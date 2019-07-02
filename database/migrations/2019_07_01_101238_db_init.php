@@ -103,6 +103,7 @@ class DbInit extends Migration
             });
         }
 
+        //Do something here
         //Check if the Table `location_links` exists
         if (!Schema::hasTable('location_links')) {
             Schema::create('location_links', function (Blueprint $table) {
