@@ -12,7 +12,7 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     function test($id = 0 ) {
-        //LOGIC
+        //LOGIC HERE
         $variable = [];
         //RETURN
         return compact($variable, 'welcome' );
