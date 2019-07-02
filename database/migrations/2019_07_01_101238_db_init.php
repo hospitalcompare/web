@@ -42,12 +42,33 @@ class DbInit extends Migration
             });
         }
 
-        //Check if the Table `providers` exists
-        if (!Schema::hasTable('providers')) {
-            Schema::create('providers', function (Blueprint $table) {
+//        Check if the Table `providers` exists
+//        if (!Schema::hasTable('providers')) {
+//            Schema::create('providers', function (Blueprint $table) {
+//                $table->increments('id');
+//                $table->unsignedInteger('address_id');
+//                $table->string('external_id');
+//                $table->string('name');
+//                $table->string('tel_number')->nullable();
+//                $table->string('url')->nullable();
+//                $table->string('status')->default("active");
+//                $table->timestamps();
+//
+//                $table->foreign('address_id')->references('id')->on('addresses')->onDelete('cascade')->onUpdate('cascade');
+//
+//            });
+//        }
+
+
+
+        //Check if the Table `trusts` exists
+        if (!Schema::hasTable('trusts')) {
+            Schema::create('trusts', function (Blueprint $table) {
                 $table->increments('id');
                 $table->unsignedInteger('address_id');
-                $table->string('external_id');
+                $table->string('external_id')->nullable();
+                $table->string('organisation_id')->nullable();
+                $table->string('provider_id')->nullable();
                 $table->string('name');
                 $table->string('tel_number')->nullable();
                 $table->string('url')->nullable();
@@ -66,6 +87,7 @@ class DbInit extends Migration
                 $table->string('external_id');
                 $table->unsignedInteger('hospital_type_id');
                 $table->unsignedInteger('address_id');
+                $table->unsignedInteger('trust_id');
                 $table->string('ods_code')->nullable();
                 $table->string('name');
                 $table->string('tel_number')->nullable();
@@ -75,52 +97,53 @@ class DbInit extends Migration
 
                 $table->foreign('hospital_type_id')->references('id')->on('hospital_types')->onDelete('cascade')->onUpdate('cascade');
                 $table->foreign('address_id')->references('id')->on('addresses')->onDelete('cascade')->onUpdate('cascade');
+                $table->foreign('trust_id')->references('id')->on('trusts')->onDelete('cascade')->onUpdate('cascade');
 
             });
         }
 
         //Check if the Table `organisations` exists
-        if (!Schema::hasTable('organisations')) {
-            Schema::create('organisations', function (Blueprint $table) {
-                $table->increments('id');
-                $table->string('external_id');
-                $table->string('name');
-                $table->string('status')->default("active");
-                $table->timestamps();
-
-            });
-        }
+//        if (!Schema::hasTable('organisations')) {
+//            Schema::create('organisations', function (Blueprint $table) {
+//                $table->increments('id');
+//                $table->string('external_id');
+//                $table->string('name');
+//                $table->string('status')->default("active");
+//                $table->timestamps();
+//
+//            });
+//        }
 
         //Check if the Table `trusts` exists
-        if (!Schema::hasTable('trusts')) {
-            Schema::create('trusts', function (Blueprint $table) {
-                $table->increments('id');
-                $table->string('external_id');
-                $table->string('name');
-                $table->string('status')->default("active");
-                $table->timestamps();
-
-            });
-        }
+//        if (!Schema::hasTable('trusts')) {
+//            Schema::create('trusts', function (Blueprint $table) {
+//                $table->increments('id');
+//                $table->string('external_id');
+//                $table->string('name');
+//                $table->string('status')->default("active");
+//                $table->timestamps();
+//
+//            });
+//        }
 
         //Check if the Table `location_links` exists
-        if (!Schema::hasTable('location_links')) {
-            Schema::create('location_links', function (Blueprint $table) {
-                $table->increments('id');
-                $table->unsignedInteger('hospital_id')->nullable();
-                $table->unsignedInteger('provider_id')->nullable();
-                $table->unsignedInteger('organisation_id')->nullable();
-                $table->unsignedInteger('trust_id')->nullable();
-                $table->string('status')->default("active");
-                $table->timestamps();
-
-                $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade')->onUpdate('cascade');
-                $table->foreign('provider_id')->references('id')->on('providers')->onDelete('cascade')->onUpdate('cascade');
-                $table->foreign('organisation_id')->references('id')->on('organisations')->onDelete('cascade')->onUpdate('cascade');
-                $table->foreign('trust_id')->references('id')->on('trusts')->onDelete('cascade')->onUpdate('cascade');
-
-            });
-        }
+//        if (!Schema::hasTable('location_links')) {
+//            Schema::create('location_links', function (Blueprint $table) {
+//                $table->increments('id');
+//                $table->unsignedInteger('hospital_id')->nullable();
+//                $table->unsignedInteger('provider_id')->nullable();
+//                $table->unsignedInteger('organisation_id')->nullable();
+//                $table->unsignedInteger('trust_id')->nullable();
+//                $table->string('status')->default("active");
+//                $table->timestamps();
+//
+//                $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade')->onUpdate('cascade');
+//                $table->foreign('provider_id')->references('id')->on('providers')->onDelete('cascade')->onUpdate('cascade');
+//                $table->foreign('organisation_id')->references('id')->on('organisations')->onDelete('cascade')->onUpdate('cascade');
+//                $table->foreign('trust_id')->references('id')->on('trusts')->onDelete('cascade')->onUpdate('cascade');
+//
+//            });
+//        }
 
         //Check if the Table `hospital_ratings` exists
         if (!Schema::hasTable('hospital_ratings')) {
@@ -168,6 +191,87 @@ class DbInit extends Migration
             });
         }
 
+        //Check if the Table `hospital_cancelled_ops` exists
+        if (!Schema::hasTable('hospital_cancelled_ops')) {
+            Schema::create('hospital_cancelled_ops', function (Blueprint $table) {
+                $table->increments('id');
+                $table->unsignedInteger('hospital_id');
+                $table->integer('total_cancelled_ops');
+                $table->integer('total_treated_last_month');
+                $table->integer('admissions');
+                $table->double('perc_cancelled_ops');
+                $table->double('perc_not_treated_last_month');
+                $table->string('status')->default("active");
+                $table->timestamps();
+
+                $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade')->onUpdate('cascade');
+            });
+        }
+
+        //Check if the Table `hospital_outpatients` exists
+        if (!Schema::hasTable('hospital_outpatients')) {
+            Schema::create('hospital_outpatients', function (Blueprint $table) {
+                $table->increments('id');
+                $table->unsignedInteger('hospital_id');
+                $table->integer('total_responses');
+                $table->integer('total_eligible');
+                $table->double('perc_recommended');
+                $table->string('status')->default("active");
+                $table->timestamps();
+
+                $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade')->onUpdate('cascade');
+            });
+        }
+
+        //Check if the Table `hospital_admitted` exists
+        if (!Schema::hasTable('hospital_admitted')) {
+            Schema::create('hospital_admitted', function (Blueprint $table) {
+                $table->increments('id');
+                $table->unsignedInteger('hospital_id');
+                $table->integer('total_responses');
+                $table->integer('total_eligible');
+                $table->double('perc_recommended');
+                $table->double('perc_response_rate');
+                $table->string('status')->default("active");
+                $table->timestamps();
+
+                $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade')->onUpdate('cascade');
+            });
+        }
+
+        //Check if the Table `hospital_emergencies` exists
+        if (!Schema::hasTable('hospital_emergencies')) {
+            Schema::create('hospital_emergencies', function (Blueprint $table) {
+                $table->increments('id');
+                $table->unsignedInteger('hospital_id');
+                $table->integer('total_responses');
+                $table->integer('total_eligible');
+                $table->float('response_rate');
+                $table->double('perc_recommended');
+                $table->double('perc_not_recommended');
+                $table->string('status')->default("active");
+                $table->timestamps();
+
+                $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade')->onUpdate('cascade');
+            });
+        }
+
+        //Check if the Table `hospital_maternity` exists
+        if (!Schema::hasTable('hospital_maternity')) {
+            Schema::create('hospital_maternity', function (Blueprint $table) {
+                $table->increments('id');
+                $table->unsignedInteger('hospital_id');
+                $table->integer('total_responses');
+                $table->integer('total_eligible');
+                $table->double('perc_response_rate');
+                $table->double('perc_recommended');
+                $table->string('status')->default("active");
+                $table->timestamps();
+
+                $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade')->onUpdate('cascade');
+            });
+        }
+
     }
 
     /**
@@ -178,14 +282,19 @@ class DbInit extends Migration
     public function down()
     {
         //Remove all the created tables from the up() functionality (MUST BE DONE IN REVERSE ORDER)
+        Schema::dropIfExists('hospital_maternity');
+        Schema::dropIfExists('hospital_emergencies');
+        Schema::dropIfExists('hospital_admitted');
+        Schema::dropIfExists('hospital_outpatients');
+        Schema::dropIfExists('hospital_cancelled_ops');
         Schema::dropIfExists('hospital_waiting_time');
         Schema::dropIfExists('specialties');
         Schema::dropIfExists('hospital_ratings');
         Schema::dropIfExists('location_links');
         Schema::dropIfExists('trusts');
-        Schema::dropIfExists('organisations');
+//        Schema::dropIfExists('organisations');
         Schema::dropIfExists('hospitals');
-        Schema::dropIfExists('providers');
+//        Schema::dropIfExists('providers');
         Schema::dropIfExists('addresses');
         Schema::dropIfExists('hospital_types');
     }
