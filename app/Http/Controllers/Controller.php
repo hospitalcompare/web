@@ -10,4 +10,11 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    function test($id = 0 ) {
+        //LOGIC
+        $variable = [];
+        //RETURN
+        return compact($variable, 'welcome' );
+    }
 }
