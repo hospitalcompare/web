@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/header.css') }}">
 
         <title>Laravel</title>
 
@@ -80,8 +81,8 @@
                 </div>
             @endif
 
-            <div class="content">
-                <p>This is a text for testing purposes</p>
+            <div class="header">
+                <p>This is a text for testing purposes 123</p>
                 <div class="title m-b-md">
                     Laravel
                 </div>
