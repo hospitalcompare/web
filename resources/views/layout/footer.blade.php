@@ -1,12 +1,9 @@
-{{-- stored in same folder --}}
-@extends('app')
+
+<footer class="mainFooter">
+    <small>&copy; <time id="thisYear"></time></small>
+</footer>
 
 
-@section('footer')
-    @parent
-
-    <small>&copy; <time>2019</time></small>
-@endsection
 
 
 

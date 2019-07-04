@@ -5,27 +5,32 @@
         <meta charset='utf-8'>
         <meta name='description' content='@yield('description')'>
         <meta name='keywords' content='@yield('keywords')'>
-        <link rel='stylesheet' href=''>
+
+        @stack('styles')
+        @stack('jquery')
     </head>
     <body>
-        @section('header')
-            <!--This is the master header section.-->
-        @show
+{{--        @section('header')--}}
+{{--            <!--This is the master header section.-->--}}
+{{--        @show--}}
         
         <div class="mainHeaderWrap">
-            @yield('header')
+            @include('layout.header', ['page_header' => ''])
+
         </div>
-       
+
+
 
         <div class="mainContentWrap">
-            @yield('content')
+        {{--@yield('content')--}}
+            @include('layout.content', ['page_content' => ''])
         </div>
         
         <div class="mainFooterWrap">
-            @yield('footer')
+            {{--@yield('footer')--}}
+            @include('layout.footer', ['page_footer' => ''])
         </div>
-        <script>
-        
-        </script>
+        <!-- or push target to footer -->
+        @stack('main')
     </body>
 </html>

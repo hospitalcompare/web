@@ -7,12 +7,10 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.content {
-  width: 600px;
-  margin: 0 auto;
-  font-size: 20px;
-  margin-top: 50px;
-  p {
-    color: red;
+.mainContentWrap {
+  .something {
+    p {
+      color: $teal;
+    }
   }
 }

@@ -11128,14 +11128,7 @@ a.text-dark:focus {
   }
 }
 
-.content {
-  width: 600px;
-  margin: 0 auto;
-  font-size: 20px;
-  margin-top: 50px;
-}
-
-.content p {
-  color: red;
+.mainContentWrap .something p {
+  color: #4dc0b5;
 }
 
