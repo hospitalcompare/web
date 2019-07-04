@@ -1,0 +1,21 @@
+// Full width
+$fullWidth: 100%;
+//alignment
+
+.mainHeader {
+  width: $fullWidth  / 1.25;
+  margin: auto;
+}
+  .mainHeaderWrap{
+    height: 50px;
+    background: $aqua;
+  }
+
+
+.mainContentWrap {
+  .something {
+    p {
+      color: $orange;
+    }
+  }
+}

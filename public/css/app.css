@@ -1,5 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+.mainHeader {
+  width: 80%;
+  margin: auto;
+}
+
+.mainHeaderWrap {
+  height: 50px;
+  background: #00cecd;
+}
+
+.mainContentWrap .something p {
+  color: #f6993f;
+}
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -11126,9 +11140,5 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
-}
-
-.mainContentWrap .something p {
-  color: #4dc0b5;
 }
 

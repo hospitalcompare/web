@@ -49376,28 +49376,16 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/pages/test.scss":
-/*!****************************************!*\
-  !*** ./resources/sass/pages/test.scss ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):\n\r\n@import 'variables';\r\n       ^\r\n      Can't find stylesheet to import.\n  ╷\n2 │ @import 'variables';\r\n  │         ^^^^^^^^^^^\n  ╵\n  stdin 2:9  root stylesheet\r\n      in C:\\xampp\\htdocs\\web\\resources\\sass\\pages\\test.scss (line 2, column 9)\n    at runLoaders (C:\\xampp\\htdocs\\web\\node_modules\\webpack\\lib\\NormalModule.js:302:20)\n    at C:\\xampp\\htdocs\\web\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\xampp\\htdocs\\web\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (C:\\xampp\\htdocs\\web\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at render (C:\\xampp\\htdocs\\web\\node_modules\\sass-loader\\lib\\loader.js:52:13)\n    at Function.$2 (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:24300:48)\n    at yb.$2 (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:15220:15)\n    at wf.lI (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:9168:42)\n    at wf.lH (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:9170:32)\n    at iQ.w2 (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8439:46)\n    at vC.$0 (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8575:7)\n    at Object.eU (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:1461:80)\n    at al.bc (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8492:3)\n    at j3.bc (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8434:25)\n    at j3.cA (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8421:12)\n    at pV.cA (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8203:35)\n    at Object.m (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:1351:19)\n    at C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:5080:51\n    at yG.a (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:1359:71)\n    at yG.$2 (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8222:23)\n    at xd.$2 (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8217:25)\n    at wf.lI (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:9168:42)\n    at wf.lH (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:9170:32)\n    at iQ.w2 (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8439:46)\n    at vC.$0 (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8575:7)\n    at Object.eU (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:1461:80)\n    at al.bc (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8492:3)\n    at j3.bc (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8434:25)\n    at j3.cA (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8421:12)\n    at Object.eval (eval at Eg (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:628:8), <anonymous>:3:37)\n    at wf.lI (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:9168:42)\n    at wf.lH (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:9170:32)\n    at iQ.w2 (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8439:46)\n    at vC.$0 (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8575:7)\n    at Object.eU (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:1461:80)\n    at al.bc (C:\\xampp\\htdocs\\web\\node_modules\\sass\\sass.dart.js:8492:3)");
-
-/***/ }),
-
 /***/ 0:
-/*!**********************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout/header.scss ./resources/sass/pages/test.scss ./resources/sass/layout/footer.scss ***!
-  \**********************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/layout/header.scss ./resources/sass/layout/footer.scss ***!
+  \*************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\xampp\htdocs\web\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\xampp\htdocs\web\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! C:\xampp\htdocs\web\resources\sass\layout\header.scss */"./resources/sass/layout/header.scss");
-__webpack_require__(/*! C:\xampp\htdocs\web\resources\sass\pages\test.scss */"./resources/sass/pages/test.scss");
 module.exports = __webpack_require__(/*! C:\xampp\htdocs\web\resources\sass\layout\footer.scss */"./resources/sass/layout/footer.scss");
 
 

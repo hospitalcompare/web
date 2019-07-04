@@ -4,13 +4,8 @@
 // Variables
 @import 'variables';
 
+@import 'pages/homepage';
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.mainContentWrap {
-  .something {
-    p {
-      color: $teal;
-    }
-  }
-}

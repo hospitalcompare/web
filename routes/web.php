@@ -17,8 +17,8 @@ Route::get('/', function () {
 
 
 
-Route::get('/test', function () {
-    return view('pages.app');
+Route::get('/', function () {
+    return view('pages.homepage');
 });
 
 
