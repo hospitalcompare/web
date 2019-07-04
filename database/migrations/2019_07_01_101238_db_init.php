@@ -66,8 +66,7 @@ class DbInit extends Migration
             Schema::create('trusts', function (Blueprint $table) {
                 $table->increments('id');
                 $table->unsignedInteger('address_id');
-                $table->string('external_id')->nullable();
-                $table->string('organisation_id')->nullable();
+                $table->string('trust_id')->nullable();
                 $table->string('provider_id')->nullable();
                 $table->string('name');
                 $table->string('tel_number')->nullable();
@@ -84,7 +83,8 @@ class DbInit extends Migration
         if (!Schema::hasTable('hospitals')) {
             Schema::create('hospitals', function (Blueprint $table) {
                 $table->increments('id');
-                $table->string('external_id');
+                $table->string('location_id')->nullable();
+                $table->string('organisation_id')->nullable();
                 $table->unsignedInteger('hospital_type_id');
                 $table->unsignedInteger('address_id');
                 $table->unsignedInteger('trust_id');
@@ -290,10 +290,10 @@ class DbInit extends Migration
         Schema::dropIfExists('hospital_waiting_time');
         Schema::dropIfExists('specialties');
         Schema::dropIfExists('hospital_ratings');
-        Schema::dropIfExists('location_links');
-        Schema::dropIfExists('trusts');
+//        Schema::dropIfExists('location_links');
 //        Schema::dropIfExists('organisations');
         Schema::dropIfExists('hospitals');
+        Schema::dropIfExists('trusts');
 //        Schema::dropIfExists('providers');
         Schema::dropIfExists('addresses');
         Schema::dropIfExists('hospital_types');

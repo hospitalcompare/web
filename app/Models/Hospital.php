@@ -15,7 +15,7 @@ class Hospital extends Model
      * @var array
      */
     protected $fillable = [
-        'external_id', 'hospital_type_id', 'address_id', 'trust_id', 'ods_code', 'name', 'tel_number', 'url', 'status'
+        'location_id', 'organisation_id','hospital_type_id', 'address_id', 'trust_id', 'ods_code', 'name', 'tel_number', 'url', 'status'
     ];
 
     /**
@@ -24,7 +24,8 @@ class Hospital extends Model
      * @var array
      */
     protected $casts = [
-        'external_id'       => 'string',
+        'location_id'       => 'string',
+        'organisation_id'   => 'string',
         'hospital_type_id'  => 'integer',
         'address_id'        => 'integer',
         'trust_id'          => 'integer',

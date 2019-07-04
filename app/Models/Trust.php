@@ -15,7 +15,7 @@ class Trust extends Model
      * @var array
      */
     protected $fillable = [
-        'address_id', 'external_id', 'organisation_id', 'provider_id', 'name', 'tel_number', 'url', 'status'
+        'address_id', 'trust_id', 'organisation_id', 'provider_id', 'name', 'tel_number', 'url', 'status'
     ];
 
     /**
@@ -24,7 +24,7 @@ class Trust extends Model
      * @var array
      */
     protected $casts = [
-        'external_id'       => 'string',
+        'trust_id'          => 'string',
         'address_id'        => 'integer',
         'organisation_id'   => 'string',
         'provider_id'       => 'string',
