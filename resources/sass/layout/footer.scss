@@ -41,16 +41,59 @@
 //SITEMAP SECTION
 .sitemapHolder{
   background-color: #1b1b1b;
-  height: 770px;
+  height: 670px; //originally 770px
   position:$relative;
   background-image:url('../images/Layer_7_copy_2.svg');
   background-repeat:no-repeat;
   background-position: center 60%;
+  padding-top: 100px;
+  background-size: 100% 20%;
+}
+
+.sitemapBottom{
+  padding-top: 300px;
+  width: $fullWidth / 1.2;
+  margin: auto;
+  color: $white; //inherited value
 }
 
 .sitemap{
   width: $fullWidth / 1.2;
   margin: auto;
   @include flex;
+
 }
+
+.sitemapMenu {
+  li{
+    list-style:none;
+    a{
+      color:$white;
+    }
+  }
+
+}
+
+.sitemapNav, .social{
+  @include uniformAlignment;
+}
+
+.social{
+  color: $white; //inherited value
+  margin-left: 36%;
+  li{
+    list-style: none;
+    a{
+      color:$white;
+      font-size: 1.5em;
+      padding-right: 17px;
+    }
+  }
+}
+
+.social li:last-child{
+  margin-left: 220px;
+  padding-top: 20px;
+}
+
 

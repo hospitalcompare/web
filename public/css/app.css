@@ -53,6 +53,12 @@
   padding: 0 15px;
 }
 
+.fa-chevron-down {
+  color: #ffffff;
+  position: relative;
+  left: 5px;
+}
+
 .bannerParent {
   width: 100%;
   height: auto;
@@ -114,11 +120,20 @@
 
 .sitemapHolder {
   background-color: #1b1b1b;
-  height: 770px;
+  height: 670px;
   position: relative;
   background-image: url(/images/Layer_7_copy_2.svg?bbe12441f06eac3fccec76af8aff7fa8);
   background-repeat: no-repeat;
   background-position: center 60%;
+  padding-top: 100px;
+  background-size: 100% 20%;
+}
+
+.sitemapBottom {
+  padding-top: 300px;
+  width: 83.3333333333%;
+  margin: auto;
+  color: #ffffff;
 }
 
 .sitemap {
@@ -126,6 +141,41 @@
   margin: auto;
   display: -webkit-flex;
   display: flex;
+}
+
+.sitemapMenu li {
+  list-style: none;
+}
+
+.sitemapMenu li a {
+  color: #ffffff;
+}
+
+.sitemapNav,
+.social {
+  flex: 1 1 0;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 100px;
+}
+
+.social {
+  color: #ffffff;
+  margin-left: 36%;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  color: #ffffff;
+  font-size: 1.5em;
+  padding-right: 17px;
+}
+
+.social li:last-child {
+  margin-left: 220px;
+  padding-top: 20px;
 }
 
 /*!

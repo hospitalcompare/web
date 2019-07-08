@@ -1,6 +1,25 @@
 <div class="sitemapHolder">
     <section class="sitemap">
-
+        <nav class="sitemapNav">
+            <ul class="sitemapMenu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Who we are</a></li>
+                <li><a href="">Your rights</a></li>
+                <li><a href="">Patient choice</a></li>
+                <li><a href="">Our blogs</a></li>
+                <li><a href="">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="social">
+            <ul>
+                <li>Helping you to make the best healthcare choices</li>
+                <li>
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
     </section>
     <section class="sitemapBottom">
         <p>
