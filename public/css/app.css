@@ -102,7 +102,7 @@
   width: 50%;
   text-align: center;
   margin: auto;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .homePromo {
@@ -119,6 +119,26 @@
 
 .promoList li {
   list-style: none;
+}
+
+.findHospital a {
+  background-image: linear-gradient(270deg, #00cecd 0%, #00d7b5 56%, #00df9d 100%);
+  width: 219px;
+  height: 58px;
+  border-radius: 31px;
+}
+
+.btn-lg,
+.btn-group-lg > .btn {
+  line-height: 2 !important;
+}
+
+select,
+input {
+  background: white !important;
+  width: 300px;
+  height: 30px;
+  border-radius: 7px;
 }
 
 .mainFooter {

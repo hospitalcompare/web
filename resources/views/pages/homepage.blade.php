@@ -36,6 +36,9 @@
                         elective surgery</p>
 
                     @component('components.basic.selectbox')
+
+                            Choose your procedure:
+
                         @slot('selectboxOption1')
                             surgery
                         @endslot
@@ -48,6 +51,16 @@
                             Enter your postcode
                         @endslot
                     @endcomponent
+                    @component('components.basic.selectbox')
+                        Up to 50 miles
+                        @slot('selectboxOption1')
+                            Up to 20 miles
+                        @endslot
+                        @slot('selectboxOption2')
+                            Less than 20 miles
+                        @endslot
+                    @endcomponent
+
                     @component('components.basic.button')
                         @slot('button')
                             Find hospitals
