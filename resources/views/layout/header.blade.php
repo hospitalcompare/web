@@ -3,7 +3,7 @@
     {{ $page_header }}
     <div class="branding hRow">
         <div class="titleParent col">
-            <h1>Hospital Compare</h1>
+            <i class="fas fa-cross"></i><h1>Hospital Compare</h1>
         </div>
         <nav class="mainNav col">
             <ul>

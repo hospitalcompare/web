@@ -1,4 +1,14 @@
 //HEADER SECTION
+
+.titleParent{
+  position:$relative;
+}
+.fa-cross{
+  position:$absolute;
+  top:4px;
+  left:0;
+  color: $white;
+}
 .hRow{
   @include flex;
   @include alignItemsCenter;

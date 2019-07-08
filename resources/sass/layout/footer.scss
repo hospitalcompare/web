@@ -4,13 +4,21 @@
   background: $footerGrey;
 }
 .footerCreds{
-  width: $fullWidth;
+  width: $fullWidth / 1.2;
   margin: auto;
+
 }
+
+
 
 .footerCreds, .credLinks{
   @include flex;
+  height:inherit;
+}
 
+.credLinks{
+  @include alignItemsCenter;
+  @include twoOneRatio;
 }
 
 .footerCreds, .credLinks, .credLinks a, .footerCreds a{
@@ -19,4 +27,30 @@
 
 .credLinks li{
   list-style:none;
+  padding: 8px 20px;
 }
+
+.credLinks li:last-child{
+  margin-left: auto;
+}
+
+.credLinks a{
+  font-size: .95em;
+}
+
+//SITEMAP SECTION
+.sitemapHolder{
+  background-color: #1b1b1b;
+  height: 770px;
+  position:$relative;
+  background-image:url('../images/Layer_7_copy_2.svg');
+  background-repeat:no-repeat;
+  background-position: center 60%;
+}
+
+.sitemap{
+  width: $fullWidth / 1.2;
+  margin: auto;
+  @include flex;
+}
+

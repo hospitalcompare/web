@@ -8,6 +8,7 @@
 
         @stack('styles')
         @stack('jquery')
+        @stack('font-awesome')
     </head>
     <body>
 {{--        @section('header')--}}

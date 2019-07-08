@@ -52,3 +52,20 @@ $footerGrey: #363636;
   -webkit-align-items: center;
   align-items: center;
 }
+
+@mixin uniformAlignment {
+  flex: 1 1 0;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 100px;
+}
+
+@mixin twoOneRatio {
+  flex: 2 1 0;
+  -webkit-flex: 2 1 0;
+  -ms-flex: 2 1 100px;
+}
+
+
+//POSITIONS
+$relative: relative;
+$absolute: absolute;

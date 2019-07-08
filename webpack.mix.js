@@ -20,3 +20,4 @@ mix.js('resources/js/app.js', 'public/js')
     //.sass('resources/sass/layout/footer.scss', 'public/css');
 
 mix.copy('resources/images/banner.jpg', 'public/images/banner.jpg');
+mix.copy('resources/images/Layer_7_copy_2.svg', 'public/images/Layer_7_copy_2.svg');
