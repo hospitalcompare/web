@@ -83,6 +83,86 @@
    </section>
 @endpush
 
+@push('whychoose')
+    @component('components.basic.whysection')
+
+        Why use Hospital Compare?
+
+        @slot('choiceText')
+            Hospital Compare helps you make the best possible choice when it comes to choosing a suitable hospital for your elective procedure. <br>
+
+            64% of people in the UK are not aware that they could have the option of an NHS funded operation in a private hospital. We are here to help you understand your rights and make the right choice. <br>
+
+            Whether you are searching for the best NHS hospital or the best private hospital, Hospital Compare is the only place that provides an accurate, up-to-date and unbiased assessment of all hospitals in the UK.
+        @endslot
+        @slot('choiceVideo')
+            <video controls>
+
+            </video>
+        @endslot
+    @endcomponent
+@endpush
+
+@push('howSection')
+    @component('components.basic.howsection')
+
+        How does it work?
+
+        @slot('firstIcon')
+            <img src="{{ asset('images/003-doctor.png') }}">
+        @endslot
+        @slot('firstIconTitle')
+            Get your referral from the GP
+                or have a surgery in mind
+        @endslot
+        @slot('firstIconBio')
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+        @endslot
+        @slot('secondIcon')
+            <img src="{{ asset('images/001-search-1.png') }}">
+        @endslot
+        @slot('secondIconTitle')
+            Search by postcode
+            or speciality
+        @endslot
+        @slot('secondIconBio')
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+        @endslot
+
+        @slot('thirdIcon')
+            <img src="{{ asset('images/Layer_536.png') }}">
+        @endslot
+        @slot('thirdIconTitle')
+            Find the best hospital
+            for you
+        @endslot
+        @slot('thirdIconBio')
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+        @endslot
+        @slot('fourthIcon')
+            <img src="{{ asset('images/Layer_537.png') }}">
+        @endslot
+        @slot('fourthIconTitle')
+            Book your
+            operation
+        @endslot
+        @slot('fourthIconBio')
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+        @endslot
+    @endcomponent
+@endpush
+
+@push('choosehealth')
+    @component('components.basic.choosehealth')
+
+
+
+        @slot('choosehealthbanner')
+            test
+        @endslot
+
+    @endcomponent
+@endpush
 
 
 

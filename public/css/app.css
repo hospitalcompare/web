@@ -141,6 +141,54 @@ input {
   border-radius: 7px;
 }
 
+.whyChooseParent {
+  width: 83.3333333333%;
+  margin: 100px auto;
+}
+
+.whyChoose {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.whyChoose p {
+  width: 589px;
+  height: 239px;
+  color: #1b1b1b;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 34px;
+}
+
+.chooseText,
+.chooseVideo {
+  flex: 1 1 0;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 100px;
+}
+
+.pageTitle {
+  font-size: 34px;
+}
+
+.howSectionParent {
+  width: 83.3333333333%;
+  margin: 100px auto;
+}
+
+.howSection {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.iconTitle,
+.iconDescription {
+  width: 200px;
+}
+
 .mainFooter {
   height: 73px;
   background: #363636;

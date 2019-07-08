@@ -3,4 +3,4 @@
     {{ $page_content }}
 </section>
 
-    <div class="something"><p>Output</p></div>
+<div class="something"><p>Output</p></div>
