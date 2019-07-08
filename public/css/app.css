@@ -11,8 +11,8 @@
 }
 
 .mainHeader {
-  width: 100%;
-  margin: 0 17% 0 7%;
+  width: 83.3333333333%;
+  margin: auto;
 }
 
 .mainHeaderWrap {
@@ -61,14 +61,21 @@
   background: #363636;
 }
 
+.footerCreds {
+  width: 100%;
+  margin: auto;
+}
+
 .footerCreds,
 .credLinks {
   display: -webkit-flex;
   display: flex;
 }
 
+.footerCreds,
 .credLinks,
-.credLinks a {
+.credLinks a,
+.footerCreds a {
   color: #ffffff;
 }
 

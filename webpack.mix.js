@@ -13,10 +13,10 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     // .js('resources/js/scripts.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/layout/header.scss', 'public/css')
+    .sass('resources/sass/app.scss', 'public/css');
+    //.sass('resources/sass/layout/header.scss', 'public/css')
     // .sass('resources/sass/pages/homepage.scss', 'public/css')
     // .sass('resources/sass/pages/test.scss', 'public/css')
-    .sass('resources/sass/layout/footer.scss', 'public/css');
+    //.sass('resources/sass/layout/footer.scss', 'public/css');
 
 mix.copy('resources/images/banner.jpg', 'public/images/banner.jpg');
