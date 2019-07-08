@@ -100,10 +100,12 @@
   flex: 1 1 0;
   -webkit-flex: 1 1 0;
   -ms-flex: 1 1 100px;
+  padding-top: 100px;
 }
 
 .homePromo p {
   font-size: 1.2em;
+  width: 70%;
 }
 
 .promoList li {

@@ -98,8 +98,11 @@
 
 .homePromo{
   @include uniformAlignment;
+  padding-top:100px;
+
   p{
     font-size: 1.2em;
+    width: 70%;
   }
 }
 

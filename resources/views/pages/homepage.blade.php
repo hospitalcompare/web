@@ -40,9 +40,9 @@
                     between hospitals. You have the legal right to choose
                     where to have your elective surgery*. It can be at:</p>
                 <ul class="promoList">
-                    <li>An NHS hospital of your choice</li>
-                    <li>A private hospital funded by NHS</li>
-                    <li>A private hospital paid by you or
+                    <li><i class="fas fa-check"></i> An NHS hospital of your choice</li>
+                    <li><i class="fas fa-check"></i> A private hospital funded by NHS</li>
+                    <li><i class="fas fa-check"></i> A private hospital paid by you or
                         your insurance provider</li>
                 </ul>
             </div>
