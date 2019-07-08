@@ -2,7 +2,7 @@
 $body-bg: #f8fafc;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-sans-serif: 'sofia', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
@@ -28,3 +28,27 @@ $darkerGrey:#1c1c1c;
 $darkerGrey:#1c1c1c;
 $black: #000000;
 $sunnyYellow: #fff568;
+$footerGrey: #363636;
+
+//Header section
+@mixin headerHeight {
+  height:75px;
+}
+
+//Resposive design parent declarations
+@mixin flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Align Items - Center */
+@mixin alignItemsCenter {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
