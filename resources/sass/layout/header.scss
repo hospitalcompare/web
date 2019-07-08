@@ -72,3 +72,39 @@
   background-repeat:no-repeat;
   background-size:cover;
 }
+
+.bannerData{
+  @include flex;
+  width: $fullWidth / 1.2;
+  margin: auto;
+  padding-top: 42px;
+  color: $white; //inherited value
+
+}
+
+//BANNER CONTENTS
+.homePostCodeParent{
+
+ @include uniformAlignment;
+}
+
+.homePostCodeBox{
+  width: 511px;
+  height: 431px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  opacity: 0.75;
+}
+
+.homePromo{
+  @include uniformAlignment;
+  p{
+    font-size: 1.2em;
+  }
+}
+
+.promoList{
+  li{
+    list-style:none;
+  }
+}

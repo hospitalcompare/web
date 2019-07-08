@@ -73,6 +73,43 @@
   background-size: cover;
 }
 
+.bannerData {
+  display: -webkit-flex;
+  display: flex;
+  width: 83.3333333333%;
+  margin: auto;
+  padding-top: 42px;
+  color: #ffffff;
+}
+
+.homePostCodeParent {
+  flex: 1 1 0;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 100px;
+}
+
+.homePostCodeBox {
+  width: 511px;
+  height: 431px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  opacity: 0.75;
+}
+
+.homePromo {
+  flex: 1 1 0;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 100px;
+}
+
+.homePromo p {
+  font-size: 1.2em;
+}
+
+.promoList li {
+  list-style: none;
+}
+
 .mainFooter {
   height: 73px;
   background: #363636;
