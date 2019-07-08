@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Trust extends Model
 {
-    public $table = 'hospitals';
+    public $table = 'trusts';
 
     /**
      * The attributes that are mass assignable.

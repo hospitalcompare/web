@@ -34,8 +34,8 @@ class DbInit extends Migration
                 $table->string('postcode')->nullable();
                 $table->string('local_authority')->nullable();
                 $table->string('region')->nullable();
-                $table->string('latitude')->nullable();
-                $table->string('longitude')->nullable();
+                $table->string('latitude');
+                $table->string('longitude');
                 $table->string('status')->default("active");
                 $table->timestamps();
 
