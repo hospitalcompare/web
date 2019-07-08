@@ -1,0 +1,22 @@
+//FOOTER SECTION
+.mainFooter{
+  height: 73px;
+  background: $footerGrey;
+}
+.footerCreds{
+  width: $fullWidth;
+  margin: auto;
+}
+
+.footerCreds, .credLinks{
+  @include flex;
+
+}
+
+.footerCreds, .credLinks, .credLinks a, .footerCreds a{
+  color: $white;
+}
+
+.credLinks li{
+  list-style:none;
+}

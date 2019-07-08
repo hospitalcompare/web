@@ -4,15 +4,12 @@
 // Variables
 @import 'variables';
 
+@import 'pages/homepage';
+
+@import 'layout/header';
+
+@import 'layout/footer';
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.content {
-  width: 600px;
-  margin: 0 auto;
-  font-size: 20px;
-  margin-top: 50px;
-  p {
-    color: red;
-  }
-}
