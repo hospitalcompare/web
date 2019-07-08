@@ -68,10 +68,16 @@ $centerOnPage:  auto;
   background: $footerGrey;
 }
 
-.mainContentWrap {
-  .something {
-    p {
-      color: $orange;
-    }
-  }
+.footerCreds, .credLinks{
+  @include flex;
+
 }
+
+.credLinks, .credLinks a{
+  color: $white;
+}
+
+.credLinks li{
+  list-style:none;
+}
+

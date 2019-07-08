@@ -61,8 +61,19 @@
   background: #363636;
 }
 
-.mainContentWrap .something p {
-  color: #f6993f;
+.footerCreds,
+.credLinks {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.credLinks,
+.credLinks a {
+  color: #ffffff;
+}
+
+.credLinks li {
+  list-style: none;
 }
 
 /*!
