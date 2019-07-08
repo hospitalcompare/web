@@ -4,7 +4,6 @@
 namespace App\Http\Imports;
 
 
-class MasterList
-{
+class MasterList {
 
 }
