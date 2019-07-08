@@ -34,7 +34,8 @@
                 <div class="homePostCodeBox">
                     <p>Find the best hospital for your
                         elective surgery</p>
-                    @component('components.selectbox')
+
+                    @component('components.basic.selectbox')
                         @slot('selectboxOption1')
                             surgery
                         @endslot
@@ -42,7 +43,12 @@
                                 Orthopedics
                             @endslot
                     @endcomponent
-                    @component('components.button')
+                    @component('components.basic.textbox')
+                        @slot('textbox')
+                            Enter your postcode
+                        @endslot
+                    @endcomponent
+                    @component('components.basic.button')
                         @slot('button')
                             Find hospitals
                         @endslot
