@@ -32,7 +32,21 @@
         <div class="bannerData">
             <div class="homePostCodeParent">
                 <div class="homePostCodeBox">
-
+                    <p>Find the best hospital for your
+                        elective surgery</p>
+                    @component('components.selectbox')
+                        @slot('selectboxOption1')
+                            surgery
+                        @endslot
+                            @slot('selectboxOption2')
+                                Orthopedics
+                            @endslot
+                    @endcomponent
+                    @component('components.button')
+                        @slot('button')
+                            Find hospitals
+                        @endslot
+                    @endcomponent
                 </div>
             </div>
             <div class="homePromo">

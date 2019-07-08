@@ -96,6 +96,15 @@
   opacity: 0.75;
 }
 
+.homePostCodeBox p {
+  color: #000000;
+  font-size: 1.3em;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  padding-top: 30px;
+}
+
 .homePromo {
   flex: 1 1 0;
   -webkit-flex: 1 1 0;

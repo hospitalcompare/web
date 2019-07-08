@@ -96,6 +96,17 @@
   opacity: 0.75;
 }
 
+.homePostCodeBox{
+  p{
+    color: $black;
+    font-size: 1.3em;
+    width: 50%;
+    text-align:center;
+    margin: auto;
+    padding-top: 30px;
+  }
+}
+
 .homePromo{
   @include uniformAlignment;
   padding-top:100px;
