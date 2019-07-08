@@ -11,6 +11,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 @endpush
 
+
 {{--creates path for JS file --}}
 @push('main')
     <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
@@ -20,6 +21,14 @@
     <script src="{{ asset('js/library/jquery-3.4.1.min.js') }}"></script>
 
 @endpush
+
+@push('banner')
+   <section class="banner">
+
+   </section>
+@endpush
+
+
 
 
 

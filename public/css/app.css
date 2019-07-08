@@ -1,13 +1,64 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+/* Align Items - Center */
+
+.hRow {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 75px;
+}
+
 .mainHeader {
-  width: 80%;
-  margin: auto;
+  width: 100%;
+  margin: 0 17% 0 7%;
 }
 
 .mainHeaderWrap {
-  height: 50px;
+  height: 75px;
   background: #00cecd;
+  width: 100%;
+  margin: auto;
+}
+
+.titleParent h1 {
+  font-size: 1.3em;
+  color: #ffffff;
+}
+
+.mainNav ul {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.mainNav ul li {
+  display: block;
+}
+
+.mainNav ul li a {
+  color: #ffffff;
+  font-size: 1.3em;
+  padding: 0 15px;
+}
+
+.bannerParent {
+  width: 100%;
+  height: auto;
+}
+
+.banner {
+  width: 100%;
+  height: 521px;
+  background-image: linear-gradient(to bottom, rgba(0, 206, 205, 0.52), rgba(139, 219, 219, 0.73)), url(/images/banner.jpg?fca133449dc5cbcc1c77d20379577457);
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mainFooter {
+  height: 73px;
+  background: #363636;
 }
 
 .mainContentWrap .something p {
@@ -48,7 +99,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Nunito", sans-serif;
+  --font-family-sans-serif: "sofia", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -80,7 +131,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "sofia", sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -6440,7 +6491,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "sofia", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -6565,7 +6616,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Nunito", sans-serif;
+  font-family: "sofia", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;

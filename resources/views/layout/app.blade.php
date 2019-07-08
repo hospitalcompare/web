@@ -19,6 +19,11 @@
 
         </div>
 
+        <div class="bannerParent">
+            @stack('banner')
+        </div>
+
+
 
 
         <div class="mainContentWrap">

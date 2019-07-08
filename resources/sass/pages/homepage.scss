@@ -1,17 +1,72 @@
 // Full width
 $fullWidth: 100%;
-//alignment
+//center on page
+$centerOnPage:  auto;
+
+
+//HEADER SECTION
+.hRow{
+  @include flex;
+  @include alignItemsCenter;
+  @include headerHeight;
+}
 
 .mainHeader {
-  width: $fullWidth  / 1.25;
-  margin: auto;
+  width: $fullWidth;
+  margin: 0 17% 0 7%;
+
 }
-  .mainHeaderWrap{
-    height: 50px;
-    background: $aqua;
+
+.mainHeaderWrap{
+  @include headerHeight;
+  background: $aqua;
+  width: $fullWidth;
+  margin: $centerOnPage;
+}
+
+.titleParent {
+  h1 {
+    font-size: 1.3em;
+    color:$white;
   }
+}
 
+.mainNav{
+  ul{
+    @include flex;
+    li{
+      display:block;
+      a{
+        color: $white;
+        font-size: 1.3em;
+        padding: 0 15px;
+      }
+    }
+  }
+}
 
+//BANNER SECTION
+.bannerParent{
+  width: 100%;
+  height: auto;
+}
+
+.banner{
+  width:$fullWidth;
+  height: 521px;
+  background-image:
+          linear-gradient(to bottom, rgba(0, 206, 205, 0.52), rgba(139, 219, 219, 0.73)),
+          url('../images/banner.jpg');
+  margin:$centerOnPage;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+//FOOTER SECTION
+.mainFooter{
+  height: 73px;
+  background: $footerGrey;
+}
 .mainContentWrap {
   .something {
     p {

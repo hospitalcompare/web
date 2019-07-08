@@ -1,17 +1,22 @@
 <!-- _partials/header.blade.php -->
 <header class="mainHeader">
     {{ $page_header }}
-    <section class="banner">
-        <div class="mainSearch">
-            test
+    <div class="branding hRow">
+        <div class="titleParent col">
+            <h1>Hospital Compare</h1>
         </div>
-        <div class="searchTips">
+        <nav class="mainNav col">
             <ul>
-                <li></li>
+                <li><a href="">our mission</a></li>
+                <li><a href="">your rights</a></li>
+                <li><a href="">how to use</a></li>
+                <li><a href="">faqs</a></li>
+                <li><a href="">guides</a></li>
             </ul>
-        </div>
+        </nav>
 
-    </section>
-    <h1>Hospital Compare</h1>
+    </div>
+
 </header>
+
 
