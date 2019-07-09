@@ -46,11 +46,6 @@ class MasterList extends DefaultImport {
                         }
                     }
 
-                    //Loop through all the inputs and set them to empty strings if the values are NULL or empty()
-                    foreach($item as $key=>$value) {
-                        $item[$key] = Utils::validateValue($value);
-                    }
-
                     $hospitalAddress = Address::firstOrCreate([
                         'address_1'         => $item['Location Address 1'],
                         'address_2'         => $item['Location Address 2'],

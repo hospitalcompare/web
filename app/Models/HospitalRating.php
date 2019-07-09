@@ -27,7 +27,7 @@ class HospitalRating extends Model
         'hospital_id'       => 'integer',
         'avg_user_rating'   => 'double',
         'total_ratings'     => 'integer',
-        'provider_rating'   => 'integer',
+        'provider_rating'   => 'string',
         'latest_rating'     => 'string',
         'status'            => 'string'
     ];
