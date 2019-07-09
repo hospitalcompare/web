@@ -4,11 +4,18 @@
 // Variables
 @import 'variables';
 
+//TEMPLATE FILES
 @import 'pages/homepage';
-
 @import 'layout/header';
-
 @import 'layout/footer';
+
+
+//COMPONENTS
+@import 'components/banner';
+@import 'components/whychoose';
+@import 'components/howsection';
+
+
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';

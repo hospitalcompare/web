@@ -1,0 +1,25 @@
+//WHY CHOOSE SECTION
+.whyChooseParent{
+  width: $fullWidth / 1.2;
+  margin: 100px auto;
+}
+.whyChoose{
+  @include flex;
+
+  p{
+    width: 589px;
+    height: 239px;
+    color: #1b1b1b;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 34px;
+  }
+}
+
+.chooseText, .chooseVideo{
+  @include uniformAlignment;
+}
+.pageTitle{
+  font-size: 34px;
+}

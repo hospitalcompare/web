@@ -20,27 +20,27 @@
 
         </div>
 
-        <div class="bannerParent">
-            @stack('banner')
-        </div>
+{{--        <div class="bannerParent">--}}
+{{--            @stack('banner')--}}
+{{--        </div>--}}
 
-        <div class="choiceParent">
-            @stack('whychoose')
-        </div>
+{{--        <div class="choiceParent">--}}
+{{--            @stack('whychoose')--}}
+{{--        </div>--}}
 
-        <div class="howSectionParent">
-            @stack('howSection')
-        </div>
+{{--        <div class="howSectionParent">--}}
+{{--            @stack('howSection')--}}
+{{--        </div>--}}
 
-        <div class="chooseHealthParent">
-            @stack('choosehealth')
-        </div>
+{{--        <div class="chooseHealthParent">--}}
+{{--            @stack('choosehealth')--}}
+{{--        </div>--}}
 
 
 
         <div class="mainContentWrap">
-        {{--@yield('content')--}}
-            @include('layout.content', ['page_content' => ''])
+            @yield('content')
+
         </div>
         
         <div class="mainFooterWrap">

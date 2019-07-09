@@ -56,81 +56,6 @@
 
 }
 
-//BANNER SECTION
-.bannerParent{
-  width: 100%;
-  height: auto;
-}
-
-.banner{
-  width:$fullWidth;
-  height: 521px;
-  background-image:
-          linear-gradient(to bottom, rgba(0, 206, 205, 0.52), rgba(139, 219, 219, 0.73)),
-          url('../images/banner.jpg');
-  margin:$centerOnPage;
-  background-repeat:no-repeat;
-  background-size:cover;
-}
-
-.bannerData{
-  @include flex;
-  width: $fullWidth / 1.2;
-  margin: auto;
-  padding-top: 42px;
-  color: $white; //inherited value
-
-}
-
-//BANNER CONTENTS
-.homePostCodeParent{
-
- @include uniformAlignment;
-}
-
-.homePostCodeBox{
-  width: 511px;
-  height: 431px;
-  border-radius: 20px;
-  background-color: #ffffff;
-  opacity: 0.75;
-}
-
-.homePostCodeBox{
-  p{
-    color: $black;
-    font-size: 1.3em;
-    width: 50%;
-    text-align:center;
-    margin: auto;
-    padding-top: 20px;
-  }
-}
-
-.homePromo{
-  @include uniformAlignment;
-  padding-top:100px;
-
-  p{
-    font-size: 1.2em;
-    width: 70%;
-  }
-}
-
-.promoList{
-  li{
-    list-style:none;
-  }
-}
-
-.findHospital a{
-  background-image: linear-gradient(270deg, #00cecd 0%, #00d7b5 56%, #00df9d 100%);
-  width: 219px;
-  height: 58px;
-  border-radius: 31px;
-}
-
-
 //OVERWRITE BOOTSTRAP
 .btn-lg, .btn-group-lg > .btn {
 
@@ -144,41 +69,5 @@ select, input{
   border-radius: 7px;
 }
 
-//WHY CHOOSE SECTION
-.whyChooseParent{
-  width: $fullWidth / 1.2;
-  margin: 100px auto;
-}
-.whyChoose{
-  @include flex;
 
-  p{
-    width: 589px;
-    height: 239px;
-    color: #1b1b1b;
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: -1px;
-    line-height: 34px;
-  }
-}
 
-.chooseText, .chooseVideo{
-  @include uniformAlignment;
-}
-.pageTitle{
-  font-size: 34px;
-}
-
-//HOW SECTION
-.howSectionParent{
-  width: $fullWidth / 1.2;
-  margin: 100px auto;
-}
-.howSection{
-  @include flex;
-  @include justify-content($value: space-between);
-}
-.iconTitle, .iconDescription{
-  width:200px;
-}
