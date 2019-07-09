@@ -1,6 +1,29 @@
 .blogSectionParent{
   width: $fullWidth / 1.2;
   margin:  auto;
+}
+.blogContent{
+
   @include flex;
   @include justify-content(space-between);
 }
+
+.buttonSectionParent{
+  width: $fullWidth / 1.2;
+  margin: 0 auto 100px auto;
+  @include flex;
+}
+
+.buttonSectionParent p{
+  margin-left: 100px;
+  width: 80%;
+}
+
+.buttonSectionParent p:nth-child(2) {
+  margin-left: 230px;
+  margin-right: 150px;
+}
+
+
+
+

@@ -1,4 +1,6 @@
+{{$slot}}
 <div class="blogWrap">
+
     <div class="icon">
         {{$firstblogPic}}
     </div>

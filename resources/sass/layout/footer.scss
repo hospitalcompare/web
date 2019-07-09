@@ -17,7 +17,7 @@
 }
 
 .credLinks{
-  @include alignItemsCenter;
+  @include alignItems;
   @include twoOneRatio;
 }
 

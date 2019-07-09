@@ -1,7 +1,7 @@
 <div class="blogSectionParent">
     @component('components.basic.blogs')
-        Making the right choice
-
+        <h1>Making the right choice</h1>
+        <div class="blogContent">
         @slot('firstblogPic')
             <img src="{{ asset('images/Layer_16.png') }}">
         @endslot
@@ -39,4 +39,23 @@
             sit amet sem ut magna ornare.
         @endslot
     @endcomponent
+
+</div>
+</div>
+<div class="buttonSectionParent">
+    @component('components.basic.button', ['classTitle' => 'blueOval'])
+        @slot('button')
+            Read more
+        @endslot
+    @endcomponent
+        @component('components.basic.button', ['classTitle' => 'blueOval'])
+            @slot('button')
+                Read more
+            @endslot
+        @endcomponent
+        @component('components.basic.button', ['classTitle' => 'blueOval'])
+            @slot('button')
+                Read more
+            @endslot
+        @endcomponent
 </div>

@@ -2,6 +2,14 @@
 
 /* Align Items - Center */
 
+.hospBtn {
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  border-radius: 24px;
+  color: #ffffff;
+}
+
 .blueOval {
   background-image: linear-gradient(270deg, #649ef7 0%, #4087f5 56%, #1b70f3 100%);
 }
@@ -11,6 +19,7 @@
   width: 219px;
   height: 58px;
   border-radius: 31px;
+  border-radius: 24px;
 }
 
 .headerLogoParent {
@@ -72,6 +81,7 @@
 .mainNav ul {
   display: -webkit-flex;
   display: flex;
+  margin: 0;
 }
 
 .mainNav ul li {
@@ -323,6 +333,10 @@ input {
   font-size: 34px;
 }
 
+.icon {
+  margin-bottom: 20px;
+}
+
 .howSectionParent {
   width: 83.3333333333%;
   margin: 100px auto;
@@ -337,7 +351,7 @@ input {
 
 .iconTitle,
 .iconDescription {
-  width: 200px;
+  width: 89%;
 }
 
 .chooseHealthParent {
@@ -361,13 +375,38 @@ input {
   top: 150px;
 }
 
+.chooseHealthText p {
+  margin-top: 50px;
+  text-align: center;
+}
+
 .blogSectionParent {
   width: 83.3333333333%;
   margin: auto;
+}
+
+.blogContent {
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+}
+
+.buttonSectionParent {
+  width: 83.3333333333%;
+  margin: 0 auto 100px auto;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.buttonSectionParent p {
+  margin-left: 100px;
+  width: 80%;
+}
+
+.buttonSectionParent p:nth-child(2) {
+  margin-left: 230px;
+  margin-right: 150px;
 }
 
 /*!

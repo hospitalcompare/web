@@ -29,7 +29,7 @@
 }
 .hRow{
   @include flex;
-  @include alignItemsCenter;
+  @include alignItems;
   @include headerHeight;
 }
 
@@ -57,6 +57,7 @@
 .mainNav{
   ul{
     @include flex;
+    margin: 0;
     li{
       display:block;
       a{
