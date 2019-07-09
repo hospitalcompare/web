@@ -80,7 +80,7 @@
 
 .social{
   color: $white; //inherited value
-  margin-left: 36%;
+  margin-left: 42%;
 
   li{
     list-style: none;
@@ -103,7 +103,7 @@
 .footerLogoParent{
   position:$relative;
   top: -25px;
-
+  left: 10px;
   .footerLogoImg{
     width: $fullWidth / 12;
     position:$absolute;

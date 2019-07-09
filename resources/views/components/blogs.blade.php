@@ -1,6 +1,6 @@
 <div class="blogSectionParent">
     @component('components.basic.blogs')
-        <h1>Making the right choice</h1>
+        <h1 class="pageTitle">Making the right choice</h1>
         <div class="blogContent">
         @slot('firstblogPic')
             <img src="{{ asset('images/Layer_16.png') }}">

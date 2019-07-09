@@ -37,7 +37,7 @@
 .headerLogoParent .headerLogoTitle {
   position: absolute;
   top: 10px;
-  left: 55px;
+  left: 65px;
   color: #ffffff;
   font-size: 24px;
 }
@@ -200,7 +200,7 @@ input {
 
 .social {
   color: #ffffff;
-  margin-left: 36%;
+  margin-left: 42%;
 }
 
 .social li {
@@ -225,6 +225,7 @@ input {
 .footerLogoParent {
   position: relative;
   top: -25px;
+  left: 10px;
 }
 
 .footerLogoParent .footerLogoImg {
@@ -300,6 +301,8 @@ input {
 
 .promoList li {
   list-style: none;
+  font-size: 1.4em;
+  line-height: 40px;
 }
 
 .whyChooseParent {
@@ -331,10 +334,15 @@ input {
 
 .pageTitle {
   font-size: 34px;
+  font-weight: 600;
 }
 
 .icon {
   margin-bottom: 20px;
+}
+
+.icon img {
+  padding-left: 40px;
 }
 
 .howSectionParent {
@@ -405,8 +413,11 @@ input {
 }
 
 .buttonSectionParent p:nth-child(2) {
-  margin-left: 230px;
-  margin-right: 150px;
+  margin-left: 250px;
+}
+
+.buttonSectionParent p:nth-child(3) {
+  margin-left: 250px;
 }
 
 /*!
