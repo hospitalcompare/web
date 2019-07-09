@@ -1,0 +1,22 @@
+//HEALTH CHOICE SECTION
+.chooseHealthParent{
+  width: $fullWidth / 1.2;
+  margin: 100px auto;
+}
+
+.chooseHealth{
+  height: 401px;
+  background: linear-gradient(to bottom, rgba(0, 206, 205, 0.52), rgba(139, 219, 219, 0.73)),
+  url('../images/placeholder.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  border-radius: 20px;
+}
+
+.chooseHealthText{
+  width:$fullWidth / 1.4;
+  margin: 100px auto;
+  color:$white;
+  position: relative;
+  top: 150px;
+}

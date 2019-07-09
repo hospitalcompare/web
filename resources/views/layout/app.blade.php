@@ -11,9 +11,7 @@
         @stack('font-awesome')
     </head>
     <body>
-{{--        @section('header')--}}
-{{--            <!--This is the master header section.-->--}}
-{{--        @show--}}
+
         
         <div class="mainHeaderWrap">
             @include('layout.header', ['page_header' => ''])

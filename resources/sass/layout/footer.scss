@@ -81,6 +81,7 @@
 .social{
   color: $white; //inherited value
   margin-left: 36%;
+
   li{
     list-style: none;
     a{
@@ -91,9 +92,30 @@
   }
 }
 
+.socialList{
+  margin-top: 40px;
+}
 .social li:last-child{
   margin-left: 220px;
   padding-top: 20px;
 }
 
+.titleParentFooter{
+  position:$relative;
+  top: -25px;
+
+  .logoFooter{
+    width: $fullWidth / 12;
+    position:$absolute;
+    top:15px;
+    left:0;
+  }
+  h1{
+
+    position:absolute;
+    top:13px;
+    left:55px;
+
+  }
+}
 

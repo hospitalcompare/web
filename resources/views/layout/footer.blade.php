@@ -10,8 +10,14 @@
                 <li><a href="">Contact us</a></li>
             </ul>
         </nav>
+
         <div class="social">
-            <ul>
+            <div class="titleParentFooter col">
+                <img class='logoFooter' src="{{ asset('images/hospital-compare-logo.svg') }}">
+                <h1>Hospital Compare</h1>
+
+            </div>
+            <ul class="socialList">
                 <li>Helping you to make the best healthcare choices</li>
                 <li>
                     <a href=""><i class="fab fa-facebook-f"></i></a>

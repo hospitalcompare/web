@@ -32,7 +32,7 @@
     @include('components.banner')
     @include('components.whychoose')
     @include('components.howsection')
-    @include('components.choosehealth')
+    @include('components.healthchoice')
 @endsection
 
 

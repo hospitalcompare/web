@@ -21,4 +21,6 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.copy('resources/images/banner.jpg', 'public/images/banner.jpg');
 mix.copy('resources/images/Layer_7_copy_2.svg', 'public/images/Layer_7_copy_2.svg');
+mix.copy('resources/images/placeholder.jpg', 'public/images/placeholder.jpg');
+
 

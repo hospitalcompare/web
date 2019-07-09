@@ -3,7 +3,9 @@
 
 
     @slot('choosehealthbanner')
-        test
+
+
+
     @endslot
 
 @endcomponent

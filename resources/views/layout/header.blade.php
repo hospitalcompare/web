@@ -2,9 +2,14 @@
 <header class="mainHeader">
     {{ $page_header }}
     <div class="branding hRow">
+
         <div class="titleParent col">
-            <i class="fas fa-cross"></i><h1>Hospital Compare</h1>
+            <img class='logo' src="{{ asset('images/hospital-compare-logo.svg') }}">
+            <h1>Hospital Compare</h1>
+
         </div>
+
+
         <nav class="mainNav col">
             <ul>
                 <li><a href="">our mission</a></li>

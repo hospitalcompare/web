@@ -2,7 +2,24 @@
 
 .titleParent{
   position:$relative;
+  top: -25px;
+
+  .logo{
+    width: $fullWidth / 15;
+    position:absolute;
+    top:0px;
+    left:0;
+  }
+  h1{
+
+    position:absolute;
+    top:13px;
+    left:55px;
+
+  }
 }
+
+
 .fa-cross{
   position:$absolute;
   top:4px;
@@ -33,6 +50,7 @@
     font-size: 1.3em;
     color:$white;
   }
+  position:relative;
 }
 
 .mainNav{
@@ -55,6 +73,10 @@
   left: 5px;
 
 }
+
+
+
+
 
 //OVERWRITE BOOTSTRAP
 .btn-lg, .btn-group-lg > .btn {
