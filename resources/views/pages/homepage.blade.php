@@ -33,6 +33,7 @@
     @include('components.whychoose')
     @include('components.howsection')
     @include('components.healthchoice')
+    @include('components.blogs')
 @endsection
 
 

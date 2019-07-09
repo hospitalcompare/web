@@ -8,6 +8,8 @@
                 @slot('button')
                     Choose your health
                 @endslot
+
+
             @endcomponent
 
         </div>

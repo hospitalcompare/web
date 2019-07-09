@@ -1,0 +1,6 @@
+.blogSectionParent{
+  width: $fullWidth / 1.2;
+  margin:  auto;
+  @include flex;
+  @include justify-content(space-between);
+}
