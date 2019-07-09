@@ -5,12 +5,12 @@ namespace App\Imports;
 
 
 use App\Models\Hospital;
-use App\Models\HospitalRating;
+use App\Models\HospitalOutpatient;
 
 /**
  * Populates the Hospitals with the related Rating
  */
-class LocationRatings extends DefaultImport {
+class OutpatientOps extends DefaultImport {
 
     public function handle() {
         //Check if we have data
@@ -20,18 +20,20 @@ class LocationRatings extends DefaultImport {
 
 
                 //Check if we have the Hospital by Location ID
-                $hospital = Hospital::where('location_id', $item['Location ID'])->orWhere('organisation_id', $item['Location ID'])->first();
+                $hospital = Hospital::where('location_id', $item['Matched Hospital Code'])->orWhere('organisation_id', $item['Matched Hospital Code'])->first();
 
                 //If we have the Hospital we can update the User Ratings
                 if(!empty($hospital)) {
                     //Check if we already have a rating for that Hospital and update it
-                    $rating = HospitalRating::updateOrCreate([
+                    $outpatient = HospitalOutpatient::updateOrCreate([
                         'hospital_id'       => $hospital->id
                     ], [
-                        'provider_rating'   => $item['Provider Rating'],
-                        'latest_rating'     => $item['Latest Rating'],
+                        'total_responses'   => $item['Total Responses'],
+                        'total_eligible'    => $item['Total Eligible'],
+                        'perc_recommended'  => rtrim($item['Percentage Recommended - OP'], '%') ?? 0,
                     ]);
-                    $this->returnedData[] = $rating;
+
+                    $this->returnedData[] = $outpatient;
                 } else {
                     //Add the item as excluded and skip the record
                     $this->excludedData[] = $item;

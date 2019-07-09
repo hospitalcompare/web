@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Trust extends Model
 {
     public $table = 'trusts';
+    public $timestamps = true;
 
     /**
      * The attributes that are mass assignable.
@@ -40,6 +41,10 @@ class Trust extends Model
      */
     public function address() {
         return $this->belongsTo( '\App\Models\Address', 'address_id');
+    }
+
+    public function hospitals() {
+        return $this->hasMany('\App\Models\Hospital', 'trust_id');
     }
 
     /**

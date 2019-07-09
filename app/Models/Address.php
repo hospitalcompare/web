@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Address extends Model
 {
     public $table = 'addresses';
+    public $timestamps = true;
 
     /**
      * The attributes that are mass assignable.

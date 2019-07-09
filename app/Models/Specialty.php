@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Specialty extends Model
 {
     public $table = 'specialties';
+    public $timestamps = true;
 
     /**
      * The attributes that are mass assignable.

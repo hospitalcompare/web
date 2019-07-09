@@ -4,20 +4,13 @@
 namespace App\Imports;
 
 
-use App\Helpers\Utils;
-use App\Imports\DefaultImport;
-use App\Models\Address;
 use App\Models\Hospital;
 use App\Models\HospitalRating;
-use App\Models\HospitalType;
-use App\Models\Trust;
 
 /**
- * Populates the Hospitals OR Trusts with the related Rating
+ * Populates the Hospitals with the related Rating
  */
 class Choices extends DefaultImport {
-
-    public $requestedTypes = ['Independent', 'NHS', 'NHS*'];
 
     public function handle() {
         //Check if we have data
@@ -34,14 +27,14 @@ class Choices extends DefaultImport {
                     //Get total number of ratings
                     $totalRatings = (int)explode('-', $item['NHS#UK users rating'])[1];
                     //Check if we already have a rating for that Hospital and update it
-                    $rating = HospitalRating::updateOrInsert([
+                    $rating = HospitalRating::updateOrCreate([
                         'hospital_id'       => $hospital->id
                     ], [
                         'avg_user_rating'   => $item['Banding Classification  (NHS#UK users rating)'],
                         'total_ratings'     => $totalRatings,
                     ]);
 
-                    $this->returnedData[] = $rating->first();
+                    $this->returnedData[] = $rating;
                 } else {
                     //Add the item as excluded and skip the record
                     $this->excludedData[] = $item;

@@ -4,8 +4,6 @@
 namespace App\Imports;
 
 
-use App\Helpers\Utils;
-use App\Imports\DefaultImport;
 use App\Models\Address;
 use App\Models\Hospital;
 use App\Models\HospitalType;
@@ -46,7 +44,10 @@ class MasterList extends DefaultImport {
                         }
                     }
 
-                    $hospitalAddress = Address::firstOrCreate([
+                    $hospitalAddress = Address::updateOrCreate([
+                        'latitude'          => $item['Location Latitude'],
+                        'longitude'         => $item['Location Longitude'],
+                    ], [
                         'address_1'         => $item['Location Address 1'],
                         'address_2'         => $item['Location Address 2'],
                         'city'              => $item['Location Address 3'],
@@ -54,11 +55,12 @@ class MasterList extends DefaultImport {
                         'postcode'          => $item['Location Postcode'],
                         'local_authority'   => $item['Location Local Authority'],
                         'region'            => $item['Location Region'],
-                        'latitude'          => $item['Location Latitude'],
-                        'longitude'         => $item['Location Longitude'],
                     ]);
 
-                    $trustAddress = Address::firstOrCreate([
+                    $trustAddress = Address::updateOrCreate([
+                        'latitude'          => $item['Provider Latitude'],
+                        'longitude'         => $item['Provider Longitude'],
+                    ], [
                         'address_1'         => $item['Provider Address 1'],
                         'address_2'         => $item['Provider Address 2'],
                         'city'              => $item['Provider Address 3'],
@@ -66,15 +68,14 @@ class MasterList extends DefaultImport {
                         'postcode'          => $item['Provider Postcode'],
                         'local_authority'   => $item['Provider Local Authority'],
                         'region'            => $item['Provider Region'],
-                        'latitude'          => $item['Provider Latitude'],
-                        'longitude'         => $item['Provider Longitude'],
                     ]);
 
                     //Create the Trust entity
-                    $trust = Trust::firstOrCreate([
-                        'address_id'    => $trustAddress->id,
+                    $trust = Trust::updateOrCreate([
                         'trust_id'      => $item['Trust Code'],
                         'provider_id'   => $item['Provider ID'],
+                    ], [
+                        'address_id'    => $trustAddress->id,
                         'name'          => $item['Provider Name'],
                         'tel_number'    => $item['Provider Telephone Number'],
                         'url'           => $item['Provider Web Address']
@@ -87,12 +88,13 @@ class MasterList extends DefaultImport {
                         continue;
                     }
 
-                    $hospital = Hospital::firstOrCreate([
+                    $hospital = Hospital::updateOrCreate([
+                        'location_id'       => $item['Location ID'],
+                        'organisation_id'   => $item['Organisation Code'],
+                    ], [
                         'hospital_type_id'  => $hospitalType->id,
                         'address_id'        => $hospitalAddress->id,
                         'trust_id'          => $trust->id,
-                        'location_id'       => $item['Location ID'],
-                        'organisation_id'   => $item['Organisation Code'],
                         'ods_code'          => $item['Location ODS Code'],
                         'name'              => $item['Location Name'],
                         'tel_number'        => $item['Location Telephone Number'],
