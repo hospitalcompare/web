@@ -1,21 +1,22 @@
 //HEADER SECTION
 
-.titleParent{
+.headerLogoParent{
   position:$relative;
   top: -25px;
 
-  .logo{
+  .headerLogoImg{
     width: $fullWidth / 15;
     position:absolute;
     top:0px;
     left:0;
   }
-  h1{
+  .headerLogoTitle{
 
     position:absolute;
-    top:13px;
+    top:10px;
     left:55px;
-
+    color:$white;
+    font-size: 24px;
   }
 }
 

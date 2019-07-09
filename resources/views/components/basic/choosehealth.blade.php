@@ -4,9 +4,10 @@
         {{$choosehealthbanner}}
         <div class="chooseHealthText">
             “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullamcorper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus.”
-            @component('components.basic.button')
+            @component('components.basic.button', ['classTitle' => 'blueOval'])
                 @slot('button')
                     Choose your health
+
                 @endslot
 
 

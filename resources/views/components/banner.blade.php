@@ -32,7 +32,7 @@
                     @endslot
                 @endcomponent
 
-                @component('components.basic.button')
+                @component('components.basic.button', ['classTitle' => 'greenOval'])
                     @slot('button')
                         Find hospitals
                     @endslot

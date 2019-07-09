@@ -100,17 +100,17 @@
   padding-top: 20px;
 }
 
-.titleParentFooter{
+.footerLogoParent{
   position:$relative;
   top: -25px;
 
-  .logoFooter{
+  .footerLogoImg{
     width: $fullWidth / 12;
     position:$absolute;
     top:15px;
     left:0;
   }
-  h1{
+  .footerLogoTitle{
 
     position:absolute;
     top:13px;

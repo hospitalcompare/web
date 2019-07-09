@@ -3,12 +3,9 @@
     {{ $page_header }}
     <div class="branding hRow">
 
-        <div class="titleParent col">
-            <img class='logo' src="{{ asset('images/hospital-compare-logo.svg') }}">
-            <h1>Hospital Compare</h1>
 
-        </div>
-
+        @component('components.basic.logo', ['titleParent' => 'headerLogoParent', 'logoImg' => 'headerLogoImg', 'logoTitle' => 'headerLogoTitle'])
+        @endcomponent
 
         <nav class="mainNav col">
             <ul>

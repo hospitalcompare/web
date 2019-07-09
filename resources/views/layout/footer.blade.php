@@ -12,11 +12,11 @@
         </nav>
 
         <div class="social">
-            <div class="titleParentFooter col">
-                <img class='logoFooter' src="{{ asset('images/hospital-compare-logo.svg') }}">
-                <h1>Hospital Compare</h1>
 
-            </div>
+
+            @component('components.basic.logo', ['titleParent' => 'footerLogoParent', 'logoImg' => 'footerLogoImg', 'logoTitle' => 'footerLogoTitle'])
+            @endcomponent
+
             <ul class="socialList">
                 <li>Helping you to make the best healthcare choices</li>
                 <li>
