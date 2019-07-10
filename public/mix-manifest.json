@@ -1,7 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
     "/images/banner.jpg": "/images/banner.jpg",
     "/images/Layer_7_copy_2.svg": "/images/Layer_7_copy_2.svg",
-    "/images/placeholder.jpg": "/images/placeholder.jpg"
+    "/images/placeholder.jpg": "/images/placeholder.jpg",
+    "/css/app.css": "/css/app.css"
 }

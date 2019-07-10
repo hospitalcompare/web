@@ -1,11 +1,18 @@
 .blogSectionParent{
   width: $fullWidth / 1.2;
-  margin:  auto;
+  margin:  0 auto 50px auto;
 }
 .blogContent{
 
   @include flex;
   @include justify-content(space-between);
+}
+
+.blogWrap{
+  @include flex;
+  @include flex-flow(column);
+  @include justify-content(center);
+  @include alignItems;
 }
 
 .buttonSectionParent{

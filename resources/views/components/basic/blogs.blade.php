@@ -10,6 +10,11 @@
     <p class="iconTitle">
         {{$firstblogDescription}}
     </p>
+    @component('components.basic.button', ['classTitle' => 'blueOval'])
+        @slot('button')
+            Read more
+        @endslot
+    @endcomponent
 </div>
 <div class="blogWrap">
     <div class="icon">
@@ -21,6 +26,11 @@
     <p class="iconTitle">
         {{$secondblogDescription}}
     </p>
+    @component('components.basic.button', ['classTitle' => 'blueOval'])
+        @slot('button')
+            Read more
+        @endslot
+    @endcomponent
 </div>
 <div class="blogWrap">
     <div class="icon">
@@ -32,4 +42,9 @@
     <p class="iconTitle">
         {{$thirdblogDescription}}
     </p>
+    @component('components.basic.button', ['classTitle' => 'blueOval'])
+        @slot('button')
+            Read more
+        @endslot
+    @endcomponent
 </div>

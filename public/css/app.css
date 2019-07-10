@@ -341,10 +341,6 @@ input {
   margin-bottom: 20px;
 }
 
-.icon img {
-  padding-left: 40px;
-}
-
 .howSectionParent {
   width: 83.3333333333%;
   margin: 100px auto;
@@ -390,7 +386,7 @@ input {
 
 .blogSectionParent {
   width: 83.3333333333%;
-  margin: auto;
+  margin: 0 auto 50px auto;
 }
 
 .blogContent {
@@ -398,6 +394,17 @@ input {
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+}
+
+.blogWrap {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 .buttonSectionParent {
