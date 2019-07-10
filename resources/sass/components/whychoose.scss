@@ -1,7 +1,13 @@
 //WHY CHOOSE SECTION
 .whyChooseParent{
+  width: 100%;
+  height: auto;
+  background: $sectionBeige;
+}
+.whyChooseContent{
   width: $fullWidth / 1.2;
-  margin: 100px auto;
+  margin:  auto;
+  padding-top: 80px;
 }
 .whyChoose{
   @include flex;
@@ -27,4 +33,14 @@
 .icon{
   margin-bottom:20px;
 
+}
+
+.playerButton{
+  background-image:url(../images//player_button.png);
+  position: relative;
+  top: -240px;
+  z-index: 999999999;
+  height: 100px;
+  background-repeat: no-repeat;
+  left: 200px
 }

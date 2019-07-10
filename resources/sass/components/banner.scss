@@ -2,6 +2,7 @@
 .bannerParent{
   width: 100%;
   height: auto;
+
 }
 
 .banner{
@@ -39,6 +40,7 @@
 }
 
 .homePostCodeBox{
+
   p{
     color: $black;
     font-size: 1.3em;
@@ -67,3 +69,58 @@
   }
 }
 
+.browseButton{
+  text-align:center;
+  font-size: 1.2em;
+  a{
+    color: $darkerGrey;
+  }
+
+}
+
+.secondChevron{
+  color: $aqua;
+  position:relative;
+  top:0px;
+  left: -30px;
+}
+
+select, input{
+  width: 445px;
+  height: 61px;
+
+}
+
+input, button, select, optgroup, textarea {
+
+  margin: 0;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-left: 7% !important;
+  margin-bottom: 20px !important;
+
+}
+select{
+  border: 2px solid #ebebeb;  /*Removes border*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-overflow:'';
+  text-indent: 0.01px; /* Removes default arrow from firefox*/
+  text-overflow: "";  /*Removes default arrow from firefox*/
+}
+select::-ms-expand {
+  display: none;
+}
+.select-wrapper
+{
+  padding-left:0px;
+  overflow:hidden;
+}
+
+input{
+  border: 2px solid #ebebeb;
+}

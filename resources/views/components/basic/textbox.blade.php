@@ -1,8 +1,8 @@
 
 
-    <p>{{$slot}}
+    {{$slot}}
 
         <input type="text" placeholder="{{$textbox}}">
-    </p>
+
 
 
