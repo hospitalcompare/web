@@ -22,9 +22,9 @@ class OutpatientOps extends DefaultImport {
                 //Check if we have the Hospital by Location ID
                 $hospital = Hospital::where('location_id', $item['Matched Hospital Code'])->orWhere('organisation_id', $item['Matched Hospital Code'])->first();
 
-                //If we have the Hospital we can update the User Ratings
+                //If we have the Hospital we can update the OutpatientOps
                 if(!empty($hospital)) {
-                    //Check if we already have a rating for that Hospital and update it
+                    //Check if we already have an OutpatientOp for that Hospital and update it
                     $outpatient = HospitalOutpatient::updateOrCreate([
                         'hospital_id'       => $hospital->id
                     ], [
