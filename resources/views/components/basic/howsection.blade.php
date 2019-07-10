@@ -1,7 +1,8 @@
 
     <h1 class="pageTitle">{{$slot}}</h1>
-    <ol class="howSection">
-        <li class="chooseContent">
+    <div class="howSection">
+        <div class="chooseContent">
+            <div class="numeral">1</div>
             <div class="icon">
                 {{$firstIcon}}
             </div>
@@ -11,8 +12,9 @@
             <p class="iconDescription">
                 {{$firstIconBio}}
             </p>
-        </li>
-        <li class="chooseContent">
+        </div>
+        <div class="chooseContent">
+            <div class="numeral">2</div>
             <div class="icon">
                 {{$secondIcon}}
             </div>
@@ -22,8 +24,9 @@
             <p class="iconDescription">
                 {{$secondIconBio}}
             </p>
-        </li>
-        <li class="chooseContent">
+        </div>
+        <div class="chooseContent">
+            <div class="numeral">3</div>
             <div class="icon">
                 {{$thirdIcon}}
             </div>
@@ -33,8 +36,9 @@
             <p class="iconDescription">
                 {{$thirdIconBio}}
             </p>
-        </li>
-        <li class="chooseContent">
+        </div>
+        <div class="chooseContent">
+            <div class="numeral">4</div>
             <div class="icon">
                 {{$fourthIcon}}
             </div>
@@ -44,7 +48,7 @@
             <p class="iconDescription">
                 {{$fourthIconBio}}
             </p>
-        </li>
+        </div>
 
-    </ol>
+    </div>
 

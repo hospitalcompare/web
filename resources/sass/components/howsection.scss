@@ -10,3 +10,20 @@
 .iconTitle, .iconDescription{
   width:89%;
 }
+
+.chooseContent{
+  text-align:center;
+  padding: 0 5.5%;
+  position:$relative;
+ .icon{
+   @include flex;
+   @include justify-content($value: center);
+ }
+  .numeral{
+    position:$absolute;
+    top:0;
+    left:22%;
+    font-size: 1.2em;
+    font-weight:600;
+  }
+}

@@ -358,6 +358,27 @@ input {
   width: 89%;
 }
 
+.chooseContent {
+  text-align: center;
+  padding: 0 5.5%;
+  position: relative;
+}
+
+.chooseContent .icon {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.chooseContent .numeral {
+  position: absolute;
+  top: 0;
+  left: 22%;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
 .chooseHealthParent {
   width: 83.3333333333%;
   margin: 100px auto;
