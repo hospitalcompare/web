@@ -10,14 +10,27 @@
                     @component('components.basic.selectbox')
                         Choose your procedure:
 
-
-
-
                         @slot('selectboxOption1')
                             surgery
                         @endslot
                         @slot('selectboxOption2')
                             Orthopedics
+                        @endslot
+
+                        @slot('selectClassName')
+                            firstSelect
+                        @endslot
+
+                        @slot('chevronFAClassName')
+                            firstChevron
+                        @endslot
+
+                        @slot('selectId')
+
+                        @endslot
+
+                        @slot('labelInner')
+
                         @endslot
                     @endcomponent
                     @component('components.basic.textbox')
@@ -34,8 +47,20 @@
                             Less than 20 miles
                         @endslot
 
-                        @slot('selectboxOption2Label')
-                            How far would you like to travel?
+                        @slot('selectClassName')
+                            secondSelect
+                        @endslot
+
+                        @slot('chevronFAClassName')
+                            secondChevron
+                        @endslot
+
+                        @slot('selectId')
+                            lessWideSelect
+                        @endslot
+
+                        @slot('labelInner')
+                            How far would you like to travel?:
                         @endslot
                     @endcomponent
 

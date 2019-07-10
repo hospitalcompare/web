@@ -1,14 +1,17 @@
-<div class="selectParent">
+<div class="{{$selectClassName}}">
 
 
-    <select>
-            <option class="firstOption" >{{$slot}}</option>
-            <option name="secondOption" id="secondOption"  value="">{{$selectboxOption1}}</option>
-            <option name="thirdOption" id="thirdOption" value="">{{$selectboxOption2}}</option>
+    <label class="selectBox" for="{{$selectId}}">{{$labelInner}}</label>
+        <select  id="{{$selectId}}">
+                <option class="firstOption">{{$slot}}</option>
+                <option name="secondOption" id="secondOption"  value="">{{$selectboxOption1}}</option>
+                <option name="thirdOption" id="thirdOption" value="">{{$selectboxOption2}}</option>
 
-    </select>
+        </select>
 
-        <i class="fas fa-chevron-down secondChevron"></i>
+
+
+    <i class="fas fa-chevron-down {{$chevronFAClassName}}"></i>
 
 
 </div>

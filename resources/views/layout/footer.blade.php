@@ -1,6 +1,6 @@
 <div class="backTopHolder">
     <div class="backTopContent">
-        @component('components.basic.button', ['classTitle' => 'blueOvalTop'])
+        @component('components.basic.button', ['classTitle' => 'greenOvalTop'])
             #top
             @slot('button')
                 Back to top

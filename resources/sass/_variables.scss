@@ -127,6 +127,11 @@ $absolute: absolute;
   background-image: linear-gradient(270deg, #649ef7 0%, #4087f5 56%, #1b70f3 100%);
 }
 
+.greenOvalTop{
+  background-image: linear-gradient(270deg, #00cecd 0%, #00d7b5 56%, #00df9d 100%);
+  border-radius: 12px 12px 0 0;
+}
+
 .blueOval:hover{
   color: $white;
   text-decoration:none;
@@ -147,7 +152,7 @@ $absolute: absolute;
   padding: 15px 40px;
 }
 
-.greenOval:hover {
+.greenOval:hover, .greenOvalTop:hover {
   background: #00e09d;
   background: -webkit-linear-gradient(legacy-direction(90deg), #00e09d,#00cecd,#00e09d);
   background: linear-gradient(90deg, #00e09d,#00cecd,#00e09d);
@@ -155,7 +160,17 @@ $absolute: absolute;
   text-decoration:none;
 }
 
-.blueOvalTop{
-  background-image: linear-gradient(270deg, #649ef7 0%, #4087f5 56%, #1b70f3 100%);
-  border-radius: 12px 12px 0 0;
+//FORM ELEMENT
+.secondSelect{
+  @include flex;
+}
+
+.selectBox{
+  color: $darkerGrey;
+  @include flexBasis;
+  position: relative;
+  left: 40px;
+}
+#lessWideSelect{
+  @include flexBasis;
 }
