@@ -6,6 +6,8 @@
 .howSection{
   @include flex;
   @include justify-content($value: space-between);
+  position: relative;
+  left: -70px;
 }
 .iconTitle, .iconDescription{
   width:89%;
