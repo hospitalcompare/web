@@ -12,6 +12,7 @@
 
 .blueOval {
   background-image: linear-gradient(270deg, #649ef7 0%, #4087f5 56%, #1b70f3 100%);
+  padding: 15px 40px;
 }
 
 .greenOvalTop {
@@ -372,7 +373,7 @@ input {
 .firstChevron {
   color: #00cecd;
   position: relative;
-  top: 0px;
+  top: 4px;
   left: -30px;
 }
 
