@@ -154,3 +154,8 @@ $absolute: absolute;
   color: $white;
   text-decoration:none;
 }
+
+.blueOvalTop{
+  background-image: linear-gradient(270deg, #649ef7 0%, #4087f5 56%, #1b70f3 100%);
+  border-radius: 12px 12px 0 0;
+}

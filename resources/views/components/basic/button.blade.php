@@ -1,5 +1,5 @@
 
 
-    {{$slot}}
-    <p><a class="hospBtn  {{$classTitle}}" href="#" role="button">{{$button}}</a></p>
+
+    <p><a class="hospBtn  {{$classTitle}}" href="{{$slot}}" role="button">{{$button}}</a></p>
 

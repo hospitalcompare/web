@@ -8,8 +8,10 @@
                         elective surgery</p>
 
                     @component('components.basic.selectbox')
-
                         Choose your procedure:
+
+
+
 
                         @slot('selectboxOption1')
                             surgery
@@ -30,6 +32,10 @@
                         @endslot
                         @slot('selectboxOption2')
                             Less than 20 miles
+                        @endslot
+
+                        @slot('selectboxOption2Label')
+                            How far would you like to travel?
                         @endslot
                     @endcomponent
 

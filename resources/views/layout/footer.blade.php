@@ -1,3 +1,15 @@
+<div class="backTopHolder">
+    <div class="backTopContent">
+        @component('components.basic.button', ['classTitle' => 'blueOvalTop'])
+            #top
+            @slot('button')
+                Back to top
+            @endslot
+
+
+        @endcomponent
+    </div>
+</div>
 <div class="sitemapHolder">
     <section class="sitemap">
         <nav class="sitemapNav">

@@ -1,5 +1,5 @@
 <!-- _partials/header.blade.php -->
-<header class="mainHeader">
+<header class="mainHeader" id="top">
     {{ $page_header }}
     <div class="branding hRow">
 

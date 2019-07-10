@@ -39,6 +39,11 @@
   text-decoration: none;
 }
 
+.blueOvalTop {
+  background-image: linear-gradient(270deg, #649ef7 0%, #4087f5 56%, #1b70f3 100%);
+  border-radius: 12px 12px 0 0;
+}
+
 .headerLogoParent {
   position: relative;
   top: -25px;
@@ -84,6 +89,7 @@
   background: #00cecd;
   width: 100%;
   margin: auto;
+  width: 100%;
 }
 
 .titleParent {
@@ -258,6 +264,17 @@ input {
   left: 55px;
 }
 
+.backTopHolder {
+  height: 30px;
+  width: 83.3333333333%;
+  margin: auto;
+}
+
+.backTopContent {
+  width: 150px;
+  float: right;
+}
+
 .bannerParent {
   width: 100%;
   height: auto;
@@ -341,7 +358,7 @@ input {
 select,
 input {
   width: 445px;
-  height: 61px;
+  height: 51px;
 }
 
 input,
