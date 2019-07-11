@@ -1,5 +1,8 @@
 //SELECTBOX
-.secondSelect{
+.selectParent{
+  position:$relative;
+}
+.flexSelect{
   @include flex;
 }
 
@@ -9,8 +12,13 @@
   position: relative;
   left: 40px;
 }
-#lessWideSelect{
-  @include flexBasis;
+
+.lessWideSelect{
+  @include flex;
+}
+
+.adjustPosition1{
+  top:15px;
 }
 
 select{

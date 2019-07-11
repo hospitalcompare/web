@@ -1,11 +1,14 @@
-<div class="blogSectionParent">
+@if(!empty($blogs))
+        @foreach($blogs as $blog)
+                <div class="blogWrap">
+                        <div class="icon"><img src="{{ asset($blog['iconImg']) }}"></div>
+                        <p class="title">{{$blog['title']}}</p>
+                        <p class="description">{{$blog['description']}}</p>
+                        <p><a class="hospBtn  {{$classTitle}}" href="" role="button">{{$buttonTitle}}</a></p>
+                </div>
+        @endforeach
 
-
-        <h1 class="pageTitle">Making the right choice</h1>
-        <div class="blogContent">
-                @include('components.basic.blogs', ['blogs' => [['iconImg'=> 'images/Layer_16.png' , 'title'=>'blog', 'description' => 'blah blah blah' ], ['iconImg'=> 'images/Layer_17.png' , 'title'=>'blog', 'description' => 'blah blah blah'], ['iconImg'=> 'images/Layer_18.png' , 'title'=>'blog', 'description' => 'blah blah blah']], 'classTitle'=> 'blueOval', 'buttonTitle' => 'Read more' ])
-        </div>
-</div>
+@endif
 
 
 

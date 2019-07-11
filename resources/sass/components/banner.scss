@@ -31,16 +31,12 @@
   @include uniformAlignment;
 }
 
-.homePostCodeBox{
+.box{
   width: 511px;
   height: 431px;
   border-radius: 20px;
   background-color: #ffffff;
   opacity: 0.75;
-}
-
-.homePostCodeBox{
-
   p{
     color: $black;
     font-size: 1.3em;
@@ -50,6 +46,8 @@
     padding-top: 10px;
   }
 }
+
+
 
 .homePromo{
   @include uniformAlignment;
@@ -77,20 +75,14 @@
   }
 
 }
-
-.bannerChevron1{
+.aquaChevron{
   color: $aqua;
-  position:relative;
-  top:2px;
+  position:$relative;
   left: -30px;
+  top: 3px;
 }
 
-.bannerChevron2{
-  color: $aqua;
-  position:relative;
-  top:15px;
-  left: -30px;
-}
+
 
 
 

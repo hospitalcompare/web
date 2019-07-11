@@ -1,4 +1,4 @@
-<div class="{{ empty($selectClassName) ? '' : $selectClassName }}">
+<div class="selectParent  {{ empty($selectClassName) ? '' : $selectClassName }}">
     <label class="selectBox" for="{{empty($selectId)? '' : $selectId}}">{{empty($placeholder)? '': $placeholder}}</label>
         <select id="{{empty($selectId)? '' : $selectId}}">
             @if(!empty($options))

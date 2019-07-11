@@ -2,7 +2,7 @@
 
 
 
-        <input type="text" placeholder="{{$options}}">
+        <input type="text" placeholder="{{$placeholder}}">
 
 
 

@@ -1,7 +1,19 @@
-<div class="howSectionParent">
-    @include('components.basic.howsection', ['howsections' => [['iconImg'=> 'images/003-doctor.png', 'numeral'=> '1', 'title'=>'Get your referral from the GP
-        or have a surgery in mind', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis' ], ['iconImg'=> 'images/001-search-1.png', 'numeral'=> '2', 'title'=>'Search by postcode
-        or speciality', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis'], ['iconImg'=> 'images/Layer_536.png', 'numeral'=> '3', 'title'=>'Find the best hospital
-        for you', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis'], ['iconImg'=> 'images/Layer_537.png', 'numeral'=> '4', 'title'=>'Book your
-        operation', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis' ] ], 'sectionTitle' => 'How does it work' ])
+<h1 class="pageTitle">{{$sectionTitle}}</h1>
+<div class="howSection">
+    @if(!empty($howsections))
+        @foreach($howsections as $howsection)
+            <div class="chooseContent">
+                <div class="numeral">{{$howsection['numeral']}}</div>
+                <div class="icon">
+                    <img src="{{ asset($howsection['iconImg']) }}">
+                </div>
+                <div class="iconTitle">
+                    {{$howsection['title']}}
+                </div>
+                <div class="iconDescription">
+                    {{$howsection['description']}}
+                </div>
+            </div>
+        @endforeach
+    @endif
 </div>
