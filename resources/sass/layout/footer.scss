@@ -10,7 +10,6 @@
 }
 
 
-
 .footerCreds, .credLinks{
   @include flex;
   height:inherit;
@@ -94,40 +93,29 @@
 
 .socialList{
   margin-top: 40px;
-}
-.social li:last-child{
-  margin-left: 220px;
-  padding-top: 20px;
-}
-
-.footerLogoParent{
-  position:$relative;
-  top: -25px;
-  left: 10px;
-  .footerLogoImg{
-    width: $fullWidth / 12;
-    position:$absolute;
-    top:15px;
-    left:0;
-  }
-  .footerLogoTitle{
-
-    position:absolute;
-    top:13px;
-    left:55px;
-
+  .social li:last-child{
+    margin-left: 220px;
+    padding-top: 20px;
   }
 }
+
+
+
 
 //Back to top styles
 .backTopHolder{
   height: 30px;
   width:$fullWidth / 1.2;
   margin: auto;
+  .backTopContent{
+    width:150px;
+    float:right;
+  }
+
+  .backToTop{
+    padding: 8px 10px;
+  }
 }
 
-.backTopContent{
-  width:150px;
-  float:right;
-}
+
 

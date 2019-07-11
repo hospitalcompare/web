@@ -3,7 +3,7 @@
     {{ $page_header }}
     <div class="branding hRow">
 
-        @include('components.basic.logo', ['titleParent' => 'headerLogoParent', 'logoImg' => 'headerLogoImg', 'logoTitle' => 'headerLogoTitle'])
+        @include('components.logo', ['titleParent' => 'headerLogoParent', 'logoImg' => 'headerLogoImg', 'logoTitle' => 'headerLogoTitle'])
 
 
         <nav class="mainNav col">

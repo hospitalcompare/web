@@ -1,11 +1,13 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Global CSS
-@import 'global';
+
 
 // Variables
 @import 'variables';
+
+// Global CSS
+@import 'global';
 
 //TEMPLATE FILES
 @import 'pages/homepage';
@@ -18,9 +20,10 @@
 @import 'components/whychoose';
 @import 'components/howsection';
 @import 'components/healthchoice';
+@import 'components/logo';
 
 //BASIC COMPONENTS
-@import 'components/basic/blogs';
+@import 'components/blogs';
 @import 'components/basic/button';
 @import 'components/basic/selectbox';
 @import 'components/basic/textbox';

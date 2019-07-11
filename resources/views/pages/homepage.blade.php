@@ -35,20 +35,24 @@
             <div class="bannerData">
                 <div class="homePostCodeParent">
                     <div class="box">
+
                         <p>Find the best hospital for your
                             elective surgery</p>
-                        @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'chevronFAClassName' => 'fa-chevron-down aquaChevron'])
+                        <form>
+                            @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'chevronFAClassName' => 'fa-chevron-down aquaChevron'])
 
 
 
-                        @include('components.basic.textbox', ['placeholder' => 'Enter your postcode'])
+                            @include('components.basic.textbox', ['placeholder' => 'Enter your postcode'])
 
-                        @include('components.basic.selectbox', ['options' => [['id'=>' lessWideSelect', 'name'=>'Up to 50 miles'], ['id'=>2, 'name'=>'Up to 20 miles'], ['id'=>1, 'name'=>'Less than 20 miles']], 'selectClassName'=> 'lessWideSelect', 'placeholder' => 'How far would you like to travel?:', 'chevronFAClassName' => 'fa-chevron-down aquaChevron adjustPosition1'])
-                        <p>
-                            @include('components.basic.button', ['classTitle' => 'greenOval', 'button' => 'Find hospitals'])
-                        </p>
+                            @include('components.basic.selectbox', ['options' => [['id'=>' lessWideSelect', 'name'=>'Up to 50 miles'], ['id'=>2, 'name'=>'Up to 20 miles'], ['id'=>1, 'name'=>'Less than 20 miles']], 'selectClassName'=> 'lessWideSelect', 'placeholder' => 'How far would you like to travel?:', 'chevronFAClassName' => 'fa-chevron-down aquaChevron adjustPosition1'])
 
-                        <p class='browseButton'><a  href="">Browse all hospitals</a></p>
+                            @include('components.basic.button', ['classTitle' => 'greenOval blockDisplay', 'button' => 'Find hospitals'])
+
+{{--                            @include('components.basic.submitButton', ['button' => 'Find hospitals'])--}}
+
+                            <p class='browseButton'><a  href="">Browse all hospitals</a></p>
+                        </form>
                     </div>
                 </div>
                 <div class="homePromo">

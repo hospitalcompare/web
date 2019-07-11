@@ -2,24 +2,8 @@
 
 /* Align Items - Center */
 
-.headerLogoParent {
-  position: relative;
-  top: -25px;
-}
-
-.headerLogoParent .headerLogoImg {
-  width: 6.6666666667%;
-  position: absolute;
-  top: 0px;
-  left: 0;
-}
-
-.headerLogoParent .headerLogoTitle {
-  position: absolute;
-  top: 10px;
-  left: 65px;
-  color: #ffffff;
-  font-size: 24px;
+.blockDisplay {
+  display: block;
 }
 
 .fa-cross {
@@ -198,28 +182,9 @@ input {
   margin-top: 40px;
 }
 
-.social li:last-child {
+.socialList .social li:last-child {
   margin-left: 220px;
   padding-top: 20px;
-}
-
-.footerLogoParent {
-  position: relative;
-  top: -25px;
-  left: 10px;
-}
-
-.footerLogoParent .footerLogoImg {
-  width: 8.3333333333%;
-  position: absolute;
-  top: 15px;
-  left: 0;
-}
-
-.footerLogoParent .footerLogoTitle {
-  position: absolute;
-  top: 13px;
-  left: 55px;
 }
 
 .backTopHolder {
@@ -228,9 +193,13 @@ input {
   margin: auto;
 }
 
-.backTopContent {
+.backTopHolder .backTopContent {
   width: 150px;
   float: right;
+}
+
+.backTopHolder .backToTop {
+  padding: 8px 10px;
 }
 
 .bannerParent {
@@ -436,6 +405,45 @@ input {
   text-align: center;
 }
 
+.headerLogoParent {
+  position: relative;
+  top: -25px;
+}
+
+.headerLogoParent .headerLogoImg {
+  width: 6.6666666667%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+
+.headerLogoParent .headerLogoTitle {
+  position: absolute;
+  top: 10px;
+  left: 65px;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.footerLogoParent {
+  position: relative;
+  top: -25px;
+  left: 10px;
+}
+
+.footerLogoParent .footerLogoImg {
+  width: 8.3333333333%;
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.footerLogoParent .footerLogoTitle {
+  position: absolute;
+  top: 13px;
+  left: 55px;
+}
+
 .blogSectionParent {
   width: 83.3333333333%;
   margin: 0 auto 50px auto;
@@ -480,12 +488,15 @@ input {
 }
 
 .hospBtn {
-  padding: 0.5rem 1rem;
   font-size: 1.125rem;
   line-height: 1.5;
   border-radius: 24px;
   color: #ffffff;
   background-image: linear-gradient(270deg, #00cecd 0%, #00d7b5 56%, #00df9d 100%);
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  padding-top: 10px;
 }
 
 .blueOval {

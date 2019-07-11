@@ -1,6 +1,6 @@
 <div class="backTopHolder">
     <div class="backTopContent">
-        @include('components.basic.button', ['classTitle' => 'greenOvalTop', 'button' => 'Back to top', 'hrefValue' => '#top'])
+        @include('components.basic.button', ['classTitle' => 'greenOvalTop backToTop', 'button' => 'Back to top', 'hrefValue' => '#top'])
 
     </div>
 </div>
@@ -19,7 +19,7 @@
 
         <div class="social">
 
-            @include('components.basic.logo', ['titleParent' => 'footerLogoParent', 'logoImg' => 'footerLogoImg', 'logoTitle' => 'footerLogoTitle'])
+            @include('components.logo', ['titleParent' => 'footerLogoParent', 'logoImg' => 'footerLogoImg', 'logoTitle' => 'footerLogoTitle'])
 
 
             <ul class="socialList">
