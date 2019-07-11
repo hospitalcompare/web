@@ -6,13 +6,13 @@
                 <div class="homePostCodeBox">
                     <p>Find the best hospital for your
                         elective surgery</p>
-                    @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClassName'=> 'firstSelect', 'placeholder' => '', 'chevronFAClassName' => 'fa-chevron-down firstChevron'])
+                    @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClassName'=> 'firstSelect', 'placeholder' => '', 'chevronFAClassName' => 'fa-chevron-down bannerChevron1'])
 
 
 
                     @include('components.basic.textbox', ['options' => 'Enter your postcode'])
 
-                    @include('components.basic.selectbox', ['options' => [['id'=>' lessWideSelect', 'name'=>'Up to 50 miles'], ['id'=>2, 'name'=>'Up to 20 miles'], ['id'=>1, 'name'=>'Less than 20 miles']], 'selectClassName'=> 'secondSelect', 'placeholder' => 'How far would you like to travel?:', 'chevronFAClassName' => 'fa-chevron-down firstChevron'])
+                    @include('components.basic.selectbox', ['options' => [['id'=>' lessWideSelect', 'name'=>'Up to 50 miles'], ['id'=>2, 'name'=>'Up to 20 miles'], ['id'=>1, 'name'=>'Less than 20 miles']], 'selectClassName'=> 'secondSelect', 'placeholder' => 'How far would you like to travel?:', 'chevronFAClassName' => 'fa-chevron-down bannerChevron2'])
                     <p>
                         @include('components.basic.button', ['classTitle' => 'greenOval', 'button' => 'Find hospitals'])
                     </p>

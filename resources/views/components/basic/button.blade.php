@@ -1,2 +1,4 @@
-<a class="hospBtn  {{$classTitle}}" href="" role="button">{{$button}}</a>
+
+    <a class="hospBtn  {{$classTitle}}" href="{{ empty($hrefValue) ? '' : $hrefValue }}" role="button">{{$button}}</a>
+
 

@@ -1,6 +1,6 @@
 <div class="backTopHolder">
     <div class="backTopContent">
-        @include('components.basic.button', ['classTitle' => 'greenOvalTop', 'button' => 'Back to top', 'navValue' => '#top'])
+        @include('components.basic.button', ['classTitle' => 'greenOvalTop', 'button' => 'Back to top', 'hrefValue' => '#top'])
 
     </div>
 </div>
