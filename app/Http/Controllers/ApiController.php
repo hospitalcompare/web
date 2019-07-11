@@ -14,16 +14,19 @@ use Request;
 class ApiController {
 
     public function import() {
-        $request = Request::all();
-        if(empty($request['name']))
-            return 'Please supply a name';
-
-        $name = $request['name'];
-
         //Set the precision to 13 for latitude and longitude
         ini_set('precision', 13);
         //Set execution time to 10 mins
         ini_set('max_execution_time', 600);
+
+        $request = Request::all();
+        if(empty($request['name']))
+            return 'Please supply a name';
+
+        if($request['name'] === 'All') {
+            $name = [];
+        } else
+            $name = $request['name'];
 
         //Get the MasterList.csv
         $filename = base_path('storage/imports/'.$name.'.csv');
