@@ -1,14 +1,34 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+
+
 // Variables
 @import 'variables';
 
+// Global CSS
+@import 'global';
+
+//TEMPLATE FILES
 @import 'pages/homepage';
-
 @import 'layout/header';
-
 @import 'layout/footer';
+
+
+//COMPONENTS
+@import 'components/banner';
+@import 'components/whychoose';
+@import 'components/howsection';
+@import 'components/healthchoice';
+@import 'components/logo';
+
+//BASIC COMPONENTS
+@import 'components/blogs';
+@import 'components/basic/button';
+@import 'components/basic/selectbox';
+@import 'components/basic/textbox';
+
+
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
