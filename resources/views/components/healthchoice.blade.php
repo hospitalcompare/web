@@ -1,6 +1,1 @@
-@component('components.basic.choosehealth')
-    @slot('choosehealthbanner')
-
-    @endslot
-
-@endcomponent
+@include('components.basic.choosehealth', ['choosehealthbanner' => '', 'buttonName' => 'Choose your health', 'classTitle' => 'blueOval' ] )
