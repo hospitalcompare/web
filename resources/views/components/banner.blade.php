@@ -6,69 +6,17 @@
                 <div class="homePostCodeBox">
                     <p>Find the best hospital for your
                         elective surgery</p>
+                    @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClassName'=> 'firstSelect', 'placeholder' => '', 'chevronFAClassName' => 'fa-chevron-down firstChevron'])
 
-                    @component('components.basic.selectbox')
-                        Choose your procedure:
 
-                        @slot('selectboxOption1')
-                            surgery
-                        @endslot
-                        @slot('selectboxOption2')
-                            Orthopedics
-                        @endslot
 
-                        @slot('selectClassName')
-                            firstSelect
-                        @endslot
+                    @include('components.basic.textbox', ['options' => 'Enter your postcode'])
 
-                        @slot('chevronFAClassName')
-                            firstChevron
-                        @endslot
+                    @include('components.basic.selectbox', ['options' => [['id'=>' lessWideSelect', 'name'=>'Up to 50 miles'], ['id'=>2, 'name'=>'Up to 20 miles'], ['id'=>1, 'name'=>'Less than 20 miles']], 'selectClassName'=> 'secondSelect', 'placeholder' => 'How far would you like to travel?:', 'chevronFAClassName' => 'fa-chevron-down firstChevron'])
+                    <p>
+                        @include('components.basic.button', ['classTitle' => 'greenOval', 'button' => 'Find hospitals'])
+                    </p>
 
-                        @slot('selectId')
-
-                        @endslot
-
-                        @slot('labelInner')
-
-                        @endslot
-                    @endcomponent
-                    @component('components.basic.textbox')
-                        @slot('textbox')
-                            Enter your postcode
-                        @endslot
-                    @endcomponent
-                    @component('components.basic.selectbox')
-                        Up to 50 miles
-                        @slot('selectboxOption1')
-                            Up to 20 miles
-                        @endslot
-                        @slot('selectboxOption2')
-                            Less than 20 miles
-                        @endslot
-
-                        @slot('selectClassName')
-                            secondSelect
-                        @endslot
-
-                        @slot('chevronFAClassName')
-                            secondChevron
-                        @endslot
-
-                        @slot('selectId')
-                            lessWideSelect
-                        @endslot
-
-                        @slot('labelInner')
-                            How far would you like to travel?:
-                        @endslot
-                    @endcomponent
-
-                    @component('components.basic.button', ['classTitle' => 'greenOval'])
-                        @slot('button')
-                            Find hospitals
-                        @endslot
-                    @endcomponent
                     <p class='browseButton'><a  href="">Browse all hospitals</a></p>
                 </div>
             </div>

@@ -1,0 +1,32 @@
+//SELECTBOX
+.secondSelect{
+  @include flex;
+}
+
+.selectBox{
+  color: $darkerGrey;
+  @include flexBasis;
+  position: relative;
+  left: 40px;
+}
+#lessWideSelect{
+  @include flexBasis;
+}
+
+select{
+  border: 2px solid #ebebeb;  /*Removes border*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-overflow:'';
+  text-indent: 0.01px; /* Removes default arrow from firefox*/
+  text-overflow: "";  /*Removes default arrow from firefox*/
+}
+select::-ms-expand {
+  display: none;
+}
+.select-wrapper
+{
+  padding-left:0px;
+  overflow:hidden;
+}

@@ -1,50 +1,12 @@
-{{$slot}}
-<div class="blogWrap">
+@if(!empty($blogs))
+    @foreach($blogs as $blog)
+        <div class="blogWrap">
+            <div class="icon"><img src="{{ asset($blog['iconImg']) }}"></div>
+            <p class="title">{{$blog['title']}}</p>
+            <p class="description">{{$blog['description']}}</p>
+            <p><a class="hospBtn  {{$classTitle}}" href="" role="button">{{$buttonTitle}}</a></p>
+        </div>
+    @endforeach
 
-    <div class="icon">
-        {{$firstblogPic}}
-    </div>
-    <p class="iconTitle">
-        {{$firstblogTitle}}
-    </p>
-    <p class="iconTitle">
-        {{$firstblogDescription}}
-    </p>
-    @component('components.basic.button', ['classTitle' => 'blueOval'])
-        @slot('button')
-            Read more
-        @endslot
-    @endcomponent
-</div>
-<div class="blogWrap">
-    <div class="icon">
-        {{$secondblogPic}}
-    </div>
-    <p class="iconTitle">
-        {{$secondblogTitle}}
-    </p>
-    <p class="iconTitle">
-        {{$secondblogDescription}}
-    </p>
-    @component('components.basic.button', ['classTitle' => 'blueOval'])
-        @slot('button')
-            Read more
-        @endslot
-    @endcomponent
-</div>
-<div class="blogWrap">
-    <div class="icon">
-        {{$thirdblogPic}}
-    </div>
-    <p class="iconTitle">
-        {{$thirdblogTitle}}
-    </p>
-    <p class="iconTitle">
-        {{$thirdblogDescription}}
-    </p>
-    @component('components.basic.button', ['classTitle' => 'blueOval'])
-        @slot('button')
-            Read more
-        @endslot
-    @endcomponent
-</div>
+@endif
+

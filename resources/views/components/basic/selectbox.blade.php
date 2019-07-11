@@ -1,17 +1,11 @@
-<div class="{{$selectClassName}}">
-
-
-    <label class="selectBox" for="{{$selectId}}">{{$labelInner}}</label>
-        <select  id="{{$selectId}}">
-                <option class="firstOption">{{$slot}}</option>
-                <option name="secondOption" id="secondOption"  value="">{{$selectboxOption1}}</option>
-                <option name="thirdOption" id="thirdOption" value="">{{$selectboxOption2}}</option>
-
+<div class="{{ empty($selectClassName) ? '' : $selectClassName }}">
+    <label class="selectBox" for="{{empty($selectId)? '' : $selectId}}">{{empty($placeholder)? '': $placeholder}}</label>
+        <select id="{{empty($selectId)? '' : $selectId}}">
+            @if(!empty($options))
+                @foreach($options as $option)
+                    <option name="option-{{$option['id']}}" id="option_id_{{$option['id']}}"  value="{{$option['id']}}">{{$option['name']}}</option>
+                @endforeach
+            @endif
         </select>
-
-
-
-    <i class="fas fa-chevron-down {{$chevronFAClassName}}"></i>
-
-
+    <i class="fas {{empty($chevronFAClassName)? 'fa-chevron-down' : $chevronFAClassName}}"></i>
 </div>

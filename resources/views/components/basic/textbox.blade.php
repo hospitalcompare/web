@@ -1,8 +1,8 @@
 
 
-    {{$slot}}
 
-        <input type="text" placeholder="{{$textbox}}">
+
+        <input type="text" placeholder="{{$options}}">
 
 
 
