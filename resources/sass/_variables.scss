@@ -1,4 +1,5 @@
 // Body
+
 $body-bg: #f8fafc;
 
 // Typography
@@ -25,30 +26,22 @@ $darkestWhite: #ebebeb;
 $aqua:#00cecd;
 $lighestGrey:#1b1b1b;
 $darkerGrey:#1c1c1c;
-$darkerGrey:#1c1c1c;
 $black: #000000;
 $sunnyYellow: #fff568;
 $footerGrey: #363636;
+$sectionBeige: #ececec;
 
-//Header section
-@mixin headerHeight {
-  height:75px;
-}
+// Full width
+$fullWidth: 100%;
+//center on page
+$centerOnPage:  auto;
 
-//Resposive design parent declarations
-@mixin flex {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
 
-/* Align Items - Center */
-@mixin alignItemsCenter {
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
+//POSITIONS
+$relative: relative;
+$absolute: absolute;
+
+
+
+
+
