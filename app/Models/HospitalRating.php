@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class HospitalRating extends Model
 {
     public $table = 'hospital_ratings';
+    public $timestamps = true;
 
     /**
      * The attributes that are mass assignable.
@@ -27,7 +28,7 @@ class HospitalRating extends Model
         'hospital_id'       => 'integer',
         'avg_user_rating'   => 'double',
         'total_ratings'     => 'integer',
-        'provider_rating'   => 'integer',
+        'provider_rating'   => 'string',
         'latest_rating'     => 'string',
         'status'            => 'string'
     ];

@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class HospitalMaternity extends Model
 {
     public $table = 'hospital_maternity';
+    public $timestamps = true;
 
     /**
      * The attributes that are mass assignable.

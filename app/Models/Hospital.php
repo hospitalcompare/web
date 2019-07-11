@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Hospital extends Model
 {
-    public $table = 'trusts';
+    public $table = 'hospitals';
+    public $timestamps = true;
 
     /**
      * The attributes that are mass assignable.
