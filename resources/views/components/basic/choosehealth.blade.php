@@ -1,5 +1,4 @@
 <div class="chooseHealthParent">
-{{--    {{$slot}}--}}
     <section class="chooseHealth">
         {{$choosehealthbanner}}
         <div class="chooseHealthText">

@@ -1,13 +1,7 @@
 <div class="backTopHolder">
     <div class="backTopContent">
-        @component('components.basic.button', ['classTitle' => 'greenOvalTop'])
-            #top
-            @slot('button')
-                Back to top
-            @endslot
+        @include('components.basic.button', ['classTitle' => 'greenOvalTop', 'button' => 'Back to top', 'navValue' => '#top'])
 
-
-        @endcomponent
     </div>
 </div>
 <div class="sitemapHolder">
@@ -25,9 +19,8 @@
 
         <div class="social">
 
+            @include('components.basic.logo', ['titleParent' => 'footerLogoParent', 'logoImg' => 'footerLogoImg', 'logoTitle' => 'footerLogoTitle'])
 
-            @component('components.basic.logo', ['titleParent' => 'footerLogoParent', 'logoImg' => 'footerLogoImg', 'logoTitle' => 'footerLogoTitle'])
-            @endcomponent
 
             <ul class="socialList">
                 <li>Helping you to make the best healthcare choices</li>
