@@ -4,9 +4,9 @@
 namespace App\Imports;
 
 
-use App\Models\Address;
 use App\Models\Hospital;
-use App\Models\HospitalType;
+use App\Models\HospitalWaitingTime;
+use App\Models\Specialty;
 use App\Models\Trust;
 
 /**
@@ -20,101 +20,52 @@ class WaitingTimes extends DefaultImport {
             //Loop through the data
             foreach($this->data as $item) {
                 //Check if we have the Specialty
-                //Check if the match is on the Hospital Level
-                //Check if the match is on the Trust Level
-                //Update or create the HospitalWaitingTime with the Specialty and Hospital(s)
-
-                //Check if we have the Hospital Type or add it to DB
-                if(!empty($item['Location Type/Sector']) && in_array($item['Location Type/Sector'], $this->requestedTypes)) {
-                    $hospitalType = HospitalType::firstOrCreate([
-                        'name' => $item['Location Type/Sector']
-                    ]);
-
-                    //Check if we have the requested fields to create the address
-                    if(empty($item['Location Longitude']) || empty($item['Location Latitude']) || $item['Location Longitude'] == 'NULL' || $item['Location Longitude'] == 'NULL') {
-                        $this->excludedData[] = $item;
-                        continue;
-                    }
-
-                    //If we don't have the name of the provider, skip the record
-                    if(empty($item['Provider Name']) || $item['Provider Name'] == 'NULL') {
-                        //Check if we have Trust Name
-                        if(empty($item['Trust Name']) || $item['Provider Name'] == 'NULL') {
-                            $this->excludedData[] = $item;
-                            continue;
-                        } else {
-                            $item['Provider Name'] = $item['Trust Name'];
-                        }
-                    }
-
-                    $hospitalAddress = Address::updateOrCreate([
-                        'latitude'          => $item['Location Latitude'],
-                        'longitude'         => $item['Location Longitude'],
+                if (!empty($item['Treatment Function Code'])) {
+                    $specialty = Specialty::updateOrCreate([
+                        'code' => $item['Treatment Function Code'],
                     ], [
-                        'address_1'         => $item['Location Address 1'],
-                        'address_2'         => $item['Location Address 2'],
-                        'city'              => $item['Location Address 3'],
-                        'county'            => $item['Location County'],
-                        'postcode'          => $item['Location Postcode'],
-                        'local_authority'   => $item['Location Local Authority'],
-                        'region'            => $item['Location Region'],
+                        'name' => $item['Treatment Function'],
                     ]);
 
-                    $trustAddress = Address::updateOrCreate([
-                        'latitude'          => $item['Provider Latitude'],
-                        'longitude'         => $item['Provider Longitude'],
-                    ], [
-                        'address_1'         => $item['Provider Address 1'],
-                        'address_2'         => $item['Provider Address 2'],
-                        'city'              => $item['Provider Address 3'],
-                        'county'            => $item['Provider County'],
-                        'postcode'          => $item['Provider Postcode'],
-                        'local_authority'   => $item['Provider Local Authority'],
-                        'region'            => $item['Provider Region'],
-                    ]);
+                } else {
+                    $this->excludedData[] = $item;
+                    continue;
+                }
 
-                    //Create the Trust entity
-                    $trust = Trust::updateOrCreate([
-                        'trust_id'      => $item['Trust Code'],
-                        'provider_id'   => $item['Provider ID'],
-                    ], [
-                        'address_id'    => $trustAddress->id,
-                        'name'          => $item['Provider Name'],
-                        'tel_number'    => $item['Provider Telephone Number'],
-                        'url'           => $item['Provider Web Address']
-                    ]);
-
-                    //Create the Hospital entity
-                    //If we don't have the trust, then skip the record
+                $hospitals = [];
+                //First we check if we can find the Hospital based on the given code
+                $hospitals[] = Hospital::where('location_id', $item['Provider Code'])->orWhere('organisation_id', $item['Provider Code'])->first();
+                //If we still don't have the hospital, try to get all the hospitals within the Trust
+                if(empty($hospitals[0])) {
+                    $trust = Trust::where('trust_id', $item['Provider Code'])->orWhere('provider_id', $item['Provider Code'])->first();
+                    //If we don't have the trust then exclude the item and move on to the next one
                     if(empty($trust)) {
                         $this->excludedData[] = $item;
                         continue;
                     }
+                    $hospitals = $trust->hospitals()->get();
+                }
 
-                    $hospital = Hospital::updateOrCreate([
-                        'location_id'       => $item['Location ID'],
-                        'organisation_id'   => $item['Organisation Code'],
-                    ], [
-                        'hospital_type_id'  => $hospitalType->id,
-                        'address_id'        => $hospitalAddress->id,
-                        'trust_id'          => $trust->id,
-                        'ods_code'          => $item['Location ODS Code'],
-                        'name'              => $item['Location Name'],
-                        'tel_number'        => $item['Location Telephone Number'],
-                        'url'               => $item['Location Web Address']
-                    ]);
+                //If we have the Hospital we can update the Waiting Times
+                if(!empty($hospitals)) {
+                    foreach($hospitals as $hospital) {
+                        $waitingTime = HospitalWaitingTime::updateOrCreate([
+                            'hospital_id'           => $hospital->id,
+                            'specialty_id'          => $specialty->id
+                        ], [
+                            'total_within_18_weeks' => empty($item['Total within 18 weeks']) ? 0 : $item['Total within 18 weeks'],
+                            'total_incomplete'      => empty($item['Total number of incomplete pathways']) ? 0 : $item['Total number of incomplete pathways'],
+                            'avg_waiting_weeks'     => empty($item['Average (median) waiting time (in weeks)']) ? null : $item['Average (median) waiting time (in weeks)'],
+                            'perc_waiting_weeks'    => empty($item['92nd percentile waiting time (in weeks)']) ? null : $item['92nd percentile waiting time (in weeks)'],
+                        ]);
 
-                    $this->returnedData[] = [
-                        'hospital_address'  => $hospitalAddress,
-                        'trust_address'     => $trustAddress,
-                        'trust'             => $trust,
-                        'hospital'          => $hospital
-                    ];
-
+                        $this->returnedData[] = $waitingTime;
+                    }
                 } else {
-                    //We skip the item if it's not one of those types
+                    //Add the item as excluded and skip the record
                     $this->excludedData[] = $item;
                     continue;
+
                 }
             }
         }
