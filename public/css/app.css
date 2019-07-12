@@ -13,12 +13,9 @@
   color: #ffffff;
 }
 
-.hRow {
+.branding {
   display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  height: 75px;
 }
 
 .mainHeader {
@@ -43,20 +40,48 @@
   color: #ffffff;
 }
 
-.mainNav ul {
+.mainNav {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin: 20px;
+}
+
+.mainNav .mainMenu {
   display: -webkit-flex;
   display: flex;
   margin: 0;
 }
 
-.mainNav ul li {
+.mainNav .mainMenu li {
   display: block;
+  position: relative;
 }
 
-.mainNav ul li a {
+.mainNav .mainMenu li a {
   color: #ffffff;
   font-size: 1.3em;
   padding: 0 15px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  background: #00b5b4;
+  width: 200px;
+  opacity: 0;
+  transition: opacity 1s linear;
+  top: 55px;
+}
+
+.mainMenu li a:hover + .dropdownMenu {
+  opacity: 1;
+}
+
+.mainNav .dropdownMenu li a {
+  padding: 0;
 }
 
 .fa-chevron-down {
@@ -408,6 +433,15 @@ input {
 .headerLogoParent {
   position: relative;
   top: -25px;
+  -webkit-flex-basis: 0;
+          flex-basis: 0;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-top: 20px;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-top: 30px;
 }
 
 .headerLogoParent .headerLogoImg {
@@ -419,8 +453,8 @@ input {
 
 .headerLogoParent .headerLogoTitle {
   position: absolute;
-  top: 10px;
-  left: 65px;
+  top: 45%;
+  left: 7.5%;
   color: #ffffff;
   font-size: 24px;
 }

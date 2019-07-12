@@ -1,7 +1,13 @@
 .headerLogoParent{
   position:$relative;
   top: -25px;
-
+  flex-basis: 0;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-top: 20px;
+  align-items: center;
+  margin-top: 30px;
   .headerLogoImg{
     width: $fullWidth / 15;
     position:absolute;
@@ -11,8 +17,8 @@
   .headerLogoTitle{
 
     position:absolute;
-    top:10px;
-    left:65px;
+    top: 45%;
+    left: 7.5%;
     color:$white;
     font-size: 24px;
   }

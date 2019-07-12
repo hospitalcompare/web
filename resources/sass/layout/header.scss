@@ -8,10 +8,9 @@
   left:0;
   color: $white;
 }
-.hRow{
+
+.branding{
   @include flex;
-  @include alignItems;
-  @include headerHeight;
 }
 
 .mainHeader {
@@ -37,11 +36,16 @@
 }
 
 .mainNav{
-  ul{
+  @include flex;
+  justify-content: center;
+  align-items:center;
+  margin: 20px;
+  .mainMenu{
     @include flex;
     margin: 0;
     li{
       display:block;
+      position: relative;
       a{
         color: $white;
         font-size: 1.3em;
@@ -49,6 +53,23 @@
       }
     }
   }
+}
+
+.dropdownMenu{
+  position: absolute;
+  background: $darkerAqua;
+  width: 200px;
+  opacity: 0;
+  transition: opacity 1s linear;
+  top: 55px;
+}
+
+.mainMenu li a:hover + .dropdownMenu{
+  opacity:1;
+}
+
+.mainNav .dropdownMenu li a{
+  padding:0;
 }
 
 .fa-chevron-down{
