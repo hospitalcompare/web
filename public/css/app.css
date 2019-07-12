@@ -65,6 +65,7 @@
   color: #ffffff;
   font-size: 1.3em;
   padding: 0 15px;
+  padding-bottom: 154px;
 }
 
 .dropdownMenu {
@@ -76,7 +77,7 @@
   top: 55px;
 }
 
-.mainMenu li a:hover + .dropdownMenu {
+.mainMenu li:hover > .dropdownMenu {
   opacity: 1;
 }
 
