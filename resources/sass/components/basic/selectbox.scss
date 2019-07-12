@@ -11,6 +11,7 @@
   @include flexBasis;
   position: relative;
   left: 40px;
+  top:10px;
 }
 
 .lessWideSelect{
@@ -38,3 +39,5 @@ select::-ms-expand {
   padding-left:0px;
   overflow:hidden;
 }
+
+

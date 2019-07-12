@@ -6,6 +6,19 @@
   display: block;
 }
 
+.formSelectChild {
+  position: relative;
+}
+
+.formTextChild {
+  position: relative;
+  left: 5px;
+}
+
+.adjustHelpLink {
+  left: 47.5% !important;
+}
+
 .fa-cross {
   position: absolute;
   top: 4px;
@@ -235,7 +248,7 @@ input {
 
 .banner {
   width: 100%;
-  height: 521px;
+  height: 621px;
   background-image: linear-gradient(to bottom, rgba(0, 206, 205, 0.52), rgba(139, 219, 219, 0.73)), url(/images/banner.jpg?fca133449dc5cbcc1c77d20379577457);
   margin: auto;
   background-repeat: no-repeat;
@@ -282,7 +295,7 @@ input {
 }
 
 .homePromo p {
-  font-size: 1.2em;
+  font-size: 1.5em;
   width: 70%;
 }
 
@@ -586,6 +599,7 @@ input {
   -ms-flex: 0 0 45%;
   position: relative;
   left: 40px;
+  top: 10px;
 }
 
 .lessWideSelect {
@@ -643,6 +657,39 @@ textarea {
 input {
   border: 2px solid #ebebeb;
   padding-left: 5px;
+}
+
+.helpLink {
+  color: #000000;
+  position: absolute;
+  top: 10px;
+  left: 210px;
+  border-radius: 50%;
+  background: #ebebeb;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.helpLink:hover + .lightbox {
+  display: block;
+}
+
+.lightbox {
+  width: 200px;
+  height: 70px;
+  background: #ffffff;
+  position: absolute;
+  top: 20%;
+  left: 55%;
+  border-radius: 20px;
+  display: none;
+  z-index: 9;
+  border: 1px dashed orange;
+  color: #000;
+  padding: 8px;
 }
 
 /*!
