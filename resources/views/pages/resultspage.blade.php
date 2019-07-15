@@ -113,10 +113,13 @@
         @include('components.item', ['itemImg' => 'images/alder-1.png', 'title' => 'Durham Diagnostic & Treatment
                     Centre – City Hospitals Sunderland
                     NHS Foundation Trust', 'location' => 'Liverpool, L37 7SL. 0.6 miles from location', 'findLink' => 'Find on map', 'waitTime' => '5.31 Weeks', 'stars' => 'stars', 'opCancelled' => '2 weeks', 'qualityRating' => 'Requires improvement', 'FFRating' => '96.9%', 'NHSFunded' => 'tick', 'NHSClass' => 'NHSHospital', 'fundedText' => 'NHS Hospital' ])
-        @include('components.item', ['itemImg' => 'images/alder-1.png', 'title' => 'Durham Diagnostic & Treatment
-                    Centre – City Hospitals Sunderland
-                    NHS Foundation Trust', 'location' => 'Liverpool, L37 7SL. 0.6 miles from location', 'findLink' => 'Find on map', 'waitTime' => '5.31 Weeks', 'stars' => 'stars', 'opCancelled' => '2 weeks', 'qualityRating' => 'Requires improvement', 'FFRating' => '96.9%', 'NHSFunded' => 'tick', 'NHSClass' => 'privateHospital', 'fundedText' => 'Private Hospital' ])
+
 
     </div>
+    <div class="sortCategoriesResults">
+        @include('components.item', ['itemImg' => 'images/alder-1.png', 'title' => 'Durham Diagnostic & Treatment
+                        Centre – City Hospitals Sunderland
+                        NHS Foundation Trust', 'location' => 'Liverpool, L37 7SL. 0.6 miles from location', 'findLink' => 'Find on map', 'waitTime' => '5.31 Weeks', 'stars' => 'stars', 'opCancelled' => '2 weeks', 'qualityRating' => 'Requires improvement', 'FFRating' => '96.9%', 'NHSFunded' => 'tick', 'NHSClass' => 'privateHospital', 'fundedText' => 'Private Hospital' ])
 
+    </div>
 @endsection
