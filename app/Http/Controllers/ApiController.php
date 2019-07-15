@@ -83,4 +83,24 @@ class ApiController {
 
         return $this->returnedData;
     }
+
+    public function getHospitalsByDistance($postcode) {
+        //Retrieve the latitude and longitude from the postcode
+        $location = new Location($postcode);
+        $location = $location->getLocation();
+        $latitude = (string)$location['data']->result->latitude;
+        $longitude = (string)$location['data']->result->longitude;
+        $radius = 1; //relates to distance in miles
+
+        $hospitals = Hospital::whereHas('address', function($q) use($latitude, $longitude, $radius) {
+            $q->selectRaw(\DB::raw("get_distance({$latitude}, {$longitude}, latitude, longitude) AS radius"));
+            $q->having('radius', '<', $radius);
+            $q->orderBy('radius', 'ASC');
+        })->with(['address'=> function($query) use($latitude, $longitude) {
+            $query->selectRaw(\DB::raw("id, address_1, address_2, city, county, postcode, local_authority, region, latitude, longitude, status, created_at, updated_at, get_distance({$latitude}, {$longitude}, latitude, longitude) AS radius"));
+        }, 'trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'waitingTime'])->get()->toArray();
+
+        $this->returnedData['data'] = $hospitals;
+        return $this->returnedData;
+    }
 }
