@@ -9,10 +9,21 @@ use App\Models\Address;
 use App\Models\Hospital;
 use App\Models\HospitalType;
 use App\Models\Trust;
+use App\Services\Location;
 use Request;
 
 class ApiController {
 
+    protected $returnedData = [
+        'success'   => false,
+        'data'      => []
+    ];
+
+    /**
+     * Imports one or ALL import files based on a given `name`
+     *
+     * @return array|string
+     */
     public function import() {
         //Set the precision to 13 for latitude and longitude
         ini_set('precision', 13);
@@ -52,5 +63,24 @@ class ApiController {
         }
 
         return $returnedData;
+    }
+
+    /**
+     * Gets a list of multiple Locations based on a given (incomplete) postcode
+     *
+     * @param $postcode
+     * @return array
+     */
+    public function getLocations($postcode) {
+
+        if(!empty($postcode)) {
+            $location = new Location($postcode);
+            $locations = $location->getLocationsByIncompletePostcode();
+
+            $this->returnedData['data']       = $locations['data'];
+            $this->returnedData['success']    = $locations['success'];
+        }
+
+        return $this->returnedData;
     }
 }
