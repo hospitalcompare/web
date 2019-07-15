@@ -31,5 +31,11 @@
                 {{$NHSFunded}}
             </div>
         </div>
-        <div class="sortCatSection3"></div>
+        <div class="sortCatSection3">
+            <p>
+                @include('components.basic.button', ['classTitle' => 'blueOval blockDisplay enquiry', 'button' => 'Make an enquiry'])
+
+            </p>
+            @include('components.basic.button', ['classTitle' => 'greenOval blockDisplay compare', 'button' => 'Compare', 'icon' => 'far fa-heart'])
+        </div>
     </section>

@@ -454,6 +454,31 @@ input {
   line-height: 13px;
 }
 
+.enquiry,
+.compare {
+  border-radius: 7px !important;
+  width: 159px !important;
+  height: 44px !important;
+  font-size: 0.8em !important;
+  padding: 0 !important;
+}
+
+.enquiry {
+  padding-top: 12px !important;
+}
+
+.compare {
+  border-radius: 23px !important;
+  border: 2px solid #00cecd;
+  background: rgba(27, 112, 243, 0) !important;
+  color: #00cecd !important;
+  padding-top: 7px !important;
+}
+
+.fa-heart {
+  padding-left: 2px;
+}
+
 .whyChooseParent {
   width: 100%;
   height: auto;
