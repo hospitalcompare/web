@@ -11,7 +11,6 @@ class Utils
      * @param $destinationDir
      * @return mixed
      */
-
     public static function createFileFromBase64Image($image, $destinationDir) {
         $result = [
             'message' => 'Unable to create the file',
@@ -50,6 +49,13 @@ class Utils
         }
     }
 
+    /**
+     * Plots a given CSV file to a multidimensional array
+     *
+     * @param string $filename
+     * @param string $delimiter
+     * @return array|string
+     */
     public static function csvToArray($filename = '', $delimiter = ',') {
 
         if (!file_exists($filename) || !is_readable($filename))

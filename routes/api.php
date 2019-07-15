@@ -15,4 +15,5 @@ use Illuminate\Http\Request;
 
 Route::middleware('checkToken')->group(function () {
     Route::post('/import', 'ApiController@import');
+    Route::get('/getLocations/{postcode}', 'ApiController@getLocations');
 });
