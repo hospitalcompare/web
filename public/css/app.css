@@ -326,9 +326,132 @@ input {
   position: relative;
 }
 
-.sortCategories {
+.sortCategoriesParent {
   background: linear-gradient(to bottom, rgba(0, 206, 205, 0.72), rgba(0, 206, 205, 0.93));
+}
+
+.sortCategoriesHeader,
+.sortCategories {
+  width: 83.3333333333%;
+  margin: auto;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.sortCategoriesHeader {
   height: 80px;
+}
+
+.sortCatSection1 {
+  flex: 0 0 20%;
+  -webkit-flex: 0 0 20%;
+  -ms-flex: 0 0 20%;
+}
+
+.sortCatSection2 {
+  flex: 0 0 70%;
+  -webkit-flex: 0 0 70%;
+  -ms-flex: 0 0 70%;
+}
+
+.sortCatSection3 {
+  flex: 0 0 10%;
+  -webkit-flex: 0 0 10%;
+  -ms-flex: 0 0 10%;
+}
+
+.sortCatMenu {
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 30px;
+}
+
+.sortCatMenu li {
+  list-style: none;
+  width: 200px;
+  flex: 1 1 0;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 100px;
+}
+
+.sortCatMenu li a {
+  color: #ffffff;
+  text-align: center;
+}
+
+.sortCategoriesResults {
+  background: #ffffff;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.sortCatSection1,
+.sortCatSection2 {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.sortCatSection2Child {
+  flex: 1 1 0;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 100px;
+  width: 200px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.sortCatItem {
+  padding-right: 5%;
+  position: relative;
+}
+
+.sortItemTitle,
+.sortItemLocation {
+  font-size: 0.9em;
+  line-height: 15px;
+}
+
+.findLink {
+  position: relative;
+  font-size: 0.9em;
+  top: -20px;
+}
+
+.NHSHospital,
+.privateHospital {
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.NHSHospital {
+  border-bottom: solid 30px #1b71f3;
+  border-right: solid 30px #1b71f3;
+  border-left: solid 30px transparent;
+  border-top: solid 30px transparent;
+}
+
+.privateHospital {
+  border-bottom: solid 30px #ed0373;
+  border-right: solid 30px #ed0373;
+  border-left: solid 30px transparent;
+  border-top: solid 30px transparent;
+}
+
+.NHSHospital p,
+.privateHospital p {
+  -webkit-transform: rotate(130deg);
+          transform: rotate(130deg);
+  position: relative;
+  color: #ffffff;
+  left: 20px;
+  top: -12px;
+  font-size: 0.6em;
+  line-height: 13px;
 }
 
 .whyChooseParent {

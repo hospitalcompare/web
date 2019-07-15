@@ -67,6 +67,12 @@
   -ms-flex: 2 1 100px;
 }
 
+@mixin threeOneRatio {
+  flex: 2 1 0;
+  -webkit-flex: 2 1 0;
+  -ms-flex: 2 1 100px;
+}
+
 @mixin flexBasis{
   flex: 0 0 45%;
   -webkit-flex: 0 0 45%;
