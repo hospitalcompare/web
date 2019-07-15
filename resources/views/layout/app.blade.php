@@ -47,5 +47,6 @@
         </div>
         <!-- or push target to footer -->
         @stack('main')
+        @stack('button')
     </body>
 </html>
