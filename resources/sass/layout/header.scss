@@ -1,17 +1,15 @@
 //HEADER SECTION
 
 
-
 .fa-cross{
   position:$absolute;
   top:4px;
   left:0;
   color: $white;
 }
-.hRow{
+
+.branding{
   @include flex;
-  @include alignItems;
-  @include headerHeight;
 }
 
 .mainHeader {
@@ -37,18 +35,44 @@
 }
 
 .mainNav{
-  ul{
+  @include flex;
+  justify-content: center;
+  align-items:center;
+  margin: 20px;
+  .mainMenu{
     @include flex;
     margin: 0;
     li{
       display:block;
+      position: relative;
       a{
         color: $white;
         font-size: 1.3em;
         padding: 0 15px;
+        padding-bottom: 154px;
       }
     }
   }
+}
+
+.dropdownMenu{
+  position: absolute;
+  background: $darkerAqua;
+  width: 200px;
+  //display:none;
+  opacity:0;
+  transition: opacity 1s linear;
+  top: 55px;
+
+}
+
+.mainMenu li:hover > .dropdownMenu{
+ //display:block;
+  opacity:1;
+}
+
+.mainNav .dropdownMenu li a{
+  padding:0;
 }
 
 .fa-chevron-down{
