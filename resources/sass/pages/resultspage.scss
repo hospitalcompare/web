@@ -1,0 +1,84 @@
+.filterParent{
+  width: $fullWidth;
+  background-color: $white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.filter{
+  width: $fullWidth / 1.2;
+  margin: $centerOnPage;
+  height: 187px;
+
+
+}
+
+.postProx, .selectProx{
+  @include flex;
+
+}
+
+.postProxChild{
+  @include uniformAlignment;
+  position: $relative;
+}
+
+.searchPageSelect{
+  width: 70%;
+  margin-left: 0 !important;
+}
+
+.inputClass{
+  margin-left: 0 !important;
+}
+
+.blackChevron{
+  color: $black;
+  left: -24px;
+}
+
+.resultsLabel{
+  padding-bottom: 10px;
+  left:0 !important;
+}
+
+.sortParent{
+  width: $fullWidth;
+  background-color: $lightergrey;
+
+}
+
+.sort{
+  width: $fullWidth / 1.2;
+  margin: $centerOnPage;
+}
+
+.sortBar{
+  height: 50px;
+  @include flex;
+}
+
+.showSection, .sortSection{
+  @include uniformAlignment;
+  padding-top: 15px;
+  padding-bottom: 7px;
+}
+
+.sortPageSelect, .sortBy{
+  width: 200px;
+}
+
+.sortLabel{
+  left: 0 !important;
+  top: -10px !important;
+}
+
+.sortBy{
+  top: -10px !important;
+  position: relative;
+}
+
+.sortCategories{
+  background: linear-gradient(to bottom, rgba(0, 206, 205, 0.72), rgba(0, 206, 205, 0.93));
+  height: 80px;
+}
