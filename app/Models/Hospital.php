@@ -93,4 +93,60 @@ class Hospital extends Model
     public function scopeByTrust($query, $trust){
         return $query->where('trust_id', $trust);
     }
+
+    /**
+     * Admitted() belongs to HospitalAdmitted
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function admitted() {
+        return $this->belongsTo( '\App\Models\HospitalAdmitted', 'id', 'hospital_id');
+    }
+
+    /**
+     * cancelledOps() belongs to HospitalCancelledOps
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function cancelledOp() {
+        return $this->belongsTo( '\App\Models\HospitalCancelledOp', 'id', 'hospital_id');
+    }
+
+    /**
+     * emergency() belongs to HospitalEmergency
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function emergency() {
+        return $this->belongsTo( '\App\Models\HospitalEmergency', 'id', 'hospital_id');
+    }
+
+    /**
+     * maternity() belongs to HospitalMaternity
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function maternity() {
+        return $this->belongsTo( '\App\Models\HospitalMaternity', 'id', 'hospital_id');
+    }
+
+    /**
+     * outpatient() belongs to HospitalOutpatient
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function outpatient() {
+        return $this->belongsTo( '\App\Models\HospitalOutpatient', 'id', 'hospital_id');
+    }
+
+    /**
+     * rating() belongs to HospitalRating
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function rating() {
+        return $this->belongsTo( '\App\Models\HospitalRating', 'id', 'hospital_id');
+    }
+
+    /**
+     * waitingTime() belongs to HospitalWaitingTime
+     * @return \Illuminate\Database\Eloquent\Relations\hasMany
+     */
+    public function waitingTime() {
+        return $this->hasMany( '\App\Models\HospitalWaitingTime', 'hospital_id', 'id');
+    }
 }
