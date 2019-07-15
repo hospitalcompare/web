@@ -13,22 +13,25 @@
 @import 'pages/homepage';
 @import 'layout/header';
 @import 'layout/footer';
+@import 'pages/resultspage';
 
 
 //COMPONENTS
-@import 'components/banner';
 @import 'components/whychoose';
 @import 'components/howsection';
 @import 'components/healthchoice';
 @import 'components/logo';
 
+
 //BASIC COMPONENTS
+@import 'components/banner';
 @import 'components/blogs';
 @import 'components/basic/button';
 @import 'components/basic/selectbox';
 @import 'components/basic/textbox';
 @import 'components/basic/helplink';
 @import 'components/basic/lightbox';
+@import 'components/basic/range';
 
 
 

@@ -1,6 +1,6 @@
 <div class="selectParent  {{ empty($selectClassName) ? '' : $selectClassName }}">
-    <label class="selectBox" for="{{empty($selectId)? '' : $selectId}}">{{empty($placeholder)? '': $placeholder}}</label>
-        <select id="{{empty($selectId)? '' : $selectId}}">
+    <label class="selectBox {{empty($resultsLabel)? '' : $resultsLabel}}" for="{{empty($selectId)? '' : $selectId}}">{{empty($placeholder)? '': $placeholder}}</label>
+        <select class="{{empty($selectClass)? '' : $selectClass}}" id="{{empty($selectId)? '' : $selectId}}">
             @if(!empty($options))
                 @foreach($options as $option)
                     <option name="option-{{$option['id']}}" id="option_id_{{$option['id']}}"  value="{{$option['id']}}">{{$option['name']}} </option>

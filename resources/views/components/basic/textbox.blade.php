@@ -2,7 +2,7 @@
 
 
 
-        <input type="text" placeholder="{{$placeholder}}">
+        <input class="{{empty($inputClassName)? '' : $inputClassName}}" type="text" placeholder="{{$placeholder}}">
 
 
 
