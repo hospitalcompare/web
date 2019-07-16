@@ -1,5 +1,5 @@
-<div class="lightbox">
+<div class="lightbox {{empty($lightBoxClass)? '' : $lightBoxClass}}">
     {{$helpText}}
 
 </div>
-<div class="pointer"></div>
+
