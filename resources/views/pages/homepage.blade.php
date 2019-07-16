@@ -6,6 +6,8 @@
 
 @section('keywords', 'this is the meta keywords')
 
+@section('mobile', 'width=device-width, initial-scale=1')
+
 {{--creates path for CSS file --}}
 @push('styles')
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

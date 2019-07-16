@@ -19,7 +19,7 @@
 
 .bannerData{
   @include flex;
-  width: $fullWidth / 1.2;
+  width:$pageWrap;
   margin: auto;
   padding-top: 42px;
   color: $white; //inherited value
@@ -52,15 +52,16 @@
 
 .homePromo{
   @include uniformAlignment;
-  padding-top:100px;
+  padding-top:80px;
 
   p{
     font-size: 1.5em;
-    width: 70%;
+    width: 86%;
   }
 }
 
 .promoList{
+  width:80%;
   li{
     list-style:none;
     font-size: 1.4em;

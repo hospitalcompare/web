@@ -5,7 +5,7 @@
   background: $sectionBeige;
 }
 .whyChooseContent{
-  width: $fullWidth / 1.2;
+  width: $pageWrap;
   margin:  auto;
   padding-top: 80px;
 }
@@ -25,6 +25,10 @@
 
 .chooseText, .chooseVideo{
   @include uniformAlignment;
+}
+
+.chooseVideo{
+  margin-left: 10%;
 }
 .pageTitle{
   font-size: 34px;
