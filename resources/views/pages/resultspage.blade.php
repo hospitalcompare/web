@@ -87,6 +87,7 @@
                 <div class="sortSection">
                     @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Distance from postcode'], ['id'=>2, 'name'=>'Distance from postcode']], 'selectClass' => 'sortBy', 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'placeholder' => 'Sort by:', 'resultsLabel' => 'sortLabel'])
 
+
                 </div>
             </section>
         </section>
