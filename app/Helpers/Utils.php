@@ -109,10 +109,7 @@ class Utils
                     ]
                 );
             }
-
         }
-
-
 
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
