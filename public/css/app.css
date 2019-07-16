@@ -169,8 +169,9 @@ input {
   position: relative;
   background-image: url(/images/Layer_7_copy_2.svg?bbe12441f06eac3fccec76af8aff7fa8);
   background-repeat: no-repeat;
+  background-position: center 60%;
   padding-top: 100px;
-  background-size: 100% 100%;
+  background-size: 100% 70%;
 }
 
 .sitemapBottom {
