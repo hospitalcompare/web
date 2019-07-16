@@ -959,8 +959,7 @@ input {
   height: 70px;
   background: #ffffff;
   position: absolute;
-  top: 20%;
-  left: 55%;
+  top: -70px;
   border-radius: 20px;
   display: none;
   z-index: 9;
