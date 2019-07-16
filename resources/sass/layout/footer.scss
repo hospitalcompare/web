@@ -4,7 +4,7 @@
   background: $footerGrey;
 }
 .footerCreds{
-  width: $fullWidth / 1.2;
+  width: $pageWrap;
   margin: auto;
 
 }
@@ -44,20 +44,19 @@
   position:$relative;
   background-image:url('../images/Layer_7_copy_2.svg');
   background-repeat:no-repeat;
-  background-position: center 60%;
   padding-top: 100px;
-  background-size: 100% 20%;
+  background-size: 100% 100%;
 }
 
 .sitemapBottom{
   padding-top: 300px;
-  width: $fullWidth / 1.2;
+  width: $pageWrap;
   margin: auto;
   color: $white; //inherited value
 }
 
 .sitemap{
-  width: $fullWidth / 1.2;
+  width:$pageWrap;
   margin: auto;
   @include flex;
 
@@ -79,7 +78,7 @@
 
 .social{
   color: $white; //inherited value
-  margin-left: 42%;
+  margin-left: 20%;
 
   li{
     list-style: none;
