@@ -6,7 +6,7 @@
 }
 
 .filter{
-  width: $fullWidth / 1.2;
+  width: $pageWrap;
   margin: $centerOnPage;
   height: 187px;
 
@@ -24,8 +24,9 @@
 }
 
 .searchPageSelect{
-  width: 70%;
+  width: 90%;
   margin-left: 0 !important;
+  padding: 0 15px 0 10px;
 }
 
 .inputClass{
@@ -49,7 +50,7 @@
 }
 
 .sort{
-  width: $fullWidth / 1.2;
+  width: $pageWrap;
   margin: $centerOnPage;
 }
 
@@ -57,9 +58,19 @@
   height: 50px;
   @include flex;
 }
+.showSection{
+  flex: 0 0 75%;
+  -webkit-flex: 0 0 75%;
+  -ms-flex: 0 0 75%;
+}
 
+.sortSection{
+  flex: 0 0 25%;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+}
 .showSection, .sortSection{
-  @include uniformAlignment;
+
   padding-top: 15px;
   padding-bottom: 7px;
 }
@@ -84,7 +95,7 @@
 }
 
 .sortCategoriesHeader, .sortCategories{
-  width: $fullWidth / 1.2;
+  width: $pageWrap;
   margin: $centerOnPage;
   @include flex;
 }
@@ -118,11 +129,10 @@
   margin-top: 30px;
   li{
     list-style:none;
-    width: 200px;
+    padding-left: 20px;
     @include uniformAlignment;
     a{
       color: $white;
-      text-align:center;
 
     }
   }
@@ -141,9 +151,9 @@
 
 .sortCatSection2Child{
   @include uniformAlignment;
-  width: 200px;
   text-align: center;
   font-weight: 600;
+  padding-left: 20px;
 }
 
 .sortCatItem{
@@ -154,6 +164,7 @@
 .sortItemTitle, .sortItemLocation{
   font-size: .9em;
   line-height: 15px;
+  width: 120px;
 }
 
 .findLink{

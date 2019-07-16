@@ -13,7 +13,7 @@
 }
 
 .mainHeader {
-  width: $fullWidth / 1.2;
+  width: $pageWrap;
   margin: $centerOnPage;
 
 }
@@ -63,7 +63,7 @@
   opacity:0;
   transition: opacity 1s linear;
   top: 55px;
-
+  z-index: 99;
 }
 
 .mainMenu li:hover > .dropdownMenu{

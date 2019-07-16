@@ -5,7 +5,7 @@
         <meta charset='utf-8'>
         <meta name='description' content='@yield('description')'>
         <meta name='keywords' content='@yield('keywords')'>
-
+        <meta name="viewport" content="@yield('mobile')">
         @stack('styles')
         @stack('jquery')
         @stack('font-awesome')

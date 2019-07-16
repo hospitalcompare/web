@@ -6,6 +6,8 @@
 
 @section('keywords', 'this is the meta keywords')
 
+@section('mobile', 'width=device-width, initial-scale=1')
+
 {{--creates path for CSS file --}}
 @push('styles')
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -45,15 +47,15 @@
                         <form class="formElem">
                             <div class="formSelectChild">
                                 @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'chevronFAClassName' => 'fa-chevron-down aquaChevron'])
-                                @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select1'])
+                                @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select1', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
                             <div class="formTextChild">
                                 @include('components.basic.textbox', ['placeholder' => 'Enter your postcode'])
-                                @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'textBox1'])
+                                @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'textBox1', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
                             <div class="formSelectChild">
                                  @include('components.basic.selectbox', ['options' => [['id'=>' lessWideSelect', 'name'=>'Up to 50 miles'], ['id'=>2, 'name'=>'Up to 20 miles'], ['id'=>1, 'name'=>'Less than 20 miles']], 'selectClassName'=> 'lessWideSelect', 'placeholder' => 'How far would you like to travel?:', 'chevronFAClassName' => 'fa-chevron-down aquaChevron adjustPosition1'])
-                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => 'adjustHelpLink'])
+                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => 'adjustHelpLink', 'lightBoxClass' => 'lightboxAdjust'])
 
                             </div>
                             @include('components.basic.button', ['classTitle' => 'greenOval blockDisplay', 'button' => 'Find hospitals'])
