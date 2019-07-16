@@ -18,9 +18,3 @@ Route::get('/', function () {
 Route::get('/resultspage', function () {
     return view('pages.resultspage');
 });
-
-
-
-
-
-

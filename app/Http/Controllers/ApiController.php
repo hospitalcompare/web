@@ -112,4 +112,18 @@ class ApiController {
 
         return $this->returnedData;
     }
+
+    /**
+     * Returns all the hospitals as array
+     *
+     * @return array
+     */
+    public function getAllHospitals() {
+        //Retrieve all the hospitals
+        $hospitals = Hospital::with(['address', 'trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'waitingTime'])->get()->toArray();
+
+        $this->returnedData['data'] = $hospitals;
+
+        return $this->returnedData;
+    }
 }
