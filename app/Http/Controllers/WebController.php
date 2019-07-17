@@ -24,8 +24,9 @@ class WebController extends BaseController
 //        return view('pages.homepage', compact('procedures'));
 
         $procedures = Specialty::all()->toArray(); //At the moment retrieve the Specialties because we don't have the Procedures
-        $this->returnedData['success'] = true;
-        $this->returnedData['data']['procedures'] = $procedures;
+
+        $this->returnedData['success']              = true;
+        $this->returnedData['data']['procedures']   = $procedures;
 
         return view('pages.homepage', $this->returnedData);
     }
