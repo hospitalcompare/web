@@ -3,6 +3,8 @@
 
 namespace App\Models;
 
+use App\Helpers\Errors;
+use App\Services\Location;
 use Illuminate\Database\Eloquent\Model;
 
 class Hospital extends Model
@@ -148,5 +150,50 @@ class Hospital extends Model
      */
     public function waitingTime() {
         return $this->hasMany( '\App\Models\HospitalWaitingTime', 'hospital_id', 'id');
+    }
+
+    /**
+     * Retrieves a list of hospitals based on the given inputs ( procedure_id, postcode and radius )
+     * Also applies the filters and sorting (if provided)
+     *
+     * @param string $postcode
+     * @param string $procedureId
+     * @param int $radius
+     *
+     * @return Hospital|array|\Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder
+     */
+    public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 10) {
+        $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating']);
+        //Check if we have the `postcode` and `procedure_id`
+        if(!empty($postcode)) {
+            //Retrieve the latitude and longitude from the postcode
+            $location = new Location($postcode);
+            $location = $location->getLocation();
+            $latitude = (string)$location['data']->result->latitude;
+            $longitude = (string)$location['data']->result->longitude;
+
+            //If we don't have data for the Latitude or Longitude, throw an Error. We should always have the right postcode (we need Fronend Validations to make sure that this is the case)
+            if(empty($latitude) || empty($longitude))
+                Errors::generateError(['Please supply a valid Postcode']);
+
+            //Left Join the address so we can sort by radius
+            $hospitals = $hospitals->whereHas('address', function($q) use($latitude, $longitude, $radius) {
+                $q->selectRaw(\DB::raw("get_distance({$latitude}, {$longitude}, latitude, longitude) AS radius"));
+                $q->having('radius', '<', $radius);
+            })->join('addresses', 'hospitals.address_id', '=', 'addresses.id')->with('address')
+                ->selectRaw(\DB::raw("*, get_distance({$latitude}, {$longitude}, latitude, longitude) AS radius"))
+                ->orderBy('radius');
+        }
+
+        //Check if we have the `procedure_id` and retrieve the relation Waiting Times
+        if(!empty($procedureId)) {
+            $hospitals->with(['waitingTime' => function($q) use($procedureId){
+                $q->where('specialty_id', $procedureId);
+            }]);
+        }
+
+        $hospitals = $hospitals->get()->toArray();
+
+        return $hospitals;
     }
 }

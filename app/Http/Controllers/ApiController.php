@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Helpers\Errors;
 use App\Helpers\Utils;
 use App\Models\Address;
 use App\Models\Hospital;
@@ -91,26 +92,15 @@ class ApiController {
      * @return array
      */
     public function getHospitalsByDistance($postcode) {
-        //Retrieve the latitude and longitude from the postcode
-        $location = new Location($postcode);
-        $location = $location->getLocation();
-        $latitude = (string)$location['data']->result->latitude;
-        $longitude = (string)$location['data']->result->longitude;
-        if(!empty($latitude) && !empty($longitude)) {
-            $radius = 1; //relates to distance in miles
+        $procedureId    = $request['procedure_id'] ?? ''; //For the moment, send the procedure as Specialty ( as we don't have the Procedures )
+        $radius         = $request['radius'] ?? 10; //10 miles as default
 
-            $hospitals = Hospital::whereHas('address', function($q) use($latitude, $longitude, $radius) {
-                $q->selectRaw(\DB::raw("get_distance({$latitude}, {$longitude}, latitude, longitude) AS radius"));
-                $q->having('radius', '<', $radius);
-                $q->orderBy('radius', 'ASC');
-            })->with(['address'=> function($query) use($latitude, $longitude) {
-                $query->selectRaw(\DB::raw("id, address_1, address_2, city, county, postcode, local_authority, region, latitude, longitude, status, created_at, updated_at, get_distance({$latitude}, {$longitude}, latitude, longitude) AS radius"));
-            }, 'trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'waitingTime'])->get()->toArray();
+        $hospitals = $hospitals = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
 
-            $this->returnedData['data'] = $hospitals;
-        }
+        $this->returnedData['success']  = true;
+        $this->returnedData['data']     = $hospitals;
 
-        return $this->returnedData;
+        return json_encode($this->returnedData);
     }
 
     /**
