@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.homepage');
-});
+Route::get('/','WebController@homepage');
 
-Route::get('/resultspage', function () {
-    return view('pages.resultspage');
-});
+Route::get('/results_page','WebController@resultsPage');
