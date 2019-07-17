@@ -92,6 +92,8 @@ class ApiController {
      * @return array
      */
     public function getHospitalsByDistance($postcode) {
+        //Get the request and load it as variables
+        $request        = \Request::all();
         $procedureId    = $request['procedure_id'] ?? ''; //For the moment, send the procedure as Specialty ( as we don't have the Procedures )
         $radius         = $request['radius'] ?? 10; //10 miles as default
 
@@ -100,7 +102,7 @@ class ApiController {
         $this->returnedData['success']  = true;
         $this->returnedData['data']     = $hospitals;
 
-        return json_encode($this->returnedData);
+        return $this->returnedData;
     }
 
     /**
@@ -109,10 +111,16 @@ class ApiController {
      * @return array
      */
     public function getAllHospitals() {
-        //Retrieve all the hospitals
-        $hospitals = Hospital::with(['address', 'trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'waitingTime'])->get()->toArray();
+        //Get the request and load it as variables
+        $request        = \Request::all();
+        $postcode       = $request['postcode'] ?? '';
+        $procedureId    = $request['procedure_id'] ?? ''; //For the moment, send the procedure as Specialty ( as we don't have the Procedures ) //TODO: update this with the id of procedures
+        $radius         = $request['radius'] ?? 10; //10 miles as default
 
-        $this->returnedData['data'] = $hospitals;
+        $hospitals = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
+
+        $this->returnedData['success']  = true;
+        $this->returnedData['data']     = $hospitals;
 
         return $this->returnedData;
     }

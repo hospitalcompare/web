@@ -20,10 +20,8 @@ class WebController extends BaseController
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function homepage() {
-//        $procedures = []; //TODO: implement the list of Procedures as a list of array/objects to populate the dropdown
-//        return view('pages.homepage', compact('procedures'));
-
-        $procedures = Specialty::all()->toArray(); //At the moment retrieve the Specialties because we don't have the Procedures
+        //At the moment retrieve the Specialties because we don't have the Procedures //TODO: implement the list of Procedures as a list of array/objects to populate the dropdown
+        $procedures = Specialty::all()->toArray();
 
         $this->returnedData['success']              = true;
         $this->returnedData['data']['procedures']   = $procedures;
