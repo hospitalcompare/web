@@ -26,7 +26,7 @@ class Procedure extends Model
      */
     protected $casts = [
         'specialty_id'  => 'integer',
-        'name'          => 'integer',
+        'name'          => 'string',
         'status'        => 'string'
     ];
 

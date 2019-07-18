@@ -187,8 +187,10 @@ class Hospital extends Model
 
         //Check if we have the `procedure_id` and retrieve the relation Waiting Times
         if(!empty($procedureId)) {
-            $hospitals->with(['waitingTime' => function($q) use($procedureId){
-                $q->where('specialty_id', $procedureId);
+            $specialty = Procedure::where('id', $procedureId)->first();
+            $specialtyId = $specialty->specialty_id;
+            $hospitals->with(['waitingTime' => function($q) use($specialtyId){
+                $q->where('specialty_id', $specialtyId);
             }]);
         }
 

@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Helpers\Errors;
 use App\Models\Hospital;
-use App\Models\Specialty;
-use App\Services\Location;
+use App\Models\Procedure;
 use Illuminate\Routing\Controller as BaseController;
 
 class WebController extends BaseController
@@ -21,7 +19,7 @@ class WebController extends BaseController
      */
     public function homepage() {
         //At the moment retrieve the Specialties because we don't have the Procedures //TODO: implement the list of Procedures as a list of array/objects to populate the dropdown
-        $procedures = Specialty::all()->toArray();
+        $procedures = Procedure::all()->sortBy('name')->toArray();
 
         $this->returnedData['success']              = true;
         $this->returnedData['data']['procedures']   = $procedures;
