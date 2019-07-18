@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Page Test')
+@section('title', 'Homepage')
 
 @section('description', 'this is the meta description')
 
@@ -17,41 +17,31 @@
 {{--creates path for JS file --}}
 @push('main')
     <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-@endpush
-
-@push('button')
-    <script type="text/javascript" src="{{ asset('js/button.js') }}"></script>
-@endpush
-
-@push('jquery')
     <script src="{{ asset('js/library/jquery-3.4.1.min.js') }}"></script>
-
-@endpush
-
-@push('font-awesome')
     <script src="{{ asset('js/library/jquery-3.4.1.min.js') }}"></script>
     <script src="{{ asset('https://kit.fontawesome.com/d4b841dc1e.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('https://kit.fontawesome.com/d4b841dc1e.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/pages/homepage.js') }}"></script>
 @endpush
-
 
 @section('content')
     <div class="bannerParent">
         <section class="banner">
-
             <div class="bannerData">
                 <div class="homePostCodeParent">
                     <div class="box">
-
-                        <p>Find the best hospital for your
-                            elective surgery</p>
+                        <p>Find the best hospital for your elective surgery</p>
                         <form class="formElem">
                             <div class="formSelectChild">
                                 @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'chevronFAClassName' => 'fa-chevron-down aquaChevron'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select1', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
                             <div class="formTextChild">
-                                @include('components.basic.textbox', ['placeholder' => 'Enter your postcode'])
+                                @include('components.basic.textbox', ['placeholder' => 'Enter your postcode', 'className' => 'postcode-text-box', 'value' => '', 'name' => 'postcode', 'id' => 'input_postcode'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'textBox1', 'lightBoxClass' => 'lightboxAdjust'])
+                                <div class="postcode-autocomplete-cont">
+                                    <div class="ajax-box"></div>
+                                </div>
                             </div>
                             <div class="formSelectChild">
                                  @include('components.basic.selectbox', ['options' => [['id'=>' lessWideSelect', 'name'=>'Up to 50 miles'], ['id'=>2, 'name'=>'Up to 20 miles'], ['id'=>1, 'name'=>'Less than 20 miles']], 'selectClassName'=> 'lessWideSelect', 'placeholder' => 'How far would you like to travel?:', 'chevronFAClassName' => 'fa-chevron-down aquaChevron adjustPosition1'])

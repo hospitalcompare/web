@@ -1,8 +1,1 @@
-
-
-
-
-        <input class="{{empty($inputClassName)? '' : $inputClassName}}" type="text" placeholder="{{$placeholder}}">
-
-
-
+<input id="{{empty($id)? '' : $id}}" class="{{empty($className)? '' : $className}}" type="text" placeholder="{{$placeholder}}" value="{{$value}}" name="{{$name}}"/>

@@ -1,8 +1,10 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/js/pages/homepage.js": "/js/pages/homepage.js",
     "/images/banner.jpg": "/images/banner.jpg",
     "/images/Layer_7_copy_2.svg": "/images/Layer_7_copy_2.svg",
     "/images/placeholder.jpg": "/images/placeholder.jpg",
-    "/images/player_button.png": "/images/player_button.png"
+    "/images/player_button.png": "/images/player_button.png",
+    "/images/alder-1.png": "/images/alder-1.png"
 }

@@ -17,18 +17,8 @@
 {{--creates path for JS file --}}
 @push('main')
     <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-@endpush
-
-@push('button')
     <script type="text/javascript" src="{{ asset('js/button.js') }}"></script>
-@endpush
-
-@push('jquery')
     <script src="{{ asset('js/library/jquery-3.4.1.min.js') }}"></script>
-
-@endpush
-
-@push('font-awesome')
     <script src="{{ asset('js/library/jquery-3.4.1.min.js') }}"></script>
     <script src="{{ asset('https://kit.fontawesome.com/d4b841dc1e.js') }}"></script>
 @endpush
@@ -40,7 +30,7 @@
                 <form class="formElem">
                     <div class="postProx">
                         <div class="postProxChild">
-                            @include('components.basic.textbox', ['placeholder' => 'Enter your postcode', 'inputClassName' => 'inputClass'])
+                            @include('components.basic.textbox', ['placeholder' => 'Enter your postcode', 'inputClassName' => 'inputClass', 'value' => '', 'name' => 'postcode', 'id' => 'input_postcode'])
 
                         </div>
                         <div class="postProxChild">

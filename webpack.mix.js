@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .js('resources/js/pages/homepage.js', 'public/js/pages/homepage.js')
     .sass('resources/sass/app.scss', 'public/css');
 
 //Copy all the images that are used on the Web Application to the right folder ( public/images )
