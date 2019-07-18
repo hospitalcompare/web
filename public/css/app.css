@@ -351,6 +351,7 @@ input {
   margin: auto;
   display: -webkit-flex;
   display: flex;
+  margin-bottom: 10px;
 }
 
 .sortCategoriesHeader {

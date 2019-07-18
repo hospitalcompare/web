@@ -163,7 +163,7 @@ class Hospital extends Model
      * @return Hospital|array|\Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder
      */
     public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 10) {
-        $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating']);
+        $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address']);
         //Check if we have the `postcode` and `procedure_id`
         if(!empty($postcode)) {
             //Retrieve the latitude and longitude from the postcode

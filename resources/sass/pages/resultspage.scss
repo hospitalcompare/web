@@ -98,6 +98,7 @@
   width: $pageWrap;
   margin: $centerOnPage;
   @include flex;
+  margin-bottom: 10px;
 }
 .sortCategoriesHeader{
   height: 80px;
