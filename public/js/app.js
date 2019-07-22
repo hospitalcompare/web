@@ -49213,6 +49213,85 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 var app = new Vue({
   el: '#app'
 });
+$(document).ready(function () {
+  // Output time (year) dynamically
+  var date = new Date();
+  var thisyear = date.getFullYear();
+  $('#thisYear').text(thisyear); //Hide first option tag value from displaying in select element options
+  // $('.firstOption').hide();
+  //BACK TO TOP SCRIPT
+  //SCROLL EFFECT
+  // Select all links with hashes
+
+  $('a[href*="#"]') // Remove links that don't actually link to anything
+  .not('[href="#"]').not('[href="#0"]').click(function (event) {
+    // On-page links
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']'); // Does a scroll target exist?
+
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 500, function () {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+
+          if ($target.is(":focus")) {
+            // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+
+            $target.focus(); // Set focus again
+          }
+
+          ;
+        });
+      }
+    }
+  }); //end of scroll
+  //POSTCODE Autocomplete
+
+  $('.postcode-autocomplete-cont').hide();
+  $('.homePostCodeParent #input_postcode').on('input', function (e) {
+    var postcode = $(this).val();
+    $.ajax({
+      url: 'api/getLocations/' + postcode,
+      type: 'GET',
+      headers: {
+        'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4'
+      },
+      dataType: "json",
+      contentType: "application/json; charset=utf-8",
+      data: {},
+      success: function success(data) {
+        // var json_obj = $.parseJSON(data);//parse JSON
+        var el = $(".homePostCodeParent .postcode-autocomplete-cont .ajax-box");
+        el.empty(); // remove old options
+        //Check if we have at least one result in our data
+
+        if (!$.isEmptyObject(data.data.result)) {
+          $.each(data.data.result, function (key, obj) {
+            //$.parseJSON() method is needed unless chrome is throwing error.
+            el.append("<p>" + obj.postcode + "</p>");
+          });
+          $('.postcode-autocomplete-cont').show();
+        } else {
+          alert('Invalid Postcode! Please try again.');
+        }
+      },
+      error: function error(data) {
+        alert('Something went wrong! Please try again.');
+      }
+    });
+  });
+});
 
 /***/ }),
 

@@ -41,9 +41,11 @@ class WebController extends BaseController
         $radius         = $request['radius'] ?? 10; //10 miles as default
 
         $hospitals = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
+        $procedures = Procedure::all();
 
-        $this->returnedData['success']  = true;
-        $this->returnedData['data']     = $hospitals;
+        $this->returnedData['success']              = true;
+        $this->returnedData['data']['hospitals']    = $hospitals;
+        $this->returnedData['data']['procedures']   = $procedures;
 
         return view('pages.resultspage', $this->returnedData);
     }

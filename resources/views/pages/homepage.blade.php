@@ -8,20 +8,6 @@
 
 @section('mobile', 'width=device-width, initial-scale=1')
 
-{{--creates path for CSS file --}}
-@push('styles')
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-@endpush
-
-
-{{--creates path for JS file --}}
-@push('main')
-    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-    <script src="{{ asset('js/library/jquery-3.4.1.min.js') }}"></script>
-    <script src="{{ asset('https://kit.fontawesome.com/d4b841dc1e.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/pages/homepage.js') }}"></script>
-@endpush
-
 @section('content')
     <div class="bannerParent">
         <section class="banner">
@@ -29,28 +15,27 @@
                 <div class="homePostCodeParent">
                     <div class="box fullLeft">
                         <p>Find the best hospital for your elective surgery</p>
-                        <form class="formElem">
-                            <div class="formSelectChild fullLeft">
-                                @include('components.basic.selectbox', ['options' => $data['procedures'], 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'placeholder'=>'Choose your procedure'])
-                                @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select1', 'lightBoxClass' => 'lightboxAdjust'])
+                        <form class="formElem" method="get" action="/results_page">
+
+                            <div class="formChild fullLeft">
+                                @include('components.basic.selectbox', ['options' => $data['procedures'], 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'placeholder'=>'Choose your procedure', 'name'=>'procedure_id'])
+                                @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'Procedures list', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
-                            <div class="formTextChild fullLeft">
+                            <div class="formChild fullLeft">
                                 @include('components.basic.textbox', ['placeholder' => 'Enter your postcode', 'className' => 'postcode-text-box', 'value' => '', 'name' => 'postcode', 'id' => 'input_postcode'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'textBox1', 'lightBoxClass' => 'lightboxAdjust'])
                                 <div class="postcode-autocomplete-cont">
                                     <div class="ajax-box"></div>
                                 </div>
                             </div>
-                            <div class="formSelectChild fullLeft">
-                                 @include('components.basic.selectbox', ['options' => [['id'=>' lessWideSelect', 'name'=>'Up to 50 miles'], ['id'=>2, 'name'=>'Up to 20 miles'], ['id'=>1, 'name'=>'Less than 20 miles']], 'selectClassName'=> 'lessWideSelect', 'placeholder' => 'How far would you like to travel?:', 'chevronFAClassName' => 'fa-chevron-down aquaChevron adjustPosition1'])
+                            <div class="formChild fullLeft">
+                                 @include('components.basic.selectbox', ['options' => [['id'=>50, 'name'=>'Up to 50 miles'], ['id'=>20, 'name'=>'Up to 20 miles'], ['id'=>10, 'name'=>'Less than 10 miles']], 'selectClassName'=> 'lessWideSelect', 'placeholder' => 'How far would you like to travel?:', 'chevronFAClassName' => 'fa-chevron-down aquaChevron adjustPosition1', 'name'=>'radius'])
                                  @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => 'adjustHelpLink', 'lightBoxClass' => 'lightboxAdjust'])
 
                             </div>
-                            @include('components.basic.button', ['classTitle' => 'greenOval', 'button' => 'Find hospitals'])
+                            @include('components.basic.submit', ['classTitle' => 'greenOval', 'button' => 'Find hospitals'])
 
-{{--                            @include('components.basic.submitButton', ['button' => 'Find hospitals'])--}}
-
-                            <p class='browseButton'><a  href="">Browse all hospitals</a></p>
+                            <p class='browseButton'><a  href="{{url('/results_page')}}">Browse all hospitals</a></p>
 
                         </form>
                     </div>
@@ -92,21 +77,3 @@
         </div>
     </div>
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,23 +1,21 @@
 select, input{
   width: 445px;
   height: 41px;
-
 }
 
 input, button, select, optgroup, textarea {
-
   margin: 0;
   margin-bottom: 0px;
   margin-left: 0px;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  margin-left: 7% !important;
-  margin-bottom: 20px !important;
+  //margin-left: 7% !important;
+  //margin-bottom: 20px !important;
 
 }
 
-input{
+input {
   border: 2px solid #ebebeb;
   padding-left:5px;
 }

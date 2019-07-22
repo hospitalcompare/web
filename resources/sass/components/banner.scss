@@ -32,19 +32,21 @@
   @include uniformAlignment;
 }
 
-.box{
+.box {
   width: 511px;
   min-height: 431px;
   border-radius: 20px;
   background-color: #ffffffad;
-  padding: 10px;
-  p{
+  padding: 10px 30px;
+  text-align:center;
+
+  p {
     color: $black;
     font-size: 1.3em;
     width: 50%;
-    text-align:center;
     margin: auto;
     padding-top: 10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -77,9 +79,9 @@
 }
 .aquaChevron{
   color: $aqua;
-  position:$relative;
-  left: -30px;
-  top: 3px;
+  position:$absolute;
+  left: 420px;
+  top: 15px;
 }
 
 .postcode-autocomplete-cont {
@@ -96,6 +98,7 @@
   -ms-transition-delay: 0s;
   -o-transition-delay: 0s;
   transition-delay: 0s;
+  margin-top: 10px;
   .ajax-box {
     float: left;
     width: 100%;

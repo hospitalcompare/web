@@ -9,8 +9,6 @@
   width: $pageWrap;
   margin: $centerOnPage;
   height: 187px;
-
-
 }
 
 .postProx, .selectProx{
@@ -21,6 +19,7 @@
 .postProxChild{
   @include uniformAlignment;
   position: $relative;
+  margin-bottom: 20px;
 }
 
 .searchPageSelect{

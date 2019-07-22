@@ -114,13 +114,13 @@ class ApiController {
         //Get the request and load it as variables
         $request        = \Request::all();
         $postcode       = $request['postcode'] ?? '';
-        $procedureId    = $request['procedure_id'] ?? ''; //For the moment, send the procedure as Specialty ( as we don't have the Procedures ) //TODO: update this with the id of procedures
+        $procedureId    = $request['procedure_id'] ?? '';
         $radius         = $request['radius'] ?? 10; //10 miles as default
 
         $hospitals = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
 
-        $this->returnedData['success']  = true;
-        $this->returnedData['data']     = $hospitals;
+        $this->returnedData['success']              = true;
+        $this->returnedData['data']['hospitals']    = $hospitals;
 
         return $this->returnedData;
     }
