@@ -15,15 +15,16 @@
 .mainHeader {
   width: $pageWrap;
   margin: $centerOnPage;
-
+  letter-spacing: -1px;
 }
 
 .mainHeaderWrap{
   @include headerHeight;
   background: $aqua;
-  width: $fullWidth;
+  //width: $fullWidth;
   margin: $centerOnPage;
   width:100%;
+  text-align: center;
 }
 
 .titleParent {
@@ -39,6 +40,7 @@
   justify-content: center;
   align-items:center;
   margin: 20px;
+  padding-top: 2px;
   .mainMenu{
     @include flex;
     margin: 0;

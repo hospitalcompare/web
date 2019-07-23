@@ -14,23 +14,23 @@
             <div class="bannerData">
                 <div class="homePostCodeParent">
                     <div class="box fullLeft">
-                        <p>Find the best hospital for your elective surgery</p>
+                        <p>Find the best hospital for your elective surgery</p><br>
                         <form class="formElem" method="get" action="/results_page">
 
                             <div class="formChild fullLeft">
-                                @include('components.basic.selectbox', ['options' => $data['procedures'], 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'placeholder'=>'Choose your procedure', 'name'=>'procedure_id'])
+                                @include('components.basic.selectbox', ['selectClass'=> 'big', 'options' => $data['procedures'], 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'placeholder'=>'Choose your procedure', 'name'=>'procedure_id'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'Procedures list', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
                             <div class="formChild fullLeft">
-                                @include('components.basic.textbox', ['placeholder' => 'Enter your postcode', 'className' => 'postcode-text-box', 'value' => '', 'name' => 'postcode', 'id' => 'input_postcode'])
+                                @include('components.basic.textbox', ['placeholder' => 'Enter your postcode', 'className' => 'postcode-text-box big', 'value' => '', 'name' => 'postcode', 'id' => 'input_postcode'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'textBox1', 'lightBoxClass' => 'lightboxAdjust'])
                                 <div class="postcode-autocomplete-cont">
                                     <div class="ajax-box"></div>
                                 </div>
                             </div>
                             <div class="formChild fullLeft">
-                                 @include('components.basic.selectbox', ['options' => [['id'=>50, 'name'=>'Up to 50 miles'], ['id'=>20, 'name'=>'Up to 20 miles'], ['id'=>10, 'name'=>'Less than 10 miles']], 'selectClassName'=> 'lessWideSelect', 'placeholder' => 'How far would you like to travel?:', 'chevronFAClassName' => 'fa-chevron-down aquaChevron adjustPosition1', 'name'=>'radius'])
-                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => 'adjustHelpLink', 'lightBoxClass' => 'lightboxAdjust'])
+                                 @include('components.basic.selectbox', ['selectClass'=> 'big', 'options' => [['id'=>50, 'name'=>'Up to 50 miles'], ['id'=>20, 'name'=>'Up to 20 miles'], ['id'=>10, 'name'=>'Less than 10 miles']], 'selectClassName'=> 'lessWideSelect', 'placeholder' => 'How far would you like to travel?:', 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'name'=>'radius'])
+                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => '', 'lightBoxClass' => 'lightboxAdjust'])
 
                             </div>
                             @include('components.basic.submit', ['classTitle' => 'greenOval', 'button' => 'Find hospitals'])
@@ -61,13 +61,9 @@
             <section class="whyChoose">
                 <div class="chooseText">
                     <h1 class="pageTitle">Why use Hospital Compare?</h1>
-                    <p>
-                        Hospital Compare helps you make the best possible choice when it comes to choosing a suitable hospital for your elective procedure.
-
-                        64% of people in the UK are not aware that they could have the option of an NHS funded operation in a private hospital. We are here to help you understand your rights and make the right choice.
-
-                        Whether you are searching for the best NHS hospital or the best private hospital, Hospital Compare is the only place that provides an accurate, up-to-date and unbiased assessment of all hospitals in the UK.
-                    </p>
+                    <p>Hospital Compare helps you make the best possible choice when it comes to choosing a suitable hospital for your elective procedure.</p>
+                    <p>64% of people in the UK are not aware that they could have the option of an NHS funded operation in a private hospital. We are here to help you understand your rights and make the right choice.</p>
+                    <p>Whether you are searching for the best NHS hospital or the best private hospital, Hospital Compare is the only place that provides an accurate, up-to-date and unbiased assessment of all hospitals in the UK.</p>
                 </div>
                 <div class="chooseVideo">
                     <div class="videoParent">
