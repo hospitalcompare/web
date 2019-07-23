@@ -8,23 +8,23 @@
 
         <nav class="mainNav">
             <ul class="mainMenu">
-                <li><a href="">our mission</a></li>
-                <li><a href="">your rights<i class="fas fa-chevron-down"></i></a>
+                <li><a href="">Our mission</a></li>
+                <li><a href="">Your Rights<i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdownMenu">
                         <li><a href="">Link text here</a></li>
                         <li><a href="">Link text here</a></li>
                         <li><a href="">Link text here</a></li>
                     </ul>
                 </li>
-                <li><a href="">how to use<i class="fas fa-chevron-down"></i></a>
+                <li><a href="">How To Use<i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdownMenu">
                         <li><a href="">Link text here</a></li>
                         <li><a href="">Link text here</a></li>
                         <li><a href="">Link text here</a></li>
                     </ul>
                 </li>
-                <li><a href="">faqs</a></li>
-                <li><a href="">guides</a></li>
+                <li><a href="">FAQs</a></li>
+                <li><a href="">Guides</a></li>
             </ul>
         </nav>
 
