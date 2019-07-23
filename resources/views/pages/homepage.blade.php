@@ -54,11 +54,35 @@
             </div>
         </section>
     </div>
-    @include('components.whysection', ['title' => 'Why use Hospital Compare?', 'description' => 'Hospital Compare helps you make the best possible choice when it comes to choosing a suitable hospital for your elective procedure.
 
-        64% of people in the UK are not aware that they could have the option of an NHS funded operation in a private hospital. We are here to help you understand your rights and make the right choice.
+    <div class="whyChooseParent">
+        <div class="whyChooseContent">
 
-        Whether you are searching for the best NHS hospital or the best private hospital, Hospital Compare is the only place that provides an accurate, up-to-date and unbiased assessment of all hospitals in the UK.', 'videoPoster' => 'images/video_placeholder.png'])
+            <section class="whyChoose">
+                <div class="chooseText">
+                    <h1 class="pageTitle">Why use Hospital Compare?</h1>
+                    <p>
+                        Hospital Compare helps you make the best possible choice when it comes to choosing a suitable hospital for your elective procedure.
+
+                        64% of people in the UK are not aware that they could have the option of an NHS funded operation in a private hospital. We are here to help you understand your rights and make the right choice.
+
+                        Whether you are searching for the best NHS hospital or the best private hospital, Hospital Compare is the only place that provides an accurate, up-to-date and unbiased assessment of all hospitals in the UK.
+                    </p>
+                </div>
+                <div class="chooseVideo">
+                    <div class="videoParent">
+                        <video  poster="{{ url('images/video_placeholder.png') }}">
+                            {{--                        <source src="movie.mp4" type="video/mp4">--}}
+                            {{--                        <source src="movie.ogg" type="video/ogg">--}}
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="playerButton"></div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
 
     <div class="howSectionParent">
         @include('components.howsection', ['howsections' => [['iconImg'=> 'images/003-doctor.png', 'numeral'=> '1', 'title'=>'Get your referral from the GP

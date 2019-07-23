@@ -6,3 +6,60 @@
 .adjustHelpLink {
   left: 47.5% !important;
 }
+
+//=======================WHY CHOOSE SECTION=======================
+.whyChooseParent{
+  width: 100%;
+  height: auto;
+  background: $sectionBeige;
+}
+
+.whyChooseContent{
+  width: $pageWrap;
+  margin:  auto;
+  padding-top: 80px;
+}
+
+.whyChoose{
+  @include flex;
+  color: #1b1b1b;
+
+  .pageTitle{
+    font-size: 40px;
+    font-weight:600;
+    margin-bottom: 30px;
+  }
+
+  p{
+    width: 589px;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 34px;
+  }
+}
+
+.chooseText, .chooseVideo{
+  @include uniformAlignment;
+}
+
+.chooseVideo{
+  margin-left: 8%;
+}
+
+.icon{
+  margin-bottom:20px;
+
+}
+
+.playerButton{
+  background-image:url(../images//player_button.png);
+  position: relative;
+  top: -240px;
+  z-index: 999999999;
+  height: 100px;
+  background-repeat: no-repeat;
+  left: 200px;
+  width: 100px;
+}
+//=======================END WHY CHOOSE SECTION=======================
