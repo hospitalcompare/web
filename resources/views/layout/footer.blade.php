@@ -1,6 +1,7 @@
 <div class="backTopHolder">
     <div class="backTopContent">
-        @include('components.basic.button', ['classTitle' => 'greenOvalTop backToTop', 'button' => 'Back to top', 'hrefValue' => '#top', 'icon' => 'fa fa-chevron-up'])
+        @include('components.basic.button', ['classTitle' => 'greenOvalTop backToTop', 'button' => 'Back to top', 'hrefValue' => '#top', 'icon' => ''])
+{{--        fa fa-chevron-up--}}
     </div>
 </div>
 
