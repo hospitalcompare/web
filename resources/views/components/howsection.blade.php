@@ -3,7 +3,10 @@
     @if(!empty($howsections))
         @foreach($howsections as $howsection)
             <div class="chooseContent">
-                <div class="numeral">{{$howsection['numeral']}}</div>
+                @if(!empty($howsection['numeral']))
+                    <div class="numeral">{{$howsection['numeral']}}</div>
+                @endif
+
                 <div class="icon">
                     <img src="{{ asset($howsection['iconImg']) }}">
                 </div>

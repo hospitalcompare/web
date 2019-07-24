@@ -60,15 +60,20 @@ input.big {
   line-height: 24px;
 }
 
-.whyChooseParent .chooseText,
-.whyChooseParent .chooseVideo {
+.whyChooseParent .whyChoose .chooseVideo {
+  margin-left: 8%;
+}
+
+.whyChooseParent .whyChoose .chooseVideo .videoParent video {
+  border: 1px solid #707070;
+  border-radius: 15px;
+}
+
+.whyChooseParent .whyChoose .chooseText,
+.whyChooseParent .whyChoose .chooseVideo {
   flex: 1 1 0;
   -webkit-flex: 1 1 0;
   -ms-flex: 1 1 100px;
-}
-
-.whyChooseParent .chooseVideo {
-  margin-left: 8%;
 }
 
 .whyChooseParent .icon {
@@ -1013,7 +1018,7 @@ input {
   color: #000000;
   position: absolute;
   top: 20px;
-  left: 250px;
+  left: 330px;
   border-radius: 50%;
   background: #ebebeb;
   width: 20px;

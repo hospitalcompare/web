@@ -33,14 +33,22 @@
       letter-spacing: -1px;
       line-height: 24px;
     }
-  }
 
-  .chooseText, .chooseVideo{
-    @include uniformAlignment;
-  }
+    .chooseVideo{
+      margin-left: 8%;
 
-  .chooseVideo{
-    margin-left: 8%;
+      .videoParent {
+
+        video {
+          border: 1px solid #707070;
+          border-radius: 15px;
+        }
+      }
+    }
+
+    .chooseText, .chooseVideo{
+      @include uniformAlignment;
+    }
   }
 
   .icon{
