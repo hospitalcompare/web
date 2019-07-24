@@ -1,3 +1,4 @@
-<label for="radiusProx">{{$label}}</label>
-<input type="range" id="radiusProx" name="radiusProx"
-       min="0" max="300" value="150">
+<div class="rangeParent">
+    <label for="radiusProx">{{$label}}</label>
+    <input type="range" id="radiusProx" name="{{$name}}" min="{{$min}}" max="{{$max}}" value="{{$value}}" step="{{$step}}">
+</div>
