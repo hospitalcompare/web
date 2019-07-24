@@ -33,26 +33,26 @@ input.big {
   background: #ececec;
 }
 
-.whyChooseContent {
+.whyChooseParent .whyChooseContent {
   width: 1180px;
   margin: auto;
   padding-top: 80px;
 }
 
-.whyChoose {
+.whyChooseParent .whyChoose {
   display: -webkit-flex;
   display: flex;
   color: #1b1b1b;
 }
 
-.whyChoose .pageTitle {
+.whyChooseParent .whyChoose .pageTitle {
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 30px;
   letter-spacing: -2px;
 }
 
-.whyChoose p {
+.whyChooseParent .whyChoose p {
   width: 589px;
   font-size: 20px;
   font-weight: 400;
@@ -60,22 +60,22 @@ input.big {
   line-height: 24px;
 }
 
-.chooseText,
-.chooseVideo {
+.whyChooseParent .chooseText,
+.whyChooseParent .chooseVideo {
   flex: 1 1 0;
   -webkit-flex: 1 1 0;
   -ms-flex: 1 1 100px;
 }
 
-.chooseVideo {
+.whyChooseParent .chooseVideo {
   margin-left: 8%;
 }
 
-.icon {
+.whyChooseParent .icon {
   margin-bottom: 20px;
 }
 
-.playerButton {
+.whyChooseParent .playerButton {
   background-image: url(/images/player_button.png?180c959869d99b858b10bfb52ee13007);
   position: relative;
   top: -240px;
@@ -84,6 +84,184 @@ input.big {
   background-repeat: no-repeat;
   left: 200px;
   width: 100px;
+}
+
+.howSectionParent {
+  width: 1180px;
+  margin: 30px auto;
+}
+
+.howSectionParent .pageTitle {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  line-height: 48px;
+  margin-bottom: 25px;
+}
+
+.howSectionParent .iconTitle,
+.howSectionParent .iconDescription {
+  color: #1b1b1b;
+}
+
+.howSectionParent .iconTitle {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -1.1px;
+  line-height: 26.4px;
+  margin-bottom: 25px;
+}
+
+.howSectionParent .iconDescription {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 24px;
+}
+
+.howSection {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+}
+
+.chooseContent {
+  text-align: center;
+  position: relative;
+  margin-right: 30px;
+}
+
+.chooseContent .icon {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.chooseContent .numeral {
+  position: absolute;
+  top: 0;
+  left: 22%;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.chooseHealthParent {
+  width: 1180px;
+  margin: 60px auto;
+}
+
+.chooseHealthParent .chooseHealth {
+  height: 410px;
+  background: url(/images/placeholder.jpg?d11a006dce88176b273025681118c15b);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  position: relative;
+}
+
+.chooseHealthParent .chooseHealthText {
+  width: 55.5555555556%;
+  color: #ffffff;
+  position: absolute;
+  font-size: 27px;
+  font-weight: 600;
+  letter-spacing: -1.35px;
+  line-height: 32.4px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.chooseHealthParent .chooseHealthText p {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.blogSectionParent {
+  width: 1180px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  color: #1b1b1b;
+}
+
+.blogSectionParent .pageTitle {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  line-height: 48px;
+}
+
+.blogSectionParent .blogContent {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.blogSectionParent .blogContent .blogWrap {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin-right: 20px;
+  text-decoration: none !important;
+}
+
+.blogSectionParent .blogContent .blogWrap a:hover {
+  text-decoration: none !important;
+}
+
+.blogSectionParent .blogContent .blogWrap a {
+  text-decoration: none !important;
+}
+
+.blogSectionParent .blogContent .blogWrap .icon {
+  margin: 20px 0;
+}
+
+.blogSectionParent .blogContent .blogWrap .title {
+  color: #00cecd;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.6px;
+  line-height: 24px;
+}
+
+.blogSectionParent .blogContent .blogWrap .description {
+  color: #1c1c1c;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.72px;
+  line-height: 28.8px;
+}
+
+.blogSectionParent .buttonSectionParent {
+  width: 83.3333333333%;
+  margin: 0 auto 100px auto;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.blogSectionParent .buttonSectionParent p {
+  margin-left: 100px;
+  width: 80%;
+}
+
+.blogSectionParent .buttonSectionParent p:nth-child(2) {
+  margin-left: 250px;
+}
+
+.blogSectionParent .buttonSectionParent p:nth-child(3) {
+  margin-left: 250px;
 }
 
 .fa-cross {
@@ -297,8 +475,8 @@ input {
 }
 
 .backTopHolder {
-  height: 30px;
-  width: 83.3333333333%;
+  height: 75px;
+  width: 1180px;
   margin: auto;
 }
 
@@ -308,7 +486,8 @@ input {
 }
 
 .backTopHolder .backToTop {
-  padding: 8px 10px;
+  padding: 27px;
+  display: block;
 }
 
 .filterParent {
@@ -560,75 +739,6 @@ input {
   padding-left: 2px;
 }
 
-.howSectionParent {
-  width: 1180px;
-  margin: 100px auto;
-}
-
-.howSection {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  position: relative;
-  left: -70px;
-}
-
-.iconTitle,
-.iconDescription {
-  width: 89%;
-}
-
-.chooseContent {
-  text-align: center;
-  padding: 0 5.5%;
-  position: relative;
-}
-
-.chooseContent .icon {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.chooseContent .numeral {
-  position: absolute;
-  top: 0;
-  left: 22%;
-  font-size: 1.2em;
-  font-weight: 600;
-}
-
-.chooseHealthParent {
-  width: 1180px;
-  margin: 100px auto;
-}
-
-.chooseHealth {
-  height: 401px;
-  background: url(/images/placeholder.jpg?d11a006dce88176b273025681118c15b);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: -20px;
-  border-radius: 20px;
-}
-
-.chooseHealthText {
-  width: 55.5555555556%;
-  margin: 80px auto;
-  color: #ffffff;
-  position: relative;
-  top: 100px;
-  font-size: 1.5em;
-  font-weight: 500;
-}
-
-.chooseHealthText p {
-  margin-top: 50px;
-  text-align: center;
-}
-
 .headerLogoParent {
   position: relative;
   -webkit-flex-basis: 0;
@@ -780,49 +890,6 @@ input {
   border: 2px solid #00cecd;
   max-height: 222px;
   overflow: auto;
-}
-
-.blogSectionParent {
-  width: 1180px;
-  margin: 0 auto 50px auto;
-}
-
-.blogContent {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-}
-
-.blogWrap {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: column;
-  flex-flow: column;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.buttonSectionParent {
-  width: 83.3333333333%;
-  margin: 0 auto 100px auto;
-  display: -webkit-flex;
-  display: flex;
-}
-
-.buttonSectionParent p {
-  margin-left: 100px;
-  width: 80%;
-}
-
-.buttonSectionParent p:nth-child(2) {
-  margin-left: 250px;
-}
-
-.buttonSectionParent p:nth-child(3) {
-  margin-left: 250px;
 }
 
 .hospBtn {

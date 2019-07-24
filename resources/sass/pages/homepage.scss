@@ -8,27 +8,89 @@
   width: 100%;
   height: auto;
   background: $sectionBeige;
-}
 
-.whyChooseContent{
-  width: $pageWrap;
-  margin:  auto;
-  padding-top: 80px;
-}
-
-.whyChoose{
-  @include flex;
-  color: #1b1b1b;
-
-  .pageTitle{
-    font-size: 40px;
-    font-weight:600;
-    margin-bottom: 30px;
-    letter-spacing: -2px;
+  .whyChooseContent{
+    width: $pageWrap;
+    margin:  auto;
+    padding-top: 80px;
   }
 
-  p{
-    width: 589px;
+  .whyChoose{
+    @include flex;
+    color: #1b1b1b;
+
+    .pageTitle{
+      font-size: 40px;
+      font-weight:600;
+      margin-bottom: 30px;
+      letter-spacing: -2px;
+    }
+
+    p{
+      width: 589px;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: -1px;
+      line-height: 24px;
+    }
+  }
+
+  .chooseText, .chooseVideo{
+    @include uniformAlignment;
+  }
+
+  .chooseVideo{
+    margin-left: 8%;
+  }
+
+  .icon{
+    margin-bottom:20px;
+
+  }
+
+  .playerButton{
+    background-image:url(../images//player_button.png);
+    position: relative;
+    top: -240px;
+    z-index: 1000;
+    height: 100px;
+    background-repeat: no-repeat;
+    left: 200px;
+    width: 100px;
+  }
+}
+
+
+//=======================END WHY CHOOSE SECTION=======================
+
+//============================HOW SECTION=============================
+.howSectionParent {
+  width: $pageWrap;
+  margin: 30px auto;
+
+  .pageTitle {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    line-height: 48px;
+    margin-bottom: 25px;
+  }
+
+  .iconTitle, .iconDescription {
+    //width:89%;
+    color: #1b1b1b;
+
+  }
+
+  .iconTitle {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -1.1px;
+    line-height: 26.4px;
+    margin-bottom: 25px;
+  }
+
+  .iconDescription {
     font-size: 20px;
     font-weight: 400;
     letter-spacing: -1px;
@@ -36,27 +98,153 @@
   }
 }
 
-.chooseText, .chooseVideo{
-  @include uniformAlignment;
-}
-
-.chooseVideo{
-  margin-left: 8%;
-}
-
-.icon{
-  margin-bottom:20px;
-
-}
-
-.playerButton{
-  background-image:url(../images//player_button.png);
+.howSection {
+  @include flex;
+  @include justify-content($value: space-between);
   position: relative;
-  top: -240px;
-  z-index: 1000;
-  height: 100px;
-  background-repeat: no-repeat;
-  left: 200px;
-  width: 100px;
+  //left: -70px;
 }
-//=======================END WHY CHOOSE SECTION=======================
+
+
+.chooseContent {
+  text-align:center;
+  //padding: 0 5.5%;
+  position:$relative;
+  margin-right: 30px;
+
+  .icon {
+    @include flex;
+    @include justify-content($value: center);
+    margin-bottom: 20px;
+  }
+
+  .numeral {
+    position:$absolute;
+    top:0;
+    left:22%;
+    font-size: 1.2em;
+    font-weight:600;
+  }
+}
+
+//============================ END HOW SECTION=============================
+
+//=========================HEALTH CHOICE SECTION===========================
+.chooseHealthParent{
+  width: $pageWrap;
+  margin: 60px auto;
+
+  .chooseHealth {
+    height: 410px;
+    background: url('../images/placeholder.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    border-radius: 20px;
+    position: relative;
+  }
+
+  .chooseHealthText{
+    width:$fullWidth / 1.8;
+    //margin: 80px auto;
+    color:$white;
+    position: absolute;
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: -1.35px;
+    line-height: 32.4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .chooseHealthText p{
+    margin-top: 50px;
+    text-align:center;
+  }
+}
+//=========================END HEALTH CHOICE SECTION====================
+
+// ========================BLOGS SECTION================================
+.blogSectionParent {
+  width: $pageWrap;
+  margin:  0 auto;
+  margin-bottom: 50px;
+  color: #1b1b1b;
+
+  .pageTitle {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    line-height: 48px;
+  }
+
+  .blogContent {
+    @include flex;
+    @include justify-content(space-between);
+
+    .blogWrap {
+      @include flex;
+      @include flex-flow(column);
+      @include justify-content(center);
+      @include alignItems;
+      margin-right: 20px;
+      text-decoration: none !important;
+
+    a:hover {
+      //top: -289.25px;
+      //box-shadow: 0px 0px 0px #3686a3;
+      text-decoration: none !important;
+    }
+
+    a {
+      text-decoration: none !important;
+    }
+      //width: 33.33%;
+      //float: left;
+
+      .icon {
+        margin: 20px 0;
+      }
+
+      .title {
+        color: #00cecd;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: -0.6px;
+        line-height: 24px;
+      }
+
+      .description {
+        color: #1c1c1c;
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: -0.72px;
+        line-height: 28.8px;
+      }
+    }
+  }
+
+  .buttonSectionParent {
+    width: $fullWidth / 1.2;
+    margin: 0 auto 100px auto;
+    @include flex;
+
+    p {
+      margin-left: 100px;
+      width: 80%;
+    }
+
+    p:nth-child(2) {
+      margin-left: 250px;
+    }
+
+    p:nth-child(3) {
+      margin-left: 250px;
+    }
+  }
+}
+
+
+// ========================END BLOGS SECTION=============================
+
+

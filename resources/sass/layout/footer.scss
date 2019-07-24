@@ -99,21 +99,20 @@
   }
 }
 
-
-
-
 //Back to top styles
 .backTopHolder{
-  height: 30px;
-  width:$fullWidth / 1.2;
+  height: 75px;
+  width:$pageWrap;
   margin: auto;
+
   .backTopContent{
     width:150px;
     float:right;
   }
 
   .backToTop{
-    padding: 8px 10px;
+    padding: 27px;
+    display: block;
   }
 }
 

@@ -1,9 +1,9 @@
 <div class="backTopHolder">
     <div class="backTopContent">
-        @include('components.basic.button', ['classTitle' => 'greenOvalTop backToTop', 'button' => 'Back to top', 'hrefValue' => '#top'])
-
+        @include('components.basic.button', ['classTitle' => 'greenOvalTop backToTop', 'button' => 'Back to top', 'hrefValue' => '#top', 'icon' => 'fa fa-chevron-up'])
     </div>
 </div>
+
 <div class="sitemapHolder">
     <section class="sitemap">
         <nav class="sitemapNav">
@@ -18,9 +18,7 @@
         </nav>
 
         <div class="social">
-
-            @include('components.logo', ['titleParent' => 'footerLogoParent', 'logoImg' => 'footerLogoImg', 'logoTitle' => 'footerLogoTitle'])
-
+{{--            @include('components.logo', ['titleParent' => 'footerLogoParent', 'logoImg' => 'footerLogoImg', 'logoTitle' => 'footerLogoTitle'])--}}
 
             <ul class="socialList">
                 <li>Helping you to make the best healthcare choices</li>
@@ -32,6 +30,7 @@
             </ul>
         </div>
     </section>
+
     <section class="sitemapBottom">
         <p>
             Nulla odio mauris, pharetra congue mi id, efficitur porttitor lorem. Cras mauris libero, facilisis id pulvinar a, sollicitudin vitae purus. Cras vel fermentum nunc. Ut ultricies ante eget eros vestibulum pretium. Donec iaculis tempus lobortis.
@@ -40,6 +39,7 @@
         </p>
     </section>
 </div>
+
 <footer class="mainFooter">
     <nav class="footerCreds">
         <ul class="credLinks">
@@ -50,11 +50,5 @@
             <li><a href="">Cookie Policy</a></li>
             <li><small>&copy; <time id="thisYear"></time><a href="">  Hospital Compare</a>. All rights reserved</small></li>
         </ul>
-
     </nav>
 </footer>
-
-
-
-
-

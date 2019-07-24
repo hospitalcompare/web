@@ -7,12 +7,12 @@
                 <div class="icon">
                     <img src="{{ asset($howsection['iconImg']) }}">
                 </div>
-                <div class="iconTitle">
+                <p class="iconTitle">
                     {{$howsection['title']}}
-                </div>
-                <div class="iconDescription">
+                </p>
+                <p class="iconDescription">
                     {{$howsection['description']}}
-                </div>
+                </p>
             </div>
         @endforeach
     @endif
