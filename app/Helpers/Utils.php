@@ -4,6 +4,100 @@ namespace App\Helpers;
 
 class Utils
 {
+    //Sort By
+    const sortBys = [
+        [
+            'id' => '0',
+            'name'  => 'Distance from Postcode ascending'
+        ],[
+            'id' => '1',
+            'name'  => 'Distance from Postcode descending'
+        ],[
+            'id' => '2',
+            'name'  => 'Waiting time ascending'
+        ],[
+            'id' => '3',
+            'name'  => 'Waiting time descending'
+        ]
+    ];
+
+    //Filter Waiting Times
+    const waitingTimes = [
+        [
+            'id' => '0',
+            'name'  => 'View All'
+        ],[
+            'id' => '1',
+            'name'  => 'Up to 2 Weeks'
+        ],[
+            'id' => '2',
+            'name'  => 'Up to 4 Weeks'
+        ],[
+            'id' => '3',
+            'name'  => 'Up to 6 Weeks'
+        ],[
+            'id' => '4',
+            'name'  => 'Up to 8 Weeks'
+        ]
+    ];
+
+    //Filter User Ratings
+    const userRatings = [
+        [
+            'id' => '0',
+            'name'  => 'View All'
+        ],[
+            'id' => '1',
+            'name'  => '5'
+        ],[
+            'id' => '2',
+            'name'  => '4+'
+        ],[
+            'id' => '3',
+            'name'  => '3+'
+        ],[
+            'id' => '4',
+            'name'  => '2+'
+        ],[
+            'id' => '5',
+            'name'  => '1+'
+        ]
+    ];
+
+    //Filter Quality Ratings
+    const qualityRatings = [
+        [
+            'id' => '0',
+            'name'  => 'View All'
+        ],[
+            'id' => '1',
+            'name'  => 'Outstanding Only'
+        ],[
+            'id' => '2',
+            'name'  => 'Good or better'
+        ],[
+            'id' => '3',
+            'name'  => 'Inadequate or better'
+        ],[
+            'id' => '4',
+            'name'  => 'Requires Improvement or better'
+        ]
+    ];
+
+    //Filter Quality Ratings
+    const hospitalTypes = [
+        [
+            'id' => '0',
+            'name'  => 'All Hospitals'
+        ],[
+            'id' => '1',
+            'name'  => 'NHS Hospitals'
+        ],[
+            'id' => '2',
+            'name'  => 'Private Hospitals'
+        ]
+    ];
+
     /**
      * Creates a file based on a given Base64 Image
      *

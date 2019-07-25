@@ -166,9 +166,9 @@ class Hospital extends Model
      *
      * @return Hospital|array|\Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder
      */
-    public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 10, $waitingTime = '', $userRating = '', $qualityRating = '', $hospitalType = '') {
-//        $hospitals = Hospital::with(['trust','hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'address', 'rating']);
-        $hospitals = Hospital::with(['trust','hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'address']);
+    public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 10, $waitingTime = '', $userRating = '', $qualityRating = '', $hospitalType = '', $sortBy = '') {
+        $hospitals = Hospital::with(['trust','hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address']);
+        //$userRatings    = HospitalRating::selectRaw(\DB::raw("MIN(id) as id, avg_user_rating AS name"))->groupBy(['avg_user_rating'])->whereNotNull('avg_user_rating')->get()->toArray();
 
         //Check if we have the `postcode` and `procedure_id`
         if(!empty($postcode)) {
@@ -187,33 +187,68 @@ class Hospital extends Model
                 $q->selectRaw(\DB::raw("get_distance({$latitude}, {$longitude}, latitude, longitude) AS radius"));
                 $q->having('radius', '<', $radius);
             })->join('addresses', 'hospitals.address_id', '=', 'addresses.id')
-                ->selectRaw(\DB::raw("*, get_distance({$latitude}, {$longitude}, latitude, longitude) AS radius"));
+                ->selectRaw(\DB::raw("hospitals.*, get_distance({$latitude}, {$longitude}, latitude, longitude) AS radius"));
         }
 
         //Check if we have the `procedure_id` and retrieve the relation Waiting Times
         if(!empty($procedureId)) {
             $procedure = Procedure::where('id', $procedureId)->first();
             $specialtyId = $procedure->specialty_id;
-            $hospitals->with(['waitingTime' => function($q) use($specialtyId){
-                $q->where('specialty_id', $specialtyId);
-            }]);
+            $hospitals = $hospitals->wherehas('waitingTime', function($q) use($specialtyId){
+                $q->where('specialty_id', '=', $specialtyId);
+            });
+
+            $hospitals = $hospitals->with('waitingTime');
         }
+
+        //Filter by the User Rating
+        if(!empty($userRating)) {
+            $hospitals = $hospitals->whereHas('rating', function($q) use($userRating) {
+                if($userRating == 1)
+                    $q->where('avg_user_rating', '=', 5);
+                elseif($userRating == 2)
+                    $q->where('avg_user_rating', '>=', 4);
+                elseif($userRating == 3)
+                    $q->where('avg_user_rating', '>=', 3);
+                elseif($userRating == 4)
+                    $q->where('avg_user_rating', '>=', 2);
+                elseif($userRating == 5)
+                    $q->where('avg_user_rating', '>=', 1);
+                else
+                    $q->where('avg_user_rating', '>=', 0);
+            });
+        }
+
+        //Filter by the Quality Rating
+        if(!empty($qualityRating)) {
+            $hospitals = $hospitals->whereHas('rating', function($q) use($qualityRating) {
+                if($qualityRating == 1)
+                    $q->whereIn('latest_rating', ['Outstanding']);
+                elseif($qualityRating == 2)
+                    $q->whereIn('latest_rating', ['Good', 'Outstanding']);
+                elseif($qualityRating == 3)
+                    $q->whereIn('latest_rating', ['Good', 'Outstanding', 'Inadequate']);
+                elseif($qualityRating == 4)
+                    $q->whereIn('latest_rating', ['Good', 'Outstanding', 'Inadequate', 'Requires improvement']);
+            });
+        }
+
+        $sortBy = 'desc';
 
         //Filter by Hospital Type ( if we have the input )
         if(!empty($hospitalType))
             $hospitals = $hospitals->where('hospital_type_id', $hospitalType);
 
         //Sorting the records
-        $hospitals = $hospitals->join('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
-
-        if(!empty($userRating))
-            $hospitals = $hospitals->orderBy(\DB::raw('hospital_ratings.avg_user_rating IS NULL, hospital_ratings.avg_user_rating'), strtoupper($userRating));;
+//        $hospitals = $hospitals->join('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
+//
+//        if(!empty($sortBy))
+//            $hospitals = $hospitals->orderBy(\DB::raw('hospital_ratings.avg_user_rating IS NULL, hospital_ratings.avg_user_rating'), strtoupper($sortBy));;
 
         if(!empty($postcode) && !empty($latitude) && !empty($longitude))
             $hospitals = $hospitals->orderBy('radius');
 
         $hospitals = $hospitals->get()->toArray();
-
 //        dd($hospitals);
 
         return $hospitals;
