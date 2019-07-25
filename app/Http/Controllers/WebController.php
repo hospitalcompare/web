@@ -39,8 +39,12 @@ class WebController extends BaseController
         $postcode       = $request['postcode'] ?? '';
         $procedureId    = $request['procedure_id'] ?? ''; //For the moment, send the procedure as Specialty ( as we don't have the Procedures ) //TODO: update this with the id of procedures
         $radius         = $request['radius'] ?? 10; //10 miles as default
+        $waitingTime    = $request['waiting_time'] ?? '';
+        $userRating     = $request['user_rating'] ?? '';
+        $qualityRating  = $request['quality_rating'] ?? '';
+        $hospitalType   = $request['hospital_type'] ?? '';
 
-        $hospitals = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
+        $hospitals = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType);
         $procedures = Procedure::all();
 
         $this->returnedData['success']              = true;

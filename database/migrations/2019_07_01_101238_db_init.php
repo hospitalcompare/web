@@ -17,7 +17,7 @@ class DbInit extends Migration
         if (!Schema::hasTable('hospital_types')) {
             Schema::create('hospital_types', function (Blueprint $table) {
                 $table->increments('id');
-                $table->enum('name', ['NHS', 'Independent', 'NHS*'])->default("Independent");
+                $table->enum('name', ['NHS', 'Independent'])->default("Independent");
                 $table->string('status')->default("active");
                 $table->timestamps();
             });

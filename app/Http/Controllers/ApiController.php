@@ -97,7 +97,7 @@ class ApiController {
         $procedureId    = $request['procedure_id'] ?? ''; //For the moment, send the procedure as Specialty ( as we don't have the Procedures )
         $radius         = $request['radius'] ?? 10; //10 miles as default
 
-        $hospitals = $hospitals = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
+        $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
 
         $this->returnedData['success']  = true;
         $this->returnedData['data']     = $hospitals;

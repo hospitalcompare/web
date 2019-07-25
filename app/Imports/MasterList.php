@@ -14,7 +14,7 @@ use App\Models\Trust;
  */
 class MasterList extends DefaultImport {
 
-    public $requestedTypes = ['Independent', 'NHS', 'NHS*'];
+    public $requestedTypes = ['Independent', 'NHS'];
 
     public function handle() {
         //Check if we have data

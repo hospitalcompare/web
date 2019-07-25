@@ -44,7 +44,7 @@
                     <div class="postProxChild">
 
 {{--                            @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'searchPageSelect', 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'placeholder' => 'NHS private/NHS funded', 'resultsLabel' => 'resultsLabel'])--}}
-                        @include('components.basic.selectbox', ['options' => [['id'=> 1, 'name' => 'NHS Hospital'],['id'=> 2, 'name' => 'Private Hospital']], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect', 'placeholder'=>'NHS private/NHS funded', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
+                        @include('components.basic.selectbox', ['options' => [['id'=> 0, 'name' => 'All Hospitals'],['id'=> 1, 'name' => 'NHS Hospital'],['id'=> 2, 'name' => 'Private Hospital']], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect', 'placeholder'=>'NHS private/NHS funded', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
                         @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'NHS private...', 'className' => 'helpPosition5'])
                     </div>
                     <div class="postProxChild">
@@ -99,7 +99,7 @@
                     'location' => (!empty($d['address']['address_1'])? $d['address']['address_1']: '').(!empty($d['radius']) ? ', '.$d['radius']. ' miles from location': ''),
                     'findLink' => 'Find on map',
                     'waitTime' => !empty($d['waiting_time'][0]['avg_waiting_weeks'])? $d['waiting_time'][0]['avg_waiting_weeks']. ' Weeks': 'N/A',
-                    'stars' => !empty($d['rating']['avg_user_rating']) ? $d['rating']['avg_user_rating'] : 'N/A',
+                    'stars' => !empty($d['avg_user_rating']) ? $d['avg_user_rating'] : 'N/A',
                     'opCancelled' => !empty($d['cancelled_op']['perc_cancelled_ops'])? $d['cancelled_op']['perc_cancelled_ops'].'%': 'N/A',
                     'qualityRating' => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : 'N/A',
                     'FFRating' => !empty($d['rating']['provider_rating']) ? $d['rating']['provider_rating'] : 'N/A',
