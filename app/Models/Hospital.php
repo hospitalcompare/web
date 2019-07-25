@@ -167,7 +167,7 @@ class Hospital extends Model
      * @return Hospital|array|\Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder
      */
     public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 10, $waitingTime = '', $userRating = '', $qualityRating = '', $hospitalType = '', $sortBy = '') {
-        $hospitals = Hospital::with(['trust','hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address']);
+        $hospitals = Hospital::with(['trust','hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'waitingTime']);
         //$userRatings    = HospitalRating::selectRaw(\DB::raw("MIN(id) as id, avg_user_rating AS name"))->groupBy(['avg_user_rating'])->whereNotNull('avg_user_rating')->get()->toArray();
 
         //Check if we have the `postcode` and `procedure_id`
@@ -194,11 +194,23 @@ class Hospital extends Model
         if(!empty($procedureId)) {
             $procedure = Procedure::where('id', $procedureId)->first();
             $specialtyId = $procedure->specialty_id;
-            $hospitals = $hospitals->wherehas('waitingTime', function($q) use($specialtyId){
+            $hospitals->with(['waitingTime' => function($q) use($specialtyId) {
                 $q->where('specialty_id', '=', $specialtyId);
-            });
+            }]);
+        }
 
-            $hospitals = $hospitals->with('waitingTime');
+        //Filter by the Waiting Time
+        if(!empty($waitingTime)) {
+            $hospitals = $hospitals->whereHas('waitingTime', function($q) use($waitingTime) {
+                if($waitingTime == 1)
+                    $q->where('avg_waiting_weeks', '<=', 2);
+                elseif($waitingTime == 2)
+                    $q->where('avg_waiting_weeks', '<=', 4);
+                elseif($waitingTime == 3)
+                    $q->where('avg_waiting_weeks', '<=', 6);
+                elseif($waitingTime == 4)
+                    $q->where('avg_waiting_weeks', '<=', 8);
+            });
         }
 
         //Filter by the User Rating
@@ -249,7 +261,6 @@ class Hospital extends Model
             $hospitals = $hospitals->orderBy('radius');
 
         $hospitals = $hospitals->get()->toArray();
-//        dd($hospitals);
 
         return $hospitals;
     }
