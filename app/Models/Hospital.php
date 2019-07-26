@@ -239,32 +239,28 @@ class Hospital extends Model
         if(empty($sortBy))
             $sortBy = 0; //default use ascending by radius ( only in case we have the postcode provided and it's a valid one )
 
-        if($sortBy == 0) {
-            if(!empty($postcode) && !empty($latitude) && !empty($longitude))
-                $hospitals = $hospitals->orderBy('radius', 'ASC');
-        } elseif($sortBy == 1) {
-            if(!empty($postcode) && !empty($latitude) && !empty($longitude))
-                $hospitals = $hospitals->orderBy('radius', 'DESC');
-        } elseif($sortBy == 2) {
-            //Sort only if we have the Specialty ID
+        if(in_array($sortBy, [0, 1])) {
+            if(!empty($postcode) && !empty($latitude) && !empty($longitude)) {
+                if($sortBy == 0)
+                    $hospitals = $hospitals->orderBy('radius', 'ASC');
+                else
+                    $hospitals = $hospitals->orderBy('radius', 'DESC');
+            }
+        } elseif (in_array($sortBy, [2, 3])) {
             if(!empty($specialtyId)) {
                 $hospitals = $hospitals->join('hospital_waiting_time', 'hospitals.id', '=', 'hospital_waiting_time.hospital_id');
                 $hospitals = $hospitals->where('hospital_waiting_time.specialty_id', $specialtyId);
-                $hospitals = $hospitals->orderBy('hospital_waiting_time.avg_waiting_weeks', 'ASC');
+                if($sortBy == 2)
+                    $hospitals = $hospitals->orderBy('hospital_waiting_time.avg_waiting_weeks', 'ASC');
+                else
+                    $hospitals = $hospitals->orderBy('hospital_waiting_time.avg_waiting_weeks', 'DESC');
             }
-        } elseif($sortBy == 3) {
-            //Sort only if we have the Specialty ID
-            if(!empty($specialtyId)) {
-                $hospitals = $hospitals->join('hospital_waiting_time', 'hospitals.id', '=', 'hospital_waiting_time.hospital_id');
-                $hospitals = $hospitals->where('hospital_waiting_time.specialty_id', $specialtyId);
-                $hospitals = $hospitals->orderBy('hospital_waiting_time.avg_waiting_weeks', 'DESC');
-            }
-        } elseif($sortBy == 4) {
+        } elseif (in_array($sortBy, [4, 5])) {
             $hospitals = $hospitals->join('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
-            $hospitals = $hospitals->orderBy('hospital_ratings.avg_user_rating', 'ASC');
-        } elseif($sortBy == 5) {
-            $hospitals = $hospitals->join('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
-            $hospitals = $hospitals->orderBy('hospital_ratings.avg_user_rating', 'DESC');
+            if($sortBy == 4)
+                $hospitals = $hospitals->orderBy('hospital_ratings.avg_user_rating', 'ASC');
+            else
+                $hospitals = $hospitals->orderBy('hospital_ratings.avg_user_rating', 'DESC');
         }
 
         $hospitals = $hospitals->get()->toArray();
