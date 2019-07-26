@@ -18,6 +18,12 @@ class Utils
         ],[
             'id' => '3',
             'name'  => 'Waiting time descending'
+        ],[
+            'id' => '4',
+            'name'  => 'User Rating ascending'
+        ],[
+            'id' => '5',
+            'name'  => 'User Rating descending'
         ]
     ];
 
@@ -27,16 +33,16 @@ class Utils
             'id' => '0',
             'name'  => 'View All'
         ],[
-            'id' => '1',
+            'id' => '2',
             'name'  => 'Up to 2 Weeks'
         ],[
-            'id' => '2',
+            'id' => '4',
             'name'  => 'Up to 4 Weeks'
         ],[
-            'id' => '3',
+            'id' => '6',
             'name'  => 'Up to 6 Weeks'
         ],[
-            'id' => '4',
+            'id' => '8',
             'name'  => 'Up to 8 Weeks'
         ]
     ];
@@ -47,19 +53,19 @@ class Utils
             'id' => '0',
             'name'  => 'View All'
         ],[
-            'id' => '1',
+            'id' => '5',
             'name'  => '5'
         ],[
-            'id' => '2',
+            'id' => '4',
             'name'  => '4+'
         ],[
             'id' => '3',
             'name'  => '3+'
         ],[
-            'id' => '4',
+            'id' => '2',
             'name'  => '2+'
         ],[
-            'id' => '5',
+            'id' => '1',
             'name'  => '1+'
         ]
     ];

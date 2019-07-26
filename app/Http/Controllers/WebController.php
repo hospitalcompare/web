@@ -19,7 +19,7 @@ class WebController extends BaseController
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function homepage() {
-        //At the moment retrieve the Specialties because we don't have the Procedures //TODO: implement the list of Procedures as a list of array/objects to populate the dropdown
+        //Retrieve the list of Procedures sorted by name ASC
         $procedures = Procedure::all()->sortBy('name')->toArray();
 
         $this->returnedData['success']              = true;
