@@ -251,16 +251,18 @@ class Hospital extends Model
                 $hospitals = $hospitals->join('hospital_waiting_time', 'hospitals.id', '=', 'hospital_waiting_time.hospital_id');
                 $hospitals = $hospitals->where('hospital_waiting_time.specialty_id', $specialtyId);
                 if($sortBy == 2)
-                    $hospitals = $hospitals->orderBy('hospital_waiting_time.avg_waiting_weeks', 'ASC');
+//                    $hospitals = $hospitals->orderBy('hospital_waiting_time.avg_waiting_weeks', 'ASC');
+                    $hospitals = $hospitals->orderByRaw('ISNULL(hospital_waiting_time.avg_waiting_weeks), hospital_waiting_time.avg_waiting_weeks ASC');
                 else
-                    $hospitals = $hospitals->orderBy('hospital_waiting_time.avg_waiting_weeks', 'DESC');
+                    $hospitals = $hospitals->orderByRaw('ISNULL(hospital_waiting_time.avg_waiting_weeks), hospital_waiting_time.avg_waiting_weeks DESC');
             }
         } elseif (in_array($sortBy, [4, 5])) {
             $hospitals = $hospitals->join('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
             if($sortBy == 4)
-                $hospitals = $hospitals->orderBy('hospital_ratings.avg_user_rating', 'ASC');
+//                $hospitals = $hospitals->orderBy('hospital_ratings.avg_user_rating', 'ASC');
+                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.avg_user_rating), hospital_ratings.avg_user_rating ASC');
             else
-                $hospitals = $hospitals->orderBy('hospital_ratings.avg_user_rating', 'DESC');
+                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.avg_user_rating), hospital_ratings.avg_user_rating DESC');
         }
 
         $hospitals = $hospitals->get()->toArray();
