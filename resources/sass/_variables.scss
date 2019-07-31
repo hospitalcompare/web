@@ -48,6 +48,79 @@ $centerOnPage:  auto;
 $relative: relative;
 $absolute: absolute;
 
+$teal: #00cecd;
+$blue: #1b71f3;
+$violet: #8e00fe;
+$hanblue: #5e15d1;
+$green: #00e09d;
+$pink: #ed0373;
+$black: #1b1b1b;
+$grey: #363636;
+$white: #FFFFFF;
+$greylight: #F6F6F6;
+
+.bg-teal{
+    background-color: $teal;
+}
+.bg-blue{
+    background-color: $blue;
+}
+.bg-violet{
+    background-color: $violet;
+}
+.bg-hanblue{
+    background-color: $hanblue;
+}
+.bg-green{
+    background-color: $green;
+}
+.bg-pink{
+    background-color: $pink;
+}
+.bg-black{
+    background-color: $black;
+}
+.bg-grey{
+    background-color: $grey;
+}
+.bg-white{
+    background-color: $white;
+}
+.bg-greylight{
+    background-color: $greylight;
+}
+
+.col-teal{
+    color: $teal;
+}
+.col-blue{
+    color: $blue;
+}
+.col-violet{
+    color: $violet;
+}
+.col-hanblue{
+    color: $hanblue;
+}
+.col-green{
+    color: $green;
+}
+.col-pink{
+    color: $pink;
+}
+.col-black{
+    color: $black;
+}
+.col-grey{
+    color: $grey;
+}
+.col-white{
+    color: $white;
+}
+.col-greylight{
+    color: $greylight;
+}
+
 
 
 
