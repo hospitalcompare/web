@@ -34,6 +34,7 @@
         <script src="{{ asset('https://kit.fontawesome.com/d4b841dc1e.js') }}"></script>
         <script src="{{ asset('js/app.js') }}"></script>
         @stack('button')
+
     </body>
 
 </html>
