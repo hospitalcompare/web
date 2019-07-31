@@ -25,6 +25,9 @@ class WebController extends BaseController
         $this->returnedData['success']              = true;
         $this->returnedData['data']['procedures']   = $procedures;
 
+        //For Live environment just show the work in progress page
+        if(env('APP_ENV') == 'live')
+            return view('pages.workInProgress', $this->returnedData);
         return view('pages.homepage', $this->returnedData);
     }
 
@@ -61,6 +64,9 @@ class WebController extends BaseController
         $this->returnedData['data']['filters']['hospitalTypes']     = Utils::hospitalTypes;
         $this->returnedData['data']['sortBy']                       = $sortBys;
 
+        //For Live environment just show the work in progress page
+        if(env('APP_ENV') == 'live')
+            return view('pages.workInProgress', $this->returnedData);
         return view('pages.resultspage', $this->returnedData);
     }
 }
