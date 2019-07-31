@@ -1,39 +1,38 @@
 //SELECTBOX
-.selectParent{
-  position:$relative;
-}
-.flexSelect{
-  @include flex;
+.selectParent {
+    position:$relative;
 }
 
-.selectBox{
-  color: $darkerGrey;
-  @include flexBasis;
-  position: relative;
-  left: 40px;
-  top:10px;
+.flexSelect {
+    @include flex;
 }
 
-.lessWideSelect{
-  //@include flex;
+.selectBox {
+    color: $darkerGrey;
+    @include flexBasis;
+    position: relative;
+    left: 40px;
+    top:10px;
 }
 
-select{
-  border: 2px solid #ebebeb;  /*Removes border*/
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-overflow:'';
-  text-indent: 0.01px; /* Removes default arrow from firefox*/
-  text-overflow: "";  /*Removes default arrow from firefox*/
+.lessWideSelect {
+    //@include flex;
 }
+
+select {
+    border: 2px solid #ebebeb;  /*Removes border*/
+    appearance: none;
+    text-indent: 0.01px; /* Removes default arrow from firefox*/
+    text-overflow: "";  /*Removes default arrow from firefox*/
+}
+
 select::-ms-expand {
-  display: none;
+    display: none;
 }
-.select-wrapper
-{
-  padding-left:0px;
-  overflow:hidden;
+
+.select-wrapper {
+    padding-left: 0px;
+    overflow: hidden;
 }
 
 

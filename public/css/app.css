@@ -1038,7 +1038,6 @@ input {
   color: #ffffff;
   text-decoration: none;
   background: #1b71f3;
-  background: -webkit-linear-gradient(legacy-direction(90deg), #1b71f3, #1b71f3, #00cecd);
   background: -webkit-gradient(linear, left top, right top, from(#1b71f3), color-stop(#1b71f3), to(#00cecd));
   background: -webkit-linear-gradient(left, #1b71f3, #1b71f3, #00cecd);
   background: linear-gradient(90deg, #1b71f3, #1b71f3, #00cecd);
@@ -1050,8 +1049,7 @@ input {
   background-image: linear-gradient(270deg, #00cecd 0%, #00d7b5 56%, #00df9d 100%);
   width: 219px;
   height: 58px;
-  border-radius: 31px;
-  border-radius: 24px;
+  border-radius: 29px;
   letter-spacing: -1.1px;
   line-height: 24px;
   padding: 15px 40px;
@@ -1060,7 +1058,6 @@ input {
 .greenOval:hover,
 .greenOvalTop:hover {
   background: #00e09d;
-  background: -webkit-linear-gradient(legacy-direction(90deg), #00e09d, #00cecd, #00e09d);
   background: -webkit-gradient(linear, left top, right top, from(#00e09d), color-stop(#00cecd), to(#00e09d));
   background: -webkit-linear-gradient(left, #00e09d, #00cecd, #00e09d);
   background: linear-gradient(90deg, #00e09d, #00cecd, #00e09d);
@@ -1101,9 +1098,8 @@ select {
   border: 2px solid #ebebeb;
   /*Removes border*/
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-overflow: "";
+     -moz-appearance: none;
+          appearance: none;
   text-indent: 0.01px;
   /* Removes default arrow from firefox*/
   text-overflow: "";
