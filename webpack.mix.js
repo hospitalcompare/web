@@ -42,7 +42,8 @@ mix.browserSync({
     injectChanges: true,
     files: [
         'resources/sass/**/*.scss',
-        'resources/js/**/*.js'
+        'resources/js/**/*.js',
+        'resources/views/**/*.blade.php'
     ],
     logSnippet: true,
     proxy: 'localhost',
