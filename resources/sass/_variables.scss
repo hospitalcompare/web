@@ -1,5 +1,4 @@
 // Body
-
 $body-bg: #f8fafc;
 
 // Typography
@@ -8,19 +7,24 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // Colors
-$blue: #3490dc;
 $indigo: #6574cd;
 $purple: #9561e2;
-$pink: #f66d9b;
 $red: #e3342f;
 $orange: #f6993f;
 $yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
 $cyan: #6cb2eb;
+$teal: #00cecd;
+$blue: #1b71f3;
+$violet: #8e00fe;
+$hanblue: #5e15d1;
+$green: #00e09d;
+$pink: #ed0373;
+$black: #1b1b1b;
+$grey: #363636;
+$white: #ffffff;
+$greylight: #F6F6F6;
 
 //Main Template colours
-$white:#ffffff;
 $darkerWhite:#f5f5f5;
 $darkestWhite: #ebebeb;
 $aqua:#00cecd;
@@ -29,7 +33,6 @@ $lightgrey: #ebebeb;
 $lightergrey: #ececec;
 $lighestGrey:#1b1b1b;
 $darkerGrey:#1c1c1c;
-$black: #000000;
 $sunnyYellow: #fff568;
 $footerGrey: #363636;
 $sectionBeige: #ececec;
@@ -46,85 +49,6 @@ $centerOnPage:  auto;
 // BS overrides
 $btn-border-radius: 100px;
 
-
 //POSITIONS
 $relative: relative;
 $absolute: absolute;
-
-$teal: #00cecd;
-$blue: #1b71f3;
-$violet: #8e00fe;
-$hanblue: #5e15d1;
-$green: #00e09d;
-$pink: #ed0373;
-$black: #1b1b1b;
-$grey: #363636;
-$white: #FFFFFF;
-$greylight: #F6F6F6;
-
-.bg-teal{
-    background-color: $teal;
-}
-.bg-blue{
-    background-color: $blue;
-}
-.bg-violet{
-    background-color: $violet;
-}
-.bg-hanblue{
-    background-color: $hanblue;
-}
-.bg-green{
-    background-color: $green;
-}
-.bg-pink{
-    background-color: $pink;
-}
-.bg-black{
-    background-color: $black;
-}
-.bg-grey{
-    background-color: $grey;
-}
-.bg-white{
-    background-color: $white;
-}
-.bg-greylight{
-    background-color: $greylight;
-}
-
-.col-teal{
-    color: $teal;
-}
-.col-blue{
-    color: $blue;
-}
-.col-violet{
-    color: $violet;
-}
-.col-hanblue{
-    color: $hanblue;
-}
-.col-green{
-    color: $green;
-}
-.col-pink{
-    color: $pink;
-}
-.col-black{
-    color: $black;
-}
-.col-grey{
-    color: $grey;
-}
-.col-white{
-    color: $white;
-}
-.col-greylight{
-    color: $greylight;
-}
-
-
-
-
-

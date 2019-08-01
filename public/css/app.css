@@ -1,5 +1,27 @@
 @charset "UTF-8";
 
+/* Align Items - Center */
+
+.blockDisplay {
+  display: block;
+}
+
+.fullLeft {
+  width: 100%;
+  float: left;
+}
+
+input[type=submit] {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+select.big,
+input.big {
+  height: 61px;
+}
+
 .bg-teal {
   background-color: #00cecd;
 }
@@ -78,28 +100,6 @@
 
 .col-greylight {
   color: #F6F6F6;
-}
-
-/* Align Items - Center */
-
-.blockDisplay {
-  display: block;
-}
-
-.fullLeft {
-  width: 100%;
-  float: left;
-}
-
-input[type=submit] {
-  padding: 0;
-  border: none;
-  background: none;
-}
-
-select.big,
-input.big {
-  height: 61px;
 }
 
 .formChild {
