@@ -11,3 +11,5 @@ npm-debug.log
 yarn-error.log
 /.idea/laravel-plugin.xml
 /public/
+package-lock.json
+composer.lock
