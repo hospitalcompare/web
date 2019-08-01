@@ -51,10 +51,10 @@
   background-image: linear-gradient(270deg, #00cecd 0%, #00d7b5 56%, #00df9d 100%) !important;
 }
 
-btn {
-  float: left;
+.btn {
+  //float: left;
   border-radius: 100px;
-  background-color: $teal;
+  //background-color: $teal;
   color: $white;
   font-size: 24px;
   padding: 14px 26px;

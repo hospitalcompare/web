@@ -495,7 +495,6 @@ input.big {
 
 select,
 input {
-  background: white !important;
   width: 300px;
   height: 30px;
   border-radius: 7px;
@@ -1151,10 +1150,8 @@ input {
   background-image: linear-gradient(270deg, #00cecd 0%, #00d7b5 56%, #00df9d 100%) !important;
 }
 
-btn {
-  float: left;
+.btn {
   border-radius: 100px;
-  background-color: #00cecd;
   color: #FFFFFF;
   font-size: 24px;
   padding: 14px 26px;
@@ -1167,48 +1164,48 @@ btn {
   transition: 0.3s;
 }
 
-btn.btn-xs {
+.btn.btn-xs {
   font-size: 16px;
   padding: 6px 18px;
 }
 
-btn.btn-s {
+.btn.btn-s {
   font-size: 20px;
   padding: 8px 22px;
 }
 
-btn.btn-m {
+.btn.btn-m {
   font-size: 24px;
   padding: 10px 26px;
 }
 
-btn.btn-l {
+.btn.btn-l {
   font-size: 28px;
   padding: 12px 30px;
 }
 
-btn.btn-xl {
+.btn.btn-xl {
   font-size: 32px;
   padding: 14px 34px;
 }
 
-btn.btn-mg-right {
+.btn.btn-mg-right {
   margin-right: 20px;
 }
 
-btn.btn-mg-bottom {
+.btn.btn-mg-bottom {
   margin-bottom: 20px;
 }
 
-btn.btn-mg-left {
+.btn.btn-mg-left {
   margin-left: 20px;
 }
 
-btn.btn-mg-top {
+.btn.btn-mg-top {
   margin-top: 20px;
 }
 
-btn.btn-teal {
+.btn.btn-teal {
   background: #00cecd;
   background: -webkit-linear-gradient(legacy-direction(90deg), #00cecd, #00cecd, #00e09d);
   background: -webkit-gradient(linear, left top, right top, from(#00cecd), color-stop(#00cecd), to(#00e09d));
@@ -1216,7 +1213,7 @@ btn.btn-teal {
   background: linear-gradient(90deg, #00cecd, #00cecd, #00e09d);
 }
 
-btn.btn-teal.btn-grad {
+.btn.btn-teal.btn-grad {
   background: #00cecd;
   background: -webkit-linear-gradient(legacy-direction(90deg), #00cecd, #00e09d, #00cecd);
   background: -webkit-gradient(linear, left top, right top, from(#00cecd), color-stop(#00e09d), to(#00cecd));
@@ -1224,7 +1221,7 @@ btn.btn-teal.btn-grad {
   background: linear-gradient(90deg, #00cecd, #00e09d, #00cecd);
 }
 
-btn.btn-blue {
+.btn.btn-blue {
   background: #1b71f3;
   background: -webkit-linear-gradient(legacy-direction(90deg), #1b71f3, #1b71f3, #00cecd);
   background: -webkit-gradient(linear, left top, right top, from(#1b71f3), color-stop(#1b71f3), to(#00cecd));
@@ -1232,7 +1229,7 @@ btn.btn-blue {
   background: linear-gradient(90deg, #1b71f3, #1b71f3, #00cecd);
 }
 
-btn.btn-blue.btn-grad {
+.btn.btn-blue.btn-grad {
   background: #1b71f3;
   background: -webkit-linear-gradient(legacy-direction(90deg), #1b71f3, #00cecd, #1b71f3);
   background: -webkit-gradient(linear, left top, right top, from(#1b71f3), color-stop(#00cecd), to(#1b71f3));
@@ -1240,7 +1237,7 @@ btn.btn-blue.btn-grad {
   background: linear-gradient(90deg, #1b71f3, #00cecd, #1b71f3);
 }
 
-btn.btn-violet {
+.btn.btn-violet {
   background: #8e00fe;
   background: -webkit-linear-gradient(legacy-direction(90deg), #8e00fe, #8e00fe, #1b71f3);
   background: -webkit-gradient(linear, left top, right top, from(#8e00fe), color-stop(#8e00fe), to(#1b71f3));
@@ -1248,7 +1245,7 @@ btn.btn-violet {
   background: linear-gradient(90deg, #8e00fe, #8e00fe, #1b71f3);
 }
 
-btn.btn-violet.btn-grad {
+.btn.btn-violet.btn-grad {
   background: #8e00fe;
   background: -webkit-linear-gradient(legacy-direction(90deg), #8e00fe, #1b71f3, #8e00fe);
   background: -webkit-gradient(linear, left top, right top, from(#8e00fe), color-stop(#1b71f3), to(#8e00fe));
@@ -1256,7 +1253,7 @@ btn.btn-violet.btn-grad {
   background: linear-gradient(90deg, #8e00fe, #1b71f3, #8e00fe);
 }
 
-btn.btn-hanblue {
+.btn.btn-hanblue {
   background: #5e15d1;
   background: -webkit-linear-gradient(legacy-direction(90deg), #5e15d1, #5e15d1, #8e00fe);
   background: -webkit-gradient(linear, left top, right top, from(#5e15d1), color-stop(#5e15d1), to(#8e00fe));
@@ -1264,7 +1261,7 @@ btn.btn-hanblue {
   background: linear-gradient(90deg, #5e15d1, #5e15d1, #8e00fe);
 }
 
-btn.btn-hanblue.btn-grad {
+.btn.btn-hanblue.btn-grad {
   background: #5e15d1;
   background: -webkit-linear-gradient(legacy-direction(90deg), #5e15d1, #8e00fe, #5e15d1);
   background: -webkit-gradient(linear, left top, right top, from(#5e15d1), color-stop(#8e00fe), to(#5e15d1));
@@ -1272,7 +1269,7 @@ btn.btn-hanblue.btn-grad {
   background: linear-gradient(90deg, #5e15d1, #8e00fe, #5e15d1);
 }
 
-btn.btn-green {
+.btn.btn-green {
   background: #00e09d;
   background: -webkit-linear-gradient(legacy-direction(90deg), #00e09d, #00e09d, #00cecd);
   background: -webkit-gradient(linear, left top, right top, from(#00e09d), color-stop(#00e09d), to(#00cecd));
@@ -1280,7 +1277,7 @@ btn.btn-green {
   background: linear-gradient(90deg, #00e09d, #00e09d, #00cecd);
 }
 
-btn.btn-green.btn-grad {
+.btn.btn-green.btn-grad {
   background: #00e09d;
   background: -webkit-linear-gradient(legacy-direction(90deg), #00e09d, #00cecd, #00e09d);
   background: -webkit-gradient(linear, left top, right top, from(#00e09d), color-stop(#00cecd), to(#00e09d));
@@ -1288,7 +1285,7 @@ btn.btn-green.btn-grad {
   background: linear-gradient(90deg, #00e09d, #00cecd, #00e09d);
 }
 
-btn.btn-pink {
+.btn.btn-pink {
   background: #ed0373;
   background: -webkit-linear-gradient(legacy-direction(90deg), #ed0373, #ed0373, #8e00fe);
   background: -webkit-gradient(linear, left top, right top, from(#ed0373), color-stop(#ed0373), to(#8e00fe));
@@ -1296,7 +1293,7 @@ btn.btn-pink {
   background: linear-gradient(90deg, #ed0373, #ed0373, #8e00fe);
 }
 
-btn.btn-pink.btn-grad {
+.btn.btn-pink.btn-grad {
   background: #ed0373;
   background: -webkit-linear-gradient(legacy-direction(90deg), #ed0373, #8e00fe, #ed0373);
   background: -webkit-gradient(linear, left top, right top, from(#ed0373), color-stop(#8e00fe), to(#ed0373));
@@ -1304,7 +1301,7 @@ btn.btn-pink.btn-grad {
   background: linear-gradient(90deg, #ed0373, #8e00fe, #ed0373);
 }
 
-btn.btn-black {
+.btn.btn-black {
   background: #1b1b1b;
   background: -webkit-linear-gradient(legacy-direction(90deg), #1b1b1b, #1b1b1b, #ed0373, #ed0373);
   background: -webkit-gradient(linear, left top, right top, from(#1b1b1b), color-stop(#1b1b1b), color-stop(#ed0373), to(#ed0373));
@@ -1313,7 +1310,7 @@ btn.btn-black {
   background-size: 300% !important;
 }
 
-btn:hover {
+.btn:hover {
   background-position: right !important;
 }
 
@@ -1363,7 +1360,6 @@ select::-ms-expand {
 
 select,
 input {
-  width: 445px;
   height: 41px;
 }
 
@@ -4553,7 +4549,7 @@ textarea.form-control.is-invalid {
   padding: 0.375rem 0.75rem;
   font-size: 0.9rem;
   line-height: 1.6;
-  border-radius: 0.25rem;
+  border-radius: 100px;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -6621,7 +6617,7 @@ input[type=button].btn-block {
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
+  border-radius: 100px;
 }
 
 .navbar-toggler:hover,
