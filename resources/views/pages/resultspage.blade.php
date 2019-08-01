@@ -60,7 +60,7 @@
             <section class="sort">
                 <section class="sortBar">
                         <div class="showSection">
-                            Showing {{count($data['hospitals'])}} out of {{count($data['hospitals'])}} provider(s)
+                            Showing {{count($data['hospitals'])}} out of {{$data['hospitals']->total()}} provider(s)
                         </div>
                     <div class="sortSection">
     {{--                    @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Distance from postcode'], ['id'=>2, 'name'=>'Distance from postcode']], 'selectClass' => 'sortBy', 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'placeholder' => 'Sort by:', 'resultsLabel' => 'sortLabel'])--}}
@@ -107,6 +107,23 @@
                     'NHSClass' => $d['hospital_type_id'] == 1 ? 'NHSHospital' : 'privateHospital',
                     'fundedText' => $d['hospital_type_id'] == 1 ? 'NHS Hospital': 'Private Hospital' ])
             @endforeach
+        @endif
+    </div>
+
+    <div class="pagination">
+        @if(!empty($data['hospitals']))
+            {{
+                $data['hospitals']->appends([
+                    'postcode'          => Request::input('postcode'),
+                    'radius'            => Request::input('radius'),
+                    'procedure_id'      => Request::input('procedure_id'),
+                    'waiting_time'      => Request::input('waiting_time'),
+                    'user_rating'       => Request::input('user_rating'),
+                    'quality_rating'    => Request::input('quality_rating'),
+                    'hospital_type'     => Request::input('hospital_type'),
+                    'sort_by'           => Request::input('sort_by')
+                ])->links()
+            }}
         @endif
     </div>
 
