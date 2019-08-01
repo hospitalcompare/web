@@ -27,7 +27,7 @@ mix.sass('resources/sass/app.scss', 'public/css')
         postCss: [
             require('autoprefixer')({
                 remove: false,
-                browsers: ['last 2 version', 'safari 5', 'ie 6', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'ios 7', 'ios 8', 'ios 9', 'android 4'],
+                // browsers: ['last 2 version', 'safari 5', 'ie 6', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'ios 7', 'ios 8', 'ios 9', 'android 4'],
             }),
             require('postcss-flexbugs-fixes')(),
         ]
@@ -42,7 +42,8 @@ mix.browserSync({
     injectChanges: true,
     files: [
         'resources/sass/**/*.scss',
-        'resources/js/**/*.js'
+        'resources/js/**/*.js',
+        'resources/views/**/*.blade.php'
     ],
     logSnippet: true,
     proxy: 'localhost',

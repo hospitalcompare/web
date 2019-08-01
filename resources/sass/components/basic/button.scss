@@ -50,3 +50,94 @@
 .submitBtn {
   background-image: linear-gradient(270deg, #00cecd 0%, #00d7b5 56%, #00df9d 100%) !important;
 }
+
+.btn {
+  //float: left;
+  border-radius: 100px;
+  //background-color: $teal;
+  color: $white;
+  font-size: 24px;
+  padding: 14px 26px;
+  background-size: 200%!important;
+  background-position: left!important;
+  @include transition(0.3s);
+  //sizes
+  &.btn-xs {
+    font-size: 16px;
+    padding: 6px 18px;
+  }
+  &.btn-s {
+    font-size: 20px;
+    padding: 8px 22px;
+  }
+  &.btn-m {
+    font-size: 24px;
+    padding: 10px 26px;
+  }
+  &.btn-l {
+    font-size: 28px;
+    padding: 12px 30px;
+  }
+  &.btn-xl {
+    font-size: 32px;
+    padding: 14px 34px;
+  }
+  //margins
+  &.btn-mg-right {
+    margin-right: 20px;
+  }
+  &.btn-mg-bottom {
+    margin-bottom: 20px;
+  }
+  &.btn-mg-left {
+    margin-left: 20px;
+  }
+  &.btn-mg-top {
+    margin-top: 20px;
+  }
+  //colours
+  &.btn-teal {
+    @include linear-gradient(90deg, $teal, $teal, $green);
+    &.btn-grad {
+      @include linear-gradient(90deg, $teal, $green, $teal);
+    }
+  }
+  &.btn-blue {
+    @include linear-gradient(90deg, $blue, $blue, $teal);
+    &.btn-grad {
+      @include linear-gradient(90deg, $blue, $teal, $blue);
+    }
+  }
+  &.btn-violet {
+    @include linear-gradient(90deg, $violet, $violet, $blue);
+    &.btn-grad {
+      @include linear-gradient(90deg, $violet, $blue, $violet);
+    }
+  }
+  &.btn-hanblue {
+    @include linear-gradient(90deg, $hanblue, $hanblue, $violet);
+    &.btn-grad {
+      @include linear-gradient(90deg, $hanblue, $violet, $hanblue);
+    }
+  }
+  &.btn-green {
+    @include linear-gradient(90deg, $green, $green, $teal);
+    &.btn-grad {
+      @include linear-gradient(90deg, $green, $teal, $green);
+    }
+  }
+  &.btn-pink {
+    @include linear-gradient(90deg, $pink, $pink, $violet);
+    &.btn-grad {
+      @include linear-gradient(90deg, $pink, $violet, $pink);
+    }
+  }
+  &.btn-black {
+    @include linear-gradient(90deg, $black, $black, $pink, $pink);
+    background-size: 300%!important;
+  }
+  //gradient button
+  &:hover {
+    background-position: right!important;
+  }
+}
