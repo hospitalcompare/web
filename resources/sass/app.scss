@@ -1,5 +1,7 @@
 // Fonts
 //@import url('https://fonts.googleapis.com/css?family=Nunito');
+//MISC
+@import 'typography';
 
 // Variables
 @import 'variables';
@@ -14,13 +16,11 @@
 @import 'layout/footer';
 @import 'pages/resultspage';
 
-
 //COMPONENTS
 @import 'components/whychoose';
 @import 'components/howsection';
 @import 'components/healthchoice';
 @import 'components/logo';
-
 
 //BASIC COMPONENTS
 @import 'components/banner';
@@ -31,8 +31,6 @@
 @import 'components/basic/helplink';
 @import 'components/basic/lightbox';
 @import 'components/basic/range';
-
-
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';

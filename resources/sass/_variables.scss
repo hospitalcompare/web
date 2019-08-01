@@ -1,5 +1,5 @@
-// Body
-$body-bg: #f8fafc;
+// Transition
+$transition: 0.3s all ease;
 
 // Typography
 $font-family-sans-serif: 'sofia', sans-serif;
@@ -39,6 +39,10 @@ $sectionBeige: #ececec;
 $darkBlue: #1b71f3;
 $hotpink:  #ed0373;
 
+// Body
+$body-bg: #f8fafc;
+$body-color: $white;
+
 // Full width
 $fullWidth: 100%;
 //center on page
@@ -48,7 +52,14 @@ $centerOnPage:  auto;
 
 // BS overrides
 $btn-border-radius: 100px;
+$btn-transition: $transition;
 
 //POSITIONS
 $relative: relative;
 $absolute: absolute;
+
+// Fonts
+$font-family-sans-serif: 'Sofia Pro', sans-serif;
+
+$headings-font-family: 'Sofia Pro', sans-serif;
+$headings-font-weight: normal; // font is bold, so normal is standard bold

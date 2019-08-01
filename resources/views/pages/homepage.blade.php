@@ -40,7 +40,7 @@
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => '', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
 
-                            @include('components.basic.submit', ['classTitle' => 'btn btn-mg-right btn-mg-bottom btn-grad btn-teal', 'button' => 'Find hospitals'])
+                            @include('components.basic.submit', ['classTitle' => 'btn btn-l btn-grad btn-teal', 'button' => 'Find hospitals'])
 
                             <p class='browseButton'><a  href="{{url('/results_page')}}">Browse all hospitals</a></p>
 
