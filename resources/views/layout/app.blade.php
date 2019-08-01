@@ -1,4 +1,4 @@
-<!Doctype html> 
+<!Doctype html>
 <html lang='en'>
     <head>
         <title>Hospital Compare - @yield('title')</title>
@@ -23,7 +23,7 @@
         <div class="mainContentWrap" id="app">
             @yield('content')
         </div>
-        
+
         <div class="mainFooterWrap">
             {{--@yield('footer')--}}
             @include('layout.footer', ['page_footer' => ''])
