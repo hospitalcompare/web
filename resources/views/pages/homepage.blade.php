@@ -40,7 +40,7 @@
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => '', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
 
-                            @include('components.basic.submit', ['classTitle' => 'greenOval', 'button' => 'Find hospitals'])
+                            @include('components.basic.submit', ['classTitle' => 'btn btn-mg-right btn-mg-bottom btn-grad btn-teal', 'button' => 'Find hospitals'])
 
                             <p class='browseButton'><a  href="{{url('/results_page')}}">Browse all hospitals</a></p>
 
@@ -58,15 +58,6 @@
                 </div>
             </div>
         </section>
-    </div>
-
-    <div class="howSectionParent">
-        @include('components.howsection', ['howsections' => [
-        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Standard procedure at an NHS Hospital', 'description' => 'You have the legal right to choose which NHS hospital to have your NHS procedure at.' ],
-        ['iconImg'=> 'images/003-doctor.png', 'title'=>'NHS Funded in a private hospital', 'description' => 'You have the legal right to have an NHS funded procedure at a private hospital of your choice'],
-        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Private Healthcare Insurance', 'description' => 'Many private healthcare insurance policies allow you to choose a hospital for your procedure'],
-        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Self Pay at a Private Hospital', 'description' => 'If time is a critical factor for you then a good option may be to self-pay and have your procedure done immediately' ] ],
-        'sectionTitle' => 'Your Healthcare Options' ])
     </div>
 
     <div class="whyChooseParent">
@@ -93,6 +84,17 @@
 
         </div>
     </div>
+
+    <div class="howSectionParent">
+        @include('components.howsection', ['howsections' => [
+        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Standard procedure at an NHS Hospital', 'description' => 'You have the legal right to choose which NHS hospital to have your NHS procedure at.' ],
+        ['iconImg'=> 'images/003-doctor.png', 'title'=>'NHS Funded in a private hospital', 'description' => 'You have the legal right to have an NHS funded procedure at a private hospital of your choice'],
+        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Private Healthcare Insurance', 'description' => 'Many private healthcare insurance policies allow you to choose a hospital for your procedure'],
+        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Self Pay at a Private Hospital', 'description' => 'If time is a critical factor for you then a good option may be to self-pay and have your procedure done immediately' ] ],
+        'sectionTitle' => 'Your Healthcare Options' ])
+    </div>
+
+
 
     <div class="howSectionParent">
         @include('components.howsection', ['howsections' => [
