@@ -31,8 +31,8 @@
                             </div>
 
                             <div class="formChild fullLeft">
-                                 @include('components.basic.selectbox', ['selectClass'=> 'big', 'options' => [['id'=>50, 'name'=>'Up to 50 miles'], ['id'=>20, 'name'=>'Up to 20 miles'], ['id'=>10, 'name'=>'Less than 10 miles']], 'selectClassName'=> 'lessWideSelect', 'placeholder' => 'How far would you like to travel?', 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'name'=>'radius'])
-                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => '', 'lightBoxClass' => 'lightboxAdjust'])
+                                @include('components.basic.selectbox', ['selectClass'=> 'big', 'options' => [['id'=>50, 'name'=>'Up to 50 miles'], ['id'=>20, 'name'=>'Up to 20 miles'], ['id'=>10, 'name'=>'Less than 10 miles']], 'selectClassName'=> 'lessWideSelect', 'placeholder' => 'How far would you like to travel?', 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'name'=>'radius'])
+                                @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => '', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
 
                             <div class="formChild fullLeft">
@@ -40,15 +40,16 @@
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => '', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
 
-                            @include('components.basic.submit', ['classTitle' => 'btn btn-l btn-grad btn-teal', 'button' => 'Find hospitals'])
+                            @include('components.basic.submit', ['classTitle' => 'btn btn-m btn-grad btn-teal', 'button' => 'Find Hospitals'])
 
-                            <p class='browseButton'><a  href="{{url('/results_page')}}">Browse all hospitals</a></p>
+                            <p class='browseButton'><a href="{{url('/results_page')}}">Browse all hospitals</a></p>
 
                         </form>
                     </div>
                 </div>
                 <div class="homePromo">
-                    <p>The quality of care in England varies greatly between hospitals. You have the legal right to choose where to have your elective surgery*. It can be at: </p>
+                    <p>The quality of care in England varies greatly between hospitals. You have the legal right to
+                        choose where to have your elective surgery*. It can be at: </p>
                     <ul class="promoList">
                         <li><i class="fas fa-check"></i> An NHS hospital of your choice</li>
                         <li><i class="fas fa-check"></i> A private hospital funded by NHS</li>
@@ -66,13 +67,18 @@
             <section class="whyChoose">
                 <div class="chooseText">
                     <h1 class="pageTitle">Why use Hospital Compare?</h1>
-                    <p>Hospital Compare helps you make the best possible choice when it comes to choosing a suitable hospital for your elective procedure.</p>
-                    <p>64% of people in the UK are not aware that they could have the option of an NHS funded operation in a private hospital. We are here to help you understand your rights and make the right choice.</p>
-                    <p>Whether you are searching for the best NHS hospital or the best private hospital, Hospital Compare is the only place that provides an accurate, up-to-date and unbiased assessment of all hospitals in the UK.</p>
+                    <p>Hospital Compare helps you make the best possible choice when it comes to choosing a suitable
+                        hospital for your elective procedure.</p>
+                    <p>64% of people in the UK are not aware that they could have the option of an NHS funded operation
+                        in a private hospital. We are here to help you understand your rights and make the right
+                        choice.</p>
+                    <p>Whether you are searching for the best NHS hospital or the best private hospital, Hospital
+                        Compare is the only place that provides an accurate, up-to-date and unbiased assessment of all
+                        hospitals in the UK.</p>
                 </div>
                 <div class="chooseVideo">
                     <div class="videoParent">
-                        <video  poster="{{ url('images/video_placeholder.png') }}">
+                        <video poster="{{ url('images/video_placeholder.png') }}">
                             {{--                        <source src="movie.mp4" type="video/mp4">--}}
                             {{--                        <source src="movie.ogg" type="video/ogg">--}}
                             Your browser does not support the video tag.
