@@ -47,7 +47,7 @@ mix.browserSync({
     logSnippet: true,
     proxy: 'localhost',
     port: 8080
-})
+});
 
 // Disable notification sounds
 mix.disableSuccessNotifications();
