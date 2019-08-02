@@ -116,7 +116,8 @@
 }
 
 .postcode-autocomplete-cont {
-    float: left;
+    display: none;
+    //float: left;
     width: 100%;
     overflow: hidden;
     transition: 1s linear;
