@@ -18,12 +18,12 @@
                         <form class="formElem" method="get" action="/results_page">
 
                             <div class="formChild fullLeft">
-                                @include('components.basic.selectbox', ['selectClass'=> 'big', 'options' => $data['procedures'], 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'placeholder'=>'Choose your procedure', 'name'=>'procedure_id'])
+                                @include('components.basic.selectbox', ['selectClass'=> 'big', 'options' => $data['procedures'], 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'placeholder'=>'Choose your procedure (if known)', 'name'=>'procedure_id'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'Procedures list', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
 
                             <div class="formChild fullLeft">
-                                @include('components.basic.textbox', ['placeholder' => 'Enter your postcode', 'className' => 'postcode-text-box big', 'value' => '', 'name' => 'postcode', 'id' => 'input_postcode'])
+                                @include('components.basic.textbox', ['placeholder' => 'Enter postcode', 'className' => 'postcode-text-box big', 'value' => '', 'name' => 'postcode', 'id' => 'input_postcode'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'textBox1', 'lightBoxClass' => 'lightboxAdjust'])
                                 <div class="postcode-autocomplete-cont">
                                     <div class="ajax-box"></div>
@@ -61,6 +61,15 @@
         </section>
     </div>
 
+    <div class="howSectionParent">
+        @include('components.howsection', ['howsections' => [
+        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Standard procedure at an NHS Hospital', 'description' => 'You have the legal right to choose which NHS hospital to have your NHS procedure at.' ],
+        ['iconImg'=> 'images/003-doctor.png', 'title'=>'NHS Funded in a private hospital', 'description' => 'You have the legal right to have an NHS funded procedure at a private hospital of your choice'],
+        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Private Healthcare Insurance', 'description' => 'Many private healthcare insurance policies allow you to choose a hospital for your procedure'],
+        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Self Pay at a Private Hospital', 'description' => 'If time is a critical factor for you then a good option may be to self-pay and have your procedure done immediately' ] ],
+        'sectionTitle' => 'Your Healthcare Options' ])
+    </div>
+
     <div class="whyChooseParent">
         <div class="whyChooseContent">
 
@@ -90,17 +99,6 @@
 
         </div>
     </div>
-
-    <div class="howSectionParent">
-        @include('components.howsection', ['howsections' => [
-        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Standard procedure at an NHS Hospital', 'description' => 'You have the legal right to choose which NHS hospital to have your NHS procedure at.' ],
-        ['iconImg'=> 'images/003-doctor.png', 'title'=>'NHS Funded in a private hospital', 'description' => 'You have the legal right to have an NHS funded procedure at a private hospital of your choice'],
-        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Private Healthcare Insurance', 'description' => 'Many private healthcare insurance policies allow you to choose a hospital for your procedure'],
-        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Self Pay at a Private Hospital', 'description' => 'If time is a critical factor for you then a good option may be to self-pay and have your procedure done immediately' ] ],
-        'sectionTitle' => 'Your Healthcare Options' ])
-    </div>
-
-
 
     <div class="howSectionParent">
         @include('components.howsection', ['howsections' => [

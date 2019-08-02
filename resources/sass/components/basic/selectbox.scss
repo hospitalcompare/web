@@ -1,6 +1,10 @@
 //SELECTBOX
 .selectParent {
     position:$relative;
+
+    select {
+        width: 100%;
+    }
 }
 
 .flexSelect {
@@ -15,16 +19,19 @@
     top:10px;
 }
 
-.lessWideSelect {
-    //@include flex;
-}
-
+input,
 select {
     border: 2px solid #ebebeb;  /*Removes border*/
+    border-radius: 10px;
     appearance: none;
-    text-indent: 0.01px; /* Removes default arrow from firefox*/
-    text-overflow: "";  /*Removes default arrow from firefox*/
+    color: $darkerGrey;
+        //text-indent: 0.01px; /* Removes default arrow from firefox*/
+    //text-overflow: "";  /*Removes default arrow from firefox*/
 }
+
+//input::-webkit-input-placeholder {
+//    color: red;
+//}
 
 select::-ms-expand {
     display: none;
@@ -35,4 +42,17 @@ select::-ms-expand {
     overflow: hidden;
 }
 
+// Homepage banner form
+.box {
+    select,
+    input {
+        padding-left: 16px;
+    }
+    input {
+        width: 100%;
+        @include placeholder {
+            color: $darkerGrey;
+        }
+    }
+}
 
