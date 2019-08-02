@@ -7,7 +7,7 @@
         <meta name='description' content='@yield('description')'>
         <meta name='keywords' content='@yield('keywords')'>
         <meta name="viewport" content="@yield('mobile')">
-        <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
 
         @stack('styles')

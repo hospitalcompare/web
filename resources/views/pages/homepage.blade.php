@@ -87,12 +87,12 @@
                 </div>
                 <div class="chooseVideo">
                     <div class="videoParent">
-                        <video autoplay muted class="content" poster="{{ url('images/video_placeholder.png') }}" >
+                        <video muted class="content" poster="{{ url('images/video_placeholder.png') }}" >
                             <source src="{{ asset('video/For_Wes.mp4') }}" type="video/mp4">
 {{--                            <source src="movie.ogg" type="video/ogg">--}}
 {{--                            Your browser does not support the video tag.--}}
                         </video>
-                        <div class="playerButton"></div>
+                        <div class="playerButton toggle"></div>
                     </div>
                 </div>
             </section>
