@@ -88,7 +88,7 @@
             content: url("/images/tick.svg");
             width: 30px;
             height: 28px;
-            position: absolute;
+            @include v-c;
             left: 0;
         }
     }
