@@ -7,7 +7,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/.idea/laravel-plugin.xml
 package-lock.json
 composer.lock
 /.idea/

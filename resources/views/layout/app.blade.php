@@ -30,8 +30,8 @@
         </div>
         <!-- or push target to footer -->
         @stack('main')
-        <script src="{{ asset('js/library/jquery-3.4.1.min.js') }}"></script>
-        <script src="{{ asset('https://kit.fontawesome.com/d4b841dc1e.js') }}"></script>
+{{--        <script src="{{ asset('js/library/jquery-3.4.1.min.js') }}"></script>--}}
+{{--        <script src="{{ asset('https://kit.fontawesome.com/d4b841dc1e.js') }}"></script>--}}
         <script src="{{ asset('js/app.js') }}"></script>
         @stack('button')
     </body>

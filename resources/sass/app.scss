@@ -5,6 +5,12 @@
 @import 'variables';
 @import 'mixins';
 
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//MISC
+@import 'typography';
+
 // Global CSS
 @import 'global';
 
@@ -14,14 +20,12 @@
 @import 'layout/footer';
 @import 'pages/resultspage';
 
-
 //COMPONENTS
 @import 'components/whychoose';
 @import 'components/howsection';
 @import 'components/healthchoice';
 @import 'components/logo';
 @import 'components/pagination';
-
 
 //BASIC COMPONENTS
 @import 'components/banner';
@@ -33,8 +37,4 @@
 @import 'components/basic/lightbox';
 @import 'components/basic/range';
 
-
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
 
