@@ -32,45 +32,20 @@
 }
 
 @mixin animation($name, $duration, $iteration, $direction) {
-    -webkit-animation-duration: $duration;
-    -moz-animation-duration: $duration;
-    -o-animation-duration: $duration;
     animation-duration: $duration;
-    -webkit-animation-iteration-count: $iteration;
-    -moz-animation-iteration-count: $iteration;
-    -o-animation-iteration-count: $iteration;
-    animation-iteration-count: $iteration;
-    -webkit-animation-name: $name;
-    -moz-animation-name: $name;
-    -o-animation-name: $name;
     animation-name: $name;
-    -webkit-animation-direction: $direction;
-    -moz-animation-direction: $direction;
-    -o-animation-direction: $direction;
     animation-direction: $direction;
 }
 
 @mixin transform($args...) {
-    -webkit-transform: $args;
-    -moz-transform: $args;
-    -ms-transform: $args;
-    -o-transform: $args;
     transform: $args;
 }
 
 @mixin transform-origin($args...) {
-    -webkit-transform-origin: $args;
-    -moz-transform-origin: $args;
-    -ms-transform-origin: $args;
-    -o-transform-origin: $args;
     transform-origin: $args;
 }
 
 @mixin transition($args...) {
-    -webkit-transition: $args;
-    -moz-transition: $args;
-    -ms-transition: $args;
-    -o-transition: $args;
     transition: $args;
 }
 
@@ -171,27 +146,24 @@
 
 //Resposive design parent declarations
 @mixin flex {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
+}
+
+// flex centering
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 //shorthand flex-direction and flex-wrap
 @mixin flex-flow($values: (row nowrap)) {
     // No Webkit/FF Box fallback.
-    -webkit-flex-flow: $values;
-    -ms-flex-flow: $values;
     flex-flow: $values;
 }
 
 /* Align Items - Center */
 @mixin alignItems {
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
 }
 

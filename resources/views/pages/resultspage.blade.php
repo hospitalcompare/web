@@ -89,7 +89,7 @@
 
     <div class="sortCategoriesResults">
         @if(!empty($data['hospitals']))
-            @foreach($data['hospitals'] as $d)
+            @foreach(array_slice($data['hospitals'], 0, 20) as $d)
                 @include('components.item', [
                     'itemImg' => 'images/alder-1.png',
                     'title' => $d['name'],
