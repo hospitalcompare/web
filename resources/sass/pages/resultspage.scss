@@ -1,3 +1,61 @@
+.filter-section {
+    flex-basis: 85%;
+    display: flex;
+
+    .postProxChild {
+        flex: 1;
+        padding: 0 20px;
+        &:not(:last-child) {
+            border-right: 2px solid #d7d7d7;
+        }
+        &:first-child {
+            margin-left: -20px;
+        }
+
+        .selectParent {
+            position: relative;
+            width: 100%;
+
+            label {
+                color: #1c1c1c;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: -0.7px;
+                line-height: 18px;
+                margin-bottom: 6px;
+            }
+
+            select {
+                padding: 12px 70px 9px 13px;
+                /* Style for "Knee Opera" */
+                color: #1c1c1c;
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: -0.6px;
+                line-height: 15px;
+            }
+
+            i.blackChevron {
+                position: absolute;
+                right: 14px;
+                bottom: 13px;
+                color: $caretBlack;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.submit-section {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 15%;
+
+    .postProxChild {
+        justify-content: flex-end;
+    }
+}
+
 .filterParent {
     width: $fullWidth;
     background-color: $white;
@@ -32,30 +90,13 @@
     }
 }
 
-.searchPageSelect {
-    width: 90%;
-    margin-left: 0 !important;
-    padding: 0 15px 0 10px;
-}
-
 .inputClass {
     margin-left: 0 !important;
-}
-
-.blackChevron {
-    color: $black;
-    left: -24px;
-}
-
-.resultsLabel {
-    padding-bottom: 10px;
-    left: 0 !important;
 }
 
 .sortParent {
     width: $fullWidth;
     background-color: $lightergrey;
-
 }
 
 .sort {
