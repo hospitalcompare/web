@@ -38,21 +38,17 @@
                             @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'NHS choices...', 'className' => 'helpPosition3'])
                         </div>
                         <div class="postProxChild">
-                            {{--                            @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'searchPageSelect', 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'placeholder' => 'Care quality rating', 'resultsLabel' => 'resultsLabel'])--}}
                             @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['filters']['qualityRatings'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect', 'placeholder'=>'Care Quality Rating', 'name'=>'quality_rating', 'resultsLabel' => 'resultsLabel'])
                             @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'Care quality...', 'className' => 'helpPosition4'])
                         </div>
                         <div class="postProxChild">
-                            @include('components.basic.selectbox', ['showLabel' => true, 'showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect', 'placeholder'=>'NHS Private/NHS Funded', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
+                            @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect', 'placeholder'=>'NHS Private/NHS Funded', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
                             @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'NHS private...', 'className' => 'helpPosition5'])
                         </div>
                     </div>
                     <div class="submit-section">
                         <div class="postProxChild">
-
-                            {{--                        @include('components.basic.button', ['classTitle' => 'greenOval blockDisplay', 'button' => 'Update results'])--}}
                             @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-teal btn-s blockDisplay', 'button' => 'Update Results'])
-
                         </div>
                     </div>
                 </div>
@@ -66,10 +62,8 @@
                         Showing {{count($data['hospitals'])}} out of {{count($data['hospitals'])}} provider(s)
                     </div>
                     <div class="sortSection">
-                        {{--                    @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Distance from postcode'], ['id'=>2, 'name'=>'Distance from postcode']], 'selectClass' => 'sortBy', 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'placeholder' => 'Sort by:', 'resultsLabel' => 'sortLabel'])--}}
-                        @include('components.basic.selectbox', ['options' => $data['sortBy'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect', 'placeholder'=>'Sort by:', 'name'=>'sort_by', 'resultsLabel' => 'sortLabel'])
-
-
+                        @include('components.basic.helplink', [ 'helpParentPositionRelative' => true, 'helpChar'=> '?', 'helpText' => 'Choose a category to sort the list...', 'className' => ''])
+                        @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['sortBy'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect', 'placeholder'=>'Sort by:', 'name'=>'sort_by', 'resultsLabel' => 'sortLabel'])
                     </div>
                 </section>
             </section>

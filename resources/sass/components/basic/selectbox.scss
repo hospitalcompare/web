@@ -19,7 +19,7 @@
     top: 10px;
 }
 
-input:not([type="range"]),
+input:not([type="range"]):not([type="submit"]),
 select {
     border: 2px solid #ebebeb; /*Removes border*/
     border-radius: 10px;
