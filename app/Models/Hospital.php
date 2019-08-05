@@ -163,8 +163,9 @@ class Hospital extends Model
      * @param string $userRating
      * @param string $qualityRating
      * @param string $hospitalType
+     * @param string $sortBy
      *
-     * @return Hospital|array|\Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
     public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 10, $waitingTime = '', $userRating = '', $qualityRating = '', $hospitalType = '', $sortBy = '') {
         $hospitals = Hospital::with(['trust','hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'waitingTime']);
@@ -265,7 +266,7 @@ class Hospital extends Model
                 $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.avg_user_rating), hospital_ratings.avg_user_rating DESC');
         }
 
-        $hospitals = $hospitals->get()->toArray();
+        $hospitals = $hospitals->paginate(10);
 
         return $hospitals;
     }
