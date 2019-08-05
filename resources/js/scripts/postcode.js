@@ -46,4 +46,4 @@ $(document).ready(function () {
 
     //Hide first option tag value from displaying in select element options
     // $('.firstOption').hide();
-})
+});
