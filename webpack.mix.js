@@ -14,6 +14,7 @@ const pathRes = require('path');
 
 //Copy all the images that are used on the Web Application to the right folder ( public/images )
 mix.copyDirectory('resources/images', 'public/images');
+mix.copyDirectory('resources/video', 'public/video');
 
 mix.webpackConfig({
     devtool: "source-map"
@@ -46,7 +47,7 @@ mix.browserSync({
         'resources/views/**/*.blade.php'
     ],
     logSnippet: true,
-    proxy: 'localhost',
+    proxy: 'hospital-compare.local',
     port: 8080
 });
 

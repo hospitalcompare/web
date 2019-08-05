@@ -17,16 +17,16 @@
 }
 
 @mixin placeholder {
-    ::-webkit-input-placeholder {
+    &::-webkit-input-placeholder {
         @content;
     }
-    ::-moz-placeholder {
+    &::-moz-placeholder {
         @content;
     }
-    :-ms-input-placeholder {
+    &:-ms-input-placeholder {
         @content;
     }
-    :-moz-placeholder {
+    &:-moz-placeholder {
         @content;
     }
 }
@@ -243,4 +243,39 @@
     flex: 0 0 45%;
     -webkit-flex: 0 0 45%;
     -ms-flex: 0 0 45%;
+}
+
+// Absolute centring
+
+@mixin v-c {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin h-c {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin v-h-c {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Fixed aspect ratio
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+    >.content {
+        @include v-h-c;
+    }
 }
