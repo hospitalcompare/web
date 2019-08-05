@@ -1,0 +1,51 @@
+.compare-hospitals-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $teal;
+    z-index: 1000;
+    .compare-hospitals-header {
+        position: relative;
+        width: 100%;
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 0 20px;
+        .compare-button-title {
+            float: left;
+            //background-color: $teal;
+            padding: 15px 30px;
+        }
+        .compare-arrow {
+            float: right;
+            width: 50px;
+            height: 50px;
+            background-color: $teal;
+            background-image: url('../images/up-arrow.svg');
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    .compare-hospitals-content {
+        max-height: 0;
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 0 20px;
+            background-color: $white;
+            .main-col {
+                float: left;
+                width: 340px;
+                padding: 40px 40px 0 0;
+            }
+            .item-col {
+                float: left;
+                width: 340px;
+                padding: 40px 40px 0 0;
+            }
+        }
+    }
+}

@@ -94,18 +94,19 @@
         @if(!empty($data['hospitals']))
             @foreach($data['hospitals'] as $d)
                 @include('components.item', [
-                    'itemImg' => 'images/alder-1.png',
-                    'title' => $d['name'],
-                    'location' => (!empty($d['address']['address_1'])? $d['address']['address_1']: '').(!empty($d['radius']) ? ', '.$d['radius']. ' miles from location': ''),
-                    'findLink' => 'Find on map',
-                    'waitTime' => !empty($d['waiting_time'][0]['avg_waiting_weeks'])? $d['waiting_time'][0]['avg_waiting_weeks']. ' Weeks': 'N/A',
-                    'stars' => !empty($d['rating']['avg_user_rating']) ? $d['rating']['avg_user_rating'] : 'N/A',
-                    'opCancelled' => !empty($d['cancelled_op']['perc_cancelled_ops'])? $d['cancelled_op']['perc_cancelled_ops'].'%': 'N/A',
-                    'qualityRating' => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : 'N/A',
-                    'FFRating' => !empty($d['rating']['provider_rating']) ? $d['rating']['provider_rating'] : 'N/A',
-                    'NHSFunded' => (!empty($d['waiting_time']))?'yes':'no',
-                    'NHSClass' => $d['hospital_type_id'] == 1 ? 'NHSHospital' : 'privateHospital',
-                    'fundedText' => $d['hospital_type_id'] == 1 ? 'NHS Hospital': 'Private Hospital' ])
+                    'id'                => $d['id'],
+                    'itemImg'           => 'images/alder-1.png',
+                    'title'             => $d['name'],
+                    'location'          => (!empty($d['address']['address_1'])? $d['address']['address_1']: '').(!empty($d['radius']) ? ', '.$d['radius']. ' miles from location': ''),
+                    'findLink'          => 'Find on map',
+                    'waitTime'          => !empty($d['waiting_time'][0]['avg_waiting_weeks'])? $d['waiting_time'][0]['avg_waiting_weeks']. ' Weeks': 'N/A',
+                    'stars'             => !empty($d['rating']['avg_user_rating']) ? $d['rating']['avg_user_rating'] : 'N/A',
+                    'opCancelled'       => !empty($d['cancelled_op']['perc_cancelled_ops'])? $d['cancelled_op']['perc_cancelled_ops'].'%': 'N/A',
+                    'qualityRating'     => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : 'N/A',
+                    'FFRating'          => !empty($d['rating']['provider_rating']) ? $d['rating']['provider_rating'] : 'N/A',
+                    'NHSFunded'         => (!empty($d['waiting_time']))?'yes':'no',
+                    'NHSClass'          => $d['hospital_type_id'] == 1 ? 'NHSHospital' : 'privateHospital',
+                    'fundedText'        => $d['hospital_type_id'] == 1 ? 'NHS Hospital': 'Private Hospital' ])
             @endforeach
         @endif
     </div>

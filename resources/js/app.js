@@ -123,4 +123,95 @@ $( document ).ready(function() {
         ajaxBox.empty();
         $('.postcode-autocomplete-cont').hide();
     });
+
+    //COMPARE FUNCTIONALITY
+    //Check if we don't have the cookie and set it to 0
+    var compareBar = $('.compare-hospitals-bar');
+    if (typeof Cookies.get("compareCount") === 'undefined') {
+        Cookies.set("compareCount", 0, {expires: 10000});
+        Cookies.set("compareHospitalsData", JSON.stringify([{}]), {expires: 10000});
+    }
+
+    // Cookies.set("compareCount", 0, -1);
+    // Cookies.set("compareHospitalsData", 0, -1);
+    // Cookies.set("compareCount", 0, {expires: 10000});
+    // Cookies.set("compareHospitalsData", JSON.stringify([{}]), {expires: 10000});
+
+    //Check if we need to show the Compare hospitals div
+    if(Cookies.get("compareCount") > 0) {
+        compareBar.show();
+    } else {
+        compareBar.hide();
+    }
+
+    function addObjectToArray(object, array) {
+
+    }
+
+    function removeObjectFromArray(object, array) {
+
+    }
+
+    //Set the OnClick event for the Compare button
+    $(document).on("click touchend", ".sortCatSection3 .compare", function () {
+        //Check if there are already 3 hospitals for comparison in Cookies
+        var compareCount = parseInt(Cookies.get("compareCount"));
+        //Get the Data that is already in the Cookies
+        var data = JSON.parse(Cookies.get("compareHospitalsData"));
+
+        //Load the Cookies with the data that we need for the comparison
+        var elementId = $(this).attr('id');
+        var name = $('#name_'+elementId).text();
+        var waitingTime = $('#waiting_time_'+elementId).text();
+        var userRating = $('#user_rating_'+elementId).text();
+        var opCancelled = $('#op_cancelled_'+elementId).text();
+        var qualityRating = $('#quality_rating_'+elementId).text();
+        var ffRating = $('#ff_rating_'+elementId).text();
+        var nhsFunded = $('#nhs_funded_'+elementId).text();
+
+        var result = $.grep(data, function(e){ return e.id == elementId; });
+
+        if(compareCount < 3) {
+
+            if (result.length === 0) {
+                // no result found, add the data to the cookies
+                data.push({
+                    'id': elementId,
+                    'name': name,
+                    'waitingTime': waitingTime,
+                    'userRating': userRating,
+                    'opCancelled': opCancelled,
+                    'qualityRating': qualityRating,
+                    'ffRating': ffRating,
+                    'nhsFunded': nhsFunded
+                });
+                compareCount = parseInt(compareCount) + 1;
+            } else if (result.length === 1) {
+                // property found, access the foo property using result[0].foo
+                data = $.grep(data, function(e){
+                    return e.id != elementId;
+                });
+                compareCount = parseInt(compareCount) - 1;
+            } else {
+                // multiple items found
+            }
+        } else {
+            if (result.length === 1) {
+                // property found, access the foo property using result[0].foo
+                data = $.grep(data, function(e){
+                    return e.id != elementId;
+                });
+                compareCount = parseInt(compareCount) - 1;
+            }
+        }
+
+        //Reset compareCount and compareHospitalsData
+        Cookies.set("compareCount", 0, -1);
+        Cookies.set("compareHospitalsData", 0, -1);
+        //Set them back again
+        Cookies.set("compareHospitalsData", JSON.stringify(data), {expires: 10000});
+        Cookies.set("compareCount", compareCount, {expires: 10000});
+        console.log(compareCount);
+        console.log(data);
+    });
 });
