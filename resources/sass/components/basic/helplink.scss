@@ -1,9 +1,9 @@
-
+// Trigger the tooltip speech bubble
 .helpLink {
   color: $black;
   position: $absolute;
-  top: 20px;
-  left: 330px;
+  top: 0;
+  right: 18px;
   border-radius: 50%;
   background: $lightgrey;
   width: 20px;
@@ -13,29 +13,6 @@
   cursor: pointer;
 }
 
-.helpLink:hover + .lightbox{
+.helpLink:hover + .lightbox {
   display:block;
-}
-
-//REPOSITION HELP LINK
-
-
-.helpPosition1{
-  left: 90px !important;
-}
-
-.helpPosition2{
-  left: 80px !important;
-}
-
-.helpPosition3{
-  left: 155px !important;
-}
-
-.helpPosition4{
-  left: 120px !important;
-}
-
-.helpPosition5{
-  left: 160px !important;
 }
