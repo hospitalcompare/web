@@ -1,6 +1,6 @@
 //SELECTBOX
 .selectParent {
-    position:$relative;
+    position: $relative;
 
     select {
         width: 100%;
@@ -16,22 +16,18 @@
     @include flexBasis;
     position: relative;
     left: 40px;
-    top:10px;
+    top: 10px;
 }
 
-input,
+input:not([type="range"]),
 select {
-    border: 2px solid #ebebeb;  /*Removes border*/
+    border: 2px solid #ebebeb; /*Removes border*/
     border-radius: 10px;
     appearance: none;
     color: $darkerGrey;
-        //text-indent: 0.01px; /* Removes default arrow from firefox*/
+    //text-indent: 0.01px; /* Removes default arrow from firefox*/
     //text-overflow: "";  /*Removes default arrow from firefox*/
 }
-
-//input::-webkit-input-placeholder {
-//    color: red;
-//}
 
 select::-ms-expand {
     display: none;
@@ -48,6 +44,7 @@ select::-ms-expand {
     input {
         padding-left: 16px;
     }
+
     input:not([type="submit"]) {
         width: 100%;
         @include placeholder {

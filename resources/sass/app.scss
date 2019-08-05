@@ -1,11 +1,15 @@
 // Fonts
 //@import url('https://fonts.googleapis.com/css?family=Nunito');
-//MISC
-@import 'typography';
 
 // Variables
 @import 'variables';
 @import 'mixins';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//MISC
+@import 'typography';
 
 // Global CSS
 @import 'global';
@@ -32,6 +36,4 @@
 @import 'components/basic/lightbox';
 @import 'components/basic/range';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
 
