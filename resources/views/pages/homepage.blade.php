@@ -33,12 +33,12 @@
                             </div>
 
                             <div class="formChild fullLeft d-flex">
-                                @include('components.basic.selectbox', ['showLabel' => true, 'selectClass'=> '', 'options' => [['id'=>50, 'name'=>'Up to 50 miles'], ['id'=>20, 'name'=>'Up to 20 miles'], ['id'=>10, 'name'=>'Less than 10 miles']], 'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'How far would you like to travel?', 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'name'=>'radius'])
+                                @include('components.basic.selectbox', ['showLabel' => true, 'selectClass'=> '', 'options' => [['id'=>50, 'name'=>'Up to 50 miles'], ['id'=>20, 'name'=>'Up to 20 miles'], ['id'=>10, 'name'=>'Less than 10 miles']], 'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'How far would you like to travel?', 'chevronFAClassName' => '', 'name'=>'radius'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => '', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
 
                             <div class="formChild fullLeft d-flex">
-                                @include('components.basic.selectbox', ['showLabel' => true, 'selectClass'=> '', 'options' => [['id'=>1, 'name'=>'Provider Name']], 'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'Do you have private healtchare insurance?', 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'name'=>'insurance_id'])
+                                @include('components.basic.selectbox', ['showLabel' => true, 'selectClass'=> '', 'options' => [['id'=>1, 'name'=>'Provider Name']], 'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'Do you have private healtchare insurance?', 'chevronFAClassName' => '', 'name'=>'insurance_id'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => '', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
 
