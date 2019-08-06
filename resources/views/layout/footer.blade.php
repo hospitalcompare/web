@@ -54,4 +54,4 @@
     </nav>
 </footer>
 
-@include('components.compareHospitals')
+@include('components.compare')
