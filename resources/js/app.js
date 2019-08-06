@@ -11,7 +11,6 @@ require('./bootstrap');
 require('./scripts/video'); // Video controller
 require('./scripts/scroll'); // Smooth scroll
 require('./scripts/postcode'); // Postcode input
-require('./scripts/year'); // Year in footer
 require('./scripts/range'); // Slider for radius of proximity on search page
 require('./scripts/compare'); // Slider for radius of proximity on search page
 
