@@ -20,7 +20,7 @@
                         <form class="formElem" method="get" action="/results_page">
 
                             <div class="formChild fullLeft">
-                                @include('components.basic.selectbox', ['selectClass'=> 'big', 'options' => $data['procedures'], 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'placeholder'=>'Choose your procedure (if known)', 'name'=>'procedure_id'])
+                                @include('components.basic.selectbox', ['selectClass'=> 'big', 'options' => $data['procedures'], 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'placeholder'=>'Choose your procedure (if known)', 'name'=> 'procedure_id'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'Procedures list', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
 
