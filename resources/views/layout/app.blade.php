@@ -15,7 +15,7 @@
         @stack('font-awesome')
     </head>
 
-    <body>
+    <body class="@yield('body-class')">
         <div class="mainHeaderWrap">
             @include('layout.header', ['page_header' => ''])
         </div>

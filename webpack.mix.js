@@ -48,7 +48,7 @@ mix.browserSync({
         'resources/views/**/*.blade.php'
     ],
     logSnippet: true,
-    proxy: 'hospital-compare.local',
+    proxy: 'localhost',
     port: 8080
 });
 

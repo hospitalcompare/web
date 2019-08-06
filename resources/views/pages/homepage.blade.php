@@ -8,6 +8,8 @@
 
 @section('mobile', 'width=device-width, initial-scale=1')
 
+@section('body-class', 'home-page')
+
 @section('content')
     <div class="bannerParent">
         <section class="banner">
