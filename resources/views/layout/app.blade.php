@@ -8,14 +8,15 @@
         <meta name='keywords' content='@yield('keywords')'>
         <meta name="viewport" content="@yield('mobile')">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
+{{--        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>--}}
 
-        @stack('styles')
-        @stack('jquery')
-        @stack('font-awesome')
+
+{{--        @stack('styles')--}}
+{{--        @stack('jquery')--}}
+{{--        @stack('font-awesome')--}}
     </head>
 
-    <body>
+    <body class="@yield('body-class')">
         <div class="mainHeaderWrap">
             @include('layout.header', ['page_header' => ''])
         </div>
@@ -34,7 +35,13 @@
 {{--        <script src="{{ asset('https://kit.fontawesome.com/d4b841dc1e.js') }}"></script>--}}
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/cookies.js') }}"></script>
-        @stack('button')
+{{--        @stack('button')--}}
+
+        <script>
+            window.FontAwesomeConfig = {
+                searchPseudoElements: true
+            }
+        </script>
     </body>
 
 </html>

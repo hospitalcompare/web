@@ -99,7 +99,7 @@
 
 .sortParent {
     width: $fullWidth;
-    background-color: $lightergrey;
+    background-color: $lighterGrey;
 }
 
 .sort {
@@ -149,54 +149,62 @@
 
 }
 
-.sortCategoriesHeader, .sortCategories {
-    width: $pageWrap;
-    margin: $centerOnPage;
+.sortCategoriesHeader,
+.sortCategories {
     @include flex;
-    margin-bottom: 10px;
 }
 
 .sortCategoriesHeader {
-    height: 80px;
+    width: 1180px;
+    margin: auto;
+}
+
+.sortCategories {
+    margin-bottom: 7px;
+    background-color: $white;
+}
+
+.sortCategoriesResults {
+    background-color: $lighterGrey;
+}
+
+.sortCategoriesInner {
+    display: flex;
+    width: 1180px;
+    margin: auto;
 }
 
 .sortCatSection1 {
-    flex: 0 0 20%;
-    -webkit-flex: 0 0 20%;
-    -ms-flex: 0 0 20%;
-
+    flex: 1 0 30%;
 }
 
 .sortCatSection2 {
-    flex: 0 0 70%;
+    flex: 1 0 60%;
 }
 
 .sortCatSection3 {
-    flex: 0 0 10%;
+    flex: 1 0 10%;
 }
 
 
 .sortCatMenu {
     @include flex;
-    margin-top: 30px;
+    margin: 18px 0;
 
     li {
         list-style: none;
-        padding-left: 20px;
         @include uniformAlignment;
 
         a {
-            color: $white;
-
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: -0.7px;
+            line-height: 16.8px;
+            text-align: center;
+            @include flex-center;
         }
     }
-}
-
-.sortCategoriesResults {
-    background: $white;
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 .sortCatSection1, .sortCatSection2 {
@@ -204,21 +212,25 @@
 }
 
 .sortCatSection2Child {
-    @include uniformAlignment;
-    text-align: center;
+    //@include uniformAlignment;
+    flex: 1;
     font-weight: 600;
-    padding-left: 20px;
+    @include flex-center;
 }
 
 .sortCatItem {
-    padding-right: 5%;
     position: $relative;
+
+    &:last-child {
+        padding: 8px;
+    }
 }
 
-.sortItemTitle, .sortItemLocation {
+.sortItemTitle,
+.sortItemLocation {
+    //width: 240px;
     font-size: .9em;
     line-height: 15px;
-    width: 120px;
 }
 
 .findLink {
@@ -263,17 +275,11 @@
     }
 }
 
-.enquiry, .compare {
-    border-radius: 7px !important;
-    width: 159px !important;
-    height: 44px !important;
-    font-size: .8em !important;
-    padding: 0 !important;
-
+.enquiry,
+.compare {
 }
 
 .enquiry {
-    padding-top: 12px !important;
 
 }
 

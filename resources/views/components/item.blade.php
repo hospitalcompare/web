@@ -1,4 +1,6 @@
 <section class="sortCategories">
+    <div class="sortCategoriesInner">
+
     <div class="sortCatSection1">
         <div class="sortCatItem">
             <img src="{{ $itemImg }}">
@@ -66,5 +68,7 @@
 
         </p>
         @include('components.basic.button', ['classTitle' => 'greenOval blockDisplay compare', 'button' => 'Compare', 'icon' => 'far fa-heart', 'id' => $id])
+        </div>
+
     </div>
 </section>

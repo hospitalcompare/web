@@ -8,6 +8,8 @@
 
 @section('mobile', 'width=device-width, initial-scale=1')
 
+@section('body-class', 'results-page')
+
 @section('content')
 
     <form class="formElem">

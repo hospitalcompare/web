@@ -8,6 +8,8 @@
 
 @section('mobile', 'width=device-width, initial-scale=1')
 
+@section('body-class', 'home-page')
+
 @section('content')
     <div class="bannerParent">
         <section class="banner">
@@ -18,7 +20,7 @@
                         <form class="formElem" method="get" action="/results_page">
 
                             <div class="formChild fullLeft">
-                                @include('components.basic.selectbox', ['selectClass'=> 'big', 'options' => $data['procedures'], 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'placeholder'=>'Choose your procedure (if known)', 'name'=>'procedure_id'])
+                                @include('components.basic.selectbox', ['selectClass'=> 'big', 'options' => $data['procedures'], 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'placeholder'=>'Choose your procedure (if known)', 'name'=> 'procedure_id'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'Procedures list', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
 
@@ -30,13 +32,13 @@
                                 </div>
                             </div>
 
-                            <div class="formChild fullLeft">
-                                @include('components.basic.selectbox', ['selectClass'=> 'big', 'options' => [['id'=>50, 'name'=>'Up to 50 miles'], ['id'=>20, 'name'=>'Up to 20 miles'], ['id'=>10, 'name'=>'Less than 10 miles']], 'selectClassName'=> 'lessWideSelect', 'placeholder' => 'How far would you like to travel?', 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'name'=>'radius'])
+                            <div class="formChild fullLeft d-flex">
+                                @include('components.basic.selectbox', ['showLabel' => true, 'selectClass'=> '', 'options' => [['id'=>50, 'name'=>'Up to 50 miles'], ['id'=>20, 'name'=>'Up to 20 miles'], ['id'=>10, 'name'=>'Less than 10 miles']], 'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'How far would you like to travel?', 'chevronFAClassName' => '', 'name'=>'radius'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => '', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
 
-                            <div class="formChild fullLeft">
-                                @include('components.basic.selectbox', ['selectClass'=> 'big', 'options' => [['id'=>1, 'name'=>'Provider Name']], 'selectClassName'=> 'lessWideSelect', 'placeholder' => 'Do you have private healtchare insurance?', 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'name'=>'insurance_id'])
+                            <div class="formChild fullLeft d-flex">
+                                @include('components.basic.selectbox', ['showLabel' => true, 'selectClass'=> '', 'options' => [['id'=>1, 'name'=>'Provider Name']], 'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'Do you have private healtchare insurance?', 'chevronFAClassName' => '', 'name'=>'insurance_id'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => '', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
 

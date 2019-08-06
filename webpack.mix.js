@@ -17,7 +17,7 @@ mix.copyDirectory('resources/images', 'public/images');
 mix.copyDirectory('resources/video', 'public/video');
 
 mix.webpackConfig({
-    devtool: "source-map"
+    devtool: "inline-source-map"
 });
 
 // Add prefixes to css rules and fix bugs with flexbox
@@ -31,7 +31,8 @@ mix.sass('resources/sass/app.scss', 'public/css')
                 // browsers: ['last 2 version', 'safari 5', 'ie 6', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'ios 7', 'ios 8', 'ios 9', 'android 4'],
             }),
             require('postcss-flexbugs-fixes')(),
-        ]
+        ],
+        processCssUrls: false
     });
 
 mix.js(['resources/js/app.js'], 'public/js');
