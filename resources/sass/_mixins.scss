@@ -127,6 +127,8 @@
     user-select: none;
 }
 
+// Fonts
+
 @mixin font($weight) {
     @if $weight=="regular" {
         font-family: Sailec-regular;
@@ -137,6 +139,13 @@
     @if $weight=="bold" {
         font-family: Sailec-bold;
     }
+}
+
+@mixin font-standard {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.9px;
+    line-height: 19px;
 }
 
 //Header section

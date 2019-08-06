@@ -6,7 +6,7 @@
 
 
 require('jquery');
-require('./scripts/vendor/fontawesome')
+require('@fortawesome/fontawesome-free/js/all.min')
 require('./bootstrap');
 require('./scripts/video'); // Video controller
 require('./scripts/scroll'); // Smooth scroll
