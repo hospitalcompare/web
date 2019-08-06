@@ -8,7 +8,7 @@
             <div class="sortCatItem">
                 <p class="sortItemTitle"
                     @if(!empty($id))
-                        id="name_{{$id}}"
+                        id="item_name_{{$id}}"
                     @endif
                 >
                     {{$title}}
@@ -20,42 +20,42 @@
         <div class="sortCatSection2">
             <div class="sortCatSection2Child"
                  @if(!empty($id))
-                    id="waiting_time_{{$id}}"
+                    id="item_waiting_time_{{$id}}"
                 @endif
             >
                 {{$waitTime}}
             </div>
             <div class="sortCatSection2Child"
                 @if(!empty($id))
-                    id="user_rating_{{$id}}"
+                    id="item_user_rating_{{$id}}"
                 @endif
             >
                 {{$stars}}
             </div>
             <div class="sortCatSection2Child"
                  @if(!empty($id))
-                     id="op_cancelled_{{$id}}"
+                     id="item_op_cancelled_{{$id}}"
                 @endif
             >
                 {{$opCancelled}}
             </div>
             <div class="sortCatSection2Child"
                  @if(!empty($id))
-                     id="quality_rating_{{$id}}"
+                     id="item_quality_rating_{{$id}}"
                 @endif
             >
                 {{$qualityRating}}
             </div>
             <div class="sortCatSection2Child"
                  @if(!empty($id))
-                    id="ff_rating_{{$id}}"
+                    id="item_ff_rating_{{$id}}"
                 @endif
             >
                 {{$FFRating}}
             </div>
             <div class="sortCatSection2Child"
                 @if(!empty($id))
-                    id="nhs_funded_{{$id}}"
+                    id="item_nhs_funded_{{$id}}"
                 @endif
             >
                 {{$NHSFunded}}

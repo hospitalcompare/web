@@ -80,13 +80,13 @@ $(document).ready(function () {
 
         //Load the Cookies with the data that we need for the comparison
         var elementId       = $(this).attr('id');
-        var name            = $('#name_'+elementId).text();
-        var waitingTime     = $('#waiting_time_'+elementId).text();
-        var userRating      = $('#user_rating_'+elementId).text();
-        var opCancelled     = $('#op_cancelled_'+elementId).text();
-        var qualityRating   = $('#quality_rating_'+elementId).text();
-        var ffRating        = $('#ff_rating_'+elementId).text();
-        var nhsFunded       = $('#nhs_funded_'+elementId).text();
+        var name            = $('#item_name_'+elementId).text();
+        var waitingTime     = $('#item_waiting_time_'+elementId).text();
+        var userRating      = $('#item_user_rating_'+elementId).text();
+        var opCancelled     = $('#item_op_cancelled_'+elementId).text();
+        var qualityRating   = $('#item_quality_rating_'+elementId).text();
+        var ffRating        = $('#item_ff_rating_'+elementId).text();
+        var nhsFunded       = $('#item_nhs_funded_'+elementId).text();
         var result          = $.grep(data, function(e){ return e.id == elementId; });
 
         //Check if there are already 3 hospitals for comparison in Cookies
