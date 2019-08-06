@@ -61,9 +61,9 @@
                 {{$NHSFunded}}
             </div>
         </div>
-        <div class="sortCatSection3">
-            @include('components.basic.button', ['classTitle' => 'blueOval blockDisplay enquiry', 'button' => 'Make an enquiry'])
-            @include('components.basic.button', ['classTitle' => 'greenOval blockDisplay compare', 'button' => 'Compare', 'icon' => 'far fa-heart', 'id' => $id])
+        <div class="sortCatSection3 pt-2">
+            @include('components.basic.button', ['classTitle' => 'blueOval enquiry mb-2', 'button' => 'Make an enquiry'])
+            @include('components.basic.button', ['classTitle' => 'btn btn-m btn-green-outline compare', 'button' => 'Compare', 'icon' => 'far fa-heart', 'id' => $id])
         </div>
     </div>
 </section>

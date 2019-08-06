@@ -1,298 +1,284 @@
-.filter-section {
-    flex-basis: 85%;
-    display: flex;
+.results-page {
 
-    .postProxChild {
-        flex: 1;
-        padding: 0 20px;
-        &:not(:last-child) {
-            border-right: 2px solid #d7d7d7;
-        }
-        &:first-child {
-            margin-left: -20px;
+    .filter-section {
+        flex-basis: 85%;
+        display: flex;
+
+        .postProxChild {
+            flex: 1;
+            padding: 0 20px;
+            &:not(:last-child) {
+                border-right: 2px solid #d7d7d7;
+            }
+            &:first-child {
+                margin-left: -20px;
+            }
         }
     }
-}
 
-.submit-section {
-    display: flex;
-    justify-content: flex-end;
-    flex-basis: 15%;
-
-    .postProxChild {
+    .submit-section {
+        display: flex;
         justify-content: flex-end;
-        align-items: flex-end;
-    }
-}
+        flex-basis: 15%;
 
-// Shared style for selects on results page
-
-.selectParent {
-    position: relative;
-    width: 100%;
-
-    label {
-        color: #1c1c1c;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: -0.7px;
-        line-height: 18px;
-        margin-bottom: 6px;
-    }
-
-    i.blackChevron {
-        position: absolute;
-        right: 14px;
-        bottom: 13px;
-        color: $caretBlack;
-        pointer-events: none;
-    }
-}
-
-.searchPageSelect {
-    padding: 10px 40px 10px 13px;
-    background-color: $white;
-    /* Style for "Knee Opera" */
-    color: #1c1c1c;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: -0.6px;
-    line-height: 15px;
-}
-
-.filterParent {
-    width: $fullWidth;
-    background-color: $white;
-    padding: 23px 0;
-}
-
-.filter {
-    width: $pageWrap;
-    margin: $centerOnPage;
-}
-
-.postProx,
-.selectProx {
-    @include flex;
-}
-
-.postProxChild {
-    @include uniformAlignment;
-    position: $relative;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-
-    #input_postcode {
-        width: 100%;
-        padding: 20px 0 18px 16px;
-
-        @include placeholder {
-            font-size: 18px;
-            //text-transform: uppercase;
-        }
-    }
-}
-
-.inputClass {
-    margin-left: 0 !important;
-}
-
-.sortParent {
-    width: $fullWidth;
-    background-color: $lighterGrey;
-}
-
-.sort {
-    width: $pageWrap;
-    margin: $centerOnPage;
-}
-
-.sortBar {
-    @include flex;
-    justify-content: space-between;
-
-    .showSection {
-        margin: auto auto auto 0;
-    }
-
-    .sortSection {
-        margin: 10px 0;
-
-        .searchPageSelect {
-            width: auto
+        .postProxChild {
+            justify-content: flex-end;
+            align-items: flex-end;
         }
     }
 
-    .showSection,
-    .sortSection {
-        //margin: auto;
-    }
-}
+    // Shared style for selects on results page
 
-
-.sortPageSelect, .sortBy {
-    width: 200px;
-}
-
-.sortLabel {
-    left: 0 !important;
-    top: -10px !important;
-}
-
-.sortBy {
-    top: -10px !important;
-    position: relative;
-}
-
-.sortCategoriesParent {
-    background: linear-gradient(to bottom, rgba(0, 206, 205, 0.72), rgba(0, 206, 205, 0.93));
-
-}
-
-.sortCategoriesHeader,
-.sortCategories {
-    @include flex;
-}
-
-.sortCategoriesHeader {
-    width: 1180px;
-    margin: auto;
-}
-
-.sortCategories {
-    margin-bottom: 7px;
-    background-color: $white;
-}
-
-.sortCategoriesResults {
-    background-color: $lighterGrey;
-}
-
-.sortCategoriesInner {
-    display: flex;
-    width: 1180px;
-    margin: auto;
-}
-
-.sortCatSection1 {
-    flex: 1 0 30%;
-}
-
-.sortCatSection2 {
-    flex: 1 0 60%;
-}
-
-.sortCatSection3 {
-    flex: 1 0 10%;
-}
-
-
-.sortCatMenu {
-    @include flex;
-    margin: 18px 0;
-
-    li {
-        list-style: none;
-        @include uniformAlignment;
-
-        a {
-            color: #ffffff;
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: -0.7px;
-            line-height: 16.8px;
-            text-align: center;
-            @include flex-center;
-        }
-    }
-}
-
-.sortCatSection1, .sortCatSection2 {
-    @include flex;
-}
-
-.sortCatSection2Child {
-    //@include uniformAlignment;
-    flex: 1;
-    font-weight: 600;
-    @include flex-center;
-}
-
-.sortCatItem {
-    position: $relative;
-
-    &:last-child {
-        padding: 8px;
-    }
-}
-
-.sortItemTitle,
-.sortItemLocation {
-    //width: 240px;
-    font-size: .9em;
-    line-height: 15px;
-}
-
-.findLink {
-    position: relative;
-    font-size: .9em;
-    top: -20px;
-}
-
-.NHSHospital, .privateHospital {
-    position: $absolute;
-    top: 0;
-    width: 60px;
-    height: 60px;
-    transform: rotate(180deg);
-}
-
-.NHSHospital {
-
-    border-bottom: solid 30px $darkBlue;
-    border-right: solid 30px $darkBlue;
-    border-left: solid 30px transparent;
-    border-top: solid 30px transparent;
-
-}
-
-.privateHospital {
-    border-bottom: solid 30px $hotpink;
-    border-right: solid 30px $hotpink;
-    border-left: solid 30px transparent;
-    border-top: solid 30px transparent;
-}
-
-.NHSHospital, .privateHospital {
-    p {
-        transform: rotate(130deg);
+    .selectParent {
         position: relative;
-        color: #ffffff;
-        left: 20px;
-        top: -12px;
-        font-size: .6em;
-        line-height: 13px;
+        width: 100%;
+
+        label {
+            font-size: 14px;
+            letter-spacing: -0.7px;
+            line-height: 18px;
+            margin-bottom: 6px;
+        }
+
+        .blackChevron {
+            position: absolute;
+            right: 14px;
+            bottom: 13px;
+            color: $caretBlack;
+            pointer-events: none;
+        }
+    }
+
+    .searchPageSelect {
+        padding: 10px 40px 10px 13px;
+        background-color: $white;
+        /* Style for "Knee Opera" */
+        color: #1c1c1c;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: -0.6px;
+        line-height: 15px;
+    }
+
+    .filterParent {
+        width: $fullWidth;
+        background-color: $white;
+        padding: 23px 0;
+    }
+
+    .filter {
+        width: $pageWrap;
+        margin: $centerOnPage;
+    }
+
+    .postProx,
+    .selectProx {
+        @include flex;
+    }
+
+    .postProxChild {
+        @include uniformAlignment;
+        position: $relative;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+
+        #input_postcode {
+            width: 100%;
+            padding: 20px 0 18px 16px;
+
+            @include placeholder {
+                font-size: 18px;
+                //text-transform: uppercase;
+            }
+        }
+    }
+
+    .inputClass {
+        margin-left: 0 !important;
+    }
+
+    .sortParent {
+        width: $fullWidth;
+        background-color: $lighterGrey;
+    }
+
+    .sort {
+        width: $pageWrap;
+        margin: $centerOnPage;
+    }
+
+    .sortBar {
+        @include flex;
+        justify-content: space-between;
+
+        .showSection {
+            margin: auto auto auto 0;
+        }
+
+        .sortSection {
+            margin: 10px 0;
+
+            .searchPageSelect {
+                width: auto
+            }
+        }
+
+        .showSection,
+        .sortSection {
+            //margin: auto;
+        }
+    }
+
+
+    .sortPageSelect, .sortBy {
+        width: 200px;
+    }
+
+    .sortLabel {
+        left: 0 !important;
+        top: -10px !important;
+    }
+
+    .sortBy {
+        top: -10px !important;
+        position: relative;
+    }
+
+    .sortCategoriesParent {
+        background: linear-gradient(to bottom, rgba(0, 206, 205, 0.72), rgba(0, 206, 205, 0.93));
+
+    }
+
+    .sortCategoriesHeader,
+    .sortCategories {
+        @include flex;
+    }
+
+    .sortCategoriesHeader {
+        width: 1180px;
+        margin: auto;
+    }
+
+    .sortCategories {
+        margin-bottom: 7px;
+        background-color: $white;
+    }
+
+    .sortCategoriesResults {
+        background-color: $lighterGrey;
+    }
+
+    .sortCategoriesInner {
+        display: flex;
+        width: 1180px;
+        margin: auto;
+    }
+
+    .sortCatSection1 {
+        flex: 1 0 33%;
+    }
+
+    .sortCatSection2 {
+        flex: 1 0 53%;
+    }
+
+    .sortCatSection3 {
+        flex: 1 0 14%;
+    }
+
+
+    .sortCatMenu {
+        @include flex;
+        margin: 18px 0;
+
+        li {
+            list-style: none;
+            @include uniformAlignment;
+
+            a {
+                color: #ffffff;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: -0.7px;
+                line-height: 16.8px;
+                text-align: center;
+                @include flex-center;
+            }
+        }
+    }
+
+    .sortCatSection1, .sortCatSection2 {
+        @include flex;
+    }
+
+    .sortCatSection2Child {
+        //@include uniformAlignment;
+        flex: 1;
+        font-weight: 600;
+        @include flex-center;
+    }
+
+    .sortCatItem {
+        position: $relative;
+
+        &:last-child {
+            padding: 8px;
+        }
+    }
+
+    .sortItemTitle,
+    .sortItemLocation {
+        //width: 240px;
+        font-size: .9em;
+        line-height: 15px;
+    }
+
+    .findLink {
+        position: relative;
+        font-size: .9em;
+        top: -20px;
+    }
+
+    .NHSHospital, .privateHospital {
+        position: $absolute;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        transform: rotate(180deg);
+    }
+
+    .NHSHospital {
+
+        border-bottom: solid 30px $darkBlue;
+        border-right: solid 30px $darkBlue;
+        border-left: solid 30px transparent;
+        border-top: solid 30px transparent;
+
+    }
+
+    .privateHospital {
+        border-bottom: solid 30px $hotpink;
+        border-right: solid 30px $hotpink;
+        border-left: solid 30px transparent;
+        border-top: solid 30px transparent;
+    }
+
+    .NHSHospital, .privateHospital {
+        p {
+            transform: rotate(130deg);
+            position: relative;
+            color: #ffffff;
+            left: 20px;
+            top: -12px;
+            font-size: .6em;
+            line-height: 13px;
+        }
+    }
+
+    .fa-heart {
+        padding-left: 2px;
     }
 }
 
-.enquiry,
-.compare {
-}
-
-.enquiry {
-
-}
-
-.compare {
-    border-radius: 23px !important;
-    border: 2px solid #00cecd;
-    background: rgba(27, 112, 243, 0) !important;
-    color: $aqua !important;
-    padding-top: 7px !important;
-}
-
-.fa-heart {
-    padding-left: 2px;
-}
 
