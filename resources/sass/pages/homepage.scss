@@ -1,269 +1,272 @@
-.formChild {
-    position: $relative;
-    margin-bottom: 20px;
-}
+.home-page {
 
-//=======================WHY CHOOSE SECTION=======================
-.whyChooseParent {
-    width: 100%;
-    height: auto;
-    background: $sectionBeige;
-
-    .whyChooseContent {
-        width: $pageWrap;
-        margin: auto;
-        padding: 70px 0 60px;
+    .formChild {
+        position: $relative;
+        margin-bottom: 20px;
     }
 
-    .whyChoose {
-        @include flex;
-        color: #1b1b1b;
+    //=======================WHY CHOOSE SECTION=======================
+    .whyChooseParent {
+        width: 100%;
+        height: auto;
+        background: $sectionBeige;
+
+        .whyChooseContent {
+            width: $pageWrap;
+            margin: auto;
+            padding: 70px 0 60px;
+        }
+
+        .whyChoose {
+            @include flex;
+            color: #1b1b1b;
+
+            .pageTitle {
+                font-size: 40px;
+                font-weight: 600;
+                margin-bottom: 30px;
+                letter-spacing: -2px;
+            }
+
+            p {
+                width: 589px;
+                font-size: 20px;
+                font-weight: 400;
+                letter-spacing: -1px;
+                line-height: 24px;
+            }
+
+            .chooseVideo {
+                margin-left: 8%;
+
+                .videoParent {
+                    position: relative;
+                    @include aspect-ratio(497px, 349px);
+                    border: 1px solid $borderVideo;
+                    border-radius: 15px;
+                    overflow: hidden;
+
+                    video {
+                        width: 140%;
+                    }
+
+                    .playerButton {
+                        background-image: url(../images//player_button.png);
+                        background-size: cover;
+                        @include v-h-c;
+                        height: 78px;
+                        width: 78px;
+                        z-index: 5;
+                        cursor: pointer;
+                        transition: $transition;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+
+            .chooseText,
+            .chooseVideo {
+                @include uniformAlignment;
+            }
+        }
+
+        .icon {
+            margin-bottom: 20px;
+
+        }
+    }
+
+
+    //=======================END WHY CHOOSE SECTION=======================
+
+    //============================HOW SECTION=============================
+    .howSectionParent {
+        width: $pageWrap;
+        margin: 30px auto;
 
         .pageTitle {
             font-size: 40px;
             font-weight: 600;
-            margin-bottom: 30px;
             letter-spacing: -2px;
+            line-height: 48px;
+            margin-bottom: 25px;
         }
 
-        p {
-            width: 589px;
+        .iconTitle, .iconDescription {
+            //width:89%;
+            color: #1b1b1b;
+
+        }
+
+        .iconTitle {
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: -1.1px;
+            line-height: 26.4px;
+            margin-bottom: 25px;
+        }
+
+        .iconDescription {
             font-size: 20px;
             font-weight: 400;
             letter-spacing: -1px;
             line-height: 24px;
         }
+    }
 
-        .chooseVideo {
-            margin-left: 8%;
+    .howSection {
+        @include flex;
+        @include justify-content($value: space-between);
+        position: relative;
+        //left: -70px;
+    }
 
-            .videoParent {
-                position: relative;
-                @include aspect-ratio(497px, 349px);
-                border: 1px solid $borderVideo;
-                border-radius: 15px;
-                overflow: hidden;
 
-                video {
-                    width: 140%;
-                }
+    .chooseContent {
+        text-align: center;
+        //padding: 0 5.5%;
+        position: $relative;
+        margin-right: 30px;
 
-                .playerButton {
-                    background-image: url(../images//player_button.png);
-                    background-size: cover;
-                    @include v-h-c;
-                    height: 78px;
-                    width: 78px;
-                    z-index: 5;
-                    cursor: pointer;
-                    transition: $transition;
-
-                    &:hover {
-                        opacity: 0.8;
-                    }
-                }
-            }
+        .icon {
+            @include flex;
+            @include justify-content($value: center);
+            margin-bottom: 20px;
         }
 
-        .chooseText,
-        .chooseVideo {
-            @include uniformAlignment;
+        .numeral {
+            position: $absolute;
+            top: 0;
+            left: 22%;
+            font-size: 1.2em;
+            font-weight: 600;
         }
     }
 
-    .icon {
-        margin-bottom: 20px;
+    //============================ END HOW SECTION=============================
 
+    //=========================HEALTH CHOICE SECTION===========================
+    .chooseHealthParent {
+        width: $pageWrap;
+        margin: 60px auto;
+
+        .chooseHealth {
+            height: 410px;
+            background: url('../images/placeholder.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .chooseHealthText {
+            width: $fullWidth / 1.8;
+            //margin: 80px auto;
+            color: $white;
+            position: absolute;
+            font-size: 27px;
+            font-weight: 600;
+            letter-spacing: -1.35px;
+            line-height: 32.4px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .chooseHealthText p {
+            margin-top: 50px;
+            text-align: center;
+        }
     }
-}
 
+    //=========================END HEALTH CHOICE SECTION====================
 
-//=======================END WHY CHOOSE SECTION=======================
-
-//============================HOW SECTION=============================
-.howSectionParent {
-    width: $pageWrap;
-    margin: 30px auto;
-
-    .pageTitle {
-        font-size: 40px;
-        font-weight: 600;
-        letter-spacing: -2px;
-        line-height: 48px;
-        margin-bottom: 25px;
-    }
-
-    .iconTitle, .iconDescription {
-        //width:89%;
+    // ========================BLOGS SECTION================================
+    .blogSectionParent {
+        width: $pageWrap;
+        margin: 0 auto;
+        margin-bottom: 50px;
         color: #1b1b1b;
 
-    }
+        .pageTitle {
+            font-size: 40px;
+            font-weight: 600;
+            letter-spacing: -2px;
+            line-height: 48px;
+        }
 
-    .iconTitle {
-        font-size: 22px;
-        font-weight: 500;
-        letter-spacing: -1.1px;
-        line-height: 26.4px;
-        margin-bottom: 25px;
-    }
-
-    .iconDescription {
-        font-size: 20px;
-        font-weight: 400;
-        letter-spacing: -1px;
-        line-height: 24px;
-    }
-}
-
-.howSection {
-    @include flex;
-    @include justify-content($value: space-between);
-    position: relative;
-    //left: -70px;
-}
-
-
-.chooseContent {
-    text-align: center;
-    //padding: 0 5.5%;
-    position: $relative;
-    margin-right: 30px;
-
-    .icon {
-        @include flex;
-        @include justify-content($value: center);
-        margin-bottom: 20px;
-    }
-
-    .numeral {
-        position: $absolute;
-        top: 0;
-        left: 22%;
-        font-size: 1.2em;
-        font-weight: 600;
-    }
-}
-
-//============================ END HOW SECTION=============================
-
-//=========================HEALTH CHOICE SECTION===========================
-.chooseHealthParent {
-    width: $pageWrap;
-    margin: 60px auto;
-
-    .chooseHealth {
-        height: 410px;
-        background: url('../images/placeholder.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 20px;
-        position: relative;
-    }
-
-    .chooseHealthText {
-        width: $fullWidth / 1.8;
-        //margin: 80px auto;
-        color: $white;
-        position: absolute;
-        font-size: 27px;
-        font-weight: 600;
-        letter-spacing: -1.35px;
-        line-height: 32.4px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .chooseHealthText p {
-        margin-top: 50px;
-        text-align: center;
-    }
-}
-
-//=========================END HEALTH CHOICE SECTION====================
-
-// ========================BLOGS SECTION================================
-.blogSectionParent {
-    width: $pageWrap;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    color: #1b1b1b;
-
-    .pageTitle {
-        font-size: 40px;
-        font-weight: 600;
-        letter-spacing: -2px;
-        line-height: 48px;
-    }
-
-    .blogContent {
-        @include flex;
-        @include justify-content(space-between);
-
-        .blogWrap {
+        .blogContent {
             @include flex;
-            @include flex-flow(column);
-            @include justify-content(center);
-            @include alignItems;
-            margin-right: 20px;
-            text-decoration: none !important;
+            @include justify-content(space-between);
 
-            a:hover {
-                //top: -289.25px;
-                //box-shadow: 0px 0px 0px #3686a3;
+            .blogWrap {
+                @include flex;
+                @include flex-flow(column);
+                @include justify-content(center);
+                @include alignItems;
+                margin-right: 20px;
                 text-decoration: none !important;
+
+                a:hover {
+                    //top: -289.25px;
+                    //box-shadow: 0px 0px 0px #3686a3;
+                    text-decoration: none !important;
+                }
+
+                a {
+                    text-decoration: none !important;
+                }
+
+                //width: 33.33%;
+                //float: left;
+
+                .icon {
+                    margin: 20px 0;
+                }
+
+                .title {
+                    color: #00cecd;
+                    font-size: 20px;
+                    font-weight: 400;
+                    letter-spacing: -0.6px;
+                    line-height: 24px;
+                }
+
+                .description {
+                    color: #1c1c1c;
+                    font-size: 24px;
+                    font-weight: 600;
+                    letter-spacing: -0.72px;
+                    line-height: 28.8px;
+                }
+            }
+        }
+
+        .buttonSectionParent {
+            width: $fullWidth / 1.2;
+            margin: 0 auto 100px auto;
+            @include flex;
+
+            p {
+                margin-left: 100px;
+                width: 80%;
             }
 
-            a {
-                text-decoration: none !important;
+            p:nth-child(2) {
+                margin-left: 250px;
             }
 
-            //width: 33.33%;
-            //float: left;
-
-            .icon {
-                margin: 20px 0;
-            }
-
-            .title {
-                color: #00cecd;
-                font-size: 20px;
-                font-weight: 400;
-                letter-spacing: -0.6px;
-                line-height: 24px;
-            }
-
-            .description {
-                color: #1c1c1c;
-                font-size: 24px;
-                font-weight: 600;
-                letter-spacing: -0.72px;
-                line-height: 28.8px;
+            p:nth-child(3) {
+                margin-left: 250px;
             }
         }
     }
 
-    .buttonSectionParent {
-        width: $fullWidth / 1.2;
-        margin: 0 auto 100px auto;
-        @include flex;
 
-        p {
-            margin-left: 100px;
-            width: 80%;
-        }
+    // ========================END BLOGS SECTION=============================
 
-        p:nth-child(2) {
-            margin-left: 250px;
-        }
 
-        p:nth-child(3) {
-            margin-left: 250px;
-        }
-    }
 }
-
-
-// ========================END BLOGS SECTION=============================
-
-
