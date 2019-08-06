@@ -12,8 +12,38 @@
 }
 
 .blueOval {
-    background-image: linear-gradient(270deg, #649ef7 0%, #4087f5 56%, #1b70f3 100%);
-    padding: 15px 40px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #1b71f3;
+    color: $white;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.7px;
+    line-height: 13px;
+    transition: $transition;
+    position: relative;
+
+    &:hover {
+        color: $white;
+        text-decoration: none;
+        opacity: 0.8;
+    }
+}
+
+.results-page {
+    .blueOval {
+        padding: 15px 15px 15px 45px;
+        display: block;
+
+        &:before {
+            content: url('../images/icons/circle-tick.svg');
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            width: 22px;
+            height: 22px;
+        }
+    }
 }
 
 .greenOvalTop {
@@ -21,13 +51,6 @@
     border-radius: 12px 12px 0 0;
 }
 
-.blueOval:hover {
-    color: $white;
-    text-decoration: none;
-    background: #1b71f3;
-    //background: -webkit-linear-gradient(legacy-direction(90deg), #1b71f3,#1b71f3,#00cecd);
-    background: linear-gradient(90deg, #1b71f3, #1b71f3, #00cecd);
-}
 
 .greenOval {
     background-image: linear-gradient(270deg, #00cecd 0%, #00d7b5 56%, #00df9d 100%);
@@ -54,12 +77,17 @@
 // New set of styles based on RC UI kit
 .btn {
     border-radius: 100px;
-    color: $white !important;
+    color: $white;
     font-size: 24px;
     padding: 14px 26px;
     background-size: 200% !important;
     background-position: left !important;
+    position: relative;
     @include transition(0.3s);
+
+    svg, i {
+        position: absolute;
+    }
     //sizes
     &.btn-xs {
         font-size: 16px;
@@ -142,6 +170,23 @@
 
         &.btn-grad {
             @include linear-gradient(90deg, $green, $teal, $green);
+        }
+    }
+
+    &.btn-green-outline {
+        display: block;
+        border: 2px solid #00cecd;
+        background-color: rgba(27, 112, 243, 0);
+        color: #00cecd;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -0.7px;
+        line-height: 14px;
+        padding: 9px 65px 9px 37px;
+
+        svg {
+            right: 39px;
+            top: 10px;
         }
     }
 
