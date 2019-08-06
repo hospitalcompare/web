@@ -1,4 +1,4 @@
-<div class="helpParent">
+<div class="helpParent" @if(!empty($helpParentPositionRelative)) style="position: relative" @endif>
     @if(!empty($helpChar))
         <div class="helpLink @if(!empty($className)) {{$className}} @endif">{{$helpChar}}</div>
     @endif

@@ -1,3 +1,27 @@
-.rangeParent{
-  @include flex;
+.rangeParent {
+    width: 100%;
+    @include flex;
+    flex: 1;
+    @include media-breakpoint-up(md) {
+        padding-left: 70px;
+    }
+
+    .radiusRange {
+        flex: 1;
+    }
+}
+
+#radiusProx {
+    margin-left: 30px;
+}
+
+.currentRadius {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: $aqua;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.35px;
+    line-height: 16.8px;
 }
