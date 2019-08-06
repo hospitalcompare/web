@@ -40,11 +40,16 @@ class ApiController {
 
         //Check if we want to import all the files or use the name for the requested import file
         if(strtolower($request['name']) === 'all') {
+            //Set the correct order for the import
+            $order = ['MasterList.csv', 'LocationRatings.csv', 'Choices.csv', 'CancelledOps.csv', 'OutpatientOps.csv', 'Admitted.csv', 'Emergency.csv', 'Maternity.csv', 'WaitingTimes.csv', 'Procedures.csv'];
+
             //Get all the names from the storage file
             $files = \Storage::disk('imports')->files();
             if(!empty($files))
-                foreach($files as $filename)
-                    $names[] = str_replace('.csv', '', $filename);
+                //Check if we have the import file and set the order
+                foreach($order as $ord)
+                    if(in_array($ord, $files))
+                        $names[] = str_replace('.csv', '', $ord);
         } else
             $names[] = $request['name'];
 
