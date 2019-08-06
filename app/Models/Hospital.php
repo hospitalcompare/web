@@ -175,13 +175,25 @@ class Hospital extends Model
         if(!empty($postcode)) {
             //Retrieve the latitude and longitude from the postcode
             $location = new Location($postcode);
-            $location = $location->getLocation();
-            $latitude = (string)$location['data']->result->latitude;
-            $longitude = (string)$location['data']->result->longitude;
+            try {
+                $location = $location->getLocation();
+                $latitude = (string)$location['data']->result->latitude;
+                $longitude = (string)$location['data']->result->longitude;
+            } catch (\GuzzleHttp\Exception\ClientException $e) {
+                //Try to get the first latitude and longitude of the partial postcode
+                try {
+                    $location = $location->getLocationsByIncompletePostcode();
+                    $latitude = (string)$location['data']->result[0]->latitude;
+                    $longitude = (string)$location['data']->result[0]->longitude;
+                } catch (\Exception $exception) {
+                    $latitude = '';
+                    $longitude = '';
+                }
+            }
 
             //If we don't have data for the Latitude or Longitude, throw an Error. We should always have the right postcode (we need Fronend Validations to make sure that this is the case)
             if(empty($latitude) || empty($longitude))
-                Errors::generateError(['Please supply a valid Postcode']);
+                Errors::generateError(['postcode' => 'Please supply a valid Postcode']);
 
             //Left Join the address so we can sort by radius
             $hospitals = $hospitals->whereHas('address', function($q) use($latitude, $longitude, $radius) {
