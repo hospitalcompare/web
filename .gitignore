@@ -10,4 +10,8 @@ yarn-error.log
 package-lock.json
 composer.lock
 /.idea/
-/public/
+/public/css/
+/public/images/
+/public/fonts/
+/public/js/
+/public/video/
