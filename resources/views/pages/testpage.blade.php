@@ -12,9 +12,9 @@
 
 @section('content')
 <main>
-    <div class="section">
+    <div class="section py-3">
         <div class="container">
-            <h1>Test page</h1>
+            <h2>Tooltips</h2>
             <br>
             <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
                 Tooltip on top
@@ -28,6 +28,10 @@
             <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
                 Tooltip on left
             </button>
+            <h3>Special offer button</h3>
+            <a href="" class="btn btn-pink btn-icon btn-special-offer">Special offers</a>
+            @include('components.basic.button', ['classTitle' => 'btn btn-pink btn-icon btn-special-offer', 'button' => 'Special Offers'])
+
         </div>
     </div>
 </main>
