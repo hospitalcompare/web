@@ -14,3 +14,6 @@
 Route::get('/','WebController@homepage');
 
 Route::get('/results_page','WebController@resultsPage');
+
+Route::get('/test_page','WebController@testPage');
+

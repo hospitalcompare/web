@@ -21,7 +21,7 @@
         "jquery": "^3.4.1",
         "laravel-mix": "^4.0.16",
         "lodash": "^4.17.15",
-        "popper.js": "^1.12",
+        "popper.js": "^1.15.0",
         "postcss-flexbugs-fixes": "^4.1.0",
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.15.2",

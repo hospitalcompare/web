@@ -4,15 +4,16 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-
-require('jquery');
-require('@fortawesome/fontawesome-free/js/all.min')
-require('./bootstrap');
-require('./scripts/video'); // Video controller
-require('./scripts/scroll'); // Smooth scroll
-require('./scripts/postcode'); // Postcode input
-require('./scripts/range'); // Slider for radius of proximity on search page
-require('./scripts/compare'); // Slider for radius of proximity on search page
+// jquery imported through webpack.mix.js
+import 'popper.js'; // Required for bootstrap tooltips
+import 'bootstrap'; // Twitter bootstrap
+import '@fortawesome/fontawesome-free/js/all.min';
+import './scripts/video'; // Video controller
+import './scripts/scroll'; // Smooth scroll
+import './scripts/postcode' ; // Postcode input
+import './scripts/range'; // Slider for radius of proximity on search page
+import './scripts/cookies'; // Compare functionality
+import './scripts/compare'; // Slider for radius of proximity on search page
 
 window.Vue = require('vue');
 

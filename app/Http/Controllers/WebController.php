@@ -51,6 +51,7 @@ class WebController extends BaseController
         $sortBy         = $request['sort_by'] ?? '';
 
         $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $sortBy);
+//        dd($hospitals->toArray()['data'][0]);
         $sortBys    = Utils::sortBys;
         $procedures = Procedure::all()->toArray();
         //Add the option to view all procedures ( id = 0 )
@@ -69,5 +70,9 @@ class WebController extends BaseController
         if(env('APP_ENV') == 'live')
             return view('pages.workInProgress', $this->returnedData);
         return view('pages.resultspage', $this->returnedData);
+    }
+
+    public function testPage() {
+        return view('pages.testpage');
     }
 }

@@ -1,5 +1,6 @@
 const mix = require('laravel-mix');
 const pathRes = require('path');
+const webpack = require('webpack');
 
 /*
  |--------------------------------------------------------------------------
@@ -17,7 +18,13 @@ mix.copyDirectory('resources/images', 'public/images');
 mix.copyDirectory('resources/video', 'public/video');
 
 mix.webpackConfig({
-    devtool: "inline-source-map"
+    devtool: "inline-source-map",
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
+    ]
 });
 
 // Add prefixes to css rules and fix bugs with flexbox
@@ -36,7 +43,7 @@ mix.sass('resources/sass/app.scss', 'public/css')
     });
 
 mix.js(['resources/js/app.js'], 'public/js');
-mix.copy('resources/js/cookies.js', 'public/js');
+// mix.copy('resources/js/cookies.js', 'public/js');
 // mix.js(['resources/js/cookies.js'], 'public/js');
 
 // Reload browser when something changes

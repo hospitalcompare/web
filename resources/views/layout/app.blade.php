@@ -37,11 +37,6 @@
         <script src="{{ asset('js/cookies.js') }}"></script>
 {{--        @stack('button')--}}
 
-        <script>
-            window.FontAwesomeConfig = {
-                searchPseudoElements: true
-            }
-        </script>
     </body>
 
 </html>
