@@ -30,21 +30,6 @@
     }
 }
 
-.results-page {
-    .blueOval {
-        padding: 15px 15px 15px 45px;
-        display: block;
-
-        &:before {
-            content: url('../images/icons/circle-tick.svg');
-            position: absolute;
-            left: 12px;
-            top: 12px;
-            width: 22px;
-            height: 22px;
-        }
-    }
-}
 
 .greenOvalTop {
     background-image: linear-gradient(270deg, #00cecd 0%, #00d7b5 56%, #00df9d 100%);
@@ -183,6 +168,7 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: 50%;
+        flex: 0 0 32px;
         //background-color: rgba(27, 112, 243, 0);
         padding: 0;
 
@@ -213,6 +199,36 @@
 
 
     // icon buttons
+
+    &.btn-enquire {
+        border-radius: 10px;
+        background: #1b71f3;
+        color: $white;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: -0.7px;
+        line-height: 13px;
+        transition: $transition;
+        position: relative;
+        padding: 15px 15px 15px 45px;
+        display: block;
+
+        &:before {
+            content: url('../images/icons/circle-tick.svg');
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            width: 22px;
+            height: 22px;
+        }
+
+        &:hover {
+            color: $white;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+    }
+
     &.btn-special-offer {
         padding: 0 30px;
         border-radius: 10px;

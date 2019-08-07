@@ -61,11 +61,15 @@
                 {{$NHSFunded}}
             </div>
         </div>
-        <div class="sortCatSection3 pt-2">
-            @include('components.basic.button', ['hrefValue' => $url, 'classTitle' => 'blueOval enquiry mb-2', 'button' => 'Make an enquiry'])
-            @include('components.basic.button', ['classTitle' => 'btn btn-green-outline compare', 'button' => '', 'icon' => '', 'id' => $id])
+        <div class="sortCatSection3 d-flex flex-column justify-content-center">
+            <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between" @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
+                @include('components.basic.button', ['hrefValue' => $url, 'classTitle' => 'btn btn-enquire enquiry mr-2 btn-block', 'button' => 'Make an enquiry'])
+                @include('components.basic.button', ['classTitle' => 'btn btn-green-outline compare btn-block mt-0', 'button' => '', 'icon' => '', 'id' => $id])
+            </div>
             @if(!empty($specialOffers))
-                @include('components.basic.button', ['classTitle' => 'enquiry btn btn-block btn-icon btn-special-offer', 'button' => 'Special Offers'])
+                <div class="btn-area btn-area-lower">
+                    @include('components.basic.button', ['classTitle' => 'enquiry btn btn-block btn-icon btn-special-offer', 'button' => 'Special Offers'])
+                </div>
             @endif
         </div>
     </div>
