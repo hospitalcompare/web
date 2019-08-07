@@ -80,8 +80,8 @@
     color: $white;
     font-size: 24px;
     padding: 14px 26px;
-    background-size: 200% !important;
-    background-position: -5px !important;
+    background-size: 200%;
+    background-position: -5px;
     position: relative;
     @include transition(0.3s);
 
@@ -174,19 +174,26 @@
     }
 
     &.btn-green-outline {
-        display: block;
+        /* Style for "Rounded Re" */
+        height: 32px;
+        width: 32px;
+        border-radius: 23px;
         border: 2px solid #00cecd;
-        background-color: rgba(27, 112, 243, 0);
-        color: #00cecd;
-        font-size: 14px;
-        font-weight: 400;
-        letter-spacing: -0.7px;
-        line-height: 14px;
-        padding: 9px 65px 9px 37px;
+        background-image: url('../images/icons/heart.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        //background-color: rgba(27, 112, 243, 0);
+        padding: 0;
 
-        svg {
-            right: 39px;
-            top: 10px;
+        &.selected {
+            background-image: url('../images/icons/heart-selected.svg');
+            background-color: #00cecd;
+        }
+
+        &:after {
+            width: 32px;
+            height: 32px;
         }
     }
 
@@ -203,10 +210,7 @@
         background-size: 300% !important;
     }
 
-    //gradient button
-    &:hover {
-        background-position: right !important;
-    }
+
 
     // icon buttons
     &.btn-special-offer {
@@ -241,13 +245,24 @@
             line-height: 40px;
         }
 
-        &.btn-icon {
-            &:before,
-            &:after {
-                content: '';
-                background-repeat: no-repeat;
-                background-position: center center;
-            }
+    }
+
+    // All buttons with icons
+    &.btn-icon {
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+
+    //gradient button
+    &.btn-grad {
+        &:hover {
+            background-position: right !important;
         }
     }
 }
+

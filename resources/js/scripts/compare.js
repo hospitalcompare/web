@@ -35,7 +35,7 @@ $(document).ready(function () {
         var newRowContent = '<tr id="compare_hospital_id_'+element.id+'"><td>'+element.name+'</td><td>'+element.waitingTime+'</td><td>'+element.userRating+'</td><td>'+element.opCancelled+'</td><td>'+element.qualityRating+'</td><td>'+element.ffRating+'</td><td>'+element.nhsFunded+'</td><td class="remove-hospital" id="remove_id_'+element.id+'">Remove</td></tr>';
         target.append(newRowContent);
         //Toggle the full heart or empty heart  class of the button
-        $('a#'+element.id+'.compare .fa-heart').addClass('fas').removeClass('far');
+        $('a#'+element.id+'.compare').addClass('selected');
     }
 
     /**
@@ -47,7 +47,7 @@ $(document).ready(function () {
      */
     function removeHospitalFromCompare(elementId, data, compareCount) {
         $('#compare_hospital_id_'+elementId).remove();
-        $('a#'+elementId+'.compare .fa-heart').removeClass('fas').addClass('far');
+        $('a#'+elementId+'.compare').removeClass('selected');
 
         // property found, access the foo property using result[0].foo
         data = $.grep(data, function(e){
