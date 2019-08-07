@@ -104,6 +104,7 @@
                     'qualityRating'     => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : 'N/A',
                     'FFRating'          => !empty($d['rating']['provider_rating']) ? $d['rating']['provider_rating'] : 'N/A',
                     'NHSFunded'         => ($d['hospital_type_id'] == 2 && !empty($d['waitingTime'])) ? 'yes' : 'no',
+                    'specialOffers'     => $d['special_offers'],
                     'NHSClass'          => $d['hospital_type_id'] == 1 ? 'NHSHospital' : 'privateHospital',
                     'fundedText'        => $d['hospital_type_id'] == 1 ? 'NHS Hospital': 'Private Hospital' ])
             @endforeach
