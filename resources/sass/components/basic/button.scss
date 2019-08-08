@@ -70,6 +70,10 @@
     position: relative;
     @include transition(0.3s);
 
+    &:hover {
+        color: $white;
+    }
+
     svg, i {
         position: absolute;
     }
@@ -80,8 +84,10 @@
     }
 
     &.btn-s {
-        font-size: 20px;
-        padding: 8px 22px;
+        font-size: 18px;
+        font-weight: 400;
+        height: 45px;
+        padding: 8px 30px;
     }
 
     &.btn-m {
