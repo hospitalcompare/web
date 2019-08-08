@@ -77,12 +77,12 @@
             <div class="sortCatSection1"></div>
             <nav class="sortCatSection2">
                 <ul class="sortCatMenu">
-                    <li><a href="">Average waiting time</a></li>
+                    <li><a href="">Waiting time<br>(NHS Funded)</a></li>
                     <li><a href="">NHS Choices User Rating</a></li>
-                    <li><a href="">% Operations cancelled</a></li>
-                    <li><a href="">Care Quality Rating</a></li>
-                    <li><a href="">Friends & Family Rating</a></li>
-                    <li><a href="">NHS Funded</a></li>
+                    <li><a href="">% Operations<br>Cancelled</a></li>
+                    <li><a href="">Care Quality<br>Rating</a></li>
+                    <li><a href="">Friends &<br>Family Rating</a></li>
+                    <li><a href="">NHS<br>Funded Work</a></li>
                 </ul>
             </nav>
             <div class="sortCatSection3 pt-2"></div>
@@ -99,7 +99,7 @@
                     'location'          => (!empty($d['address']['address_1']) ? $d['address']['address_1']: '').(!empty($d['radius']) ? ', '.$d['radius']. ' miles from location': ''),
                     'findLink'          => 'Find on map',
                     'waitTime'          => !empty($d['waitingTime'][0]['avg_waiting_weeks']) ? $d['waitingTime'][0]['avg_waiting_weeks'].' Weeks' : 'N/A',
-                    'stars'             => !empty($d['rating']['avg_user_rating']) ? $d['rating']['avg_user_rating'] : 'N/A',
+                    'stars'             => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\starRating($d['rating']['avg_user_rating']) : 'N/A',
                     'opCancelled'       => !empty($d['cancelledOp']['perc_cancelled_ops'])? $d['cancelledOp']['perc_cancelled_ops'].'%': 'N/A',
                     'qualityRating'     => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : 'N/A',
                     'FFRating'          => !empty($d['rating']['provider_rating']) ? $d['rating']['provider_rating'] : 'N/A',

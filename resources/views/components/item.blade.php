@@ -33,9 +33,8 @@
             <div class="sortCatSection2Child"
                 @if(!empty($id))
                     id="item_user_rating_{{$id}}"
-                @endif
-            >
-                {{$stars}}
+                @endif >
+                {!! html_entity_decode($stars) !!}
             </div>
             <div class="sortCatSection2Child"
                  @if(!empty($id))
