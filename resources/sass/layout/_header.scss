@@ -1,5 +1,4 @@
 .mainHeaderWrap {
-    @include headerHeight;
     background: $aqua;
     //width: $fullWidth;
     margin: $centerOnPage;
@@ -26,14 +25,59 @@
         }
     }
 }
-//HEADER SECTION
 
+//HEADER SECTION
 
 
 .branding {
     @include flex;
+    justify-content: space-between;
 }
 
+.headerLogoParent {
+    display: flex;
+    align-items: center;
+
+    a {
+        display: flex;
+        &:hover {
+            text-decoration: none;
+        }
+
+        .headerLogoImg {
+            //width: 34px;
+            //height: 34px;
+        }
+    }
+}
+
+.headerLogoTitle {
+    color: $white;
+    font-size: 20px;
+    margin-left: 15px;
+
+}
+
+.footerLogoParent {
+    position: $relative;
+    top: -25px;
+    left: 10px;
+
+    .footerLogoImg {
+        width: $fullWidth / 12;
+        position: $absolute;
+        top: 15px;
+        left: 0;
+    }
+
+    .footerLogoTitle {
+
+        position: absolute;
+        top: 13px;
+        left: 55px;
+
+    }
+}
 
 
 .titleParent {
@@ -89,8 +133,6 @@
 .mainNav .dropdownMenu li a {
     padding: 0;
 }
-
-
 
 
 //OVERWRITE BOOTSTRAP

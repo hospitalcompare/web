@@ -18,30 +18,32 @@
 // Global CSS
 @import 'global';
 
+//PAGES
+@import 'pages/homePage';
+@import 'pages/resultsPage';
+
 //TEMPLATE FILES
-@import 'pages/homepage';
 @import 'layout/header';
 @import 'layout/footer';
-@import 'pages/resultspage';
+@import 'layout/blog';
+
 
 //COMPONENTS
-@import 'components/whychoose';
-@import 'components/howsection';
-@import 'components/healthchoice';
+@import 'components/whyChoose';
+@import 'components/howSection';
+@import 'components/healthChoice';
 @import 'components/logo';
 @import 'components/pagination';
 @import 'components/compare';
 
 //BASIC COMPONENTS
 @import 'components/banner';
-@import 'components/blogs';
 @import 'components/basic/button';
-@import 'components/basic/selectbox';
-@import 'components/basic/textbox';
-@import 'components/basic/helplink';
-@import 'components/basic/lightbox';
-@import 'components/basic/range-style';
-//@import '../../node_modules/input-range-scss/inputrange';
+@import 'components/basic/selectBox';
+@import 'components/basic/textBox';
+@import 'components/basic/helpLink';
+@import 'components/basic/lightBox';
+@import 'components/basic/rangeStyle';
 @import 'components/basic/range';
 
 

@@ -2,9 +2,7 @@
 <header class="mainHeader" id="top">
     {{ $page_header }}
     <div class="branding">
-
         @include('components.logo', ['titleParent' => 'headerLogoParent', 'logoImg' => 'headerLogoImg', 'logoTitle' => 'headerLogoTitle'])
-
 
         <nav class="mainNav">
             <ul class="mainMenu">

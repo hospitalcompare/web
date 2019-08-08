@@ -1,0 +1,110 @@
+
+// ========================BLOGS SECTION================================
+.blogSectionParent {
+    width: $pageWrap;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: #1b1b1b;
+
+    .pageTitle {
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: -2px;
+        line-height: 48px;
+    }
+
+    .blogContent {
+        @include flex;
+        @include justify-content(space-between);
+
+        .blogWrap {
+            @include flex;
+            @include flex-flow(column);
+            @include justify-content(center);
+            @include alignItems;
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+            text-decoration: none !important;
+
+            a:hover {
+                //top: -289.25px;
+                //box-shadow: 0px 0px 0px #3686a3;
+                text-decoration: none !important;
+
+                .btn-read-more {
+                    background-position: right;
+                }
+
+                .icon .overlay {
+                    background-color: rgba(237,3,115,0.3);
+                }
+
+            }
+
+            a {
+                text-decoration: none !important;
+            }
+
+            //width: 33.33%;
+            //float: left;
+
+            .icon {
+                margin: 20px 0;
+                position: relative;
+
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: $transition;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .title {
+                color: #00cecd;
+                font-size: 20px;
+                font-weight: 400;
+                letter-spacing: -0.6px;
+                line-height: 24px;
+            }
+
+            .description {
+                color: #1c1c1c;
+                font-size: 24px;
+                font-weight: 600;
+                letter-spacing: -0.72px;
+                line-height: 28.8px;
+            }
+        }
+    }
+
+    .buttonSectionParent {
+        width: $fullWidth / 1.2;
+        margin: 0 auto 100px auto;
+        @include flex;
+
+        p {
+            margin-left: 100px;
+            width: 80%;
+        }
+
+        p:nth-child(2) {
+            margin-left: 250px;
+        }
+
+        p:nth-child(3) {
+            margin-left: 250px;
+        }
+    }
+}
+
+
+// ========================END BLOGS SECTION=============================
+
