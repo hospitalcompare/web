@@ -202,7 +202,19 @@
         background-size: 300% !important;
     }
 
-
+    &.btn-read-more {
+        border-radius: 50px;
+        color: #fff;
+        font-size: 22px;
+        height: 46px;
+        line-height: 46px;
+        background: #ed0373;
+        background: linear-gradient(-90deg, #ed0373,#fc278d,#fc278d,#649ef7,#649ef7,#1b70f3,#1b70f3);
+        transition: 0.6s;
+        background-size: 300%;
+        background-position: left;
+        padding: 0 25px;
+    }
 
     // icon buttons
     &.btn-icon {
