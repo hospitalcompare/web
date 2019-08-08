@@ -30,7 +30,5 @@
         "vue-template-compiler": "^2.6.10",
         "webpack-cli": "^3.3.5"
     },
-    "dependencies": {
-        "input-range-scss": "^1.5.2"
-    }
+    "dependencies": {}
 }
