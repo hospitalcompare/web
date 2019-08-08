@@ -15,6 +15,11 @@
                 </p>
                 <p class="sortItemLocation">{{$location}}</p>
                 <a class='findLink' href="">{{$findLink}}</a>
+                @if(!empty($specialOffers))
+                    <div class="btn-area" style="margin-top: 10px">
+                        @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-teal btn-icon btn-consultant btn-plus', 'button' => 'Consultants'])
+                    </div>
+                @endif
             </div>
         </div>
         <div class="sortCatSection2">
@@ -69,7 +74,7 @@
             </div>
             @if(!empty($specialOffers))
                 <div class="btn-area btn-area-lower">
-                    @include('components.basic.button', ['classTitle' => 'enquiry btn btn-block btn-icon btn-special-offer', 'button' => 'Special Offers'])
+                    @include('components.basic.button', ['classTitle' => 'enquiry btn btn-block btn-icon btn-special-offer btn-plus', 'button' => 'Special Offers'])
                 </div>
             @endif
         </div>

@@ -213,6 +213,28 @@
             @include icon-bg-center;
         }
 
+        &.btn-consultant {
+            /* Style for "Consultant" */
+            height: 20px;
+            line-height: 20px;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: -0.6px;
+            padding: 0 20px 0 12px;
+
+            &:after {
+                background-image: url('../images/icons/plus-solid.svg');
+                @include icon-bg-center(40%);
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+            }
+        }
+
         &.btn-enquire {
             border-radius: 10px;
             background: $blue;
@@ -258,10 +280,11 @@
             background-color: $pink;
             min-width: 160px;
 
-            &:before {
-                background-image: url('../images/icons/special.svg');
+            &:after {
+                background-image: url('../images/icons/plus-solid.svg');
+                @include icon-bg-center(30%);
                 position: absolute;
-                left: 0;
+                right: 0;
                 top: 0;
                 bottom: 0;
                 width: 40px;
@@ -269,11 +292,10 @@
                 line-height: 40px;
             }
 
-            &:after {
-                background-image: url('../images/icons/plus-solid.svg');
-                @include icon-bg-center(30%);
+            &:before {
+                background-image: url('../images/icons/special.svg');
                 position: absolute;
-                right: 0;
+                left: 0;
                 top: 0;
                 bottom: 0;
                 width: 40px;
@@ -293,3 +315,7 @@
     }
 }
 
+// Container for buttons
+.btn-area {
+    line-height: 1;
+}
