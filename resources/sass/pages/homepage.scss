@@ -164,16 +164,13 @@
 
         .chooseHealthText {
             width: $fullWidth / 1.8;
-            //margin: 80px auto;
             color: $white;
-            position: absolute;
             font-size: 27px;
             font-weight: 600;
             letter-spacing: -1.35px;
             line-height: 32.4px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            @include v-h-c;
+            text-align: center;
         }
 
         .chooseHealthText p {

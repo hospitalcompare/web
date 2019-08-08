@@ -111,7 +111,7 @@
         'sectionTitle' => 'How does it work?' ])
     </div>
 
-    @include('components.healthchoice', ['choosehealthbanner' => '', 'buttonName' => 'Choose your health', 'classTitle' => 'blueOval' ] )
+    @include('components.healthchoice', ['choosehealthbanner' => '', 'buttonName' => 'Choose your health', 'classTitle' => 'btn btn-icon btn-arrow-right mx-auto' ] )
 
     <div class="blogSectionParent">
         <h1 class="pageTitle">Making the right choice</h1>
