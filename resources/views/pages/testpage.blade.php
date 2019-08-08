@@ -29,9 +29,8 @@
                 Tooltip on left
             </button>
             <h3>Special offer button</h3>
-            @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer', 'button' => 'Special Offers'])
-            <br>
-            @include('components.basic.button', ['classTitle' => 'btn btn-enquire enquiry', 'button' => 'Make an enquiry'])
+            @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer mr-2', 'button' => 'Special Offers'])
+            @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-enquire enquiry', 'button' => 'Make an enquiry'])
 
 
         </div>

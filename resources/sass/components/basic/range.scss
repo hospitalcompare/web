@@ -2,8 +2,13 @@
     width: 100%;
     @include flex;
     flex: 1;
+    align-items: center;
     @include media-breakpoint-up(md) {
         padding-left: 70px;
+    }
+
+    label {
+        margin-bottom: 0;
     }
 
     .radiusRange {
@@ -25,3 +30,4 @@
     letter-spacing: -0.35px;
     line-height: 16.8px;
 }
+
