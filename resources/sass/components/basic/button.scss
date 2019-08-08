@@ -199,80 +199,83 @@
 
 
     // icon buttons
-
-    &.btn-enquire {
-        border-radius: 10px;
-        background: #1b71f3;
-        color: $white;
-        font-size: 12px;
-        font-weight: 400;
-        letter-spacing: -0.7px;
-        line-height: 13px;
-        transition: $transition;
-        position: relative;
-        padding: 15px 15px 15px 45px;
-        display: block;
-
-        &:before {
-            content: url('../images/icons/circle-tick.svg');
-            position: absolute;
-            left: 12px;
-            top: 12px;
-            width: 22px;
-            height: 22px;
-        }
-
-        &:hover {
-            color: $white;
-            text-decoration: none;
-            opacity: 0.8;
-        }
-    }
-
-    &.btn-special-offer {
-        padding: 0 30px;
-        border-radius: 10px;
-        font-size: 14px;
-        color: $white;
-        height: 40px;
-        line-height: 40px;
-        background-color: #ed0373;
-
-        &:before {
-            background-image: url('../images/icons/special.svg');
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-        }
-
-        &:after {
-            background-image: url('../images/icons/plus-solid.svg');
-            background-size: 30%;
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-        }
-
-    }
-
-    // All buttons with icons
     &.btn-icon {
         &:before,
         &:after {
             content: '';
             position: absolute;
-            background-repeat: no-repeat;
-            background-position: center center;
+            @include icon-bg-center;
+        }
+
+        &.btn-enquire {
+            border-radius: 10px;
+            background: $blue;
+            color: $white;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: -0.7px;
+            line-height: 13px;
+            height: 40px;
+            transition: $transition;
+            position: relative;
+            padding: 5px 15px 5px 40px;
+            display: inline-block;
+            text-align: left;
+
+            &:before {
+                content: '';
+                background-image: url('../images/icons/circle-check.svg');
+                @include icon-bg-center;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 22px;
+                width: 40px;
+                height: 40px;
+            }
+
+            &:hover {
+                color: $white;
+                text-decoration: none;
+                background-color: darken($blue, 5%);
+            }
+        }
+
+        &.btn-special-offer {
+            padding: 13px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            color: $white;
+            height: 40px;
+            line-height: 13px;
+            background-color: $pink;
+
+            &:before {
+                background-image: url('../images/icons/special.svg');
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+            }
+
+            &:after {
+                background-image: url('../images/icons/plus-solid.svg');
+                @include icon-bg-center(30%);
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+            }
         }
     }
+
+
 
     //gradient button
     &.btn-grad {

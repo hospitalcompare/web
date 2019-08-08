@@ -260,3 +260,26 @@
         @include v-h-c;
     }
 }
+
+// Center background icons in pseudo elements
+@mixin icon-bg-center($bgSize: 50%) {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: $bgSize;
+}
+
+// Add partial height border to an element
+
+@mixin pseudo-border($bgColor) {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 0;
+        bottom: 10px;
+        width: 1px;
+        background-color: $bgColor;
+    }
+}

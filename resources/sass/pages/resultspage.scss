@@ -181,14 +181,14 @@
 
     .sortCatSection2 {
         flex: 1 0 53%;
+
     }
 
     .sortCatSection3 {
         flex: 1 0 14%;
-        padding: 10px 10px;
-
-        .btn-area-upper {
-        }
+        min-width: 170px;
+        padding: 10px 0 10px 10px;
+        @include pseudo-border($borderGrey);
 
         .btn-area-lower {
             border-top: 1px solid #d7d7d7;
