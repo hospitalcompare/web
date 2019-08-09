@@ -23,33 +23,43 @@
             </div>
         </div>
         <div class="sortCatSection2">
+            {{-- Waiting time --}}
             <div class="sortCatSection2Child"
                  @if(!empty($id))
                     id="item_waiting_time_{{$id}}"
                 @endif
-            >
-                {{$waitTime}}
+            ><p
+                @include('components.basic.popover', [
+                    'content' => 'For private self-pay waiting time click <a class="link" href="/">here</a>',
+                    'html' => 'true'])>
+                    {{$waitTime}}
+                </p>
             </div>
+            {{-- End waiting time --}}
             <div class="sortCatSection2Child"
                 @if(!empty($id))
                     id="item_user_rating_{{$id}}"
                 @endif >
                 {!! html_entity_decode($stars) !!}
             </div>
+            {{-- % operations cancelled --}}
             <div class="sortCatSection2Child"
                  @if(!empty($id))
                      id="item_op_cancelled_{{$id}}"
-                @endif
-            >
-                {{$opCancelled}}
+                @endif >
+                <p
+                    @include('components.basic.popover', [
+                    'content' => 'National average is 3.35%'])>
+                    {{$opCancelled}}
+                </p>
             </div>
             <div class="sortCatSection2Child"
                  @if(!empty($id))
                      id="item_quality_rating_{{$id}}"
-                @endif
-            >
+                @endif >
                 {{$qualityRating}}
             </div>
+
             {{-- Friends and family --}}
             <div class="sortCatSection2Child"
 
@@ -57,11 +67,11 @@
                  id="item_ff_rating_{{$id}}"
                 @endif >
                 <p  class="m-0"
-                    data-toggle="popover"
                     @include('components.basic.popover', [
                         'placement' => 'bottom',
-                        'trigger' => 'hover',
-                        'content' => 'National average is 98.85%'])>
+                        'trigger' => 'click',
+                        'html' => '',
+                        'content' => 'Some paragraph text'])>
                     {{$FFRating}}</p>
             </div>
             <div class="sortCatSection2Child"
