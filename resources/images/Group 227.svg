@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="275.871" height="237.169" viewBox="0 0 275.871 237.169">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="0.5" x2="0" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00cecd"/>
+      <stop offset="0.56" stop-color="#00d7b5"/>
+      <stop offset="1" stop-color="#00df9d"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_227" data-name="Group 227" transform="translate(-631.309 -190.368)">
+    <g id="Group_228" data-name="Group 228">
+      <path id="chat" d="M27.187,2h217.5c14.735,0,27.187,11.442,27.187,24.982v137.4c0,13.54-12.452,24.982-27.187,24.982h-129.4L71.321,233.807a4.738,4.738,0,0,1-3.353,1.362,4.944,4.944,0,0,1-1.636-.279,4.19,4.19,0,0,1-2.9-3.885V189.368H27.187C12.452,189.368,0,177.926,0,164.386V26.982C0,13.442,12.452,2,27.187,2Z" transform="translate(633.309 190.368)" fill="#fff" stroke="#000" stroke-width="4"/>
+      <text id="What_is_NHS_funded_work_Many_private_healthcare_policies_allow_you_to_choose_which_hospital_to_have_your_elective_procedure_at._Enter_your_provider_and_policy_name_to_find_the_best_hospital_for_you." data-name="What is NHS funded work?
+Many private healthcare policies allow you to choose which hospital to have your elective procedure at. Enter your provider and policy name to find the best hospital for you." transform="translate(666 215)" font-size="16" font-family="SofiaProBold, Sofia Pro" letter-spacing="-0.05em"><tspan x="0" y="18">What is NHS funded work?</tspan><tspan font-size="14" font-family="SofiaProMedium, Sofia Pro"><tspan x="0" y="34.8">Many private healthcare policies </tspan><tspan x="0" y="51.6">allow you to choose which hospital to </tspan><tspan x="0" y="68.4">have your elective procedure at. </tspan><tspan x="0" y="85.2">Enter your provider and policy name </tspan><tspan x="0" y="102">to find the best hospital for you.</tspan></tspan></text>
+      <rect id="Rounded_Rectangle_1_copy_8" data-name="Rounded Rectangle 1 copy 8" width="95.591" height="27.602" rx="13.801" transform="translate(665.69 329.066)" fill="url(#linear-gradient)"/>
+      <text id="Close" transform="translate(681.167 345.871)" fill="#fff" font-size="12" font-family="SofiaProMedium, Sofia Pro" letter-spacing="-0.05em"><tspan x="0" y="0">Close</tspan></text>
+      <g id="Group_39" data-name="Group 39" transform="translate(737.953 347.886) rotate(180)">
+        <path id="Path_5" data-name="Path 5" d="M2.064,5.23,5.976,1.319a.573.573,0,0,0,0-.809L5.633.167a.573.573,0,0,0-.809,0L.167,4.825a.577.577,0,0,0,0,.812L4.82,10.289a.573.573,0,0,0,.809,0l.343-.343a.573.573,0,0,0,0-.809Z" transform="translate(0)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
