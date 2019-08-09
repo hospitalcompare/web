@@ -82,7 +82,12 @@
                     <li><a href="">% Operations<br>Cancelled</a></li>
                     <li><a href="">Care Quality<br>Rating</a></li>
                     <li><a href="">Friends &<br>Family Rating</a></li>
-                    <li><a href="">NHS<br>Funded Work</a></li>
+                    <li>
+                        <a @include('components.basic.popover', [
+                            'size'      => 'large',
+                            'trigger'   => 'hover',
+                            'content'   => 'content'])
+                            href="">NHS<br>Funded Work</a></li>
                 </ul>
             </nav>
             <div class="sortCatSection3 pt-2"></div>

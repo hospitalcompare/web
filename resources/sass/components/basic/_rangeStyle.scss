@@ -7,16 +7,16 @@ $shade-0: #fff !default;
 $teal: #1abc9c !default;
 
 // Reset
-* {
-    &,
-    &:before,
-    &:after {
-        box-sizing: border-box;
-    }
-}
 
 .range-slider {
     //margin: 60px 0 0 0%;
+    * {
+        &,
+        &:before,
+        &:after {
+            box-sizing: border-box;
+        }
+    }
 }
 
 // Range Slider

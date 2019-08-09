@@ -57,6 +57,13 @@
                    data-placement="bottom"
                    title="Popover title">
                     Popover on hover, at the bottom</a>
+                <a class="btn btn-blue"
+                   data-toggle="popover-large"
+                   data-content="Hello, this is a popover"
+                   data-trigger="hover"
+                   data-placement="bottom"
+                   title="Popover title">
+                    Large popover</a>
                 <br>
                 <h3>Popover html</h3>
                 <div class="popover fade bs-popover-bottom show" role="tooltip" id="popover438743" x-placement="bottom"
@@ -65,11 +72,18 @@
                     <h3 class="popover-header">Popover title</h3>
                     <div class="popover-body">Hello, this is a popover</div>
                 </div>
+
                 <h3>Popover with link</h3>
-                <div class="popover fade bs-popover-bottom show" role="tooltip" id="popover438743" x-placement="bottom"
+                <div class="popover fade bs-popover-top show" role="tooltip" id="popover438743" x-placement="bottom"
                      style="position: relative;">
                     <div class="arrow" style="left: 64px;"></div>
-                    <h3 class="popover-header">Popover title</h3>
+                    <div class="popover-body">Hello, this is a popover <a class="" href="/">Click here</a></div>
+                </div>
+
+                <h3>Large popover</h3>
+                <div class="popover popover-large fade bs-popover-top show" role="tooltip" id="popover438743" x-placement="bottom"
+                     style="position: relative;">
+                    <div class="arrow" style="left: 64px;"></div>
                     <div class="popover-body">Hello, this is a popover <a class="" href="/">Click here</a></div>
                 </div>
 
