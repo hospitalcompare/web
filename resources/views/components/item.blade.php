@@ -40,7 +40,34 @@
                 @if(!empty($id))
                     id="item_user_rating_{{$id}}"
                 @endif >
-                {!! html_entity_decode($stars) !!}
+                <p @include('components.basic.popover', [
+                        'placement' => 'bottom',
+                        'trigger' => 'click',
+                        'html' => 'true',
+                        'content' => '
+                        <p><span class="mr-2">Food rating</span>
+                            <img src="../images/icons/star.svg" alt="Whole Star">
+                            <img src="../images/icons/star.svg" alt="Whole Star">
+                            <img src="../images/icons/star.svg" alt="Whole Star">
+                            <img src="../images/icons/star.svg" alt="Whole Star">
+                            <img src="../images/icons/star.svg" alt="Whole Star">
+                        </p>
+                        <p><span class="mr-2">Food rating</span>
+                            <img src="../images/icons/star.svg" alt="Whole Star">
+                            <img src="../images/icons/star.svg" alt="Whole Star">
+                            <img src="../images/icons/star.svg" alt="Whole Star">
+                            <img src="../images/icons/star.svg" alt="Whole Star">
+                            <img src="../images/icons/star.svg" alt="Whole Star">
+                        </p>
+                        <p><span class="mr-2">Food rating</span>
+                            <img src="../images/icons/star.svg" alt="Whole Star">
+                            <img src="../images/icons/star.svg" alt="Whole Star">
+                            <img src="../images/icons/star.svg" alt="Whole Star">
+                            <img src="../images/icons/star.svg" alt="Whole Star">
+                            <img src="../images/icons/star.svg" alt="Whole Star">
+                        </p>'])>
+                    {!! html_entity_decode($stars) !!}
+                </p>
             </div>
             {{-- % operations cancelled --}}
             <div class="sortCatSection2Child"
@@ -62,7 +89,6 @@
 
             {{-- Friends and family --}}
             <div class="sortCatSection2Child"
-
                  @if(!empty($id))
                  id="item_ff_rating_{{$id}}"
                 @endif >

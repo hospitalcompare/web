@@ -65,6 +65,42 @@
                     <h3 class="popover-header">Popover title</h3>
                     <div class="popover-body">Hello, this is a popover</div>
                 </div>
+                <h3>Popover with link</h3>
+                <div class="popover fade bs-popover-bottom show" role="tooltip" id="popover438743" x-placement="bottom"
+                     style="position: relative;">
+                    <div class="arrow" style="left: 64px;"></div>
+                    <h3 class="popover-header">Popover title</h3>
+                    <div class="popover-body">Hello, this is a popover <a class="" href="/">Click here</a></div>
+                </div>
+
+                <h3>Popover with stars</h3>
+                <div class="popover fade bs-popover-bottom show" role="tooltip" id="popover438743" x-placement="bottom"
+                     style="position: relative;">
+                    <div class="arrow" style="left: 64px;"></div>
+                    <div class="popover-body">
+                        <p><span class="mr-2">Food rating</span>
+                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                        </p>
+                        <p><span class="mr-2">Food rating</span>
+                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                        </p>
+                        <p><span class="mr-2">Food rating</span>
+                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                        </p>
+                    </div>
+                </div>
 
             </div>
         </div>
