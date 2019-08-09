@@ -103,7 +103,7 @@
                     'opCancelled'       => !empty($d['cancelledOp']['perc_cancelled_ops'])? $d['cancelledOp']['perc_cancelled_ops'].'%': 'N/A',
                     'qualityRating'     => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : 'N/A',
                     'FFRating'          => !empty($d['rating']['provider_rating']) ? $d['rating']['provider_rating'] : 'N/A',
-                    'NHSFunded'         => ($d['hospital_type_id'] == 2 && !empty($d['waitingTime'])) ? 'yes' : 'no',
+                    'NHSFunded'         => ($d['hospital_type_id'] == 2 && !empty($d['waitingTime'])) ? "<img src='../images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'specialOffers'     => $d['special_offers'],
                     'btnText'           => !empty($d['special_offers']) ? 'NHS Funded Enquiry' : 'Make an enquiry',
                     'NHSClass'          => $d['hospital_type_id'] == 1 ? 'NHSHospital' : 'privateHospital',

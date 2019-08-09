@@ -62,12 +62,11 @@
                     id="item_nhs_funded_{{$id}}"
                 @endif
             >
-                {{$NHSFunded}}
+                {!! $NHSFunded  !!}
             </div>
         </div>
         <div class="sortCatSection3 d-flex flex-column justify-content-center">
             <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between" @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
-{{--                {!! $text = !empty($specialOffers) ? 'NHS Funded Enquiry' : 'Make an enquiry' !!}--}}
                 @include('components.basic.button', ['hrefValue' => $url, 'classTitle' => 'btn btn-icon btn-enquire enquiry mr-2 btn-block', 'button' => $btnText])
                 @include('components.basic.button', ['classTitle' => 'btn btn-green-outline compare btn-block mt-0', 'button' => '', 'icon' => '', 'id' => $id])
             </div>
