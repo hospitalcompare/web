@@ -50,16 +50,23 @@
             >
                 {{$qualityRating}}
             </div>
+            {{-- Friends and family --}}
             <div class="sortCatSection2Child"
+
                  @if(!empty($id))
-                    id="item_ff_rating_{{$id}}"
-                @endif
-            >
-                {{$FFRating}}
+                 id="item_ff_rating_{{$id}}"
+                @endif >
+                <p  class="m-0"
+                    data-toggle="popover"
+                    @include('components.basic.popover', [
+                        'placement' => 'bottom',
+                        'trigger' => 'hover',
+                        'content' => 'National average is 98.85%'])>
+                    {{$FFRating}}</p>
             </div>
             <div class="sortCatSection2Child"
-                @if(!empty($id))
-                    id="item_nhs_funded_{{$id}}"
+                 @if(!empty($id))
+                id="item_nhs_funded_{{$id}}"
                 @endif
             >
                 {!! $NHSFunded  !!}

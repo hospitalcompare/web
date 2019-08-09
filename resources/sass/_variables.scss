@@ -55,17 +55,28 @@ $fullWidth: 100%;
 $pageWrap: 1180px;
 $centerOnPage:  auto;
 
-// BS overrides
-$btn-border-radius: 100px;
-$btn-transition: $transition;
-$btn-border-width: 0;
 
 //POSITIONS
 $relative: relative;
 $absolute: absolute;
+
+
+// ************** BS overrides ****************** //
+$btn-border-radius: 100px;
+$btn-transition: $transition;
+$btn-border-width: 0;
 
 // Fonts
 $font-family-sans-serif: 'Sofia Pro', sans-serif;
 
 $headings-font-family: 'Sofia Pro', sans-serif;
 $headings-font-weight: normal; // font is bold, so normal is standard bold
+
+// Popovers
+//$popover-border-width: 0;
+$popover-body-padding-y: 10px;
+$popover-body-padding-x: 10px;
+$popover-arrow-width: 12px;
+$popover-arrow-height: 9px;
+$popover-arrow-outer-color: transparent;
+$popover-arrow-color: #fff;

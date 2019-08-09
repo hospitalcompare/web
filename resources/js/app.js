@@ -7,18 +7,17 @@
 // jquery imported through webpack.mix.js
 window.Popper = require('popper.js');
 require('bootstrap'); // Required for bootstrap tooltips
-// import 'bootstrap'; // Twitter bootstrap
 import '@fortawesome/fontawesome-free/js/all.min';
 import './scripts/global'; // Site wide js
-import './scripts/video'; // Video controller
+import './scripts/global'; // Site wide scripts
 import './scripts/scroll'; // Smooth scroll
 import './scripts/postcode' ; // Postcode input
-import './scripts/range'; // Slider for radius of proximity on search page
-// import './scripts/cookies'; // Compare functionality
 window.Cookies = require('./scripts/cookies');
 import './scripts/compare'; // Slider for radius of proximity on search page
-
 window.Vue = require('vue');
+
+// Components
+import './components/basic/range'; // Slider for radius of proximity on search page
 
 /**
  * The following block of code may be used to automatically register your
