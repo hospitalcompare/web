@@ -18,6 +18,8 @@ window.Vue = require('vue');
 
 // Components
 import './components/basic/range'; // Slider for radius of proximity on search page
+import './components/basic/popover'; // Trigger bootstrap tooltip
+import './components/basic/tooltip'; // Trigger bootstrap popover
 
 /**
  * The following block of code may be used to automatically register your

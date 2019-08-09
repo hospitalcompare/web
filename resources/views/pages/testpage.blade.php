@@ -83,7 +83,7 @@
                 <h3>Large popover</h3>
                 <div class="popover popover-large fade bs-popover-top show" role="tooltip" id="popover438743" x-placement="bottom"
                      style="position: relative;">
-                    <div class="arrow" style="left: 64px;"></div>
+                    <div class="arrow arrow-large" style="left: 64px;"></div>
                     <div class="popover-body">Hello, this is a popover <a class="" href="/">Click here</a></div>
                 </div>
 
@@ -132,7 +132,7 @@
                             <a class="btn btn-teal btn-icon btn-consultant" href="/">Close</a>
                         </p>
                     </div>
-                    <div class="arrow" style="left: 64px;"></div>
+                    <div class="arrow arrow-large" style="left: 64px;"></div>
                 </div>
 
             </div>

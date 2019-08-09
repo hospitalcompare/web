@@ -42,7 +42,7 @@
                 @endif >
                 <p @include('components.basic.popover', [
                         'placement' => 'bottom',
-                        'trigger' => 'click',
+                        'trigger' => 'hover',
                         'html' => 'true',
                         'content' => '
                         <p><span class="mr-2">Food rating</span>
@@ -95,7 +95,7 @@
                 <p  class="m-0"
                     @include('components.basic.popover', [
                         'placement' => 'bottom',
-                        'trigger' => 'click',
+                        'trigger' => 'hover',
                         'html' => '',
                         'content' => 'Some paragraph text'])>
                     {{$FFRating}}</p>

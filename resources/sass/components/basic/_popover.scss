@@ -17,7 +17,6 @@
     }
 
     .popover-header {
-        //box-shadow: 0 0 5px rgba(0, 0, 0, 0.16);
         border: none;
         border-radius: 15px 15px 0 0;
     }
@@ -47,8 +46,18 @@
             }
         }
 
-        .arrow {
+        .arrow-large {
+            top: calc(100% - 8px);
+            width: 56.6px;
+            height: 55.7px;
+            background-image: url('../images/speech-point.svg');
+            @include icon-bg-center(cover);
+            z-index: 5;
 
+            &:before,
+            &:after {
+                border: none;
+            }
         }
     }
 }
