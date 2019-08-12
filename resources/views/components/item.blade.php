@@ -112,7 +112,11 @@
             <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between" @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
 {{--                <p>{{$NHSClass}}</p>--}}
             @if($NHSClass == 'privateHospital')
-                    @include('components.basic.button', ['hrefValue' => $url, 'classTitle' => 'btn btn-icon btn-enquire enquiry mr-2 btn-block', 'button' => $btnText])
+                    @include('components.basic.button', [
+                    'hrefValue' => $url,
+                    'classTitle' => 'btn btn-icon btn-enquire enquiry mr-2 btn-block',
+                    'target' => 'blank',
+                    'button' => $btnText])
                 @elseif($NHSClass == 'NHSHospital')
                     @include('components.basic.modalbutton', [
                     'hrefValue'         => $url,
