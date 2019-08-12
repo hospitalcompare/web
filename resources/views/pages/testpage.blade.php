@@ -81,7 +81,8 @@
                 </div>
 
                 <h3>Large popover</h3>
-                <div class="popover popover-large fade bs-popover-top show" role="tooltip" id="popover438743" x-placement="bottom"
+                <div class="popover popover-large fade bs-popover-top show" role="tooltip" id="popover438743"
+                     x-placement="bottom"
                      style="position: relative;">
                     <div class="arrow arrow-large" style="left: 64px;"></div>
                     <div class="popover-body">Hello, this is a popover <a class="" href="/">Click here</a></div>
@@ -137,10 +138,75 @@
                 <hr>
                 <h3>Modal trigger</h3>
                 <div class="btn-area">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hc_modal" data-whatever="@mdo">Open modal for @mdo</button>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hc_modal" data-whatever="@fat">Open modal for @fat</button>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hc_modal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-toggle="modal"
+                        data-target="#hc_modal"
+                        data-content="<h1>Some modal content</h1>">Open modal for @mdo
+                    </button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hc_modal"
+                            data-content="@fat">Open modal for @fat
+                    </button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hc_modal"
+                            data-content="@getbootstrap">Open modal for @getbootstrap
+                    </button>
 
+                </div>
+
+                <h1>Modal - enquiry now</h1>
+                <div class="modal modal-enquire fade show" id="hc_example_modal" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabel" aria-modal="true"
+                     style="display: block; position: static">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" class="text-white bg-black">Close</span>
+                            </button>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col col-md-6">
+                                            <div class="col-inner col-inner__left">
+                                                <div class="modal-title">
+                                                    NHS Hospital name
+                                                </div>
+                                                <img src="images/alder-1.png">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                                                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                                    aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                                    reprehenderit in.</p>
+                                                <div class="btn-area">
+                                                    <div class="btn btn-icon btn-enquire">Make an enquiry</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-md-6 bg-pink">
+                                            <div
+                                                class="col-inner col-inner__right h-100 text-center d-flex align-items-center justify-content-center flex-column">
+                                                <h2 class="text-white">Or go back to results</h2>
+
+                                                <p class="text-white modal-copy">Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing elit, sed do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                                    ea
+                                                    commodo consequat. Duis aute irure dolor in reprehenderit in.</p>
+                                                <div class="btn-area">
+                                                    <div class="btn btn-icon btn-special-offer">Special Offers</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{--                            <div class="modal-footer">--}}
+                            {{--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--}}
+                            {{--                                <button type="button" class="btn btn-primary">Send message</button>--}}
+                            {{--                            </div>--}}
+                        </div>
+                    </div>
                 </div>
 
             </div>

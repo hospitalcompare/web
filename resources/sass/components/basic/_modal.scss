@@ -1,0 +1,39 @@
+// Bootstrap modal
+
+.modal {
+    &.modal-enquire {
+        .close {
+            display: none;
+        }
+
+        .modal-copy {
+            /* Style for "Lorem ipsu" */
+            width: 337px;
+            height: 94px;
+            color: #ffffff;
+            font-family: "Sofia Pro";
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: -0.8px;
+            line-height: 19.2px;
+        }
+
+        .modal-dialog {
+            width: 100%;
+            max-width: 820px;
+        }
+    }
+
+    .col-inner {
+        &__left {
+            padding: 30px;
+        }
+
+        &__right {
+            padding: 60px 30px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}
