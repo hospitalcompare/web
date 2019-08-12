@@ -1,17 +1,29 @@
 // Bootstrap modal
 
 .modal {
+    .modal-content {
+        border-radius: 16px 0 16px 16px;
+    }
+
     &.modal-enquire {
         .close {
-            display: none;
+            right: 0;
+            width: 61px;
+            height: 29px;
+            border-radius: 31px;
+            background-color: #000000;
+            z-index: 5;
+            opacity: 1;
+            transform: translate(50%, -50%);
+
+
+            span {
+                background-color: inherit;
+            }
         }
 
         .modal-copy {
             /* Style for "Lorem ipsu" */
-            width: 337px;
-            height: 94px;
-            color: #ffffff;
-            font-family: "Sofia Pro";
             font-size: 16px;
             font-weight: 400;
             letter-spacing: -0.8px;
@@ -32,7 +44,10 @@
         &__right {
             padding: 60px 30px;
             display: flex;
+            justify-content: center;
+            align-items: center;
             flex-direction: column;
+            border-radius: 0 0 16px 0;
         }
     }
 

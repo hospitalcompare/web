@@ -7,6 +7,6 @@ $(document).ready(function () {
         var content = button.data('content') // Extract info from data-* attributes
         console.log(content)
         var modal = $(this)
-        modal.find('.modal-title').html(content)
+        modal.find('.modal-content').html(content)
     })
 })
