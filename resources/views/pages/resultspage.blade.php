@@ -162,7 +162,11 @@
                                                                     ea
                                                                     commodo consequat. Duis aute irure dolor in reprehenderit in.</p>
                                                                 <div class="btn-area">
-                                                                    <div class="btn btn-icon btn-special-offer">Special Offers</div>
+                                                                    <a  data-toggle="modal"
+                                                                        data-target="#hc_modal_special"
+                                                                        data-content="<h1>Some special content</h1>"
+                                                                        data-dismiss="modal"
+                                                                        class="btn btn-icon btn-special-offer">Special Offers</a>
                                                                 </div>
                                                             </div>
                                                         </div>

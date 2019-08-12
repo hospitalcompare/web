@@ -124,6 +124,7 @@
                     'hospitalUrl'       => $d['title'],
                     'classTitle'        => 'btn btn-icon btn-enquire enquiry mr-2 btn-block',
                     'button'            => $btnText,
+                    'modalTarget'       => '#hc_modal',
                     'modalContent'      => $modalContent])
                 @endif
                 @include('components.basic.button', ['classTitle' => 'btn btn-green-outline compare btn-block mt-0', 'button' => '', 'icon' => '', 'id' => $id])
