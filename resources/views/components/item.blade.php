@@ -110,7 +110,18 @@
         </div>
         <div class="sortCatSection3 d-flex flex-column justify-content-center">
             <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between" @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
-                @include('components.basic.button', ['hrefValue' => $url, 'classTitle' => 'btn btn-icon btn-enquire enquiry mr-2 btn-block', 'button' => $btnText])
+{{--                <p>{{$NHSClass}}</p>--}}
+            @if($NHSClass == 'privateHospital')
+                    @include('components.basic.button', ['hrefValue' => $url, 'classTitle' => 'btn btn-icon btn-enquire enquiry mr-2 btn-block', 'button' => $btnText])
+                @elseif($NHSClass == 'NHSHospital')
+                    @include('components.basic.modalbutton', [
+                    'hrefValue'         => $url,
+                    'hospitalTitle'     => $d['title'],
+                    'hospitalUrl'       => $d['title'],
+                    'classTitle'        => 'btn btn-icon btn-enquire enquiry mr-2 btn-block',
+                    'button'            => $btnText,
+                    'modalContent'      => $modalContent])
+                @endif
                 @include('components.basic.button', ['classTitle' => 'btn btn-green-outline compare btn-block mt-0', 'button' => '', 'icon' => '', 'id' => $id])
             </div>
             @if(!empty($specialOffers))

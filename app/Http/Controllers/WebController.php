@@ -55,7 +55,7 @@ class WebController extends BaseController
         $sortBys    = Utils::sortBys;
         $procedures = Procedure::all()->toArray();
         //Add the option to view all procedures ( id = 0 )
-        array_unshift($procedures, ['id'=> 0, 'name'=>'Choose your procedure (if known)']);
+        array_unshift($procedures, ['id' => 0, 'name' => 'Choose your procedure (if known)']);
 
         $this->returnedData['success']                              = true;
         $this->returnedData['data']['hospitals']                    = $hospitals;
