@@ -3,7 +3,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: $teal;
+    background-image: linear-gradient(to right, #00de9d 0%, #00cecb 100%);
     z-index: 1060;
 
     .compare-hospitals-header {
@@ -39,9 +39,15 @@
             height: 7px;
             background-color: $teal;
             background-image: url('../images/up-arrow.svg');
-            background-size: 50%;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            transform: rotate(180deg);
+            transition: $transition;
+
+            &.rotated {
+                transform: rotate(0);
+            }
         }
     }
 

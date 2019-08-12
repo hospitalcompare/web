@@ -146,5 +146,6 @@ $(document).ready(function () {
     //Set the Onclick event for the Comparison Header
     $(document).on("click touchend", ".compare-hospitals-bar .compare-button-title", function () {
         $('.compare-hospitals-bar .compare-hospitals-content').slideToggle();
+        $('.compare-arrow').toggleClass('rotated');
     });
 });
