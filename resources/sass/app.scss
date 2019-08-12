@@ -22,13 +22,13 @@
 @import 'pages/homePage';
 @import 'pages/resultsPage';
 
-//TEMPLATE FILES
+// TEMPLATE FILES
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/blog';
 
 
-//COMPONENTS
+// COMPONENTS
 @import 'components/whyChoose';
 @import 'components/howSection';
 @import 'components/healthChoice';
@@ -36,7 +36,7 @@
 @import 'components/pagination';
 @import 'components/compare';
 
-//BASIC COMPONENTS
+// BASIC COMPONENTS
 @import 'components/banner';
 @import 'components/basic/button';
 @import 'components/basic/selectBox';
@@ -46,6 +46,7 @@
 @import 'components/basic/rangeStyle';
 @import 'components/basic/range';
 @import 'components/basic/popOver';
+@import 'components/basic/modal';
 
 
 

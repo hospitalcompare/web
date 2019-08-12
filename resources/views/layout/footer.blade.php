@@ -54,3 +54,4 @@
 </footer>
 
 @include('components.compare')
+@include('components.modal')

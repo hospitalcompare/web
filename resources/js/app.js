@@ -8,18 +8,19 @@
 window.Popper = require('popper.js');
 require('bootstrap'); // Required for bootstrap tooltips
 import '@fortawesome/fontawesome-free/js/all.min';
-import './scripts/global'; // Site wide js
-import './scripts/global'; // Site wide scripts
-import './scripts/scroll'; // Smooth scroll
-import './scripts/postcode' ; // Postcode input
-window.Cookies = require('./scripts/cookies');
-import './scripts/compare'; // Slider for radius of proximity on search page
-window.Vue = require('vue');
+import './scripts/global';                                          // Site wide js
+import './scripts/global';                          // Site wide scripts
+import './scripts/scroll';                          // Smooth scroll
+import './scripts/postcode' ;                       // Postcode input
+window.Cookies = require('./scripts/cookies');      // Cookie/compare functionallity
+import './scripts/compare';                         // Slider for radius of proximity on search page
+// window.Vue = require('vue');                        // Vue.js
 
 // Components
-import './components/basic/range'; // Slider for radius of proximity on search page
-import './components/basic/popover'; // Trigger bootstrap tooltip
-import './components/basic/tooltip'; // Trigger bootstrap popover
+import './components/basic/range';                  // Slider for radius of proximity on search page
+import './components/basic/popover';                // Trigger bootstrap tooltip
+import './components/basic/tooltip';                // Trigger bootstrap popover
+import './components/basic/modal';                  // Trigger bootstrap modal
 
 /**
  * The following block of code may be used to automatically register your
@@ -32,7 +33,7 @@ import './components/basic/tooltip'; // Trigger bootstrap popover
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -40,7 +41,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app',
-});
+// const app = new Vue({
+//     el: '#app',
+// });
 
