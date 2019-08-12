@@ -164,7 +164,7 @@
                                                                 <div class="btn-area">
                                                                     <a  data-toggle="modal"
                                                                         data-target="#hc_modal_special"
-                                                                        data-content="<h1>Some special content</h1>"
+                                                                        data-content="<h1>' . $specialOfferContent = 'hello' . '</h1>"
                                                                         data-dismiss="modal"
                                                                         class="btn btn-icon btn-special-offer">Special Offers</a>
                                                                 </div>

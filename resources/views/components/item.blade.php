@@ -131,7 +131,12 @@
             </div>
             @if(!empty($specialOffers))
                 <div class="btn-area btn-area-lower">
-                    @include('components.basic.button', ['classTitle' => 'enquiry btn btn-block btn-icon btn-special-offer btn-plus', 'button' => 'Special Offers'])
+                    @include('components.basic.modalbutton', [
+                    'hrefValue'         => $url,
+                    'classTitle'        => 'enquiry btn btn-block btn-icon btn-special-offer btn-plus',
+                    'modalTarget'       => '#hc_modal_special',
+                    'modalContent'       => 'Modal content for special offers',
+                    'button'            => 'Special Offers'])
                 </div>
             @endif
         </div>

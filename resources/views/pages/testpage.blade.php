@@ -160,7 +160,8 @@
                      style="display: block; position: static">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                            <button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close position-absolute" data-dismiss="modal"
+                                    aria-label="Close">
                                 <span aria-hidden="true" class="text-white bg-black">Close</span>
                             </button>
                             <div class="modal-body">
@@ -175,9 +176,12 @@
                                                     <div class="image-wrapper mr-3">
                                                         <img class="mr-3" src="images/alder-1.png">
                                                     </div>
-                                                    <p class="modal-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                                    <p class="modal-copy">Lorem ipsum dolor sit amet, consectetur
+                                                        adipiscing elit, sed do
+                                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                                        enim
+                                                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                                        ut
                                                         aliquip ex ea commodo consequat. Duis aute irure dolor in
                                                         reprehenderit in.</p>
 
@@ -206,10 +210,58 @@
                                     </div>
                                 </div>
                             </div>
-                            {{--                            <div class="modal-footer">--}}
-                            {{--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--}}
-                            {{--                                <button type="button" class="btn btn-primary">Send message</button>--}}
-                            {{--                            </div>--}}
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h1>Modal - special offers</h1>
+                <div class="modal modal-special fade show" id="hc_example_modal" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabel" aria-modal="true"
+                     style="display: block; position: static">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="close position-absolute" data-dismiss="modal"
+                                    aria-label="Close">
+                                <span aria-hidden="true" class="text-white bg-black">Close</span>
+                            </button>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col col-md-3 p-0">
+                                            <div class="col-inner">
+
+                                                <div class="d-flex mb-3">
+                                                    <div class="image-wrapper mr-3">
+                                                        <img class="mr-3 mb-3" src="images/alder-1.png">
+                                                        <img class="mr-3" src="images/bupa.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-md-9 p-0">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h3 class="text-uppercase">Special Offer</h3>
+                                                </div>
+                                                <div class="col-8">
+                                                    <p>Get your Knee operation done in under 2 weeks on our self-pay
+                                                        programme for £8,999 (reduced from £10,500).</p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <ul>
+                                                        <li>2 weeks</li>
+                                                        <li>Outstanding</li>
+                                                        <li>5 star user rating</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-12">
+                                                    <a class="btn btn-enquire btn-icon">Make an enquiry</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
