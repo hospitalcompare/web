@@ -92,11 +92,11 @@ $(document).ready(function () {
         //Load the Cookies with the data that we need for the comparison
         var elementId = $(this).attr('id');
         var name = $('#item_name_' + elementId).text();
-        var waitingTime = $('#item_waiting_time_' + elementId).html();
+        var waitingTime = $('#item_waiting_time_' + elementId).text();
         var userRating = $('#item_user_rating_' + elementId).html();
-        var opCancelled = $('#item_op_cancelled_' + elementId).html();
-        var qualityRating = $('#item_quality_rating_' + elementId).html();
-        var ffRating = $('#item_ff_rating_' + elementId).html();
+        var opCancelled = $('#item_op_cancelled_' + elementId).text();
+        var qualityRating = $('#item_quality_rating_' + elementId).text();
+        var ffRating = $('#item_ff_rating_' + elementId).text();
         var nhsFunded = $('#item_nhs_funded_' + elementId).html();
         var result = $.grep(data, function (e) {
             return e.id == elementId;
@@ -119,6 +119,7 @@ $(document).ready(function () {
                 //Add data to Cookies and send the element to populate the table
                 data.push(element);
                 addHospitalToCompare(element);
+                console.log((element.name));
                 compareCount = parseInt(compareCount) + 1;
                 var countSpan = $('#compare_number');
                 countSpan.text(compareCount);
