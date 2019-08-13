@@ -53,10 +53,80 @@
                     <p>The quality of care in England varies greatly between hospitals. You have the legal right to
                         choose where to have your elective surgery*. It can be at: </p>
                     <ul class="promoList">
-                        <li>An NHS hospital of your choice</li>
-                        <li>A private hospital funded by NHS</li>
-                        <li>A private hospital paid by you</li>
-                        <li>A private hospital paid by your insurance provider</li>
+                        <li>An NHS hospital of your choice NHS<br>Funded Work
+                            <span data-offset="0 30px"
+                                  class="help-link help-link__inline"
+                               @include('components.basic.popover', [
+                               'placement'      => 'top',
+                               'size'           => 'large',
+                               'html'           => 'true',
+                               'trigger'        => 'click',
+                               'content'        => '<p class="bold mb-0">
+                                                What is NHS funded work?
+                                            </p>
+                                            <p>
+                                                Many private healthcare policies allow you to choose which hospital to have your elective
+                                                procedure at. Enter your provider and policy name to find the best hospital for you.
+                                            </p>
+                                            <p>
+                                                <a class="btn btn-close__small btn-teal btn-icon" href="/">Close</a>
+                                            </p>'])
+                            >?</span>
+                        </li>
+                        <li>A private hospital funded by NHS <span data-offset="0 30px"
+                                                                   class="help-link help-link__inline"
+                               @include('components.basic.popover', [
+                               'placement'      => 'top',
+                               'size'           => 'large',
+                               'html'           => 'true',
+                               'trigger'        => 'click',
+                               'content'        => '<p class="bold mb-0">
+                                                What is NHS funded work?
+                                            </p>
+                                            <p>
+                                                Many private healthcare policies allow you to choose which hospital to have your elective
+                                                procedure at. Enter your provider and policy name to find the best hospital for you.
+                                            </p>
+                                            <p>
+                                                <a class="btn btn-close__small btn-teal btn-icon" href="/">Close</a>
+                                            </p>'])
+                            >?</span></li>
+                        <li>A private hospital paid by you <span data-offset="0 30px"
+                                                                class="help-link help-link__inline"
+                               @include('components.basic.popover', [
+                               'placement'      => 'top',
+                               'size'           => 'large',
+                               'html'           => 'true',
+                               'trigger'        => 'click',
+                               'content'        => '<p class="bold mb-0">
+                                                What is NHS funded work?
+                                            </p>
+                                            <p>
+                                                Many private healthcare policies allow you to choose which hospital to have your elective
+                                                procedure at. Enter your provider and policy name to find the best hospital for you.
+                                            </p>
+                                            <p>
+                                                <a class="btn btn-close__small btn-teal btn-icon" href="/">Close</a>
+                                            </p>'])
+                            >?</span></li>
+                        <li>A private hospital paid by your insurance provider <span data-offset="0 30px"
+                                                                                     class="help-link help-link__inline"
+                               @include('components.basic.popover', [
+                               'placement'      => 'top',
+                               'size'           => 'large',
+                               'html'           => 'true',
+                               'trigger'        => 'click',
+                               'content'        => '<p class="bold mb-0">
+                                                What is NHS funded work?
+                                            </p>
+                                            <p>
+                                                Many private healthcare policies allow you to choose which hospital to have your elective
+                                                procedure at. Enter your provider and policy name to find the best hospital for you.
+                                            </p>
+                                            <p>
+                                                <a class="btn btn-close__small btn-teal btn-icon" href="/">Close</a>
+                                            </p>'])
+                            >?</span></li>
                     </ul>
                 </div>
             </div>
@@ -80,10 +150,10 @@
                 </div>
                 <div class="chooseVideo">
                     <div class="videoParent">
-                        <video muted class="content" poster="{{ url('images/video_placeholder.png') }}" >
+                        <video muted class="content" poster="{{ url('images/video_placeholder.png') }}">
                             <source src="{{ asset('video/For_Wes.mp4') }}" type="video/mp4">
-{{--                            <source src="movie.ogg" type="video/ogg">--}}
-{{--                            Your browser does not support the video tag.--}}
+                            {{--                            <source src="movie.ogg" type="video/ogg">--}}
+                            {{--                            Your browser does not support the video tag.--}}
                         </video>
                         <div class="playerButton toggle"></div>
                     </div>

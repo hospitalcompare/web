@@ -1,27 +1,35 @@
 
 
 // Trigger the tooltip speech bubble
-.helpLink {
+.help-link {
     color: $black;
     position: $absolute;
     border-radius: 50%;
     background: $lightGrey;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 12px;
     text-align: center;
     z-index: 99;
     cursor: pointer;
+
+    &.help-link__inline {
+        position: initial;
+        display: inline-block;
+    }
 }
 .home-page {
-    .helpLink {
-        right: 40px;
-        top: 20px;
+    .box {
+        .help-link {
+            right: 40px;
+            top: 20px;
+        }
     }
 }
 
 .results-page {
-    .helpLink {
+    .help-link {
         top: 0;
         right: 18px;
     }
@@ -29,6 +37,6 @@
 
 
 
-.helpLink:hover + .lightbox {
+.help-link:hover + .lightbox {
   display:block;
 }

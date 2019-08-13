@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Page Test')
+@section('title', 'Test Page')
 
 @section('description', 'this is the meta description')
 
@@ -35,7 +35,12 @@
                 <hr>
                 <h3>Special offer button</h3>
                 @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer mr-2', 'button' => 'Special Offers'])
+                <h3>Special offer button reversed</h3>
+                @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer-reverse mr-2', 'button' => 'Special Offers'])
+                <h3>Enquiry button</h3>
                 @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-enquire enquiry', 'button' => 'Make an enquiry'])
+                <h3>Close button</h3>
+                @include('components.basic.button', ['classTitle' => 'btn btn-close__small btn-teal btn-icon', 'button' => 'Close'])
                 <hr>
                 <h3>Popovers</h3>
                 <a href="#" class="btn btn-blue"
@@ -130,7 +135,7 @@
                             procedure at. Enter your provider and policy name to find the best hospital for you.
                         </p>
                         <p>
-                            <a class="btn btn-teal btn-icon btn-consultant" href="/">Close</a>
+                            <a class="btn btn-close__small btn-teal btn-icon" href="/">Close</a>
                         </p>
                     </div>
                     <div class="arrow arrow-large" style="left: 64px;"></div>

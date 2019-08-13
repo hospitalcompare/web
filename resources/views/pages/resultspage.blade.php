@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Page Test')
+@section('title', 'Results Page')
 
 @section('description', 'this is the meta description')
 
