@@ -92,12 +92,12 @@ $(document).ready(function () {
         //Load the Cookies with the data that we need for the comparison
         var elementId = $(this).attr('id');
         var name = $('#item_name_' + elementId).text();
-        var waitingTime = $('#item_waiting_time_' + elementId).text();
-        var userRating = $('#item_user_rating_' + elementId).text();
-        var opCancelled = $('#item_op_cancelled_' + elementId).text();
-        var qualityRating = $('#item_quality_rating_' + elementId).text();
-        var ffRating = $('#item_ff_rating_' + elementId).text();
-        var nhsFunded = $('#item_nhs_funded_' + elementId).text();
+        var waitingTime = $('#item_waiting_time_' + elementId).html();
+        var userRating = $('#item_user_rating_' + elementId).html();
+        var opCancelled = $('#item_op_cancelled_' + elementId).html();
+        var qualityRating = $('#item_quality_rating_' + elementId).html();
+        var ffRating = $('#item_ff_rating_' + elementId).html();
+        var nhsFunded = $('#item_nhs_funded_' + elementId).html();
         var result = $.grep(data, function (e) {
             return e.id == elementId;
         });
