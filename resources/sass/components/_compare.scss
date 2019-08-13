@@ -61,7 +61,7 @@
 
     .compare-hospitals-content {
         background-color: #fff;
-        display: block !important;
+        display: none;
 
         &.hidden {
             transform: translateY(-100%);
