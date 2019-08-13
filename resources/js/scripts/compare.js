@@ -91,17 +91,18 @@ $(document).ready(function () {
 
         //Load the Cookies with the data that we need for the comparison
         var elementId = $(this).attr('id');
-        var name = $('#item_name_' + elementId).text();
-        var waitingTime = $('#item_waiting_time_' + elementId).text();
-        var userRating = $('#item_user_rating_' + elementId).html();
-        var opCancelled = $('#item_op_cancelled_' + elementId).text();
-        var qualityRating = $('#item_quality_rating_' + elementId).text();
-        var ffRating = $('#item_ff_rating_' + elementId).text();
-        var nhsFunded = $('#item_nhs_funded_' + elementId).html();
+        var name = $('#item_name_' + elementId).text().trim();
+        var waitingTime = $('#item_waiting_time_' + elementId).text().trim();
+        var userRating = $('#item_user_rating_' + elementId).text().trim();
+        var opCancelled = $('#item_op_cancelled_' + elementId).text().trim();
+        var qualityRating = $('#item_quality_rating_' + elementId).text().trim();
+        var ffRating = $('#item_ff_rating_' + elementId).text().trim();
+        var nhsFunded = $('#item_nhs_funded_' + elementId).text().trim();
         var result = $.grep(data, function (e) {
             return e.id == elementId;
         });
 
+        console.log(result)
         //Check if there are already 3 hospitals for comparison in Cookies
         if (compareCount < 3) {
             //Check if we don't have the hospital in our comparison and add it
@@ -110,16 +111,15 @@ $(document).ready(function () {
                     'id': elementId,
                     'name': name,
                     'waitingTime': waitingTime,
-                    'userRating': userRating,
+                    'userRating': JSON.stringify(userRating),
                     'opCancelled': opCancelled,
                     'qualityRating': qualityRating,
                     'ffRating': ffRating,
-                    'nhsFunded': nhsFunded
+                    'nhsFunded': JSON.stringify(nhsFunded)
                 };
                 //Add data to Cookies and send the element to populate the table
                 data.push(element);
                 addHospitalToCompare(element);
-                console.log((element.name));
                 compareCount = parseInt(compareCount) + 1;
                 var countSpan = $('#compare_number');
                 countSpan.text(compareCount);
