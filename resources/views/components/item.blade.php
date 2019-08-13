@@ -4,6 +4,10 @@
             <div class="sortCatItem">
                 <img src="{{ $itemImg }}">
                 <div class="{{$NHSClass}}"><p>{{$fundedText}}</p></div>
+                @if(!empty($specialOffers))
+                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>
+                    @include('components.basic.specialofferslide')
+                @endif
             </div>
             <div class="sortCatItem">
                 <p class="sortItemTitle"
@@ -131,11 +135,8 @@
             </div>
             @if(!empty($specialOffers))
                 <div class="btn-area btn-area-lower">
-                    @include('components.basic.modalbutton', [
-                    'hrefValue'         => $url,
-                    'classTitle'        => 'enquiry btn btn-block btn-icon btn-special-offer btn-plus',
-                    'modalTarget'       => '#hc_modal_special',
-                    'modalContent'       => 'Modal content for special offers',
+                    @include('components.basic.button', [
+                    'classTitle'        => 'toggle-special-offer btn btn-block btn-icon btn-special-offer btn-plus',
                     'button'            => 'Special Offers'])
                 </div>
             @endif

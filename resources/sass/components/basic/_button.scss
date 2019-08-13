@@ -165,7 +165,6 @@
     }
 
     &.btn-green-outline {
-        /* Style for "Rounded Re" */
         height: 32px;
         width: 32px;
         border-radius: 23px;
@@ -175,7 +174,6 @@
         background-repeat: no-repeat;
         background-size: 50%;
         flex: 0 0 32px;
-        //background-color: rgba(27, 112, 243, 0);
         padding: 0;
 
         &.selected {
@@ -187,6 +185,22 @@
             width: 32px;
             height: 32px;
         }
+    }
+    &.btn-green-plus {
+        position: absolute;
+        right: 10px;
+        top: 90px;
+        height: 19px;
+        width: 19px;
+        border-radius: 50%;
+        background-color: $teal;
+        background-image: url('../images/icons/plus-solid.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        flex: 0 0 32px;
+        padding: 0;
+        cursor: pointer;
     }
 
     &.btn-pink {

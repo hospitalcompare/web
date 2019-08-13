@@ -17,6 +17,7 @@ import './scripts/compare';                         // Slider for radius of prox
 // window.Vue = require('vue');                        // Vue.js
 
 // Components
+import './components/basic/specialoffer';           // Toggling special offer slide out
 import './components/basic/video';                  // Video controller
 import './components/basic/range';                  // Slider for radius of proximity on search page
 import './components/basic/popover';                // Trigger bootstrap tooltip
