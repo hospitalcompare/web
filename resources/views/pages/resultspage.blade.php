@@ -166,7 +166,7 @@
                                                                         data-target="#hc_modal_special"
                                                                         data-content="<h1>' . $specialOfferContent = 'hello' . '</h1>"
                                                                         data-dismiss="modal"
-                                                                        class="btn btn-icon btn-special-offer">Special Offers</a>
+                                                                        class="btn btn-icon btn-special-offer-reverse">Special Offers</a>
                                                                 </div>
                                                             </div>
                                                         </div>

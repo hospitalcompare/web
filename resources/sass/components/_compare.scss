@@ -15,14 +15,23 @@
 
         ul {
             list-style: none;
+            padding-left: 190px;
             li {
                 a {
                     display: inline-block;
                     color: $white;
-                    padding: 14px;
+                    padding: 0 12px;
+                    height: 50px;
+                    line-height: 50px;
                     font-size: 18px;
                     font-weight: 400;
                     letter-spacing: -0.9px;
+
+                    &.btn-special-tab {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
                 }
             }
         }
