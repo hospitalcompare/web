@@ -32,7 +32,16 @@ $(document).ready(function () {
      */
     function addHospitalToCompare(element) {
         var target = $('#compare_hospitals_table');
-        var newRowContent = '<tr id="compare_hospital_id_' + element.id + '"><td>' + element.name + '</td><td>' + element.waitingTime + '</td><td>' + element.userRating + '</td><td>' + element.opCancelled + '</td><td>' + element.qualityRating + '</td><td>' + element.ffRating + '</td><td>' + element.nhsFunded + '</td><td class="remove-hospital" id="remove_id_' + element.id + '">Remove</td></tr>';
+        var newRowContent = '<tr id="compare_hospital_id_' + element.id + '">' +
+                                '<td>' + element.name + '</td>' +
+                                '<td>' + element.waitingTime + '</td>' +
+                                '<td>' + element.userRating + '</td>' +
+                                '<td>' + element.opCancelled + '</td>' +
+                                '<td>' + element.qualityRating + '</td>' +
+                                '<td>' + element.ffRating + '</td>' +
+                                '<td>' + element.nhsFunded + '</td>' +
+                                '<td class="remove-hospital" id="remove_id_' + element.id + '">Remove</td>' +
+                            '</tr>';
         target.append(newRowContent);
         //Toggle the full heart or empty heart  class of the button
         $('a#' + element.id + '.compare').addClass('selected');
