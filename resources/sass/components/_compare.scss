@@ -51,16 +51,17 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            transform: rotate(180deg);
             transition: $transition;
 
             &.rotated {
-                transform: rotate(0);
+                transform: rotate(180deg);
             }
         }
     }
 
     .compare-hospitals-content {
+        background-color: #fff;
+        display: block !important;
 
         &.hidden {
             transform: translateY(-100%);
@@ -72,15 +73,17 @@
             max-width: 1220px;
             margin: 0 auto;
             padding: 0 20px;
+        }
 
-            .main-col {
-                width: 340px;
-                padding: 40px 40px 0 0;
-            }
+        .col-inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
 
-            .item-col {
-                //width: 340px;
-                padding: 40px 40px 0 0;
+            .cell {
+                height: 40px;
+                line-height: 40px;
+                overflow: hidden;
             }
         }
     }

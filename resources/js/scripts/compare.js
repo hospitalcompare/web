@@ -31,17 +31,19 @@ $(document).ready(function () {
      * @param element
      */
     function addHospitalToCompare(element) {
-        var target = $('#compare_hospitals_table');
-        var newRowContent = '<tr id="compare_hospital_id_' + element.id + '">' +
-                                '<td>' + element.name + '</td>' +
-                                '<td>' + element.waitingTime + '</td>' +
-                                '<td>' + element.userRating + '</td>' +
-                                '<td>' + element.opCancelled + '</td>' +
-                                '<td>' + element.qualityRating + '</td>' +
-                                '<td>' + element.ffRating + '</td>' +
-                                '<td>' + element.nhsFunded + '</td>' +
-                                '<td class="remove-hospital" id="remove_id_' + element.id + '">Remove</td>' +
-                            '</tr>';
+        var target = $('#compare_hospitals_grid');
+        var newRowContent = '<div class="col-3 text-center" id="compare_hospital_id_' + element.id + '">' +
+                                '<div class="col-inner">' +
+                                    '<div class=""><img src="images/alder-1.png"><div class="remove-hospital" id="remove_id_' + element.id + '">Remove</div></div>' +
+                                    '<div class="cell">' + element.name + '</div>' +
+                                    '<div class="cell">' + element.waitingTime + '</div>' +
+                                    '<div class="cell">' + element.userRating + '</div>' +
+                                    '<div class="cell">' + element.opCancelled + '</div>' +
+                                    '<div class="cell">' + element.qualityRating + '</div>' +
+                                    '<div class="cell">' + element.ffRating + '</div>' +
+                                    '<div class="cell">' + element.nhsFunded + '</div>' +
+                                '</div>' +
+                            '</div>';
         target.append(newRowContent);
         //Toggle the full heart or empty heart  class of the button
         $('a#' + element.id + '.compare').addClass('selected');
