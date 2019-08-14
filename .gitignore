@@ -15,4 +15,3 @@ composer.lock
 /public/fonts/
 /public/js/
 /public/video/
-webpack.mix.js

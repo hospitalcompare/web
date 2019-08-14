@@ -55,7 +55,7 @@ mix.browserSync({
         'resources/views/**/*.blade.php'
     ],
     logSnippet: true,
-    proxy: 'localhost',
+    proxy: process.env.APP_URL,
     port: 8080
 });
 

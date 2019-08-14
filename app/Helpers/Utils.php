@@ -234,4 +234,34 @@ class Utils
 
         return $value;
     }
+
+    /**
+     * Generates HTML code based on a given rating ( between 0 - 5 )
+     *
+     * @param $rating
+     * @return string
+     */
+    public static function getHtmlStars($rating) {
+        // round down to get number of whole stars needed
+        $wholeStars = floor($rating);
+
+        // double, round, take modulo.
+        // this will be 1 if you have a half-rating, 0 if not.
+        $halfStar = round($rating * 2) % 2;
+
+        // this will hold your html markup
+        $html = "";
+
+        // write img tags for each whole star
+        for ($i = 0; $i < $wholeStars; $i++) {
+            $html .= "<img src='../images/icons/star.svg' alt='Whole Star'>";
+        }
+
+        // write img tag for half star if needed
+        if ($halfStar) {
+            $html .= "<img src='../images/icons/half.svg' alt='Half Star'>";
+        }
+
+        return $html;
+    }
 }

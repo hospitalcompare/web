@@ -10,11 +10,7 @@
                 @endif
             </div>
             <div class="sortCatItem">
-                <p class="sortItemTitle"
-                    @if(!empty($id))
-                        id="item_name_{{$id}}"
-                    @endif
-                >
+                <p class="sortItemTitle" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
                 <p class="sortItemLocation">{{$location}}</p>
@@ -28,11 +24,8 @@
         </div>
         <div class="sortCatSection2">
             {{-- Waiting time --}}
-            <div class="sortCatSection2Child"
-                 @if(!empty($id))
-                    id="item_waiting_time_{{$id}}"
-                @endif
-            ><p
+            <div class="sortCatSection2Child" id="item_waiting_time_{{$id}}">
+                <p
                 @include('components.basic.popover', [
                     'content' => 'For private self-pay waiting time click <a class="link" href="/">here</a>',
                     'html' => 'true'])>
@@ -40,10 +33,7 @@
                 </p>
             </div>
             {{-- End waiting time --}}
-            <div class="sortCatSection2Child"
-                @if(!empty($id))
-                    id="item_user_rating_{{$id}}"
-                @endif >
+            <div class="sortCatSection2Child" id="item_user_rating_{{$id}}">
                 <p @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
@@ -74,28 +64,19 @@
                 </p>
             </div>
             {{-- % operations cancelled --}}
-            <div class="sortCatSection2Child"
-                 @if(!empty($id))
-                     id="item_op_cancelled_{{$id}}"
-                @endif >
+            <div class="sortCatSection2Child" id="item_op_cancelled_{{$id}}">
                 <p
                     @include('components.basic.popover', [
                     'content' => 'National average is 3.35%'])>
                     {{$opCancelled}}
                 </p>
             </div>
-            <div class="sortCatSection2Child"
-                 @if(!empty($id))
-                     id="item_quality_rating_{{$id}}"
-                @endif >
+            <div class="sortCatSection2Child" id="item_quality_rating_{{$id}}">
                 {{$qualityRating}}
             </div>
 
             {{-- Friends and family --}}
-            <div class="sortCatSection2Child"
-                 @if(!empty($id))
-                 id="item_ff_rating_{{$id}}"
-                @endif >
+            <div class="sortCatSection2Child" id="item_ff_rating_{{$id}}">
                 <p  class="m-0"
                     @include('components.basic.popover', [
                         'placement' => 'bottom',
@@ -104,17 +85,12 @@
                         'content' => 'Some paragraph text'])>
                     {{$FFRating}}</p>
             </div>
-            <div class="sortCatSection2Child"
-                 @if(!empty($id))
-                id="item_nhs_funded_{{$id}}"
-                @endif
-            >
+            <div class="sortCatSection2Child" id="item_nhs_funded_{{$id}}">
                 {!! $NHSFunded  !!}
             </div>
         </div>
         <div class="sortCatSection3 d-flex flex-column justify-content-center">
             <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between" @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
-{{--                <p>{{$NHSClass}}</p>--}}
             @if($NHSClass == 'privateHospital')
                     @include('components.basic.button', [
                     'hrefValue' => $url,
