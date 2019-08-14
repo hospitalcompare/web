@@ -16,6 +16,7 @@ const webpack = require('webpack');
 //Copy all the images that are used on the Web Application to the right folder ( public/images )
 mix.copyDirectory('resources/images', 'public/images');
 mix.copyDirectory('resources/video', 'public/video');
+mix.copyDirectory('resources/fonts', 'public/fonts');
 
 mix.webpackConfig({
     devtool: "inline-source-map",
