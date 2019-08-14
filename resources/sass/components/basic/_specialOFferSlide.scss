@@ -11,6 +11,7 @@
     transition: $transition;
     opacity: 0;
     pointer-events: none;
+    border-radius: 0 10px 10px 10px;
 
     &.show {
         transform: translate3d(0, 0, 0);
@@ -33,5 +34,33 @@
         opacity: 1;
         transform: translate(50%, -50%) rotate(-45deg);
 
+    }
+
+    ul {
+        width: 80%;
+
+        li {
+            list-style: none;
+            font-size: 13px;
+            line-height: 2;
+            font-weight: 400;
+            letter-spacing: -0.65px;
+            position: relative;
+            padding-left: 30px;
+
+            &:before {
+                content: url("/images/icons/circle-check.svg");
+                width: 20px;
+                height: 20px;
+                @include v-c;
+                left: 0;
+            }
+        }
+    }
+}
+
+.test-page {
+    .special-offers-slide {
+        position: static;
     }
 }

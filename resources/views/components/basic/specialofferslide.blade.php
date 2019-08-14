@@ -1,4 +1,4 @@
-<div class="special-offers-slide" >
+<div class="special-offers-slide {{ $class }}" >
     <div class="container-fluid">
         <div class="row">
             <button type="button" class="close toggle-special-offer position-absolute" data-dismiss="modal"
@@ -17,8 +17,8 @@
                 </ul>
             </div>
             <div class="col-3">
-                <a class="btn btn-enquire btn-icon">Make an enquiry</a>
-                <img src="images/bupa.png" alt="">
+                <img width="100px" height="50px" class="mb-3" src="images/bupa.png" alt="">
+                <a class="btn btn-enquire-pink btn-icon">Make an enquiry</a>
             </div>
         </div>
     </div>

@@ -53,6 +53,4 @@
     </nav>
 </footer>
 
-@include('components.compare')
-@include('components.modalenquire')
-@include('components.modalspecial')
+

@@ -195,4 +195,10 @@
         @endif
     </div>
 
+    {{--  Compare bar  --}}
+    @include('components.compare')
+    {{--  Modal for 'make an enquiry'  --}}
+    @include('components.modalenquire')
+    {{--  Modal for special offers  --}}
+    @include('components.modalspecial')
 @endsection

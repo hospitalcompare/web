@@ -220,7 +220,7 @@
                 </div>
                 <hr>
                 <h1>Special offers slide out</h1>
-                @include('components.basic.specialofferslide')
+                @include('components.basic.specialofferslide', ['class' => 'show'])
             </div>
         </div>
     </main>
