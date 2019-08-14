@@ -22,7 +22,7 @@ $(document).ready(function () {
         var countSpan = $('#compare_number');
         countSpan.text(compareCount);
     } else {
-        compareBar.slideUp();
+        // compareBar.slideUp();
     }
 
     /**
@@ -66,13 +66,14 @@ $(document).ready(function () {
         });
         compareCount = parseInt(compareCount) - 1;
 
+        // Slide content down when all data removed
+        if(compareCount === 0){
+            $('.compare-hospitals-bar .compare-hospitals-content').slideUp();
+            $('.compare-arrow').toggleClass('rotated');
+        }
+
         var countSpan = $('#compare_number');
         countSpan.text(compareCount);
-
-        //Hide the Compare Bar if there is no Hospital to compare
-        if (compareCount < 1) {
-            compareBar.slideUp();
-        }
 
         //Reset compareCount and compareHospitalsData
         Cookies.set("compareCount", 0, -1);
@@ -102,7 +103,6 @@ $(document).ready(function () {
             return e.id == elementId;
         });
 
-        console.log(result)
         //Check if there are already 3 hospitals for comparison in Cookies
         if (compareCount < 3) {
             //Check if we don't have the hospital in our comparison and add it
@@ -127,6 +127,7 @@ $(document).ready(function () {
         }
 
         //Check if we have to remove the data of the element that has been clicked
+
         if (result.length === 1) {
             //Remove the hospital from the comparison table
             removeHospitalFromCompare(elementId, data, compareCount);
@@ -134,6 +135,12 @@ $(document).ready(function () {
                 return e.id != elementId;
             });
             compareCount = parseInt(compareCount) - 1;
+        }
+
+        // Slide content down when all data removed
+        if(compareCount === 0){
+            $('.compare-hospitals-bar .compare-hospitals-content').slideUp();
+            $('.compare-arrow').toggleClass('rotated');
         }
 
         //Reset compareCount and compareHospitalsData
@@ -157,7 +164,10 @@ $(document).ready(function () {
 
     //Set the Onclick event for the Comparison Header
     $(document).on("click touchend", ".compare-hospitals-bar .compare-button-title", function () {
-        $('.compare-hospitals-bar .compare-hospitals-content').slideToggle();
-        $('.compare-arrow').toggleClass('rotated');
+        var compareCount = parseInt(Cookies.get("compareCount"));
+        if(compareCount > 0){
+            $('.compare-hospitals-bar .compare-hospitals-content').slideToggle();
+            $('.compare-arrow').toggleClass('rotated');
+        }
     });
 });

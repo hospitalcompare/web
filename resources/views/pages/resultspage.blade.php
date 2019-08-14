@@ -50,7 +50,7 @@
                     </div>
                     <div class="submit-section">
                         <div class="postProxChild">
-                            @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-teal btn-s d-block', 'button' => 'Update Results'])
+                            @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-teal btn-s d-block btn-submit-results', 'button' => 'Update Results'])
                         </div>
                     </div>
                 </div>
