@@ -40,7 +40,7 @@
     </section>
 </div>
 
-<footer class="mainFooter">
+<footer class="footer">
     <nav class="footerCreds">
         <ul class="credLinks">
             <li><a href="">T&Cs</a></li>
