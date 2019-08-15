@@ -24,7 +24,6 @@
     &.modal-enquire {
 
         .modal-copy {
-            /* Style for "Loem ipsu" */
             font-size: 16px;
             font-weight: 400;
             letter-spacing: -0.8px;
@@ -52,5 +51,24 @@
         }
     }
 
+    // Private hospital enquiry
+    &.modal-enquire-form {
+        .modal-copy {
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: -0.8px;
+            line-height: 19.2px;
+        }
+
+        .modal-dialog {
+            width: 100%;
+            max-width: 820px;
+        }
+
+        .modal-content {
+            background-color: $teal;
+
+        }
+    }
 }
 

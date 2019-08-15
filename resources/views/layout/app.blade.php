@@ -30,6 +30,10 @@
         @include('components.modalspecial')
         {{--  Modal for special offers  --}}
         @include('components.modalenquireprivate')
+
+        <div id="result">
+
+        </div>
     </body>
 
 </html>
