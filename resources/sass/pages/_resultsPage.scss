@@ -29,7 +29,7 @@
 
     // Shared style for selects on results page
 
-    .selectParent {
+    .select-parent {
         position: relative;
         width: 100%;
 
@@ -314,9 +314,12 @@
         border-top: solid 30px transparent;
     }
 
-    .NHSHospital, .privateHospital {
+    .NHSHospital,
+    .privateHospital {
+        text-align: center;
+
         p {
-            transform: rotate(130deg);
+            transform: rotate(135deg);
             position: relative;
             color: #ffffff;
             left: 20px;

@@ -5,7 +5,7 @@
                 <img src="{{ $itemImg }}">
                 <div class="{{$NHSClass}}"><p>{{$fundedText}}</p></div>
                 @if(!empty($specialOffers))
-                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>
+{{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
                     @include('components.basic.specialofferslide', ['class' => 'default'])
                 @endif
             </div>
@@ -94,6 +94,7 @@
             @if($NHSClass == 'privateHospital')
                     @include('components.basic.modalbutton', [
                     'hrefValue'         => $url,
+                    'hospitalTitle'     => $d['title'],
                     'modalTarget'       => '#hc_modal_enquire_private',
                     'classTitle'        => 'btn btn-icon btn-enquire enquiry mr-2 btn-block',
                     'target'            => 'blank',
@@ -102,7 +103,7 @@
                     @include('components.basic.modalbutton', [
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $d['title'],
-                    'hospitalUrl'       => $d['title'],
+                    'hospitalUrl'       => $d['url'],
                     'classTitle'        => 'btn btn-icon btn-enquire enquiry mr-2 btn-block',
                     'button'            => $btnText,
                     'modalTarget'       => '#hc_modal',

@@ -53,11 +53,8 @@
 
     // Private hospital enquiry
     &.modal-enquire-form {
-        .modal-copy {
-            font-size: 16px;
-            font-weight: 400;
-            letter-spacing: -0.8px;
-            line-height: 19.2px;
+        .modal-inner {
+            padding: 16px 55px 25px 55px;
         }
 
         .modal-dialog {
@@ -67,7 +64,13 @@
 
         .modal-content {
             background-color: $teal;
+        }
 
+        // Force it to show on test page
+        .test-page & {
+            display: block !important;
+            position: initial;
+            z-index: 1070;
         }
     }
 }

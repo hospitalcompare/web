@@ -1,0 +1,132 @@
+input,
+button,
+select,
+optgroup,
+textarea {
+    margin: 0;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+//SELECTBOX
+.select-parent {
+    position: relative;
+
+    select {
+        width: 100%;
+        background-color: $white;
+    }
+
+    label {
+        color: #1c1c1c;
+        font-weight: 500;
+    }
+}
+
+.flex-select {
+    @include flex;
+}
+
+.select-box {
+    color: $darkerGrey;
+    @include flexBasis;
+    position: relative;
+    left: 40px;
+    top: 10px;
+}
+
+input:not([type="range"]):not([type="submit"]),
+select {
+    border: 2px solid #ebebeb; /*Removes border*/
+    border-radius: 10px;
+    appearance: none;
+    color: $darkerGrey;
+    background-color: $white;
+    //text-indent: 0.01px; /* Removes default arrow from firefox*/
+    //text-overflow: "";  /*Removes default arrow from firefox*/
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select-wrapper {
+    padding-left: 0px;
+    overflow: hidden;
+}
+
+// Homepage banner form
+.box {
+    select,
+    input {
+        //padding-left: 16px;
+    }
+
+    input:not([type="submit"]) {
+        width: 100%;
+        @include placeholder {
+            color: $darkerGrey;
+        }
+    }
+}
+
+// Half width selects on homepage
+
+.select_half-width {
+    justify-content: space-between;
+
+    label {
+        text-align: left;
+        @include font-standard;
+    }
+
+    select {
+        flex: 0 0 50%;
+        padding: 12px 100px 12px 16px;
+        @include font-standard;
+    }
+
+    &:after {
+        //font-size: 10px;
+        //color: red;
+        content: url('../images/icons/chevron-down.svg');
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        border-radius: 0 10px 10px 0;
+        border: 2px solid #ebebeb;
+        background-color: #ebebeb;
+        pointer-events: none;
+    }
+
+    + .helpParent {
+        .helpLink {
+            right: 240px;
+            top: 10px;
+        }
+    }
+}
+
+
+// Submit private enquiry form
+
+#enquiry_form {
+    input,
+    select {
+        height: 44px;
+        line-height: 44px;
+        border-radius: 10px;
+        border: 2px solid #ebebeb;
+        background-color: #ffffff;
+        margin-bottom: 15px;
+    }
+}
+

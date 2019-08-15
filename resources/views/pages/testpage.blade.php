@@ -260,8 +260,8 @@
                     </option>
                 </select>
                 <h4>Styled select</h4>
-                <div class="selectParent  ">
-                    <label class="_selectBox sortLabel" for="">
+                <div class="select-parent  ">
+                    <label class="_select-box sortLabel" for="">
                         Sort by:
                     </label>
                     <select class="searchPageSelect" id="" name="sort_by">
@@ -289,7 +289,7 @@
                 </div>
                 <hr>
                 <h3>Enquiry Form</h3>
-                @include('components.privateenquiryform')
+                @include('components.modalenquireprivate', ['forceshow' => true])
             </div>
         </div>
     </main>
