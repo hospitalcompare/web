@@ -191,6 +191,25 @@
                         </p>
                         <span title="Sort by this column" class="sort-arrow"></span>
                     </li>
+                    <li>
+                        <p>
+                            Private<br>Self Pay&nbsp;
+                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                                @include('components.basic.popover', [
+                                'size'      => 'large',
+                                'placement' => 'top',
+                                'trigger'   => 'focus',
+                                'html'      => 'true',
+                                'content'   => '<p class="bold mb-0">
+                                                    What is Private Self Pay?
+                                                </p>
+                                                <p>
+                                                    Many private healthcare policies allow you to pay for the procedure that you want
+                                                </p>'])>?</a>
+
+                        </p>
+                        <span title="Sort by this column" class="sort-arrow"></span>
+                    </li>
                 </ul>
             </nav>
             <div class="sortCatSection3 pt-2"></div>
@@ -206,12 +225,13 @@
                     'title'             => $d['name'],
                     'location'          => (!empty($d['address']['address_1']) ? $d['address']['address_1']: '').(!empty($d['radius']) ? ', '.$d['radius']. ' miles from location': ''),
                     'findLink'          => 'Find on map',
-                    'waitTime'          => !empty($d['waitingTime'][0]['avg_waiting_weeks']) ? $d['waitingTime'][0]['avg_waiting_weeks'].' Weeks' : 'N/A',
-                    'stars'             => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\Utils::getHtmlStars($d['rating']['avg_user_rating']) : 'N/A',
-                    'opCancelled'       => !empty($d['cancelledOp']['perc_cancelled_ops'])? $d['cancelledOp']['perc_cancelled_ops'].'%': 'N/A',
-                    'qualityRating'     => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : 'N/A',
-                    'FFRating'          => !empty($d['rating']['provider_rating']) ? $d['rating']['provider_rating'] : 'N/A',
-                    'NHSFunded'         => ($d['hospital_type_id'] == 1 && !empty($d['waitingTime'])) ? "<img src='../images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
+                    'waitTime'          => !empty($d['waitingTime'][0]['avg_waiting_weeks']) ? $d['waitingTime'][0]['avg_waiting_weeks'].' Weeks' : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
+                    'stars'             => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\Utils::getHtmlStars($d['rating']['avg_user_rating']) : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
+                    'opCancelled'       => !empty($d['cancelledOp']['perc_cancelled_ops'])? $d['cancelledOp']['perc_cancelled_ops'].'%': "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
+                    'qualityRating'     => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
+                    'FFRating'          => !empty($d['rating']['provider_rating']) ? $d['rating']['provider_rating'] : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
+                    'NHSFunded'         => ($d['hospital_type_id'] == 1 && !empty($d['waitingTime'][0])) ? "<img src='../images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
+                    'privateSelfPay'    => $d['hospital_type_id'] == 1 ? "<img src='../images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'specialOffers'     => $d['special_offers'],
                     'btnText'           => !empty($d['special_offers']) ? 'NHS Funded Enquiry' : 'Make an enquiry',
                     'NHSClass'          => $d['hospital_type_id'] == 2 ? 'NHSHospital' : 'privateHospital',

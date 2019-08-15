@@ -237,11 +237,11 @@ class Hospital extends Model
                 if($qualityRating == 1)
                     $q->whereIn('latest_rating', ['Outstanding']);
                 elseif($qualityRating == 2)
-                    $q->whereIn('latest_rating', ['Good', 'Outstanding']);
+                    $q->whereIn('latest_rating', ['Outstanding', 'Good']);
                 elseif($qualityRating == 3)
-                    $q->whereIn('latest_rating', ['Good', 'Outstanding', 'Inadequate']);
+                    $q->whereIn('latest_rating', ['Outstanding', 'Good', 'Inadequate']);
                 elseif($qualityRating == 4)
-                    $q->whereIn('latest_rating', ['Good', 'Outstanding', 'Inadequate', 'Requires improvement']);
+                    $q->whereIn('latest_rating', ['Outstanding', 'Good', 'Inadequate', 'Requires improvement']);
             });
         }
 
@@ -265,7 +265,6 @@ class Hospital extends Model
                 $hospitals = $hospitals->join('hospital_waiting_time', 'hospitals.id', '=', 'hospital_waiting_time.hospital_id');
                 $hospitals = $hospitals->where('hospital_waiting_time.specialty_id', $specialtyId);
                 if($sortBy == 2)
-//                    $hospitals = $hospitals->orderBy('hospital_waiting_time.avg_waiting_weeks', 'ASC');
                     $hospitals = $hospitals->orderByRaw('ISNULL(hospital_waiting_time.avg_waiting_weeks), hospital_waiting_time.avg_waiting_weeks ASC');
                 else
                     $hospitals = $hospitals->orderByRaw('ISNULL(hospital_waiting_time.avg_waiting_weeks), hospital_waiting_time.avg_waiting_weeks DESC');
@@ -273,10 +272,41 @@ class Hospital extends Model
         } elseif (in_array($sortBy, [4, 5])) {
             $hospitals = $hospitals->join('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
             if($sortBy == 4)
-//                $hospitals = $hospitals->orderBy('hospital_ratings.avg_user_rating', 'ASC');
                 $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.avg_user_rating), hospital_ratings.avg_user_rating ASC');
             else
                 $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.avg_user_rating), hospital_ratings.avg_user_rating DESC');
+        } elseif (in_array($sortBy, [6, 7])) {
+            $hospitals = $hospitals->join('hospital_cancelled_ops', 'hospitals.id', '=', 'hospital_cancelled_ops.hospital_id');
+            if($sortBy == 6)
+                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_cancelled_ops.perc_cancelled_ops), hospital_cancelled_ops.perc_cancelled_ops ASC');
+            else
+                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_cancelled_ops.perc_cancelled_ops), hospital_cancelled_ops.perc_cancelled_ops DESC');
+        } elseif (in_array($sortBy, [8, 9])) {
+            $hospitals = $hospitals->join('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
+            if($sortBy == 8)
+                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 4 when hospital_ratings.latest_rating = "Good" then 3 when hospital_ratings.latest_rating = "Inadequate" then 2 when hospital_ratings.latest_rating = "Requires improvement" then 1 end');
+            else
+                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 1 when hospital_ratings.latest_rating = "Good" then 2 when hospital_ratings.latest_rating = "Inadequate" then 3 when hospital_ratings.latest_rating = "Requires improvement" then 4 end');
+        } elseif (in_array($sortBy, [10, 11])) {
+            $hospitals = $hospitals->join('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
+            if($sortBy == 10)
+                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.provider_rating), case when hospital_ratings.provider_rating = "Outstanding" then 4 when hospital_ratings.provider_rating = "Good" then 3 when hospital_ratings.provider_rating = "Inadequate" then 2 when hospital_ratings.provider_rating = "Requires improvement" then 1 end');
+            else
+                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.provider_rating), case when hospital_ratings.provider_rating = "Outstanding" then 1 when hospital_ratings.provider_rating = "Good" then 2 when hospital_ratings.provider_rating = "Inadequate" then 3 when hospital_ratings.provider_rating = "Requires improvement" then 4 end');
+        } elseif (in_array($sortBy, [12, 13])) {
+            if(!empty($specialtyId)) {
+                $hospitals = $hospitals->join('hospital_waiting_time', 'hospitals.id', '=', 'hospital_waiting_time.hospital_id');
+                $hospitals = $hospitals->where('hospital_waiting_time.specialty_id', $specialtyId);
+                if ($sortBy == 12)
+                    $hospitals = $hospitals->orderByRaw(' hospital_waiting_time.avg_waiting_weeks IS NOT NULL ASC, hospital_waiting_time.avg_waiting_weeks ASC');
+                else
+                    $hospitals = $hospitals->orderByRaw(' hospital_waiting_time.avg_waiting_weeks IS NULL ASC, hospital_waiting_time.avg_waiting_weeks ASC');
+            }
+        } elseif (in_array($sortBy, [14, 15])) {
+            if($sortBy == 14)
+                $hospitals = $hospitals->orderByRaw('hospitals.hospital_type_id DESC');
+            else
+                $hospitals = $hospitals->orderByRaw('hospitals.hospital_type_id ASC');
         }
 
         $hospitals = $hospitals->paginate(10);
