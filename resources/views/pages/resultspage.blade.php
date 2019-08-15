@@ -93,9 +93,11 @@
                                                     Many private healthcare policies allow you to choose which hospital to have your elective
                                                     procedure at. Enter your provider and policy name to find the best hospital for you.
                                                 </p>'])>?</a>
-                        </p></li>
+                        </p>
+                        <span title="Sort by this column" class="sort-arrow"></span>
+                    </li>
                     <li>
-                        <p>NHS Choices User Rating&nbsp;
+                        <p>NHS Choices <br> User Rating&nbsp;
                             <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
@@ -110,6 +112,7 @@
                                                     procedure at. Enter your provider and policy name to find the best hospital for you.
                                                 </p>'])>?</a>
                         </p>
+                        <span title="Sort by this column" class="sort-arrow"></span>
                     </li>
                     <li>
                         <p>
@@ -128,6 +131,7 @@
                                                     procedure at. Enter your provider and policy name to find the best hospital for you.
                                                 </p>'])>?</a>
                         </p>
+                        <span title="Sort by this column" class="sort-arrow"></span>
                     </li>
                     <li>
                         <p>
@@ -146,6 +150,7 @@
                                                     procedure at. Enter your provider and policy name to find the best hospital for you.
                                                 </p>'])>?</a>
                         </p>
+                        <span title="Sort by this column" class="sort-arrow"></span>
                     </li>
                     <li>
                         <p>
@@ -164,6 +169,7 @@
                                                     procedure at. Enter your provider and policy name to find the best hospital for you.
                                                 </p>'])>?</a>
                         </p>
+                        <span title="Sort by this column" class="sort-arrow"></span>
                     </li>
                     <li>
                         <p>
@@ -183,6 +189,7 @@
                                                 </p>'])>?</a>
 
                         </p>
+                        <span title="Sort by this column" class="sort-arrow"></span>
                     </li>
                 </ul>
             </nav>
