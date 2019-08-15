@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use App\Helpers\Errors;
 use App\Helpers\Utils;
 use App\Models\Address;
+use App\Models\Enquiry;
 use App\Models\Hospital;
 use App\Models\HospitalType;
 use App\Models\Trust;
@@ -68,6 +69,10 @@ class ApiController {
             }
         }
 
+        //Update the Hospitals with special offers
+        //TODO: Remove this when the actual special offers are decided
+        \DB::statement('UPDATE hospitals SET special_offers = 1 WHERE hospital_type_id = 2 AND id % 3 = 0');
+
         return $returnedData;
     }
 
@@ -126,6 +131,54 @@ class ApiController {
 
         $this->returnedData['success']              = true;
         $this->returnedData['data']['hospitals']    = $hospitals;
+
+        return $this->returnedData;
+    }
+
+    /**
+     * Creates an Enquiry based on the given inputs: specialty_id (can be null/empty), hospital_id, title, first_name, last_name, email, date_of_birth, additional_information
+     *
+     * @return array
+     */
+    public function enquiry() {
+        //Get the request and load it as variables
+        $request               = \Request::all();
+        $specialtyId           = !empty($request['specialty_id']) ?$request['specialty_id'] : null;
+        $hospitalId            = $request['hospital_id'];
+        $title                 = $request['title'];
+        $firstName             = $request['first_name'];
+        $lastName              = $request['last_name'];
+        $email                 = $request['email'];
+        $phoneNumber           = $request['phone_number'];
+        $postcode              = $request['postcode'];
+        $dob                   = $request['date_of_birth'];
+        $additionalInformation = $request['additional_information'];
+
+        //Check if we have the required variables
+        $required = ['hospitalId', 'title', 'firstName', 'lastName', 'email', 'phoneNumber','postcode', 'dob'];
+        foreach($required as $req) {
+            if(empty($$req)){
+                $this->returnedData['error'] = 'Please supply the value:'.$req;
+                Errors::generateError($this->returnedData);
+            }
+        }
+        //TODO: Validate the date_of_birth + email + phone_number + postcode
+        //We can create the actual Enquiry if it reaches here
+        $enquiry = new Enquiry();
+        $enquiry->specialty_id              = $specialtyId;
+        $enquiry->hospital_id               = $hospitalId;
+        $enquiry->title                     = $title;
+        $enquiry->first_name                = $firstName;
+        $enquiry->last_name                 = $lastName;
+        $enquiry->email                     = $email;
+        $enquiry->phone_number              = $phoneNumber;
+        $enquiry->postcode                  = $postcode;
+        $enquiry->date_of_birth             = $dob;
+        $enquiry->additional_information    = $additionalInformation;
+        $enquiry->save();
+
+        $this->returnedData['success']  = true;
+        $this->returnedData['data']     = $enquiry;
 
         return $this->returnedData;
     }
