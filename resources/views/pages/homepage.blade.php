@@ -21,12 +21,46 @@
 
                             <div class="formChild fullLeft">
                                 @include('components.basic.selectbox', ['selectClass'=> 'big', 'options' => $data['procedures'], 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'placeholder'=>'Choose your procedure (if known)', 'name'=> 'procedure_id'])
-                                @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'Procedures list', 'lightBoxClass' => 'lightboxAdjust'])
+                                <a tabindex="0" data-offset="30px, 40px"
+                                   class="help-link"
+                                    @include('components.basic.popover', [
+                                    'dismissible'   => true,
+                                    'placement'      => 'top',
+                                    'size'           => 'large',
+                                    'html'           => 'true',
+                                    'trigger'        => 'focus',
+                                    'content'        => '<p class="bold mb-0">
+                                                     Choose your procedure
+                                                 </p>
+                                                 <p>
+                                                     Please choose the procedure if you know it
+                                                 </p>
+                                                 <p>
+                                                     <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
+                                                 </p>'])
+                                >?</a>
                             </div>
 
                             <div class="formChild fullLeft">
                                 @include('components.basic.textbox', ['placeholder' => 'Enter postcode', 'className' => 'postcode-text-box big', 'value' => '', 'name' => 'postcode', 'id' => 'input_postcode'])
-                                @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'textBox1', 'lightBoxClass' => 'lightboxAdjust'])
+                                <a tabindex="0" data-offset="30px, 40px"
+                                   class="help-link"
+                                    @include('components.basic.popover', [
+                                    'dismissible'   => true,
+                                    'placement'      => 'top',
+                                    'size'           => 'large',
+                                    'html'           => 'true',
+                                    'trigger'        => 'focus',
+                                    'content'        => '<p class="bold mb-0">
+                                                     Postcode
+                                                 </p>
+                                                 <p>
+                                                     Please enter your postcode for a refined search
+                                                 </p>
+                                                 <p>
+                                                     <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
+                                                 </p>'])
+                                >?</a>
                                 <div class="postcode-autocomplete-cont">
                                     <div class="ajax-box"></div>
                                 </div>
@@ -40,7 +74,24 @@
                                         ['id'=>20, 'name'=>'Up to 20 miles'],
                                         ['id'=>10, 'name'=>'Less than 10 miles']],
                                      'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'How far would you like to travel?', 'chevronFAClassName' => '', 'name'=>'radius'])
-                                @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => '', 'lightBoxClass' => 'lightboxAdjust'])
+                                <a tabindex="0" data-offset="30px, 40px"
+                                   class="help-link"
+                                    @include('components.basic.popover', [
+                                    'dismissible'   => true,
+                                    'placement'      => 'top',
+                                    'size'           => 'large',
+                                    'html'           => 'true',
+                                    'trigger'        => 'focus',
+                                    'content'        => '<p class="bold mb-0">
+                                                     Distance
+                                                 </p>
+                                                 <p>
+                                                     Please enter your distance. This is based on the postcode provided
+                                                 </p>
+                                                 <p>
+                                                     <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
+                                                 </p>'])
+                                >?</a>
                             </div>
 
                             <div class="formChild fullLeft d-none">

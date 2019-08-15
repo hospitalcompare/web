@@ -8,5 +8,5 @@
            max="{{$max}}"
            value="{{$value}}"
            step="{{$step}}">
-    <div class="currentRadius range-slider__value">Max. {{ $value }} Miles</div>
+    <div class="currentRadius range-slider__value">{{ $value }} Miles</div>
 </div>

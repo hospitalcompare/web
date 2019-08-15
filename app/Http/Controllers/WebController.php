@@ -51,7 +51,7 @@ class WebController extends BaseController
         $sortBy         = $request['sort_by'] ?? '';
 
         $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $sortBy);
-//        dd($hospitals->toArray()['data'][0]);
+//        dd($hospitals->toArray()['data']);
         $sortBys    = Utils::sortBys;
         $procedures = Procedure::all()->toArray();
         //Add the option to view all procedures ( id = 0 )
