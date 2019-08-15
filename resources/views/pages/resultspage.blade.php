@@ -27,25 +27,110 @@
                     <div class="filter-section">
                         <div class="postProxChild">
                             @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['filters']['procedures'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Surgery Type', 'name'=>'procedure_id', 'resultsLabel' => 'resultsLabel'])
-                            @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'surgery type...', 'className' => 'helpPosition1'])
+                            <a tabindex="0" data-offset="30px, 40px"
+                               class="help-link"
+                                @include('components.basic.popover', [
+                                'dismissible'   => true,
+                                'placement'      => 'top',
+                                'size'           => 'large',
+                                'html'           => 'true',
+                                'trigger'        => 'focus',
+                                'content'        => '<p class="bold mb-0">
+                                                 Surgery Type
+                                             </p>
+                                             <p>
+                                                 Please enter your procedure (if known)
+                                             </p>
+                                             <p>
+                                                 <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
+                                             </p>'])
+                            >?</a>
                         </div>
                         <div class="postProxChild">
                             {{--                            @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'searchPageSelect', 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'placeholder' => 'Waiting time', 'resultsLabel' => 'resultsLabel'])--}}
                             @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['filters']['waitingTimes'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect', 'placeholder'=>'Waiting time', 'name'=>'waiting_time', 'resultsLabel' => 'resultsLabel'])
-                            @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'waiting time...', 'className' => 'helpPosition2'])
+                            <a tabindex="0" data-offset="30px, 40px"
+                               class="help-link"
+                                @include('components.basic.popover', [
+                                'dismissible'   => true,
+                                'placement'      => 'top',
+                                'size'           => 'large',
+                                'html'           => 'true',
+                                'trigger'        => 'focus',
+                                'content'        => '<p class="bold mb-0">
+                                                 Waiting Time
+                                             </p>
+                                             <p>
+                                                 Filter by Waiting Times
+                                             </p>
+                                             <p>
+                                                 <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
+                                             </p>'])
+                            >?</a>
                         </div>
                         <div class="postProxChild">
                             {{--                            @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'searchPageSelect', 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'placeholder' => 'NHS choices user rating', 'resultsLabel' => 'resultsLabel'])--}}
                             @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['filters']['userRatings'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect', 'placeholder'=>'NHS Choices User Rating', 'name'=>'user_rating', 'resultsLabel' => 'resultsLabel'])
-                            @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'NHS choices...', 'className' => 'helpPosition3'])
+                            <a tabindex="0" data-offset="30px, 40px"
+                               class="help-link"
+                                @include('components.basic.popover', [
+                                'dismissible'   => true,
+                                'placement'      => 'top',
+                                'size'           => 'large',
+                                'html'           => 'true',
+                                'trigger'        => 'focus',
+                                'content'        => '<p class="bold mb-0">
+                                                 NHS Choice User Rating
+                                             </p>
+                                             <p>
+                                                 Filter by NHS Choice User Rating
+                                             </p>
+                                             <p>
+                                                 <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
+                                             </p>'])
+                            >?</a>
                         </div>
                         <div class="postProxChild">
                             @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['filters']['qualityRatings'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect', 'placeholder'=>'Care Quality Rating', 'name'=>'quality_rating', 'resultsLabel' => 'resultsLabel'])
-                            @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'Care quality...', 'className' => 'helpPosition4'])
+                            <a tabindex="0" data-offset="30px, 40px"
+                               class="help-link"
+                                @include('components.basic.popover', [
+                                'dismissible'   => true,
+                                'placement'      => 'top',
+                                'size'           => 'large',
+                                'html'           => 'true',
+                                'trigger'        => 'focus',
+                                'content'        => '<p class="bold mb-0">
+                                                 Care Quality Rating
+                                             </p>
+                                             <p>
+                                                 Filter by Care Quality Rating
+                                             </p>
+                                             <p>
+                                                 <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
+                                             </p>'])
+                            >?</a>
                         </div>
                         <div class="postProxChild">
                             @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect', 'placeholder'=>'NHS Private/NHS Funded', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
-                            @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'NHS private...', 'className' => 'helpPosition5'])
+                            <a tabindex="0" data-offset="30px, 40px"
+                               class="help-link"
+                                @include('components.basic.popover', [
+                                'dismissible'   => true,
+                                'placement'      => 'top',
+                                'size'           => 'large',
+                                'html'           => 'true',
+                                'trigger'        => 'focus',
+                                'content'        => '<p class="bold mb-0">
+                                                 NHS or Private Hospitals
+                                             </p>
+                                             <p>
+                                                 Filter by NHS or Private Hospitals
+                                             </p>
+                                             <p>
+                                                 <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
+                                             </p>'])
+                            >?</a>
                         </div>
                     </div>
                     <div class="submit-section">
@@ -64,7 +149,6 @@
                         Showing {{count($data['hospitals'])}} out of {{$data['hospitals']->total()}} provider(s)
                     </div>
                     <div class="sortSection">
-                        @include('components.basic.helplink', [ 'helpParentPositionRelative' => true, 'helpChar'=> '?', 'helpText' => 'Choose a category to sort the list...', 'className' => ''])
                         @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['sortBy'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect', 'placeholder'=>'Sort by:', 'name'=>'sort_by', 'resultsLabel' => 'sortLabel'])
                     </div>
                 </section>
