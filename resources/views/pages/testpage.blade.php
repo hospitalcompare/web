@@ -33,6 +33,21 @@
                     Tooltip on left
                 </button>
                 <hr>
+                <h3>Popover trigger</h3>
+                <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                    @include('components.basic.popover', [
+                    'size'      => 'large',
+                    'placement' => 'top',
+                    'trigger'   => 'click',
+                    'html'      => 'true',
+                    'content'   => '<p class="bold mb-0">
+                                        What is NHS funded work?
+                                    </p>
+                                    <p>
+                                        Many private healthcare policies allow you to choose which hospital to have your elective
+                                        procedure at. Enter your provider and policy name to find the best hospital for you.
+                                    </p>'])>?</a>
+                <hr>
                 <h3>Special offer button</h3>
                 @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer mr-2', 'button' => 'Special Offers'])
                 <h3>Special offer button reversed</h3>

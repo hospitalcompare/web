@@ -23,7 +23,6 @@
 {{--        <div class="main-footer-wrap">--}}
 {{--        </div>--}}
         <!-- or push target to footer -->
-        @stack('main')
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
 

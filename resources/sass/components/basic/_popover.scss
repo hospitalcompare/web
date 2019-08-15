@@ -48,6 +48,7 @@
 
         .arrow-large {
             top: calc(100% - 8px);
+            left: calc(50% - 40px) !important;
             width: 56.6px;
             height: 55.7px;
             background-image: url('../images/speech-point.svg');

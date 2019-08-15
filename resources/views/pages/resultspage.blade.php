@@ -82,8 +82,9 @@
                     <li><a href="">% Operations<br>Cancelled</a></li>
                     <li><a href="">Care Quality<br>Rating</a></li>
                     <li><a href="">Friends &<br>Family Rating</a></li>
-                    <li>
-                        <a data-offset="0 30px" @include('components.basic.popover', [
+                    <li>NHS<br>Funded Work
+                        <a tabindex="0" data-offset="0, 30px" class="help-link help-link__inline"
+                            @include('components.basic.popover', [
                             'size'      => 'large',
                             'placement' => 'top',
                             'trigger'   => 'click',
@@ -94,11 +95,8 @@
                                             <p>
                                                 Many private healthcare policies allow you to choose which hospital to have your elective
                                                 procedure at. Enter your provider and policy name to find the best hospital for you.
-                                            </p>
-                                            <p>
-                                                <a class="btn btn-close btn-teal btn-icon btn-consultant" href="/">Close</a>
-                                            </p>'])
-                        >NHS<br>Funded Work</a></li>
+                                            </p>'])>?</a>
+                    </li>
                 </ul>
             </nav>
             <div class="sortCatSection3 pt-2"></div>

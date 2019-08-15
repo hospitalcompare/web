@@ -23,14 +23,14 @@ $(document).ready(function () {
                         scrollTop: target.offset().top
                     }, 500, function () {
                         // Callback after animation
-                        // Must change focus!
+                        // Must change click!
                         var $target = $(target);
-                        $target.focus();
-                        if ($target.is(":focus")) { // Checking if the target was focused
+                        $target.click();
+                        if ($target.is(":click")) { // Checking if the target was clicked
                             return false;
                         } else {
-                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                            $target.focus(); // Set focus again
+                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not clickable
+                            $target.click(); // Set click again
                         }
                         ;
                     });
