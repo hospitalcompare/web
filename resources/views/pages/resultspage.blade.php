@@ -181,7 +181,7 @@
                         <span title="Sort by this column" class="sort-arrow"></span>
                     </li>
                     <li>
-                        <p>NHS Choices <br> User Rating&nbsp;
+                        <p>NHS Choices <br> User Rating&nbsp;<br>
                             <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
@@ -200,7 +200,7 @@
                     </li>
                     <li>
                         <p>
-                            % Operations<br>Cancelled&nbsp;
+                            % Operations<br>Cancelled&nbsp;<br>
                             <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
@@ -219,7 +219,7 @@
                     </li>
                     <li>
                         <p>
-                            Care Quality<br>Rating&nbsp;
+                            Care Quality<br>Rating&nbsp;<br>
                             <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
@@ -277,7 +277,7 @@
                     </li>
                     <li>
                         <p>
-                            Private<br>Self Pay&nbsp;
+                            Private<br>Self Pay&nbsp;<br>
                             <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
