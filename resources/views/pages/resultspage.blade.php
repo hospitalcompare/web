@@ -149,7 +149,7 @@
                         Showing {{count($data['hospitals'])}} out of {{$data['hospitals']->total()}} provider(s)
                     </div>
                     <div class="sortSection">
-                        @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['sortBy'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect', 'placeholder'=>'Sort by:', 'name'=>'sort_by', 'resultsLabel' => 'sortLabel'])
+                        @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['sortBy'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect select-sort-by', 'placeholder'=>'Sort by:', 'name'=>'sort_by', 'resultsLabel' => 'sortLabel'])
                     </div>
                 </section>
             </section>
