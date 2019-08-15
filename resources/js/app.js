@@ -24,6 +24,8 @@ import './components/basic/popover';                // Trigger bootstrap tooltip
 import './components/basic/tooltip';                // Trigger bootstrap popover
 import './components/basic/modal';                  // Trigger bootstrap modal
 
+// Pages
+import './pages/resultspage';                       // Jquery used for the Results Page
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

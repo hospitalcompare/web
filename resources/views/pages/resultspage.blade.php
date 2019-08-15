@@ -26,7 +26,7 @@
                 <div class="selectProx">
                     <div class="filter-section">
                         <div class="postProxChild">
-                            @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['filters']['procedures'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect', 'placeholder'=>'Surgery Type', 'name'=>'procedure_id', 'resultsLabel' => 'resultsLabel'])
+                            @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['filters']['procedures'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Surgery Type', 'name'=>'procedure_id', 'resultsLabel' => 'resultsLabel'])
                             @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'surgery type...', 'className' => 'helpPosition1'])
                         </div>
                         <div class="postProxChild">
@@ -233,7 +233,7 @@
                     'NHSFunded'         => ($d['hospital_type_id'] == 1 && !empty($d['waitingTime'][0])) ? "<img src='../images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'privateSelfPay'    => $d['hospital_type_id'] == 1 ? "<img src='../images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'specialOffers'     => $d['special_offers'],
-                    'btnText'           => !empty($d['special_offers']) ? 'NHS Funded Enquiry' : 'Make an enquiry',
+                    'btnText'           => 'Make an enquiry',
                     'NHSClass'          => $d['hospital_type_id'] == 2 ? 'NHSHospital' : 'privateHospital',
                     'fundedText'        => $d['hospital_type_id'] == 2 ? 'NHS Hospital': 'Private Hospital',
                     'url'               => 'https://' . $d['url'],
