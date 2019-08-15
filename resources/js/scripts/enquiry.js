@@ -54,7 +54,8 @@ $(document).ready(function () {
                 'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
             },
             success: function (data) {
-
+                alert('Thanks, your enquiry has been submitted');
+                $('#hc_modal_enquire_private').modal('hide');
                 $("#result").text(data);
                 console.log("SUCCESS : ", data);
                 $("#btnSubmit").prop("disabled", false);
