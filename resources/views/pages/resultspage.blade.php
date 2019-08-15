@@ -307,7 +307,7 @@
                     'id'                => $d['id'],
                     'itemImg'           => 'images/alder-1.png',
                     'title'             => $d['name'],
-                    'location'          => (!empty($d['address']['address_1']) ? $d['address']['address_1']: '').(!empty($d['radius']) ? ', '.$d['radius']. ' miles from location': ''),
+                    'location'          => (!empty($d['address']['address_1']) ? $d['address']['address_1']: '').(!empty($d['radius']) ? ', '.number_format($d['radius'], 1 ). ' miles from postcode': ''),
                     'findLink'          => 'Find on map',
                     'waitTime'          => !empty($d['waitingTime'][0]['avg_waiting_weeks']) ? $d['waitingTime'][0]['avg_waiting_weeks'].' Weeks' : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'stars'             => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\Utils::getHtmlStars($d['rating']['avg_user_rating']) : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
