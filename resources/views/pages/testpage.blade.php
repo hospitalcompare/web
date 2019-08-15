@@ -236,6 +236,57 @@
                 <hr>
                 <h1>Special offers slide out</h1>
                 @include('components.basic.specialofferslide', ['class' => 'show'])
+                <h3>Select styling</h3>
+                <h4>Plain select</h4>
+                <select class="" id="" name="sort_by">
+
+                    <option name="Distance from Postcode ascending" id="sort_by_0" value="0">
+                        Distance from Postcode ascending
+                    </option>
+                    <option name="Distance from Postcode descending" id="sort_by_1" value="1">
+                        Distance from Postcode descending
+                    </option>
+                    <option name="Waiting time ascending" id="sort_by_2" value="2">
+                        Waiting time ascending
+                    </option>
+                    <option name="Waiting time descending" id="sort_by_3" value="3">
+                        Waiting time descending
+                    </option>
+                    <option name="User Rating ascending" id="sort_by_4" value="4">
+                        User Rating ascending
+                    </option>
+                    <option name="User Rating descending" id="sort_by_5" value="5">
+                        User Rating descending
+                    </option>
+                </select>
+                <h4>Styled select</h4>
+                <div class="selectParent  ">
+                    <label class="_selectBox sortLabel" for="">
+                        Sort by:
+                    </label>
+                    <select class="searchPageSelect" id="" name="sort_by">
+
+                        <option name="Distance from Postcode ascending" id="sort_by_0" value="0">
+                            Distance from Postcode ascending
+                        </option>
+                        <option name="Distance from Postcode descending" id="sort_by_1" value="1">
+                            Distance from Postcode descending
+                        </option>
+                        <option name="Waiting time ascending" id="sort_by_2" value="2">
+                            Waiting time ascending
+                        </option>
+                        <option name="Waiting time descending" id="sort_by_3" value="3">
+                            Waiting time descending
+                        </option>
+                        <option name="User Rating ascending" id="sort_by_4" value="4">
+                            User Rating ascending
+                        </option>
+                        <option name="User Rating descending" id="sort_by_5" value="5">
+                            User Rating descending
+                        </option>
+                    </select>
+                    <svg class="svg-inline--fa fa-chevron-down fa-w-14 blackChevron" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg><!-- <i class="fas fa-chevron-down blackChevron"></i> -->
+                </div>
             </div>
         </div>
     </main>

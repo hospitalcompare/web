@@ -77,25 +77,112 @@
             <div class="sortCatSection1"></div>
             <nav class="sortCatSection2">
                 <ul class="sortCatMenu">
-                    <li><a href="">Waiting time<br>(NHS Funded)</a></li>
-                    <li><a href="">NHS Choices User Rating</a></li>
-                    <li><a href="">% Operations<br>Cancelled</a></li>
-                    <li><a href="">Care Quality<br>Rating</a></li>
-                    <li><a href="">Friends &<br>Family Rating</a></li>
-                    <li>NHS<br>Funded Work
-                        <a tabindex="0" data-offset="0, 30px" class="help-link help-link__inline"
-                            @include('components.basic.popover', [
-                            'size'      => 'large',
-                            'placement' => 'top',
-                            'trigger'   => 'click',
-                            'html'      => 'true',
-                            'content'   => '<p class="bold mb-0">
-                                                What is NHS funded work?
-                                            </p>
-                                            <p>
-                                                Many private healthcare policies allow you to choose which hospital to have your elective
-                                                procedure at. Enter your provider and policy name to find the best hospital for you.
-                                            </p>'])>?</a>
+                    <li>
+                        <p>
+                            Waiting time <br>(NHS Funded)&nbsp;
+                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                                @include('components.basic.popover', [
+                                'size'      => 'large',
+                                'placement' => 'top',
+                                'trigger'   => 'focus',
+                                'html'      => 'true',
+                                'content'   => '<p class="bold mb-0">
+                                                    What is NHS funded work?
+                                                </p>
+                                                <p>
+                                                    Many private healthcare policies allow you to choose which hospital to have your elective
+                                                    procedure at. Enter your provider and policy name to find the best hospital for you.
+                                                </p>'])>?</a>
+                        </p></li>
+                    <li>
+                        <p>NHS Choices User Rating&nbsp;
+                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                                @include('components.basic.popover', [
+                                'size'      => 'large',
+                                'placement' => 'top',
+                                'trigger'   => 'focus',
+                                'html'      => 'true',
+                                'content'   => '<p class="bold mb-0">
+                                                    What is NHS funded work?
+                                                </p>
+                                                <p>
+                                                    Many private healthcare policies allow you to choose which hospital to have your elective
+                                                    procedure at. Enter your provider and policy name to find the best hospital for you.
+                                                </p>'])>?</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            % Operations<br>Cancelled&nbsp;
+                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                                @include('components.basic.popover', [
+                                'size'      => 'large',
+                                'placement' => 'top',
+                                'trigger'   => 'focus',
+                                'html'      => 'true',
+                                'content'   => '<p class="bold mb-0">
+                                                    What is NHS funded work?
+                                                </p>
+                                                <p>
+                                                    Many private healthcare policies allow you to choose which hospital to have your elective
+                                                    procedure at. Enter your provider and policy name to find the best hospital for you.
+                                                </p>'])>?</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Care Quality<br>Rating&nbsp;
+                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                                @include('components.basic.popover', [
+                                'size'      => 'large',
+                                'placement' => 'top',
+                                'trigger'   => 'focus',
+                                'html'      => 'true',
+                                'content'   => '<p class="bold mb-0">
+                                                    What is NHS funded work?
+                                                </p>
+                                                <p>
+                                                    Many private healthcare policies allow you to choose which hospital to have your elective
+                                                    procedure at. Enter your provider and policy name to find the best hospital for you.
+                                                </p>'])>?</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Friends &<br>Family Rating&nbsp;
+                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                                @include('components.basic.popover', [
+                                'size'      => 'large',
+                                'placement' => 'top',
+                                'trigger'   => 'focus',
+                                'html'      => 'true',
+                                'content'   => '<p class="bold mb-0">
+                                                    What is NHS funded work?
+                                                </p>
+                                                <p>
+                                                    Many private healthcare policies allow you to choose which hospital to have your elective
+                                                    procedure at. Enter your provider and policy name to find the best hospital for you.
+                                                </p>'])>?</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            NHS<br>Funded Work&nbsp;
+                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                                @include('components.basic.popover', [
+                                'size'      => 'large',
+                                'placement' => 'top',
+                                'trigger'   => 'focus',
+                                'html'      => 'true',
+                                'content'   => '<p class="bold mb-0">
+                                                    What is NHS funded work?
+                                                </p>
+                                                <p>
+                                                    Many private healthcare policies allow you to choose which hospital to have your elective
+                                                    procedure at. Enter your provider and policy name to find the best hospital for you.
+                                                </p>'])>?</a>
+
+                        </p>
                     </li>
                 </ul>
             </nav>

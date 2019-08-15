@@ -1,3 +1,10 @@
+// remove focus ring
+* {
+    &:focus {
+        outline: none;
+    }
+}
+
 ul {
     padding-left: 0;
 }

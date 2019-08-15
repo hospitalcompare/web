@@ -158,6 +158,13 @@
     .sortCategoriesHeader {
         width: 1180px;
         margin: auto;
+
+        .sortCatSection3 {
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
     }
 
     .sortCategories {
