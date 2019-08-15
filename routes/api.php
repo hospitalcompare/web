@@ -18,4 +18,5 @@ Route::middleware('checkToken')->group(function () {
     Route::get('/getLocations/{postcode}', 'ApiController@getLocations');
     Route::get('/getHospitalsByDistance/{postcode}', 'ApiController@getHospitalsByDistance');
     Route::get('/getAllHospitals', 'ApiController@getAllHospitals');
+    Route::post('/enquiry', 'ApiController@enquiry');
 });
