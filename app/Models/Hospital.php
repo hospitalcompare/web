@@ -169,7 +169,7 @@ class Hospital extends Model
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
     public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 10, $waitingTime = '', $userRating = '', $qualityRating = '', $hospitalType = '', $sortBy = '') {
-        $hospitals = Hospital::with(['trust','hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'waitingTime']);
+        $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'waitingTime']);
         //$userRatings    = HospitalRating::selectRaw(\DB::raw("MIN(id) as id, avg_user_rating AS name"))->groupBy(['avg_user_rating'])->whereNotNull('avg_user_rating')->get()->toArray();
 
         //Check if we have the `postcode` and `procedure_id`
@@ -246,8 +246,17 @@ class Hospital extends Model
         }
 
         //Filter by Hospital Type ( if we have the input )
-        if(!empty($hospitalType))
-            $hospitals = $hospitals->where('hospital_type_id', $hospitalType);
+        if(!empty($hospitalType)) {
+            if($hospitalType == 1) {
+                $hospitals = $hospitals->whereHas('hospitalType', function($q) {
+                    $q->where('name', '=', 'Independent');
+                });
+            } elseif($hospitalType == 2) {
+                $hospitals = $hospitals->whereHas('hospitalType', function($q) {
+                    $q->where('name', '=', 'NHS');
+                });
+            }
+        }
 
 //        Sorting the records
         if(empty($sortBy))

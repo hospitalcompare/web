@@ -314,12 +314,12 @@
                     'opCancelled'       => !empty($d['cancelledOp']['perc_cancelled_ops'])? $d['cancelledOp']['perc_cancelled_ops'].'%': "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'qualityRating'     => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'FFRating'          => !empty($d['rating']['provider_rating']) ? $d['rating']['provider_rating'] : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
-                    'NHSFunded'         => ($d['hospital_type']['name'] === 'Independent' && !empty($d['waitingTime'][0])) ? "<img src='../images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
-                    'privateSelfPay'    => $d['hospital_type']['name'] === 'Independent' ? "<img src='../images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
+                    'NHSFunded'         => ($d['hospitalType']['name'] === 'Independent' && !empty($d['waitingTime'][0])) ? "<img src='../images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
+                    'privateSelfPay'    => $d['hospitalType']['name'] === 'Independent' ? "<img src='../images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'specialOffers'     => $d['special_offers'],
                     'btnText'           => 'Make an enquiry',
-                    'NHSClass'          => $d['hospital_type']['name'] === 'NHS' ? 'NHSHospital' : 'privateHospital',
-                    'fundedText'        => $d['hospital_type']['name'] === 'NHS' ? 'NHS Hospital': 'Private Hospital',
+                    'NHSClass'          => $d['hospitalType']['name'] == 'NHS' ? 'NHSHospital' : 'privateHospital',
+                    'fundedText'        => ($d['hospitalType']['name'] == 'NHS') ? 'NHS Hospital': 'Private Hospital',
                     'url'               => 'https://' . $d['url'],
                     'modalContent'      => '<button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true" class="text-white bg-black">Close</span>

@@ -4,10 +4,10 @@
             <div class="sortCatItem">
                 <img src="{{ $itemImg }}">
                 <div class="{{$NHSClass}}"><p>{{$fundedText}}</p></div>
-{{--                @if(!empty($specialOffers))--}}
+                @if(!empty($specialOffers))
 {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
-{{--                    @include('components.basic.specialofferslide', ['class' => 'default'])--}}
-{{--                @endif--}}
+                    @include('components.basic.specialofferslide', ['class' => 'default'])
+                @endif
             </div>
             <div class="sortCatItem">
                 <p class="sortItemTitle" id="item_name_{{$id}}">
