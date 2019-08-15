@@ -83,8 +83,8 @@ $range-label-width: 60px !default;
         background: $range-handle-color-hover;
     }
 
-    // Focus state
-    //&:focus {
+    // click state
+    //&:click {
     //
     //    &::-webkit-slider-thumb {
     //        box-shadow: 0 0 0 3px $shade-0,
@@ -99,7 +99,7 @@ $range-label-width: 60px !default;
     border: 0;
 }
 
-input::-moz-focus-inner,
-input::-moz-focus-outer {
+input::-moz-click-inner,
+input::-moz-click-outer {
     border: 0;
 }

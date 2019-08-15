@@ -19,11 +19,10 @@
             @yield('content')
         </div>
 
-        <div class="mainFooterWrap">
-            @include('layout.footer', ['page_footer' => ''])
-        </div>
+        @include('layout.footer', ['page_footer' => ''])
+{{--        <div class="main-footer-wrap">--}}
+{{--        </div>--}}
         <!-- or push target to footer -->
-        @stack('main')
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
 

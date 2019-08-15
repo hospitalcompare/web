@@ -158,6 +158,13 @@
     .sortCategoriesHeader {
         width: 1180px;
         margin: auto;
+
+        .sortCatSection3 {
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
     }
 
     .sortCategories {
@@ -201,20 +208,32 @@
     .sortCatMenu {
         @include flex;
         width: 100%;
-        margin: 18px 0;
+        margin-bottom: 0;
 
         li {
+            padding: 18px 0;
+            position: relative;
             list-style: none;
             @include uniformAlignment;
+            @include flex-center;
+            flex-direction: column;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: -0.7px;
+            line-height: 16.8px;
+            text-align: center;
 
-            a {
-                color: #ffffff;
-                font-size: 14px;
-                font-weight: 500;
-                letter-spacing: -0.7px;
-                line-height: 16.8px;
-                text-align: center;
-                @include flex-center;
+            span.sort-arrow {
+                position: absolute;
+                bottom: 10px;
+                display: inline-block;
+                @include icon-bg-center(10%);
+                width: 100%;
+                height: 20px;
+                background-image: url('../images/icons/caret-down-white.svg');
+                cursor: pointer;
+                //background-color: red;
             }
         }
     }

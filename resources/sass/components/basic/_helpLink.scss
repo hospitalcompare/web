@@ -18,7 +18,12 @@
         position: initial;
         display: inline-block;
     }
+
+    &:hover {
+        text-decoration: none;
+    }
 }
+
 .home-page {
     .box {
         .help-link {

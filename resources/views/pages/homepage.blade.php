@@ -54,13 +54,14 @@
                         choose where to have your elective surgery*. It can be at: </p>
                     <ul class="promoList">
                         <li>An NHS hospital of your choice NHS<br>Funded Work
-                            <span data-offset="0 30px"
+                            <a tabindex="0" data-offset="30px, 40px"
                                   class="help-link help-link__inline"
                                @include('components.basic.popover', [
+                               'dismissible'   => true,
                                'placement'      => 'top',
                                'size'           => 'large',
                                'html'           => 'true',
-                               'trigger'        => 'click',
+                               'trigger'        => 'focus',
                                'content'        => '<p class="bold mb-0">
                                                 What is NHS funded work?
                                             </p>
@@ -69,18 +70,19 @@
                                                 procedure at. Enter your provider and policy name to find the best hospital for you.
                                             </p>
                                             <p>
-                                                <a class="btn btn-close__small btn-teal btn-icon" href="/">Close</a>
+                                                <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
                                             </p>'])
-                            >?</span>
+                            >?</a>
                         </li>
-                        <li>A private hospital funded by NHS <span data-offset="0 30px"
+                        <li>A private hospital funded by NHS <a tabindex="0" data-offset="30, 40px"
                                                                    class="help-link help-link__inline"
                                @include('components.basic.popover', [
-                               'placement'      => 'top',
-                               'size'           => 'large',
-                               'html'           => 'true',
-                               'trigger'        => 'click',
-                               'content'        => '<p class="bold mb-0">
+                                        'dismissible'   => true,
+                                        'placement'      => 'top',
+                                        'size'           => 'large',
+                                        'html'           => 'true',
+                                        'trigger'        => 'focus',
+                                        'content'        => '<p class="bold mb-0">
                                                 What is NHS funded work?
                                             </p>
                                             <p>
@@ -88,16 +90,17 @@
                                                 procedure at. Enter your provider and policy name to find the best hospital for you.
                                             </p>
                                             <p>
-                                                <a class="btn btn-close__small btn-teal btn-icon" href="/">Close</a>
+                                                <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
                                             </p>'])
-                            >?</span></li>
-                        <li>A private hospital paid by you <span data-offset="0 30px"
-                                                                class="help-link help-link__inline"
+                            >?</a></li>
+                        <li>A private hospital paid by you <a tabindex="0" data-offset="30, 40px"
+                                                                 class="help-link help-link__inline"
                                @include('components.basic.popover', [
+                               'dismissible'   => true,
                                'placement'      => 'top',
                                'size'           => 'large',
                                'html'           => 'true',
-                               'trigger'        => 'click',
+                               'trigger'        => 'focus',
                                'content'        => '<p class="bold mb-0">
                                                 What is NHS funded work?
                                             </p>
@@ -106,17 +109,18 @@
                                                 procedure at. Enter your provider and policy name to find the best hospital for you.
                                             </p>
                                             <p>
-                                                <a class="btn btn-close__small btn-teal btn-icon" href="/">Close</a>
+                                                <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
                                             </p>'])
-                            >?</span></li>
-                        <li>A private hospital paid by your insurance provider <span data-offset="0 30px"
+                            >?</a></li>
+                        <li>A private hospital paid by your insurance provider <a tabindex="0" data-offset="30, 40px"
                                                                                      class="help-link help-link__inline"
                                @include('components.basic.popover', [
-                               'placement'      => 'top',
-                               'size'           => 'large',
-                               'html'           => 'true',
-                               'trigger'        => 'click',
-                               'content'        => '<p class="bold mb-0">
+                                   'dismissible'   => true,
+                                   'placement'      => 'top',
+                                   'size'           => 'large',
+                                   'html'           => 'true',
+                                   'trigger'        => 'focus',
+                                   'content'        => '<p class="bold mb-0">
                                                 What is NHS funded work?
                                             </p>
                                             <p>
@@ -124,23 +128,23 @@
                                                 procedure at. Enter your provider and policy name to find the best hospital for you.
                                             </p>
                                             <p>
-                                                <a class="btn btn-close__small btn-teal btn-icon" href="/">Close</a>
+                                                <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
                                             </p>'])
-                            >?</span></li>
+                            >?</a></li>
                     </ul>
                 </div>
             </div>
         </section>
     </div>
 
-{{--    <div class="howSectionParent">--}}
-{{--        @include('components.howsection', ['howsections' => [--}}
-{{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Standard procedure at an NHS Hospital', 'description' => 'You have the legal right to choose which NHS hospital to have your NHS procedure at.' ],--}}
-{{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'NHS Funded in a private hospital', 'description' => 'You have the legal right to have an NHS funded procedure at a private hospital of your choice'],--}}
-{{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Private Healthcare Insurance', 'description' => 'Many private healthcare insurance policies allow you to choose a hospital for your procedure'],--}}
-{{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Self Pay at a Private Hospital', 'description' => 'If time is a critical factor for you then a good option may be to self-pay and have your procedure done immediately' ] ],--}}
-{{--        'sectionTitle' => 'Your Healthcare Options' ])--}}
-{{--    </div>--}}
+    {{--    <div class="howSectionParent">--}}
+    {{--        @include('components.howsection', ['howsections' => [--}}
+    {{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Standard procedure at an NHS Hospital', 'description' => 'You have the legal right to choose which NHS hospital to have your NHS procedure at.' ],--}}
+    {{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'NHS Funded in a private hospital', 'description' => 'You have the legal right to have an NHS funded procedure at a private hospital of your choice'],--}}
+    {{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Private Healthcare Insurance', 'description' => 'Many private healthcare insurance policies allow you to choose a hospital for your procedure'],--}}
+    {{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Self Pay at a Private Hospital', 'description' => 'If time is a critical factor for you then a good option may be to self-pay and have your procedure done immediately' ] ],--}}
+    {{--        'sectionTitle' => 'Your Healthcare Options' ])--}}
+    {{--    </div>--}}
 
     <div class="whyChooseParent">
         <div class="whyChooseContent">
