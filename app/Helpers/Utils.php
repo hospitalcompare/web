@@ -97,10 +97,10 @@ class Utils
             'name'  => 'All Hospitals'
         ],[
             'id' => '1',
-            'name'  => 'NHS Hospitals'
+            'name'  => 'Private Hospitals'
         ],[
             'id' => '2',
-            'name'  => 'Private Hospitals'
+            'name'  => 'NHS Hospitals'
         ]
     ];
 

@@ -71,7 +71,7 @@ class ApiController {
 
         //Update the Hospitals with special offers
         //TODO: Remove this when the actual special offers are decided
-        \DB::statement('UPDATE hospitals SET special_offers = 1 WHERE hospital_type_id = 2 AND id % 3 = 0');
+        \DB::statement('UPDATE hospitals SET special_offers = 1 WHERE hospital_type_id = 1 AND id % 3 = 0');
 
         return $returnedData;
     }
