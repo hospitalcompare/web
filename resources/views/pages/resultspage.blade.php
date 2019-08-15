@@ -290,5 +290,11 @@
 
     {{--  Compare bar  --}}
     @include('components.compare')
+    {{--  Modal for 'make an enquiry'  --}}
+    @include('components.modalenquirenhs')
+    {{--  Modal for special offers  --}}
+    @include('components.modalspecial')
+    {{--  Modal for special offers  --}}
+    @include('components.modalenquireprivate', ['procedures' => $data['filters']['procedures']])
 
 @endsection

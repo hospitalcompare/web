@@ -62,8 +62,8 @@ $(document).ready(function () {
 
             },
             error: function (e) {
-
-                $("#result").text(e.responseText);
+                alert(e.responseText);
+                // $("#result").text(e.responseText);
                 console.log("ERROR : ", e);
                 $("#btnSubmit").prop("disabled", false);
 

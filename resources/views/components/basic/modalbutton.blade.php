@@ -4,7 +4,7 @@
     role="button"
     data-toggle="modal"
     data-content="{{ $modalContent }}"
-    data-hospital-title="{{ $hospitalTitle ?? '' }}"
+    data-hospital-title="{{ $hospitalTitle ?? 'test' }}"
     data-hospital-url="{{ $hrefValue }}"
     data-target="{{ $modalTarget }}">{{ $button }}
     <i class="{{ empty($icon) ? '' : $icon }}"></i>

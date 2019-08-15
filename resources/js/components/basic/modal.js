@@ -8,4 +8,12 @@ $(document).ready(function () {
         var modal = $(this);
         modal.find('.modal-content').html(content);
     })
+
+    // Private enquiry form - show title of hospital clicked
+    $('#hc_modal_enquire_private').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);// Button that triggered the modal
+        var hospitalTitle = button.data('hospital-title');// Extract info from data-* attributes
+        var modal = $(this);
+        modal.find('.hospital-title').html(hospitalTitle);
+    })
 })

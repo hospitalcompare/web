@@ -289,7 +289,7 @@
                 </div>
                 <hr>
                 <h3>Enquiry Form</h3>
-                @include('components.modalenquireprivate', ['forceshow' => true])
+                @include('components.modalenquireprivate', ['procedures' => $data['filters']['procedures']])
             </div>
         </div>
     </main>
