@@ -12,6 +12,7 @@ import './scripts/global';                                          // Site wide
 import './scripts/global';                          // Site wide scripts
 import './scripts/scroll';                          // Smooth scroll
 import './scripts/postcode' ;                       // Postcode input
+import './scripts/enquiry' ;                        // Private hospital enquiry form
 window.Cookies = require('./scripts/cookies');      // Cookie/compare functionallity
 import './scripts/compare';                         // Slider for radius of proximity on search page
 // window.Vue = require('vue');                        // Vue.js
