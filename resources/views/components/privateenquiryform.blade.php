@@ -68,7 +68,7 @@
                         'resultsLabel' => 'resultsLabel'])
                 </div>
                 <div class="col col-6 checkbox">
-                    <input name="gdpr" type="checkbox" id="gdpr">
+                    <input required name="gdpr" type="checkbox" id="gdpr">
                     <label for="gdpr">Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit, sed do eiusmod tempor incididunt ut labore et
                         dolore magna aliqua.</label>
@@ -76,11 +76,11 @@
                 <div class="col col-6">
                     <input required name="additional_information" type="hidden" class="form-control" id="additional_information" placeholder="Additional information">
                 </div>
+                <div class="col-12 btn-area text-center">
+                    <a id="btnSubmit" class="btn btn-icon btn-enquire">Make an enquiry</a>
+                </div>
             </div>
         </form>
-    </div>
-    <div class="btn-area text-center">
-        <a id="btnSubmit" class="btn btn-icon btn-enquire">Make an enquiry</a>
     </div>
 </div>
 
