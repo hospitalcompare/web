@@ -213,7 +213,7 @@
                     'FFRating'          => !empty($d['rating']['provider_rating']) ? $d['rating']['provider_rating'] : 'N/A',
                     'NHSFunded'         => ($d['hospital_type_id'] == 2 && !empty($d['waitingTime'])) ? "<img src='../images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'specialOffers'     => $d['special_offers'],
-                    'btnText'           => !empty($d['special_offers']) ? 'NHS Funded Enquiry' : 'Make an enquiry',
+                    'btnText'           => 'Make an enquiry',
                     'NHSClass'          => $d['hospital_type_id'] == 1 ? 'NHSHospital' : 'privateHospital',
                     'fundedText'        => $d['hospital_type_id'] == 1 ? 'NHS Hospital': 'Private Hospital',
                     'url'               => 'https://' . $d['url'],
@@ -238,7 +238,7 @@
 
                                                                 </div>
                                                                 <div class="btn-area">
-                                                                    <a href="http://' . $d['url'] . '" target="_blank" class="btn btn-icon btn-enquire">Make an enquiry</a>
+                                                                    <a href="http://' . $d['url'] . '" target="_blank" class="btn btn-icon btn-enquire">Visit<br> website</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -255,10 +255,11 @@
                                                                     commodo consequat. Duis aute irure dolor in reprehenderit in.</p>
                                                                 <div class="btn-area">
                                                                     <a  data-toggle="modal"
-                                                                        data-target="#hc_modal_special"
-                                                                        data-content="<h1>' . $specialOfferContent = 'hello' . '</h1>"
-                                                                        data-dismiss="modal"
-                                                                        class="btn btn-icon btn-special-offer-reverse">Special Offers</a>
+
+{{--                                                                        data-target="#hc_modal_special"--}}
+{{--                                                                        data-content="<h1>' . $specialOfferContent = 'hello' . '</h1>"--}}
+{{--                                                                        data-dismiss="modal"--}}
+                                                                        class="btn btn-icon btn-special-offer-reverse">Back to results</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -289,8 +290,5 @@
 
     {{--  Compare bar  --}}
     @include('components.compare')
-    {{--  Modal for 'make an enquiry'  --}}
-    @include('components.modalenquire')
-    {{--  Modal for special offers  --}}
-    @include('components.modalspecial')
+
 @endsection

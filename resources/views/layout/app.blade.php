@@ -24,6 +24,12 @@
 {{--        </div>--}}
         <!-- or push target to footer -->
         <script src="{{ asset('js/app.js') }}"></script>
+        {{--  Modal for 'make an enquiry'  --}}
+        @include('components.modalenquirenhs')
+        {{--  Modal for special offers  --}}
+        @include('components.modalspecial')
+        {{--  Modal for special offers  --}}
+        @include('components.modalenquireprivate')
     </body>
 
 </html>
