@@ -18,8 +18,6 @@ class AddSpecialOffersToHospitals extends Migration
                 //Add the Special Offers flag
                 $table->boolean('special_offers')->default(0)->after('url')->nullable();
             });
-            //Add this flag random for each 3 hospitals
-            \DB::statement('UPDATE hospitals SET special_offers = 1 WHERE hospital_type_id = 2 AND id % 3 = 0');
         }
     }
 

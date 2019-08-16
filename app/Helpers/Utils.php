@@ -24,6 +24,36 @@ class Utils
         ],[
             'id' => '5',
             'name'  => 'User Rating descending'
+        ],[
+            'id' => '6',
+            'name'  => 'Operations Cancelled ascending'
+        ],[
+            'id' => '7',
+            'name'  => 'Operations Cancelled descending'
+        ],[
+            'id' => '8',
+            'name'  => 'Care Quality Rating ascending'
+        ],[
+            'id' => '9',
+            'name'  => 'Care Quality Rating descending'
+        ],[
+            'id' => '10',
+            'name'  => 'Friends & Family Rating ascending'
+        ],[
+            'id' => '11',
+            'name'  => 'Friends & Family Rating descending'
+        ],[
+            'id' => '12',
+            'name'  => 'NHS Funded Work ascending'
+        ],[
+            'id' => '13',
+            'name'  => 'NHS Funded Work descending'
+        ],[
+            'id' => '14',
+            'name'  => 'Private Self Pay ascending'
+        ],[
+            'id' => '15',
+            'name'  => 'Private Self Pay descending'
         ]
     ];
 
@@ -97,10 +127,10 @@ class Utils
             'name'  => 'All Hospitals'
         ],[
             'id' => '1',
-            'name'  => 'NHS Hospitals'
+            'name'  => 'Private Hospitals'
         ],[
             'id' => '2',
-            'name'  => 'Private Hospitals'
+            'name'  => 'NHS Hospitals'
         ]
     ];
 

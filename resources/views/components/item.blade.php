@@ -30,7 +30,7 @@
                 @include('components.basic.popover', [
                     'content' => 'For private self-pay waiting time click <a class="link" href="/">here</a>',
                     'html' => 'true'])>
-                    {{$waitTime}}
+                    {!! $waitTime !!}
                 </p>
             </div>
             {{-- End waiting time --}}
@@ -69,13 +69,11 @@
                 <p
                     @include('components.basic.popover', [
                     'content' => 'National average is 3.35%'])>
-                    {{$opCancelled}}
+                    {!! $opCancelled !!}
                 </p>
             </div>
             <div class="sortCatSection2Child" id="item_quality_rating_{{$id}}">
-                <p>
-                    {{$qualityRating}}
-                </p>
+                {!! $qualityRating !!}
             </div>
 
             {{-- Friends and family --}}
@@ -86,12 +84,16 @@
                         'trigger' => 'hover',
                         'html' => '',
                         'content' => 'Some paragraph text'])>
-                    {{$FFRating}}</p>
+                    {!! $FFRating !!}
+                </p>
             </div>
             <div class="sortCatSection2Child" id="item_nhs_funded_{{$id}}">
                 <p>
                     {!! $NHSFunded  !!}
                 </p>
+            </div>
+            <div class="sortCatSection2Child" id="item_nhs_private_pay_{{$id}}">
+                {!! $privateSelfPay  !!}
             </div>
         </div>
         <div class="sortCatSection3 d-flex flex-column justify-content-center">

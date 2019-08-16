@@ -17,8 +17,6 @@ class LocationRatings extends DefaultImport {
         if(!empty($this->data) && is_array($this->data)) {
             //Loop through the data
             foreach($this->data as $item) {
-
-
                 //Check if we have the Hospital by Location ID
                 $hospital = Hospital::where('location_id', $item['Location ID'])->orWhere('organisation_id', $item['Location ID'])->first();
 
@@ -28,8 +26,8 @@ class LocationRatings extends DefaultImport {
                     $rating = HospitalRating::updateOrCreate([
                         'hospital_id'       => $hospital->id
                     ], [
-                        'provider_rating'   => $item['Provider Rating'],
-                        'latest_rating'     => $item['Latest Rating'],
+                        'provider_rating'   => !empty($item['Provider Rating']) ? $item['Provider Rating'] : null,
+                        'latest_rating'     => !empty($item['Latest Rating']) ? $item['Latest Rating'] : null,
                     ]);
                     $this->returnedData[] = $rating;
                 } else {

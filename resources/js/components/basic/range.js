@@ -19,7 +19,7 @@ $(document).ready(function () {
 //   ... the input inside addEventListener() is looking for the input action, we could change it to something like change
         slider.querySelector('input').addEventListener('input', (event) => {
             // 1. apply our value to the span
-            slider.querySelector('.range-slider__value').innerHTML = `Max. ${event.target.value} Miles`;
+            slider.querySelector('.range-slider__value').innerHTML = `${event.target.value} Miles`;
             // 2. apply our fill to the input
             applyFill(event.target);
         });
