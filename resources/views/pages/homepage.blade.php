@@ -193,15 +193,15 @@
 
     @include('components.healthchoice', ['choosehealthbanner' => '', 'buttonName' => 'Choose your health', 'classTitle' => 'btn btn-icon btn-arrow-right mx-auto' ] )
 
-    <div class="blogSectionParent">
-        <h1 class="pageTitle">Making the right choice</h1>
-        <div class="blogContent">
-            @include('components.blogs', ['blogs' =>
-            [
-                ['iconImg'=> 'images/Layer_16.png' , 'title'=>'Blog', 'description' => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.', 'url' => url('/blog/1')],
-                ['iconImg'=> 'images/Layer_17.png' , 'title'=>'Blog', 'description' => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.', 'url' => url('/blog/2')],
-                ['iconImg'=> 'images/Layer_18.png' , 'title'=>'Blog', 'description' => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.', 'url' => url('/blog/3')]
-            ], 'classTitle'=> '', 'buttonTitle' => 'Read more', 'buttonClass' => 'btn btn-block btn-read-more' ])
-        </div>
-    </div>
+{{--    <div class="blogSectionParent">--}}
+{{--        <h1 class="pageTitle">Making the right choice</h1>--}}
+{{--        <div class="blogContent">--}}
+{{--            @include('components.blogs', ['blogs' =>--}}
+{{--            [--}}
+{{--                ['iconImg'=> 'images/Layer_16.png' , 'title'=>'Blog', 'description' => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.', 'url' => url('/blog/1')],--}}
+{{--                ['iconImg'=> 'images/Layer_17.png' , 'title'=>'Blog', 'description' => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.', 'url' => url('/blog/2')],--}}
+{{--                ['iconImg'=> 'images/Layer_18.png' , 'title'=>'Blog', 'description' => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.', 'url' => url('/blog/3')]--}}
+{{--            ], 'classTitle'=> '', 'buttonTitle' => 'Read more', 'buttonClass' => 'btn btn-block btn-read-more' ])--}}
+{{--        </div>--}}
+{{--    </div>--}}
 @endsection
