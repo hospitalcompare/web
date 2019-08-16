@@ -174,7 +174,7 @@
                             {{--                            <source src="movie.ogg" type="video/ogg">--}}
                             {{--                            Your browser does not support the video tag.--}}
                         </video>
-                        <div class="playerButton toggle"></div>
+{{--                        <div class="playerButton toggle"></div>--}}
                     </div>
                 </div>
             </section>
