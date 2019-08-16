@@ -59,6 +59,16 @@
         letter-spacing: -1.25px;
         line-height: 30px;
     }
+
+    .postcode-item {
+        &:hover {
+            background-color: $teal;
+            color: $white;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
 }
 
 .homePromo {
