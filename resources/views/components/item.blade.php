@@ -72,7 +72,9 @@
                 </p>
             </div>
             <div class="sortCatSection2Child" id="item_quality_rating_{{$id}}">
-                {{$qualityRating}}
+                <p>
+                    {{$qualityRating}}
+                </p>
             </div>
 
             {{-- Friends and family --}}
@@ -86,7 +88,9 @@
                     {{$FFRating}}</p>
             </div>
             <div class="sortCatSection2Child" id="item_nhs_funded_{{$id}}">
-                {!! $NHSFunded  !!}
+                <p>
+                    {!! $NHSFunded  !!}
+                </p>
             </div>
         </div>
         <div class="sortCatSection3 d-flex flex-column justify-content-center">
