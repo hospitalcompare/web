@@ -11,7 +11,7 @@
     </head>
 
     <body class="@yield('body-class')">
-        <div class="mainHeaderWrap">
+        <div class="header-wrapper">
             @include('layout.header', ['page_header' => ''])
         </div>
 

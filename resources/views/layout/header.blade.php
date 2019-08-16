@@ -1,5 +1,5 @@
 <!-- _partials/header.blade.php -->
-<header class="mainHeader" id="top">
+<header class="header" id="top">
     {{ $page_header }}
     <div class="branding">
         @include('components.logo', ['titleParent' => 'headerLogoParent', 'logoImg' => 'headerLogoImg', 'logoTitle' => 'headerLogoTitle'])
