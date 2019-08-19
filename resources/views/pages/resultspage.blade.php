@@ -308,6 +308,8 @@
                     'itemImg'           => 'images/alder-1.png',
                     'title'             => $d['name'],
                     'location'          => (!empty($d['address']['address_1']) ? $d['address']['address_1']: '').(!empty($d['radius']) ? ', '.number_format($d['radius'], 1 ). ' miles from postcode': ''),
+                    'latitude'          => $d['address']['latitude'],
+                    'longitude'         => $d['address']['longitude'],
                     'findLink'          => 'Find on map',
                     'waitTime'          => !empty($d['waitingTime'][0]['avg_waiting_weeks']) ? $d['waitingTime'][0]['avg_waiting_weeks'].' Weeks' : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'stars'             => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\Utils::getHtmlStars($d['rating']['avg_user_rating']) : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
@@ -395,10 +397,12 @@
     {{--  Compare bar  --}}
     @include('components.compare')
     {{--  Modal for 'make an enquiry'  --}}
-    @include('components.modalenquirenhs')
+    @include('components.modals.modalenquirenhs')
     {{--  Modal for special offers  --}}
-    @include('components.modalspecial')
+    @include('components.modals.modalspecial')
     {{--  Modal for special offers  --}}
-    @include('components.modalenquireprivate', ['procedures' => $data['filters']['procedures']])
+    @include('components.modals.modalenquireprivate', ['procedures' => $data['filters']['procedures']])
+    {{--  Maps modal  --}}
+    @include('components.modals.modalmaps')
 
 @endsection
