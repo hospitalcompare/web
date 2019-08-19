@@ -336,11 +336,10 @@
                                                                     <div class="image-wrapper mr-3">
                                                                         <img class="mr-3" src="images/alder-1.png">
                                                                     </div>
-                                                                    <p class="modal-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                                                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                                                        reprehenderit in.</p>
+                                                                    <div class="modal-copy">
+                                                                        <p>Unfortunately this NHS Hospital has not enabled enquiries to be made from our site.</p>
+                                                                        <p>To make an enquiry with them please visit their website <a href="http://' . $d['url'] . '" target="_blank">here</a> or by clicking the link below or you can discuss making an enquiry with your GP.</p>
+                                                                    </div>
 
                                                                 </div>
                                                                 <div class="btn-area">
@@ -353,20 +352,17 @@
                                                                 class="col-inner col-inner__right h-100 text-center bg-pink">
                                                                 <h2 class="text-white">Or go back to results</h2>
 
-                                                                <p class="text-white modal-copy">Lorem ipsum dolor sit amet, consectetur
-                                                                    adipiscing elit, sed do eiusmod
-                                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                                                    ea
-                                                                    commodo consequat. Duis aute irure dolor in reprehenderit in.</p>
-                                                                <div class="btn-area">
-                                                                    <a  data-toggle="modal"
-
-{{--                                                                        data-target="#hc_modal_special"--}}
-{{--                                                                        data-content="<h1>' . $specialOfferContent = 'hello' . '</h1>"--}}
-{{--                                                                        data-dismiss="modal"--}}
-                                                                        class="btn btn-icon btn-special-offer-reverse">Back to results</a>
+                                                                <div class="text-white modal-copy">
+                                                                    <p>Remember you can make an enquiry with a Private  Hospital of your choice to have your procedure performed by them, paid for by the NHS, at no greater cost to the tax payer.</p>
+                                                                    <p>To do this you can refresh your search by clicking <a href="/results_page?hospital_type=1">here</a></p>
                                                                 </div>
+{{--                                                                <div class="btn-area">--}}
+{{--                                                                    <a  data-toggle="modal"--}}
+{{--                                                                       data-target="#hc_modal_special"--}}
+{{--                                                                      data-content="<h1>' . $specialOfferContent = 'hello' . '</h1>"--}}
+{{--                                                                       data-dismiss="modal"--}}
+{{--                                                                        class="btn btn-icon btn-special-offer-reverse">Back to results</a>--}}
+{{--                                                               </div>--}}
                                                             </div>
                                                         </div>
                                                     </div>
