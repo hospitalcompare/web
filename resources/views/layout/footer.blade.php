@@ -47,7 +47,7 @@
             <li><a href="">Private Policy</a></li>
             <li><a href="">Cookie Policy</a></li>
             <li><a href="">Cookie Policy</a></li>
-            <li><small>&copy; <time id="thisYear">{{ date('Y') }}</time><a href="">  Hospital Compare</a>. All rights reserved</small></li>
+            <li><small><time id="thisYear">{{ date('Y') }}</time><a href="">  Hospital Compare<sup>TM</sup></a>. All rights reserved</small></li>
         </ul>
     </nav>
 </footer>
