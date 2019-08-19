@@ -12,7 +12,7 @@
             <input type="hidden" name="hospital_id" value="1">
             <div class="form-group row">
                 <div class="col col-6">
-                    @include('components.basic.selectbox', [
+                    @include('components.basic.select', [
                         'options' => [
                             ['id'=>'Mr', 'name'=>'Mr'],
                             ['id'=>'Mrs', 'name'=>'Mrs'],
@@ -59,7 +59,7 @@
                     <input required name="postcode" type="text" class="form-control" id="postcode" placeholder="Postcode*">
                 </div>
                 <div class="col col-6">
-                    @include('components.basic.selectbox', [
+                    @include('components.basic.select', [
                         'options' => $procedures,
                         'chevronFAClassName' => 'fa-chevron-down blackChevron',
                         'selectClass' => 'form-control',

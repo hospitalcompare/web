@@ -5,7 +5,9 @@
             {{empty($placeholder)? '': $placeholder}}
         </label>
     @endif
-    <select class="{{empty($selectClass)? '' : $selectClass}}" id="{{empty($selectId)? '' : $selectId}}"
+    <select class="{{empty($selectClass)? '' : $selectClass}}"
+            id="{{empty($selectId)? '' : $selectId}}"
+            data-live-search="{{ !empty($selectPicker)? 'true' : ''}}"
             name="{{$name}}">
         {{--        <option value="" disabled {{ empty(Request::input($name)) ? 'selected' : ''  }}>{{$placeholder}}</option>--}}
         @if(!empty($options))

@@ -11,16 +11,22 @@
 @section('body-class', 'home-page')
 
 @section('content')
-    <div class="bannerParent">
+    <div class="banner-parent">
         <section class="banner">
-            <div class="bannerData">
-                <div class="homePostCodeParent">
-                    <div class="box fullLeft">
+            <div class="banner-data">
+                <div class="home-postcode-parent">
+                    <div class="box full-left">
                         <p>Find the best hospital for your elective surgery</p><br>
-                        <form class="formElem" method="get" action="/results_page">
+                        <form class="form-element" method="get" action="/results_page">
 
-                            <div class="formChild fullLeft">
-                                @include('components.basic.selectbox', ['selectClass'=> 'big', 'options' => $data['procedures'], 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'placeholder'=>'Choose your procedure (if known)', 'name'=> 'procedure_id'])
+                            <div class="form-child full-left">
+                                @include('components.basic.select', [
+                                    'selectPicker' => 'true',
+                                    'selectClass'=> 'big selectpicker',
+                                    'options' => $data['procedures'],
+                                    'chevronFAClassName' => 'fa-chevron-down aquaChevron',
+                                    'placeholder'=>'Choose your procedure (if known)',
+                                    'name'=> 'procedure_id'])
                                 <a tabindex="0" data-offset="30px, 40px"
                                    class="help-link"
                                     @include('components.basic.popover', [
@@ -41,8 +47,8 @@
                                 >?</a>
                             </div>
 
-                            <div class="formChild fullLeft">
-                                @include('components.basic.textbox', ['placeholder' => 'Enter postcode', 'className' => 'postcode-text-box big', 'value' => '', 'name' => 'postcode', 'id' => 'input_postcode'])
+                            <div class="form-child full-left">
+                                @include('components.basic.input', ['placeholder' => 'Enter postcode', 'className' => 'postcode-text-box big', 'value' => '', 'name' => 'postcode', 'id' => 'input_postcode'])
                                 <a tabindex="0" data-offset="30px, 40px"
                                    class="help-link"
                                     @include('components.basic.popover', [
@@ -66,8 +72,8 @@
                                 </div>
                             </div>
 
-                            <div class="formChild fullLeft d-flex">
-                                @include('components.basic.selectbox', [
+                            <div class="form-child full-left d-flex">
+                                @include('components.basic.select', [
                                     'showLabel' => true, 'selectClass'=> '',
                                     'options' => [
                                         ['id'=>50, 'name'=>'Up to 50 miles'],
@@ -94,8 +100,8 @@
                                 >?</a>
                             </div>
 
-                            <div class="formChild fullLeft d-none">
-                                @include('components.basic.selectbox', ['showLabel' => true, 'selectClass'=> '', 'options' => [['id'=>1, 'name'=>'Provider Name']], 'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'Do you have private healthcare insurance?', 'chevronFAClassName' => '', 'name'=>'insurance_id'])
+                            <div class="form-child full-left d-none">
+                                @include('components.basic.select', ['showLabel' => true, 'selectClass'=> '', 'options' => [['id'=>1, 'name'=>'Provider Name']], 'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'Do you have private healthcare insurance?', 'chevronFAClassName' => '', 'name'=>'insurance_id'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => '', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
 

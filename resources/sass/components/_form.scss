@@ -22,7 +22,7 @@ textarea {
     }
 
     label {
-        color: #1c1c1c;
+        color: $darkerGrey;
         font-weight: 500;
     }
 }
@@ -41,7 +41,7 @@ textarea {
 
 input:not([type="range"]):not([type="submit"]):not([type="checkbox"]),
 select {
-    border: 2px solid #ebebeb; /*Removes border*/
+    border: 2px solid $darkestWhite; /*Removes border*/
     border-radius: 10px;
     appearance: none;
     color: $darkerGrey;
@@ -102,8 +102,8 @@ select::-ms-expand {
         height: 45px;
         line-height: 45px;
         border-radius: 0 10px 10px 0;
-        border: 2px solid #ebebeb;
-        background-color: #ebebeb;
+        border: 2px solid $darkestWhite;
+        background-color: $darkestWhite;
         pointer-events: none;
     }
 
@@ -124,7 +124,7 @@ select::-ms-expand {
         height: 44px;
         line-height: 44px;
         border-radius: 10px;
-        border: 2px solid #ebebeb;
+        border: 2px solid $darkestWhite;
         background-color: #ffffff;
         margin-bottom: 12px;
     }
@@ -179,7 +179,7 @@ select::-ms-expand {
             width: 26px;
             height: 26px;
             border-radius: 10px;
-            border: 2px solid #ebebeb;
+            border: 2px solid $darkestWhite;
             flex: 0 0 26px;
             margin-right: 11px;
             text-align: center;

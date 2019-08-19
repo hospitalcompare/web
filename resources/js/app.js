@@ -6,7 +6,8 @@
 
 // jquery imported through webpack.mix.js
 window.Popper = require('popper.js');
-require('bootstrap'); // Required for bootstrap tooltips
+require('bootstrap');                               // Required for bootstrap tooltips
+require('bootstrap-select');                        // Searchable dropdowns
 import '@fortawesome/fontawesome-free/js/all.min';
 import './scripts/global';                                          // Site wide js
 import './scripts/global';                          // Site wide scripts

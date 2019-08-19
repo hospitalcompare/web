@@ -1,0 +1,36 @@
+.bootstrap-select {
+    background-color: #fff;
+    border-radius: 10px;
+
+    &.show {
+        .dropdown-toggle {
+            background-color: #fff !important;
+        }
+    }
+
+    // Button added by BS select
+    .dropdown-toggle {
+        height: 61px;
+        line-height: 61px;
+        padding: 0 45px 0 16px;
+        width: 100%;
+        border-radius: 10px;
+        color: $darkerGrey;
+        font-size: 18px;
+        border: 2px solid $darkestWhite;
+
+        &:after {
+            display: none;
+        }
+
+        &:hover {
+            color: $darkerGrey;
+            background-color: #fff;
+        }
+
+        &:active {
+            background-color: #fff !important;
+        }
+    }
+}
+
