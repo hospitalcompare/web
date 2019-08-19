@@ -29,10 +29,8 @@
         <!-- or push target to footer -->
         <script src="{{ asset('js/app.js') }}"></script>
 
-
-        <div id="result">
-
-        </div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_-K_00rFUlX8NZni78N7dGeRZKl51yDk"
+                async defer></script>
     </body>
 
 </html>

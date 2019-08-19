@@ -1,15 +1,44 @@
-$(document).ready(function () {
+// Open a modal with gmap loaded
+$(document).ready(function() {
 
-    // On modal show event
-    $('#hc_modal_map').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget); // Button that triggered the modal
-        // var data = button.data('test'); // Extract info from data-* attributes
-        var data = button.data('longitude'); // Extract info from data-* attributes
-        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        var modal = $(this);
-        console.log(data);
-        modal.find('.modal-content').text('New message to ' + data)
-    })
+    var initMap = function(){
+        console.log('Maps init')
+    }
+    var map = null;
+    var myMarker;
+    var myLatlng;
 
-})
+    function initializeGMap(lat, lng) {
+        myLatlng = new google.maps.LatLng(lat, lng);
+
+        var myOptions = {
+            zoom: 14,
+            zoomControl: true,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+        myMarker = new google.maps.Marker({
+            position: myLatlng
+        });
+        myMarker.setMap(map);
+    }
+
+    // Re-init map before show modal
+    $('#hc_modal_map').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget);
+        initializeGMap(button.data('latitude'), button.data('longitude'));
+        // $("#location-map").css("width", "100%");
+        $("#map").css("height", "263px");
+    });
+
+    // Trigger map resize event after modal shown
+    $('#hc_modal_map').on('shown.bs.modal', function() {
+        google.maps.event.trigger(map, "resize");
+        map.setCenter(myLatlng);
+    });
+});
+
+
