@@ -289,7 +289,8 @@
                 </div>
                 <hr>
                 <h3>Enquiry Form</h3>
-                @include('components.modals.modalenquireprivate', ['procedures' => $data['filters']['procedures']])
+                @include('components.modals.modalenquireprivate', [
+                    'procedures' => $data['filters']['procedures']])
             </div>
         </div>
     </main>

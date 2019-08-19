@@ -94,10 +94,13 @@ $close-font-size: 1rem;
 // Forms
 $input-padding-y: 0;
 $input-padding-x: 1rem;
-$input-height: 3;
+$input-height: 30px;
 $input-line-height: 3;
 $input-placeholder-color: $darkerGrey;
 $input-font-weight: 500;
+$input-border-radius: 10px;
+$input-border-color: $darkestWhite;
+$input-border-width: 2px;
 
 // Select picker
 

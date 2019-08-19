@@ -58,6 +58,15 @@
                 <div class="col col-6">
                     <input required name="postcode" type="text" class="form-control" id="postcode" placeholder="Postcode*">
                 </div>
+                <div class="col col-12">
+{{--                    <label for="additional_information">Additional information</label>--}}
+                    <textarea
+                        class="form-control"
+                        name="additional_information"
+                        placeholder="Additional information"
+                        id="additional_information"
+                    ></textarea>
+                </div>
                 <div class="col col-6">
                     @include('components.basic.select', [
                         'options' => $procedures,
@@ -73,11 +82,8 @@
                         elit, sed do eiusmod tempor incididunt ut labore et
                         dolore magna aliqua.</label>
                 </div>
-                <div class="col col-6">
-                    <input required name="additional_information" type="hidden" class="form-control" id="additional_information" placeholder="Additional information">
-                </div>
                 <div class="col-12 btn-area text-center">
-                    <a id="btnSubmit" class="btn btn-icon btn-enquire">Make an enquiry</a>
+                    <a id="btn-submit" class="btn btn-icon btn-enquire">Make an enquiry</a>
                 </div>
             </div>
         </form>

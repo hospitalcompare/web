@@ -73,6 +73,9 @@ class WebController extends BaseController
     }
 
     public function testPage() {
-        return view('pages.testpage');
+        $procedures = Procedure::all()->toArray();
+        $this->returnedData['data']['filters']['procedures']        = $procedures;
+
+        return view('pages.testpage', $this->returnedData);
     }
 }

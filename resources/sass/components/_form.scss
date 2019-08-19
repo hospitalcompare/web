@@ -12,7 +12,7 @@ textarea {
 }
 
 
-//SELECTBOX
+// Select
 .select-parent {
     position: relative;
 
@@ -188,5 +188,17 @@ select::-ms-expand {
             transition: font-size 0.3s;
             cursor: pointer;
         }
+    }
+}
+
+textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid $darkestWhite;
+    background-color: #ffffff;
+    margin-bottom: 12px;
+
+    @include placeholder {
+        color: $darkerGrey;
     }
 }

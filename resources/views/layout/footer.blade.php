@@ -13,7 +13,7 @@
                 <li><a href="">Your rights</a></li>
                 <li><a href="">Patient choice</a></li>
                 <li><a href="">Our blogs</a></li>
-                <li><a href="">Contact us</a></li>
+                <li><a href="mailto:hello@hospitalcompare.co.uk">Contact us</a></li>
             </ul>
         </nav>
 
