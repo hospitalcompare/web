@@ -6,7 +6,7 @@
 
         <nav class="mainNav">
             <ul class="mainMenu">
-                <li><a href="">Our mission</a></li>
+                <li><a href="/about-us">About Us</a></li>
                 <li><a href="">Your Rights
 {{--                        <i class="fas fa-chevron-down"></i>--}}
                     </a>
