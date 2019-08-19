@@ -29,7 +29,7 @@
         <!-- or push target to footer -->
         <script src="{{ asset('js/app.js') }}"></script>
 
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_-K_00rFUlX8NZni78N7dGeRZKl51yDk"
+        <script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_KEY') }}"
                 async defer></script>
     </body>
 
