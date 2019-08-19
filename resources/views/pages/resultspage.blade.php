@@ -112,7 +112,7 @@
                             >?</a>
                         </div>
                         <div class="postProxChild">
-                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'NHS Private/NHS Funded', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
+                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Hospital Type', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
