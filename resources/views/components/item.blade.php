@@ -37,7 +37,7 @@
                 @include('components.basic.popover', [
                     'hideDelay'         => '1000',
                     'content'           => 'For private self-pay<br> waiting time click
-                                            <a  class="link"
+                                            <a  class="text-link"
                                                 data-target="#hc_modal_enquire_private"
                                                 data-toggle="modal"
                                                 data-dismiss="modal">here</a>'
