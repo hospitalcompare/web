@@ -311,7 +311,7 @@
                     'latitude'          => $d['address']['latitude'],
                     'longitude'         => $d['address']['longitude'],
                     'findLink'          => 'Find on map',
-                    'waitTime'          => !empty($d['waitingTime'][0]['avg_waiting_weeks']) ? $d['waitingTime'][0]['avg_waiting_weeks'].' Weeks' : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
+                    'waitTime'          => !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? $d['waitingTime'][0]['perc_waiting_weeks'].' Weeks' : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'stars'             => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\Utils::getHtmlStars($d['rating']['avg_user_rating']) : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'opCancelled'       => !empty($d['cancelledOp']['perc_cancelled_ops'])? $d['cancelledOp']['perc_cancelled_ops'].'%': "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'qualityRating'     => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
@@ -322,7 +322,7 @@
                     'btnText'           => 'Make an enquiry',
                     'NHSClass'          => $d['hospitalType']['name'] == 'NHS' ? 'NHSHospital' : 'privateHospital',
                     'fundedText'        => ($d['hospitalType']['name'] == 'NHS') ? 'NHS Hospital': 'Private Hospital',
-                    'url'               => 'https://' . $d['url'],
+                    'url'               => $d['url'],
                     'modalContent'      => '<button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true" class="text-white bg-black">Close</span>
                                             </button>

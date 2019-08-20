@@ -65,39 +65,6 @@ class Hospital extends Model
     }
 
     /**
-     * Used to build Queries
-     *
-     * @param $query
-     * @param $hospitalType
-     * @return mixed
-     */
-    public function scopeByHospitalType($query, $hospitalType){
-        return $query->where('hospital_type_id', $hospitalType);
-    }
-
-    /**
-     * Used to build Queries
-     *
-     * @param $query
-     * @param $address
-     * @return mixed
-     */
-    public function scopeByAddress($query, $address){
-        return $query->where('address_id', $address);
-    }
-
-    /**
-     * Used to build Queries
-     *
-     * @param $query
-     * @param $trust
-     * @return mixed
-     */
-    public function scopeByTrust($query, $trust){
-        return $query->where('trust_id', $trust);
-    }
-
-    /**
      * Admitted() belongs to HospitalAdmitted
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -150,7 +117,7 @@ class Hospital extends Model
      * @return \Illuminate\Database\Eloquent\Relations\hasMany
      */
     public function waitingTime() {
-        return $this->hasMany( '\App\Models\HospitalWaitingTime', 'hospital_id', 'id');
+        return $this->hasMany( '\App\Models\HospitalWaitingTime', 'hospital_id');
     }
 
     /**
@@ -168,8 +135,8 @@ class Hospital extends Model
      *
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
-    public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 10, $waitingTime = '', $userRating = '', $qualityRating = '', $hospitalType = '', $sortBy = '') {
-        $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'waitingTime']);
+    public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 600, $waitingTime = '', $userRating = '', $qualityRating = '', $hospitalType = '', $sortBy = '') {
+        $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address']);
         //$userRatings    = HospitalRating::selectRaw(\DB::raw("MIN(id) as id, avg_user_rating AS name"))->groupBy(['avg_user_rating'])->whereNotNull('avg_user_rating')->get()->toArray();
 
         //Check if we have the `postcode` and `procedure_id`
@@ -195,32 +162,40 @@ class Hospital extends Model
             //If we don't have data for the Latitude or Longitude, throw an Error. We should always have the right postcode (we need Fronend Validations to make sure that this is the case)
             if(empty($latitude) || empty($longitude))
                 Errors::generateError(['postcode' => 'Please supply a valid Postcode']);
+        }
 
+        if(!empty($latitude) && !empty($longitude)) {
             //Left Join the address so we can sort by radius
             $hospitals = $hospitals->whereHas('address', function($q) use($latitude, $longitude, $radius) {
                 $q->selectRaw(\DB::raw("get_distance({$latitude}, {$longitude}, latitude, longitude) AS radius"));
                 $q->having('radius', '<', $radius);
             })->join('addresses', 'hospitals.address_id', '=', 'addresses.id')
                 ->selectRaw(\DB::raw("hospitals.*, get_distance({$latitude}, {$longitude}, latitude, longitude) AS radius"));
+        } else {
+            //Left Join the address
+            $hospitals = $hospitals->with('address')->join('addresses', 'hospitals.address_id', '=', 'addresses.id')
+                ->selectRaw(\DB::raw("hospitals.*"));
         }
 
         //Check if we have the `procedure_id` and retrieve the relation Waiting Times
         if(!empty($procedureId)) {
             $procedure = Procedure::where('id', $procedureId)->first();
             $specialtyId = $procedure->specialty_id;
-            $hospitals->with(['waitingTime' => function($q) use($specialtyId) {
-                $q->where('specialty_id', '=', $specialtyId);
-            }]);
+
+        } else {
+            $specialty = Specialty::where('name', 'Total')->first();
+            $specialtyId = $specialty->id;
         }
+
+        $hospitals = $hospitals->with(['waitingTime' => function($q) use($specialtyId) {
+            $q->where('specialty_id', '=', $specialtyId);
+        }]);
 
         //Filter by the Waiting Time
         if(!empty($waitingTime)) {
-            if(empty($specialtyId))
-                $specialtyId = 0;
             $hospitals = $hospitals->whereHas('waitingTime', function($q) use($waitingTime, $specialtyId) {
-                    $q->where('avg_waiting_weeks', '<=', $waitingTime);
-                    if(!empty($specialtyId))
-                        $q->where('specialty_id', '=', $specialtyId);
+                $q->where('perc_waiting_weeks', '<=', $waitingTime);
+                $q->where('specialty_id', '=', $specialtyId);
             });
         }
 
@@ -270,14 +245,13 @@ class Hospital extends Model
                     $hospitals = $hospitals->orderBy('radius', 'DESC');
             }
         } elseif (in_array($sortBy, [2, 3])) {
-            if(!empty($specialtyId)) {
-                $hospitals = $hospitals->join('hospital_waiting_time', 'hospitals.id', '=', 'hospital_waiting_time.hospital_id');
-                $hospitals = $hospitals->where('hospital_waiting_time.specialty_id', $specialtyId);
-                if($sortBy == 2)
-                    $hospitals = $hospitals->orderByRaw('ISNULL(hospital_waiting_time.avg_waiting_weeks), hospital_waiting_time.avg_waiting_weeks ASC');
-                else
-                    $hospitals = $hospitals->orderByRaw('ISNULL(hospital_waiting_time.avg_waiting_weeks), hospital_waiting_time.avg_waiting_weeks DESC');
-            }
+            $hospitals = $hospitals->join('hospital_waiting_time', 'hospitals.id', '=', 'hospital_waiting_time.hospital_id');
+            $hospitals = $hospitals->where('hospital_waiting_time.specialty_id', $specialtyId);
+            if($sortBy == 2)
+                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_waiting_time.perc_waiting_weeks), hospital_waiting_time.perc_waiting_weeks ASC');
+            else
+                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_waiting_time.perc_waiting_weeks), hospital_waiting_time.perc_waiting_weeks DESC');
+
         } elseif (in_array($sortBy, [4, 5])) {
             $hospitals = $hospitals->join('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
             if($sortBy == 4)
@@ -307,9 +281,9 @@ class Hospital extends Model
                 $hospitals = $hospitals->join('hospital_waiting_time', 'hospitals.id', '=', 'hospital_waiting_time.hospital_id');
                 $hospitals = $hospitals->where('hospital_waiting_time.specialty_id', $specialtyId);
                 if ($sortBy == 12)
-                    $hospitals = $hospitals->orderByRaw(' hospital_waiting_time.avg_waiting_weeks IS NOT NULL ASC, hospital_waiting_time.avg_waiting_weeks ASC');
+                    $hospitals = $hospitals->orderByRaw(' hospital_waiting_time.perc_waiting_weeks IS NOT NULL ASC, hospital_waiting_time.perc_waiting_weeks ASC');
                 else
-                    $hospitals = $hospitals->orderByRaw(' hospital_waiting_time.avg_waiting_weeks IS NULL ASC, hospital_waiting_time.avg_waiting_weeks ASC');
+                    $hospitals = $hospitals->orderByRaw(' hospital_waiting_time.perc_waiting_weeks IS NULL ASC, hospital_waiting_time.perc_waiting_weeks ASC');
             }
         } elseif (in_array($sortBy, [14, 15])) {
             if($sortBy == 14)
