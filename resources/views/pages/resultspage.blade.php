@@ -26,7 +26,15 @@
                 <div class="selectProx">
                     <div class="filter-section">
                         <div class="postProxChild">
-                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['procedures'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Surgery Type', 'name'=>'procedure_id', 'resultsLabel' => 'resultsLabel'])
+                            @include('components.basic.select', [
+                                'showLabel' => true,
+                                'selectPicker' => 'true',
+                                'options' => $data['filters']['procedures'],
+                                'chevronFAClassName' => 'fa-chevron-down blackChevron',
+                                'selectClass' => 'selectpicker',
+                                'placeholder'=>'Surgery Type',
+                                'name'=>'procedure_id',
+                                'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
