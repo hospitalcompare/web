@@ -80,7 +80,9 @@
                 </p>
             </div>
             <div class="sort-categories-section-2__child" id="item_quality_rating_{{$id}}">
-                {!! $qualityRating !!}
+                <p>
+                    {!! $qualityRating !!}
+                </p>
             </div>
 
             {{-- Friends and family --}}
@@ -100,7 +102,9 @@
                 </p>
             </div>
             <div class="sort-categories-section-2__child" id="item_nhs_private_pay_{{$id}}">
-                {!! $privateSelfPay  !!}
+                <p>
+                    {!! $privateSelfPay  !!}
+                </p>
             </div>
         </div>
         <div class="sortCatSection3 d-flex flex-column justify-content-center">
