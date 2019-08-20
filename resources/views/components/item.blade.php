@@ -34,7 +34,7 @@
             {{-- Waiting time --}}
             <div class="sort-categories-section-2__child" id="item_waiting_time_{{$id}}">
                 <p
-                    @include('components.basic.popover', [
+                    @includeWhen($d['hospitalType']['name'] != 'NHS','components.basic.popover', [
                         'trigger'           => 'hover',
                         'hideDelay'         => '1000',
                         'content'           => '<p>For private self-pay<br> waiting time click
