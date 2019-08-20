@@ -33,7 +33,7 @@
 
     <section class="sitemapBottom">
         <p>
-            *your legal right to choose may be restricted in some circumstances. For more information see <a
+            *your legal right to choose may be restricted in some circumstances. For more information see <a class="text-link"
                 href="/your-rights">Your Rights</a>
         </p>
     </section>
@@ -45,7 +45,6 @@
             <li><a href="">T&Cs</a></li>
             <li><a href="">Accessibility</a></li>
             <li><a href="">Private Policy</a></li>
-            <li><a href="">Cookie Policy</a></li>
             <li><a href="">Cookie Policy</a></li>
             <li><small><time id="thisYear">{{ date('Y') }}</time><a href="/">  Hospital Compare<sup>TM</sup></a>. All rights reserved</small></li>
         </ul>

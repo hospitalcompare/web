@@ -1,47 +1,49 @@
-<section class="sortCategories">
-    <div class="sortCategoriesInner">
-        <div class="sortCatSection1">
-            <div class="sortCatItem">
-                <img src="{{ $itemImg }}">
+<section class="sort-categories">
+    <div class="sort-categories-inner">
+        <div class="sort-categories-section-1">
+            <div class="sort-categories-item">
+                <img alt="Image of {{ $title }}" src="{{ $itemImg }}">
                 <div class="{{$NHSClass}}"><p>{{$fundedText}}</p></div>
-                @if(!empty($specialOffers))
-{{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
-                    @include('components.basic.specialofferslide', ['class' => 'default'])
-                @endif
+                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', ['class' => 'default'])
+                    {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
             </div>
-            <div class="sortCatItem">
-                <p class="sortItemTitle" id="item_name_{{$id}}">
+            <div class="sort-categories-item">
+                <p class="sort-item-title" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
-                <p class="sortItemLocation">{{$location}}</p>
-                    @include('components.basic.modalbutton', [
-                    'hrefValue'         => '#',
-                    'classTitle'        => 'find-link',
-                    'button'            => 'Find on map',
-                    'modalTarget'       => '#hc_modal_map',
-                    'latitude'          => $latitude,
-                    'longitude'         => $longitude
-                    ])
-{{--                TODO: reintroduce consultant button when we have this data --}}
-{{--                @if(!empty($specialOffers))--}}
-{{--                    <div class="btn-area" style="margin-top: 10px">--}}
-{{--                        @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-teal btn-icon btn-consultant btn-plus', 'button' => 'Consultants'])--}}
-{{--                    </div>--}}
-{{--                @endif--}}
+                <p class="sort-item-location">{{$location}}</p>
+                @include('components.basic.modalbutton', [
+                'hrefValue'         => '#',
+                'classTitle'        => 'find-link',
+                'button'            => 'Find on map',
+                'modalTarget'       => '#hc_modal_map',
+                'latitude'          => $latitude,
+                'longitude'         => $longitude
+                ])
+                {{--                TODO: reintroduce consultant button when we have this data --}}
+                {{--                @if(!empty($specialOffers))--}}
+                {{--                    <div class="btn-area" style="margin-top: 10px">--}}
+                {{--                        @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-teal btn-icon btn-consultant btn-plus', 'button' => 'Consultants'])--}}
+                {{--                    </div>--}}
+                {{--                @endif--}}
             </div>
         </div>
-        <div class="sortCatSection2">
+        <div class="sort-categories-section-2">
             {{-- Waiting time --}}
-            <div class="sortCatSection2Child" id="item_waiting_time_{{$id}}">
+            <div class="sort-categories-section-2__child" id="item_waiting_time_{{$id}}">
                 <p
-                @include('components.basic.popover', [
-                    'content' => 'For private self-pay waiting time click <a class="link" href="/">here</a>',
-                    'html' => 'true'])>
+                    @includeWhen($d['hospitalType']['name'] == 'Independent','components.basic.popover', [
+                        'trigger'           => 'hover',
+                        'hideDelay'         => '1000',
+                        'content'           => '<p>For private self-pay<br> waiting time click
+                                                    <a tabindex class="text-link modal-enquire-trigger" role="button" >here</a>
+                                                  </p>',
+                        'html'              => 'true'])>
                     {!! $waitTime !!}
                 </p>
             </div>
             {{-- End waiting time --}}
-            <div class="sortCatSection2Child" id="item_user_rating_{{$id}}">
+            <div class="sort-categories-section-2__child" id="item_user_rating_{{$id}}">
                 <p @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
@@ -72,40 +74,53 @@
                 </p>
             </div>
             {{-- % operations cancelled --}}
-            <div class="sortCatSection2Child" id="item_op_cancelled_{{$id}}">
+            <div class="sort-categories-section-2__child" id="item_op_cancelled_{{$id}}">
                 <p
                     @include('components.basic.popover', [
-                    'content' => 'National average is 3.35%'])>
+                    'trigger' => 'hover',
+                    'html'    => 'true',
+                    'content' => 'National average<br> is 3.35%'])>
                     {!! $opCancelled !!}
                 </p>
             </div>
-            <div class="sortCatSection2Child" id="item_quality_rating_{{$id}}">
-                {!! $qualityRating !!}
+            <div class="sort-categories-section-2__child" id="item_quality_rating_{{$id}}">
+                <p>
+                    {!! $qualityRating !!}
+                </p>
             </div>
 
             {{-- Friends and family --}}
-            <div class="sortCatSection2Child" id="item_ff_rating_{{$id}}">
-                <p  class="m-0"
+            <div class="sort-categories-section-2__child" id="item_ff_rating_{{$id}}">
+                <p class="m-0"
                     @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
-                        'html' => '',
-                        'content' => 'Some paragraph text'])>
+                        'html' => 'true',
+                        'content' => 'National average<br>is 98.85%'])>
                     {!! $FFRating !!}
                 </p>
             </div>
-            <div class="sortCatSection2Child" id="item_nhs_funded_{{$id}}">
+            <div class="sort-categories-section-2__child" id="item_nhs_funded_{{$id}}">
                 <p>
                     {!! $NHSFunded  !!}
                 </p>
             </div>
-            <div class="sortCatSection2Child" id="item_nhs_private_pay_{{$id}}">
-                {!! $privateSelfPay  !!}
+            <div class="sort-categories-section-2__child" id="item_nhs_private_pay_{{$id}}">
+                <p @includeWhen($d['hospitalType']['name'] == 'Independent', 'components.basic.popover', [
+                        'trigger'           => 'hover',
+                        'hideDelay'         => '1000',
+                        'content'           => '<p>For private self-pay<br> Pricing click
+                                                    <a tabindex class="text-link modal-enquire-trigger" role="button" >here</a>
+                                                  </p>',
+                        'html'              => 'true'])>
+                    {!! $privateSelfPay  !!}
+                </p>
             </div>
         </div>
         <div class="sortCatSection3 d-flex flex-column justify-content-center">
-            <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between" @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
-            @if($NHSClass == 'privateHospital')
+            <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between"
+                 @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
+                @if($NHSClass == 'privateHospital')
                     @include('components.basic.modalbutton', [
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,

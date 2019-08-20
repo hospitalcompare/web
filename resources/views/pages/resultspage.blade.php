@@ -158,8 +158,8 @@
 
     <div class="sortCategoriesParent">
         <section class="sortCategoriesHeader">
-            <div class="sortCatSection1"></div>
-            <nav class="sortCatSection2">
+            <div class="sort-categories-section-1"></div>
+            <nav class="sort-categories-section-2">
                 <ul class="sortCatMenu">
                     <li>
                         <p>

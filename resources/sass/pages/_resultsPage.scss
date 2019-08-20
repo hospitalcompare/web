@@ -151,7 +151,7 @@
     }
 
     .sortCategoriesHeader,
-    .sortCategories {
+    .sort-categories {
         @include flex;
     }
 
@@ -167,7 +167,7 @@
         }
     }
 
-    .sortCategories {
+    .sort-categories {
         margin-bottom: 7px;
         background-color: $white;
     }
@@ -176,17 +176,17 @@
         background-color: $lighterGrey;
     }
 
-    .sortCategoriesInner {
+    .sort-categories-inner {
         display: flex;
         width: 1180px;
         margin: auto;
     }
 
-    .sortCatSection1 {
+    .sort-categories-section-1 {
         flex: 1 0 33%;
     }
 
-    .sortCatSection2 {
+    .sort-categories-section-2 {
         flex: 1 0 53%;
 
     }
@@ -239,11 +239,11 @@
         }
     }
 
-    .sortCatSection1, .sortCatSection2 {
+    .sort-categories-section-1, .sort-categories-section-2 {
         @include flex;
     }
 
-    .sortCatSection2Child {
+    .sort-categories-section-2__child {
         flex: 1;
         @include flex-center;
         /* Style for "5.3 Weeks" */
@@ -258,7 +258,7 @@
         }
     }
 
-    .sortCatItem {
+    .sort-categories-item {
         position: $relative;
 
         &:last-child {
@@ -266,7 +266,7 @@
         }
     }
 
-    .sortItemTitle {
+    .sort-item-title {
         font-size: 16px;
         font-weight: 500;
         letter-spacing: -0.8px;
@@ -274,7 +274,7 @@
         margin-bottom: 4px;
     }
 
-    .sortItemLocation {
+    .sort-item-location {
         color: #040202;
         font-size: 14px;
         font-weight: 400;
