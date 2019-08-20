@@ -1,7 +1,7 @@
-<section class="sortCategories">
-    <div class="sortCategoriesInner">
-        <div class="sortCatSection1">
-            <div class="sortCatItem">
+<section class="sort-categories">
+    <div class="sort-categories-inner">
+        <div class="sort-categories-section-1">
+            <div class="sort-categories-item">
                 <img src="{{ $itemImg }}">
                 <div class="{{$NHSClass}}"><p>{{$fundedText}}</p></div>
                 @if(!empty($specialOffers))
@@ -9,11 +9,11 @@
                     @include('components.basic.specialofferslide', ['class' => 'default'])
                 @endif
             </div>
-            <div class="sortCatItem">
-                <p class="sortItemTitle" id="item_name_{{$id}}">
+            <div class="sort-categories-item">
+                <p class="sort-item-title" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
-                <p class="sortItemLocation">{{$location}}</p>
+                <p class="sort-item-location">{{$location}}</p>
                     @include('components.basic.modalbutton', [
                     'hrefValue'         => '#',
                     'classTitle'        => 'find-link',
@@ -30,9 +30,9 @@
 {{--                @endif--}}
             </div>
         </div>
-        <div class="sortCatSection2">
+        <div class="sort-categories-section-2">
             {{-- Waiting time --}}
-            <div class="sortCatSection2Child" id="item_waiting_time_{{$id}}">
+            <div class="sort-categories-section-2__child" id="item_waiting_time_{{$id}}">
                 <p
                 @include('components.basic.popover', [
                     'content' => 'For private self-pay waiting time click <a class="link" href="/">here</a>',
@@ -41,7 +41,7 @@
                 </p>
             </div>
             {{-- End waiting time --}}
-            <div class="sortCatSection2Child" id="item_user_rating_{{$id}}">
+            <div class="sort-categories-section-2__child" id="item_user_rating_{{$id}}">
                 <p @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
@@ -72,19 +72,19 @@
                 </p>
             </div>
             {{-- % operations cancelled --}}
-            <div class="sortCatSection2Child" id="item_op_cancelled_{{$id}}">
+            <div class="sort-categories-section-2__child" id="item_op_cancelled_{{$id}}">
                 <p
                     @include('components.basic.popover', [
                     'content' => 'National average is 3.35%'])>
                     {!! $opCancelled !!}
                 </p>
             </div>
-            <div class="sortCatSection2Child" id="item_quality_rating_{{$id}}">
+            <div class="sort-categories-section-2__child" id="item_quality_rating_{{$id}}">
                 {!! $qualityRating !!}
             </div>
 
             {{-- Friends and family --}}
-            <div class="sortCatSection2Child" id="item_ff_rating_{{$id}}">
+            <div class="sort-categories-section-2__child" id="item_ff_rating_{{$id}}">
                 <p  class="m-0"
                     @include('components.basic.popover', [
                         'placement' => 'bottom',
@@ -94,12 +94,12 @@
                     {!! $FFRating !!}
                 </p>
             </div>
-            <div class="sortCatSection2Child" id="item_nhs_funded_{{$id}}">
+            <div class="sort-categories-section-2__child" id="item_nhs_funded_{{$id}}">
                 <p>
                     {!! $NHSFunded  !!}
                 </p>
             </div>
-            <div class="sortCatSection2Child" id="item_nhs_private_pay_{{$id}}">
+            <div class="sort-categories-section-2__child" id="item_nhs_private_pay_{{$id}}">
                 {!! $privateSelfPay  !!}
             </div>
         </div>
