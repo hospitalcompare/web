@@ -273,9 +273,9 @@ class Hospital extends Model
         } elseif (in_array($sortBy, [10, 11])) {
             $hospitals = $hospitals->join('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
             if($sortBy == 10)
-                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.provider_rating), case when hospital_ratings.provider_rating = "Outstanding" then 4 when hospital_ratings.provider_rating = "Good" then 3 when hospital_ratings.provider_rating = "Inadequate" then 2 when hospital_ratings.provider_rating = "Requires improvement" then 1 end');
+                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.friends_family_rating), hospital_ratings.friends_family_rating ASC');
             else
-                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.provider_rating), case when hospital_ratings.provider_rating = "Outstanding" then 1 when hospital_ratings.provider_rating = "Good" then 2 when hospital_ratings.provider_rating = "Inadequate" then 3 when hospital_ratings.provider_rating = "Requires improvement" then 4 end');
+                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.friends_family_rating), hospital_ratings.friends_family_rating DESC');
         } elseif (in_array($sortBy, [12, 13])) {
             if(!empty($specialtyId)) {
                 $hospitals = $hospitals->join('hospital_waiting_time', 'hospitals.id', '=', 'hospital_waiting_time.hospital_id');

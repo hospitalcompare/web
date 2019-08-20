@@ -6,6 +6,7 @@ namespace App\Imports;
 
 use App\Models\Hospital;
 use App\Models\HospitalAdmitted;
+use App\Models\HospitalRating;
 
 /**
  * Populates the Hospitals with the related Rating
@@ -32,6 +33,13 @@ class Admitted extends DefaultImport {
                         'total_eligible'    => $item['Total Eligible - IP'],
                         'perc_recommended'  => rtrim($item['Percentage Recommended - IP'], '%') ?? 0,
                         'perc_response_rate'  => rtrim($item['Response Rate - IP'], '%') ?? 0,
+                    ]);
+
+                    //Check if we already have a rating for that Hospital and update it
+                    HospitalRating::updateOrCreate([
+                        'hospital_id'       => $hospital->id
+                    ], [
+                        'friends_family_rating'   => !empty($item['Percentage Recommended - IP']) ? rtrim($item['Percentage Recommended - IP'], '%') : null,
                     ]);
 
                     $this->returnedData[] = $admitted;
