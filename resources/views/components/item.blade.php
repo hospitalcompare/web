@@ -2,12 +2,10 @@
     <div class="sort-categories-inner">
         <div class="sort-categories-section-1">
             <div class="sort-categories-item">
-                <img src="{{ $itemImg }}">
+                <img alt="Image of {{ $title }}" src="{{ $itemImg }}">
                 <div class="{{$NHSClass}}"><p>{{$fundedText}}</p></div>
-                @if(!empty($specialOffers))
+                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', ['class' => 'default'])
                     {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
-                    @include('components.basic.specialofferslide', ['class' => 'default'])
-                @endif
             </div>
             <div class="sort-categories-item">
                 <p class="sort-item-title" id="item_name_{{$id}}">
@@ -34,11 +32,11 @@
             {{-- Waiting time --}}
             <div class="sort-categories-section-2__child" id="item_waiting_time_{{$id}}">
                 <p
-                    @includeWhen($d['hospitalType']['name'] != 'NHS','components.basic.popover', [
+                    @includeWhen($d['hospitalType']['name'] == 'Independent','components.basic.popover', [
                         'trigger'           => 'hover',
                         'hideDelay'         => '1000',
                         'content'           => '<p>For private self-pay<br> waiting time click
-                                                    <a class="text-link modal-enquire-trigger" role="button" >here</a>
+                                                    <a tabindex class="text-link modal-enquire-trigger" role="button" >here</a>
                                                   </p>',
                         'html'              => 'true'])>
                     {!! $waitTime !!}
@@ -79,7 +77,9 @@
             <div class="sort-categories-section-2__child" id="item_op_cancelled_{{$id}}">
                 <p
                     @include('components.basic.popover', [
-                    'content' => 'National average is 3.35%'])>
+                    'trigger' => 'hover',
+                    'html'    => 'true',
+                    'content' => 'National average<br> is 3.35%'])>
                     {!! $opCancelled !!}
                 </p>
             </div>
@@ -95,8 +95,8 @@
                     @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
-                        'html' => '',
-                        'content' => 'Some paragraph text'])>
+                        'html' => 'true',
+                        'content' => 'National average<br>is 98.85%'])>
                     {!! $FFRating !!}
                 </p>
             </div>
@@ -106,7 +106,13 @@
                 </p>
             </div>
             <div class="sort-categories-section-2__child" id="item_nhs_private_pay_{{$id}}">
-                <p>
+                <p @includeWhen($d['hospitalType']['name'] == 'Independent', 'components.basic.popover', [
+                        'trigger'           => 'hover',
+                        'hideDelay'         => '1000',
+                        'content'           => '<p>For private self-pay<br> Pricing click
+                                                    <a tabindex class="text-link modal-enquire-trigger" role="button" >here</a>
+                                                  </p>',
+                        'html'              => 'true'])>
                     {!! $privateSelfPay  !!}
                 </p>
             </div>
