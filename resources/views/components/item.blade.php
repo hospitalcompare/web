@@ -35,8 +35,14 @@
             <div class="sort-categories-section-2__child" id="item_waiting_time_{{$id}}">
                 <p
                 @include('components.basic.popover', [
-                    'content' => 'For private self-pay waiting time click <a class="link" href="/">here</a>',
-                    'html' => 'true'])>
+                    'hideDelay'         => '1000',
+                    'content'           => 'For private self-pay<br> waiting time click
+                                            <a  class="link"
+                                                data-target="#hc_modal_enquire_private"
+                                                data-toggle="modal"
+                                                data-dismiss="modal">here</a>'
+                    ,
+                    'html'              => 'true'])>
                     {!! $waitTime !!}
                 </p>
             </div>

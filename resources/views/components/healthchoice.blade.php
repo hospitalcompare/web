@@ -2,7 +2,8 @@
     <section class="chooseHealth">
         {{$choosehealthbanner}}
         <div class="chooseHealthText">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullamcorper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus.”
+            “Use Hospital Compare to make the very best choice for your treatment.”
+{{--            TODO: add opacity mask for clarity of text --}}
 
 {{--            <p>--}}
 {{--                <a class="{{$classTitle}}" href="" role="button">{{$buttonName}}</a>--}}

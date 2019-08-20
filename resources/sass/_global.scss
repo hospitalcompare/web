@@ -87,3 +87,15 @@ select.big {
 .col-greylight{
     color: $greylight;
 }
+
+// In text links
+
+.text-link {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover {
+        color: inherit;
+    }
+}
