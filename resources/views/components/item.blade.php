@@ -5,7 +5,7 @@
                 <img src="{{ $itemImg }}">
                 <div class="{{$NHSClass}}"><p>{{$fundedText}}</p></div>
                 @if(!empty($specialOffers))
-{{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
+                    {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
                     @include('components.basic.specialofferslide', ['class' => 'default'])
                 @endif
             </div>
@@ -14,35 +14,33 @@
                     {{$title}}
                 </p>
                 <p class="sort-item-location">{{$location}}</p>
-                    @include('components.basic.modalbutton', [
-                    'hrefValue'         => '#',
-                    'classTitle'        => 'find-link',
-                    'button'            => 'Find on map',
-                    'modalTarget'       => '#hc_modal_map',
-                    'latitude'          => $latitude,
-                    'longitude'         => $longitude
-                    ])
-{{--                TODO: reintroduce consultant button when we have this data --}}
-{{--                @if(!empty($specialOffers))--}}
-{{--                    <div class="btn-area" style="margin-top: 10px">--}}
-{{--                        @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-teal btn-icon btn-consultant btn-plus', 'button' => 'Consultants'])--}}
-{{--                    </div>--}}
-{{--                @endif--}}
+                @include('components.basic.modalbutton', [
+                'hrefValue'         => '#',
+                'classTitle'        => 'find-link',
+                'button'            => 'Find on map',
+                'modalTarget'       => '#hc_modal_map',
+                'latitude'          => $latitude,
+                'longitude'         => $longitude
+                ])
+                {{--                TODO: reintroduce consultant button when we have this data --}}
+                {{--                @if(!empty($specialOffers))--}}
+                {{--                    <div class="btn-area" style="margin-top: 10px">--}}
+                {{--                        @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-teal btn-icon btn-consultant btn-plus', 'button' => 'Consultants'])--}}
+                {{--                    </div>--}}
+                {{--                @endif--}}
             </div>
         </div>
         <div class="sort-categories-section-2">
             {{-- Waiting time --}}
             <div class="sort-categories-section-2__child" id="item_waiting_time_{{$id}}">
                 <p
-                @include('components.basic.popover', [
-                    'hideDelay'         => '1000',
-                    'content'           => 'For private self-pay<br> waiting time click
-                                            <a  class="text-link"
-                                                data-target="#hc_modal_enquire_private"
-                                                data-toggle="modal"
-                                                data-dismiss="modal">here</a>'
-                    ,
-                    'html'              => 'true'])>
+                    @include('components.basic.popover', [
+                        'trigger'           => 'hover',
+                        'hideDelay'         => '1000',
+                        'content'           => '<p>For private self-pay<br> waiting time click
+                                                    <a class="text-link modal-enquire-trigger" role="button" >here</a>
+                                                  </p>',
+                        'html'              => 'true'])>
                     {!! $waitTime !!}
                 </p>
             </div>
@@ -93,7 +91,7 @@
 
             {{-- Friends and family --}}
             <div class="sort-categories-section-2__child" id="item_ff_rating_{{$id}}">
-                <p  class="m-0"
+                <p class="m-0"
                     @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
@@ -114,8 +112,9 @@
             </div>
         </div>
         <div class="sortCatSection3 d-flex flex-column justify-content-center">
-            <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between" @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
-            @if($NHSClass == 'privateHospital')
+            <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between"
+                 @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
+                @if($NHSClass == 'privateHospital')
                     @include('components.basic.modalbutton', [
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,

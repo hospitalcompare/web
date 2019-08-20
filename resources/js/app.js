@@ -9,8 +9,6 @@ window.Popper = require('popper.js');
 require('bootstrap');                               // Required for bootstrap tooltips
 require('bootstrap-select');                        // Searchable dropdowns
 import '@fortawesome/fontawesome-free/js/all.min';
-import './scripts/global';                                          // Site wide js
-import './scripts/global';                          // Site wide scripts
 import './scripts/scroll';                          // Smooth scroll
 import './scripts/postcode' ;                       // Postcode input
 import './scripts/enquiry' ;                        // Private hospital enquiry form

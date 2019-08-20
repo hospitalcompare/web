@@ -16,4 +16,6 @@ $(document).ready(function () {
         var modal = $(this);
         modal.find('.hospital-title').html(hospitalTitle);
     })
+
+
 })
