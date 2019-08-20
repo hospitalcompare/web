@@ -7,11 +7,8 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+yarn.lock
 package-lock.json
 composer.lock
 /.idea/
-/public/css/
-/public/images/
-/public/fonts/
-/public/js/
-/public/video/
+/public/
