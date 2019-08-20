@@ -1,7 +1,7 @@
 $(document).ready(function () {
     //POSTCODE Autocomplete
     // $('.postcode-autocomplete-cont').hide();
-    var $postcode_input = $('.homePostCodeParent #input_postcode')
+    var $postcode_input = $('.home-postcode-parent #input_postcode')
     $postcode_input.on('input',function(e) {
         var postcode = $(this).val();
         $.ajax({
@@ -15,7 +15,7 @@ $(document).ready(function () {
             data: {},
             success: function (data) {
                 // var json_obj = $.parseJSON(data);//parse JSON
-                var ajaxBox = $(".homePostCodeParent .postcode-autocomplete-cont .ajax-box");
+                var ajaxBox = $(".home-postcode-parent .postcode-autocomplete-cont .ajax-box");
                 ajaxBox.empty(); // remove old options
                 //Check if we have at least one result in our data
                 if(!$.isEmptyObject(data.data.result)) {
@@ -37,7 +37,7 @@ $(document).ready(function () {
 
     $('.ajax-box').on('click', '.postcode-item', function(){
         var newPostcode = $(this).text();
-        var parent      = $('.homePostCodeParent #input_postcode');
+        var parent      = $('.home-postcode-parent #input_postcode');
         var ajaxBox     = $('.postcode-autocomplete-cont .ajax-box');
         parent.val(newPostcode);
         ajaxBox.empty();

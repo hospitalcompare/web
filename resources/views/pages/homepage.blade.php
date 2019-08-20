@@ -11,16 +11,22 @@
 @section('body-class', 'home-page')
 
 @section('content')
-    <div class="bannerParent">
+    <div class="banner-parent">
         <section class="banner">
-            <div class="bannerData">
-                <div class="homePostCodeParent">
-                    <div class="box fullLeft">
+            <div class="banner-data">
+                <div class="home-postcode-parent">
+                    <div class="box full-left">
                         <p>Find the best hospital for your elective surgery</p><br>
-                        <form class="formElem" method="get" action="/results_page">
+                        <form class="form-element" method="get" action="/results_page">
 
-                            <div class="formChild fullLeft">
-                                @include('components.basic.selectbox', ['selectClass'=> 'big', 'options' => $data['procedures'], 'chevronFAClassName' => 'fa-chevron-down aquaChevron', 'placeholder'=>'Choose your procedure (if known)', 'name'=> 'procedure_id'])
+                            <div class="form-child full-left">
+                                @include('components.basic.select', [
+                                    'selectPicker' => 'true',
+                                    'selectClass'=> 'big selectpicker',
+                                    'options' => $data['procedures'],
+                                    'chevronFAClassName' => 'fa-chevron-down aquaChevron',
+                                    'placeholder'=>'Choose your procedure (if known)',
+                                    'name'=> 'procedure_id'])
                                 <a tabindex="0" data-offset="30px, 40px"
                                    class="help-link"
                                     @include('components.basic.popover', [
@@ -41,8 +47,8 @@
                                 >?</a>
                             </div>
 
-                            <div class="formChild fullLeft">
-                                @include('components.basic.textbox', ['placeholder' => 'Enter postcode', 'className' => 'postcode-text-box big', 'value' => '', 'name' => 'postcode', 'id' => 'input_postcode'])
+                            <div class="form-child full-left">
+                                @include('components.basic.input', ['placeholder' => 'Enter postcode', 'className' => 'postcode-text-box big', 'value' => '', 'name' => 'postcode', 'id' => 'input_postcode'])
                                 <a tabindex="0" data-offset="30px, 40px"
                                    class="help-link"
                                     @include('components.basic.popover', [
@@ -66,8 +72,8 @@
                                 </div>
                             </div>
 
-                            <div class="formChild fullLeft d-flex">
-                                @include('components.basic.selectbox', [
+                            <div class="form-child full-left d-flex">
+                                @include('components.basic.select', [
                                     'showLabel' => true, 'selectClass'=> '',
                                     'options' => [
                                         ['id'=>50, 'name'=>'Up to 50 miles'],
@@ -94,8 +100,8 @@
                                 >?</a>
                             </div>
 
-                            <div class="formChild fullLeft d-none">
-                                @include('components.basic.selectbox', ['showLabel' => true, 'selectClass'=> '', 'options' => [['id'=>1, 'name'=>'Provider Name']], 'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'Do you have private healthcare insurance?', 'chevronFAClassName' => '', 'name'=>'insurance_id'])
+                            <div class="form-child full-left d-none">
+                                @include('components.basic.select', ['showLabel' => true, 'selectClass'=> '', 'options' => [['id'=>1, 'name'=>'Provider Name']], 'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'Do you have private healthcare insurance?', 'chevronFAClassName' => '', 'name'=>'insurance_id'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => '', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
 
@@ -225,7 +231,7 @@
                             {{--                            <source src="movie.ogg" type="video/ogg">--}}
                             {{--                            Your browser does not support the video tag.--}}
                         </video>
-                        <div class="playerButton toggle"></div>
+{{--                        <div class="playerButton toggle"></div>--}}
                     </div>
                 </div>
             </section>
@@ -235,24 +241,24 @@
 
     <div class="howSectionParent">
         @include('components.howsection', ['howsections' => [
-        ['iconImg'=> 'images/003-doctor.png', 'numeral'=> '1.', 'title'=>'Get your referral from the GP or have a surgery in mind', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis' ],
-        ['iconImg'=> 'images/001-search-1.png', 'numeral'=> '2.', 'title'=>'Search by postcode or speciality', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis'],
-        ['iconImg'=> 'images/Layer_536.png', 'numeral'=> '3.', 'title'=>'Find the best hospital for you', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis'],
-        ['iconImg'=> 'images/Layer_537.png', 'numeral'=> '4.', 'title'=>'Book your operation', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis' ] ],
+        ['iconImg'=> 'images/003-doctor.png', 'numeral'=> '', 'title'=>'Get your referral from the GP or have a surgery in mind', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis' ],
+        ['iconImg'=> 'images/001-search-1.png', 'numeral'=> '', 'title'=>'Search by postcode or speciality', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis'],
+        ['iconImg'=> 'images/Layer_536.png', 'numeral'=> '', 'title'=>'Find the best hospital for you', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis'],
+        ['iconImg'=> 'images/Layer_537.png', 'numeral'=> '', 'title'=>'Book your operation', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis' ] ],
         'sectionTitle' => 'How does it work?' ])
     </div>
 
     @include('components.healthchoice', ['choosehealthbanner' => '', 'buttonName' => 'Choose your health', 'classTitle' => 'btn btn-icon btn-arrow-right mx-auto' ] )
 
-    <div class="blogSectionParent">
-        <h1 class="pageTitle">Making the right choice</h1>
-        <div class="blogContent">
-            @include('components.blogs', ['blogs' =>
-            [
-                ['iconImg'=> 'images/Layer_16.png' , 'title'=>'Blog', 'description' => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.', 'url' => url('/blog/1')],
-                ['iconImg'=> 'images/Layer_17.png' , 'title'=>'Blog', 'description' => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.', 'url' => url('/blog/2')],
-                ['iconImg'=> 'images/Layer_18.png' , 'title'=>'Blog', 'description' => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.', 'url' => url('/blog/3')]
-            ], 'classTitle'=> '', 'buttonTitle' => 'Read more', 'buttonClass' => 'btn btn-block btn-read-more' ])
-        </div>
-    </div>
+{{--    <div class="blogSectionParent">--}}
+{{--        <h1 class="pageTitle">Making the right choice</h1>--}}
+{{--        <div class="blogContent">--}}
+{{--            @include('components.blogs', ['blogs' =>--}}
+{{--            [--}}
+{{--                ['iconImg'=> 'images/Layer_16.png' , 'title'=>'Blog', 'description' => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.', 'url' => url('/blog/1')],--}}
+{{--                ['iconImg'=> 'images/Layer_17.png' , 'title'=>'Blog', 'description' => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.', 'url' => url('/blog/2')],--}}
+{{--                ['iconImg'=> 'images/Layer_18.png' , 'title'=>'Blog', 'description' => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.', 'url' => url('/blog/3')]--}}
+{{--            ], 'classTitle'=> '', 'buttonTitle' => 'Read more', 'buttonClass' => 'btn btn-block btn-read-more' ])--}}
+{{--        </div>--}}
+{{--    </div>--}}
 @endsection

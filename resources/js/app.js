@@ -6,7 +6,8 @@
 
 // jquery imported through webpack.mix.js
 window.Popper = require('popper.js');
-require('bootstrap'); // Required for bootstrap tooltips
+require('bootstrap');                               // Required for bootstrap tooltips
+require('bootstrap-select');                        // Searchable dropdowns
 import '@fortawesome/fontawesome-free/js/all.min';
 import './scripts/global';                                          // Site wide js
 import './scripts/global';                          // Site wide scripts
@@ -15,11 +16,12 @@ import './scripts/postcode' ;                       // Postcode input
 import './scripts/enquiry' ;                        // Private hospital enquiry form
 window.Cookies = require('./scripts/cookies');      // Cookie/compare functionallity
 import './scripts/compare';                         // Slider for radius of proximity on search page
-// window.Vue = require('vue');                        // Vue.js
+import './scripts/gmapInit';                        // Gmaps nodal
+// window.Vue = require('vue');                     // Vue.js
 
 // Components
 import './components/basic/specialoffer';           // Toggling special offer slide out
-import './components/basic/video';                  // Video controller
+// import './components/basic/video';                  // Video controller TODO: reinstate video when we have one
 import './components/basic/range';                  // Slider for radius of proximity on search page
 import './components/basic/popover';                // Trigger bootstrap tooltip
 import './components/basic/tooltip';                // Trigger bootstrap popover

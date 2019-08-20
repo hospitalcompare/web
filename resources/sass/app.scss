@@ -8,6 +8,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Bootstrap select picker
+@import '~bootstrap-select/sass/bootstrap-select';
+
 // Font-awesome
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 
@@ -40,15 +43,15 @@
 // BASIC COMPONENTS
 @import 'components/banner';
 @import 'components/basic/button';
-@import 'components/basic/selectBox';
-@import 'components/basic/textBox';
+@import 'components/basic/select';
+@import 'components/basic/input';
 @import 'components/basic/helpLink';
 @import 'components/basic/lightBox';
 @import 'components/basic/rangeStyle';
 @import 'components/basic/range';
 @import 'components/basic/popover';
 @import 'components/basic/modal';
-@import 'components/basic/specialOFferSlide';
+@import 'components/basic/specialOfferSlide';
 
 
 

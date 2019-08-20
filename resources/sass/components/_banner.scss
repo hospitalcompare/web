@@ -1,5 +1,5 @@
 //BANNER SECTION
-.bannerParent {
+.banner-parent {
     width: 100%;
     height: auto;
 
@@ -27,7 +27,7 @@
     }
 }
 
-.bannerData {
+.banner-data {
     @include flex;
     width: $pageWrap;
     margin: auto;
@@ -36,7 +36,7 @@
 }
 
 //BANNER CONTENTS
-.homePostCodeParent {
+.home-postcode-parent {
     @include uniformAlignment;
 }
 
@@ -58,6 +58,16 @@
         font-weight: 500;
         letter-spacing: -1.25px;
         line-height: 30px;
+    }
+
+    .postcode-item {
+        &:hover {
+            background-color: $teal;
+            color: $white;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 10px;
+        }
     }
 }
 
@@ -118,7 +128,6 @@
 
 .postcode-autocomplete-cont {
     display: none;
-    //float: left;
     width: 100%;
     overflow: hidden;
     transition: 1s linear;
@@ -126,7 +135,6 @@
     margin-top: 20px;
 
     .ajax-box {
-        float: left;
         width: 100%;
         padding: 10px;
         border-radius: 10px;

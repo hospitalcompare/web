@@ -5,7 +5,9 @@
         border-radius: 16px 0 16px 16px;
     }
 
+
     .close {
+        top: 0;
         right: 0;
         width: 61px;
         height: 29px;
@@ -15,6 +17,9 @@
         opacity: 1;
         transform: translate(50%, -50%);
 
+        @include hover {
+            opacity: 1 !important;
+        }
 
         span {
             background-color: inherit;
@@ -71,6 +76,19 @@
             display: block !important;
             position: initial;
             z-index: 1070;
+        }
+    }
+
+    // GMaps
+    &.modal-maps {
+        border-radius: 16px;
+
+        .modal-dialog {
+            max-width: 1060px;
+        }
+
+        .modal-content {
+            padding: 25px;
         }
     }
 }

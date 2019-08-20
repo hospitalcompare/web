@@ -24,7 +24,7 @@
 
 $(document).ready(function () {
 
-    $("#btnSubmit").click(function (event) {
+    $("#btn-submit").click(function (event) {
 
         //stop submit the form, we will post it manually.
         event.preventDefault();
@@ -39,7 +39,7 @@ $(document).ready(function () {
         // data.append("CustomField", "This is some extra data, testing");
 
         // disabled the submit button
-        $("#btnSubmit").prop("disabled", true);
+        $("#btn-submit").prop("disabled", true);
 
         $.ajax({
             type: "POST",
@@ -58,14 +58,14 @@ $(document).ready(function () {
                 $('#hc_modal_enquire_private').modal('hide');
                 $("#result").text(data);
                 console.log("SUCCESS : ", data);
-                $("#btnSubmit").prop("disabled", false);
+                $("#btn-submit").prop("disabled", false);
 
             },
             error: function (e) {
                 alert(e.responseText);
                 // $("#result").text(e.responseText);
                 console.log("ERROR : ", e);
-                $("#btnSubmit").prop("disabled", false);
+                $("#btn-submit").prop("disabled", false);
 
             }
         });

@@ -14,12 +14,20 @@
                     {{$title}}
                 </p>
                 <p class="sortItemLocation">{{$location}}</p>
-                <a class='findLink' href="">{{$findLink}}</a>
-                @if(!empty($specialOffers))
-                    <div class="btn-area" style="margin-top: 10px">
-                        @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-teal btn-icon btn-consultant btn-plus', 'button' => 'Consultants'])
-                    </div>
-                @endif
+                    @include('components.basic.modalbutton', [
+                    'hrefValue'         => '#',
+                    'classTitle'        => 'find-link',
+                    'button'            => 'Find on map',
+                    'modalTarget'       => '#hc_modal_map',
+                    'latitude'          => $latitude,
+                    'longitude'         => $longitude
+                    ])
+{{--                TODO: reintroduce consultant button when we have this data --}}
+{{--                @if(!empty($specialOffers))--}}
+{{--                    <div class="btn-area" style="margin-top: 10px">--}}
+{{--                        @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-teal btn-icon btn-consultant btn-plus', 'button' => 'Consultants'])--}}
+{{--                    </div>--}}
+{{--                @endif--}}
             </div>
         </div>
         <div class="sortCatSection2">
@@ -87,7 +95,9 @@
                 </p>
             </div>
             <div class="sortCatSection2Child" id="item_nhs_funded_{{$id}}">
-                {!! $NHSFunded  !!}
+                <p>
+                    {!! $NHSFunded  !!}
+                </p>
             </div>
             <div class="sortCatSection2Child" id="item_nhs_private_pay_{{$id}}">
                 {!! $privateSelfPay  !!}
@@ -113,7 +123,10 @@
                     'modalTarget'       => '#hc_modal_enquire_nhs',
                     'modalContent'      => $modalContent])
                 @endif
-                @include('components.basic.button', ['classTitle' => 'btn btn-green-outline compare btn-block mt-0', 'button' => '', 'icon' => '', 'id' => $id])
+                @include('components.basic.button', [
+                    'classTitle' => 'btn btn-green-outline compare btn-block mt-0',
+                    'button' => '', 'icon' => '',
+                    'id' => $id])
             </div>
             @if(!empty($specialOffers))
                 <div class="btn-area btn-area-lower">

@@ -12,12 +12,12 @@
 
 @section('content')
 
-    <form class="formElem">
+    <form class="form-element">
         <div class="filterParent">
             <section class="filter">
                 <div class="postProx">
                     <div class="postProxChild">
-                        @include('components.basic.textbox', ['placeholder' => 'Enter your postcode', 'inputClassName' => 'inputClass', 'value' => !empty(Request::input('postcode')) ? Request::input('postcode') : '' , 'name' => 'postcode', 'id' => 'input_postcode'])
+                        @include('components.basic.input', ['placeholder' => 'Enter your postcode', 'inputClassName' => 'inputClass', 'value' => !empty(Request::input('postcode')) ? Request::input('postcode') : '' , 'name' => 'postcode', 'id' => 'input_postcode'])
                     </div>
                     <div class="postProxChild">
                         @include('components.basic.range', ['label' => 'Within radius of:', 'min' => 10, 'max' => 300, 'value' => !empty(Request::input('radius')) ? Request::input('radius') : '', 'name' => 'radius', 'step' => 10])
@@ -26,7 +26,7 @@
                 <div class="selectProx">
                     <div class="filter-section">
                         <div class="postProxChild">
-                            @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['filters']['procedures'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Surgery Type', 'name'=>'procedure_id', 'resultsLabel' => 'resultsLabel'])
+                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['procedures'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Surgery Type', 'name'=>'procedure_id', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
@@ -47,8 +47,8 @@
                             >?</a>
                         </div>
                         <div class="postProxChild">
-                            {{--                            @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'searchPageSelect', 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'placeholder' => 'Waiting time', 'resultsLabel' => 'resultsLabel'])--}}
-                            @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['filters']['waitingTimes'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Waiting time', 'name'=>'waiting_time', 'resultsLabel' => 'resultsLabel'])
+                            {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'searchPageSelect', 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'placeholder' => 'Waiting time', 'resultsLabel' => 'resultsLabel'])--}}
+                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['waitingTimes'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Waiting time', 'name'=>'waiting_time', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
@@ -69,8 +69,8 @@
                             >?</a>
                         </div>
                         <div class="postProxChild">
-                            {{--                            @include('components.basic.selectbox', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'searchPageSelect', 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'placeholder' => 'NHS choices user rating', 'resultsLabel' => 'resultsLabel'])--}}
-                            @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['filters']['userRatings'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'NHS Choices User Rating', 'name'=>'user_rating', 'resultsLabel' => 'resultsLabel'])
+                            {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'searchPageSelect', 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'placeholder' => 'NHS choices user rating', 'resultsLabel' => 'resultsLabel'])--}}
+                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['userRatings'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'NHS Choices User Rating', 'name'=>'user_rating', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
@@ -91,7 +91,7 @@
                             >?</a>
                         </div>
                         <div class="postProxChild">
-                            @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['filters']['qualityRatings'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Care Quality Rating', 'name'=>'quality_rating', 'resultsLabel' => 'resultsLabel'])
+                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['qualityRatings'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Care Quality Rating', 'name'=>'quality_rating', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
@@ -112,7 +112,7 @@
                             >?</a>
                         </div>
                         <div class="postProxChild">
-                            @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'NHS Private/NHS Funded', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
+                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Hospital Type', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
@@ -149,7 +149,7 @@
                         Showing {{count($data['hospitals'])}} out of {{$data['hospitals']->total()}} provider(s)
                     </div>
                     <div class="sortSection">
-                        @include('components.basic.selectbox', ['showLabel' => true, 'options' => $data['sortBy'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect select-sort-by', 'placeholder'=>'Sort by:', 'name'=>'sort_by', 'resultsLabel' => 'sortLabel'])
+                        @include('components.basic.select', ['showLabel' => true, 'options' => $data['sortBy'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect select-sort-by', 'placeholder'=>'Sort by:', 'name'=>'sort_by', 'resultsLabel' => 'sortLabel'])
                     </div>
                 </section>
             </section>
@@ -308,6 +308,8 @@
                     'itemImg'           => 'images/alder-1.png',
                     'title'             => $d['name'],
                     'location'          => (!empty($d['address']['address_1']) ? $d['address']['address_1']: '').(!empty($d['radius']) ? ', '.number_format($d['radius'], 1 ). ' miles from postcode': ''),
+                    'latitude'          => $d['address']['latitude'],
+                    'longitude'         => $d['address']['longitude'],
                     'findLink'          => 'Find on map',
                     'waitTime'          => !empty($d['waitingTime'][0]['avg_waiting_weeks']) ? $d['waitingTime'][0]['avg_waiting_weeks'].' Weeks' : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'stars'             => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\Utils::getHtmlStars($d['rating']['avg_user_rating']) : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
@@ -334,11 +336,10 @@
                                                                     <div class="image-wrapper mr-3">
                                                                         <img class="mr-3" src="images/alder-1.png">
                                                                     </div>
-                                                                    <p class="modal-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                                                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                                                        reprehenderit in.</p>
+                                                                    <div class="modal-copy">
+                                                                        <p>Unfortunately this NHS Hospital has not enabled enquiries to be made from our site.</p>
+                                                                        <p>To make an enquiry with them please visit their website <a href="http://' . $d['url'] . '" target="_blank">here</a> or by clicking the link below or you can discuss making an enquiry with your GP.</p>
+                                                                    </div>
 
                                                                 </div>
                                                                 <div class="btn-area">
@@ -351,20 +352,17 @@
                                                                 class="col-inner col-inner__right h-100 text-center bg-pink">
                                                                 <h2 class="text-white">Or go back to results</h2>
 
-                                                                <p class="text-white modal-copy">Lorem ipsum dolor sit amet, consectetur
-                                                                    adipiscing elit, sed do eiusmod
-                                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                                                    ea
-                                                                    commodo consequat. Duis aute irure dolor in reprehenderit in.</p>
-                                                                <div class="btn-area">
-                                                                    <a  data-toggle="modal"
-
-{{--                                                                        data-target="#hc_modal_special"--}}
-{{--                                                                        data-content="<h1>' . $specialOfferContent = 'hello' . '</h1>"--}}
-{{--                                                                        data-dismiss="modal"--}}
-                                                                        class="btn btn-icon btn-special-offer-reverse">Back to results</a>
+                                                                <div class="text-white modal-copy">
+                                                                    <p>Remember you can make an enquiry with a Private  Hospital of your choice to have your procedure performed by them, paid for by the NHS, at no greater cost to the tax payer.</p>
+                                                                    <p>To do this you can refresh your search by clicking <a href="/results_page?hospital_type=1">here</a></p>
                                                                 </div>
+{{--                                                                <div class="btn-area">--}}
+{{--                                                                    <a  data-toggle="modal"--}}
+{{--                                                                       data-target="#hc_modal_special"--}}
+{{--                                                                      data-content="<h1>' . $specialOfferContent = 'hello' . '</h1>"--}}
+{{--                                                                       data-dismiss="modal"--}}
+{{--                                                                        class="btn btn-icon btn-special-offer-reverse">Back to results</a>--}}
+{{--                                                               </div>--}}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -395,10 +393,12 @@
     {{--  Compare bar  --}}
     @include('components.compare')
     {{--  Modal for 'make an enquiry'  --}}
-    @include('components.modalenquirenhs')
+    @include('components.modals.modalenquirenhs')
     {{--  Modal for special offers  --}}
-    @include('components.modalspecial')
+    @include('components.modals.modalspecial')
     {{--  Modal for special offers  --}}
-    @include('components.modalenquireprivate', ['procedures' => $data['filters']['procedures']])
+    @include('components.modals.modalenquireprivate', ['procedures' => $data['filters']['procedures']])
+    {{--  Maps modal  --}}
+    @include('components.modals.modalmaps')
 
 @endsection
