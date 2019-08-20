@@ -97,7 +97,7 @@
                 <div class="popover fade bs-popover-top show" role="tooltip" id="popover438743" x-placement="bottom"
                      style="position: relative;">
                     <div class="arrow" style="left: 64px;"></div>
-                    <div class="popover-body">Hello, this is a popover <a class="" href="/">Click here</a></div>
+                    <div class="popover-body">Hello, this is a popover <a tabindex class="text-link">Click here</a></div>
                 </div>
 
                 <h3>Large popover</h3>
@@ -105,7 +105,7 @@
                      x-placement="bottom"
                      style="position: relative;">
                     <div class="arrow arrow-large" style="left: 64px;"></div>
-                    <div class="popover-body">Hello, this is a popover <a class="" href="/">Click here</a></div>
+                    <div class="popover-body">Hello, this is a popover <a tabindex class="text-link">Click here</a></div>
                 </div>
 
                 <h3>Popover with stars</h3>
