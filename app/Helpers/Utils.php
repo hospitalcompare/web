@@ -134,6 +134,26 @@ class Utils
         ]
     ];
 
+    //Filter Quality Ratings
+    const radius = [
+        [
+            'id' => 600,
+            'name'  => 'National'
+        ],[
+            'id' => 100,
+            'name'  => 'Up to 100 miles'
+        ],[
+            'id' => 75,
+            'name'  => 'Up to 75 miles'
+        ],[
+            'id' => 50,
+            'name'  => 'Up to 50 miles'
+        ],[
+            'id' => 25,
+            'name'  => 'Up to 25 miles'
+        ]
+    ];
+
     /**
      * Creates a file based on a given Base64 Image
      *

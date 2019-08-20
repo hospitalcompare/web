@@ -16,7 +16,7 @@ class HospitalRating extends Model
      * @var array
      */
     protected $fillable = [
-        'hospital_id', 'avg_user_rating', 'total_ratings', 'provider_rating', 'latest_rating', 'status'
+        'hospital_id', 'avg_user_rating', 'total_ratings', 'provider_rating', 'latest_rating', 'friends_family_rating', 'status'
     ];
 
     /**
@@ -25,12 +25,13 @@ class HospitalRating extends Model
      * @var array
      */
     protected $casts = [
-        'hospital_id'       => 'integer',
-        'avg_user_rating'   => 'double',
-        'total_ratings'     => 'integer',
-        'provider_rating'   => 'string',
-        'latest_rating'     => 'string',
-        'status'            => 'string'
+        'hospital_id'           => 'integer',
+        'avg_user_rating'       => 'double',
+        'total_ratings'         => 'integer',
+        'provider_rating'       => 'string',
+        'latest_rating'         => 'string',
+        'friends_family_rating' => 'string',
+        'status'                => 'string'
     ];
 
     /**

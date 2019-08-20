@@ -75,10 +75,7 @@
                             <div class="form-child full-left d-flex">
                                 @include('components.basic.select', [
                                     'showLabel' => true, 'selectClass'=> '',
-                                    'options' => [
-                                        ['id'=>50, 'name'=>'Up to 50 miles'],
-                                        ['id'=>20, 'name'=>'Up to 20 miles'],
-                                        ['id'=>10, 'name'=>'Less than 10 miles']],
+                                    'options' => \App\Helpers\Utils::radius,
                                      'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'How far would you like to travel?', 'chevronFAClassName' => '', 'name'=>'radius'])
                                 <a tabindex="0" data-offset="30px, 40px"
                                    class="help-link"

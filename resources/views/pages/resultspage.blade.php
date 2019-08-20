@@ -20,7 +20,7 @@
                         @include('components.basic.input', ['placeholder' => 'Enter your postcode', 'inputClassName' => 'inputClass', 'value' => !empty(Request::input('postcode')) ? Request::input('postcode') : '' , 'name' => 'postcode', 'id' => 'input_postcode'])
                     </div>
                     <div class="postProxChild">
-                        @include('components.basic.range', ['label' => 'Within radius of:', 'min' => 10, 'max' => 300, 'value' => !empty(Request::input('radius')) ? Request::input('radius') : '', 'name' => 'radius', 'step' => 10])
+                        @include('components.basic.range', ['label' => 'Within radius of:', 'min' => 10, 'max' => 600, 'value' => !empty(Request::input('radius')) ? Request::input('radius') : '', 'name' => 'radius', 'step' => 10])
                     </div>
                 </div>
                 <div class="selectProx">
@@ -319,18 +319,18 @@
                     'latitude'          => $d['address']['latitude'],
                     'longitude'         => $d['address']['longitude'],
                     'findLink'          => 'Find on map',
-                    'waitTime'          => !empty($d['waitingTime'][0]['avg_waiting_weeks']) ? $d['waitingTime'][0]['avg_waiting_weeks'].' Weeks' : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
+                    'waitTime'          => !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? $d['waitingTime'][0]['perc_waiting_weeks'].' Weeks' : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'stars'             => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\Utils::getHtmlStars($d['rating']['avg_user_rating']) : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'opCancelled'       => !empty($d['cancelledOp']['perc_cancelled_ops'])? $d['cancelledOp']['perc_cancelled_ops'].'%': "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'qualityRating'     => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
-                    'FFRating'          => !empty($d['rating']['provider_rating']) ? $d['rating']['provider_rating'] : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
+                    'FFRating'          => !empty($d['rating']['friends_family_rating']) ? $d['rating']['friends_family_rating'].'%' : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'NHSFunded'         => ($d['hospitalType']['name'] === 'Independent' && !empty($d['waitingTime'][0])) ? "<img src='../images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'privateSelfPay'    => $d['hospitalType']['name'] === 'Independent' ? "<img src='../images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='../images/icons/dash-black.svg' alt='Dash icon'>",
                     'specialOffers'     => $d['special_offers'],
                     'btnText'           => 'Make an enquiry',
                     'NHSClass'          => $d['hospitalType']['name'] == 'NHS' ? 'NHSHospital' : 'privateHospital',
                     'fundedText'        => ($d['hospitalType']['name'] == 'NHS') ? 'NHS Hospital': 'Private Hospital',
-                    'url'               => 'https://' . $d['url'],
+                    'url'               => $d['url'],
                     'modalContent'      => '<button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true" class="text-white bg-black">Close</span>
                                             </button>
