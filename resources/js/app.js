@@ -6,8 +6,9 @@
 
 // jquery imported through webpack.mix.js
 window.Popper = require('popper.js');
-require('bootstrap');                               // Required for bootstrap tooltips
-require('bootstrap-select');                        // Searchable dropdowns
+import 'bootstrap';                                 // Required for bootstrap tooltips
+import 'bootstrap-select';                          // Searchable dropdowns
+import 'cookieconsent';                             // Cookie consent plugin
 import '@fortawesome/fontawesome-free/js/all.min';
 import './scripts/scroll';                          // Smooth scroll
 import './scripts/postcode' ;                       // Postcode input

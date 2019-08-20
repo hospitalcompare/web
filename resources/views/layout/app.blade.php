@@ -31,6 +31,26 @@
 
         <script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_KEY') }}"
                 async defer></script>
+        <script>
+            window.addEventListener("load", function(){
+                window.cookieconsent.initialise({
+                    "palette": {
+                        "popup": {
+                            "background": "#efefef",
+                            "text": "#404040"
+                        },
+                        "button": {
+                            "background": "#8ec760",
+                            "text": "#ffffff"
+                        }
+                    },
+                    "theme": "classic",
+                    "position": "bottom-right",
+                    "content": {
+                        "href": "/privacy-policy/"
+                    }
+                })});
+        </script>
     </body>
 
 </html>
