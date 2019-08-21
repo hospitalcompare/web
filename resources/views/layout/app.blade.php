@@ -37,17 +37,17 @@
                     "palette": {
                         "popup": {
                             "background": "#efefef",
-                            "text": "#404040"
+                            "text": "#1c1c1c"
                         },
                         "button": {
-                            "background": "#8ec760",
+                            "background": "#00cecd",
                             "text": "#ffffff"
                         }
                     },
                     "theme": "classic",
-                    "position": "bottom-right",
+                    "position": "top",
                     "content": {
-                        "href": "/privacy-policy/"
+                        "href": "/cookie-policy/"
                     }
                 })});
         </script>

@@ -42,10 +42,10 @@
 <footer class="footer">
     <nav class="footerCreds">
         <ul class="credLinks">
-            <li><a href="">T&Cs</a></li>
-            <li><a href="">Accessibility</a></li>
-            <li><a href="">Private Policy</a></li>
-            <li><a href="">Cookie Policy</a></li>
+            <li><a href="/terms-and-conditions">T&Cs</a></li>
+            <li><a href="/accessibility">Accessibility</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/cookie-policy">Cookie Policy</a></li>
             <li><small><time id="thisYear">{{ date('Y') }}</time><a href="/">  Hospital Compare<sup>TM</sup></a>. All rights reserved</small></li>
         </ul>
     </nav>

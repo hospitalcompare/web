@@ -13,7 +13,9 @@
 
 Route::get('/','WebController@homepage');
 
-Route::get('/results_page','WebController@resultsPage');
+Route::get('/results-page','WebController@resultsPage');
 
-Route::get('/test_page','WebController@testPage');
+Route::get('/test-page','WebController@testPage');
+
+Route::get('/cookie-policy','WebController@contentPage');
 
