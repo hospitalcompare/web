@@ -7,7 +7,7 @@
         <nav class="mainNav">
             <ul class="mainMenu">
                 <li><a href="/about-us">About Us</a></li>
-                <li><a href="">Your Rights
+                <li><a href="/your-rights">Your Rights
 {{--                        <i class="fas fa-chevron-down"></i>--}}
                     </a>
 {{--                    <ul class="dropdownMenu">--}}
@@ -16,7 +16,7 @@
 {{--                        <li><a href="">Link text here</a></li>--}}
 {{--                    </ul>--}}
                 </li>
-                <li><a href="">How To Use
+                <li><a href="/how-to-use">How To Use
 {{--                        <i class="fas fa-chevron-down"></i>--}}
                     </a>
 {{--                    <ul class="dropdownMenu">--}}
@@ -25,8 +25,8 @@
 {{--                        <li><a href="">Link text here</a></li>--}}
 {{--                    </ul>--}}
                 </li>
-                <li><a href="">FAQs</a></li>
-                <li><a href="">Guides</a></li>
+                <li><a href="/faqs">FAQs</a></li>
+                <li><a href="/guides">Guides</a></li>
             </ul>
         </nav>
 
