@@ -12,6 +12,15 @@
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/icons/favicon-32x32.png') }}">
         <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/icons/favicon-16x16.png') }}">
         <link rel="manifest" href="{{ asset('images/icons/site.webmanifest') }}">
+        <script type="text/javascript">
+            //uncomment and change this to false if you're having trouble with WOFFs
+            //var woffEnabled = true;
+            //to place your webfonts in a custom directory
+            //uncomment this and set it to where your webfonts are.
+            //var customPath = "/themes/fonts";
+        </script>
+        <script type="text/javascript" src="{{ asset('fonts/MyFontsWebfontsKit.js') }}"></script>
+
     </head>
 
     <body class="@yield('body-class')">

@@ -1,10 +1,14 @@
 // Transition
 $transition: 0.3s all ease;
 
+// Fonts
+$font-family-sans-serif: 'Sofia Pro', sans-serif;
+$headings-font-family: 'Sofia Pro', sans-serif;
+$headings-font-weight: normal; // font is bold, so normal is standard bold
 // Typography
-$font-family-sans-serif: 'sofia', sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+//$font-family-sans-serif: 'sofia', sans-serif;
+//$font-size-base: 0.9rem;
+//$line-height-base: 1.6;
 
 // Colors
 $indigo: #6574cd;
@@ -65,11 +69,7 @@ $btn-border-radius: 100px;
 $btn-transition: $transition;
 $btn-border-width: 0;
 
-// Fonts
-$font-family-sans-serif: 'Sofia Pro', sans-serif;
 
-$headings-font-family: 'Sofia Pro', sans-serif;
-$headings-font-weight: normal; // font is bold, so normal is standard bold
 
 // Popovers
 //$popover-border-width: 0;
