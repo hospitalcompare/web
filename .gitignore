@@ -9,6 +9,7 @@ npm-debug.log
 yarn-error.log
 package-lock.json
 composer.lock
+yarn.lock
 /.idea/
 /public/css/
 /public/images/

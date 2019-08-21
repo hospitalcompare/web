@@ -57,7 +57,18 @@
                 border: none;
             }
         }
+
+        // Move arrow if popover below trigger
+        &.bs-popover-bottom {
+            .arrow-large {
+                bottom: calc(100% - 8px);
+                top: auto;
+                left: calc(50% - 40px) !important;
+                transform: rotate(180deg) scaleX(-1);
+            }
+        }
     }
+
 }
 
 

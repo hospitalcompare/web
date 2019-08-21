@@ -17,7 +17,7 @@
                 <div class="home-postcode-parent">
                     <div class="box full-left">
                         <p>Find the best hospital for your elective surgery</p><br>
-                        <form class="form-element" method="get" action="/results_page">
+                        <form class="form-element" method="get" action="/results-page">
 
                             <div class="form-child full-left">
                                 @include('components.basic.select', [
@@ -104,7 +104,7 @@
 
                             @include('components.basic.submit', ['classTitle' => 'btn btn-m btn-grad btn-teal', 'button' => 'Find Hospitals'])
 
-                            <p class='browseButton'><a href="{{url('/results_page')}}">Browse all hospitals</a></p>
+                            <p class='browseButton'><a href="{{url('/results-page')}}">Browse all hospitals</a></p>
 
                         </form>
                     </div>
@@ -197,8 +197,8 @@
         </section>
     </div>
 
-    {{--    <div class="howSectionParent">--}}
-    {{--        @include('components.howsection', ['howsections' => [--}}
+    {{--    <div class="how-section__parent">--}}
+    {{--        @include('components.how-section', ['howsections' => [--}}
     {{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Standard procedure at an NHS Hospital', 'description' => 'You have the legal right to choose which NHS hospital to have your NHS procedure at.' ],--}}
     {{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'NHS Funded in a private hospital', 'description' => 'You have the legal right to have an NHS funded procedure at a private hospital of your choice'],--}}
     {{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Private Healthcare Insurance', 'description' => 'Many private healthcare insurance policies allow you to choose a hospital for your procedure'],--}}
@@ -236,16 +236,41 @@
         </div>
     </div>
 
-    <div class="howSectionParent">
-        @include('components.howsection', ['howsections' => [
-        ['iconImg'=> 'images/003-doctor.png', 'numeral'=> '', 'title'=>'Get your referral from the GP or have a surgery in mind', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis' ],
-        ['iconImg'=> 'images/001-search-1.png', 'numeral'=> '', 'title'=>'Search by postcode or speciality', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis'],
-        ['iconImg'=> 'images/Layer_536.png', 'numeral'=> '', 'title'=>'Find the best hospital for you', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis'],
-        ['iconImg'=> 'images/Layer_537.png', 'numeral'=> '', 'title'=>'Book your operation', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis' ] ],
-        'sectionTitle' => 'How does it work?' ])
-    </div>
+    <section class="how-section__parent">
+        @include('components.howSection', [
+        'sectionTitle' => 'How does it work?',
+        'howsections' => [
+            ['iconImg'=> 'images/003-doctor.png',
+            'numeral'=> '',
+            'title'=>'Step One',
+            'description' => 'Make sure you understand:
+                - your rights to choose (if NHS funded treatment, self-pay or if covered by a health insurance policy)<br>
+                - that you don’t have to select your hospital during the GP appointment, but can easily do so at a later date, having made whatever enquires you wish to make.
+                Include click here’s for the various points.
+                ' ],
+            ['iconImg'=> 'images/001-search-1.png',
+            'numeral'=> '',
+            'title'=>'Step Two',
+            'description' => 'Use the Hospital Compare search criteria to shortlist one or more hospitals to make further enquiries of (Possibly insert note here about NHS hospitals enquiry procedures).'],
+            ['iconImg'=> 'images/Layer_536.png',
+            'numeral'=> '',
+            'title'=>'Step Three',
+            'description' => 'Make the enquires and then make your selection as to which hospital to have your treatment at.'],
+            ['iconImg'=> 'images/Layer_537.png',
+            'numeral'=> '',
+            'title'=>'Step Four',
+            'description' => 'Call your GP surgery and book your first appointment slot via their E-referral system.
+The four steps will be across the page and then presumably we will have a fifth button to press to start searching, return to the top part of the homepage?
+' ] ] ])
+    </section>
 
-    @include('components.healthchoice', ['choosehealthbanner' => '', 'buttonName' => 'Choose your health', 'classTitle' => 'btn btn-icon btn-arrow-right mx-auto' ] )
+    <section class="choose-health-parent">
+        @include('components.healthchoice', [
+            'choosehealthbanner' => '',
+            'buttonName' => 'Choose your health',
+            'classTitle' => 'btn btn-icon btn-arrow-right mx-auto' ] )
+
+    </section>
 
 {{--    <div class="blogSectionParent">--}}
 {{--        <h1 class="pageTitle">Making the right choice</h1>--}}

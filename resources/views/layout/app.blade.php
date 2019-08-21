@@ -16,7 +16,7 @@
 
     <body class="@yield('body-class')">
         <div class="header-wrapper">
-            @include('layout.header', ['page_header' => ''])
+            @include('layout.header')
         </div>
 
         <div class="mainContentWrap" id="app">
@@ -29,8 +29,28 @@
         <!-- or push target to footer -->
         <script src="{{ asset('js/app.js') }}"></script>
 
-        <script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_KEY') }}"
+        <script src="https://maps.googleapis.com/maps/api/js?key={{ config('services.googleApiKey') }}"
                 async defer></script>
+        <script>
+            window.addEventListener("load", function(){
+                window.cookieconsent.initialise({
+                    "palette": {
+                        "popup": {
+                            "background": "#efefef",
+                            "text": "#1c1c1c"
+                        },
+                        "button": {
+                            "background": "#00cecd",
+                            "text": "#ffffff"
+                        }
+                    },
+                    "theme": "classic",
+                    "position": "top",
+                    "content": {
+                        "href": "/cookie-policy/"
+                    }
+                })});
+        </script>
     </body>
 
 </html>

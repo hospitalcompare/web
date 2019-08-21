@@ -8,11 +8,11 @@
     <section class="sitemap">
         <nav class="sitemapNav">
             <ul class="sitemapMenu">
-                <li><a href="">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/about-us">About Us</a></li>
-                <li><a href="">Your rights</a></li>
-                <li><a href="">Patient choice</a></li>
-                <li><a href="">Our blogs</a></li>
+                <li><a href="/your-rights">Your rights</a></li>
+                <li><a href="/patient-choice">Patient choice</a></li>
+{{--                <li><a href="/our-blogs">Our blogs</a></li>--}}
                 <li><a href="mailto:hello@hospitalcompare.co.uk">Contact us</a></li>
             </ul>
         </nav>
@@ -42,10 +42,10 @@
 <footer class="footer">
     <nav class="footerCreds">
         <ul class="credLinks">
-            <li><a href="">T&Cs</a></li>
-            <li><a href="">Accessibility</a></li>
-            <li><a href="">Private Policy</a></li>
-            <li><a href="">Cookie Policy</a></li>
+            <li><a href="/terms-and-conditions">T&Cs</a></li>
+            <li><a href="/accessibility">Accessibility</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/cookie-policy">Cookie Policy</a></li>
             <li><small><time id="thisYear">{{ date('Y') }}</time><a href="/">  Hospital Compare<sup>TM</sup></a>. All rights reserved</small></li>
         </ul>
     </nav>

@@ -26,7 +26,15 @@
                 <div class="selectProx">
                     <div class="filter-section">
                         <div class="postProxChild">
-                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['procedures'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Surgery Type', 'name'=>'procedure_id', 'resultsLabel' => 'resultsLabel'])
+                            @include('components.basic.select', [
+                                'showLabel' => true,
+                                'selectPicker' => 'true',
+                                'options' => $data['filters']['procedures'],
+                                'chevronFAClassName' => 'fa-chevron-down blackChevron',
+                                'selectClass' => 'selectpicker',
+                                'placeholder'=>'Surgery Type',
+                                'name'=>'procedure_id',
+                                'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
@@ -354,7 +362,7 @@
 
                                                                 <div class="text-white modal-copy">
                                                                     <p>Remember you can make an enquiry with a Private  Hospital of your choice to have your procedure performed by them, paid for by the NHS, at no greater cost to the tax payer.</p>
-                                                                    <p>To do this you can refresh your search by clicking <a href="/results_page?hospital_type=1">here</a></p>
+                                                                    <p>To do this you can refresh your search by clicking <a href="/results-page?hospital_type=1">here</a></p>
                                                                 </div>
 {{--                                                                <div class="btn-area">--}}
 {{--                                                                    <a  data-toggle="modal"--}}

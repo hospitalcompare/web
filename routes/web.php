@@ -13,7 +13,17 @@
 
 Route::get('/','WebController@homepage');
 
-Route::get('/results_page','WebController@resultsPage');
+Route::get('/results-page','WebController@resultsPage');
 
-Route::get('/test_page','WebController@testPage');
+Route::get('/test-page','WebController@testPage');
 
+//Route::get('/cookie-policy','WebController@contentPage');
+
+Route::get('/{slug}', 'WebController@contentPage'); //This replaces all the individual routes
+//
+//Route::get('/{slug}', function ($slug) {
+//
+//    // slug other url, subfolders also
+//    return view('pages.contentpage')->with(['slug' => $slug]);
+//
+//})->where('slug', '.*');

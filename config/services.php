@@ -44,4 +44,6 @@ return [
         ],
     ],
 
+    'googleApiKey' => 'AIzaSyChk0D7cV2T9kUHLwr8ZDJquWeKqVbUfLs'
+
 ];

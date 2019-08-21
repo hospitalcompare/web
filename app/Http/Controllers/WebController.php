@@ -72,6 +72,12 @@ class WebController extends BaseController
         return view('pages.resultspage', $this->returnedData);
     }
 
+    // Return generic view for pages without specific route
+    public function contentPage($slug) {
+        return view('pages.contentpage')->with(['slug' => $slug]);
+    }
+
+    // Stacking page for components etc
     public function testPage() {
         $procedures = Procedure::all()->toArray();
         $this->returnedData['data']['filters']['procedures']        = $procedures;

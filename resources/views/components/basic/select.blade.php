@@ -7,7 +7,7 @@
     @endif
     <select class="{{empty($selectClass)? '' : $selectClass}}"
             id="{{empty($selectId)? '' : $selectId}}"
-            data-live-search="{{ !empty($selectPicker)? 'true' : ''}}"
+            data-live-search="{{ !empty($selectPicker) ? $selectPicker : ''}}"
             name="{{$name}}">
         {{--        <option value="" disabled {{ empty(Request::input($name)) ? 'selected' : ''  }}>{{$placeholder}}</option>--}}
         @if(!empty($options))
