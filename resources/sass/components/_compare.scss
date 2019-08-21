@@ -27,6 +27,11 @@
                     font-weight: 400;
                     letter-spacing: -0.9px;
 
+                    &:hover {
+                        background-color: darken($teal, 5%);
+                        text-decoration: none;
+                    }
+
                     &.btn-special-tab {
                         position: absolute;
                         left: 0;

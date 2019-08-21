@@ -3,8 +3,8 @@
     <div class="container">
         <div class="branding">
             @include('components.logo', ['titleParent' => 'headerLogoParent', 'logoImg' => 'headerLogoImg', 'logoTitle' => 'headerLogoTitle'])
-            <nav class="mainNav">
-                <ul class="mainMenu">
+            <nav class="main-nav">
+                <ul class="main-menu">
                     <li><a href="/about-us">About Us</a></li>
                     <li><a href="/your-rights">Your Rights
                             {{--                        <i class="fas fa-chevron-down"></i>--}}

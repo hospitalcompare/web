@@ -121,5 +121,23 @@
     }
 }
 
+.footerLogoParent {
+    position: relative;
+    top: -25px;
+    left: 10px;
 
+    .footerLogoImg {
+        width: $fullWidth / 12;
+        position: absolute;
+        top: 15px;
+        left: 0;
+    }
 
+    .footerLogoTitle {
+
+        position: absolute;
+        top: 13px;
+        left: 55px;
+
+    }
+}
