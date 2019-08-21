@@ -90,6 +90,10 @@
                 padding: 30px 15px;
                 transition: $transition;
 
+                &.active {
+                    background-color: darken($teal, 5%);
+                }
+
                 &:hover {
                     background-color: darken($teal, 5%);
                     text-decoration: none;
