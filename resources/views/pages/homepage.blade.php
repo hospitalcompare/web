@@ -237,7 +237,7 @@
     </div>
 
     <section class="how-section__parent">
-        @include('components.howSection', [
+        @include('components.howsection', [
         'sectionTitle' => 'How does it work?',
         'howsections' => [
             ['iconImg'=> 'images/003-doctor.png',
