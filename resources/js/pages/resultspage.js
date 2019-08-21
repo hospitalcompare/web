@@ -31,40 +31,40 @@ $(document).ready(function() {
 
         if(target === "sort-waiting-time") {
             if(direction === 'asc')
-                optionTarget = $('.results-page .select-sort-by #sort_by_3');
+                optionTarget = $('.results-page .select-sort-by #sort_by_4');
             else
-                optionTarget = $('.results-page .select-sort-by #sort_by_2');
+                optionTarget = $('.results-page .select-sort-by #sort_by_3');
 
         } else if(target === "sort-user-rating") {
             if(direction === 'asc')
-                optionTarget = $('.results-page .select-sort-by #sort_by_5');
+                optionTarget = $('.results-page .select-sort-by #sort_by_6');
             else
-                optionTarget = $('.results-page .select-sort-by #sort_by_4');
+                optionTarget = $('.results-page .select-sort-by #sort_by_5');
         } else if(target === "sort-op-cancelled") {
             if(direction === 'asc')
-                optionTarget = $('.results-page .select-sort-by #sort_by_7');
-            else
-                optionTarget = $('.results-page .select-sort-by #sort_by_6');
-        } else if(target === "sort-care-quality") {
-            if(direction === 'asc')
-                optionTarget = $('.results-page .select-sort-by #sort_by_9');
-            else
                 optionTarget = $('.results-page .select-sort-by #sort_by_8');
+            else
+                optionTarget = $('.results-page .select-sort-by #sort_by_7');
+        } else if(target === "sort-care-quality-rating") {
+            if(direction === 'asc')
+                optionTarget = $('.results-page .select-sort-by #sort_by_10');
+            else
+                optionTarget = $('.results-page .select-sort-by #sort_by_9');
         } else if(target === "sort-ff-rating") {
             if(direction === 'asc')
-                optionTarget = $('.results-page .select-sort-by #sort_by_11');
+                optionTarget = $('.results-page .select-sort-by #sort_by_12');
             else
-                optionTarget = $('.results-page .select-sort-by #sort_by_10');
+                optionTarget = $('.results-page .select-sort-by #sort_by_11');
         } else if(target === "sort-nhs-funded") {
             if(direction === 'asc')
-                optionTarget = $('.results-page .select-sort-by #sort_by_13');
+                optionTarget = $('.results-page .select-sort-by #sort_by_14');
             else
-                optionTarget = $('.results-page .select-sort-by #sort_by_12');
+                optionTarget = $('.results-page .select-sort-by #sort_by_13');
         } else if(target === "sort-self-pay") {
             if(direction === 'asc')
-                optionTarget = $('.results-page .select-sort-by #sort_by_15');
+                optionTarget = $('.results-page .select-sort-by #sort_by_16');
             else
-                optionTarget = $('.results-page .select-sort-by #sort_by_14');
+                optionTarget = $('.results-page .select-sort-by #sort_by_15');
         }
         //Check if we have an actual value
         if(optionTarget === '')

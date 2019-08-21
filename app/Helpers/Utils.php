@@ -8,51 +8,54 @@ class Utils
     const sortBys = [
         [
             'id' => '0',
-            'name'  => 'Distance from Postcode ascending'
+            'name'  => 'Default sorting'
         ],[
             'id' => '1',
-            'name'  => 'Distance from Postcode descending'
+            'name'  => 'Distance from Postcode ascending'
         ],[
             'id' => '2',
-            'name'  => 'Waiting time ascending'
+            'name'  => 'Distance from Postcode descending'
         ],[
             'id' => '3',
-            'name'  => 'Waiting time descending'
+            'name'  => 'Waiting time ascending'
         ],[
             'id' => '4',
-            'name'  => 'User Rating ascending'
+            'name'  => 'Waiting time descending'
         ],[
             'id' => '5',
-            'name'  => 'User Rating descending'
+            'name'  => 'User Rating ascending'
         ],[
             'id' => '6',
-            'name'  => 'Operations Cancelled ascending'
+            'name'  => 'User Rating descending'
         ],[
             'id' => '7',
-            'name'  => 'Operations Cancelled descending'
+            'name'  => 'Operations Cancelled ascending'
         ],[
             'id' => '8',
-            'name'  => 'Care Quality Rating ascending'
+            'name'  => 'Operations Cancelled descending'
         ],[
             'id' => '9',
-            'name'  => 'Care Quality Rating descending'
+            'name'  => 'Care Quality Rating ascending'
         ],[
             'id' => '10',
-            'name'  => 'Friends & Family Rating ascending'
+            'name'  => 'Care Quality Rating descending'
         ],[
             'id' => '11',
-            'name'  => 'Friends & Family Rating descending'
+            'name'  => 'Friends & Family Rating ascending'
         ],[
             'id' => '12',
-            'name'  => 'NHS Funded Work ascending'
+            'name'  => 'Friends & Family Rating descending'
         ],[
             'id' => '13',
-            'name'  => 'NHS Funded Work descending'
+            'name'  => 'NHS Funded Work ascending'
         ],[
             'id' => '14',
-            'name'  => 'Private Self Pay ascending'
+            'name'  => 'NHS Funded Work descending'
         ],[
             'id' => '15',
+            'name'  => 'Private Self Pay ascending'
+        ],[
+            'id' => '16',
             'name'  => 'Private Self Pay descending'
         ]
     ];

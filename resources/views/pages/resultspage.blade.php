@@ -186,7 +186,7 @@
                                                     procedure at. Enter your provider and policy name to find the best hospital for you.
                                                 </p>'])>?</a>
                         </p>
-                        <span title="Sort by this column" class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 3 ? 'desc':'asc' }}"></span>
+                        <span title="Sort by this column" class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p>NHS Choices <br> User Rating&nbsp;<br>
@@ -204,7 +204,7 @@
                                                     procedure at. Enter your provider and policy name to find the best hospital for you.
                                                 </p>'])>?</a>
                         </p>
-                        <span title="Sort by this column" class="sort-arrow sort-user-rating {{Request::input('sort_by') == 5 ? 'desc':'asc' }}"></span>
+                        <span title="Sort by this column" class="sort-arrow sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p>
@@ -223,7 +223,7 @@
                                                     procedure at. Enter your provider and policy name to find the best hospital for you.
                                                 </p>'])>?</a>
                         </p>
-                        <span title="Sort by this column" class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 7 ? 'desc':'asc' }}"></span>
+                        <span title="Sort by this column" class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p>
@@ -242,7 +242,7 @@
                                                     procedure at. Enter your provider and policy name to find the best hospital for you.
                                                 </p>'])>?</a>
                         </p>
-                        <span title="Sort by this column" class="sort-arrow sort-care-quality-rating {{Request::input('sort_by') == 9 ? 'desc':'asc' }}"></span>
+                        <span title="Sort by this column" class="sort-arrow sort-care-quality-rating {{Request::input('sort_by') == 10 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p>
@@ -261,7 +261,7 @@
                                                     procedure at. Enter your provider and policy name to find the best hospital for you.
                                                 </p>'])>?</a>
                         </p>
-                        <span title="Sort by this column" class="sort-arrow sort-ff-rating {{Request::input('sort_by') == 11 ? 'desc':'asc' }}"></span>
+                        <span title="Sort by this column" class="sort-arrow sort-ff-rating {{Request::input('sort_by') == 12 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p>
@@ -281,7 +281,7 @@
                                                 </p>'])>?</a>
 
                         </p>
-                        <span title="Sort by this column" class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 13 ? 'desc':'asc' }}"></span>
+                        <span title="Sort by this column" class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 14 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p>
@@ -300,7 +300,7 @@
                                                 </p>'])>?</a>
 
                         </p>
-                        <span title="Sort by this column" class="sort-arrow sort-self-pay {{Request::input('sort_by') == 15 ? 'desc':'asc' }}"></span>
+                        <span title="Sort by this column" class="sort-arrow sort-self-pay {{Request::input('sort_by') == 16 ? 'desc':'asc' }}"></span>
                     </li>
                 </ul>
             </nav>
