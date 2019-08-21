@@ -17,7 +17,7 @@
                 <div class="home-postcode-parent">
                     <div class="box full-left">
                         <p>Find the best hospital for your elective surgery</p><br>
-                        <form class="form-element" method="get" action="/results_page">
+                        <form class="form-element" method="get" action="/results-page">
 
                             <div class="form-child full-left">
                                 @include('components.basic.select', [
@@ -104,7 +104,7 @@
 
                             @include('components.basic.submit', ['classTitle' => 'btn btn-m btn-grad btn-teal', 'button' => 'Find Hospitals'])
 
-                            <p class='browseButton'><a href="{{url('/results_page')}}">Browse all hospitals</a></p>
+                            <p class='browseButton'><a href="{{url('/results-page')}}">Browse all hospitals</a></p>
 
                         </form>
                     </div>

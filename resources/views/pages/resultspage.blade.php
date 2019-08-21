@@ -362,7 +362,7 @@
 
                                                                 <div class="text-white modal-copy">
                                                                     <p>Remember you can make an enquiry with a Private  Hospital of your choice to have your procedure performed by them, paid for by the NHS, at no greater cost to the tax payer.</p>
-                                                                    <p>To do this you can refresh your search by clicking <a href="/results_page?hospital_type=1">here</a></p>
+                                                                    <p>To do this you can refresh your search by clicking <a href="/results-page?hospital_type=1">here</a></p>
                                                                 </div>
 {{--                                                                <div class="btn-area">--}}
 {{--                                                                    <a  data-toggle="modal"--}}
