@@ -10,6 +10,7 @@ use App\Models\Address;
 use App\Models\Enquiry;
 use App\Models\Hospital;
 use App\Models\HospitalType;
+use App\Models\Specialty;
 use App\Models\Trust;
 use App\Services\Location;
 use Request;
@@ -72,6 +73,13 @@ class ApiController {
         //Update the Hospitals with special offers
         //TODO: Remove this when the actual special offers are decided
         \DB::statement('UPDATE hospitals LEFT JOIN hospital_types ON hospitals.hospital_type_id = hospital_types.id SET special_offers = 1 WHERE hospital_types.name = "Independent" AND hospitals.id % 3 = 0');
+        //Add a waiting time = 0 to all the hospitals that don't have the total specialty
+        //Get the Specialty
+//        $totalSpecialty = Specialty::where('name', 'Total')->first();
+//        if(!empty($totalSpecialty)) {
+//
+//        }
+
 
         return $returnedData;
     }
