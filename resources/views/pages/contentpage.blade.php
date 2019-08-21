@@ -14,10 +14,11 @@
 
     <main>
         <div class="container">
-            <section>
-                <h1>The {{ $slug }} page is under construction!</h1>
-            </section>
-
+            <div class="row">
+                <div class="col">
+                    <h1>The {{ $slug }} page is under construction!</h1>
+                </div>
+            </div>
         </div>
     </main>
 

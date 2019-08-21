@@ -197,8 +197,8 @@
         </section>
     </div>
 
-    {{--    <div class="howSectionParent">--}}
-    {{--        @include('components.howsection', ['howsections' => [--}}
+    {{--    <div class="how-section__parent">--}}
+    {{--        @include('components.how-section', ['howsections' => [--}}
     {{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Standard procedure at an NHS Hospital', 'description' => 'You have the legal right to choose which NHS hospital to have your NHS procedure at.' ],--}}
     {{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'NHS Funded in a private hospital', 'description' => 'You have the legal right to have an NHS funded procedure at a private hospital of your choice'],--}}
     {{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Private Healthcare Insurance', 'description' => 'Many private healthcare insurance policies allow you to choose a hospital for your procedure'],--}}
@@ -236,14 +236,27 @@
         </div>
     </div>
 
-    <div class="howSectionParent">
-        @include('components.howsection', ['howsections' => [
-        ['iconImg'=> 'images/003-doctor.png', 'numeral'=> '', 'title'=>'Get your referral from the GP or have a surgery in mind', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis' ],
-        ['iconImg'=> 'images/001-search-1.png', 'numeral'=> '', 'title'=>'Search by postcode or speciality', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis'],
-        ['iconImg'=> 'images/Layer_536.png', 'numeral'=> '', 'title'=>'Find the best hospital for you', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis'],
-        ['iconImg'=> 'images/Layer_537.png', 'numeral'=> '', 'title'=>'Book your operation', 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis' ] ],
-        'sectionTitle' => 'How does it work?' ])
-    </div>
+    <section class="how-section__parent">
+        @include('components.howSection', [
+        'sectionTitle' => 'How does it work?',
+        'howsections' => [
+            ['iconImg'=> 'images/003-doctor.png',
+            'numeral'=> '',
+            'title'=>'Get your referral from the GP or have a surgery in mind',
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis' ],
+            ['iconImg'=> 'images/001-search-1.png',
+            'numeral'=> '',
+            'title'=>'Search by postcode or speciality',
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis'],
+            ['iconImg'=> 'images/Layer_536.png',
+            'numeral'=> '',
+            'title'=>'Find the best hospital for you',
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis'],
+            ['iconImg'=> 'images/Layer_537.png',
+            'numeral'=> '',
+            'title'=>'Book your operation',
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis' ] ] ])
+    </section>
 
     @include('components.healthchoice', ['choosehealthbanner' => '', 'buttonName' => 'Choose your health', 'classTitle' => 'btn btn-icon btn-arrow-right mx-auto' ] )
 
