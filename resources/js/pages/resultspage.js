@@ -5,5 +5,72 @@ $(document).ready(function() {
     //On click event for the sorting ( to submit without clicking the submit button )
     $('.results-page .select-sort-by').change(function(){
         $('.results-page .btn-submit-results').click();
-    })
+    });
+
+    //Sorting asc/desc when the arrows are clicked
+    $(document).on("click touchend", ".sortCatMenu .sort-arrow", function () {
+        //Get all the classes from the element
+        var elementClasses = $(this).attr('class');
+        //Get the actual target class
+        var explodedClasses = elementClasses.split(' ');
+        var targetClass = explodedClasses[1];
+        //Get the direction (asc/desc)
+        var direction = explodedClasses[2];
+        //Change the sort order by clicking the dropdown
+        changeSortBy(targetClass, direction);
+    });
+
+    /**
+     * Selects an option from the Sort By dropdown and triggers the `change` event
+     *
+     * @param target
+     * @param direction
+     */
+    function changeSortBy(target, direction) {
+        var optionTarget = '';
+
+        if(target === "sort-waiting-time") {
+            if(direction === 'asc')
+                optionTarget = $('.results-page .select-sort-by #sort_by_3');
+            else
+                optionTarget = $('.results-page .select-sort-by #sort_by_2');
+
+        } else if(target === "sort-user-rating") {
+            if(direction === 'asc')
+                optionTarget = $('.results-page .select-sort-by #sort_by_5');
+            else
+                optionTarget = $('.results-page .select-sort-by #sort_by_4');
+        } else if(target === "sort-op-cancelled") {
+            if(direction === 'asc')
+                optionTarget = $('.results-page .select-sort-by #sort_by_7');
+            else
+                optionTarget = $('.results-page .select-sort-by #sort_by_6');
+        } else if(target === "sort-care-quality") {
+            if(direction === 'asc')
+                optionTarget = $('.results-page .select-sort-by #sort_by_9');
+            else
+                optionTarget = $('.results-page .select-sort-by #sort_by_8');
+        } else if(target === "sort-ff-rating") {
+            if(direction === 'asc')
+                optionTarget = $('.results-page .select-sort-by #sort_by_11');
+            else
+                optionTarget = $('.results-page .select-sort-by #sort_by_10');
+        } else if(target === "sort-nhs-funded") {
+            if(direction === 'asc')
+                optionTarget = $('.results-page .select-sort-by #sort_by_13');
+            else
+                optionTarget = $('.results-page .select-sort-by #sort_by_12');
+        } else if(target === "sort-self-pay") {
+            if(direction === 'asc')
+                optionTarget = $('.results-page .select-sort-by #sort_by_15');
+            else
+                optionTarget = $('.results-page .select-sort-by #sort_by_14');
+        }
+        //Check if we have an actual value
+        if(optionTarget === '')
+            return false;
+
+        optionTarget.prop('selected', true);
+        optionTarget.trigger('change');
+    }
 });

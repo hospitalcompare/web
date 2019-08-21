@@ -236,6 +236,13 @@
                 cursor: pointer;
                 //background-color: red;
             }
+            span.sort-arrow.asc {
+                transform: rotateX(0deg);
+            }
+
+            span.sort-arrow.desc {
+                transform: rotateX(180deg);
+            }
         }
     }
 
