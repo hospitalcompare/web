@@ -8,11 +8,11 @@
     <section class="sitemap">
         <nav class="sitemapNav">
             <ul class="sitemapMenu">
-                <li><a href="">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/about-us">About Us</a></li>
-                <li><a href="">Your rights</a></li>
-                <li><a href="">Patient choice</a></li>
-                <li><a href="">Our blogs</a></li>
+                <li><a href="/your-rights">Your rights</a></li>
+                <li><a href="/patient-choice">Patient choice</a></li>
+{{--                <li><a href="/our-blogs">Our blogs</a></li>--}}
                 <li><a href="mailto:hello@hospitalcompare.co.uk">Contact us</a></li>
             </ul>
         </nav>

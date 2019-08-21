@@ -73,8 +73,8 @@ class WebController extends BaseController
     }
 
     // Stacking page for components etc
-    public function contentPage() {
+    public function contentPage($slug) {
 
-        return view('pages.contentpage');
+        return view('pages.contentpage')->with(['slug' => $slug]);
     }
 }

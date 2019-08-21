@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Cookie Policy')
+@section('title', $slug)
 
 @section('description', 'this is the meta description')
 
@@ -8,14 +8,14 @@
 
 @section('mobile', 'width=device-width, initial-scale=1')
 
-@section('body-class', 'cookie-policy-page')
+@section('body-class', $slug . '-page')
 
 @section('content')
 
     <main>
         <div class="container">
             <section>
-                <h1>Cookie policy</h1>
+                <h1>The {{ $slug }} page is under construction!</h1>
             </section>
 
         </div>
