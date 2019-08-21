@@ -242,23 +242,35 @@
         'howsections' => [
             ['iconImg'=> 'images/003-doctor.png',
             'numeral'=> '',
-            'title'=>'Get your referral from the GP or have a surgery in mind',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis' ],
+            'title'=>'Step One',
+            'description' => 'Make sure you understand:
+                - your rights to choose (if NHS funded treatment, self-pay or if covered by a health insurance policy)<br>
+                - that you don’t have to select your hospital during the GP appointment, but can easily do so at a later date, having made whatever enquires you wish to make.
+                Include click here’s for the various points.
+                ' ],
             ['iconImg'=> 'images/001-search-1.png',
             'numeral'=> '',
-            'title'=>'Search by postcode or speciality',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis'],
+            'title'=>'Step Two',
+            'description' => 'Use the Hospital Compare search criteria to shortlist one or more hospitals to make further enquiries of (Possibly insert note here about NHS hospitals enquiry procedures).'],
             ['iconImg'=> 'images/Layer_536.png',
             'numeral'=> '',
-            'title'=>'Find the best hospital for you',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis'],
+            'title'=>'Step Three',
+            'description' => 'Make the enquires and then make your selection as to which hospital to have your treatment at.'],
             ['iconImg'=> 'images/Layer_537.png',
             'numeral'=> '',
-            'title'=>'Book your operation',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna ornare ullam corper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec, hendrerit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis' ] ] ])
+            'title'=>'Step Four',
+            'description' => 'Call your GP surgery and book your first appointment slot via their E-referral system.
+The four steps will be across the page and then presumably we will have a fifth button to press to start searching, return to the top part of the homepage?
+' ] ] ])
     </section>
 
-    @include('components.healthchoice', ['choosehealthbanner' => '', 'buttonName' => 'Choose your health', 'classTitle' => 'btn btn-icon btn-arrow-right mx-auto' ] )
+    <section class="choose-health-parent">
+        @include('components.healthchoice', [
+            'choosehealthbanner' => '',
+            'buttonName' => 'Choose your health',
+            'classTitle' => 'btn btn-icon btn-arrow-right mx-auto' ] )
+
+    </section>
 
 {{--    <div class="blogSectionParent">--}}
 {{--        <h1 class="pageTitle">Making the right choice</h1>--}}
