@@ -171,6 +171,22 @@
                 <ul class="sort-categories-menu">
                     <li>
                         <p tabindex="0" data-offset="30px, 40px"
+                            @include('components.basic.popover', [
+                            'size'      => 'large',
+                            'placement' => 'top',
+                            'trigger'   => 'hover',
+                            'html'      => 'true',
+                            'content'   => '<p class="bold mb-0">
+                                                Care Quality Rating
+                                            </p>
+                                            <p>
+                                                The Care Quality Commission evaluates every registered healthcare location as Outstanding, Good, Requires Improvement or Inadequate. If the location hasn’t been reviewed yet, it will be marked ‘Not Yet Rated’.
+                                            </p>'])>Care Quality<br>Rating</p>
+                        <span title="Sort by this column"
+                              class="sort-arrow sort-care-quality-rating {{Request::input('sort_by') == 10 ? 'desc':'asc' }}"></span>
+                    </li>
+                    <li>
+                        <p tabindex="0" data-offset="30px, 40px"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
@@ -216,22 +232,6 @@
                                                 </p>'])>% Operations<br>Cancelled</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }}"></span>
-                    </li>
-                    <li>
-                        <p tabindex="0" data-offset="30px, 40px"
-                                @include('components.basic.popover', [
-                                'size'      => 'large',
-                                'placement' => 'top',
-                                'trigger'   => 'hover',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    Care Quality Rating
-                                                </p>
-                                                <p>
-                                                    The Care Quality Commission evaluates every registered healthcare location as Outstanding, Good, Requires Improvement or Inadequate. If the location hasn’t been reviewed yet, it will be marked ‘Not Yet Rated’.
-                                                </p>'])>Care Quality<br>Rating</p>
-                        <span title="Sort by this column"
-                              class="sort-arrow sort-care-quality-rating {{Request::input('sort_by') == 10 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p tabindex="0" data-offset="30px, 40px"

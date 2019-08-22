@@ -29,6 +29,13 @@
             </div>
         </div>
         <div class="sort-categories-section-2">
+            {{-- CQC rating  --}}
+            <div class="sort-categories-section-2__child">
+                <p>
+                    {!! !empty($qualityRating) ? $qualityRating : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
+                </p>
+                <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
+            </div>
             {{-- Waiting time --}}
             <div class="sort-categories-section-2__child">
                 <p
@@ -86,12 +93,7 @@
                 </p>
                 <span class="d-none" id="item_op_cancelled_{{$id}}">{!! $opCancelled !!}</span>
             </div>
-            <div class="sort-categories-section-2__child">
-                <p>
-                    {!! !empty($qualityRating) ? $qualityRating : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
-                </p>
-                <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
-            </div>
+
 
             {{-- Friends and family --}}
             <div class="sort-categories-section-2__child">
