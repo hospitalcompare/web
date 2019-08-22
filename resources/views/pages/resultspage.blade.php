@@ -179,14 +179,14 @@
                                 'trigger'   => 'focus',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
-                                                    What is NHS funded work?
+                                                    Waiting Time (NHS Funded)
                                                 </p>
                                                 <p>
-                                                    Many private healthcare policies allow you to choose which hospital to have your elective
-                                                    procedure at. Enter your provider and policy name to find the best hospital for you.
+                                                    The number of weeks that 92 out of 100 people are waiting before their treatment starts. This is the NHS standard measure of waiting times.
                                                 </p>'])>?</a>
                         </p>
-                        <span title="Sort by this column" class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}"></span>
+                        <span title="Sort by this column"
+                              class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p>NHS Choices <br> User Rating&nbsp;<br>
@@ -197,14 +197,14 @@
                                 'trigger'   => 'focus',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
-                                                    What is NHS funded work?
+                                                    NHS Choices User Rating
                                                 </p>
                                                 <p>
-                                                    Many private healthcare policies allow you to choose which hospital to have your elective
-                                                    procedure at. Enter your provider and policy name to find the best hospital for you.
+                                                    The user rating for the location as recorded on <a class="text-link" target="_blank" href="https://www.nhs.uk">www.nhs.uk</a>, from 1-5 in 0.5 increments, where available. If the location doesn’t exist on <a class="text-link" target="_blank" href="https://www.nhs.uk">www.nhs.uk</a> then it is marked ‘No Data’, if it exists but there are no ratings, it’s marked as ‘Not Yet Rated’.
                                                 </p>'])>?</a>
                         </p>
-                        <span title="Sort by this column" class="sort-arrow sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }}"></span>
+                        <span title="Sort by this column"
+                              class="sort-arrow sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p>
@@ -216,14 +216,14 @@
                                 'trigger'   => 'focus',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
-                                                    What is NHS funded work?
+                                                    % of Operations Cancelled
                                                 </p>
                                                 <p>
-                                                    Many private healthcare policies allow you to choose which hospital to have your elective
-                                                    procedure at. Enter your provider and policy name to find the best hospital for you.
+                                                    The percentage of cancelled elective operations, compared to the NHS Average. Currently available for NHS hospitals Only.
                                                 </p>'])>?</a>
                         </p>
-                        <span title="Sort by this column" class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }}"></span>
+                        <span title="Sort by this column"
+                              class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p>
@@ -235,14 +235,14 @@
                                 'trigger'   => 'focus',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
-                                                    What is NHS funded work?
+                                                    Care Quality Rating
                                                 </p>
                                                 <p>
-                                                    Many private healthcare policies allow you to choose which hospital to have your elective
-                                                    procedure at. Enter your provider and policy name to find the best hospital for you.
+                                                    The Care Quality Commission evaluates every registered healthcare location as Outstanding, Good, Requires Improvement or Inadequate. If the location hasn’t been reviewed yet, it will be marked ‘Not Yet Rated’.
                                                 </p>'])>?</a>
                         </p>
-                        <span title="Sort by this column" class="sort-arrow sort-care-quality-rating {{Request::input('sort_by') == 10 ? 'desc':'asc' }}"></span>
+                        <span title="Sort by this column"
+                              class="sort-arrow sort-care-quality-rating {{Request::input('sort_by') == 10 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p>
@@ -254,14 +254,14 @@
                                 'trigger'   => 'focus',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
-                                                    What is NHS funded work?
+                                                    Friends & Family Rating
                                                 </p>
                                                 <p>
-                                                    Many private healthcare policies allow you to choose which hospital to have your elective
-                                                    procedure at. Enter your provider and policy name to find the best hospital for you.
+                                                    This is the % of patients who would recommend the location to the friends or family if they required similar treatment.
                                                 </p>'])>?</a>
                         </p>
-                        <span title="Sort by this column" class="sort-arrow sort-ff-rating {{Request::input('sort_by') == 12 ? 'desc':'asc' }}"></span>
+                        <span title="Sort by this column"
+                              class="sort-arrow sort-ff-rating {{Request::input('sort_by') == 12 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p>
@@ -273,15 +273,15 @@
                                 'trigger'   => 'focus',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
-                                                    What is NHS funded work?
+                                                    NHS Funded Work
                                                 </p>
                                                 <p>
-                                                    Many private healthcare policies allow you to choose which hospital to have your elective
-                                                    procedure at. Enter your provider and policy name to find the best hospital for you.
+                                                    Indicates whether a Private hospital provides NHS funded services – you can be referred by your GP to a Private hospital as an alternative to your local NHS.
                                                 </p>'])>?</a>
 
                         </p>
-                        <span title="Sort by this column" class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 14 ? 'desc':'asc' }}"></span>
+                        <span title="Sort by this column"
+                              class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 14 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p>
@@ -293,14 +293,15 @@
                                 'trigger'   => 'focus',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
-                                                    What is Private Self Pay?
+                                                    Private Self Pay
                                                 </p>
                                                 <p>
-                                                    Many private healthcare policies allow you to pay for the procedure that you want
+                                                    Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
                                                 </p>'])>?</a>
 
                         </p>
-                        <span title="Sort by this column" class="sort-arrow sort-self-pay {{Request::input('sort_by') == 16 ? 'desc':'asc' }}"></span>
+                        <span title="Sort by this column"
+                              class="sort-arrow sort-self-pay {{Request::input('sort_by') == 16 ? 'desc':'asc' }}"></span>
                     </li>
                 </ul>
             </nav>

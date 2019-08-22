@@ -3,52 +3,74 @@
         @include('components.basic.button', ['classTitle' => 'greenOvalTop backToTop', 'button' => 'Back to top', 'hrefValue' => '#top', 'icon' => 'fa fa-chevron-up'])
     </div>
 </div>
-
-<div class="sitemapHolder">
-    <section class="sitemap">
-        <nav class="sitemapNav">
-            <ul class="sitemapMenu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about-us">About Us</a></li>
-                <li><a href="/your-rights">Your rights</a></li>
-                <li><a href="/patient-choice">Patient choice</a></li>
-{{--                <li><a href="/our-blogs">Our blogs</a></li>--}}
-                <li><a href="mailto:hello@hospitalcompare.co.uk">Contact us</a></li>
-            </ul>
-        </nav>
-
-        <div class="social">
-{{--            @include('components.logo', ['titleParent' => 'footerLogoParent', 'logoImg' => 'footerLogoImg', 'logoTitle' => 'footerLogoTitle'])--}}
-
-            <ul class="socialList">
-                <li>Helping you to make the best healthcare choices</li>
-                <li>
-                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                    <a href=""><i class="fab fa-twitter"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="sitemapBottom">
-        <p>
-            *your legal right to choose may be restricted in some circumstances. For more information see <a class="text-link"
-                href="/your-rights">Your Rights</a>
-        </p>
-    </section>
-</div>
-
 <footer class="footer">
-    <nav class="footerCreds">
-        <ul class="credLinks">
-            <li><a href="/terms-and-conditions">T&Cs</a></li>
-            <li><a href="/accessibility">Accessibility</a></li>
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
-            <li><a href="/cookie-policy">Cookie Policy</a></li>
-            <li><small><time id="thisYear">{{ date('Y') }}</time><a href="/">  Hospital Compare<sup>TM</sup></a>. All rights reserved</small></li>
-        </ul>
-    </nav>
+    <div class="footer-upper">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <nav class="footer-upper__nav">
+                        <ul class="footer-upper__menu">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about-us">About Us</a></li>
+                            <li><a href="/your-rights">Your rights</a></li>
+                            <li><a href="/patient-choice">Patient choice</a></li>
+                            {{--                <li><a href="/our-blogs">Our blogs</a></li>--}}
+                            <li><a href="mailto:hello@hospitalcompare.co.uk">Contact us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col">
+                    <div class="social">
+                        {{--            @include('components.logo', ['titleParent' => 'footerLogoParent', 'logoImg' => 'footerLogoImg', 'logoTitle' => 'footerLogoTitle'])--}}
+                        <p>Helping you to make the best healthcare choices</p>
+                        <ul class="social-list">
+                            <li>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="footer-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p>
+                        *your legal right to choose may be restricted in some circumstances. For more information see <a
+                            class="text-link"
+                            href="/your-rights">Your Rights</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-lower">
+        <div class="container">
+            <nav class="footer-lower__nav">
+                <ul class="footer-lower__menu mb-0">
+                    <li><a href="/terms-and-conditions">T&Cs</a></li>
+                    <li><a href="/accessibility">Accessibility</a></li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/cookie-policy">Cookie Policy</a></li>
+                    <li class="ml-auto"><small>
+                            <time id="thisYear">{{ date('Y') }}</time>
+                            <a href="/"> Hospital Compare<sup>TM</sup></a>. All rights reserved</small></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 </footer>
 
 

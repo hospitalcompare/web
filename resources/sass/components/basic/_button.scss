@@ -1,16 +1,5 @@
 //BUTTONS
 
-.btn-submit-results {
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: -0.9px;
-    line-height: 20px;
-    background-image: linear-gradient(270deg, #00cecd 0%, #00d7b5 56%, #00df9d 100%);
-
-    &:hover {
-        background-position: right;
-    }
-}
 
 // New set of styles based on RC UI kit
 .btn {
@@ -31,6 +20,7 @@
     svg, i {
         position: absolute;
     }
+
     //sizes
     &.btn-xs {
         font-size: 16px;
@@ -39,14 +29,14 @@
 
     &.btn-s {
         font-size: 18px;
-        font-weight: 400;
+
         height: 45px;
         padding: 8px 30px;
     }
 
     &.btn-m {
         font-size: 22px;
-        font-weight: 400;
+
         padding: 10px 47px;
     }
 
@@ -75,6 +65,10 @@
 
     &.btn-mg-top {
         margin-top: 20px;
+    }
+
+    &.btn-grad {
+        background-position: left;
     }
 
     //colours
@@ -140,6 +134,7 @@
             height: 32px;
         }
     }
+
     &.btn-green-plus {
         position: absolute;
         right: 10px;
@@ -176,7 +171,7 @@
         height: 46px;
         line-height: 46px;
         background: #ed0373;
-        background: linear-gradient(-90deg, #ed0373,#fc278d,#fc278d,#649ef7,#649ef7,#1b70f3,#1b70f3);
+        background: linear-gradient(-90deg, #ed0373, #fc278d, #fc278d, #649ef7, #649ef7, #1b70f3, #1b70f3);
         transition: 0.6s;
         background-size: 300%;
         background-position: left;
@@ -194,7 +189,7 @@
 
         &.btn-arrow-right {
             background: #649ef7;
-            background: linear-gradient(-90deg, #649ef7,#1b70f3,#1b70f3,#1b70f3);
+            background: linear-gradient(-90deg, #649ef7, #1b70f3, #1b70f3, #1b70f3);
             background-size: 200%;
             background-position: right;
             border-radius: 100px;
@@ -227,7 +222,7 @@
             height: 20px;
             line-height: 20px;
             font-size: 12px;
-            font-weight: 400;
+
             letter-spacing: -0.6px;
             padding: 0 20px 0 12px;
 
@@ -250,7 +245,6 @@
             height: 20px;
             line-height: 20px;
             font-size: 12px;
-            font-weight: 400;
             letter-spacing: -0.6px;
             padding: 0 20px 0 12px;
 
@@ -278,7 +272,6 @@
             background: $blue;
             color: $white;
             font-size: 12px;
-            font-weight: 400;
             letter-spacing: -0.7px;
             line-height: 13px;
             height: 40px;
@@ -312,7 +305,7 @@
             background: $white;
             color: $pink;
             font-size: 12px;
-            font-weight: 400;
+
             letter-spacing: -0.7px;
             line-height: 13px;
             height: 40px;
@@ -339,6 +332,7 @@
                 color: $white;
                 background-color: $pink;
                 text-decoration: none;
+
                 &:before {
                     background-image: url('../images/icons/circle-check.svg');
 
@@ -451,9 +445,8 @@
     }
 
 
-
     //gradient button
-    &.btn-grad {
+    &.btn {
         &:hover {
             background-position: right !important;
         }
@@ -463,4 +456,16 @@
 // Container for buttons
 .btn-area {
     line-height: 1;
+}
+
+.btn-submit-results {
+    font-size: 18px;
+
+    letter-spacing: -0.9px;
+    line-height: 20px;
+    background-image: linear-gradient(270deg, #00cecd 0%, #00d7b5 56%, #00df9d 100%);
+
+    &:hover {
+        background-position: right;
+    }
 }

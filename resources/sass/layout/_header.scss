@@ -1,23 +1,21 @@
 .header-wrapper {
-    background: $aqua;
+    background: $teal;
     //width: $fullWidth;
-    margin: $centerOnPage;
     width: 100%;
     text-align: center;
 
     .header {
-        margin: $centerOnPage;
         letter-spacing: -1px;
 
         .fa-chevron-down {
             color: $white;
-            position: $relative;
+            position: relative;
             left: 5px;
 
         }
 
         .fa-cross {
-            position: $absolute;
+            position: absolute;
             top: 4px;
             left: 0;
             color: $white;
@@ -57,28 +55,6 @@
 
 }
 
-.footerLogoParent {
-    position: $relative;
-    top: -25px;
-    left: 10px;
-
-    .footerLogoImg {
-        width: $fullWidth / 12;
-        position: $absolute;
-        top: 15px;
-        left: 0;
-    }
-
-    .footerLogoTitle {
-
-        position: absolute;
-        top: 13px;
-        left: 55px;
-
-    }
-}
-
-
 .titleParent {
     h1 {
         font-size: 1.3em;
@@ -88,26 +64,40 @@
     position: relative;
 }
 
-.mainNav {
+.main-nav {
     @include flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
-    padding-top: 2px;
 
-    .mainMenu {
+    .main-menu {
         @include flex;
         margin: 0;
 
         li {
-            display: block;
             position: relative;
+            display: inline-block;
 
-            a {
+            &:last-child {
+                a {
+                    margin-right: 0;
+                }
+            }
+
+            > a {
+                display: inline-block;
                 color: $white;
                 font-size: 1.3em;
-                padding: 0 15px;
-                //padding-bottom: 154px;
+                padding: 30px 15px;
+                transition: $transition;
+
+                &.active {
+                    background-color: darken($teal, 5%);
+                }
+
+                &:hover {
+                    background-color: darken($teal, 5%);
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -124,12 +114,12 @@
     z-index: 99;
 }
 
-.mainMenu li:hover > .dropdownMenu {
+.main-menu li:hover > .dropdownMenu {
     //display:block;
     opacity: 1;
 }
 
-.mainNav .dropdownMenu li a {
+.main-nav .dropdownMenu li a {
     padding: 0;
 }
 
