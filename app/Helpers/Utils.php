@@ -66,17 +66,14 @@ class Utils
             'id' => '0',
             'name'  => 'View All'
         ],[
-            'id' => '2',
-            'name'  => 'Up to 2 Weeks'
+            'id' => '18',
+            'name'  => 'Up to 18 Weeks'
         ],[
-            'id' => '4',
-            'name'  => 'Up to 4 Weeks'
+            'id' => '21',
+            'name'  => 'Up to 21 Weeks'
         ],[
-            'id' => '6',
-            'name'  => 'Up to 6 Weeks'
-        ],[
-            'id' => '8',
-            'name'  => 'Up to 8 Weeks'
+            'id' => '24',
+            'name'  => 'Up to 24 Weeks'
         ]
     ];
 
