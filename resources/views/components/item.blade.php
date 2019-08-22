@@ -113,20 +113,23 @@
                 </p>
                 <span class="d-none" id="item_nhs_funded_{{$id}}">{!! $NHSFunded !!}</span>
             </div>
-            <div class="sort-categories-section-2__child">
-                <p @includeWhen($d['hospitalType']['name'] == 'Independent', 'components.basic.popover', [
-                        'trigger'           => 'hover',
-                        'hideDelay'         => '1000',
-                        'content'           => '<p>For private self-pay<br> Pricing click
-                                                    <a tabindex class="text-link modal-enquire-trigger" role="button" >here</a>
-                                                  </p>',
-                        'html'              => 'true'])>
+            <div class="sort-categories-section-2__child flex-column">
+                <p
+{{--                    @includeWhen($d['hospitalType']['name'] == 'Independent', 'components.basic.popover', [--}}
+{{--                        'trigger'           => 'hover',--}}
+{{--                        'hideDelay'         => '1000',--}}
+{{--                        'content'           => '<p>For private self-pay<br> Pricing click--}}
+{{--                                                    <a tabindex class="text-link modal-enquire-trigger" role="button" >here</a>--}}
+{{--                                                  </p>',--}}
+{{--                        'html'              => 'true'])--}}
+                >
                     {!! !empty($privateSelfPay) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>"  !!}
                 </p>
+                <span><small>Click <a tabindex class="text-link modal-enquire-trigger" role="button" >here</a> for prices</small></span>
                 <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
             </div>
         </div>
-        <div class="sortCatSection3 d-flex flex-column justify-content-center">
+        <div class="sort-categories-section-3 d-flex flex-column justify-content-center">
             <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between"
                  @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
                 @if($NHSClass == 'privateHospital')

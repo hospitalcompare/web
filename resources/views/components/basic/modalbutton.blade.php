@@ -3,9 +3,10 @@
     href="{{ empty($hrefValue) ? 'javascript:void(0);' : $hrefValue }}"
     role="button"
     data-toggle="modal"
-    data-long="176562873"
+   @if($modalTarget == '#hc_modal_map')
     data-longitude="{{ $longitude ?? '' }}"
     data-latitude="{{ $latitude ?? '' }}"
+   @endif
     data-content="{{ $modalContent }}"
     data-hospital-title="{{ $hospitalTitle ?? 'test' }}"
     data-hospital-url="{{ $hrefValue }}"

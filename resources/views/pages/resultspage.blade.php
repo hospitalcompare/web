@@ -283,7 +283,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="sortCatSection3 pt-2"></div>
+            <div class="sort-categories-section-3 pt-2"></div>
         </section>
     </div>
 
