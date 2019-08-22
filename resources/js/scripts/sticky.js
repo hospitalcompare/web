@@ -1,21 +1,23 @@
 // Make the search header sticky on scroll
-$(document).ready(function(){
+$(document).ready(function () {
     var $stickyThing = $('#sort_categories_parent');
-    console.log($stickyThing.length);
+    var $top = $stickyThing.offset().top;
 
     if ($stickyThing.length > 0) {
-        $(window).on('scroll', function () {
-            var $top = $stickyThing.offset().top;
+
+        function stickyFunc() {
 
             if ($(window).scrollTop() > $top) {
-                $stickyThing.addClass("sticky");
+                $('body').addClass("sticky");
             } else {
-                $stickyThing.removeClass("sticky");
+                $('body').removeClass("sticky");
             }
+        }
 
+        $(window).on('scroll', function(){
+            requestAnimationFrame(stickyFunc);
         });
-
     }
 
-})
+});
 
