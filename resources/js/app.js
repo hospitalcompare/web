@@ -27,6 +27,7 @@ import './components/basic/tooltip';                // Trigger bootstrap popover
 import './components/basic/modal';                  // Trigger bootstrap modal
 
 // Pages
+import './pages/homepage';                       // Jquery used for the Homepage
 import './pages/resultspage';                       // Jquery used for the Results Page
 /**
  * The following block of code may be used to automatically register your
