@@ -116,7 +116,7 @@
                 </div>
 
                 <h3>Popover with stars</h3>
-                <div class="popover fade bs-popover-bottom show" role="tooltip" id="popover438743" x-placement="bottom"
+                <div class="popover popover-regular fade bs-popover-bottom show" role="tooltip" id="popover438743" x-placement="bottom"
                      style="position: relative;">
                     <div class="arrow" style="left: 64px;"></div>
                     <div class="popover-body">
