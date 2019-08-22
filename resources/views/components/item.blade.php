@@ -125,7 +125,19 @@
                 >
                     {!! !empty($privateSelfPay) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>"  !!}
                 </p>
-                <span><small>Click <a tabindex class="text-link modal-enquire-trigger" role="button" >here</a> for prices</small></span>
+                @if($NHSClass == 'privateHospital')
+                <span>
+                    <small>Click for
+                        @include('components.basic.modalbutton', [
+                                'hrefValue'         => $url,
+                                'hospitalTitle'     => $title,
+                                'modalTarget'       => '#hc_modal_enquire_private',
+                                'classTitle'        => 'text-link',
+                                'target'            => 'blank',
+                                'button'            => 'prices'])
+                    </small>
+                </span>
+                @endif
                 <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
             </div>
         </div>
