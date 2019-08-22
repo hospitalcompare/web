@@ -12,7 +12,7 @@ $(document).ready(function() {
     });
 
     //Sorting asc/desc when the arrows are clicked
-    $(document).on("click touchend", ".sortCatMenu .sort-arrow", function () {
+    $(document).on("click touchend", ".sort-categories-menu .sort-arrow", function () {
         //Get all the classes from the element
         var elementClasses = $(this).attr('class');
         //Get the actual target class

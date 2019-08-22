@@ -145,17 +145,17 @@
         position: relative;
     }
 
-    .sortCategoriesParent {
+    .sort-categories-parent {
         background-color: $teal;
 
     }
 
-    .sortCategoriesHeader,
+    .sort-categories-header,
     .sort-categories {
         @include flex;
     }
 
-    .sortCategoriesHeader {
+    .sort-categories-header {
         width: 1180px;
         margin: auto;
 
@@ -205,7 +205,7 @@
     }
 
 
-    .sortCatMenu {
+    .sort-categories-menu {
         @include flex;
         width: 100%;
         margin-bottom: 0;

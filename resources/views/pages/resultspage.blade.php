@@ -164,142 +164,120 @@
         </div>
     </form>
 
-    <div class="sortCategoriesParent">
-        <section class="sortCategoriesHeader">
+    <div class="sort-categories-parent">
+        <section class="sort-categories-header">
             <div class="sort-categories-section-1"></div>
             <nav class="sort-categories-section-2">
-                <ul class="sortCatMenu">
+                <ul class="sort-categories-menu">
                     <li>
-                        <p>
-                            Waiting time <br>(NHS Funded)&nbsp;
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                        <p tabindex="0" data-offset="30px, 40px"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'focus',
+                                'trigger'   => 'hover',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     Waiting Time (NHS Funded)
                                                 </p>
                                                 <p>
                                                     The number of weeks that 92 out of 100 people are waiting before their treatment starts. This is the NHS standard measure of waiting times.
-                                                </p>'])>?</a>
-                        </p>
+                                                </p>'])>Waiting time <br>(NHS Funded)</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p>NHS Choices <br> User Rating&nbsp;<br>
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                        <p tabindex="0" data-offset="30px, 40px"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'focus',
+                                'trigger'   => 'hover',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     NHS Choices User Rating
                                                 </p>
                                                 <p>
                                                     The user rating for the location as recorded on <a class="text-link" target="_blank" href="https://www.nhs.uk">www.nhs.uk</a>, from 1-5 in 0.5 increments, where available. If the location doesn’t exist on <a class="text-link" target="_blank" href="https://www.nhs.uk">www.nhs.uk</a> then it is marked ‘No Data’, if it exists but there are no ratings, it’s marked as ‘Not Yet Rated’.
-                                                </p>'])>?</a>
-                        </p>
+                                                </p>'])>NHS Choices <br> User Rating&nbsp;<br></p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p>
-                            % Operations<br>Cancelled&nbsp;<br>
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                        <p tabindex="0" data-offset="30px, 40px"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'focus',
+                                'trigger'   => 'hover',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     % of Operations Cancelled
                                                 </p>
                                                 <p>
                                                     The percentage of cancelled elective operations, compared to the NHS Average. Currently available for NHS hospitals Only.
-                                                </p>'])>?</a>
-                        </p>
+                                                </p>'])>% Operations<br>Cancelled</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p>
-                            Care Quality<br>Rating&nbsp;<br>
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                        <p tabindex="0" data-offset="30px, 40px"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'focus',
+                                'trigger'   => 'hover',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     Care Quality Rating
                                                 </p>
                                                 <p>
                                                     The Care Quality Commission evaluates every registered healthcare location as Outstanding, Good, Requires Improvement or Inadequate. If the location hasn’t been reviewed yet, it will be marked ‘Not Yet Rated’.
-                                                </p>'])>?</a>
-                        </p>
+                                                </p>'])>Care Quality<br>Rating</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-care-quality-rating {{Request::input('sort_by') == 10 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p>
-                            Friends &<br>Family Rating&nbsp;
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                        <p tabindex="0" data-offset="30px, 40px"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'focus',
+                                'trigger'   => 'hover',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     Friends & Family Rating
                                                 </p>
                                                 <p>
                                                     This is the % of patients who would recommend the location to the friends or family if they required similar treatment.
-                                                </p>'])>?</a>
-                        </p>
+                                                </p>'])>Friends &<br>Family Rating</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-ff-rating {{Request::input('sort_by') == 12 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p>
-                            NHS<br>Funded Work&nbsp;
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                        <p tabindex="0" data-offset="30px, 40px"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'focus',
+                                'trigger'   => 'hover',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     NHS Funded Work
                                                 </p>
                                                 <p>
                                                     Indicates whether a Private hospital provides NHS funded services – you can be referred by your GP to a Private hospital as an alternative to your local NHS.
-                                                </p>'])>?</a>
-
-                        </p>
+                                                </p>'])>NHS<br>Funded Work</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 14 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p>
-                            Private<br>Self Pay&nbsp;<br>
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                        <p tabindex="0" data-offset="30px, 40px"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'focus',
+                                'trigger'   => 'hover',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     Private Self Pay
                                                 </p>
                                                 <p>
                                                     Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
-                                                </p>'])>?</a>
-
-                        </p>
+                                                </p>'])>Private<br>Self Pay</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-self-pay {{Request::input('sort_by') == 16 ? 'desc':'asc' }}"></span>
                     </li>
