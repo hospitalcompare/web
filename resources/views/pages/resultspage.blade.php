@@ -326,7 +326,7 @@
                     'opCancelled'       => !empty($d['cancelledOp']['perc_cancelled_ops'])? $d['cancelledOp']['perc_cancelled_ops'].'%': 0,
                     'qualityRating'     => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : 0,
                     'FFRating'          => !empty($d['rating']['friends_family_rating']) ? $d['rating']['friends_family_rating'].'%' : 0,
-                    'NHSFunded'         => ($d['hospitalType']['name'] === 'Independent' && !empty($d['waitingTime'][0])) ? 1 : 0,
+                    'NHSFunded'         => ($d['hospitalType']['name'] === 'Independent' && !empty($d['waitingTime'][0]['perc_waiting_weeks'])) ? 1 : 0,
                     'privateSelfPay'    => $d['hospitalType']['name'] === 'Independent' ? 1 : 0,
                     'specialOffers'     => $d['special_offers'],
                     'btnText'           => 'Make an enquiry',

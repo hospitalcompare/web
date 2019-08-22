@@ -6,12 +6,10 @@ namespace App\Http\Controllers;
 
 use App\Helpers\Errors;
 use App\Helpers\Utils;
-use App\Models\Address;
 use App\Models\Enquiry;
 use App\Models\Hospital;
-use App\Models\HospitalType;
+use App\Models\HospitalWaitingTime;
 use App\Models\Specialty;
-use App\Models\Trust;
 use App\Services\Location;
 use Request;
 
@@ -74,12 +72,27 @@ class ApiController {
         //TODO: Remove this when the actual special offers are decided
         \DB::statement('UPDATE hospitals LEFT JOIN hospital_types ON hospitals.hospital_type_id = hospital_types.id SET special_offers = 1 WHERE hospital_types.name = "Independent" AND hospitals.id % 3 = 0');
         //Add a waiting time = 0 to all the hospitals that don't have the total specialty
-        //Get the Specialty
-//        $totalSpecialty = Specialty::where('name', 'Total')->first();
-//        if(!empty($totalSpecialty)) {
-//
-//        }
 
+        //Update all the Hospitals that don't have a Waiting Time ( so they won't be excluded from our filters )
+        $hospitals = Hospital::doesntHave('waitingTime')->get();
+        $specialties = Specialty::all();
+
+        if(!empty($specialties)) {
+            foreach($specialties as $spec){
+                if(!empty($hospitals)) {
+                    foreach($hospitals as $hos) {
+                        $waitingTime = new HospitalWaitingTime();
+                        $waitingTime->hospital_id = $hos->id;
+                        $waitingTime->specialty_id = $spec->id;
+                        $waitingTime->total_within_18_weeks = 0;
+                        $waitingTime->total_incomplete = 0;
+                        $waitingTime->avg_waiting_weeks = null;
+                        $waitingTime->perc_waiting_weeks = null;
+                        $waitingTime->save();
+                    }
+                }
+            }
+        }
 
         return $returnedData;
     }
