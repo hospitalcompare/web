@@ -21,8 +21,6 @@ $(document).ready(function () {
         }
         var countSpan = $('#compare_number');
         countSpan.text(compareCount);
-    } else {
-        // compareBar.slideUp();
     }
 
     /**
@@ -32,18 +30,21 @@ $(document).ready(function () {
      */
     function addHospitalToCompare(element) {
         var target = $('#compare_hospitals_grid');
-        var newRowContent = '<div class="col-3 text-center" id="compare_hospital_id_' + element.id + '">' +
-                                '<div class="col-inner">' +
-                                    '<div class=""><img src="images/alder-1.png"><div class="remove-hospital" id="remove_id_' + element.id + '">Remove</div></div>' +
-                                    '<div class="cell">' + element.name + '</div>' +
-                                    '<div class="cell">' + element.waitingTime + '</div>' +
-                                    '<div class="cell">' + element.userRating + '</div>' +
-                                    '<div class="cell">' + element.opCancelled + '</div>' +
-                                    '<div class="cell">' + element.qualityRating + '</div>' +
-                                    '<div class="cell">' + element.ffRating + '</div>' +
-                                    '<div class="cell">' + element.nhsFunded + '</div>' +
-                                '</div>' +
-                            '</div>';
+        console.log(element);
+        var newRowContent =
+            '<div class="col-3 text-center" id="compare_hospital_id_' + element.id + '">' +
+                '<div class="col-inner">' +
+                    '<div class=""><img src="images/alder-1.png"><div class="remove-hospital" id="remove_id_' + element.id + '">Remove</div></div>' +
+                    '<div class="cell">' + element.name + '</div>' +
+                    '<div class="cell">' + element.waitingTime + '</div>' +
+                    '<div class="cell">' + element.userRating + '</div>' +
+                    '<div class="cell">' + element.opCancelled + '</div>' +
+                    '<div class="cell">' + element.qualityRating + '</div>' +
+                    '<div class="cell">' + element.ffRating + '</div>' +
+                    '<div class="cell">' + element.nhsFunded + '</div>' +
+                    '<div class="cell">' + element.nhsPrivatePay + '</div>' +
+                '</div>' +
+            '</div>';
         target.append(newRowContent);
         //Toggle the full heart or empty heart  class of the button
         $('a#' + element.id + '.compare').addClass('selected');
@@ -92,13 +93,14 @@ $(document).ready(function () {
 
         //Load the Cookies with the data that we need for the comparison
         var elementId = $(this).attr('id');
-        var name = $('#item_name_' + elementId).text().trim();
-        var waitingTime = $('#item_waiting_time_' + elementId).text().trim();
-        var userRating = $('#item_user_rating_' + elementId).text().trim();
-        var opCancelled = $('#item_op_cancelled_' + elementId).text().trim();
-        var qualityRating = $('#item_quality_rating_' + elementId).text().trim();
-        var ffRating = $('#item_ff_rating_' + elementId).text().trim();
-        var nhsFunded = $('#item_nhs_funded_' + elementId).text().trim();
+        var name = $('#item_name_' + elementId).text();
+        var waitingTime = $('#item_waiting_time_' + elementId).text();
+        var userRating = $('#item_user_rating_' + elementId).text();
+        var opCancelled = $('#item_op_cancelled_' + elementId).text();
+        var qualityRating = $('#item_quality_rating_' + elementId).text();
+        var ffRating = $('#item_ff_rating_' + elementId).text();
+        var nhsFunded = $('#item_nhs_funded_' + elementId).text();
+        var nhsPrivatePay = $('#item_nhs_private_pay_' + elementId).text();
         var result = $.grep(data, function (e) {
             return e.id == elementId;
         });
@@ -111,11 +113,12 @@ $(document).ready(function () {
                     'id': elementId,
                     'name': name,
                     'waitingTime': waitingTime,
-                    'userRating': JSON.stringify(userRating),
+                    'userRating': userRating,
                     'opCancelled': opCancelled,
                     'qualityRating': qualityRating,
                     'ffRating': ffRating,
-                    'nhsFunded': JSON.stringify(nhsFunded)
+                    'nhsFunded': nhsFunded,
+                    'nhsPrivatePay': nhsPrivatePay
                 };
                 //Add data to Cookies and send the element to populate the table
                 data.push(element);

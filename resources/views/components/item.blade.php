@@ -30,7 +30,7 @@
         </div>
         <div class="sort-categories-section-2">
             {{-- Waiting time --}}
-            <div class="sort-categories-section-2__child" id="item_waiting_time_{{$id}}">
+            <div class="sort-categories-section-2__child">
                 <p
                     @includeWhen($d['hospitalType']['name'] == 'Independent','components.basic.popover', [
                         'trigger'           => 'hover',
@@ -39,73 +39,79 @@
                                                     <a tabindex class="text-link modal-enquire-trigger" role="button" >here</a>
                                                   </p>',
                         'html'              => 'true'])>
-                    {!! $waitTime !!}
+                    {!! !empty($waitTime) ? $waitTime : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                 </p>
+                <span class="d-none" id="item_waiting_time_{{$id}}">{{$waitTime}}</span>
             </div>
             {{-- End waiting time --}}
-            <div class="sort-categories-section-2__child" id="item_user_rating_{{$id}}">
+            <div class="sort-categories-section-2__child" >
                 <p @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
                         'content' => '
                         <p><span class="mr-2">Food rating</span>
-                            <img src="../images/icons/star.svg" alt="Whole Star">
-                            <img src="../images/icons/star.svg" alt="Whole Star">
-                            <img src="../images/icons/star.svg" alt="Whole Star">
-                            <img src="../images/icons/star.svg" alt="Whole Star">
-                            <img src="../images/icons/star.svg" alt="Whole Star">
+                            <img src="images/icons/star.svg" alt="Whole Star">
+                            <img src="images/icons/star.svg" alt="Whole Star">
+                            <img src="images/icons/star.svg" alt="Whole Star">
+                            <img src="images/icons/star.svg" alt="Whole Star">
+                            <img src="images/icons/star.svg" alt="Whole Star">
                         </p>
                         <p><span class="mr-2">Food rating</span>
-                            <img src="../images/icons/star.svg" alt="Whole Star">
-                            <img src="../images/icons/star.svg" alt="Whole Star">
-                            <img src="../images/icons/star.svg" alt="Whole Star">
-                            <img src="../images/icons/star.svg" alt="Whole Star">
-                            <img src="../images/icons/star.svg" alt="Whole Star">
+                            <img src="images/icons/star.svg" alt="Whole Star">
+                            <img src="images/icons/star.svg" alt="Whole Star">
+                            <img src="images/icons/star.svg" alt="Whole Star">
+                            <img src="images/icons/star.svg" alt="Whole Star">
+                            <img src="images/icons/star.svg" alt="Whole Star">
                         </p>
                         <p><span class="mr-2">Food rating</span>
-                            <img src="../images/icons/star.svg" alt="Whole Star">
-                            <img src="../images/icons/star.svg" alt="Whole Star">
-                            <img src="../images/icons/star.svg" alt="Whole Star">
-                            <img src="../images/icons/star.svg" alt="Whole Star">
-                            <img src="../images/icons/star.svg" alt="Whole Star">
+                            <img src="images/icons/star.svg" alt="Whole Star">
+                            <img src="images/icons/star.svg" alt="Whole Star">
+                            <img src="images/icons/star.svg" alt="Whole Star">
+                            <img src="images/icons/star.svg" alt="Whole Star">
+                            <img src="images/icons/star.svg" alt="Whole Star">
                         </p>'])>
                     {!! html_entity_decode($stars) !!}
                 </p>
+                <span class="d-none" id="item_user_rating_{{$id}}">{!! $userRating !!}</span>
             </div>
             {{-- % operations cancelled --}}
-            <div class="sort-categories-section-2__child" id="item_op_cancelled_{{$id}}">
+            <div class="sort-categories-section-2__child">
                 <p
                     @include('components.basic.popover', [
                     'trigger' => 'hover',
                     'html'    => 'true',
                     'content' => 'National average<br> is 3.35%'])>
-                    {!! $opCancelled !!}
+                    {!! !empty($opCancelled) ? $opCancelled : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                 </p>
+                <span class="d-none" id="item_op_cancelled_{{$id}}">{!! $opCancelled !!}</span>
             </div>
-            <div class="sort-categories-section-2__child" id="item_quality_rating_{{$id}}">
+            <div class="sort-categories-section-2__child">
                 <p>
-                    {!! $qualityRating !!}
+                    {!! !empty($qualityRating) ? $qualityRating : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                 </p>
+                <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
             </div>
 
             {{-- Friends and family --}}
-            <div class="sort-categories-section-2__child" id="item_ff_rating_{{$id}}">
+            <div class="sort-categories-section-2__child">
                 <p class="m-0"
                     @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
                         'content' => 'National average<br>is 98.85%'])>
-                    {!! $FFRating !!}
+                    {!! !empty($FFRating) ? $FFRating : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                 </p>
+                <span class="d-none" id="item_ff_rating_{{$id}}">{!! $FFRating !!}</span>
             </div>
-            <div class="sort-categories-section-2__child" id="item_nhs_funded_{{$id}}">
+            <div class="sort-categories-section-2__child">
                 <p>
-                    {!! $NHSFunded  !!}
+                    {!! !empty($NHSFunded) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                 </p>
+                <span class="d-none" id="item_nhs_funded_{{$id}}">{!! $NHSFunded !!}</span>
             </div>
-            <div class="sort-categories-section-2__child" id="item_nhs_private_pay_{{$id}}">
+            <div class="sort-categories-section-2__child">
                 <p @includeWhen($d['hospitalType']['name'] == 'Independent', 'components.basic.popover', [
                         'trigger'           => 'hover',
                         'hideDelay'         => '1000',
@@ -113,8 +119,9 @@
                                                     <a tabindex class="text-link modal-enquire-trigger" role="button" >here</a>
                                                   </p>',
                         'html'              => 'true'])>
-                    {!! $privateSelfPay  !!}
+                    {!! !empty($privateSelfPay) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>"  !!}
                 </p>
+                <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
             </div>
         </div>
         <div class="sortCatSection3 d-flex flex-column justify-content-center">
