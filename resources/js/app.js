@@ -16,6 +16,7 @@ import './scripts/enquiry' ;                        // Private hospital enquiry 
 window.Cookies = require('./scripts/cookies');      // Cookie/compare functionallity
 import './scripts/compare';                         // Slider for radius of proximity on search page
 import './scripts/gmapInit';                        // Gmaps nodal
+import './scripts/sticky';                          // Make the search header sticky on scroll
 // window.Vue = require('vue');                     // Vue.js
 
 // Components

@@ -164,7 +164,7 @@
         </div>
     </form>
 
-    <div class="sort-categories-parent">
+    <div id="sort_categories_parent" class="sort-categories-parent" >
         <section class="sort-categories-header">
             <div class="sort-categories-section-1"></div>
             <nav class="sort-categories-section-2">
