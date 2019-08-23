@@ -113,10 +113,10 @@ class Utils
             'name'  => 'Good or better'
         ],[
             'id' => '3',
-            'name'  => 'Inadequate or better'
+            'name'  => 'Requires Improvement or better'
         ],[
             'id' => '4',
-            'name'  => 'Requires Improvement or better'
+            'name'  => 'Inadequate or better'
         ]
     ];
 

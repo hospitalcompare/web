@@ -214,9 +214,9 @@ class Hospital extends Model
                 elseif($qualityRating == 2)
                     $q->whereIn('latest_rating', ['Outstanding', 'Good']);
                 elseif($qualityRating == 3)
-                    $q->whereIn('latest_rating', ['Outstanding', 'Good', 'Inadequate']);
+                    $q->whereIn('latest_rating', ['Outstanding', 'Good', 'Requires improvement']);
                 elseif($qualityRating == 4)
-                    $q->whereIn('latest_rating', ['Outstanding', 'Good', 'Inadequate', 'Requires improvement']);
+                    $q->whereIn('latest_rating', ['Outstanding', 'Good', 'Requires improvement', 'Inadequate']);
             });
         }
 
