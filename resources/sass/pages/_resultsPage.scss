@@ -344,15 +344,16 @@
 }
 
 
-.sticky {
+.js-is-sticky {
     //padding-top: 85.6px;
 
-    #sort_categories_parent {
-        position: sticky;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        z-index: 10;
-    }
 }
+#sort_categories_parent {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1050;
+}
+
+
