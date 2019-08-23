@@ -84,4 +84,9 @@ class WebController extends BaseController
 
         return view('pages.testpage', $this->returnedData);
     }
+
+    // Cookie policy
+    public function cookiePage() {
+        return view('pages.cookiepage', $this->returnedData);
+    }
 }
