@@ -16,7 +16,8 @@
         <div class="container">
             <div class="row">
                 <div class="col hc-content">
-                    <h1>Introduction</h1>
+                    <h1>Privacy Policy</h1>
+                    <h2>Introduction</h2>
                     <p>Welcome to Hospital Compare Limited’s privacy policy</p>
                     <p>Hospital Compare Limited (<strong>“Hospital Compare”</strong>) respects your privacy and is
                         committed to
