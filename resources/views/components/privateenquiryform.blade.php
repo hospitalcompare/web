@@ -22,7 +22,7 @@
                             ['id'=>'Prof.', 'name'=>'Prof.'],
                             ['id'=>'Rev.', 'name'=>'Rev.']
                         ],
-                        'chevronFAClassName' => 'fa-chevron-down blackChevron',
+                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
                         'selectClass' => 'form-control',
                         'placeholder' => 'Title*',
                         'name'=>'title',
@@ -70,7 +70,7 @@
                 <div class="col col-6">
                     @include('components.basic.select', [
                         'options' => $procedures,
-                        'chevronFAClassName' => 'fa-chevron-down blackChevron',
+                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
                         'selectClass' => 'form-control',
                         'placeholder' => 'Surgery Type',
                         'name'=>'procedure_id',

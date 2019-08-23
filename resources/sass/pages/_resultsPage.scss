@@ -4,7 +4,7 @@
         flex-basis: 85%;
         display: flex;
 
-        .postcode-proximity-child {
+        .filter-section-child {
             flex: 1;
             padding: 0 20px;
             &:not(:last-child) {
@@ -21,7 +21,7 @@
         justify-content: flex-end;
         flex-basis: 15%;
 
-        .postcode-proximity-child {
+        .submit-section-child {
             justify-content: flex-end;
             align-items: flex-end;
         }
@@ -40,7 +40,7 @@
             margin-bottom: 6px;
         }
 
-        .blackChevron {
+        .black-chevron {
             position: absolute;
             right: 15px;
             bottom: 12px;
@@ -49,7 +49,7 @@
         }
     }
 
-    .searchPageSelect {
+    .results-page-select {
         padding: 10px 40px 10px 13px;
         background-color: $white;
         /* Style for "Knee Opera" */
@@ -66,17 +66,14 @@
         padding-top: 23px;
     }
 
-    //.filter {
-    //    width: $pageWrap;
-    //    margin: $centerOnPage;
-    //}
-
     .postcode-proximity,
     .select-proximity {
         @include flex;
     }
 
-    .postcode-proximity-child {
+    .postcode-proximity-child,
+    .submit-section-child,
+    .filter-section-child {
         @include uniformAlignment;
         position: relative;
         margin-bottom: 20px;
@@ -94,11 +91,7 @@
         }
     }
 
-    .inputClass {
-        margin-left: 0 !important;
-    }
-
-    .sortParent {
+    .sort-parent {
         width: $fullWidth;
         background-color: $lighterGrey;
     }
@@ -108,39 +101,39 @@
         margin: $centerOnPage;
     }
 
-    .sortBar {
+    .sort-bar {
         @include flex;
         justify-content: space-between;
 
-        .showSection {
+        .show-section {
             margin: auto auto auto 0;
         }
 
-        .sortSection {
+        .sort-section {
             margin: 10px 0;
 
-            .searchPageSelect {
+            .results-page-select {
                 width: auto
             }
         }
 
-        .showSection,
-        .sortSection {
+        .show-section,
+        .sort-section {
             //margin: auto;
         }
     }
 
 
-    .sortPageSelect, .sortBy {
+    .sort-page-select, .sort-by {
         width: 200px;
     }
 
-    .sortLabel {
+    .sort-label {
         left: 0 !important;
         top: -10px !important;
     }
 
-    .sortBy {
+    .sort-by {
         top: -10px !important;
         position: relative;
     }
