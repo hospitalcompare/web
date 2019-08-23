@@ -6,22 +6,22 @@
     }
 
     //=======================WHY CHOOSE SECTION=======================
-    .whyChooseParent {
+    .why-use-parent {
         width: 100%;
         height: auto;
         background: $sectionBeige;
 
-        .whyChooseContent {
+        .why-use-content {
             width: $pageWrap;
             margin: auto;
             padding: 70px 0 60px;
         }
 
-        .whyChoose {
+        .why-use {
             @include flex;
             color: #1b1b1b;
 
-            .pageTitle {
+            .section-title {
                 font-size: 40px;
                 margin-bottom: 30px;
                 letter-spacing: -2px;
@@ -34,10 +34,10 @@
                 line-height: 24px;
             }
 
-            .chooseVideo {
+            .why-use-video {
                 margin-left: 8%;
 
-                .videoParent {
+                .video-wrapper {
                     position: relative;
                     @include aspect-ratio(497px, 349px);
                     border: 1px solid $borderVideo;
@@ -48,7 +48,7 @@
                         width: 140%;
                     }
 
-                    .playerButton {
+                    .player-button {
                         background-image: url(../images//player_button.png);
                         background-size: cover;
                         @include v-h-c;
@@ -65,8 +65,8 @@
                 }
             }
 
-            .chooseText,
-            .chooseVideo {
+            .why-use-text,
+            .why-use-video {
                 @include uniformAlignment;
             }
         }
