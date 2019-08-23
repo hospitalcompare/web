@@ -66,10 +66,10 @@
         padding: 23px 0;
     }
 
-    .filter {
-        width: $pageWrap;
-        margin: $centerOnPage;
-    }
+    //.filter {
+    //    width: $pageWrap;
+    //    margin: $centerOnPage;
+    //}
 
     .postProx,
     .selectProx {
@@ -78,7 +78,7 @@
 
     .postProxChild {
         @include uniformAlignment;
-        position: $relative;
+        position: relative;
         margin-bottom: 20px;
         display: flex;
         align-items: center;
@@ -157,7 +157,7 @@
     }
 
     .sort-categories-header {
-        width: 1180px;
+        //width: 1180px;
         margin: auto;
 
         .sort-categories-section-3 {
@@ -179,7 +179,7 @@
 
     .sort-categories-inner {
         display: flex;
-        width: 1180px;
+        //width: 1180px;
         margin: auto;
     }
 
@@ -272,7 +272,7 @@
     }
 
     .sort-categories-item {
-        position: $relative;
+        position: relative;
 
         &:last-child {
             padding: 8px;
@@ -305,7 +305,7 @@
     }
 
     .NHSHospital, .privateHospital {
-        position: $absolute;
+        position: absolute;
         top: 0;
         width: 60px;
         height: 60px;

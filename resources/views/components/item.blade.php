@@ -1,5 +1,5 @@
 <section class="sort-categories">
-    <div class="sort-categories-inner">
+    <div class="sort-categories-inner container">
         <div class="sort-categories-section-1">
             <div class="sort-categories-item">
                 <img alt="Image of {{ $title }}" src="{{ $itemImg }}">

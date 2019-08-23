@@ -14,7 +14,7 @@
 
     <form class="form-element">
         <div class="filterParent">
-            <section class="filter">
+            <div class="filter container">
                 <div class="postProx">
                     <div class="postProxChild">
                         @include('components.basic.input', ['placeholder' => 'Enter your postcode', 'inputClassName' => 'inputClass', 'value' => !empty(Request::input('postcode')) ? Request::input('postcode') : '' , 'name' => 'postcode', 'id' => 'input_postcode'])
@@ -147,25 +147,25 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
 
         <div class="sortParent">
-            <section class="sort">
-                <section class="sortBar">
+            <div class="container">
+                <div class="sortBar">
                     <div class="showSection">
                         Showing {{count($data['hospitals'])}} out of {{$data['hospitals']->total()}} provider(s)
                     </div>
                     <div class="sortSection">
                         @include('components.basic.select', ['showLabel' => true, 'options' => $data['sortBy'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect select-sort-by', 'placeholder'=>'Sort by:', 'name'=>'sort_by', 'resultsLabel' => 'sortLabel'])
                     </div>
-                </section>
-            </section>
+                </div>
+            </div>
         </div>
     </form>
 
     <div id="sort_categories_parent" class="sort-categories-parent" >
-        <section class="sort-categories-header">
+        <div class="sort-categories-header container">
             <div class="sort-categories-section-1"></div>
             <nav class="sort-categories-section-2">
                 <ul class="sort-categories-menu">
@@ -284,7 +284,7 @@
                 </ul>
             </nav>
             <div class="sort-categories-section-3 pt-2"></div>
-        </section>
+        </div>
     </div>
 
     <div class="sortCategoriesResults">
@@ -361,7 +361,7 @@
         @endif
     </div>
 
-    <div class="pagination">
+    <div class="pagination-wrap">
         @if(!empty($data['hospitals']))
             {{
                 $data['hospitals']->appends([

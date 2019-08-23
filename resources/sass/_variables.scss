@@ -53,21 +53,13 @@ $body-color: $darkerGrey;
 $fullWidth: 100%;
 //center on page
 
-$pageWrap: 1180px;
+$pageWrap: auto;
 $centerOnPage: auto;
-
-
-//POSITIONS
-$relative: relative;
-$absolute: absolute;
-
 
 // ************** BS overrides ****************** //
 $btn-border-radius: 100px;
 $btn-transition: $transition;
 $btn-border-width: 0;
-
-
 
 // Popovers
 //$popover-border-width: 0;

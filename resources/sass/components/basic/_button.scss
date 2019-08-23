@@ -442,6 +442,29 @@
                 background-position: right;
             }
         }
+
+        // Back to top button
+        &.btn-back-to-top {
+            padding: 0px 50px 0px 20px;
+            color: $white;
+            height: 60px;
+            line-height: 60px;
+            background-color: $teal;
+            min-width: 182px;
+            border-radius: 10px 10px 0 0;
+            font-size: 22px;
+            letter-spacing: -0.66px;
+
+            svg {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+            &:hover {
+                background-position: right;
+            }
+        }
     }
 
 
