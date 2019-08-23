@@ -13,19 +13,19 @@
 @section('content')
 
     <form class="form-element">
-        <div class="filterParent">
+        <div class="filter-parent">
             <div class="filter container">
-                <div class="postProx">
-                    <div class="postProxChild">
+                <div class="postcode-proximity">
+                    <div class="postcode-proximity-child">
                         @include('components.basic.input', ['placeholder' => 'Enter your postcode', 'inputClassName' => 'inputClass', 'value' => !empty(Request::input('postcode')) ? Request::input('postcode') : '' , 'name' => 'postcode', 'id' => 'input_postcode'])
                     </div>
-                    <div class="postProxChild">
+                    <div class="postcode-proximity-child">
                         @include('components.basic.range', ['label' => 'Within radius of:', 'min' => 10, 'max' => 600, 'value' => !empty(Request::input('radius')) ? Request::input('radius') : '', 'name' => 'radius', 'step' => 10])
                     </div>
                 </div>
-                <div class="selectProx">
+                <div class="select-proximity">
                     <div class="filter-section">
-                        <div class="postProxChild">
+                        <div class="postcode-proximity-child">
                             @include('components.basic.select', [
                                 'showLabel' => true,
                                 'selectPicker' => 'true',
@@ -54,7 +54,7 @@
                                              </p>'])
                             >?</a>
                         </div>
-                        <div class="postProxChild">
+                        <div class="postcode-proximity-child">
                             {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'searchPageSelect', 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'placeholder' => 'Waiting time', 'resultsLabel' => 'resultsLabel'])--}}
                             @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['waitingTimes'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Waiting time', 'name'=>'waiting_time', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
@@ -76,7 +76,7 @@
                                              </p>'])
                             >?</a>
                         </div>
-                        <div class="postProxChild">
+                        <div class="postcode-proximity-child">
                             {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'searchPageSelect', 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'placeholder' => 'NHS choices user rating', 'resultsLabel' => 'resultsLabel'])--}}
                             @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['userRatings'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'NHS Choices User Rating', 'name'=>'user_rating', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
@@ -98,7 +98,7 @@
                                              </p>'])
                             >?</a>
                         </div>
-                        <div class="postProxChild">
+                        <div class="postcode-proximity-child">
                             @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['qualityRatings'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Care Quality Rating', 'name'=>'quality_rating', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
@@ -119,7 +119,7 @@
                                              </p>'])
                             >?</a>
                         </div>
-                        <div class="postProxChild">
+                        <div class="postcode-proximity-child">
                             @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Hospital Type', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
@@ -142,7 +142,7 @@
                         </div>
                     </div>
                     <div class="submit-section">
-                        <div class="postProxChild">
+                        <div class="postcode-proximity-child">
                             @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-teal btn-s d-block btn-submit-results', 'button' => 'Update Results'])
                         </div>
                     </div>
