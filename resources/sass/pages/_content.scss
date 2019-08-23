@@ -56,6 +56,7 @@
             margin: 0 0 22px 0;
             position: relative;
             padding: 0 0 0 40px;
+            line-height: 1;
             &:before {
                 content: '';
                 position: absolute;
@@ -78,6 +79,7 @@
             position: relative;
             padding: 0 0 0 40px;
             counter-increment: counter;
+            line-height: 1;
             &:before {
                 content: counter(counter) '.';
                 position: absolute;
@@ -104,5 +106,8 @@
         width: 100%;
         height: 2px;
         background-color: $green;
+    }
+    .btn-link {
+        color: $darkerGrey;
     }
 }
