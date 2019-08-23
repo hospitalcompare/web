@@ -9,6 +9,7 @@ use App\Helpers\Utils;
 use App\Models\Enquiry;
 use App\Models\Hospital;
 use App\Models\HospitalWaitingTime;
+use App\Models\Procedure;
 use App\Models\Specialty;
 use App\Services\Location;
 use Request;
@@ -164,7 +165,7 @@ class ApiController {
     public function enquiry() {
         //Get the request and load it as variables
         $request               = \Request::all();
-        $specialtyId           = !empty($request['specialty_id']) ?$request['specialty_id'] : null;
+        $procedureId           = !empty($request['procedure_id']) ?$request['procedure_id'] : null;
         $hospitalId            = $request['hospital_id'];
         $title                 = $request['title'];
         $firstName             = $request['first_name'];
@@ -183,6 +184,13 @@ class ApiController {
                 Errors::generateError($this->returnedData);
             }
         }
+        $specialtyId = null;
+        if(!empty($procedureId)) {
+            $specialty = Procedure::where('id', $procedureId)->first();
+            if(!empty($specialty))
+                $specialtyId = $specialty->specialty_id;
+        }
+
         //TODO: Validate the date_of_birth + email + phone_number + postcode
         //We can create the actual Enquiry if it reaches here
         $enquiry = new Enquiry();

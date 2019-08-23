@@ -134,7 +134,8 @@
                     'modalTarget'       => '#hc_modal_enquire_private',
                     'classTitle'        => 'btn btn-icon btn-enquire enquiry mr-2 btn-block',
                     'target'            => 'blank',
-                    'button'            => $btnText])
+                    'button'            => $btnText,
+                    'id'                => 'modal_button_private_enquiry_'.$id])
                 @elseif($NHSClass == 'NHSHospital')
                     @include('components.basic.modalbutton', [
                     'hrefValue'         => $url,
