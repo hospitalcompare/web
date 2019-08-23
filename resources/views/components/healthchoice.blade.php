@@ -1,7 +1,6 @@
 <div class="container">
     <div class="choose-health">
     {{$choosehealthbanner}}
-        {{--            TODO: add opacity mask for clarity of text --}}
         {{--            <p>--}}
         {{--                <a class="{{$classTitle}}" href="" role="button">{{$buttonName}}</a>--}}
         {{--            </p>--}}

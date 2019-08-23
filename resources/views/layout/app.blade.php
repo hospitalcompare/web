@@ -20,6 +20,7 @@
             //var customPath = "/themes/fonts";
         </script>
         <script type="text/javascript" src="{{ asset('fonts/MyFontsWebfontsKit.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/stickybits.js') }}"></script>
 
     </head>
 
