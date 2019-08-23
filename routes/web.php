@@ -19,6 +19,8 @@ Route::get('/test-page','WebController@testPage');
 
 Route::get('/cookie-policy','WebController@cookiePage');
 
+Route::get('/privacy-policy','WebController@privacyPage');
+
 Route::get('/{slug}', 'WebController@contentPage'); //This replaces all the individual routes
 //
 //Route::get('/{slug}', function ($slug) {
