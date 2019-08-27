@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Cookie Policy')
+@section('title', 'Privacy Policy')
 
 @section('description', 'this is the meta description')
 
