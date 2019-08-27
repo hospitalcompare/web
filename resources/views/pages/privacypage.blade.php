@@ -291,7 +291,11 @@
                                         to use your personal data, and which of the legal bases we rely on to do so. We
                                         have also identified what our legitimate interests are where appropriate.
                                     </p>
-                                    <p>Note that we may process your personal data for more than one lawful ground depending on the specific purpose for which we are using your data. Please contact us if you need details about the specific legal ground we are relying on to process your personal data where more than one ground has been set out in the table below.
+                                    <p>Note that we may process your personal data for more than one lawful ground
+                                        depending on the specific purpose for which we are using your data. Please
+                                        contact us if you need details about the specific legal ground we are relying on
+                                        to process your personal data where more than one ground has been set out in the
+                                        table below.
                                     </p>
                                     <div class="table-responsive">
                                         <table class="table">
@@ -313,20 +317,168 @@
                                                     <ol class="alpha">
                                                         <li>Identity</li>
                                                         <li>Contact</li>
-                                                    </ol></td>
+                                                    </ol>
+                                                </td>
                                                 <td>
                                                     Performance of a contract with you
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">2</th>
-                                                <td>Cell</td>
-                                                <td>Cell</td>
+                                                <td>To process and deliver your enquiry about a service offered by
+                                                    others, such as private hospitals
+                                                </td>
+                                                <td>
+                                                    <ol class="alpha">
+                                                        <li>Identity</li>
+                                                        <li>Contact</li>
+                                                        <li>Transaction</li>
+                                                        <li>Marketing and Communications</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
+                                                    <ol class="alpha">
+                                                        <li>Performance of a contract with you</li>
+                                                        <li>Necessary for our legitimate interests (to keep our records
+                                                            and transaction records updated and to study and record how
+                                                            customers use our services)
+                                                        </li>
+                                                    </ol>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">3</th>
-                                                <td>Cell</td>
-                                                <td>Cell</td>
+                                                <td>
+                                                    To manage our relationship with you which will include:
+                                                    <ol class="alpha">
+                                                        <li>Notifying you about changes to our terms or privacy policy
+                                                        </li>
+                                                        <li>Asking you to leave a review or take a survey</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
+                                                    <ol class="alpha">
+                                                        <li>Identity</li>
+                                                        <li>Contact</li>
+                                                        <li>Profile</li>
+                                                        <li>Usage</li>
+                                                        <li>Marketing and Communications</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
+                                                    <ol class="alpha">
+                                                        <li>Performance of a contract with you</li>
+                                                        <li>Necessary to comply with a legal obligation
+                                                        </li>
+                                                        <li>Necessary for our legitimate interests (to keep our records
+                                                            updated and to study and record how customers use our
+                                                            services so we can improve them and grow our business)
+                                                        </li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    To enable you to partake in a competition or complete a survey
+                                                </td>
+                                                <td>
+                                                    <ol class="alpha">
+                                                        <li>Identity</li>
+                                                        <li>Contact</li>
+                                                        <li>Profile</li>
+                                                        <li>Usage</li>
+                                                        <li>Marketing and Communications</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
+                                                    <ol class="alpha">
+                                                        <li>Performance of a contract with you</li>
+                                                        <li>Necessary for our legitimate interests (to study and record
+                                                            how customers use our services, to develop them and grow our
+                                                            business)
+                                                        </li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    To administer and protect our business and this website (including
+                                                    troubleshooting, data analysis, testing, system maintenance,
+                                                    support, reporting and hosting of data)
+                                                </td>
+                                                <td>
+                                                    <ol class="alpha">
+                                                        <li>Identity</li>
+                                                        <li>Contact</li>
+                                                        <li>Technical</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
+                                                    <ol class="alpha">
+                                                        <li>
+                                                            Necessary for our legitimate interests (for running our
+                                                            business, provision of administration and IT services,
+                                                            network security, to prevent fraud and in the context of a
+                                                            business reorganisation or group restructuring exercise)
+                                                        </li>
+                                                        <li>Necessary to comply with a legal obligation
+                                                        </li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    To deliver relevant website content and advertisements to you and
+                                                    measure or understand the effectiveness of the advertising we serve
+                                                    to you
+                                                </td>
+                                                <td>
+                                                    <ol class="alpha">
+                                                        <li>Identity</li>
+                                                        <li>Contact</li>
+                                                        <li>Profile</li>
+                                                        <li>Usage</li>
+                                                        <li>Marketing and Communications</li>
+                                                        <li>Technical</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
+                                                    Necessary for our legitimate interests (to study and record how
+                                                    customers use our services, to improve them, to grow our business
+                                                    and to inform our marketing strategy)
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    To use data analytics to improve our website, products/services,
+                                                    marketing, customer relationships and experiences
+                                                </td>
+                                                <td>
+                                                    <ol class="alpha">
+                                                        <li>Technical</li>
+                                                        <li>Usage</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
+                                                    Necessary for our legitimate interests (to define types of users of our services, to keep our website updated and relevant, to develop our business and to inform our marketing strategy)
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    To make suggestions and recommendations to you about goods or
+                                                    services that may be of interest to you
+                                                </td>
+                                                <td>
+                                                    <ol class="alpha">
+                                                        <li>Identity</li>
+                                                        <li>Contact</li>
+                                                        <li>Technical</li>
+                                                        <li>Usage</li>
+                                                        <li>Profile</li>
+                                                        <li>Marketing and Communications</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
+                                                    Necessary for our legitimate interests (to develop our products/services and grow our business)
+                                                </td>
                                             </tr>
                                             </tbody>
                                         </table>
