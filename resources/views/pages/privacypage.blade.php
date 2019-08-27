@@ -252,16 +252,16 @@
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header" id="headingThree">
+                            <div class="card-header" id="headingFour">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link _collapsed" type="button" data-toggle="collapse"
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                             data-target="#collapseFour" aria-expanded="false"
                                             aria-controls="collapseFour">
                                         4. How we use your personal data
                                     </button>
                                 </h2>
                             </div>
-                            <div id="collapseFour" class="_collapse" aria-labelledby="headingFour"
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                                  data-parent="#privacy_accordion">
                                 <div class="card-body">
                                     <p>We will only use your personal data when the law allows us to. Most commonly, we
@@ -458,7 +458,9 @@
                                                     </ol>
                                                 </td>
                                                 <td>
-                                                    Necessary for our legitimate interests (to define types of users of our services, to keep our website updated and relevant, to develop our business and to inform our marketing strategy)
+                                                    Necessary for our legitimate interests (to define types of users of
+                                                    our services, to keep our website updated and relevant, to develop
+                                                    our business and to inform our marketing strategy)
                                                 </td>
                                             </tr>
                                             <tr>
@@ -477,12 +479,153 @@
                                                     </ol>
                                                 </td>
                                                 <td>
-                                                    Necessary for our legitimate interests (to develop our products/services and grow our business)
+                                                    Necessary for our legitimate interests (to develop our
+                                                    products/services and grow our business)
                                                 </td>
                                             </tr>
                                             </tbody>
                                         </table>
-                                    </div>
+                                    </div>{{-- End of table-responsive --}}
+                                    <h3>Marketing</h3>
+                                    <p>We strive to provide you with choices regarding certain personal data uses,
+                                        particularly around marketing and advertising. We have established the following
+                                        personal data control mechanisms:
+                                    </p>
+                                    <h3>Promotional offers from us
+                                    </h3>
+                                    <p>We may use your Identity, Contact, Technical, Usage and Profile Data to form a
+                                        view on what we think you may want or need, or what may be of interest to you.
+                                        This is how we decide which products, services and offers may be relevant for
+                                        you (we call this marketing).
+                                    </p>
+                                    <p>You will receive marketing communications from us if you have requested
+                                        information from us or purchased goods or services from us and you have opted
+                                        into receiving that marketing.
+                                    </p>
+                                    <h3>Third party marketing</h3>
+                                    <p>We will get your express opt-in consent before we share your personal data with
+                                        any third party for marketing purposes.
+                                    </p>
+                                    <h3>Opting out</h3>
+                                    <p>You can ask us or third parties to stop sending you marketing messages at any
+                                        time by following the opt-out links on any marketing message sent to you or by
+                                        contacting us at any time.
+                                    </p>
+                                    <p>Where you opt out of receiving these marketing messages, this will not apply to
+                                        personal data provided to us as a result of a product/service purchase, enquiry
+                                        made to service providers from our website, product/service experience or other
+                                        transactions.
+                                    </p>
+                                    <h3>Cookies</h3>
+                                    <p>You can set your browser to refuse all or some browser cookies, or to alert you
+                                        when websites set or access cookies. If you disable or refuse cookies, please
+                                        note that some parts of this website may become inaccessible or not function
+                                        properly. For more information about the cookies we use, please see our <a
+                                            href="/cookie-policy"
+                                            class="btn-link">cookie policy</a>.
+                                    </p>
+                                    <h3>Change of purpose</h3>
+                                    <p>We will only use your personal data for the purposes for which we collected it,
+                                        unless we reasonably consider that we need to use it for another reason and that
+                                        reason is compatible with the original purpose. If you wish to get an
+                                        explanation as to how the processing for the new purpose is compatible with the
+                                        original purpose, please contact us.
+                                    </p>
+                                    <p>If we need to use your personal data for an unrelated purpose, we will notify you
+                                        and we will explain the legal basis which allows us to do so.
+                                    </p>
+                                    <p>Please note that we may process your personal data without your knowledge or
+                                        consent, in compliance with the above rules, where this is required or permitted
+                                        by law.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseFive" aria-expanded="false"
+                                            aria-controls="collapseFive">
+                                        5. Disclosures of your personal data
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                 data-parent="#privacy_accordion">
+                                <div class="card-body">
+                                    <p>We may share your personal data with the parties set out below for the purposes
+                                        set out in the table <i>Purposes for which we will use your personal data</i>
+                                        above.
+                                    </p>
+                                    <ul>
+                                        <li>Internal Third Parties as set out in the <a href="/glossary"
+                                                                                        class="btn-link">glossary</a>.
+                                        </li>
+                                        <li>External Third Parties, including specifically any or all of the private
+                                            hospitals or other service providers mentioned on our website to whom you
+                                            make an enquiry by completing an enquiry from or clicking a link to connect
+                                            with them, as set out in the <a href="/glossary"
+                                                                            class="btn-link">glossary</a>
+                                        </li>
+                                        <li>Third parties to whom we may choose to sell, transfer or merge parts of our
+                                            business or our assets. Alternatively, we may seek to acquire other
+                                            businesses or merge with them. If a change happens to our business, then the
+                                            new owners may use your personal data in the same way as set out in this
+                                            privacy policy.
+                                        </li>
+                                    </ul>
+                                    <p>We require all third parties with whom we contract to respect the security of
+                                        your personal data and to treat it in accordance with the law. If you make an
+                                        enquiry or connect with a service provider, such as a private hospital or
+                                        broker, through our website, remember we do not control their websites and are
+                                        not responsible for their privacy statements. When you leave our website, we
+                                        encourage you to read the privacy policy of every website you visit to ensure
+                                        you understand how they propose to use your data.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingSix">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link _collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseSix" aria-expanded="false"
+                                            aria-controls="collapseSix">
+                                        6. International transfers
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseSix" class="_collapse" aria-labelledby="headingSix"
+                                 data-parent="#privacy_accordion">
+                                <div class="card-body">
+                                    <p>We share your personal data within Digital Ocean who carry our webhosting
+                                        services for us. This will involve transferring your data outside the European
+                                        Economic Area <strong>(EEA)</strong>.
+                                    </p>
+                                    <p>Whenever we transfer your personal data out of the EEA, we ensure a similar
+                                        degree of protection is afforded to it by ensuring at least one of the following
+                                        safeguards is implemented:
+                                    </p>
+                                    <ul>
+                                        <li>We will only transfer your personal data to countries that have been deemed
+                                            to provide an adequate level of protection for personal data by the European
+                                            Commission. For further details, see European Commission: Adequacy of the
+                                            protection of personal data in non-EU countries.
+                                        </li>
+                                        <li>Where we use certain service providers, we may use specific contracts
+                                            approved by the European Commission which give personal data the same
+                                            protection it has in Europe. For further details, see European Commission:
+                                            Model contracts for the transfer of personal data to third countries.
+                                        </li>
+                                        <li>Where we use providers based in the US, we may transfer data to them if they
+                                            are part of the Privacy Shield which requires them to provide similar
+                                            protection to personal data shared between Europe and the US. For further
+                                            details, see European Commission: EU-US Privacy Shield. Please contact us if
+                                            you want further information on the specific mechanism used by us when
+                                            transferring your personal data out of the EEA.
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

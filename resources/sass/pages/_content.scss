@@ -6,6 +6,16 @@
 }
 
 .hc-content {
+    table {
+        ol, ul {
+            margin: 0;
+
+            li {
+                font-size: inherit
+            }
+        }
+    }
+
     h1,
     h2,
     h3,
@@ -60,6 +70,7 @@
     ol, ul {
         list-style-type: none;
     }
+
     ul {
         //padding: 0 0 0 50px;
         margin: 30px 0 50px 0;
@@ -144,4 +155,6 @@
     .btn-link {
         color: $darkerGrey;
     }
+
+
 }
