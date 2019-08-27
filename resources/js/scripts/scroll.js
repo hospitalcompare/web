@@ -40,9 +40,20 @@
 // })
 $(document).ready(function () {
     //BACK TO TOP
-    jQuery('#back-to-top').on('click',function(){
-        jQuery('html, body').animate({
-            scrollTop: (jQuery('body').offset().top)
+    $('#back-to-top').on('click',function(){
+        $('html, body').animate({
+            scrollTop: ($('body').offset().top)
+        }, 800);
+    });
+
+    //Smooth scroll for in page links
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        var hash = this.hash;
+        console.log(hash);
+        scrolling = true;
+        $('html, body').animate({
+            scrollTop: ($(hash).offset().top)
         }, 800);
     });
 });
