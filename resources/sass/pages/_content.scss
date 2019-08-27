@@ -14,49 +14,63 @@
     h6 {
         @extend .font-semibold;
     }
+
     h1 {
         font-size: 36px;
         margin: 0 0 30px 0;
     }
+
     h2 {
         font-size: 28px;
         color: $teal;
         margin: 0 0 28px 0;
     }
+
     h3 {
         font-size: 24px;
         margin: 0 0 24px 0;
     }
+
     h4 {
         font-size: 24px;
         color: $teal;
         margin: 0 0 24px 0;
     }
+
     h5 {
         font-size: 22px;
         color: $pink;
         margin: 0 0 22px 0;
     }
+
     h6 {
         font-size: 22px;
         margin: 0 0 22px 0;
     }
+
     p {
         font-size: 20px;
         margin: 0 0 20px 0;
     }
+
     em {
         color: $blue;
     }
+
+    ol, ul {
+        list-style-type: none;
+    }
     ul {
-        padding: 0 0 0 50px;
+        //padding: 0 0 0 50px;
         margin: 30px 0 50px 0;
-        li {
+
+        > li {
             font-size: 22px;
             margin: 0 0 22px 0;
             position: relative;
             padding: 0 0 0 40px;
             line-height: 1;
+
             &:before {
                 content: '';
                 position: absolute;
@@ -69,10 +83,12 @@
             }
         }
     }
+
     ol {
-        padding: 0 0 0 50px;
+        //padding: 0 0 0 50px;
         margin: 30px 0 50px 0;
         counter-reset: counter;
+
         li {
             font-size: 22px;
             margin: 0 0 22px 0;
@@ -80,6 +96,7 @@
             padding: 0 0 0 40px;
             counter-increment: counter;
             line-height: 1;
+
             &:before {
                 content: counter(counter) '.';
                 position: absolute;
@@ -90,8 +107,23 @@
             }
         }
     }
+
+    ol.alpha {
+        li {
+            &:before {
+                content: '(' counter(counter, lower-alpha) ')';
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: $blue;
+                @extend .font-semibold;
+            }
+        }
+    }
+
     blockquote {
         padding: 40px 0;
+
         p {
             max-width: 80%;
             margin: 0 auto 20px auto;
@@ -100,6 +132,7 @@
             color: $teal;
         }
     }
+
     hr {
         border: 0;
         float: left;
@@ -107,6 +140,7 @@
         height: 2px;
         background-color: $green;
     }
+
     .btn-link {
         color: $darkerGrey;
     }

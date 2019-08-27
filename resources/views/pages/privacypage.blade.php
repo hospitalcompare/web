@@ -31,81 +31,81 @@
                         Please also use the Glossary to understand the meaning of some of the terms used in this privacy
                         policy.</p>
                     <div class="accordion" id="privacy_accordion">
-{{--                        <div class="card">--}}
-{{--                            <div class="card-header" id="headingThree">--}}
-{{--                                <h2 class="mb-0">--}}
-{{--                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"--}}
-{{--                                            data-target="#collapseOne" aria-expanded="false"--}}
-{{--                                            aria-controls="collapseOne">--}}
-{{--                                        1. Important information and who we are--}}
-{{--                                    </button>--}}
-{{--                                </h2>--}}
-{{--                            </div>--}}
-{{--                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"--}}
-{{--                                 data-parent="#privacy_accordion">--}}
-{{--                                <div class="card-body">--}}
-{{--                                    <p>This privacy policy aims to give you information on how Hospital Compare collects--}}
-{{--                                        and processes your personal data through your use of this website, including any--}}
-{{--                                        data you may provide through this website when you complete an enquiry form to--}}
-{{--                                        contact a private hospital or to contact a broker or to enquire about another--}}
-{{--                                        service.</p>--}}
-{{--                                    <p>This website is not intended for children and we do not knowingly collect data--}}
-{{--                                        relating to children.</p>--}}
-{{--                                    <p>This privacy policy aims to give you information on how Hospital Compare collects--}}
-{{--                                        and processes your personal data through your use of this website, including any--}}
-{{--                                        data you may provide through this website when you complete an enquiry form to--}}
-{{--                                        contact a private hospital or to contact a broker or to enquire about another--}}
-{{--                                        service. </p>--}}
-{{--                                    <p>It is important that you read this privacy policy together with any other privacy--}}
-{{--                                        policy or fair processing policy we may provide on specific occasions when we--}}
-{{--                                        are collecting or processing personal data about you so that you are fully aware--}}
-{{--                                        of how and why we are using your data. This privacy policy supplements other--}}
-{{--                                        notices and privacy policies and is not intended to override them. </p>--}}
-{{--                                    <h2>Controller</h2>--}}
-{{--                                    <p>Hospital Compare is the controller and responsible for your personal data--}}
-{{--                                        (collectively referred to as “Hospital Compare”, "we", "us" or "our" in this--}}
-{{--                                        privacy policy).</p>--}}
-{{--                                    <p>We have appointed a data privacy manager who is responsible for overseeing--}}
-{{--                                        questions in relation to this privacy policy. If you have any questions about--}}
-{{--                                        this privacy policy, including any requests to exercise your legal rights,--}}
-{{--                                        please contact the data privacy manager using the details set out below. </p>--}}
-{{--                                    <h2>Contact details</h2>--}}
-{{--                                    <p>If you have any questions about this privacy policy or our privacy practices,--}}
-{{--                                        please contact our data privacy manager in the following ways:</p>--}}
-{{--                                    <p>Email address: <a class="btn-link"--}}
-{{--                                                         href="mailto:datamanager@hospitalcompare.co.uk">datamanager@hospitalcompare.co.uk</a>--}}
-{{--                                    </p>--}}
-{{--                                    <p>Postal address: Hospital Compare Limited, Liverpool Science Park, ICi Building,--}}
-{{--                                        131 Mount Pleasant, Liverpool L3 5TF. </p>--}}
-{{--                                    <h2>Changes to the privacy policy and your duty to inform us of changes</h2>--}}
-{{--                                    <p>We keep our privacy policy under regular review. This version was last updated on--}}
-{{--                                        23 August 2019. Historic versions can be obtained by contacting us.--}}
-{{--                                    </p>--}}
-{{--                                    <p>It is important that the personal data we hold about you is accurate and current.--}}
-{{--                                        Please keep us informed if your personal data changes during your relationship--}}
-{{--                                        with us.--}}
-{{--                                    </p>--}}
-{{--                                    <h2>Third-party links</h2>--}}
-{{--                                    <p>This website includes links to third-party websites, plug-ins and applications.--}}
-{{--                                        Clicking on those links or enabling those connections may allow third parties to--}}
-{{--                                        collect or share data about you. We do not control these third-party websites--}}
-{{--                                        and are not responsible for their privacy statements. When you leave our--}}
-{{--                                        website, we encourage you to read the privacy policy of every website you visit.--}}
-{{--                                    </p>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseOne" aria-expanded="false"
+                                            aria-controls="collapseOne">
+                                        1. Important information and who we are
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                 data-parent="#privacy_accordion">
+                                <div class="card-body">
+                                    <p>This privacy policy aims to give you information on how Hospital Compare collects
+                                        and processes your personal data through your use of this website, including any
+                                        data you may provide through this website when you complete an enquiry form to
+                                        contact a private hospital or to contact a broker or to enquire about another
+                                        service.</p>
+                                    <p>This website is not intended for children and we do not knowingly collect data
+                                        relating to children.</p>
+                                    <p>This privacy policy aims to give you information on how Hospital Compare collects
+                                        and processes your personal data through your use of this website, including any
+                                        data you may provide through this website when you complete an enquiry form to
+                                        contact a private hospital or to contact a broker or to enquire about another
+                                        service. </p>
+                                    <p>It is important that you read this privacy policy together with any other privacy
+                                        policy or fair processing policy we may provide on specific occasions when we
+                                        are collecting or processing personal data about you so that you are fully aware
+                                        of how and why we are using your data. This privacy policy supplements other
+                                        notices and privacy policies and is not intended to override them. </p>
+                                    <h2>Controller</h2>
+                                    <p>Hospital Compare is the controller and responsible for your personal data
+                                        (collectively referred to as “Hospital Compare”, "we", "us" or "our" in this
+                                        privacy policy).</p>
+                                    <p>We have appointed a data privacy manager who is responsible for overseeing
+                                        questions in relation to this privacy policy. If you have any questions about
+                                        this privacy policy, including any requests to exercise your legal rights,
+                                        please contact the data privacy manager using the details set out below. </p>
+                                    <h2>Contact details</h2>
+                                    <p>If you have any questions about this privacy policy or our privacy practices,
+                                        please contact our data privacy manager in the following ways:</p>
+                                    <p>Email address: <a class="btn-link"
+                                                         href="mailto:datamanager@hospitalcompare.co.uk">datamanager@hospitalcompare.co.uk</a>
+                                    </p>
+                                    <p>Postal address: Hospital Compare Limited, Liverpool Science Park, ICi Building,
+                                        131 Mount Pleasant, Liverpool L3 5TF. </p>
+                                    <h2>Changes to the privacy policy and your duty to inform us of changes</h2>
+                                    <p>We keep our privacy policy under regular review. This version was last updated on
+                                        23 August 2019. Historic versions can be obtained by contacting us.
+                                    </p>
+                                    <p>It is important that the personal data we hold about you is accurate and current.
+                                        Please keep us informed if your personal data changes during your relationship
+                                        with us.
+                                    </p>
+                                    <h2>Third-party links</h2>
+                                    <p>This website includes links to third-party websites, plug-ins and applications.
+                                        Clicking on those links or enabling those connections may allow third parties to
+                                        collect or share data about you. We do not control these third-party websites
+                                        and are not responsible for their privacy statements. When you leave our
+                                        website, we encourage you to read the privacy policy of every website you visit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="card">
                             <div class="card-header" id="headingTwo">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link _collapsed" type="button" data-toggle="collapse"
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                             data-target="#collapseTwo" aria-expanded="false"
                                             aria-controls="collapseTwo">
                                         2. The data we collect about you
                                     </button>
                                 </h2>
                             </div>
-                            <div id="collapseTwo" class="_collapse" aria-labelledby="headingTwo"
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                                  data-parent="#privacy_accordion">
                                 <div class="card-body">
                                     <p>Personal data, or personal information, means any information about an individual
@@ -188,30 +188,152 @@
                                 </div>
                             </div>
                         </div>
-{{--                        <div class="card">--}}
-{{--                            <div class="card-header" id="headingThree">--}}
-{{--                                <h2 class="mb-0">--}}
-{{--                                    <button class="btn btn-link _collapsed" type="button" data-toggle="collapse"--}}
-{{--                                            data-target="#collapseThree" aria-expanded="false"--}}
-{{--                                            aria-controls="collapseThree">--}}
-{{--                                        Collapsible Group Item #3--}}
-{{--                                    </button>--}}
-{{--                                </h2>--}}
-{{--                            </div>--}}
-{{--                            <div id="collapseThree" class="_collapse" aria-labelledby="headingThree"--}}
-{{--                                 data-parent="#privacy_accordion">--}}
-{{--                                <div class="card-body">--}}
-{{--                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry--}}
-{{--                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor--}}
-{{--                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt--}}
-{{--                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.--}}
-{{--                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente--}}
-{{--                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer--}}
-{{--                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them--}}
-{{--                                    accusamus labore sustainable VHS.--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                        3. How is your personal data collected?
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                 data-parent="#privacy_accordion">
+                                <div class="card-body">
+                                    <p>We use different methods to collect data from and about you including through:
+                                    </p>
+                                    <ul>
+                                        <li><strong>Direct interactions</strong> You may give us your Identity or
+                                            Contact Data by clicking links or filling in enquiry or other forms on our
+                                            website or by corresponding with us by post, phone, email or otherwise. This
+                                            includes personal data you provide when you:
+                                            <ul>
+                                                <li>complete an enquiry form on our website to be referred to a private
+                                                    hospital or broker or other service;
+                                                </li>
+                                                <li>enter a promotion or survey; or</li>
+                                                <li>give us feedback or contact us.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Automated technologies or interactions</strong> As you interact with
+                                            our website, we will automatically collect Technical Data about your
+                                            equipment, browsing actions and patterns. We collect this personal data by
+                                            using cookies and other similar technologies. We may also receive Technical
+                                            Data about you if you visit other websites employing our cookies. Please see
+                                            our
+                                            <a class="btn-link" href="/cookie-policy">cookie policy</a> for further
+                                            details.
+                                        </li>
+                                        <li><strong>Third parties or publicly available sources</strong> We will receive
+                                            personal data about you from various third parties and public sources as set
+                                            out below:
+                                            <ul>
+                                                <li>
+                                                    Technical Data from the following parties:
+                                                    <ol class="alpha">
+                                                        <li>analytics providers such as Google or facebook;
+                                                        </li>
+                                                        <li>advertising networks with whom we work such as Google or
+                                                            facebook; and
+                                                        </li>
+                                                        <li>search information providers such as Google.
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Contact, and Transaction Data from providers of medical, technical, payment
+                                            and delivery services, or other service providers, such as private hospitals
+                                            or brokers listed on our website with whom we connect you.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link _collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseFour" aria-expanded="false"
+                                            aria-controls="collapseFour">
+                                        4. How we use your personal data
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseFour" class="_collapse" aria-labelledby="headingFour"
+                                 data-parent="#privacy_accordion">
+                                <div class="card-body">
+                                    <p>We will only use your personal data when the law allows us to. Most commonly, we
+                                        will use your personal data in the following circumstances:</p>
+                                    <ul>
+                                        <li>Where we need to perform a contract we are about to enter into or have
+                                            entered into with you.
+                                        </li>
+                                        <li>Where it is necessary for our legitimate interests (or those of a third
+                                            party) and your interests and fundamental rights do not override those
+                                            interests.
+                                        </li>
+                                        <li>Where we need to comply with a legal obligation.
+                                        </li>
+                                    </ul>
+                                    <p>Click <a href="/glossary" class="btn-link">here</a> to find out more about the
+                                        types of lawful basis that we will rely on to process your personal data.
+                                    </p>
+                                    <p>Generally, we do not rely on consent as a legal basis for processing your
+                                        personal data although we will get your consent before sending third party
+                                        direct marketing communications to you via email or text message. You have the
+                                        right to withdraw consent to such marketing at any time by contacting us.
+                                    </p>
+                                    <h3>Purposes for which we will use your personal data
+                                    </h3>
+                                    <p>We have set out below, in a table format, a description of all the ways we plan
+                                        to use your personal data, and which of the legal bases we rely on to do so. We
+                                        have also identified what our legitimate interests are where appropriate.
+                                    </p>
+                                    <p>Note that we may process your personal data for more than one lawful ground depending on the specific purpose for which we are using your data. Please contact us if you need details about the specific legal ground we are relying on to process your personal data where more than one ground has been set out in the table below.
+                                    </p>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Purpose/Activity</th>
+                                                <th scope="col">Type of data</th>
+                                                <th scope="col">
+                                                    Lawful basis for processing including basis of legitimate interest
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    To register you as a new user or our website and services
+                                                </td>
+                                                <td>
+                                                    <ol class="alpha">
+                                                        <li>Identity</li>
+                                                        <li>Contact</li>
+                                                    </ol></td>
+                                                <td>
+                                                    Performance of a contract with you
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Cell</td>
+                                                <td>Cell</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Cell</td>
+                                                <td>Cell</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
