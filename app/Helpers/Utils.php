@@ -7,56 +7,66 @@ class Utils
     //Sort By
     const sortBys = [
         [
-            'id' => '0',
-            'name'  => 'Default sorting'
+            'id'        => '0',
+            'name'      => 'Default sorting'
         ],[
-            'id' => '1',
-            'name'  => 'Distance from Postcode ascending'
+            'id'        => '1',
+            'name'      => 'Distance',
         ],[
-            'id' => '2',
-            'name'  => 'Distance from Postcode descending'
+            'id'        => '2',
+            'name'      => 'Distance from Postcode descending',
+            'class'     => 'd-none'
         ],[
-            'id' => '3',
-            'name'  => 'Waiting time ascending'
+            'id'        => '3',
+            'name'      => 'Waiting time ascending',
+            'class'     => 'd-none'
         ],[
-            'id' => '4',
-            'name'  => 'Waiting time descending'
+            'id'        => '4',
+            'name'      => 'Waiting time'
         ],[
-            'id' => '5',
-            'name'  => 'User Rating ascending'
+            'id'        => '5',
+            'name'      => 'User Rating ascending',
+            'class'     => 'd-none'
         ],[
-            'id' => '6',
-            'name'  => 'User Rating descending'
+            'id'        => '6',
+            'name'      => 'User Rating'
         ],[
-            'id' => '7',
-            'name'  => 'Operations Cancelled ascending'
+            'id'        => '7',
+            'name'      => 'Operations Cancelled'
         ],[
-            'id' => '8',
-            'name'  => 'Operations Cancelled descending'
+            'id'        => '8',
+            'name'      => 'Operations Cancelled descending',
+            'class'     => 'd-none'
         ],[
-            'id' => '9',
-            'name'  => 'Care Quality Rating ascending'
+            'id'        => '9',
+            'name'      => 'Care Quality Rating ascending',
+            'class'     => 'd-none'
         ],[
-            'id' => '10',
-            'name'  => 'Care Quality Rating descending'
+            'id'        => '10',
+            'name'      => 'Care Quality Rating'
         ],[
-            'id' => '11',
-            'name'  => 'Friends & Family Rating ascending'
+            'id'        => '11',
+            'name'      => 'Friends & Family Rating ascending',
+            'class'     => 'd-none'
         ],[
-            'id' => '12',
-            'name'  => 'Friends & Family Rating descending'
+            'id'        => '12',
+            'name'      => 'Friends & Family Rating'
         ],[
-            'id' => '13',
-            'name'  => 'NHS Funded Work ascending'
+            'id'        => '13',
+            'name'      => 'NHS Funded Work ascending',
+            'class'     => 'd-none'
         ],[
-            'id' => '14',
-            'name'  => 'NHS Funded Work descending'
+            'id'        => '14',
+            'name'      => 'NHS Funded Work descending',
+            'class'     => 'd-none'
         ],[
-            'id' => '15',
-            'name'  => 'Private Self Pay ascending'
+            'id'        => '15',
+            'name'      => 'Private Self Pay ascending',
+            'class'     => 'd-none'
         ],[
-            'id' => '16',
-            'name'  => 'Private Self Pay descending'
+            'id'        => '16',
+            'name'      => 'Private Self Pay descending',
+            'class'     => 'd-none'
         ]
     ];
 
