@@ -75,21 +75,27 @@ class ApiController {
         //Add a waiting time = 0 to all the hospitals that don't have the total specialty
 
         //Update all the Hospitals that don't have a Waiting Time ( so they won't be excluded from our filters )
-        $hospitals = Hospital::doesntHave('waitingTime')->get();
+//        $hospitals = Hospital::doesntHave('waitingTime')->get();
         $specialties = Specialty::all();
 
         if(!empty($specialties)) {
-            foreach($specialties as $spec){
+            foreach($specialties as $spec) {
+                //Check if we have the specialty to all the Hospitals
+                $hospitals = Hospital::all();
                 if(!empty($hospitals)) {
                     foreach($hospitals as $hos) {
-                        $waitingTime = new HospitalWaitingTime();
-                        $waitingTime->hospital_id = $hos->id;
-                        $waitingTime->specialty_id = $spec->id;
-                        $waitingTime->total_within_18_weeks = 0;
-                        $waitingTime->total_incomplete = 0;
-                        $waitingTime->avg_waiting_weeks = null;
-                        $waitingTime->perc_waiting_weeks = null;
-                        $waitingTime->save();
+                        //Check if we have the Specialty assigned to the Hospital
+                        $waitingTime = HospitalWaitingTime::where(['hospital_id' => $hos->id, 'specialty_id' => $spec->id])->first();
+                        if(empty($waitingTime)) {
+                            $waitingTime = new HospitalWaitingTime();
+                            $waitingTime->hospital_id = $hos->id;
+                            $waitingTime->specialty_id = $spec->id;
+                            $waitingTime->total_within_18_weeks = 0;
+                            $waitingTime->total_incomplete = 0;
+                            $waitingTime->avg_waiting_weeks = null;
+                            $waitingTime->perc_waiting_weeks = null;
+                            $waitingTime->save();
+                        }
                     }
                 }
             }

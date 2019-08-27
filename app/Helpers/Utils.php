@@ -14,18 +14,18 @@ class Utils
             'name'      => 'Distance',
         ],[
             'id'        => '2',
-            'name'      => 'Distance from Postcode descending',
+            'name'      => 'Distance',
             'class'     => 'd-none'
         ],[
             'id'        => '3',
-            'name'      => 'Waiting time ascending',
+            'name'      => 'Waiting time',
             'class'     => 'd-none'
         ],[
             'id'        => '4',
             'name'      => 'Waiting time'
         ],[
             'id'        => '5',
-            'name'      => 'User Rating ascending',
+            'name'      => 'User Rating',
             'class'     => 'd-none'
         ],[
             'id'        => '6',
@@ -35,37 +35,37 @@ class Utils
             'name'      => 'Operations Cancelled'
         ],[
             'id'        => '8',
-            'name'      => 'Operations Cancelled descending',
+            'name'      => 'Operations Cancelled',
             'class'     => 'd-none'
         ],[
             'id'        => '9',
-            'name'      => 'Care Quality Rating ascending',
+            'name'      => 'Care Quality Rating',
             'class'     => 'd-none'
         ],[
             'id'        => '10',
             'name'      => 'Care Quality Rating'
         ],[
             'id'        => '11',
-            'name'      => 'Friends & Family Rating ascending',
+            'name'      => 'Friends & Family Rating',
             'class'     => 'd-none'
         ],[
             'id'        => '12',
             'name'      => 'Friends & Family Rating'
         ],[
             'id'        => '13',
-            'name'      => 'NHS Funded Work ascending',
+            'name'      => 'NHS Funded Work',
             'class'     => 'd-none'
         ],[
             'id'        => '14',
-            'name'      => 'NHS Funded Work descending',
+            'name'      => 'NHS Funded Work',
             'class'     => 'd-none'
         ],[
             'id'        => '15',
-            'name'      => 'Private Self Pay ascending',
+            'name'      => 'Private Self Pay',
             'class'     => 'd-none'
         ],[
             'id'        => '16',
-            'name'      => 'Private Self Pay descending',
+            'name'      => 'Private Self Pay',
             'class'     => 'd-none'
         ]
     ];
