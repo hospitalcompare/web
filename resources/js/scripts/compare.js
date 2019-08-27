@@ -30,7 +30,6 @@ $(document).ready(function () {
      */
     function addHospitalToCompare(element) {
         var target = $('#compare_hospitals_grid');
-        console.log(element);
         var newRowContent =
             '<div class="col-3 text-center" id="compare_hospital_id_' + element.id + '">' +
                 '<div class="col-inner">' +

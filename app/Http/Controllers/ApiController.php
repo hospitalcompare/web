@@ -6,12 +6,11 @@ namespace App\Http\Controllers;
 
 use App\Helpers\Errors;
 use App\Helpers\Utils;
-use App\Models\Address;
 use App\Models\Enquiry;
 use App\Models\Hospital;
-use App\Models\HospitalType;
+use App\Models\HospitalWaitingTime;
+use App\Models\Procedure;
 use App\Models\Specialty;
-use App\Models\Trust;
 use App\Services\Location;
 use Request;
 
@@ -74,12 +73,33 @@ class ApiController {
         //TODO: Remove this when the actual special offers are decided
         \DB::statement('UPDATE hospitals LEFT JOIN hospital_types ON hospitals.hospital_type_id = hospital_types.id SET special_offers = 1 WHERE hospital_types.name = "Independent" AND hospitals.id % 3 = 0');
         //Add a waiting time = 0 to all the hospitals that don't have the total specialty
-        //Get the Specialty
-//        $totalSpecialty = Specialty::where('name', 'Total')->first();
-//        if(!empty($totalSpecialty)) {
-//
-//        }
 
+        //Update all the Hospitals that don't have a Waiting Time ( so they won't be excluded from our filters )
+//        $hospitals = Hospital::doesntHave('waitingTime')->get();
+        $specialties = Specialty::all();
+
+        if(!empty($specialties)) {
+            foreach($specialties as $spec) {
+                //Check if we have the specialty to all the Hospitals
+                $hospitals = Hospital::all();
+                if(!empty($hospitals)) {
+                    foreach($hospitals as $hos) {
+                        //Check if we have the Specialty assigned to the Hospital
+                        $waitingTime = HospitalWaitingTime::where(['hospital_id' => $hos->id, 'specialty_id' => $spec->id])->first();
+                        if(empty($waitingTime)) {
+                            $waitingTime = new HospitalWaitingTime();
+                            $waitingTime->hospital_id = $hos->id;
+                            $waitingTime->specialty_id = $spec->id;
+                            $waitingTime->total_within_18_weeks = 0;
+                            $waitingTime->total_incomplete = 0;
+                            $waitingTime->avg_waiting_weeks = null;
+                            $waitingTime->perc_waiting_weeks = null;
+                            $waitingTime->save();
+                        }
+                    }
+                }
+            }
+        }
 
         return $returnedData;
     }
@@ -151,7 +171,7 @@ class ApiController {
     public function enquiry() {
         //Get the request and load it as variables
         $request               = \Request::all();
-        $specialtyId           = !empty($request['specialty_id']) ?$request['specialty_id'] : null;
+        $procedureId           = !empty($request['procedure_id']) ?$request['procedure_id'] : null;
         $hospitalId            = $request['hospital_id'];
         $title                 = $request['title'];
         $firstName             = $request['first_name'];
@@ -170,6 +190,13 @@ class ApiController {
                 Errors::generateError($this->returnedData);
             }
         }
+        $specialtyId = null;
+        if(!empty($procedureId)) {
+            $specialty = Procedure::where('id', $procedureId)->first();
+            if(!empty($specialty))
+                $specialtyId = $specialty->specialty_id;
+        }
+
         //TODO: Validate the date_of_birth + email + phone_number + postcode
         //We can create the actual Enquiry if it reaches here
         $enquiry = new Enquiry();

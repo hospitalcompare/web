@@ -7,15 +7,15 @@ $(document).ready(function () {
         var content = button.data('content');// Extract info from data-* attributes
         var modal = $(this);
         modal.find('.modal-content').html(content);
-    })
+    });
 
     // Private enquiry form - show title of hospital clicked
     $('#hc_modal_enquire_private').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget);// Button that triggered the modal
         var hospitalTitle = button.data('hospital-title');// Extract info from data-* attributes
         var modal = $(this);
+        var hospitalId = button.attr('id').replace('modal_button_private_enquiry_', '');
         modal.find('.hospital-title').html(hospitalTitle);
+        modal.find("input[name='hospital_id']").val(hospitalId);
     })
-
-
-})
+});

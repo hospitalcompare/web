@@ -12,7 +12,7 @@ import 'bootstrap-select';                          // Searchable dropdowns
 import 'cookieconsent';                             // Cookie consent plugin
 import '@fortawesome/fontawesome-free/js/all.min';
 // import './scripts/vendor/stickybits';               // Position: sticky stuff https://www.npmjs.com/package/stickybits
-//
+
 // UTILITIES
 import './scripts/scroll';                          // Smooth scroll
 import './scripts/postcode' ;                       // Postcode input
@@ -32,6 +32,7 @@ import './components/basic/tooltip';                // Trigger bootstrap popover
 import './components/basic/modal';                  // Trigger bootstrap modal
 
 // PAGES
+import './pages/homepage';                       // Jquery used for the Homepage
 import './pages/resultspage';                       // Jquery used for the Results Page
 /**
  * The following block of code may be used to automatically register your

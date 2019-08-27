@@ -73,30 +73,30 @@
                                     </div>
                                 </div>
 
-                                <div class="form-child full-left d-flex">
-                                    @include('components.basic.select', [
-                                        'showLabel' => true, 'selectClass'=> '',
-                                        'options' => \App\Helpers\Utils::radius,
-                                         'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'How far would you like to travel?', 'chevronFAClassName' => '', 'name'=>'radius'])
-                                    <a tabindex="0" data-offset="30px, 40px"
-                                       class="help-link"
-                                        @include('components.basic.popover', [
-                                        'dismissible'   => true,
-                                        'placement'      => 'top',
-                                        'size'           => 'large',
-                                        'html'           => 'true',
-                                        'trigger'        => 'focus',
-                                        'content'        => '<p class="bold mb-0">
-                                                         Distance
-                                                     </p>
-                                                     <p>
-                                                         Please enter your distance. This is based on the postcode provided
-                                                     </p>
-                                                     <p>
-                                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
-                                                     </p>'])
-                                    >?</a>
-                                </div>
+                            <div class="form-child full-left d-flex">
+                                @include('components.basic.select', [
+                                    'showLabel' => true, 'selectClass'=> 'distance-dropdown',
+                                    'options' => \App\Helpers\Utils::radius,
+                                     'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'How far would you like to travel?', 'chevronFAClassName' => '', 'name'=>'radius'])
+                                <a tabindex="0" data-offset="30px, 40px"
+                                   class="help-link"
+                                    @include('components.basic.popover', [
+                                    'dismissible'   => true,
+                                    'placement'      => 'top',
+                                    'size'           => 'large',
+                                    'html'           => 'true',
+                                    'trigger'        => 'focus',
+                                    'content'        => '<p class="bold mb-0">
+                                                     Distance
+                                                 </p>
+                                                 <p>
+                                                     Please enter your distance. This is based on the postcode provided
+                                                 </p>
+                                                 <p>
+                                                     <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
+                                                 </p>'])
+                                >?</a>
+                            </div>
 
                                 <div class="form-child full-left d-none">
                                     @include('components.basic.select', ['showLabel' => true, 'selectClass'=> '', 'options' => [['id'=>1, 'name'=>'Provider Name']], 'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'Do you have private healthcare insurance?', 'chevronFAClassName' => '', 'name'=>'insurance_id'])
