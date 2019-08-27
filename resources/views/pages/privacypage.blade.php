@@ -27,7 +27,8 @@
                     <p>This privacy policy is provided in a layered format so you can click through to the specific
                         areas set out below. Alternatively, you can download a pdf version of the policy <a
                             class="btn-link"
-                            href="">here</a>.
+                            target="_blank"
+                            href="/downloads/privacy-policy.pdf">here</a>.
                         Please also use the Glossary to understand the meaning of some of the terms used in this privacy
                         policy.</p>
                     <div class="accordion" id="privacy_accordion">
@@ -589,14 +590,14 @@
                         <div class="card">
                             <div class="card-header" id="headingSix">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link _collapsed" type="button" data-toggle="collapse"
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                             data-target="#collapseSix" aria-expanded="false"
                                             aria-controls="collapseSix">
                                         6. International transfers
                                     </button>
                                 </h2>
                             </div>
-                            <div id="collapseSix" class="_collapse" aria-labelledby="headingSix"
+                            <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
                                  data-parent="#privacy_accordion">
                                 <div class="card-body">
                                     <p>We share your personal data within Digital Ocean who carry our webhosting
@@ -629,8 +630,235 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                        <div class="card">
+                            <div class="card-header" id="headingSeven">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseSeven" aria-expanded="false"
+                                            aria-controls="collapseSeven">
+                                        7. Data security
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
+                                 data-parent="#privacy_accordion">
+                                <div class="card-body">
+                                    <p>We have put in place appropriate security measures to prevent your personal data
+                                        from being accidentally lost, used or accessed in an unauthorised way, altered
+                                        or disclosed. In addition, we limit access to your personal data to those
+                                        employees, agents, contractors and other third parties who have a business need
+                                        to know. They will only process your personal data on our instructions and they
+                                        are subject to a duty of confidentiality.
+                                    </p>
+                                    <p>We have put in place procedures to deal with any suspected personal data breach
+                                        and will notify you and any applicable regulator of a breach where we are
+                                        legally required to do so.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingEight">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseEight" aria-expanded="false"
+                                            aria-controls="collapseEight">
+                                        8. Data retention
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+                                 data-parent="#privacy_accordion">
+                                <div class="card-body">
+                                    <h3>How long will you use my personal data for?
+                                    </h3>
+                                    <p>We will only retain your personal data for as long as reasonably necessary to
+                                        fulfil the purposes we collected it for, including for the purposes of
+                                        satisfying any legal, regulatory, tax, accounting or reporting requirements. We
+                                        may retain your personal data for a longer period in the event of a complaint or
+                                        if we reasonably believe there is a prospect of litigation in respect to our
+                                        relationship with you.</p>
+                                    <p>To determine the appropriate retention period for personal data, we consider the
+                                        amount, nature and sensitivity of the personal data, the potential risk of harm
+                                        from unauthorised use or disclosure of your personal data, the purposes for
+                                        which we process your personal data and whether we can achieve those purposes
+                                        through other means, and the applicable legal, regulatory, tax, accounting or
+                                        other requirements.
+                                    </p>
+                                    <p>Details of retention periods for different aspects of your personal data are
+                                        available in our retention policy which you can request from us by contacting
+                                        us.
+                                    </p>
+                                    <p>In some circumstances you can ask us to delete your data: see Your legal rights,
+                                        below for further information.
+                                    </p>
+                                    <p>In some circumstances we will anonymise your personal data (so that it can no
+                                        longer be associated with you) for research or statistical purposes, in which
+                                        case we may use this information indefinitely without further notice to you.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingNine">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseNine" aria-expanded="false"
+                                            aria-controls="collapseNine">
+                                        9. Your legal rights
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseNine" class="collapse" aria-labelledby="headingNine"
+                                 data-parent="#privacy_accordion">
+                                <div class="card-body">
+                                    <p>Under certain circumstances, you have rights under data protection laws in
+                                        relation to your personal data. As follows:
+                                    </p>
+                                    <ul class="no-bull">
+                                        <li><strong>Your Legal Rights -</strong> You have the right to:</li>
+                                        <li><strong>Request access</strong> to your personal data (commonly known as a
+                                            "data
+                                            subject access request"). This enables you to receive a copy of the personal
+                                            data we hold about you and to check that we are lawfully processing it.
+                                        </li>
+                                        <li><strong>Request erasure</strong> of your personal data. This enables you to
+                                            ask
+                                            us to delete or remove personal data where there is no good reason for us
+                                            continuing to process it. You also have the right to ask us to delete or
+                                            remove
+                                            your personal data where you have successfully exercised your right to
+                                            object to
+                                            processing (see below), where we may have processed your information
+                                            unlawfully
+                                            or where we are required to erase your personal data to comply with local
+                                            law.
+                                            Note, however, that we may not always be able to comply with your request of
+                                            erasure for specific legal reasons which will be notified to you, if
+                                            applicable,
+                                            at the time of your request.
+                                        </li>
+                                        <li>
+                                            <strong>Request restriction</strong> of processing of your personal data.
+                                            This enables you to ask us to suspend the processing of your personal data
+                                            in the following scenarios:
+                                            <ul>
+                                                <li>If you want us to establish the data's accuracy.
+                                                </li>
+                                                <li>Where our use of the data is unlawful but you do not want us to
+                                                    erase it.
+                                                </li>
+                                                <li>Where you need us to hold the data even if we no longer require it
+                                                    as you need it to e stablish, exercise or defend legal claims.
+                                                </li>
+                                                <li>You have objected to our use of your data but we need to verify
+                                                    whether we have overriding legitimate grounds to use it.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Request the transfer</strong> of your personal data to you or to a
+                                            third party. We will provide to you, or a third party you have chosen, your
+                                            personal data in a structured, commonly used, machine-readable format. Note
+                                            that this right only applies to automated information which you initially
+                                            provided consent for us to use or where we used the information to perform a
+                                            contract with you.
+                                        </li>
+                                        <li><strong>Withdraw consent</strong> at any time where we are relying on
+                                            consent to process your personal data. However, this will not affect the
+                                            lawfulness of any processing carried out before you withdraw your consent.
+                                            If you withdraw your consent, we may not be able to provide certain products
+                                            or services to you. We will advise you if this is the case at the time you
+                                            withdraw your consent.
+                                        </li>
+                                    </ul>
+                                    <p>If you wish to exercise any of the rights set out above, please contact us at <a
+                                            href="mailto:datamanager@hospitalcompare.co.uk." class="btn-link">datamanager@hospitalcompare.co.uk.</a>
+                                    </p>
+                                    <h3>No fee usually required
+                                    </h3>
+                                    <p>You will not have to pay a fee to access your personal data (or to exercise any
+                                        of the other rights). However, we may charge a reasonable fee if your request is
+                                        clearly unfounded, repetitive or excessive. Alternatively, we could refuse to
+                                        comply with your request in these circumstances.
+                                    </p>
+                                    <h3>What we may need from you
+                                    </h3>
+                                    <p>We may need to request specific information from you to help us confirm your
+                                        identity and ensure your right to access your personal data (or to exercise any
+                                        of your other rights). This is a security measure to ensure that personal data
+                                        is not disclosed to any person who has no right to receive it. We may also
+                                        contact you to ask you for further information in relation to your request to
+                                        speed up our response.
+                                    </p>
+                                    <h3>Time limit to respond</h3>
+                                    <p>We try to respond to all legitimate requests within one month. Occasionally it
+                                        could take us longer than a month if your request is particularly complex or you
+                                        have made a number of requests. In this case, we will notify you and keep you
+                                        updated.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTen">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                            data-target="#collapseTen" aria-expanded="false"
+                                            aria-controls="collapseTen">
+                                        10. Glossary
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTen" class="collapse" aria-labelledby="headingTen"
+                                 data-parent="#privacy_accordion">
+                                <div class="card-body">
+                                    <h3 class="text-uppercase">Lawful basis</h3>
+                                    <p><strong>Legitimate Interest</strong> means the interest of our business in
+                                        conducting and managing our business to enable us to give you the best
+                                        service/product and the best and most secure experience. We make sure we
+                                        consider and balance any potential impact on you (both positive and negative)
+                                        and your rights before we process your personal data for our legitimate
+                                        interests. We do not use your personal data for activities where our interests
+                                        are overridden by the impact on you (unless we have your consent or are
+                                        otherwise required or permitted to by law). You can obtain further information
+                                        about how we assess our legitimate interests against any potential impact on you
+                                        in respect of specific activities by contacting us.
+                                    </p>
+                                    <p><strong>Performance of Contract</strong> means processing your data where it is
+                                        necessary for the performance of a contract to which you are a party or to take
+                                        steps at your request before entering into such a contract.
+                                    </p>
+                                    <p><strong>Comply with a legal obligation</strong></p>
+                                    <h3 class="text-uppercase">Third parties</h3>
+                                    <h3>Internal third parties</h3>
+                                    <p>Other companies in the Hospital Compare Group acting as joint controllers or
+                                        processors based within or outside the EEA and provide IT and system
+                                        administration services and undertake leadership reporting.
+                                    </p>
+                                    <h3>External Third Parties</h3>
+                                    <ul>
+                                        <li>Service or product providers who are also processors based within or outside
+                                            the EEA who provide services or products to consumers or who provide IT and
+                                            system administration services.
+                                        </li>
+                                        <li>Professional advisers including lawyers, bankers, auditors and insurers
+                                            based within or outside the EEA who provide consultancy, banking, legal,
+                                            insurance and accounting services.
+                                        </li>
+                                        <li>HM Revenue & Customs, regulators and other authorities based in the United
+                                            Kingdom who require reporting of processing activities in certain
+                                            circumstances.
+                                        </li>
+                                        <li>Any or all of the private hospitals or brokers or other service providers
+                                            mentioned on our website to whom you make an enquiry by completing an
+                                            enquiry form or clicking a link to connect with them.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>{{-- Accordion --}}
+                </div>{{-- hc-content --}}
             </div>
         </div>
 

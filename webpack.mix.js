@@ -29,6 +29,7 @@ mix.webpackConfig({
 mix.copyDirectory('resources/images', 'public/images');
 mix.copyDirectory('resources/video', 'public/video');
 mix.copyDirectory('resources/fonts', 'public/fonts');
+mix.copyDirectory('resources/downloads', 'public/downloads');
 mix.copy('node_modules/stickybits/dist/stickybits.min.js', 'public/js/stickybits.js');
 
 // Add prefixes to css rules and fix bugs with flexbox
