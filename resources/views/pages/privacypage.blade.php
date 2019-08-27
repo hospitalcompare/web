@@ -31,70 +31,70 @@
                         Please also use the Glossary to understand the meaning of some of the terms used in this privacy
                         policy.</p>
                     <div class="accordion" id="privacy_accordion">
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link _collapsed" type="button" data-toggle="collapse"
-                                            data-target="#collapseOne" aria-expanded="false"
-                                            aria-controls="collapseOne">
-                                        1. Important information and who we are
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseOne" class="" aria-labelledby="headingOne"
-                                 data-parent="#privacy_accordion">
-                                <div class="card-body">
-                                    <p>This privacy policy aims to give you information on how Hospital Compare collects
-                                        and processes your personal data through your use of this website, including any
-                                        data you may provide through this website when you complete an enquiry form to
-                                        contact a private hospital or to contact a broker or to enquire about another
-                                        service.</p>
-                                    <p>This website is not intended for children and we do not knowingly collect data
-                                        relating to children.</p>
-                                    <p>This privacy policy aims to give you information on how Hospital Compare collects
-                                        and processes your personal data through your use of this website, including any
-                                        data you may provide through this website when you complete an enquiry form to
-                                        contact a private hospital or to contact a broker or to enquire about another
-                                        service. </p>
-                                    <p>It is important that you read this privacy policy together with any other privacy
-                                        policy or fair processing policy we may provide on specific occasions when we
-                                        are collecting or processing personal data about you so that you are fully aware
-                                        of how and why we are using your data. This privacy policy supplements other
-                                        notices and privacy policies and is not intended to override them. </p>
-                                    <h2>Controller</h2>
-                                    <p>Hospital Compare is the controller and responsible for your personal data
-                                        (collectively referred to as “Hospital Compare”, "we", "us" or "our" in this
-                                        privacy policy).</p>
-                                    <p>We have appointed a data privacy manager who is responsible for overseeing
-                                        questions in relation to this privacy policy. If you have any questions about
-                                        this privacy policy, including any requests to exercise your legal rights,
-                                        please contact the data privacy manager using the details set out below. </p>
-                                    <h2>Contact details</h2>
-                                    <p>If you have any questions about this privacy policy or our privacy practices,
-                                        please contact our data privacy manager in the following ways:</p>
-                                    <p>Email address: <a class="btn-link"
-                                                         href="mailto:datamanager@hospitalcompare.co.uk">datamanager@hospitalcompare.co.uk</a>
-                                    </p>
-                                    <p>Postal address: Hospital Compare Limited, Liverpool Science Park, ICi Building,
-                                        131 Mount Pleasant, Liverpool L3 5TF. </p>
-                                    <h2>Changes to the privacy policy and your duty to inform us of changes</h2>
-                                    <p>We keep our privacy policy under regular review. This version was last updated on
-                                        23 August 2019. Historic versions can be obtained by contacting us.
-                                    </p>
-                                    <p>It is important that the personal data we hold about you is accurate and current.
-                                        Please keep us informed if your personal data changes during your relationship
-                                        with us.
-                                    </p>
-                                    <h2>Third-party links</h2>
-                                    <p>This website includes links to third-party websites, plug-ins and applications.
-                                        Clicking on those links or enabling those connections may allow third parties to
-                                        collect or share data about you. We do not control these third-party websites
-                                        and are not responsible for their privacy statements. When you leave our
-                                        website, we encourage you to read the privacy policy of every website you visit.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+{{--                        <div class="card">--}}
+{{--                            <div class="card-header" id="headingThree">--}}
+{{--                                <h2 class="mb-0">--}}
+{{--                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"--}}
+{{--                                            data-target="#collapseOne" aria-expanded="false"--}}
+{{--                                            aria-controls="collapseOne">--}}
+{{--                                        1. Important information and who we are--}}
+{{--                                    </button>--}}
+{{--                                </h2>--}}
+{{--                            </div>--}}
+{{--                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"--}}
+{{--                                 data-parent="#privacy_accordion">--}}
+{{--                                <div class="card-body">--}}
+{{--                                    <p>This privacy policy aims to give you information on how Hospital Compare collects--}}
+{{--                                        and processes your personal data through your use of this website, including any--}}
+{{--                                        data you may provide through this website when you complete an enquiry form to--}}
+{{--                                        contact a private hospital or to contact a broker or to enquire about another--}}
+{{--                                        service.</p>--}}
+{{--                                    <p>This website is not intended for children and we do not knowingly collect data--}}
+{{--                                        relating to children.</p>--}}
+{{--                                    <p>This privacy policy aims to give you information on how Hospital Compare collects--}}
+{{--                                        and processes your personal data through your use of this website, including any--}}
+{{--                                        data you may provide through this website when you complete an enquiry form to--}}
+{{--                                        contact a private hospital or to contact a broker or to enquire about another--}}
+{{--                                        service. </p>--}}
+{{--                                    <p>It is important that you read this privacy policy together with any other privacy--}}
+{{--                                        policy or fair processing policy we may provide on specific occasions when we--}}
+{{--                                        are collecting or processing personal data about you so that you are fully aware--}}
+{{--                                        of how and why we are using your data. This privacy policy supplements other--}}
+{{--                                        notices and privacy policies and is not intended to override them. </p>--}}
+{{--                                    <h2>Controller</h2>--}}
+{{--                                    <p>Hospital Compare is the controller and responsible for your personal data--}}
+{{--                                        (collectively referred to as “Hospital Compare”, "we", "us" or "our" in this--}}
+{{--                                        privacy policy).</p>--}}
+{{--                                    <p>We have appointed a data privacy manager who is responsible for overseeing--}}
+{{--                                        questions in relation to this privacy policy. If you have any questions about--}}
+{{--                                        this privacy policy, including any requests to exercise your legal rights,--}}
+{{--                                        please contact the data privacy manager using the details set out below. </p>--}}
+{{--                                    <h2>Contact details</h2>--}}
+{{--                                    <p>If you have any questions about this privacy policy or our privacy practices,--}}
+{{--                                        please contact our data privacy manager in the following ways:</p>--}}
+{{--                                    <p>Email address: <a class="btn-link"--}}
+{{--                                                         href="mailto:datamanager@hospitalcompare.co.uk">datamanager@hospitalcompare.co.uk</a>--}}
+{{--                                    </p>--}}
+{{--                                    <p>Postal address: Hospital Compare Limited, Liverpool Science Park, ICi Building,--}}
+{{--                                        131 Mount Pleasant, Liverpool L3 5TF. </p>--}}
+{{--                                    <h2>Changes to the privacy policy and your duty to inform us of changes</h2>--}}
+{{--                                    <p>We keep our privacy policy under regular review. This version was last updated on--}}
+{{--                                        23 August 2019. Historic versions can be obtained by contacting us.--}}
+{{--                                    </p>--}}
+{{--                                    <p>It is important that the personal data we hold about you is accurate and current.--}}
+{{--                                        Please keep us informed if your personal data changes during your relationship--}}
+{{--                                        with us.--}}
+{{--                                    </p>--}}
+{{--                                    <h2>Third-party links</h2>--}}
+{{--                                    <p>This website includes links to third-party websites, plug-ins and applications.--}}
+{{--                                        Clicking on those links or enabling those connections may allow third parties to--}}
+{{--                                        collect or share data about you. We do not control these third-party websites--}}
+{{--                                        and are not responsible for their privacy statements. When you leave our--}}
+{{--                                        website, we encourage you to read the privacy policy of every website you visit.--}}
+{{--                                    </p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                         <div class="card">
                             <div class="card-header" id="headingTwo">
                                 <h2 class="mb-0">
@@ -188,30 +188,30 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link _collapsed" type="button" data-toggle="collapse"
-                                            data-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                        Collapsible Group Item #3
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                 data-parent="#privacy_accordion">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
-                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                    accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>
+{{--                        <div class="card">--}}
+{{--                            <div class="card-header" id="headingThree">--}}
+{{--                                <h2 class="mb-0">--}}
+{{--                                    <button class="btn btn-link _collapsed" type="button" data-toggle="collapse"--}}
+{{--                                            data-target="#collapseThree" aria-expanded="false"--}}
+{{--                                            aria-controls="collapseThree">--}}
+{{--                                        Collapsible Group Item #3--}}
+{{--                                    </button>--}}
+{{--                                </h2>--}}
+{{--                            </div>--}}
+{{--                            <div id="collapseThree" class="_collapse" aria-labelledby="headingThree"--}}
+{{--                                 data-parent="#privacy_accordion">--}}
+{{--                                <div class="card-body">--}}
+{{--                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry--}}
+{{--                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor--}}
+{{--                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt--}}
+{{--                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.--}}
+{{--                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente--}}
+{{--                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer--}}
+{{--                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them--}}
+{{--                                    accusamus labore sustainable VHS.--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
