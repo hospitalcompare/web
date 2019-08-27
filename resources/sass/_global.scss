@@ -5,14 +5,16 @@
     }
 }
 
-ul {
+ul,
+ol {
     padding-left: 0;
+    list-style: none;
 }
 
 input[type=submit] {
-  padding: 0;
-  border: none;
-  background: none;
+    padding: 0;
+    border: none;
+    background: none;
 }
 
 // Larger input/select
@@ -26,65 +28,83 @@ select.big {
     padding: 0 45px 0 16px;
 }
 
-.bg-teal{
+.bg-teal {
     background-color: $teal;
 }
-.bg-blue{
+
+.bg-blue {
     background-color: $blue;
 }
-.bg-violet{
+
+.bg-violet {
     background-color: $violet;
 }
-.bg-hanblue{
+
+.bg-hanblue {
     background-color: $hanblue;
 }
-.bg-green{
+
+.bg-green {
     background-color: $green;
 }
-.bg-pink{
+
+.bg-pink {
     background-color: $pink;
 }
-.bg-black{
+
+.bg-black {
     background-color: $black;
 }
-.bg-grey{
+
+.bg-grey {
     background-color: $grey;
 }
-.bg-white{
+
+.bg-white {
     background-color: $white;
 }
-.bg-greylight{
+
+.bg-greylight {
     background-color: $greylight;
 }
 
-.col-teal{
+.col-teal {
     color: $teal;
 }
-.col-blue{
+
+.col-blue {
     color: $blue;
 }
-.col-violet{
+
+.col-violet {
     color: $violet;
 }
-.col-hanblue{
+
+.col-hanblue {
     color: $hanblue;
 }
-.col-green{
+
+.col-green {
     color: $green;
 }
-.col-pink{
+
+.col-pink {
     color: $pink;
 }
-.col-black{
+
+.col-black {
     color: $black;
 }
-.col-grey{
+
+.col-grey {
     color: $grey;
 }
-.col-white{
+
+.col-white {
     color: $white;
 }
-.col-greylight{
+
+.col-greylight {
     color: $greylight;
 }
 

@@ -4,7 +4,7 @@
         flex-basis: 85%;
         display: flex;
 
-        .postProxChild {
+        .filter-section-child {
             flex: 1;
             padding: 0 20px;
             &:not(:last-child) {
@@ -21,7 +21,7 @@
         justify-content: flex-end;
         flex-basis: 15%;
 
-        .postProxChild {
+        .submit-section-child {
             justify-content: flex-end;
             align-items: flex-end;
         }
@@ -40,7 +40,7 @@
             margin-bottom: 6px;
         }
 
-        .blackChevron {
+        .black-chevron {
             position: absolute;
             right: 15px;
             bottom: 12px;
@@ -49,7 +49,7 @@
         }
     }
 
-    .searchPageSelect {
+    .results-page-select {
         padding: 10px 40px 10px 13px;
         background-color: $white;
         /* Style for "Knee Opera" */
@@ -60,25 +60,22 @@
         line-height: 15px;
     }
 
-    .filterParent {
+    .filter-parent {
         width: $fullWidth;
         background-color: $white;
-        padding: 23px 0;
+        padding-top: 23px;
     }
 
-    .filter {
-        width: $pageWrap;
-        margin: $centerOnPage;
-    }
-
-    .postProx,
-    .selectProx {
+    .postcode-proximity,
+    .select-proximity {
         @include flex;
     }
 
-    .postProxChild {
+    .postcode-proximity-child,
+    .submit-section-child,
+    .filter-section-child {
         @include uniformAlignment;
-        position: $relative;
+        position: relative;
         margin-bottom: 20px;
         display: flex;
         align-items: center;
@@ -94,11 +91,7 @@
         }
     }
 
-    .inputClass {
-        margin-left: 0 !important;
-    }
-
-    .sortParent {
+    .sort-parent {
         width: $fullWidth;
         background-color: $lighterGrey;
     }
@@ -108,58 +101,59 @@
         margin: $centerOnPage;
     }
 
-    .sortBar {
+    .sort-bar {
         @include flex;
         justify-content: space-between;
 
-        .showSection {
+        .show-section {
             margin: auto auto auto 0;
         }
 
-        .sortSection {
+        .sort-section {
             margin: 10px 0;
 
-            .searchPageSelect {
+            .results-page-select {
                 width: auto
             }
         }
 
-        .showSection,
-        .sortSection {
+        .show-section,
+        .sort-section {
             //margin: auto;
         }
     }
 
 
-    .sortPageSelect, .sortBy {
+    .sort-page-select, .sort-by {
         width: 200px;
     }
 
-    .sortLabel {
+    .sort-label {
         left: 0 !important;
         top: -10px !important;
     }
 
-    .sortBy {
+    .sort-by {
         top: -10px !important;
         position: relative;
     }
 
-    .sortCategoriesParent {
+    .sort-categories-parent {
         background-color: $teal;
+
 
     }
 
-    .sortCategoriesHeader,
+    .sort-categories-header,
     .sort-categories {
         @include flex;
     }
 
-    .sortCategoriesHeader {
-        width: 1180px;
+    .sort-categories-header {
+        //width: 1180px;
         margin: auto;
 
-        .sortCatSection3 {
+        .sort-categories-section-3 {
             &:before,
             &:after {
                 display: none;
@@ -178,7 +172,7 @@
 
     .sort-categories-inner {
         display: flex;
-        width: 1180px;
+        //width: 1180px;
         margin: auto;
     }
 
@@ -191,7 +185,7 @@
 
     }
 
-    .sortCatSection3 {
+    .sort-categories-section-3 {
         flex: 1 0 14%;
         min-width: 170px;
         padding: 10px 0 10px 10px;
@@ -205,7 +199,7 @@
     }
 
 
-    .sortCatMenu {
+    .sort-categories-menu {
         @include flex;
         width: 100%;
         margin-bottom: 0;
@@ -260,13 +254,18 @@
         line-height: 20px;
         text-align: center;
 
+        small {
+            font-size: 10px;
+            line-height: 1;
+        }
+
         p {
             margin-bottom: 0;
         }
     }
 
     .sort-categories-item {
-        position: $relative;
+        position: relative;
 
         &:last-child {
             padding: 8px;
@@ -299,7 +298,7 @@
     }
 
     .NHSHospital, .privateHospital {
-        position: $absolute;
+        position: absolute;
         top: 0;
         width: 60px;
         height: 60px;
@@ -342,6 +341,19 @@
     }
 
 
+}
+
+
+.js-is-sticky {
+    //padding-top: 85.6px;
+}
+
+#sort_categories_parent {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1050;
 }
 
 

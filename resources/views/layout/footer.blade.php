@@ -1,6 +1,11 @@
-<div class="backTopHolder">
-    <div class="backTopContent">
-        @include('components.basic.button', ['classTitle' => 'greenOvalTop backToTop', 'button' => 'Back to top', 'hrefValue' => '#top', 'icon' => 'fa fa-chevron-up'])
+<div class="back-top-wrapper">
+    <div class="container back-top-content d-flex justify-content-end">
+        @include('components.basic.button', [
+        'id' => 'back-to-top',
+        'classTitle' => 'btn btn-icon btn-back-to-top',
+        'button' => 'Back to top',
+        'hrefValue' => '#top',
+        'icon' => 'fa fa-chevron-up'])
     </div>
 </div>
 <footer class="footer">

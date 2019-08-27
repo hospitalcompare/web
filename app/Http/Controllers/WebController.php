@@ -84,4 +84,20 @@ class WebController extends BaseController
 
         return view('pages.testpage', $this->returnedData);
     }
+
+    // Cookie policy
+    public function cookiePage() {
+        return view('pages.cookiepage');
+    }
+
+    // Privacy policy
+    public function privacyPage() {
+        return view('pages.privacypage');
+    }
+
+    // Downloads
+    public function download($file_name) {
+        $file_path = public_path('downloads/'.$file_name);
+        return response()->download($file_path);
+    }
 }

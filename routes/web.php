@@ -17,7 +17,11 @@ Route::get('/results-page','WebController@resultsPage');
 
 Route::get('/test-page','WebController@testPage');
 
-//Route::get('/cookie-policy','WebController@contentPage');
+Route::get('/cookie-policy','WebController@cookiePage');
+
+Route::get('/privacy-policy','WebController@privacyPage');
+
+Route::get('/downloads/{file}','WebController@download');
 
 Route::get('/{slug}', 'WebController@contentPage'); //This replaces all the individual routes
 //

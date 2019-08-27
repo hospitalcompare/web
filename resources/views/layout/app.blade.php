@@ -20,6 +20,7 @@
             //var customPath = "/themes/fonts";
         </script>
         <script type="text/javascript" src="{{ asset('fonts/MyFontsWebfontsKit.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/stickybits.js') }}"></script>
 
     </head>
 
@@ -28,9 +29,9 @@
             @include('layout.header')
         </div>
 
-        <div class="mainContentWrap" id="app">
+        <main class="" id="app">
             @yield('content')
-        </div>
+        </main>
 
         @include('layout.footer', ['page_footer' => ''])
 {{--        <div class="main-footer-wrap">--}}

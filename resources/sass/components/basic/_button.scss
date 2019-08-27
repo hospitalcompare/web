@@ -287,8 +287,8 @@
                 background-image: url('../images/icons/circle-check.svg');
                 @include icon-bg-center;
                 position: absolute;
-                left: 0px;
-                top: 0px;
+                left: 0;
+                top: 0;
                 width: 40px;
                 height: 40px;
             }
@@ -321,8 +321,8 @@
                 background-image: url('../images/icons/circle-check-pink.svg');
                 @include icon-bg-center;
                 position: absolute;
-                left: 0px;
-                top: 0px;
+                left: 0;
+                top: 0;
                 width: 22px;
                 width: 40px;
                 height: 40px;
@@ -415,7 +415,7 @@
 
         // Button on the floating green bar
         &.btn-special-tab {
-            padding: 0px 20px 0px 65px;
+            padding: 0 20px 0 65px;
             color: $white;
             height: 60px;
             line-height: 60px;
@@ -442,11 +442,34 @@
                 background-position: right;
             }
         }
+
+        // Back to top button
+        &.btn-back-to-top {
+            padding: 0 50px 0 20px;
+            color: $white;
+            height: 60px;
+            line-height: 60px;
+            background-color: $teal;
+            min-width: 182px;
+            border-radius: 10px 10px 0 0;
+            font-size: 22px;
+            letter-spacing: -0.66px;
+
+            svg {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+            &:hover {
+                background-position: right;
+            }
+        }
     }
 
 
     //gradient button
-    &.btn {
+    &.btn-grad {
         &:hover {
             background-position: right !important;
         }
@@ -468,4 +491,8 @@
     &:hover {
         background-position: right;
     }
+}
+
+.btn-link:hover {
+    color: $darkerGrey;
 }

@@ -85,7 +85,7 @@ $(document).ready(function () {
     }
 
     //Set the OnClick event for the Compare button
-    $(document).on("click touchend", ".sortCatSection3 .compare", function () {
+    $(document).on("click touchend", ".sort-categories-section-3 .compare", function () {
         //Get the Data that is already in the Cookies
         var compareCount = parseInt(Cookies.get("compareCount"));
         var data = JSON.parse(Cookies.get("compareHospitalsData"));
