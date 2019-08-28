@@ -37,17 +37,23 @@
                 <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
             </div>
             {{-- Waiting time --}}
-            <div class="sort-categories-section-2__child">
-                <p
-                    @includeWhen($d['hospitalType']['name'] == 'Independent','components.basic.popover', [
-                        'trigger'           => 'hover',
-                        'hideDelay'         => '1000',
-                        'content'           => '<p>For private self-pay<br> waiting time click
-                                                    <a tabindex class="text-link modal-enquire-trigger" role="button" >here</a>
-                                                  </p>',
-                        'html'              => 'true'])>
+            <div class="sort-categories-section-2__child flex-column">
+                <p>
                     {!! !empty($waitTime) ? $waitTime : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                 </p>
+                @if($NHSClass == 'privateHospital')
+                    <span>
+                        <small>Click for
+                            @include('components.basic.modalbutton', [
+                                    'hrefValue'         => $url,
+                                    'hospitalTitle'     => $title,
+                                    'modalTarget'       => '#hc_modal_enquire_private',
+                                    'classTitle'        => 'text-link',
+                                    'target'            => 'blank',
+                                    'button'            => 'current waiting time'])
+                        </small>
+                    </span>
+                @endif
                 <span class="d-none" id="item_waiting_time_{{$id}}">{{$waitTime}}</span>
             </div>
             {{-- End waiting time --}}
