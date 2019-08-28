@@ -7,7 +7,6 @@
         <ul class="solutions-menu d-flex align-items-end m-0">
             <li class="d-block">
                 @include('components.basic.specialoffertab', [
-                    'bgColor' => 'pink',
                     'headerText' => [
                         'open' => [
                             'title' => 'BMI - On The Green',
@@ -26,7 +25,7 @@
             </li>
             <li class="d-block">
                 @include('components.basic.specialoffertab', [
-                   'bgColor' => '',
+                   'bgColor' => 'pink',
                    'headerText' => [
                        'open' => [
                            'title' => 'Spire - The Place',
