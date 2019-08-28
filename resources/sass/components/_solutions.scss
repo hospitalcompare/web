@@ -13,6 +13,12 @@
         padding: 0 20px;
         height: 60px;
 
+        // Doctor illustration
+        .doctor {
+            margin-left: 100px;
+            cursor: pointer;
+        }
+
         // Solutions menu
         ul {
             list-style: none;
@@ -45,6 +51,8 @@
         }
 
         .compare-button-title {
+            cursor: pointer;
+
             p {
                 margin: 0;
                 color: $white;
@@ -127,37 +135,68 @@
 .special-offer-tab {
     color: $white;
     background-image: linear-gradient(246deg, #8e00fe 0%, #77a9f5 100%);
-    width: 300px;
+    //width: 300px;
     border-radius: 10px 10px 0 0;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: -0.9px;
 
-    .header {
+    .special-offer-header {
         position: relative;
-        padding: 25px 100px 0 25px;
+        padding: 20px 50px 0 20px;
+        height: 80px;
+
+        .offer-text {
+            min-width: 250px;
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        .open-text {
+            display: none;
+        }
 
         .image-wrapper {
-            width: 67px;
+            width: 55px;
+            height: 50px;
             @include aspect-ratio(67px, 62px);
+
+            .label {
+                width: 30px;
+                height: 30px;
+            }
         }
 
-        &:after {
-            content: '';
-            background-image: url('/images/icons/chevron-down.svg');
+        svg {
             position: absolute;
-            @include icon-bg-center(50%);
-            right: 0;
-            top: 0;
-            width: 60px;
-            height: 60px;
+            right: 20px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
             line-height: 60px;
+            cursor: pointer;
+            transition: $transition;
         }
 
     }
 
+    // Spin arrow when open
+    &.open {
+        .special-offer-header svg {
+            transform: rotate3d(0, 0, 1, 180deg);
+        }
 
-    &:hover {
-        background-position: right;
+        .closed-text {
+            display: none;
+        }
+
+        .open-text {
+            display: block;
+        }
     }
+}
+
+.special-offer-body {
+    padding: 0 25px 25px 117px;
+    display: none;
 }

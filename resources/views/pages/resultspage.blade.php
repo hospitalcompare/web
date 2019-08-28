@@ -315,7 +315,7 @@
                     'privateSelfPay'    => $d['hospitalType']['name'] === 'Independent' ? 1 : 0,
                     'specialOffers'     => $d['special_offers'],
                     'btnText'           => 'Make an enquiry',
-                    'NHSClass'          => $d['hospitalType']['name'] == 'NHS' ? 'NHSHospital' : 'privateHospital',
+                    'NHSClass'          => $d['hospitalType']['name'] == 'NHS' ? 'nhs-hospital' : 'private-hospital',
                     'fundedText'        => ($d['hospitalType']['name'] == 'NHS') ? 'NHS Hospital': 'Private Hospital',
                     'url'               => $d['url'],
                     'modalContent'      => '<button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
