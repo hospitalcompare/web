@@ -6,7 +6,8 @@
                  'placement'      => 'top',
                  'size'           => 'large',
                  'html'           => 'true',
-                 'trigger'        => 'click',
+                 'trigger'        => 'hover',
+                 'hideDelay'      => '800',
                  'content'        => '<p class="bold mb-0">
                          Need some help?
                      </p>
