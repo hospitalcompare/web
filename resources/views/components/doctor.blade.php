@@ -19,5 +19,4 @@
                      </p>'])>
         <img src="{{ asset('../images/dr-stevini.svg') }}" alt="Illustration of Dr Stevini">
     </a>
-
 </div>
