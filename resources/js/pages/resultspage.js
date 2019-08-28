@@ -3,7 +3,7 @@ $(document).ready(function() {
     //Add a delay of 10 ms because rendering is not instant for the new dropdown ( and it's acting weird, sometimes it works and sometimes it doesn't without the delay)
     setTimeout( function() {
             //Change the background color of the selectbox when an option with a value different than 0 is selected
-            $('.results-page .searchPageSelect.highlight option[value!="0"]:selected').parent().css('background-color', '#ececec');
+            $('.results-page .results-page-select.highlight option[value!="0"]:selected').parent().css('background-color', '#ececec');
             $('.results-page .highlight-search-dropdown option[value!="0"]:selected').parent().next().css('background-color', '#ececec');
         }, 200);
 

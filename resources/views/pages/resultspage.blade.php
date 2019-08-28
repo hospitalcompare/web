@@ -332,7 +332,7 @@
                                                                         <img class="mr-3" src="images/alder-1.png">
                                                                     </div>
                                                                     <div class="modal-copy">
-                                                                        <p>Unfortunately this NHS Hospital has not enabled enquiries to be made from our site.</p>
+                                                                        <p>This NHS hospital does not respond to direct enquiries regarding NHS funded elective procedures prior to an appointment being confirmed.</p>
                                                                         <p>To make an enquiry with them please visit their website <a href="http://' . $d['url'] . '" target="_blank">here</a> or by clicking the link below or you can discuss making an enquiry with your GP.</p>
                                                                     </div>
 
