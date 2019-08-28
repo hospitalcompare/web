@@ -373,11 +373,11 @@
             font-family: "SofiaPro-Bold", sans-serif;
             color: $pink;
             background-color: $white;
-            height: 25px;
-            line-height: 25px;
+            height: 30px;
+            line-height: 30px;
             font-size: 14px;
             letter-spacing: -0.6px;
-            padding: 0 25px 0 12px;
+            padding: 0 30px 0 12px;
 
             &:after {
                 background-image: url('../images/icons/up-arrow-pink.svg');
@@ -386,9 +386,9 @@
                 right: 0;
                 top: 0;
                 bottom: 0;
-                width: 25px;
-                height: 25px;
-                line-height: 20px;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
                 transform: rotate(90deg);
             }
 
