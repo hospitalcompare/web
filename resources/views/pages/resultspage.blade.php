@@ -386,7 +386,9 @@
     </div>
 
     {{--  Compare bar  --}}
-    @include('components.compare')
+{{--    @include('components.compare')--}}
+    {{-- New comparebar - solutions bar --}}
+    @include('components.solutionsbar')
     {{--  Modal for 'make an enquiry'  --}}
     @include('components.modals.modalenquirenhs')
     {{--  Modal for special offers  --}}

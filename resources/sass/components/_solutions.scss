@@ -1,0 +1,95 @@
+.compare-hospitals-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to right, #00de9d 0%, #00cecb 100%);
+    z-index: 1040;
+
+    .compare-hospitals-header {
+        position: relative;
+        width: 100%;
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        ul {
+            list-style: none;
+            padding-left: 190px;
+            li {
+                a {
+                    display: inline-block;
+                    color: $white;
+                    padding: 0 12px;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 18px;
+                    font-weight: 400;
+                    letter-spacing: -0.9px;
+
+                    &:hover {
+                        background-color: darken($teal, 5%);
+                        text-decoration: none;
+                    }
+
+                    &.btn-special-tab {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+        .compare-button-title {
+            p {
+                margin: 0;
+                color: $white;
+            }
+        }
+
+        .compare-arrow {
+            display: inline-block;
+            width: 12px;
+            height: 7px;
+            background-color: $teal;
+            background-image: url('../images/up-arrow.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: $transition;
+
+            &.rotated {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .compare-hospitals-content {
+        background-color: #fff;
+        display: none;
+
+        &.hidden {
+            transform: translateY(-100%);
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .col-inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .cell {
+                height: 40px;
+                line-height: 40px;
+                overflow: hidden;
+            }
+        }
+    }
+}
