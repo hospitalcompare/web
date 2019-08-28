@@ -368,6 +368,40 @@
             }
         }
 
+        // Button inside special offer tabs in solutions bar
+        &.btn-enquire-now {
+            font-family: "SofiaPro-Bold", sans-serif;
+            color: $pink;
+            background-color: $white;
+            height: 25px;
+            line-height: 25px;
+            font-size: 14px;
+            letter-spacing: -0.6px;
+            padding: 0 25px 0 12px;
+
+            &:after {
+                background-image: url('../images/icons/up-arrow-pink.svg');
+                @include icon-bg-center(30%);
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 25px;
+                height: 25px;
+                line-height: 20px;
+                transform: rotate(90deg);
+            }
+
+            &:hover {
+                color: $white;
+                background-color: $pink;
+
+                &:after {
+                    background-image: url('../images/icons/up-arrow.svg');
+                }
+            }
+        }
+
         &.btn-special-offer {
             padding: 13px 20px 13px 40px;
             border-radius: 10px;

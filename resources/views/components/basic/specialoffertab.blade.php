@@ -27,7 +27,7 @@
             </ul>
         </div>
         <div class="btn-area text-right">
-            <a class="btn btn-icon btn-go">Enquire Now</a>
+            <a class="btn btn-icon btn-enquire-now">Enquire Now</a>
         </div>
     </div>
 </div>

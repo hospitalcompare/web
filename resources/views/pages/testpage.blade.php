@@ -57,6 +57,10 @@
                                         procedure at. Enter your provider and policy name to find the best hospital for you.
                                     </p>'])>?</a>
                 <hr>
+                <h3>Enquire now button</h3>
+                @include('components.basic.button', [
+                    'classTitle' => 'btn btn-icon btn-enquire-now mr-2',
+                    'button' => 'Enquire Now'])
                 <h3>Special offer button</h3>
                 @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer mr-2', 'button' => 'Special Offers'])
                 <h3>Special offer button reversed</h3>
