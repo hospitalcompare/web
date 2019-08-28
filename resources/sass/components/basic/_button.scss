@@ -267,6 +267,34 @@
             }
         }
 
+        &.btn-go {
+            color: $white;
+            height: 20px;
+            line-height: 20px;
+            font-size: 12px;
+            letter-spacing: -0.6px;
+            padding: 0 20px 0 12px;
+            background-color: #000;
+
+            &:after {
+                background-image: url('../images/icons/up-arrow.svg');
+                @include icon-bg-center(30%);
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                transform: rotate(90deg);
+            }
+
+            &:hover {
+                color: $white;
+
+            }
+        }
+
         &.btn-enquire {
             border-radius: 10px;
             background: $blue;
@@ -414,34 +442,7 @@
         }
 
         // Button on the floating green bar
-        &.btn-special-tab {
-            padding: 0 20px 0 65px;
-            color: $white;
-            height: 60px;
-            line-height: 60px;
-            background-color: $pink;
-            min-width: 160px;
-            //width: 190px;
-            border-radius: 10px 10px 0 0;
-            background-image: linear-gradient(260deg, #1b71f3 0%, #00cecd 100%);
-            font-size: 18px;
-            font-weight: 500;
-            letter-spacing: -0.9px;
 
-            &:before {
-                background-image: url('../images/icons/special.svg');
-                @include icon-bg-center(50%);
-                left: 0;
-                top: 0;
-                width: 60px;
-                height: 60px;
-                line-height: 60px;
-            }
-
-            &:hover {
-                background-position: right;
-            }
-        }
 
         // Back to top button
         &.btn-back-to-top {

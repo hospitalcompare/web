@@ -22,9 +22,7 @@
         <div class="section py-3">
             <div class="container">
                 <h2>Dr Stevini</h2>
-                <div class="doctor">
-                    <img src="{{ asset('../images/dr-stevini.svg') }}" alt="Illustration of Dr Stevini">
-                </div>
+                @include('components.doctor')
                 <h2>Tooltips</h2>
                 <br>
                 <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top"

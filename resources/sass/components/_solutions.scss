@@ -9,14 +9,17 @@
     .compare-hospitals-header {
         position: relative;
         width: 100%;
-        max-width: 1220px;
         margin: 0 auto;
         padding: 0 20px;
+        height: 60px;
 
+        // Solutions menu
         ul {
             list-style: none;
-            padding-left: 190px;
+
             li {
+                position: relative;
+
                 a {
                     display: inline-block;
                     color: $white;
@@ -33,13 +36,14 @@
                     }
 
                     &.btn-special-tab {
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
+                        //position: absolute;
+                        //left: 0;
+                        //bottom: 0;
                     }
                 }
             }
         }
+
         .compare-button-title {
             p {
                 margin: 0;
@@ -91,5 +95,69 @@
                 overflow: hidden;
             }
         }
+    }
+}
+
+// Special offers tabs
+
+.solutions-menu {
+    .bullets {
+        ul {
+            li {
+                list-style: none;
+                font-size: 13px;
+                line-height: 2;
+                font-weight: 400;
+                letter-spacing: -0.65px;
+                position: relative;
+                padding-left: 30px;
+
+                &:before {
+                    content: url("/images/icons/circle-check.svg");
+                    width: 20px;
+                    height: 20px;
+                    @include v-c;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+.special-offer-tab {
+    color: $white;
+    background-image: linear-gradient(246deg, #8e00fe 0%, #77a9f5 100%);
+    width: 300px;
+    border-radius: 10px 10px 0 0;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.9px;
+
+    .header {
+        position: relative;
+        padding: 25px 100px 0 25px;
+
+        .image-wrapper {
+            width: 67px;
+            @include aspect-ratio(67px, 62px);
+        }
+
+        &:after {
+            content: '';
+            background-image: url('/images/icons/chevron-down.svg');
+            position: absolute;
+            @include icon-bg-center(50%);
+            right: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+        }
+
+    }
+
+
+    &:hover {
+        background-position: right;
     }
 }
