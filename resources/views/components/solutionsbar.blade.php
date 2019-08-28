@@ -4,11 +4,13 @@
         <div class="compare-button-title d-flex h-100 align-items-center ml-5 mr-auto">
             <p>Hospital Shortlist&nbsp;(<span id="compare_number">0</span>)<span class="compare-arrow ml-3"></span></p>
         </div>
-        <ul class="solutions-menu d-flex m-0">
+        <ul class="solutions-menu d-flex align-items-end m-0">
             <li class="d-block">
                 @include('components.basic.specialoffertab')
             </li><li class="d-block">
-                @include('components.basic.specialoffertab')
+                @include('components.basic.specialoffertab', [
+                'bgColor' => 'pink'
+                ])
             </li>
 {{--            <li class="d-block ml-3">--}}
 {{--                <a href="" class="btn btn-icon btn-special-tab">Special Offers</a>--}}
