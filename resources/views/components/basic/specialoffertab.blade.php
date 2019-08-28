@@ -8,12 +8,12 @@
         </div>
         <div class="offer-text ml-4">
             <div class="closed-text">
-                <p class="offer-title mb-0"><strong>NHS funded operation</strong></p>
-                <p class="offer-subtitle mb-0">At a private hospital of your choice</p>
+                <p class="offer-title mb-0"><strong>{{ $headerText['closed']['title'] }}</strong></p>
+                <p class="offer-subtitle mb-0">{{ $headerText['closed']['subtitle'] }}</p>
             </div>
             <div class="open-text">
-                <p class="hospital-name mb-0"><strong>Spire Murrayfield</strong></p>
-                <p class="distance mb-0">35.3 miles away</p>
+                <p class="hospital-name mb-0"><strong>{{ $headerText['open']['title'] }}</strong></p>
+                <p class="distance mb-0">{{ $headerText['open']['subtitle'] }}</p>
             </div>
         </div>
         <span class="fa fa-chevron-up toggle-special-offer"></span>
@@ -21,9 +21,9 @@
     <div class="special-offer-body">
         <div class="bullets mb-4">
             <ul>
-                <li>2 weeks</li>
-                <li>Outstanding</li>
-                <li>5 star user rating</li>
+                @foreach($bulletPoints as $bulletPoint)
+                    <li>{{ $bulletPoint }}</li>
+                @endforeach
             </ul>
         </div>
         <div class="btn-area text-right">

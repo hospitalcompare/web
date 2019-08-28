@@ -6,15 +6,46 @@
         </div>
         <ul class="solutions-menu d-flex align-items-end m-0">
             <li class="d-block">
-                @include('components.basic.specialoffertab')
-            </li><li class="d-block">
                 @include('components.basic.specialoffertab', [
-                'bgColor' => 'pink'
+                    'bgColor' => 'pink',
+                    'headerText' => [
+                        'open' => [
+                            'title' => 'BMI - On The Green',
+                            'subtitle' => '27 miles away'
+                        ],
+                        'closed' => [
+                            'title' => 'NHS funded operation',
+                            'subtitle' => 'At a private hospital of your choice'
+                        ]
+                    ],
+                    'bulletPoints' => [
+                        'Outstanding CQC rating',
+                        '5 star NHS choices rating',
+                        '14 wks NHS funded waiting time']
                 ])
             </li>
-{{--            <li class="d-block ml-3">--}}
-{{--                <a href="" class="btn btn-icon btn-special-tab">Special Offers</a>--}}
-{{--            </li>--}}
+            <li class="d-block">
+                @include('components.basic.specialoffertab', [
+                   'bgColor' => '',
+                   'headerText' => [
+                       'open' => [
+                           'title' => 'Spire - The Place',
+                           'subtitle' => '29 miles away'
+                       ],
+                       'closed' => [
+                           'title' => 'Operation done in 2 weeks',
+                           'subtitle' => 'Outstanding hospital close to you'
+                       ]
+                   ],
+                   'bulletPoints' => [
+                       'Operation done in 2 wks',
+                       'Outstanding CQC rating',
+                       '5 star NHS choices rating']
+               ])
+            </li>
+            {{--            <li class="d-block ml-3">--}}
+            {{--                <a href="" class="btn btn-icon btn-special-tab">Special Offers</a>--}}
+            {{--            </li>--}}
             {{--                    <li><a href="">Virtual GP</a></li>--}}
             {{--                    <li><a href="">Operation Funding</a></li>--}}
             {{--                    <li><a href="">Insurance Guide</a></li>--}}
