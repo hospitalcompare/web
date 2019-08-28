@@ -162,8 +162,14 @@
             @include aspect-ratio(67px, 62px);
 
             .label {
-                width: 30px;
-                height: 30px;
+                display: none;
+                width: 10px;
+                height: 10px;
+                border-width: 10px;
+
+                p {
+
+                }
             }
         }
 
