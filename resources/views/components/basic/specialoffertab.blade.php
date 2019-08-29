@@ -29,7 +29,14 @@
             </ul>
         </div>
         <div class="btn-area text-right">
-            <a class="btn btn-icon btn-enquire-now">Enquire Now</a>
+            @include('components.basic.modalbutton', [
+                'hospitalTitle'     => $headerText['open']['title'],
+                'hrefValue'         => '',
+                'modalTarget'       => '#hc_modal_enquire_private',
+                'classTitle'        => 'btn btn-icon btn-enquire-now enquiry',
+                'target'            => 'blank',
+                'button'            => 'Enquire now'
+                ])
         </div>
     </div>
 </div>
