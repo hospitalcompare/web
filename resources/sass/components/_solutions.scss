@@ -153,8 +153,9 @@
         cursor: pointer;
 
         .offer-text {
-            //min-width: 250px;
+            margin-left: 10px;
             line-height: 1;
+            max-width: 200px;
 
             .offer-title {
                 font-size: 18px;
@@ -175,7 +176,7 @@
             @include aspect-ratio(48px, 44px);
 
             .label {
-                display: none;
+                //display: none;
                 width: 10px;
                 height: 10px;
                 border-width: 10px;
