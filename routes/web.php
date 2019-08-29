@@ -23,6 +23,8 @@ Route::get('/privacy-policy','WebController@privacyPage');
 
 Route::get('/terms-and-conditions','WebController@termsAndConditionsPage');
 
+Route::get('/your-rights','WebController@yourRightsPage');
+
 Route::get('/downloads/{file}','WebController@download');
 
 Route::get('/{slug}', 'WebController@contentPage'); //This replaces all the individual routes
