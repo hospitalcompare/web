@@ -4,7 +4,9 @@
     <div class="special-offer-header d-flex justify-content-between align-items-center">
         <div class="image-wrapper">
             <img class="content" width="55" height="50" alt="Image of The Christie Main Site" src="{{ asset('../images/alder-1.png') }}">
-            <div class="nhs-hospital label"><p>NHS Hospital</p></div>
+            <div class="nhs-hospital label">
+{{--                <p>NHS Hospital</p>--}}
+            </div>
         </div>
         <div class="offer-text ml-4">
             <div class="closed-text">

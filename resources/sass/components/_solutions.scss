@@ -11,7 +11,7 @@
         width: 100%;
         margin: 0 auto;
         padding: 0 20px;
-        height: 60px;
+        height: 50px;
 
         // Doctor illustration
         .doctor {
@@ -148,7 +148,8 @@
     .special-offer-header {
         position: relative;
         padding: 0 50px 0 20px;
-        height: 80px;
+        height: 65px;
+        cursor: pointer;
 
         .offer-text {
             min-width: 250px;
@@ -166,7 +167,6 @@
             @include aspect-ratio(67px, 62px);
 
             .label {
-                display: none;
                 width: 10px;
                 height: 10px;
                 border-width: 10px;
@@ -177,11 +177,10 @@
         span {
             position: absolute;
             right: 20px;
-            top: 30px;
+            top: 25px;
             width: 20px;
             height: 20px;
             line-height: 60px;
-            cursor: pointer;
             transition: $transition;
         }
 
