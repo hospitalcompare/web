@@ -1,5 +1,5 @@
 <div class="how-section container">
-    <div class="row w-100">
+    <div class="row">
         <h2 class="section-title col-12">{{$sectionTitle}}</h2>
         @if(!empty($howsections))
             @foreach($howsections as $howsection)
