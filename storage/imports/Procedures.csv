@@ -1,683 +1,594 @@
-Surgical Procedures,Specialty,Secondary Specialty,Provider
-Ambulatory blood pressure recording,Cardiology,,BMI
-Ambulatory ECG,Cardiology,,BMI
-Angioplasty,Cardiology,,BMI
-Atrial Fibrillation AF Ablation,Cardiology,,BMI
-Balloon sinuplasty,Cardiology,,BMI
-Blood pressure test,Cardiology,,BMI
-Cardiac catheterisation,Cardiology,,BMI
-Cardiac stress testing,Cardiology,,BMI
-Cardio Pulmonary Exercise Test CPET,Cardiology,,BMI
-Catheter ablation for common arrhythmias in adults and children,Cardiology,,BMI
-Contrast echocardiography,Cardiology,,BMI
-Coronary angiography,Cardiology,,General
-Coronary artery bypass,Cardiology,,BMI
-CT coronary angiography,Cardiology,,BMI
-ECG recorder,Cardiology,,BMI
-"ECG, electrocardiogram",Cardiology,,BMI
-Echocardiogram,Cardiology,,BMI
-Endovascular aortic aneurysm repair EVAR,Cardiology,,BMI
-Internal cardiac defibrillator implantation,Cardiology,,BMI
-Mitral valve surgery,Cardiology,,BMI
-Myocardial perfusion imaging,Cardiology,,BMI
-"Pacemaker (insertion, removal or attention)",Cardiology,,General
-Pacemaker implantation,Cardiology,,BMI
-Paediatric cardiology,Cardiology,,BMI
-Ptca (angioplasty),Cardiology,,General
-Stress echocardiogram,Cardiology,,BMI
-TAVI,Cardiology,,BMI
-Transoesophageal echocardiography,Cardiology,,BMI
-Anti reflux surgery,Cardiothoracic Surgery,Gastroenterology,Ramsay
-Aortic aneurysm repair,Cardiothoracic Surgery,Cardiology,General
-Aortic root replacement,Cardiothoracic Surgery,,BMI
-Aortic valve replacement,Cardiothoracic Surgery,Cardiology,BMI
-Bronchoscopy,Cardiothoracic Surgery,,Ramsay
-Bronchoscopy (diagnostic),Cardiothoracic Surgery,"Ear, Nose & Throat (ENT)",General
-Cardiac surgery - aortic valve repair / replacement,Cardiothoracic Surgery,Cardiology,General
-Cardiac surgery - mitral valve repair / replacement,Cardiothoracic Surgery,Cardiology,General
-Cardiac surgery (coronary artery bypass graft - CABG),Cardiothoracic Surgery,Cardiology,General
-Cardioversion,Cardiothoracic Surgery,Cardiology,General
-Carotid artery surgery (endarterectomy),Cardiothoracic Surgery,Cardiology,General
-Lung biopsy,Cardiothoracic Surgery,,BMI
-Lung Cancer,Cardiothoracic Surgery,,BMI
-Lung function testing,Cardiothoracic Surgery,,BMI
-Pleural biopsy and drainage,Cardiothoracic Surgery,,BMI
-Thoracoscopy,Cardiothoracic Surgery,,BMI
-Transbronchial Biopsy,Cardiothoracic Surgery,,Ramsay
-Transbronchial biopsy,Cardiothoracic Surgery,,BMI
-Excess sweating of the feet hyperhidrosis,Dermatology,,BMI
-Excision of a Ganglion,Dermatology,General Surgery,Ramsay
-Pilonidal sinus removal,Dermatology,,General
-Removing benign skin lesions (under local anaesthetics),Dermatology,,Ramsay
-Skin lesion removal,Dermatology,,General
-Skin lesion removal (external nose),Dermatology,,General
-Skin resurfacing,Dermatology,,General
-Toe soft tissue operation,Dermatology,General Surgery,General
-Varicose Veins Surgery,Dermatology,,Ramsay
-Adenoidectomy,"Ear, Nose & Throat (ENT)",,General
-Adenoidectomy child,"Ear, Nose & Throat (ENT)",,BMI
-Audiology consultation,"Ear, Nose & Throat (ENT)",,BMI
-Bonebridge ear implant,"Ear, Nose & Throat (ENT)",,BMI
-Cochlear implants,"Ear, Nose & Throat (ENT)",,BMI
-Drainage of middle ear (insertion of grommets),"Ear, Nose & Throat (ENT)",,General
-"ear correction, pinnaplasty","Ear, Nose & Throat (ENT)",Plastic Surgery,BMI
-Ear external lesion removal,"Ear, Nose & Throat (ENT)",,General
-Ear pinning (pinnaplasty),"Ear, Nose & Throat (ENT)",Plastic Surgery,General
-Ear pinning (pinnaplasty),"Ear, Nose & Throat (ENT)",Plastic Surgery,Spire
-Eardrum repair,"Ear, Nose & Throat (ENT)",,General
-Endoscopic sinus surgery,"Ear, Nose & Throat (ENT)",,BMI
-Grommet insertion,"Ear, Nose & Throat (ENT)",,BMI
-Grommets insertion (glue ear treatment),"Ear, Nose & Throat (ENT)",,Spire
-Laryngoscopy and pharyngoscopy,"Ear, Nose & Throat (ENT)",,BMI
-Myringoplasty,"Ear, Nose & Throat (ENT)",,BMI
-Nasal polypectomy,"Ear, Nose & Throat (ENT)",,BMI
-Nose (turbinate) procedure,"Ear, Nose & Throat (ENT)",,General
-Nose diagnostic examination (endoscopy),"Ear, Nose & Throat (ENT)",,General
-Nose removal of lesion,"Ear, Nose & Throat (ENT)",Plastic Surgery,General
-Parathyroidectomy,"Ear, Nose & Throat (ENT)",,BMI
-Parotid gland removal,"Ear, Nose & Throat (ENT)",Plastic Surgery,General
-Repair of oesophagus (for gastric reflux),"Ear, Nose & Throat (ENT)",General Surgery,General
-Septoplasty and submucous resection,"Ear, Nose & Throat (ENT)",,BMI
-Septorhinoplasty with graft or implant,"Ear, Nose & Throat (ENT)",,BMI
-Sinus procedure,"Ear, Nose & Throat (ENT)",,General
-Stapedectomy,"Ear, Nose & Throat (ENT)",,BMI
-Submandibular gland removal,"Ear, Nose & Throat (ENT)",Oral Surgery,General
-Thyroidectomy,"Ear, Nose & Throat (ENT)",,General
-Thyroidectomy (for Goitre),"Ear, Nose & Throat (ENT)",,Ramsay
-Thyroidectomy (for Nodule),"Ear, Nose & Throat (ENT)",,Ramsay
-Thyroidectomy for Goitre,"Ear, Nose & Throat (ENT)",,BMI
-Thyroidectomy for Nodule,"Ear, Nose & Throat (ENT)",,BMI
-Tinnitus Counselling,"Ear, Nose & Throat (ENT)",Audiology,BMI
-Tonsillectomy,"Ear, Nose & Throat (ENT)",Oral Surgery,General
-Tonsillectomy adult,"Ear, Nose & Throat (ENT)",Oral Surgery,BMI
-Tonsillectomy child,"Ear, Nose & Throat (ENT)",Oral Surgery,BMI
-Tonsillectomy for adults,"Ear, Nose & Throat (ENT)",Oral Surgery,Spire
-Total thyroidectomy,"Ear, Nose & Throat (ENT)",Oral Surgery,BMI
-Total thyroidectomy (for thyrotoxicosis),"Ear, Nose & Throat (ENT)",General Surgery,Ramsay
-Vibrant Soundbridge Middle Ear Implant,"Ear, Nose & Throat (ENT)",,BMI
-Abdominal adhesion surgery (endoscopic),Gastroenterology,,General
-Abdominal Aortic Aneurysm AAA Screening,Gastroenterology,,BMI
-Abdominal surgery for Crohns Disease,Gastroenterology,,BMI
-Abdominal wall reconstruction,Gastroenterology,,BMI
-Anal fistula therapeutic procedure,Gastroenterology,,General
-Anal lesion removal,Gastroenterology,,General
-Appendicectomy Surgery,Gastroenterology,,Ramsay
-Banded Gastric Band,Gastroenterology,,BMI
-Banded Sleeve Gastrectomy,Gastroenterology,,BMI
-Bowel Cancer,Gastroenterology,,BMI
-Bowel Cancer Screening,Gastroenterology,,BMI
-Bowel Cancer Surgery,Gastroenterology,,BMI
-Bowel therapeutic endoscopy (colonoscopy),Gastroenterology,,General
-Bowel therapeutic endoscopy (sigmoidoscopy),Gastroenterology,,General
-Capsule endoscopy,Gastroenterology,,BMI
-Cholecystectomy and examination of Bile Duct,Gastroenterology,,Ramsay
-Cholecystectomy laparoscopic,Gastroenterology,,BMI
-Cholesteatoma surgery,Gastroenterology,,BMI
-Colonoscopy,Gastroenterology,,Ramsay
-Colonoscopy,Gastroenterology,,Spire
-Colonoscopy,Gastroenterology,,BMI
-Colonoscopy (diagnostic endoscopy of colon),Gastroenterology,,General
-Colorectal Treatment,Gastroenterology,,Ramsay
-Colostomy closure of loop,Gastroenterology,,BMI
-Colposcopy,Gastroenterology,,BMI
-"Diagnostic flexible sigmoidoscopy, includes forceps biopsy",Gastroenterology,,General
-Duodenal Switch,Gastroenterology,,BMI
-Endoscopy,Gastroenterology,,Ramsay
-ERCP,Gastroenterology,,Ramsay
-ERCP,Gastroenterology,,BMI
-Flexible sigmoidoscopy,Gastroenterology,,Spire
-Gallbladder / gallstone removal (cholecystectomy),Gastroenterology,,Spire
-Gastric balloon surgery,Gastroenterology,,BMI
-Gastric band surgery,Gastroenterology,Bariatrics,Spire
-Gastric band surgery,Gastroenterology,Bariatrics,BMI
-Gastric bypass surgery,Gastroenterology,Bariatrics,BMI
-Gastric bypass surgery ,Gastroenterology,Bariatrics,Spire
-Gastric sleeve sleeve gastrectomy,Gastroenterology,Bariatrics,BMI
-Gastroesophageal reflux surgery anti reflux surgery,Gastroenterology,,BMI
-Gastroscopy,Gastroenterology,,Spire
-Gastroscopy (diagnostic endoscopy of stomach),Gastroenterology,,General
-Haemorrhoid removal,Gastroenterology,,General
-Haemorrhoid treatment,Gastroenterology,,General
-Haemorrhoids removal treatment,Gastroenterology,,Spire
-Haemorroidectomy,Gastroenterology,,Ramsay
-Inserting an oesophageal stent endoscopy,Gastroenterology,,BMI
-Laparoscopic bile duct exploration,Gastroenterology,,BMI
-Laparoscopic Cholecystectomy,Gastroenterology,,Ramsay
-Laparoscopic greater curvature plication LRCP,Gastroenterology,,BMI
-Laparoscopic ileoanal pouch surgery,Gastroenterology,,BMI
-Laparoscopic incisional hernia,Gastroenterology,,BMI
-Laparoscopic myomectomies,Gastroenterology,,BMI
-Laparoscopic sterilisation,Gastroenterology,,BMI
-Laparoscopy,Gastroenterology,,BMI
-Nissen fundoplication laparoscopic,Gastroenterology,,BMI
-Open Cholecystectomy,Gastroenterology,,Ramsay
-Percutaneous endoscopic gastrostomy PEG,Gastroenterology,,BMI
-Pyloromyotomy,Gastroenterology,Paediatrics,BMI
-Rectal examination (under anaesthetic),Gastroenterology,,General
-Rectal prolapse repair (perineal),Gastroenterology,,General
-Repair of inguinal hernia,Gastroenterology,General Surgery,General
-Repair of inguinal hernia - keyhole,Gastroenterology,General Surgery,General
-Repair of inguinal hernia (recurrent),Gastroenterology,General Surgery,General
-Reversal of Hartmanns procedure,Gastroenterology,,BMI
-Revision surgery after primary bariatric consultation,Gastroenterology,,BMI
-Sacral neurostimulation,Gastroenterology,,BMI
-Sigmoid colectomy for diverticular disease,Gastroenterology,,BMI
-Sigmoidoscopy,Gastroenterology,,BMI
-Sphincterotomy (Lateral Internal),Gastroenterology,,Ramsay
-Sphincterotomy lateral internal,Gastroenterology,,BMI
-Surgery for Anal Fistula,Gastroenterology,,Ramsay
-Surgery for pilonidal sinus,Gastroenterology,,Ramsay
-Surgery to remove bile duct stones,Gastroenterology,,Ramsay
-Surgery to remove gall bladder stones,Gastroenterology,,Ramsay
-Surgery to remove the appendix,Gastroenterology,,Ramsay
-Surgery to treat Anal Fistulas,Gastroenterology,,Ramsay
-The abiliti system,Gastroenterology,Bariatrics,BMI
-Umbilical hernia repair,Gastroenterology,General Surgery,General
-Umbilical hernia repair (recurrent),Gastroenterology,General Surgery,General
-Upper GI endoscopy and dilatation,Gastroenterology,,BMI
-Upper GI endoscopy gastroscopy,Gastroenterology,,BMI
-Ventral hernia repair,Gastroenterology,General Surgery,General
-Ventral hernia repair (recurrent),Gastroenterology,General Surgery,General
-Weight loss surgery (bypass operation),Gastroenterology,Bariatrics,General
-Weight loss surgery (gastrectomy),Gastroenterology,Bariatrics,General
-Weight loss surgery (gastric balloon),Gastroenterology,Bariatrics,General
-Weight loss surgery (gastric band maintenance),Gastroenterology,Bariatrics,General
-Weight loss surgery (gastric banding),Gastroenterology,Bariatrics,General
-Weight loss surgery (gastric stapling),Gastroenterology,Bariatrics,General
-Dementia,General Medicine,,BMI
-Memory Problems Assessment and Treatment,General Medicine,,BMI
-Abnormal Liver Function tests LFTs,General Surgery,,BMI
-Abnormal liver imaging,General Surgery,,BMI
-Abscess Incision and Drainage,General Surgery,,Ramsay
-Alcoholic liver disease,General Surgery,,BMI
-Appendicectomy,General Surgery,,BMI
-Appendicectomy for children,General Surgery,,BMI
-ClariVein,General Surgery,Plastic Surgery,BMI
-Endovenous laser therapy EVLT,General Surgery,,BMI
-Epigastric hernia repair,General Surgery,,BMI
-Femoral hernia repair,General Surgery,,BMI
-Femoro popliteal bypass surgery,General Surgery,,BMI
-Gallbladder surgery (cholecystectomy),General Surgery,,General
-Gallbladder surgery (laparoscopic cholecystectomy),General Surgery,,General
-Ganglion excision,General Surgery,,General
-Hernia repair (female),General Surgery,Urology,Ramsay
-Hernia Repair (Femoral),General Surgery,Urology,Ramsay
-Hernia Repair (Open Incisional),General Surgery,Urology,Ramsay
-Hernia Repair (Open Inguinal),General Surgery,Urology,Ramsay
-Hernia Repair (open inguinal) Female,General Surgery,Urology,Ramsay
-Hernia Repair (Paraumbilical and umbilical),General Surgery,Urology,Ramsay
-Hernia repair inguinal child,General Surgery,Urology,BMI
-Hernia repair inguinal open,General Surgery,Urology,BMI
-Hernia repair paraumbilical and umbilical,General Surgery,Urology,BMI
-Hernia repair TAPP laparoscopic,General Surgery,Urology,BMI
-Hernia repair TEP laparoscopic,General Surgery,Urology,BMI
-Hernia repair umbilical child,General Surgery,Urology,BMI
-Hernia surgery,General Surgery,Urology,Spire
-Hiatus hernia repair,General Surgery,,General
-Incisional hernia repair,General Surgery,,General
-Incisional hernia repair (recurrent),General Surgery,,General
-In-growing nail treatment,General Surgery,,General
-Ingrown toe nails,General Surgery,,BMI
-Kidney removal (nephrectomy),General Surgery,,General
-Kidney stone treatment - keyhole (PCNL),General Surgery,,General
-Kidney stone treatment (endoscopy),General Surgery,,General
-Kidney stone treatment (ultrasound),General Surgery,,General
-Laparoscopic inguinal hernia repair (TAPP),General Surgery,Urology,Ramsay
-Laparoscopic inguinal hernia repair (TEP),General Surgery,Urology,Ramsay
-Laparoscopic Nissen Fundoplication,General Surgery,Urology,Ramsay
-Laparoscopic repair of inguinal hernia (recurrent),General Surgery,Urology,General
-Liver biopsy,General Surgery,,BMI
-Liver Cancer,General Surgery,,BMI
-Lymph node biopsy,General Surgery,,BMI
-Lymph node transfer,General Surgery,,BMI
-Lymph node transfer,General Surgery,,BMI
-Minimal access thyroid surgery,General Surgery,,BMI
-Minimally Invasive Spinal Surgery MISS,General Surgery,,BMI
-Open incisional hernia repair,General Surgery,Urology,BMI
-Parathyroidectomy,General Surgery,,Ramsay
-Sports hernia repair,General Surgery,,BMI
-3D 4D scan,Gynaecology,,BMI
-Caesarean delivery,Gynaecology,,General
-Cervical Cancer,Gynaecology,,BMI
-Cervical Cancer Fertility Sparing Treatment,Gynaecology,,BMI
-Cervical Cancer Laparoscopic Radical Hysterectomy,Gynaecology,,BMI
-Cervical cerclage,Gynaecology,,BMI
-Cervix lesion cauterisation,Gynaecology,,General
-Cycle monitoring,Gynaecology,,BMI
-D&C (dilation and curettage),Gynaecology,,General
-Diagnostic hysteroscopy (examination of the uterus),Gynaecology,,General
-Diagnostic Laparoscopy,Gynaecology,,Ramsay
-Diagnostic laparoscopy and dye test,Gynaecology,,BMI
-Dilatation and curettage (D&C),Gynaecology,,Spire
-Donor insemination,Gynaecology,,BMI
-Early pregnancy and dating scan,Gynaecology,,BMI
-Egg collection and transfer,Gynaecology,Fertility,BMI
-Egg donation,Gynaecology,Fertility,BMI
-Egg donation recipient,Gynaecology,Fertility,BMI
-Egg freezing,Gynaecology,Fertility,BMI
-Egg sharing,Gynaecology,Fertility,BMI
-Embryo cryopreservation,Gynaecology,Fertility,BMI
-Endometrial ablation,Gynaecology,,BMI
-Endometrial ablation NovaSure,Gynaecology,,BMI
-Endometrium ablation,Gynaecology,,General
-Epidural anaesthetic,Gynaecology,,BMI
-Epidural injection,Gynaecology,,General
-Fallopian tube and / or ovary removal,Gynaecology,,General
-Fibroid surgery (myomectomy),Gynaecology,,General
-Foetal anatomy anomaly scan,Gynaecology,,BMI
-Frozen embryo replacement cycle,Gynaecology,Fertility,BMI
-Gynaecology consultation,Gynaecology,,BMI
-Hysterectomy - abdominal,Gynaecology,,General
-Hysterectomy - keyhole,Gynaecology,,General
-Hysterectomy - keyhole vaginal,Gynaecology,,General
-Hysterectomy - vaginal,Gynaecology,,General
-Hysterectomy Abdominal,Gynaecology,,BMI
-Hysterectomy surgery,Gynaecology,,Spire
-Hysterectomy Vaginal,Gynaecology,,BMI
-Hysteroscopy,Gynaecology,,BMI
-Hysteroscopy procedure,Gynaecology,,Spire
-In vitro fertilisation IVF,Gynaecology,,BMI
-Introduction of coil (IUD),Gynaecology,,General
-Labial reduction surgery (vaginal reshaping),Gynaecology,,Spire
-Labiaplasty,Gynaecology,,General
-Mammography,Gynaecology,,BMI
-Obstetrics consultation,Gynaecology,,BMI
-Ovarian lesion treatment (laparoscopic),Gynaecology,,General
-Ovarian lesion treatment (open),Gynaecology,,General
-Posterior repair,Gynaecology,,BMI
-Removal of coil (IUD),Gynaecology,,General
-Removal of products of conception (RPOC),Gynaecology,,General
-Repair of prolapsed vagina,Gynaecology,,General
-Reversal of Sterilisation,Gynaecology,,BMI
-Sacrospinous Fixation SSF,Gynaecology,,BMI
-Total laparoscopic hysterectomy,Gynaecology,,BMI
-Uterine cancer condition,Gynaecology,Cancer,BMI
-Vaginal repair operation,Gynaecology,,Spire
-Vulvectomy,Gynaecology,,General
-Advanced laser vision correction,Ophthalmology,,BMI
-Age-related macular degeneration treatment,Ophthalmology,,Spire
-Cataract removal surgery,Ophthalmology,,Spire
-Cataract surgery,Ophthalmology,,General
-Cataract surgery,Ophthalmology,,BMI
-Cataract surgery assessment,Ophthalmology,,BMI
-Corneal transplant surgery,Ophthalmology,,BMI
-Correcting a squint child,Ophthalmology,,BMI
-Correction of squint,Ophthalmology,,General
-Entropion and ectropion repair,Ophthalmology,,BMI
-Excimer laser surgery,Ophthalmology,,BMI
-Eye angiogram,Ophthalmology,,BMI
-Eye operations (vitreous body),Ophthalmology,,General
-Eyelid surgery or eyebag removal (blepharoplasty),Ophthalmology,,Spire
-"eyelid surgery, blepharoplasty",Ophthalmology,,BMI
-Glaucoma surgery trabeculectomy,Ophthalmology,,BMI
-IOL Vip system,Ophthalmology,,BMI
-Low vision aids,Ophthalmology,,BMI
-Low vision assessment,Ophthalmology,,BMI
-Ophthalmic diagnostic testing,Ophthalmology,,BMI
-Ophthalmology consultation,Ophthalmology,,BMI
-Paediatric ophthalmology,Ophthalmology,,BMI
-Ptosis management,Ophthalmology,,BMI
-Ptosis surgery,Ophthalmology,,BMI
-Refraction and low vision assessment,Ophthalmology,,BMI
-Retinal detachment surgery,Ophthalmology,,BMI
-Squint Surgery,Ophthalmology,,BMI
-Extraction of wisdom teeth,Oral Surgery,,General
-Implantation of tooth,Oral Surgery,,General
-Investigation and treatment of oral ulcers,Oral Surgery,,BMI
-Larynx diagnostic examination (endoscopy),Oral Surgery,"Ear, Nose & Throat (ENT)",General
-Larynx therapeutic procedure (endoscopy),Oral Surgery,"Ear, Nose & Throat (ENT)",General
-Orthodontic services,Oral Surgery,,BMI
-Removal of facial skin lesions,Oral Surgery,,BMI
-Removal of lumps of the salivary glands,Oral Surgery,,BMI
-Removing teeth,Oral Surgery,,BMI
-Removing wisdom teeth,Oral Surgery,,BMI
-Salivary gland excision,Oral Surgery,,BMI
-Temporomandibular joint management TMJ,Oral Surgery,,BMI
-Tooth or teeth extraction (excluding wisdom teeth),Oral Surgery,,General
-Wisdom teeth removal,Oral Surgery,,Spire
-Hormone Therapies,Other,Cancer,BMI
-HPV vaccination,Other,,BMI
-Intra cytoplasmic sperm injection ICSI,Other,Urology,BMI
-Intrauterine insemination,Other,Urology,BMI
-Kidney Cancer,Other,Cancer,BMI
-Local anaesthetic,Other,,BMI
-Neuropsychological testing,Other,,BMI
-Nuchal translucency scan,Other,,BMI
-Open testicular biopsy with microsurgical techniques,Other,,BMI
-Ovarian Cancer,Other,Cancer,BMI
-Ovarian Cancer Surgery,Other,Cancer,BMI
-Pancreatic Cancer,Other,Cancer,BMI
-Parental induction of ovulation,Other,,BMI
-Prostate Cancer,Other,Cancer,BMI
-Prostate Cancer Prostate Mapping,Other,Cancer,BMI
-Prostate Cancer Prostatectomy,Other,Cancer,BMI
-Sclerotherapy treatment,Other,Vascular Surgery,BMI
-Sexing scan,Other,,BMI
-Sleep studies snoring clinic,Other,,BMI
-Sperm freezing,Other,Fertility,BMI
-Stomach Cancer,Other,Cancer,BMI
-Surgical sperm recovery,Other,Fertility,BMI
-Testicular Cancer,Other,Cancer,BMI
-Uterine artery embolisation,Other,Radiology,BMI
-Varicose vein laser treatment,Other,Vascular Surgery,BMI
-Varicose veins treatment,Other,Vascular Surgery,BMI
-Veinwave treatment,Other,Vascular Surgery,BMI
-VenaSeal closure system,Other,Vascular Surgery,BMI
-Verruca,Other,Podiatry,BMI
-Viral hepatitis B,Other,Hepatology,BMI
-Viral hepatitis C,Other,Hepatology,BMI
-VNUS closure procedure Venefit,Other,Vascular Surgery,BMI
-Womb Cancer,Other,Cancer,BMI
-Apronectomy (abdominolipectomy),Plastic Surgery,,General
-Breast - nipple operation,Plastic Surgery,,General
-Breast Cancer,Plastic Surgery,General Surgery,BMI
-Breast Cancer Rapid Access Clinics symptomatic,Plastic Surgery,,BMI
-Breast Cancer Single Dose Intraoperative Radiotherapy SD IORT,Plastic Surgery,,BMI
-Breast duct surgery,Plastic Surgery,,General
-Breast enlargement,Plastic Surgery,,General
-Breast enlargement,Plastic Surgery,,Spire
-Breast enlargement and breast augmentation,Plastic Surgery,,BMI
-Breast lift,Plastic Surgery,,General
-Breast prosthesis,Plastic Surgery,,General
-Breast reconstruction,Plastic Surgery,,General
-Breast reconstruction - pedicle,Plastic Surgery,,General
-Breast reconstruction DIEP Flap,Plastic Surgery,,BMI
-Breast reconstruction DIEP Flap with Lymph Node Transfer,Plastic Surgery,,BMI
-Breast reconstruction TRAM Flap,Plastic Surgery,,BMI
-Breast reconstruction with latissimus dorsi flap,Plastic Surgery,,BMI
-Breast reduction,Plastic Surgery,,General
-Breast reduction,Plastic Surgery,,Spire
-Breast reduction surgery breast reduction operation,Plastic Surgery,,BMI
-Breast Screening asymptomatic,Plastic Surgery,,BMI
-Breast Surgery Excision Biopsy,Plastic Surgery,,BMI
-Breast Surgery Lump Removal Lumpectomy,Plastic Surgery,,BMI
-Breast Surgery Mastectomy,Plastic Surgery,,BMI
-Breast surgery other,Plastic Surgery,,General
-Breast Surgery Reconstruction Following Mastectomy,Plastic Surgery,,BMI
-Breast surgery Sentinel Lymph Node Biopsy,Plastic Surgery,,BMI
-Breast uplift (mastopexy),Plastic Surgery,,Spire
-Breast uplift surgery breast lift,Plastic Surgery,,BMI
-Brow lift,Plastic Surgery,,General
-Brow lift,Plastic Surgery,,BMI
-Brow lift surgery,Plastic Surgery,,Spire
-Correction of breast asymmetry underdevelopment,Plastic Surgery,General Surgery,BMI
-Excision lesion of breast (lumpectomy),Plastic Surgery,Dermatology,General
-Eye lift (blepharoplasty),Plastic Surgery,Dermatology,General
-Eyelid correction,Plastic Surgery,Ophthalmology,General
-Eyelid cyst removal,Plastic Surgery,Ophthalmology,General
-Eyelid lift (ptosis),Plastic Surgery,Ophthalmology,General
-Eyelid reconstruction,Plastic Surgery,Ophthalmology,General
-Face lift,Plastic Surgery,,General
-Facelift,Plastic Surgery,,Spire
-Fat transfer,Plastic Surgery,,BMI
-Fat transfer,Plastic Surgery,,BMI
-Fat Transfer for Breast Reconstruction,Plastic Surgery,,BMI
-Lip removal of lesion,Plastic Surgery,,General
-Liposuction,Plastic Surgery,,General
-Liposuction,Plastic Surgery,,Spire
-Liposuction,Plastic Surgery,,BMI
-Mastectomy,Plastic Surgery,,General
-Mastectomy (partial),Plastic Surgery,,General
-"Mole, cyst, wart and skin tag removal",Plastic Surgery,,Spire
-Nose reshaping,Plastic Surgery,,BMI
-Nose reshaping (rhinoplasty),Plastic Surgery,,Spire
-Partial excision of breast (wide local excision),Plastic Surgery,,General
-Refashioning of scar,Plastic Surgery,,General
-Rhinoplasty,Plastic Surgery,"Ear, Nose & Throat (ENT)",General
-Septoplasty,Plastic Surgery,"Ear, Nose & Throat (ENT)",General
-Tummy tuck (abdominoplasty),Plastic Surgery,,General
-Tummy tuck (abdominoplasty),Plastic Surgery,,Spire
-Varicose vein combined treatments,Plastic Surgery,,General
-Varicose vein sclerotherapy,Plastic Surgery,,General
-Varicose vein treatment,Plastic Surgery,Dermatology,Spire
-Varicose vein treatment (laser ablation),Plastic Surgery,,General
-"Varicose vein treatment (ligation, stripping and avulsion)",Plastic Surgery,,General
-Varicose vein treatment (radiofrequency ablation),Plastic Surgery,,General
-Bronchoscopy,Thoracic Medicine,,BMI
-Respiratory physiotherapy,Thoracic Medicine,,BMI
-"ACL Reconstruction Surgery, Knee ACL reconstruction",Trauma & Orthopaedics,,BMI
-Acromioclavicular joint arthroscopy,Trauma & Orthopaedics,,General
-Acromioclavicular joint decompression,Trauma & Orthopaedics,,General
-Acromioclavicular joint stabilisation,Trauma & Orthopaedics,,General
-Ankle arthroscopy,Trauma & Orthopaedics,,General
-Ankle Instability,Trauma & Orthopaedics,,BMI
-Ankle ligament reconstruction,Trauma & Orthopaedics,,General
-Ankle Pain,Trauma & Orthopaedics,,BMI
-Ankle replacement (primary),Trauma & Orthopaedics,,General
-Ankle replacement (revision),Trauma & Orthopaedics,,General
-Ankle Replacement Surgery,Trauma & Orthopaedics,,BMI
-Ankle Surgery and Ankle Arthroscopy,Trauma & Orthopaedics,,BMI
-Anterior repair,Trauma & Orthopaedics,,BMI
-Arthroscopic Latarjet,Trauma & Orthopaedics,,BMI
-Arthroscopic Subacromial Decompression,Trauma & Orthopaedics,,BMI
-Arthroscopy of joint (other),Trauma & Orthopaedics,,General
-Back pain,Trauma & Orthopaedics,,BMI
-Back surgery (slipped disc),Trauma & Orthopaedics,,General
-Back surgery (spinal surgery),Trauma & Orthopaedics,,Spire
-Back surgery (trapped nerve release),Trauma & Orthopaedics,,General
-Brachial Plexus Surgery,Trauma & Orthopaedics,General Surgery,BMI
-Bunion correction,Trauma & Orthopaedics,,General
-Bunion removal and treatment,Trauma & Orthopaedics,,Spire
-Bunion Surgery,Trauma & Orthopaedics,,BMI
-Bursa excision (surgical),Trauma & Orthopaedics,,General
-Bursa treatment (non-surgical),Trauma & Orthopaedics,,General
-Carpal tunnel release,Trauma & Orthopaedics,,General
-Carpal tunnel release (revision),Trauma & Orthopaedics,,General
-Carpal tunnel syndrome surgery,Trauma & Orthopaedics,,Spire
-Cartilage Operation,Trauma & Orthopaedics,,BMI
-Cervical spine surgery,Trauma & Orthopaedics,,BMI
-Comprehensive Arthroscopic Management CAM,Trauma & Orthopaedics,,BMI
-Computer assisted navigation high tibial osteotomy,Trauma & Orthopaedics,,BMI
-Computer assisted navigation total knee replacement,Trauma & Orthopaedics,,BMI
-Congenital deformity of hand repair,Trauma & Orthopaedics,Plastic Surgery,General
-Correction of congenital foot abnormality,Trauma & Orthopaedics,Plastic Surgery,General
-Cranio-cervical decompression,Trauma & Orthopaedics,,General
-Craniotomy Brain Surgery,Trauma & Orthopaedics,,BMI
-Cubital tunnel release,Trauma & Orthopaedics,,General
-Debridement of joint (other),Trauma & Orthopaedics,,General
-Discectomy,Trauma & Orthopaedics,,BMI
-Dupuytren's contracture surgery,Trauma & Orthopaedics,,General
-Dupuytren's contracture surgery (fingers),Trauma & Orthopaedics,,General
-"Dupuytren's contracture surgery (fingers, revision)",Trauma & Orthopaedics,,General
-Dupuytren's contracture surgery (revision),Trauma & Orthopaedics,,General
-Elbow arthroscopy,Trauma & Orthopaedics,,General
-Elbow Arthroscopy,Trauma & Orthopaedics,,BMI
-Elbow decompression,Trauma & Orthopaedics,,General
-Elbow replacement (primary),Trauma & Orthopaedics,,General
-Elbow replacement (revision),Trauma & Orthopaedics,,General
-Elbow stabilisation,Trauma & Orthopaedics,,General
-Endoscopic Minimal Invasive Spine Surgery Lower Back,Trauma & Orthopaedics,,BMI
-Epidural for back pain,Trauma & Orthopaedics,,BMI
-Epidural for chronic pain relief,Trauma & Orthopaedics,,BMI
-Excision foot bone,Trauma & Orthopaedics,,General
-Facet joint injections,Trauma & Orthopaedics,,Spire
-Foot amputation,Trauma & Orthopaedics,,General
-Foot arthroscopy,Trauma & Orthopaedics,,General
-Foot orthotics knee orthotics back orthotics,Trauma & Orthopaedics,,BMI
-Foot orthotics knee orthotics back orthotics,Trauma & Orthopaedics,,BMI
-Foot surgery,Trauma & Orthopaedics,,BMI
-Foot surgery for toe problems,Trauma & Orthopaedics,,BMI
-Forefoot reconstruction (complex),Trauma & Orthopaedics,,General
-Forefoot reconstruction (simple),Trauma & Orthopaedics,,General
-Frozen shoulder release,Trauma & Orthopaedics,,General
-Gait analysis,Trauma & Orthopaedics,,BMI
-Gallbladder Cancer,Trauma & Orthopaedics,,BMI
-Ganglion excision - wrist and hand,Trauma & Orthopaedics,,General
-Great toe fusion,Trauma & Orthopaedics,,General
-Hand amputation,Trauma & Orthopaedics,,General
-Hand and wrist exercise and functional activity,Trauma & Orthopaedics,,BMI
-Hand and wrist manual therapies,Trauma & Orthopaedics,,BMI
-Hand and wrist splinting,Trauma & Orthopaedics,,BMI
-Hand reconstruction,Trauma & Orthopaedics,,General
-Head of femur replacement,Trauma & Orthopaedics,,General
-Head of femur replacement (revision),Trauma & Orthopaedics,,General
-Hindfoot reconstruction,Trauma & Orthopaedics,Plastic Surgery,General
-Hip arthroscopy,Trauma & Orthopaedics,,General
-Hip Arthroscopy,Trauma & Orthopaedics,,BMI
-Hip Debridement Surgery,Trauma & Orthopaedics,,BMI
-Hip dislocation reduction,Trauma & Orthopaedics,,General
-Hip Injection Treatment,Trauma & Orthopaedics,,BMI
-Hip joint manipulation,Trauma & Orthopaedics,,General
-Hip replacement (primary),Trauma & Orthopaedics,,General
-Hip replacement (revision),Trauma & Orthopaedics,,General
-Hip Replacement Surgery,Trauma & Orthopaedics,,BMI
-Hip replacement surgery ,Trauma & Orthopaedics,,Spire
-Hip Resurfacing,Trauma & Orthopaedics,,BMI
-Hip Revision,Trauma & Orthopaedics,,BMI
-Injections for Dupuytren disease,Trauma & Orthopaedics,,BMI
-Joint injections for pain,Trauma & Orthopaedics,,General
-Joint pain treatment (joint injections),Trauma & Orthopaedics,,Spire
-Knee arthroscopy,Trauma & Orthopaedics,,General
-Knee Arthroscopy,Trauma & Orthopaedics,,BMI
-Knee arthroscopy surgery,Trauma & Orthopaedics,,Spire
-Knee Injuries,Trauma & Orthopaedics,,BMI
-Knee ligament reconstruction,Trauma & Orthopaedics,,General
-Knee ligament surgery,Trauma & Orthopaedics,,Spire
-Knee replacement ,Trauma & Orthopaedics,,Spire
-Knee replacement (primary - patellofemoral),Trauma & Orthopaedics,,General
-Knee replacement (primary - unicompartmental),Trauma & Orthopaedics,,General
-Knee replacement (primary),Trauma & Orthopaedics,,General
-Knee replacement (revision),Trauma & Orthopaedics,,General
-Knee Replacement Surgery,Trauma & Orthopaedics,,BMI
-Lower Limb Reconstruction,Trauma & Orthopaedics,,BMI
-Lumbar laminectomy,Trauma & Orthopaedics,,BMI
-Lumbar microdiscectomy,Trauma & Orthopaedics,,BMI
-Lumbar spinal decompression,Trauma & Orthopaedics,,BMI
-Mako® robotic-arm assisted hip surgery,Trauma & Orthopaedics,,BMI
-Mako® robotic-arm assisted knee surgery,Trauma & Orthopaedics,,BMI
-Manipulation of joint,Trauma & Orthopaedics,,General
-Metatarsal osteotomy,Trauma & Orthopaedics,,General
-Open operation on semilunar cartilage (knee),Trauma & Orthopaedics,,General
-Orthoptic consultation,Trauma & Orthopaedics,,BMI
-Osteotomy knee,Trauma & Orthopaedics,,General
-Osteotomy Surgery,Trauma & Orthopaedics,,BMI
-Other toe fusion,Trauma & Orthopaedics,,General
-Pain management injections for back and facet joints,Trauma & Orthopaedics,,Spire
-Partial Knee Replacement Surgery,Trauma & Orthopaedics,,BMI
-Pelvic health rehabilitation,Trauma & Orthopaedics,,BMI
-Plantar fasciitis heel spur pain policemans heel etc,Trauma & Orthopaedics,,BMI
-Release nerve at wrist,Trauma & Orthopaedics,,General
-Release of Stiff Elbow,Trauma & Orthopaedics,,BMI
-Removal carpal bones,Trauma & Orthopaedics,,General
-Removal of metalwork from bone,Trauma & Orthopaedics,,General
-Removal of spinal instrumentation or fixation,Trauma & Orthopaedics,,General
-Repair of fractured neck of femur,Trauma & Orthopaedics,,General
-Revision Elbow Replacement,Trauma & Orthopaedics,,BMI
-Revision Knee Replacement,Trauma & Orthopaedics,,BMI
-Rotator cuff repair,Trauma & Orthopaedics,,Spire
-Rotator Cuff Surgery,Trauma & Orthopaedics,,BMI
-Scoliosis,Trauma & Orthopaedics,,BMI
-Shoulder Arthroplasty,Trauma & Orthopaedics,,BMI
-Shoulder arthroscopy,Trauma & Orthopaedics,,General
-Shoulder arthroscopy,Trauma & Orthopaedics,,Spire
-Shoulder Arthroscopy,Trauma & Orthopaedics,,BMI
-Shoulder Pain,Trauma & Orthopaedics,,BMI
-Shoulder reconstruction,Trauma & Orthopaedics,,General
-Shoulder replacement (primary),Trauma & Orthopaedics,,General
-Shoulder replacement (revision - reverse polarity),Trauma & Orthopaedics,,General
-Shoulder replacement (revision),Trauma & Orthopaedics,,General
-Shoulder Replacement Surgery,Trauma & Orthopaedics,,BMI
-Shoulder rotator cuff repair,Trauma & Orthopaedics,,General
-Shoulder slap repair,Trauma & Orthopaedics,,General
-Shoulder stabilisation,Trauma & Orthopaedics,,General
-Spinal anaesthetic,Trauma & Orthopaedics,,BMI
-Spinal biopsy,Trauma & Orthopaedics,,General
-Spinal decompression (cervical),Trauma & Orthopaedics,,General
-Spinal decompression (lumbar),Trauma & Orthopaedics,,General
-Spinal decompression (lumbar/thoracic),Trauma & Orthopaedics,,General
-Spinal decompression (posterior cervical),Trauma & Orthopaedics,,General
-Spinal decompression (revision cervical),Trauma & Orthopaedics,,General
-Spinal decompression (revision lumbar),Trauma & Orthopaedics,,General
-Spinal decompression (revision lumbar/thoracic),Trauma & Orthopaedics,,General
-Spinal decompression (revision posterior cervical),Trauma & Orthopaedics,,General
-Spinal decompression (revision thoracic),Trauma & Orthopaedics,,General
-Spinal decompression (thoracic),Trauma & Orthopaedics,,General
-Spinal deformity correction (scoliosis),Trauma & Orthopaedics,,General
-Spinal disc excision (cervical),Trauma & Orthopaedics,,General
-Spinal disc excision (lumbar),Trauma & Orthopaedics,,General
-Spinal disc excision (revision lumbar),Trauma & Orthopaedics,,General
-Spinal disc replacement,Trauma & Orthopaedics,,General
-Spinal disc replacement (cervical),Trauma & Orthopaedics,,General
-Spinal disc replacement (lumbar),Trauma & Orthopaedics,,General
-Spinal facet joint denervation,Trauma & Orthopaedics,,General
-Spinal fracture decompression,Trauma & Orthopaedics,,General
-Spinal fusion (anterior cervical),Trauma & Orthopaedics,,General
-Spinal fusion (cervical C1/C2),Trauma & Orthopaedics,,General
-Spinal fusion (cervical),Trauma & Orthopaedics,,General
-Spinal fusion (cranio-cervical),Trauma & Orthopaedics,,General
-Spinal fusion (lumbar / thoracic),Trauma & Orthopaedics,,General
-Spinal fusion (lumbar),Trauma & Orthopaedics,,General
-Spinal fusion (posterior cervical),Trauma & Orthopaedics,,General
-Spinal fusion (revision anterior cervical),Trauma & Orthopaedics,,General
-Spinal fusion (revision lumbar),Trauma & Orthopaedics,,General
-Spinal fusion (revision),Trauma & Orthopaedics,,General
-Spinal injection (facet joint injection or paravertebral block),Trauma & Orthopaedics,,General
-Spinal lesion excision,Trauma & Orthopaedics,,General
-Spinal nerve root destruction,Trauma & Orthopaedics,,General
-Spinal operation (other),Trauma & Orthopaedics,,General
-Spinal spacer insertion,Trauma & Orthopaedics,,General
-Spinal stablilisation,Trauma & Orthopaedics,,General
-Spinal surgery (thoracic),Trauma & Orthopaedics,,General
-Spine manipulation,Trauma & Orthopaedics,,General
-Stabilisation of Unstable Elbows,Trauma & Orthopaedics,,BMI
-Sternoclavicular joint arthroscopy,Trauma & Orthopaedics,,General
-Sternoclavicular joint decompression,Trauma & Orthopaedics,,General
-Stress incontinence surgery (female),Trauma & Orthopaedics,,General
-Subacromial joint decompression,Trauma & Orthopaedics,,General
-Tendon sheath release (wrist),Trauma & Orthopaedics,,General
-Tennis elbow release,Trauma & Orthopaedics,,General
-Therapeutic hysteroscopy,Trauma & Orthopaedics,,General
-Thumb reconstruction,Trauma & Orthopaedics,,General
-Thumb/finger amputation,Trauma & Orthopaedics,,General
-Toe amputation,Trauma & Orthopaedics,,General
-Toe fusion (revision),Trauma & Orthopaedics,,General
-Toe joint arthroplasty,Trauma & Orthopaedics,,General
-Total Elbow Replacement,Trauma & Orthopaedics,,BMI
-Total hip replacement by computer assisted navigation,Trauma & Orthopaedics,,BMI
-Trigger finger release,Trauma & Orthopaedics,,General
-Trigger finger release,Trauma & Orthopaedics,,Spire
-Ulnar Nerve Release Surgery,Trauma & Orthopaedics,,BMI
-Wrist arthroscopy,Trauma & Orthopaedics,,General
-Bladder Cancer,Urology,,BMI
-Bladder chemotherapy,Urology,,General
-Bladder examination - diagnostic endoscopy (cystoscopy),Urology,,General
-Bladder investigations (cystoscopy),Urology,,Spire
-Bladder lesion treatment (endoscopy),Urology,,General
-Bladder surgery (cystectomy),Urology,,General
-Bladder tumour resection (TURBT),Urology,,General
-Circumcision,Urology,,General
-Circumcision adult,Urology,,BMI
-Circumcision child,Urology,,BMI
-Correction of hydrocele,Urology,,General
-Epididymal surgery,Urology,,General
-Foreskin operations (other),Urology,,General
-High Intensity Focused Ultrasound HIFU,Urology,,BMI
-Holmium Laser Enucleation of the Prostate HoLEP,Urology,,BMI
-Hydrocele repair child,Urology,Other,BMI
-Keyhole prostate surgery (TURP),Urology,,General
-Male Breast Cancer,Urology,,BMI
-Male breast reduction gynaecomastia,Urology,,BMI
-Male sling,Urology,,BMI
-Micro epididymal sperm aspiration,Urology,,BMI
-Operations for Peyronies Disease,Urology,,BMI
-Orchidopexy for a palpable testicle child,Urology,,BMI
-Penile surgery,Urology,Plastic Surgery,General
-Prostate needle biopsy,Urology,,General
-Prostate surgery (prostatectomy),Urology,,General
-Prostate surgery and laser prostate surgery,Urology,,Spire
-PVP GreenLight Laser Surgery,Urology,,BMI
-Removal of testicle (orchidectomy),Urology,,General
-Rezum treatment,Urology,,BMI
-Saturation biopsies of the prostate,Urology,,BMI
-Surgery for benign scrotal lumps,Urology,,BMI
-Testicular epididymal sperm extraction,Urology,,BMI
-TURP,Urology,,BMI
-Urethral stricture dilation (endoscopic),Urology,,General
-Urethral surgery (urethroplasty),Urology,,General
-Urethrotomy,Urology,,General
-Urolift System,Urology,,BMI
-Vasectomy,Urology,,General
-Vasectomy bilateral,Urology,,BMI
-Vasectomy reversal,Urology,,General
-Vasectomy reversal,Urology,,Spire
-Vasectomy reversal,Urology,,BMI
+Surgical Procedures,Specialty,Secondary Specialty,Provider,Body Area
+Abdomen,General Surgery,,,Abdomen
+Appendicectomy,General Surgery,,BMI,Abdomen
+Apronectomy (abdominolipectomy),Plastic Surgery,,General,Abdomen
+Epigastric hernia repair,General Surgery,,BMI,Abdomen
+Femoral hernia repair,General Surgery,,BMI,Abdomen
+Ganglion excision,General Surgery,,General,Abdomen
+Hernia Repair (Femoral),General Surgery,Urology,Ramsay,Abdomen
+Hernia Repair (Open Incisional),General Surgery,Urology,Ramsay,Abdomen
+Hernia Repair (Open Inguinal),General Surgery,Urology,Ramsay,Abdomen
+Hernia Repair (Paraumbilical and umbilical),General Surgery,Urology,Ramsay,Abdomen
+Hernia repair TAPP laparoscopic,General Surgery,Urology,BMI,Abdomen
+Hernia repair TEP laparoscopic,General Surgery,Urology,BMI,Abdomen
+Hernia surgery,General Surgery,Urology,Spire,Abdomen
+Hiatus hernia repair,General Surgery,,General,Abdomen
+Incisional hernia repair,General Surgery,,General,Abdomen
+Laparoscopic inguinal hernia repair (TAPP),General Surgery,Urology,Ramsay,Abdomen
+Laparoscopic inguinal hernia repair (TEP),General Surgery,Urology,Ramsay,Abdomen
+Laparoscopic Nissen Fundoplication,General Surgery,Urology,Ramsay,Abdomen
+Open incisional hernia repair,General Surgery,Urology,BMI,Abdomen
+Repair of inguinal hernia,Gastroenterology,General Surgery,General,Abdomen
+Repair of inguinal hernia - keyhole,Gastroenterology,General Surgery,General,Abdomen
+Repair of inguinal hernia (recurrent),Gastroenterology,General Surgery,General,Abdomen
+Sports hernia repair,General Surgery,,BMI,Abdomen
+Surgery to remove the appendix,Gastroenterology,,Ramsay,Abdomen
+Tummy tuck (abdominoplasty),Plastic Surgery,,General,Abdomen
+Umbilical hernia repair,Gastroenterology,General Surgery,General,Abdomen
+Ventral hernia repair,Gastroenterology,General Surgery,General,Abdomen
+Ankle or Foot,Trauma & Orthopaedics,,,Ankle or Foot
+Ankle arthroscopy,Trauma & Orthopaedics,,General,Ankle or Foot
+Ankle Instability,Trauma & Orthopaedics,,BMI,Ankle or Foot
+Ankle ligament reconstruction,Trauma & Orthopaedics,,General,Ankle or Foot
+Ankle Pain,Trauma & Orthopaedics,,BMI,Ankle or Foot
+Ankle replacement (primary),Trauma & Orthopaedics,,General,Ankle or Foot
+Ankle replacement (revision),Trauma & Orthopaedics,,General,Ankle or Foot
+Ankle Surgery and Ankle Arthroscopy,Trauma & Orthopaedics,,BMI,Ankle or Foot
+Correction of congenital foot abnormality,Trauma & Orthopaedics,Plastic Surgery,General,Ankle or Foot
+Excision foot bone,Trauma & Orthopaedics,,General,Ankle or Foot
+Foot amputation,Trauma & Orthopaedics,,General,Ankle or Foot
+Foot arthroscopy,Trauma & Orthopaedics,,General,Ankle or Foot
+Foot surgery,Trauma & Orthopaedics,,BMI,Ankle or Foot
+Forefoot reconstruction (complex),Trauma & Orthopaedics,,General,Ankle or Foot
+Forefoot reconstruction (simple),Trauma & Orthopaedics,,General,Ankle or Foot
+Hindfoot reconstruction,Trauma & Orthopaedics,Plastic Surgery,General,Ankle or Foot
+Ingrown toe nails,General Surgery,,BMI,Ankle or Foot
+Verruca,Other,Podiatry,BMI,Ankle or Foot
+Anus,Gastroenterology,,,Anus
+Anal fistula therapeutic procedure,Gastroenterology,,General,Anus
+Anal lesion removal,Gastroenterology,,General,Anus
+Appendicectomy Surgery,Gastroenterology,,Ramsay,Anus
+Sigmoid colectomy for diverticular disease,Gastroenterology,,BMI,Anus
+Sphincterotomy (Lateral Internal),Gastroenterology,,Ramsay,Anus
+Surgery for Anal Fistula,Gastroenterology,,Ramsay,Anus
+Bladder,Urology,,,Bladder
+Bladder Cancer,Urology,,BMI,Bladder
+Bladder chemotherapy,Urology,,General,Bladder
+Bladder examination - diagnostic endoscopy (cystoscopy),Urology,,General,Bladder
+Bladder investigations (cystoscopy),Urology,,Spire,Bladder
+Bladder lesion treatment (endoscopy),Urology,,General,Bladder
+Bladder surgery (cystectomy),Urology,,General,Bladder
+Bladder tumour resection (TURBT),Urology,,General,Bladder
+Male sling,Urology,,BMI,Bladder
+Stress incontinence surgery (female),Trauma & Orthopaedics,,General,Bladder
+Urethral stricture dilation (endoscopic),Urology,,General,Bladder
+Urethral surgery (urethroplasty),Urology,,General,Bladder
+Urethrotomy,Urology,,General,Bladder
+Body  - External (General),Dermatology,,,Body  - External (General)
+Abscess Incision and Drainage,General Surgery,,Ramsay,Body  - External (General)
+Excess sweating of the feet hyperhidrosis,Dermatology,,BMI,Body  - External (General)
+Excision of a Ganglion,Dermatology,General Surgery,Ramsay,Body  - External (General)
+Fat transfer,Plastic Surgery,,BMI,Body  - External (General)
+Liposuction,Plastic Surgery,,General,Body  - External (General)
+Local anaesthetic,Other,,BMI,Body  - External (General)
+"Mole, cyst, wart and skin tag removal",Plastic Surgery,,Spire,Body  - External (General)
+Pilonidal sinus removal,Dermatology,,General,Body  - External (General)
+Refashioning of scar,Plastic Surgery,,General,Body  - External (General)
+Skin lesion removal,Dermatology,,General,Body  - External (General)
+Surgery for pilonidal sinus,Dermatology,,Ramsay,Body  - External (General)
+Varicose Veins Surgery,Dermatology,,Ramsay,Body  - External (General)
+Bowel,Gastroenterology,,,Bowel
+Abdominal adhesion surgery (endoscopic),Gastroenterology,,General,Bowel
+Abdominal Aortic Aneurysm AAA Screening,Gastroenterology,,BMI,Bowel
+Abdominal surgery for Crohns Disease,Gastroenterology,,BMI,Bowel
+Abdominal wall reconstruction,Gastroenterology,,BMI,Bowel
+Bowel Cancer,Gastroenterology,,BMI,Bowel
+Bowel Cancer Screening,Gastroenterology,,BMI,Bowel
+Bowel Cancer Surgery,Gastroenterology,,BMI,Bowel
+Bowel therapeutic endoscopy (colonoscopy),Gastroenterology,,General,Bowel
+Bowel therapeutic endoscopy (sigmoidoscopy),Gastroenterology,,General,Bowel
+Capsule endoscopy,Gastroenterology,,BMI,Bowel
+Colonoscopy,Gastroenterology,,Ramsay,Bowel
+Colorectal Treatment,Gastroenterology,,Ramsay,Bowel
+Colostomy closure of loop,Gastroenterology,,BMI,Bowel
+"Diagnostic flexible sigmoidoscopy, includes forceps biopsy",Gastroenterology,,General,Bowel
+Duodenal Switch,Gastroenterology,,BMI,Bowel
+Flexible sigmoidoscopy,Gastroenterology,,Spire,Bowel
+Haemorrhoid removal,Gastroenterology,,General,Bowel
+Haemorrhoid treatment,Gastroenterology,,General,Bowel
+Rectal examination (under anaesthetic),Gastroenterology,,General,Bowel
+Rectal prolapse repair (perineal),Gastroenterology,,General,Bowel
+Reversal of Hartmanns procedure,Gastroenterology,,BMI,Bowel
+Revision surgery after primary bariatric consultation,Gastroenterology,,BMI,Bowel
+Sacral neurostimulation,Gastroenterology,,BMI,Bowel
+Sigmoidoscopy,Gastroenterology,,BMI,Bowel
+Brain or Memory,General Medicine,,,Brain or Memory
+Craniotomy Brain Surgery,Trauma & Orthopaedics,,BMI,Brain or Memory
+Dementia,General Medicine,,BMI,Brain or Memory
+Memory Problems Assessment and Treatment,General Medicine,,BMI,Brain or Memory
+Neuropsychological testing,Other,,BMI,Brain or Memory
+Breast,Plastic Surgery,,,Breast
+Breast - nipple operation,Plastic Surgery,,General,Breast
+Breast Cancer,Plastic Surgery,General Surgery,BMI,Breast
+Breast Cancer Rapid Access Clinics symptomatic,Plastic Surgery,,BMI,Breast
+Breast Cancer Single Dose Intraoperative Radiotherapy SD IORT,Plastic Surgery,,BMI,Breast
+Breast duct surgery,Plastic Surgery,,General,Breast
+Breast enlargement,Plastic Surgery,,Spire,Breast
+Breast enlargement and breast augmentation,Plastic Surgery,,BMI,Breast
+Breast lift,Plastic Surgery,,General,Breast
+Breast prosthesis,Plastic Surgery,,General,Breast
+Breast reconstruction,Plastic Surgery,,General,Breast
+Breast reconstruction - pedicle,Plastic Surgery,,General,Breast
+Breast reconstruction DIEP Flap,Plastic Surgery,,BMI,Breast
+Breast reconstruction DIEP Flap with Lymph Node Transfer,Plastic Surgery,,BMI,Breast
+Breast reconstruction TRAM Flap,Plastic Surgery,,BMI,Breast
+Breast reconstruction with latissimus dorsi flap,Plastic Surgery,,BMI,Breast
+Breast reduction,Plastic Surgery,,Spire,Breast
+Breast reduction surgery breast reduction operation,Plastic Surgery,,BMI,Breast
+Breast Screening asymptomatic,Plastic Surgery,,BMI,Breast
+Breast Surgery Excision Biopsy,Plastic Surgery,,BMI,Breast
+Breast Surgery Lump Removal Lumpectomy,Plastic Surgery,,BMI,Breast
+Breast Surgery Mastectomy,Plastic Surgery,,BMI,Breast
+Breast surgery other,Plastic Surgery,,General,Breast
+Breast Surgery Reconstruction Following Mastectomy,Plastic Surgery,,BMI,Breast
+Breast surgery Sentinel Lymph Node Biopsy,Plastic Surgery,,BMI,Breast
+Breast uplift (mastopexy),Plastic Surgery,,Spire,Breast
+Excision lesion of breast (lumpectomy),Plastic Surgery,Dermatology,General,Breast
+Fat Transfer for Breast Reconstruction,Plastic Surgery,,BMI,Breast
+Mammography,Gynaecology,,BMI,Breast
+Mastectomy,Plastic Surgery,,General,Breast
+Mastectomy (partial),Plastic Surgery,,General,Breast
+Partial excision of breast (wide local excision),Plastic Surgery,,General,Breast
+Breast (male),Urology,,,Breast (male)
+Male Breast Cancer,Urology,,BMI,Breast (male)
+Male breast reduction gynaecomastia,Urology,,BMI,Breast (male)
+Cervix,Gynaecology,,,Cervix
+Cervical Cancer,Gynaecology,,BMI,Cervix
+Cervical Cancer Fertility Sparing Treatment,Gynaecology,,BMI,Cervix
+Cervical Cancer Laparoscopic Radical Hysterectomy,Gynaecology,,BMI,Cervix
+Cervical cerclage,Gynaecology,,BMI,Cervix
+Cervix lesion cauterisation,Gynaecology,,General,Cervix
+Colposcopy,Gynaecology,,BMI,Cervix
+Digestive System (Upper),Gastroenterology,,,Digestive System (Upper)
+Cholecystectomy and examination of Bile Duct,Gastroenterology,,Ramsay,Digestive System (Upper)
+Cholecystectomy laparoscopic,Gastroenterology,,BMI,Digestive System (Upper)
+Cholesteatoma surgery,Gastroenterology,,BMI,Digestive System (Upper)
+Endoscopy,Gastroenterology,,Ramsay,Digestive System (Upper)
+ERCP (Endoscopic Retrograde Cholangio-Pancreatography),Gastroenterology,,Ramsay,Digestive System (Upper)
+Gallbladder / gallstone removal (cholecystectomy),Gastroenterology,,Spire,Digestive System (Upper)
+Gallbladder Cancer,Gastroenterology,,BMI,Digestive System (Upper)
+Gallbladder surgery (cholecystectomy),Gastroenterology,,General,Digestive System (Upper)
+Gastroesophageal reflux surgery anti reflux surgery,Gastroenterology,,BMI,Digestive System (Upper)
+Gastroscopy (diagnostic endoscopy of stomach),Gastroenterology,,General,Digestive System (Upper)
+Inserting an oesophageal stent endoscopy,Gastroenterology,,BMI,Digestive System (Upper)
+Laparoscopic bile duct exploration,Gastroenterology,,BMI,Digestive System (Upper)
+Laparoscopic Cholecystectomy,Gastroenterology,,Ramsay,Digestive System (Upper)
+Laparoscopic greater curvature plication LRCP,Gastroenterology,,BMI,Digestive System (Upper)
+Laparoscopic ileoanal pouch surgery,Gastroenterology,,BMI,Digestive System (Upper)
+Laparoscopic incisional hernia,Gastroenterology,,BMI,Digestive System (Upper)
+Laparoscopic myomectomies,Gastroenterology,,BMI,Digestive System (Upper)
+Laparoscopic sterilisation,Gastroenterology,,BMI,Digestive System (Upper)
+Laparoscopy,Gastroenterology,,BMI,Digestive System (Upper)
+Nissen fundoplication laparoscopic,Gastroenterology,,BMI,Digestive System (Upper)
+Open Cholecystectomy,Gastroenterology,,Ramsay,Digestive System (Upper)
+Pancreatic Cancer,Gastroenterology,Cancer,BMI,Digestive System (Upper)
+Percutaneous endoscopic gastrostomy PEG,Gastroenterology,,BMI,Digestive System (Upper)
+Pyloromyotomy,Gastroenterology,Paediatrics,BMI,Digestive System (Upper)
+Surgery to remove bile duct stones,Gastroenterology,,Ramsay,Digestive System (Upper)
+Surgery to remove gall bladder stones,Gastroenterology,,Ramsay,Digestive System (Upper)
+Upper GI endoscopy and dilatation,Gastroenterology,,BMI,Digestive System (Upper)
+Upper GI endoscopy gastroscopy,Gastroenterology,,BMI,Digestive System (Upper)
+Ear,"Ear, Nose & Throat (ENT)",,,Ear
+Adenoidectomy,"Ear, Nose & Throat (ENT)",,General,Ear
+Audiology consultation,"Ear, Nose & Throat (ENT)",,BMI,Ear
+Bonebridge ear implant,"Ear, Nose & Throat (ENT)",,BMI,Ear
+Cochlear implants,"Ear, Nose & Throat (ENT)",,BMI,Ear
+Drainage of middle ear (insertion of grommets),"Ear, Nose & Throat (ENT)",,General,Ear
+Ear external lesion removal,"Ear, Nose & Throat (ENT)",,General,Ear
+Ear pinning (pinnaplasty),"Ear, Nose & Throat (ENT)",Plastic Surgery,General,Ear
+Eardrum repair,"Ear, Nose & Throat (ENT)",,General,Ear
+Grommets insertion (glue ear treatment),"Ear, Nose & Throat (ENT)",,Spire,Ear
+Myringoplasty,"Ear, Nose & Throat (ENT)",,BMI,Ear
+Stapedectomy,"Ear, Nose & Throat (ENT)",,BMI,Ear
+Tinnitus Counselling,"Ear, Nose & Throat (ENT)",Audiology,BMI,Ear
+Vibrant Soundbridge Middle Ear Implant,"Ear, Nose & Throat (ENT)",,BMI,Ear
+Elbow,Trauma & Orthopaedics,,,Elbow
+Bursa excision (surgical),Trauma & Orthopaedics,,General,Elbow
+Bursa treatment (non-surgical),Trauma & Orthopaedics,,General,Elbow
+Cubital tunnel release,Trauma & Orthopaedics,,General,Elbow
+Elbow Arthroscopy,Trauma & Orthopaedics,,BMI,Elbow
+Elbow decompression,Trauma & Orthopaedics,,General,Elbow
+Elbow replacement (primary),Trauma & Orthopaedics,,General,Elbow
+Elbow replacement (revision),Trauma & Orthopaedics,,General,Elbow
+Elbow stabilisation,Trauma & Orthopaedics,,General,Elbow
+Release of Stiff Elbow,Trauma & Orthopaedics,,BMI,Elbow
+Revision Elbow Replacement,Trauma & Orthopaedics,,BMI,Elbow
+Total Elbow Replacement,Trauma & Orthopaedics,,BMI,Elbow
+Ulnar Nerve Release Surgery,Trauma & Orthopaedics,,BMI,Elbow
+Eye,Ophthalmology,,,Eye
+Advanced laser vision correction,Ophthalmology,,BMI,Eye
+Age-related macular degeneration treatment,Ophthalmology,,Spire,Eye
+Cataract surgery,Ophthalmology,,General,Eye
+Cataract surgery assessment,Ophthalmology,,BMI,Eye
+Corneal transplant surgery,Ophthalmology,,BMI,Eye
+Correction of squint,Ophthalmology,,General,Eye
+Entropion and ectropion repair,Ophthalmology,,BMI,Eye
+Excimer laser surgery,Ophthalmology,,BMI,Eye
+Eye angiogram,Ophthalmology,,BMI,Eye
+Eye lift (blepharoplasty),Plastic Surgery,Dermatology,General,Eye
+Eye operations (vitreous body),Ophthalmology,,General,Eye
+Eyelid correction,Plastic Surgery,Ophthalmology,General,Eye
+Eyelid cyst removal,Plastic Surgery,Ophthalmology,General,Eye
+Eyelid lift (ptosis),Plastic Surgery,Ophthalmology,General,Eye
+Eyelid reconstruction,Plastic Surgery,Ophthalmology,General,Eye
+"eyelid surgery, blepharoplasty",Ophthalmology,,BMI,Eye
+Glaucoma surgery trabeculectomy,Ophthalmology,,BMI,Eye
+Low vision aids,Ophthalmology,,BMI,Eye
+Low vision assessment,Ophthalmology,,BMI,Eye
+Ophthalmic diagnostic testing,Ophthalmology,,BMI,Eye
+Ophthalmology consultation,Ophthalmology,,BMI,Eye
+Ptosis management,Ophthalmology,,BMI,Eye
+Ptosis surgery,Ophthalmology,,BMI,Eye
+Refraction and low vision assessment,Ophthalmology,,BMI,Eye
+Retinal detachment surgery,Ophthalmology,,BMI,Eye
+Squint Surgery,Ophthalmology,,BMI,Eye
+Face,Plastic Surgery,,,Face
+Brow lift,Plastic Surgery,,General,Face
+Face lift,Plastic Surgery,,General,Face
+IOL Vip system,Ophthalmology,,BMI,Face
+Lip removal of lesion,Plastic Surgery,,General,Face
+Removal of facial skin lesions,Oral Surgery,,BMI,Face
+Removal of lumps of the salivary glands,Oral Surgery,,BMI,Face
+Temporomandibular joint management TMJ,Oral Surgery,,BMI,Face
+Fertility or Pregnancy,Gynaecology,,,Fertility or Pregnancy
+3D 4D scan,Gynaecology,,BMI,Fertility or Pregnancy
+Cycle monitoring,Gynaecology,,BMI,Fertility or Pregnancy
+Donor insemination,Gynaecology,,BMI,Fertility or Pregnancy
+Early pregnancy and dating scan,Gynaecology,,BMI,Fertility or Pregnancy
+Egg collection and transfer,Gynaecology,Fertility,BMI,Fertility or Pregnancy
+Egg donation,Gynaecology,Fertility,BMI,Fertility or Pregnancy
+Egg freezing,Gynaecology,Fertility,BMI,Fertility or Pregnancy
+Egg sharing,Gynaecology,Fertility,BMI,Fertility or Pregnancy
+Embryo cryopreservation,Gynaecology,Fertility,BMI,Fertility or Pregnancy
+Foetal anatomy anomaly scan,Gynaecology,,BMI,Fertility or Pregnancy
+Frozen embryo replacement cycle,Gynaecology,Fertility,BMI,Fertility or Pregnancy
+In vitro fertilisation IVF,Gynaecology,,BMI,Fertility or Pregnancy
+Intra cytoplasmic sperm injection ICSI,Other,Urology,BMI,Fertility or Pregnancy
+Intrauterine insemination,Other,Urology,BMI,Fertility or Pregnancy
+Micro epididymal sperm aspiration,Urology,,BMI,Fertility or Pregnancy
+Nuchal translucency scan,Other,,BMI,Fertility or Pregnancy
+Parental induction of ovulation,Other,,BMI,Fertility or Pregnancy
+Sexing scan,Other,,BMI,Fertility or Pregnancy
+Sperm freezing,Other,Fertility,BMI,Fertility or Pregnancy
+Surgical sperm recovery,Other,Fertility,BMI,Fertility or Pregnancy
+Testicular epididymal sperm extraction,Urology,,BMI,Fertility or Pregnancy
+Finger or Thumb,Trauma & Orthopaedics,,,Finger or Thumb
+Dupuytren's contracture surgery,Trauma & Orthopaedics,,General,Finger or Thumb
+Dupuytren's contracture surgery (revision),Trauma & Orthopaedics,,General,Finger or Thumb
+Thumb reconstruction,Trauma & Orthopaedics,,General,Finger or Thumb
+Thumb/finger amputation,Trauma & Orthopaedics,,General,Finger or Thumb
+Trigger finger release,Trauma & Orthopaedics,,General,Finger or Thumb
+Hand or Wrist,Trauma & Orthopaedics,,,Hand or Wrist
+Carpal tunnel release,Trauma & Orthopaedics,,General,Hand or Wrist
+Carpal tunnel release (revision),Trauma & Orthopaedics,,General,Hand or Wrist
+Congenital deformity of hand repair,Trauma & Orthopaedics,Plastic Surgery,General,Hand or Wrist
+Ganglion excision - wrist and hand,Trauma & Orthopaedics,,General,Hand or Wrist
+Hand amputation,Trauma & Orthopaedics,,General,Hand or Wrist
+Hand and wrist exercise and functional activity,Trauma & Orthopaedics,,BMI,Hand or Wrist
+Hand and wrist manual therapies,Trauma & Orthopaedics,,BMI,Hand or Wrist
+Hand and wrist splinting,Trauma & Orthopaedics,,BMI,Hand or Wrist
+Hand reconstruction,Trauma & Orthopaedics,,General,Hand or Wrist
+Injections for Dupuytren disease,Trauma & Orthopaedics,,BMI,Hand or Wrist
+Release nerve at wrist,Trauma & Orthopaedics,,General,Hand or Wrist
+Removal carpal bones,Trauma & Orthopaedics,,General,Hand or Wrist
+Tendon sheath release (wrist),Trauma & Orthopaedics,,General,Hand or Wrist
+Wrist arthroscopy,Trauma & Orthopaedics,,General,Hand or Wrist
+Heart,Cardiology,,,Heart
+Ambulatory blood pressure recording,Cardiology,,BMI,Heart
+Ambulatory ECG,Cardiology,,BMI,Heart
+Angioplasty,Cardiology,,BMI,Heart
+Aortic root replacement,Cardiothoracic Surgery,,BMI,Heart
+Aortic valve replacement,Cardiothoracic Surgery,Cardiology,BMI,Heart
+Atrial Fibrillation AF Ablation,Cardiology,,BMI,Heart
+Balloon sinuplasty,Cardiology,,BMI,Heart
+Blood pressure test,Cardiology,,BMI,Heart
+Cardiac catheterisation,Cardiology,,BMI,Heart
+Cardiac stress testing,Cardiology,,BMI,Heart
+Cardiac surgery - aortic valve repair / replacement,Cardiothoracic Surgery,Cardiology,General,Heart
+Cardiac surgery - mitral valve repair / replacement,Cardiothoracic Surgery,Cardiology,General,Heart
+Cardiac surgery (coronary artery bypass graft - CABG),Cardiothoracic Surgery,Cardiology,General,Heart
+Cardio Pulmonary Exercise Test CPET,Cardiology,,BMI,Heart
+Cardioversion,Cardiothoracic Surgery,Cardiology,General,Heart
+Contrast echocardiography,Cardiology,,BMI,Heart
+Coronary angiography,Cardiology,,General,Heart
+Coronary artery bypass,Cardiology,,BMI,Heart
+CT coronary angiography,Cardiology,,BMI,Heart
+"ECG, electrocardiogram",Cardiology,,BMI,Heart
+Echocardiogram,Cardiology,,BMI,Heart
+Endovascular aortic aneurysm repair EVAR,Cardiology,,BMI,Heart
+Internal cardiac defibrillator implantation,Cardiology,,BMI,Heart
+Mitral valve surgery,Cardiology,,BMI,Heart
+Myocardial perfusion imaging,Cardiology,,BMI,Heart
+"Pacemaker (insertion, removal or attention)",Cardiology,,General,Heart
+Pacemaker implantation,Cardiology,,BMI,Heart
+PTCA (angioplasty),Cardiology,,General,Heart
+Stress echocardiogram,Cardiology,,BMI,Heart
+TAVI (Aortic valve replacement),Cardiology,,BMI,Heart
+Transoesophageal echocardiography,Cardiology,,BMI,Heart
+Hip or Upper Leg,Trauma & Orthopaedics,,,Hip or Upper Leg
+Head of femur replacement,Trauma & Orthopaedics,,General,Hip or Upper Leg
+Head of femur replacement (revision),Trauma & Orthopaedics,,General,Hip or Upper Leg
+Hip Arthroscopy,Trauma & Orthopaedics,,BMI,Hip or Upper Leg
+Hip Debridement Surgery,Trauma & Orthopaedics,,BMI,Hip or Upper Leg
+Hip dislocation reduction,Trauma & Orthopaedics,,General,Hip or Upper Leg
+Hip Injection Treatment,Trauma & Orthopaedics,,BMI,Hip or Upper Leg
+Hip joint manipulation,Trauma & Orthopaedics,,General,Hip or Upper Leg
+Hip replacement (primary),Trauma & Orthopaedics,,General,Hip or Upper Leg
+Hip replacement (revision),Trauma & Orthopaedics,,General,Hip or Upper Leg
+Hip Replacement Surgery,Trauma & Orthopaedics,,BMI,Hip or Upper Leg
+Hip Resurfacing,Trauma & Orthopaedics,,BMI,Hip or Upper Leg
+Hip Revision,Trauma & Orthopaedics,,BMI,Hip or Upper Leg
+Pelvic health rehabilitation,Trauma & Orthopaedics,,BMI,Hip or Upper Leg
+Repair of fractured neck of femur,Trauma & Orthopaedics,,General,Hip or Upper Leg
+Total hip replacement by computer assisted navigation,Trauma & Orthopaedics,,BMI,Hip or Upper Leg
+Knee,Trauma & Orthopaedics,,,Knee
+"ACL Reconstruction Surgery, Knee ACL reconstruction",Trauma & Orthopaedics,,BMI,Knee
+Computer assisted navigation high tibial osteotomy,Trauma & Orthopaedics,,BMI,Knee
+Computer assisted navigation total knee replacement,Trauma & Orthopaedics,,BMI,Knee
+Foot orthotics knee orthotics back orthotics,Trauma & Orthopaedics,,BMI,Knee
+Knee Arthroscopy,Trauma & Orthopaedics,,BMI,Knee
+Knee Injuries,Trauma & Orthopaedics,,BMI,Knee
+Knee ligament reconstruction,Trauma & Orthopaedics,,General,Knee
+Knee ligament surgery,Trauma & Orthopaedics,,Spire,Knee
+Knee replacement ,Trauma & Orthopaedics,,Spire,Knee
+Knee replacement (primary - patellofemoral),Trauma & Orthopaedics,,General,Knee
+Knee replacement (primary - unicompartmental),Trauma & Orthopaedics,,General,Knee
+Knee replacement (revision),Trauma & Orthopaedics,,General,Knee
+Open operation on semilunar cartilage (knee),Trauma & Orthopaedics,,General,Knee
+Osteotomy Surgery,Trauma & Orthopaedics,,BMI,Knee
+Partial Knee Replacement Surgery,Trauma & Orthopaedics,,BMI,Knee
+Revision Knee Replacement,Trauma & Orthopaedics,,BMI,Knee
+Leg,Trauma & Orthopaedics,,,Leg
+Lower Limb Reconstruction,Trauma & Orthopaedics,,BMI,Leg
+Lungs,Cardiothoracic Surgery,,,Lungs
+Bronchoscopy,Cardiothoracic Surgery,,Ramsay,Lungs
+Lung biopsy,Cardiothoracic Surgery,,BMI,Lungs
+Lung Cancer,Cardiothoracic Surgery,,BMI,Lungs
+Lung function testing,Cardiothoracic Surgery,,BMI,Lungs
+Pleural biopsy and drainage,Cardiothoracic Surgery,,BMI,Lungs
+Respiratory physiotherapy,Thoracic Medicine,,BMI,Lungs
+Thoracoscopy,Cardiothoracic Surgery,,BMI,Lungs
+Transbronchial biopsy,Cardiothoracic Surgery,,BMI,Lungs
+Lymph Node,General Surgery,,,Lymph Node
+Lymph node biopsy,General Surgery,,BMI,Lymph Node
+Lymph node transfer,General Surgery,,BMI,Lymph Node
+Mouth or Teeth,Oral Surgery,,,Mouth or Teeth
+Extraction of wisdom teeth,Oral Surgery,,General,Mouth or Teeth
+Implantation of tooth,Oral Surgery,,General,Mouth or Teeth
+Investigation and treatment of oral ulcers,Oral Surgery,,BMI,Mouth or Teeth
+Removing teeth,Oral Surgery,,BMI,Mouth or Teeth
+Salivary gland excision,Oral Surgery,,BMI,Mouth or Teeth
+Tooth or teeth extraction (excluding wisdom teeth),Oral Surgery,,General,Mouth or Teeth
+Nose,"Ear, Nose & Throat (ENT)",,,Nose
+Endoscopic sinus surgery,"Ear, Nose & Throat (ENT)",,BMI,Nose
+Nasal polypectomy,"Ear, Nose & Throat (ENT)",,BMI,Nose
+Nose (turbinate) procedure,"Ear, Nose & Throat (ENT)",,General,Nose
+Nose diagnostic examination (endoscopy),"Ear, Nose & Throat (ENT)",,General,Nose
+Nose removal of lesion,"Ear, Nose & Throat (ENT)",Plastic Surgery,General,Nose
+Nose reshaping (rhinoplasty),Plastic Surgery,,Spire,Nose
+Rhinoplasty,Plastic Surgery,"Ear, Nose & Throat (ENT)",General,Nose
+Septoplasty,Plastic Surgery,"Ear, Nose & Throat (ENT)",General,Nose
+Septoplasty and submucous resection,"Ear, Nose & Throat (ENT)",,BMI,Nose
+Septorhinoplasty with graft or implant,"Ear, Nose & Throat (ENT)",,BMI,Nose
+Sinus procedure,"Ear, Nose & Throat (ENT)",,General,Nose
+Sleep studies snoring clinic,Other,,BMI,Nose
+Other - Bone,Trauma & Orthopaedics,,,Other - Bone
+Removal of metalwork from bone,Trauma & Orthopaedics,,General,Other - Bone
+Other Gynaecology,Gynaecology,,,Other Gynaecology
+Gynaecology consultation,Gynaecology,,BMI,Other Gynaecology
+Introduction of coil (IUD),Gynaecology,,General,Other Gynaecology
+Removal of coil (IUD),Gynaecology,,General,Other Gynaecology
+Other Joint,Trauma & Orthopaedics,,,Other Joint
+Arthroscopic Latarjet,Trauma & Orthopaedics,,BMI,Other Joint
+Arthroscopy of joint (other),Trauma & Orthopaedics,,General,Other Joint
+Cartilage Operation,Trauma & Orthopaedics,,BMI,Other Joint
+Comprehensive Arthroscopic Management CAM,Trauma & Orthopaedics,,BMI,Other Joint
+Debridement of joint (other),Trauma & Orthopaedics,,General,Other Joint
+Facet joint injections,Trauma & Orthopaedics,,Spire,Other Joint
+Gait analysis,Trauma & Orthopaedics,,BMI,Other Joint
+Joint injections for pain,Trauma & Orthopaedics,,General,Other Joint
+Joint pain treatment (joint injections),Trauma & Orthopaedics,,Spire,Other Joint
+Manipulation of joint,Trauma & Orthopaedics,,General,Other Joint
+Metatarsal osteotomy,Trauma & Orthopaedics,,General,Other Joint
+Pain management injections for back and facet joints,Trauma & Orthopaedics,,Spire,Other Joint
+Sternoclavicular joint arthroscopy,Trauma & Orthopaedics,,General,Other Joint
+Sternoclavicular joint decompression,Trauma & Orthopaedics,,General,Other Joint
+Ovary,Gynaecology,,,Ovary
+Fallopian tube and / or ovary removal,Gynaecology,,General,Ovary
+Ovarian Cancer,Other,Cancer,BMI,Ovary
+Ovarian lesion treatment (laparoscopic),Gynaecology,,General,Ovary
+Ovarian lesion treatment (open),Gynaecology,,General,Ovary
+Male genitals,Urology,,,Male genitals
+Circumcision,Urology,,General,Male genitals
+Foreskin operations (other),Urology,,General,Male genitals
+Operations for Peyronies Disease,Urology,,BMI,Male genitals
+Penile surgery,Urology,Plastic Surgery,General,Male genitals
+Correction of hydrocele,Urology,,General,Male genitals
+Epididymal surgery,Urology,,General,Male genitals
+Open testicular biopsy with microsurgical techniques,Other,,BMI,Male genitals
+Removal of testicle (orchidectomy),Urology,,General,Male genitals
+Reversal of Sterilisation,Gynaecology,,BMI,Male genitals
+Surgery for benign scrotal lumps,Urology,,BMI,Male genitals
+Testicular Cancer,Other,Cancer,BMI,Male genitals
+Vasectomy,Urology,,General,Male genitals
+Vasectomy bilateral,Urology,,BMI,Male genitals
+Vasectomy reversal,Urology,,General,Male genitals
+Prostate,Urology,,,Prostate
+High Intensity Focused Ultrasound HIFU,Urology,,BMI,Prostate
+Holmium Laser Enucleation of the Prostate HoLEP,Urology,,BMI,Prostate
+Keyhole prostate surgery (TURP),Urology,,General,Prostate
+Prostate Cancer,Other,Cancer,BMI,Prostate
+Prostate Cancer Prostate Mapping,Other,Cancer,BMI,Prostate
+Prostate Cancer Prostatectomy,Other,Cancer,BMI,Prostate
+Prostate needle biopsy,Urology,,General,Prostate
+Prostate surgery (prostatectomy),Urology,,General,Prostate
+Prostate surgery and laser prostate surgery,Urology,,Spire,Prostate
+PVP GreenLight Laser Surgery,Urology,,BMI,Prostate
+Rezum treatment,Urology,,BMI,Prostate
+Saturation biopsies of the prostate,Urology,,BMI,Prostate
+Transurethral resection of the prostate (TURP),Urology,,BMI,Prostate
+"Renal (Liver, Kidneys etc)",General Surgery,,,"Renal (Liver, Kidneys etc)"
+Abnormal Liver Function tests LFTs,General Surgery,,BMI,"Renal (Liver, Kidneys etc)"
+Abnormal liver imaging,General Surgery,,BMI,"Renal (Liver, Kidneys etc)"
+Alcoholic liver disease,General Surgery,,BMI,"Renal (Liver, Kidneys etc)"
+Kidney removal (nephrectomy),General Surgery,,General,"Renal (Liver, Kidneys etc)"
+Kidney stone treatment (endoscopy),General Surgery,,General,"Renal (Liver, Kidneys etc)"
+Kidney stone treatment (ultrasound),General Surgery,,General,"Renal (Liver, Kidneys etc)"
+Liver biopsy,General Surgery,,BMI,"Renal (Liver, Kidneys etc)"
+Shoulder,Trauma & Orthopaedics,,,Shoulder
+Acromioclavicular joint arthroscopy,Trauma & Orthopaedics,,General,Shoulder
+Acromioclavicular joint decompression,Trauma & Orthopaedics,,General,Shoulder
+Acromioclavicular joint stabilisation,Trauma & Orthopaedics,,General,Shoulder
+Arthroscopic Subacromial Decompression,Trauma & Orthopaedics,,BMI,Shoulder
+Frozen shoulder release,Trauma & Orthopaedics,,General,Shoulder
+Rotator cuff repair,Trauma & Orthopaedics,,Spire,Shoulder
+Rotator Cuff Surgery,Trauma & Orthopaedics,,BMI,Shoulder
+Shoulder Arthroplasty,Trauma & Orthopaedics,,BMI,Shoulder
+Shoulder Arthroscopy,Trauma & Orthopaedics,,BMI,Shoulder
+Shoulder Pain,Trauma & Orthopaedics,,BMI,Shoulder
+Shoulder reconstruction,Trauma & Orthopaedics,,General,Shoulder
+Shoulder replacement (primary),Trauma & Orthopaedics,,General,Shoulder
+Shoulder replacement (revision - reverse polarity),Trauma & Orthopaedics,,General,Shoulder
+Shoulder replacement (revision),Trauma & Orthopaedics,,General,Shoulder
+Shoulder rotator cuff repair,Trauma & Orthopaedics,,General,Shoulder
+Shoulder slap repair,Trauma & Orthopaedics,,General,Shoulder
+Shoulder stabilisation,Trauma & Orthopaedics,,General,Shoulder
+Subacromial joint decompression,Trauma & Orthopaedics,,General,Shoulder
+Spine,Trauma & Orthopaedics,,,Spine
+Back pain,Trauma & Orthopaedics,,BMI,Spine
+Back surgery (slipped disc),Trauma & Orthopaedics,,General,Spine
+Back surgery (spinal surgery),Trauma & Orthopaedics,,Spire,Spine
+Back surgery (trapped nerve release),Trauma & Orthopaedics,,General,Spine
+Cervical spine surgery,Trauma & Orthopaedics,,BMI,Spine
+Cranio-cervical decompression,Trauma & Orthopaedics,,General,Spine
+Discectomy,Trauma & Orthopaedics,,BMI,Spine
+Endoscopic Minimal Invasive Spine Surgery Lower Back,Trauma & Orthopaedics,,BMI,Spine
+Epidural anaesthetic,Gynaecology,,BMI,Spine
+Epidural for back pain,Trauma & Orthopaedics,,BMI,Spine
+Epidural for chronic pain relief,Trauma & Orthopaedics,,BMI,Spine
+Epidural injection,Gynaecology,,General,Spine
+Lumbar laminectomy,Trauma & Orthopaedics,,BMI,Spine
+Lumbar microdiscectomy,Trauma & Orthopaedics,,BMI,Spine
+Lumbar spinal decompression,Trauma & Orthopaedics,,BMI,Spine
+Minimally Invasive Spinal Surgery MISS,General Surgery,,BMI,Spine
+Removal of spinal instrumentation or fixation,Trauma & Orthopaedics,,General,Spine
+Scoliosis,Trauma & Orthopaedics,,BMI,Spine
+Spinal anaesthetic,Trauma & Orthopaedics,,BMI,Spine
+Spinal biopsy,Trauma & Orthopaedics,,General,Spine
+Spinal decompression (cervical),Trauma & Orthopaedics,,General,Spine
+Spinal decompression (lumbar),Trauma & Orthopaedics,,General,Spine
+Spinal decompression (lumbar/thoracic),Trauma & Orthopaedics,,General,Spine
+Spinal decompression (posterior cervical),Trauma & Orthopaedics,,General,Spine
+Spinal decompression (revision cervical),Trauma & Orthopaedics,,General,Spine
+Spinal decompression (revision lumbar),Trauma & Orthopaedics,,General,Spine
+Spinal decompression (revision lumbar/thoracic),Trauma & Orthopaedics,,General,Spine
+Spinal decompression (revision posterior cervical),Trauma & Orthopaedics,,General,Spine
+Spinal decompression (revision thoracic),Trauma & Orthopaedics,,General,Spine
+Spinal decompression (thoracic),Trauma & Orthopaedics,,General,Spine
+Spinal deformity correction (scoliosis),Trauma & Orthopaedics,,General,Spine
+Spinal disc excision (cervical),Trauma & Orthopaedics,,General,Spine
+Spinal disc excision (lumbar),Trauma & Orthopaedics,,General,Spine
+Spinal disc excision (revision lumbar),Trauma & Orthopaedics,,General,Spine
+Spinal disc replacement,Trauma & Orthopaedics,,General,Spine
+Spinal disc replacement (cervical),Trauma & Orthopaedics,,General,Spine
+Spinal disc replacement (lumbar),Trauma & Orthopaedics,,General,Spine
+Spinal facet joint denervation,Trauma & Orthopaedics,,General,Spine
+Spinal fracture decompression,Trauma & Orthopaedics,,General,Spine
+Spinal fusion (anterior cervical),Trauma & Orthopaedics,,General,Spine
+Spinal fusion (cervical C1/C2),Trauma & Orthopaedics,,General,Spine
+Spinal fusion (cervical),Trauma & Orthopaedics,,General,Spine
+Spinal fusion (cranio-cervical),Trauma & Orthopaedics,,General,Spine
+Spinal fusion (lumbar / thoracic),Trauma & Orthopaedics,,General,Spine
+Spinal fusion (lumbar),Trauma & Orthopaedics,,General,Spine
+Spinal fusion (posterior cervical),Trauma & Orthopaedics,,General,Spine
+Spinal fusion (revision anterior cervical),Trauma & Orthopaedics,,General,Spine
+Spinal fusion (revision lumbar),Trauma & Orthopaedics,,General,Spine
+Spinal fusion (revision),Trauma & Orthopaedics,,General,Spine
+Spinal injection (facet joint injection or paravertebral block),Trauma & Orthopaedics,,General,Spine
+Spinal lesion excision,Trauma & Orthopaedics,,General,Spine
+Spinal nerve root destruction,Trauma & Orthopaedics,,General,Spine
+Spinal operation (other),Trauma & Orthopaedics,,General,Spine
+Spinal spacer insertion,Trauma & Orthopaedics,,General,Spine
+Spinal stablilisation,Trauma & Orthopaedics,,General,Spine
+Spinal surgery (thoracic),Trauma & Orthopaedics,,General,Spine
+Spine manipulation,Trauma & Orthopaedics,,General,Spine
+Throat,"Ear, Nose & Throat (ENT)",,,Throat
+Laryngoscopy and pharyngoscopy,"Ear, Nose & Throat (ENT)",,BMI,Throat
+Larynx diagnostic examination (endoscopy),Oral Surgery,"Ear, Nose & Throat (ENT)",General,Throat
+Larynx therapeutic procedure (endoscopy),Oral Surgery,"Ear, Nose & Throat (ENT)",General,Throat
+Minimal access thyroid surgery,General Surgery,,BMI,Throat
+Parathyroidectomy,"Ear, Nose & Throat (ENT)",,Ramsay,Throat
+Parotid gland removal,"Ear, Nose & Throat (ENT)",Plastic Surgery,General,Throat
+Repair of oesophagus (for gastric reflux),"Ear, Nose & Throat (ENT)",General Surgery,General,Throat
+Submandibular gland removal,"Ear, Nose & Throat (ENT)",Oral Surgery,General,Throat
+Thyroidectomy,"Ear, Nose & Throat (ENT)",,General,Throat
+Thyroidectomy for Goitre,"Ear, Nose & Throat (ENT)",,BMI,Throat
+Thyroidectomy for Nodule,"Ear, Nose & Throat (ENT)",,BMI,Throat
+Tonsillectomy,"Ear, Nose & Throat (ENT)",Oral Surgery,General,Throat
+Total thyroidectomy (for thyrotoxicosis),"Ear, Nose & Throat (ENT)",General Surgery,Ramsay,Throat
+Toe,Trauma & Orthopaedics,,,Toe
+Bunion Surgery,Trauma & Orthopaedics,,BMI,Toe
+Great toe fusion,Trauma & Orthopaedics,,General,Toe
+Other toe fusion,Trauma & Orthopaedics,,General,Toe
+Toe amputation,Trauma & Orthopaedics,,General,Toe
+Toe fusion (revision),Trauma & Orthopaedics,,General,Toe
+Toe joint arthroplasty,Trauma & Orthopaedics,,General,Toe
+Uterus,Gynaecology,,,Uterus
+Diagnostic hysteroscopy (examination of the uterus),Gynaecology,,General,Uterus
+Diagnostic Laparoscopy,Gynaecology,,Ramsay,Uterus
+Diagnostic laparoscopy and dye test,Gynaecology,,BMI,Uterus
+Dilatation and curettage (D&C),Gynaecology,,Spire,Uterus
+Endometrial ablation,Gynaecology,,BMI,Uterus
+Fibroid surgery (myomectomy),Gynaecology,,General,Uterus
+Hysterectomy - abdominal,Gynaecology,,General,Uterus
+Hysterectomy - keyhole,Gynaecology,,General,Uterus
+Hysterectomy - keyhole vaginal,Gynaecology,,General,Uterus
+Hysterectomy - vaginal,Gynaecology,,General,Uterus
+Hysteroscopy,Gynaecology,,BMI,Uterus
+Total laparoscopic hysterectomy,Gynaecology,,BMI,Uterus
+Uterine artery embolisation,Other,Radiology,BMI,Uterus
+Uterine cancer condition,Gynaecology,Cancer,BMI,Uterus
+Womb Cancer,Other,Cancer,BMI,Uterus
+Female genitals,Gynaecology,,,Female genitals
+Anterior repair,Gynaecology,,BMI,Female genitals
+Labiaplasty,Gynaecology,,General,Female genitals
+Posterior repair,Gynaecology,,BMI,Female genitals
+Removal of products of conception (RPOC),Gynaecology,,General,Female genitals
+Repair of prolapsed vagina,Gynaecology,,General,Female genitals
+Sacrospinous Fixation SSF,Gynaecology,,BMI,Female genitals
+Vaginal repair operation,Gynaecology,,Spire,Female genitals
+Vulvectomy,Gynaecology,,General,Female genitals
+Vascular,General Surgery,,,Vascular
+Aortic aneurysm repair,Cardiothoracic Surgery,Cardiology,General,Vascular
+Endovenous laser therapy EVLT,General Surgery,,BMI,Vascular
+Femoro popliteal bypass surgery,General Surgery,,BMI,Vascular
+Sclerotherapy treatment,Other,Vascular Surgery,BMI,Vascular
+Varicose vein combined treatments,Plastic Surgery,,General,Vascular
+Varicose vein laser treatment,Other,Vascular Surgery,BMI,Vascular
+Varicose vein sclerotherapy,Plastic Surgery,,General,Vascular
+Varicose vein treatment (laser ablation),Plastic Surgery,,General,Vascular
+"Varicose vein treatment (ligation, stripping and avulsion)",Plastic Surgery,,General,Vascular
+Varicose vein treatment (radiofrequency ablation),Plastic Surgery,,General,Vascular
+Varicose veins treatment,Other,Vascular Surgery,BMI,Vascular
+Weight Loss,Gastroenterology,Bariatrics,,Weight Loss
+Banded Gastric Band,Gastroenterology,Bariatrics,BMI,Weight Loss
+Banded Sleeve Gastrectomy,Gastroenterology,Bariatrics,BMI,Weight Loss
+Gastric band surgery,Gastroenterology,Bariatrics,Spire,Weight Loss
+Gastric bypass surgery,Gastroenterology,Bariatrics,BMI,Weight Loss
+Gastric sleeve sleeve gastrectomy,Gastroenterology,Bariatrics,BMI,Weight Loss
+Weight loss surgery (bypass operation),Gastroenterology,Bariatrics,General,Weight Loss
+Weight loss surgery (gastrectomy),Gastroenterology,Bariatrics,General,Weight Loss
+Weight loss surgery (gastric balloon),Gastroenterology,Bariatrics,General,Weight Loss
+Weight loss surgery (gastric band maintenance),Gastroenterology,Bariatrics,General,Weight Loss
+Weight loss surgery (gastric banding),Gastroenterology,Bariatrics,General,Weight Loss
+Weight loss surgery (gastric stapling),Gastroenterology,Bariatrics,General,Weight Loss

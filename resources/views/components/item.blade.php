@@ -1,5 +1,5 @@
 <section class="sort-categories">
-    <div class="sort-categories-inner">
+    <div class="sort-categories-inner container">
         <div class="sort-categories-section-1">
             <div class="sort-categories-item">
                 <img alt="Image of {{ $title }}" src="{{ $itemImg }}">
@@ -29,18 +29,31 @@
             </div>
         </div>
         <div class="sort-categories-section-2">
-            {{-- Waiting time --}}
+            {{-- CQC rating  --}}
             <div class="sort-categories-section-2__child">
-                <p
-                    @includeWhen($d['hospitalType']['name'] == 'Independent','components.basic.popover', [
-                        'trigger'           => 'hover',
-                        'hideDelay'         => '1000',
-                        'content'           => '<p>For private self-pay<br> waiting time click
-                                                    <a tabindex class="text-link modal-enquire-trigger" role="button" >here</a>
-                                                  </p>',
-                        'html'              => 'true'])>
+                <p>
+                    {!! !empty($qualityRating) ? $qualityRating : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
+                </p>
+                <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
+            </div>
+            {{-- Waiting time --}}
+            <div class="sort-categories-section-2__child flex-column">
+                <p>
                     {!! !empty($waitTime) ? $waitTime : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                 </p>
+                @if($NHSClass == 'private-hospital')
+                    <span>
+                        <small>Click for
+                            @include('components.basic.modalbutton', [
+                                    'hrefValue'         => $url,
+                                    'hospitalTitle'     => $title,
+                                    'modalTarget'       => '#hc_modal_enquire_private',
+                                    'classTitle'        => 'text-link',
+                                    'target'            => 'blank',
+                                    'button'            => 'current waiting time'])
+                        </small>
+                    </span>
+                @endif
                 <span class="d-none" id="item_waiting_time_{{$id}}">{{$waitTime}}</span>
             </div>
             {{-- End waiting time --}}
@@ -86,12 +99,7 @@
                 </p>
                 <span class="d-none" id="item_op_cancelled_{{$id}}">{!! $opCancelled !!}</span>
             </div>
-            <div class="sort-categories-section-2__child">
-                <p>
-                    {!! !empty($qualityRating) ? $qualityRating : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
-                </p>
-                <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
-            </div>
+
 
             {{-- Friends and family --}}
             <div class="sort-categories-section-2__child">
@@ -111,31 +119,39 @@
                 </p>
                 <span class="d-none" id="item_nhs_funded_{{$id}}">{!! $NHSFunded !!}</span>
             </div>
-            <div class="sort-categories-section-2__child">
-                <p @includeWhen($d['hospitalType']['name'] == 'Independent', 'components.basic.popover', [
-                        'trigger'           => 'hover',
-                        'hideDelay'         => '1000',
-                        'content'           => '<p>For private self-pay<br> Pricing click
-                                                    <a tabindex class="text-link modal-enquire-trigger" role="button" >here</a>
-                                                  </p>',
-                        'html'              => 'true'])>
+            <div class="sort-categories-section-2__child flex-column">
+                <p>
                     {!! !empty($privateSelfPay) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>"  !!}
                 </p>
+                @if($NHSClass == 'private-hospital')
+                <span>
+                    <small>Click for
+                        @include('components.basic.modalbutton', [
+                                'hrefValue'         => $url,
+                                'hospitalTitle'     => $title,
+                                'modalTarget'       => '#hc_modal_enquire_private',
+                                'classTitle'        => 'text-link',
+                                'target'            => 'blank',
+                                'button'            => 'prices'])
+                    </small>
+                </span>
+                @endif
                 <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
             </div>
         </div>
-        <div class="sortCatSection3 d-flex flex-column justify-content-center">
+        <div class="sort-categories-section-3 d-flex flex-column justify-content-center">
             <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between"
                  @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
-                @if($NHSClass == 'privateHospital')
+                @if($NHSClass == 'private-hospital')
                     @include('components.basic.modalbutton', [
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'modalTarget'       => '#hc_modal_enquire_private',
                     'classTitle'        => 'btn btn-icon btn-enquire enquiry mr-2 btn-block',
                     'target'            => 'blank',
-                    'button'            => $btnText])
-                @elseif($NHSClass == 'NHSHospital')
+                    'button'            => $btnText,
+                    'id'                => 'modal_button_private_enquiry_'.$id])
+                @elseif($NHSClass == 'nhs-hospital')
                     @include('components.basic.modalbutton', [
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,

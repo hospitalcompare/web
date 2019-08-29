@@ -3,7 +3,7 @@
 // Trigger the tooltip speech bubble
 .help-link {
     color: $black;
-    position: $absolute;
+    position: absolute;
     border-radius: 50%;
     background: $lightGrey;
     width: 15px;
@@ -11,7 +11,7 @@
     line-height: 15px;
     font-size: 12px;
     text-align: center;
-    z-index: 99;
+    z-index: 5;
     cursor: pointer;
 
     &.help-link__inline {

@@ -50,7 +50,10 @@
 
 .results-page {
     .dropdown-toggle,
-    .searchPageSelect {
+    .results-page-select {
         max-width: 158px;
+        option {
+            background-color: $white !important;
+        }
     }
 }

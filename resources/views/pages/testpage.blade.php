@@ -12,8 +12,17 @@
 
 @section('content')
     <main>
+
+        <div class="section py-3 ">
+            <div class="container-fluid px-0">
+                <h2>Solutions bar  </h2>
+                @include('components.solutionsbar', ['position' => 'static'])
+            </div>
+        </div>
         <div class="section py-3">
             <div class="container">
+                <h2>Dr Stevini</h2>
+                @include('components.doctor')
                 <h2>Tooltips</h2>
                 <br>
                 <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top"
@@ -48,6 +57,10 @@
                                         procedure at. Enter your provider and policy name to find the best hospital for you.
                                     </p>'])>?</a>
                 <hr>
+                <h3>Enquire now button</h3>
+                @include('components.basic.button', [
+                    'classTitle' => 'btn btn-icon btn-enquire-now mr-2',
+                    'button' => 'Enquire Now'])
                 <h3>Special offer button</h3>
                 @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer mr-2', 'button' => 'Special Offers'])
                 <h3>Special offer button reversed</h3>
@@ -116,7 +129,7 @@
                 </div>
 
                 <h3>Popover with stars</h3>
-                <div class="popover fade bs-popover-bottom show" role="tooltip" id="popover438743" x-placement="bottom"
+                <div class="popover popover-regular fade bs-popover-bottom show" role="tooltip" id="popover438743" x-placement="bottom"
                      style="position: relative;">
                     <div class="arrow" style="left: 64px;"></div>
                     <div class="popover-body">
@@ -271,7 +284,7 @@
                     <label class="_select-box sortLabel" for="">
                         Sort by:
                     </label>
-                    <select class="searchPageSelect" id="" name="sort_by">
+                    <select class="results-page-select" id="" name="sort_by">
 
                         <option name="Distance from Postcode ascending" id="sort_by_0" value="0">
                             Distance from Postcode ascending
@@ -292,7 +305,7 @@
                             User Rating descending
                         </option>
                     </select>
-                    <svg class="svg-inline--fa fa-chevron-down fa-w-14 blackChevron" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg><!-- <i class="fas fa-chevron-down blackChevron"></i> -->
+                    <svg class="svg-inline--fa fa-chevron-down fa-w-14 black-chevron" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg><!-- <i class="fas fa-chevron-down black-chevron"></i> -->
                 </div>
                 <hr>
                 <h3>Enquiry Form</h3>

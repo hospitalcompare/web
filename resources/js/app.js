@@ -5,28 +5,35 @@
  */
 
 // jquery imported through webpack.mix.js
+// VENDOR
 window.Popper = require('popper.js');
 import 'bootstrap';                                 // Required for bootstrap tooltips
 import 'bootstrap-select';                          // Searchable dropdowns
 import 'cookieconsent';                             // Cookie consent plugin
 import '@fortawesome/fontawesome-free/js/all.min';
+// import './scripts/vendor/stickybits';               // Position: sticky stuff https://www.npmjs.com/package/stickybits
+
+// UTILITIES
 import './scripts/scroll';                          // Smooth scroll
 import './scripts/postcode' ;                       // Postcode input
 import './scripts/enquiry' ;                        // Private hospital enquiry form
 window.Cookies = require('./scripts/cookies');      // Cookie/compare functionallity
-import './scripts/compare';                         // Slider for radius of proximity on search page
 import './scripts/gmapInit';                        // Gmaps nodal
-// window.Vue = require('vue');                     // Vue.js
+import './scripts/specialOffers';          // Toggle special offer tabs in solutions bar
 
-// Components
+import './scripts/sticky';                          // Make the search header sticky on scroll
+// window.Vue = require('vue');                     // Vue.js
+// COMPONENTS
+import './components/compare';                      // Slider for radius of proximity on search page
+// import './components/basic/video';               // Video controller TODO: reinstate video when we have one
 import './components/basic/specialoffer';           // Toggling special offer slide out
-// import './components/basic/video';                  // Video controller TODO: reinstate video when we have one
 import './components/basic/range';                  // Slider for radius of proximity on search page
 import './components/basic/popover';                // Trigger bootstrap tooltip
 import './components/basic/tooltip';                // Trigger bootstrap popover
 import './components/basic/modal';                  // Trigger bootstrap modal
 
-// Pages
+// PAGES
+import './pages/homepage';                       // Jquery used for the Homepage
 import './pages/resultspage';                       // Jquery used for the Results Page
 /**
  * The following block of code may be used to automatically register your

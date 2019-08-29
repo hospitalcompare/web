@@ -13,24 +13,24 @@
 @section('content')
 
     <form class="form-element">
-        <div class="filterParent">
-            <section class="filter">
-                <div class="postProx">
-                    <div class="postProxChild">
+        <div class="filter-parent">
+            <div class="filter container">
+                <div class="postcode-proximity">
+                    <div class="postcode-proximity-child">
                         @include('components.basic.input', ['placeholder' => 'Enter your postcode', 'inputClassName' => 'inputClass', 'value' => !empty(Request::input('postcode')) ? Request::input('postcode') : '' , 'name' => 'postcode', 'id' => 'input_postcode'])
                     </div>
-                    <div class="postProxChild">
+                    <div class="postcode-proximity-child">
                         @include('components.basic.range', ['label' => 'Within radius of:', 'min' => 10, 'max' => 600, 'value' => !empty(Request::input('radius')) ? Request::input('radius') : '', 'name' => 'radius', 'step' => 10])
                     </div>
                 </div>
-                <div class="selectProx">
+                <div class="select-proximity">
                     <div class="filter-section">
-                        <div class="postProxChild">
+                        <div class="filter-section-child">
                             @include('components.basic.select', [
                                 'showLabel' => true,
                                 'selectPicker' => 'true',
                                 'options' => $data['filters']['procedures'],
-                                'chevronFAClassName' => 'fa-chevron-down blackChevron',
+                                'chevronFAClassName' => 'fa-chevron-down black-chevron',
                                 'selectClass' => 'selectpicker highlight-search-dropdown',
                                 'placeholder'=>'Surgery Type',
                                 'name'=>'procedure_id',
@@ -54,9 +54,9 @@
                                              </p>'])
                             >?</a>
                         </div>
-                        <div class="postProxChild">
-                            {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'searchPageSelect', 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'placeholder' => 'Waiting time', 'resultsLabel' => 'resultsLabel'])--}}
-                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['waitingTimes'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Waiting time', 'name'=>'waiting_time', 'resultsLabel' => 'resultsLabel'])
+                        <div class="filter-section-child">
+                            {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'Waiting time', 'resultsLabel' => 'resultsLabel'])--}}
+                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['waitingTimes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Waiting time', 'name'=>'waiting_time', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
@@ -76,9 +76,9 @@
                                              </p>'])
                             >?</a>
                         </div>
-                        <div class="postProxChild">
-                            {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'searchPageSelect', 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'placeholder' => 'NHS choices user rating', 'resultsLabel' => 'resultsLabel'])--}}
-                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['userRatings'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'NHS Choices User Rating', 'name'=>'user_rating', 'resultsLabel' => 'resultsLabel'])
+                        <div class="filter-section-child">
+                            {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'NHS choices user rating', 'resultsLabel' => 'resultsLabel'])--}}
+                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['userRatings'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'NHS Choices User Rating', 'name'=>'user_rating', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
@@ -98,8 +98,8 @@
                                              </p>'])
                             >?</a>
                         </div>
-                        <div class="postProxChild">
-                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['qualityRatings'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Care Quality Rating', 'name'=>'quality_rating', 'resultsLabel' => 'resultsLabel'])
+                        <div class="filter-section-child">
+                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['qualityRatings'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Care Quality Rating', 'name'=>'quality_rating', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
@@ -119,8 +119,8 @@
                                              </p>'])
                             >?</a>
                         </div>
-                        <div class="postProxChild">
-                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect highlight', 'placeholder'=>'Hospital Type', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
+                        <div class="filter-section-child">
+                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Hospital Type', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
@@ -142,171 +142,156 @@
                         </div>
                     </div>
                     <div class="submit-section">
-                        <div class="postProxChild">
+                        <div class="submit-section-child">
                             @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-teal btn-s d-block btn-submit-results', 'button' => 'Update Results'])
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
 
-        <div class="sortParent">
-            <section class="sort">
-                <section class="sortBar">
-                    <div class="showSection">
+        <div class="sort-parent">
+            <div class="container">
+                <div class="sort-bar">
+                    <div class="show-section">
                         Showing {{count($data['hospitals'])}} out of {{$data['hospitals']->total()}} provider(s)
                     </div>
-                    <div class="sortSection">
-                        @include('components.basic.select', ['showLabel' => true, 'options' => $data['sortBy'], 'chevronFAClassName' => 'fa-chevron-down blackChevron', 'selectClass' => 'searchPageSelect select-sort-by', 'placeholder'=>'Sort by:', 'name'=>'sort_by', 'resultsLabel' => 'sortLabel'])
+                    <div class="sort-section">
+                        @include('components.basic.select', [
+                            'showLabel' => true,
+                            'options' => $data['sortBy'],
+                            'chevronFAClassName' => 'fa-chevron-down black-chevron',
+                            'selectClass' => 'results-page-select select-sort-by',
+                            'placeholder'=>'Sort by:',
+                            'name'=>'sort_by',
+                            'resultsLabel' => 'sortLabel'])
                     </div>
-                </section>
-            </section>
+                </div>
+            </div>
         </div>
     </form>
 
-    <div class="sortCategoriesParent">
-        <section class="sortCategoriesHeader">
+    <div id="sort_categories_parent" class="sort-categories-parent" >
+        <div class="sort-categories-header container">
             <div class="sort-categories-section-1"></div>
             <nav class="sort-categories-section-2">
-                <ul class="sortCatMenu">
+                <ul class="sort-categories-menu">
                     <li>
-                        <p>
-                            Waiting time <br>(NHS Funded)&nbsp;
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                        <p tabindex="0" data-offset="30px, 40px"
+                            @include('components.basic.popover', [
+                            'size'      => 'large',
+                            'placement' => 'top',
+                            'trigger'   => 'hover',
+                            'html'      => 'true',
+                            'content'   => '<p class="bold mb-0">
+                                                Care Quality Rating
+                                            </p>
+                                            <p>
+                                                The Care Quality Commission evaluates every registered healthcare location as Outstanding, Good, Requires Improvement or Inadequate. If the location hasn’t been reviewed yet, it will be marked ‘Not Yet Rated’.
+                                            </p>'])>Care Quality<br>Rating</p>
+                        <span title="Sort by this column"
+                              class="sort-arrow sort-care-quality-rating {{Request::input('sort_by') == 10 ? 'desc':'asc' }}"></span>
+                    </li>
+                    <li>
+                        <p tabindex="0" data-offset="30px, 40px"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'focus',
+                                'trigger'   => 'hover',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     Waiting Time (NHS Funded)
                                                 </p>
                                                 <p>
                                                     The number of weeks that 92 out of 100 people are waiting before their treatment starts. This is the NHS standard measure of waiting times.
-                                                </p>'])>?</a>
-                        </p>
+                                                </p>'])>Waiting time <br>(NHS Funded)</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p>NHS Choices <br> User Rating&nbsp;<br>
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                        <p tabindex="0" data-offset="30px, 40px"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'focus',
+                                'trigger'   => 'hover',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     NHS Choices User Rating
                                                 </p>
                                                 <p>
                                                     The user rating for the location as recorded on <a class="text-link" target="_blank" href="https://www.nhs.uk">www.nhs.uk</a>, from 1-5 in 0.5 increments, where available. If the location doesn’t exist on <a class="text-link" target="_blank" href="https://www.nhs.uk">www.nhs.uk</a> then it is marked ‘No Data’, if it exists but there are no ratings, it’s marked as ‘Not Yet Rated’.
-                                                </p>'])>?</a>
-                        </p>
+                                                </p>'])>NHS Choices <br> User Rating&nbsp;<br></p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p>
-                            % Operations<br>Cancelled&nbsp;<br>
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                        <p tabindex="0" data-offset="30px, 40px"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'focus',
+                                'trigger'   => 'hover',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     % of Operations Cancelled
                                                 </p>
                                                 <p>
                                                     The percentage of cancelled elective operations, compared to the NHS Average. Currently available for NHS hospitals Only.
-                                                </p>'])>?</a>
-                        </p>
+                                                </p>'])>% Operations<br>Cancelled</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p>
-                            Care Quality<br>Rating&nbsp;<br>
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                        <p tabindex="0" data-offset="30px, 40px"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'focus',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    Care Quality Rating
-                                                </p>
-                                                <p>
-                                                    The Care Quality Commission evaluates every registered healthcare location as Outstanding, Good, Requires Improvement or Inadequate. If the location hasn’t been reviewed yet, it will be marked ‘Not Yet Rated’.
-                                                </p>'])>?</a>
-                        </p>
-                        <span title="Sort by this column"
-                              class="sort-arrow sort-care-quality-rating {{Request::input('sort_by') == 10 ? 'desc':'asc' }}"></span>
-                    </li>
-                    <li>
-                        <p>
-                            Friends &<br>Family Rating&nbsp;
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
-                                @include('components.basic.popover', [
-                                'size'      => 'large',
-                                'placement' => 'top',
-                                'trigger'   => 'focus',
+                                'trigger'   => 'hover',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     Friends & Family Rating
                                                 </p>
                                                 <p>
                                                     This is the % of patients who would recommend the location to the friends or family if they required similar treatment.
-                                                </p>'])>?</a>
-                        </p>
+                                                </p>'])>Friends &<br>Family Rating</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-ff-rating {{Request::input('sort_by') == 12 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p>
-                            NHS<br>Funded Work&nbsp;
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                        <p tabindex="0" data-offset="30px, 40px"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'focus',
+                                'trigger'   => 'hover',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     NHS Funded Work
                                                 </p>
                                                 <p>
                                                     Indicates whether a Private hospital provides NHS funded services – you can be referred by your GP to a Private hospital as an alternative to your local NHS.
-                                                </p>'])>?</a>
-
-                        </p>
+                                                </p>'])>NHS<br>Funded Work</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 14 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p>
-                            Private<br>Self Pay&nbsp;<br>
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                        <p tabindex="0" data-offset="30px, 40px"
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'focus',
+                                'trigger'   => 'hover',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     Private Self Pay
                                                 </p>
                                                 <p>
                                                     Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
-                                                </p>'])>?</a>
-
-                        </p>
+                                                </p>'])>Private<br>Self Pay</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-self-pay {{Request::input('sort_by') == 16 ? 'desc':'asc' }}"></span>
                     </li>
                 </ul>
             </nav>
-            <div class="sortCatSection3 pt-2"></div>
-        </section>
+            <div class="sort-categories-section-3 pt-2"></div>
+        </div>
     </div>
 
     <div class="sortCategoriesResults">
@@ -320,17 +305,17 @@
                     'latitude'          => $d['address']['latitude'],
                     'longitude'         => $d['address']['longitude'],
                     'findLink'          => 'Find on map',
-                    'waitTime'          => !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? $d['waitingTime'][0]['perc_waiting_weeks'].' Weeks' : 0,
+                    'waitTime'          => !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? round($d['waitingTime'][0]['perc_waiting_weeks'], 1).' Weeks' : 0,
                     'userRating'        => !empty($d['rating']['avg_user_rating']) ? $d['rating']['avg_user_rating'] : 0,
                     'stars'             => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\Utils::getHtmlStars($d['rating']['avg_user_rating']) : "<img src='images/icons/dash-black.svg' alt='Dash icon'>",
                     'opCancelled'       => !empty($d['cancelledOp']['perc_cancelled_ops'])? $d['cancelledOp']['perc_cancelled_ops'].'%': 0,
                     'qualityRating'     => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : 0,
                     'FFRating'          => !empty($d['rating']['friends_family_rating']) ? $d['rating']['friends_family_rating'].'%' : 0,
-                    'NHSFunded'         => ($d['hospitalType']['name'] === 'Independent' && !empty($d['waitingTime'][0])) ? 1 : 0,
+                    'NHSFunded'         => ($d['hospitalType']['name'] === 'Independent' && !empty($d['waitingTime'][0]['perc_waiting_weeks'])) ? 1 : 0,
                     'privateSelfPay'    => $d['hospitalType']['name'] === 'Independent' ? 1 : 0,
                     'specialOffers'     => $d['special_offers'],
                     'btnText'           => 'Make an enquiry',
-                    'NHSClass'          => $d['hospitalType']['name'] == 'NHS' ? 'NHSHospital' : 'privateHospital',
+                    'NHSClass'          => $d['hospitalType']['name'] == 'NHS' ? 'nhs-hospital' : 'private-hospital',
                     'fundedText'        => ($d['hospitalType']['name'] == 'NHS') ? 'NHS Hospital': 'Private Hospital',
                     'url'               => $d['url'],
                     'modalContent'      => '<button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
@@ -347,7 +332,7 @@
                                                                         <img class="mr-3" src="images/alder-1.png">
                                                                     </div>
                                                                     <div class="modal-copy">
-                                                                        <p>Unfortunately this NHS Hospital has not enabled enquiries to be made from our site.</p>
+                                                                        <p>This NHS hospital does not respond to direct enquiries regarding NHS funded elective procedures prior to an appointment being confirmed.</p>
                                                                         <p>To make an enquiry with them please visit their website <a href="http://' . $d['url'] . '" target="_blank">here</a> or by clicking the link below or you can discuss making an enquiry with your GP.</p>
                                                                     </div>
 
@@ -364,7 +349,7 @@
 
                                                                 <div class="text-white modal-copy">
                                                                     <p>Remember you can make an enquiry with a Private  Hospital of your choice to have your procedure performed by them, paid for by the NHS, at no greater cost to the tax payer.</p>
-                                                                    <p>To do this you can refresh your search by clicking <a href="/results-page?hospital_type=1">here</a></p>
+                                                                    <p>To do this you can refresh your search by clicking <a class="text-link" href="/results-page?hospital_type=1">here</a></p>
                                                                 </div>
 {{--                                                                <div class="btn-area">--}}
 {{--                                                                    <a  data-toggle="modal"--}}
@@ -383,7 +368,7 @@
         @endif
     </div>
 
-    <div class="pagination">
+    <div class="pagination-wrap">
         @if(!empty($data['hospitals']))
             {{
                 $data['hospitals']->appends([
@@ -401,7 +386,9 @@
     </div>
 
     {{--  Compare bar  --}}
-    @include('components.compare')
+{{--    @include('components.compare')--}}
+    {{-- New comparebar - solutions bar --}}
+    @include('components.solutionsbar')
     {{--  Modal for 'make an enquiry'  --}}
     @include('components.modals.modalenquirenhs')
     {{--  Modal for special offers  --}}

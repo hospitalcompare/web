@@ -1,8 +1,11 @@
-.pagination {
-    margin: auto;
+.pagination-wrap {
+    margin-top: 30px;
 }
 
 .pagination {
+    display: flex;
+    justify-content: center;
+
     .page-item {
         &:first-child,
         &:last-child {

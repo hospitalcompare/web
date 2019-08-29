@@ -1,8 +1,7 @@
 <div class="modal-inner">
 
     <h3 class="text-center text-white">Enquire now for <span class="hospital-title">this hospital</span></h3>
-    <p class="text-white text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+    <p class="text-white text-center"></p>
     <div class="form-wrap d-flex">
         <div class="img-wrap mr-4">
             <img width="173" height="158" src="images/alder-1.png">
@@ -22,7 +21,7 @@
                             ['id'=>'Prof.', 'name'=>'Prof.'],
                             ['id'=>'Rev.', 'name'=>'Rev.']
                         ],
-                        'chevronFAClassName' => 'fa-chevron-down blackChevron',
+                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
                         'selectClass' => 'form-control',
                         'placeholder' => 'Title*',
                         'name'=>'title',
@@ -70,7 +69,7 @@
                 <div class="col col-6">
                     @include('components.basic.select', [
                         'options' => $procedures,
-                        'chevronFAClassName' => 'fa-chevron-down blackChevron',
+                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
                         'selectClass' => 'form-control',
                         'placeholder' => 'Surgery Type',
                         'name'=>'procedure_id',
@@ -78,9 +77,7 @@
                 </div>
                 <div class="col col-6 checkbox">
                     <input required name="gdpr" type="checkbox" id="gdpr">
-                    <label for="gdpr">Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.</label>
+                    <label for="gdpr">Please accept the Terms & Conditions before submitting the form.</label>
                 </div>
                 <div class="col-12 btn-area text-center">
                     <a id="btn-submit" class="btn btn-icon btn-enquire">Make an enquiry</a>

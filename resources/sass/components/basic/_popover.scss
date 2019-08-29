@@ -1,13 +1,18 @@
 // Popover
 
 .popover {
+
+}
+
+
+.popover {
     /* Style for "For privat" */
     color: $black;
     font-size: 10px;
     font-weight: 400;
     letter-spacing: -0.5px;
     line-height: 10.2px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.16);
+    //box-shadow: 0 0 5px rgba(0, 0, 0, 0.16);
     border-radius: 15px;
     border: none;
     text-align: center;
@@ -20,6 +25,35 @@
     .popover-body {
         p:last-child {
             margin-bottom: 0;
+        }
+    }
+
+    &-regular {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.16);
+
+        .arrow {
+            background-image: url('../images/speech-point-small.svg');
+            @include icon-bg-center(cover);
+            z-index: 5;
+            top: auto;
+            bottom: calc(100% - 8px);
+            width: 29px;
+            height: 25px;
+            padding: 3px 3px 0;
+
+            // The pseudo element is to hide the bottom box shadow on the arrow
+            &:after {
+                display: none;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: calc(100% - 8px);
+                width: 29px;
+                height: 10px;
+                background-color: #fff;
+            }
         }
     }
 

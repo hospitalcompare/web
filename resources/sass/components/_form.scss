@@ -4,8 +4,6 @@ select,
 optgroup,
 textarea {
     margin: 0;
-    margin-bottom: 0px;
-    margin-left: 0px;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
@@ -31,14 +29,6 @@ textarea {
     @include flex;
 }
 
-.select-box {
-    color: $darkerGrey;
-    @include flexBasis;
-    position: relative;
-    left: 40px;
-    top: 10px;
-}
-
 input:not([type="range"]):not([type="submit"]):not([type="checkbox"]),
 select {
     border: 2px solid $darkestWhite; /*Removes border*/
@@ -55,7 +45,7 @@ select::-ms-expand {
 }
 
 .select-wrapper {
-    padding-left: 0px;
+    padding-left: 0;
     overflow: hidden;
 }
 

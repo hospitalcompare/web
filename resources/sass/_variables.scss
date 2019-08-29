@@ -46,28 +46,20 @@ $borderVideo: #707070;
 $borderGrey: #d7d7d7;
 
 // Body
-$body-bg: #f8fafc;
+$body-bg: #fff;
 $body-color: $darkerGrey;
 
 // Full width
 $fullWidth: 100%;
 //center on page
 
-$pageWrap: 1180px;
+$pageWrap: auto;
 $centerOnPage: auto;
-
-
-//POSITIONS
-$relative: relative;
-$absolute: absolute;
-
 
 // ************** BS overrides ****************** //
 $btn-border-radius: 100px;
 $btn-transition: $transition;
 $btn-border-width: 0;
-
-
 
 // Popovers
 //$popover-border-width: 0;
@@ -81,6 +73,7 @@ $popover-arrow-color: #fff;
 // Modal
 $modal-inner-padding: 0;
 $modal-content-border-radius: 16px;
+$modal-content-border-width: 0;
 
 // Modal close buttons
 $close-text-shadow: 0;

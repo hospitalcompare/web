@@ -267,6 +267,34 @@
             }
         }
 
+        &.btn-go {
+            color: $white;
+            height: 20px;
+            line-height: 20px;
+            font-size: 12px;
+            letter-spacing: -0.6px;
+            padding: 0 20px 0 12px;
+            background-color: #000;
+
+            &:after {
+                background-image: url('../images/icons/up-arrow.svg');
+                @include icon-bg-center(30%);
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                transform: rotate(90deg);
+            }
+
+            &:hover {
+                color: $white;
+
+            }
+        }
+
         &.btn-enquire {
             border-radius: 10px;
             background: $blue;
@@ -287,8 +315,8 @@
                 background-image: url('../images/icons/circle-check.svg');
                 @include icon-bg-center;
                 position: absolute;
-                left: 0px;
-                top: 0px;
+                left: 0;
+                top: 0;
                 width: 40px;
                 height: 40px;
             }
@@ -321,8 +349,8 @@
                 background-image: url('../images/icons/circle-check-pink.svg');
                 @include icon-bg-center;
                 position: absolute;
-                left: 0px;
-                top: 0px;
+                left: 0;
+                top: 0;
                 width: 22px;
                 width: 40px;
                 height: 40px;
@@ -336,6 +364,40 @@
                 &:before {
                     background-image: url('../images/icons/circle-check.svg');
 
+                }
+            }
+        }
+
+        // Button inside special offer tabs in solutions bar
+        &.btn-enquire-now {
+            font-family: "SofiaPro-Bold", sans-serif;
+            color: $pink;
+            background-color: $white;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            letter-spacing: -0.6px;
+            padding: 0 30px 0 12px;
+
+            &:after {
+                background-image: url('../images/icons/up-arrow-pink.svg');
+                @include icon-bg-center(30%);
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                transform: rotate(90deg);
+            }
+
+            &:hover {
+                color: $white;
+                background-color: $pink;
+
+                &:after {
+                    background-image: url('../images/icons/up-arrow.svg');
                 }
             }
         }
@@ -414,28 +476,24 @@
         }
 
         // Button on the floating green bar
-        &.btn-special-tab {
-            padding: 0px 20px 0px 65px;
+
+
+        // Back to top button
+        &.btn-back-to-top {
+            padding: 0 50px 0 20px;
             color: $white;
             height: 60px;
             line-height: 60px;
-            background-color: $pink;
-            min-width: 160px;
-            //width: 190px;
+            background-color: $teal;
+            min-width: 182px;
             border-radius: 10px 10px 0 0;
-            background-image: linear-gradient(260deg, #1b71f3 0%, #00cecd 100%);
-            font-size: 18px;
-            font-weight: 500;
-            letter-spacing: -0.9px;
+            font-size: 22px;
+            letter-spacing: -0.66px;
 
-            &:before {
-                background-image: url('../images/icons/special.svg');
-                @include icon-bg-center(50%);
-                left: 0;
-                top: 0;
-                width: 60px;
-                height: 60px;
-                line-height: 60px;
+            svg {
+                position: absolute;
+                right: 20px;
+                top: 20px;
             }
 
             &:hover {
@@ -446,7 +504,7 @@
 
 
     //gradient button
-    &.btn {
+    &.btn-grad {
         &:hover {
             background-position: right !important;
         }
@@ -468,4 +526,8 @@
     &:hover {
         background-position: right;
     }
+}
+
+.btn-link:hover {
+    color: $darkerGrey;
 }

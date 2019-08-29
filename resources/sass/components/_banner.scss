@@ -7,7 +7,6 @@
 
 .banner {
     width: $fullWidth;
-    min-height: 621px;
     background-image: url(/images/banner.jpg);
     margin: $centerOnPage;
     background-repeat: no-repeat;
@@ -31,7 +30,7 @@
     @include flex;
     width: $pageWrap;
     margin: auto;
-    padding: 42px 0;
+    padding: 45px 0;
     color: $white; //inherited value
 }
 
@@ -121,7 +120,7 @@
 
 .aquaChevron {
     color: $aqua;
-    position: $absolute;
+    position: absolute;
     left: 420px;
     top: 25px;
 }

@@ -7,56 +7,66 @@ class Utils
     //Sort By
     const sortBys = [
         [
-            'id' => '0',
-            'name'  => 'Default sorting'
+            'id'        => '0',
+            'name'      => 'Default sorting'
         ],[
-            'id' => '1',
-            'name'  => 'Distance from Postcode ascending'
+            'id'        => '1',
+            'name'      => 'Distance',
         ],[
-            'id' => '2',
-            'name'  => 'Distance from Postcode descending'
+            'id'        => '2',
+            'name'      => 'Distance',
+            'class'     => 'd-none'
         ],[
-            'id' => '3',
-            'name'  => 'Waiting time ascending'
+            'id'        => '3',
+            'name'      => 'Waiting time',
+            'class'     => 'd-none'
         ],[
-            'id' => '4',
-            'name'  => 'Waiting time descending'
+            'id'        => '4',
+            'name'      => 'Waiting time'
         ],[
-            'id' => '5',
-            'name'  => 'User Rating ascending'
+            'id'        => '5',
+            'name'      => 'User Rating',
+            'class'     => 'd-none'
         ],[
-            'id' => '6',
-            'name'  => 'User Rating descending'
+            'id'        => '6',
+            'name'      => 'User Rating'
         ],[
-            'id' => '7',
-            'name'  => 'Operations Cancelled ascending'
+            'id'        => '7',
+            'name'      => 'Operations Cancelled'
         ],[
-            'id' => '8',
-            'name'  => 'Operations Cancelled descending'
+            'id'        => '8',
+            'name'      => 'Operations Cancelled',
+            'class'     => 'd-none'
         ],[
-            'id' => '9',
-            'name'  => 'Care Quality Rating ascending'
+            'id'        => '9',
+            'name'      => 'Care Quality Rating',
+            'class'     => 'd-none'
         ],[
-            'id' => '10',
-            'name'  => 'Care Quality Rating descending'
+            'id'        => '10',
+            'name'      => 'Care Quality Rating'
         ],[
-            'id' => '11',
-            'name'  => 'Friends & Family Rating ascending'
+            'id'        => '11',
+            'name'      => 'Friends & Family Rating',
+            'class'     => 'd-none'
         ],[
-            'id' => '12',
-            'name'  => 'Friends & Family Rating descending'
+            'id'        => '12',
+            'name'      => 'Friends & Family Rating'
         ],[
-            'id' => '13',
-            'name'  => 'NHS Funded Work ascending'
+            'id'        => '13',
+            'name'      => 'NHS Funded Work',
+            'class'     => 'd-none'
         ],[
-            'id' => '14',
-            'name'  => 'NHS Funded Work descending'
+            'id'        => '14',
+            'name'      => 'NHS Funded Work',
+            'class'     => 'd-none'
         ],[
-            'id' => '15',
-            'name'  => 'Private Self Pay ascending'
+            'id'        => '15',
+            'name'      => 'Private Self Pay',
+            'class'     => 'd-none'
         ],[
-            'id' => '16',
-            'name'  => 'Private Self Pay descending'
+            'id'        => '16',
+            'name'      => 'Private Self Pay',
+            'class'     => 'd-none'
         ]
     ];
 
@@ -66,17 +76,14 @@ class Utils
             'id' => '0',
             'name'  => 'View All'
         ],[
-            'id' => '2',
-            'name'  => 'Up to 2 Weeks'
+            'id' => '18',
+            'name'  => 'Up to 18 Weeks'
         ],[
-            'id' => '4',
-            'name'  => 'Up to 4 Weeks'
+            'id' => '21',
+            'name'  => 'Up to 21 Weeks'
         ],[
-            'id' => '6',
-            'name'  => 'Up to 6 Weeks'
-        ],[
-            'id' => '8',
-            'name'  => 'Up to 8 Weeks'
+            'id' => '24',
+            'name'  => 'Up to 24 Weeks'
         ]
     ];
 
@@ -116,10 +123,10 @@ class Utils
             'name'  => 'Good or better'
         ],[
             'id' => '3',
-            'name'  => 'Inadequate or better'
+            'name'  => 'Requires Improvement or better'
         ],[
             'id' => '4',
-            'name'  => 'Requires Improvement or better'
+            'name'  => 'Inadequate or better'
         ]
     ];
 
@@ -141,7 +148,7 @@ class Utils
     const radius = [
         [
             'id' => 600,
-            'name'  => 'National'
+            'name'  => 'Countrywide'
         ],[
             'id' => 100,
             'name'  => 'Up to 100 miles'

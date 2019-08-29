@@ -28,6 +28,7 @@
 //PAGES
 @import 'pages/homePage';
 @import 'pages/resultsPage';
+@import 'pages/content';
 
 // TEMPLATE FILES
 @import 'layout/header';
@@ -41,8 +42,9 @@
 @import 'components/healthChoice';
 @import 'components/logo';
 @import 'components/pagination';
-@import 'components/compare';
+@import 'components/solutions';
 @import 'components/form';
+@import 'components/accordion';
 
 // BASIC COMPONENTS
 @import 'components/banner';
