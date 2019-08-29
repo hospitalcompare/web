@@ -120,15 +120,7 @@
                 <span class="d-none" id="item_nhs_funded_{{$id}}">{!! $NHSFunded !!}</span>
             </div>
             <div class="sort-categories-section-2__child flex-column">
-                <p
-{{--                    @includeWhen($d['hospitalType']['name'] == 'Independent', 'components.basic.popover', [--}}
-{{--                        'trigger'           => 'hover',--}}
-{{--                        'hideDelay'         => '1000',--}}
-{{--                        'content'           => '<p>For private self-pay<br> Pricing click--}}
-{{--                                                    <a tabindex class="text-link modal-enquire-trigger" role="button" >here</a>--}}
-{{--                                                  </p>',--}}
-{{--                        'html'              => 'true'])--}}
-                >
+                <p>
                     {!! !empty($privateSelfPay) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>"  !!}
                 </p>
                 @if($NHSClass == 'privateHospital')
@@ -150,7 +142,7 @@
         <div class="sort-categories-section-3 d-flex flex-column justify-content-center">
             <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between"
                  @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
-                @if($NHSClass == 'privateHospital')
+                @if($NHSClass == 'private-hospital')
                     @include('components.basic.modalbutton', [
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
@@ -159,7 +151,7 @@
                     'target'            => 'blank',
                     'button'            => $btnText,
                     'id'                => 'modal_button_private_enquiry_'.$id])
-                @elseif($NHSClass == 'NHSHospital')
+                @elseif($NHSClass == 'nhs-hospital')
                     @include('components.basic.modalbutton', [
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,

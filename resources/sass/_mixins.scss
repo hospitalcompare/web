@@ -257,6 +257,7 @@
         padding-top: ($height / $width) * 100%;
     }
     >.content {
+        width: 100%;
         @include v-h-c;
     }
 }

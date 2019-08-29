@@ -12,8 +12,17 @@
 
 @section('content')
     <main>
+
+        <div class="section py-3 ">
+            <div class="container-fluid px-0">
+                <h2>Solutions bar  </h2>
+                @include('components.solutionsbar', ['position' => 'static'])
+            </div>
+        </div>
         <div class="section py-3">
             <div class="container">
+                <h2>Dr Stevini</h2>
+                @include('components.doctor')
                 <h2>Tooltips</h2>
                 <br>
                 <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top"
@@ -48,6 +57,10 @@
                                         procedure at. Enter your provider and policy name to find the best hospital for you.
                                     </p>'])>?</a>
                 <hr>
+                <h3>Enquire now button</h3>
+                @include('components.basic.button', [
+                    'classTitle' => 'btn btn-icon btn-enquire-now mr-2',
+                    'button' => 'Enquire Now'])
                 <h3>Special offer button</h3>
                 @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer mr-2', 'button' => 'Special Offers'])
                 <h3>Special offer button reversed</h3>

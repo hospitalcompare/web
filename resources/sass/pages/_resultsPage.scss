@@ -1,4 +1,5 @@
 .results-page {
+    margin-bottom: 50px;
 
     .filter-section {
         flex-basis: 85%;
@@ -297,7 +298,8 @@
         //line-height: 19.2px;
     }
 
-    .NHSHospital, .privateHospital {
+    .nhs-hospital,
+    .private-hospital {
         position: absolute;
         top: 0;
         width: 60px;
@@ -305,7 +307,7 @@
         transform: rotate(180deg);
     }
 
-    .NHSHospital {
+    .nhs-hospital {
 
         border-bottom: solid 30px $darkBlue;
         border-right: solid 30px $darkBlue;
@@ -314,15 +316,15 @@
 
     }
 
-    .privateHospital {
+    .private-hospital {
         border-bottom: solid 30px $hotpink;
         border-right: solid 30px $hotpink;
         border-left: solid 30px transparent;
         border-top: solid 30px transparent;
     }
 
-    .NHSHospital,
-    .privateHospital {
+    .nhs-hospital,
+    .private-hospital {
         text-align: center;
 
         p {
@@ -353,7 +355,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 5;
 }
 
 
