@@ -10,11 +10,11 @@
         </div>
         <div class="offer-text ml-4">
             <div class="closed-text">
-                <p class="offer-title mb-0"><strong>{{ $headerText['closed']['title'] }}</strong></p>
+                <p class="offer-title mb-0">{{ $headerText['closed']['title'] }}</p>
                 <p class="offer-subtitle mb-0">{{ $headerText['closed']['subtitle'] }}</p>
             </div>
             <div class="open-text">
-                <p class="hospital-name mb-0"><strong>{{ $headerText['open']['title'] }}</strong></p>
+                <p class="hospital-name mb-0">{{ $headerText['open']['title'] }}</p>
                 <p class="distance mb-0">{{ $headerText['open']['subtitle'] }}</p>
             </div>
         </div>
