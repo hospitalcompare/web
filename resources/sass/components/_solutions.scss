@@ -134,11 +134,11 @@
 
 .special-offer-tab {
     color: $white;
-    background-image: linear-gradient(246deg, #8e00fe 0%, #77a9f5 100%);
+    background-image: linear-gradient(264deg, #1b71f3 0%, #8f00ff 0%, #a346ec 52%, #b687db 100%);
     width: 340px;
 
     &.pink {
-        background-image: linear-gradient(252deg, #d57ca6 0%, #ed0373 100%);
+        background-image: linear-gradient(249deg, #1b71f3 0%, #ed0373 0%, #cc6d9b 100%);
     }
     //width: 300px;
     border-radius: 10px 10px 0 0;
@@ -148,7 +148,7 @@
 
     .special-offer-header {
         position: relative;
-        padding: 0 50px 0 20px;
+        padding: 0 50px 0 30px;
         height: 65px;
         cursor: pointer;
 
@@ -213,6 +213,6 @@
 }
 
 .special-offer-body {
-    padding: 0 25px 25px 100px;
+    padding: 0 25px 25px 80px;
     display: none;
 }

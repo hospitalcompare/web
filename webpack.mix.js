@@ -27,10 +27,10 @@ mix.webpackConfig({
 });
 
 //Copy all the images that are used on the Web Application to the right folder ( public/images )
-mix.copyDirectoryWatched('resources/images', 'public/images');
-mix.copyDirectoryWatched('resources/video', 'public/video');
-mix.copyDirectoryWatched('resources/fonts', 'public/fonts');
-mix.copyDirectoryWatched('resources/downloads', 'public/downloads');
+mix.copyDirectory('resources/images', 'public/images');
+mix.copyDirectory('resources/video', 'public/video');
+mix.copyDirectory('resources/fonts', 'public/fonts');
+mix.copyDirectory('resources/downloads', 'public/downloads');
 mix.copy('node_modules/stickybits/dist/stickybits.min.js', 'public/js/stickybits.js');
 
 // Add prefixes to css rules and fix bugs with flexbox
