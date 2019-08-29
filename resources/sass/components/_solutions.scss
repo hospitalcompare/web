@@ -11,7 +11,7 @@
         width: 100%;
         margin: 0 auto;
         padding: 0 20px;
-        height: 60px;
+        height: 50px;
 
         // Doctor illustration
         .doctor {
@@ -135,6 +135,7 @@
 .special-offer-tab {
     color: $white;
     background-image: linear-gradient(246deg, #8e00fe 0%, #77a9f5 100%);
+    width: 340px;
 
     &.pink {
         background-image: linear-gradient(252deg, #d57ca6 0%, #ed0373 100%);
@@ -148,12 +149,21 @@
     .special-offer-header {
         position: relative;
         padding: 0 50px 0 20px;
-        height: 80px;
+        height: 65px;
+        cursor: pointer;
 
         .offer-text {
-            min-width: 250px;
-            font-size: 16px;
+            margin-left: 10px;
             line-height: 1;
+            max-width: 200px;
+
+            .offer-title {
+                font-size: 18px;
+            }
+
+            .offer-subtitle {
+                font-size: 14px;
+            }
         }
 
         .open-text {
@@ -161,12 +171,12 @@
         }
 
         .image-wrapper {
-            width: 55px;
-            height: 50px;
-            @include aspect-ratio(67px, 62px);
+            width: 48px;
+            height: 44px;
+            @include aspect-ratio(48px, 44px);
 
             .label {
-                display: none;
+                //display: none;
                 width: 10px;
                 height: 10px;
                 border-width: 10px;
@@ -177,11 +187,10 @@
         span {
             position: absolute;
             right: 20px;
-            top: 30px;
+            top: 25px;
             width: 20px;
             height: 20px;
             line-height: 60px;
-            cursor: pointer;
             transition: $transition;
         }
 
