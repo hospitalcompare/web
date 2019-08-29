@@ -41,7 +41,7 @@
                 <p>
                     {!! !empty($waitTime) ? $waitTime : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                 </p>
-                @if($NHSClass == 'privateHospital')
+                @if($NHSClass == 'private-hospital')
                     <span>
                         <small>Click for
                             @include('components.basic.modalbutton', [
@@ -123,7 +123,7 @@
                 <p>
                     {!! !empty($privateSelfPay) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>"  !!}
                 </p>
-                @if($NHSClass == 'privateHospital')
+                @if($NHSClass == 'private-hospital')
                 <span>
                     <small>Click for
                         @include('components.basic.modalbutton', [
