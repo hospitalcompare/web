@@ -1,5 +1,5 @@
 <div class="compare-hospitals-bar {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
-    <div class="compare-hospitals-header d-flex justify-content-between align-items-end container">
+    <div class="compare-hospitals-header d-flex justify-content-between align-items-end">
         @include('components.doctor')
         <div class="compare-button-title d-flex h-100 align-items-center ml-5 mr-auto">
             <p>Hospital Shortlist&nbsp;(<span id="compare_number">0</span>)<span class="compare-arrow ml-3"></span></p>
