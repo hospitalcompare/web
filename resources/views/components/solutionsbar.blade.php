@@ -14,7 +14,7 @@
                         ],
                         'closed' => [
                             'title' => 'NHS funded operation',
-                            'subtitle' => 'At a private hospital of your choice'
+                            'subtitle' => 'at Outstanding hospital 27 miles away'
                         ]
                     ],
                     'bulletPoints' => [
@@ -33,7 +33,7 @@
                        ],
                        'closed' => [
                            'title' => 'Operation done in 2 weeks',
-                           'subtitle' => 'Outstanding hospital close to you'
+                           'subtitle' => 'Outstanding hospital 29 miles away'
                        ]
                    ],
                    'bulletPoints' => [
