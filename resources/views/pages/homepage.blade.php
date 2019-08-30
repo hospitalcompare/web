@@ -197,7 +197,7 @@
                             <small>
                                 *your legal right to choose may be restricted in some circumstances. For more information see <a
                                     class="text-link"
-                                    href="/your-rights">Your Rights</a>
+                                    href="/your-rights">your rights</a>
                             </small>
                         </p>
                     </div>

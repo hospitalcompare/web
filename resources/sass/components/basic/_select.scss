@@ -54,11 +54,13 @@
 }
 
 .results-page {
-    .dropdown-toggle,
-    .results-page-select {
-        max-width: 158px;
-        option {
-            background-color: $white !important;
+    .filter-section {
+        .dropdown-toggle,
+        .results-page-select {
+            max-width: 162px;
+            option {
+                background-color: $white !important;
+            }
         }
     }
 }

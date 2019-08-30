@@ -57,7 +57,7 @@
                 <div class="col col-6">
                     <input required name="postcode" type="text" class="form-control" id="postcode" placeholder="Postcode*">
                 </div>
-                <div class="col col-12"><p class="text-white">What is the nature of your enquiry?</p></div>
+                <div class="col col-12"><p class="text-white m-0">What is the nature of your enquiry?</p></div>
                 <div class="col col-12 checkbox">
                     <input required name="prices" type="checkbox" id="prices">
                     <label for="prices">I want to make an enquiry about pricing.</label>
