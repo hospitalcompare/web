@@ -57,6 +57,15 @@
                 <div class="col col-6">
                     <input required name="postcode" type="text" class="form-control" id="postcode" placeholder="Postcode*">
                 </div>
+                <div class="col col-12 checkbox">
+                    <input required name="prices" type="checkbox" id="prices">
+                    <label for="prices">I want to make an enquiry about pricing.</label>
+                </div>
+                <div class="col col-12 checkbox">
+                    <input required name="waiting_times" type="checkbox" id="waiting_times">
+                    <label for="waiting_times">I want to make an enquiry about current waiting times.</label>
+                </div>
+
                 <div class="col col-12">
 {{--                    <label for="additional_information">Additional information</label>--}}
                     <textarea
@@ -77,7 +86,7 @@
                 </div>
                 <div class="col col-6 checkbox">
                     <input required name="gdpr" type="checkbox" id="gdpr">
-                    <label for="gdpr">Please accept the Terms & Conditions before submitting the form.</label>
+                    <label class="small-print" for="gdpr">Please accept the Terms & Conditions before submitting the form.</label>
                 </div>
                 <div class="col-12 btn-area text-center">
                     <a id="btn-submit" class="btn btn-icon btn-enquire">Make an enquiry</a>

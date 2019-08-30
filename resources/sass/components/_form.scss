@@ -154,13 +154,17 @@ select::-ms-expand {
 
     label {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         cursor: pointer;
         color: $white;
-        font-size: 10px;
-        font-weight: 400;
-        letter-spacing: -0.5px;
-        line-height: 12px;
+        margin-bottom: 12px;
+
+        &.small-print {
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            line-height: 12px;
+        }
 
         &:before {
             content: "";

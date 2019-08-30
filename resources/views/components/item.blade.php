@@ -118,7 +118,7 @@
                                 'hrefValue'         => $url,
                                 'hospitalTitle'     => $title,
                                 'modalTarget'       => '#hc_modal_enquire_private',
-                                'classTitle'        => 'text-link',
+                                'classTitle'        => 'text-link enquire-prices',
                                 'target'            => 'blank',
                                 'button'            => 'prices'])
                     </small>
@@ -129,7 +129,7 @@
                                         'hrefValue'         => $url,
                                         'hospitalTitle'     => $title,
                                         'modalTarget'       => '#hc_modal_enquire_private',
-                                        'classTitle'        => 'text-link',
+                                        'classTitle'        => 'text-link enquire-times',
                                         'target'            => 'blank',
                                         'button'            => 'current waiting time'])
                             </small>
