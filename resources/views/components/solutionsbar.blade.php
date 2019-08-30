@@ -20,7 +20,8 @@
                     'bulletPoints' => [
                         'Outstanding CQC rating',
                         '5 star NHS choices rating',
-                        '14 wks NHS funded waiting time']
+                        '14 wks NHS funded waiting time'],
+                    'offerPrice' => '6999'
                 ])
             </li>
             <li class="d-block">
@@ -39,7 +40,8 @@
                    'bulletPoints' => [
                        'Operation done in 2 wks',
                        'Outstanding CQC rating',
-                       '5 star NHS choices rating']
+                       '5 star NHS choices rating'],
+                   'offerPrice' => '8499'
                ])
             </li>
             {{--            <li class="d-block ml-3">--}}

@@ -27,6 +27,7 @@
                     <li>{{ $bulletPoint }}</li>
                 @endforeach
             </ul>
+            <div class="offer-price">Total cost <strong>£{{ $offerPrice }}</strong></div>
         </div>
         <div class="btn-area text-right">
             @include('components.basic.modalbutton', [
