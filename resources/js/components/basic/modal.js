@@ -27,5 +27,16 @@ $(document).ready(function () {
         modal.find("input[name='hospital_id']").val(hospitalId);
     });
 
+    // Toggle the additional info box when clicking on the 'other' checkbox
+        $('#other').on('click', function(){
+            var $info = $('#col_additional_information');
+            $info.toggleClass('open');
+            // if($("#other").is(':checked')) {
+            //     $info.addClass()
+            // }
+        })
+
+
+
 
 });

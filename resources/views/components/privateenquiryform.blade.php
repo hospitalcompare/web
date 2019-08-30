@@ -71,7 +71,7 @@
                     <label for="other">Something else</label>
                 </div>
 
-                <div class="col col-12">
+                <div class="col col-12" id="col_additional_information">
 {{--                    <label for="additional_information">Additional information</label>--}}
                     <textarea
                         class="form-control"

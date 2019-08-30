@@ -185,8 +185,16 @@ select::-ms-expand {
     }
 }
 
-#additional_information {
-    display: none;
+#col_additional_information {
+    //height: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: $transition;
+
+    &.open {
+        //height: auto;
+        max-height: 500px;
+    }
 }
 
 textarea {
