@@ -4,7 +4,7 @@
     <div class="special-offer-header d-flex align-items-center">
         <div class="image-wrapper">
             <img class="content" width="55" height="50" alt="Image of The Christie Main Site" src="{{ asset('../images/alder-1.png') }}">
-            <div class="{{ $hospitalType == "private" ? '' }} label">
+            <div class="{{ $hospitalType == "private" ? 'private-hospital' : 'nhs-hospital' }} label">
 {{--                <p>NHS Hospital</p>--}}
             </div>
         </div>
