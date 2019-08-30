@@ -116,7 +116,7 @@ select::-ms-expand {
         border-radius: 10px;
         border: 2px solid $darkestWhite;
         background-color: #ffffff;
-        margin-bottom: 12px;
+
     }
 
     select.form-control {
@@ -130,7 +130,13 @@ select::-ms-expand {
         .col {
             padding-left: 6px;
             padding-right: 6px;
+            margin-bottom: 12px;
         }
+    }
+
+    // Boostrap select button
+    .dropdown-toggle {
+        height: 44px;
     }
 }
 
@@ -157,7 +163,7 @@ select::-ms-expand {
         align-items: center;
         cursor: pointer;
         color: $white;
-        margin-bottom: 12px;
+        margin-bottom: 0;
 
         &.small-print {
             font-size: 10px;
@@ -202,7 +208,7 @@ textarea {
     border-radius: 10px;
     border: 2px solid $darkestWhite;
     background-color: #ffffff;
-    margin-bottom: 12px;
+
 
     @include placeholder {
         color: $darkerGrey;

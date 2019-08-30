@@ -84,9 +84,10 @@
                     @include('components.basic.select', [
                         'options' => $procedures,
                         'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                        'selectClass' => 'form-control',
+                        'selectClass' => 'selectpicker',
                         'placeholder' => 'Surgery Type',
                         'name'=>'procedure_id',
+                        'selectPicker' => 'true',
                         'resultsLabel' => 'resultsLabel'])
                 </div>
                 <div class="col col-6 checkbox">
