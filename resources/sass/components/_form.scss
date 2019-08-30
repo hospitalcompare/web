@@ -185,6 +185,10 @@ select::-ms-expand {
     }
 }
 
+#additional_information {
+    display: none;
+}
+
 textarea {
     width: 100%;
     border-radius: 10px;
