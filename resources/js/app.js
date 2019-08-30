@@ -24,7 +24,10 @@ import './scripts/specialOffers';          // Toggle special offer tabs in solut
 import './scripts/sticky';                          // Make the search header sticky on scroll
 // window.Vue = require('vue');                     // Vue.js
 // COMPONENTS
-import './components/compare';                      // Slider for radius of proximity on search page
+import './components/compare';
+import './components/doctor';
+
+// Components > Basic
 // import './components/basic/video';               // Video controller TODO: reinstate video when we have one
 import './components/basic/specialoffer';           // Toggling special offer slide out
 import './components/basic/range';                  // Slider for radius of proximity on search page
