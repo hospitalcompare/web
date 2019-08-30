@@ -301,8 +301,7 @@ class Utils
     /**
      * Validates a given array with the given value
      *
-     * @param $item
-     * @param $searched
+     * @param $value
      * @return mixed
      */
     public static function validateValue($value) {

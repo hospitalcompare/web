@@ -170,23 +170,25 @@ class ApiController {
      */
     public function enquiry() {
         //Get the request and load it as variables
-        $request               = \Request::all();
-        $procedureId           = (!empty($request['procedure_id']) && $request['procedure_id'] > 0) ? $request['procedure_id'] : null;
-        $hospitalId            = $request['hospital_id'];
-        $title                 = $request['title'];
-        $firstName             = $request['first_name'];
-        $lastName              = $request['last_name'];
-        $email                 = $request['email'];
-        $phoneNumber           = $request['phone_number'];
-        $postcode              = $request['postcode'];
-        $dob                   = $request['date_of_birth'];
-        $additionalInformation = $request['additional_information'];
+        $request                = \Request::all();
+        $procedureId            = (!empty($request['procedure_id']) && $request['procedure_id'] > 0) ? $request['procedure_id'] : null;
+        $hospitalId             = $request['hospital_id'];
+        $title                  = $request['title'];
+        $firstName              = $request['first_name'];
+        $lastName               = $request['last_name'];
+        $email                  = $request['email'];
+        $phoneNumber            = $request['phone_number'];
+        $postcode               = $request['postcode'];
+        $dob                    = $request['date_of_birth'];
+        $additionalInformation  = $request['additional_information'];
+        $price                  = $request['price'] ?? 0;
+        $waitingTime            = $request['waiting_times'] ?? 0;
 
         //Check if we have the required variables
         $required = ['hospitalId', 'title', 'firstName', 'lastName', 'email', 'phoneNumber','postcode', 'dob'];
         foreach($required as $req) {
             if(empty($$req)){
-                $this->returnedData['error'] = 'Please supply the value:'.$req;
+                $this->returnedData['error'] = 'Please supply the value: '.$req;
                 Errors::generateError($this->returnedData);
             }
         }
@@ -210,6 +212,8 @@ class ApiController {
         $enquiry->postcode                  = $postcode;
         $enquiry->date_of_birth             = $dob;
         $enquiry->additional_information    = $additionalInformation;
+        $enquiry->price                     = $price;
+        $enquiry->waiting_time              = $waitingTime;
         $enquiry->save();
 
         $this->returnedData['success']  = true;

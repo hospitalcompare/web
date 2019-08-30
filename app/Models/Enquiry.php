@@ -15,7 +15,7 @@ class Enquiry extends Model {
      * @var array
      */
     protected $fillable = [
-        'specialty_id', 'hospital_id', 'title', 'first_name', 'last_name', 'email', 'phone_number', 'postcode', 'date_of_birth', 'additional_information', 'status', 'created_at', 'updated_at'
+        'specialty_id', 'hospital_id', 'title', 'first_name', 'last_name', 'email', 'phone_number', 'postcode', 'date_of_birth', 'additional_information', 'price', 'waiting_time', 'status', 'created_at', 'updated_at'
     ];
 
     /**
@@ -34,6 +34,8 @@ class Enquiry extends Model {
         'postcode'                  => 'string',
         'date_of_birth'             => 'string',
         'additional_information'    => 'string',
+        'price'                     => 'boolean',
+        'waiting_time'              => 'boolean',
         'status'                    => 'string',
         'created_at'                => 'string',
         'updated_at'                => 'string'
