@@ -171,7 +171,7 @@ class ApiController {
     public function enquiry() {
         //Get the request and load it as variables
         $request               = \Request::all();
-        $procedureId           = !empty($request['procedure_id']) ?$request['procedure_id'] : null;
+        $procedureId           = (!empty($request['procedure_id']) && $request['procedure_id'] > 0) ? $request['procedure_id'] : null;
         $hospitalId            = $request['hospital_id'];
         $title                 = $request['title'];
         $firstName             = $request['first_name'];

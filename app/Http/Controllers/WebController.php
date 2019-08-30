@@ -20,8 +20,7 @@ class WebController extends BaseController
      */
     public function homepage() {
         //Retrieve the list of Procedures sorted by name ASC
-        $procedures = Procedure::all()->sortBy('name')->toArray();
-        array_unshift($procedures, ['id'=> 0, 'name'=>'Choose your procedure (if known)']);
+        $procedures = Utils::getProceduresForDropdown();
 
         $this->returnedData['success']              = true;
         $this->returnedData['data']['procedures']   = $procedures;
@@ -50,12 +49,14 @@ class WebController extends BaseController
         $hospitalType   = $request['hospital_type'] ?? '';
         $sortBy         = $request['sort_by'] ?? '';
 
+        //Set procedure_id to 0 if it's -1
+        if($procedureId == '-1')
+            $procedureId = 0;
+
         $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $sortBy);
 //        dd($hospitals->toArray()['data']);
         $sortBys    = Utils::sortBys;
-        $procedures = Procedure::all()->toArray();
-        //Add the option to view all procedures ( id = 0 )
-        array_unshift($procedures, ['id' => 0, 'name' => 'Choose your procedure (if known)']);
+        $procedures = Utils::getProceduresForDropdown();
 
         $this->returnedData['success']                              = true;
         $this->returnedData['data']['hospitals']                    = $hospitals;
