@@ -21,7 +21,8 @@
                         'Outstanding CQC rating',
                         '5 star NHS choices rating',
                         '14 wks NHS funded waiting time'],
-                    'offerPrice' => '6999'
+                    'offerPrice' => '6999',
+                    'hospitalType' => 'private'
                 ])
             </li>
             <li class="d-block">
@@ -41,7 +42,8 @@
                        'Operation done in 2 wks',
                        'Outstanding CQC rating',
                        '5 star NHS choices rating'],
-                   'offerPrice' => '8499'
+                   'offerPrice' => '8499',
+                   'hospitalType' => 'private'
                ])
             </li>
             {{--            <li class="d-block ml-3">--}}

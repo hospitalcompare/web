@@ -46,6 +46,11 @@
             border: 2px solid $darkestWhite;
         }
     }
+
+    + svg,
+    + span {
+        pointer-events: none;
+    }
 }
 
 .results-page {
