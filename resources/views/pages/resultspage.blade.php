@@ -305,7 +305,7 @@
                     'latitude'          => $d['address']['latitude'],
                     'longitude'         => $d['address']['longitude'],
                     'findLink'          => 'Find on map',
-                    'waitTime'          => !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? round($d['waitingTime'][0]['perc_waiting_weeks'], 1).' Weeks' : 0,
+                    'waitTime'          => !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? round($d['waitingTime'][0]['perc_waiting_weeks'], 1).'<br>Weeks' : 0,
                     'userRating'        => !empty($d['rating']['avg_user_rating']) ? $d['rating']['avg_user_rating'] : 0,
                     'stars'             => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\Utils::getHtmlStars($d['rating']['avg_user_rating']) : "<img src='images/icons/dash-black.svg' alt='Dash icon'>",
                     'opCancelled'       => !empty($d['cancelledOp']['perc_cancelled_ops'])? $d['cancelledOp']['perc_cancelled_ops'].'%': 0,
