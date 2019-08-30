@@ -14,8 +14,8 @@
     <section class="banner-parent">
         <div class="banner">
             <div class="container">
-                <div class="banner-data">
-                    <div class="home-postcode-parent">
+                <div class="banner-data row">
+                    <div class="col col-12 col-lg-6">
                         <div class="box full-left">
                             <p>Find the best hospital for your elective surgery</p><br>
                             <form class="form-element" method="get" action="/results-page">
@@ -110,10 +110,10 @@
                             </form>
                         </div>
                     </div>
-                    <div class="homePromo">
+                    <div class="home-promo col col-12 col-lg-6">
                         <p>The quality of care in England varies greatly between hospitals. You have the legal right to
                             choose where to have your elective surgery*. It can be at: </p>
-                        <ul class="promoList">
+                        <ul class="promo-list">
                             <li>An NHS hospital of your choice NHS<br>Funded Work
                                 <a tabindex="0" data-offset="30px, 40px"
                                    class="help-link help-link__inline"

@@ -140,6 +140,10 @@ select::-ms-expand {
     }
 }
 
+.dropdown-toggle {
+    cursor: auto !important;
+}
+
 .checkbox {
     input[type="checkbox"] {
         position: absolute;
