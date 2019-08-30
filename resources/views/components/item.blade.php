@@ -5,7 +5,7 @@
                 <img alt="Image of {{ $title }}" src="{{ $itemImg }}">
                 <div class="{{$NHSClass}}"><p>{{$fundedText}}</p></div>
                 @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', ['class' => 'default'])
-                    {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
+                {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
             </div>
             <div class="sort-categories-item">
                 <p class="sort-item-title" id="item_name_{{$id}}">
@@ -41,23 +41,11 @@
                 <p>
                     {!! !empty($waitTime) ? $waitTime : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                 </p>
-                @if($NHSClass == 'private-hospital')
-                    <span>
-                        <small>Click for
-                            @include('components.basic.modalbutton', [
-                                    'hrefValue'         => $url,
-                                    'hospitalTitle'     => $title,
-                                    'modalTarget'       => '#hc_modal_enquire_private',
-                                    'classTitle'        => 'text-link',
-                                    'target'            => 'blank',
-                                    'button'            => 'current waiting time'])
-                        </small>
-                    </span>
-                @endif
+
                 <span class="d-none" id="item_waiting_time_{{$id}}">{{$waitTime}}</span>
             </div>
             {{-- End waiting time --}}
-            <div class="sort-categories-section-2__child" >
+            <div class="sort-categories-section-2__child">
                 <p @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
@@ -124,7 +112,7 @@
                     {!! !empty($privateSelfPay) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>"  !!}
                 </p>
                 @if($NHSClass == 'private-hospital')
-                <span>
+                    <span>
                     <small>Click for
                         @include('components.basic.modalbutton', [
                                 'hrefValue'         => $url,
@@ -134,7 +122,18 @@
                                 'target'            => 'blank',
                                 'button'            => 'prices'])
                     </small>
-                </span>
+                    </span>
+                        <span>
+                            <small>
+                                @include('components.basic.modalbutton', [
+                                        'hrefValue'         => $url,
+                                        'hospitalTitle'     => $title,
+                                        'modalTarget'       => '#hc_modal_enquire_private',
+                                        'classTitle'        => 'text-link',
+                                        'target'            => 'blank',
+                                        'button'            => 'current waiting time'])
+                            </small>
+                        </span>
                 @endif
                 <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
             </div>
