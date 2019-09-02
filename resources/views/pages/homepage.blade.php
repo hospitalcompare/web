@@ -257,7 +257,7 @@ git status                                                 <p>
             [
                 'iconImg'=> 'search',
                 'title'=>'Step Two',
-                'description' => 'Use the Hospital Compare search criteria to shortlist one or more hospitals to make further enquiries of (Possibly insert note here about NHS hospitals enquiry procedures).'],
+                'description' => 'Use the Hospital Compare search criteria to shortlist one or more hospitals to make further enquiries of.'],
             [
                 'iconImg'=> 'hospital-compare',
                 'title'=>'Step Three',

@@ -5,6 +5,12 @@
     }
 }
 
+@keyframes drawsvg {
+    to {
+        stroke-dashoffset: 1000;
+    }
+}
+
 .popover-open {
     animation-name: bg-reverse;
     animation-duration: 1s;

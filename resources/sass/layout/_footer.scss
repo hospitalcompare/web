@@ -28,6 +28,16 @@
 .footer-middle {
     background-color: #1b1b1b;
     padding: 50px 0;
+
+    svg {
+        path {
+            stroke-dasharray: 10000;
+            stroke-dashoffset: 10000;
+            animation: drawsvg 10s linear;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+    }
 }
 
 .footer-lower {
