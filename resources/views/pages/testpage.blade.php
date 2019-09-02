@@ -69,6 +69,8 @@
                 @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-enquire enquiry', 'button' => 'Make an enquiry'])
                 <h3>Close button</h3>
                 @include('components.basic.button', ['classTitle' => 'btn btn-close__small btn-teal btn-icon', 'button' => 'Close'])
+                <h3>Let's go button</h3>
+                @include('components.basic.button', ['classTitle' => 'btn btn-go btn-icon', 'button' => 'Close'])
                 <hr>
                 <h3>Popovers</h3>
                 <a href="#" class="btn btn-blue"

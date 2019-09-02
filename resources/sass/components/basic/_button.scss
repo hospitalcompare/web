@@ -274,7 +274,9 @@
             font-size: 12px;
             letter-spacing: -0.6px;
             padding: 0 20px 0 12px;
-            background-color: #000;
+            background: linear-gradient(90deg, #003a5d, #003a5d, #00bcb4, #00bcb4);
+            background-size: 300% 100%;
+            background-position: 100%;
 
             &:after {
                 background-image: url('../images/icons/up-arrow.svg');
@@ -291,7 +293,12 @@
 
             &:hover {
                 color: $white;
+                background-position: 0%;
+            }
 
+            &:focus {
+                animation-name: bg-reverse;
+                animation-duration: 5s;
             }
         }
 
@@ -526,6 +533,8 @@
     &:hover {
         background-position: right;
     }
+
+
 }
 
 .btn-link:hover {
