@@ -8,7 +8,7 @@
                         <div class="arrow arrow-large">
                         </div>
                     </div>`,
-        content: `<p class="bold mb-0">Need some help?</p><p>Here to help you find the best hospital</p><p><a  class="btn btn-go btn-icon" >Let's Go</a></p>`,
+        content: `<p class="bold mb-0">Need some help?</p><p>Here to help you find<br> the best hospital</p><p><a  class="btn btn-go btn-icon" >Let's Go</a></p>`,
         html: true,
         trigger: 'focus',
         placement: 'top'

@@ -1,13 +1,13 @@
 <div class="compare-hospitals-bar {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
     <div class="compare-hospitals-header d-flex justify-content-between">
-        <div class="container d-flex align-items-end h-100">
+        <div class="container position-relative d-flex align-items-end h-100">
             @include('components.doctor')
-            <div class="compare-button-title d-flex align-items-center h-100 ml-5 mr-auto">
-                {!! file_get_contents(asset('images/icons/compare-heart.svg')) !!}
+            <div class="compare-button-title d-flex align-items-center h-100 mr-auto">
+                @svg('compare-heart', 'popover-open')
                 <p>Hospital Shortlist&nbsp;(<span id="compare_number">0</span>)<span class="compare-arrow ml-3"></span>
                 </p>
             </div>
-            <ul class="solutions-menu align-items-end d-flex m-0">
+            <ul class="solutions-menu align-items-end d-flex mb-0">
                 <li class="d-block">
                     @include('components.basic.specialoffertab', [
                         'headerText' => [

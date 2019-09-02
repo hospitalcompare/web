@@ -15,8 +15,16 @@
 
         // Doctor illustration
         .doctor {
-            //margin-left: 100px;
             cursor: pointer;
+            margin-right: 40px         ;
+        }
+
+        @media (min-width: 1240px) {
+            .doctor {
+                position: absolute;
+                right: calc(100% + 42px);
+                margin-right: 0;
+            }
         }
 
         // Solutions menu
@@ -48,6 +56,10 @@
                     }
                 }
             }
+
+            @media (min-width: 1240px) {
+                margin-right: -60px;
+            }
         }
 
 
@@ -57,6 +69,7 @@
             svg {
                 width: 30px;
                 height: 30px;
+                margin-right: 10px;
             }
 
             p {
@@ -145,6 +158,7 @@
     &.pink {
         background-image: linear-gradient(249deg, #1b71f3 0%, #ed0373 0%, #cc6d9b 100%);
     }
+
     //width: 300px;
     border-radius: 10px 10px 0 0;
     font-size: 18px;
