@@ -3,6 +3,7 @@
         <div class="container d-flex align-items-end h-100">
             @include('components.doctor')
             <div class="compare-button-title d-flex align-items-center h-100 ml-5 mr-auto">
+                {!! file_get_contents(asset('images/icons/compare-heart.svg')) !!}
                 <p>Hospital Shortlist&nbsp;(<span id="compare_number">0</span>)<span class="compare-arrow ml-3"></span>
                 </p>
             </div>
