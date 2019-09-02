@@ -2,6 +2,8 @@
 
 namespace App\Helpers;
 
+use App\Models\Procedure;
+
 class Utils
 {
     //Sort By
@@ -165,6 +167,21 @@ class Utils
     ];
 
     /**
+     * Returns the list of Procedures with the first option as a placeholder
+     *
+     * @return array
+     */
+    public static function getProceduresForDropdown() {
+        //Get all the Procedures
+        $procedures = Procedure::all()->sortBy('name')->toArray();
+        //Add the option to view all procedures ( id = 0 )
+        array_unshift($procedures, ['id' => '-1', 'name' => 'Not Known']);
+        array_unshift($procedures, ['id' => 0, 'name' => 'Choose your procedure (if known)']);
+
+        return $procedures;
+    }
+
+    /**
      * Creates a file based on a given Base64 Image
      *
      * @param $image
@@ -284,8 +301,7 @@ class Utils
     /**
      * Validates a given array with the given value
      *
-     * @param $item
-     * @param $searched
+     * @param $value
      * @return mixed
      */
     public static function validateValue($value) {

@@ -25,6 +25,13 @@ $(document).ready(function() {
         changeSortBy(targetClass, direction);
     });
 
+    //Toggling the Special Offers tabs
+    $('.special-offer-tab .special-offer-header').on('click', function (e) {
+        $(this).parents('.special-offer-tab')
+            .toggleClass('open')
+            .find('.special-offer-body').slideToggle();
+    });
+
     /**
      * Selects an option from the Sort By dropdown and triggers the `change` event
      *
@@ -78,4 +85,6 @@ $(document).ready(function() {
         optionTarget.prop('selected', true);
         optionTarget.trigger('change');
     }
+
+
 });
