@@ -1,60 +1,62 @@
 <div class="compare-hospitals-bar {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
-    <div class="compare-hospitals-header d-flex justify-content-between align-items-end">
-        @include('components.doctor')
-        <div class="compare-button-title d-flex h-100 align-items-center ml-5 mr-auto">
-            <p>Hospital Shortlist&nbsp;(<span id="compare_number">0</span>)<span class="compare-arrow ml-3"></span></p>
-        </div>
-        <ul class="solutions-menu d-flex align-items-end m-0">
-            <li class="d-block">
-                @include('components.basic.specialoffertab', [
-                    'headerText' => [
-                        'open' => [
-                            'title' => 'BMI - On The Green',
-                            'subtitle' => '27 miles away'
+    <div class="compare-hospitals-header d-flex justify-content-between">
+        <div class="container d-flex align-items-end h-100">
+            @include('components.doctor')
+            <div class="compare-button-title d-flex align-items-center h-100 ml-5 mr-auto">
+                <p>Hospital Shortlist&nbsp;(<span id="compare_number">0</span>)<span class="compare-arrow ml-3"></span>
+                </p>
+            </div>
+            <ul class="solutions-menu align-items-end d-flex m-0">
+                <li class="d-block">
+                    @include('components.basic.specialoffertab', [
+                        'headerText' => [
+                            'open' => [
+                                'title' => 'BMI - On The Green',
+                                'subtitle' => '27 miles away'
+                            ],
+                            'closed' => [
+                                'title' => 'NHS funded operation',
+                                'subtitle' => 'at Outstanding hospital 27 miles away'
+                            ]
                         ],
-                        'closed' => [
-                            'title' => 'NHS funded operation',
-                            'subtitle' => 'at Outstanding hospital 27 miles away'
-                        ]
-                    ],
-                    'bulletPoints' => [
-                        'Outstanding CQC rating',
-                        '5 star NHS choices rating',
-                        '14 wks NHS funded waiting time'],
-                    'offerPrice' => '6999',
-                    'hospitalType' => 'private'
-                ])
-            </li>
-            <li class="d-block">
-                @include('components.basic.specialoffertab', [
-                   'bgColor' => 'pink',
-                   'headerText' => [
-                       'open' => [
-                           'title' => 'Spire - The Place',
-                           'subtitle' => '29 miles away'
+                        'bulletPoints' => [
+                            'Outstanding CQC rating',
+                            '5 star NHS choices rating',
+                            '14 wks NHS funded waiting time'],
+                        'offerPrice' => '6999',
+                        'hospitalType' => 'private'
+                    ])
+                </li>
+                <li class="d-block">
+                    @include('components.basic.specialoffertab', [
+                       'bgColor' => 'pink',
+                       'headerText' => [
+                           'open' => [
+                               'title' => 'Spire - The Place',
+                               'subtitle' => '29 miles away'
+                           ],
+                           'closed' => [
+                               'title' => 'Operation done in 2 weeks',
+                               'subtitle' => 'Outstanding hospital 29 miles away'
+                           ]
                        ],
-                       'closed' => [
-                           'title' => 'Operation done in 2 weeks',
-                           'subtitle' => 'Outstanding hospital 29 miles away'
-                       ]
-                   ],
-                   'bulletPoints' => [
-                       'Operation done in 2 wks',
-                       'Outstanding CQC rating',
-                       '5 star NHS choices rating'],
-                   'offerPrice' => '8499',
-                   'hospitalType' => 'private'
-               ])
-            </li>
-            {{--            <li class="d-block ml-3">--}}
-            {{--                <a href="" class="btn btn-icon btn-special-tab">Special Offers</a>--}}
-            {{--            </li>--}}
-            {{--                    <li><a href="">Virtual GP</a></li>--}}
-            {{--                    <li><a href="">Operation Funding</a></li>--}}
-            {{--                    <li><a href="">Insurance Guide</a></li>--}}
-            {{--                    <li><a href="">Medical Negligence</a></li>--}}
-        </ul>
-
+                       'bulletPoints' => [
+                           'Operation done in 2 wks',
+                           'Outstanding CQC rating',
+                           '5 star NHS choices rating'],
+                       'offerPrice' => '8499',
+                       'hospitalType' => 'private'
+                   ])
+                </li>
+                {{--            <li class="d-block ml-3">--}}
+                {{--                <a href="" class="btn btn-icon btn-special-tab">Special Offers</a>--}}
+                {{--            </li>--}}
+                {{--                    <li><a href="">Virtual GP</a></li>--}}
+                {{--                    <li><a href="">Operation Funding</a></li>--}}
+                {{--                    <li><a href="">Insurance Guide</a></li>--}}
+                {{--                    <li><a href="">Medical Negligence</a></li>--}}
+            </ul>
+        </div>
     </div>
     <div class="compare-hospitals-content">
         <div class="container">
