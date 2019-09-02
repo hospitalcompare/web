@@ -4,11 +4,9 @@
         @if(!empty($howsections))
             @foreach($howsections as $howsection)
                 <div class="how-section__child col-12 col-md-3">
-                    {{--                    @if(!empty($howsection['numeral']))--}}
-                    {{--                        <div class="numeral">{{$howsection['numeral']}}</div>--}}
-                    {{--                    @endif--}}
                     <div class="icon">
-                        <img src="{{ asset($howsection['iconImg']) }}">
+                        {!! file_get_contents(asset('images/icons/' . $howsection['iconImg'] . '.svg')) !!}
+
                     </div>
                     <p class="icon-title">
                         {{ $howsection['title'] }}

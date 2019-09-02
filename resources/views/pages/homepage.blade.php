@@ -181,7 +181,7 @@
                                         'html'           => 'true',
                                         'trigger'        => 'focus',
                                         'content'        => '
-                                                 <p>
+git status                                                 <p>
                                                     You can choose which private hospital to perform your elective procedure, if covered by your healthcare insurance policy.
                                                  </p>
                                                  <p>
@@ -245,26 +245,26 @@
         @include('components.howsection', [
         'sectionTitle' => 'How does it work?',
         'howsections' => [
-            ['iconImg'=> 'images/003-doctor.png',
-            'numeral'=> '',
-            'title'=>'Step One',
-            'description' => 'Make sure you understand:
-                - your rights to choose (if NHS funded treatment, self-pay or if covered by a health insurance policy)<br>
-                - that you don’t have to select your hospital during the GP appointment, but can easily do so at a later date, having made whatever enquires you wish to make.
-                Include click here’s for the various points.
+            [
+                'iconImg'=> 'doctor',
+                'title'=>'Step One',
+                'description' => 'Make sure you understand:
+                    - your rights to choose (if NHS funded treatment, self-pay or if covered by a health insurance policy)<br>
+                    - that you don’t have to select your hospital during the GP appointment, but can easily do so at a later date, having made whatever enquires you wish to make.
+                    Include click here’s for the various points.
                 ' ],
-            ['iconImg'=> 'images/001-search-1.png',
-            'numeral'=> '',
-            'title'=>'Step Two',
-            'description' => 'Use the Hospital Compare search criteria to shortlist one or more hospitals to make further enquiries of (Possibly insert note here about NHS hospitals enquiry procedures).'],
-            ['iconImg'=> 'images/Layer_536.png',
-            'numeral'=> '',
-            'title'=>'Step Three',
-            'description' => 'Make the enquires and then make your selection as to which hospital to have your treatment at.'],
-            ['iconImg'=> 'images/Layer_537.png',
-            'numeral'=> '',
-            'title'=>'Step Four',
-            'description' => 'Call your GP surgery and book your first appointment slot via their E-referral system.
+            [
+                'iconImg'=> 'search',
+                'title'=>'Step Two',
+                'description' => 'Use the Hospital Compare search criteria to shortlist one or more hospitals to make further enquiries of (Possibly insert note here about NHS hospitals enquiry procedures).'],
+            [
+                'iconImg'=> 'hospital-compare',
+                'title'=>'Step Three',
+                'description' => 'Make the enquires and then make your selection as to which hospital to have your treatment at.'],
+            [
+                'iconImg'=> 'confirm',
+                'title'=>'Step Four',
+                'description' => 'Call your GP surgery and book your first appointment slot via their E-referral system.
 The four steps will be across the page and then presumably we will have a fifth button to press to start searching, return to the top part of the homepage?
 ' ] ] ])
     </section>
