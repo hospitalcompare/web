@@ -3,7 +3,7 @@
         <div class="container position-relative d-flex align-items-end h-100">
             @include('components.doctor')
             <div class="compare-button-title d-flex align-items-center h-100 mr-auto">
-                @svg('compare-heart', 'popover-open')
+                @svg('compare-heart', 'compare-heart')
                 <p>Hospital Shortlist&nbsp;(<span id="compare_number">0</span>)<span class="compare-arrow ml-3"></span>
                 </p>
             </div>
