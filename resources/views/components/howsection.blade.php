@@ -1,4 +1,4 @@
-<div class="how-section container">
+<div class="how-section hc-content container">
     <div class="row">
         <h2 class="section-title col-12">{{$sectionTitle}}</h2>
         @if(!empty($howsections))

@@ -249,9 +249,10 @@ git status                                                 <p>
                 'iconImg'=> 'doctor',
                 'title'=>'Step One',
                 'description' => 'Make sure you understand:
-                    - your rights to choose (if NHS funded treatment, self-pay or if covered by a health insurance policy)<br>
-                    - that you don’t have to select your hospital during the GP appointment, but can easily do so at a later date, having made whatever enquires you wish to make.
-                    Include click here’s for the various points.
+                <ul>
+                    <li>your rights to choose (if NHS funded treatment, self-pay or if covered by a health insurance policy)</li>
+                    <li>that you don’t have to select your hospital during the GP appointment, but can easily do so at a later date, having made whatever enquires you wish to make.</li>
+                </ul>
                 ' ],
             [
                 'iconImg'=> 'search',
