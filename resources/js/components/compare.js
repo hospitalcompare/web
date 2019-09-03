@@ -179,6 +179,18 @@ $(document).ready(function () {
         if (compareCount > 0) {
             $('.compare-hospitals-bar .compare-hospitals-content').slideToggle();
             $('.compare-arrow').toggleClass('rotated');
+
+            $(document).one('click', function (e) {
+                // Hide compare bar if clicking outside
+                if ($('.compare-hospitals-bar').has(e.target).length === 0) {
+                    $('.compare-hospitals-bar .compare-hospitals-content').slideUp();
+                    $('.compare-arrow').removeClass('rotated');
+
+                }
+            });
         }
     });
+
+
+
 });

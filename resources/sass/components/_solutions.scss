@@ -48,12 +48,6 @@
                         background-color: darken($teal, 5%);
                         text-decoration: none;
                     }
-
-                    &.btn-special-tab {
-                        //position: absolute;
-                        //left: 0;
-                        //bottom: 0;
-                    }
                 }
             }
 
@@ -135,6 +129,12 @@
 // Special offers tabs
 
 .solutions-menu {
+    pointer-events: none;
+
+    > li {
+        pointer-events: initial;
+    }
+
     .bullets {
         ul {
             li {
