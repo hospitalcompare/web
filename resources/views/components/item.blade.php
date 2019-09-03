@@ -149,7 +149,7 @@
                     'classTitle'        => 'btn btn-icon btn-enquire btn-blue enquiry mr-2 btn-block',
                     'target'            => 'blank',
                     'button'            => $btnText,
-                    'id'                => 'modal_button_private_enquiry_'.$id])
+                    'id'                => 'enquire_'.$id])
                 @elseif($NHSClass == 'nhs-hospital')
                     @include('components.basic.modalbutton', [
                     'hrefValue'         => $url,
@@ -158,7 +158,8 @@
                     'classTitle'        => 'btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block',
                     'button'            => $btnText,
                     'modalTarget'       => '#hc_modal_enquire_nhs',
-                    'modalContent'      => $modalContent])
+                    'modalContent'      => $modalContent,
+                    'id'                => 'enquire_'.$id])
                 @endif
                 @include('components.basic.button', [
                     'classTitle' => 'btn btn-green-outline compare btn-block mt-0',

@@ -65,13 +65,14 @@
                 <div class="col-3">
                     <div class="col-inner h-100">
                         <div class=""></div>
-                        <div class="cell">Name</div>
+                        <div class=""></div>
                         <div class="cell">Average Waiting Time</div>
                         <div class="cell">NHS Choices User Rating</div>
                         <div class="cell">% Operations cancelled</div>
                         <div class="cell">Care Quality Rating</div>
                         <div class="cell">Friends & Family Rating</div>
                         <div class="cell">NHS Funded</div>
+                        <div class="cell">NHS Private Pay</div>
                     </div>
                 </div>
             </div>

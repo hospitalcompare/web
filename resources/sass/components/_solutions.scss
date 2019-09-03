@@ -100,6 +100,42 @@
     .compare-hospitals-content {
         background-color: #fff;
         display: none;
+        //display: block !important;
+
+        #compare_hospitals_grid {
+
+            .image-wrapper {
+                position: relative;
+                width: 134px;
+                height: 123px;
+                text-align: center;
+
+                .remove-hospital {
+                    cursor: pointer;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 25px;
+                    height: 25px;
+                    line-height: 25px;
+                    background-color: #6F6F6F;
+                    background-image: url('../images/icons/plus-solid.svg');
+                    @include icon-bg-center(70%);
+                    border-radius: 50%;
+                    z-index: 10;
+                    opacity: 1;
+                    transform: translate(50%, -50%) rotate(-45deg);
+                }
+            }
+
+            .details {
+                height: 180px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
 
         &.hidden {
             transform: translateY(-100%);
@@ -113,6 +149,7 @@
         }
 
         .col-inner {
+            padding-top: 30px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -125,6 +162,7 @@
         }
     }
 }
+
 
 // Special offers tabs
 
@@ -243,3 +281,7 @@
     padding: 0 25px 25px 80px;
     display: none;
 }
+
+// Compare items
+
+

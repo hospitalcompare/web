@@ -35,17 +35,23 @@ $(document).ready(function () {
         var target = $('#compare_hospitals_grid');
         var newRowContent =
             '<div class="col-3 text-center" id="compare_hospital_id_' + element.id + '">' +
-            '<div class="col-inner">' +
-            '<div class=""><img src="images/alder-1.png"><div class="remove-hospital" id="remove_id_' + element.id + '">Remove</div></div>' +
-            '<div class="cell">' + element.name + '</div>' +
-            '<div class="cell">' + element.waitingTime + '</div>' +
-            '<div class="cell">' + element.userRating + '</div>' +
-            '<div class="cell">' + element.opCancelled + '</div>' +
-            '<div class="cell">' + element.qualityRating + '</div>' +
-            '<div class="cell">' + element.ffRating + '</div>' +
-            '<div class="cell">' + element.nhsFunded + '</div>' +
-            '<div class="cell">' + element.nhsPrivatePay + '</div>' +
-            '</div>' +
+                '<div class="col-inner">' +
+                    '<div class="image-wrapper mx-auto">' +
+                        '<img class="" src="images/alder-1.png">' +
+                        '<div class="remove-hospital" id="remove_id_' + element.id + '"></div>' +
+                    '</div>' +
+                    '<div class="details">' +
+                        '<p>' + element.name + '</p>' +
+                        // element.enquireBtn +
+                    '</div>' +
+                    '<div class="cell">' + element.waitingTime + '</div>' +
+                    '<div class="cell">' + element.userRating + '</div>' +
+                    '<div class="cell">' + element.opCancelled + '</div>' +
+                    '<div class="cell">' + element.qualityRating + '</div>' +
+                    '<div class="cell">' + element.ffRating + '</div>' +
+                    '<div class="cell">' + element.nhsFunded + '</div>' +
+                    '<div class="cell">' + element.nhsPrivatePay + '</div>' +
+                '</div>' +
             '</div>';
         target.append(newRowContent);
         //Toggle the full heart or empty heart  class of the button
@@ -96,6 +102,7 @@ $(document).ready(function () {
 
         //Load the Cookies with the data that we need for the comparison
         var elementId = $(this).attr('id');
+        // var enquireBtn = $('#enquire_' + elementId).outerHTML;
         var name = $('#item_name_' + elementId).text();
         var waitingTime = $('#item_waiting_time_' + elementId).text();
         var userRating = $('#item_user_rating_' + elementId).text();
@@ -114,6 +121,7 @@ $(document).ready(function () {
             if (result.length === 0) {
                 var element = {
                     'id': elementId,
+                    // 'enquireBtn': enquireBtn,
                     'name': name,
                     'waitingTime': waitingTime,
                     'userRating': userRating,
@@ -180,7 +188,7 @@ $(document).ready(function () {
             $('.compare-hospitals-bar .compare-hospitals-content').slideToggle();
             $('.compare-arrow').toggleClass('rotated');
 
-            $(document).one('click', function (e) {
+            $(document).on('click', function (e) {
                 // Hide compare bar if clicking outside
                 if ($('.compare-hospitals-bar').has(e.target).length === 0) {
                     $('.compare-hospitals-bar .compare-hospitals-content').slideUp();
