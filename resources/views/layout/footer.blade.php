@@ -49,7 +49,7 @@
 
     <div class="footer-middle">
         <div class="container-fluid p-0">
-            <div class="svg-wrap">
+            <div class="svg-wrap animated" data-animation="draw">
                 @svg('heart-line')
             </div>
         </div>
