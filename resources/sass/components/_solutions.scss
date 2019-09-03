@@ -8,15 +8,23 @@
 
     .compare-hospitals-header {
         position: relative;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 20px;
+        //width: 100%;
+        //margin: 0 auto;
+        //padding: 0 20px;
         height: 50px;
 
         // Doctor illustration
         .doctor {
-            margin-left: 100px;
             cursor: pointer;
+            margin-right: 40px         ;
+        }
+
+        @media (min-width: 1240px) {
+            .doctor {
+                position: absolute;
+                right: calc(100% + 42px);
+                margin-right: 0;
+            }
         }
 
         // Solutions menu
@@ -48,10 +56,29 @@
                     }
                 }
             }
+
+            @media (min-width: 1240px) {
+                margin-right: -60px;
+            }
         }
+
 
         .compare-button-title {
             cursor: pointer;
+
+            svg {
+                width: 30px;
+                height: 30px;
+                opacity: 0.3;
+                max-width: 0;
+                transition: $transition;
+
+                &.has-count {
+                    opacity: 1;
+                    max-width: initial;
+                    margin-right: 10px;
+                }
+            }
 
             p {
                 margin: 0;
@@ -87,7 +114,6 @@
         .container {
             position: relative;
             width: 100%;
-            max-width: 1220px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -134,12 +160,13 @@
 
 .special-offer-tab {
     color: $white;
-    background-image: linear-gradient(246deg, #8e00fe 0%, #77a9f5 100%);
+    background-image: linear-gradient(264deg, #1b71f3 0%, #8f00ff 0%, #a346ec 52%, #b687db 100%);
     width: 340px;
 
     &.pink {
-        background-image: linear-gradient(252deg, #d57ca6 0%, #ed0373 100%);
+        background-image: linear-gradient(249deg, #1b71f3 0%, #ed0373 0%, #cc6d9b 100%);
     }
+
     //width: 300px;
     border-radius: 10px 10px 0 0;
     font-size: 18px;
@@ -148,7 +175,7 @@
 
     .special-offer-header {
         position: relative;
-        padding: 0 50px 0 20px;
+        padding: 0 50px 0 30px;
         height: 65px;
         cursor: pointer;
 
@@ -213,6 +240,6 @@
 }
 
 .special-offer-body {
-    padding: 0 25px 25px 100px;
+    padding: 0 25px 25px 80px;
     display: none;
 }

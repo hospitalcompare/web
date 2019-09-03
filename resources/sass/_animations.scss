@@ -1,0 +1,24 @@
+@keyframes bg-reverse {
+    0% {
+        background-position: 0;
+    }
+    50% {
+        background-position: 100%;
+        //transform: scale3d(1.1, 1.1, 1.1);
+    }
+    100% {
+        background-position: 0;
+    }
+}
+
+@keyframes drawsvg {
+    to {
+        stroke-dashoffset: 1000;
+    }
+}
+
+.popover-open {
+    animation-name: bg-reverse;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}

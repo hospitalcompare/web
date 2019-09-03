@@ -82,7 +82,7 @@
 
     //============================HOW SECTION=============================
     .how-section__parent {
-        margin: 45px auto;
+        padding: 45px 0 90px;
 
         .section-title {
             font-size: 40px;
@@ -137,18 +137,40 @@
             margin-bottom: 25px;
             height: 120px;
 
-            img {
+            svg {
                 height: 100%;
                 width: auto;
+                fill: $teal;
             }
         }
 
-        .numeral {
-            position: absolute;
-            top: 0;
-            left: 22%;
-            font-size: 1.2em;
-            font-weight: 600;
+        .icon-description {
+            > ul {
+                //padding: 0 0 0 50px;
+                margin: 30px 0 50px 0;
+                counter-reset: counter;
+
+                > li {
+                    margin: 0 0 22px 0;
+                    position: relative;
+                    counter-increment: counter;
+
+                    &:before {
+                        content: counter(counter) '.';
+                        position: absolute;
+                        top: 0;
+                        right: calc(100% + 10px);
+                        color: $blue;
+                        @extend .font-semibold;
+                    }
+
+                    ul {
+                        li {
+
+                        }
+                    }
+                }
+            }
         }
     }
 

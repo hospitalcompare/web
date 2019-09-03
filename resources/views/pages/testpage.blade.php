@@ -15,12 +15,75 @@
 
         <div class="section py-3 ">
             <div class="container-fluid px-0">
-                <h2>Solutions bar  </h2>
+                <h2>Solutions bar </h2>
                 @include('components.solutionsbar', ['position' => 'static'])
             </div>
         </div>
         <div class="section py-3">
             <div class="container">
+                <h3>Modal - enquire now</h3>
+                <div class="modal modal-enquire fade show" id="hc_example_modal" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabel" aria-modal="true"
+                     style="display: block; position: static">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="close position-absolute" data-dismiss="modal"
+                                    aria-label="Close">
+                                <span aria-hidden="true" class="text-white bg-black">Close</span>
+                            </button>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col col-md-6 p-0">
+                                            <div class="col-inner col-inner__left">
+                                                <h3 class="modal-title mb-3">Hospital Name</h3>
+                                                <div class="d-flex mb-3">
+                                                    <div class="image-wrapper mr-3">
+                                                        <img class="mr-3" src="images/alder-1.png">
+                                                    </div>
+                                                    <div class="modal-copy">
+                                                        <p>This NHS hospital does not respond to direct enquiries
+                                                            regarding NHS funded elective procedures prior to an
+                                                            appointment being confirmed.</p>
+                                                    </div>
+
+                                                </div>
+                                                <div class="btn-area">
+                                                    <a href="http://' . $d['url'] . '" target="_blank"
+                                                       class="btn btn-icon btn-blue btn-enquire">Visit hospital
+                                                        website</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-md-6 p-0">
+                                            <div
+                                                class="col-inner col-inner__right h-100 text-center bg-pink">
+                                                <h2 class="text-white">Or go back to results</h2>
+
+                                                <div class="text-white modal-copy">
+                                                    <p>Click <a class="text-link"
+                                                                data-dismiss="modal"
+                                                                aria-label="Close">here</a>
+                                                        to go back to results</p>
+                                                </div>
+                                                {{--                                                                <div class="btn-area">--}}
+                                                {{--                                                                    <a  data-toggle="modal"--}}
+                                                {{--                                                                       data-target="#hc_modal_special"--}}
+                                                {{--                                                                      data-content="<h1>' . $specialOfferContent = 'hello' . '</h1>"--}}
+                                                {{--                                                                       data-dismiss="modal"--}}
+                                                {{--                                                                        class="btn btn-icon btn-special-offer-reverse">Back to results</a>--}}
+                                                {{--                                                               </div>--}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3>Enquiry Form</h3>
+                @include('components.modals.modalenquireprivate', [
+                    'procedures' => $data['filters']['procedures']])
                 <h2>Dr Stevini</h2>
                 @include('components.doctor')
                 <h2>Tooltips</h2>
@@ -69,6 +132,8 @@
                 @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-enquire enquiry', 'button' => 'Make an enquiry'])
                 <h3>Close button</h3>
                 @include('components.basic.button', ['classTitle' => 'btn btn-close__small btn-teal btn-icon', 'button' => 'Close'])
+                <h3>Let's go button</h3>
+                @include('components.basic.button', ['classTitle' => 'btn btn-go btn-icon', 'button' => 'Close'])
                 <hr>
                 <h3>Popovers</h3>
                 <a href="#" class="btn btn-blue"
@@ -110,7 +175,8 @@
                 <div class="popover fade bs-popover-top show" role="tooltip" id="popover438743" x-placement="bottom"
                      style="position: relative;">
                     <div class="arrow" style="left: 64px;"></div>
-                    <div class="popover-body">Hello, this is a popover <a tabindex class="text-link">Click here</a></div>
+                    <div class="popover-body">Hello, this is a popover <a tabindex class="text-link">Click here</a>
+                    </div>
                 </div>
 
                 <h3>Large popover - top</h3>
@@ -118,18 +184,21 @@
                      x-placement="bottom"
                      style="position: relative;">
                     <div class="arrow arrow-large" style="left: 64px;"></div>
-                    <div class="popover-body">Hello, this is a popover <a tabindex class="text-link">Click here</a></div>
+                    <div class="popover-body">Hello, this is a popover <a tabindex class="text-link">Click here</a>
+                    </div>
                 </div>
                 <h3>Large popover - bottom</h3>
                 <div class="my-5 popover popover-large fade bs-popover-bottom show" role="tooltip" id="popover438743"
                      x-placement="bottom"
                      style="position: relative;">
                     <div class="arrow arrow-large" style="left: 64px;"></div>
-                    <div class="popover-body">Hello, this is a popover <a tabindex class="text-link">Click here</a></div>
+                    <div class="popover-body">Hello, this is a popover <a tabindex class="text-link">Click here</a>
+                    </div>
                 </div>
 
                 <h3>Popover with stars</h3>
-                <div class="popover popover-regular fade bs-popover-bottom show" role="tooltip" id="popover438743" x-placement="bottom"
+                <div class="popover popover-regular fade bs-popover-bottom show" role="tooltip" id="popover438743"
+                     x-placement="bottom"
                      style="position: relative;">
                     <div class="arrow" style="left: 64px;"></div>
                     <div class="popover-body">
@@ -194,65 +263,7 @@
 
                 </div>
 
-                <h1>Modal - enquiry now</h1>
-                <div class="modal modal-enquire fade show" id="hc_example_modal" tabindex="-1" role="dialog"
-                     aria-labelledby="exampleModalLabel" aria-modal="true"
-                     style="display: block; position: static">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <button type="button" class="close position-absolute" data-dismiss="modal"
-                                    aria-label="Close">
-                                <span aria-hidden="true" class="text-white bg-black">Close</span>
-                            </button>
-                            <div class="modal-body">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col col-md-6 p-0">
-                                            <div class="col-inner col-inner__left">
-                                                <h3 class="modal-title mb-3">
-                                                    NHS Hospital name
-                                                </h3>
-                                                <div class="d-flex mb-3">
-                                                    <div class="image-wrapper mr-3">
-                                                        <img class="mr-3" src="images/alder-1.png">
-                                                    </div>
-                                                    <p class="modal-copy">Lorem ipsum dolor sit amet, consectetur
-                                                        adipiscing elit, sed do
-                                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                                        enim
-                                                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                                                        ut
-                                                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                                        reprehenderit in.</p>
 
-                                                </div>
-                                                <div class="btn-area">
-                                                    <div class="btn btn-icon btn-enquire">Make an enquiry</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col col-md-6 p-0">
-                                            <div
-                                                class="col-inner col-inner__right h-100 text-center bg-pink">
-                                                <h2 class="text-white">Or go back to results</h2>
-
-                                                <p class="text-white modal-copy">Lorem ipsum dolor sit amet, consectetur
-                                                    adipiscing elit, sed do eiusmod
-                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                                    ea
-                                                    commodo consequat. Duis aute irure dolor in reprehenderit in.</p>
-                                                <div class="btn-area">
-                                                    <div class="btn btn-icon btn-special-offer">Special Offers</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <hr>
                 <h1>Special offers slide out</h1>
                 @include('components.basic.specialofferslide', ['class' => 'show'])
@@ -305,12 +316,16 @@
                             User Rating descending
                         </option>
                     </select>
-                    <svg class="svg-inline--fa fa-chevron-down fa-w-14 black-chevron" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg><!-- <i class="fas fa-chevron-down black-chevron"></i> -->
+                    <svg class="svg-inline--fa fa-chevron-down fa-w-14 black-chevron" aria-hidden="true"
+                         focusable="false" data-prefix="fas" data-icon="chevron-down" role="img"
+                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                        <path fill="currentColor"
+                              d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+                    </svg><!-- <i class="fas fa-chevron-down black-chevron"></i> -->
                 </div>
                 <hr>
-                <h3>Enquiry Form</h3>
-                @include('components.modals.modalenquireprivate', [
-                    'procedures' => $data['filters']['procedures']])
+
+                {{--                @include('components.modals.modalenquirenhs')--}}
             </div>
         </div>
     </main>

@@ -1,6 +1,8 @@
 $(document).ready(function () {
     //Check if we don't have the cookie and set it to 0
     var compareBar = $('.compare-hospitals-bar');
+    var countSpan = $('#compare_number');
+    var icon = $('.compare-heart');
     if (typeof Cookies.get("compareCount") === 'undefined') {
         Cookies.set("compareCount", 0, {expires: 10000});
         Cookies.set("compareHospitalsData", JSON.stringify([{}]), {expires: 10000});
@@ -19,8 +21,9 @@ $(document).ready(function () {
             var element = compareData[i];
             addHospitalToCompare(element);
         }
-        var countSpan = $('#compare_number');
+        // var countSpan = $('#compare_number');
         countSpan.text(compareCount);
+        icon.addClass('has-count');
     }
 
     /**
@@ -32,17 +35,17 @@ $(document).ready(function () {
         var target = $('#compare_hospitals_grid');
         var newRowContent =
             '<div class="col-3 text-center" id="compare_hospital_id_' + element.id + '">' +
-                '<div class="col-inner">' +
-                    '<div class=""><img src="images/alder-1.png"><div class="remove-hospital" id="remove_id_' + element.id + '">Remove</div></div>' +
-                    '<div class="cell">' + element.name + '</div>' +
-                    '<div class="cell">' + element.waitingTime + '</div>' +
-                    '<div class="cell">' + element.userRating + '</div>' +
-                    '<div class="cell">' + element.opCancelled + '</div>' +
-                    '<div class="cell">' + element.qualityRating + '</div>' +
-                    '<div class="cell">' + element.ffRating + '</div>' +
-                    '<div class="cell">' + element.nhsFunded + '</div>' +
-                    '<div class="cell">' + element.nhsPrivatePay + '</div>' +
-                '</div>' +
+            '<div class="col-inner">' +
+            '<div class=""><img src="images/alder-1.png"><div class="remove-hospital" id="remove_id_' + element.id + '">Remove</div></div>' +
+            '<div class="cell">' + element.name + '</div>' +
+            '<div class="cell">' + element.waitingTime + '</div>' +
+            '<div class="cell">' + element.userRating + '</div>' +
+            '<div class="cell">' + element.opCancelled + '</div>' +
+            '<div class="cell">' + element.qualityRating + '</div>' +
+            '<div class="cell">' + element.ffRating + '</div>' +
+            '<div class="cell">' + element.nhsFunded + '</div>' +
+            '<div class="cell">' + element.nhsPrivatePay + '</div>' +
+            '</div>' +
             '</div>';
         target.append(newRowContent);
         //Toggle the full heart or empty heart  class of the button
@@ -67,9 +70,10 @@ $(document).ready(function () {
         compareCount = parseInt(compareCount) - 1;
 
         // Slide content down when all data removed
-        if(compareCount === 0){
+        if (compareCount === 0) {
             $('.compare-hospitals-bar .compare-hospitals-content').slideUp();
             $('.compare-arrow').toggleClass('rotated');
+            icon.removeClass('has-count');
         }
 
         var countSpan = $('#compare_number');
@@ -140,9 +144,14 @@ $(document).ready(function () {
         }
 
         // Slide content down when all data removed
-        if(compareCount === 0){
+        if (compareCount === 0) {
             $('.compare-hospitals-bar .compare-hospitals-content').slideUp();
             $('.compare-arrow').toggleClass('rotated');
+        }
+
+        // If more than one item, highlight the heart icon
+        if (compareCount > 0) {
+            icon.addClass('has-count');
         }
 
         //Reset compareCount and compareHospitalsData
@@ -167,7 +176,7 @@ $(document).ready(function () {
     //Set the Onclick event for the Comparison Header
     $(document).on("click touchend", ".compare-hospitals-bar .compare-button-title", function () {
         var compareCount = parseInt(Cookies.get("compareCount"));
-        if(compareCount > 0){
+        if (compareCount > 0) {
             $('.compare-hospitals-bar .compare-hospitals-content').slideToggle();
             $('.compare-arrow').toggleClass('rotated');
         }

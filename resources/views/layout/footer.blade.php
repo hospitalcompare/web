@@ -48,11 +48,9 @@
     </div>
 
     <div class="footer-middle">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-
-                </div>
+        <div class="container-fluid p-0">
+            <div class="svg-wrap">
+                @svg('heart-line')
             </div>
         </div>
     </div>

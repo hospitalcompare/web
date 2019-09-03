@@ -37,7 +37,7 @@
         // Button added by BS select
         .dropdown-toggle {
             height: 61px;
-            line-height: 61px;
+            //line-height: 61px;
             padding: 0 45px 0 16px;
             width: 100%;
             border-radius: 10px;
@@ -46,14 +46,21 @@
             border: 2px solid $darkestWhite;
         }
     }
+
+    + svg,
+    + span {
+        pointer-events: none;
+    }
 }
 
 .results-page {
-    .dropdown-toggle,
-    .results-page-select {
-        max-width: 158px;
-        option {
-            background-color: $white !important;
+    .filter-section {
+        .dropdown-toggle,
+        .results-page-select {
+            max-width: 162px;
+            option {
+                background-color: $white !important;
+            }
         }
     }
 }
