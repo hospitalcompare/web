@@ -241,10 +241,10 @@ git status                                                 <p>
                 'title'=>'Step One',
                 'description' => '
                     <p>Make sure you understand:</p>
-                    <ul>
+                    <ol>
                         <li>your rights to choose (if NHS funded treatment, self-pay or if covered by a health insurance policy)</li>
                         <li>that you don’t have to select your hospital during the GP appointment, but can easily do so at a later date, having made whatever enquires you wish to make.</li>
-                    </ul>
+                    </ol>
                 ' ],
             [
                 'iconImg'=> 'search',

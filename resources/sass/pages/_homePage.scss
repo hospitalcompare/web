@@ -144,9 +144,24 @@
             }
         }
 
-        ul {
-            li {
+        ol {
+            //padding: 0 0 0 50px;
+            margin: 30px 0 50px 0;
+            counter-reset: counter;
 
+            li {
+                margin: 0 0 22px 0;
+                position: relative;
+                counter-increment: counter;
+
+                &:before {
+                    content: counter(counter) '.';
+                    position: absolute;
+                    top: 0;
+                    right: calc(100% + 10px);
+                    color: $blue;
+                    @extend .font-semibold;
+                }
             }
         }
     }
