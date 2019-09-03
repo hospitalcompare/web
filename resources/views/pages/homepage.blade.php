@@ -203,15 +203,6 @@ git status                                                 <p>
         </div>
     </section>
 
-    {{--    <div class="how-section__parent">--}}
-    {{--        @include('components.how-section', ['howsections' => [--}}
-    {{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Standard procedure at an NHS Hospital', 'description' => 'You have the legal right to choose which NHS hospital to have your NHS procedure at.' ],--}}
-    {{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'NHS Funded in a private hospital', 'description' => 'You have the legal right to have an NHS funded procedure at a private hospital of your choice'],--}}
-    {{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Private Healthcare Insurance', 'description' => 'Many private healthcare insurance policies allow you to choose a hospital for your procedure'],--}}
-    {{--        ['iconImg'=> 'images/003-doctor.png', 'title'=>'Self Pay at a Private Hospital', 'description' => 'If time is a critical factor for you then a good option may be to self-pay and have your procedure done immediately' ] ],--}}
-    {{--        'sectionTitle' => 'Your Healthcare Options' ])--}}
-    {{--    </div>--}}
-
     <section class="why-use-parent">
         <div class="why-use-content">
 
@@ -248,26 +239,25 @@ git status                                                 <p>
             [
                 'iconImg'=> 'doctor',
                 'title'=>'Step One',
-                'description' => 'Make sure you understand:
-                <ul>
-                    <li>your rights to choose (if NHS funded treatment, self-pay or if covered by a health insurance policy)</li>
-                    <li>that you don’t have to select your hospital during the GP appointment, but can easily do so at a later date, having made whatever enquires you wish to make.</li>
-                </ul>
+                'description' => '
+                    <p>Make sure you understand:</p>
+                    <ul>
+                        <li>your rights to choose (if NHS funded treatment, self-pay or if covered by a health insurance policy)</li>
+                        <li>that you don’t have to select your hospital during the GP appointment, but can easily do so at a later date, having made whatever enquires you wish to make.</li>
+                    </ul>
                 ' ],
             [
                 'iconImg'=> 'search',
                 'title'=>'Step Two',
-                'description' => 'Use the Hospital Compare search criteria to shortlist one or more hospitals to make further enquiries of.'],
+                'description' => '<p>Use the Hospital Compare search criteria to shortlist one or more hospitals to make further enquiries of. Please note NHS hospitals typically do not respond to direct enquiries regarding elective procedures prior to an appointment being confirmed.</p>'],
             [
                 'iconImg'=> 'hospital-compare',
                 'title'=>'Step Three',
-                'description' => 'Make the enquires and then make your selection as to which hospital to have your treatment at.'],
+                'description' => '<p>Make the enquires and then make your selection as to which hospital to have your treatment at.</p>'],
             [
                 'iconImg'=> 'confirm',
                 'title'=>'Step Four',
-                'description' => 'Call your GP surgery and book your first appointment slot via their E-referral system.
-The four steps will be across the page and then presumably we will have a fifth button to press to start searching, return to the top part of the homepage?
-' ] ] ])
+                'description' => '<p>Call your GP surgery and book your first appointment slot via their E-referral system.</p>' ] ] ])
     </section>
 
     <section class="choose-health-parent">
