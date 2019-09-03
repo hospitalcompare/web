@@ -57,29 +57,6 @@
                 <div class="col col-6">
                     <input required name="postcode" type="text" class="form-control" id="postcode" placeholder="Postcode*">
                 </div>
-                <div class="col col-12"><p class="text-white m-0">What is the nature of your enquiry?</p></div>
-                <div class="col col-12 checkbox">
-                    <input required name="prices" type="checkbox" id="prices">
-                    <label for="prices">I want to make an enquiry about pricing.</label>
-                </div>
-                <div class="col col-12 checkbox">
-                    <input required name="waiting_times" type="checkbox" id="waiting_times">
-                    <label for="waiting_times">I want to make an enquiry about current waiting times.</label>
-                </div>
-                <div class="col col-12 checkbox">
-                    <input required name="other" type="checkbox" id="other">
-                    <label for="other">Something else</label>
-                </div>
-
-                <div class="col col-12" id="col_additional_information">
-{{--                    <label for="additional_information">Additional information</label>--}}
-                    <textarea
-                        class="form-control"
-                        name="additional_information"
-                        placeholder="Additional information"
-                        id="additional_information"
-                    ></textarea>
-                </div>
                 <div class="col col-6">
                     @include('components.basic.select', [
                         'options' => $procedures,
@@ -90,12 +67,43 @@
                         'selectPicker' => 'true',
                         'resultsLabel' => 'resultsLabel'])
                 </div>
+                <div class="col col-12"><p class="text-white m-0">Please confirm:</p></div>
+                <div class="col col-12 checkbox">
+                    <input required name="waiting_times" type="checkbox" id="waiting_times">
+                    <label for="waiting_times">the likely waiting time for an NHS funded referral, should treatment be necessary.</label>
+                </div>
+                <div class="col col-12 checkbox">
+                    <input required name="prices" type="checkbox" id="prices">
+                    <label for="prices">the likely price range for treatment.</label>
+                </div>
+                <div class="col col-12 checkbox">
+                    <input required name="waiting_times_self" type="checkbox" id="waiting_times_self">
+                    <label for="waiting_times_self">the likely waiting time for self-pay.</label>
+                </div>
+                <div class="col col-12 checkbox">
+                    <input required name="consultants" type="checkbox" id="consultants">
+                    <label for="consultants">my choice of consultants for self-pay.</label>
+                </div>
+                <div class="col col-12 checkbox">
+                    <input required name="other" type="checkbox" id="other">
+                    <label for="other">Something else</label>
+                </div>
+
+                <div class="col col-12" id="col_additional_information">
+                    <textarea
+                        class="form-control"
+                        name="additional_information"
+                        placeholder="Additional information"
+                        id="additional_information"
+                    ></textarea>
+                </div>
+
                 <div class="col col-6 checkbox">
                     <input required name="gdpr" type="checkbox" id="gdpr">
                     <label class="small-print" for="gdpr">Please accept the Terms & Conditions before submitting the form.</label>
                 </div>
                 <div class="col-12 btn-area text-center">
-                    <a id="btn-submit" class="btn btn-icon btn-enquire">Make an enquiry</a>
+                    <a id="btn-submit" class="btn btn-icon btn-blue btn-enquire">Make an enquiry</a>
                 </div>
             </div>
         </form>

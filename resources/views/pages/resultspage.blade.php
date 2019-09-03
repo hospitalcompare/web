@@ -338,7 +338,7 @@
 
                                                                 </div>
                                                                 <div class="btn-area">
-                                                                    <a href="http://' . $d['url'] . '" target="_blank" class="btn btn-icon btn-enquire">Visit<br> website</a>
+                                                                    <a href="http://' . $d['url'] . '" target="_blank" class="btn btn-icon btn-blue btn-enquire">Visit<br> website</a>
                                                                 </div>
                                                             </div>
                                                         </div>
