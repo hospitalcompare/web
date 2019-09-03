@@ -243,9 +243,8 @@
                     <p>Make sure you understand:</p>
                     <ul>
                         <li>your rights to choose:
-                            <ol class="alpha">
-                                <li>
-                                     (if NHS funded treatment
+                            <ul class="blue-dot">
+                                <li>if NHS funded treatment
                             <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline" data-toggle="popover-large" data-content="
                                  <p>
                                     You can choose which NHS hospital to perform your elective procedure. Paid for by the NHS. Anywhere in England.
@@ -256,9 +255,7 @@
                                  </p>
                                  <p>
                                      <a class=&quot;btn btn-close btn-close__small btn-teal btn-icon&quot; >Close</a>
-                                 </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>
-
-                        ,
+                                 </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>,
                                 </li>
                                 <li>
                                     self-pay
@@ -278,9 +275,8 @@
                                                  <p>
                                                      <a  class=&quot;btn btn-close btn-close__small btn-teal btn-icon&quot; >Close</a>
                                                  </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>
-                        )
                                 </li>
-                            </ol>
+                            </ul>
 
                         </li>
                         <li>that you don’t have to select your hospital during the GP appointment, but can easily do so at a later date, having made whatever enquires you wish to make.</li>
