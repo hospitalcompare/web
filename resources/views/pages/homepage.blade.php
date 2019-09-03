@@ -241,8 +241,11 @@
                 'title'=>'Step One',
                 'description' => '
                     <p>Make sure you understand:</p>
-                    <ol>
-                        <li>your rights to choose (if NHS funded treatment
+                    <ul>
+                        <li>your rights to choose:
+                            <ol class="alpha">
+                                <li>
+                                     (if NHS funded treatment
                             <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline" data-toggle="popover-large" data-content="
                                  <p>
                                     You can choose which NHS hospital to perform your elective procedure. Paid for by the NHS. Anywhere in England.
@@ -255,14 +258,19 @@
                                      <a class=&quot;btn btn-close btn-close__small btn-teal btn-icon&quot; >Close</a>
                                  </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>
 
-                        , self-pay
+                        ,
+                                </li>
+                                <li>
+                                    self-pay
                             <a tabindex="0" data-offset="30, 40px" class="help-link help-link__inline" data-toggle="popover-large" data-content="<p>
                                                     You can choose a private hospital to perform your elective procedure. Paid for by you. Anywhere in England.
                                                  </p>
                                                  <p>
                                                      <a  class=&quot;btn btn-close btn-close__small btn-teal btn-icon&quot; >Close</a>
-                                                 </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>
-                        or if covered by a health insurance policy
+                                                 </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>,
+                                </li>
+                                <li>
+                                    or if covered by a health insurance policy
                             <a tabindex="0" data-offset="30, 40px" class="help-link help-link__inline" data-toggle="popover-large" data-content="
                                                  <p>
                                                     You can choose which private hospital to perform your elective procedure, if covered by your healthcare insurance policy.
@@ -270,14 +278,18 @@
                                                  <p>
                                                      <a  class=&quot;btn btn-close btn-close__small btn-teal btn-icon&quot; >Close</a>
                                                  </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>
-                        )</li>
+                        )
+                                </li>
+                            </ol>
+
+                        </li>
                         <li>that you don’t have to select your hospital during the GP appointment, but can easily do so at a later date, having made whatever enquires you wish to make.</li>
-                    </ol>
+                    </ul>
                 ' ],
             [
                 'iconImg'=> 'search',
                 'title'=>'Step Two',
-                'description' => '<p>Use the Hospital Compare search criteria to shortlist one or more hospitals to make further enquiries of. Please note NHS hospitals typically do not respond to direct enquiries regarding elective procedures prior to an appointment being confirmed.</p>'],
+                'description' => '<p>Use the Hospital Compare search criteria to shortlist one or more hospitals to make further enquiries of. Please note NHS hospitals typically do not respond to direct enquiries regarding NHS funded elective procedures prior to an appointment being confirmed.</p>'],
             [
                 'iconImg'=> 'hospital-compare',
                 'title'=>'Step Three',
@@ -285,7 +297,7 @@
             [
                 'iconImg'=> 'confirm',
                 'title'=>'Step Four',
-                'description' => '<p>Call your GP surgery and book your first appointment slot via their E-referral system.</p>' ] ] ])
+                'description' => '<p>Call your GP surgery (if NHS funded), chosen hospital (if self-pay) or health insurance provider (if covered by a health insurance policy) to book your first appointment.</p>' ] ] ])
     </section>
 
     <section class="choose-health-parent">

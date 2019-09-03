@@ -29,12 +29,16 @@
     background-color: #1b1b1b;
     padding: 50px 0;
 
+    .svg-wrap {
+        margin: 0 -20px;
+    }
+
     svg {
         path {
             stroke-dasharray: 10000;
             stroke-dashoffset: 10000;
-            animation: drawsvg 10s linear;
-            animation-delay: 1s;
+            animation: drawsvg 10s ease-in-out;
+            //animation-delay: 1s;
             animation-fill-mode: forwards;
         }
     }

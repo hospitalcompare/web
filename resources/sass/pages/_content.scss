@@ -121,18 +121,7 @@
         }
     }
 
-    ol.alpha {
-        li {
-            &:before {
-                content: '(' counter(counter, lower-alpha) ')';
-                position: absolute;
-                top: 0;
-                left: 0;
-                color: $blue;
-                @extend .font-semibold;
-            }
-        }
-    }
+
 
     blockquote {
         padding: 40px 0;
@@ -159,4 +148,24 @@
     }
 
 
+}
+
+ol.alpha {
+    counter-reset: counter;
+
+    li {
+        position: relative;
+        counter-increment: counter;
+        padding-left: 40px;
+        text-align: left;
+
+        &:before {
+            content: '(' counter(counter, lower-alpha) ')';
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: $blue;
+            @extend .font-semibold;
+        }
+    }
 }

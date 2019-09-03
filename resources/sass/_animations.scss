@@ -1,7 +1,13 @@
 @keyframes bg-reverse {
-    50% {
+    0% {
         background-position: 0;
-        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    50% {
+        background-position: 100%;
+        //transform: scale3d(1.1, 1.1, 1.1);
+    }
+    100% {
+        background-position: 0;
     }
 }
 
