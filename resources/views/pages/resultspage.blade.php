@@ -333,12 +333,11 @@
                                                                     </div>
                                                                     <div class="modal-copy">
                                                                         <p>This NHS hospital does not respond to direct enquiries regarding NHS funded elective procedures prior to an appointment being confirmed.</p>
-                                                                        <p>To make an enquiry with them please visit their website <a href="http://' . $d['url'] . '" target="_blank">here</a> or by clicking the link below or you can discuss making an enquiry with your GP.</p>
                                                                     </div>
 
                                                                 </div>
                                                                 <div class="btn-area">
-                                                                    <a href="http://' . $d['url'] . '" target="_blank" class="btn btn-icon btn-blue btn-enquire">Visit<br> website</a>
+                                                                    <a href="http://' . $d['url'] . '" target="_blank" class="btn btn-icon btn-blue btn-enquire">Visit hospital website</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -346,18 +345,12 @@
                                                             <div
                                                                 class="col-inner col-inner__right h-100 text-center bg-pink">
                                                                 <h2 class="text-white">Or go back to results</h2>
-
                                                                 <div class="text-white modal-copy">
-                                                                    <p>Remember you can make an enquiry with a Private  Hospital of your choice to have your procedure performed by them, paid for by the NHS, at no greater cost to the tax payer.</p>
-                                                                    <p>To do this you can refresh your search by clicking <a class="text-link" href="/results-page?hospital_type=1">here</a></p>
+                                                                    <p>Click <a class="text-link"
+                                                                                data-dismiss="modal"
+                                                                                aria-label="Close">here</a>
+                                                                    to go return to results</p>
                                                                 </div>
-{{--                                                                <div class="btn-area">--}}
-{{--                                                                    <a  data-toggle="modal"--}}
-{{--                                                                       data-target="#hc_modal_special"--}}
-{{--                                                                      data-content="<h1>' . $specialOfferContent = 'hello' . '</h1>"--}}
-{{--                                                                       data-dismiss="modal"--}}
-{{--                                                                        class="btn btn-icon btn-special-offer-reverse">Back to results</a>--}}
-{{--                                                               </div>--}}
                                                             </div>
                                                         </div>
                                                     </div>
