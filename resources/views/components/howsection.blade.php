@@ -21,8 +21,9 @@
         <div class="col-12">
             <div class="btn-area text-center">
                 @include('components.basic.button', [
-                    'classTitle' => 'btn btn-m btn-grad btn-teal',
-                    'button'    => 'Find Hospitals'
+                    'hrefValue'     => '/results-page',
+                    'classTitle'    => 'btn btn-m btn-grad btn-teal',
+                    'button'        => 'Find Hospitals'
 
                 ])
             </div>
