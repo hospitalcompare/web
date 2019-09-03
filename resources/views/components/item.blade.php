@@ -146,7 +146,7 @@
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'modalTarget'       => '#hc_modal_enquire_private',
-                    'classTitle'        => 'btn btn-icon btn-enquire enquiry mr-2 btn-block',
+                    'classTitle'        => 'btn btn-icon btn-enquire btn-blue enquiry mr-2 btn-block',
                     'target'            => 'blank',
                     'button'            => $btnText,
                     'id'                => 'modal_button_private_enquiry_'.$id])
@@ -155,7 +155,7 @@
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'hospitalUrl'       => $d['url'],
-                    'classTitle'        => 'btn btn-icon btn-enquire enquiry mr-2 btn-block',
+                    'classTitle'        => 'btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block',
                     'button'            => $btnText,
                     'modalTarget'       => '#hc_modal_enquire_nhs',
                     'modalContent'      => $modalContent])
@@ -168,7 +168,7 @@
             @if(!empty($specialOffers))
                 <div class="btn-area btn-area-lower">
                     @include('components.basic.button', [
-                    'classTitle'        => 'toggle-special-offer btn btn-block btn-icon btn-special-offer btn-plus',
+                    'classTitle'        => 'toggle-special-offer btn btn-block btn-icon btn-pink btn-special-offer btn-plus',
                     'button'            => 'Special Offers'])
                 </div>
             @endif
