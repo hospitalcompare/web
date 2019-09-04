@@ -2,7 +2,7 @@
     <div class="compare-hospitals-header d-flex justify-content-between">
         <div class="container position-relative d-flex align-items-end h-100">
             @include('components.doctor')
-            <ul class="solutions-menu align-items-end d-flex mb-0 ml-auto mr-5">
+            <ul class="solutions-menu align-items-end d-flex mb-0 ml-auto mr-3">
                 <li class="d-block">
                     @include('components.basic.specialoffertab', [
                         'headerText' => [
