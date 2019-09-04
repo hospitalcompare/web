@@ -40,7 +40,7 @@
                             '5 star NHS choices rating',
                             '14 wks NHS funded waiting time'],
                         'offerPrice' => '6999',
-                        'hospitalType' => 'private'
+                        'hospitalType' => 'nhs'
                     ])
                 </li>
                 <li class="d-block">
