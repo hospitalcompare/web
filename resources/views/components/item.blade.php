@@ -41,7 +41,20 @@
                 <p>
                     {!! !empty($waitTime) ? $waitTime : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                 </p>
-
+                @if($NHSClass == 'private-hospital')
+                    <span>
+                        <small>
+                            Click for<br>
+                            @include('components.basic.modalbutton', [
+                                    'hrefValue'         => $url,
+                                    'hospitalTitle'     => $title,
+                                    'modalTarget'       => '#hc_modal_enquire_private',
+                                    'classTitle'        => 'text-link enquire-times',
+                                    'target'            => 'blank',
+                                    'button'            => 'waiting time enquiry'])
+                        </small>
+                    </span>
+                @endif
                 <span class="d-none" id="item_waiting_time_{{$id}}">{{$waitTime}}</span>
             </div>
             {{-- End waiting time --}}
@@ -87,8 +100,6 @@
                 </p>
                 <span class="d-none" id="item_op_cancelled_{{$id}}">{!! $opCancelled !!}</span>
             </div>
-
-
             {{-- Friends and family --}}
             <div class="sort-categories-section-2__child">
                 <p class="m-0"
@@ -123,17 +134,6 @@
                                 'button'            => 'prices'])
                     </small>
                     </span>
-                        <span>
-                            <small>
-                                @include('components.basic.modalbutton', [
-                                        'hrefValue'         => $url,
-                                        'hospitalTitle'     => $title,
-                                        'modalTarget'       => '#hc_modal_enquire_private',
-                                        'classTitle'        => 'text-link enquire-times',
-                                        'target'            => 'blank',
-                                        'button'            => 'current waiting time'])
-                            </small>
-                        </span>
                 @endif
                 <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
             </div>

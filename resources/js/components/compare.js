@@ -2,7 +2,7 @@ $(document).ready(function () {
     //Check if we don't have the cookie and set it to 0
     var compareBar = $('.compare-hospitals-bar');
     var countSpan = $('#compare_number');
-    var icon = $('.compare-heart');
+    var icon = $('#compare_heart');
     if (typeof Cookies.get("compareCount") === 'undefined') {
         Cookies.set("compareCount", 0, {expires: 10000});
         Cookies.set("compareHospitalsData", JSON.stringify([{}]), {expires: 10000});
@@ -33,6 +33,46 @@ $(document).ready(function () {
      */
     function addHospitalToCompare(element) {
         var target = $('#compare_hospitals_grid');
+        var btnContent = '<a id="enquire_614" class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" href="www.northumbria.nhs.uk" role="button" data-toggle="modal" data-content="<button type=&quot;button&quot; class=&quot;close position-absolute&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;>\n' +
+            '                                                <span aria-hidden=&quot;true&quot; class=&quot;text-white bg-black&quot;>Close</span>\n' +
+            '                                            </button>\n' +
+            '                                            <div class=&quot;modal-body&quot;>\n' +
+            '                                                <div class=&quot;container-fluid&quot;>\n' +
+            '                                                    <div class=&quot;row&quot;>\n' +
+            '                                                        <div class=&quot;col col-md-6 p-0&quot;>\n' +
+            '                                                            <div class=&quot;col-inner col-inner__left&quot;>\n' +
+            '                                                                <h3 class=&quot;modal-title mb-3&quot;>Rothbury Community Hospital </h3>\n' +
+            '                                                                <div class=&quot;d-flex mb-3&quot;>\n' +
+            '                                                                    <div class=&quot;image-wrapper mr-3&quot;>\n' +
+            '                                                                        <img class=&quot;mr-3&quot; src=&quot;images/alder-1.png&quot;>\n' +
+            '                                                                    </div>\n' +
+            '                                                                    <div class=&quot;modal-copy&quot;>\n' +
+            '                                                                        <p>This NHS hospital does not respond to direct enquiries regarding NHS funded elective procedures prior to an appointment being confirmed.</p>\n' +
+            '                                                                    </div>\n' +
+            '\n' +
+            '                                                                </div>\n' +
+            '                                                                <div class=&quot;btn-area&quot;>\n' +
+            '                                                                    <a href=&quot;http://www.northumbria.nhs.uk&quot; target=&quot;_blank&quot; class=&quot;btn btn-icon btn-blue btn-enquire&quot;>Visit hospital website</a>\n' +
+            '                                                                </div>\n' +
+            '                                                            </div>\n' +
+            '                                                        </div>\n' +
+            '                                                        <div class=&quot;col col-md-6 p-0&quot;>\n' +
+            '                                                            <div\n' +
+            '                                                                class=&quot;col-inner col-inner__right h-100 text-center bg-pink&quot;>\n' +
+            '                                                                <h2 class=&quot;text-white&quot;>Or go back to results</h2>\n' +
+            '                                                                <div class=&quot;text-white modal-copy&quot;>\n' +
+            '                                                                    <p>Click <a class=&quot;text-link&quot;\n' +
+            '                                                                                data-dismiss=&quot;modal&quot;\n' +
+            '                                                                                aria-label=&quot;Close&quot;>here</a>\n' +
+            '                                                                    to go return to results</p>\n' +
+            '                                                                </div>\n' +
+            '                                                            </div>\n' +
+            '                                                        </div>\n' +
+            '                                                    </div>\n' +
+            '                                                </div>\n' +
+            '                                            </div>" data-hospital-title="Rothbury Community Hospital " data-hospital-url="www.northumbria.nhs.uk" data-target="#hc_modal_enquire_nhs">Make an enquiry\n' +
+            '    <i class=""></i>\n' +
+            '</a>'
         var newRowContent =
             '<div class="col-2 text-center" id="compare_hospital_id_' + element.id + '">' +
                 '<div class="col-inner">' +
@@ -42,7 +82,7 @@ $(document).ready(function () {
                     '</div>' +
                     '<div class="details">' +
                         '<p>' + element.name + '</p>' +
-                        // element.enquireBtn +
+                        btnContent +
                     '</div>' +
                     '<div class="cell">' + element.waitingTime + '</div>' +
                     '<div class="cell">' + element.userRating + '</div>' +
