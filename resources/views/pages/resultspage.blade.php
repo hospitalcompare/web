@@ -349,7 +349,7 @@
                                                                     <p>Click <a class="text-link"
                                                                                 data-dismiss="modal"
                                                                                 aria-label="Close">here</a>
-                                                                    to go return to results</p>
+                                                                    to return to results</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -413,7 +413,7 @@
                                                                     <p>Click <a class="text-link"
                                                                                 data-dismiss="modal"
                                                                                 aria-label="Close">here</a>
-                                                                    to go return to results</p>
+                                                                    to return to results</p>
                                                                 </div>
                                                             </div>
                                                         </div>

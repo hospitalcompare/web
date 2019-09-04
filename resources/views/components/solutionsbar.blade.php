@@ -54,7 +54,7 @@
             </ul>
             <div class="compare-button-title d-flex align-items-center h-100">
                 {{--                @svg('compare-heart', 'compare-heart')--}}
-                <svg id="compare_heart" xmlns="http://www.w3.org/2000/svg" width="" height="">
+                <svg id="compare_heart" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
                     <g data-name="Group 263">
                         <g data-name="Group 133">
                             <g data-name="Rounded Rectangle 1 copy 8"
