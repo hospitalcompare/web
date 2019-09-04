@@ -15,7 +15,7 @@
     <div class="compare-hospitals-content">
         <div class="container">
             <div id="compare_hospitals_grid" class="row">
-                <div class="col-3">
+                <div class="col-2">
                     <div class="col-inner h-100">
                         <div class=""></div>
                         <div class="cell">Name</div>
