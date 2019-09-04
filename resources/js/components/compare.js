@@ -34,7 +34,7 @@ $(document).ready(function () {
     function addHospitalToCompare(element) {
         var target = $('#compare_hospitals_grid');
         var newRowContent =
-            '<div class="col-3 text-center" id="compare_hospital_id_' + element.id + '">' +
+            '<div class="col-2 text-center" id="compare_hospital_id_' + element.id + '">' +
                 '<div class="col-inner">' +
                     '<div class="image-wrapper mx-auto">' +
                         '<img class="" src="images/alder-1.png">' +
@@ -116,7 +116,7 @@ $(document).ready(function () {
         });
 
         //Check if there are already 3 hospitals for comparison in Cookies
-        if (compareCount < 3) {
+        if (compareCount < 5) {
             //Check if we don't have the hospital in our comparison and add it
             if (result.length === 0) {
                 var element = {
