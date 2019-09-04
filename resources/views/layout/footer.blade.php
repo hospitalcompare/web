@@ -48,11 +48,11 @@
     </div>
 
     <div class="footer-middle">
-        <div class="container-fluid p-0">
-            <div class="svg-wrap animated" data-animation="draw">
-                @svg('heart-line')
-            </div>
+        <div class="svg-wrap animated" data-animation="draw" style="overflow: hidden">
+            @svg('heart-line')
         </div>
+{{--        <div class="container-fluid p-0">--}}
+{{--        </div>--}}
     </div>
 
     <div class="footer-lower">

@@ -182,23 +182,11 @@ $(document).ready(function () {
     });
 
     //Set the Onclick event for the Comparison Header
-    $(document).on("click touchend", ".compare-hospitals-bar .compare-button-title", function () {
+    $(document).on("click touchend", ".compare-hospitals-bar .compare-button-title", function (e) {
         var compareCount = parseInt(Cookies.get("compareCount"));
         if (compareCount > 0) {
             $('.compare-hospitals-bar .compare-hospitals-content').slideToggle();
             $('.compare-arrow').toggleClass('rotated');
-
-            $(document).on('click', function (e) {
-                // Hide compare bar if clicking outside
-                if ($('.compare-hospitals-bar').has(e.target).length === 0) {
-                    $('.compare-hospitals-bar .compare-hospitals-content').slideUp();
-                    $('.compare-arrow').removeClass('rotated');
-
-                }
-            });
         }
     });
-
-
-
 });
