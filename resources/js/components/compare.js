@@ -192,7 +192,7 @@ $(document).ready(function () {
 
     $(document).on('click', function (e) {
         // Hide compare bar if clicking outside
-        console.log( $.contains( $(e.target), $('.compare-hospitals-bar')) );
+        // console.log( $.contains( $(e.target), $('.compare-hospitals-bar')) );
         // console.log($('.compare-hospitals-bar').has(e.target).length)
         // if ($('.compare-hospitals-bar').has(e.target).length === 0) {
         //     $('.compare-hospitals-bar .compare-hospitals-content').slideUp();

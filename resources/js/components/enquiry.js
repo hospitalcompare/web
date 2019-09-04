@@ -7,7 +7,6 @@ $(document).ready(function () {
 
         // Get form
         var form = $('#enquiry_form')[0];
-        console.log(form);
         // Create an FormData object
         var data = new FormData(form);
 
@@ -33,7 +32,6 @@ $(document).ready(function () {
                 alert('Thanks, your enquiry has been submitted');
                 $('#hc_modal_enquire_private').modal('hide');
                 $("#result").text(data);
-                console.log("SUCCESS : ", data);
                 $("#btn-submit").prop("disabled", false);
 
             },

@@ -69,15 +69,15 @@
                 </div>
                 <div class="col col-12"><p class="text-white m-0">Please confirm:</p></div>
                 <div class="col col-12 checkbox">
-                    <input required name="waiting_times" type="checkbox" id="waiting_times">
+                    <input required name="waiting_time" type="checkbox" id="waiting_times">
                     <label for="waiting_times">the likely waiting time for an NHS funded referral, should treatment be necessary.</label>
                 </div>
                 <div class="col col-12 checkbox">
-                    <input required name="prices" type="checkbox" id="prices">
+                    <input required name="price" type="checkbox" id="prices">
                     <label for="prices">the likely price range for treatment.</label>
                 </div>
                 <div class="col col-12 checkbox">
-                    <input required name="waiting_times_self" type="checkbox" id="waiting_times_self">
+                    <input required name="waiting_time_self" type="checkbox" id="waiting_times_self">
                     <label for="waiting_times_self">the likely waiting time for self-pay.</label>
                 </div>
                 <div class="col col-12 checkbox">

@@ -11,18 +11,11 @@ $(document).ready(function () {
 
     // Private enquiry form - show title of hospital clicked
     $('#hc_modal_enquire_private').on('show.bs.modal', function (event) {
-        var $button = $(event.relatedTarget);// Button that triggered the modal
-        // Pre-check the checkboxes
-        if($button.hasClass('enquire-prices')){
-            $('#prices').prop('checked', true)
-        }
-        if($button.hasClass('enquire-times')){
-            $('#waiting_times').prop('checked', true)
-        }
+        var $button         = $(event.relatedTarget);// Button that triggered the modal
+        var hospitalTitle   = $button.data('hospital-title');// Extract info from data-* attributes
+        var modal           = $(this);
+        var hospitalId      = $button.attr('id').replace('enquire_', '');
 
-        var hospitalTitle = $button.data('hospital-title');// Extract info from data-* attributes
-        var modal = $(this);
-        var hospitalId = $button.attr('id').replace('modal_button_private_enquiry_', '');
         modal.find('.hospital-title').html(hospitalTitle);
         modal.find("input[name='hospital_id']").val(hospitalId);
     });
@@ -31,12 +24,5 @@ $(document).ready(function () {
         $('#other').on('click', function(){
             var $info = $('#col_additional_information');
             $info.toggleClass('open');
-            // if($("#other").is(':checked')) {
-            //     $info.addClass()
-            // }
         })
-
-
-
-
 });
