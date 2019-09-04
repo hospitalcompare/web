@@ -27,16 +27,25 @@ $(document).ready(function () {
         modal.find("input[name='hospital_id']").val(hospitalId);
     });
 
+    var $info = $('#col_additional_information');
+    // Clear form checkboxes inputs when closing modal
+    $('#hc_modal_enquire_private').on('hide.bs.modal', function (event) {
+        $(this)
+            .find('input[type=checkbox]')
+            .prop('checked', false);
+        // Close the info box and empty contents
+        $info
+            .removeClass('open')
+            .find('textarea')
+            .val('');
+    });
+
     // Toggle the additional info box when clicking on the 'other' checkbox
-        $('#other').on('click', function(){
-            var $info = $('#col_additional_information');
-            $info.toggleClass('open');
-            // if($("#other").is(':checked')) {
-            //     $info.addClass()
-            // }
-        })
+    $('#other').on('click', function(){
 
-
-
-
+        $info.toggleClass('open');
+        // if($("#other").is(':checked')) {
+        //     $info.addClass()
+        // }
+    })
 });
