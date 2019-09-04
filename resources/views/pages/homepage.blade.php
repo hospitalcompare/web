@@ -255,19 +255,20 @@
                                  </p>
                                  <p>
                                      <a class=&quot;btn btn-close btn-close__small btn-teal btn-icon&quot; >Close</a>
-                                 </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>,
+                                 </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>
                                 </li>
                                 <li>
-                                    self-pay
+                                   if self-pay
                             <a tabindex="0" data-offset="30, 40px" class="help-link help-link__inline" data-toggle="popover-large" data-content="<p>
                                                     You can choose a private hospital to perform your elective procedure. Paid for by you. Anywhere in England.
                                                  </p>
+
                                                  <p>
                                                      <a  class=&quot;btn btn-close btn-close__small btn-teal btn-icon&quot; >Close</a>
-                                                 </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>,
+                                                 </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>
                                 </li>
                                 <li>
-                                    or if covered by a health insurance policy
+                                    if covered by a health insurance policy
                             <a tabindex="0" data-offset="30, 40px" class="help-link help-link__inline" data-toggle="popover-large" data-content="
                                                  <p>
                                                     You can choose which private hospital to perform your elective procedure, if covered by your healthcare insurance policy.
