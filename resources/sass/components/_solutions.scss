@@ -16,16 +16,16 @@
         // Doctor illustration
         .doctor {
             cursor: pointer;
-            margin-right: 40px         ;
+            //margin-right: 40px         ;
         }
 
-        @media (min-width: 1240px) {
-            .doctor {
-                position: absolute;
-                right: calc(100% + 42px);
-                margin-right: 0;
-            }
-        }
+        //@media (min-width: 1240px) {
+        //    .doctor {
+        //        position: absolute;
+        //        right: calc(100% + 42px);
+        //        margin-right: 0;
+        //    }
+        //}
 
         // Solutions menu
         ul {

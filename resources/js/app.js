@@ -32,7 +32,8 @@ import './components/basic/specialoffer';           // Toggling special offer sl
 import './components/basic/range';                  // Slider for radius of proximity on search page
 import './components/basic/popover';                // Trigger bootstrap tooltip
 import './components/basic/tooltip';                // Trigger bootstrap popover
-import './components/basic/modal';                  // Trigger bootstrap modal
+import './components/basic/modalNhs';                  // Trigger bootstrap modal
+import './components/basic/modalPrivate';                  // Trigger bootstrap modal
 import './components/enquiry' ;                     // Private hospital enquiry form
 
 // PAGES
