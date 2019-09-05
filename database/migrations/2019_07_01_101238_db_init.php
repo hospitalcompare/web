@@ -90,7 +90,6 @@ class DbInit extends Migration
                 $table->unsignedInteger('hospital_id');
                 $table->double('avg_user_rating')->nullable();
                 $table->integer('total_ratings')->nullable();
-                $table->string('provider_rating')->nullable();
                 $table->string('latest_rating')->nullable();
                 $table->string('status')->default("active");
                 $table->timestamps();
