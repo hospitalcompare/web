@@ -313,29 +313,44 @@ class Utils
 
     /**
      * Generates HTML code based on a given rating ( between 0 - 5 )
+     * NB: Make sure that if this function is changed, the equivalent JQuery function is changed as well ( resultspage.js )
      *
      * @param $rating
      * @return string
      */
     public static function getHtmlStars($rating) {
-        // round down to get number of whole stars needed
+        //Validation for an empty rating or greater than 5
+        if(empty($rating) || $rating > 5 )
+            return '';
+
+        // Round down to get number of whole stars needed
         $wholeStars = floor($rating);
 
-        // double, round, take modulo.
-        // this will be 1 if you have a half-rating, 0 if not.
+        // This will be 1 if you have a half-rating, 0 if not.
         $halfStar = round($rating * 2) % 2;
 
-        // this will hold your html markup
+        // Get the number of empty stars
+        $emptyStars = 5 - $wholeStars - $halfStar;
+
+        // This will hold your html markup
         $html = "";
 
         // write img tags for each whole star
         for ($i = 0; $i < $wholeStars; $i++) {
-            $html .= "<img src='../images/icons/star.svg' alt='Whole Star'>";
+            $html .= "<img src='images/icons/star.svg' alt='Whole Star'>";
         }
 
         // write img tag for half star if needed
         if ($halfStar) {
-            $html .= "<img src='../images/icons/half.svg' alt='Half Star'>";
+            $html .= "<img src='images/icons/half.svg' alt='Half Star'>";
+        }
+
+        //Check if we need to add empty stars as image
+        if(!empty($emptyStars) && $emptyStars > 0) {
+            for ($i = 0; $i < $emptyStars; $i++) {
+//                $html .= "<img src='../images/icons/empty.svg' alt='Empty Star'>"; //TODO: Add the image for the empty stars
+                $html .= ""; //TODO: Remove this line and set the correct Empty Star above
+            }
         }
 
         return $html;
