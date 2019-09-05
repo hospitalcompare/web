@@ -2,7 +2,7 @@ $(document).ready(function () {
     //Check if we don't have the cookie and set it to 0
     var compareBar = $('.compare-hospitals-bar');
     var countSpan = $('#compare_number');
-    var icon = $('#compare_heart');
+    var heartIcon = $('#compare_heart');
     if (typeof Cookies.get("compareCount") === 'undefined') {
         Cookies.set("compareCount", 0, {expires: 10000});
         Cookies.set("compareHospitalsData", JSON.stringify([{}]), {expires: 10000});
@@ -23,7 +23,7 @@ $(document).ready(function () {
         }
         // var countSpan = $('#compare_number');
         countSpan.text(compareCount);
-        icon.addClass('has-count');
+        heartIcon.addClass('has-count');
     }
 
     /**
@@ -119,7 +119,6 @@ $(document).ready(function () {
         if (compareCount === 0) {
             $('.compare-hospitals-bar .compare-hospitals-content').slideUp();
             $('.compare-arrow').toggleClass('rotated');
-            icon.removeClass('has-count');
         }
 
         var countSpan = $('#compare_number');
@@ -201,10 +200,11 @@ $(document).ready(function () {
             $('.compare-arrow').toggleClass('rotated');
         }
 
-        // If more than one item, highlight the heart icon
-        if (compareCount > 0) {
-            icon.addClass('has-count');
-        }
+        // Pulsate the heart every time there is an action
+        heartIcon.removeClass('has-count');
+        setTimeout( function() {
+            heartIcon.addClass('has-count');
+        }, 100);
 
         //Reset compareCount and compareHospitalsData
         Cookies.set("compareCount", 0, -1);
