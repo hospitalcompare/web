@@ -59,28 +59,30 @@
             svg {
                 width: 30px;
                 height: 30px;
-                //opacity: 0;
-                //max-width: 0;
+                overflow: visible;
                 margin-right: 10px;
                 transition: $transition;
                 transform-origin: 50% 50%;
 
                 &.has-count {
                     transform-origin: 50% 50%;
-                    animation: outer-beat1 .8s ease-out .6s;
-                    animation-fill-mode: forwards;
+                    //animation: outer-beat1 .8s ease-out .6s;
+                    //animation-fill-mode: forwards;
+                    //animation-iteration-count: 3;
 
                     #outer-circle {
                         transform-origin: 50% 50%;
-                        animation: outer-beat1 .8s ease-out .6s;
+                        animation: outer-beat1 .5s ease-out .6s;
                         animation-fill-mode: forwards;
+                        animation-iteration-count: 3;
                     }
 
                     // The inner heart
                     #wishlist {
                         transform-origin: 50% 50%;
-                        animation: center-beat .3s ease-out .5s;
+                        animation: center-beat .15s ease-out .5s;
                         animation-fill-mode: forwards;
+                        animation-iteration-count: 3;
                     }
                     //max-width: initial;
                 }
