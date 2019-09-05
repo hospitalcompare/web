@@ -64,7 +64,7 @@ $(document).ready(function () {
             '                                                                    <p>Click <a class=&quot;text-link&quot;\n' +
             '                                                                                data-dismiss=&quot;modal&quot;\n' +
             '                                                                                aria-label=&quot;Close&quot;>here</a>\n' +
-            '                                                                    to go return to results</p>\n' +
+            '                                                                    to return to results</p>\n' +
             '                                                                </div>\n' +
             '                                                            </div>\n' +
             '                                                        </div>\n' +

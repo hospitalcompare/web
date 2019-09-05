@@ -106,6 +106,11 @@ class WebController extends BaseController
         return view('pages.yourrightspage');
     }
 
+    // Your rights
+    public function howToUsePage() {
+        return view('pages.howtousepage');
+    }
+
     // Downloads
     public function download($file_name) {
         $file_path = public_path('downloads/'.$file_name);
