@@ -11,7 +11,7 @@ import 'bootstrap';                                 // Required for bootstrap to
 import 'bootstrap-select';                          // Searchable dropdowns
 import 'cookieconsent';                             // Cookie consent plugin
 import '@fortawesome/fontawesome-free/js/all.min';
-// import './scripts/vendor/stickybits';               // Position: sticky stuff https://www.npmjs.com/package/stickybits
+import './scripts/vendor/stickybits';               // Position: sticky stuff https://www.npmjs.com/package/stickybits
 
 // UTILITIES
 import './scripts/scroll';                          // Smooth scroll
@@ -32,7 +32,8 @@ import './components/basic/specialoffer';           // Toggling special offer sl
 import './components/basic/range';                  // Slider for radius of proximity on search page
 import './components/basic/popover';                // Trigger bootstrap tooltip
 import './components/basic/tooltip';                // Trigger bootstrap popover
-import './components/basic/modal';                  // Trigger bootstrap modal
+import './components/basic/modalNhs';                  // Trigger bootstrap modal
+import './components/basic/modalPrivate';                  // Trigger bootstrap modal
 import './components/enquiry' ;                     // Private hospital enquiry form
 
 // PAGES

@@ -1,3 +1,80 @@
+/**
+ * Generates HTML code based on a given rating ( between 0 - 5 )
+ * NB: Make sure that if this function is changed, the equivalent PhP function is changed as well ( /App/Helpers/Utils.php )
+ *
+ * @param rating
+ * @returns {string}
+ */
+function getHtmlStars(rating) {
+    if(rating == null)
+        return "";
+
+    if(rating == 0) {
+        return "<img src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
+    }
+
+    rating = parseFloat(rating);
+    if (rating > 5)
+        return "";
+
+    // Round down to get number of whole stars needed
+    var wholeStars = Math.floor(rating);
+
+    // This will be 1 if you have a half-rating, 0 if not.
+    var halfStar = Math.round(rating * 2) % 2;
+
+    // Get the number of empty stars
+    var emptyStars = 5 - wholeStars - halfStar;
+
+    // This will hold your html markup
+    var html = "";
+
+    // write img tags for each whole star
+    for (var i = 0; i < wholeStars; i++) {
+        html += "<img class='star-icon' src='images/icons/star.svg' alt='Whole Star'>";
+    }
+
+    // write img tag for half star if needed
+    if (halfStar) {
+        html += "<img class='star-icon' src='images/icons/star-half.svg' alt='Half Star'>";
+    }
+
+    //Check if we need to add empty stars as image
+    if(emptyStars != null && emptyStars > 0) {
+        for (var i = 0; i < emptyStars; i++) {
+            // html += "<img class='star-icon' src='../images/icons/empty.svg' alt='Empty Star'>"; //TODO: Add the image for the empty stars
+            html += ""; //TODO: Remove this line and set the correct Empty Star above
+        }
+    }
+
+    return html;
+}
+
+/**
+ * Generates HTML code based on a given value (percentage or 0 or 1)
+ *
+ * @param value
+ * @returns {string}
+ */
+function getHtmlDashTickValue(value, text = "") {
+    if(value == null)
+        return "";
+
+    var html = "";
+
+    value = parseFloat(value);
+
+    if(value === 0) {
+        html += "<img src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
+
+    } else if(value === 1) {
+        html += "<img src=\"images/icons/tick-green.svg\" alt=\"Tick icon\">";
+    } else {
+        return value + text;
+    }
+    return html;
+}
+
 $(document).ready(function () {
     //Check if we don't have the cookie and set it to 0
     var compareBar = $('.compare-hospitals-bar');
@@ -26,6 +103,8 @@ $(document).ready(function () {
         heartIcon.addClass('has-count');
     }
 
+
+
     /**
      * Adds the element to the Comparison Table
      *
@@ -33,46 +112,23 @@ $(document).ready(function () {
      */
     function addHospitalToCompare(element) {
         var target = $('#compare_hospitals_grid');
-        var btnContent = '<a id="enquire_614" class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" href="www.northumbria.nhs.uk" role="button" data-toggle="modal" data-content="<button type=&quot;button&quot; class=&quot;close position-absolute&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;>\n' +
-            '                                                <span aria-hidden=&quot;true&quot; class=&quot;text-white bg-black&quot;>Close</span>\n' +
-            '                                            </button>\n' +
-            '                                            <div class=&quot;modal-body&quot;>\n' +
-            '                                                <div class=&quot;container-fluid&quot;>\n' +
-            '                                                    <div class=&quot;row&quot;>\n' +
-            '                                                        <div class=&quot;col col-md-6 p-0&quot;>\n' +
-            '                                                            <div class=&quot;col-inner col-inner__left&quot;>\n' +
-            '                                                                <h3 class=&quot;modal-title mb-3&quot;>Rothbury Community Hospital </h3>\n' +
-            '                                                                <div class=&quot;d-flex mb-3&quot;>\n' +
-            '                                                                    <div class=&quot;image-wrapper mr-3&quot;>\n' +
-            '                                                                        <img class=&quot;mr-3&quot; src=&quot;images/alder-1.png&quot;>\n' +
-            '                                                                    </div>\n' +
-            '                                                                    <div class=&quot;modal-copy&quot;>\n' +
-            '                                                                        <p>This NHS hospital does not respond to direct enquiries regarding NHS funded elective procedures prior to an appointment being confirmed.</p>\n' +
-            '                                                                    </div>\n' +
-            '\n' +
-            '                                                                </div>\n' +
-            '                                                                <div class=&quot;btn-area&quot;>\n' +
-            '                                                                    <a href=&quot;http://www.northumbria.nhs.uk&quot; target=&quot;_blank&quot; class=&quot;btn btn-icon btn-blue btn-enquire&quot;>Visit hospital website</a>\n' +
-            '                                                                </div>\n' +
-            '                                                            </div>\n' +
-            '                                                        </div>\n' +
-            '                                                        <div class=&quot;col col-md-6 p-0&quot;>\n' +
-            '                                                            <div\n' +
-            '                                                                class=&quot;col-inner col-inner__right h-100 text-center bg-pink&quot;>\n' +
-            '                                                                <h2 class=&quot;text-white&quot;>Or go back to results</h2>\n' +
-            '                                                                <div class=&quot;text-white modal-copy&quot;>\n' +
-            '                                                                    <p>Click <a class=&quot;text-link&quot;\n' +
-            '                                                                                data-dismiss=&quot;modal&quot;\n' +
-            '                                                                                aria-label=&quot;Close&quot;>here</a>\n' +
-            '                                                                    to go return to results</p>\n' +
-            '                                                                </div>\n' +
-            '                                                            </div>\n' +
-            '                                                        </div>\n' +
-            '                                                    </div>\n' +
-            '                                                </div>\n' +
-            '                                            </div>" data-hospital-title="Rothbury Community Hospital " data-hospital-url="www.northumbria.nhs.uk" data-target="#hc_modal_enquire_nhs">Make an enquiry\n' +
+        var btnContent = element.type == 'nhs-hospital' ?
+            '<a id="' + element.id + '" ' +
+            'class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" ' +
+            'role="button" data-toggle="modal" ' +
+            'data-hospital-url="' + element.url + '" ' +
+            'data-hospital-title="' + element.name + '" ' +
+            'data-target="#hc_modal_enquire_nhs">Make an enquiry\n' +
             '    <i class=""></i>\n' +
-            '</a>'
+            '</a>' :
+            '<a id="' + element.id + '" ' +
+            'class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" ' +
+            'role="button" data-toggle="modal" ' +
+            'data-hospital-url="' + element.url + '" ' +
+            'data-hospital-title="' + element.name + '" ' +
+            'data-target="#hc_modal_enquire_private">Make an enquiry\n' +
+            '    <i class=""></i>\n' +
+            '</a>';
         var newRowContent =
             '<div class="col-2 text-center" id="compare_hospital_id_' + element.id + '">' +
                 '<div class="col-inner">' +
@@ -84,13 +140,13 @@ $(document).ready(function () {
                         '<p>' + element.name + '</p>' +
                         btnContent +
                     '</div>' +
-                    '<div class="cell">' + element.waitingTime + '</div>' +
-                    '<div class="cell">' + element.userRating + '</div>' +
-                    '<div class="cell">' + element.opCancelled + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(element.waitingTime, " Weeks") + '</div>' +
+                    '<div class="cell">' + getHtmlStars(element.userRating) + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(element.opCancelled, "%") + '</div>' +
                     '<div class="cell">' + element.qualityRating + '</div>' +
-                    '<div class="cell">' + element.ffRating + '</div>' +
-                    '<div class="cell">' + element.nhsFunded + '</div>' +
-                    '<div class="cell">' + element.nhsPrivatePay + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(element.ffRating, "%") + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(element.nhsFunded) + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(element.nhsPrivatePay) + '</div>' +
                 '</div>' +
             '</div>';
         target.append(newRowContent);
@@ -236,11 +292,10 @@ $(document).ready(function () {
 
     $(document).on('click', function (e) {
         // Hide compare bar if clicking outside
-        // console.log( $.contains( $(e.target), $('.compare-hospitals-bar')) );
-        // console.log($('.compare-hospitals-bar').has(e.target).length)
-        // if ($('.compare-hospitals-bar').has(e.target).length === 0) {
-        //     $('.compare-hospitals-bar .compare-hospitals-content').slideUp();
-        //     $('.compare-arrow').removeClass('rotated');
-        // }
+        console.log($('.compare-hospitals-bar').has(e.target).length)
+        if ($('.compare-hospitals-bar').has(e.target).length === 0) {
+            $('.compare-hospitals-bar .compare-hospitals-content').slideUp();
+            $('.compare-arrow').removeClass('rotated');
+        }
     });
 });

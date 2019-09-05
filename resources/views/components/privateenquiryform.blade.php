@@ -84,11 +84,10 @@
                     <input required name="consultants" type="checkbox" id="consultants">
                     <label for="consultants">my choice of consultants for self-pay.</label>
                 </div>
-                <div class="col col-12 checkbox">
-                    <input required name="other" type="checkbox" id="other">
-                    <label for="other">Something else</label>
-                </div>
-
+{{--                <div class="col col-12 checkbox">--}}
+{{--                    <input required name="other" type="checkbox" id="other">--}}
+{{--                    <label for="other">Something else</label>--}}
+{{--                </div>--}}
                 <div class="col col-12" id="col_additional_information">
                     <textarea
                         class="form-control"

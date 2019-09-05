@@ -7,3 +7,5 @@ $(document).ready(function () {
         $(this).val(this.checked ? 1 : 0);
     })
 });
+
+

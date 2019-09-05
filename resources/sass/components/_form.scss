@@ -197,15 +197,15 @@ select::-ms-expand {
 
 #col_additional_information {
     //height: 0;
-    max-height: 0;
-    overflow: hidden;
+    //max-height: 0;
+    //overflow: hidden;
     transition: $transition;
-    margin-bottom: 0 !important;
+    //margin-bottom: 0 !important;
 
     &.open {
         //height: auto;
-        max-height: 500px;
-        margin-bottom: inherit !important;
+        //max-height: 500px;
+        //margin-bottom: inherit !important;
     }
 }
 

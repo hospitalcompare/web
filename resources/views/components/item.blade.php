@@ -6,6 +6,7 @@
                 <div class="{{$NHSClass}}"><p>{{$fundedText}}</p></div>
                 @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', ['class' => 'default'])
                 {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
+                <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
             </div>
             <div class="sort-categories-item">
                 <p class="sort-item-title" id="item_name_{{$id}}">
@@ -35,7 +36,7 @@
                     {!! !empty($qualityRating) ? $qualityRating : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                 </p>
                 <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
-                <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
+
             </div>
             {{-- Waiting time --}}
             <div class="sort-categories-section-2__child flex-column">
@@ -145,6 +146,7 @@
                 <span class="d-none" id="item_hospital_type_class_{{$id}}">{!! $NHSClass !!}</span>
                 @if($NHSClass == 'private-hospital')
                     @include('components.basic.modalbutton', [
+                    'hospitalType'      => $NHSClass,
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'modalTarget'       => '#hc_modal_enquire_private',
@@ -154,13 +156,13 @@
                     'id'                => 'enquire_'.$id])
                 @elseif($NHSClass == 'nhs-hospital')
                     @include('components.basic.modalbutton', [
+                    'hospitalType'      => $NHSClass,
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'hospitalUrl'       => $d['url'],
                     'classTitle'        => 'btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block',
                     'button'            => $btnText,
                     'modalTarget'       => '#hc_modal_enquire_nhs',
-                    'modalContent'      => $modalContent,
                     'id'                => 'enquire_'.$id])
                 @endif
                 @include('components.basic.button', [

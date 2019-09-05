@@ -1,43 +1,3 @@
-//BACK TO TOP SCRIPT
-//SCROLL EFFECT
-// Select all links with hashes
-// $(document).ready(function () {
-//     $('a[href*="#"]') // Remove links that don't actually link to anything
-//         .not('[href="#"]')
-//         .not('[href="#0"]')
-//         .click(function (event) {
-//             // On-page links
-//             if (
-//                 location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-//                 &&
-//                 location.hostname == this.hostname
-//             ) {
-//                 // Figure out element to scroll to
-//                 var target = $(this.hash);
-//                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-//                 // Does a scroll target exist?
-//                 if (target.length) {
-//                     // Only prevent default if animation is actually gonna happen
-//                     event.preventDefault();
-//                     $('html, body').animate({
-//                         scrollTop: target.offset().top
-//                     }, 500, function () {
-//                         // Callback after animation
-//                         // Must change click!
-//                         var $target = $(target);
-//                         $target.click();
-//                         if ($target.is(":click")) { // Checking if the target was clicked
-//                             return false;
-//                         } else {
-//                             $target.attr('tabindex', '-1'); // Adding tabindex for elements not clickable
-//                             $target.click(); // Set click again
-//                         }
-//                         ;
-//                     });
-//                 }
-//             }
-//         }); //end of scroll
-// })
 $(document).ready(function () {
     //BACK TO TOP
     $('#back-to-top').on('click',function(){
@@ -60,7 +20,6 @@ $(document).ready(function () {
     // Stuff happening on scroll
     // https://daneden.github.io/animate.css/
 //PARALLAX
-    var $document = $(document);
     var vp_height = $(window).height();
 
 //Lazy Loader
@@ -68,7 +27,7 @@ $(document).ready(function () {
     var lazyloaderslength = lazyloaders.length;
 
 
-    var revealpoint = Math.round(vp_height * 0.1);
+    var revealpoint = Math.round(vp_height * 0.2);
     var scrolled_distance = 0;
 
 //STICKY NAV AND PARALLAX HEADER

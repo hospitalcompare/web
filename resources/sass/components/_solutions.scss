@@ -16,16 +16,16 @@
         // Doctor illustration
         .doctor {
             cursor: pointer;
-            margin-right: 40px         ;
+            //margin-right: 40px         ;
         }
 
-        @media (min-width: 1240px) {
-            .doctor {
-                position: absolute;
-                right: calc(100% + 42px);
-                margin-right: 0;
-            }
-        }
+        //@media (min-width: 1240px) {
+        //    .doctor {
+        //        position: absolute;
+        //        right: calc(100% + 42px);
+        //        margin-right: 0;
+        //    }
+        //}
 
         // Solutions menu
         ul {
@@ -59,30 +59,28 @@
             svg {
                 width: 30px;
                 height: 30px;
-                //opacity: 0;
-                //max-width: 0;
+                overflow: visible;
                 margin-right: 10px;
                 transition: $transition;
                 transform-origin: 50% 50%;
 
                 &.has-count {
                     transform-origin: 50% 50%;
-                    animation: outer-beat1 .8s ease-out .6s;
-                    animation-fill-mode: forwards;
 
                     #outer-circle {
                         transform-origin: 50% 50%;
-                        animation: outer-beat1 .8s ease-out .6s;
+                        animation: heartBeat .5s ease-in-out 0.1s;
                         animation-fill-mode: forwards;
+                        animation-iteration-count: 2;
                     }
 
                     // The inner heart
                     #wishlist {
                         transform-origin: 50% 50%;
-                        animation: center-beat .3s ease-out .5s;
+                        animation: heartBeat .5s ease-in-out;
                         animation-fill-mode: forwards;
+                        animation-iteration-count: 2;
                     }
-                    //max-width: initial;
                 }
             }
 
@@ -121,6 +119,7 @@
         //display: block !important;
 
         #compare_hospitals_grid {
+            padding-bottom: 30px;
 
             .image-wrapper {
                 position: relative;
@@ -147,11 +146,11 @@
             }
 
             .details {
-                height: 180px;
+                height: 130px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-end;
             }
         }
 
@@ -302,4 +301,8 @@
 
 // Compare items
 
-
+// Star icons
+.star-icon {
+    width: 16px;
+    height: 15px;
+}
