@@ -21,6 +21,8 @@ Route::get('/cookie-policy','WebController@cookiePage');
 
 Route::get('/privacy-policy','WebController@privacyPage');
 
+Route::get('/faqs','WebController@faqsPage');
+
 Route::get('/terms-and-conditions','WebController@termsAndConditionsPage');
 
 Route::get('/your-rights','WebController@yourRightsPage');
