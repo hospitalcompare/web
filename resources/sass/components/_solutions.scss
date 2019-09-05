@@ -69,7 +69,7 @@
 
                     #outer-circle {
                         transform-origin: 50% 50%;
-                        animation: outer-beat1 .5s ease-in-out .6s;
+                        animation: outer-beat1 .5s ease-in-out;
                         animation-fill-mode: forwards;
                         animation-iteration-count: 2;
                     }
@@ -77,11 +77,10 @@
                     // The inner heart
                     #wishlist {
                         transform-origin: 50% 50%;
-                        animation: center-beat .5s ease-in-out .5s;
+                        animation: center-beat .5s ease-in-out;
                         animation-fill-mode: forwards;
                         animation-iteration-count: 2;
                     }
-                    //max-width: initial;
                 }
             }
 
