@@ -7,9 +7,6 @@
        data-longitude="{{ $longitude ?? '' }}"
        data-latitude="{{ $latitude ?? '' }}"
    @endif
-   @if($modalTarget == '#hc_modal_enquire_nhs')
-        data-content="{{ $modalContent }}"
-   @endif
    data-hospital-title="{{ $hospitalTitle ?? 'test' }}"
    data-hospital-url="{{ $hrefValue }}"
    data-target="{{ $modalTarget }}">{{ $button }}
