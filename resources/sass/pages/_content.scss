@@ -121,18 +121,7 @@
         }
     }
 
-    ol.alpha {
-        li {
-            &:before {
-                content: '(' counter(counter, lower-alpha) ')';
-                position: absolute;
-                top: 0;
-                left: 0;
-                color: $blue;
-                @extend .font-semibold;
-            }
-        }
-    }
+
 
     blockquote {
         padding: 40px 0;
@@ -159,4 +148,49 @@
     }
 
 
+}
+
+ol.alpha {
+    counter-reset: counter;
+
+    li {
+        position: relative;
+        counter-increment: counter;
+        padding-left: 40px;
+        text-align: left;
+
+        &:before {
+            content: '(' counter(counter, lower-alpha) ')';
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: $blue;
+            @extend .font-semibold;
+        }
+    }
+}
+
+ul.blue-dot {
+    //padding: 0 0 0 50px;
+    margin: 30px 0;
+
+    > li {
+        //font-size: 22px;
+        margin: 0 0 12px 0;
+        position: relative;
+        padding: 0 0 0 20px;
+        line-height: 1;
+        text-align: left;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 11px;
+            height: 11px;
+            background-color: $blue;
+            border-radius: 50%;
+        }
+    }
 }

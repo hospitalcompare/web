@@ -116,7 +116,7 @@ select::-ms-expand {
         border-radius: 10px;
         border: 2px solid $darkestWhite;
         background-color: #ffffff;
-        margin-bottom: 12px;
+
     }
 
     select.form-control {
@@ -130,8 +130,18 @@ select::-ms-expand {
         .col {
             padding-left: 6px;
             padding-right: 6px;
+            margin-bottom: 12px;
         }
     }
+
+    // Boostrap select button
+    .dropdown-toggle {
+        height: 44px;
+    }
+}
+
+.dropdown-toggle {
+    cursor: auto !important;
 }
 
 .checkbox {
@@ -154,13 +164,17 @@ select::-ms-expand {
 
     label {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         cursor: pointer;
         color: $white;
-        font-size: 10px;
-        font-weight: 400;
-        letter-spacing: -0.5px;
-        line-height: 12px;
+        margin-bottom: 0;
+
+        &.small-print {
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            line-height: 12px;
+        }
 
         &:before {
             content: "";
@@ -181,12 +195,26 @@ select::-ms-expand {
     }
 }
 
+#col_additional_information {
+    //height: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: $transition;
+    margin-bottom: 0 !important;
+
+    &.open {
+        //height: auto;
+        max-height: 500px;
+        margin-bottom: inherit !important;
+    }
+}
+
 textarea {
     width: 100%;
     border-radius: 10px;
     border: 2px solid $darkestWhite;
     background-color: #ffffff;
-    margin-bottom: 12px;
+
 
     @include placeholder {
         color: $darkerGrey;

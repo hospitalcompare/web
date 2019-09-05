@@ -4,8 +4,8 @@
     <div class="special-offer-header d-flex align-items-center">
         <div class="image-wrapper">
             <img class="content" width="55" height="50" alt="Image of The Christie Main Site" src="{{ asset('../images/alder-1.png') }}">
-            <div class="nhs-hospital label">
-{{--                <p>NHS Hospital</p>--}}
+            <div class="{{ $hospitalType == "private" ? 'private-hospital' : 'nhs-hospital' }} label">
+                {{--                <p>NHS Hospital</p>--}}
             </div>
         </div>
         <div class="offer-text">
@@ -27,9 +27,28 @@
                     <li>{{ $bulletPoint }}</li>
                 @endforeach
             </ul>
+            @if($hospitalType == 'private')
+                <div class="offer-price">Total cost <strong>£{{ $offerPrice }}</strong></div>
+            @endif
         </div>
         <div class="btn-area text-right">
-            <a class="btn btn-icon btn-enquire-now">Enquire Now</a>
+            @includeWhen($hospitalType == 'private' ,'components.basic.modalbutton', [
+                'hospitalTitle'     => $headerText['open']['title'],
+                'hrefValue'         => '',
+                'modalTarget'       => '#hc_modal_enquire_private',
+                'classTitle'        => 'btn btn-icon btn-enquire-now enquiry',
+                'target'            => 'blank',
+                'button'            => 'Enquire now'
+                ])
+            @includeWhen($hospitalType == 'nhs' ,'components.basic.modalbutton', [
+                'hospitalTitle'     => $headerText['open']['title'],
+                'hrefValue'         => '',
+                'modalTarget'       => '#hc_modal_enquire_nhs',
+                'classTitle'        => 'btn btn-icon btn-enquire-now enquiry',
+                'target'            => 'blank',
+                'button'            => 'Enquire now',
+                'modalContent'      => $modalContent
+                ])
         </div>
     </div>
 </div>

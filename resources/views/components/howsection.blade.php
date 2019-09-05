@@ -4,20 +4,29 @@
         @if(!empty($howsections))
             @foreach($howsections as $howsection)
                 <div class="how-section__child col-12 col-md-3">
-                    {{--                    @if(!empty($howsection['numeral']))--}}
-                    {{--                        <div class="numeral">{{$howsection['numeral']}}</div>--}}
-                    {{--                    @endif--}}
-                    <div class="icon">
-                        <img src="{{ asset($howsection['iconImg']) }}">
+                    <div class="col-inner h-100 d-flex flex-column">
+                        <div class="icon">
+                            {!! file_get_contents(asset('images/icons/' . $howsection['iconImg'] . '.svg')) !!}
+                        </div>
+                        <div class="icon-title">
+                            {{ $howsection['title'] }}
+                        </div>
+                        <div class="icon-description my-auto">
+                            {!! $howsection['description'] !!}
+                        </div>
                     </div>
-                    <p class="icon-title">
-                        {{ $howsection['title'] }}
-                    </p>
-                    <p class="icon-description">
-                        {!! $howsection['description'] !!}
-                    </p>
                 </div>
             @endforeach
         @endif
+        <div class="col-12">
+            <div class="btn-area text-center">
+                @include('components.basic.button', [
+                    'hrefValue'     => '/results-page',
+                    'classTitle'    => 'btn btn-m btn-grad btn-teal',
+                    'button'        => 'Find Hospitals'
+
+                ])
+            </div>
+        </div>
     </div>
 </div>

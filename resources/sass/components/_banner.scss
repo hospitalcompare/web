@@ -6,7 +6,7 @@
 }
 
 .banner {
-    width: $fullWidth;
+    //width: $fullWidth;
     background-image: url(/images/banner.jpg);
     margin: $centerOnPage;
     background-repeat: no-repeat;
@@ -27,20 +27,15 @@
 }
 
 .banner-data {
-    @include flex;
-    width: $pageWrap;
-    margin: auto;
     padding: 45px 0;
     color: $white; //inherited value
 }
 
 //BANNER CONTENTS
-.home-postcode-parent {
-    @include uniformAlignment;
-}
 
 .box {
-    width: 511px;
+    width: 100%;
+    max-width: 511px;
     min-height: 431px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.75);
@@ -70,9 +65,9 @@
     }
 }
 
-.homePromo {
-    @include uniformAlignment;
-    margin: auto 0;
+.home-promo {
+    //@include uniformAlignment;
+    //margin: auto 0;
     position: relative;
     z-index: 5;
 
@@ -84,8 +79,7 @@
     }
 }
 
-.promoList {
-    width: 80%;
+.promo-list {
 
     li {
         list-style: none;

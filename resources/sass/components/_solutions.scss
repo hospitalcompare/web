@@ -8,15 +8,23 @@
 
     .compare-hospitals-header {
         position: relative;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 20px;
+        //width: 100%;
+        //margin: 0 auto;
+        //padding: 0 20px;
         height: 50px;
 
         // Doctor illustration
         .doctor {
-            margin-left: 100px;
             cursor: pointer;
+            margin-right: 40px         ;
+        }
+
+        @media (min-width: 1240px) {
+            .doctor {
+                position: absolute;
+                right: calc(100% + 42px);
+                margin-right: 0;
+            }
         }
 
         // Solutions menu
@@ -40,23 +48,54 @@
                         background-color: darken($teal, 5%);
                         text-decoration: none;
                     }
-
-                    &.btn-special-tab {
-                        //position: absolute;
-                        //left: 0;
-                        //bottom: 0;
-                    }
                 }
             }
         }
 
+
         .compare-button-title {
             cursor: pointer;
+
+            svg {
+                width: 30px;
+                height: 30px;
+                //opacity: 0;
+                //max-width: 0;
+                margin-right: 10px;
+                transition: $transition;
+                transform-origin: 50% 50%;
+
+                &.has-count {
+                    transform-origin: 50% 50%;
+                    animation: outer-beat1 .8s ease-out .6s;
+                    animation-fill-mode: forwards;
+
+                    #outer-circle {
+                        transform-origin: 50% 50%;
+                        animation: outer-beat1 .8s ease-out .6s;
+                        animation-fill-mode: forwards;
+                    }
+
+                    // The inner heart
+                    #wishlist {
+                        transform-origin: 50% 50%;
+                        animation: center-beat .3s ease-out .5s;
+                        animation-fill-mode: forwards;
+                    }
+                    //max-width: initial;
+                }
+            }
 
             p {
                 margin: 0;
                 color: $white;
             }
+        }
+
+        #compare_number {
+            display: inline-block;
+            min-width: 10px;
+            text-align: center;
         }
 
         .compare-arrow {
@@ -79,6 +118,42 @@
     .compare-hospitals-content {
         background-color: #fff;
         display: none;
+        //display: block !important;
+
+        #compare_hospitals_grid {
+
+            .image-wrapper {
+                position: relative;
+                width: 134px;
+                height: 123px;
+                text-align: center;
+
+                .remove-hospital {
+                    cursor: pointer;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 25px;
+                    height: 25px;
+                    line-height: 25px;
+                    background-color: #6F6F6F;
+                    background-image: url('../images/icons/plus-solid.svg');
+                    @include icon-bg-center(70%);
+                    border-radius: 50%;
+                    z-index: 10;
+                    opacity: 1;
+                    transform: translate(50%, -50%) rotate(-45deg);
+                }
+            }
+
+            .details {
+                height: 180px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
 
         &.hidden {
             transform: translateY(-100%);
@@ -87,12 +162,12 @@
         .container {
             position: relative;
             width: 100%;
-            max-width: 1220px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
         .col-inner {
+            padding-top: 30px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -106,9 +181,16 @@
     }
 }
 
+
 // Special offers tabs
 
 .solutions-menu {
+    pointer-events: none;
+
+    > li {
+        pointer-events: initial;
+    }
+
     .bullets {
         ul {
             li {
@@ -134,12 +216,13 @@
 
 .special-offer-tab {
     color: $white;
-    background-image: linear-gradient(246deg, #8e00fe 0%, #77a9f5 100%);
+    background-image: linear-gradient(264deg, #1b71f3 0%, #8f00ff 0%, #a346ec 52%, #b687db 100%);
     width: 340px;
 
     &.pink {
-        background-image: linear-gradient(252deg, #d57ca6 0%, #ed0373 100%);
+        background-image: linear-gradient(249deg, #1b71f3 0%, #ed0373 0%, #cc6d9b 100%);
     }
+
     //width: 300px;
     border-radius: 10px 10px 0 0;
     font-size: 18px;
@@ -148,7 +231,7 @@
 
     .special-offer-header {
         position: relative;
-        padding: 0 50px 0 20px;
+        padding: 0 50px 0 30px;
         height: 65px;
         cursor: pointer;
 
@@ -213,6 +296,10 @@
 }
 
 .special-offer-body {
-    padding: 0 25px 25px 100px;
+    padding: 0 25px 25px 80px;
     display: none;
 }
+
+// Compare items
+
+

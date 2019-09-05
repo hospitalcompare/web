@@ -1,5 +1,6 @@
-.results-page {
-    margin-bottom: 50px;
+.results-page,
+.test-page {
+    margin-bottom: 49px;
 
     .filter-section {
         flex-basis: 85%;
@@ -255,8 +256,8 @@
         line-height: 20px;
         text-align: center;
 
-        small {
-            font-size: 10px;
+        span {
+            font-size: 12px;
             line-height: 1;
         }
 

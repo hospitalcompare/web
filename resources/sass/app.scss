@@ -20,6 +20,7 @@
 
 
 //MISC
+@import 'animations';
 @import 'typography';
 
 // Global CSS
@@ -38,7 +39,6 @@
 
 // COMPONENTS
 @import 'components/whychoose';
-@import 'components/howSection';
 @import 'components/healthChoice';
 @import 'components/logo';
 @import 'components/pagination';

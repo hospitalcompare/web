@@ -18,6 +18,7 @@
 
         li {
             margin-bottom: 15px;
+
             a {
                 font-size: 22px;
             }
@@ -27,11 +28,25 @@
 
 .footer-middle {
     background-color: #1b1b1b;
-    background-image: url('../images/Layer_7_copy_2.svg');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
-    padding: 200px 0 50px;
+    padding: 50px 0;
+    overflow: hidden;
+
+    .svg-wrap {
+        margin: 0 -20px;
+
+        &.draw {
+            svg {
+                path {
+                    stroke-dasharray: 10000;
+                    stroke-dashoffset: 10000;
+                    animation: drawsvg 8s ease-in;
+                    //animation-delay: 1s;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
+
 }
 
 .footer-lower {

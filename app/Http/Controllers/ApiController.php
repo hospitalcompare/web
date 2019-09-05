@@ -182,7 +182,9 @@ class ApiController {
         $dob                    = $request['date_of_birth'];
         $additionalInformation  = $request['additional_information'];
         $price                  = $request['price'] ?? 0;
-        $waitingTime            = $request['waiting_times'] ?? 0;
+        $waitingTime            = $request['waiting_time'] ?? 0;
+        $waitingTimeSelf        = $request['waiting_time_self'] ?? 0;
+        $consultants            = $request['consultants'] ?? 0;
 
         //Check if we have the required variables
         $required = ['hospitalId', 'title', 'firstName', 'lastName', 'email', 'phoneNumber','postcode', 'dob'];
@@ -214,6 +216,8 @@ class ApiController {
         $enquiry->additional_information    = $additionalInformation;
         $enquiry->price                     = $price;
         $enquiry->waiting_time              = $waitingTime;
+        $enquiry->waiting_time_self         = $waitingTimeSelf;
+        $enquiry->consultants               = $consultants;
         $enquiry->save();
 
         $this->returnedData['success']  = true;

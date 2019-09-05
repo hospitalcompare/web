@@ -5,7 +5,7 @@
                 <img alt="Image of {{ $title }}" src="{{ $itemImg }}">
                 <div class="{{$NHSClass}}"><p>{{$fundedText}}</p></div>
                 @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', ['class' => 'default'])
-                    {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
+                {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
             </div>
             <div class="sort-categories-item">
                 <p class="sort-item-title" id="item_name_{{$id}}">
@@ -43,21 +43,22 @@
                 </p>
                 @if($NHSClass == 'private-hospital')
                     <span>
-                        <small>Click for
+                        <small>
+                            Click for<br>
                             @include('components.basic.modalbutton', [
                                     'hrefValue'         => $url,
                                     'hospitalTitle'     => $title,
                                     'modalTarget'       => '#hc_modal_enquire_private',
-                                    'classTitle'        => 'text-link',
+                                    'classTitle'        => 'text-link enquire-times',
                                     'target'            => 'blank',
-                                    'button'            => 'current waiting time'])
+                                    'button'            => 'waiting time enquiry'])
                         </small>
                     </span>
                 @endif
                 <span class="d-none" id="item_waiting_time_{{$id}}">{{$waitTime}}</span>
             </div>
             {{-- End waiting time --}}
-            <div class="sort-categories-section-2__child" >
+            <div class="sort-categories-section-2__child">
                 <p @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
@@ -99,8 +100,6 @@
                 </p>
                 <span class="d-none" id="item_op_cancelled_{{$id}}">{!! $opCancelled !!}</span>
             </div>
-
-
             {{-- Friends and family --}}
             <div class="sort-categories-section-2__child">
                 <p class="m-0"
@@ -124,17 +123,17 @@
                     {!! !empty($privateSelfPay) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>"  !!}
                 </p>
                 @if($NHSClass == 'private-hospital')
-                <span>
+                    <span>
                     <small>Click for
                         @include('components.basic.modalbutton', [
                                 'hrefValue'         => $url,
                                 'hospitalTitle'     => $title,
                                 'modalTarget'       => '#hc_modal_enquire_private',
-                                'classTitle'        => 'text-link',
+                                'classTitle'        => 'text-link enquire-prices',
                                 'target'            => 'blank',
                                 'button'            => 'prices'])
                     </small>
-                </span>
+                    </span>
                 @endif
                 <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
             </div>
@@ -147,19 +146,20 @@
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'modalTarget'       => '#hc_modal_enquire_private',
-                    'classTitle'        => 'btn btn-icon btn-enquire enquiry mr-2 btn-block',
+                    'classTitle'        => 'btn btn-icon btn-enquire btn-blue enquiry mr-2 btn-block',
                     'target'            => 'blank',
                     'button'            => $btnText,
-                    'id'                => 'modal_button_private_enquiry_'.$id])
+                    'id'                => 'enquire_'.$id])
                 @elseif($NHSClass == 'nhs-hospital')
                     @include('components.basic.modalbutton', [
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'hospitalUrl'       => $d['url'],
-                    'classTitle'        => 'btn btn-icon btn-enquire enquiry mr-2 btn-block',
+                    'classTitle'        => 'btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block',
                     'button'            => $btnText,
                     'modalTarget'       => '#hc_modal_enquire_nhs',
-                    'modalContent'      => $modalContent])
+                    'modalContent'      => $modalContent,
+                    'id'                => 'enquire_'.$id])
                 @endif
                 @include('components.basic.button', [
                     'classTitle' => 'btn btn-green-outline compare btn-block mt-0',
@@ -169,7 +169,7 @@
             @if(!empty($specialOffers))
                 <div class="btn-area btn-area-lower">
                     @include('components.basic.button', [
-                    'classTitle'        => 'toggle-special-offer btn btn-block btn-icon btn-special-offer btn-plus',
+                    'classTitle'        => 'toggle-special-offer btn btn-block btn-icon btn-pink btn-special-offer btn-plus',
                     'button'            => 'Special Offers'])
                 </div>
             @endif
