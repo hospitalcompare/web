@@ -47,7 +47,7 @@
                 'classTitle'        => 'btn btn-icon btn-enquire-now enquiry',
                 'target'            => 'blank',
                 'button'            => 'Enquire now',
-                'modalContent'      => $modalContent
+                'modalContent'      => '<div>Content</div>'
                 ])
         </div>
     </div>

@@ -34,11 +34,11 @@ $(document).ready(function () {
     });
 
     // Toggle the additional info box when clicking on the 'other' checkbox
-    $('#other').on('click', function(){
-
-        $info.toggleClass('open');
-        // if($("#other").is(':checked')) {
-        //     $info.addClass()
-        // }
-    })
+    // $('#other').on('click', function(){
+    //
+    //     $info.toggleClass('open');
+    //     // if($("#other").is(':checked')) {
+    //     //     $info.addClass()
+    //     // }
+    // })
 });
