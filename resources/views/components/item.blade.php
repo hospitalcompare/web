@@ -143,6 +143,7 @@
                  @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
                 @if($NHSClass == 'private-hospital')
                     @include('components.basic.modalbutton', [
+                    'hospitalType'      => $NHSClass,
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'modalTarget'       => '#hc_modal_enquire_private',
@@ -152,13 +153,13 @@
                     'id'                => 'enquire_'.$id])
                 @elseif($NHSClass == 'nhs-hospital')
                     @include('components.basic.modalbutton', [
+                    'hospitalType'      => $NHSClass,
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'hospitalUrl'       => $d['url'],
                     'classTitle'        => 'btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block',
                     'button'            => $btnText,
                     'modalTarget'       => '#hc_modal_enquire_nhs',
-                    'modalContent'      => $modalContent,
                     'id'                => 'enquire_'.$id])
                 @endif
                 @include('components.basic.button', [

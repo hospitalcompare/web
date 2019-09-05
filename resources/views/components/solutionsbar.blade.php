@@ -20,7 +20,8 @@
                             '5 star NHS choices rating',
                             '14 wks NHS funded waiting time'],
                         'offerPrice' => '6999',
-                        'hospitalType' => 'nhs'
+                        'hospitalType' => 'nhs-hospital',
+                        'hospitalUrl' => 'www.northumbria.nhs.uk'
                     ])
                 </li>
                 <li class="d-block">
@@ -41,7 +42,8 @@
                            'Outstanding CQC rating',
                            '5 star NHS choices rating'],
                        'offerPrice' => '8499',
-                       'hospitalType' => 'private'
+                       'hospitalType' => 'private-hospital',
+                       'hospitalUrl' => 'www.northumbria.nhs.uk'
                    ])
                 </li>
                 {{--            <li class="d-block ml-3">--}}
