@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="choose-health">
+    <div class="choose-health animated" data-animation="fade-in">
     {{$choosehealthbanner}}
         {{--            <p>--}}
         {{--                <a class="{{$classTitle}}" href="" role="button">{{$buttonName}}</a>--}}

@@ -93,8 +93,17 @@
             background-size: cover;
             border-radius: 20px;
             position: relative;
+            @include mask($lighestGrey, 1);
 
-            @include mask($lighestGrey, 0.38);
+            &:before {
+                transition: 0.3s opacity ease-in;
+            }
+
+            &.fade-in {
+                &:before {
+                    opacity: 0.38;
+                }
+            }
         }
 
         .choose-health-text {
