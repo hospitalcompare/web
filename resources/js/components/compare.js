@@ -33,13 +33,21 @@ $(document).ready(function () {
      */
     function addHospitalToCompare(element) {
         var target = $('#compare_hospitals_grid');
-        var btnContent = '' +
+        var btnContent = element.type == 'nhs-hospital' ?
             '<a id="' + element.id + '" ' +
             'class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" ' +
             'role="button" data-toggle="modal" ' +
             'data-hospital-url="' + element.url + '" ' +
             'data-hospital-title="' + element.name + '" ' +
             'data-target="#hc_modal_enquire_nhs">Make an enquiry\n' +
+            '    <i class=""></i>\n' +
+            '</a>' :
+            '<a id="' + element.id + '" ' +
+            'class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" ' +
+            'role="button" data-toggle="modal" ' +
+            'data-hospital-url="' + element.url + '" ' +
+            'data-hospital-title="' + element.name + '" ' +
+            'data-target="#hc_modal_enquire_private">Make an enquiry\n' +
             '    <i class=""></i>\n' +
             '</a>';
         var newRowContent =
