@@ -6,6 +6,7 @@
                 <div class="{{$NHSClass}}"><p>{{$fundedText}}</p></div>
                 @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', ['class' => 'default'])
                 {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
+                <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
             </div>
             <div class="sort-categories-item">
                 <p class="sort-item-title" id="item_name_{{$id}}">
@@ -35,7 +36,7 @@
                     {!! !empty($qualityRating) ? $qualityRating : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                 </p>
                 <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
-                <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
+
             </div>
             {{-- Waiting time --}}
             <div class="sort-categories-section-2__child flex-column">
