@@ -337,18 +337,18 @@ class Utils
 
         // write img tags for each whole star
         for ($i = 0; $i < $wholeStars; $i++) {
-            $html .= "<img src='images/icons/star.svg' alt='Whole Star'>";
+            $html .= "<img class='star-icon' src='images/icons/star-full.svg' alt='Whole Star'>";
         }
 
         // write img tag for half star if needed
         if ($halfStar) {
-            $html .= "<img src='images/icons/half.svg' alt='Half Star'>";
+            $html .= "<img class='star-icon' src='images/icons/star-half.svg' alt='Half Star'>";
         }
 
         //Check if we need to add empty stars as image
         if(!empty($emptyStars) && $emptyStars > 0) {
             for ($i = 0; $i < $emptyStars; $i++) {
-//                $html .= "<img src='../images/icons/empty.svg' alt='Empty Star'>"; //TODO: Add the image for the empty stars
+//                $html .= "<img class='star-icon' src='../images/icons/empty.svg' alt='Empty Star'>"; //TODO: Add the image for the empty stars
                 $html .= ""; //TODO: Remove this line and set the correct Empty Star above
             }
         }

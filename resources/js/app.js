@@ -11,7 +11,7 @@ import 'bootstrap';                                 // Required for bootstrap to
 import 'bootstrap-select';                          // Searchable dropdowns
 import 'cookieconsent';                             // Cookie consent plugin
 import '@fortawesome/fontawesome-free/js/all.min';
-// import './scripts/vendor/stickybits';               // Position: sticky stuff https://www.npmjs.com/package/stickybits
+import './scripts/vendor/stickybits';               // Position: sticky stuff https://www.npmjs.com/package/stickybits
 
 // UTILITIES
 import './scripts/scroll';                          // Smooth scroll
