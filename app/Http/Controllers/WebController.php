@@ -106,9 +106,14 @@ class WebController extends BaseController
         return view('pages.yourrightspage');
     }
 
-    // Your rights
+    // How to use Page
     public function howToUsePage() {
         return view('pages.howtousepage');
+    }
+
+    // FAQS Page
+    public function faqsPage() {
+        return view('pages.faqspage');
     }
 
     // Downloads
