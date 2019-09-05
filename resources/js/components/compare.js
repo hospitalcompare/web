@@ -56,16 +56,21 @@ function getHtmlStars(rating) {
  * @param value
  * @returns {string}
  */
-function htmlDashOrTick(value) {
+function getHtmlDashTickValue(value, text = "") {
+    if(value == null)
+        return "";
+
     var html = "";
 
-    if(parseInt(value) === 0) {
+    value = parseFloat(value);
+
+    if(value === 0) {
         html += "<img src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
 
-    } else if(parseInt(value) === 1) {
+    } else if(value === 1) {
         html += "<img src=\"images/icons/tick-green.svg\" alt=\"Tick icon\">";
     } else {
-        return value;
+        return value + text;
     }
     return html;
 }
@@ -135,13 +140,13 @@ $(document).ready(function () {
                         '<p>' + element.name + '</p>' +
                         btnContent +
                     '</div>' +
-                    '<div class="cell">' + element.waitingTime + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(element.waitingTime, " Weeks") + '</div>' +
                     '<div class="cell">' + getHtmlStars(element.userRating) + '</div>' +
-                    '<div class="cell">' + htmlDashOrTick(element.opCancelled) + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(element.opCancelled, "%") + '</div>' +
                     '<div class="cell">' + element.qualityRating + '</div>' +
-                    '<div class="cell">' + element.ffRating + '</div>' +
-                    '<div class="cell">' + htmlDashOrTick(element.nhsFunded) + '</div>' +
-                    '<div class="cell">' + htmlDashOrTick(element.nhsPrivatePay) + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(element.ffRating, "%") + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(element.nhsFunded) + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(element.nhsPrivatePay) + '</div>' +
                 '</div>' +
             '</div>';
         target.append(newRowContent);
