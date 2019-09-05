@@ -105,6 +105,8 @@ $(document).ready(function () {
         var elementId = $(this).attr('id');
         // var enquireBtn = $('#enquire_' + elementId).outerHTML;
         var name = $('#item_name_' + elementId).text();
+        var url = $('#item_hospital_url_' + elementId).text();
+        var type = $('#item_hospital_type_class_' + elementId).text();
         var waitingTime = $('#item_waiting_time_' + elementId).text();
         var userRating = $('#item_user_rating_' + elementId).text();
         var opCancelled = $('#item_op_cancelled_' + elementId).text();
@@ -124,6 +126,8 @@ $(document).ready(function () {
                     'id': elementId,
                     // 'enquireBtn': enquireBtn,
                     'name': name,
+                    'url': url,
+                    'type': type,
                     'waitingTime': waitingTime,
                     'userRating': userRating,
                     'opCancelled': opCancelled,

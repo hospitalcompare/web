@@ -13,12 +13,12 @@
                 </p>
                 <p class="sort-item-location">{{$location}}</p>
                 @include('components.basic.modalbutton', [
-                'hrefValue'         => '#',
-                'classTitle'        => 'find-link',
-                'button'            => 'Find on map',
-                'modalTarget'       => '#hc_modal_map',
-                'latitude'          => $latitude,
-                'longitude'         => $longitude
+                    'hrefValue'         => '#',
+                    'classTitle'        => 'find-link',
+                    'button'            => 'Find on map',
+                    'modalTarget'       => '#hc_modal_map',
+                    'latitude'          => $latitude,
+                    'longitude'         => $longitude
                 ])
                 {{--                TODO: reintroduce consultant button when we have this data --}}
                 {{--                @if(!empty($specialOffers))--}}
@@ -35,6 +35,7 @@
                     {!! !empty($qualityRating) ? $qualityRating : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                 </p>
                 <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
+                <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
             </div>
             {{-- Waiting time --}}
             <div class="sort-categories-section-2__child flex-column">
@@ -141,6 +142,7 @@
         <div class="sort-categories-section-3 d-flex flex-column justify-content-center">
             <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between"
                  @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
+                <span class="d-none" id="item_hospital_type_class_{{$id}}">{!! $NHSClass !!}</span>
                 @if($NHSClass == 'private-hospital')
                     @include('components.basic.modalbutton', [
                     'hospitalType'      => $NHSClass,

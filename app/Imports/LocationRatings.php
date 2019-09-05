@@ -26,7 +26,6 @@ class LocationRatings extends DefaultImport {
                     $rating = HospitalRating::updateOrCreate([
                         'hospital_id'       => $hospital->id
                     ], [
-                        'provider_rating'   => !empty($item['Provider Rating']) ? $item['Provider Rating'] : null,
                         'latest_rating'     => !empty($item['Latest Rating']) ? $item['Latest Rating'] : null,
                     ]);
                     $this->returnedData[] = $rating;
