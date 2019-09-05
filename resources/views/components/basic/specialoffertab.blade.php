@@ -27,12 +27,12 @@
                     <li>{{ $bulletPoint }}</li>
                 @endforeach
             </ul>
-            @if($hospitalType == 'private')
+            @if($hospitalType == 'private-hospital')
                 <div class="offer-price">Total cost <strong>£{{ $offerPrice }}</strong></div>
             @endif
         </div>
         <div class="btn-area text-right">
-            @includeWhen($hospitalType == 'private' ,'components.basic.modalbutton', [
+            @includeWhen($hospitalType == 'private-hospital' ,'components.basic.modalbutton', [
                 'hospitalType'      => $hospitalType,
                 'hospitalTitle'     => $headerText['open']['title'],
                 'modalTarget'       => '#hc_modal_enquire_private',
@@ -40,7 +40,7 @@
                 'target'            => 'blank',
                 'button'            => 'Enquire now'
                 ])
-            @includeWhen($hospitalType == 'nhs' ,'components.basic.modalbutton', [
+            @includeWhen($hospitalType == 'nhs-hospital' ,'components.basic.modalbutton', [
                 'hospitalType'      => $hospitalType,
                 'hospitalTitle'     => $headerText['open']['title'],
                 'hrefValue'         => $hospitalUrl,

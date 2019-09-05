@@ -9,7 +9,7 @@
    @if(!empty($hospitalType) && $hospitalType == 'nhs-hospital')
         data-hospital-url="{{ $hrefValue }}"
    @endif
-   data-hospital-title="{{ $hospitalTitle ?? 'test' }}"
+   data-hospital-title="{{ $hospitalTitle ?? 'Hospital Title Here' }}"
    data-target="{{ $modalTarget }}">{{ $button }}
     <i class="{{ empty($icon) ? '' : $icon }}"></i>
 </a>
