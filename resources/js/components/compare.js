@@ -9,6 +9,10 @@ function getHtmlStars(rating) {
     if(rating == null)
         return "";
 
+    if(rating == 0) {
+        return "<img src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
+    }
+
     rating = parseFloat(rating);
     if (rating > 5)
         return "";
@@ -43,6 +47,26 @@ function getHtmlStars(rating) {
         }
     }
 
+    return html;
+}
+
+/**
+ * Generates HTML code based on a given value (percentage or 0 or 1)
+ *
+ * @param value
+ * @returns {string}
+ */
+function htmlDashOrTick(value) {
+    var html = "";
+
+    if(parseInt(value) === 0) {
+        html += "<img src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
+
+    } else if(parseInt(value) === 1) {
+        html += "<img src=\"images/icons/tick-green.svg\" alt=\"Tick icon\">";
+    } else {
+        return value;
+    }
     return html;
 }
 
@@ -113,11 +137,11 @@ $(document).ready(function () {
                     '</div>' +
                     '<div class="cell">' + element.waitingTime + '</div>' +
                     '<div class="cell">' + getHtmlStars(element.userRating) + '</div>' +
-                    '<div class="cell">' + element.opCancelled + '</div>' +
+                    '<div class="cell">' + htmlDashOrTick(element.opCancelled) + '</div>' +
                     '<div class="cell">' + element.qualityRating + '</div>' +
                     '<div class="cell">' + element.ffRating + '</div>' +
-                    '<div class="cell">' + element.nhsFunded + '</div>' +
-                    '<div class="cell">' + element.nhsPrivatePay + '</div>' +
+                    '<div class="cell">' + htmlDashOrTick(element.nhsFunded) + '</div>' +
+                    '<div class="cell">' + htmlDashOrTick(element.nhsPrivatePay) + '</div>' +
                 '</div>' +
             '</div>';
         target.append(newRowContent);
