@@ -66,23 +66,20 @@
 
                 &.has-count {
                     transform-origin: 50% 50%;
-                    //animation: outer-beat1 .8s ease-out .6s;
-                    //animation-fill-mode: forwards;
-                    //animation-iteration-count: 3;
 
                     #outer-circle {
                         transform-origin: 50% 50%;
-                        animation: outer-beat1 .5s ease-out .6s;
+                        animation: outer-beat1 .5s ease-in-out .6s;
                         animation-fill-mode: forwards;
-                        animation-iteration-count: 3;
+                        animation-iteration-count: 2;
                     }
 
                     // The inner heart
                     #wishlist {
                         transform-origin: 50% 50%;
-                        animation: center-beat .15s ease-out .5s;
+                        animation: center-beat .5s ease-in-out .5s;
                         animation-fill-mode: forwards;
-                        animation-iteration-count: 3;
+                        animation-iteration-count: 2;
                     }
                     //max-width: initial;
                 }
