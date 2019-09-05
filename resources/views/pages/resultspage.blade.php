@@ -290,7 +290,24 @@
                     </li>
                 </ul>
             </nav>
-            <div class="sort-categories-section-3 pt-2"></div>
+            <div class="sort-categories-section-3 pt-2">
+                <ul class="sort-categories-menu">
+                    <li>
+                        <p tabindex="0" data-offset="30px, 40px" class="align-c"
+                            @include('components.basic.popover', [
+                            'size'      => 'large',
+                            'placement' => 'top',
+                            'trigger'   => 'hover',
+                            'html'      => 'true',
+                            'content'   => '<p class="bold mb-0">
+                                                Add to Shortlist
+                                            </p>
+                                            <p>
+                                                Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
+                                            </p>'])>Add to Shortlist</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
