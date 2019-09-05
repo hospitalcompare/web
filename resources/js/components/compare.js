@@ -1,3 +1,51 @@
+/**
+ * Generates HTML code based on a given rating ( between 0 - 5 )
+ * NB: Make sure that if this function is changed, the equivalent PhP function is changed as well ( /App/Helpers/Utils.php )
+ *
+ * @param rating
+ * @returns {string}
+ */
+function getHtmlStars(rating) {
+    if(rating == null)
+        return "";
+
+    rating = parseFloat(rating);
+    if (rating > 5)
+        return "";
+
+    // Round down to get number of whole stars needed
+    var wholeStars = Math.floor(rating);
+
+    // This will be 1 if you have a half-rating, 0 if not.
+    var halfStar = Math.round(rating * 2) % 2;
+
+    // Get the number of empty stars
+    var emptyStars = 5 - wholeStars - halfStar;
+
+    // This will hold your html markup
+    var html = "";
+
+    // write img tags for each whole star
+    for (var i = 0; i < wholeStars; i++) {
+        html += "<img src='images/icons/star.svg' alt='Whole Star'>";
+    }
+
+    // write img tag for half star if needed
+    if (halfStar) {
+        html += "<img src='images/icons/half.svg' alt='Half Star'>";
+    }
+
+    //Check if we need to add empty stars as image
+    if(emptyStars != null && emptyStars > 0) {
+        for (var i = 0; i < emptyStars; i++) {
+            // html += "<img src='../images/icons/empty.svg' alt='Empty Star'>"; //TODO: Add the image for the empty stars
+            html += ""; //TODO: Remove this line and set the correct Empty Star above
+        }
+    }
+
+    return html;
+}
+
 $(document).ready(function () {
     //Check if we don't have the cookie and set it to 0
     var compareBar = $('.compare-hospitals-bar');
@@ -25,6 +73,8 @@ $(document).ready(function () {
         countSpan.text(compareCount);
         icon.addClass('has-count');
     }
+
+
 
     /**
      * Adds the element to the Comparison Table
@@ -62,7 +112,7 @@ $(document).ready(function () {
                         btnContent +
                     '</div>' +
                     '<div class="cell">' + element.waitingTime + '</div>' +
-                    '<div class="cell">' + element.userRating + '</div>' +
+                    '<div class="cell">' + getHtmlStars(element.userRating) + '</div>' +
                     '<div class="cell">' + element.opCancelled + '</div>' +
                     '<div class="cell">' + element.qualityRating + '</div>' +
                     '<div class="cell">' + element.ffRating + '</div>' +
