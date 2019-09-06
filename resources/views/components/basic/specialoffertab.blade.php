@@ -1,6 +1,6 @@
 {{--Special offers tabs in solutions bar --}}
 
-<div class="special-offer-tab {{ $bgColor ?? '' }} ml-3">
+<div class="special-offer-tab {{ $hospitalType }}__offer {{ $bgColor ?? '' }} ml-3">
     <div class="special-offer-header d-flex align-items-center">
         <div class="image-wrapper">
             <img class="content" width="55" height="50" alt="Image of The Christie Main Site" src="{{ asset('../images/alder-1.png') }}">
@@ -21,14 +21,16 @@
         <span class="fa fa-chevron-up toggle-special-offer"></span>
     </div>
     <div class="special-offer-body">
-        <div class="bullets mb-4">
+        <div class="bullets">
             <ul>
                 @foreach($bulletPoints as $bulletPoint)
                     <li>{{ $bulletPoint }}</li>
                 @endforeach
             </ul>
+        </div>
+        <div class="offer-price mb-4">
             @if($hospitalType == 'private-hospital')
-                <div class="offer-price">Total cost <strong>£{{ $offerPrice }}</strong></div>
+                Total cost <strong>£{{ $offerPrice }}</strong>
             @endif
         </div>
         <div class="btn-area text-right">
