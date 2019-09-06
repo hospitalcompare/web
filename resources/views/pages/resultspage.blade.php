@@ -290,21 +290,26 @@
                     </li>
                 </ul>
             </nav>
-            <div class="sort-categories-section-3 pt-2">
-                <ul class="sort-categories-menu">
-                    <li>
-                        <p tabindex="0" data-offset="30px, 40px" class="align-c"
-                            @include('components.basic.popover', [
-                            'size'      => 'large',
-                            'placement' => 'top',
-                            'trigger'   => 'hover',
-                            'html'      => 'true',
-                            'content'   => '<p class="bold mb-0">
-                                                Add to Shortlist
-                                            </p>
-                                            <p>
-                                                Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
-                                            </p>'])>Add to Shortlist</p>
+            <div class="sort-categories-section-3 p-0">
+                <ul class="sort-categories-menu p-0 h-100">
+                    <li class="align-items-end">
+                        <p class="text-center">
+                            Add to<br>Shortlist
+                            <a tabindex="0" data-offset="30px, 40px" class="mx-auto mt-1 help-link position-static d-block"
+                                @include('components.basic.popover', [
+                                'size'      => 'large',
+                                'placement' => 'top',
+                                'trigger'   => 'hover',
+                                'html'      => 'true',
+                                'content'   => '<p class="bold mb-0">
+                                                    Add to Shortlist
+                                                <p class="">
+                                                    <a id="1" class="float-left btn btn-green-outline compare mt-0 mr-1" target="" href="javascript:void(0);" role="button"><i class=""></i></a>
+                                                    When you have performed a search for hospitals on your results page you can click the
+                                                    blue “compare” icon
+                                                </p>
+                                                </p>'])>?</a>
+                        </p>
                     </li>
                 </ul>
             </div>

@@ -348,8 +348,7 @@ class Utils
         //Check if we need to add empty stars as image
         if(!empty($emptyStars) && $emptyStars > 0) {
             for ($i = 0; $i < $emptyStars; $i++) {
-//                $html .= "<img class='star-icon' src='../images/icons/empty.svg' alt='Empty Star'>"; //TODO: Add the image for the empty stars
-                $html .= ""; //TODO: Remove this line and set the correct Empty Star above
+                $html .= "<img class='star-icon' src='../images/icons/star-outline.svg' alt='Empty Star'>";
             }
         }
 

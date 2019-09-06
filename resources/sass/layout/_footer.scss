@@ -34,11 +34,14 @@
     .svg-wrap {
         margin: 0 -20px;
 
+        svg {
+            stroke-dasharray: 10000;
+            stroke-dashoffset: 10000;
+        }
+
         &.draw {
             svg {
                 path {
-                    stroke-dasharray: 10000;
-                    stroke-dashoffset: 10000;
                     animation: drawsvg 8s ease-in;
                     //animation-delay: 1s;
                     animation-fill-mode: forwards;
@@ -46,7 +49,6 @@
             }
         }
     }
-
 }
 
 .footer-lower {
