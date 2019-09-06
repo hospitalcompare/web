@@ -284,9 +284,15 @@ $(document).ready(function () {
     //Set the Onclick event for the Comparison Header
     $(document).on("click touchend", ".compare-hospitals-bar .compare-button-title", function (e) {
         var compareCount = parseInt(Cookies.get("compareCount"));
+        var openTabs = $('.special-offer-tab.open');
         if (compareCount > 0) {
             $('.compare-hospitals-bar .compare-hospitals-content').slideToggle();
             $('.compare-arrow').toggleClass('rotated');
+            // Close the special offer tabs if any are open
+            openTabs
+                .removeClass('open')
+                .find('.special-offer-body')
+                .slideUp();
         }
     });
 
