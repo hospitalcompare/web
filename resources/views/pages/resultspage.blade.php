@@ -290,21 +290,23 @@
                     </li>
                 </ul>
             </nav>
-            <div class="sort-categories-section-3 pt-2">
-                <ul class="sort-categories-menu">
-                    <li>
+            <div class="sort-categories-section-3 p-0">
+                <ul class="sort-categories-menu p-0 h-100">
+                    <li class="align-items-end">
                         <p tabindex="0" data-offset="30px, 40px" class="align-c"
                             @include('components.basic.popover', [
                             'size'      => 'large',
                             'placement' => 'top',
-                            'trigger'   => 'hover',
+                            'trigger'   => 'click',
                             'html'      => 'true',
                             'content'   => '<p class="bold mb-0">
                                                 Add to Shortlist
+                                            <p class="">
+                                                <a id="1" class="float-left btn btn-green-outline compare mt-0 mr-1" target="" href="javascript:void(0);" role="button"><i class=""></i></a>
+                                                When you have performed a search for hospitals on your results page you can click the
+                                                blue “compare” icon
                                             </p>
-                                            <p>
-                                                Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
-                                            </p>'])>Add to Shortlist</p>
+                                            </p>'])>Add to<br>Shortlist</p>
                     </li>
                 </ul>
             </div>
