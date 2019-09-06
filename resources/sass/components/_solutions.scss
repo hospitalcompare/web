@@ -116,8 +116,8 @@
     .compare-hospitals-content {
         background-color: #fff;
         display: none;
-        //display: block !important;
-
+        max-height: calc(100vh - 50px);
+        overflow-y: scroll;
         #compare_hospitals_grid {
             padding-bottom: 30px;
 

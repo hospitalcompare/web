@@ -42,7 +42,7 @@ function getHtmlStars(rating) {
     //Check if we need to add empty stars as image
     if(emptyStars != null && emptyStars > 0) {
         for (var i = 0; i < emptyStars; i++) {
-            html += "<img class='star-icon' src='../images/icons/star-outline.svg' alt='Empty Star'>";
+            html += "<img class='star-icon' src='../images/icons/star-outline.svg' alt='Empty Star'>"; //TODO: Add the image for the empty stars
         }
     }
 
@@ -271,7 +271,8 @@ $(document).ready(function () {
     });
 
     //Set the OnClick event for the Remove Hospital on the Comparison table
-    $(document).on("click touchend", ".compare-hospitals-bar .remove-hospital", function () {
+    $(document).on("click touchend", ".compare-hospitals-bar .remove-hospital", function (e) {
+        e.stopPropagation();
         var elementId = $(this).attr('id');
         var data = JSON.parse(Cookies.get("compareHospitalsData"));
         var compareCount = parseInt(Cookies.get("compareCount"));
@@ -290,8 +291,7 @@ $(document).ready(function () {
     });
 
     $(document).on('click', function (e) {
-        // Hide compare bar if clicking outside
-        console.log($('.compare-hospitals-bar').has(e.target).length)
+        // Hide shortlist bar if clicking outside it
         if ($('.compare-hospitals-bar').has(e.target).length === 0) {
             $('.compare-hospitals-bar .compare-hospitals-content').slideUp();
             $('.compare-arrow').removeClass('rotated');
