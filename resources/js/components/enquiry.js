@@ -1,29 +1,41 @@
 $(document).ready(function () {
-
-    $("#btn-submit").click(function (event) {
+    $("#btn_submit").click(function (event) {
 
         //stop submit the form, we will post it manually.
-        // event.preventDefault();
-
         // Get form
-        var $form = $('#enquiry_form')[0];
+        var $form = $('#enquiry_form');
+
+        event.preventDefault();
+
         // Create an FormData object
-        var data = new FormData(form);
+        var data = new FormData($form[0]);
 
         // If you want to add an extra field for the FormData
-        // data.append("CustomField", "This is some extra data, testing");
+        // data.append("CustomField", "This is some extra data, testing);
 
-        // disabled the submit button
-        $("#btn-submit").prop("disabled", true);
+        // disable the submit button
+        //$("#btn_submit").prop("disabled", true);
 
         $form.validate({
+            ignore: [],
             rules: {
                 title: "required",
                 firstName: "required",
-                lastName: "required"
+                lastName: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                confirm_email: {
+                    equalTo: email
+                }
+            },
+            messages: {
+                email: "Please enter a valid email address",
+                confirm_email: "The passwords entered do not match"
             },
             // JQuery's awesome submit handler.
-            submitHandler(function(form) {
+            submitHandler: function(form) {
                 $.ajax({
                     type: "POST",
                     enctype: 'multipart/form-data',
@@ -40,7 +52,7 @@ $(document).ready(function () {
                         alert('Thanks, your enquiry has been submitted');
                         $('#hc_modal_enquire_private').modal('hide');
                         $("#result").text(data);
-                        $("#btn-submit").prop("disabled", false);
+                        $("#btn_submit").prop("disabled", false);
 
                     },
                     error: function (e) {
@@ -50,11 +62,13 @@ $(document).ready(function () {
                         // alert(e.responseText);
                         // $("#result").text(e.responseText);
                         console.log("ERROR : ", e);
-                        $("#btn-submit").prop("disabled", false);
+                        // $("#btn_submit").prop("disabled", false);
 
                     }
                 });
             }
         })
     });
+
 });
+

@@ -88,6 +88,16 @@ class WebController extends BaseController
         return view('pages.testpage', $this->returnedData);
     }
 
+    // test page just for ajax form
+    public function ajaxForm() {
+        $procedures = Utils::getProceduresForDropdown();
+
+        $this->returnedData['success']              = true;
+        $this->returnedData['data']['procedures']   = $procedures;
+
+        return view('pages.ajaxformpage', $this->returnedData);
+    }
+
     // Cookie policy
     public function cookiePage() {
         return view('pages.cookiepage');

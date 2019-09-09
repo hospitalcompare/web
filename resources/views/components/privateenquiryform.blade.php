@@ -75,7 +75,7 @@
                 </div>
                 <div class="col col-12 checkbox">
                     <input required name="price" type="checkbox" id="prices">
-                    <label for="prices">the likely price range for treatment.</label>
+                    <label for="prices">the likely price range for treatment (if self pay).</label>
                 </div>
                 <div class="col col-12 checkbox">
                     <input required name="waiting_time_self" type="checkbox" id="waiting_times_self">
@@ -103,7 +103,7 @@
                     <label class="small-print" for="gdpr">Please accept the Terms & Conditions before submitting the form.</label>
                 </div>
                 <div class="col-12 btn-area text-center">
-                    <a id="btn-submit" class="btn btn-icon btn-blue btn-enquire">Make an enquiry</a>
+                    <input type="submit" id="btn_submit" class="btn btn-icon btn-blue btn-enquire" value="Make an enquiry" />
                 </div>
             </div>
         </form>

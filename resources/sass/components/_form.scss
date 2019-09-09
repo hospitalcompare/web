@@ -150,7 +150,7 @@ select::-ms-expand {
         left: -200vw;
 
         &:checked {
-            +label {
+            +label:last-child {
                 font-weight: 600;
 
                 &:before {
@@ -162,7 +162,7 @@ select::-ms-expand {
         }
     }
 
-    label {
+    label:last-child {
         display: flex;
         align-items: center;
         cursor: pointer;
