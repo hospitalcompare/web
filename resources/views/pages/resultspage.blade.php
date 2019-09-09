@@ -11,7 +11,7 @@
 @section('body-class', 'results-page')
 
 @section('content')
-
+    @include('components.basic.alertdanger')
     <form class="form-element">
         <div class="filter-parent">
             <div class="filter container">
@@ -373,5 +373,6 @@
     @include('components.modals.modalenquireprivate', ['procedures' => $data['filters']['procedures']])
     {{--  Maps modal  --}}
     @include('components.modals.modalmaps')
+
 
 @endsection

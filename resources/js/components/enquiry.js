@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#btn-submit").click(function (event) {
 
         //stop submit the form, we will post it manually.
-        event.preventDefault();
+        // event.preventDefault();
 
         // Get form
         var form = $('#enquiry_form')[0];
@@ -36,7 +36,10 @@ $(document).ready(function () {
 
             },
             error: function (e) {
-                alert(e.responseText);
+                $('.alert')
+                    .text(e.responseText)
+                    .show();
+                // alert(e.responseText);
                 // $("#result").text(e.responseText);
                 console.log("ERROR : ", e);
                 $("#btn-submit").prop("disabled", false);

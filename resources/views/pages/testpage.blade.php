@@ -12,6 +12,12 @@
 
 @section('content')
     <main>
+        <div class="container">
+            @include('components.basic.alertdanger')
+        </div>
+        <h3>Enquiry Form</h3>
+        @include('components.modals.modalenquireprivate', [
+            'procedures' => $data['procedures'] ])
         <div class="section pt-3 pb-5">
             <div class="container">
                 <p class="p-5" style="width: 300px; border: 3px solid black">
@@ -90,9 +96,6 @@
                         </div>
                     </div>
                 </div>
-                <h3>Enquiry Form</h3>
-                @include('components.modals.modalenquireprivate', [
-                    'procedures' => $data['procedures'] ])
                 <h2>Dr Stevini</h2>
                 @include('components.doctor')
                 <h2>Tooltips</h2>
