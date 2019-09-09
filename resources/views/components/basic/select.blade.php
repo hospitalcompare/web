@@ -9,7 +9,9 @@
             id="{{empty($selectId)? '' : $selectId}}"
             data-live-search="{{ !empty($selectPicker) ? $selectPicker : ''}}"
             name="{{$name}}">
-        {{--        <option value="" disabled {{ empty(Request::input($name)) ? 'selected' : ''  }}>{{$placeholder}}</option>--}}
+        @if(!empty($placeholder))
+            <option value="" disabled {{ empty(Request::input($name)) ? 'selected' : ''  }}>{{$placeholder}}</option>
+        @endif
         @if(!empty($options))
             @foreach($options as $option)
                 <option name="{{$option['name']}}" id="{{$name.'_'.$option['id']}}"

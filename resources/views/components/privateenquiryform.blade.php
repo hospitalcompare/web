@@ -13,7 +13,6 @@
                 <div class="col col-6">
                     @include('components.basic.select', [
                         'options' => [
-                            ['id'=>'0', 'name'=>'Title*'],
                             ['id'=>'Mr', 'name'=>'Mr'],
                             ['id'=>'Mrs', 'name'=>'Mrs'],
                             ['id'=>'Miss', 'name'=>'Miss'],
@@ -30,59 +29,59 @@
                 </div>
                 {{-- First name --}}
                 <div class="col col-6">
-                    <input required name="first_name" type="text" class="form-control" id="firstName"
+                    <input required name="first_name" value="Tom" type="text" class="form-control" id="firstName"
                            placeholder="First Name*">
                 </div>
                 {{-- Last name --}}
                 <div class="col col-6">
-                    <input required name="last_name" type="text" class="form-control" id="lastName"
+                    <input required name="last_name" type="text" value="Eagle" class="form-control" id="lastName"
                            placeholder="Last Name*">
                 </div>
 
                 {{-- DOB --}}
                 <div class="col col-6">
-                    <input required name="date_of_birth" type="text" class="form-control" id="dateOfBirth" placeholder="DOB* (YYYY/MM/DD)">
+                    <input required name="date_of_birth" type="text" value="1979/08/13" class="form-control" id="dateOfBirth" placeholder="DOB* (YYYY/MM/DD)">
                 </div>
                 {{-- Email address --}}
                 <div class="col col-6">
-                    <input required name="email" type="email" class="form-control" id="email" placeholder="Email Address*">
+                    <input required name="email" type="email" class="form-control" value="tomeagle79@gmail.com" id="email" placeholder="Email Address*">
                 </div>
                 <div class="col col-6">
-                    <input required name="confirm_email" type="email" class="form-control" id="confirmEmail"
+                    <input required name="confirm_email" type="email" value="tomeagle79@gmail.com" class="form-control" id="confirmEmail"
                            placeholder="Confirm Email Address*">
                 </div>
                 <div class="col col-6">
-                    <input required name="phone_number" type="text" class="form-control" id="phoneNumber"
+                    <input required name="phone_number" type="text" value="07941939374" class="form-control" id="phoneNumber"
                            placeholder="Phone Number*">
                 </div>
                 <div class="col col-6">
-                    <input required name="postcode" type="text" class="form-control" id="postcode" placeholder="Postcode*">
+                    <input required name="postcode" type="text" class="form-control" id="postcode" value="ch23ae" placeholder="Postcode*">
                 </div>
                 <div class="col col-6">
                     @include('components.basic.select', [
                         'options' => $procedures,
                         'chevronFAClassName' => 'fa-chevron-down black-chevron',
                         'selectClass' => 'selectpicker',
-                        'placeholder' => 'Surgery Type',
+{{--                        'placeholder' => 'Surgery Type',--}}
                         'name'=>'procedure_id',
                         'selectPicker' => 'true',
                         'resultsLabel' => 'resultsLabel'])
                 </div>
                 <div class="col col-12"><p class="text-white m-0">Please confirm:</p></div>
                 <div class="col col-12 checkbox">
-                    <input required name="waiting_time" type="checkbox" id="waiting_times">
+                    <input name="waiting_time" type="checkbox" id="waiting_times">
                     <label for="waiting_times">the likely waiting time for an NHS funded referral, should treatment be necessary.</label>
                 </div>
                 <div class="col col-12 checkbox">
-                    <input required name="price" type="checkbox" id="prices">
+                    <input name="price" type="checkbox" id="prices">
                     <label for="prices">the likely price range for treatment (if self pay).</label>
                 </div>
                 <div class="col col-12 checkbox">
-                    <input required name="waiting_time_self" type="checkbox" id="waiting_times_self">
+                    <input name="waiting_time_self" type="checkbox" id="waiting_times_self">
                     <label for="waiting_times_self">the likely waiting time for self-pay.</label>
                 </div>
                 <div class="col col-12 checkbox">
-                    <input required name="consultants" type="checkbox" id="consultants">
+                    <input name="consultants" type="checkbox" id="consultants">
                     <label for="consultants">my choice of consultants for self-pay.</label>
                 </div>
 {{--                <div class="col col-12 checkbox">--}}
