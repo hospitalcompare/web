@@ -80,8 +80,14 @@ class WebController extends BaseController
 
     // Stacking page for components etc
     public function testPage() {
-        $procedures = Procedure::all()->toArray();
-        $this->returnedData['data']['filters']['procedures']        = $procedures;
+//        $procedures = Procedure::all()->toArray();
+//        $this->returnedData['data']['filters']['procedures']        = $procedures;
+        //Retrieve the list of Procedures sorted by name ASC
+
+        $procedures = Utils::getProceduresForDropdown();
+
+        $this->returnedData['success']              = true;
+        $this->returnedData['data']['procedures']   = $procedures;
 
         return view('pages.testpage', $this->returnedData);
     }

@@ -92,7 +92,7 @@
                 </div>
                 <h3>Enquiry Form</h3>
                 @include('components.modals.modalenquireprivate', [
-                    'procedures' => $data['filters']['procedures']])
+                    'procedures' => $data['procedures'] ])
                 <h2>Dr Stevini</h2>
                 @include('components.doctor')
                 <h2>Tooltips</h2>

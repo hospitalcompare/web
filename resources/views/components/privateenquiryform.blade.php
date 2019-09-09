@@ -13,6 +13,7 @@
                 <div class="col col-6">
                     @include('components.basic.select', [
                         'options' => [
+                            ['id'=>'0', 'name'=>'Title*'],
                             ['id'=>'Mr', 'name'=>'Mr'],
                             ['id'=>'Mrs', 'name'=>'Mrs'],
                             ['id'=>'Miss', 'name'=>'Miss'],
@@ -30,7 +31,7 @@
                 {{-- First name --}}
                 <div class="col col-6">
                     <input required name="first_name" type="text" class="form-control" id="firstName"
-                           placeholder="First Name">
+                           placeholder="First Name*">
                 </div>
                 {{-- Last name --}}
                 <div class="col col-6">
