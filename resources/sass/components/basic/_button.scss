@@ -313,7 +313,7 @@
             padding: 5px 15px 5px 40px;
             display: inline-block;
             text-align: left;
-            max-width: 117px;
+            //max-width: 117px;
 
             &:before {
                 content: '';
@@ -325,6 +325,10 @@
                 width: 40px;
                 height: 40px;
             }
+        }
+
+        input[type="submit"].btn-enquire {
+
         }
 
         &.btn-enquire-pink {

@@ -8,17 +8,9 @@ $(document).ready(function () {
 
     // Get form
     var $form = $('#enquiry_form');
-    console.log($form.length);
 
+    // Only run if the page contains the enquiry form
     if($form.length > 0) {
-        // Create an FormData object
-        var data = new FormData($form[0]);
-
-        // If you want to add an extra field for the FormData
-        // data.append("CustomField", "This is some extra data, testing);
-
-        // disable the submit button
-        // $("#btn_submit").prop("disabled", true);
 
         $form.validate({
             rules: {
@@ -64,6 +56,12 @@ $(document).ready(function () {
             },
             // JQuery's awesome submit handler.
             submitHandler: function(form) {
+                // Create an FormData object
+                var data = new FormData($form[0]);
+
+                // If you want to add an extra field for the FormData
+                // data.append("CustomField", "This is some extra data, testing);
+
                 $.ajax({
                     type: "POST",
                     enctype: 'multipart/form-data',
