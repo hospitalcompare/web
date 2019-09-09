@@ -6,7 +6,7 @@ $(document).ready(function () {
         // event.preventDefault();
 
         // Get form
-        var form = $('#enquiry_form')[0];
+        var $form = $('#enquiry_form')[0];
         // Create an FormData object
         var data = new FormData(form);
 
@@ -16,37 +16,45 @@ $(document).ready(function () {
         // disabled the submit button
         $("#btn-submit").prop("disabled", true);
 
-        $.ajax({
-            type: "POST",
-            enctype: 'multipart/form-data',
-            url: "/api/enquiry",
-            data: data,
-            processData: false,
-            contentType: false,
-            cache: false,
-            timeout: 600000,
-            headers: {
-                'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
+        $form.validate({
+            rules: {
+                title: "required",
+                firstName: "required",
+                lastName: "required"
             },
-            success: function (data) {
-                alert('Thanks, your enquiry has been submitted');
-                $('#hc_modal_enquire_private').modal('hide');
-                $("#result").text(data);
-                $("#btn-submit").prop("disabled", false);
+            // JQuery's awesome submit handler.
+            submitHandler(function(form) {
+                $.ajax({
+                    type: "POST",
+                    enctype: 'multipart/form-data',
+                    url: "/api/enquiry",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 600000,
+                    headers: {
+                        'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
+                    },
+                    success: function (data) {
+                        alert('Thanks, your enquiry has been submitted');
+                        $('#hc_modal_enquire_private').modal('hide');
+                        $("#result").text(data);
+                        $("#btn-submit").prop("disabled", false);
 
-            },
-            error: function (e) {
-                $('.alert')
-                    .text(e.responseText)
-                    .show();
-                // alert(e.responseText);
-                // $("#result").text(e.responseText);
-                console.log("ERROR : ", e);
-                $("#btn-submit").prop("disabled", false);
+                    },
+                    error: function (e) {
+                        $('.alert')
+                            .text(e.responseText)
+                            .show();
+                        // alert(e.responseText);
+                        // $("#result").text(e.responseText);
+                        console.log("ERROR : ", e);
+                        $("#btn-submit").prop("disabled", false);
 
+                    }
+                });
             }
-        });
-
+        })
     });
-
 });
