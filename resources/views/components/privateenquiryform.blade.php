@@ -95,15 +95,16 @@
                 {{--                </div>--}}
                 <div class="col col-12" id="col_additional_information">
                     <textarea
-                        class="form-control"
+                        class=""
                         name="additional_information"
                         placeholder="Additional information"
                         id="additional_information"
+                        rows="5"
                     ></textarea>
                 </div>
 
                 <div class="col col-6 checkbox">
-                    <input required name="gdpr" type="checkbox" id="gdpr" {{ ($gdpr) ? 'checked' : '' }}>
+                    <input required name="gdpr" type="checkbox" id="gdpr" {{ !empty($gdpr) && ($gdpr) ? 'checked' : '' }}>
                     <label class="small-print" for="gdpr">Please accept the Terms & Conditions before submitting the
                         form.</label>
                 </div>

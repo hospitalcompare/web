@@ -1,3 +1,4 @@
+// Submitting and validating the private hospital enquiry form
 $(document).ready(function () {
 
     // Add a custom validation to the jquery validate object - validate phone number field as UK format
@@ -29,6 +30,9 @@ $(document).ready(function () {
         // jquery validate options
         $form.validate({
             rules: {
+                hospital_id: {
+                  required: true
+                },
                 title: "required",
                 firstName: {
                     required: true,
@@ -64,6 +68,7 @@ $(document).ready(function () {
                 gdpr: "required"
             },
             messages: {
+                hospital_id: "There is no hospital id specified",
                 title: "Please select your title",
                 firstName: "Please enter your first name",
                 lastName: "Please enter your surname",
@@ -115,7 +120,6 @@ $(document).ready(function () {
                     success: function (data) {
                         // alert('Thanks, your enquiry has been submitted');
                         $('#hc_modal_enquire_private').modal('hide');
-                        console.log();
                         $('.alert')
                             .find('.alert-text')
                             .html('Thank you ' + data.data.first_name + ', your enquiry has been successfully sent!')
@@ -128,12 +132,17 @@ $(document).ready(function () {
                         }, 800);
                     },
                     error: function (e) {
-                        // $('.alert')
-                        //     .html('<pre>' + e.responseText + '</pre>')
-                        //     .show();
                         console.log("ERROR : ", e.responseText);
-                        // $("#btn_submit").prop("disabled", false);
-
+                        $('.alert')
+                            .find('.alert-text')
+                            .html("<pre>ERROR : " + e.responseText + "</pre>")
+                            .parents('.alert')
+                            .addClass('alert-danger show')
+                            .show();
+                        // Scroll to alert bar
+                        $('html, body').animate({
+                            scrollTop: ($('#hc_alert').offset().top)
+                        }, 800);
                     }
                 });
             }

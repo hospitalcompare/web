@@ -15,8 +15,7 @@
                 'dob'           => $dob ?? '',
                 'email'         => $email ?? '',
                 'postCode'      => $postCode ?? '',
-                'phone'         => $phone ?? '',
-                'gdpr'          => true])
+                'phone'         => $phone ?? ''])
         </div>
     </div>
 </div>
