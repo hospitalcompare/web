@@ -49,7 +49,11 @@
                                 </div>
 
                                 <div class="form-child home-postcode-parent">
-                                    @include('components.basic.input', ['placeholder' => 'Enter postcode', 'className' => 'postcode-text-box big', 'value' => '', 'name' => 'postcode', 'id' => 'input_postcode'])
+                                    @include('components.basic.input', [
+                                        'placeholder' => 'Enter postcode',
+                                        'className' => 'postcode-text-box big',
+                                        'value' => '', 'name' =>
+                                        'postcode', 'id' => 'input_postcode'])
                                     <a tabindex="0" data-offset="30px, 40px"
                                        class="help-link"
                                         @include('components.basic.popover', [

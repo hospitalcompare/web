@@ -14,6 +14,12 @@ $(document).ready(function () {
         "Please enter a date in the format yyyy/mm/dd."
     );
 
+    $.validator.addMethod("alpha", function(value, element) {
+            return value.match(/^[a-zA-Z\s]*$/);
+        },
+        "Please enter only alphabetical characters"
+    );
+
     // Get form
     var $form = $('#enquiry_form');
 
@@ -24,8 +30,14 @@ $(document).ready(function () {
         $form.validate({
             rules: {
                 title: "required",
-                firstName: "required",
-                lastName: "required",
+                firstName: {
+                    required: true,
+                    alpha: true
+                },
+                lastName: {
+                    required: true,
+                    alpha: true
+                },
                 date_of_birth: {
                     required: true,
                     dateFormat: true,
@@ -37,14 +49,19 @@ $(document).ready(function () {
                 },
                 confirm_email: {
                     required: true,
-                    equalTo: email
+                    equalTo: email,
+                    email: true
                 },
                 phone_number: {
                     required: true,
                     phoneUK: true
                 },
-                postcode: "required",
-                procedure_id: "required"
+                postcode: {
+                    required: true,
+                    postcodeUK: true
+                },
+                procedure_id: "required",
+                gdpr: "required"
             },
             messages: {
                 title: "Please select your title",

@@ -222,7 +222,6 @@ textarea {
 }
 
 // jquery validate error messages
-
 .form-error-message {
     color: #fff;
     font-size: 14px;
@@ -230,4 +229,9 @@ textarea {
     padding: 5px;
     border-radius: 5px;
     line-height: 1;
+}
+
+// jquery validate feedback - stop alignment issue
+.invalid-feedback {
+    margin-top: 0;
 }
