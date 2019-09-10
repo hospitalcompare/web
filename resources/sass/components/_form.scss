@@ -19,10 +19,10 @@ textarea {
         background-color: $white;
     }
 
-    label {
-        color: $darkerGrey;
-        font-weight: 500;
-    }
+    //label {
+    //    color: $darkerGrey;
+    //    font-weight: 500;
+    //}
 }
 
 .flex-select {
@@ -219,4 +219,15 @@ textarea {
     @include placeholder {
         color: $darkerGrey;
     }
+}
+
+// jquery validate error messages
+
+.form-error-message {
+    color: #fff;
+    font-size: 14px;
+    background-color: $form-feedback-invalid-color;
+    padding: 5px;
+    border-radius: 5px;
+    line-height: 1;
 }

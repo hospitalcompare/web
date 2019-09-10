@@ -59,13 +59,14 @@
                 </div>
                 <div class="col col-6">
                     @include('components.basic.select', [
-                        'options' => $procedures,
-                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                        'selectClass' => 'selectpicker',
-                        'placeholder' => 'Surgery Type',
-                        'name'=>'procedure_id',
-                        'selectPicker' => 'true',
-                        'resultsLabel' => 'resultsLabel'])
+                        'options'               => $procedures,
+                        'chevronFAClassName'    => 'fa-chevron-down black-chevron',
+                        'selectClass'           => 'selectpicker',
+                        'placeholder'           => 'Surgery Type',
+                        'name'                  =>'procedure_id',
+                        'selectPicker'          => 'true',
+                        'resultsLabel'          => 'resultsLabel',
+                        'required'              => true])
                 </div>
                 <div class="col col-12"><p class="text-white m-0">Please confirm:</p></div>
                 <div class="col col-12 checkbox">
@@ -102,7 +103,8 @@
                     <label class="small-print" for="gdpr">Please accept the Terms & Conditions before submitting the form.</label>
                 </div>
                 <div class="col-12 btn-area text-center">
-                    <input type="submit" id="btn_submit" class="btn btn-icon btn-blue btn-enquire" value="Make an enquiry" />
+                    <a id="btn_submit" class="btn btn-icon btn-blue btn-enquire">Make an enquiry</a>
+{{--                    <input type="submit" id="btn_submit" class="btn btn-icon btn-blue btn-enquire" value="Make an enquiry" />--}}
                 </div>
             </div>
         </form>

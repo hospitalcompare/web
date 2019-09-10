@@ -30,7 +30,7 @@
         <div class="section py-3 ">
             <div class="container-fluid px-0">
                 <h2>Solutions bar </h2>
-                @include('components.solutionsbar', ['position' => 'static'])
+                @include('components.solutionsbar', ['position' => ''])
             </div>
         </div>
         <div class="section py-3 ">

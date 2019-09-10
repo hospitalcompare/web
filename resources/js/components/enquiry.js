@@ -1,9 +1,17 @@
 $(document).ready(function () {
 
+    // Add a custom validation to the jquery validate object - validate phone number field as UK format
     $.validator.addMethod('phoneUK', function(phone_number, element) {
             return this.optional(element) || phone_number.length > 9 &&
                 phone_number.match(/^(\(?(0|\+44)[1-9]{1}\d{1,4}?\)?\s?\d{3,4}\s?\d{3,4})$/);
         }, 'Please specify a valid phone number'
+    );
+
+    $.validator.addMethod("dateFormat", function(date, element) {
+            // put your own logic here, this is just a (crappy) example
+            return date.match(/^\d\d\d\d?\/\d\d?\/\d\d$/);
+        },
+        "Please enter a date in the format yyyy/mm/dd."
     );
 
     // Get form
@@ -12,12 +20,17 @@ $(document).ready(function () {
     // Only run if the page contains the enquiry form
     if($form.length > 0) {
 
+        // jquery validate options
         $form.validate({
             rules: {
                 title: "required",
                 firstName: "required",
                 lastName: "required",
-                date_of_birth: "required",
+                date_of_birth: {
+                    required: true,
+                    dateFormat: true
+                    // dateNL: true
+                },
                 email: {
                     required: true,
                     email: true
@@ -34,8 +47,16 @@ $(document).ready(function () {
                 procedure_id: "required"
             },
             messages: {
+                title: "Please select your title",
+                firstName: "Please enter your first name",
+                lastName: "Please enter your surname",
+                // date_of_birth: "Please enter your date of birth",
                 email: "Please enter a valid email address",
-                confirm_email: "The passwords entered do not match"
+                confirm_email: "The passwords entered do not match",
+                phone_number: "Please enter your contact number",
+                postcode: "Please enter a valid UK postcode",
+                procedure_id: "Please select the procedure required",
+                gdpr: "Please confirm you consent to our terms and conditions"
             },
             errorPlacement: function(error, element) {
                 var customError = $([
@@ -54,7 +75,7 @@ $(document).ready(function () {
                 // Insert your custom error
                 customError.insertBefore( element );
             },
-            // JQuery's awesome submit handler.
+            // Submit handler - what happens when form submitted
             submitHandler: function(form) {
                 // Create an FormData object
                 var data = new FormData($form[0]);
@@ -93,6 +114,12 @@ $(document).ready(function () {
         })
     }
 
-
+    // Send the form on click of the button
+    $('#btn_submit').on('click', function(e){
+        e.preventDefault();
+        $(this)
+            .parents('form')
+            .submit();
+    })
 });
 
