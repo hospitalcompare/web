@@ -114,6 +114,8 @@ class ApiController {
     public function getLocations($postcode) {
 
         if(!empty($postcode)) {
+            //Validate the postcode
+            $postcode = Validate::escapeString($postcode);
             $location = new Location($postcode);
             $locations = $location->getLocationsByIncompletePostcode();
 
