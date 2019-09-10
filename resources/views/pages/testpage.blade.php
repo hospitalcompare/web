@@ -11,29 +11,26 @@
 @section('body-class', 'test-page')
 
 @section('content')
-    <main>
+    <h3>Enquiry Form</h3>
+    @include('components.modals.modalenquireprivate', [
+        'procedures' => $data['procedures'] ])
+    <div class="section pt-3 pb-5">
         <div class="container">
-            @include('components.basic.alertdanger')
+            <p class="p-5" style="width: 300px; border: 3px solid black">
+                When you have performed a search for hospitals on your results page you can click the
+                blue “compare” icon
+                <a id="1" class="float-right display-inline btn btn-green-outline compare mt-0" target=""
+                   href="javascript:void(0);" role="button"><i class=""></i></a>
+            </p>
         </div>
-        <h3>Enquiry Form</h3>
-        @include('components.modals.modalenquireprivate', [
-            'procedures' => $data['procedures'] ])
-        <div class="section pt-3 pb-5">
-            <div class="container">
-                <p class="p-5" style="width: 300px; border: 3px solid black">
-                    When you have performed a search for hospitals on your results page you can click the
-                    blue “compare” icon
-                    <a id="1" class="float-right display-inline btn btn-green-outline compare mt-0" target="" href="javascript:void(0);" role="button"><i class=""></i></a>
-                </p>
-            </div>
+    </div>
+    <div class="section py-3 ">
+        <div class="container-fluid px-0">
+            <h2>Solutions bar </h2>
+            @include('components.solutionsbar', ['position' => ''])
         </div>
-        <div class="section py-3 ">
-            <div class="container-fluid px-0">
-                <h2>Solutions bar </h2>
-                @include('components.solutionsbar', ['position' => ''])
-            </div>
-        </div>
-        <div class="section py-3 ">
+    </div>
+    <div class="section py-3 ">
         <div class="section py-3">
             <div class="container">
                 <h3>Modal - enquire now</h3>
@@ -340,6 +337,4 @@
                 {{--                @include('components.modals.modalenquirenhs')--}}
             </div>
         </div>
-    </main>
-
 @endsection

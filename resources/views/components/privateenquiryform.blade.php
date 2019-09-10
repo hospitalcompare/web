@@ -7,7 +7,7 @@
             <img width="173" height="158" src="images/alder-1.png">
         </div>
         <form id="enquiry_form">
-{{--            <input type="hidden" name="specialty_id" value="3">--}}
+            {{--            <input type="hidden" name="specialty_id" value="3">--}}
             <input type="hidden" name="hospital_id" value="1">
             <div class="form-group row">
                 <div class="col col-6">
@@ -30,32 +30,35 @@
                 {{-- First name --}}
                 <div class="col col-6">
                     <input required name="first_name" type="text" class="form-control" id="firstName"
-                           placeholder="First Name*">
+                           placeholder="First Name*" value="{{ !empty($firstName) ? $firstName : '' }}">
                 </div>
                 {{-- Last name --}}
                 <div class="col col-6">
                     <input required name="last_name" type="text" class="form-control" id="lastName"
-                           placeholder="Last Name*">
+                           placeholder="Last Name*" value="{{ !empty($lastName) ? $lastName : '' }}">
                 </div>
 
                 {{-- DOB --}}
                 <div class="col col-6">
-                    <input required name="date_of_birth" type="text" class="form-control" id="dateOfBirth" placeholder="DOB* (YYYY/MM/DD)">
+                    <input required name="date_of_birth" type="text" class="form-control" id="dateOfBirth"
+                           placeholder="DOB* (YYYY/MM/DD)" value="{{ !empty($dob) ? $dob : '' }}">
                 </div>
                 {{-- Email address --}}
                 <div class="col col-6">
-                    <input required name="email" type="email" class="form-control" id="email" placeholder="Email Address*">
+                    <input required name="email" type="email" class="form-control" id="email"
+                           placeholder="Email Address*" value="{{ !empty($email) ? $email : '' }}">
                 </div>
                 <div class="col col-6">
                     <input required name="confirm_email" type="email" class="form-control" id="confirmEmail"
-                           placeholder="Confirm Email Address*">
+                           placeholder="Confirm Email Address*" value="{{ !empty($email) ? $email : '' }}">
                 </div>
                 <div class="col col-6">
                     <input required name="phone_number" type="text" class="form-control" id="phoneNumber"
-                           placeholder="Phone Number*">
+                           placeholder="Phone Number*" value="{{ !empty($phone) ? $phone : '' }}">
                 </div>
                 <div class="col col-6">
-                    <input required name="postcode" type="text" class="form-control" id="postcode" placeholder="Postcode*">
+                    <input required name="postcode" type="text" class="form-control" id="postcode"
+                           placeholder="Postcode*" value="{{ !empty($postcode) ? $postcode : '' }}">
                 </div>
                 <div class="col col-6">
                     @include('components.basic.select', [
@@ -71,7 +74,8 @@
                 <div class="col col-12"><p class="text-white m-0">Please confirm:</p></div>
                 <div class="col col-12 checkbox">
                     <input name="waiting_time" type="checkbox" id="waiting_times">
-                    <label for="waiting_times">the likely waiting time for an NHS funded referral, should treatment be necessary.</label>
+                    <label for="waiting_times">the likely waiting time for an NHS funded referral, should treatment be
+                        necessary.</label>
                 </div>
                 <div class="col col-12 checkbox">
                     <input name="price" type="checkbox" id="prices">
@@ -85,10 +89,10 @@
                     <input name="consultants" type="checkbox" id="consultants">
                     <label for="consultants">my choice of consultants for self-pay.</label>
                 </div>
-{{--                <div class="col col-12 checkbox">--}}
-{{--                    <input required name="other" type="checkbox" id="other">--}}
-{{--                    <label for="other">Something else</label>--}}
-{{--                </div>--}}
+                {{--                <div class="col col-12 checkbox">--}}
+                {{--                    <input required name="other" type="checkbox" id="other">--}}
+                {{--                    <label for="other">Something else</label>--}}
+                {{--                </div>--}}
                 <div class="col col-12" id="col_additional_information">
                     <textarea
                         class="form-control"
@@ -99,12 +103,13 @@
                 </div>
 
                 <div class="col col-6 checkbox">
-                    <input required name="gdpr" type="checkbox" id="gdpr">
-                    <label class="small-print" for="gdpr">Please accept the Terms & Conditions before submitting the form.</label>
+                    <input required name="gdpr" type="checkbox" id="gdpr" {{ ($gdpr) ? 'checked' : '' }}>
+                    <label class="small-print" for="gdpr">Please accept the Terms & Conditions before submitting the
+                        form.</label>
                 </div>
                 <div class="col-12 btn-area text-center">
                     <a id="btn_submit" class="btn btn-icon btn-blue btn-enquire">Make an enquiry</a>
-{{--                    <input type="submit" id="btn_submit" class="btn btn-icon btn-blue btn-enquire" value="Make an enquiry" />--}}
+                    {{--                    <input type="submit" id="btn_submit" class="btn btn-icon btn-blue btn-enquire" value="Make an enquiry" />--}}
                 </div>
             </div>
         </form>

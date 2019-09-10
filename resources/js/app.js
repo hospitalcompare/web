@@ -18,7 +18,7 @@ import 'jquery-validation/dist/additional-methods.min';                    // Pl
 // UTILITIES
 import './scripts/scroll';                          // Smooth scroll
 import './scripts/postcode' ;                       // Postcode input
-window.Cookies = require('./scripts/cookies');      // Cookie/compare functionallity
+window.Cookies = require('./scripts/cookies');      // Cookie/compare functionality
 import './scripts/gmapInit';                        // Gmaps nodal
 import './scripts/global';                          // Global Script used for multiple pages
 import './scripts/sticky';                          // Make the search header sticky on scroll

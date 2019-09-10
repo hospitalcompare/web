@@ -112,11 +112,20 @@ $(document).ready(function () {
                     headers: {
                         'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
                     },
-                    success: function () {
-                        alert('Thanks, your enquiry has been submitted');
+                    success: function (data) {
+                        // alert('Thanks, your enquiry has been submitted');
                         $('#hc_modal_enquire_private').modal('hide');
-                        // $("#btn_submit").prop("disabled", false);
-
+                        console.log();
+                        $('.alert')
+                            .find('.alert-text')
+                            .html('Thank you ' + data.data.first_name + ', your enquiry has been successfully sent!')
+                            .parents('.alert')
+                            .addClass('alert-success show')
+                            .show();
+                        // Scroll to alert bar
+                        $('html, body').animate({
+                            scrollTop: ($('#hc_alert').offset().top)
+                        }, 800);
                     },
                     error: function (e) {
                         // $('.alert')

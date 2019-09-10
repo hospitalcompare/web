@@ -11,17 +11,19 @@
 @section('body-class', 'test-page')
 
 @section('content')
-    <main>
+    <section>
         <div class="container">
-            @include('components.basic.alertdanger')
+            <h3>Enquiry Form</h3>
+            @include('components.modals.modalenquireprivate', [
+                'procedures'    => $data['procedures'],
+                'title'         => 'Mr',
+                'firstName'     => 'Test',
+                'dob'           => '1980/04/12',
+                'lastName'      => 'Testing',
+                'email'         => 'test@test.com',
+                'phone'         => '012345678901',
+                'postcode'      => 'ch423re',
+                'gdpr'          => true])
         </div>
-        <section>
-            <div class="container">
-                <h3>Enquiry Form</h3>
-                @include('components.modals.modalenquireprivate', [
-                    'procedures' => $data['procedures'] ])
-            </div>
-        </section>
-    </main>
-
+    </section>
 @endsection
