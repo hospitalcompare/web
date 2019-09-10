@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Helpers\Errors;
 use App\Helpers\Utils;
+use App\Helpers\Validate;
 use App\Models\Enquiry;
 use App\Models\Hospital;
 use App\Models\HospitalWaitingTime;
@@ -153,7 +154,7 @@ class ApiController {
         $request        = \Request::all();
         $postcode       = $request['postcode'] ?? '';
         $procedureId    = $request['procedure_id'] ?? '';
-        $radius         = $request['radius'] ?? 10; //10 miles as default
+        $radius         = $request['radius'] ?? 50; //50 miles as default
 
         $hospitals = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
 
@@ -171,20 +172,20 @@ class ApiController {
     public function enquiry() {
         //Get the request and load it as variables
         $request                = \Request::all();
-        $procedureId            = (!empty($request['procedure_id']) && $request['procedure_id'] > 0) ? $request['procedure_id'] : null;
-        $hospitalId             = $request['hospital_id'];
-        $title                  = $request['title'];
-        $firstName              = $request['first_name'];
-        $lastName               = $request['last_name'];
-        $email                  = $request['email'];
-        $phoneNumber            = $request['phone_number'];
-        $postcode               = $request['postcode'];
-        $dob                    = $request['date_of_birth'];
-        $additionalInformation  = $request['additional_information'];
-        $price                  = $request['price'] ?? 0;
-        $waitingTime            = $request['waiting_time'] ?? 0;
-        $waitingTimeSelf        = $request['waiting_time_self'] ?? 0;
-        $consultants            = $request['consultants'] ?? 0;
+        $procedureId            = (!empty($request['procedure_id']) && $request['procedure_id'] > 0) ? Validate::escapeString($request['procedure_id']) : null;
+        $hospitalId             = Validate::escapeString($request['hospital_id']);
+        $title                  = Validate::escapeString($request['title']);
+        $firstName              = Validate::escapeString($request['first_name']);
+        $lastName               = Validate::escapeString($request['last_name']);
+        $email                  = Validate::escapeString($request['email']);
+        $phoneNumber            = Validate::escapeString($request['phone_number']);
+        $postcode               = Validate::escapeString($request['postcode']);
+        $dob                    = Validate::escapeString($request['date_of_birth']) ?? '';
+        $additionalInformation  = Validate::escapeString($request['additional_information']);
+        $price                  = isset($request['price']) ? Validate::escapeString($request['price']) : 0;
+        $waitingTime            = isset($request['waiting_time']) ? Validate::escapeString($request['waiting_time']) : 0;
+        $waitingTimeSelf        = isset($request['waiting_time_self']) ? Validate::escapeString($request['waiting_time_self']) : 0;
+        $consultants            = isset($request['consultants']) ? Validate::escapeString($request['consultants']) : 0;
 
         //Check if we have the required variables
         $required = ['hospitalId', 'title', 'firstName', 'lastName', 'email', 'phoneNumber','postcode', 'dob'];
@@ -194,6 +195,32 @@ class ApiController {
                 Errors::generateError($this->returnedData);
             }
         }
+
+        //Validate date of birth
+        if(!Validate::isValidDate($dob)) {
+            $this->returnedData['error'] = 'The date_of_birth is wrong. Please try again.';
+            Errors::generateError($this->returnedData);
+        }
+
+        //Validate the email
+        if(!Validate::isValidEmail($email)) {
+            $this->returnedData['error'] = 'The email is wrong. Please try again.';
+            Errors::generateError($this->returnedData);
+        }
+
+        //Validate the phone_number
+        if(!Validate::isValidPhoneNumber($phoneNumber)) {
+            $this->returnedData['error'] = 'The phone number is wrong. Please try again.';
+            Errors::generateError($this->returnedData);
+        }
+
+        //Validate the postcode
+        if(!Validate::isValidPostcode($postcode)) {
+            $this->returnedData['error'] = 'The postcode is wrong. Please try again.';
+            Errors::generateError($this->returnedData);
+        }
+
+        //Set the Specialty if we have a procedure_id
         $specialtyId = null;
         if(!empty($procedureId)) {
             $specialty = Procedure::where('id', $procedureId)->first();
@@ -201,7 +228,6 @@ class ApiController {
                 $specialtyId = $specialty->specialty_id;
         }
 
-        //TODO: Validate the date_of_birth + email + phone_number + postcode
         //We can create the actual Enquiry if it reaches here
         $enquiry = new Enquiry();
         $enquiry->specialty_id              = $specialtyId;

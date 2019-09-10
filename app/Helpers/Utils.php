@@ -336,8 +336,10 @@ class Utils
         $html = "";
 
         // write img tags for each whole star
-        for ($i = 0; $i < $wholeStars; $i++) {
-            $html .= "<img class='star-icon' src='images/icons/star-full.svg' alt='Whole Star'>";
+        if($wholeStars > 0) {
+            for ($i = 0; $i < $wholeStars; $i++) {
+                $html .= "<img class='star-icon' src='images/icons/star-full.svg' alt='Whole Star'>";
+            }
         }
 
         // write img tag for half star if needed
