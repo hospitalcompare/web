@@ -1,0 +1,95 @@
+// Bootstrap modal
+
+.modal {
+    .modal-content {
+        border-radius: 16px 0 16px 16px;
+    }
+
+
+    .close {
+        top: 0;
+        right: 0;
+        width: 61px;
+        height: 29px;
+        border-radius: 31px;
+        background-color: #000000;
+        z-index: 5;
+        opacity: 1;
+        transform: translate(50%, -50%);
+
+        @include hover {
+            opacity: 1 !important;
+        }
+
+        span {
+            background-color: inherit;
+        }
+    }
+
+    &.modal-enquire {
+
+        .modal-copy {
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: -0.8px;
+            line-height: 19.2px;
+        }
+
+        .modal-dialog {
+            width: 100%;
+            max-width: 820px;
+        }
+
+        .col-inner {
+            &__left {
+                padding: 30px;
+            }
+
+            &__right {
+                padding: 60px 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border-radius: 0 0 16px 0;
+            }
+        }
+    }
+
+    // Private hospital enquiry
+    &.modal-enquire-form {
+        .modal-inner {
+            padding: 16px 55px 25px 55px;
+        }
+
+        .modal-dialog {
+            width: 100%;
+            max-width: 820px;
+        }
+
+        .modal-content {
+            background-color: $teal;
+        }
+
+        // Force it to show on test page
+        .test-page & {
+            display: block !important;
+            position: initial;
+            z-index: 1070;
+        }
+    }
+
+    // GMaps
+    &.modal-maps {
+        border-radius: 16px;
+
+        .modal-dialog {
+            max-width: 1060px;
+        }
+
+        .modal-content {
+            padding: 25px;
+        }
+    }
+}
+

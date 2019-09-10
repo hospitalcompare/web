@@ -1,0 +1,143 @@
+//BANNER SECTION
+.banner-parent {
+    width: 100%;
+    height: auto;
+
+}
+
+.banner {
+    //width: $fullWidth;
+    background-image: url(/images/banner.jpg);
+    margin: $centerOnPage;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #19a2a1;
+        opacity: 0.85;
+    }
+}
+
+.banner-data {
+    padding: 45px 0;
+    color: $white; //inherited value
+}
+
+//BANNER CONTENTS
+
+.box {
+    width: 100%;
+    max-width: 511px;
+    min-height: 431px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 20px 30px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+
+    p {
+        color: #333333;
+        font-size: 25px;
+        width: 67%;
+        margin: auto;
+        font-weight: 500;
+        letter-spacing: -1.25px;
+        line-height: 30px;
+    }
+
+    .postcode-item {
+        &:hover {
+            background-color: $teal;
+            color: $white;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+}
+
+.home-promo {
+    //@include uniformAlignment;
+    //margin: auto 0;
+    position: relative;
+    z-index: 5;
+
+    p {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -1.2px;
+        //width: 86%;
+    }
+}
+
+.promo-list {
+
+    li {
+        list-style: none;
+        font-size: 24px;
+        line-height: 40px;
+        position: relative;
+        padding-left: 63px;
+
+        &:before {
+            content: url("/images/tick.svg");
+            width: 30px;
+            height: 28px;
+            @include v-c;
+            left: 0;
+        }
+    }
+}
+
+.browseButton {
+    text-align: center;
+    font-size: 1.2em;
+
+    a {
+        color: $darkerGrey;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -0.7px;
+        line-height: 19px;
+    }
+
+}
+
+.aquaChevron {
+    color: $aqua;
+    position: absolute;
+    left: 420px;
+    top: 25px;
+}
+
+.postcode-autocomplete-cont {
+    display: none;
+    width: 100%;
+    overflow: hidden;
+    transition: 1s linear;
+    transition-delay: 0s;
+    margin-top: 20px;
+
+    .ajax-box {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #fff;
+        border: 2px solid #00cecd;
+        max-height: 222px;
+        overflow: auto;
+    }
+
+}
+
+
+

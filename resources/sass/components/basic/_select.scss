@@ -1,0 +1,66 @@
+.bootstrap-select {
+    //background-color: #fff;
+    //border-radius: 10px;
+
+    &.show {
+        .dropdown-toggle {
+            background-color: #fff !important;
+        }
+    }
+
+    .dropdown-toggle {
+        padding: 10px 40px 10px 13px;
+        background-color: $white;
+        color: $darkerGrey;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: -0.6px;
+        line-height: 15px;
+        border: 2px solid $darkestWhite;
+        border-radius: 10px;
+
+        &:after {
+            display: none;
+        }
+
+        &:hover {
+            color: $darkerGrey;
+            background-color: #fff;
+        }
+
+        &:active {
+            background-color: #fff !important;
+        }
+    }
+
+    &.big {
+        // Button added by BS select
+        .dropdown-toggle {
+            height: 61px;
+            //line-height: 61px;
+            padding: 0 45px 0 16px;
+            width: 100%;
+            border-radius: 10px;
+            color: $darkerGrey;
+            font-size: 18px;
+            border: 2px solid $darkestWhite;
+        }
+    }
+
+    + svg,
+    + span {
+        pointer-events: none;
+    }
+}
+
+.results-page {
+    .filter-section {
+        .dropdown-toggle,
+        .results-page-select {
+            max-width: 162px;
+            option {
+                background-color: $white !important;
+            }
+        }
+    }
+}

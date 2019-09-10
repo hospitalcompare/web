@@ -1,0 +1,314 @@
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+}
+
+@mixin animation($name, $duration, $iteration, $direction) {
+    animation-duration: $duration;
+    animation-name: $name;
+    animation-direction: $direction;
+}
+
+@mixin transform($args...) {
+    transform: $args;
+}
+
+@mixin transform-origin($args...) {
+    transform-origin: $args;
+}
+
+@mixin transition($args...) {
+    transition: $args;
+}
+
+@mixin transition-delay($args...) {
+    -webkit-transition-delay: $args;
+    -moz-transition-delay: $args;
+    -ms-transition-delay: $args;
+    -o-transition-delay: $args;
+    transition-delay: $args;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin horizontal-gradient($from, $to, $deg: 90deg, $stop: 100%) {
+    background-color: $from;
+    background-image: -moz-linear-gradient(left, $from 0%, $to $stop);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $from), color-stop($stop, $to));
+    background-image: -webkit-linear-gradient(left, $from 0%, $to $stop);
+    background-image: -o-linear-gradient(left, $from 0%, $to $stop);
+    background: -ms-linear-gradient(left, $from 0%, $to $stop);
+    background: linear-gradient($deg, $from 0%, $to $stop);
+    //filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to', GradientType=1);
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+    // Direction has been omitted and happens to be a color-stop
+    @if is-direction($direction)==false {
+        $color-stops: $direction, $color-stops;
+        $direction: 180deg;
+    }
+    background: nth(nth($color-stops, 1), 1);
+    background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    background: linear-gradient($direction, $color-stops);
+}
+
+@mixin gradient-border($color1, $color2, $border-width, $direction) {
+    border: none;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#{$direction}, $color1 0%, $color2 100%),
+    linear-gradient(#{$direction}, $color1 0%, $color2 100%);
+    @if $direction=='to right' or $direction=='to left' {
+        @if $direction=='to right' {
+            border-left: $border-width solid $color1;
+            border-right: $border-width solid $color2;
+        }
+        @else {
+            border-left: $border-width solid $color2;
+            border-right: $border-width solid $color1;
+        }
+        background-position: 0 0,
+        0 100%;
+        background-size: 100% $border-width;
+    }
+    @if $direction=='to top' or $direction=='to bottom' {
+        @if $direction=='to top' {
+            border-top: $border-width solid $color2;
+            border-bottom: $border-width solid $color1;
+        }
+        @else {
+            border-top: $border-width solid $color1;
+            border-bottom: $border-width solid $color2;
+        }
+        background-position: 0 0,
+        100% 0;
+        background-size: $border-width 100%;
+    }
+}
+
+@mixin noselect() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+// Fonts
+
+@mixin font($weight) {
+    @if $weight=="regular" {
+        font-family: Sailec-regular;
+    }
+    @if $weight=="medium" {
+        font-family: Sailec-medium;
+    }
+    @if $weight=="bold" {
+        font-family: Sailec-bold;
+    }
+}
+
+@mixin font-standard {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.9px;
+    line-height: 19px;
+}
+
+//Header section
+@mixin headerHeight {
+    height:75px;
+}
+
+//Resposive design parent declarations
+@mixin flex {
+    display: flex;
+}
+
+// flex centering
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//shorthand flex-direction and flex-wrap
+@mixin flex-flow($values: (row nowrap)) {
+    // No Webkit/FF Box fallback.
+    flex-flow: $values;
+}
+
+/* Align Items - Center */
+@mixin alignItems {
+    align-items: center;
+}
+
+//main axis alignment
+@mixin justify-content($value: flex-start) {
+
+    @if $value == flex-start {
+        -webkit-box-pack: start;
+        -moz-box-pack: start;
+        -ms-flex-pack: start;
+    } @else if $value == flex-end {
+        -webkit-box-pack: end;
+        -moz-box-pack: end;
+        -ms-flex-pack: end;
+    } @else if $value == space-between {
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+    } @else if $value == space-around {
+        -ms-flex-pack: distribute;
+    } @else {
+        -webkit-box-pack: $value;
+        -moz-box-pack: $value;
+        -ms-flex-pack: $value;
+    }
+    -webkit-justify-content: $value;
+    justify-content: $value;
+}
+
+@mixin uniformAlignment {
+    flex: 1 1 0;
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 100px;
+}
+
+@mixin twoOneRatio {
+    flex: 2 1 0;
+    -webkit-flex: 2 1 0;
+    -ms-flex: 2 1 100px;
+}
+
+@mixin threeOneRatio {
+    flex: 2 1 0;
+    -webkit-flex: 2 1 0;
+    -ms-flex: 2 1 100px;
+}
+
+@mixin flexBasis{
+    flex: 0 0 45%;
+    -webkit-flex: 0 0 45%;
+    -ms-flex: 0 0 45%;
+}
+
+// Absolute centring
+
+@mixin v-c {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin h-c {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin v-h-c {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Fixed aspect ratio
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+    >.content {
+        width: 100%;
+        @include v-h-c;
+    }
+}
+
+// Center background icons in pseudo elements
+@mixin icon-bg-center($bgSize: 50%) {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: $bgSize;
+}
+
+// Add partial height border to an element
+
+@mixin pseudo-border($bgColor) {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 0;
+        bottom: 10px;
+        width: 1px;
+        background-color: $bgColor;
+    }
+}
+
+// Custom BS grid gutters
+@mixin reset-row-spacing($spacing) {
+    margin-left: -$spacing;
+    margin-right: -$spacing;
+
+    > * {
+        padding-left: $spacing;
+        padding-right: $spacing;
+    }
+}
+
+// Add opacity mask over image
+@mixin mask($bgColor: $teal, $opacity: 0.8) {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $bgColor;
+        opacity: $opacity;
+    }
+}
