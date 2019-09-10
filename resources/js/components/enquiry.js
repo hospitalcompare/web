@@ -7,7 +7,7 @@ $(document).ready(function () {
         }, 'Please specify a valid phone number'
     );
 
-    $.validator.addMethod("dateFormat", function(date, element) {
+    $.validator.addMethod("dateFormat", function(date) {
             // put your own logic here, this is just a (crappy) example
             return date.match(/^\d\d\d\d?\/\d\d?\/\d\d$/);
         },
@@ -28,8 +28,8 @@ $(document).ready(function () {
                 lastName: "required",
                 date_of_birth: {
                     required: true,
-                    dateFormat: true
-                    // dateNL: true
+                    dateFormat: true,
+                    dateISO: true
                 },
                 email: {
                     required: true,
@@ -76,7 +76,7 @@ $(document).ready(function () {
                 customError.insertBefore( element );
             },
             // Submit handler - what happens when form submitted
-            submitHandler: function(form) {
+            submitHandler: function() {
                 // Create an FormData object
                 var data = new FormData($form[0]);
 
@@ -95,7 +95,7 @@ $(document).ready(function () {
                     headers: {
                         'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
                     },
-                    success: function (data) {
+                    success: function () {
                         alert('Thanks, your enquiry has been submitted');
                         $('#hc_modal_enquire_private').modal('hide');
                         // $("#btn_submit").prop("disabled", false);
