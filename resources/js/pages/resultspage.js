@@ -118,6 +118,35 @@ $(document).ready(function() {
         window.location.href = updateQueryStringParam('hospital_type', 1);
     });
 
+    // Validate the search form on the results page
+    var $form = $('#resultspage_form');
 
+    if($form.length > 0) {
+        $form.validate({
+            rules: {
+                postcode: {
+                    required: true,
+                    postcodeUK: true
+                }
+            },
+            errorPlacement: function(error, element) {
+                var customError = $([
+                    '<span class="invalid-feedback" style="display: block">',
+                    '  <span class="mb-0" style="display: block">',
+                    '  </span>',
+                    '</span>'
+                ].join(""));
+
+                // Add `form-error-message` class to the error element
+                error.addClass("form-error-message");
+
+                // Insert it inside the span that has `mb-0` class
+                error.appendTo(customError.find("span.mb-0"));
+
+                // Insert your custom error
+                customError.insertBefore( element );
+            },
+        })
+    }
 
 });

@@ -11,7 +11,7 @@
 @section('body-class', 'results-page')
 
 @section('content')
-    <form class="form-element">
+    <form class="form-element" id="resultspage_form">
         <div class="filter-parent">
             <div class="filter container">
                 <div class="postcode-proximity">
