@@ -124,6 +124,7 @@ $(document).ready(function () {
                             .find('.alert-text')
                             .html('Thank you ' + data.data.first_name + ', your enquiry has been successfully sent!')
                             .parents('.alert')
+                            .removeClass('alert-danger')
                             .addClass('alert-success show')
                             .show();
                         // Scroll to alert bar
@@ -137,12 +138,13 @@ $(document).ready(function () {
                             .find('.alert-text')
                             .html("<pre>ERROR : " + e.responseText + "</pre>")
                             .parents('.alert')
+                            .removeClass('alert-success')
                             .addClass('alert-danger show')
                             .show();
                         // Scroll to alert bar
                         $('html, body').animate({
                             scrollTop: ($('#hc_alert').offset().top)
-                        }, 800);
+                        }, 400);
                     }
                 });
             }

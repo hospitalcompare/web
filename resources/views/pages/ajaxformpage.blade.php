@@ -21,7 +21,7 @@
                 'dob'           => '1980/04/12',
                 'lastName'      => 'Testing',
                 'email'         => 'test@test.com',
-                'phone'         => '012345678901',
+                'phone'         => '01244316469',
                 'postcode'      => 'ch423re',
                 'gdpr'          => true])
         </div>

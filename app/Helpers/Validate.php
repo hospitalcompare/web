@@ -52,7 +52,8 @@ class Validate
      * @return bool
      */
     public static function isValidPhoneNumber($string) {
-        $pattern = "/^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/";
+//        $pattern = "/^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/";
+        $pattern = "/^(\(?(0|\+44)[1-9]{1}\d{1,4}?\)?\s?\d{3,4}\s?\d{3,4})$/";
 
         $match = preg_match($pattern, $string);
 
