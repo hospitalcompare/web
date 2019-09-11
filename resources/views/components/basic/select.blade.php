@@ -11,7 +11,7 @@
             name="{{$name}}"
             {{ !empty($required) && ($required) ? 'required' : '' }}>
         @if(!empty($placeholder))
-            <option value="" disabled {{ empty(Request::input($name)) ? 'selected' : ''  }}>{{$placeholder}}</option>
+            <option value="0" disabled {{ empty(Request::input($name)) ? 'selected' : ''  }}>{{$placeholder}}</option>
         @endif
         @if(!empty($options))
             @foreach($options as $option)
