@@ -77,6 +77,7 @@ function getHtmlDashTickValue(value, text = "") {
 $(document).ready(function () {
     //Check if we don't have the cookie and set it to 0
     var compareBar = $('.compare-hospitals-bar');
+    var compareContent = $('.compare-hospitals-content');
     var countSpan = $('#compare_number');
     var heartIcon = $('#compare_heart');
     if (typeof Cookies.get("compareCount") === 'undefined') {
@@ -89,9 +90,10 @@ $(document).ready(function () {
 
     //Check if we need to show the Compare hospitals div
     if (compareCount > 0) {
-        compareBar.slideDown();
+        // compareContent.slideDown();
+        // $('body').addClass('modal-open');
         //Hide the contents and increase the span with number
-        $('.compare-hospitals-bar .compare-hospitals-content').removeClass('revealed');
+        // compareContent.addClass('revealed');
         //Populate the table with the given data
         for (i = 1; i <= compareCount; i++) {
             var element = compareData[i];
@@ -172,7 +174,9 @@ $(document).ready(function () {
 
         // Slide content down when all data removed
         if (compareCount === 0) {
-            $('.compare-hospitals-bar .compare-hospitals-content').slideUp();
+            compareContent.slideUp();
+            $('body').removeClass('modal-open');
+            compareContent.removeClass('revealed');
             $('.compare-arrow').toggleClass('rotated');
         }
 
@@ -193,6 +197,8 @@ $(document).ready(function () {
         var compareCount = parseInt(Cookies.get("compareCount"));
         var data = JSON.parse(Cookies.get("compareHospitalsData"));
         compareBar.slideDown();
+        $('body').addClass('modal-open');
+        compareContent.removeClass('revealed');
 
         //Load the Cookies with the data that we need for the comparison
         var elementId = $(this).attr('id');
@@ -251,7 +257,9 @@ $(document).ready(function () {
 
         // Slide content down when all data removed
         if (compareCount === 0) {
-            $('.compare-hospitals-bar .compare-hospitals-content').slideUp();
+            compareContent.slideUp();
+            $('body').removeClass('modal-open');
+            compareContent.removeClass('revealed');
             $('.compare-arrow').toggleClass('rotated');
         }
 
@@ -286,8 +294,10 @@ $(document).ready(function () {
         var compareCount = parseInt(Cookies.get("compareCount"));
         var openTabs = $('.special-offer-tab.open');
         if (compareCount > 0) {
-            $('.compare-hospitals-bar .compare-hospitals-content').slideToggle();
+            compareContent.slideToggle();
+            $('body').toggleClass('modal-open');
             $('.compare-arrow').toggleClass('rotated');
+            compareContent.toggleClass('revealed');
             // Close the special offer tabs if any are open
             openTabs
                 .removeClass('open')
@@ -297,10 +307,15 @@ $(document).ready(function () {
     });
 
     $(document).on('click', function (e) {
-        // Hide shortlist bar if clicking outside it
-        if ($('.compare-hospitals-bar').has(e.target).length === 0) {
-            $('.compare-hospitals-bar .compare-hospitals-content').slideUp();
+        console.log(compareContent.hasClass('revealed'));
+        // Hide shortlist bar if clicking outside it, but only if it is already open
+        if (compareBar.has(e.target).length === 0 && compareContent.hasClass('revealed')) {
+            compareContent.slideUp();
+            $('body').removeClass('modal-open');
             $('.compare-arrow').removeClass('rotated');
+            compareContent.removeClass('revealed');
         }
     });
 });
+
+// TODO: refactor the toggling classes into a function
