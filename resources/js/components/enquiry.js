@@ -158,5 +158,10 @@ $(document).ready(function () {
             .parents('form')
             .submit();
     })
+
+    // Dismiss bootstrap alert
+    $("[data-hide]").on("click", function(){
+        $(this).closest("." + $(this).attr("data-hide")).slideUp();
+    });
 });
 
