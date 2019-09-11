@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('checkToken')->group(function () {
     Route::post('/import', 'ApiController@import');
     Route::get('/getLocations/{postcode}', 'ApiController@getLocations');
-    Route::get('/getHospitalsByDistance/{postcode}', 'ApiController@getHospitalsByDistance');
-    Route::get('/getAllHospitals', 'ApiController@getAllHospitals');
+//    Route::get('/getHospitalsByDistance/{postcode}', 'ApiController@getHospitalsByDistance'); //DISABLED AS WE DON'T USE THIS ROUTE ( TESTING ONLY )
+//    Route::get('/getAllHospitals', 'ApiController@getAllHospitals'); //DISABLED AS WE DON'T USE THIS ROUTE ( TESTING ONLY )
     Route::post('/enquiry', 'ApiController@enquiry');
 });
