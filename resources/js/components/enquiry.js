@@ -133,10 +133,11 @@ $(document).ready(function () {
                         }, 800);
                     },
                     error: function (e) {
-                        console.log("ERROR : ", e.responseText);
+                        var errorMsg = JSON.parse(e.responseText).errors.error;
+                        console.log( "ERROR : ", errorMsg, "status text: ", e.statusText );
                         $('.alert')
                             .find('.alert-text')
-                            .html("<pre>ERROR : " + e.responseText + "</pre>")
+                            .html(errorMsg)
                             .parents('.alert')
                             .removeClass('alert-success')
                             .addClass('alert-danger show')

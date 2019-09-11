@@ -307,7 +307,6 @@ $(document).ready(function () {
     });
 
     $(document).on('click', function (e) {
-        console.log(compareContent.hasClass('revealed'));
         // Hide shortlist bar if clicking outside it, but only if it is already open
         if (compareBar.has(e.target).length === 0 && compareContent.hasClass('revealed')) {
             compareContent.slideUp();
