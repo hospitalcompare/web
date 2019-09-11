@@ -11,7 +11,6 @@
 @section('body-class', 'results-page')
 
 @section('content')
-
     <form class="form-element">
         <div class="filter-parent">
             <div class="filter container">
@@ -370,8 +369,10 @@
     {{--  Modal for special offers  --}}
     @include('components.modals.modalspecial')
     {{--  Modal for special offers  --}}
-    @include('components.modals.modalenquireprivate', ['procedures' => $data['filters']['procedures']])
+    @include('components.modals.modalenquireprivate', [
+        'procedures' => $data['filters']['procedures']])
     {{--  Maps modal  --}}
     @include('components.modals.modalmaps')
+
 
 @endsection

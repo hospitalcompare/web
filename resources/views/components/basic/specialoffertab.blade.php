@@ -35,6 +35,7 @@
         </div>
         <div class="btn-area text-right">
             @includeWhen($hospitalType == 'private-hospital' ,'components.basic.modalbutton', [
+                'id'                => '1',
                 'hospitalType'      => $hospitalType,
                 'hospitalTitle'     => $headerText['open']['title'],
                 'modalTarget'       => '#hc_modal_enquire_private',

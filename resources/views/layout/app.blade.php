@@ -30,6 +30,7 @@
         </div>
 
         <main class="" id="app">
+            @include('components.basic.alert')
             @yield('content')
         </main>
 

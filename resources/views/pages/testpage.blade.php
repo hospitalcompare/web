@@ -11,23 +11,34 @@
 @section('body-class', 'test-page')
 
 @section('content')
-    <main>
-        <div class="section pt-3 pb-5">
-            <div class="container">
-                <p class="p-5" style="width: 300px; border: 3px solid black">
-                    When you have performed a search for hospitals on your results page you can click the
-                    blue “compare” icon
-                    <a id="1" class="float-right display-inline btn btn-green-outline compare mt-0" target="" href="javascript:void(0);" role="button"><i class=""></i></a>
-                </p>
-            </div>
+    <h3>Enquiry Form</h3>
+    @include('components.modals.modalenquireprivate', [
+               'procedures'    => $data['procedures'],
+               'title'         => 'Mr',
+               'firstName'     => 'Test',
+               'dob'           => '1980/04/12',
+               'lastName'      => 'Testing',
+               'email'         => 'test@test.com',
+               'phone'         => '012345678901',
+               'postcode'      => 'ch423re',
+               'gdpr'          => true])
+    <div class="section pt-3 pb-5">
+        <div class="container">
+            <p class="p-5" style="width: 300px; border: 3px solid black">
+                When you have performed a search for hospitals on your results page you can click the
+                blue “compare” icon
+                <a id="1" class="float-right display-inline btn btn-green-outline compare mt-0" target=""
+                   href="javascript:void(0);" role="button"><i class=""></i></a>
+            </p>
         </div>
-        <div class="section py-3 ">
-            <div class="container-fluid px-0">
-                <h2>Solutions bar </h2>
-                @include('components.solutionsbar', ['position' => 'static'])
-            </div>
+    </div>
+    <div class="section py-3 ">
+        <div class="container-fluid px-0">
+            <h2>Solutions bar </h2>
+            @include('components.solutionsbar', ['position' => ''])
         </div>
-        <div class="section py-3 ">
+    </div>
+    <div class="section py-3 ">
         <div class="section py-3">
             <div class="container">
                 <h3>Modal - enquire now</h3>
@@ -90,9 +101,6 @@
                         </div>
                     </div>
                 </div>
-                <h3>Enquiry Form</h3>
-                @include('components.modals.modalenquireprivate', [
-                    'procedures' => $data['filters']['procedures']])
                 <h2>Dr Stevini</h2>
                 @include('components.doctor')
                 <h2>Tooltips</h2>
@@ -337,6 +345,4 @@
                 {{--                @include('components.modals.modalenquirenhs')--}}
             </div>
         </div>
-    </main>
-
 @endsection

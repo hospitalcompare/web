@@ -17,3 +17,4 @@ yarn.lock
 /public/js/
 /public/video/
 /public/downloads/
+/public/mix-manifest.json

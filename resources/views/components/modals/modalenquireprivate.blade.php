@@ -7,7 +7,15 @@
             <button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true" class="text-white bg-black">Close</span>
             </button>
-            @include('components.privateenquiryform', ['procedures' => $procedures])
+            @include('components.privateenquiryform', [
+                'procedures'    => $procedures,
+                'title'         => $title ?? '',
+                'firstName'     => $firstName ?? '',
+                'lastName'      => $lastName ?? '',
+                'dob'           => $dob ?? '',
+                'email'         => $email ?? '',
+                'postCode'      => $postCode ?? '',
+                'phone'         => $phone ?? ''])
         </div>
     </div>
 </div>
