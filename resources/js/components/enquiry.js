@@ -8,11 +8,18 @@ $(document).ready(function () {
         }, 'Please specify a valid phone number'
     );
 
+    // $.validator.addMethod("dateFormat", function(date) {
+    //         // put your own logic here, this is just a (crappy) example
+    //         return date.match(/^\d\d\d\d?\/\d\d?\/\d\d$/);
+    //     },
+    //     "Please enter a date in the format yyyy/mm/dd."
+    // );
+
     $.validator.addMethod("dateFormat", function(date) {
-            // put your own logic here, this is just a (crappy) example
-            return date.match(/^\d\d\d\d?\/\d\d?\/\d\d$/);
+            // Match the basic structure required - date also has to match dateISO
+            return date.match(/^\d\d?\/\d\d?\/\d\d\d\d$/);
         },
-        "Please enter a date in the format yyyy/mm/dd."
+        "Please enter a date in the format dd/mm/yyyy."
     );
 
     $.validator.addMethod("alpha", function(value, element) {
@@ -45,7 +52,7 @@ $(document).ready(function () {
                 date_of_birth: {
                     required: true,
                     dateFormat: true,
-                    dateISO: true
+                    // dateISO: true
                 },
                 email: {
                     required: true,
