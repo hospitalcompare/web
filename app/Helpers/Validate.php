@@ -41,13 +41,8 @@ class Validate
     }
 
     /**
-     * Validates if the given string is a UK phone number
-     * Working examples :
-    07222 555555
-
-    (07222) 555555
-
-    +44 7222 555 555
+     * Validates if the given string is a UK mobile or line number
+     *
      * @param $string
      * @return bool
      */
@@ -152,5 +147,18 @@ class Validate
         $data = filter_var($data, FILTER_SANITIZE_STRING);
 
         return $data;
+    }
+
+    /**
+     * Validates a given array with the given value
+     *
+     * @param $value
+     * @return mixed
+     */
+    public static function validateValue($value) {
+        if($value === 'NULL' || empty($value))
+            return '';
+
+        return $value;
     }
 }

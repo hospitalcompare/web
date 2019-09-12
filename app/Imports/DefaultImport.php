@@ -3,8 +3,7 @@
 
 namespace App\Imports;
 
-
-use App\Helpers\Utils;
+use App\Helpers\Validate;
 
 class DefaultImport {
     public $returnedData = [];
@@ -20,7 +19,7 @@ class DefaultImport {
         //Loop through all the inputs and set them to empty strings if the values are NULL or empty()
         foreach($data as &$item) {
             foreach($item as $key=>$value) {
-                $item[$key] = Utils::validateValue($value);
+                $item[$key] = Validate::validateValue($value);
             }
         }
         $this->data = $data;
