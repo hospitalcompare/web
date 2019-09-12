@@ -7,11 +7,24 @@ $(document).ready(function () {
         $(this).val(this.checked ? 1 : 0);
     })
 
+    var $pickers = $('.select-picker');
     // Initiate select-pickers
-    $('.select-picker').selectpicker({
+    $pickers.selectpicker({
         style: '',
         styleBase: ''
     });
+
+    // Do something when select pickers open
+    $pickers.on('show.bs.select', function (e, clickedIndex, isSelected, previousValue) {
+        // Stop body scrolling
+        $('body').addClass('modal-open');
+    });
+
+    $pickers.on('hide.bs.select', function (e, clickedIndex, isSelected, previousValue) {
+        // Stop body scrolling
+        $('body').removeClass('modal-open');
+    });
+
 });
 
 
