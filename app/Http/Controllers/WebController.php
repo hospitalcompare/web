@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\Utils;
+use App\Helpers\Validate;
 use App\Models\Hospital;
 use App\Models\Procedure;
 use Illuminate\Routing\Controller as BaseController;
@@ -40,14 +41,14 @@ class WebController extends BaseController
     public function resultsPage() {
         //Get the request and load it as variables
         $request        = \Request::all();
-        $postcode       = $request['postcode'] ?? '';
-        $procedureId    = $request['procedure_id'] ?? '';
-        $radius         = $request['radius'] ?? 10; //10 miles as default
-        $waitingTime    = $request['waiting_time'] ?? '';
-        $userRating     = $request['user_rating'] ?? '';
-        $qualityRating  = $request['quality_rating'] ?? '';
-        $hospitalType   = $request['hospital_type'] ?? '';
-        $sortBy         = $request['sort_by'] ?? '';
+        $postcode       = !empty($request['postcode'])          ? Validate::escapeString($request['postcode'])          : '';
+        $procedureId    = !empty($request['procedure_id'])      ? Validate::escapeString($request['procedure_id'])      : '';
+        $radius         = !empty($request['radius'])            ? Validate::escapeString($request['radius'])            : 50; //10 miles as default
+        $waitingTime    = !empty($request['waiting_time'])      ? Validate::escapeString($request['waiting_time'])      : '';
+        $userRating     = !empty($request['user_rating'])       ? Validate::escapeString($request['user_rating'])       : '';
+        $qualityRating  = !empty($request['quality_rating'])    ? Validate::escapeString($request['quality_rating'])    : '';
+        $hospitalType   = !empty($request['hospital_type'])     ? Validate::escapeString($request['hospital_type'])     : '';
+        $sortBy         = !empty($request['sort_by'])           ? Validate::escapeString($request['sort_by'])           : '';
 
         //Set procedure_id to 0 if it's -1
         if($procedureId == '-1')
