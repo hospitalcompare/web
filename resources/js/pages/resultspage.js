@@ -4,7 +4,7 @@ $(document).ready(function() {
     setTimeout( function() {
             //Change the background color of the selectbox when an option with a value different than 0 is selected
             $('.results-page .results-page-select.highlight option[value!="0"]:selected').parent().css('background-color', '#ececec');
-            $('.results-page .highlight-search-dropdown option[value!="0"]:selected').parent().next().removeClass('btn-light').css('background-color', '#ececec');
+            $('.results-page .highlight-search-dropdown option[value!="0"]:selected').parent().next().removeClass('btn-light').css('background-color', '#ececec'); //Making the Background color grey for the dropdown with search
         }, 200);
 
     //On click event for the sorting ( to submit without clicking the submit button )
