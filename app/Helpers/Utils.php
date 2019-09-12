@@ -20,11 +20,11 @@ class Utils
             'class'     => 'd-none'
         ],[
             'id'        => '3',
-            'name'      => 'Waiting time',
-            'class'     => 'd-none'
+            'name'      => 'Waiting time'
         ],[
             'id'        => '4',
-            'name'      => 'Waiting time'
+            'name'      => 'Waiting time',
+            'class'     => 'd-none'
         ],[
             'id'        => '5',
             'name'      => 'User Rating',
