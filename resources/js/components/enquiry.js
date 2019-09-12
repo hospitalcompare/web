@@ -1,6 +1,15 @@
 // Submitting and validating the private hospital enquiry form
 $(document).ready(function () {
 
+    // Create jquery datepicker from DOB input
+    $( "#date_of_birth" ).datepicker({
+        changeMonth: true,
+        changeYear: true,
+        dateFormat: 'dd/mm/yy',
+        // minDate: -20,
+        maxDate: "-20Y"
+    });
+
     // Add a custom validation to the jquery validate object - validate phone number field as UK format
     $.validator.addMethod('phoneUK', function(phone_number, element) {
             return this.optional(element) || phone_number.length > 9 &&

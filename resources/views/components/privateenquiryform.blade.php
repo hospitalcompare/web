@@ -40,7 +40,7 @@
 
                 {{-- DOB --}}
                 <div class="col col-6">
-                    <input required name="date_of_birth" type="date" class="form-control" id="dateOfBirth"
+                    <input required id="date_of_birth" name="date_of_birth" class="form-control" id="dateOfBirth"
                            placeholder="DOB* (DD/MM/YYYY)" value="{{ !empty($dob) ? $dob : '' }}">
                 </div>
                 {{-- Email address --}}
