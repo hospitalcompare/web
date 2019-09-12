@@ -7,41 +7,41 @@
 // jquery imported through webpack.mix.js
 // VENDOR
 window.Popper = require('popper.js');
-import 'bootstrap';                                 // Required for bootstrap tooltips
-import 'bootstrap-select';                          // Searchable dropdowns
-import 'cookieconsent';                             // Cookie consent plugin
+import 'bootstrap';                                         // Required for bootstrap tooltips
+import 'bootstrap-select';                                  // Searchable dropdowns
+import 'cookieconsent';                                     // Cookie consent plugin
 import '@fortawesome/fontawesome-free/js/all.min';
-import './scripts/vendor/stickybits';               // Position: sticky stuff https://www.npmjs.com/package/stickybits
-import 'jquery-validation';                         // Frontend form validation
-import 'jquery-validation/dist/additional-methods.min';                    // Plugin for jquery validate
+import './scripts/vendor/stickybits';                                                  // Position: sticky stuff https://www.npmjs.com/package/stickybits
+import 'jquery-validation';                                 // Frontend form validation
+import 'jquery-validation/dist/additional-methods.min';     // Plugin for jquery validate
 
 // UTILITIES
-import './scripts/scroll';                          // Smooth scroll
-import './scripts/postcode' ;                       // Postcode input
-window.Cookies = require('./scripts/cookies');      // Cookie/compare functionality
-import './scripts/gmapInit';                        // Gmaps nodal
-import './scripts/global';                          // Global Script used for multiple pages
-import './scripts/sticky';                          // Make the search header sticky on scroll
-import './scripts/validate';                        // Init form validation
-// window.Vue = require('vue');                     // Vue.js
+import './scripts/scroll';                                  // Smooth scroll
+import './scripts/postcode' ;                               // Postcode input
+window.Cookies = require('./scripts/cookies');              // Cookie/compare functionality
+import './scripts/gmapInit';                                // Gmaps nodal
+import './scripts/global';                                  // Global Script used for multiple pages
+import './scripts/sticky';                                  // Make the search header sticky on scroll
+import './scripts/validate';                                // Init form validation
+// window.Vue = require('vue');                             // Vue.js
 
 // COMPONENTS
 import './components/compare';
 import './components/doctor';
 
 // Components > Basic
-// import './components/basic/video';               // Video controller TODO: reinstate video when we have one
-import './components/basic/specialoffer';           // Toggling special offer slide out
-import './components/basic/range';                  // Slider for radius of proximity on search page
-import './components/basic/popover';                // Trigger bootstrap tooltip
-import './components/basic/tooltip';                // Trigger bootstrap popover
-import './components/basic/modalNhs';               // Trigger bootstrap modal
-import './components/basic/modalPrivate';           // Trigger bootstrap modal
-import './components/enquiry' ;                     // Private hospital enquiry form
+// import './components/basic/video';                       // Video controller TODO: reinstate video when we have one
+import './components/basic/specialoffer';                   // Toggling special offer slide out
+import './components/basic/range';                          // Slider for radius of proximity on search page
+import './components/basic/popover';                        // Trigger bootstrap tooltip
+import './components/basic/tooltip';                        // Trigger bootstrap popover
+import './components/basic/modalNhs';                       // Trigger bootstrap modal
+import './components/basic/modalPrivate';                   // Trigger bootstrap modal
+import './components/enquiry' ;                             // Private hospital enquiry form
 
 // PAGES
-import './pages/homepage';                          // Jquery used for the Homepage
-import './pages/resultspage';                       // Jquery used for the Results Page
+import './pages/homepage';                                  // Jquery used for the Homepage
+import './pages/resultspage';                               // Jquery used for the Results Page
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
