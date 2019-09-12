@@ -4,4 +4,6 @@
     type="text"
     placeholder="{{$placeholder}}"
     value="{{$value}}"
-    name="{{$name}}"/>
+    name="{{$name}}"
+    {{!empty($validation) ? $validation : ''}}
+/>
