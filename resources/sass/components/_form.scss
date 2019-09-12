@@ -30,7 +30,7 @@ textarea {
 }
 
 input:not([type="range"]):not([type="submit"]):not([type="checkbox"]),
-select {
+select:not([class^="ui-datepicker"]) {
     border: 2px solid $darkestWhite; /*Removes border*/
     border-radius: 10px;
     appearance: none;

@@ -38,10 +38,12 @@
                            placeholder="Last Name*" value="{{ !empty($lastName) ? $lastName : '' }}">
                 </div>
 
-                {{-- DOB --}}
+                {{-- DOB - the field to select dob--}}
                 <div class="col col-6">
-                    <input required id="date_of_birth" name="date_of_birth" class="form-control" id="dateOfBirth"
+                    <input readonly="readonly" required name="dob" class="form-control" id="dateOfBirth"
                            placeholder="DOB* (DD/MM/YYYY)" value="{{ !empty($dob) ? $dob : '' }}">
+                    {{-- DOB- hidden field to submit different format for backend validation --}}
+                    <input type="hidden" id="actualDate" name="date_of_birth">
                 </div>
                 {{-- Email address --}}
                 <div class="col col-6">
