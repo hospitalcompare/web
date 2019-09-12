@@ -135,8 +135,8 @@ class ApiController {
     public function getHospitalsByDistance($postcode) {
         //Get the request and load it as variables
         $request        = \Request::all();
-        $procedureId    = $request['procedure_id'] ?? ''; //For the moment, send the procedure as Specialty ( as we don't have the Procedures )
-        $radius         = $request['radius'] ?? 10; //10 miles as default
+        $procedureId    = $request['procedure_id'] ?? '';
+        $radius         = $request['radius'] ?? 50; //50 miles as default
 
         $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
 

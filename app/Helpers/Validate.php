@@ -41,13 +41,8 @@ class Validate
     }
 
     /**
-     * Validates if the given string is a UK phone number
-     * Working examples :
-    07222 555555
-
-    (07222) 555555
-
-    +44 7222 555 555
+     * Validates if the given string is a UK mobile or line number
+     *
      * @param $string
      * @return bool
      */

@@ -8,10 +8,10 @@ $(document).ready(function () {
         var $button = $(event.relatedTarget);// Button that triggered the modal
         // Pre-check the checkboxes
         if($button.hasClass('enquire-prices')){
-            $('#prices').prop('checked', true)
+            $('#prices').click();
         }
         if($button.hasClass('enquire-times')){
-            $('#waiting_times').prop('checked', true)
+            $('#waiting_times').click();
         }
 
         var $button         = $(event.relatedTarget);// Button that triggered the modal
