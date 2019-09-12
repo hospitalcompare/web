@@ -6,6 +6,12 @@ $(document).ready(function () {
     $("input[type='checkbox']").on('change', function(){
         $(this).val(this.checked ? 1 : 0);
     })
+
+    // Initiate select-pickers
+    $('.select-picker').selectpicker({
+        style: '',
+        styleBase: ''
+    });
 });
 
 

@@ -23,7 +23,7 @@
                                 <div class="form-child">
                                     @include('components.basic.select', [
                                         'selectPicker' => 'true',
-                                        'selectClass'=> 'big selectpicker',
+                                        'selectClass'=> 'big select-picker',
                                         'options' => $data['procedures'],
                                         'chevronFAClassName' => 'fa-chevron-down aquaChevron',
                                         'placeholder'=>'Choose your procedure (if known)',

@@ -30,7 +30,7 @@
                                 'selectPicker' => 'true',
                                 'options' => $data['filters']['procedures'],
                                 'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                                'selectClass' => 'selectpicker highlight-search-dropdown',
+                                'selectClass' => 'select-picker highlight-search-dropdown',
                                 'placeholder'=>'Surgery Type',
                                 'name'=>'procedure_id',
                                 'resultsLabel' => 'resultsLabel'])
