@@ -62,8 +62,8 @@ class ApiController {
                 $data = Utils::csvToArray($filename);
 
                 //Design Pattern to import the File
-                if(empty($data))
-                    return "Please supply the file {$name}.csv";
+                if(empty($data) || $data == 'Filename does not exists or is not readable')
+                    return json_encode("Please supply the file {$name}.csv");
                 $class = '\App\Imports\\' .ucfirst($name);
                 $import = new $class($data);
                 $returnedData[$name] = $import->handle();
