@@ -12,9 +12,6 @@ import 'webpack-jquery-ui/css';                     // Styling for the above
 import 'bootstrap';                                 // Required for bootstrap tooltips
 import 'bootstrap-select';                          // Searchable dropdowns
 import 'cookieconsent';                             // Cookie consent plugin
-import 'bootstrap';                                         // Required for bootstrap tooltips
-import 'bootstrap-select';                                  // Searchable dropdowns
-import 'cookieconsent';                                     // Cookie consent plugin
 import '@fortawesome/fontawesome-free/js/all.min';
 import './scripts/vendor/stickybits';                                                  // Position: sticky stuff https://www.npmjs.com/package/stickybits
 import 'jquery-validation';                                 // Frontend form validation
@@ -29,14 +26,6 @@ import './scripts/global';                          // Global Script used for mu
 import './scripts/sticky';                          // Make the search header sticky on scroll
 import './scripts/validate';                        // Init form validation
 // window.Vue = require('vue');                     // Vue.js
-import './scripts/scroll';                                  // Smooth scroll
-import './scripts/postcode' ;                               // Postcode input
-window.Cookies = require('./scripts/cookies');              // Cookie/compare functionality
-import './scripts/gmapInit';                                // Gmaps nodal
-import './scripts/global';                                  // Global Script used for multiple pages
-import './scripts/sticky';                                  // Make the search header sticky on scroll
-import './scripts/validate';                                // Init form validation
-// window.Vue = require('vue');                             // Vue.js
 
 // COMPONENTS
 import './components/compare';

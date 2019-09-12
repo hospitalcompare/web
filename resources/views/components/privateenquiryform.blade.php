@@ -9,7 +9,7 @@
         <form id="enquiry_form">
             {{--            <input type="hidden" name="specialty_id" value="3">--}}
             <input type="hidden" name="hospital_id" value="1">
-            <div class="form-group row">
+            <div class="form-group row align-items-end mb-0">
                 <div class="col col-6">
                     @include('components.basic.select', [
                         'options' => [
@@ -32,20 +32,24 @@
                     <input required name="first_name" type="text" class="form-control" id="firstName"
                            placeholder="First Name*" value="{{ !empty($firstName) ? $firstName : '' }}">
                 </div>
+
+            </div>
+            <div class="form-group row align-items-end mb-0">
                 {{-- Last name --}}
                 <div class="col col-6">
                     <input required name="last_name" type="text" class="form-control" id="lastName"
                            placeholder="Last Name*" value="{{ !empty($lastName) ? $lastName : '' }}">
                 </div>
-
                 {{-- DOB - the field to select dob--}}
                 <div class="col col-6">
                     <input readonly="readonly" required name="dob" class="form-control" id="dateOfBirth"
-                           placeholder="DOB* (DD/MM/YYYY)" value="{{ !empty($dob) ? $dob : '' }}">
+                           placeholder="DOB* (DD/MM/YYYY)" >
                     {{-- DOB- hidden field to submit different format for backend validation --}}
                     <input type="hidden" id="actualDate" name="date_of_birth">
                 </div>
+            </div> {{-- end row --}}
                 {{-- Email address --}}
+            <div class="form-group row align-items-end mb-0">
                 <div class="col col-6">
                     <input required name="email" type="email" class="form-control" id="email"
                            placeholder="Email Address*" value="{{ !empty($email) ? $email : '' }}">
@@ -54,6 +58,8 @@
                     <input required name="confirm_email" type="email" class="form-control" id="confirmEmail"
                            placeholder="Confirm Email Address*" value="{{ !empty($email) ? $email : '' }}">
                 </div>
+            </div>
+            <div class="form-group row align-items-end mb-0">
                 <div class="col col-6">
                     <input required name="phone_number" type="text" class="form-control" id="phoneNumber"
                            placeholder="Phone Number*" value="{{ !empty($phone) ? $phone : '' }}">
@@ -62,6 +68,8 @@
                     <input required name="postcode" type="text" class="form-control" id="postcode"
                            placeholder="Postcode*" value="{{ !empty($postcode) ? $postcode : '' }}">
                 </div>
+            </div>
+            <div class="form-group row align-items-end">
                 <div class="col col-6">
                     @include('components.basic.select', [
                         'options'               => $procedures,
@@ -73,6 +81,8 @@
                         'resultsLabel'          => 'resultsLabel',
                         'required'              => true])
                 </div>
+            </div>
+            <div class="form-group row align-items-end">
                 <div class="col col-12"><p class="text-white m-0">Please confirm:</p></div>
                 <div class="col col-12 checkbox">
                     <input name="waiting_time" type="checkbox" id="waiting_times">
@@ -106,7 +116,8 @@
                 </div>
 
                 <div class="col col-6 checkbox">
-                    <input required name="gdpr" type="checkbox" id="gdpr" {{ !empty($gdpr) && ($gdpr) ? 'checked' : '' }}>
+                    <input required name="gdpr" type="checkbox"
+                           id="gdpr" {{ !empty($gdpr) && ($gdpr) ? 'checked' : '' }}>
                     <label class="small-print" for="gdpr">Please accept the Terms & Conditions before submitting the
                         form.</label>
                 </div>

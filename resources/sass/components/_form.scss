@@ -227,9 +227,8 @@ textarea {
 
 // jquery validate error messages
 .form-error-message {
-    color: #fff;
     font-size: 14px;
-    background-color: $form-feedback-invalid-color;
+    @extend .alert-danger;
     padding: 5px;
     border-radius: 5px;
     line-height: 1;

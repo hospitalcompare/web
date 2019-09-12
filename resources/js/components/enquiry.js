@@ -27,6 +27,9 @@ $(document).ready(function () {
         altField: "#actualDate",
         altFormat: "yy/mm/dd",
         setDate: "-0d"
+    }).on('change', function() {
+        $(this).valid();  // triggers the validation test
+        // '$(this)' refers to '$("#datepicker")'
     });
 
     // Add a custom validation to the jquery validate object - validate phone number field as UK format
@@ -36,15 +39,9 @@ $(document).ready(function () {
         }, 'Please specify a valid phone number'
     );
 
-    // $.validator.addMethod("dateFormat", function(date) {
-    //         // put your own logic here, this is just a (crappy) example
-    //         return date.match(/^\d\d\d\d?\/\d\d?\/\d\d$/);
-    //     },
-    //     "Please enter a date in the format yyyy/mm/dd."
-    // );
-
+    // regex for date format
     $.validator.addMethod("dateFormat", function (date) {
-            // Match the basic structure required - date also has to match dateISO
+            // Match the basic structure required
             return date.match(/^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/);
         },
         "Please enter a date in the format dd/mm/yyyy."
@@ -81,10 +78,10 @@ $(document).ready(function () {
                     required: true,
                     dateFormat: true,
                 },
-                date_of_birth: { // The proxy date that is submitted to the backend
-                    required: true,
-                    dateISO: true
-                },
+                // date_of_birth: { // The proxy date that is submitted to the backend
+                //     required: true,
+                //     dateISO: true
+                // },
                 email: {
                     required: true,
                     email: true
@@ -110,7 +107,7 @@ $(document).ready(function () {
                 title: "Please select your title",
                 firstName: "Please enter your first name",
                 lastName: "Please enter your surname",
-                // date_of_birth: "Please enter your date of birth",
+                dob: "Please enter your date of birth",
                 email: "Please enter a valid email address",
                 confirm_email: "The passwords entered do not match",
                 phone_number: "Please enter your contact number",
@@ -119,6 +116,7 @@ $(document).ready(function () {
                 gdpr: "Please confirm you consent to our terms and conditions"
             },
             errorPlacement: function (error, element) {
+                console.dir(error, element);
                 var customError = $([
                     '<span class="invalid-feedback d-block">',
                     '  <span class="mb-0 d-block">',
@@ -133,7 +131,7 @@ $(document).ready(function () {
                 error.appendTo(customError.find("span.mb-0"));
 
                 // Insert your custom error
-                customError.insertBefore(element);
+                customError.insertBefore(element).slideDown();
             },
             // Submit handler - what happens when form submitted
             submitHandler: function () {
