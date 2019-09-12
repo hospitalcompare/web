@@ -52,8 +52,10 @@
                                     @include('components.basic.input', [
                                         'placeholder' => 'Enter postcode',
                                         'className' => 'postcode-text-box big',
-                                        'value' => '', 'name' =>
-                                        'postcode', 'id' => 'input_postcode'])
+                                        'value' => '',
+                                        'name' =>'postcode',
+                                        'validation' => 'maxlength=8',
+                                         'id' => 'input_postcode'])
                                     <a tabindex="0" data-offset="30px, 40px"
                                        class="help-link"
                                         @include('components.basic.popover', [

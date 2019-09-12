@@ -4,7 +4,7 @@ $(document).ready(function() {
     setTimeout( function() {
             //Change the background color of the selectbox when an option with a value different than 0 is selected
             $('.results-page .results-page-select.highlight option[value!="0"]:selected').parent().css('background-color', '#ececec');
-            $('.results-page .highlight-search-dropdown option[value!="0"]:selected').parent().next().css('background-color', '#ececec');
+            $('.results-page .highlight-search-dropdown option[value!="0"]:selected').parent().next().removeClass('btn-light').css('background-color', '#ececec'); //Making the Background color grey for the dropdown with search
         }, 200);
 
     //On click event for the sorting ( to submit without clicking the submit button )
@@ -119,34 +119,35 @@ $(document).ready(function() {
     });
 
     // Validate the search form on the results page
-    var $form = $('#resultspage_form');
-
-    if($form.length > 0) {
-        $form.validate({
-            rules: {
-                postcode: {
-                    required: true,
-                    postcodeUK: true
-                }
-            },
-            errorPlacement: function(error, element) {
-                var customError = $([
-                    '<span class="invalid-feedback" style="display: block">',
-                    '  <span class="mb-0" style="display: block">',
-                    '  </span>',
-                    '</span>'
-                ].join(""));
-
-                // Add `form-error-message` class to the error element
-                error.addClass("form-error-message");
-
-                // Insert it inside the span that has `mb-0` class
-                error.appendTo(customError.find("span.mb-0"));
-
-                // Insert your custom error
-                customError.insertBefore( element );
-            },
-        })
-    }
+    // var $form = $('#resultspage_form');
+    //
+    // if($form.length > 0) {
+    //     $form.validate({
+    //         rules: {
+    //             postcode: {
+    //                 // required: true,
+    //                 // postcodeUK: true
+    //                 // maxlength: 7
+    //             }
+    //         },
+    //         errorPlacement: function(error, element) {
+    //             var customError = $([
+    //                 '<span class="invalid-feedback" style="display: block">',
+    //                 '  <span class="mb-0" style="display: block">',
+    //                 '  </span>',
+    //                 '</span>'
+    //             ].join(""));
+    //
+    //             // Add `form-error-message` class to the error element
+    //             error.addClass("form-error-message");
+    //
+    //             // Insert it inside the span that has `mb-0` class
+    //             error.appendTo(customError.find("span.mb-0"));
+    //
+    //             // Insert your custom error
+    //             customError.insertBefore( element );
+    //         },
+    //     })
+    // }
 
 });
