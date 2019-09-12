@@ -299,19 +299,6 @@ class Utils
     }
 
     /**
-     * Validates a given array with the given value
-     *
-     * @param $value
-     * @return mixed
-     */
-    public static function validateValue($value) {
-        if($value === 'NULL' || empty($value))
-            return '';
-
-        return $value;
-    }
-
-    /**
      * Generates HTML code based on a given rating ( between 0 - 5 )
      * NB: Make sure that if this function is changed, the equivalent JQuery function is changed as well ( resultspage.js )
      *

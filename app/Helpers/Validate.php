@@ -149,4 +149,17 @@ class Validate
 
         return $data;
     }
+
+    /**
+     * Validates a given array with the given value
+     *
+     * @param $value
+     * @return mixed
+     */
+    public static function validateValue($value) {
+        if($value === 'NULL' || empty($value))
+            return '';
+
+        return $value;
+    }
 }
