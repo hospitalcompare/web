@@ -170,7 +170,7 @@ $(document).ready(function () {
                     },
                     error: function (e) {
                         var errorMsg = JSON.parse(e.responseText).errors.error;
-                        console.log("ERROR : ", errorMsg, "status text: ", e.statusText);
+                        // console.log("ERROR : ", errorMsg, "status text: ", e.statusText);
                         $('.alert')
                             .find('.alert-text')
                             .html(errorMsg)
