@@ -1,5 +1,20 @@
 // Submitting and validating the private hospital enquiry form
 $(document).ready(function () {
+    $.extend($.datepicker, {
+        _checkOffset: function (inst, offset, isFixed) {
+            // If the container is pos fixed, alter the coordinates accordingly
+            if(isFixed) {
+                // inst is the instance of datepicker
+                // Find out how much window has scrolled
+                var scrolled = window.scrollY;
+                // get the position of the top of the input
+                var posY = offset.top;
+                offset.top = posY - scrolled;
+            }
+
+            return offset;
+        }
+    });
 
     // Create jquery datepicker from DOB input
     $("#dateOfBirth").datepicker({
