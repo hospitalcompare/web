@@ -1,21 +1,53 @@
 // Submitting and validating the private hospital enquiry form
 $(document).ready(function () {
+    $.extend($.datepicker, {
+        _checkOffset: function (inst, offset, isFixed) {
+            // If the container is pos fixed, alter the coordinates accordingly
+            if(isFixed) {
+                // inst is the instance of datepicker
+                // Find out how much window has scrolled
+                var scrolled = window.scrollY;
+                // get the position of the top of the input
+                var posY = offset.top;
+                offset.top = posY - scrolled;
+            }
+
+            return offset;
+        }
+    });
+
+    // Create jquery datepicker from DOB input
+    $("#dateOfBirth").datepicker({
+        changeMonth: true,
+        changeYear: true,
+        // minDate: "-100Y",
+        // maxDate: "0Y",
+        yearRange: "-100:-0",
+        dateFormat: "dd/mm/yy",
+        altField: "#actualDate",
+        altFormat: "yy/mm/dd",
+        setDate: "-0d"
+    }).on('change', function() {
+        $(this).valid();  // triggers the validation test
+        // '$(this)' refers to '$("#datepicker")'
+    });
 
     // Add a custom validation to the jquery validate object - validate phone number field as UK format
-    $.validator.addMethod('phoneUK', function(phone_number, element) {
+    $.validator.addMethod('phoneUK', function (phone_number, element) {
             return this.optional(element) || phone_number.length > 9 &&
                 phone_number.match(/^(\(?(0|\+44)[1-9]{1}\d{1,4}?\)?\s?\d{3,4}\s?\d{3,4})$/);
         }, 'Please specify a valid phone number'
     );
 
-    $.validator.addMethod("dateFormat", function(date) {
-            // put your own logic here, this is just a (crappy) example
-            return date.match(/^\d\d\d\d?\/\d\d?\/\d\d$/);
+    // regex for date format
+    $.validator.addMethod("dateFormat", function (date) {
+            // Match the basic structure required
+            return date.match(/^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/);
         },
-        "Please enter a date in the format yyyy/mm/dd."
+        "Please enter a date in the format dd/mm/yyyy."
     );
 
-    $.validator.addMethod("alpha", function(value, element) {
+    $.validator.addMethod("alpha", function (value, element) {
             return value.match(/^[a-zA-Z\s]*$/);
         },
         "Please enter only alphabetical characters"
@@ -25,13 +57,13 @@ $(document).ready(function () {
     var $form = $('#enquiry_form');
 
     // Only run if the page contains the enquiry form
-    if($form.length > 0) {
+    if ($form.length > 0) {
 
         // jquery validate options
         $form.validate({
             rules: {
                 hospital_id: {
-                  required: true
+                    required: true
                 },
                 title: "required",
                 firstName: {
@@ -42,11 +74,14 @@ $(document).ready(function () {
                     required: true,
                     alpha: true
                 },
-                date_of_birth: {
+                dob: { // The entered date
                     required: true,
                     dateFormat: true,
-                    dateISO: true
                 },
+                // date_of_birth: { // The proxy date that is submitted to the backend
+                //     required: true,
+                //     dateISO: true
+                // },
                 email: {
                     required: true,
                     email: true
@@ -72,7 +107,7 @@ $(document).ready(function () {
                 title: "Please select your title",
                 firstName: "Please enter your first name",
                 lastName: "Please enter your surname",
-                // date_of_birth: "Please enter your date of birth",
+                dob: "Please enter your date of birth",
                 email: "Please enter a valid email address",
                 confirm_email: "The passwords entered do not match",
                 phone_number: "Please enter your contact number",
@@ -80,7 +115,8 @@ $(document).ready(function () {
                 procedure_id: "Please select the procedure required",
                 gdpr: "Please confirm you consent to our terms and conditions"
             },
-            errorPlacement: function(error, element) {
+            errorPlacement: function (error, element) {
+                console.dir(error, element);
                 var customError = $([
                     '<span class="invalid-feedback d-block">',
                     '  <span class="mb-0 d-block">',
@@ -95,10 +131,10 @@ $(document).ready(function () {
                 error.appendTo(customError.find("span.mb-0"));
 
                 // Insert your custom error
-                customError.insertBefore( element );
+                customError.insertBefore(element).slideDown();
             },
             // Submit handler - what happens when form submitted
-            submitHandler: function() {
+            submitHandler: function () {
                 // Create an FormData object
                 var data = new FormData($form[0]);
 
@@ -133,10 +169,11 @@ $(document).ready(function () {
                         }, 800);
                     },
                     error: function (e) {
-                        console.log("ERROR : ", e.responseText);
+                        var errorMsg = JSON.parse(e.responseText).errors.error;
+                        console.log("ERROR : ", errorMsg, "status text: ", e.statusText);
                         $('.alert')
                             .find('.alert-text')
-                            .html("<pre>ERROR : " + e.responseText + "</pre>")
+                            .html(errorMsg)
                             .parents('.alert')
                             .removeClass('alert-success')
                             .addClass('alert-danger show')
@@ -152,11 +189,16 @@ $(document).ready(function () {
     }
 
     // Send the form on click of the button
-    $('#btn_submit').on('click', function(e){
+    $('#btn_submit').on('click', function (e) {
         e.preventDefault();
         $(this)
             .parents('form')
             .submit();
     })
+
+    // Dismiss bootstrap alert
+    $("[data-hide]").on("click", function () {
+        $(this).closest("." + $(this).attr("data-hide")).slideUp();
+    });
 });
 

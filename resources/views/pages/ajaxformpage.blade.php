@@ -18,7 +18,7 @@
                 'procedures'    => $data['procedures'],
                 'title'         => 'Mr',
                 'firstName'     => 'Test',
-                'dob'           => '1980/04/12',
+                'dob'           => '',
                 'lastName'      => 'Testing',
                 'email'         => 'test@test.com',
                 'phone'         => '01244316469',
