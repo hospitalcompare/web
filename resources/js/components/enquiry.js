@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     $.validator.addMethod("dateFormat", function(date) {
             // Match the basic structure required - date also has to match dateISO
-            return date.match(/^\d\d?\/\d\d?\/\d\d\d\d$/);
+            return date.match(/^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/);
         },
         "Please enter a date in the format dd/mm/yyyy."
     );
