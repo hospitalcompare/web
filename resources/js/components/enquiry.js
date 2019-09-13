@@ -29,7 +29,7 @@ $(document).ready(function () {
         setDate: "-0d"
     }).on('change', function() {
         $(this).valid();  // triggers the validation test
-        // '$(this)' refers to '$("#datepicker")'
+        // '$(this)' refers to '$("#dateOfBirth")'
     });
 
     // Add a custom validation to the jquery validate object - validate phone number field as UK format
