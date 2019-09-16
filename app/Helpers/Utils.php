@@ -3,6 +3,7 @@
 namespace App\Helpers;
 
 use App\Models\Procedure;
+use App\Models\Specialty;
 
 class Utils
 {
@@ -179,6 +180,14 @@ class Utils
         array_unshift($procedures, ['id' => 0, 'name' => 'Choose your procedure (if known)']);
 
         return $procedures;
+    }
+
+    public static function getSpecialties() {
+        //Get all the Procedures
+        $specialties = Specialty::all()->sortBy('id')->toArray();
+        //Add the option to view all procedures ( id = 0 )
+
+        return $specialties;
     }
 
     /**

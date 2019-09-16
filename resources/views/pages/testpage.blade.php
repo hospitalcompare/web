@@ -11,6 +11,7 @@
 @section('body-class', 'test-page')
 
 @section('content')
+    {{ dd($data['specialties']) }}
     <h3>Enquiry Form</h3>
     @include('components.modals.modalenquireprivate', [
                'procedures'    => $data['procedures'],

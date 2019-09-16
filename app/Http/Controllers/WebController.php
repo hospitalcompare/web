@@ -82,9 +82,11 @@ class WebController extends BaseController
     // Stacking page for components etc
     public function testPage() {
         $procedures = Utils::getProceduresForDropdown();
+        $specialties = Utils::getSpecialties();
 
         $this->returnedData['success']              = true;
         $this->returnedData['data']['procedures']   = $procedures;
+        $this->returnedData['data']['specialties']  = $specialties;
 
         return view('pages.testpage', $this->returnedData);
     }
