@@ -66,8 +66,9 @@
 }
 
 .home-promo {
-    //@include uniformAlignment;
-    //margin: auto 0;
+    @include media-breakpoint-up(lg) {
+        padding-top: 70px;
+    }
     position: relative;
     z-index: 5;
 
@@ -84,9 +85,10 @@
     li {
         list-style: none;
         font-size: 24px;
-        line-height: 40px;
+        line-height: 28px;
         position: relative;
         padding-left: 63px;
+        margin-bottom: 20px;
 
         &:before {
             content: url("/images/tick.svg");

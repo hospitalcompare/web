@@ -54,7 +54,7 @@
                             >?</a>
                         </div>
                         <div class="filter-section-child">
-                            {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'Waiting time', 'resultsLabel' => 'resultsLabel'])--}}
+                            {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'Waiting time', 'resultsLabel' => 'resultsLabel'])--}}
                             @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['waitingTimes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Waiting time', 'name'=>'waiting_time', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
@@ -76,7 +76,7 @@
                             >?</a>
                         </div>
                         <div class="filter-section-child">
-                            {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'NHS choices user rating', 'resultsLabel' => 'resultsLabel'])--}}
+                            {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'NHS choices user rating', 'resultsLabel' => 'resultsLabel'])--}}
                             @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['userRatings'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'NHS Choices User Rating', 'name'=>'user_rating', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"

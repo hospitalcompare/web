@@ -70,7 +70,7 @@
                     class="text-link"
                     href="/your-rights">Your Rights</a>
             </p>
-         </div>
+          </div>
     </div>
 
     <div class="footer-lower">

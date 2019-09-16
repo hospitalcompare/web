@@ -177,7 +177,7 @@ class Utils
         $procedures = Procedure::all()->sortBy('name')->toArray();
         //Add the option to view all procedures ( id = 0 )
         array_unshift($procedures, ['id' => '-1', 'name' => 'Not Known']);
-        array_unshift($procedures, ['id' => 0, 'name' => 'Choose your procedure (if known)']);
+        array_unshift($procedures, ['id' => 0, 'name' => 'Choose your treatment (if known)']);
 
         return $procedures;
     }
