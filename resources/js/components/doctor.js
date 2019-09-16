@@ -4,6 +4,7 @@ $(document).ready(function () {
     $doctor.popover({
         container: 'body',
         template: `<div class="popover popover-large popover-doctor">
+                        <span class="fa fa-times close" data-dismiss=""></span>
                         <div class="popover-body">
                         </div>
                         <div class="arrow arrow-large">
