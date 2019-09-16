@@ -5,8 +5,9 @@ $(document).ready(function () {
     //Set the checked value of checkboxes to boolean 0/1
     $("input[type='checkbox']").on('change', function(){
         $(this).val(this.checked ? 1 : 0);
-    })
+    });
 
+    // Bootstrap select pickers - searchable dropdowns
     var $pickers = $('.select-picker');
     // Initiate select-pickers
     $pickers.selectpicker({
@@ -17,12 +18,12 @@ $(document).ready(function () {
     // Do something when select pickers open
     $pickers.on('show.bs.select', function (e, clickedIndex, isSelected, previousValue) {
         // Stop body scrolling
-        $('body').addClass('modal-open');
+        $('body').addClass('select-open');
     });
 
     $pickers.on('hide.bs.select', function (e, clickedIndex, isSelected, previousValue) {
         // Stop body scrolling
-        $('body').removeClass('modal-open');
+        $('body').removeClass('select-open');
     });
 
 });
