@@ -32,7 +32,7 @@ $(document).ready(function() {
         var button = $(event.relatedTarget);
         initializeGMap(button.data('latitude'), button.data('longitude'));
         // $("#location-map").css("width", "100%");
-        $("#map").css("height", "400px");
+        // $("#map").css("height", "400px");
         $(this).find('.address').html(button.data('address'));
         $(this).find('.image').prop('src', button.data('image'));
     });
