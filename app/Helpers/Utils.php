@@ -78,6 +78,9 @@ class Utils
             'id' => '0',
             'name'  => 'View All'
         ],[
+            'id' => '10',
+            'name'  => 'Up to 10 Weeks'
+        ],[
             'id' => '18',
             'name'  => 'Up to 18 Weeks'
         ],[
