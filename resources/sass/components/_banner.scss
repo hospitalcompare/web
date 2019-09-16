@@ -6,9 +6,7 @@
 }
 
 .banner {
-    //width: $fullWidth;
-    background-image: url(/images/banner.jpg);
-    margin: $centerOnPage;
+    background-image: url(/images/banner-flipped.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -21,7 +19,7 @@
         left: 0;
         bottom: 0;
         right: 0;
-        background-color: #19a2a1;
+        background-color: $bannerMaskGreen;
         opacity: 0.85;
     }
 }

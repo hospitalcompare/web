@@ -33,10 +33,10 @@
                                     'html'           => 'true',
                                     'trigger'        => 'focus',
                                     'content'        => '<p class="bold mb-0">
-                                                     Choose your treatment
+                                                     Treatment
                                                  </p>
                                                  <p>
-                                                     Please choose the procedure if you know it
+                                                     Select your treatment if known.
                                                  </p>
                                                  <p>
                                                      <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
@@ -64,7 +64,7 @@
                                                      Postcode
                                                  </p>
                                                  <p>
-                                                     Please enter your postcode for a refined search
+                                                     Please enter your postcode for a refined search.
                                                  </p>
                                                  <p>
                                                      <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
@@ -92,7 +92,7 @@
                                                      Distance
                                                  </p>
                                                  <p>
-                                                     Please enter your distance. This is based on the postcode provided
+                                                     Select how far you would be willing to travel for your treatment.
                                                  </p>
                                                  <p>
                                                      <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>

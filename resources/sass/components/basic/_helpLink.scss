@@ -28,7 +28,7 @@
     .box {
         .help-link {
             right: 60px;
-            top: 20px;
+            @include v-c;
         }
     }
 }
