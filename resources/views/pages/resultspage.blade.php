@@ -186,7 +186,7 @@
                                                 Care Quality Rating
                                             </p>
                                             <p>
-                                                The Care Quality Commission evaluates every registered healthcare location as Outstanding, Good, Requires Improvement or Inadequate. If the location hasn’t been reviewed yet, it will be marked ‘Not Yet Rated’.
+                                                The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
                                             </p>'])>Care Quality<br>Rating</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-care-quality-rating {{Request::input('sort_by') == 10 ? 'desc':'asc' }}"></span>
@@ -202,7 +202,7 @@
                                                     Waiting Time (NHS Funded)
                                                 </p>
                                                 <p>
-                                                    The number of weeks that 92 out of 100 people are waiting before their treatment starts. This is the NHS standard measure of waiting times.
+                                                    Our waiting time data is based on NHS data, specifically the number of weeks that 92 out or 100 people wait for their treatment to start.
                                                 </p>'])>Waiting time <br>(NHS Funded)</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}"></span>
@@ -218,7 +218,7 @@
                                                     NHS Choices User Rating
                                                 </p>
                                                 <p>
-                                                    The user rating for the location as recorded on <a class="text-link" target="_blank" href="https://www.nhs.uk">www.nhs.uk</a>, from 1-5 in 0.5 increments, where available. If the location doesn’t exist on <a class="text-link" target="_blank" href="https://www.nhs.uk">www.nhs.uk</a> then it is marked ‘No Data’, if it exists but there are no ratings, it’s marked as ‘Not Yet Rated’.
+                                                    Five star rating system based on feedback provided by users of the NHS, five stars being the best. Information is not available on some hospitals.
                                                 </p>'])>NHS Choices <br> User Rating&nbsp;<br></p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }}"></span>
@@ -234,7 +234,7 @@
                                                     % of Operations Cancelled
                                                 </p>
                                                 <p>
-                                                    The percentage of cancelled elective operations, compared to the NHS Average. Currently available for NHS hospitals Only.
+                                                    The percentage of operations cancelled during the last reporting period. Data only available for NHS hospitals at this time.
                                                 </p>'])>% Operations<br>Cancelled</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }}"></span>
@@ -250,7 +250,7 @@
                                                     Friends & Family Rating
                                                 </p>
                                                 <p>
-                                                    This is the % of patients who would recommend the location to the friends or family if they required similar treatment.
+                                                    The percentage of people who would recommend this hospital to family and friends.
                                                 </p>'])>Friends &<br>Family Rating</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-ff-rating {{Request::input('sort_by') == 12 ? 'desc':'asc' }}"></span>
@@ -266,7 +266,7 @@
                                                     NHS Funded Work
                                                 </p>
                                                 <p>
-                                                    Indicates whether a Private hospital provides NHS funded services – you can be referred by your GP to a Private hospital as an alternative to your local NHS.
+                                                    This hospital provides treatments funded by the NHS. Remember you can have an NHS treatment at most private hospitals.
                                                 </p>'])>NHS<br>Funded Work</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 14 ? 'desc':'asc' }}"></span>
@@ -276,7 +276,7 @@
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'click',
+                                'trigger'   => 'hover',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     Private Self Pay
