@@ -153,7 +153,7 @@
             <div class="container">
                 <div class="sort-bar">
                     <div class="show-section">
-                        Showing {{count($data['hospitals'])}} out of {{$data['hospitals']->total()}} provider(s)
+                        Showing {{$data['hospitals']->total()}} hospital(s) | Ordered by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : 'Care Quality Rating & Distance' }}
                     </div>
                     <div class="sort-section">
                         @include('components.basic.select', [
