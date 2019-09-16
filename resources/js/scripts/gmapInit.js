@@ -26,16 +26,19 @@ $(document).ready(function() {
         myMarker.setMap(map);
     }
 
+    var $mapModal = $('#hc_modal_map');
     // Re-init map before show modal
-    $('#hc_modal_map').on('show.bs.modal', function(event) {
+    $mapModal.on('show.bs.modal', function(event) {
         var button = $(event.relatedTarget);
         initializeGMap(button.data('latitude'), button.data('longitude'));
         // $("#location-map").css("width", "100%");
-        $("#map").css("height", "263px");
+        $("#map").css("height", "400px");
+        $(this).find('.address').html(button.data('address'));
+        $(this).find('.image').prop('src', button.data('image'));
     });
 
     // Trigger map resize event after modal shown
-    $('#hc_modal_map').on('shown.bs.modal', function() {
+    $mapModal.on('shown.bs.modal', function() {
         google.maps.event.trigger(map, "resize");
         map.setCenter(myLatlng);
     });

@@ -12,14 +12,16 @@
                 <p class="sort-item-title SofiaPro-SemiBold" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
-                <p class="sort-item-location">{{$location}}{{-- $town --}}</p>
+                <p class="sort-item-location">{{$location}}, {{ trim($town, ', ') }}</p>
                 @include('components.basic.modalbutton', [
                     'hrefValue'         => '#',
                     'classTitle'        => 'find-link',
                     'button'            => 'Find on map',
                     'modalTarget'       => '#hc_modal_map',
                     'latitude'          => $latitude,
-                    'longitude'         => $longitude
+                    'longitude'         => $longitude,
+                    'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,
+                    'image'             => 'images/alder-1.png'
                 ])
                 {{--                TODO: reintroduce consultant button when we have this data --}}
                 {{--                @if(!empty($specialOffers))--}}
