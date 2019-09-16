@@ -77,26 +77,25 @@ class ApiController {
 
         //Update all the Hospitals that don't have a Waiting Time ( so they won't be excluded from our filters )
 //        $hospitals = Hospital::doesntHave('waitingTime')->get();
-        $specialties = Specialty::all();
+        $totalSpecialty = Specialty::where(['name' => 'Total'])->first();
 
-        if(!empty($specialties)) {
-            foreach($specialties as $spec) {
+        if(!empty($totalSpecialty)) {
                 //Check if we have the specialty to all the Hospitals
-                $hospitals = Hospital::all();
-                if(!empty($hospitals)) {
-                    foreach($hospitals as $hos) {
-                        //Check if we have the Specialty assigned to the Hospital
-                        $waitingTime = HospitalWaitingTime::where(['hospital_id' => $hos->id, 'specialty_id' => $spec->id])->first();
-                        if(empty($waitingTime)) {
-                            $waitingTime = new HospitalWaitingTime();
-                            $waitingTime->hospital_id = $hos->id;
-                            $waitingTime->specialty_id = $spec->id;
-                            $waitingTime->total_within_18_weeks = 0;
-                            $waitingTime->total_incomplete = 0;
-                            $waitingTime->avg_waiting_weeks = null;
-                            $waitingTime->perc_waiting_weeks = null;
-                            $waitingTime->save();
-                        }
+            $hospitals = Hospital::all();
+            if(!empty($hospitals)) {
+                foreach($hospitals as $hos) {
+                    $waitingTime = null;
+                    //Check if we have the Specialty assigned to the Hospital
+                    $waitingTime = HospitalWaitingTime::where(['hospital_id' => $hos->id, 'specialty_id' => $totalSpecialty->id])->first();
+                    if(empty($waitingTime)) {
+                        $waitingTime = new HospitalWaitingTime();
+                        $waitingTime->hospital_id = $hos->id;
+                        $waitingTime->specialty_id = $totalSpecialty->id;
+                        $waitingTime->total_within_18_weeks = 0;
+                        $waitingTime->total_incomplete = 0;
+                        $waitingTime->avg_waiting_weeks = null;
+                        $waitingTime->perc_waiting_weeks = null;
+                        $waitingTime->save();
                     }
                 }
             }

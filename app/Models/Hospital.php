@@ -187,9 +187,9 @@ class Hospital extends Model
             $specialtyId = $specialty->id;
         }
 
-        $hospitals = $hospitals->with(['waitingTime' => function($q) use($specialtyId) {
+        $hospitals = $hospitals->whereHas('waitingTime', function($q) use($specialtyId) {
             $q->where('specialty_id', '=', $specialtyId);
-        }]);
+        });
 
         //Filter by the Waiting Time
         if(!empty($waitingTime)) {
