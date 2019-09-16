@@ -46,7 +46,7 @@
                                                  Surgery Type
                                              </p>
                                              <p>
-                                                 Please enter your procedure (if known)
+                                                 Select your treatment if known.
                                              </p>
                                              <p>
                                                  <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
@@ -68,7 +68,7 @@
                                                  Waiting Time
                                              </p>
                                              <p>
-                                                 Filter by Waiting Times
+                                                 Select the waiting time most suitable for your needs.
                                              </p>
                                              <p>
                                                  <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
@@ -90,7 +90,7 @@
                                                  NHS Choice User Rating
                                              </p>
                                              <p>
-                                                 Filter by NHS Choice User Rating
+                                                 Five start rating system based on feedback provided by users of the NHS, five stars being the best. Information is not available on some hospitals.
                                              </p>
                                              <p>
                                                  <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
@@ -111,7 +111,7 @@
                                                  Care Quality Rating
                                              </p>
                                              <p>
-                                                 Filter by Care Quality Rating
+                                                 The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
                                              </p>
                                              <p>
                                                  <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
@@ -132,7 +132,7 @@
                                                  NHS or Private Hospitals
                                              </p>
                                              <p>
-                                                 Filter by NHS or Private Hospitals
+                                                 Select which hospital type best suits your needs. Remember you can have an NHS treatment at most private hospitals.
                                              </p>
                                              <p>
                                                  <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
@@ -291,23 +291,9 @@
             </nav>
             <div class="sort-categories-section-3 p-0">
                 <ul class="sort-categories-menu p-0 h-100">
-                    <li class="align-items-end">
-                        <p class="text-center">
-                            Add to<br>Shortlist
-                            <a tabindex="0" data-offset="30px, 40px" class="mx-auto mt-1 help-link position-static d-block"
-                                @include('components.basic.popover', [
-                                'size'      => 'large',
-                                'placement' => 'top',
-                                'trigger'   => 'click',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    Add to Shortlist
-                                                <p class="">
-                                                    <a id="1" class="float-left btn btn-green-outline compare mt-0 mr-1" target="" href="javascript:void(0);" role="button"><i class=""></i></a>
-                                                    When you have performed a search for hospitals on your results page you can click the
-                                                    blue “compare” icon
-                                                </p>
-                                                </p>'])>?</a>
+                    <li class="align-items-end justify-content-end">
+                        <p class="text-center  m-0">
+                            Compare
                         </p>
                     </li>
                 </ul>

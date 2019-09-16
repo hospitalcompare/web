@@ -135,7 +135,7 @@
                 </p>
                 @if($NHSClass == 'private-hospital')
                     <span>
-                        Click for
+                        Click for<br>
                         @include('components.basic.modalbutton', [
                                 'hrefValue'         => $url,
                                 'hospitalTitle'     => $title,
