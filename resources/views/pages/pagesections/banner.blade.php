@@ -14,7 +14,7 @@
                 <div class="col col-12 col-lg-6">
                     <div class="box full-left ml-auto">
                         <p>Find the best hospital for your elective surgery</p><br>
-                        <form class="form-element" method="get" action="/results-page">
+                        <form class="form-element" method="get" action="/results-page#sort_parent">
 
                             <div class="form-child">
                                 @include('components.basic.select', [

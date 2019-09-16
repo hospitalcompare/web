@@ -150,4 +150,10 @@ $(document).ready(function() {
     //     })
     // }
 
+    // Toggle sort dropdown
+    $('#show_sort').on('click', function(){
+        $('.sort-section').animate({
+            width: "toggle"
+        });
+    })
 });

@@ -153,13 +153,23 @@
             </div>
         </div>
 
-        <div class="sort-parent">
+        <div class="sort-parent" id="sort_parent">
             <div class="container">
                 <div class="sort-bar">
                     <div class="show-section">
                         Showing {{$data['hospitals']->total()}} hospital(s) | Ordered by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : 'Care Quality Rating & Distance' }}
                     </div>
-                    <div class="sort-section">
+                    @include('components.basic.button', [
+                        'button'            => 'Filter Results',
+                        'classTitle'        => 'btn btn-s btn-teal btn-grad',
+                        'id'                => 'show_filters'
+                    ])
+                    @include('components.basic.button', [
+                        'button'            => 'Sort Results',
+                        'classTitle'        => 'btn btn-s btn-teal btn-grad ml-3',
+                        'id'                => 'show_sort'
+                    ])
+                    <div class="sort-section ml-3">
                         @include('components.basic.select', [
                             'showLabel' => true,
                             'options' => $data['sortBy'],

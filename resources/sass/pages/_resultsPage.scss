@@ -66,6 +66,7 @@
         width: $fullWidth;
         background-color: $white;
         padding-top: 23px;
+        //display: none;
     }
 
     .postcode-proximity,
@@ -94,7 +95,6 @@
     }
 
     .sort-parent {
-        width: $fullWidth;
         background-color: $lighterGrey;
     }
 
@@ -104,24 +104,21 @@
     }
 
     .sort-bar {
+        min-height: 60px;
         @include flex;
         justify-content: space-between;
+        align-items: center;
 
         .show-section {
             margin: auto auto auto 0;
         }
 
         .sort-section {
-            margin: 10px 0;
+            display: none;
 
             .results-page-select {
                 width: auto
             }
-        }
-
-        .show-section,
-        .sort-section {
-            //margin: auto;
         }
     }
 
