@@ -34,29 +34,35 @@
         <div class="sort-categories-section-2">
             {{-- CQC rating  --}}
             <div class="sort-categories-section-2__child">
-                <p>
-                    {!! !empty($qualityRating) ? $qualityRating : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
+                <p @includeWhen(empty($qualityRating), 'components.basic.popover', [
+                        'placement' => 'bottom',
+                        'trigger' => 'hover',
+                        'html' => 'true',
+                        'content' => 'Currently no data available for this hospital'])>
+                    {!! !empty($qualityRating) ? $qualityRating : "<a class='btn-link'>No data</a>" !!}
                 </p>
                 <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
 
             </div>
             {{-- Waiting time --}}
             <div class="sort-categories-section-2__child flex-column">
-                <p>
-                    {!! !empty($waitTime) ? $waitTime : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
+                <p @includeWhen(empty($waitTime), 'components.basic.popover', [
+                        'placement' => 'bottom',
+                        'trigger' => 'hover',
+                        'html' => 'true',
+                        'content' => 'Currently no data available for this hospital'])>
+                    {!! !empty($waitTime) ? $waitTime : "<a class='btn-link'>No data</a>" !!}
                 </p>
                 @if($NHSClass == 'private-hospital')
                     <span>
-                        <small>
-                            Click for<br>
-                            @include('components.basic.modalbutton', [
-                                    'hrefValue'         => $url,
-                                    'hospitalTitle'     => $title,
-                                    'modalTarget'       => '#hc_modal_enquire_private',
-                                    'classTitle'        => 'text-link enquire-times',
-                                    'target'            => 'blank',
-                                    'button'            => 'waiting time enquiry'])
-                        </small>
+                        Click for<br>
+                        @include('components.basic.modalbutton', [
+                                'hrefValue'         => $url,
+                                'hospitalTitle'     => $title,
+                                'modalTarget'       => '#hc_modal_enquire_private',
+                                'classTitle'        => 'text-link enquire-times',
+                                'target'            => 'blank',
+                                'button'            => 'waiting time enquiry'])
                     </span>
                 @endif
                 <span class="d-none" id="item_waiting_time_{{$id}}">{{$waitTime}}</span>
@@ -67,7 +73,7 @@
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
-                        'content' => '
+                        'content' => !empty($d['rating']['avg_user_rating']) ? '
                         <p><span class="mr-2">Food rating</span>
                             <img src="images/icons/star.svg" alt="Whole Star">
                             <img src="images/icons/star.svg" alt="Whole Star">
@@ -88,7 +94,7 @@
                             <img src="images/icons/star.svg" alt="Whole Star">
                             <img src="images/icons/star.svg" alt="Whole Star">
                             <img src="images/icons/star.svg" alt="Whole Star">
-                        </p>'])>
+                        </p>' : 'Currently no data available<br>for this hospital'])>
                     {!! html_entity_decode($stars) !!}
                 </p>
                 <span class="d-none" id="item_user_rating_{{$id}}">{!! $userRating !!}</span>
@@ -99,8 +105,8 @@
                     @include('components.basic.popover', [
                     'trigger' => 'hover',
                     'html'    => 'true',
-                    'content' => 'National average<br> is 3.35%'])>
-                    {!! !empty($opCancelled) ? $opCancelled : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
+                    'content' => !empty($opCancelled) ? 'National average<br> is 3.35%' : 'Currently no data available<br>for this hopsital'])>
+                    {!! !empty($opCancelled) ? $opCancelled : "<a class='btn-link'>No data</a>" !!}
                 </p>
                 <span class="d-none" id="item_op_cancelled_{{$id}}">{!! $opCancelled !!}</span>
             </div>
@@ -111,14 +117,15 @@
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
-                        'content' => 'National average<br>is 98.85%'])>
-                    {!! !empty($FFRating) ? $FFRating : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
+                        'content' => !empty($FFRating) ? 'National average<br>is 98.85%' : 'Currently no data available<br>for this hospital'])>
+                    {!! !empty($FFRating) ? $FFRating : "<a class='btn-link'>No data</a>" !!}
                 </p>
                 <span class="d-none" id="item_ff_rating_{{$id}}">{!! $FFRating !!}</span>
             </div>
+            {{-- NHS funded work  --}}
             <div class="sort-categories-section-2__child">
                 <p>
-                    {!! !empty($NHSFunded) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
+                    {!! ($NHSClass == 'nhs-hospital') || ($NHSClass == 'private-hospital') && !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                 </p>
                 <span class="d-none" id="item_nhs_funded_{{$id}}">{!! $NHSFunded !!}</span>
             </div>
@@ -128,7 +135,7 @@
                 </p>
                 @if($NHSClass == 'private-hospital')
                     <span>
-                    <small>Click for
+                        Click for
                         @include('components.basic.modalbutton', [
                                 'hrefValue'         => $url,
                                 'hospitalTitle'     => $title,
@@ -136,7 +143,6 @@
                                 'classTitle'        => 'text-link enquire-prices',
                                 'target'            => 'blank',
                                 'button'            => 'prices'])
-                    </small>
                     </span>
                 @endif
                 <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>

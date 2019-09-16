@@ -276,7 +276,7 @@
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'hover',
+                                'trigger'   => 'click',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     Private Self Pay
@@ -298,7 +298,7 @@
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'hover',
+                                'trigger'   => 'click',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     Add to Shortlist
@@ -331,7 +331,7 @@
                     'findLink'          => 'Find on map',
                     'waitTime'          => !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? round($d['waitingTime'][0]['perc_waiting_weeks'], 1).'<br>Weeks' : 0,
                     'userRating'        => !empty($d['rating']['avg_user_rating']) ? $d['rating']['avg_user_rating'] : 0,
-                    'stars'             => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\Utils::getHtmlStars($d['rating']['avg_user_rating']) : "<img src='images/icons/dash-black.svg' alt='Dash icon'>",
+                    'stars'             => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\Utils::getHtmlStars($d['rating']['avg_user_rating']) : "<a class='btn-link'>No data</a>",
                     'opCancelled'       => !empty($d['cancelledOp']['perc_cancelled_ops'])? $d['cancelledOp']['perc_cancelled_ops'].'%': 0,
                     'qualityRating'     => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : 0,
                     'FFRating'          => !empty($d['rating']['friends_family_rating']) ? $d['rating']['friends_family_rating'].'%' : 0,
