@@ -26,14 +26,18 @@
                     <div class="filter-section">
                         <div class="filter-section-child">
                             @include('components.basic.select', [
-                                'showLabel' => true,
-                                'selectPicker' => 'true',
-                                'options' => $data['filters']['procedures'],
-                                'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                                'selectClass' => 'selectpicker highlight-search-dropdown',
-                                'placeholder'=>'Surgery Type',
-                                'name'=>'procedure_id',
-                                'resultsLabel' => 'resultsLabel'])
+                                'showLabel'             => true,
+                                'selectPicker'          => 'true',
+                                'group'                 => true,
+                                'groupName'             => 'procedures',
+                                'options'               => $data['filters']['procedures'],
+                                'suboptionClass'        => 'subprocedures',
+                                'chevronFAClassName'    => 'fa-chevron-down black-chevron',
+                                'selectClass'           => 'selectpicker highlight-search-dropdown',
+                                'placeholder'           => 'Surgery Type', //Why do we need another placeholder?
+                                'name'                  =>'procedure_id',
+                                'resultsLabel'          => 'resultsLabel'
+                            ])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [

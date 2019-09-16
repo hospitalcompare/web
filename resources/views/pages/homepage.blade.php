@@ -22,12 +22,16 @@
 
                                 <div class="form-child">
                                     @include('components.basic.select', [
-                                        'selectPicker' => 'true',
-                                        'selectClass'=> 'big selectpicker',
-                                        'options' => $data['procedures'],
-                                        'chevronFAClassName' => 'fa-chevron-down aquaChevron',
-                                        'placeholder'=>'Choose your procedure (if known)',
-                                        'name'=> 'procedure_id'])
+                                        'selectPicker'          => 'true',
+                                        'selectClass'           => 'big selectpicker',
+                                        'options'               => $data['procedures'],
+                                        'group'                 => true,
+                                        'groupName'             => 'procedures',
+                                        'suboptionClass'        => 'subprocedures',
+                                        'chevronFAClassName'    => 'fa-chevron-down aquaChevron',
+                                        'placeholder'           => 'Choose your procedure (if known)', //Why do we need another placeholder?
+                                        'name'                  => 'procedure_id'
+                                    ])
                                     <a tabindex="0" data-offset="30px, 40px"
                                        class="help-link"
                                         @include('components.basic.popover', [

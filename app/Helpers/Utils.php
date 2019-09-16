@@ -3,6 +3,7 @@
 namespace App\Helpers;
 
 use App\Models\Procedure;
+use App\Models\Specialty;
 
 class Utils
 {
@@ -178,8 +179,12 @@ class Utils
      * @return array
      */
     public static function getProceduresForDropdown() {
-        //Get all the Procedures
-        $procedures = Procedure::all()->sortBy('name')->toArray();
+        //Get all Specialties with Procedures ordered by name
+        $procedures = Specialty::with(['procedures' => function($query) {
+            $query->orderBy('name', 'ASC');
+        }])->orderBy('name', 'ASC')->get()->toArray();
+
+//        $procedures = Procedure::all()->sortBy('name')->toArray();
         //Add the option to view all procedures ( id = 0 )
         array_unshift($procedures, ['id' => '-1', 'name' => 'Not Known']);
         array_unshift($procedures, ['id' => 0, 'name' => 'Choose your procedure (if known)']);
