@@ -1,6 +1,7 @@
-(function () {
+$(document).ready(function () {
     // Doctor popover event handler
-    $('#doctor-popover').popover({
+    var $doctor = $('#doctor-popover');
+    $doctor.popover({
         container: 'body',
         template: `<div class="popover popover-large popover-doctor">
                         <div class="popover-body">
@@ -14,21 +15,24 @@
         placement: 'top'
     });
 
-    // Show the doctor popover after 1 sec delay
-    setTimeout(function () {
-        $('#doctor-popover')
-            .focus()
-    }, 1000)
+    var $showDoctor =  Cookies.get('showDoctor');
 
-    $('#doctor-popover').on('shown.bs.popover', function (e) {
-        // do something…
+    if($showDoctor != 'false') {
+        // Show the doctor popover after 1 sec delay (if she hasn't already been dismissed
+        setTimeout(function () {
+            $doctor
+                .focus()
+        }, 1000);
+    }
+
+    $doctor.on('shown.bs.popover', function (e) {
         $('.popover-doctor')
             .find('.btn-go')
             .addClass('popover-open')
-            // .animate({
-            //     backgroundPosition: '0%'
-            // }, 1000, function(){
-            //     console.log('finished')
-            // })
-    })
-})();
+    });
+
+    // Set the showDoctor cookie to false when she is dismissed
+    $doctor.on('hide.bs.popover', function (e) {
+        Cookies.set('showDoctor', 'false');
+    });
+});
