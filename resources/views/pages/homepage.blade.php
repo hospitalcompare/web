@@ -16,92 +16,13 @@
             <div class="container">
                 <div class="banner-data row">
                     <div class="home-promo col col-12 col-lg-6">
-                        <p>The quality of care in England varies greatly between hospitals. You have the legal right to
-                            choose where to have your elective surgery*. It can be at: </p>
+                        <p>The quality of care and waiting times in England vary greatly between hospitals. You have the legal right to
+                            choose where to have your treatment*. It can be at: </p>
                         <ul class="promo-list">
-                            <li>An NHS hospital of your choice NHS, funded by the NHS
-                                <a tabindex="0" data-offset="30px, 40px"
-                                   class="help-link help-link__inline"
-                                    @include('components.basic.popover', [
-                                    'dismissible'   => true,
-                                    'placement'      => 'top',
-                                    'size'           => 'large',
-                                    'html'           => 'true',
-                                    'trigger'        => 'focus',
-                                    'content'        => '
-                                                 <p>
-                                                    You can choose which NHS hospital to perform your elective procedure. Paid for by the NHS. Anywhere in England. See <a
-                                    class="text-link"
-                                    href="/your-rights">Your Rights</a> for exceptions.
-                                                 </p>
-                                                 <p>
-                                                     <a class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
-                                                 </p>'])
-                                >?</a>
-                            </li>
-                            <li>A private hospital of your choice, funded by the NHS
-                                <a tabindex="0" data-offset="30, 40px"
-                                   class="help-link help-link__inline"
-                                    @include('components.basic.popover', [
-                                             'dismissible'   => true,
-                                             'placement'      => 'top',
-                                             'size'           => 'large',
-                                             'html'           => 'true',
-                                             'trigger'        => 'focus',
-                                             'content'        => '
-                                                 <p>
-                                                    You can choose which private hospital to perform your elective procedure. Paid for by the NHS, at no extra cost to the taxpayer than an NHS hospital. Anywhere in England. See <a
-                                    class="text-link"
-                                    href="/your-rights">Your Rights</a> for exceptions.
-                                                 </p>
-                                                 <p>
-                                                     <a class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
-                                                 </p>'
-                                             ])
-                                >?</a></li>
-                            <li>A private hospital of your choice, paid for by you <a tabindex="0"
-                                                                                      data-offset="30, 40px"
-                                                                                      class="help-link help-link__inline"
-                                    @include('components.basic.popover', [
-                                    'dismissible'   => true,
-                                    'placement'      => 'top',
-                                    'size'           => 'large',
-                                    'html'           => 'true',
-                                    'trigger'        => 'focus',
-                                    'content'        =>
-                                                '<p>
-                                                    You can choose a private hospital to perform your elective procedure. Paid for by you. Anywhere in England.
-                                                 </p>
-                                                 <p>
-                                                     <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
-                                                 </p>'])
-                                >?</a></li>
-                            <li>a private hospital of your choice, funded by health insurance <a tabindex="0"
-                                                                                                 data-offset="30, 40px"
-                                                                                                 class="help-link help-link__inline"
-                                    @include('components.basic.popover', [
-                                        'dismissible'   => true,
-                                        'placement'      => 'top',
-                                        'size'           => 'large',
-                                        'html'           => 'true',
-                                        'trigger'        => 'focus',
-                                        'content'        => '
-                                                 <p>
-                                                    You can choose which private hospital to perform your elective procedure, if covered by your healthcare insurance policy.
-                                                 </p>
-                                                 <p>
-                                                     <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
-                                                 </p>'])
-                                >?</a></li>
+                            <li>An NHS or private hospital, funded by the NHS</li>
+                            <li>A private hospital of your choice, paid for by you or your insurance</li>
                         </ul>
                         <p>
-                            <small>
-                                *your legal right to choose may be restricted in some circumstances. For more
-                                information see <a
-                                    class="text-link"
-                                    href="/your-rights">Your Rights</a>
-                            </small>
-                        </p>
                     </div>
                     <div class="col col-12 col-lg-6">
                         <div class="box full-left ml-auto">

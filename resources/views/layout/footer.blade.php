@@ -63,8 +63,14 @@
 					</svg>
 
         </div>
-{{--        <div class="container-fluid p-0">--}}
-{{--        </div>--}}
+        <div class="container">
+            <p>
+                *your legal right to choose may be restricted in some circumstances. For more
+                information see <a
+                    class="text-link"
+                    href="/your-rights">Your Rights</a>
+            </p>
+         </div>
     </div>
 
     <div class="footer-lower">
