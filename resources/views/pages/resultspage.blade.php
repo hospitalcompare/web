@@ -33,7 +33,7 @@
                                 'options'               => $data['filters']['procedures'],
                                 'suboptionClass'        => 'subprocedures',
                                 'chevronFAClassName'    => 'fa-chevron-down black-chevron',
-                                'selectClass'           => 'selectpicker highlight-search-dropdown',
+                                'selectClass'           => 'select-picker highlight-search-dropdown',
                                 'placeholder'           => 'Surgery Type', //Why do we need another placeholder?
                                 'name'                  =>'procedure_id',
                                 'resultsLabel'          => 'resultsLabel'
@@ -50,7 +50,7 @@
                                                  Surgery Type
                                              </p>
                                              <p>
-                                                 Please enter your procedure (if known)
+                                                 Select your treatment if known.
                                              </p>
                                              <p>
                                                  <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
@@ -58,7 +58,7 @@
                             >?</a>
                         </div>
                         <div class="filter-section-child">
-                            {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'Waiting time', 'resultsLabel' => 'resultsLabel'])--}}
+                            {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'Waiting time', 'resultsLabel' => 'resultsLabel'])--}}
                             @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['waitingTimes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Waiting time', 'name'=>'waiting_time', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
@@ -72,7 +72,7 @@
                                                  Waiting Time
                                              </p>
                                              <p>
-                                                 Filter by Waiting Times
+                                                 Select the waiting time most suitable for your needs.
                                              </p>
                                              <p>
                                                  <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
@@ -80,7 +80,7 @@
                             >?</a>
                         </div>
                         <div class="filter-section-child">
-                            {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your procedure'], ['id'=>2, 'name'=>'Choose your procedure']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'NHS choices user rating', 'resultsLabel' => 'resultsLabel'])--}}
+                            {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'NHS choices user rating', 'resultsLabel' => 'resultsLabel'])--}}
                             @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['userRatings'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'NHS Choices User Rating', 'name'=>'user_rating', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
@@ -94,7 +94,7 @@
                                                  NHS Choice User Rating
                                              </p>
                                              <p>
-                                                 Filter by NHS Choice User Rating
+                                                 Five start rating system based on feedback provided by users of the NHS, five stars being the best. Information is not available on some hospitals.
                                              </p>
                                              <p>
                                                  <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
@@ -115,7 +115,7 @@
                                                  Care Quality Rating
                                              </p>
                                              <p>
-                                                 Filter by Care Quality Rating
+                                                 The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
                                              </p>
                                              <p>
                                                  <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
@@ -136,7 +136,7 @@
                                                  NHS or Private Hospitals
                                              </p>
                                              <p>
-                                                 Filter by NHS or Private Hospitals
+                                                 Select which hospital type best suits your needs. Remember you can have an NHS treatment at most private hospitals.
                                              </p>
                                              <p>
                                                  <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
@@ -280,7 +280,7 @@
                                 @include('components.basic.popover', [
                                 'size'      => 'large',
                                 'placement' => 'top',
-                                'trigger'   => 'hover',
+                                'trigger'   => 'click',
                                 'html'      => 'true',
                                 'content'   => '<p class="bold mb-0">
                                                     Private Self Pay
@@ -295,23 +295,9 @@
             </nav>
             <div class="sort-categories-section-3 p-0">
                 <ul class="sort-categories-menu p-0 h-100">
-                    <li class="align-items-end">
-                        <p class="text-center">
-                            Add to<br>Shortlist
-                            <a tabindex="0" data-offset="30px, 40px" class="mx-auto mt-1 help-link position-static d-block"
-                                @include('components.basic.popover', [
-                                'size'      => 'large',
-                                'placement' => 'top',
-                                'trigger'   => 'hover',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    Add to Shortlist
-                                                <p class="">
-                                                    <a id="1" class="float-left btn btn-green-outline compare mt-0 mr-1" target="" href="javascript:void(0);" role="button"><i class=""></i></a>
-                                                    When you have performed a search for hospitals on your results page you can click the
-                                                    blue “compare” icon
-                                                </p>
-                                                </p>'])>?</a>
+                    <li class="align-items-end justify-content-end">
+                        <p class="text-center  m-0">
+                            Compare
                         </p>
                     </li>
                 </ul>
@@ -326,13 +312,16 @@
                     'id'                => $d['id'],
                     'itemImg'           => 'images/alder-1.png',
                     'title'             => $d['name'],
-                    'location'          => (!empty($d['address']['address_1']) ? $d['address']['address_1']: '').(!empty($d['radius']) ? ', '.number_format((float)$d['radius'], 1 ). ' miles from postcode': ''),
+                    'location'          => (!empty($d['address']['address_1']) ? trim($d['address']['address_1']) : '') . (!empty($d['radius']) ? ', '.number_format($d['radius'], 1 ). ' miles from postcode': ''),
+                    'town'              => (!empty($d['address']['city']) ? ', ' . $d['address']['city'] : ''),
+                    'county'             => (!empty($d['address']['county']) ? $d['address']['county'] : ''),
+                    'postcode'          => (!empty($d['address']['postcode']) ? $d['address']['postcode'] : ''),
                     'latitude'          => $d['address']['latitude'],
                     'longitude'         => $d['address']['longitude'],
                     'findLink'          => 'Find on map',
                     'waitTime'          => !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? number_format((float)$d['waitingTime'][0]['perc_waiting_weeks'], 1).'<br>Weeks' : 0,
                     'userRating'        => !empty($d['rating']['avg_user_rating']) ? $d['rating']['avg_user_rating'] : 0,
-                    'stars'             => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\Utils::getHtmlStars($d['rating']['avg_user_rating']) : "<img src='images/icons/dash-black.svg' alt='Dash icon'>",
+                    'stars'             => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\Utils::getHtmlStars($d['rating']['avg_user_rating']) : "<a class='btn-link'>No data</a>",
                     'opCancelled'       => !empty($d['cancelledOp']['perc_cancelled_ops'])? number_format((float)$d['cancelledOp']['perc_cancelled_ops'], 1).'%': 0,
                     'qualityRating'     => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : 0,
                     'FFRating'          => !empty($d['rating']['friends_family_rating']) ? number_format((float)$d['rating']['friends_family_rating'], 1).'%' : 0,

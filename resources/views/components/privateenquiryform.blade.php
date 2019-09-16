@@ -74,7 +74,7 @@
                     @include('components.basic.select', [
                         'options'               => $procedures,
                         'chevronFAClassName'    => 'fa-chevron-down black-chevron',
-                        'selectClass'           => 'selectpicker',
+                        'selectClass'           => 'select-picker',
                         'placeholder'           => 'Surgery Type',
                         'group'                 => true,
                         'groupName'             => 'procedures',

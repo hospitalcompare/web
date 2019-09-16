@@ -4,7 +4,6 @@ $(document).ready(function () {
         _checkOffset: function (inst, offset, isFixed) {
             // If the container is pos fixed, alter the coordinates accordingly
             if(isFixed) {
-                // inst is the instance of datepicker
                 // Find out how much window has scrolled
                 var scrolled = window.scrollY;
                 // get the position of the top of the input
@@ -20,8 +19,6 @@ $(document).ready(function () {
     $("#dateOfBirth").datepicker({
         changeMonth: true,
         changeYear: true,
-        // minDate: "-100Y",
-        // maxDate: "0Y",
         yearRange: "-100:-0",
         dateFormat: "dd/mm/yy",
         altField: "#actualDate",
@@ -29,7 +26,6 @@ $(document).ready(function () {
         setDate: "-0d"
     }).on('change', function() {
         $(this).valid();  // triggers the validation test
-        // '$(this)' refers to '$("#datepicker")'
     });
 
     // Add a custom validation to the jquery validate object - validate phone number field as UK format
@@ -78,10 +74,6 @@ $(document).ready(function () {
                     required: true,
                     dateFormat: true,
                 },
-                // date_of_birth: { // The proxy date that is submitted to the backend
-                //     required: true,
-                //     dateISO: true
-                // },
                 email: {
                     required: true,
                     email: true

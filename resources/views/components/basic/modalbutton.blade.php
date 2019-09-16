@@ -3,13 +3,16 @@
    role="button"
    data-toggle="modal"
    @if($modalTarget == '#hc_modal_map')
-        data-longitude="{{ $longitude ?? '' }}"
-        data-latitude="{{ $latitude ?? '' }}"
+   data-longitude="{{ $longitude ?? '' }}"
+   data-latitude="{{ $latitude ?? '' }}"
    @endif
    @if(!empty($hospitalType) && $hospitalType == 'nhs-hospital')
-        data-hospital-url="{{ $hrefValue }}"
+   data-hospital-url="{{ $hrefValue }}"
    @endif
    data-hospital-title="{{ $hospitalTitle ?? 'Hospital Title Here' }}"
-   data-target="{{ $modalTarget }}">{{ $button }}
+   data-target="{{ $modalTarget }}"
+   data-image="{{ $image ?? '' }}"
+   data-address="{{ $address ?? '' }}">{{ $button }}
     <i class="{{ empty($icon) ? '' : $icon }}"></i>
+
 </a>

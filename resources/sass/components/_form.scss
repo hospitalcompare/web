@@ -238,3 +238,12 @@ textarea {
 .invalid-feedback {
     margin-top: 0;
 }
+
+// Stop the body scrolling when bootstrap selects are open
+.select-open {
+    overflow: hidden;
+    
+    .dropdown-menu.show {
+        z-index: 1050;
+    }
+}
