@@ -166,6 +166,9 @@ class Utils
         ],[
             'id' => 25,
             'name'  => 'Up to 25 miles'
+        ],[
+            'id' => 10,
+            'name'  => 'Up to 10 miles'
         ]
     ];
 
