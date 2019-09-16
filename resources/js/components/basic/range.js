@@ -13,7 +13,7 @@ $(document).ready(function () {
     const sliders = document.querySelectorAll('.range-slider');
 
 // Iterate through that list of sliders
-// ... this call goes through our array of sliders [slider1,slider2,slider3] and inserts them one-by-one into the code block below with the variable name (slider). We can then access each of wthem by calling slider
+// ... this call goes through our array of sliders [slider1,slider2,slider3] and inserts them one-by-one into the code block below with the variable name (slider). We can then access each of them by calling slider
     Array.prototype.forEach.call(sliders,(slider)=>{
         // Look inside our slider for our input add an event listener
 //   ... the input inside addEventListener() is looking for the input action, we could change it to something like change

@@ -29,4 +29,12 @@ class Specialty extends Model
         'code'      => 'string',
         'status'    => 'string'
     ];
+
+    /**
+     * waitingTime() belongs to HospitalWaitingTime
+     * @return \Illuminate\Database\Eloquent\Relations\hasMany
+     */
+    public function procedures() {
+        return $this->hasMany( '\App\Models\Procedure', 'specialty_id');
+    }
 }

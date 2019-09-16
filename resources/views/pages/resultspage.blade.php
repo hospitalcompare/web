@@ -19,21 +19,25 @@
                         @include('components.basic.input', ['placeholder' => 'Enter your postcode', 'validation' => 'maxlength=8', 'inputClassName' => 'inputClass', 'value' => !empty(Request::input('postcode')) ? Request::input('postcode') : '' , 'name' => 'postcode', 'id' => 'input_postcode'])
                     </div>
                     <div class="postcode-proximity-child">
-                        @include('components.basic.range', ['label' => 'Within radius of:', 'min' => 10, 'max' => 600, 'value' => !empty(Request::input('radius')) ? Request::input('radius') : '', 'name' => 'radius', 'step' => 10])
+                        @include('components.basic.range', ['label' => 'Within radius of:', 'min' => 10, 'max' => 600, 'value' => !empty(Request::input('radius')) ? Request::input('radius') : 50, 'name' => 'radius', 'step' => 10])
                     </div>
                 </div>
                 <div class="select-proximity">
                     <div class="filter-section">
                         <div class="filter-section-child">
                             @include('components.basic.select', [
-                                'showLabel' => true,
-                                'selectPicker' => 'true',
-                                'options' => $data['filters']['procedures'],
-                                'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                                'selectClass' => 'select-picker highlight-search-dropdown',
-                                'placeholder'=>'Surgery Type',
-                                'name'=>'procedure_id',
-                                'resultsLabel' => 'resultsLabel'])
+                                'showLabel'             => true,
+                                'selectPicker'          => 'true',
+                                'group'                 => true,
+                                'groupName'             => 'procedures',
+                                'options'               => $data['filters']['procedures'],
+                                'suboptionClass'        => 'subprocedures',
+                                'chevronFAClassName'    => 'fa-chevron-down black-chevron',
+                                'selectClass'           => 'select-picker highlight-search-dropdown',
+                                'placeholder'           => 'Surgery Type', //Why do we need another placeholder?
+                                'name'                  =>'procedure_id',
+                                'resultsLabel'          => 'resultsLabel'
+                            ])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
@@ -153,7 +157,7 @@
             <div class="container">
                 <div class="sort-bar">
                     <div class="show-section">
-                        Showing {{count($data['hospitals'])}} out of {{$data['hospitals']->total()}} provider(s)
+                        Showing {{$data['hospitals']->total()}} hospital(s) | Ordered by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : 'Care Quality Rating & Distance' }}
                     </div>
                     <div class="sort-section">
                         @include('components.basic.select', [
@@ -315,13 +319,13 @@
                     'latitude'          => $d['address']['latitude'],
                     'longitude'         => $d['address']['longitude'],
                     'findLink'          => 'Find on map',
-                    'waitTime'          => !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? round($d['waitingTime'][0]['perc_waiting_weeks'], 1).'<br>Weeks' : 0,
+                    'waitTime'          => !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? number_format((float)$d['waitingTime'][0]['perc_waiting_weeks'], 1).'<br>Weeks' : 0,
                     'userRating'        => !empty($d['rating']['avg_user_rating']) ? $d['rating']['avg_user_rating'] : 0,
                     'stars'             => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\Utils::getHtmlStars($d['rating']['avg_user_rating']) : "<a class='btn-link'>No data</a>",
-                    'opCancelled'       => !empty($d['cancelledOp']['perc_cancelled_ops'])? $d['cancelledOp']['perc_cancelled_ops'].'%': 0,
+                    'opCancelled'       => !empty($d['cancelledOp']['perc_cancelled_ops'])? number_format((float)$d['cancelledOp']['perc_cancelled_ops'], 1).'%': 0,
                     'qualityRating'     => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : 0,
-                    'FFRating'          => !empty($d['rating']['friends_family_rating']) ? $d['rating']['friends_family_rating'].'%' : 0,
-                    'NHSFunded'         => ($d['hospitalType']['name'] === 'Independent' && !empty($d['waitingTime'][0]['perc_waiting_weeks'])) ? 1 : 0,
+                    'FFRating'          => !empty($d['rating']['friends_family_rating']) ? number_format((float)$d['rating']['friends_family_rating'], 1).'%' : 0,
+                    'NHSFunded'         => ($d['hospitalType']['name'] === 'NHS' || ($d['hospitalType']['name'] === 'Independent' && !empty($d['waitingTime'][0]['perc_waiting_weeks']))) ? 1 : 0,
                     'privateSelfPay'    => $d['hospitalType']['name'] === 'Independent' ? 1 : 0,
                     'specialOffers'     => $d['special_offers'],
                     'btnText'           => 'Make an enquiry',

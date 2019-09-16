@@ -11,9 +11,26 @@
             name="{{$name}}"
             {{ !empty($required) && ($required) ? 'required' : '' }}>
         @if(!empty($placeholder))
-            <option value="0" disabled {{ empty(Request::input($name)) ? 'selected' : ''  }}>{{$placeholder}}</option>
+            <option value="0" disabled {{ empty(Request::input($name)) ? 'selected' : ''  }}> {{ $placeholder }}</option>
         @endif
-        @if(!empty($options))
+        @if(!empty($group))
+            @foreach($options as $option)
+                    <option name="{{$option['name']}}" id="{{'group_'.$name.'_'.$option['id']}}"
+                            value="{{$option['id']}}" {{$option['id'] > 0 ? 'disabled': ''}}
+                            {{ Request::input($name)==$option['id'] ? 'selected' : ''  }} class="{{$option['class'] ?? ''}}">
+                        {{$option['name']}}
+                    </option>
+                @if(!empty($option[$groupName]))
+                    @foreach($option[$groupName] as $opt)
+                        <option name="{{$opt['name']}}" id="{{$name.'_'.$opt['id']}}"
+                                value="{{$opt['id']}}"
+                                {{ Request::input($name)==$opt['id'] ? 'selected' : ''  }} class="suboption {{$suboptionClass ?? ''}}">
+                            {{$opt['name']}}
+                        </option>
+                    @endforeach
+                @endif
+            @endforeach
+        @elseif(!empty($options))
             @foreach($options as $option)
                 <option name="{{$option['name']}}" id="{{$name.'_'.$option['id']}}"
                         value="{{$option['id']}}"

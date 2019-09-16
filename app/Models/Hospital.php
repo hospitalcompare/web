@@ -187,15 +187,15 @@ class Hospital extends Model
             $specialtyId = $specialty->id;
         }
 
-        $hospitals = $hospitals->with(['waitingTime' => function($q) use($specialtyId) {
-            $q->where('specialty_id', '=', $specialtyId);
-        }]);
+        $hospitals = $hospitals->whereHas('waitingTime', function($q) use($specialtyId) {
+            $q->bySpecialty($specialtyId);
+        });
 
         //Filter by the Waiting Time
         if(!empty($waitingTime)) {
             $hospitals = $hospitals->whereHas('waitingTime', function($q) use($waitingTime, $specialtyId) {
+                $q->bySpecialty($specialtyId);
                 $q->where('perc_waiting_weeks', '<=', $waitingTime);
-                $q->where('specialty_id', '=', $specialtyId);
             });
         }
 
@@ -300,6 +300,10 @@ class Hospital extends Model
             else
                 $hospitals = $hospitals->orderByRaw('hospitals.hospital_type_id ASC');
         }
+
+        $hospitals = $hospitals->with(['waitingTime' => function ($query) use($specialtyId) {
+            $query->bySpecialty($specialtyId);
+        }]);
 
         $hospitals = $hospitals->paginate(10);
 
