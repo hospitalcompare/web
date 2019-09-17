@@ -27,26 +27,25 @@
                         'name'=>'title',
                         'resultsLabel' => 'resultsLabel'])
                 </div>
+            </div>
+            <div class="form-group row align-items-end mb-0">
                 {{-- First name --}}
                 <div class="col col-6">
                     <input required name="first_name" type="text" class="form-control" id="firstName"
                            placeholder="First Name*" value="{{ !empty($firstName) ? $firstName : '' }}">
                 </div>
-
-            </div>
-            <div class="form-group row align-items-end mb-0">
                 {{-- Last name --}}
                 <div class="col col-6">
                     <input required name="last_name" type="text" class="form-control" id="lastName"
                            placeholder="Last Name*" value="{{ !empty($lastName) ? $lastName : '' }}">
                 </div>
                 {{-- DOB - the field to select dob--}}
-                <div class="col col-6">
-                    <input readonly="readonly" required name="dob" class="form-control" id="dateOfBirth"
-                           placeholder="DOB* (DD/MM/YYYY)" >
-                    {{-- DOB- hidden field to submit different format for backend validation --}}
-                    <input type="hidden" id="actualDate" name="date_of_birth">
-                </div>
+{{--                <div class="col col-6">--}}
+{{--                    <input readonly="readonly" required name="dob" class="form-control" id="dateOfBirth"--}}
+{{--                           placeholder="DOB* (DD/MM/YYYY)" >--}}
+{{--                    --}}{{-- DOB- hidden field to submit different format for backend validation --}}
+{{--                    <input type="hidden" id="actualDate" name="date_of_birth">--}}
+{{--                </div>--}}
             </div> {{-- end row --}}
                 {{-- Email address --}}
             <div class="form-group row align-items-end mb-0">
@@ -86,7 +85,7 @@
                 </div>
             </div>
             <div class="form-group row align-items-end">
-                <div class="col col-12"><p class="text-white m-0">Please confirm:</p></div>
+                <div class="col col-12"><p class="text-white m-0">Reason for contact:</p></div>
                 <div class="col col-12 checkbox">
                     <input name="waiting_time" type="checkbox" id="waiting_times">
                     <label for="waiting_times">the likely waiting time for an NHS funded referral, should treatment be
