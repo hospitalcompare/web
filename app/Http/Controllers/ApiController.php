@@ -181,12 +181,8 @@ class ApiController {
         $email                  = Validate::escapeString($request['email']);
         $phoneNumber            = Validate::escapeString($request['phone_number']);
         $postcode               = Validate::escapeString($request['postcode']);
-//        $dob                    = Validate::escapeString($request['date_of_birth']) ?? '';
+        $reason                 = !empty($request['reason_for_contact']) ? Validate::escapeString($request['reason_for_contact']) : 'other';
         $additionalInformation  = Validate::escapeString($request['additional_information']);
-        $price                  = isset($request['price']) ? Validate::escapeString($request['price']) : 0;
-        $waitingTime            = isset($request['waiting_time']) ? Validate::escapeString($request['waiting_time']) : 0;
-        $waitingTimeSelf        = isset($request['waiting_time_self']) ? Validate::escapeString($request['waiting_time_self']) : 0;
-        $consultants            = isset($request['consultants']) ? Validate::escapeString($request['consultants']) : 0;
 
         //Check if we have the required variables
         $required = ['hospitalId', 'title', 'firstName', 'lastName', 'email', 'phoneNumber','postcode'];
@@ -197,7 +193,7 @@ class ApiController {
             }
         }
 
-        //Validate date of birth
+        //Validate date of birth (OLD)
 //        if(!Validate::isValidDate($dob)) {
 //            $this->returnedData['error'] = 'The date_of_birth is wrong. Please try again.';
 //            Errors::generateError($this->returnedData);
@@ -239,12 +235,8 @@ class ApiController {
         $enquiry->email                     = $email;
         $enquiry->phone_number              = $phoneNumber;
         $enquiry->postcode                  = $postcode;
-//        $enquiry->date_of_birth             = $dob;
+        $enquiry->reason                    = $reason;
         $enquiry->additional_information    = $additionalInformation;
-        $enquiry->price                     = $price;
-        $enquiry->waiting_time              = $waitingTime;
-        $enquiry->waiting_time_self         = $waitingTimeSelf;
-        $enquiry->consultants               = $consultants;
         $enquiry->save();
 
         $this->returnedData['success']  = true;

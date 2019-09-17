@@ -24,7 +24,7 @@ class CreateEnquiries extends Migration
                 $table->string('email');
                 $table->string('phone_number');
                 $table->string('postcode');
-                $table->date('date_of_birth');
+                $table->enum('reason', ['waiting_time_nhs_funded', 'price_range', 'waiting_time_self_pay', 'consultants', 'other'])->default("other");
                 $table->text('additional_information')->nullable();
                 $table->string('status')->default("active");
                 $table->timestamps();
