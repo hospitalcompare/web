@@ -155,21 +155,8 @@
 
         <div class="sort-parent" id="sort_parent">
             <div class="container">
-                <div class="sort-bar">
-                    <div class="show-section">
-                        Showing {{$data['hospitals']->total()}} hospital(s) | Ordered by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : 'Care Quality Rating & Distance' }}
-                    </div>
-                    @include('components.basic.button', [
-                        'button'            => 'Filter Results',
-                        'classTitle'        => 'btn btn-s btn-teal btn-grad',
-                        'id'                => 'show_filters'
-                    ])
-                    @include('components.basic.button', [
-                        'button'            => 'Sort Results',
-                        'classTitle'        => 'btn btn-s btn-teal btn-grad ml-3',
-                        'id'                => 'show_sort'
-                    ])
-                    <div class="sort-section ml-3">
+                <div class="sort-bar d-flex justify-content-end">
+                    <div class="sort-section">
                         @include('components.basic.select', [
                             'showLabel' => true,
                             'options' => $data['sortBy'],
@@ -182,9 +169,32 @@
                 </div>
             </div>
         </div>
+        <div class="sort-parent">
+            <div class="container">
+                <div class="sort-bar">
+                    <div class="show-section">
+                        Showing {{$data['hospitals']->total()}} hospital(s) | Ordered
+                        by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : 'Care Quality Rating & Distance' }}
+                    </div>
+
+                    <div class="sort-section pl-lg-3">
+                        @include('components.basic.button', [
+                            'button'            => 'Filter Results',
+                            'classTitle'        => 'btn btn-s btn-teal btn-grad',
+                            'id'                => 'show_filters'
+                        ])
+                        @include('components.basic.button', [
+                            'button'            => 'Sort Results',
+                            'classTitle'        => 'btn btn-s btn-teal btn-grad ml-3',
+                            'id'                => 'show_sort'
+                        ])
+                    </div>
+                </div>
+            </div>
+        </div>
     </form>
 
-    <div id="sort_categories_parent" class="sort-categories-parent" >
+    <div id="sort_categories_parent" class="sort-categories-parent">
         <div class="sort-categories-header container">
             <div class="sort-categories-section-1"></div>
             <nav class="sort-categories-section-2">
@@ -207,97 +217,97 @@
                     </li>
                     <li>
                         <p tabindex="0" data-offset="30px, 40px"
-                                @include('components.basic.popover', [
-                                'size'      => 'large',
-                                'placement' => 'top',
-                                'trigger'   => 'hover',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    Waiting Time (NHS Funded)
-                                                </p>
-                                                <p>
-                                                    Our waiting time data is based on NHS data, specifically the number of weeks that 92 out or 100 people wait for their treatment to start.
-                                                </p>'])>Waiting time <br>(NHS Funded)</p>
+                            @include('components.basic.popover', [
+                            'size'      => 'large',
+                            'placement' => 'top',
+                            'trigger'   => 'hover',
+                            'html'      => 'true',
+                            'content'   => '<p class="bold mb-0">
+                                                Waiting Time (NHS Funded)
+                                            </p>
+                                            <p>
+                                                Our waiting time data is based on NHS data, specifically the number of weeks that 92 out or 100 people wait for their treatment to start.
+                                            </p>'])>Waiting time <br>(NHS Funded)</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p tabindex="0" data-offset="30px, 40px"
-                                @include('components.basic.popover', [
-                                'size'      => 'large',
-                                'placement' => 'top',
-                                'trigger'   => 'hover',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    NHS Choices User Rating
-                                                </p>
-                                                <p>
-                                                    Five star rating system based on feedback provided by users of the NHS, five stars being the best. Information is not available on some hospitals.
-                                                </p>'])>NHS Choices <br> User Rating&nbsp;<br></p>
+                            @include('components.basic.popover', [
+                            'size'      => 'large',
+                            'placement' => 'top',
+                            'trigger'   => 'hover',
+                            'html'      => 'true',
+                            'content'   => '<p class="bold mb-0">
+                                                NHS Choices User Rating
+                                            </p>
+                                            <p>
+                                                Five star rating system based on feedback provided by users of the NHS, five stars being the best. Information is not available on some hospitals.
+                                            </p>'])>NHS Choices <br> User Rating&nbsp;<br></p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p tabindex="0" data-offset="30px, 40px"
-                                @include('components.basic.popover', [
-                                'size'      => 'large',
-                                'placement' => 'top',
-                                'trigger'   => 'hover',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    % of Operations Cancelled
-                                                </p>
-                                                <p>
-                                                    The percentage of operations cancelled during the last reporting period. Data only available for NHS hospitals at this time.
-                                                </p>'])>% Operations<br>Cancelled</p>
+                            @include('components.basic.popover', [
+                            'size'      => 'large',
+                            'placement' => 'top',
+                            'trigger'   => 'hover',
+                            'html'      => 'true',
+                            'content'   => '<p class="bold mb-0">
+                                                % of Operations Cancelled
+                                            </p>
+                                            <p>
+                                                The percentage of operations cancelled during the last reporting period. Data only available for NHS hospitals at this time.
+                                            </p>'])>% Operations<br>Cancelled</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p tabindex="0" data-offset="30px, 40px"
-                                @include('components.basic.popover', [
-                                'size'      => 'large',
-                                'placement' => 'top',
-                                'trigger'   => 'hover',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    Friends & Family Rating
-                                                </p>
-                                                <p>
-                                                    The percentage of people who would recommend this hospital to family and friends.
-                                                </p>'])>Friends &<br>Family Rating</p>
+                            @include('components.basic.popover', [
+                            'size'      => 'large',
+                            'placement' => 'top',
+                            'trigger'   => 'hover',
+                            'html'      => 'true',
+                            'content'   => '<p class="bold mb-0">
+                                                Friends & Family Rating
+                                            </p>
+                                            <p>
+                                                The percentage of people who would recommend this hospital to family and friends.
+                                            </p>'])>Friends &<br>Family Rating</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-ff-rating {{Request::input('sort_by') == 12 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p tabindex="0" data-offset="30px, 40px"
-                                @include('components.basic.popover', [
-                                'size'      => 'large',
-                                'placement' => 'top',
-                                'trigger'   => 'hover',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    NHS Funded Work
-                                                </p>
-                                                <p>
-                                                    This hospital provides treatments funded by the NHS. Remember you can have an NHS treatment at most private hospitals.
-                                                </p>'])>NHS<br>Funded Work</p>
+                            @include('components.basic.popover', [
+                            'size'      => 'large',
+                            'placement' => 'top',
+                            'trigger'   => 'hover',
+                            'html'      => 'true',
+                            'content'   => '<p class="bold mb-0">
+                                                NHS Funded Work
+                                            </p>
+                                            <p>
+                                                This hospital provides treatments funded by the NHS. Remember you can have an NHS treatment at most private hospitals.
+                                            </p>'])>NHS<br>Funded Work</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 14 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
                         <p tabindex="0" data-offset="30px, 40px"
-                                @include('components.basic.popover', [
-                                'size'      => 'large',
-                                'placement' => 'top',
-                                'trigger'   => 'hover',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    Private Self Pay
-                                                </p>
-                                                <p>
-                                                    Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
-                                                </p>'])>Private<br>Self Pay</p>
+                            @include('components.basic.popover', [
+                            'size'      => 'large',
+                            'placement' => 'top',
+                            'trigger'   => 'hover',
+                            'html'      => 'true',
+                            'content'   => '<p class="bold mb-0">
+                                                Private Self Pay
+                                            </p>
+                                            <p>
+                                                Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
+                                            </p>'])>Private<br>Self Pay</p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-self-pay {{Request::input('sort_by') == 16 ? 'desc':'asc' }}"></span>
                     </li>
@@ -364,7 +374,7 @@
     </div>
 
     {{--  Compare bar  --}}
-{{--    @include('components.compare')--}}
+    {{--    @include('components.compare')--}}
     {{-- New comparebar - solutions bar --}}
     @include('components.solutionsbar')
     {{--  Modal for 'make an enquiry'  --}}

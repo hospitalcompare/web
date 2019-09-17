@@ -150,10 +150,15 @@ $(document).ready(function() {
     //     })
     // }
 
+    // Toggle filter section
+    $('#show_filters').on('click', function(){
+        $('#resultspage_form .filter-parent').slideToggle();
+    });
+
     // Toggle sort dropdown
     $('#show_sort').on('click', function(){
-        $('.sort-section').animate({
-            width: "toggle"
-        });
-    })
+        $('#sort_parent').slideToggle();
+    });
+
+
 });

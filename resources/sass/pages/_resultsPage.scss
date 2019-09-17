@@ -18,6 +18,13 @@
         }
     }
 
+    // Hide filters on pageload
+    #resultspage_form {
+        .filter-parent {
+            display: none;
+        }
+    }
+
     .submit-section {
         display: flex;
         justify-content: flex-end;
@@ -98,9 +105,8 @@
         background-color: $lighterGrey;
     }
 
-    .sort {
-        width: $pageWrap;
-        margin: $centerOnPage;
+    #sort_parent {
+        display: none;
     }
 
     .sort-bar {
@@ -114,8 +120,6 @@
         }
 
         .sort-section {
-            display: none;
-
             .results-page-select {
                 width: auto
             }
