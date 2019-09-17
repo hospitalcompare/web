@@ -21,7 +21,10 @@
     // Hide filters on pageload
     #resultspage_form {
         .filter-parent {
-            display: none;
+            //display: none;
+            .dropdown-toggle {
+                @include font-size(14);
+            }
         }
     }
 
@@ -63,7 +66,7 @@
         background-color: $white;
         /* Style for "Knee Opera" */
         color: $darkerGrey;
-        font-size: 12px;
+        @include font-size(14);
         font-weight: 500;
         letter-spacing: -0.6px;
         line-height: 15px;

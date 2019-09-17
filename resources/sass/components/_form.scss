@@ -155,7 +155,6 @@ select::-ms-expand {
 
         &:checked {
             + label:last-child {
-                font-weight: 600;
 
                 &:before {
                     content: '';
@@ -174,10 +173,9 @@ select::-ms-expand {
         margin-bottom: 0;
 
         &.small-print {
-            font-size: 10px;
-            font-weight: 400;
+            @include font-size(14);
             letter-spacing: -0.5px;
-            line-height: 12px;
+            line-height: 1.2;
         }
 
         &:before {
@@ -192,8 +190,6 @@ select::-ms-expand {
             margin-right: 11px;
             text-align: center;
             line-height: 26px;
-            font-size: 10px;
-            transition: font-size 0.3s;
             cursor: pointer;
         }
     }
@@ -242,7 +238,7 @@ textarea {
 // Stop the body scrolling when bootstrap selects are open
 .select-open {
     overflow: hidden;
-    
+
     .dropdown-menu.show {
         z-index: 1050;
     }

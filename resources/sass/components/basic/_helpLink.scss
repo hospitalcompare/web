@@ -9,7 +9,7 @@
     width: 15px;
     height: 15px;
     line-height: 15px;
-    font-size: 12px;
+    @include font-size(14);
     text-align: center;
     z-index: 5;
     cursor: pointer;

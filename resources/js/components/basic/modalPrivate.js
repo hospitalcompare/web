@@ -1,17 +1,18 @@
 // Bootstrap modal
 $(document).ready(function () {
+    var $privateModal = $('#hc_modal_enquire_private');
 // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
 // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
     // Private enquiry form - show title of hospital clicked
-    $('#hc_modal_enquire_private').on('show.bs.modal', function (event) {
+    $privateModal.on('show.bs.modal', function (event) {
 
         var $button = $(event.relatedTarget);// Button that triggered the modal
         // Pre-check the checkboxes
         if($button.hasClass('enquire-prices')){
-            $('#prices').click();
+            $('#reason_for_contact_price_range').prop('selected', true);
         }
         if($button.hasClass('enquire-times')){
-            $('#waiting_times').click();
+            $('#reason_for_contact_waiting_time_nhs_funded').prop('selected', true);
         }
 
         var $button         = $(event.relatedTarget);// Button that triggered the modal
@@ -25,7 +26,7 @@ $(document).ready(function () {
 
     var $info = $('#col_additional_information');
     // Clear form checkboxes inputs when closing modal
-    $('#hc_modal_enquire_private').on('hide.bs.modal', function (event) {
+    $privateModal.on('hide.bs.modal', function (event) {
         $(this)
             .find('input[type=checkbox]')
             .prop('checked', false);

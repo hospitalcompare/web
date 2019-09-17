@@ -1,32 +1,32 @@
 // Submitting and validating the private hospital enquiry form
 $(document).ready(function () {
-    $.extend($.datepicker, {
-        _checkOffset: function (inst, offset, isFixed) {
-            // If the container is pos fixed, alter the coordinates accordingly
-            if(isFixed) {
-                // Find out how much window has scrolled
-                var scrolled = window.scrollY;
-                // get the position of the top of the input
-                var posY = offset.top;
-                offset.top = posY - scrolled;
-            }
-
-            return offset;
-        }
-    });
+    // $.extend($.datepicker, {
+    //     _checkOffset: function (inst, offset, isFixed) {
+    //         // If the container is pos fixed, alter the coordinates accordingly
+    //         if(isFixed) {
+    //             // Find out how much window has scrolled
+    //             var scrolled = window.scrollY;
+    //             // get the position of the top of the input
+    //             var posY = offset.top;
+    //             offset.top = posY - scrolled;
+    //         }
+    //
+    //         return offset;
+    //     }
+    // });
 
     // Create jquery datepicker from DOB input
-    $("#dateOfBirth").datepicker({
-        changeMonth: true,
-        changeYear: true,
-        yearRange: "-100:-0",
-        dateFormat: "dd/mm/yy",
-        altField: "#actualDate",
-        altFormat: "yy/mm/dd",
-        setDate: "-0d"
-    }).on('change', function() {
-        $(this).valid();  // triggers the validation test
-    });
+    // $("#dateOfBirth").datepicker({
+    //     changeMonth: true,
+    //     changeYear: true,
+    //     yearRange: "-100:-0",
+    //     dateFormat: "dd/mm/yy",
+    //     altField: "#actualDate",
+    //     altFormat: "yy/mm/dd",
+    //     setDate: "-0d"
+    // }).on('change', function() {
+    //     $(this).valid();  // triggers the validation test
+    // });
 
     // Add a custom validation to the jquery validate object - validate phone number field as UK format
     $.validator.addMethod('phoneUK', function (phone_number, element) {
@@ -70,10 +70,10 @@ $(document).ready(function () {
                     required: true,
                     alpha: true
                 },
-                dob: { // The entered date
-                    required: true,
-                    dateFormat: true,
-                },
+                // dob: { // The entered date
+                //     required: true,
+                //     dateFormat: true,
+                // },
                 email: {
                     required: true,
                     email: true
@@ -99,7 +99,7 @@ $(document).ready(function () {
                 title: "Please select your title",
                 firstName: "Please enter your first name",
                 lastName: "Please enter your surname",
-                dob: "Please enter your date of birth",
+                // dob: "Please enter your date of birth",
                 email: "Please enter a valid email address",
                 confirm_email: "The passwords entered do not match",
                 phone_number: "Please enter your contact number",
