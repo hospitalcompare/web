@@ -181,7 +181,7 @@ class ApiController {
         $email                  = Validate::escapeString($request['email']);
         $phoneNumber            = Validate::escapeString($request['phone_number']);
         $postcode               = Validate::escapeString($request['postcode']);
-        $dob                    = Validate::escapeString($request['date_of_birth']) ?? '';
+//        $dob                    = Validate::escapeString($request['date_of_birth']) ?? '';
         $additionalInformation  = Validate::escapeString($request['additional_information']);
         $price                  = isset($request['price']) ? Validate::escapeString($request['price']) : 0;
         $waitingTime            = isset($request['waiting_time']) ? Validate::escapeString($request['waiting_time']) : 0;
@@ -189,7 +189,7 @@ class ApiController {
         $consultants            = isset($request['consultants']) ? Validate::escapeString($request['consultants']) : 0;
 
         //Check if we have the required variables
-        $required = ['hospitalId', 'title', 'firstName', 'lastName', 'email', 'phoneNumber','postcode', 'dob'];
+        $required = ['hospitalId', 'title', 'firstName', 'lastName', 'email', 'phoneNumber','postcode'];
         foreach($required as $req) {
             if(empty($$req)){
                 $this->returnedData['error'] = 'Please supply the value: '.$req;
@@ -198,10 +198,10 @@ class ApiController {
         }
 
         //Validate date of birth
-        if(!Validate::isValidDate($dob)) {
-            $this->returnedData['error'] = 'The date_of_birth is wrong. Please try again.';
-            Errors::generateError($this->returnedData);
-        }
+//        if(!Validate::isValidDate($dob)) {
+//            $this->returnedData['error'] = 'The date_of_birth is wrong. Please try again.';
+//            Errors::generateError($this->returnedData);
+//        }
 
         //Validate the email
         if(!Validate::isValidEmail($email)) {
@@ -239,7 +239,7 @@ class ApiController {
         $enquiry->email                     = $email;
         $enquiry->phone_number              = $phoneNumber;
         $enquiry->postcode                  = $postcode;
-        $enquiry->date_of_birth             = $dob;
+//        $enquiry->date_of_birth             = $dob;
         $enquiry->additional_information    = $additionalInformation;
         $enquiry->price                     = $price;
         $enquiry->waiting_time              = $waitingTime;

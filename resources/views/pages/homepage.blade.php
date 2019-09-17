@@ -20,7 +20,7 @@
                 <div class="why-use-text">
                     <h1 class="section-title">Why use Hospital Compare?</h1>
                     <p>Hospital Compare helps you make the best possible choice when it comes to choosing a suitable
-                        hospital for your elective procedure.</p>
+                        hospital for your treatment.</p>
                     <p>64% of people in the UK are not aware that they could have the option of an NHS funded operation
                         in a private hospital. We are here to help you understand your rights and make the right
                         choice.</p>
@@ -57,10 +57,10 @@
                                 <li>if NHS funded treatment
                             <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline" data-toggle="popover-large" data-content="
                                  <p>
-                                    You can choose which NHS hospital to perform your elective procedure. Paid for by the NHS. Anywhere in England.
+                                    You can choose which NHS hospital to perform your treatment. Paid for by the NHS. Anywhere in England.
                                  </p>
                                  <p><strong>OR</strong></p>
-                                 <p> you can choose which private hospital to perform your elective procedure. Paid for by the NHS, at no extra cost to the taxpayer than an NHS hospital. Anywhere in England. See <a
+                                 <p> you can choose which private hospital to perform your treatment. Paid for by the NHS, at no extra cost to the taxpayer than an NHS hospital. Anywhere in England. See <a
                                     class=&quot;text-link&quot; href=&quot;/your-rights&quot;>Your Rights</a> for exceptions.
                                  </p>
                                  <p>
@@ -70,7 +70,7 @@
                                 <li>
                                    if self-pay
                             <a tabindex="0" data-offset="30, 40px" class="help-link help-link__inline" data-toggle="popover-large" data-content="<p>
-                                                    You can choose a private hospital to perform your elective procedure. Paid for by you. Anywhere in England.
+                                                    You can choose a private hospital to perform your treatment. Paid for by you. Anywhere in England.
                                                  </p>
 
                                                  <p>
@@ -81,7 +81,7 @@
                                     if covered by a health insurance policy
                             <a tabindex="0" data-offset="30, 40px" class="help-link help-link__inline" data-toggle="popover-large" data-content="
                                                  <p>
-                                                    You can choose which private hospital to perform your elective procedure, if covered by your healthcare insurance policy.
+                                                    You can choose which private hospital to perform your treatment, if covered by your healthcare insurance policy.
                                                  </p>
                                                  <p>
                                                      <a  class=&quot;btn btn-close btn-close__small btn-teal btn-icon&quot; >Close</a>
@@ -96,7 +96,7 @@
             [
                 'iconImg'=> 'search',
                 'title'=>'Step Two',
-                'description' => '<p>Use the Hospital Compare search criteria to shortlist one or more hospitals to make further enquiries of. Please note NHS hospitals typically do not respond to direct enquiries regarding NHS funded elective procedures prior to an appointment being confirmed.</p>'],
+                'description' => '<p>Use the Hospital Compare search criteria to shortlist one or more hospitals to make further enquiries of. Please note NHS hospitals typically do not respond to direct enquiries regarding NHS funded treatments prior to an appointment being confirmed.</p>'],
             [
                 'iconImg'=> 'hospital-compare',
                 'title'=>'Step Three',

@@ -81,9 +81,9 @@
                     <li><a href="/accessibility">Accessibility</a></li>
                     <li><a href="/privacy-policy">Privacy Policy</a></li>
                     <li><a href="/cookie-policy">Cookie Policy</a></li>
-                    <li class="ml-auto"><small>
+                    <li class="ml-auto"><span>
                             <time id="thisYear">{{ date('Y') }}</time>
-                            <a href="/"> Hospital Compare<sup>TM</sup></a>. All rights reserved</small></li>
+                            <a href="/"> Hospital Compare<sup>TM</sup></a>. All rights reserved</span></li>
                 </ul>
             </nav>
         </div>

@@ -217,11 +217,27 @@
             }
         }
 
+        &.btn-arrow-down {
+            padding-right: 60px;
+
+            i, svg {
+                @include v-c;
+                right: 20px;
+                transition: $transition;
+            }
+
+            &.open {
+                i, svg {
+                    transform: translateY(-50%) rotate3d(0, 0, 1, 180deg);
+                }
+            }
+        }
+
         &.btn-consultant {
             /* Style for "Consultant" */
             height: 20px;
             line-height: 20px;
-            font-size: 12px;
+            @include font-size(14);
 
             letter-spacing: -0.6px;
             padding: 0 20px 0 12px;
@@ -244,7 +260,7 @@
             color: $white;
             height: 20px;
             line-height: 20px;
-            font-size: 12px;
+            @include font-size(14);
             letter-spacing: -0.6px;
             padding: 0 20px 0 12px;
 
@@ -271,7 +287,7 @@
             color: $white;
             height: 20px;
             line-height: 20px;
-            font-size: 12px;
+            @include font-size(14);
             letter-spacing: -0.6px;
             padding: 0 20px 0 12px;
             background: linear-gradient(90deg, #003a5d, #003a5d, #00bcb4, #00bcb4);
@@ -304,7 +320,7 @@
         &.btn-enquire {
             border-radius: 10px;
             color: $white !important;
-            font-size: 12px;
+            @include font-size(14);
             letter-spacing: -0.7px;
             line-height: 13px;
             height: 40px;
@@ -335,7 +351,7 @@
             border-radius: 10px;
             background: $white;
             color: $pink;
-            font-size: 12px;
+            @include font-size(14);
 
             letter-spacing: -0.7px;
             line-height: 13px;
@@ -520,8 +536,6 @@
     &:hover {
         background-position: right;
     }
-
-
 }
 
 .btn-link:hover {

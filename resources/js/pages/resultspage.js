@@ -150,4 +150,14 @@ $(document).ready(function() {
     //     })
     // }
 
+    // Toggle filter section
+    $('#show_filters').on('click', function(){
+        $('#resultspage_form .filter-parent').slideToggle();
+        $(this).toggleClass('open');
+    });
+    // Toggle sort dropdown
+    $('#show_sort').on('click', function(){
+        $('#sort_parent').slideToggle();
+        $(this).toggleClass('open');
+    });
 });

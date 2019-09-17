@@ -13,7 +13,7 @@
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div class="box full-left ml-auto">
-                        <p>Find the best hospital for your elective surgery</p><br>
+                        <p>Find the best hospital<br>for your treatment</p><br>
                         <form class="form-element" method="get" action="/results-page">
 
                             <div class="form-child">

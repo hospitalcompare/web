@@ -5,6 +5,9 @@
     <div class="form-wrap d-flex">
         <div class="img-wrap mr-4">
             <img width="173" height="158" src="images/alder-1.png">
+            <div id="info_text" class="mt-2 text-white">
+                Default text for enquiry form
+            </div>
         </div>
         <form id="enquiry_form">
             {{--            <input type="hidden" name="specialty_id" value="3">--}}
@@ -27,26 +30,25 @@
                         'name'=>'title',
                         'resultsLabel' => 'resultsLabel'])
                 </div>
+            </div>
+            <div class="form-group row align-items-end mb-0">
                 {{-- First name --}}
                 <div class="col col-6">
                     <input required name="first_name" type="text" class="form-control" id="firstName"
                            placeholder="First Name*" value="{{ !empty($firstName) ? $firstName : '' }}">
                 </div>
-
-            </div>
-            <div class="form-group row align-items-end mb-0">
                 {{-- Last name --}}
                 <div class="col col-6">
                     <input required name="last_name" type="text" class="form-control" id="lastName"
                            placeholder="Last Name*" value="{{ !empty($lastName) ? $lastName : '' }}">
                 </div>
                 {{-- DOB - the field to select dob--}}
-                <div class="col col-6">
-                    <input readonly="readonly" required name="dob" class="form-control" id="dateOfBirth"
-                           placeholder="DOB* (DD/MM/YYYY)" >
-                    {{-- DOB- hidden field to submit different format for backend validation --}}
-                    <input type="hidden" id="actualDate" name="date_of_birth">
-                </div>
+{{--                <div class="col col-6">--}}
+{{--                    <input readonly="readonly" required name="dob" class="form-control" id="dateOfBirth"--}}
+{{--                           placeholder="DOB* (DD/MM/YYYY)" >--}}
+{{--                    --}}{{-- DOB- hidden field to submit different format for backend validation --}}
+{{--                    <input type="hidden" id="actualDate" name="date_of_birth">--}}
+{{--                </div>--}}
             </div> {{-- end row --}}
                 {{-- Email address --}}
             <div class="form-group row align-items-end mb-0">
@@ -69,8 +71,8 @@
                            placeholder="Postcode*" value="{{ !empty($postcode) ? $postcode : '' }}">
                 </div>
             </div>
-            <div class="form-group row align-items-end">
-                <div class="col col-6">
+            <div class="form-group row align-items-end mb-0">
+                <div class="col col-12">
                     @include('components.basic.select', [
                         'options'               => $procedures,
                         'chevronFAClassName'    => 'fa-chevron-down black-chevron',
@@ -86,28 +88,24 @@
                 </div>
             </div>
             <div class="form-group row align-items-end">
-                <div class="col col-12"><p class="text-white m-0">Please confirm:</p></div>
-                <div class="col col-12 checkbox">
-                    <input name="waiting_time" type="checkbox" id="waiting_times">
-                    <label for="waiting_times">the likely waiting time for an NHS funded referral, should treatment be
-                        necessary.</label>
+                <div class="col col-12">
+{{--                    Reason for contact --}}
+                    @include('components.basic.select', [
+                            'options'               => [
+                                ['id'=>'waiting_time_nhs_funded', 'name'=>'Likely waiting time for NHS funded treatment'],
+                                ['id'=>'price_range', 'name'=>'Likely price range for treatment'],
+                                ['id'=>'waiting_time_self_pay', 'name'=>'Likely waiting time for self-pay'],
+                                ['id'=>'consultants', 'name'=>'My choice of consultants for self-pay']
+                            ],
+                            'selectId'              => 'reason_for_contact',
+                            'chevronFAClassName'    => 'fa-chevron-down black-chevron',
+                            'selectClass'           => 'form-control',
+                            'placeholder'           => 'Reason for contact',
+                            'name'                  =>'reason_for_contact',
+                            'selectPicker'          => 'true',
+                            'required'              => true])
+
                 </div>
-                <div class="col col-12 checkbox">
-                    <input name="price" type="checkbox" id="prices">
-                    <label for="prices">the likely price range for treatment (if self pay).</label>
-                </div>
-                <div class="col col-12 checkbox">
-                    <input name="waiting_time_self" type="checkbox" id="waiting_times_self">
-                    <label for="waiting_times_self">the likely waiting time for self-pay.</label>
-                </div>
-                <div class="col col-12 checkbox">
-                    <input name="consultants" type="checkbox" id="consultants">
-                    <label for="consultants">my choice of consultants for self-pay.</label>
-                </div>
-                {{--                <div class="col col-12 checkbox">--}}
-                {{--                    <input required name="other" type="checkbox" id="other">--}}
-                {{--                    <label for="other">Something else</label>--}}
-                {{--                </div>--}}
                 <div class="col col-12" id="col_additional_information">
                     <textarea
                         class=""
@@ -118,7 +116,7 @@
                     ></textarea>
                 </div>
 
-                <div class="col col-6 checkbox">
+                <div class="col col-12 checkbox">
                     <input required name="gdpr" type="checkbox"
                            id="gdpr" {{ !empty($gdpr) && ($gdpr) ? 'checked' : '' }}>
                     <label class="small-print" for="gdpr">Please accept the Terms & Conditions before submitting the

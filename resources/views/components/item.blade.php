@@ -62,6 +62,7 @@
                                 'modalTarget'       => '#hc_modal_enquire_private',
                                 'classTitle'        => 'text-link enquire-times',
                                 'target'            => 'blank',
+                                'modalText'         => 'Information for waiting time enquiry',
                                 'button'            => 'waiting time enquiry'])
                     </span>
                 @endif
@@ -142,6 +143,7 @@
                                 'modalTarget'       => '#hc_modal_enquire_private',
                                 'classTitle'        => 'text-link enquire-prices',
                                 'target'            => 'blank',
+                                'modalText'         => 'This is the text about prices',
                                 'button'            => 'prices'])
                     </span>
                 @endif

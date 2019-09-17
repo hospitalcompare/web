@@ -11,18 +11,22 @@
 @section('body-class', 'test-page')
 
 @section('content')
-    {{ dd($data['specialties']) }}
-    <h3>Enquiry Form</h3>
-    @include('components.modals.modalenquireprivate', [
-               'procedures'    => $data['procedures'],
-               'title'         => 'Mr',
-               'firstName'     => 'Test',
-               'dob'           => '1980/04/12',
-               'lastName'      => 'Testing',
-               'email'         => 'test@test.com',
-               'phone'         => '012345678901',
-               'postcode'      => 'ch423re',
-               'gdpr'          => true])
+    {{-- dd($data['specialties']) --}}
+    <section class="pt-3">
+        <div class="container">
+            <h3>Enquiry Form</h3>
+            @include('components.modals.modalenquireprivate', [
+                       'procedures'    => $data['procedures'],
+                       'title'         => 'Mr',
+                       'firstName'     => 'Test',
+                       'dob'           => '1980/04/12',
+                       'lastName'      => 'Testing',
+                       'email'         => 'test@test.com',
+                       'phone'         => '07941939374',
+                       'postcode'      => 'ch423re',
+                       'gdpr'          => true])
+        </div>
+    </section>
     <div class="section pt-3 pb-5">
         <div class="container">
             <p class="p-5" style="width: 300px; border: 3px solid black">
