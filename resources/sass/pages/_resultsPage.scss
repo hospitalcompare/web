@@ -21,8 +21,8 @@
     // Hide filters on pageload
     #resultspage_form {
         .filter-parent {
-            display: none;
-            
+            //display: none;
+
             .dropdown-toggle {
                 @include font-size(14);
             }
@@ -362,4 +362,7 @@
     z-index: 10;
 }
 
-
+// Jquery UI slider
+.ui-slider {
+    width: 100%;
+}

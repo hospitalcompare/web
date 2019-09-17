@@ -8,6 +8,7 @@
 // VENDOR
 window.Popper = require('popper.js');
 import 'webpack-jquery-ui/datepicker';                      // Jquery UI datepicker
+import 'webpack-jquery-ui/slider';                      // Jquery UI datepicker
 import 'webpack-jquery-ui/css';                             // Styling for the above
 import 'bootstrap';                                         // Required for bootstrap tooltips
 import 'bootstrap-select';                                  // Searchable dropdowns
