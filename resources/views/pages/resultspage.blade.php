@@ -180,13 +180,15 @@
                     <div class="sort-section pl-lg-3">
                         @include('components.basic.button', [
                             'button'            => 'Filter Results',
-                            'classTitle'        => 'btn btn-s btn-teal btn-grad',
-                            'id'                => 'show_filters'
+                            'classTitle'        => 'btn btn-s btn-teal btn-grad btn-icon btn-arrow-down',
+                            'id'                => 'show_filters',
+                            'icon'              => 'fas fa-chevron-down'
                         ])
                         @include('components.basic.button', [
                             'button'            => 'Sort Results',
-                            'classTitle'        => 'btn btn-s btn-teal btn-grad ml-3',
-                            'id'                => 'show_sort'
+                            'classTitle'        => 'btn btn-s btn-teal btn-grad btn-icon btn-arrow-down ml-2',
+                            'id'                => 'show_sort',
+                            'icon'                => 'fas fa-chevron-down'
                         ])
                     </div>
                 </div>

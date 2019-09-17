@@ -217,6 +217,22 @@
             }
         }
 
+        &.btn-arrow-down {
+            padding-right: 60px;
+
+            i, svg {
+                @include v-c;
+                right: 20px;
+                transition: $transition;
+            }
+
+            &.open {
+                i, svg {
+                    transform: translateY(-50%) rotate3d(0, 0, 1, 180deg);
+                }
+            }
+        }
+
         &.btn-consultant {
             /* Style for "Consultant" */
             height: 20px;
