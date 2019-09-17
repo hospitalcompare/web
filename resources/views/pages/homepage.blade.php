@@ -21,11 +21,11 @@
                     <h1 class="section-title">Why use Hospital Compare?</h1>
                     <p>Hospital Compare helps you make the best possible choice when it comes to choosing a suitable
                         hospital for your treatment.</p>
-                    <p>64% of people in the UK are not aware that they could have the option of an NHS funded operation
+                    <p>Many people in the UK are not aware that they could have the option of an NHS funded operation
                         in a private hospital. We are here to help you understand your rights and make the right
                         choice.</p>
                     <p>Whether you are searching for the best NHS hospital or the best private hospital, Hospital
-                        Compare is the only place that provides an accurate, up-to-date and unbiased assessment of all
+                        Compare is the best place that provides an accurate, up-to-date and unbiased assessment of all
                         hospitals in the UK.</p>
                 </div>
                 <div class="why-use-video">
