@@ -21,7 +21,8 @@
     // Hide filters on pageload
     #resultspage_form {
         .filter-parent {
-            //display: none;
+            display: none;
+            
             .dropdown-toggle {
                 @include font-size(14);
             }

@@ -10,12 +10,11 @@ $(document).ready(function () {
         // Pre-check the checkboxes
         if($button.hasClass('enquire-prices')){
             $('#reason_for_contact_price_range').prop('selected', true);
-        }
-        if($button.hasClass('enquire-times')){
+        } else if($button.hasClass('enquire-times')){
             $('#reason_for_contact_waiting_time_nhs_funded').prop('selected', true);
         }
+        $('#info_text').text($button.data('modal-text'));
 
-        var $button         = $(event.relatedTarget);// Button that triggered the modal
         var hospitalTitle   = $button.data('hospital-title');// Extract info from data-* attributes
         var modal           = $(this);
         var hospitalId      = $button.attr('id').replace('enquire_', '');
@@ -30,9 +29,9 @@ $(document).ready(function () {
         $(this)
             .find('input[type=checkbox]')
             .prop('checked', false);
+
         // Close the info box and empty contents
         $info
-            .removeClass('open')
             .find('textarea')
             .val('');
     });

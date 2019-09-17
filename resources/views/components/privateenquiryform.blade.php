@@ -5,6 +5,9 @@
     <div class="form-wrap d-flex">
         <div class="img-wrap mr-4">
             <img width="173" height="158" src="images/alder-1.png">
+            <div id="info_text" class="mt-2 text-white">
+                Default text for enquiry form
+            </div>
         </div>
         <form id="enquiry_form">
             {{--            <input type="hidden" name="specialty_id" value="3">--}}
