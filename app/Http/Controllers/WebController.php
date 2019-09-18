@@ -55,7 +55,7 @@ class WebController extends BaseController
             $procedureId = 0;
 
         //Format the radius with the correct distance
-        $radiusSelection = ['none', 5, 10, 25, 50, 75, 100, 600];
+        $radiusSelection = Utils::sliderRange;
         if(array_key_exists($radius, $radiusSelection))
             $radius = $radiusSelection[$radius];
         else
