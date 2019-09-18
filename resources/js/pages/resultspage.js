@@ -150,17 +150,6 @@ $(document).ready(function() {
     //     })
     // }
 
-    // Custom Juqery ui slider
-    $( ".ui-slider" ).slider({
-        step: 1,
-        min: 0,
-        max: 5,
-        values: [1, 5],
-        slide: function(event, ui) {
-            // $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-        }
-    });
-
     // Toggle filter section
     $('#show_filters').on('click', function(){
         $('#resultspage_form .filter-parent').slideToggle();
