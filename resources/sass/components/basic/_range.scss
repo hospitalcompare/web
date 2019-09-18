@@ -1,28 +1,36 @@
 .rangeParent {
     width: 100%;
-    background-color: lightblue;
+    height: 100%;
+    position: relative;
+    padding-top: 30px;
 
     label {
         margin-bottom: 0;
     }
 
-    .radiusRange {
+    // The range slider
+    input {
         flex: 1;
+        z-index: 5;
     }
 
-    position: relative;
-    // height: 100%;
+    label,
+    .currentRadius {
+        position: absolute;
+        top: 0;
+    }
+
 
     input,
     .range-labels {
         position: absolute;
-        top: 0;
+        bottom: 0;
         width: 100%;
     }
 
     .range-labels {
-        bottom: 0;
         padding: 0 11px;
+        pointer-events: none;
     }
 }
 
@@ -43,39 +51,39 @@
 
 // Labels below slider
 .range-labels {
-    //margin: 0 -11px;
     padding: 0;
     list-style: none;
     display: flex;
     position: absolute;
 
+
     li {
         position: relative;
         display: inline-block;
-        width: calc(calc(100% - 22px)/6);
-        flex: calc(calc(100% - 22px)/6);
+        width: calc(calc(100% - 22px) / 6);
+        flex: calc(calc(100% - 22px) / 6);
         text-align: center;
         color: #b2b2b2;
-        font-size: 14px;
+        @include font-size(14);
         cursor: pointer;
-        border: 1px solid red;
 
         &::before {
             position: absolute;
-            top: -25px;
+            top: 25px;
             right: 0;
             left: 0;
             content: "";
             margin: 0 auto;
-            width: 9px;
-            height: 9px;
-            background: #b2b2b2;
-            border-radius: 50%;
+            width: 2px;
+            height: 10px;
+            background: #d7d7d7;
+            //border-radius: 50%;
         }
 
         &:first-child {
             margin-left: -29px;
         }
+
         &:last-child {
             margin-right: -29px;
         }
