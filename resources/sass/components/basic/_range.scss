@@ -1,11 +1,6 @@
 .rangeParent {
     width: 100%;
-    //@include flex;
-    //flex: 1;
-    //align-items: center;
-    @include media-breakpoint-up(md) {
-        //padding-left: 70px;
-    }
+    background-color: lightblue;
 
     label {
         margin-bottom: 0;
@@ -13,6 +8,21 @@
 
     .radiusRange {
         flex: 1;
+    }
+
+    position: relative;
+    // height: 100%;
+
+    input,
+    .range-labels {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .range-labels {
+        bottom: 0;
+        padding: 0 11px;
     }
 }
 
@@ -33,18 +43,22 @@
 
 // Labels below slider
 .range-labels {
-    //margin: 18px -41px 0;
+    //margin: 0 -11px;
     padding: 0;
     list-style: none;
     display: flex;
+    position: absolute;
 
     li {
         position: relative;
-        width: percentage(1/7);
+        display: inline-block;
+        width: calc(calc(100% - 22px)/6);
+        flex: calc(calc(100% - 22px)/6);
         text-align: center;
         color: #b2b2b2;
         font-size: 14px;
         cursor: pointer;
+        border: 1px solid red;
 
         &::before {
             position: absolute;
@@ -58,18 +72,25 @@
             background: #b2b2b2;
             border-radius: 50%;
         }
+
+        &:first-child {
+            margin-left: -29px;
+        }
+        &:last-child {
+            margin-right: -29px;
+        }
     }
 
-    .active {
-        color: #37adbf;
-    }
+    //.active {
+    //    color: #37adbf;
+    //}
 
     .selected::before {
         background: #37adbf;
     }
 
-    .active.selected::before {
-        display: none;
-    }
+    //.active.selected::before {
+    //    display: none;
+    //}
 }
 
