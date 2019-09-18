@@ -30,13 +30,14 @@
                     </div>
                 </div>
                 <div class="select-proximity">
-                    <div class="filter-section">nree
+                    <div class="filter-section">
                         <div class="filter-section-child">
                             @include('components.basic.select', [
                                 'showLabel'             => true,
                                 'selectPicker'          => 'true',
                                 'group'                 => true,
                                 'groupName'             => 'procedures',
+                                'placeholder'           => 'Surgery Type',
                                 'options'               => $data['filters']['procedures'],
                                 'suboptionClass'        => 'subprocedures',
                                 'chevronFAClassName'    => 'fa-chevron-down black-chevron',
@@ -65,7 +66,7 @@
                         </div>
                         <div class="filter-section-child">
                             {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'Waiting time', 'resultsLabel' => 'resultsLabel'])--}}
-                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['waitingTimes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'name'=>'waiting_time', 'resultsLabel' => 'resultsLabel'])
+                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['waitingTimes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Waiting time', 'name'=>'waiting_time', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
@@ -87,7 +88,7 @@
                         </div>
                         <div class="filter-section-child">
                             {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'NHS choices user rating', 'resultsLabel' => 'resultsLabel'])--}}
-                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['userRatings'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'name'=>'user_rating', 'resultsLabel' => 'resultsLabel'])
+                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['userRatings'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'NHS Choices User Rating', 'name'=>'user_rating', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
@@ -108,7 +109,7 @@
                             >?</a>
                         </div>
                         <div class="filter-section-child">
-                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['qualityRatings'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'name'=>'quality_rating', 'resultsLabel' => 'resultsLabel'])
+                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['qualityRatings'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Care Quality Rating', 'name'=>'quality_rating', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
@@ -129,7 +130,7 @@
                             >?</a>
                         </div>
                         <div class="filter-section-child">
-                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
+                            @include('components.basic.select', ['showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Hospital Type', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
                             <a tabindex="0" data-offset="30px, 40px"
                                class="help-link"
                                 @include('components.basic.popover', [
@@ -164,13 +165,15 @@
                 <div class="sort-bar d-flex justify-content-end">
                     <div class="sort-section">
                         @include('components.basic.select', [
-                            'showLabel' => true,
-                            'options' => $data['sortBy'],
-                            'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                            'selectClass' => 'results-page-select select-sort-by',
-                            'placeholder'=>'Sort by:',
-                            'name'=>'sort_by',
-                            'resultsLabel' => 'sortLabel'])
+                            'showLabel'             => true,
+                            'options'               => $data['sortBy'],
+                            'chevronFAClassName'    => 'fa-chevron-down black-chevron',
+                            'selectClass'           => 'results-page-select select-sort-by',
+                            'placeholder'           => 'Sort by:',
+                            'placeholderOption'     => 'Sort By:',
+                            'name'                  =>'sort_by',
+                            'resultsLabel'          => 'sortLabel'
+                        ])
                     </div>
                 </div>
             </div>

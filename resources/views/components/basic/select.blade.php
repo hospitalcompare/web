@@ -10,8 +10,8 @@
             data-live-search="{{ !empty($selectPicker) ? $selectPicker : ''}}"
             name="{{$name}}"
             {{ !empty($required) && ($required) ? 'required' : '' }}>
-        @if(!empty($placeholder))
-            <option value="0" disabled {{ empty(Request::input($name)) ? 'selected' : ''  }}> {{ $placeholder }}</option>
+        @if(!empty($placeholderOption))
+            <option value="0" disabled {{ empty(Request::input($name)) ? 'selected' : ''  }}> {{ $placeholderOption }}</option>
         @endif
         @if(!empty($group))
             @foreach($options as $option)

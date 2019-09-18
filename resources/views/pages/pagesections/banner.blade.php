@@ -21,6 +21,7 @@
                                     'selectPicker'          => 'true',
                                     'selectClass'           => 'big select-picker',
                                     'options'               => $data['procedures'],
+
                                     'group'                 => true,
                                     'groupName'             => 'procedures',
                                     'suboptionClass'        => 'subprocedures',
