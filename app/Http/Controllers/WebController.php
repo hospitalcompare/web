@@ -81,12 +81,35 @@ class WebController extends BaseController
 
     // Stacking page for components etc
     public function testPage() {
-        $procedures = Utils::getProceduresForDropdown();
-        $specialties = Utils::getSpecialties();
+        //Get the request and load it as variables
+        $request        = \Request::all();
+        $postcode       = !empty($request['postcode'])          ? Validate::escapeString($request['postcode'])          : '';
+        $procedureId    = !empty($request['procedure_id'])      ? Validate::escapeString($request['procedure_id'])      : '';
+        $radius         = !empty($request['radius'])            ? Validate::escapeString($request['radius'])            : 50; //10 miles as default
+        $waitingTime    = !empty($request['waiting_time'])      ? Validate::escapeString($request['waiting_time'])      : '';
+        $userRating     = !empty($request['user_rating'])       ? Validate::escapeString($request['user_rating'])       : '';
+        $qualityRating  = !empty($request['quality_rating'])    ? Validate::escapeString($request['quality_rating'])    : '';
+        $hospitalType   = !empty($request['hospital_type'])     ? Validate::escapeString($request['hospital_type'])     : '';
+        $sortBy         = !empty($request['sort_by'])           ? Validate::escapeString($request['sort_by'])           : '';
 
-        $this->returnedData['success']              = true;
-        $this->returnedData['data']['procedures']   = $procedures;
-        $this->returnedData['data']['specialties']  = $specialties;
+        //Set procedure_id to 0 if it's -1
+        if($procedureId == '-1')
+            $procedureId = 0;
+
+        $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $sortBy);
+//        dd($hospitals->toArray()['data']);
+        $sortBys    = Utils::sortBys;
+        $procedures = Utils::getProceduresForDropdown();
+
+        $this->returnedData['success']                              = true;
+        $this->returnedData['data']['hospitals']                    = $hospitals;
+        $this->returnedData['data']['filters']['procedures']        = $procedures;
+        $this->returnedData['data']['filters']['waitingTimes']      = Utils::waitingTimes;
+        $this->returnedData['data']['filters']['userRatings']       = Utils::userRatings;
+        $this->returnedData['data']['filters']['qualityRatings']    = Utils::qualityRatings;
+        $this->returnedData['data']['filters']['hospitalTypes']     = Utils::hospitalTypes;
+        $this->returnedData['data']['sortBy']                       = $sortBys;
+
 
         return view('pages.testpage', $this->returnedData);
     }

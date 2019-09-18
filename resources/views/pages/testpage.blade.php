@@ -12,11 +12,15 @@
 
 @section('content')
     {{-- dd($data['specialties']) --}}
+    <section>
+        @include('pages.pagesections.resultspageform', [
+        'displayBlock' => true])
+    </section>
     <section class="pt-3">
         <div class="container">
             <h3>Enquiry Form</h3>
             @include('components.modals.modalenquireprivate', [
-                       'procedures'    => $data['procedures'],
+                       'procedures'    => $data['filters']['procedures'],
                        'title'         => 'Mr',
                        'firstName'     => 'Test',
                        'dob'           => '1980/04/12',
