@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Helpers\Email;
 use App\Helpers\Errors;
 use App\Helpers\Utils;
 use App\Helpers\Validate;
@@ -239,9 +240,27 @@ class ApiController {
         $enquiry->additional_information    = $additionalInformation;
         $enquiry->save();
 
+        //Send the email //TODO: Activate it once the tests are working
+//        Email::send($email, 'Thank you for Enquiring with Hospital Compare', 'Thank you for your Enquiry! You will be contacted shortly', 'datamanager@hospitalcompare.co.uk');
         $this->returnedData['success']  = true;
         $this->returnedData['data']     = $enquiry;
 
         return $this->returnedData;
+    }
+
+    public function testEmail() {
+//        $email = 'niculesculuci@gmail.com';
+//        $data = Email::send($email, 'Testing the Backend', 'Thank you for your Enquiry! You will be contacted shortly', 'datamanager@hospitalcompare.co.uk');
+
+        $to_name = 'Lucian';
+        $to_email = 'niculesculuci@gmail.com';
+        $data = array('name'=>"Hospital Compare", "body" => "Thank you for your Enquiry! You will be contacted shortly");
+        \Mail::send('layout.email.test', $data, function($message) use ($to_name, $to_email) {
+            $message->to($to_email, $to_name)
+                ->subject('Laravel Test Mail');
+        $message->from('datamanager@hospitalcompare.co.uk','Test Mail');
+        });
+
+        return json_encode($data);
     }
 }
