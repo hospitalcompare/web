@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="select-proximity">
-                    <div class="filter-section">nree
+                    <div class="filter-section">
                         <div class="filter-section-child">
                             @include('components.basic.select', [
                                 'showLabel'             => true,
