@@ -1,4 +1,5 @@
 // https://codepen.io/nosurprisethere/pen/KJxwQz
+//http://danielstern.ca/range.css/#/ - not used here, but useful
 
 // Base Colors
 $shade-10: #1b70f3 !default;
@@ -38,7 +39,8 @@ $range-label-width: 60px !default;
 
 .range-slider__range {
     -webkit-appearance: none;
-    width: calc(100% - (#{$range-label-width + 13px}));
+    width: 100%;
+    //width: calc(100% - (#{$range-label-width + 13px}));
     height: $range-track-height;
     border-radius: 0;
     background: $range-track-color;

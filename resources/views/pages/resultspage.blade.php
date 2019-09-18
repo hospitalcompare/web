@@ -14,16 +14,23 @@
     <form class="form-element" id="resultspage_form">
         <div class="filter-parent">
             <div class="filter container">
-                <div class="postcode-proximity">
-                    <div class="postcode-proximity-child">
+                <div class="postcode-proximity row">
+                    <div class="postcode-proximity-child col-lg-4">
                         @include('components.basic.input', ['placeholder' => 'Enter your postcode', 'validation' => 'maxlength=8', 'inputClassName' => 'inputClass', 'value' => !empty(Request::input('postcode')) ? Request::input('postcode') : '' , 'name' => 'postcode', 'id' => 'input_postcode'])
                     </div>
-                    <div class="postcode-proximity-child">
-                        @include('components.basic.range', ['label' => 'Within radius of:', 'min' => 10, 'max' => 600, 'value' => !empty(Request::input('radius')) ? Request::input('radius') : 50, 'name' => 'radius', 'step' => 10])
+                    <div class="postcode-proximity-child col-lg-4 offset-lg-2">
+                        @include('components.basic.range', [
+                            'label'         => 'Within radius of:',
+                            'classTitle'    => 'radiusRange range-slider__range',
+                            'min'           => 1,
+                            'max'           => 7,
+                            'value'         => !empty(Request::input('radius')) ? Request::input('radius') : 4,
+                            'name'          => 'radius',
+                            'step'          => 1])
                     </div>
                 </div>
                 <div class="select-proximity">
-                    <div class="filter-section">
+                    <div class="filter-section">nree
                         <div class="filter-section-child">
                             @include('components.basic.select', [
                                 'showLabel'             => true,
