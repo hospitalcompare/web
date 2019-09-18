@@ -25,7 +25,6 @@
                                     'groupName'             => 'procedures',
                                     'suboptionClass'        => 'subprocedures',
                                     'chevronFAClassName'    => 'fa-chevron-down aquaChevron',
-                                    'placeholder'           => 'Choose your treatment (if known)', //Why do we need another placeholder?
                                     'name'                  => 'procedure_id'
                                 ])
                                 <a tabindex="0" data-offset="30px, 40px"
