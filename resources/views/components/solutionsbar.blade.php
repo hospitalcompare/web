@@ -75,7 +75,7 @@
                         </g>
                     </g>
                 </svg>
-                <p>View Shortlist&nbsp;(<span id="compare_number">0</span>)<span class="compare-arrow ml-3"></span>
+                <p>Comparison&nbsp;(<span id="compare_number">0</span>)<span class="compare-arrow ml-3"></span>
                 </p>
             </div>
         </div>
