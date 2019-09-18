@@ -156,8 +156,8 @@ $(document).ready(function() {
         $(this).toggleClass('open');
     });
     // Toggle sort dropdown
-    $('#show_sort').on('click', function(){
-        $('#sort_parent').slideToggle();
-        $(this).toggleClass('open');
-    });
+    // $('#show_sort').on('click', function(){
+    //     $('#sort_parent').slideToggle();
+    //     $(this).toggleClass('open');
+    // });
 });

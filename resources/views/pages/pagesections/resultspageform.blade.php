@@ -146,44 +146,30 @@
             </div>
         </div>
     </div>
-
     <div class="sort-parent" id="sort_parent">
         <div class="container">
-            <div class="sort-bar d-flex justify-content-end">
-                <div class="sort-section">
-                    @include('components.basic.select', [
-                        'showLabel' => true,
-                        'options' => $data['sortBy'],
-                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                        'selectClass' => 'results-page-select select-sort-by',
-                        'placeholder'=>'Sort by:',
-                        'name'=>'sort_by',
-                        'resultsLabel' => 'sortLabel'])
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="sort-parent">
-        <div class="container">
-            <div class="sort-bar">
-                <div class="show-section">
+            <div class="sort-bar row">
+                <div class="show-section col-6">
                     Showing {{$data['hospitals']->total()}} hospital(s) | Ordered
                     by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : 'Care Quality Rating & Distance' }}
                 </div>
 
-                <div class="sort-section pl-lg-3">
+                <div class="sort-section col-6 d-flex justify-content-end align-items-center">
                     @include('components.basic.button', [
                         'button'            => 'Filter Results',
                         'classTitle'        => 'btn btn-s btn-teal btn-grad btn-icon btn-arrow-down',
                         'id'                => 'show_filters',
                         'icon'              => 'fas fa-chevron-down'
                     ])
-                    @include('components.basic.button', [
-                        'button'            => 'Sort Results',
-                        'classTitle'        => 'btn btn-s btn-teal btn-grad btn-icon btn-arrow-down ml-2',
-                        'id'                => 'show_sort',
-                        'icon'                => 'fas fa-chevron-down'
-                    ])
+                    @include('components.basic.select', [
+                        'showLabel' => true,
+                        'options' => $data['sortBy'],
+                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
+                        'selectClass' => 'results-page-select select-sort-by',
+                        'selectClassName' => 'pl-3',
+                        'placeholder'=>'Sort by:',
+                        'name'=>'sort_by',
+                        'resultsLabel' => 'sortLabel'])
                 </div>
             </div>
         </div>
