@@ -7,7 +7,7 @@ $(document).ready(function () {
     const settings = {
         fill: '#1abc9c',
         background: '#d7dcdf'
-    }
+    };
 
 // First find all our sliders
     const sliders = document.querySelectorAll('.range-slider');
@@ -19,7 +19,9 @@ $(document).ready(function () {
 //   ... the input inside addEventListener() is looking for the input action, we could change it to something like change
         slider.querySelector('input').addEventListener('input', (event) => {
             // 1. apply our value to the span
-            slider.querySelector('.range-slider__value').innerHTML = `${event.target.value} Miles`;
+            var vals = [0, 5, 10, 25, 50, 75, 100, 600];
+
+            slider.querySelector('.range-slider__value').innerHTML = `${vals[event.target.value] } Miles`;
             // 2. apply our fill to the input
             applyFill(event.target);
         });
