@@ -43,7 +43,7 @@ class WebController extends BaseController
         $request        = \Request::all();
         $postcode       = !empty($request['postcode'])          ? Validate::escapeString($request['postcode'])          : '';
         $procedureId    = !empty($request['procedure_id'])      ? Validate::escapeString($request['procedure_id'])      : '';
-        $radius         = !empty($request['radius'])            ? Validate::escapeString($request['radius'])            : 50; //10 miles as default
+        $radius         = !empty($request['radius'])            ? Validate::escapeString($request['radius'])            : 4; //50 miles as default
         $waitingTime    = !empty($request['waiting_time'])      ? Validate::escapeString($request['waiting_time'])      : '';
         $userRating     = !empty($request['user_rating'])       ? Validate::escapeString($request['user_rating'])       : '';
         $qualityRating  = !empty($request['quality_rating'])    ? Validate::escapeString($request['quality_rating'])    : '';
@@ -53,6 +53,13 @@ class WebController extends BaseController
         //Set procedure_id to 0 if it's -1
         if($procedureId == '-1')
             $procedureId = 0;
+
+        //Format the radius with the correct distance
+        $radiusSelection = Utils::sliderRange;
+        if(array_key_exists($radius, $radiusSelection))
+            $radius = $radiusSelection[$radius];
+        else
+            $radius = 50;
 
         $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $sortBy);
 //        dd($hospitals->toArray()['data']);

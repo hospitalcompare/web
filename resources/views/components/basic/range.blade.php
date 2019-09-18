@@ -1,6 +1,3 @@
-@php
-$vars = [0, 5, 10, 25, 50, 75, 100, 600];
-@endphp
 <div class="rangeParent range-slider">
     <label for="radiusProx">{{$label}}</label>
     <input class="{{ $classTitle ?? '' }}"
@@ -11,7 +8,7 @@ $vars = [0, 5, 10, 25, 50, 75, 100, 600];
            max="{{$max ?? ''}}"
            value="{{$value ?? ''}}"
            step="{{$step ?? ''}}">
-    <div class="currentRadius range-slider__value"><span>{{ $vars[$value] }}</span> Miles</div>
+    <div class="currentRadius range-slider__value"><span>{{ array_key_exists($value, \App\Helpers\Utils::sliderRange) ? \App\Helpers\Utils::sliderRange[$value] : 50 }}</span> Miles</div>
     <ul class="range-labels">
         <li>5</li>
         <li>10</li>

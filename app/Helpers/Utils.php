@@ -153,25 +153,30 @@ class Utils
     //Filter Quality Ratings
     const radius = [
         [
-            'id' => 600,
+            'id' => 7,
             'name'  => 'Countrywide'
         ],[
-            'id' => 100,
+            'id' => 6,
             'name'  => 'Up to 100 miles'
         ],[
-            'id' => 75,
+            'id' => 5,
             'name'  => 'Up to 75 miles'
         ],[
-            'id' => 50,
+            'id' => 4,
             'name'  => 'Up to 50 miles'
         ],[
-            'id' => 25,
+            'id' => 3,
             'name'  => 'Up to 25 miles'
         ],[
-            'id' => 10,
+            'id' => 2,
             'name'  => 'Up to 10 miles'
+        ],[
+            'id' => 1,
+            'name'  => 'Up to 5 miles'
         ]
     ];
+    //Filter Quality Ratings
+    const sliderRange = [0, 5, 10, 25, 50, 75, 100, 600];
 
     /**
      * Returns the list of Procedures with the first option as a placeholder
