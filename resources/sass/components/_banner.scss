@@ -119,13 +119,14 @@
     top: 25px;
 }
 
-.postcode-autocomplete-cont {
+.postcode-autocomplete-container {
     display: none;
     width: 100%;
     overflow: hidden;
     transition: 1s linear;
     transition-delay: 0s;
     margin-top: 20px;
+    //position: absolute;
 
     .ajax-box {
         width: 100%;
