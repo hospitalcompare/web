@@ -77,9 +77,9 @@
             left: 0;
             content: "";
             margin: 0 auto;
-            width: 5px;
-            height: 21px;
-            background-color: #ebebeb;
+            width: $range-track-height;
+            height: 20px;
+            background-color: $darkestWhite;
         }
 
         &:first-child {
@@ -115,21 +115,21 @@
     // Move right to compensate for 'overhang'
     transform: translateX(10px);
 
-    .track-mask {
-        position: absolute;
-        background-color: #fff;
-        z-index: 5;
-        width: 10px;
-        height: 20px;
-        bottom: 20px;
-
-        &__start {
-            left: 0;
-        }
-
-        &__end {
-            right: 0;
-        }
-    }
+    //.track-mask {
+    //    position: absolute;
+    //    background-color: #fff;
+    //    z-index: 5;
+    //    width: 10px;
+    //    height: 20px;
+    //    bottom: 20px;
+    //
+    //    &__start {
+    //        left: 0;
+    //    }
+    //
+    //    &__end {
+    //        right: 0;
+    //    }
+    //}
 }
 
