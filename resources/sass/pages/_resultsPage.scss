@@ -1,3 +1,5 @@
+$col-spacing: 18px;
+
 .results-page,
 .test-page {
     margin-bottom: 49px;
@@ -16,7 +18,7 @@
         }
     }
 
-    $col-spacing: 18px;
+
 
     .filter-section {
         //flex-basis: 85%;
@@ -116,6 +118,22 @@
             @include placeholder {
                 font-size: 18px;
                 //text-transform: uppercase;
+            }
+        }
+    }
+
+    .postcode-proximity {
+        margin-left: -$col-spacing;
+        margin-right: -$col-spacing;
+
+        .postcode-proximity-child {
+            padding: $col-spacing;
+
+            &:first-child {
+                width: 40%;
+            }
+            &:last-child {
+                width: 60%;
             }
         }
     }
