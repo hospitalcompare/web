@@ -5,8 +5,8 @@ $(document).ready(function () {
 
 // First let's set the colors of our sliders
     const settings = {
-        fill: '#1abc9c',
-        background: '#d7dcdf'
+        fill: '#00cecd',
+        background: '#ebebeb'
     };
 
 // First find all our sliders
@@ -21,7 +21,7 @@ $(document).ready(function () {
             // 1. apply our value to the span
             var vals = [0, 5, 10, 25, 50, 75, 100, 600];
 
-            slider.querySelector('.range-slider__value').innerHTML = `${vals[event.target.value] } Miles`;
+            // slider.querySelector('.range-slider__value').innerHTML = `${vals[event.target.value] } Miles`;
             // 2. apply our fill to the input
             applyFill(event.target);
         });
@@ -35,7 +35,7 @@ $(document).ready(function () {
         const percentage = 100*(slider.value-slider.min)/(slider.max-slider.min);
         // now we'll create a linear gradient that separates at the above point
         // Our background color will change here
-        const bg = `linear-gradient(90deg, ${settings.fill} ${percentage}%, ${settings.background} ${percentage+0.1}%)`;
+        const bg = `linear-gradient(90deg, white 9.9px, ${settings.fill} 10px, ${settings.fill} ${percentage}%, ${settings.background} ${percentage+0.1}%, ${settings.background} calc(100% - 10px), white calc(100% - 9.9px))`;
         slider.style.background = bg;
     }
 })

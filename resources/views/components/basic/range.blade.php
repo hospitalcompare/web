@@ -1,7 +1,7 @@
 <div class="rangeParent range-slider">
     <label for="radiusProx">{{$label}}</label>
-    <div class="range-wrapper position-relative">
-        <div class="currentRadius range-slider__value d-none"><span>{{ array_key_exists($value, \App\Helpers\Utils::sliderRange) ? \App\Helpers\Utils::sliderRange[$value] : 50 }}</span> Miles</div>
+    <div class="range-wrapper position-relative h-100">
+{{--        <div class="currentRadius range-slider__value d-none"><span>{{ array_key_exists($value, \App\Helpers\Utils::sliderRange) ? \App\Helpers\Utils::sliderRange[$value] : 50 }}</span> Miles</div>--}}
         <input class="{{ $classTitle ?? '' }}"
                type="range"
                id="radiusProx"
@@ -17,7 +17,9 @@
             <li>50</li>
             <li>75</li>
             <li>100</li>
-            <li>600</li>
+            <li>England</li>
         </ul>
+{{--        <div class="track-mask track-mask__start"></div>--}}
+{{--        <div class="track-mask track-mask__end"></div>--}}
     </div>
 </div>

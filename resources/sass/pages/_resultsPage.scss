@@ -127,7 +127,8 @@ $col-spacing: 18px;
         margin-right: -$col-spacing;
 
         .postcode-proximity-child {
-            padding: $col-spacing;
+            padding-left: $col-spacing;
+            padding-right: $col-spacing;
 
             &:first-child {
                 width: 40%;
