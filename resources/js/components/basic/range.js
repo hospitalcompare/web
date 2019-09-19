@@ -24,26 +24,12 @@ $(document).ready(function () {
             // slider.querySelector('.range-slider__value').innerHTML = `${vals[event.target.value] } Miles`;
             // 2. apply our fill to the input
             applyFill(event.target);
-
-            // Select the ticks
-            const ticks = slider.querySelectorAll('.range-label');
-            console.log(ticks);
-            // Remove fill and active class from the ticks
-            ticks.forEach(tick => tick.classList.remove('active', 'fill'));
-            ticks.forEach(tick => console.log(tick.classList));
-            // Get the tick corresponding to new value
-            ticks[ event.target.value - 1 ].classList.add('active');
-            // For the ticks, from array position 0 to the new value (-1) apply the fill class to colout them green
-            for(let i = 0; i < event.target.value; i++ ) {
-                ticks[i].classList.add('fill');
-            }
-
+            fillTicks(event.target);
         });
 
-
-        // Don't wait for the listener, apply it now!
+        // Apply fills on pageload
         applyFill(slider.querySelector('input'));
-        // fillTicks(slider.querySelector('input'));
+        fillTicks(slider.querySelector('input'));
     });
 
 // This function applies the fill to our sliders by using a linear gradient background
@@ -54,10 +40,33 @@ $(document).ready(function () {
         // Our background color will change here
         const bg = `linear-gradient(90deg, white 9.9px, ${settings.fill} 10px, ${settings.fill} ${percentage}%, ${settings.background} ${percentage+0.1}%, ${settings.background} calc(100% - 10px), white calc(100% - 9.9px))`;
         slider.style.background = bg;
-
-
     }
-    function fillTicks(slider) {
 
-    }
+    // This function applies the 'active' colour to ticks up to the new range value
+    function fillTicks(input) {
+        // Select the ticks
+        let ticks = input.parentElement.querySelectorAll('.range-label');
+        // Convery from Nodelist to array
+        ticks = Array.from(ticks);
+        // ticks.forEach(tick => {
+        //     console.log(tick.classList);
+        // });
+        // console.log(ticks);
+        // Remove fill and active class from the ticks
+        ticks.forEach(tick => tick.classList.remove('active', 'fill'));
+        // Get the tick corresponding to new value
+        ticks[ input.value - 1 ].classList.add('active');
+        // For the ticks, from array position 0 to the new value (-1) apply the fill class to colout them green
+        for(let i = 0; i < input.value; i++ ) {
+            ticks[i].classList.add('fill');
+        }
+    };
+
+    function getSiblings(elem) {
+        return elem.nextElementSibling;
+        // var descendants = elem.parentNode.children;
+        // return Array.prototype.filter.call(descendants, function (sibling) {
+        //     return sibling !== elem;
+        // });
+    };
 })
