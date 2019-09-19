@@ -14,7 +14,7 @@ $(document).ready(function () {
 
 // Iterate through that list of sliders
 // ... this call goes through our array of sliders [slider1,slider2,slider3] and inserts them one-by-one into the code block below with the variable name (slider). We can then access each of them by calling slider
-    Array.prototype.forEach.call(sliders,(slider)=>{
+    Array.prototype.forEach.call(sliders,(slider) => {
         // Look inside our slider for our input add an event listener
 //   ... the input inside addEventListener() is looking for the input action, we could change it to something like change
         slider.querySelector('input').addEventListener('input', (event) => {
@@ -24,9 +24,26 @@ $(document).ready(function () {
             // slider.querySelector('.range-slider__value').innerHTML = `${vals[event.target.value] } Miles`;
             // 2. apply our fill to the input
             applyFill(event.target);
+
+            // Select the ticks
+            const ticks = slider.querySelectorAll('.range-label');
+            console.log(ticks);
+            // Remove fill and active class from the ticks
+            ticks.forEach(tick => tick.classList.remove('active', 'fill'));
+            ticks.forEach(tick => console.log(tick.classList));
+            // Get the tick corresponding to new value
+            ticks[ event.target.value - 1 ].classList.add('active');
+            // For the ticks, from array position 0 to the new value (-1) apply the fill class to colout them green
+            for(let i = 0; i < event.target.value; i++ ) {
+                ticks[i].classList.add('fill');
+            }
+
         });
+
+
         // Don't wait for the listener, apply it now!
         applyFill(slider.querySelector('input'));
+        // fillTicks(slider.querySelector('input'));
     });
 
 // This function applies the fill to our sliders by using a linear gradient background
@@ -37,5 +54,10 @@ $(document).ready(function () {
         // Our background color will change here
         const bg = `linear-gradient(90deg, white 9.9px, ${settings.fill} 10px, ${settings.fill} ${percentage}%, ${settings.background} ${percentage+0.1}%, ${settings.background} calc(100% - 10px), white calc(100% - 9.9px))`;
         slider.style.background = bg;
+
+
+    }
+    function fillTicks(slider) {
+
     }
 })

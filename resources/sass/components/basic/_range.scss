@@ -89,11 +89,18 @@
         &:last-child {
             margin-right: calc(-1 * calc(100% - #{$range-handle-size}) / 12);
         }
+
+        &.active {
+            @extend .SofiaPro-Black;
+        }
+
+        &.fill {
+            &:before {
+                background-color: $teal;
+            }
+        }
     }
 
-    //.active {
-    //    color: #37adbf;
-    //}
 
     .selected::before {
         background: #37adbf;
