@@ -3,9 +3,12 @@
     height: 100%;
     position: relative;
     padding-top: 30px;
+    padding-left: 150px;
 
     label {
         margin-bottom: 0;
+        @include v-c;
+        left: 0;
     }
 
     // The range slider
@@ -14,7 +17,6 @@
         z-index: 5;
     }
 
-    label,
     .currentRadius {
         position: absolute;
         top: 0;
@@ -29,7 +31,7 @@
     }
 
     .range-labels {
-        padding: 0 11px;
+        padding: 0 $range-handle-size/2;
         pointer-events: none;
     }
 }
@@ -60,8 +62,8 @@
     li {
         position: relative;
         display: inline-block;
-        width: calc(calc(100% - 22px) / 6);
-        flex: calc(calc(100% - 22px) / 6);
+        width: calc(calc(100% - #{$range-handle-size}) / 6);
+        flex: calc(calc(100% - #{$range-handle-size}) / 6);
         text-align: center;
         color: #b2b2b2;
         @include font-size(14);
@@ -77,15 +79,14 @@
             width: 2px;
             height: 10px;
             background: #d7d7d7;
-            //border-radius: 50%;
         }
 
         &:first-child {
-            margin-left: -45px;
+            margin-left: calc(-1 * calc(100% - #{$range-handle-size}) / 12);
         }
 
         &:last-child {
-            margin-right: -45px;
+            margin-right: calc(-1 * calc(100% - #{$range-handle-size}) / 12);
         }
     }
 
