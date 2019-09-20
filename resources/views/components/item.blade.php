@@ -9,7 +9,7 @@
                 <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
             </div>
             <div class="sort-categories-item">
-                <p class="sort-item-title SofiaPro-SemiBold" id="item_name_{{$id}}">
+                <p class="sort-item-title SofiaPro-Medium" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
                 <p class="sort-item-location">{{$location}}, {{ trim($town, ', ') }}</p>

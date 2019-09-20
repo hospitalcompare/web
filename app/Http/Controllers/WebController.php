@@ -162,8 +162,14 @@ class WebController extends BaseController
     }
 
     // Downloads
+
     public function download($file_name) {
         $file_path = public_path('downloads/'.$file_name);
         return response()->download($file_path);
+    }
+
+    // About us page
+    public function aboutUs() {
+        return view('pages.aboutus');
     }
 }
