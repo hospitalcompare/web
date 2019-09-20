@@ -9,7 +9,6 @@
                         <li>An NHS or private hospital, funded by the NHS</li>
                         <li>A private hospital of your choice, paid for by you or your insurance</li>
                     </ul>
-                    <p>
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div class="box full-left ml-auto">
