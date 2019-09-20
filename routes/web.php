@@ -29,6 +29,8 @@ Route::get('/your-rights','WebController@yourRightsPage');
 
 Route::get('/how-to-use','WebController@howToUsePage');
 
+Route::get('/about-us','WebController@aboutUs');
+
 Route::get('/ajax-form','WebController@ajaxForm');
 
 Route::get('/downloads/{file}','WebController@download');
