@@ -1,7 +1,7 @@
 <input
     id="{{empty($id)? '' : $id}}"
     class="{{empty($className)? '' : $className}}"
-    type="text"
+    type="search"
     placeholder="{{$placeholder}}"
     value="{{$value}}"
     name="{{$name}}"

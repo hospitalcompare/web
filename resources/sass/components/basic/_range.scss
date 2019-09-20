@@ -2,19 +2,15 @@
     width: 100%;
     height: 100%;
     position: relative;
-    padding-top: 30px;
+    padding-left: 150px;
 
     label {
         margin-bottom: 0;
+        @include v-c;
+        left: 0;
     }
 
-    // The range slider
-    input {
-        flex: 1;
-        z-index: 5;
-    }
 
-    label,
     .currentRadius {
         position: absolute;
         top: 0;
@@ -24,12 +20,19 @@
     input,
     .range-labels {
         position: absolute;
-        bottom: 0;
         width: 100%;
     }
 
+    // The range slider
+    input {
+        top: 32px;
+        flex: 1;
+        z-index: 5;
+    }
+
     .range-labels {
-        padding: 0 11px;
+        top: 0;
+        padding: 0 $range-handle-size/2;
         pointer-events: none;
     }
 }
@@ -56,15 +59,15 @@
     display: flex;
     position: absolute;
 
-
     li {
         position: relative;
         display: inline-block;
-        width: calc(calc(100% - 22px) / 6);
-        flex: calc(calc(100% - 22px) / 6);
+        width: calc(calc(100% - #{$range-handle-size}) / 6);
+        flex: calc(calc(100% - #{$range-handle-size}) / 6);
         text-align: center;
-        color: #b2b2b2;
+        color: $teal;
         @include font-size(14);
+        @extend .SofiaPro-Bold;
         cursor: pointer;
 
         &::before {
@@ -74,24 +77,30 @@
             left: 0;
             content: "";
             margin: 0 auto;
-            width: 2px;
-            height: 10px;
-            background: #d7d7d7;
-            //border-radius: 50%;
+            width: $range-track-height;
+            height: 20px;
+            background-color: $darkestWhite;
         }
 
         &:first-child {
-            margin-left: -45px;
+            margin-left: calc(-1 * calc(100% - #{$range-handle-size}) / 12);
         }
 
         &:last-child {
-            margin-right: -45px;
+            margin-right: calc(-1 * calc(100% - #{$range-handle-size}) / 12);
+        }
+
+        &.active {
+            @extend .SofiaPro-Black;
+        }
+
+        &.fill {
+            &:before {
+                background-color: $teal;
+            }
         }
     }
 
-    //.active {
-    //    color: #37adbf;
-    //}
 
     .selected::before {
         background: #37adbf;
@@ -99,6 +108,28 @@
 
     //.active.selected::before {
     //    display: none;
+    //}
+}
+
+.range-wrapper {
+    // Move right to compensate for 'overhang'
+    transform: translateX(10px);
+
+    //.track-mask {
+    //    position: absolute;
+    //    background-color: #fff;
+    //    z-index: 5;
+    //    width: 10px;
+    //    height: 20px;
+    //    bottom: 20px;
+    //
+    //    &__start {
+    //        left: 0;
+    //    }
+    //
+    //    &__end {
+    //        right: 0;
+    //    }
     //}
 }
 

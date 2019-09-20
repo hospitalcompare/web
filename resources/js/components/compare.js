@@ -197,8 +197,8 @@ $(document).ready(function () {
         var compareCount = parseInt(Cookies.get("compareCount"));
         var data = JSON.parse(Cookies.get("compareHospitalsData"));
         compareBar.slideDown();
-        $('body').addClass('modal-open');
-        compareContent.removeClass('revealed');
+        // $('body').addClass('modal-open');
+        // compareContent.removeClass('revealed');
 
         //Load the Cookies with the data that we need for the comparison
         var elementId = $(this).attr('id');

@@ -11,8 +11,7 @@
 @section('body-class', 'results-page')
 
 @section('content')
-    @include('pages.pagesections.resultspageform')
-
+    @include('pages.pagesections.resultspageform', ['displayBlock' => false])
     <div id="sort_categories_parent" class="sort-categories-parent">
         <div class="sort-categories-header container">
             <div class="sort-categories-section-1"></div>
@@ -137,7 +136,7 @@
                     <li class="align-items-end justify-content-end">
                         <p class="text-center m-0 d-flex flex-column align-items-end">
                             <span class="d-inline-block mb-1">Compare</span>
-                            <svg id="compare_heart" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                            <svg id="" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
                                 <g data-name="Group 263">
                                     <g data-name="Group 133">
                                         <g data-name="Rounded Rectangle 1 copy 8" fill="rgba(27,112,243,0)" stroke="#fff" stroke-linejoin="round" stroke-width="2">

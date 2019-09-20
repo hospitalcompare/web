@@ -33,16 +33,10 @@
 }
 
 .how-section {
-    @include flex;
-    @include justify-content($value: space-between);
-    position: relative;
-    //left: -70px;
-
     .row {
         @include reset-row-spacing(30px);
     }
 }
-
 
 .how-section__child {
     text-align: center;

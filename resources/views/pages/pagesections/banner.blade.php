@@ -49,32 +49,34 @@
                             </div>
 
                             <div class="form-child home-postcode-parent">
-                                @include('components.basic.input', [
+                                <div class="input-wrapper position-relative">
+                                    @include('components.basic.input', [
                                     'placeholder' => 'Enter postcode',
                                     'className' => 'postcode-text-box big',
                                     'value' => '',
                                     'name' =>'postcode',
                                     'validation' => 'maxlength=8',
                                      'id' => 'input_postcode'])
-                                <a tabindex="0" data-offset="30px, 40px"
-                                   class="help-link"
-                                    @include('components.basic.popover', [
-                                    'dismissible'   => true,
-                                    'placement'      => 'top',
-                                    'size'           => 'large',
-                                    'html'           => 'true',
-                                    'trigger'        => 'focus',
-                                    'content'        => '<p class="bold mb-0">
-                                                     Postcode
-                                                 </p>
-                                                 <p>
-                                                     Please enter your postcode for a refined search.
-                                                 </p>
-                                                 <p>
-                                                     <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
-                                                 </p>'])
-                                >?</a>
-                                <div class="postcode-autocomplete-cont">
+                                    <a tabindex="0" data-offset="30px, 40px"
+                                       class="help-link"
+                                        @include('components.basic.popover', [
+                                        'dismissible'   => true,
+                                        'placement'      => 'top',
+                                        'size'           => 'large',
+                                        'html'           => 'true',
+                                        'trigger'        => 'focus',
+                                        'content'        => '<p class="bold mb-0">
+                                                         Postcode
+                                                     </p>
+                                                     <p>
+                                                         Please enter your postcode for a refined search.
+                                                     </p>
+                                                     <p>
+                                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
+                                                     </p>'])
+                                    >?</a>
+                                </div>
+                                <div class="postcode-autocomplete-container">
                                     <div class="ajax-box"></div>
                                 </div>
                             </div>
