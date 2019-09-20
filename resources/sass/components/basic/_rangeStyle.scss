@@ -1,8 +1,5 @@
 // https://codepen.io/nosurprisethere/pen/KJxwQz
 //http://danielstern.ca/range.css/#/ - not used here, but useful
-
-
-
 // Reset
 
 .range-slider {
@@ -16,8 +13,6 @@
     }
 }
 
-
-
 .range-slider {
     width: $range-width;
 }
@@ -28,7 +23,7 @@
     //width: calc(100% - (#{$range-label-width + 13px}));
     height: $range-track-height;
     border-radius: 0;
-    background: linear-gradient(90deg, white 9.9px, rgb(235, 235, 235) 10px, rgb(235, 235, 235) calc(100% - 10px), white calc(100% - 9.9px));
+    background: linear-gradient(90deg, white 10.5px, rgb(235, 235, 235) 10.6px, rgb(235, 235, 235) calc(100% - 10px), white calc(100% - 9.9px));
     outline: none;
     padding: 0;
     margin: 0;
