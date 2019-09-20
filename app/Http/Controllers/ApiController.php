@@ -257,7 +257,7 @@ class ApiController {
         try {
             Email::send($email, 'Thank you for Enquiring with Hospital Compare', 'Thank you for your Enquiry! You will be contacted shortly', 'datamanager@hospitalcompare.co.uk');
         } catch(\Exception $e){
-            \Log::info('Something went wrong sending an email. Please check the enquiry with id: '.$enquiry->id);
+            \Log::info('Something went wrong sending an email. Please check the enquiry with id: '.$enquiry->id.'. Error:'.$e->getMessage());
         }
 
         $this->returnedData['success']  = true;
