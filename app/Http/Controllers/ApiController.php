@@ -13,6 +13,7 @@ use App\Models\Hospital;
 use App\Models\HospitalWaitingTime;
 use App\Models\Procedure;
 use App\Models\Specialty;
+use App\Models\Trust;
 use App\Services\Location;
 use Request;
 
@@ -73,8 +74,20 @@ class ApiController {
 
         //Update the Hospitals with special offers
         //TODO: Remove this when the actual special offers are decided
-        \DB::statement('UPDATE hospitals LEFT JOIN hospital_types ON hospitals.hospital_type_id = hospital_types.id SET special_offers = 1 WHERE hospital_types.name = "Independent" AND hospitals.id % 3 = 0');
-        //Add a waiting time = 0 to all the hospitals that don't have the total specialty
+//        \DB::statement('UPDATE hospitals LEFT JOIN hospital_types ON hospitals.hospital_type_id = hospital_types.id SET special_offers = 1 WHERE hospital_types.name = "Independent" AND hospitals.id % 3 = 0');
+        //Set Special offers just to BMI ( for the meeting with them)
+        //Get all the Trusts having trust_id = 'NT4'
+        $bmiTrusts = Trust::where('trust_id', 'NT4')->with('hospitals')->get();
+        if(!empty($bmiTrusts)) {
+            foreach($bmiTrusts as $bmi) {
+                if(!empty($bmi->hospitals)) {
+                    foreach($bmi->hospitals as $hospital) {
+                        $hospital->special_offers = true;
+                        $hospital->save();
+                    }
+                }
+            }
+        }
 
         //Update all the Hospitals that don't have a Waiting Time ( so they won't be excluded from our filters )
 //        $hospitals = Hospital::doesntHave('waitingTime')->get();
