@@ -8,7 +8,15 @@
     }
 }
 
+body {
+
+}
+
 .hc-content {
+    p {
+        @include font-style(false, 20px, false, false, 24px, -1px);
+    }
+
     table {
         ol, ul {
             margin: 0;
@@ -18,8 +26,6 @@
             }
         }
     }
-
-
 
     em {
         color: $blue;
@@ -34,11 +40,10 @@
         margin: 30px 0 50px 0;
 
         > li {
-            font-size: 22px;
+            @include font-style(false, 20px, false, false, 24px, -1px);
             margin: 0 0 22px 0;
             position: relative;
             padding: 0 0 0 40px;
-            line-height: 1;
 
             &:before {
                 content: '';
@@ -176,12 +181,12 @@ h6 {
 }
 
 h1 {
-    @include font-style('SofiaPro-Black', 45px, false, false, 1.25, -2.25px);
-    //margin: 0 0 30px 0;
+    @include font-style('SofiaPro-Black', 45px, false, false, 45px, -2.25px);
+    margin: 0 0 30px 0;
 }
 
 h2 {
-    @include font-style('SofiaPro-Bold', 28px, false, false, 1.25, -2.25px);
+    @include font-style('SofiaPro-Bold', 28px, false, false, 35px, -2.25px);
     margin: 0 0 28px 0;
 
     &.teal {
@@ -190,11 +195,12 @@ h2 {
 }
 
 .section-title {
-    @include font-style('SofiaPro-Bold', 40px, false, false, 1.2, -2px);
+    @include font-style('SofiaPro-Bold', 40px, false, false, 48px, -2px);
+    margin-bottom: 40px;
 }
 
 .page-subtitle {
-    @include font-style('SofiaPro-SemiBold', 28px, false, false, calc(35/$size), -1.45px);
+    @include font-style('SofiaPro-SemiBold', 28px, false, false, 35px, -1.45px);
 }
 
 h3 {
@@ -220,6 +226,5 @@ h6 {
 }
 
 p {
-    font-size: 20px;
-    margin: 0 0 20px 0;
+    @include font-style(false, 14px, false, false, 16.8px, -1px);
 }

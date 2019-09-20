@@ -1,3 +1,14 @@
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
 @mixin keyframes($animation-name) {
     @-webkit-keyframes #{$animation-name} {
         @content;
@@ -94,8 +105,7 @@
         @if $direction=='to right' {
             border-left: $border-width solid $color1;
             border-right: $border-width solid $color2;
-        }
-        @else {
+        } @else {
             border-left: $border-width solid $color2;
             border-right: $border-width solid $color1;
         }
@@ -107,8 +117,7 @@
         @if $direction=='to top' {
             border-top: $border-width solid $color2;
             border-bottom: $border-width solid $color1;
-        }
-        @else {
+        } @else {
             border-top: $border-width solid $color1;
             border-bottom: $border-width solid $color2;
         }
@@ -137,24 +146,41 @@
 
 
 /**
-     * @param $family
+     * @param {string} $family
+     * @param {string} $size
+     * @param {string} $colour
+     * @param {string} $weight
+     * @param {string} $lh
+     * @param {string} $ls
 */
-@mixin font-style($family: 'SofiaPro-Regular', $size: false, $colour: false, $weight: false,  $lh: false, $ls: false) {
-    @if $family { font-family: $family, Helvetica, Arial, sans-serif; }
-    @if $size { @include font-size($size); }
-    @if $colour { color: $colour; }
-    @if $weight { font-weight: $weight; }
-    @if $lh { line-height: $lh; }
-    @if $ls { letter-spacing: $ls; }
+@mixin font-style($family: 'SofiaPro-Regular', $size: false, $colour: false, $weight: 400,  $lh: false, $ls: false) {
+    @if $family {
+        font-family: $family, Helvetica, Arial, sans-serif;
+    }
+    @if $size {
+        @include font-size($size);
+    }
+    @if $colour {
+        color: $colour;
+    }
+    @if $weight {
+        font-weight: $weight;
+    }
+    @if $lh {
+        line-height: calc(#{strip-unit($lh)} / #{strip-unit($size)});
+    }
+    @if $ls {
+        letter-spacing: $ls;
+    }
 }
 
 
 //Header section
 @mixin headerHeight {
-    height:75px;
+    height: 75px;
 }
 
-//Resposive design parent declarations
+//Responsive design parent declarations
 @mixin flex {
     display: flex;
 }
@@ -233,7 +259,7 @@
         width: 100%;
         padding-top: ($height / $width) * 100%;
     }
-    >.content {
+    > .content {
         width: 100%;
         @include v-h-c;
     }

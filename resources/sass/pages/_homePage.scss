@@ -81,7 +81,7 @@
             background-size: cover;
             border-radius: 20px;
             position: relative;
-            @include mask($lighestGrey, 1);
+            @include mask($lightestGrey, 1);
 
             &:before {
                 transition: 0.3s opacity ease-in;

@@ -12,10 +12,10 @@
         border-radius: 40px !important;
         padding-left: 90px;
         padding-right: 45px;
-        @include font-style(false, 32px, false, false, 44px, -1.6px);
+        @include font-style(false, 32px, #000, false, 44px, -1.6px);
 
         @include placeholder {
-            @include font-style(false, 32px, false, false, 44px, -1.6px);
+            @include font-style(false, 32px, #000, false, 44px, -1.6px);
         }
     }
 

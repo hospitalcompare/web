@@ -13,7 +13,7 @@
 @section('content')
     <section>
         <div class="container container-980 text-center">
-            <h1>How can we help you?</h1>
+            <h1 class="mb-0">How can we help you?</h1>
             <h2 class="page-subtitle">Type your query into the search bar below and scroll down for all questions</h2>
         </div>
     </section>
@@ -45,15 +45,15 @@
                 ],
                 [
                     'iconImg'=> 'search',
-                    'title'=>'Step Two'
+                    'title'=>'Category Two'
                 ],
                 [
                     'iconImg'=> 'hospital-compare',
-                    'title'=>'Step Three'
+                    'title'=>'Category Three'
                 ],
                 [
                     'iconImg'=> 'confirm',
-                    'title'=>'Step Four'
+                    'title'=>'Category Four'
                 ]
              ]
          ])
