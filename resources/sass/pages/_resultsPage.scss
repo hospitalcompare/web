@@ -19,7 +19,6 @@ $col-spacing: 18px;
     }
 
 
-
     .filter-section {
         //flex-basis: 85%;
         display: flex;
@@ -30,6 +29,7 @@ $col-spacing: 18px;
             flex: 0 0 20%;
             width: 20%;
             padding: 0 $col-spacing;
+
             &:not(:last-child) {
                 border-right: 2px solid #d7d7d7;
             }
@@ -105,7 +105,6 @@ $col-spacing: 18px;
     .postcode-proximity-child,
     .submit-section-child,
     .filter-section-child {
-        //@include uniformAlignment;
         position: relative;
         margin-bottom: 20px;
         display: flex;
@@ -133,6 +132,7 @@ $col-spacing: 18px;
             &:first-child {
                 width: 40%;
             }
+
             &:last-child {
                 width: 60%;
             }
@@ -247,7 +247,6 @@ $col-spacing: 18px;
             padding: 16px 0;
             position: relative;
             list-style: none;
-            @include uniformAlignment;
             @include flex-center;
             justify-content: flex-start;
             flex-direction: column;
@@ -257,6 +256,7 @@ $col-spacing: 18px;
             letter-spacing: -0.7px;
             line-height: 16.8px;
             text-align: center;
+            flex: 1;
 
             span.sort-arrow {
                 position: absolute;
@@ -268,6 +268,7 @@ $col-spacing: 18px;
                 background-image: url('../images/icons/caret-down-white.svg');
                 cursor: pointer;
             }
+
             span.sort-arrow.asc {
                 transform: rotateX(0deg);
             }
@@ -329,11 +330,14 @@ $col-spacing: 18px;
     }
 
     .find-link {
-        color: #00cecd;
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: -0.7px;
+        @include font-style('SofiaPro-Bold', 14px, $body-color, false, 14px, -0.7px);
         cursor: pointer;
+
+        &:hover,
+        &:active {
+            color: $teal;
+            text-decoration: none;
+        }
     }
 
     .nhs-hospital,

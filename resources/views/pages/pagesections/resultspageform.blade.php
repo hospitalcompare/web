@@ -25,7 +25,7 @@
                                 'selectPicker'          => 'true',
                                 'group'                 => true,
                                 'groupName'             => 'procedures',
-                                'placeholder'           => 'Surgery Type',
+                                'placeholder'           => 'Treatment',
                                 'options'               => $data['filters']['procedures'],
                                 'suboptionClass'        => 'subprocedures',
                                 'chevronFAClassName'    => 'fa-chevron-down black-chevron',
@@ -89,7 +89,7 @@
                                                  NHS Choice User Rating
                                              </p>
                                              <p>
-                                                 Five start rating system based on feedback provided by users of the NHS, five stars being the best. Information is not available on some hospitals.
+                                                 Five star rating system based on feedback provided by users of the NHS (five stars being the best). Information is not available on some hospitals.
                                              </p>
                                              <p>
                                                  <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
@@ -131,7 +131,7 @@
                                                  NHS or Private Hospitals
                                              </p>
                                              <p>
-                                                 Select which hospital type best suits your needs. Remember you can have an NHS treatment at most private hospitals.
+                                                 Select which hospital type best suits your needs. Remember you can choose to have an NHS treatment at most private hospitals in England and Wales.
                                              </p>
                                              <p>
                                                  <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>

@@ -7,25 +7,14 @@
 
     //=======================WHY CHOOSE SECTION=======================
     .why-use-parent {
-        width: 100%;
-        height: auto;
         background: $sectionBeige;
 
         .why-use-content {
-            width: $pageWrap;
-            margin: auto;
             padding: 70px 0 60px;
         }
 
-        .why-use {
-            @include flex;
-            color: #1b1b1b;
-
-            .section-title {
-                font-size: 40px;
-                margin-bottom: 30px;
-                letter-spacing: -2px;
-            }
+        .why-use { // container
+            //color: #1b1b1b;
 
             p {
                 width: 589px;
@@ -34,40 +23,39 @@
                 line-height: 24px;
             }
 
-            .why-use-video {
-                margin-left: 8%;
 
-                .video-wrapper {
-                    position: relative;
-                    @include aspect-ratio(497px, 349px);
-                    border: 1px solid $borderVideo;
-                    border-radius: 15px;
-                    overflow: hidden;
+        }
 
-                    video {
-                        width: 140% !important;
-                    }
-
-                    .player-button {
-                        background-image: url(../images//player_button.png);
-                        background-size: cover;
-                        @include v-h-c;
-                        height: 78px;
-                        width: 78px;
-                        z-index: 5;
-                        cursor: pointer;
-                        transition: $transition;
-
-                        &:hover {
-                            opacity: 0.8;
-                        }
-                    }
-                }
+        .why-use-video {
+            @include media-breakpoint-up(md) {
+                padding-left: 110px;
             }
 
-            .why-use-text,
-            .why-use-video {
-                @include uniformAlignment;
+            .video-wrapper {
+                position: relative;
+                @include aspect-ratio(497px, 349px);
+                border: 1px solid $borderVideo;
+                border-radius: 15px;
+                overflow: hidden;
+
+                video {
+                    width: 140% !important;
+                }
+
+                .player-button {
+                    background-image: url(../images//player_button.png);
+                    background-size: cover;
+                    @include v-h-c;
+                    height: 78px;
+                    width: 78px;
+                    z-index: 5;
+                    cursor: pointer;
+                    transition: $transition;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
             }
         }
 
@@ -93,7 +81,7 @@
             background-size: cover;
             border-radius: 20px;
             position: relative;
-            @include mask($lighestGrey, 1);
+            @include mask($lightestGrey, 1);
 
             &:before {
                 transition: 0.3s opacity ease-in;

@@ -1,4 +1,4 @@
-<div class="how-section container{{ !empty($containerFluid) ?? ($containerFluid) ? '-fluid' : '' }}">
+<div class="how-section container {{ !empty($containerFluid) ?? ($containerFluid) ? 'container-980' : '' }}">
     <div class="row">
         @if(!empty($sectionTitle))
         <h2 class="section-title col-12">{{ $sectionTitle }}</h2>

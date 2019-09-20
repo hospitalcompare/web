@@ -28,6 +28,11 @@ select.big {
     padding: 0 45px 0 16px;
 }
 
+// Custom container width
+.container-980 {
+    max-width: 980px;
+}
+
 .bg-teal {
     background-color: $teal;
 }
@@ -118,4 +123,9 @@ select.big {
     &:hover {
         color: inherit;
     }
+}
+
+// Vertical center position absolute
+.v-c {
+    @include v-c;
 }
