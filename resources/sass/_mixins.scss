@@ -153,7 +153,7 @@
      * @param {string} $lh
      * @param {string} $ls
 */
-@mixin font-style($family: 'SofiaPro-Regular', $size: false, $colour: false, $weight: 400,  $lh: false, $ls: false) {
+@mixin font-style($family: 'SofiaPro-Regular', $size: false, $colour: $body-color, $weight: 400,  $lh: false, $ls: false) {
     @if $family {
         font-family: $family, Helvetica, Arial, sans-serif;
     }

@@ -19,7 +19,6 @@ $col-spacing: 18px;
     }
 
 
-
     .filter-section {
         //flex-basis: 85%;
         display: flex;
@@ -30,6 +29,7 @@ $col-spacing: 18px;
             flex: 0 0 20%;
             width: 20%;
             padding: 0 $col-spacing;
+
             &:not(:last-child) {
                 border-right: 2px solid #d7d7d7;
             }
@@ -132,6 +132,7 @@ $col-spacing: 18px;
             &:first-child {
                 width: 40%;
             }
+
             &:last-child {
                 width: 60%;
             }
@@ -267,6 +268,7 @@ $col-spacing: 18px;
                 background-image: url('../images/icons/caret-down-white.svg');
                 cursor: pointer;
             }
+
             span.sort-arrow.asc {
                 transform: rotateX(0deg);
             }
@@ -328,11 +330,14 @@ $col-spacing: 18px;
     }
 
     .find-link {
-        color: #00cecd;
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: -0.7px;
+        @include font-style('SofiaPro-Bold', 14px, $body-color, false, 14px, -0.7px);
         cursor: pointer;
+
+        &:hover,
+        &:active {
+            color: $teal;
+            text-decoration: none;
+        }
     }
 
     .nhs-hospital,

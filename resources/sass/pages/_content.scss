@@ -188,10 +188,6 @@ h1 {
 h2 {
     @include font-style('SofiaPro-Bold', 28px, false, false, 35px, -2.25px);
     margin: 0 0 28px 0;
-
-    &.teal {
-        color: $teal;
-    }
 }
 
 .section-title {
