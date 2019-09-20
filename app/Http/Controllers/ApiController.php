@@ -254,7 +254,12 @@ class ApiController {
         $enquiry->save();
 
         //Send the email //TODO: Activate it once the tests are working
-//        Email::send($email, 'Thank you for Enquiring with Hospital Compare', 'Thank you for your Enquiry! You will be contacted shortly', 'datamanager@hospitalcompare.co.uk');
+        try {
+            Email::send($email, 'Thank you for Enquiring with Hospital Compare', 'Thank you for your Enquiry! You will be contacted shortly', 'datamanager@hospitalcompare.co.uk');
+        } catch(\Exception $e){
+            \Log::info('Something went wrong sending an email. Please check the enquiry with id: '.$enquiry->id);
+        }
+
         $this->returnedData['success']  = true;
         $this->returnedData['data']     = $enquiry;
 
@@ -262,17 +267,17 @@ class ApiController {
     }
 
     public function testEmail() {
-//        $email = 'niculesculuci@gmail.com';
-//        $data = Email::send($email, 'Testing the Backend', 'Thank you for your Enquiry! You will be contacted shortly', 'datamanager@hospitalcompare.co.uk');
+        $email = 'niculesculuci@gmail.com';
+        $data = Email::send($email, 'Testing the Backend', 'Thank you for your Enquiry! You will be contacted shortly', 'datamanager@hospitalcompare.co.uk');
 
-        $to_name = 'Lucian';
-        $to_email = 'niculesculuci@gmail.com';
-        $data = array('name'=>"Hospital Compare", "body" => "Thank you for your Enquiry! You will be contacted shortly");
-        \Mail::send('layout.email.test', $data, function($message) use ($to_name, $to_email) {
-            $message->to($to_email, $to_name)
-                ->subject('Laravel Test Mail');
-        $message->from('datamanager@hospitalcompare.co.uk','Test Mail');
-        });
+//        $to_name = 'Lucian';
+//        $to_email = 'niculesculuci@gmail.com';
+//        $data = array('name'=>"Hospital Compare", "body" => "Thank you for your Enquiry! You will be contacted shortly");
+//        \Mail::send('layout.email.test', $data, function($message) use ($to_name, $to_email) {
+//            $message->to($to_email, $to_name)
+//                ->subject('Laravel Test Mail');
+//        $message->from('datamanager@hospitalcompare.co.uk','Test Mail');
+//        });
 
         return json_encode($data);
     }
