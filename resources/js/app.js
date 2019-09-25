@@ -44,6 +44,7 @@ import './components/enquiry' ;                             // Private hospital 
 // PAGES
 import './pages/homepage';                                  // Jquery used for the Homepage
 import './pages/resultspage';                               // Jquery used for the Results Page
+import './pages/faqspage';                                  // Jquery used for the FAQs Page
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

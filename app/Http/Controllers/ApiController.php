@@ -9,6 +9,7 @@ use App\Helpers\Errors;
 use App\Helpers\Utils;
 use App\Helpers\Validate;
 use App\Models\Enquiry;
+use App\Models\Faq;
 use App\Models\Hospital;
 use App\Models\HospitalWaitingTime;
 use App\Models\Procedure;
@@ -266,19 +267,26 @@ class ApiController {
         return $this->returnedData;
     }
 
-    public function testEmail() {
-        $email = 'niculesculuci@gmail.com';
-        $data = Email::send($email, 'Testing the Backend', 'Thank you for your Enquiry! You will be contacted shortly', 'datamanager@hospitalcompare.co.uk');
+    public function searchFaq($search = '') {
+        $search = Validate::escapeString($search);
+        //Search FAQs by question and answer
+        $faqs = Faq::where('answer', 'like', '%'.$search.'%')->orWhere('question', 'like', '%'.$search.'%')->get();
 
-//        $to_name = 'Lucian';
-//        $to_email = 'niculesculuci@gmail.com';
-//        $data = array('name'=>"Hospital Compare", "body" => "Thank you for your Enquiry! You will be contacted shortly");
-//        \Mail::send('layout.email.test', $data, function($message) use ($to_name, $to_email) {
-//            $message->to($to_email, $to_name)
-//                ->subject('Laravel Test Mail');
-//        $message->from('datamanager@hospitalcompare.co.uk','Test Mail');
-//        });
+        $this->returnedData['success']      = true;
+        $this->returnedData['data']['faqs'] = $faqs;
 
-        return json_encode($data);
+        return $this->returnedData;
+    }
+
+    public function testGet() {
+
+        $this->returnedData['success'] = true;
+        return $this->returnedData;
+    }
+
+    public function testPost() {
+
+        $this->returnedData['success'] = true;
+        return $this->returnedData;
     }
 }

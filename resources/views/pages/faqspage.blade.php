@@ -17,6 +17,7 @@
             <h2 class="page-subtitle">Type your query into the search bar below and scroll down for all questions</h2>
         </div>
     </section>
+
     <section>
         <div class="container container-980">
             <div class="input-wrapper position-relative">
@@ -29,11 +30,12 @@
                 'className'   => 'faq-search-input w-100',
                 'placeholder' => 'Search',
                 'value'       => '',
-                'name'        => 'q'
+                'name'        => 'search'
                 ])
             </div>
         </div>
     </section>
+
     <section class="how-section__parent">
         @include('components.howsection', [
             'hideButton'        => true,
@@ -78,7 +80,6 @@
                 </div>{{-- hc-content --}}
             </div>
         </div>
-
     </section>
 
 @endsection
