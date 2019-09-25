@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Helpers\Utils;
 use App\Helpers\Validate;
+use App\Models\Faq;
 use App\Models\Hospital;
 use App\Models\Procedure;
 use Illuminate\Routing\Controller as BaseController;
@@ -158,7 +159,12 @@ class WebController extends BaseController
 
     // FAQS Page
     public function faqsPage() {
-        return view('pages.faqspage');
+        //Get all the FAQs from DB
+        $faqs  = Faq::with('category')->get();
+        $this->returnedData['success']      = true;
+        $this->returnedData['data']['faqs'] = $faqs;
+
+        return view('pages.faqspage', $this->returnedData);
     }
 
     // Downloads
