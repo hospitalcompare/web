@@ -57,11 +57,11 @@
                             'trigger'   => 'hover',
                             'html'      => 'true',
                             'content'   => '<p class="bold mb-0">
-                                                NHS Choices User Rating
+                                                NHS User Rating
                                             </p>
                                             <p>
                                                 Five star rating system based on feedback provided by users of the NHS, five stars being the best. Information is not available on some hospitals.
-                                            </p>'])>NHS Choices <br> User Rating&nbsp;<br></p>
+                                            </p>'])>NHS User<br> Rating&nbsp;<br></p>
                         <span title="Sort by this column"
                               class="sort-arrow sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }}"></span>
                     </li>
