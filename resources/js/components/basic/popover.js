@@ -4,9 +4,11 @@ $(document).ready(function () {
         template: `<div class="popover popover-regular">
                         <div class="popover-body">
                         </div>
-                        <div class="arrow arrow-large">
+                        <div class="arrow">
                         </div>
-                    </div>`
+                    </div>`,
+        container: 'body',
+        offset: '0, 5px'
     });
 
     // Larger, speech bubble popover

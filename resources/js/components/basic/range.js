@@ -1,5 +1,5 @@
 // Handle the dynamic changes for the radius range input
-// Possible alternative methodology: https://codepen.io/sgestrella/pen/rPWOKv
+// Possible alternative methodology: https://codepen.io/sgestrella/pen/rPWOKv https://css-tricks.com/custom-interactive-range-inputs/
 $(document).ready(function () {
     // Get the value of the width of the range handle
     var rangeHandleSize = getComputedStyle(document.documentElement)
