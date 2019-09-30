@@ -32,7 +32,7 @@
 
     .range-labels {
         top: 0;
-        padding: 0 $range-handle-size/2;
+        padding: 0 calc(var(--range-handle-size)/2);
         pointer-events: none;
     }
 }
@@ -62,8 +62,8 @@
     li {
         position: relative;
         display: inline-block;
-        width: calc(calc(100% - #{$range-handle-size}) / 6);
-        flex: calc(calc(100% - #{$range-handle-size}) / 6);
+        width: calc(calc(100% - #{var(--range-handle-size)}) / 6);
+        flex: calc(calc(100% - #{var(--range-handle-size)}) / 6);
         text-align: center;
         color: $teal;
         @include font-size(14);
@@ -83,11 +83,11 @@
         }
 
         &:first-child {
-            margin-left: calc(-1 * calc(100% - #{$range-handle-size}) / 12);
+            margin-left: calc(-1 * calc(100% - #{var(--range-handle-size)}) / 12);
         }
 
         &:last-child {
-            margin-right: calc(-1 * calc(100% - #{$range-handle-size}) / 12);
+            margin-right: calc(-1 * calc(100% - #{var(--range-handle-size)}) / 12);
         }
 
         &.active {
