@@ -121,6 +121,14 @@ class Hospital extends Model
     }
 
     /**
+     * policies() belongs to HospitalPolicy
+     * @return \Illuminate\Database\Eloquent\Relations\hasMany
+     */
+    public function policies() {
+        return $this->hasMany( '\App\Models\HospitalPolicy', 'hospital_id');
+    }
+
+    /**
      * Retrieves a list of hospitals based on the given inputs ( procedure_id, postcode, radius, waiting_time, user_rating, quality_rating, hospital_type )
      * Also applies the filters and sorting (if provided)
      *
@@ -131,12 +139,13 @@ class Hospital extends Model
      * @param string $userRating
      * @param string $qualityRating
      * @param string $hospitalType
+     * @param string $policyId
      * @param string $sortBy
      *
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
-    public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 600, $waitingTime = '', $userRating = '', $qualityRating = '', $hospitalType = '', $sortBy = '') {
-        $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address']);
+    public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 600, $waitingTime = '', $userRating = '', $qualityRating = '', $hospitalType = '', $policyId = '', $sortBy = '') {
+        $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'policies']);
         //$userRatings    = HospitalRating::selectRaw(\DB::raw("MIN(id) as id, avg_user_rating AS name"))->groupBy(['avg_user_rating'])->whereNotNull('avg_user_rating')->get()->toArray();
 
         //Check if we have the `postcode` and `procedure_id`
@@ -203,6 +212,13 @@ class Hospital extends Model
         if(!empty($userRating)) {
             $hospitals = $hospitals->whereHas('rating', function($q) use($userRating) {
                 $q->where('avg_user_rating', '>=', $userRating);
+            });
+        }
+
+        //Filter by the Insurance Policy
+        if(!empty($policyId)) {
+            $hospitals = $hospitals->whereHas('policies', function($q) use($policyId) {
+                $q->where('policy_id', $policyId);
             });
         }
 
