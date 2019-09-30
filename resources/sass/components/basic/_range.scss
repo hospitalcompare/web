@@ -71,10 +71,11 @@
         cursor: pointer;
 
         &::before {
-            position: absolute;
+            //position: absolute;
+            //right: 0;
+            //left: 0;
+            @include h-c;
             top: 25px;
-            right: 0;
-            left: 0;
             content: "";
             margin: 0 auto;
             width: $range-track-height;

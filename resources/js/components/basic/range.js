@@ -1,4 +1,5 @@
 // Handle the dynamic changes for the radius range input
+// Possible alternative methodology: https://codepen.io/sgestrella/pen/rPWOKv
 $(document).ready(function () {
     // Get the value of the width of the range handle
     var rangeHandleSize = getComputedStyle(document.documentElement)
@@ -44,12 +45,12 @@ $(document).ready(function () {
         // now we'll create a linear gradient that separates at the above point
         // Our background color will change here
         const bg = `linear-gradient(
-                    90deg, white ${rangeSpacing - 0.1}px, 
+                    90deg, white ${rangeSpacing - 1}px, 
                     ${settings.fill} ${rangeSpacing}px, 
                     ${settings.fill} ${percentage}%, 
                     ${settings.background} ${percentage+0.1}%, 
-                    ${settings.background} calc(100% - ${rangeSpacing + 0.1}px), 
-                    white calc(100% - ${rangeSpacing}px))`;
+                    ${settings.background} calc(100% - ${rangeSpacing}px), 
+                    white calc(100% - ${rangeSpacing - 1 }px))`;
         slider.style.background = bg;
         console.log(bg);
     }
