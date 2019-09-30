@@ -63,7 +63,7 @@ class AddInsurancePolicies extends Migration
 
         //Populate the data with Policies
         //Aviva
-        $avivaPolicies = ['Personal Care', 'Select Care', 'Children', 'Express Care', 'Exclusive', 'Company Connect', 'Company Healthcover', 'Fair & Square', 'Speedy Diagnostics'];
+        $avivaPolicies = ['Personal Care', 'Select Care', 'Children', 'Express Care', 'Exclusive', 'Company Connect', 'Company Healthcover', 'Fair & Square', 'Speedy Diagnostics', 'Capital Option', 'Trust Hospital'];
         //Loop and add the Policy
         foreach($avivaPolicies as $avivaPolicy) {
             $avPolicy = new App\Models\Policy();
