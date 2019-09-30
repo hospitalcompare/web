@@ -58,7 +58,8 @@
     .filter-section {
         .dropdown-toggle,
         .results-page-select {
-            max-width: 158px;
+            //max-width: 158px;
+
             option {
                 background-color: $white !important;
             }
