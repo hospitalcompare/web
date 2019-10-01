@@ -26,6 +26,27 @@ $(document).ready(function () {
         $('body').removeClass('select-open');
     });
 
+
 });
 
+// Scroll up to show alert bar
+window.scrollToAlert = function () {
+    $('html, body').animate({
+        scrollTop: ($('#hc_alert').offset().top)
+    }, 400);
+};
+
+// Show the bootstrap alert bar
+window.showAlert = function(message, success) {
+    var $alertClass = (success) ? 'alert-success' : 'alert-danger';
+    $('.alert')
+        .find('.alert-text')
+        .html(message)
+        .parents('.alert')
+        .removeClass('alert-success alert-danger')
+        .addClass($alertClass + ' show')
+        .show();
+    // Scroll to alert bar
+    scrollToAlert();
+}
 

@@ -49,12 +49,6 @@ $(document).ready(function () {
         "Please enter only alphabetical characters"
     );
 
-    function scrollToAlert() {
-        $('html, body').animate({
-            scrollTop: ($('#hc_alert').offset().top)
-        }, 400);
-    }
-
     // Get form
     var $form = $('#enquiry_form');
 
@@ -154,27 +148,14 @@ $(document).ready(function () {
                     success: function (data) {
                         // alert('Thanks, your enquiry has been submitted');
                         $('#hc_modal_enquire_private').modal('hide');
-                        $('.alert')
-                            .find('.alert-text')
-                            .html('Thank you ' + data.data.first_name + ', your enquiry has been successfully sent!')
-                            .parents('.alert')
-                            .removeClass('alert-danger')
-                            .addClass('alert-success show')
-                            .show();
-                        // Scroll to alert bar
+                        showAlert('Thank you ' + data.data.first_name + ', your enquiry has been successfully sent!', true);
                         scrollToAlert();
                     },
                     error: function (e) {
                         var errorMsg = JSON.parse(e.responseText).errors.error;
                         console.log(JSON.parse(e.responseText).errors);
                         console.log("ERROR : ", errorMsg, "status text: ", e.statusText);
-                        $('.alert')
-                            .find('.alert-text')
-                            .html(errorMsg)
-                            .parents('.alert')
-                            .removeClass('alert-success')
-                            .addClass('alert-danger show')
-                            .show();
+                        showAlert(errorMsg, false);
                         // Scroll to alert bar
                         scrollToAlert();
                     }

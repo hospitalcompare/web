@@ -18,11 +18,11 @@ import 'jquery-validation';                                 // Frontend form val
 import 'jquery-validation/dist/additional-methods.min';     // Plugin for jquery validate
 
 // UTILITIES
+import './scripts/global';                                  // Global Script used for multiple pages
 import './scripts/scroll';                                  // Smooth scroll
 import './scripts/postcode' ;                               // Postcode input
 window.Cookies = require('./scripts/cookies');              // Cookie/compare functionality
 import './scripts/gmapInit';                                // Gmaps modal
-import './scripts/global';                                  // Global Script used for multiple pages
 import './scripts/sticky';                                  // Make the search header sticky on scroll
 // window.Vue = require('vue');                             // Vue.js
 
