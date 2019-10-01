@@ -155,22 +155,18 @@
                 </div>
                 <div class="filter-section-child col-2">
                     @include('components.basic.select', [
-                        'selectClassName' => 'w-100',
-                        'showLabel' => true,
-                        'options' => [
-                            ['id'=>'0', 'name'=>'None'],
-                            ['id'=>'axa', 'name'=>'Axa'],
-                            ['id'=>'aviva', 'name'=>'Aviva'],
-                            ['id'=>'bupa', 'name'=>'Bupa'],
-                            ['id'=>'wpa', 'name'=>'WPA']
-                        ],
-                        'group' => true,
-                        'groupName' => 'Group Name',
-                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                        'selectClass' => 'results-page-select highlight',
-                        'placeholder'=>'Insurance',
-                        'name'=>'insurance',
-                        'resultsLabel' => 'resultsLabel'])
+                        'selectClassName'       => 'w-100',
+                        'showLabel'             => true,
+                        'options'               => $data['filters']['policies'],
+                        'suboptionClass'        => 'subprocedures',
+                        'group'                 => true,
+                        'groupName'             => 'policies',
+                        'chevronFAClassName'    => 'fa-chevron-down black-chevron',
+                        'selectClass'           => 'results-page-select highlight',
+                        'placeholder'           => 'Insurance',
+                        'name'                  => 'policy_id',
+                        'resultsLabel'          => 'resultsLabel'
+                    ])
                     <a tabindex="0" data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [

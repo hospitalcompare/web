@@ -73,6 +73,7 @@ class WebController extends BaseController
 
         $sortBys    = Utils::sortBys;
         $procedures = Utils::getProceduresForDropdown();
+        $policies   = Utils::getInsurancePoliciesForDropdown();
 
         $this->returnedData['success']                              = true;
         $this->returnedData['data']['hospitals']                    = $hospitals;
@@ -81,8 +82,9 @@ class WebController extends BaseController
         $this->returnedData['data']['filters']['userRatings']       = Utils::userRatings;
         $this->returnedData['data']['filters']['qualityRatings']    = Utils::qualityRatings;
         $this->returnedData['data']['filters']['hospitalTypes']     = Utils::hospitalTypes;
+        $this->returnedData['data']['filters']['policies']          = $policies;
         $this->returnedData['data']['sortBy']                       = $sortBys;
-        $this->returnedData['errors']                               = $errors;
+        $this->returnedData['hc_errors']                            = $errors;
 
         //For Live environment just show the work in progress page
         if(env('APP_ENV') == 'live')

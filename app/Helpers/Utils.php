@@ -2,6 +2,7 @@
 
 namespace App\Helpers;
 
+use App\Models\Insurance;
 use App\Models\Procedure;
 use App\Models\Specialty;
 
@@ -195,6 +196,24 @@ class Utils
         array_unshift($procedures, ['id' => 0, 'name' => 'Choose your treatment (if known)']);
 
         return $procedures;
+    }
+
+    /**
+     * Returns the list of Procedures with the first option as a placeholder
+     *
+     * @return array
+     */
+    public static function getInsurancePoliciesForDropdown() {
+        //Get all Specialties with Procedures ordered by name
+        $policies = Insurance::with(['policies' => function($query) {
+//            $query->orderBy('name', 'ASC');
+        }])->orderBy('name', 'ASC')->get()->toArray();
+
+//        $procedures = Procedure::all()->sortBy('name')->toArray();
+        //Add the option to view all procedures ( id = 0 )
+        array_unshift($policies, ['id' => 0, 'name' => 'View All']);
+
+        return $policies;
     }
 
     public static function getSpecialties() {
