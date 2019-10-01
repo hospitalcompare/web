@@ -68,7 +68,9 @@ class WebController extends BaseController
             $radius = 50;
 
         $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy);
-//        dd($hospitals->toArray()['data']);
+        $errors     = $hospitals['errors'];
+        $hospitals  = $hospitals['data'];
+
         $sortBys    = Utils::sortBys;
         $procedures = Utils::getProceduresForDropdown();
 
@@ -80,6 +82,7 @@ class WebController extends BaseController
         $this->returnedData['data']['filters']['qualityRatings']    = Utils::qualityRatings;
         $this->returnedData['data']['filters']['hospitalTypes']     = Utils::hospitalTypes;
         $this->returnedData['data']['sortBy']                       = $sortBys;
+        $this->returnedData['errors']                               = $errors;
 
         //For Live environment just show the work in progress page
         if(env('APP_ENV') == 'live')
@@ -111,6 +114,8 @@ class WebController extends BaseController
             $procedureId = 0;
 
         $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy);
+        $errors     = $hospitals['errors'];
+        $hospitals  = $hospitals['data'];
 //        dd($hospitals->toArray()['data']);
         $sortBys    = Utils::sortBys;
         $procedures = Utils::getProceduresForDropdown();
@@ -123,6 +128,7 @@ class WebController extends BaseController
         $this->returnedData['data']['filters']['qualityRatings']    = Utils::qualityRatings;
         $this->returnedData['data']['filters']['hospitalTypes']     = Utils::hospitalTypes;
         $this->returnedData['data']['sortBy']                       = $sortBys;
+        $this->returnedData['errors']                               = $errors;
 
 
         return view('pages.testpage', $this->returnedData);
