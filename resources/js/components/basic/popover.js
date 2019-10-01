@@ -7,8 +7,8 @@ $(document).ready(function () {
                         <div class="arrow">
                         </div>
                     </div>`,
-        container: 'body',
-        offset: '0, 5px'
+        // container: 'body',
+        // offset: '0, 5px'
     });
 
     // Larger, speech bubble popover
