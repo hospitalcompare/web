@@ -49,6 +49,12 @@ $(document).ready(function () {
         "Please enter only alphabetical characters"
     );
 
+    function scrollToAlert() {
+        $('html, body').animate({
+            scrollTop: ($('#hc_alert').offset().top)
+        }, 400);
+    }
+
     // Get form
     var $form = $('#enquiry_form');
 
@@ -156,9 +162,7 @@ $(document).ready(function () {
                             .addClass('alert-success show')
                             .show();
                         // Scroll to alert bar
-                        $('html, body').animate({
-                            scrollTop: ($('#hc_alert').offset().top)
-                        }, 800);
+                        scrollToAlert();
                     },
                     error: function (e) {
                         var errorMsg = JSON.parse(e.responseText).errors.error;
@@ -172,9 +176,7 @@ $(document).ready(function () {
                             .addClass('alert-danger show')
                             .show();
                         // Scroll to alert bar
-                        $('html, body').animate({
-                            scrollTop: ($('#hc_alert').offset().top)
-                        }, 400);
+                        scrollToAlert();
                     }
                 });
             }

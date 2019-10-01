@@ -25,7 +25,6 @@
         <script type="text/javascript" src="{{ asset('js/stickybits.js') }}"></script>
 
     </head>
-
     <body class="@yield('body-class')">
         <div class="header-wrapper">
             @include('layout.header')

@@ -1,13 +1,15 @@
-{{--        Eror messages for form --}}
-<div class="container">
-    <div id="hc_alert" class="alert collapse alert-dismissible fade {{ !empty($errors) ? 'alert-danger show' : '' }}" role="alert">
+{{--        Error messages for forms --}}
 
+<div id="hc_alert"
+     class="alert collapse alert-dismissible fade mb-0 {{ !empty($hc_errors) ? 'alert-danger show' : '' }}"
+     role="alert">
+    <div class="container">
         <button type="button" class="close" data-hide="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
         <div class="alert-text">
-            @if(!empty($errors))
-                @foreach($errors[0] as $error)
+            @if(!empty($hc_errors))
+                @foreach($hc_errors[0] as $error)
                     {{ $error }}
                 @endforeach
             @endif
