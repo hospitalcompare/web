@@ -148,16 +148,13 @@ $(document).ready(function () {
                     success: function (data) {
                         // alert('Thanks, your enquiry has been submitted');
                         $('#hc_modal_enquire_private').modal('hide');
-                        showAlert('Thank you ' + data.data.first_name + ', your enquiry has been successfully sent!', true);
-                        scrollToAlert();
+                        showAlert('Thank you ' + data.data.first_name + ', your enquiry has been successfully sent!', true, true);
                     },
                     error: function (e) {
                         var errorMsg = JSON.parse(e.responseText).errors.error;
                         console.log(JSON.parse(e.responseText).errors);
                         console.log("ERROR : ", errorMsg, "status text: ", e.statusText);
-                        showAlert(errorMsg, false);
-                        // Scroll to alert bar
-                        scrollToAlert();
+                        showAlert(errorMsg, false, true);
                     }
                 });
             }

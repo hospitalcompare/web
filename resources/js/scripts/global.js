@@ -37,9 +37,9 @@ window.scrollToAlert = function () {
 };
 
 // Show the bootstrap alert bar
-window.showAlert = function(message, success = true) {
+window.showAlert = function(message, success = true, scroll = false) {
     var $alertClass = (success) ? 'alert-success' : 'alert-danger';
-    $('.alert')
+    $('#hc_alert')
         .find('.alert-text')
         .html(message)
         .parents('.alert')
@@ -47,7 +47,7 @@ window.showAlert = function(message, success = true) {
         .addClass($alertClass + ' show')
         .show();
     // Scroll to alert bar
-    scrollToAlert();
+    if(scroll) scrollToAlert();
 };
 
 /**

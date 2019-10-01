@@ -4,7 +4,7 @@ $(document).ready(function () {
     var $postcode_input = $('.home-postcode-parent #input_postcode');
 
     var timer;
-    var interval = 200;
+    var interval = 2000;
 
     // Do the ajax request with a delay
     $postcode_input.on('keyup', function() {
@@ -31,6 +31,7 @@ $(document).ready(function () {
                 // var json_obj = $.parseJSON(data);//parse JSON
                 var ajaxBox = $(".home-postcode-parent .postcode-autocomplete-container .ajax-box");
                 ajaxBox.empty(); // remove old options
+                $('#hc_alert').hide(); // Hide the alert bar
                 //Check if we have at least one result in our data
                 if (!$.isEmptyObject(data.data.result)) {
                     $.each(data.data.result, function (key, obj) { //$.parseJSON() method is needed unless chrome is throwing error.
@@ -38,13 +39,13 @@ $(document).ready(function () {
                     });
                     $('.postcode-autocomplete-container').show();
                 } else {
-                    showAlert('Invalid Postcode! Please try again.');
+                    showAlert('Invalid Postcode! Please try again.', false);
                     $postcode_input.val("");
                     $('.postcode-autocomplete-container').hide();
                 }
             },
             error: function (data) {
-                showAlert('Something went wrong! Please try again.')
+                showAlert('Something went wrong! Please try again.', false)
             },
         })
     }
