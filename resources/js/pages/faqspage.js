@@ -28,7 +28,7 @@ $(document).ready(function() {
                 }
             },
             error: function (data) {
-                alert('Something went wrong! Please try again.')
+                showAlert('Something went wrong! Please try again.', true);
             },
         });
     });

@@ -45,7 +45,7 @@ window.showAlert = function(message, success = true, scroll = false) {
         .parents('.alert')
         .removeClass('alert-success alert-danger')
         .addClass($alertClass + ' show')
-        .show();
+        .slideDown();
     // Scroll to alert bar
     if(scroll) scrollToAlert();
 };

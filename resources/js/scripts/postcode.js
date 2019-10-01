@@ -31,7 +31,7 @@ $(document).ready(function () {
                 // var json_obj = $.parseJSON(data);//parse JSON
                 var ajaxBox = $(".home-postcode-parent .postcode-autocomplete-container .ajax-box");
                 ajaxBox.empty(); // remove old options
-                $('#hc_alert').hide(); // Hide the alert bar
+                $('#hc_alert').slideUp(); // Hide the alert bar
                 //Check if we have at least one result in our data
                 if (!$.isEmptyObject(data.data.result)) {
                     $.each(data.data.result, function (key, obj) { //$.parseJSON() method is needed unless chrome is throwing error.
