@@ -22,7 +22,7 @@
                 'lastName'      => 'Testing',
                 'email'         => 'test@test.com',
                 'phone'         => '01244316469',
-                'postcode'      => 'ch423re',
+                'postcode'      => 'hjhkjhk',
                 'gdpr'          => true])
         </div>
     </section>

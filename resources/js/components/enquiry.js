@@ -88,8 +88,8 @@ $(document).ready(function () {
                     phoneUK: true
                 },
                 postcode: {
-                    required: true,
-                    postcodeUK: true
+                    // required: true,
+                    // postcodeUK: true
                 },
                 procedure_id: "required",
                 gdpr: "required"
@@ -108,7 +108,7 @@ $(document).ready(function () {
                 gdpr: "Please confirm you consent to our terms and conditions"
             },
             errorPlacement: function (error, element) {
-                console.dir(error, element);
+                //console.dir(error, element);
                 var customError = $([
                     '<span class="invalid-feedback d-block">',
                     '  <span class="mb-0 d-block">',
@@ -162,7 +162,8 @@ $(document).ready(function () {
                     },
                     error: function (e) {
                         var errorMsg = JSON.parse(e.responseText).errors.error;
-                        // console.log("ERROR : ", errorMsg, "status text: ", e.statusText);
+                        console.log(JSON.parse(e.responseText).errors);
+                        console.log("ERROR : ", errorMsg, "status text: ", e.statusText);
                         $('.alert')
                             .find('.alert-text')
                             .html(errorMsg)
