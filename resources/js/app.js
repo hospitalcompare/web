@@ -24,7 +24,6 @@ window.Cookies = require('./scripts/cookies');              // Cookie/compare fu
 import './scripts/gmapInit';                                // Gmaps modal
 import './scripts/global';                                  // Global Script used for multiple pages
 import './scripts/sticky';                                  // Make the search header sticky on scroll
-import './scripts/validate';                                // Init form validation
 // window.Vue = require('vue');                             // Vue.js
 
 // COMPONENTS
