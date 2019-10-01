@@ -142,11 +142,12 @@ class Hospital extends Model
      * @param string $policyId
      * @param string $sortBy
      *
-     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     * @return array
      */
     public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 600, $waitingTime = '', $userRating = '', $qualityRating = '', $hospitalType = '', $policyId = '', $sortBy = '') {
         $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'policies']);
         //$userRatings    = HospitalRating::selectRaw(\DB::raw("MIN(id) as id, avg_user_rating AS name"))->groupBy(['avg_user_rating'])->whereNotNull('avg_user_rating')->get()->toArray();
+        $errors = [];
 
         //Check if we have the `postcode` and `procedure_id`
         if(!empty($postcode)) {
@@ -170,7 +171,7 @@ class Hospital extends Model
 
             //If we don't have data for the Latitude or Longitude, throw an Error. We should always have the right postcode (we need Fronend Validations to make sure that this is the case)
             if(empty($latitude) || empty($longitude))
-                Errors::generateError(['postcode' => 'Please supply a valid Postcode']);
+                $errors[] = ['postcode' => 'Please supply a valid Postcode'];
         }
 
         if(!empty($latitude) && !empty($longitude)) {
@@ -323,6 +324,9 @@ class Hospital extends Model
 
         $hospitals = $hospitals->paginate(10);
 
-        return $hospitals;
+        return [
+            'data'      => $hospitals,
+            'errors'    => $errors
+        ];
     }
 }
