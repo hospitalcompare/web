@@ -49,11 +49,16 @@ class WebController extends BaseController
         $userRating     = !empty($request['user_rating'])       ? Validate::escapeString($request['user_rating'])       : '';
         $qualityRating  = !empty($request['quality_rating'])    ? Validate::escapeString($request['quality_rating'])    : '';
         $hospitalType   = !empty($request['hospital_type'])     ? Validate::escapeString($request['hospital_type'])     : '';
+        $policyId       = !empty($request['policy_id'])         ? Validate::escapeString($request['policy_id'])         : '';
         $sortBy         = !empty($request['sort_by'])           ? Validate::escapeString($request['sort_by'])           : '';
 
         //Set procedure_id to 0 if it's -1
         if($procedureId == '-1')
             $procedureId = 0;
+
+        //Set policy_id to 0 if it's -1
+        if($policyId == '-1')
+            $policyId = 0;
 
         //Format the radius with the correct distance
         $radiusSelection = Utils::sliderRange;
@@ -62,7 +67,7 @@ class WebController extends BaseController
         else
             $radius = 50;
 
-        $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $sortBy);
+        $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy);
 //        dd($hospitals->toArray()['data']);
         $sortBys    = Utils::sortBys;
         $procedures = Utils::getProceduresForDropdown();
@@ -98,13 +103,14 @@ class WebController extends BaseController
         $userRating     = !empty($request['user_rating'])       ? Validate::escapeString($request['user_rating'])       : '';
         $qualityRating  = !empty($request['quality_rating'])    ? Validate::escapeString($request['quality_rating'])    : '';
         $hospitalType   = !empty($request['hospital_type'])     ? Validate::escapeString($request['hospital_type'])     : '';
+        $policyId       = !empty($request['policy_id'])         ? Validate::escapeString($request['policy_id'])         : '';
         $sortBy         = !empty($request['sort_by'])           ? Validate::escapeString($request['sort_by'])           : '';
 
         //Set procedure_id to 0 if it's -1
         if($procedureId == '-1')
             $procedureId = 0;
 
-        $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $sortBy);
+        $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy);
 //        dd($hospitals->toArray()['data']);
         $sortBys    = Utils::sortBys;
         $procedures = Utils::getProceduresForDropdown();
