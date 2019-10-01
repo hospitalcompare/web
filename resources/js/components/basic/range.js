@@ -1,7 +1,13 @@
-
+// Handle the dynamic changes for the radius range input
+// Possible alternative methodology: https://codepen.io/sgestrella/pen/rPWOKv https://css-tricks.com/custom-interactive-range-inputs/
 $(document).ready(function () {
-    // I've added annotations to make this easier to follow along at home. Good luck learning and check out my other pens if you found this useful
+    // Get the value of the width of the range handle
+    var rangeHandleSize = getComputedStyle(document.documentElement)
+        .getPropertyValue('--range-handle-size');
 
+    // Divide the range handle size by two to get the spacing value
+    var rangeSpacing = (parseInt(rangeHandleSize.replace(/px/,"")) / 2);
+    // var rangeSpacing = parseInt(rangeHandleSize) / 2;
 
 // First let's set the colors of our sliders
     const settings = {
@@ -38,15 +44,22 @@ $(document).ready(function () {
         const percentage = 100*(slider.value-slider.min)/(slider.max-slider.min);
         // now we'll create a linear gradient that separates at the above point
         // Our background color will change here
-        const bg = `linear-gradient(90deg, white 9.9px, ${settings.fill} 10px, ${settings.fill} ${percentage}%, ${settings.background} ${percentage+0.1}%, ${settings.background} calc(100% - 10px), white calc(100% - 9.9px))`;
+        const bg = `linear-gradient(
+                    90deg, white ${rangeSpacing - 1}px, 
+                    ${settings.fill} ${rangeSpacing}px, 
+                    ${settings.fill} ${percentage}%, 
+                    ${settings.background} ${percentage+0.1}%, 
+                    ${settings.background} calc(100% - ${rangeSpacing}px), 
+                    white calc(100% - ${rangeSpacing - 1 }px))`;
         slider.style.background = bg;
+        console.log(bg);
     }
 
     // This function applies the 'active' colour to ticks up to the new range value
     function fillTicks(input) {
         // Select the ticks
         let ticks = input.parentElement.querySelectorAll('.range-label');
-        // Convery from Nodelist to array
+        // Convert from Nodelist to array
         ticks = Array.from(ticks);
         // ticks.forEach(tick => {
         //     console.log(tick.classList);
@@ -56,17 +69,9 @@ $(document).ready(function () {
         ticks.forEach(tick => tick.classList.remove('active', 'fill'));
         // Get the tick corresponding to new value
         ticks[ input.value - 1 ].classList.add('active');
-        // For the ticks, from array position 0 to the new value (-1) apply the fill class to colout them green
+        // For the ticks, from array position 0 to the new value (-1) apply the fill class to colour them green
         for(let i = 0; i < input.value; i++ ) {
             ticks[i].classList.add('fill');
         }
-    };
-
-    function getSiblings(elem) {
-        return elem.nextElementSibling;
-        // var descendants = elem.parentNode.children;
-        // return Array.prototype.filter.call(descendants, function (sibling) {
-        //     return sibling !== elem;
-        // });
-    };
-})
+    }
+});

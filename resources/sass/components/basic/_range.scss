@@ -32,7 +32,7 @@
 
     .range-labels {
         top: 0;
-        padding: 0 $range-handle-size/2;
+        padding: 0 calc(var(--range-handle-size)/2);
         pointer-events: none;
     }
 }
@@ -62,8 +62,8 @@
     li {
         position: relative;
         display: inline-block;
-        width: calc(calc(100% - #{$range-handle-size}) / 6);
-        flex: calc(calc(100% - #{$range-handle-size}) / 6);
+        width: calc(calc(100% - #{var(--range-handle-size)}) / 6);
+        flex: calc(calc(100% - #{var(--range-handle-size)}) / 6);
         text-align: center;
         color: $teal;
         @include font-size(14);
@@ -71,10 +71,11 @@
         cursor: pointer;
 
         &::before {
-            position: absolute;
+            //position: absolute;
+            //right: 0;
+            //left: 0;
+            @include h-c;
             top: 25px;
-            right: 0;
-            left: 0;
             content: "";
             margin: 0 auto;
             width: $range-track-height;
@@ -83,11 +84,11 @@
         }
 
         &:first-child {
-            margin-left: calc(-1 * calc(100% - #{$range-handle-size}) / 12);
+            margin-left: calc(-1 * calc(100% - #{var(--range-handle-size)}) / 12);
         }
 
         &:last-child {
-            margin-right: calc(-1 * calc(100% - #{$range-handle-size}) / 12);
+            margin-right: calc(-1 * calc(100% - #{var(--range-handle-size)}) / 12);
         }
 
         &.active {
@@ -113,7 +114,7 @@
 
 .range-wrapper {
     // Move right to compensate for 'overhang'
-    transform: translateX(10px);
+    //transform: translateX(10px);
 
     //.track-mask {
     //    position: absolute;

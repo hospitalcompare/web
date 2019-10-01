@@ -39,7 +39,7 @@
                         'trigger' => 'hover',
                         'html' => 'true',
                         'content' => 'Currently no data available for this hospital'])>
-                    {!! !empty($qualityRating) ? $qualityRating : "<a class='btn-link'>No data</a>" !!}
+                    {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
                 </p>
                 <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
 
@@ -51,7 +51,7 @@
                         'trigger' => 'hover',
                         'html' => 'true',
                         'content' => 'Currently no data available for this hospital'])>
-                    {!! !empty($waitTime) ? $waitTime : "<a class='btn-link'>No data</a>" !!}
+                    {!! !empty($waitTime) ? $waitTime : "No data" !!}
                 </p>
                 @if($NHSClass == 'private-hospital')
                     <span>
@@ -107,7 +107,7 @@
                     'trigger' => 'hover',
                     'html'    => 'true',
                     'content' => !empty($opCancelled) ? 'National average<br> is 3.35%' : 'Currently no data available<br>for this hopsital'])>
-                    {!! !empty($opCancelled) ? $opCancelled : "<a class='btn-link'>No data</a>" !!}
+                    {!! !empty($opCancelled) ? $opCancelled : "No data" !!}
                 </p>
                 <span class="d-none" id="item_op_cancelled_{{$id}}">{!! $opCancelled !!}</span>
             </div>
@@ -119,7 +119,7 @@
                         'trigger' => 'hover',
                         'html' => 'true',
                         'content' => !empty($FFRating) ? 'National average<br>is 98.85%' : 'Currently no data available<br>for this hospital'])>
-                    {!! !empty($FFRating) ? $FFRating : "<a class='btn-link'>No data</a>" !!}
+                    {!! !empty($FFRating) ? $FFRating : "No data" !!}
                 </p>
                 <span class="d-none" id="item_ff_rating_{{$id}}">{!! $FFRating !!}</span>
             </div>

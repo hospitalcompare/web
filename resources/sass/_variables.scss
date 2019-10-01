@@ -1,3 +1,8 @@
+:root {
+    // Width/height of the range thumb
+    --range-handle-size: 22px;
+}
+
 // Transition
 $transition: 0.3s all ease;
 
@@ -141,3 +146,5 @@ $range-track-height: 4px !default;
 
 $range-label-color: $shade-10 !default;
 $range-label-width: 60px !default;
+
+
