@@ -4,7 +4,7 @@ $(document).ready(function () {
     var $postcode_input = $('.home-postcode-parent #input_postcode');
 
     var timer;
-    var interval = 2000;
+    var interval = 1000;
 
     // Do the ajax request with a delay
     $postcode_input.on('keyup', function() {
@@ -17,7 +17,6 @@ $(document).ready(function () {
 
     function ajaxCall(input) {
         var postcode = input.val();
-
         $.ajax({
             url: 'api/getLocations/' + postcode,
             type: 'GET',
