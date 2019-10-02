@@ -1,10 +1,11 @@
 
+
 .special-offers-slide {
     position: absolute;
-    max-width: 870px;
+    //max-width: 870px;
     top: 0;
     left: 100%;
-    width: 50vw;
+    min-width: 50vw;
     color: $white;
     background-image: linear-gradient(252deg, #d57ca6 0%, #ed0373 100%);
     padding: 22px;
@@ -41,6 +42,8 @@
 
     ul {
         width: 80%;
+        border-left: 1px solid #fff;
+        padding-left: 25px;
 
         li {
             list-style: none;

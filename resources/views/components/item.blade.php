@@ -1,14 +1,14 @@
 <section class="sort-categories">
     <div class="sort-categories-inner container">
         <div class="sort-categories-section-1">
-            <div class="sort-categories-item">
+            <div class="sort-categories-item hospital-image">
                 <img alt="Image of {{ $title }}" src="{{ $itemImg }}">
                 <div class="{{$NHSClass}}"><p>{{$fundedText}}</p></div>
                 @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', ['class' => 'default'])
                 {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
                 <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
             </div>
-            <div class="sort-categories-item">
+            <div class="sort-categories-item hospital-details w-100">
                 <p class="sort-item-title SofiaPro-Medium" id="item_name_{{$id}}">
                     {{$title}}
                 </p>

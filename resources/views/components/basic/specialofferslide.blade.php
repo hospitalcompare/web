@@ -10,7 +10,7 @@
                     programme for £8,999 (reduced from £10,500).</p>
             </div>
             <div class="col-3">
-                <ul>
+                <ul class="bullets">
                     <li>2 weeks</li>
                     <li>Outstanding</li>
                     <li>5 star user rating</li>
