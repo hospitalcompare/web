@@ -22,7 +22,7 @@
                         'step'          => 1])
                 </div>
                 <div class="postcode-proximity-child col-2">
-                    @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-teal btn-s d-block btn-submit-results', 'button' => 'Update Results'])
+                    @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-blue btn-s d-block btn-submit-results', 'button' => 'Update Results'])
                 </div>
             </div>
             <div class="select-proximity filter-section row">
