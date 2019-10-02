@@ -174,10 +174,12 @@
                     'modalTarget'       => '#hc_modal_enquire_nhs',
                     'id'                => 'enquire_'.$id])
                 @endif
+                <span>
                 @include('components.basic.button', [
                     'classTitle' => 'btn btn-green-outline compare btn-block mt-0',
                     'button' => '', 'icon' => '',
                     'id' => $id])
+                </span>
             </div>
             @if(!empty($specialOffers))
                 <div class="btn-area btn-area-lower">
