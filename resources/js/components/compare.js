@@ -9,7 +9,7 @@ window.disableButtons = function (modifier = 0) {
     var $notSelected = $('.compare').not($('.selected'));
 
     if (compareCount + modifier === 5) {
-        console.log(compareCount, 'Disabling buttons');
+        // console.log(compareCount, 'Disabling buttons');
         $notSelected
             .addClass('disabled')
             .parent()
@@ -208,7 +208,7 @@ $(document).ready(function () {
                 compareCount = parseInt(compareCount) + 1;
                 // Disable buttons if we have reached the max number of items
                 if (compareCount === 5) {
-                    console.log('Max reached');
+                    // console.log('Max reached');
                     disableButtons(1);
                 }
                 // var countSpan = $('#compare_number');
