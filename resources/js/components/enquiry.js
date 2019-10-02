@@ -88,8 +88,8 @@ $(document).ready(function () {
                     phoneUK: true
                 },
                 postcode: {
-                    required: true,
-                    postcodeUK: true
+                    // required: true,
+                    // postcodeUK: true
                 },
                 procedure_id: "required",
                 gdpr: "required"
@@ -108,7 +108,7 @@ $(document).ready(function () {
                 gdpr: "Please confirm you consent to our terms and conditions"
             },
             errorPlacement: function (error, element) {
-                console.dir(error, element);
+                //console.dir(error, element);
                 var customError = $([
                     '<span class="invalid-feedback d-block">',
                     '  <span class="mb-0 d-block">',
@@ -148,32 +148,13 @@ $(document).ready(function () {
                     success: function (data) {
                         // alert('Thanks, your enquiry has been submitted');
                         $('#hc_modal_enquire_private').modal('hide');
-                        $('.alert')
-                            .find('.alert-text')
-                            .html('Thank you ' + data.data.first_name + ', your enquiry has been successfully sent!')
-                            .parents('.alert')
-                            .removeClass('alert-danger')
-                            .addClass('alert-success show')
-                            .show();
-                        // Scroll to alert bar
-                        $('html, body').animate({
-                            scrollTop: ($('#hc_alert').offset().top)
-                        }, 800);
+                        showAlert('Thank you ' + data.data.first_name + ', your enquiry has been successfully sent!', true, true);
                     },
                     error: function (e) {
                         var errorMsg = JSON.parse(e.responseText).errors.error;
-                        // console.log("ERROR : ", errorMsg, "status text: ", e.statusText);
-                        $('.alert')
-                            .find('.alert-text')
-                            .html(errorMsg)
-                            .parents('.alert')
-                            .removeClass('alert-success')
-                            .addClass('alert-danger show')
-                            .show();
-                        // Scroll to alert bar
-                        $('html, body').animate({
-                            scrollTop: ($('#hc_alert').offset().top)
-                        }, 400);
+                        console.log(JSON.parse(e.responseText).errors);
+                        console.log("ERROR : ", errorMsg, "status text: ", e.statusText);
+                        showAlert(errorMsg, false, true);
                     }
                 });
             }

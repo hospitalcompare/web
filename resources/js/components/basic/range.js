@@ -52,7 +52,6 @@ $(document).ready(function () {
                     ${settings.background} calc(100% - ${rangeSpacing}px), 
                     white calc(100% - ${rangeSpacing - 1 }px))`;
         slider.style.background = bg;
-        console.log(bg);
     }
 
     // This function applies the 'active' colour to ticks up to the new range value
