@@ -1,7 +1,7 @@
 // remove focus ring
 * {
     &:focus {
-        outline: none;
+        outline: none !important;
     }
 }
 
