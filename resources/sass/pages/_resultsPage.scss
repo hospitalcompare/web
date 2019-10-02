@@ -381,8 +381,6 @@ $col-spacing: 18px;
     .fa-heart {
         padding-left: 2px;
     }
-
-
 }
 
 
@@ -396,4 +394,10 @@ $col-spacing: 18px;
     right: 0;
     width: 100%;
     z-index: 10;
+}
+
+.compare {
+    &.disabled {
+        opacity: 0.3;
+    }
 }

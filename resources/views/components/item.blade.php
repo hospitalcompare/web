@@ -1,4 +1,4 @@
-<section class="sort-categories">
+<div class="sort-categories">
     <div class="sort-categories-inner container">
         <div class="sort-categories-section-1">
             <div class="sort-categories-item hospital-image">
@@ -42,7 +42,6 @@
                     {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
                 </p>
                 <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
-
             </div>
             {{-- Waiting time --}}
             <div class="sort-categories-section-2__child flex-column">
@@ -189,4 +188,4 @@
             @endif
         </div>
     </div>
-</section>
+</div>
