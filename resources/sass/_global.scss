@@ -129,3 +129,8 @@ select.big {
 .v-c {
     @include v-c;
 }
+
+// Prevent bootstrap adding opacity hover to close buttons
+.close {
+    opacity: 1 !important;
+}
