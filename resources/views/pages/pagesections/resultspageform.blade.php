@@ -151,12 +151,13 @@
                     @include('components.basic.select', [
                         'selectClassName'       => 'w-100',
                         'showLabel'             => true,
+                        'selectPicker'          => 'true',
                         'options'               => $data['filters']['policies'],
-                        'suboptionClass'        => 'subprocedures',
+                        'suboptionClass'        => 'policies',
                         'group'                 => true,
                         'groupName'             => 'policies',
                         'chevronFAClassName'    => 'fa-chevron-down black-chevron',
-                        'selectClass'           => 'results-page-select highlight',
+                        'selectClass'           => 'highlight-search-dropdown select-picker',
                         'placeholder'           => 'Insurance',
                         'name'                  => 'policy_id',
                         'resultsLabel'          => 'resultsLabel'
