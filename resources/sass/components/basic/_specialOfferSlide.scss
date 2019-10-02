@@ -25,19 +25,18 @@
     }
 
     .close {
-        right: 0;
-        top: 0;
+        right: -6px;
+        top: -6px;
+        //transform: translate(50%, -50%);
         width: 25px;
         height: 25px;
         line-height: 25px;
         background-color: #80efce;
-        background-image: url('../images/icons/plus-solid.svg');
-        @include icon-bg-center(70%);
+        background-image: url('../images/icons/times.svg');
+        @include icon-bg-center(46%);
         border-radius: 50%;
         z-index: 10;
-        opacity: 1;
-        transform: translate(50%, -50%) rotate(-45deg);
-
+        opacity: 1 !important;
     }
 
     ul {
