@@ -1,9 +1,15 @@
 <form class="form-element" id="resultspage_form">
-    <div class="filter-parent {{ !empty($displayBlock) && ($displayBlock) ? 'd-block' : '' }}">
+    <div class="filter-parent {{ !empty($displayBlock) && ($displayBlock) || !empty($hc_errors) ? 'd-block' : '' }}">
         <div class="filter container">
             <div class="postcode-proximity row">
                 <div class="postcode-proximity-child col-12 col-md-4">
-                    @include('components.basic.input', ['placeholder' => 'Enter your postcode', 'validation' => 'maxlength=8', 'inputClassName' => 'inputClass', 'value' => !empty(Request::input('postcode')) ? Request::input('postcode') : '' , 'name' => 'postcode', 'id' => 'input_postcode'])
+                    @include('components.basic.input', [
+                        'placeholder' => 'Enter your postcode',
+                        'validation' => 'maxlength=8',
+                        'inputClassName' => 'inputClass',
+                        'value' => !empty(Request::input('postcode')) && empty($hc_errors) ? Request::input('postcode') : '' ,
+                        'name' => 'postcode',
+                        'id' => 'input_postcode'])
                 </div>
                 <div class="postcode-proximity-child col-12 col-md-6">
                     @include('components.basic.range', [

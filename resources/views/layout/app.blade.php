@@ -25,14 +25,13 @@
         <script type="text/javascript" src="{{ asset('js/stickybits.js') }}"></script>
 
     </head>
-
     <body class="@yield('body-class')">
         <div class="header-wrapper">
             @include('layout.header')
         </div>
 
+        @include('components.basic.alert')
         <main class="" id="app">
-            @include('components.basic.alert')
             @yield('content')
         </main>
 

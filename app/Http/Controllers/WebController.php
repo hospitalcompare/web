@@ -99,6 +99,8 @@ class WebController extends BaseController
 
     // Stacking page for components etc
     public function testPage() {
+        $policies       = Utils::getInsurancePoliciesForDropdown();
+
         //Get the request and load it as variables
         $request        = \Request::all();
         $postcode       = !empty($request['postcode'])          ? Validate::escapeString($request['postcode'])          : '';
@@ -123,6 +125,7 @@ class WebController extends BaseController
         $procedures = Utils::getProceduresForDropdown();
 
         $this->returnedData['success']                              = true;
+        $this->returnedData['data']['filters']['policies']          = $policies;
         $this->returnedData['data']['hospitals']                    = $hospitals;
         $this->returnedData['data']['filters']['procedures']        = $procedures;
         $this->returnedData['data']['filters']['waitingTimes']      = Utils::waitingTimes;
