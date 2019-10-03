@@ -36,9 +36,7 @@
         </main>
 
         @include('layout.footer', ['page_footer' => ''])
-{{--        <div class="main-footer-wrap">--}}
-{{--        </div>--}}
-        <!-- or push target to footer -->
+
         <script src="{{ asset('js/app.js') }}"></script>
 
         <script src="https://maps.googleapis.com/maps/api/js?key={{ config('services.googleApiKey') }}"

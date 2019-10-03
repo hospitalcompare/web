@@ -1,4 +1,4 @@
-<div class="back-top-wrapper">
+<div class="back-top-wrapper mt-4">
     <div class="container back-top-content d-flex justify-content-end">
         @include('components.basic.button', [
         'id' => 'back-to-top',
