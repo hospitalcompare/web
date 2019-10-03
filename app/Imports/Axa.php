@@ -11,36 +11,26 @@ use App\Models\Policy;
 /**
  * Populates the Hospitals with the related Aviva Policy
  */
-class Aviva extends DefaultImport {
+class Axa extends DefaultImport {
 
     public function handle() {
         //Check if we have data
         if(!empty($this->data) && is_array($this->data)) {
             //Get the Policies based on the name
-            $personalCare           = Policy::where('name', 'Personal Care')->first();
-            $selectCare             = Policy::where('name', 'Select Care')->first();
-            $children               = Policy::where('name', 'Children')->first();
-            $expressCare            = Policy::where('name', 'Express Care')->first();
-            $exclusive              = Policy::where('name', 'Exclusive')->first();
-            $companyConnect         = Policy::where('name', 'Company Connect')->first();
-            $companyHealthcover     = Policy::where('name', 'Company Healthcover')->first();
-            $fairSquare             = Policy::where('name', 'Fair & Square')->first();
-            $speedyDiagnostics      = Policy::where('name', 'Speedy Diagnostics')->first();
-            $capitalOption          = Policy::where('name', 'Capital Option')->first();
-            $trustHospital          = Policy::where('name', 'Trust Hospital')->first();
+            $general                = Policy::where('name', 'General')->first();
+            $cataractSurgery        = Policy::where('name', 'Cataract Surgery')->first();
+            $oralSurgery            = Policy::where('name', 'Oral Surgery')->first();
+            $mri                    = Policy::where('name', 'Diagnostic Imaging - MRI')->first();
+            $ctScan                 = Policy::where('name', 'Diagnostic Imaging - CT Scan')->first();
+            $petScan         = Policy::where('name', 'Diagnostic Imaging - PET Scan')->first();
 
             $mapping = [
-                'Aviva, Key List - Personal Care'               => 'personalCare',
-                'Aviva, Key List - Select Care'                 => 'selectCare',
-                'Aviva, Key List - Children\'s'                 => 'children',
-                'Aviva, Extended List - Express Care'           => 'expressCare',
-                'Aviva, Extended List - Exclusive'              => 'exclusive',
-                'Aviva, Extended List - Company Connect'        => 'companyConnect',
-                'Aviva, Extended List - Company Healthcover'    => 'companyHealthcover',
-                'Aviva - Fair & Square'                         => 'fairSquare',
-                'Aviva - Speedy Diagnostics'                    => 'speedyDiagnostics',
-                'Aviva - Capital Option List'                   => 'capitalOption',
-                'Aviva -Trust Hospital List'                    => 'trustHospital'
+                'General'                           => 'general',
+                'Cataract Surgery'                  => 'cataractSurgery',
+                'Oral Surgery'                      => 'oralSurgery',
+                'Diagnostic Imaging - MRI'          => 'mri',
+                'Diagnostic Imaging - CT Scan'      => 'ctScan',
+                'Diagnostic Imaging - PET Scan'     => 'petScan'
             ];
 
             //Loop through the data
