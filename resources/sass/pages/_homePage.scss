@@ -1,0 +1,116 @@
+.home-page {
+
+    .form-child {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    //=======================WHY CHOOSE SECTION=======================
+    .why-use-parent {
+        background: $sectionBeige;
+
+        .why-use-content {
+            padding: 70px 0 60px;
+        }
+
+        .why-use { // container
+            //color: #1b1b1b;
+
+            p {
+                width: 589px;
+                font-size: 20px;
+                letter-spacing: -1px;
+                line-height: 24px;
+            }
+
+
+        }
+
+        .why-use-video {
+            @include media-breakpoint-up(md) {
+                padding-left: 110px;
+            }
+
+            .video-wrapper {
+                position: relative;
+                @include aspect-ratio(497px, 349px);
+                border: 1px solid $borderVideo;
+                border-radius: 15px;
+                overflow: hidden;
+
+                video {
+                    width: 140% !important;
+                }
+
+                .player-button {
+                    background-image: url(../images//player_button.png);
+                    background-size: cover;
+                    @include v-h-c;
+                    height: 78px;
+                    width: 78px;
+                    z-index: 5;
+                    cursor: pointer;
+                    transition: $transition;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+
+        .icon {
+            margin-bottom: 20px;
+
+        }
+    }
+
+
+    //=======================END WHY CHOOSE SECTION=======================
+
+
+
+    //=========================HEALTH CHOICE SECTION===========================
+    .choose-health-parent {
+        margin: 0 auto 60px;
+
+        .choose-health {
+            height: 410px;
+            background: url('../images/placeholder.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 20px;
+            position: relative;
+            @include mask($lightestGrey, 1);
+
+            &:before {
+                transition: 0.3s opacity ease-in;
+            }
+
+            &.fade-in {
+                &:before {
+                    opacity: 0.38;
+                }
+            }
+        }
+
+        .choose-health-text {
+            width: $fullWidth / 1.8;
+            color: $white;
+            font-size: 27px;
+            font-weight: 600;
+            letter-spacing: -1.35px;
+            line-height: 32.4px;
+            @include v-h-c;
+            text-align: center;
+        }
+
+        .choose-health-text p {
+            margin-top: 50px;
+            text-align: center;
+        }
+    }
+
+    //=========================END HEALTH CHOICE SECTION====================
+
+}

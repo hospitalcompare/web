@@ -1,0 +1,28 @@
+.accordion {
+    .card-header {
+        padding: 0;
+        position: relative;
+
+        .btn {
+            width: 100%;
+            text-align: left;
+            padding-right: 90px;
+
+            &:after {
+                content: " ";
+                @include v-c;
+                right: 30px;
+                width: 27px;
+                height: 16px;
+                background-image: url('/images/icons/chevron-down.svg');
+                background-size: 100%;
+                transition: $transition;
+                transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, -180deg);
+            }
+
+            &.collapsed:after {
+                transform: translate3d(0, -50%, 0) rotate3d(0, 0, 0, 0);
+            }
+        }
+    }
+}

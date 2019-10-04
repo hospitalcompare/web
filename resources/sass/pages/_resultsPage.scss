@@ -1,0 +1,404 @@
+$col-spacing: 18px;
+
+.results-page,
+.test-page {
+    margin-bottom: 49px;
+
+    .filter {
+        //display: flex;
+        //
+        //.filter-left {
+        //    //flex-basis: 80.3333%;
+        //    width: 80.3333%;
+        //}
+        //
+        //.filter-right {
+        //    //flex-basis: 1.6666%;
+        //    width: 19.6666%;
+        //}
+    }
+
+
+    .filter-section {
+        //flex-basis: 85%;
+        //display: flex;
+        //margin-left: -$col-spacing;
+        //margin-right: -$col-spacing;
+
+        .filter-section-child {
+            //flex: 0 0 20%;
+            //width: 20%;
+            //padding: 0 $col-spacing;
+
+            &:not(:last-child) {
+                border-right: 2px solid #d7d7d7;
+            }
+        }
+    }
+
+    // Hide filters on pageload
+    #resultspage_form {
+        .filter-parent {
+            //display: none;
+
+            .dropdown-toggle {
+                @include font-size(14);
+            }
+        }
+    }
+
+    .submit-section {
+        display: flex;
+        justify-content: flex-end;
+        //flex-basis: 15%;
+
+        .submit-section-child {
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+    }
+
+    // Shared style for selects on results page
+
+    .select-parent {
+        position: relative;
+        //width: 100%;
+
+        label {
+            font-size: 14px;
+            letter-spacing: -0.7px;
+            line-height: 18px;
+            margin-bottom: 6px;
+        }
+
+        .black-chevron {
+            position: absolute;
+            right: 15px;
+            bottom: 12px;
+            color: $caretBlack;
+            pointer-events: none;
+        }
+    }
+
+    .results-page-select,
+    .dropdown-toggle {
+        padding: 10px 40px 10px 13px;
+        background-color: $white;
+        color: $darkerGrey;
+        @include font-size(14);
+        letter-spacing: -0.6px;
+        line-height: 17px;
+    }
+
+    .filter-parent {
+        width: $fullWidth;
+        background-color: $white;
+        padding-top: 23px;
+        display: none;
+    }
+
+    .postcode-proximity,
+    .select-proximity {
+        @include flex;
+    }
+
+    .postcode-proximity-child,
+    .submit-section-child,
+    .filter-section-child {
+        position: relative;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+
+        #input_postcode {
+            width: 100%;
+            padding: 20px 0 18px 16px;
+
+            @include placeholder {
+                font-size: 18px;
+                //text-transform: uppercase;
+            }
+        }
+    }
+
+    .postcode-proximity {
+        margin-left: -$col-spacing;
+        margin-right: -$col-spacing;
+
+        .postcode-proximity-child {
+            padding-left: $col-spacing;
+            padding-right: $col-spacing;
+
+            &:first-child {
+                width: 40%;
+            }
+
+            &:last-child {
+                width: 60%;
+            }
+        }
+    }
+
+    .sort-parent {
+        background-color: $lighterGrey;
+    }
+
+    //#sort_parent {
+    //    display: none;
+    //}
+
+    .sort-bar {
+        min-height: 60px;
+        @include flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .show-section {
+            margin: auto auto auto 0;
+        }
+
+        .sort-section {
+            .results-page-select {
+                width: auto
+            }
+        }
+    }
+
+
+    .sort-page-select, .sort-by {
+        width: 200px;
+    }
+
+    .sort-label {
+        left: 0 !important;
+        top: -10px !important;
+    }
+
+    .sort-by {
+        top: -10px !important;
+        position: relative;
+    }
+
+    .sort-categories-parent {
+        background-color: $teal;
+
+
+    }
+
+    .sort-categories-header,
+    .sort-categories {
+        @include flex;
+    }
+
+    .sort-categories-header {
+        //width: 1180px;
+        margin: auto;
+
+        .sort-categories-section-3 {
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    .sort-categories {
+        margin-bottom: 7px;
+        background-color: $white;
+    }
+
+    .sortCategoriesResults {
+        background-color: $lighterGrey;
+    }
+
+    .sort-categories-inner {
+        display: flex;
+        margin: auto;
+    }
+
+    .sort-categories-section-1 {
+        flex: 1 0 33%;
+    }
+
+    .sort-categories-section-2 {
+        flex: 1 0 53%;
+
+    }
+
+    .sort-categories-section-3 {
+        flex: 1 0 14%;
+        padding: 10px 0 10px 10px;
+        @include pseudo-border($borderGrey);
+
+        .btn-area-lower {
+            border-top: 1px solid #d7d7d7;
+            padding-top: 10px;
+
+        }
+    }
+
+
+    .sort-categories-menu {
+        @include flex;
+        width: 100%;
+        margin-bottom: 0;
+
+        li {
+            padding: 16px 0;
+            position: relative;
+            list-style: none;
+            @include flex-center;
+            justify-content: flex-start;
+            flex-direction: column;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: -0.7px;
+            line-height: 16.8px;
+            text-align: center;
+            flex: 1;
+
+            span.sort-arrow {
+                position: absolute;
+                bottom: 10px;
+                display: inline-block;
+                @include icon-bg-center(15%);
+                width: 100%;
+                height: 20px;
+                background-image: url('../images/icons/caret-down-white.svg');
+                cursor: pointer;
+            }
+
+            span.sort-arrow.asc {
+                transform: rotateX(0deg);
+            }
+
+            span.sort-arrow.desc {
+                transform: rotateX(180deg);
+            }
+        }
+    }
+
+    .sort-categories-section-1, .sort-categories-section-2 {
+        @include flex;
+    }
+
+    .sort-categories-section-2__child {
+        flex: 1;
+        @include flex-center;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: -0.8px;
+        line-height: 20px;
+        text-align: center;
+
+        span {
+            @include font-size(14);
+            display: inline-block;
+            margin-top: 10px;
+            line-height: 1;
+        }
+
+        p {
+            @include font-size(16px);
+            margin-bottom: 0;
+        }
+    }
+
+    .sort-categories-item {
+        position: relative;
+
+        &:last-child {
+            padding: 8px;
+        }
+    }
+
+    .sort-item-title {
+        font-size: 16px;
+        letter-spacing: -0.8px;
+        line-height: 19.2px;
+        margin-bottom: 4px;
+    }
+
+    .sort-item-location {
+        color: #040202;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -0.7px;
+        line-height: 1.3;
+        margin-bottom: 2px;
+    }
+
+    .find-link {
+        @include font-style('SofiaPro-Bold', 14px, $body-color, false, 14px, -0.7px);
+        cursor: pointer;
+
+        &:hover,
+        &:active {
+            color: $teal;
+            text-decoration: none;
+        }
+    }
+
+    .nhs-hospital,
+    .private-hospital {
+        position: absolute;
+        top: 0;
+        //width: 60px;
+        //height: 60px;
+        //transform: rotate(180deg);
+    }
+
+    .nhs-hospital {
+        //border-bottom: solid 30px $darkBlue;
+        //border-right: solid 30px $darkBlue;
+        //border-left: solid 30px transparent;
+        //border-top: solid 30px transparent;
+    }
+
+    .private-hospital {
+        //border-bottom: solid 30px $hotpink;
+        //border-right: solid 30px $hotpink;
+        //border-left: solid 30px transparent;
+        //border-top: solid 30px transparent;
+    }
+
+    .nhs-hospital,
+    .private-hospital {
+        text-align: center;
+
+        p {
+            position: relative;
+            color: #ffffff;
+            //transform: rotate(135deg);
+            //left: 20px;
+            //top: -12px;
+            @include font-size(14);
+            line-height: 1;
+        }
+    }
+
+    .fa-heart {
+        padding-left: 2px;
+    }
+}
+
+
+.js-is-sticky {
+    //padding-top: 85.6px;
+}
+
+#sort_categories_parent {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.compare {
+    &.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,316 @@
+.compare-hospitals-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to right, #00de9d 0%, #00cecb 100%);
+    z-index: 1040;
+
+    .compare-hospitals-header {
+        position: relative;
+        //width: 100%;
+        //margin: 0 auto;
+        //padding: 0 20px;
+        height: 50px;
+
+        // Doctor illustration
+        .doctor {
+            cursor: pointer;
+            //margin-right: 40px         ;
+        }
+
+        //@media (min-width: 1240px) {
+        //    .doctor {
+        //        position: absolute;
+        //        right: calc(100% + 42px);
+        //        margin-right: 0;
+        //    }
+        //}
+
+        // Solutions menu
+        ul {
+            list-style: none;
+
+            li {
+                position: relative;
+
+                a {
+                    display: inline-block;
+                    color: $white;
+                    padding: 0 12px;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 18px;
+                    font-weight: 400;
+                    letter-spacing: -0.9px;
+
+                    &:hover {
+                        background-color: darken($teal, 5%);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+
+        .compare-button-title {
+            cursor: pointer;
+
+            svg {
+                width: 30px;
+                height: 30px;
+                overflow: visible;
+                margin-right: 10px;
+                transition: $transition;
+                transform-origin: 50% 50%;
+
+                &.has-count {
+                    transform-origin: 50% 50%;
+
+                    #outer-circle {
+                        transform-origin: 50% 50%;
+                        animation: heartBeat .5s ease-in-out 0.1s;
+                        animation-fill-mode: forwards;
+                        animation-iteration-count: 2;
+                    }
+
+                    // The inner heart
+                    #wishlist {
+                        transform-origin: 50% 50%;
+                        animation: heartBeat .5s ease-in-out;
+                        animation-fill-mode: forwards;
+                        animation-iteration-count: 2;
+                    }
+                }
+            }
+
+            p {
+                margin: 0;
+                color: $white;
+            }
+        }
+
+        #compare_number {
+            display: inline-block;
+            min-width: 10px;
+            text-align: center;
+        }
+
+        .compare-arrow {
+            display: inline-block;
+            width: 18px;
+            height: 10px;
+            background-color: $teal;
+            background-image: url('../images/up-arrow.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: $transition;
+
+            &.rotated {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .compare-hospitals-content {
+        background-color: #fff;
+        display: none;
+        max-height: calc(100vh - 50px);
+        overflow-y: scroll;
+
+        #compare_hospitals_grid {
+            padding-bottom: 30px;
+
+            .image-wrapper {
+                position: relative;
+                width: 134px;
+                height: 123px;
+                text-align: center;
+
+                .remove-hospital {
+                    cursor: pointer;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 25px;
+                    height: 25px;
+                    line-height: 25px;
+                    background-color: #6F6F6F;
+                    background-image: url('../images/icons/plus-solid.svg');
+                    @include icon-bg-center(70%);
+                    border-radius: 50%;
+                    z-index: 10;
+                    opacity: 1;
+                    transform: translate(50%, -50%) rotate(-45deg);
+                }
+            }
+
+            .details {
+                height: 130px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+            }
+        }
+
+        &.hidden {
+            transform: translateY(-100%);
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .col-inner {
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .cell {
+                height: 40px;
+                line-height: 40px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+
+// Special offers tabs
+
+.solutions-menu {
+    pointer-events: none;
+
+    > li {
+        pointer-events: initial;
+    }
+
+    .bullets {
+        ul {
+            li {
+                list-style: none;
+                font-size: 13px;
+                line-height: 2;
+                font-weight: 400;
+                letter-spacing: -0.65px;
+                position: relative;
+                padding-left: 30px;
+
+                &:before {
+                    content: url("/images/icons/circle-check.svg");
+                    width: 20px;
+                    height: 20px;
+                    @include v-c;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+.special-offer-tab {
+    color: $white;
+    width: 340px;
+
+    &.nhs-hospital__offer {
+        background-image: linear-gradient(264deg, #1b71f3 0%, #8f00ff 0%, #a346ec 52%, #b687db 100%);
+    }
+
+    &.private-hospital__offer {
+        background-image: linear-gradient(249deg, #1b71f3 0%, #ed0373 0%, #cc6d9b 100%);
+    }
+
+    //width: 300px;
+    border-radius: 10px 10px 0 0;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.9px;
+
+    .special-offer-header {
+        position: relative;
+        padding: 0 50px 0 30px;
+        height: 65px;
+        cursor: pointer;
+
+        .offer-text {
+            margin-left: 10px;
+            line-height: 1;
+            max-width: 200px;
+
+            .offer-title {
+                font-size: 18px;
+            }
+
+            .offer-subtitle {
+                font-size: 14px;
+            }
+        }
+
+        .open-text {
+            display: none;
+        }
+
+        .image-wrapper {
+            width: 48px;
+            height: 44px;
+            @include aspect-ratio(48px, 44px);
+
+            .label {
+                //display: none;
+                width: 10px;
+                height: 10px;
+                border-width: 10px;
+            }
+        }
+
+        svg,
+        span {
+            position: absolute;
+            right: 20px;
+            top: 25px;
+            width: 20px;
+            height: 20px;
+            line-height: 60px;
+            transition: $transition;
+        }
+
+    }
+
+    // Spin arrow when open
+    &.open {
+        .special-offer-header svg {
+            transform: rotate3d(0, 0, 1, 180deg);
+        }
+
+        .closed-text {
+            display: none;
+        }
+
+        .open-text {
+            display: block;
+        }
+    }
+}
+
+.special-offer-body {
+    padding: 0 25px 25px 80px;
+    display: none;
+
+    .offer-price {
+        min-height: 30px;
+    }
+}
+
+// Compare items
+
+// Star icons
+.star-icon {
+    width: 16px;
+    height: 15px;
+}

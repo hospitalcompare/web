@@ -1,0 +1,77 @@
+//============================HOW SECTION=============================
+.how-section__parent {
+    padding: 45px 0 90px;
+
+    .icon-title,
+    .icon-description {
+        //width:89%;
+        color: $lightestGrey;
+    }
+
+    .icon-title {
+        @include font-style('SofiaPro-Medium', 22px, false, #000, 26px, -0.9px);
+        margin-bottom: 25px;
+    }
+
+    .icon-description {
+        li, p {
+            @include font-style(false, 20px, false, false, 24px, -1px);
+        }
+    }
+}
+
+.how-section {
+    .row {
+        @include reset-row-spacing(30px);
+    }
+}
+
+.how-section__child {
+    text-align: center;
+    //padding: 0 5.5%;
+    position: relative;
+
+    .icon {
+        //@include flex;
+        //@include justify-content($value: center);
+        margin-bottom: 25px;
+        height: 120px;
+
+        svg {
+            height: 100%;
+            width: auto;
+            fill: $teal;
+        }
+    }
+
+    .icon-description {
+        > ul {
+            //padding: 0 0 0 50px;
+            margin: 30px 0 50px 0;
+            counter-reset: counter;
+
+            > li {
+                margin: 0 0 22px 0;
+                position: relative;
+                counter-increment: counter;
+
+                &:before {
+                    content: counter(counter) '.';
+                    position: absolute;
+                    top: 0;
+                    right: calc(100% + 10px);
+                    color: $blue;
+                    @extend .font-semibold;
+                }
+
+                ul {
+                    li {
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+//============================ END HOW SECTION=============================
