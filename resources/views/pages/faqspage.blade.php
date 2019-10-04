@@ -28,7 +28,7 @@
                 'type'        => 'search',
                 'results'     => '5',
                 'className'   => 'faq-search-input w-100',
-                'placeholder' => 'Search for keyword',
+                'placeholder' => 'Search by Keyword(s)',
                 'value'       => '',
                 'name'        => 'search'
                 ])
