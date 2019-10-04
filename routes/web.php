@@ -40,7 +40,7 @@ Route::get('/ajax-form','WebController@ajaxForm');
 
 Route::get('/downloads/{file}','WebController@download');
 
-Route::get('/{slug}', 'WebController@contentPage'); //This replaces all the individual routes
+//Route::get('/{slug}', 'WebController@contentPage'); //This replaces all the individual routes
 //
 //Route::get('/{slug}', function ($slug) {
 //
