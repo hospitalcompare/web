@@ -322,11 +322,108 @@ class Hospital extends Model
             $query->bySpecialty($specialtyId);
         }]);
 
+        $preHospitals =  $hospitals->get()->toArray();
         $hospitals = $hospitals->paginate(10);
 
+        //Get the special Offers
+        $radius = 50;
+        do {
+            $specialOffers = self::getSpecialOffers($latitude, $longitude, $radius, $specialtyId, $hospitals);
+            $radius += 20;
+        } while ($specialOffers['purple']->count() == 0 && $specialOffers['pink']->count() == 0);
+
         return [
-            'data'      => $hospitals,
-            'errors'    => $errors
+            'data'              => [
+                'hospitals'         => $hospitals,
+                'special_offers'    => $specialOffers,
+            ],
+            'errors'            => $errors
+        ];
+    }
+
+    /**
+     * Special Offers Algorithm
+     * PURPLE
+     * IF enter postcode and IF no outstanding hospitals come up within search, show in the solutions bar the nearest outstanding hospital.
+     * However, if there is one or more outstanding hospitals, then show hospital with the lowest waiting time within 50 miles regardless of CQC rating. If no results show the lowest within 75 miles…..
+     * If no postcode entered, the algorithm should be lowest time in country. And if the same cqc and waiting time - ie part of multi site hospital group, choose main (AT flag).
+     * PINK
+     * Best Private hospital which satisfies the above (if it isn’t already the purple) or the second best private (if the purple offer is a private hospital)
+     *
+     * @param string $latitude
+     * @param string $longitude
+     * @param int $radius
+     * @param int $specialtyId
+     * @param array $hospitals
+     *
+     * @return array
+     */
+    public static function getSpecialOffers($latitude = '', $longitude = '', $radius = 50, $specialtyId = 0, $hospitals = []) {
+        $specialOffers = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'policies']);
+        $outstandingFlag = 0;
+
+        //Parse the hospitals to check if there is an outstanding hospital
+        if(!empty($hospitals)) {
+            foreach($hospitals as $hospital) {
+                if($hospital['rating']['latest_rating'] == 'Outstanding') {
+                    $outstandingFlag = 1;
+                    break;
+                }
+            }
+        }
+
+        //IF enter postcode and IF no outstanding hospitals come up within search, show in the solutions bar the nearest outstanding hospital.
+        if(!empty($latitude) && !empty($longitude)) {
+            //Get the nearest Hospital
+            $specialOffers = $specialOffers->whereHas('address', function($q) use($latitude, $longitude, $radius) {
+                $q->selectRaw(\DB::raw("get_distance({$latitude}, {$longitude}, latitude, longitude) AS radius"));
+                $q->having('radius', '<=', $radius);
+            })->join('addresses', 'hospitals.address_id', '=', 'addresses.id')
+                ->selectRaw(\DB::raw("hospitals.*, get_distance({$latitude}, {$longitude}, latitude, longitude) AS radius"));
+
+        }  else {
+            //Left Join the address
+            $specialOffers = $specialOffers->with('address')->join('addresses', 'hospitals.address_id', '=', 'addresses.id')
+                ->selectRaw(\DB::raw("hospitals.*"));
+        }
+
+        //Filter the Special offers by Specialty
+        $specialOffers = $specialOffers->whereHas('waitingTime', function($q) use($specialtyId) {
+            $q->bySpecialty($specialtyId);
+        });
+        //Add the relationship based on the Specialty
+        $specialOffers = $specialOffers->with(['waitingTime' => function ($query) use($specialtyId) {
+            $query->bySpecialty($specialtyId);
+        }]);
+
+        if($outstandingFlag == 1) { // Retrieve the lowest waiting time
+            $specialOffers = $specialOffers->leftJoin('hospital_waiting_time', 'hospitals.id', '=', 'hospital_waiting_time.hospital_id');
+            $specialOffers = $specialOffers->where('hospital_waiting_time.specialty_id', $specialtyId);
+            $specialOffers = $specialOffers->orderByRaw('ISNULL(hospital_waiting_time.perc_waiting_weeks), hospital_waiting_time.perc_waiting_weeks ASC');
+        } else { // Retrieve the Outstanding
+            $specialOffers = $specialOffers->leftJoin('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
+            $specialOffers = $specialOffers->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 1 when hospital_ratings.latest_rating = "Good" then 2 when hospital_ratings.latest_rating = "Inadequate" then 3 when hospital_ratings.latest_rating = "Requires improvement" then 4 when hospital_ratings.latest_rating = "Not Yet Rated" then 5 end');
+        }
+
+        if(!empty($latitude) && !empty($longitude)) {
+            $specialOffers = $specialOffers->orderBy('radius', 'ASC');
+        }
+
+        $purple = $specialOffers->first();
+        //Best Private hospital which satisfies the above (if it isn’t already the purple) or the second best private (if the purple offer is a private hospital)
+        $prePink = $specialOffers->whereHas('hospitalType', function($q) {
+            $q->where('name', '=', 'Independent');
+        });
+        $pink = $prePink->limit(1)->first();
+
+        if($purple->count() > 0 && $pink->count() > 0) {
+            if($purple->id == $pink->id)
+                $pink = $prePink->limit(1)->offset(1)->first();
+        }
+
+        return [
+            'purple'    => $purple,
+            'pink'      => $pink
         ];
     }
 }
