@@ -118,6 +118,7 @@
         display: none;
         max-height: calc(100vh - 50px);
         overflow-y: scroll;
+
         #compare_hospitals_grid {
             padding-bottom: 30px;
 
@@ -303,7 +304,7 @@
 
     .offer-price {
         min-height: 30px;
-}
+    }
 }
 
 // Compare items

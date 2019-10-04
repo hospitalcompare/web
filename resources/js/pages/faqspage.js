@@ -12,13 +12,13 @@ $(document).ready(function () {
         clearTimeout(timer);
         // Third argument passes the input to the function
         timer = setTimeout(ajaxCall, interval, $(this));
-        if ($faqSearch.val()) {
-        }
+        // if ($faqSearch.val()) {
+        // }
     });
 
     function ajaxCall(input) {
         var search = input.val();
-        if (search != '') {
+        if (search) {
             $.ajax({
                 url: 'api/search-faq/' + search,
                 type: 'POST',
@@ -34,17 +34,19 @@ $(document).ready(function () {
                     var ajaxBox = $(".faqs-page #faqs_accordion");
                     ajaxBox.empty(); // remove old content
                     //Check if we have at least one result in our data
-                    console.log(data.data.faqs);
+                    // console.log(data.data.faqs);
                     if (!$.isEmptyObject(data.data.faqs)) {
-                        console.log(data.faqs);
+                        // console.log(data.faqs);
                         $.each(data.data.faqs, function (key, obj) { //$.parseJSON() method is needed unless chrome is throwing error.
                             // var regex = new RegExp(search, 'gi');
                             var result = obj.question + obj.answer;
                             // Replace the search term within the results with a highlighted span
 
                             // result = result.replace(regex, `<span class="hl">${search}</span>`);
-                            ajaxBox.append('<div class="card">' + result + "</div>").highlight(search);
+                            ajaxBox
+                                .append('<div class="card">' + result + "</div>")
                         });
+                        ajaxBox.highlight(search); // Use the highlight API to search for keyword, not including HTML tags
                     } else {
                         ajaxBox.append('<h3>No FAQs found! Please refine the search.</h3>');
                     }

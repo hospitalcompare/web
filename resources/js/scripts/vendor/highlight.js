@@ -1,6 +1,7 @@
 jQuery.fn.highlight = function (pat) {
     function innerHighlight(node, pat) {
         var skip = 0;
+        console.log(node.nodeType);
         if (node.nodeType == 3) {
             var pos = node.data.toUpperCase().indexOf(pat);
             if (pos >= 0) {
@@ -51,7 +52,7 @@ jQuery.fn.removeHighlight = function () {
         }
     }
 
-    return this.find("span.highlight").each(function () {
+    return this.find("span.hl").each(function () {
         var thisParent = this.parentNode;
         thisParent.replaceChild(this.firstChild, this);
         newNormalize(thisParent);
