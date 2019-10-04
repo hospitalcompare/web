@@ -69,7 +69,7 @@ class WebController extends BaseController
 
         $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy);
         $errors     = $hospitals['errors'];
-        $hospitals  = $hospitals['data'];
+        $hospitals  = $hospitals['data']['hospitals'];
 
         $sortBys    = Utils::sortBys;
         $procedures = Utils::getProceduresForDropdown();
@@ -119,7 +119,7 @@ class WebController extends BaseController
 
         $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy);
         $errors     = $hospitals['errors'];
-        $hospitals  = $hospitals['data'];
+        $hospitals  = $hospitals['data']['hospitals'];
 //        dd($hospitals->toArray()['data']);
         $sortBys    = Utils::sortBys;
         $procedures = Utils::getProceduresForDropdown();

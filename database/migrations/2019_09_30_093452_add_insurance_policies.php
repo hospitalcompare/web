@@ -60,6 +60,10 @@ class AddInsurancePolicies extends Migration
         $simplyHealth = new App\Models\Insurance();
         $simplyHealth->name = 'Simply Health';
         $simplyHealth->save();
+        //Axa
+        $axa = new App\Models\Insurance();
+        $axa->name = 'Axa';
+        $axa->save();
 
         //Populate the data with Policies
         //Aviva
@@ -78,6 +82,15 @@ class AddInsurancePolicies extends Migration
             $shPolicy = new App\Models\Policy();
             $shPolicy->insurance_id = $simplyHealth->id;
             $shPolicy->name = $simplyHealthPolicy;
+            $shPolicy->save();
+        }
+
+        //Axa
+        $axayHealthPolicies = ['General', 'Cataract Surgery', 'Oral Surgery', 'Diagnostic Imaging - MRI', 'Diagnostic Imaging - CT Scan', 'Diagnostic Imaging - PET Scan'];
+        foreach($axayHealthPolicies as $axayHealthPolicy) {
+            $shPolicy = new App\Models\Policy();
+            $shPolicy->insurance_id = $axa->id;
+            $shPolicy->name = $axayHealthPolicy;
             $shPolicy->save();
         }
     }
