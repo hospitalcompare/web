@@ -7,6 +7,8 @@ $(document).ready(function () {
     var timer;
     var interval = 500;
 
+    $faqSearch.focus();
+
     // Do the ajax request with a delay
     $faqSearch.on('input', function (e) {
         clearTimeout(timer);
