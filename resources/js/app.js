@@ -14,6 +14,7 @@ import 'bootstrap-select';                                  // Searchable dropdo
 import 'cookieconsent';                                     // Cookie consent plugin
 import '@fortawesome/fontawesome-free/js/all.min';
 import './scripts/vendor/stickybits';                       // Position: sticky stuff https://www.npmjs.com/package/stickybits
+import './scripts/vendor/highlight';                        // Highlight search terms without
 import 'jquery-validation';                                 // Frontend form validation
 import 'jquery-validation/dist/additional-methods.min';     // Plugin for jquery validate
 
