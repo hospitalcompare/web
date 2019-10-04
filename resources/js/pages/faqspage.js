@@ -8,7 +8,7 @@ $(document).ready(function () {
     var interval = 1000;
 
     // Do the ajax request with a delay
-    $faqSearch.on('keyup search', function (e) {
+    $faqSearch.on('input', function (e) {
         clearTimeout(timer);
         // Third argument passes the input to the function
         timer = setTimeout(ajaxCall, interval, $(this))
