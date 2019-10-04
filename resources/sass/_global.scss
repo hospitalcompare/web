@@ -1,7 +1,7 @@
 // remove focus ring
 * {
     &:focus {
-        outline: none;
+        outline: none !important;
     }
 }
 
@@ -128,4 +128,9 @@ select.big {
 // Vertical center position absolute
 .v-c {
     @include v-c;
+}
+
+// Prevent bootstrap adding opacity hover to close buttons
+.close {
+    opacity: 1 !important;
 }

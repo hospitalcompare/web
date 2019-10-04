@@ -13,8 +13,10 @@
         margin-bottom: 25px;
     }
 
-    .icon-description * {
-        @include font-style(false, 20px, false, false, 24px, -1px);
+    .icon-description {
+        li, p {
+            @include font-style(false, 20px, false, false, 24px, -1px);
+        }
     }
 }
 

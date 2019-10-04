@@ -344,23 +344,23 @@ $col-spacing: 18px;
     .private-hospital {
         position: absolute;
         top: 0;
-        width: 60px;
-        height: 60px;
-        transform: rotate(180deg);
+        //width: 60px;
+        //height: 60px;
+        //transform: rotate(180deg);
     }
 
     .nhs-hospital {
-        border-bottom: solid 30px $darkBlue;
-        border-right: solid 30px $darkBlue;
-        border-left: solid 30px transparent;
-        border-top: solid 30px transparent;
+        //border-bottom: solid 30px $darkBlue;
+        //border-right: solid 30px $darkBlue;
+        //border-left: solid 30px transparent;
+        //border-top: solid 30px transparent;
     }
 
     .private-hospital {
-        border-bottom: solid 30px $hotpink;
-        border-right: solid 30px $hotpink;
-        border-left: solid 30px transparent;
-        border-top: solid 30px transparent;
+        //border-bottom: solid 30px $hotpink;
+        //border-right: solid 30px $hotpink;
+        //border-left: solid 30px transparent;
+        //border-top: solid 30px transparent;
     }
 
     .nhs-hospital,
@@ -368,21 +368,19 @@ $col-spacing: 18px;
         text-align: center;
 
         p {
-            transform: rotate(135deg);
             position: relative;
             color: #ffffff;
-            left: 20px;
-            top: -12px;
-            font-size: .6em;
-            line-height: 13px;
+            //transform: rotate(135deg);
+            //left: 20px;
+            //top: -12px;
+            @include font-size(14);
+            line-height: 1;
         }
     }
 
     .fa-heart {
         padding-left: 2px;
     }
-
-
 }
 
 
@@ -396,4 +394,11 @@ $col-spacing: 18px;
     right: 0;
     width: 100%;
     z-index: 10;
+}
+
+.compare {
+    &.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+    }
 }

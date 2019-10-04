@@ -1,4 +1,4 @@
-<div class="back-top-wrapper">
+<div class="back-top-wrapper mt-4">
     <div class="container back-top-content d-flex justify-content-end">
         @include('components.basic.button', [
         'id' => 'back-to-top',
@@ -18,7 +18,7 @@
                             <li><a href="/">Home</a></li>
                             <li><a href="/about-us">About Us</a></li>
                             <li><a href="/your-rights">Your rights</a></li>
-                            <li><a href="/patient-choice">Patient choice</a></li>
+{{--                            <li><a href="/patient-choice">Patient choice</a></li>--}}
                             {{--                <li><a href="/our-blogs">Our blogs</a></li>--}}
                             <li><a href="mailto:hello@hospitalcompare.co.uk">Contact us</a></li>
                         </ul>
@@ -78,7 +78,7 @@
             <nav class="footer-lower__nav">
                 <ul class="footer-lower__menu mb-0">
                     <li><a href="/terms-and-conditions">T&Cs</a></li>
-                    <li><a href="/accessibility">Accessibility</a></li>
+{{--                    <li><a href="/accessibility">Accessibility</a></li>--}}
                     <li><a href="/privacy-policy">Privacy Policy</a></li>
                     <li><a href="/cookie-policy">Cookie Policy</a></li>
                     <li class="ml-auto"><span>

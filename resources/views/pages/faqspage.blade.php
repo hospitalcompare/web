@@ -28,7 +28,7 @@
                 'type'        => 'search',
                 'results'     => '5',
                 'className'   => 'faq-search-input w-100',
-                'placeholder' => 'Search',
+                'placeholder' => 'Search for keyword',
                 'value'       => '',
                 'name'        => 'search'
                 ])
@@ -36,32 +36,32 @@
         </div>
     </section>
 
-    <section class="how-section__parent">
-        @include('components.howsection', [
-            'hideButton'        => true,
-            'containerFluid'    => true,
-            'howsections'       => [
-                [
-                    'iconImg'=> 'doctor',
-                    'title'=>'Category One',
-                ],
-                [
-                    'iconImg'=> 'search',
-                    'title'=>'Category Two'
-                ],
-                [
-                    'iconImg'=> 'hospital-compare',
-                    'title'=>'Category Three'
-                ],
-                [
-                    'iconImg'=> 'confirm',
-                    'title'=>'Category Four'
-                ]
-             ]
-         ])
-    </section>
+{{--    <section class="how-section__parent">--}}
+{{--        @include('components.howsection', [--}}
+{{--            'hideButton'        => true,--}}
+{{--            'containerFluid'    => true,--}}
+{{--            'howsections'       => [--}}
+{{--                [--}}
+{{--                    'iconImg'=> 'doctor',--}}
+{{--                    'title'=>'Category One',--}}
+{{--                ],--}}
+{{--                [--}}
+{{--                    'iconImg'=> 'search',--}}
+{{--                    'title'=>'Category Two'--}}
+{{--                ],--}}
+{{--                [--}}
+{{--                    'iconImg'=> 'hospital-compare',--}}
+{{--                    'title'=>'Category Three'--}}
+{{--                ],--}}
+{{--                [--}}
+{{--                    'iconImg'=> 'confirm',--}}
+{{--                    'title'=>'Category Four'--}}
+{{--                ]--}}
+{{--             ]--}}
+{{--         ])--}}
+{{--    </section>--}}
 
-    <section>
+    <section class="mt-5">
         <div class="container container-980">
             <div class="row">
                 <div class="col hc-content">

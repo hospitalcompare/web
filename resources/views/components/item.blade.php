@@ -1,14 +1,14 @@
-<section class="sort-categories">
+<div class="sort-categories">
     <div class="sort-categories-inner container">
         <div class="sort-categories-section-1">
-            <div class="sort-categories-item">
+            <div class="sort-categories-item hospital-image">
                 <img alt="Image of {{ $title }}" src="{{ $itemImg }}">
-                <div class="{{$NHSClass}}"><p>{{$fundedText}}</p></div>
+                <div class="{{$NHSClass}} py-1 px-2 rounded-pill m-1 {{ $NHSClass == 'private-hospital' ? 'bg-hanblue' : 'bg-teal' }}"><p class="m-0">{{$fundedText}}</p></div>
                 @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', ['class' => 'default'])
                 {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
                 <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
             </div>
-            <div class="sort-categories-item">
+            <div class="sort-categories-item hospital-details w-100">
                 <p class="sort-item-title SofiaPro-Medium" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
@@ -42,7 +42,6 @@
                     {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
                 </p>
                 <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
-
             </div>
             {{-- Waiting time --}}
             <div class="sort-categories-section-2__child flex-column">
@@ -175,10 +174,12 @@
                     'modalTarget'       => '#hc_modal_enquire_nhs',
                     'id'                => 'enquire_'.$id])
                 @endif
+                <span>
                 @include('components.basic.button', [
                     'classTitle' => 'btn btn-green-outline compare btn-block mt-0',
                     'button' => '', 'icon' => '',
                     'id' => $id])
+                </span>
             </div>
             @if(!empty($specialOffers))
                 <div class="btn-area btn-area-lower">
@@ -189,4 +190,4 @@
             @endif
         </div>
     </div>
-</section>
+</div>

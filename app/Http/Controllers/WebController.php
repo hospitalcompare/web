@@ -135,8 +135,9 @@ class WebController extends BaseController
         $this->returnedData['data']['sortBy']                       = $sortBys;
         $this->returnedData['errors']                               = $errors;
 
-
-        return view('pages.testpage', $this->returnedData);
+        if(env('APP_ENV') != 'live')
+            return view('pages.testpage', $this->returnedData);
+        return redirect('/');
     }
 
     // test page just for ajax form
@@ -146,7 +147,9 @@ class WebController extends BaseController
         $this->returnedData['success']              = true;
         $this->returnedData['data']['procedures']   = $procedures;
 
-        return view('pages.ajaxformpage', $this->returnedData);
+        if(env('APP_ENV') != 'live')
+            return view('pages.ajaxformpage', $this->returnedData);
+        return redirect('/');
     }
 
     // Cookie policy

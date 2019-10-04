@@ -1,11 +1,47 @@
+/**
+ * Disable compare buttons if we have reached the max no of items
+ *
+ */
+window.disableButtons = function (modifier = 0) {
+    compareCount = Cookies.get('compareCount');
+    compareCount = parseInt(compareCount);
 
+    var $notSelected = $('.compare').not($('.selected'));
+
+    if (compareCount + modifier === 5) {
+        // console.log(compareCount, 'Disabling buttons');
+        $notSelected
+            .addClass('disabled')
+            .parent()
+            .prop('title', 'Sorry, you have reached the limit of hospitals to compare.')
+            // .attr('data-toggle', 'tooltip');
+        // enable tooltips
+        // $('[data-toggle="tooltip"]').tooltip();
+    }
+};
+
+// Reenable buttons to allow to add to compare
+window.enableButtons = function () {
+    compareCount = Cookies.get('compareCount');
+    compareCount = parseInt(compareCount);
+
+    if (compareCount === 5) {
+        $('.compare')
+            .removeClass('disabled')
+            .parent()
+            .prop('title', '');
+            // .attr('data-toggle', '');
+    }
+};
 
 $(document).ready(function () {
+
     //Check if we don't have the cookie and set it to 0
     var compareBar = $('.compare-hospitals-bar');
     var compareContent = $('.compare-hospitals-content');
     var countSpan = $('#compare_number');
     var heartIcon = $('#compare_heart');
+
     if (typeof Cookies.get("compareCount") === 'undefined') {
         Cookies.set("compareCount", 0, {expires: 10000});
         Cookies.set("compareHospitalsData", JSON.stringify([{}]), {expires: 10000});
@@ -25,12 +61,12 @@ $(document).ready(function () {
             var element = compareData[i];
             addHospitalToCompare(element);
         }
-        // var countSpan = $('#compare_number');
         countSpan.text(compareCount);
         heartIcon.addClass('has-count');
     }
 
-
+    // Check if we need to disable buttons on pageload
+    disableButtons(0);
 
     /**
      * Adds the element to the Comparison Table
@@ -58,23 +94,23 @@ $(document).ready(function () {
             '</a>';
         var newRowContent =
             '<div class="col-2 text-center" id="compare_hospital_id_' + element.id + '">' +
-                '<div class="col-inner">' +
-                    '<div class="image-wrapper mx-auto">' +
-                        '<img class="" src="images/alder-1.png">' +
-                        '<div class="remove-hospital" id="remove_id_' + element.id + '"></div>' +
-                    '</div>' +
-                    '<div class="details">' +
-                        '<p>' + element.name + '</p>' +
-                        btnContent +
-                    '</div>' +
-                    '<div class="cell">' + getHtmlDashTickValue(element.waitingTime, " Weeks") + '</div>' +
-                    '<div class="cell">' + getHtmlStars(element.userRating) + '</div>' +
-                    '<div class="cell">' + getHtmlDashTickValue(element.opCancelled, "%") + '</div>' +
-                    '<div class="cell">' + element.qualityRating + '</div>' +
-                    '<div class="cell">' + getHtmlDashTickValue(element.ffRating, "%") + '</div>' +
-                    '<div class="cell">' + getHtmlDashTickValue(element.nhsFunded) + '</div>' +
-                    '<div class="cell">' + getHtmlDashTickValue(element.nhsPrivatePay) + '</div>' +
-                '</div>' +
+            '<div class="col-inner">' +
+            '<div class="image-wrapper mx-auto">' +
+            '<img class="" src="images/alder-1.png">' +
+            '<div class="remove-hospital" id="remove_id_' + element.id + '"></div>' +
+            '</div>' +
+            '<div class="details">' +
+            '<p>' + element.name + '</p>' +
+            btnContent +
+            '</div>' +
+            '<div class="cell">' + getHtmlDashTickValue(element.waitingTime, " Weeks") + '</div>' +
+            '<div class="cell">' + getHtmlStars(element.userRating) + '</div>' +
+            '<div class="cell">' + getHtmlDashTickValue(element.opCancelled, "%") + '</div>' +
+            '<div class="cell">' + element.qualityRating + '</div>' +
+            '<div class="cell">' + getHtmlDashTickValue(element.ffRating, "%") + '</div>' +
+            '<div class="cell">' + getHtmlDashTickValue(element.nhsFunded) + '</div>' +
+            '<div class="cell">' + getHtmlDashTickValue(element.nhsPrivatePay) + '</div>' +
+            '</div>' +
             '</div>';
         target.append(newRowContent);
         //Toggle the full heart or empty heart  class of the button
@@ -88,6 +124,7 @@ $(document).ready(function () {
      * @param data
      * @param compareCount
      */
+
     function removeHospitalFromCompare(elementId, data, compareCount) {
         $('#compare_hospital_id_' + elementId).remove();
         $('a#' + elementId + '.compare').removeClass('selected');
@@ -106,7 +143,10 @@ $(document).ready(function () {
             $('.compare-arrow').toggleClass('rotated');
         }
 
-        var countSpan = $('#compare_number');
+        // Check to see if we need to re-enable the buttons
+        enableButtons();
+
+        // var countSpan = $('#compare_number');
         countSpan.text(compareCount);
 
         //Reset compareCount and compareHospitalsData
@@ -123,6 +163,7 @@ $(document).ready(function () {
         var compareCount = parseInt(Cookies.get("compareCount"));
         var data = JSON.parse(Cookies.get("compareHospitalsData"));
         compareBar.slideDown();
+
         // $('body').addClass('modal-open');
         // compareContent.removeClass('revealed');
 
@@ -165,7 +206,12 @@ $(document).ready(function () {
                 data.push(element);
                 addHospitalToCompare(element);
                 compareCount = parseInt(compareCount) + 1;
-                var countSpan = $('#compare_number');
+                // Disable buttons if we have reached the max number of items
+                if (compareCount === 5) {
+                    // console.log('Max reached');
+                    disableButtons(1);
+                }
+                // var countSpan = $('#compare_number');
                 countSpan.text(compareCount);
             }
         }
@@ -191,7 +237,7 @@ $(document).ready(function () {
 
         // Pulsate the heart every time there is an action
         heartIcon.removeClass('has-count');
-        setTimeout( function() {
+        setTimeout(function () {
             heartIcon.addClass('has-count');
         }, 100);
 

@@ -10,8 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/','WebController@homepage');
+
+if(env('APP_ENV') == 'live')
+Route::get('{anyExceptRoot}', function() {
+        return redirect('/');
+    })->where('anyExceptRoot', '[^/]*');
+
 
 Route::get('/results-page','WebController@resultsPage');
 
@@ -35,7 +40,7 @@ Route::get('/ajax-form','WebController@ajaxForm');
 
 Route::get('/downloads/{file}','WebController@download');
 
-Route::get('/{slug}', 'WebController@contentPage'); //This replaces all the individual routes
+//Route::get('/{slug}', 'WebController@contentPage'); //This replaces all the individual routes
 //
 //Route::get('/{slug}', function ($slug) {
 //
