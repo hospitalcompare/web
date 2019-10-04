@@ -148,6 +148,8 @@ class Hospital extends Model
         $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'policies']);
         //$userRatings    = HospitalRating::selectRaw(\DB::raw("MIN(id) as id, avg_user_rating AS name"))->groupBy(['avg_user_rating'])->whereNotNull('avg_user_rating')->get()->toArray();
         $errors = [];
+        $latitude = '';
+        $longitude = '';
 
         //Check if we have the `postcode` and `procedure_id`
         if(!empty($postcode)) {
