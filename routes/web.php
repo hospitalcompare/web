@@ -10,8 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/','WebController@homepage');
+
+if(env('APP_ENV') == 'live')
+Route::get('{anyExceptRoot}', function() {
+        return redirect('/');
+    })->where('anyExceptRoot', '[^/]*');
+
 
 Route::get('/results-page','WebController@resultsPage');
 
