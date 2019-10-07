@@ -297,8 +297,14 @@
     &.open {
         background-position: right;
 
-        .special-offer-header svg {
-            transform: rotate3d(0, 0, 1, 180deg);
+        .special-offer-header {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            height: initial;
+
+            svg {
+                transform: rotate3d(0, 0, 1, 180deg);
+            }
         }
 
         .closed-text {
