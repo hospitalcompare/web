@@ -2,13 +2,15 @@
     <div class="compare-hospitals-header d-flex justify-content-between">
         <div class="container position-relative d-flex align-items-end h-100">
             @include('components.doctor')
+            @if(!empty($data['special_offers']))
             <ul class="solutions-menu align-items-end d-flex mb-0 ml-auto mr-3">
+                @foreach($specialOffers as $specialOffer )
                 <li class="d-block">
                     @include('components.basic.specialoffertab', [
                         'headerText' => [
                             'open' => [
-                                'title' => 'BMI - On The Green',
-                                'subtitle' => '27 miles away'
+                                'title' => $specialOffer['name'],
+                                'subtitle' => $specialOffer['radius'] . ' miles away'
                             ],
                             'closed' => [
                                 'title' => 'NHS funded operation',
@@ -24,28 +26,29 @@
                         'hospitalUrl' => 'www.northumbria.nhs.uk'
                     ])
                 </li>
-                <li class="d-block">
-                    @include('components.basic.specialoffertab', [
-                       'bgColor' => 'pink',
-                       'headerText' => [
-                           'open' => [
-                               'title' => 'Spire - The Place',
-                               'subtitle' => '29 miles away'
-                           ],
-                           'closed' => [
-                               'title' => 'Operation done in 2 weeks',
-                               'subtitle' => 'Outstanding hospital 29 miles away'
-                           ]
-                       ],
-                       'bulletPoints' => [
-                           'Operation done in 2 wks',
-                           'Outstanding CQC rating',
-                           '5 star NHS choices rating'],
-                       'offerPrice' => '8499',
-                       'hospitalType' => 'private-hospital',
-                       'hospitalUrl' => 'www.northumbria.nhs.uk'
-                   ])
-                </li>
+{{--                <li class="d-block">--}}
+{{--                    @include('components.basic.specialoffertab', [--}}
+{{--                       'bgColor' => 'pink',--}}
+{{--                       'headerText' => [--}}
+{{--                           'open' => [--}}
+{{--                               'title' => 'Spire - The Place',--}}
+{{--                               'subtitle' => '29 miles away'--}}
+{{--                           ],--}}
+{{--                           'closed' => [--}}
+{{--                               'title' => 'Operation done in 2 weeks',--}}
+{{--                               'subtitle' => 'Outstanding hospital 29 miles away'--}}
+{{--                           ]--}}
+{{--                       ],--}}
+{{--                       'bulletPoints' => [--}}
+{{--                           'Operation done in 2 wks',--}}
+{{--                           'Outstanding CQC rating',--}}
+{{--                           '5 star NHS choices rating'],--}}
+{{--                       'offerPrice' => '8499',--}}
+{{--                       'hospitalType' => 'private-hospital',--}}
+{{--                       'hospitalUrl' => 'www.northumbria.nhs.uk'--}}
+{{--                   ])--}}
+{{--                </li>--}}
+                @endforeach
                 {{--            <li class="d-block ml-3">--}}
                 {{--                <a href="" class="btn btn-icon btn-special-tab">Special Offers</a>--}}
                 {{--            </li>--}}
@@ -54,6 +57,7 @@
                 {{--                    <li><a href="">Insurance Guide</a></li>--}}
                 {{--                    <li><a href="">Medical Negligence</a></li>--}}
             </ul>
+            @endif
             <div class="compare-button-title d-flex align-items-center h-100">
                 {{--                @svg('compare-heart', 'compare-heart')--}}
                 <svg id="compare_heart" xmlns="http://www.w3.org/2000/svg" width="30" height="30">

@@ -207,7 +207,7 @@
     {{--  Compare bar  --}}
     {{--    @include('components.compare')--}}
     {{-- New comparebar - solutions bar --}}
-    @include('components.solutionsbar')
+    @include('components.solutionsbar', ['specialOffers' => $data['special_offers']])
     {{--  Modal for 'make an enquiry'  --}}
     @include('components.modals.modalenquirenhs')
     {{--  Modal for special offers  --}}
