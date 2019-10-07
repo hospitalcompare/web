@@ -5,7 +5,7 @@
             @if(!empty($data['special_offers']))
             <ul class="solutions-menu align-items-end d-flex mb-0 ml-auto mr-3">
                 @foreach($specialOffers as $key => $specialOffer )
-                <li class="d-block">
+                <li class="d-block h-100">
                     @include('components.basic.specialoffertab', [
                         'bgColor' => $key,
                         'headerText' => [
@@ -21,9 +21,9 @@
                         'bulletPoints' => [
                             $key == 'purple' ? 'Fully funded by the NHS' : 'Shortest waiting time',
                             $specialOffer['rating']['latest_rating'] . ' CQC rating',
-                            (!empty($specialOffer['rating']['avg_user_rating'])) ? $specialOffer['rating']['avg_user_rating'] . ' star NHS Choices user rating' : 'No data'],
+                            (!empty($specialOffer['rating']['avg_user_rating'])) ? $specialOffer['rating']['avg_user_rating'] . ' star NHS Choices user rating' : null],
                         'offerPrice' => null,
-                        'hospitalType' => 'private-hospital',
+                        'hospitalType' => $specialOffer['hospital_type_id'] = 1 ? 'private-hospital' : 'nhs-hospital',
                         'hospitalUrl' => $specialOffer['url']
                     ])
                 </li>

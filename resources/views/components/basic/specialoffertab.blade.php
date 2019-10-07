@@ -21,37 +21,42 @@
         <span class="fa fa-chevron-up toggle-special-offer"></span>
     </div>
     <div class="special-offer-body">
-        <div class="bullets">
-            <ul>
-                @foreach($bulletPoints as $bulletPoint)
-                    <li>{{ $bulletPoint }}</li>
-                @endforeach
-            </ul>
-        </div>
-        @if(!empty($offerPrice))
-            <div class="offer-price mb-4">
-                Total cost <strong>£{{ $offerPrice }}</strong>
+        <div class="inner-body d-flex flex-column justify-content-between h-100">
+            <div class="bullets">
+                <ul>
+                    @foreach($bulletPoints as $bulletPoint)
+                        @if(!empty($bulletPoint))
+                            <li>{{ $bulletPoint }}</li>
+                        @endif
+                    @endforeach
+                </ul>
             </div>
-        @endif
-        <div class="btn-area text-right">
-            @includeWhen($hospitalType == 'private-hospital' ,'components.basic.modalbutton', [
-                'id'                => '1',
-                'hospitalType'      => $hospitalType,
-                'hospitalTitle'     => $headerText['open']['title'],
-                'modalTarget'       => '#hc_modal_enquire_private',
-                'classTitle'        => 'btn btn-icon btn-enquire-now enquiry',
-                'target'            => 'blank',
-                'button'            => 'Enquire now'
-                ])
-            @includeWhen($hospitalType == 'nhs-hospital' ,'components.basic.modalbutton', [
-                'hospitalType'      => $hospitalType,
-                'hospitalTitle'     => $headerText['open']['title'],
-                'hrefValue'         => $hospitalUrl,
-                'modalTarget'       => '#hc_modal_enquire_nhs',
-                'classTitle'        => 'btn btn-icon btn-enquire-now enquiry',
-                'target'            => 'blank',
-                'button'            => 'Enquire now',
-                ])
+
+            @if(!empty($offerPrice))
+                <div class="offer-price mb-4">
+                    Total cost <strong>£{{ $offerPrice }}</strong>
+                </div>
+            @endif
+            <div class="btn-area text-right">
+                @includeWhen($hospitalType == 'private-hospital' ,'components.basic.modalbutton', [
+                    'id'                => '1',
+                    'hospitalType'      => $hospitalType,
+                    'hospitalTitle'     => $headerText['open']['title'],
+                    'modalTarget'       => '#hc_modal_enquire_private',
+                    'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto',
+                    'target'            => 'blank',
+                    'button'            => 'Enquire now'
+                    ])
+                @includeWhen($hospitalType == 'nhs-hospital' ,'components.basic.modalbutton', [
+                    'hospitalType'      => $hospitalType,
+                    'hospitalTitle'     => $headerText['open']['title'],
+                    'hrefValue'         => $hospitalUrl,
+                    'modalTarget'       => '#hc_modal_enquire_nhs',
+                    'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto',
+                    'target'            => 'blank',
+                    'button'            => 'Enquire now',
+                    ])
+            </div>
         </div>
     </div>
 </div>
