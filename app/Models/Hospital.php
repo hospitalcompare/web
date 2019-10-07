@@ -333,7 +333,7 @@ class Hospital extends Model
         do {
             $specialOffers = self::getSpecialOffers($latitude, $longitude, $radius, $specialtyId, $preHospitals);
             $radius += 20;
-        } while ($specialOffers['purple']->count() == 0 && $specialOffers['pink']->count() == 0);
+        } while (count($specialOffers['purple']) == 0 && count($specialOffers['pink']) == 0);
 
         return [
             'data'              => [
@@ -425,8 +425,8 @@ class Hospital extends Model
         }
 
         return [
-            'purple'    => $purple,
-            'pink'      => $pink
+            'purple'    => $purple->toArray(),
+            'pink'      => $pink->toArray()
         ];
     }
 }
