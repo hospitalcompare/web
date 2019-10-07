@@ -67,9 +67,10 @@ class WebController extends BaseController
         else
             $radius = 50;
 
-        $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy);
-        $errors     = $hospitals['errors'];
-        $hospitals  = $hospitals['data']['hospitals'];
+        $hospitals      = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy);
+        $errors         = $hospitals['errors'];
+        $hospitals      = $hospitals['data']['hospitals'];
+        $specialOffers  = $hospitals['data']['special_offers'];
 
         $sortBys    = Utils::sortBys;
         $procedures = Utils::getProceduresForDropdown();
@@ -77,6 +78,7 @@ class WebController extends BaseController
 
         $this->returnedData['success']                              = true;
         $this->returnedData['data']['hospitals']                    = $hospitals;
+        $this->returnedData['data']['special_offers']               = $specialOffers;
         $this->returnedData['data']['filters']['procedures']        = $procedures;
         $this->returnedData['data']['filters']['waitingTimes']      = Utils::waitingTimes;
         $this->returnedData['data']['filters']['userRatings']       = Utils::userRatings;
