@@ -28,11 +28,11 @@
                 @endforeach
             </ul>
         </div>
-        <div class="offer-price mb-4">
-            @if($hospitalType == 'private-hospital')
+        @if(!empty($offerPrice))
+            <div class="offer-price mb-4">
                 Total cost <strong>£{{ $offerPrice }}</strong>
-            @endif
-        </div>
+            </div>
+        @endif
         <div class="btn-area text-right">
             @includeWhen($hospitalType == 'private-hospital' ,'components.basic.modalbutton', [
                 'id'                => '1',
