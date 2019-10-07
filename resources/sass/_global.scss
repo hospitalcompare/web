@@ -49,12 +49,20 @@ select.big {
     background-color: $hanblue;
 }
 
+.bg-indigo {
+    background-color: $indigo;
+}
+
 .bg-green {
     background-color: $green;
 }
 
 .bg-pink {
     background-color: $pink;
+}
+
+.bg-darkpink {
+    background-color: darken($pink, 10%);
 }
 
 .bg-black {

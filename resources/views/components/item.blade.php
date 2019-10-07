@@ -3,7 +3,7 @@
         <div class="sort-categories-section-1">
             <div class="sort-categories-item hospital-image">
                 <img alt="Image of {{ $title }}" src="{{ $itemImg }}">
-                <div class="{{$NHSClass}} py-1 px-2 rounded-pill m-1 {{ $NHSClass == 'private-hospital' ? 'bg-hanblue' : 'bg-teal' }}"><p class="m-0">{{$fundedText}}</p></div>
+                <div class="{{$NHSClass}} py-1 px-2 rounded-pill m-1 {{ $NHSClass == 'private-hospital' ? 'bg-darkpink' : 'bg-teal' }}"><p class="m-0">{{$fundedText}}</p></div>
                 @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', ['class' => 'default'])
                 {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
                 <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
