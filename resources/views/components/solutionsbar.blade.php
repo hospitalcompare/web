@@ -1,29 +1,30 @@
 <div class="compare-hospitals-bar {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
     <div class="compare-hospitals-header d-flex justify-content-between">
-        <div class="container position-relative d-flex align-items-end h-100">
+        <div class="container position-relative d-flex justify-content-between align-items-end h-100">
             @include('components.doctor')
             @if(!empty($data['special_offers']))
             <ul class="solutions-menu align-items-end d-flex mb-0 ml-auto mr-3">
-                @foreach($specialOffers as $specialOffer )
+                @foreach($specialOffers as $key => $specialOffer )
                 <li class="d-block">
                     @include('components.basic.specialoffertab', [
+                        'bgColor' => $key,
                         'headerText' => [
                             'open' => [
                                 'title' => $specialOffer['name'],
-                                'subtitle' => $specialOffer['radius'] . ' miles away'
+                                'subtitle' => !empty($specialOffer['radius']) ? round($specialOffer['radius'], 1) . ' miles away' : 'bongo'
                             ],
                             'closed' => [
                                 'title' => 'NHS funded operation',
-                                'subtitle' => 'at Outstanding hospital 27 miles away'
+                                'subtitle' => !empty($specialOffer['radius']) ? 'at Outstanding hospital ' . round($specialOffer['radius'], 1) . ' miles away' : 'at Outstanding hospital'
                             ]
                         ],
                         'bulletPoints' => [
-                            'Outstanding CQC rating',
-                            '5 star NHS choices rating',
-                            '14 wks NHS funded waiting time'],
+                            $specialOffer['rating']['friends_family_rating'],
+                            $specialOffer['rating']['latest_rating'] . ' CQC rating',
+                            (!empty($specialOffer['rating']['avg_user_rating'])) ? $specialOffer['rating']['avg_user_rating'] . ' star NHS Choices user rating' : 'No data'],
                         'offerPrice' => '6999',
-                        'hospitalType' => 'nhs-hospital',
-                        'hospitalUrl' => 'www.northumbria.nhs.uk'
+                        'hospitalType' => $specialOffer['hospital_type_id'] = 1 ? 'nhs-hospital' : 'private-hospital',
+                        'hospitalUrl' => $specialOffer['url']
                     ])
                 </li>
 {{--                <li class="d-block">--}}

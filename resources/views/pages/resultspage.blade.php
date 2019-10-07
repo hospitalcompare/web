@@ -9,7 +9,7 @@
 @section('mobile', 'width=device-width, initial-scale=1')
 
 @section('body-class', 'results-page')
-
+{{--{{ dd($data['special_offers']) }}--}}
 @section('content')
     @include('pages.pagesections.resultspageform')
     <div id="sort_categories_parent" class="sort-categories-parent">
