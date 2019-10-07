@@ -75,25 +75,25 @@
                         'html' => 'true',
                         'content' => !empty($d['rating']['avg_user_rating']) ? '
                         <p><span class="mr-2">Food rating</span>
-                            <img src="images/icons/star.svg" alt="Whole Star">
-                            <img src="images/icons/star.svg" alt="Whole Star">
-                            <img src="images/icons/star.svg" alt="Whole Star">
-                            <img src="images/icons/star.svg" alt="Whole Star">
-                            <img src="images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
                         </p>
                         <p><span class="mr-2">Food rating</span>
-                            <img src="images/icons/star.svg" alt="Whole Star">
-                            <img src="images/icons/star.svg" alt="Whole Star">
-                            <img src="images/icons/star.svg" alt="Whole Star">
-                            <img src="images/icons/star.svg" alt="Whole Star">
-                            <img src="images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
                         </p>
                         <p><span class="mr-2">Food rating</span>
-                            <img src="images/icons/star.svg" alt="Whole Star">
-                            <img src="images/icons/star.svg" alt="Whole Star">
-                            <img src="images/icons/star.svg" alt="Whole Star">
-                            <img src="images/icons/star.svg" alt="Whole Star">
-                            <img src="images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
                         </p>' : 'Currently no data available<br>for this hospital'])>
                     {!! html_entity_decode($stars) !!}
                 </p>
