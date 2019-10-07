@@ -195,7 +195,7 @@
             <div class="sort-bar row">
                 <div class="show-section col-6">
                     Showing {{$data['hospitals']->total()}} hospital(s) | Ordered
-                    by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : 'Care Quality Rating & Distance' }}
+                    by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : (!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating & Distance' : 'Care Quality Rating & Waiting Time' }}
                 </div>
                 <div class="sort-section col-6 d-flex justify-content-end align-items-center">
                     @include('components.basic.button', [
