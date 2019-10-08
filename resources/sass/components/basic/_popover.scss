@@ -24,8 +24,6 @@
 
     &-regular {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.16);
-        // Stop the flickering effect on hover of popover trigger
-        pointer-events: none;
 
         .arrow {
             background-image: url('../images/speech-point-small.svg');
@@ -97,6 +95,11 @@
                 transform: rotate(180deg) scaleX(-1);
             }
         }
+    }
+
+    &-hover {
+        // Stop the flickering effect on hover triggered popovers
+        pointer-events: none;
     }
 
     &-doctor {

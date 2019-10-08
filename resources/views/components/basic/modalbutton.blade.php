@@ -10,9 +10,10 @@
    @if(!empty($hospitalType) && $hospitalType == 'nhs-hospital')
    data-hospital-url="{{ $hrefValue }}"
    @endif
-   @if($modalTarget == '#hc_modal_enquire_private'),
+   @if($modalTarget == '#hc_modal_enquire_private')
    data-modal-text="{{ $modalText ?? 'This is the default text for an enquiry to a private hospital' }}"
    @endif
+   data-hospital-title="{{ $hospitalTitle ?? '' }}"
    data-target="{{ $modalTarget }}"
    data-image="{{ $image ?? '' }}"
    data-address="{{ $address ?? '' }}">{{ $button }}

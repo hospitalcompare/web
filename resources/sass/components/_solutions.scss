@@ -195,8 +195,8 @@
         ul {
             li {
                 list-style: none;
-                font-size: 13px;
-                line-height: 2;
+                @include font-size(16);
+                //line-height: 2;
                 font-weight: 400;
                 letter-spacing: -0.65px;
                 position: relative;
@@ -217,18 +217,26 @@
 .special-offer-tab {
     color: $white;
     width: 340px;
+    background-size: 200%;
+    background-position: left;
+    min-height: 0;
+    transition: min-height ease 0.4s, background-position ease 0.3s;
 
-    &.nhs-hospital__offer {
+    &.nhs-hospital__offer,
+    &.purple__offer {
         background-image: linear-gradient(264deg, #1b71f3 0%, #8f00ff 0%, #a346ec 52%, #b687db 100%);
+        //background: linear-gradient(264deg, #8e00fe,#1b71f3,#8e00fe);
     }
 
-    &.private-hospital__offer {
-        background-image: linear-gradient(249deg, #1b71f3 0%, #ed0373 0%, #cc6d9b 100%);
+    &.private-hospital__offer,
+    &.pink__offer {
+        background-image: linear-gradient(249deg, #8e00fe,#1b71f3);
+        //background-image: linear-gradient(249deg, #1b71f3 0%, #ed0373 0%, #cc6d9b 100%);
     }
 
     //width: 300px;
     border-radius: 10px 10px 0 0;
-    font-size: 18px;
+    @include font-size(18);
     font-weight: 500;
     letter-spacing: -0.9px;
 
@@ -244,15 +252,18 @@
             max-width: 200px;
 
             .offer-title {
-                font-size: 18px;
+                @include font-size(18);
             }
 
             .offer-subtitle {
-                font-size: 14px;
+                @include font-size(14);
             }
         }
 
         .open-text {
+            .hospital-name {
+                @include font-size(18);
+            }
             display: none;
         }
 
@@ -284,8 +295,16 @@
 
     // Spin arrow when open
     &.open {
-        .special-offer-header svg {
-            transform: rotate3d(0, 0, 1, 180deg);
+        background-position: right;
+
+        .special-offer-header {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            height: initial;
+
+            svg {
+                transform: rotate3d(0, 0, 1, 180deg);
+            }
         }
 
         .closed-text {
@@ -301,6 +320,7 @@
 .special-offer-body {
     padding: 0 25px 25px 80px;
     display: none;
+    height: 200px;
 
     .offer-price {
         min-height: 30px;
