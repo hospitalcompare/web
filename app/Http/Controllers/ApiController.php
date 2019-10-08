@@ -78,7 +78,7 @@ class ApiController {
 //        \DB::statement('UPDATE hospitals LEFT JOIN hospital_types ON hospitals.hospital_type_id = hospital_types.id SET special_offers = 1 WHERE hospital_types.name = "Independent" AND hospitals.id % 3 = 0');
         //Set Special offers just to BMI ( for the meeting with them)
         //Get all the Trusts having trust_id = 'NT4'
-        $trustSpecialOffers = Trust::where('trust_id', 'NTP')->with('hospitals')->get();
+        $trustSpecialOffers = Trust::where('trust_id', 'NT4')->with('hospitals')->get();
         if(!empty($trustSpecialOffers)) {
             foreach($trustSpecialOffers as $trustSpecialOffer) {
                 if(!empty($trustSpecialOffer->hospitals)) {
