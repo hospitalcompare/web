@@ -9,7 +9,8 @@
 @section('mobile', 'width=device-width, initial-scale=1')
 
 @section('body-class', 'results-page')
-{{--{{ dd($data['special_offers']) }}--}}
+
+{{--{{ dd($doctor) }}--}}
 @section('content')
     @include('pages.pagesections.resultspageform')
     <div id="sort_categories_parent" class="sort-categories-parent">
@@ -207,7 +208,10 @@
     {{--  Compare bar  --}}
     {{--    @include('components.compare')--}}
     {{-- New comparebar - solutions bar --}}
-    @include('components.solutionsbar', ['specialOffers' => $data['special_offers']])
+    @include('components.solutionsbar', [
+        'specialOffers' => $data['special_offers'],
+{{--        'doctor' => $doctor--}}
+        ])
     {{--  Modal for 'make an enquiry'  --}}
     @include('components.modals.modalenquirenhs')
     {{--  Modal for special offers  --}}

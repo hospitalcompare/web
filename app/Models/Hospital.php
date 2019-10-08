@@ -342,16 +342,20 @@ class Hospital extends Model
         } while (count($specialOffers['purple']) == 0 && count($specialOffers['pink']) == 0);
 
         //Generate text for Doctor Stevini
-        $doctor = "Your search returned ".count($preHospitals)." hospitals, currently sorted by ".$doctorSort.", with the best at the top.";
-        if(empty($latitude) || empty($longitude) || empty($postcode) || empty($procedureId))
-            $doctor .= 'The most useful results will be achieved if you input a postcode (for postcode) / treatment (for treatment type)';
+        $doctor = "<p>Your search returned " . "<strong>" .count($preHospitals). "</strong>" . " hospitals, currently sorted by ".$doctorSort.", with the best at the top.</p>";
 
-        $doctor .= 'Next, you can either:
-            - Click the “Filter Results” to view all the ways in which you may wish to refine your search
-            - Click on one of the triangles (arrows?) on the header bar to change the sort order - for example click on the waiting time to view the shortest wait in your search results
-            - Select one or more hospitals to shortlist by clicking the heart / compare logo then click on View shortlist
-            - Make an enquiry of a particular hospital relating to NHS funded or self-pay treatment eg more information about consultants. This won’t cost you a penny and does not commit you to anything.
-            - View the various special offers and Hospital Compare selected best alternatives (the solutions bar)';
+        if(empty($latitude) || empty($longitude) || empty($postcode) || empty($procedureId))
+            $doctor .= '<p>The most useful results will be achieved if you input a postcode (for postcode) / treatment (for treatment type).</p>';
+
+        $doctor .= '<p>Next, you can either:</p>
+            <ul class="highlight-page-elements">
+                <li data-highlight="#show_filters">Click the “Filter Results” to view all the ways in which you may wish to refine your search.</li> 
+                <li>Click on one of the triangles (arrows?) on the header bar to change the sort order - for example click on the waiting time to view the shortest wait in your search results.</li>
+                <li>Select one or more hospitals to shortlist by clicking the heart / compare logo then click on View shortlist.</li>
+                <li>Make an enquiry of a particular hospital relating to NHS funded or self-pay treatment eg more information about consultants. This won’t cost you a penny and does not commit you to anything.</li>
+                <li>View the various special offers and Hospital Compare selected best alternatives (the solutions bar).</li>
+            </ul>';
+
 
         return [
             'data'              => [

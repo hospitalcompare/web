@@ -1,6 +1,10 @@
 $(document).ready(function () {
     // Doctor popover event handler
     var $doctor = $('#doctor-popover');
+    var $message = $('.doctor').data('message');
+    var $content = `<p class="bold mb-0">${$message}</p>
+                    <p class="mt-3"><a class="btn btn-close btn-close__small btn-teal btn-icon">Close</a></p>`;
+    // console.log($content);
     $doctor.popover({
         container: 'body',
         template: `<div class="popover popover-large popover-doctor">
@@ -10,9 +14,9 @@ $(document).ready(function () {
                         <div class="arrow arrow-large">
                         </div>
                     </div>`,
-        content: `<p class="bold mb-0">Need some help?</p><p>Here to help you find<br> the best hospital</p><p><a  class="btn btn-go btn-icon" >Let's Go</a></p>`,
+        content: $content,
         html: true,
-        trigger: 'focus',
+        trigger: 'click',
         placement: 'top'
     });
 
@@ -36,4 +40,6 @@ $(document).ready(function () {
     $doctor.on('hide.bs.popover', function (e) {
         Cookies.set('showDoctor', 'false');
     });
+
+    // Highlight page sections when hovering over the list items
 });
