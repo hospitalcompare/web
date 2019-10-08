@@ -33,7 +33,20 @@ $(document).ready(function () {
     $doctor.on('shown.bs.popover', function (e) {
         $('.popover-doctor')
             .find('.btn-go')
-            .addClass('popover-open')
+            .addClass('popover-open');
+
+        // Highlight page sections when hovering over the list items
+        var $highlightClass = "highlight";
+        function highlightElements(action){
+            var $highlightTarget = $(this).find('.highlight').text();
+            // console.log($highlightTarget);
+            var $selector = $(`${$highlightTarget}`);
+            $selector.bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+                $selector.removeClass($highlightClass);
+            }).addClass($highlightClass);
+        }
+
+        $('.highlight-page-elements li').on('mouseenter', highlightElements);
     });
 
     // Set the showDoctor cookie to false when she is dismissed
@@ -41,5 +54,5 @@ $(document).ready(function () {
         Cookies.set('showDoctor', 'false');
     });
 
-    // Highlight page sections when hovering over the list items
+
 });
