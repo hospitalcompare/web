@@ -230,7 +230,7 @@
 
     &.private-hospital__offer,
     &.pink__offer {
-        background-image: linear-gradient(249deg, #8e00fe,#1b71f3);
+        background-image: linear-gradient(249deg, #8e00fe, #1b71f3);
         //background-image: linear-gradient(249deg, #1b71f3 0%, #ed0373 0%, #cc6d9b 100%);
     }
 
@@ -264,6 +264,7 @@
             .hospital-name {
                 @include font-size(18);
             }
+
             display: none;
         }
 
@@ -333,4 +334,16 @@
 .star-icon {
     width: 16px;
     height: 15px;
+}
+
+// Pulse effect when highlighting page elements
+.highlight {
+    transform-origin: 50% 50%;
+    //animation: bounce .8s ease-in-out;
+    //animation: wobble .5s ease-in-out;
+    //animation: shake .8s ease-in-out;
+    //animation: flash .8s ease-in-out;
+    animation: pulse .5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
 }

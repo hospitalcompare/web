@@ -11,7 +11,7 @@
 @section('body-class', 'test-page')
 
 @section('content')
-    {{-- dd($data['specialties']) --}}
+{{--     {{ dd($doctor) }}--}}
     <section>
         @include('pages.pagesections.resultspageform', [
         'displayBlock' => true])

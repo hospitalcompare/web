@@ -121,12 +121,11 @@ class WebController extends BaseController
         if($procedureId == '-1')
             $procedureId = 0;
 
-        $hospitals  = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy);
+        $hospitals      = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy);
         $errors     = $hospitals['errors'];
-        $hospitals  = $hospitals['data']['hospitals'];
-//        dd($hospitals->toArray()['data']);
         $sortBys    = Utils::sortBys;
         $procedures = Utils::getProceduresForDropdown();
+        $doctor     = $hospitals['doctor'];
 
         $this->returnedData['success']                              = true;
         $this->returnedData['data']['filters']['policies']          = $policies;
@@ -138,6 +137,7 @@ class WebController extends BaseController
         $this->returnedData['data']['filters']['hospitalTypes']     = Utils::hospitalTypes;
         $this->returnedData['data']['sortBy']                       = $sortBys;
         $this->returnedData['errors']                               = $errors;
+        $this->returnedData['doctor']                               = $doctor;
 
         if(env('APP_ENV') != 'live')
             return view('pages.testpage', $this->returnedData);

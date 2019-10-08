@@ -23,11 +23,14 @@ $(document).ready(function () {
                         </div>`
         });
 
-    // Popover with close button
-    $(document).on("click", ".popover .btn-close", function (e) {
+    // Popover with close button or x button
+    $(document).on("click", ".popover .btn-close", hidePopover);
+    $(document).on("click", ".popover .close", hidePopover);
+
+    function hidePopover(e) {
         e.preventDefault();
         $(this).parents(".popover").popover('hide');
-    });
+    }
 
     // Add a custom class to the popover, so we can target popovers triggered by hover
     function addDynamicClassToPopover(shownEvent) {
