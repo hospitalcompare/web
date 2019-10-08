@@ -4,6 +4,7 @@
 namespace App\Models;
 
 use App\Helpers\Errors;
+use App\Helpers\Utils;
 use App\Services\Location;
 use Illuminate\Database\Eloquent\Model;
 
@@ -253,17 +254,22 @@ class Hospital extends Model
         }
 
 //        Sorting the records
+        $doctorSort = '';
         if(empty($sortBy)) {
             $hospitals = $hospitals->leftJoin('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
             $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 1 when hospital_ratings.latest_rating = "Good" then 2 when hospital_ratings.latest_rating = "Inadequate" then 3 when hospital_ratings.latest_rating = "Requires improvement" then 4 when hospital_ratings.latest_rating = "Not Yet Rated" then 5 end');
             if(!empty($postcode) && !empty($latitude) && !empty($longitude)) {
                 $hospitals = $hospitals->orderBy('radius', 'ASC');
+                $doctorSort = 'Care Quality Rating & Distance';
             } else {
                 $hospitals = $hospitals->leftJoin('hospital_waiting_time', 'hospitals.id', '=', 'hospital_waiting_time.hospital_id');
                 $hospitals = $hospitals->where('hospital_waiting_time.specialty_id', $specialtyId);
                 $hospitals = $hospitals->orderByRaw('ISNULL(hospital_waiting_time.perc_waiting_weeks), hospital_waiting_time.perc_waiting_weeks ASC');
+                $doctorSort = 'Care Quality Rating & Waiting Time';
             }
-
+        } else {
+            if(array_key_exists($sortBy, Utils::sortBys))
+                $doctorSort = Utils::sortBys[$sortBy]['name'];
         }
 
         if(in_array($sortBy, [1, 2])) {
@@ -335,11 +341,24 @@ class Hospital extends Model
             $radius += 20;
         } while (count($specialOffers['purple']) == 0 && count($specialOffers['pink']) == 0);
 
+        //Generate text for Doctor Stevini
+        $doctor = "Your search returned ".count($preHospitals)." hospitals, currently sorted by ".$doctorSort.", with the best at the top.";
+        if(empty($latitude) || empty($longitude) || empty($postcode) || empty($procedureId))
+            $doctor .= 'The most useful results will be achieved if you input a postcode (for postcode) / treatment (for treatment type)';
+
+        $doctor .= 'Next, you can either:
+            - Click the “Filter Results” to view all the ways in which you may wish to refine your search
+            - Click on one of the triangles (arrows?) on the header bar to change the sort order - for example click on the waiting time to view the shortest wait in your search results
+            - Select one or more hospitals to shortlist by clicking the heart / compare logo then click on View shortlist
+            - Make an enquiry of a particular hospital relating to NHS funded or self-pay treatment eg more information about consultants. This won’t cost you a penny and does not commit you to anything.
+            - View the various special offers and Hospital Compare selected best alternatives (the solutions bar)';
+
         return [
             'data'              => [
                 'hospitals'         => $hospitals,
                 'special_offers'    => $specialOffers,
             ],
+            'doctor'            => $doctor,
             'errors'            => $errors
         ];
     }

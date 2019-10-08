@@ -69,6 +69,7 @@ class WebController extends BaseController
 
         $hospitals      = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy);
         $errors         = $hospitals['errors'];
+        $doctor         = $hospitals['doctor'];
         $specialOffers  = $hospitals['data']['special_offers'];
         $hospitals      = $hospitals['data']['hospitals'];
 
@@ -86,6 +87,7 @@ class WebController extends BaseController
         $this->returnedData['data']['filters']['hospitalTypes']     = Utils::hospitalTypes;
         $this->returnedData['data']['filters']['policies']          = $policies;
         $this->returnedData['data']['sortBy']                       = $sortBys;
+        $this->returnedData['doctor']                               = $doctor;
         $this->returnedData['hc_errors']                            = $errors;
 
         //For Live environment just show the work in progress page
