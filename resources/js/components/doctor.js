@@ -37,7 +37,7 @@ $(document).ready(function () {
 
         function highlightElements(action){
             // Animate page sections when hovering over the list items
-            var $highlightClass = "highlight";
+            var $highlightClass = "dr-highlight";
             var $highlightTarget = $(this).find('.highlight').text();
             if($(this).find('.animation').length > 0 ){
                 $highlightClass = $(this).find('.animation').text();
