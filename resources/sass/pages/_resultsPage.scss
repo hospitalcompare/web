@@ -260,6 +260,7 @@ $col-spacing: 18px;
 
             span.sort-arrow {
                 position: absolute;
+                left: 0;
                 bottom: 10px;
                 display: inline-block;
                 @include icon-bg-center(15%);

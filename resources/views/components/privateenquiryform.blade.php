@@ -3,7 +3,7 @@
     <h3 class="text-center text-white">Enquire now for <span class="hospital-title">this hospital</span></h3>
     <p class="text-white text-center"></p>
     <div class="form-wrap d-flex">
-        <div class="img-wrap mr-4">
+        <div class="img-wrap">
             <img width="173" height="158" src="images/alder-1.png">
             <div id="info_text" class="mt-2 text-white">
                 Default text for enquiry form

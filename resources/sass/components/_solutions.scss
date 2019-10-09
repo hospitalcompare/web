@@ -55,6 +55,8 @@
 
         .compare-button-title {
             cursor: pointer;
+            @extend .SofiaPro-Bold;
+            @include font-size(20);
 
             svg {
                 width: 30px;

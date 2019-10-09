@@ -5,7 +5,6 @@
         border-radius: 16px 0 16px 16px;
     }
 
-
     .close {
         top: 0;
         right: 0;
@@ -27,7 +26,6 @@
     }
 
     &.modal-enquire {
-
         .modal-copy {
             font-size: 16px;
             font-weight: 400;
@@ -76,6 +74,17 @@
             display: block !important;
             position: initial;
             z-index: 1070;
+        }
+
+        .form-wrap {
+            .img-wrap {
+                width: 28%;
+                padding-right: 25px;
+            }
+
+            form {
+                width: 72%;
+            }
         }
     }
 
