@@ -7,8 +7,8 @@
             @foreach($howsections as $howsection)
                 <div class="how-section__child col-12 col-md-3">
                     <div class="col-inner h-100 d-flex flex-column">
-                        <div class="icon">
-                            {!! file_get_contents(asset('images/icons/' . $howsection['iconImg'] . '.svg')) !!}
+                        <div class="icon" style="background-image: url('images/icons/{{ $howsection['iconImg'] }}.svg')">
+{{--                            {!! file_get_contents(asset('images/icons/' . $howsection['iconImg'] . '.svg')) !!}--}}
                         </div>
                         @if(!empty($howsection['title']))
                         <div class="icon-title">
