@@ -337,12 +337,33 @@
 }
 
 // Pulse effect when highlighting page elements
-.highlight {
+.dr-highlight {
     transform-origin: 50% 50%;
     //animation: bounce .8s ease-in-out;
     //animation: wobble .5s ease-in-out;
     //animation: shake .8s ease-in-out;
     //animation: flash .8s ease-in-out;
+    animation: pulse .5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+}
+
+.heartbeat {
+    transform-origin: 50% 50%;
+    animation: heartBeat .5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+}
+
+.shake {
+    transform-origin: 50% 50%;
+    animation: shake .8s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.pulse {
+    transform-origin: 50% 50%;
     animation: pulse .5s ease-in-out;
     animation-fill-mode: forwards;
     animation-iteration-count: 2;
