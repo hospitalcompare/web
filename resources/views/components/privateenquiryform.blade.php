@@ -35,7 +35,7 @@
                 {{-- First name --}}
                 <div class="col col-6">
                     <input required name="first_name" type="text" class="form-control" id="firstName"
-                           placeholder="First Name*" value="{{ !empty($firstName) ? $firstName : '' }}">
+                           placeholder="First Name*" value="{{ !empty($firstName) ? $firstName : '' }}" />
                 </div>
                 {{-- Last name --}}
                 <div class="col col-6">
@@ -54,21 +54,21 @@
             <div class="form-group row align-items-end mb-0">
                 <div class="col col-6">
                     <input required name="email" type="email" class="form-control" id="email"
-                           placeholder="Email Address*" value="{{ !empty($email) ? $email : '' }}">
+                           placeholder="Email Address*" value="{{ !empty($email) ? $email : '' }}" />
                 </div>
                 <div class="col col-6">
                     <input required name="confirm_email" type="email" class="form-control" id="confirmEmail"
-                           placeholder="Confirm Email Address*" value="{{ !empty($email) ? $email : '' }}">
+                           placeholder="Confirm Email Address*" value="{{ !empty($email) ? $email : '' }}" />
                 </div>
             </div>
             <div class="form-group row align-items-end mb-0">
                 <div class="col col-6">
                     <input required name="phone_number" type="text" class="form-control" id="phoneNumber"
-                           placeholder="Phone Number*" value="{{ !empty($phone) ? $phone : '' }}">
+                           placeholder="Phone Number*" value="{{ !empty($phone) ? $phone : '' }}" />
                 </div>
                 <div class="col col-6">
                     <input required name="postcode" type="text" class="form-control" id="postcode"
-                           placeholder="Postcode*" value="{{ !empty($postcode) ? $postcode : '' }}">
+                           placeholder="Postcode*" value="{{ !empty($postcode) ? $postcode : '' }}" />
                 </div>
             </div>
             <div class="form-group row align-items-end mb-0">
@@ -118,7 +118,7 @@
 
                 <div class="col col-12 checkbox">
                     <input required name="gdpr" type="checkbox"
-                           id="gdpr" {{ !empty($gdpr) && ($gdpr) ? 'checked' : '' }}>
+                           id="gdpr" {{ !empty($gdpr) && ($gdpr) ? 'checked' : '' }} />
                     <label class="small-print" for="gdpr">Please accept the Terms & Conditions before submitting the
                         form.</label>
                 </div>

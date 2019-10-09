@@ -22,7 +22,17 @@ mix.webpackConfig({
             $: "jquery",
             jQuery: "jquery"
         })
-    ]
+    ],
+    module: {
+        rules: [{
+            test: /\.js?$/,
+            exclude: /(bower_components)/,
+            use: [{
+                loader: 'babel-loader',
+                options: mix.config.babel()
+            }]
+        }]
+    }
 });
 
 //Copy all the images that are used on the Web Application to the right folder ( public/images )
