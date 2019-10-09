@@ -60,6 +60,7 @@ select::-ms-expand {
         width: 100%;
         @include placeholder {
             color: $darkerGrey;
+            opacity: 1; // To fix a bug in firefox
         }
     }
 }
