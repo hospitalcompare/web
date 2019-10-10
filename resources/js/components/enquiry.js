@@ -80,7 +80,7 @@ $(document).ready(function () {
                 },
                 confirm_email: {
                     required: true,
-                    equalTo: email,
+                    equalTo: "#email",
                     email: true
                 },
                 phone_number: {
@@ -167,7 +167,7 @@ $(document).ready(function () {
         $(this)
             .parents('form')
             .submit();
-    })
+    });
 
     // Dismiss bootstrap alert
     $("[data-hide]").on("click", function () {

@@ -17,22 +17,22 @@ const webpack = require('webpack');
 
 mix.webpackConfig({
     devtool: "source-map",
-    plugins: [
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery"
-        })
-    ],
-    module: {
-        rules: [{
-            test: /\.js?$/,
-            exclude: /(bower_components)/,
-            use: [{
-                loader: 'babel-loader',
-                options: mix.config.babel()
-            }]
-        }]
-    }
+    // plugins: [
+    //     new webpack.ProvidePlugin({
+    //         $: "jquery",
+    //         jQuery: "jquery"
+    //     })
+    // ],
+    // module: {
+    //     rules: [{
+    //         test: /\.js?$/,
+    //         exclude: /(bower_components)/,
+    //         use: [{
+    //             loader: 'babel-loader',
+    //             options: mix.config.babel()
+    //         }]
+    //     }]
+    // }
 });
 
 //Copy all the images that are used on the Web Application to the right folder ( public/images )
@@ -57,7 +57,7 @@ mix.sass('resources/sass/app.scss', 'public/css')
         processCssUrls: false
     });
 
-mix.js(['resources/js/app.js'], 'public/js');
+mix.babel(['resources/js/app.js'], 'public/js');
 // mix.copy('resources/js/cookies.js', 'public/js');
 // mix.js(['resources/js/cookies.js'], 'public/js');
 
