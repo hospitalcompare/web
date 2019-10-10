@@ -17,12 +17,12 @@ const webpack = require('webpack');
 
 mix.webpackConfig({
     devtool: "source-map",
-    // plugins: [
-    //     new webpack.ProvidePlugin({
-    //         $: "jquery",
-    //         jQuery: "jquery"
-    //     })
-    // ],
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
+    ],
     // module: {
     //     rules: [{
     //         test: /\.js?$/,
