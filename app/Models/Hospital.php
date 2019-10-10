@@ -349,11 +349,15 @@ class Hospital extends Model
 
         $doctor .= '<p>Next, you can either:</p>
             <ul class="highlight-page-elements">
-                <li><span class="d-none highlight">#show_filters</span>Click the “Filter Results” to view all the ways in which you may wish to refine your search.</li> 
-                <li><span class="d-none highlight">.sort-arrow</span>Click on one of the triangles (arrows?) on the header bar to change the sort order - for example click on the waiting time to view the shortest wait in your search results.</li>
-                <li><span class="d-none highlight">.compare</span>Select one or more hospitals to shortlist by clicking the heart / compare logo then click on View shortlist.</li>
+                <li><span class="d-none highlight">#show_filters</span><span class="d-none animation">shake
+                </span>Click the “Filter Results” to view all the ways in which you may wish to refine your search.</li>
+                <li><span class="d-none highlight">.sort-arrow</span><span class="d-none animation">shake
+                </span>Click on one of the triangles (arrows?) on the header bar to change the sort order - for example click on the waiting time to view the shortest wait in your search results.</li>
+                <li><span class="d-none highlight">.compare</span><span class="d-none animation">heartbeat
+                </span>Select one or more hospitals to shortlist by clicking the heart / compare logo then click on View shortlist.</li>
                 <li><span class="d-none highlight">.enquiry</span>Make an enquiry of a particular hospital relating to NHS funded or self-pay treatment eg more information about consultants. This won’t cost you a penny and does not commit you to anything.</li>
-                <li><span class="d-none highlight">.compare-hospitals-bar</span>View the various special offers and Hospital Compare selected best alternatives (the solutions bar).</li>
+                <li><span class="d-none highlight">.compare-hospitals-bar</span><span class="d-none animation">pulse
+                </span>View the various special offers and Hospital Compare selected best alternatives (the solutions bar).</li>
             </ul>';
 
 
