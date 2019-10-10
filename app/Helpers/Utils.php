@@ -21,13 +21,6 @@ class Utils
             'name'      => 'Distance',
             'class'     => 'd-none'
         ],[
-            'id'        => '9',
-            'name'      => 'Care Quality Rating',
-            'class'     => 'd-none'
-        ],[
-            'id'        => '10',
-            'name'      => 'Care Quality Rating'
-        ],[
             'id'        => '3',
             'name'      => 'Waiting time'
         ],[
@@ -48,6 +41,13 @@ class Utils
             'id'        => '8',
             'name'      => 'Operations Cancelled',
             'class'     => 'd-none'
+        ],[
+            'id'        => '9',
+            'name'      => 'Care Quality Rating',
+            'class'     => 'd-none'
+        ],[
+            'id'        => '10',
+            'name'      => 'Care Quality Rating'
         ],[
             'id'        => '11',
             'name'      => 'Friends & Family Rating',
