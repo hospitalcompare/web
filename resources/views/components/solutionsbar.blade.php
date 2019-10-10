@@ -3,39 +3,40 @@
         <div class="container position-relative d-flex justify-content-between align-items-end h-100">
             @include('components.doctor')
             @if(!empty($data['special_offers']))
-            <ul class="solutions-menu align-items-end d-flex mb-0 ml-auto mr-3">
-                @foreach($specialOffers as $key => $specialOffer )
-                <li class="d-block h-100">
-                    @include('components.basic.specialoffertab', [
-                        'bgColor' => $key,
-                        'headerText' => [
-                            'open' => [
-                                'title' => $specialOffer['name'],
-                                'subtitle' => !empty($specialOffer['radius']) ? round($specialOffer['radius'], 1) . ' miles away' : ''
+                <ul class="solutions-menu align-items-end d-flex mb-0 ml-auto mr-3">
+                    @foreach($specialOffers as $key => $specialOffer )
+                    <li class="d-block h-100">
+                        @include('components.basic.specialoffertab', [
+                            'bgColor' => $key,
+                            'headerText' => [
+                                'open' => [
+                                    'title' => $specialOffer['name'],
+                                    'subtitle' => !empty($specialOffer['radius']) ? round($specialOffer['radius'], 1) . ' miles away' : ''
+                                ],
+                                'closed' => [
+                                    'title' => 'NHS funded operation',
+                                    'subtitle' => !empty($specialOffer['radius']) ? 'at '.$specialOffer['rating']['latest_rating'].' hospital ' . round($specialOffer['radius'], 1) . ' miles away' : 'at '.$specialOffer['rating']['latest_rating'].' hospital'
+                                ]
                             ],
-                            'closed' => [
-                                'title' => 'NHS funded operation',
-                                'subtitle' => !empty($specialOffer['radius']) ? 'at Outstanding hospital ' . round($specialOffer['radius'], 1) . ' miles away' : 'at Outstanding hospital'
-                            ]
-                        ],
-                        'bulletPoints' => [
-                            $key == 'purple' ? 'Fully funded by the NHS' : 'Shortest waiting time',
-                            $specialOffer['rating']['latest_rating'] . ' CQC rating',
-                            (!empty($specialOffer['rating']['avg_user_rating'])) ? $specialOffer['rating']['avg_user_rating'] . ' star NHS Choices user rating' : null],
-                        'offerPrice' => null,
-                        'hospitalType' => $specialOffer['hospital_type_id'] = 1 ? 'private-hospital' : 'nhs-hospital',
-                        'hospitalUrl' => $specialOffer['url']
-                    ])
-                </li>
-                @endforeach
-                {{--            <li class="d-block ml-3">--}}
-                {{--                <a href="" class="btn btn-icon btn-special-tab">Special Offers</a>--}}
-                {{--            </li>--}}
-                {{--                    <li><a href="">Virtual GP</a></li>--}}
-                {{--                    <li><a href="">Operation Funding</a></li>--}}
-                {{--                    <li><a href="">Insurance Guide</a></li>--}}
-                {{--                    <li><a href="">Medical Negligence</a></li>--}}
-            </ul>
+                            'bulletPoints' => [
+                                $key == 'purple' ? 'Fully funded by the NHS' : 'Shortest waiting time',
+                                $specialOffer['rating']['latest_rating'] . ' CQC Rating',
+                                (!empty($specialOffer['rating']['avg_user_rating'])) ? $specialOffer['rating']['avg_user_rating'] . ' star NHS Choices user rating' : null
+                            ],
+                            'offerPrice' => null,
+                            'hospitalType' => $specialOffer['hospital_type']['name'] == 'Independent' ? 'private-hospital' : 'nhs-hospital',
+                            'hospitalUrl' => $specialOffer['url']
+                        ])
+                    </li>
+                    @endforeach
+                    {{--            <li class="d-block ml-3">--}}
+                    {{--                <a href="" class="btn btn-icon btn-special-tab">Special Offers</a>--}}
+                    {{--            </li>--}}
+                    {{--                    <li><a href="">Virtual GP</a></li>--}}
+                    {{--                    <li><a href="">Operation Funding</a></li>--}}
+                    {{--                    <li><a href="">Insurance Guide</a></li>--}}
+                    {{--                    <li><a href="">Medical Negligence</a></li>--}}
+                </ul>
             @endif
             <div class="compare-button-title d-flex align-items-center h-100">
                 {{--                @svg('compare-heart', 'compare-heart')--}}
