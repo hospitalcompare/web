@@ -356,7 +356,7 @@ class Hospital extends Model
         do {
             $specialOffers = self::getSpecialOffers($latitude, $longitude, $radius, $specialtyId, $preHospitals);
             $radius += 20;
-        } while (count($specialOffers['purple']) == 0 && count($specialOffers['pink']) == 0);
+        } while (empty($specialOffers['purple']) || empty($specialOffers['pink']));
 
         //Generate text for Doctor Stevini
         $doctor = "<p>Your search returned " . "<strong>" . count($preHospitals) . "</strong>" . " hospitals, currently sorted by " . $doctorSort . ", with the best at the top.</p>";
@@ -448,12 +448,16 @@ class Hospital extends Model
             $specialOffers = $specialOffers->leftJoin('hospital_waiting_time', 'hospitals.id', '=', 'hospital_waiting_time.hospital_id');
             $specialOffers = $specialOffers->where('hospital_waiting_time.specialty_id', $specialtyId);
             $specialOffers = $specialOffers->orderByRaw('ISNULL(hospital_waiting_time.perc_waiting_weeks), hospital_waiting_time.perc_waiting_weeks ASC');
-        } else { // Retrieve the Outstanding
-            $specialOffers = $specialOffers->leftJoin('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
-            $specialOffers = $specialOffers->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 1 when hospital_ratings.latest_rating = "Good" then 2 when hospital_ratings.latest_rating = "Inadequate" then 3 when hospital_ratings.latest_rating = "Requires improvement" then 4 when hospital_ratings.latest_rating = "Not Yet Rated" then 5 end');
+        } else {
+            $specialOffers = $specialOffers->whereHas('rating', function($q) {
+                $q->whereIn('latest_rating', ['Outstanding', 'Good']);
+            });
         }
 
-        if (!empty($latitude) && !empty($longitude)) {
+        $specialOffers = $specialOffers->leftJoin('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
+        $specialOffers = $specialOffers->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 1 when hospital_ratings.latest_rating = "Good" then 2 when hospital_ratings.latest_rating = "Inadequate" then 3 when hospital_ratings.latest_rating = "Requires improvement" then 4 when hospital_ratings.latest_rating = "Not Yet Rated" then 5 end');
+
+        if(!empty($latitude) && !empty($longitude)) {
             $specialOffers = $specialOffers->orderBy('radius', 'ASC');
         }
 
@@ -462,16 +466,16 @@ class Hospital extends Model
         $prePink = $specialOffers->whereHas('hospitalType', function ($q) {
             $q->where('name', '=', 'Independent');
         });
-        $pink = $prePink->limit(1)->first();
+        $pink = $prePink->first();
 
-        if ($purple->count() > 0 && $pink->count() > 0) {
-            if ($purple->id == $pink->id)
-                $pink = $prePink->limit(1)->offset(1)->first();
-        }
+        if(!empty($purple) && !empty($pink))
+            if($purple->count() > 0 && $pink->count() > 0)
+                if($purple->id == $pink->id)
+                    $pink = $prePink->limit(1)->offset(1)->first();
 
         return [
-            'purple' => $purple->toArray(),
-            'pink' => $pink->toArray()
+            'purple'    => !empty($purple) ? $purple->toArray() : [] ,
+            'pink'      => !empty($pink) ? $pink->toArray() : []
         ];
     }
 }
