@@ -6,7 +6,6 @@
 
 // jquery imported through webpack.mix.js
 // VENDOR
-import 'jquery';
 window.Popper = require('popper.js');
 window.Cookies = require('./scripts/cookies');              // Cookie/compare functionality
 import 'webpack-jquery-ui/datepicker';                      // Jquery UI datepicker

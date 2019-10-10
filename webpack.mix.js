@@ -17,12 +17,12 @@ const webpack = require('webpack');
 
 mix.webpackConfig({
     devtool: "source-map",
-    // plugins: [
-    //     new webpack.ProvidePlugin({
-    //         $: "jquery",
-    //         jQuery: "jquery"
-    //     })
-    // ],
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
+    ],
     // module: {
     //     rules: [{
     //         test: /\.js?$/,
@@ -57,7 +57,7 @@ mix.sass('resources/sass/app.scss', 'public/css')
         processCssUrls: false
     });
 
-mix.babel(['resources/js/app.js'], 'public/js');
+mix.js(['resources/js/app.js'], 'public/js');
 // mix.copy('resources/js/cookies.js', 'public/js');
 // mix.js(['resources/js/cookies.js'], 'public/js');
 

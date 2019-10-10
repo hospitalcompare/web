@@ -1,7 +1,6 @@
 jQuery.fn.highlight = function (pat) {
     function innerHighlight(node, pat) {
         var skip = 0;
-        console.log(node.nodeType);
         if (node.nodeType == 3) {
             var pos = node.data.toUpperCase().indexOf(pat);
             if (pos >= 0) {
