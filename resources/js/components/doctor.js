@@ -16,7 +16,7 @@ $(document).ready(function () {
                     </div>`,
         content: $content,
         html: true,
-        trigger: 'focus',
+        trigger: 'click',
         placement: 'top'
     });
 
@@ -35,11 +35,13 @@ $(document).ready(function () {
             .find('.btn-go')
             .addClass('popover-open');
 
-        // Highlight page sections when hovering over the list items
-        var $highlightClass = "highlight";
         function highlightElements(action){
+            // Animate page sections when hovering over the list items
+            var $highlightClass = "dr-highlight";
             var $highlightTarget = $(this).find('.highlight').text();
-            // console.log($highlightTarget);
+            if($(this).find('.animation').length > 0 ){
+                $highlightClass = $(this).find('.animation').text();
+            }
             var $selector = $(`${$highlightTarget}`);
             $selector.bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
                 $selector.removeClass($highlightClass);
