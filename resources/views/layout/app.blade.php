@@ -1,4 +1,4 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang='en'>
     <head>
         <title>Hospital Compare - @yield('title')</title>
@@ -7,6 +7,7 @@
         <meta name='description' content='@yield('description')'>
         <meta name='keywords' content='@yield('keywords')'>
         <meta name="viewport" content="@yield('mobile')">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/icons/apple-touch-icon.png') }}">

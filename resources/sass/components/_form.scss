@@ -60,6 +60,7 @@ select::-ms-expand {
         width: 100%;
         @include placeholder {
             color: $darkerGrey;
+            opacity: 1; // To fix a bug in firefox
         }
     }
 }
@@ -68,6 +69,11 @@ select::-ms-expand {
 
 .select_half-width {
     justify-content: space-between;
+
+    label,
+    select {
+        width: 50%;
+    }
 
     label {
         text-align: left;
@@ -79,7 +85,7 @@ select::-ms-expand {
     }
 
     select {
-        flex: 0 0 50%;
+        height: 45px;
         padding: 12px 100px 12px 16px;
         @include font-style('SofiaPro-Medium', 18px, false, false, 20px, -0.9px);
     }
@@ -87,7 +93,9 @@ select::-ms-expand {
     &:after {
         //font-size: 10px;
         //color: red;
-        content: url('../images/icons/chevron-down.svg');
+        content: '';
+        background-image: url('../images/icons/chevron-down.svg');
+        @include icon-bg-center(50%);
         position: absolute;
         top: 0;
         bottom: 0;

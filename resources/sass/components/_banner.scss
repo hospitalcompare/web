@@ -2,7 +2,6 @@
 .banner-parent {
     width: 100%;
     height: auto;
-
 }
 
 .banner {
@@ -41,6 +40,11 @@
     text-align: center;
     position: relative;
     z-index: 5;
+
+    .form-child {
+        position: relative;
+        margin-bottom: 20px;
+    }
 
     p {
         color: #333333;

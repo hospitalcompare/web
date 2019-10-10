@@ -36,8 +36,11 @@
         //@include justify-content($value: center);
         margin-bottom: 25px;
         height: 120px;
+        @include icon-bg-center(100%);
+        background-size: contain;
 
         svg {
+            transform-origin: 50% 50%;
             height: 100%;
             width: auto;
             fill: $teal;

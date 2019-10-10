@@ -6,23 +6,24 @@
 
 // jquery imported through webpack.mix.js
 // VENDOR
+import 'jquery';
 window.Popper = require('popper.js');
+window.Cookies = require('./scripts/cookies');              // Cookie/compare functionality
 import 'webpack-jquery-ui/datepicker';                      // Jquery UI datepicker
 import 'webpack-jquery-ui/css';                             // Styling for the above
 import 'bootstrap';                                         // Required for bootstrap tooltips
 import 'bootstrap-select';                                  // Searchable dropdowns
 import 'cookieconsent';                                     // Cookie consent plugin
 import '@fortawesome/fontawesome-free/js/all.min';
-import './scripts/vendor/stickybits';                       // Position: sticky stuff https://www.npmjs.com/package/stickybits
-import './scripts/vendor/highlight';                        // Highlight search terms without
-import 'jquery-validation';                                 // Frontend form validation
+import './scripts/vendor/stickybits';                                                  // Position: sticky stuff https://www.npmjs.com/package/stickybits
 import 'jquery-validation/dist/additional-methods.min';     // Plugin for jquery validate
+import 'jquery-validation/dist/jquery.validate';            // Frontend form validation
+import './scripts/vendor/highlight';                        // Highlight search terms without
 
 // UTILITIES
 import './scripts/global';                                  // Global Script used for multiple pages
 import './scripts/scroll';                                  // Smooth scroll
 import './scripts/postcode' ;                               // Postcode input
-window.Cookies = require('./scripts/cookies');              // Cookie/compare functionality
 import './scripts/gmapInit';                                // Gmaps modal
 import './scripts/sticky';                                  // Make the search header sticky on scroll
 // window.Vue = require('vue');                             // Vue.js

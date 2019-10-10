@@ -81,16 +81,16 @@ $(document).ready(function () {
             'role="button" data-toggle="modal" ' +
             'data-hospital-url="' + element.url + '" ' +
             'data-hospital-title="' + element.name + '" ' +
-            'data-target="#hc_modal_enquire_nhs">Make an enquiry\n' +
-            '    <i class=""></i>\n' +
+            'data-target="#hc_modal_enquire_nhs">Make an enquiry' +
+            '    <i class=""></i>' +
             '</a>' :
             '<a id="' + element.id + '" ' +
             'class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" ' +
             'role="button" data-toggle="modal" ' +
             'data-hospital-url="' + element.url + '" ' +
             'data-hospital-title="' + element.name + '" ' +
-            'data-target="#hc_modal_enquire_private">Make an enquiry\n' +
-            '    <i class=""></i>\n' +
+            'data-target="#hc_modal_enquire_private">Make an enquiry' +
+            '    <i class=""></i>' +
             '</a>';
         var newRowContent =
             '<div class="col-2 text-center" id="compare_hospital_id_' + element.id + '">' +

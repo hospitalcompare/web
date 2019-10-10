@@ -3,7 +3,8 @@
         <div class="container">
             <div class="banner-data row">
                 <div class="home-promo col col-12 col-lg-6">
-                    <p>The quality of care and waiting times in England vary greatly between hospitals. You have the legal right to
+                    <p>The quality of care and waiting times in England vary greatly between hospitals. You have the
+                        legal right to
                         choose where to have your treatment*. It can be at: </p>
                     <ul class="promo-list">
                         <li>An NHS or private hospital, funded by the NHS</li>
@@ -14,13 +15,11 @@
                     <div class="box full-left ml-auto">
                         <p>Find the best hospital<br>for your treatment</p><br>
                         <form class="form-element" method="get" action="/results-page">
-
                             <div class="form-child">
                                 @include('components.basic.select', [
                                     'selectPicker'          => 'true',
                                     'selectClass'           => 'big select-picker',
                                     'options'               => $data['procedures'],
-
                                     'group'                 => true,
                                     'groupName'             => 'procedures',
                                     'suboptionClass'        => 'subprocedures',
@@ -84,7 +83,10 @@
                                 @include('components.basic.select', [
                                     'showLabel' => true, 'selectClass'=> 'distance-dropdown',
                                     'options' => \App\Helpers\Utils::radius,
-                                     'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'How far would you like to travel?', 'chevronFAClassName' => '', 'name'=>'radius'])
+                                    'selectClassName'=> 'd-flex select_half-width w-100',
+                                    'placeholder' => 'How far would you like to travel?',
+                                    'chevronFAClassName' => '',
+                                    'name'=>'radius'])
                                 <a tabindex="0" data-offset="30px, 40px"
                                    class="help-link"
                                     @include('components.basic.popover', [
@@ -106,7 +108,19 @@
                             </div>
 
                             <div class="form-child full-left d-none">
-                                @include('components.basic.select', ['showLabel' => true, 'selectClass'=> '', 'options' => [['id'=>1, 'name'=>'Provider Name']], 'selectClassName'=> 'd-flex select_half-width', 'placeholder' => 'Do you have private healthcare insurance?', 'chevronFAClassName' => '', 'name'=>'insurance_id'])
+                                @include('components.basic.select', [
+                                    'showLabel'             => true,
+                                    'selectClass'           => '',
+                                    'options'               => [
+                                        [
+                                            'id'       =>1,
+                                            'name'      =>'Provider Name'
+                                        ]
+                                    ],
+                                    'selectClassName'       => 'd-flex select_half-width ',
+                                    'placeholder'           => 'Do you have private healthcare insurance?',
+                                    'chevronFAClassName'    => '',
+                                    'name'                  =>'insurance_id'])
                                 @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => '', 'lightBoxClass' => 'lightboxAdjust'])
                             </div>
 

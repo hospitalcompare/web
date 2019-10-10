@@ -57,8 +57,6 @@
     &__menu {
         margin-left: -25px;
         list-style-type: none;
-        display: flex;
-        @include flex-center;
 
         li {
             display: inline-block;

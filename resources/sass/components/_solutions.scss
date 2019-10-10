@@ -87,6 +87,7 @@
             p {
                 margin: 0;
                 color: $white;
+                @include font-size(20);
             }
         }
 

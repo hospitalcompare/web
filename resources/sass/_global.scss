@@ -23,8 +23,8 @@ select.big {
     font-size: 18px;
     font-weight: 500;
     letter-spacing: -0.9px;
-    height: 61px;
-    line-height: 61px;
+    height: 60px;
+    line-height: 60px;
     padding: 0 45px 0 16px;
 }
 
@@ -49,10 +49,6 @@ select.big {
     background-color: $hanblue;
 }
 
-.bg-indigo {
-    background-color: $indigo;
-}
-
 .bg-green {
     background-color: $green;
 }
@@ -62,7 +58,7 @@ select.big {
 }
 
 .bg-darkpink {
-    background-color: darken($pink, 10%);
+    background-color: darken($pink, 20%);
 }
 
 .bg-black {

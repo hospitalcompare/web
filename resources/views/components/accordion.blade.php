@@ -14,7 +14,7 @@
         <div class="card">
             <div class="card-header" id="heading_{{ $loop->iteration }}">
                 <h2 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                             data-target="#collapse_{{ $loop->iteration }}" aria-expanded="true" aria-controls="collapse_{{ $loop->iteration }}">
                         {{ $card['title'] }}
                     </button>
