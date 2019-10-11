@@ -65,7 +65,7 @@
                                 'button'            => 'waiting time enquiry'])
                     </span>
                 @endif
-                <span class="d-none" id="item_waiting_time_{{$id}}">{{$waitTime}}</span>
+                <span class="d-none" id="item_waiting_time_{{$id}}">{{str_replace("<br>", " ", $waitTime)}}</span>
             </div>
             {{-- End waiting time --}}
             <div class="sort-categories-section-2__child">
