@@ -13,7 +13,7 @@
                 </div>
                 <div class="postcode-radius-child radius col-12 col-md-6">
                     <div class="col-inner pr-3 d-flex align-items-center h-100 position-relative">
-                        @include('components.basic.input', [
+                        @include('components.basic.range', [
                             'id'            => 'radiusProx',
                             'label'         => 'Within radius of:',
                             'placeholder'   => '',
