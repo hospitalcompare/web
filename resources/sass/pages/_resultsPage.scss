@@ -97,17 +97,17 @@ $col-spacing: 18px;
         display: none;
     }
 
-    .postcode-proximity,
+    .postcode-radius,
     .select-proximity {
         @include flex;
     }
 
-    .postcode-proximity-child,
+    .postcode-radius-child,
     .submit-section-child,
     .filter-section-child {
         position: relative;
         margin-bottom: 20px;
-        display: flex;
+        //display: flex;
         align-items: center;
 
         #input_postcode {
@@ -121,20 +121,28 @@ $col-spacing: 18px;
         }
     }
 
-    .postcode-proximity {
-        margin-left: -$col-spacing;
-        margin-right: -$col-spacing;
+    .postcode-radius {
+        //margin-left: -$col-spacing;
+        //margin-right: -$col-spacing;
 
-        .postcode-proximity-child {
-            padding-left: $col-spacing;
-            padding-right: $col-spacing;
+        .postcode-radius-child {
+            //padding-left: $col-spacing;
+            //padding-right: $col-spacing;
 
             &:first-child {
-                width: 40%;
+                //width: 40%;
             }
 
-            &:last-child {
-                width: 60%;
+            &.radius {
+                //width: 60%;
+                .col-inner {
+                    padding-left: 153px;
+
+                    label {
+                        @include v-c;
+                        left: 0;
+                    }
+                }
             }
         }
     }

@@ -12,7 +12,8 @@
 
 {{--{{ dd($doctor) }}--}}
 @section('content')
-    @include('pages.pagesections.resultspageform')
+    @include('pages.pagesections.resultspageform', [
+        'displayBlock' => false])
     <div id="sort_categories_parent" class="sort-categories-parent">
         <div class="sort-categories-header container">
             <div class="sort-categories-section-1"></div>

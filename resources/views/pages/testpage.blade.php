@@ -16,21 +16,21 @@
         @include('pages.pagesections.resultspageform', [
         'displayBlock' => true])
     </section>
-    <section class="pt-3">
-        <div class="container">
-            <h3>Enquiry Form</h3>
-            @include('components.modals.modalenquireprivate', [
-                       'procedures'    => $data['filters']['procedures'],
-                       'title'         => 'Mr',
-                       'firstName'     => 'Test',
-                       'dob'           => '1980/04/12',
-                       'lastName'      => 'Testing',
-                       'email'         => 'test@test.com',
-                       'phone'         => '07941939374',
-                       'postcode'      => 'ch423re',
-                       'gdpr'          => true])
-        </div>
-    </section>
+{{--    <section class="pt-3">--}}
+{{--        <div class="container">--}}
+{{--            <h3>Enquiry Form</h3>--}}
+{{--            @include('components.modals.modalenquireprivate', [--}}
+{{--                       'procedures'    => $data['filters']['procedures'],--}}
+{{--                       'title'         => 'Mr',--}}
+{{--                       'firstName'     => 'Test',--}}
+{{--                       'dob'           => '1980/04/12',--}}
+{{--                       'lastName'      => 'Testing',--}}
+{{--                       'email'         => 'test@test.com',--}}
+{{--                       'phone'         => '07941939374',--}}
+{{--                       'postcode'      => 'ch423re',--}}
+{{--                       'gdpr'          => true])--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <div class="section pt-3 pb-5">
         <div class="container">
             <p class="p-5" style="width: 300px; border: 3px solid black">
@@ -44,7 +44,9 @@
     <div class="section py-3 ">
         <div class="container-fluid px-0">
             <h2>Solutions bar </h2>
-            @include('components.solutionsbar', ['position' => ''])
+            @include('components.solutionsbar', [
+                'position' => '',
+                'specialOffers' => $data['special_offers']])
         </div>
     </div>
     <div class="section py-3 ">
