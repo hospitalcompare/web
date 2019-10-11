@@ -75,6 +75,7 @@ $(document).ready(function () {
      */
     function addHospitalToCompare(element) {
         var target = $('#compare_hospitals_grid');
+        // Content for modal trigger button
         var btnContent = element.type == 'nhs-hospital' ?
             '<a id="' + element.id + '" ' +
             'class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" ' +
@@ -92,6 +93,8 @@ $(document).ready(function () {
             'data-target="#hc_modal_enquire_private">Make an enquiry' +
             '    <i class=""></i>' +
             '</a>';
+        // Content for new hospital added to compare
+        console.log
         var newRowContent =
             '<div class="col-2 text-center" id="compare_hospital_id_' + element.id + '">' +
             '<div class="col-inner">' +
@@ -100,7 +103,7 @@ $(document).ready(function () {
             '<div class="remove-hospital" id="remove_id_' + element.id + '"></div>' +
             '</div>' +
             '<div class="details">' +
-            '<p>' + element.name + '</p>' +
+            '<p class="w-100">' + element.name + '</p>' +
             btnContent +
             '</div>' +
             '<div class="cell">' + getHtmlDashTickValue(element.waitingTime, " Weeks") + '</div>' +
@@ -191,7 +194,7 @@ $(document).ready(function () {
                 var element = {
                     'id': elementId,
                     // 'enquireBtn': enquireBtn,
-                    'name': name,
+                    'name': name.trim(),
                     'url': url,
                     'type': type,
                     'waitingTime': waitingTime,
@@ -254,6 +257,7 @@ $(document).ready(function () {
     $(document).on("click touchend", ".compare-hospitals-bar .remove-hospital", function (e) {
         e.stopPropagation();
         var elementId = $(this).attr('id');
+        console.log(JSON.parse(Cookies.get("compareHospitalsData")));
         var data = JSON.parse(Cookies.get("compareHospitalsData"));
         var compareCount = parseInt(Cookies.get("compareCount"));
         elementId = elementId.replace('remove_id_', '');

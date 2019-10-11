@@ -124,7 +124,7 @@ select::-ms-expand {
     input:not([type="submit"]),
     select {
         height: 44px;
-        line-height: 44px;
+        //line-height: 44px;
         border-radius: 10px;
         border: 2px solid $darkestWhite;
         background-color: #ffffff;
@@ -149,6 +149,7 @@ select::-ms-expand {
     // bootstrap select button
     .dropdown-toggle {
         height: 44px;
+        @include font-size(16);
     }
 }
 
