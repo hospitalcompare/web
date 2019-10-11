@@ -12,11 +12,11 @@
                         'id' => 'input_postcode'])
                 </div>
                 <div class="postcode-proximity-child col-12 col-md-6">
-                    @include('components.basic.range', [
+                    @include('components.basic.input', [
+                        'id'            => 'radiusProx',
                         'label'         => 'Within radius of:',
-                        'classTitle'    => 'radiusRange range-slider__range',
-                        'min'           => 1,
-                        'max'           => 7,
+                        'placeholder'   => '',
+                        'classTitle'    => '',
                         'value'         => !empty(Request::input('radius')) ? Request::input('radius') : 4,
                         'name'          => 'radius',
                         'step'          => 1])

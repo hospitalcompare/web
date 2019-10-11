@@ -10,15 +10,15 @@
                max="{{$max ?? ''}}"
                value="{{$value ?? ''}}"
                step="{{$step ?? ''}}">
-        <ul class="range-labels">
-            <li class="range-label">5</li>
-            <li class="range-label">10</li>
-            <li class="range-label">25</li>
-            <li class="range-label active">50</li>
-            <li class="range-label">75</li>
-            <li class="range-label">100</li>
-            <li class="range-label">England</li>
-        </ul>
+{{--        <ul class="range-labels">--}}
+{{--            <li class="range-label">5</li>--}}
+{{--            <li class="range-label">10</li>--}}
+{{--            <li class="range-label">25</li>--}}
+{{--            <li class="range-label active">50</li>--}}
+{{--            <li class="range-label">75</li>--}}
+{{--            <li class="range-label">100</li>--}}
+{{--            <li class="range-label">England</li>--}}
+{{--        </ul>--}}
 {{--        <div class="track-mask track-mask__start"></div>--}}
 {{--        <div class="track-mask track-mask__end"></div>--}}
     </div>

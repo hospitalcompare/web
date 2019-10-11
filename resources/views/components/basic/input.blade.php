@@ -1,3 +1,6 @@
+@if(!empty($label))
+<label for="{{empty($id)? '' : $id}}">{{ $label }}</label>
+@endif
 <input
     id="{{empty($id)? '' : $id}}"
     class="{{empty($className)? '' : $className}}"
