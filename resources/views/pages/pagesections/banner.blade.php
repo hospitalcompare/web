@@ -107,23 +107,6 @@
                                 >?</a>
                             </div>
 
-                            <div class="form-child full-left d-none">
-                                @include('components.basic.select', [
-                                    'showLabel'             => true,
-                                    'selectClass'           => '',
-                                    'options'               => [
-                                        [
-                                            'id'       =>1,
-                                            'name'      =>'Provider Name'
-                                        ]
-                                    ],
-                                    'selectClassName'       => 'd-flex select_half-width ',
-                                    'placeholder'           => 'Do you have private healthcare insurance?',
-                                    'chevronFAClassName'    => '',
-                                    'name'                  =>'insurance_id'])
-                                @include('components.basic.helplink', [ 'helpChar'=> '?', 'helpText' => 'select2', 'className' => '', 'lightBoxClass' => 'lightboxAdjust'])
-                            </div>
-
                             @include('components.basic.submit', ['classTitle' => 'btn btn-m btn-grad btn-teal', 'button' => 'Find Hospitals'])
 
                             <p class='browseButton'><a href="{{url('/results-page')}}">Browse all hospitals</a></p>
