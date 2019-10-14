@@ -64,6 +64,10 @@ class AddInsurancePolicies extends Migration
         $axa = new App\Models\Insurance();
         $axa->name = 'Axa';
         $axa->save();
+        //Vitality Health
+        $vitality = new App\Models\Insurance();
+        $vitality->name = 'Vitality Health';
+        $vitality->save();
 
         //Populate the data with Policies
         //Aviva
@@ -88,10 +92,19 @@ class AddInsurancePolicies extends Migration
         //Axa
         $axayHealthPolicies = ['General', 'Cataract Surgery', 'Oral Surgery', 'Diagnostic Imaging - MRI', 'Diagnostic Imaging - CT Scan', 'Diagnostic Imaging - PET Scan'];
         foreach($axayHealthPolicies as $axayHealthPolicy) {
-            $shPolicy = new App\Models\Policy();
-            $shPolicy->insurance_id = $axa->id;
-            $shPolicy->name = $axayHealthPolicy;
-            $shPolicy->save();
+            $axaPol = new App\Models\Policy();
+            $axaPol->insurance_id = $axa->id;
+            $axaPol->name = $axayHealthPolicy;
+            $axaPol->save();
+        }
+
+        //Vitality Health
+        $vitalityPolicies = ['Local', 'Countrywide', 'London Care'];
+        foreach($vitalityPolicies as $vitalityPolicy) {
+            $vitPolicy = new App\Models\Policy();
+            $vitPolicy->insurance_id = $vitality->id;
+            $vitPolicy->name = $vitalityPolicy;
+            $vitPolicy->save();
         }
     }
 
