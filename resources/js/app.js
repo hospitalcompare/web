@@ -18,6 +18,7 @@ import './scripts/vendor/stickybits';                                           
 import 'jquery-validation/dist/additional-methods.min';     // Plugin for jquery validate
 import 'jquery-validation/dist/jquery.validate';            // Frontend form validation
 import './scripts/vendor/highlight';                        // Highlight search terms without
+import 'bootstrap-slider';                                  // Bootstrap range slider plugin
 
 // UTILITIES
 import './scripts/global';                                  // Global Script used for multiple pages
@@ -25,6 +26,7 @@ import './scripts/scroll';                                  // Smooth scroll
 import './scripts/postcode' ;                               // Postcode input
 import './scripts/gmapInit';                                // Gmaps modal
 import './scripts/sticky';                                  // Make the search header sticky on scroll
+import './scripts/bootstrapSlider';                         // Init the bs slider plugin
 // window.Vue = require('vue');                             // Vue.js
 
 // COMPONENTS
@@ -34,7 +36,7 @@ import './components/doctor';
 // Components > Basic
 // import './components/basic/video';                       // Video controller TODO: reinstate video when we have one
 import './components/basic/specialoffer';                   // Toggling special offer slide out
-import './components/basic/range';                          // Slider for radius of proximity on search page
+// import './components/basic/range';                          // Slider for radius of proximity on search page
 import './components/basic/popover';                        // Trigger bootstrap tooltip
 import './components/basic/tooltip';                        // Trigger bootstrap popover
 import './components/basic/modalNhs';                       // Trigger bootstrap modal

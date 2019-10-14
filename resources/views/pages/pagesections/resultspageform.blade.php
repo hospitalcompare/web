@@ -1,8 +1,8 @@
 <form class="form-element" id="resultspage_form">
     <div class="filter-parent {{ !empty($displayBlock) && ($displayBlock) || !empty($hc_errors) ? 'd-block' : '' }}">
         <div class="filter container">
-            <div class="postcode-proximity row">
-                <div class="postcode-proximity-child col-12 col-md-4">
+            <div class="postcode-radius row">
+                <div class="postcode-radius-child postcode col-12 col-md-4">
                     @include('components.basic.input', [
                         'placeholder' => 'Enter your postcode',
                         'validation' => 'maxlength=8',
@@ -11,17 +11,19 @@
                         'name' => 'postcode',
                         'id' => 'input_postcode'])
                 </div>
-                <div class="postcode-proximity-child col-12 col-md-6">
-                    @include('components.basic.range', [
-                        'label'         => 'Within radius of:',
-                        'classTitle'    => 'radiusRange range-slider__range',
-                        'min'           => 1,
-                        'max'           => 7,
-                        'value'         => !empty(Request::input('radius')) ? Request::input('radius') : 4,
-                        'name'          => 'radius',
-                        'step'          => 1])
+                <div class="postcode-radius-child radius col-12 col-md-6">
+                    <div class="col-inner pr-3 d-flex align-items-center h-100 position-relative">
+                        @include('components.basic.range', [
+                            'id'            => 'radiusProx',
+                            'label'         => 'Within radius of:',
+                            'placeholder'   => '',
+                            'classTitle'    => '',
+                            'value'         => !empty(Request::input('radius')) ? Request::input('radius') : 4,
+                            'name'          => 'radius',
+                            'step'          => 1])
+                    </div>
                 </div>
-                <div class="postcode-proximity-child col-2">
+                <div class="postcode-radius-child col-2">
                     @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-blue btn-s d-block btn-submit-results', 'button' => 'Update Results'])
                 </div>
             </div>

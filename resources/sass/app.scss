@@ -14,6 +14,9 @@
 // Bootstrap select picker
 @import '~bootstrap-select/sass/bootstrap-select';
 
+// Bootstrap slider
+//@import '~bootstrap-slider/dist/css/bootstrap-slider.css';
+
 // Cookie consent
 // https://github.com/osano/cookieconsent
 @import '~cookieconsent/build/cookieconsent.min.css';
@@ -63,6 +66,7 @@
 @import 'components/basic/lightBox';
 @import 'components/basic/rangeStyle';
 @import 'components/basic/range';
+@import 'components/basic/bsSlider';
 @import 'components/basic/popover';
 @import 'components/basic/modal';
 @import 'components/basic/specialOfferSlide';

@@ -154,6 +154,8 @@ $(document).ready(function() {
     $('#show_filters').on('click', function(){
         $('#resultspage_form .filter-parent').slideToggle();
         $(this).toggleClass('open');
+        // // Refresh the range slider as it is initially hidden
+        $("#radiusProx").slider('relayout');
     });
     // Toggle sort dropdown
     // $('#show_sort').on('click', function(){

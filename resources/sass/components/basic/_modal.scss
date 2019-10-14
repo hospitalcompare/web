@@ -104,5 +104,13 @@
             min-height: 400px;
         }
     }
+
+    &#hc_modal_enquire_nhs {
+        .btn-enquire {
+            padding: 0 15px 0 40px;
+            line-height: 40px;
+            max-width: inherit;
+        }
+    }
 }
 

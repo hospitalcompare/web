@@ -103,13 +103,11 @@ class WebController extends BaseController
 
     // Stacking page for components etc
     public function testPage() {
-        $policies       = Utils::getInsurancePoliciesForDropdown();
-
         //Get the request and load it as variables
         $request        = \Request::all();
         $postcode       = !empty($request['postcode'])          ? Validate::escapeString($request['postcode'])          : '';
         $procedureId    = !empty($request['procedure_id'])      ? Validate::escapeString($request['procedure_id'])      : '';
-        $radius         = !empty($request['radius'])            ? Validate::escapeString($request['radius'])            : 50; //10 miles as default
+        $radius         = !empty($request['radius'])            ? Validate::escapeString($request['radius'])            : 4; //50 miles as default
         $waitingTime    = !empty($request['waiting_time'])      ? Validate::escapeString($request['waiting_time'])      : '';
         $userRating     = !empty($request['user_rating'])       ? Validate::escapeString($request['user_rating'])       : '';
         $qualityRating  = !empty($request['quality_rating'])    ? Validate::escapeString($request['quality_rating'])    : '';
@@ -121,23 +119,39 @@ class WebController extends BaseController
         if($procedureId == '-1')
             $procedureId = 0;
 
+        //Set policy_id to 0 if it's -1
+        if($policyId == '-1')
+            $policyId = 0;
+
+        //Format the radius with the correct distance
+        $radiusSelection = Utils::sliderRange;
+        if(array_key_exists($radius, $radiusSelection))
+            $radius = $radiusSelection[$radius];
+        else
+            $radius = 50;
+
         $hospitals      = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy);
-        $errors     = $hospitals['errors'];
+        $errors         = $hospitals['errors'];
+        $doctor         = $hospitals['doctor'];
+        $specialOffers  = $hospitals['data']['special_offers'];
+        $hospitals      = $hospitals['data']['hospitals'];
+
         $sortBys    = Utils::sortBys;
         $procedures = Utils::getProceduresForDropdown();
-        $doctor     = $hospitals['doctor'];
+        $policies   = Utils::getInsurancePoliciesForDropdown();
 
         $this->returnedData['success']                              = true;
-        $this->returnedData['data']['filters']['policies']          = $policies;
         $this->returnedData['data']['hospitals']                    = $hospitals;
+        $this->returnedData['data']['special_offers']               = $specialOffers;
         $this->returnedData['data']['filters']['procedures']        = $procedures;
         $this->returnedData['data']['filters']['waitingTimes']      = Utils::waitingTimes;
         $this->returnedData['data']['filters']['userRatings']       = Utils::userRatings;
         $this->returnedData['data']['filters']['qualityRatings']    = Utils::qualityRatings;
         $this->returnedData['data']['filters']['hospitalTypes']     = Utils::hospitalTypes;
+        $this->returnedData['data']['filters']['policies']          = $policies;
         $this->returnedData['data']['sortBy']                       = $sortBys;
-        $this->returnedData['errors']                               = $errors;
         $this->returnedData['doctor']                               = $doctor;
+        $this->returnedData['hc_errors']                            = $errors;
 
         if(env('APP_ENV') != 'live')
             return view('pages.testpage', $this->returnedData);
