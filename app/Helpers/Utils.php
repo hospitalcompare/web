@@ -186,7 +186,7 @@ class Utils
      */
     public static function getProceduresForDropdown() {
         //Get all Specialties with Procedures ordered by name
-        $procedures = Specialty::with(['procedures' => function($query) {
+        $procedures = Specialty::where('name', '<>','Total')->with(['procedures' => function($query) {
             $query->orderBy('name', 'ASC');
         }])->orderBy('name', 'ASC')->get()->toArray();
 
