@@ -538,7 +538,11 @@
     }
 }
 
-.btn-link:hover {
-    color: $darkerGrey;
-    cursor: pointer;
+.btn-link {
+    overflow-wrap: break-word;
+
+    &:hover {
+        color: $darkerGrey;
+        cursor: pointer;
+    }
 }
