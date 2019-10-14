@@ -19,7 +19,7 @@ class Hospital extends Model
      * @var array
      */
     protected $fillable = [
-        'location_id', 'organisation_id','hospital_type_id', 'address_id', 'trust_id', 'ods_code', 'name', 'tel_number', 'url', 'special_offers', 'status'
+        'location_id', 'organisation_id','hospital_type_id', 'address_id', 'trust_id', 'ods_code', 'name', 'tel_number', 'url', 'report_url', 'special_offers', 'status'
     ];
 
     /**
@@ -37,6 +37,7 @@ class Hospital extends Model
         'name'              => 'string',
         'tel_number'        => 'string',
         'url'               => 'string',
+        'report_url'        => 'string',
         'special_offers'    => 'boolean',
         'status'            => 'string'
     ];

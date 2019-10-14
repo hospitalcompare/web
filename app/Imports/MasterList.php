@@ -98,7 +98,8 @@ class MasterList extends DefaultImport {
                         'ods_code'          => $item['Location ODS Code'],
                         'name'              => $item['Location Name'],
                         'tel_number'        => $item['Location Telephone Number'],
-                        'url'               => $item['Location Web Address']
+                        'url'               => $item['Location Web Address'],
+                        'report_url'        => $item['CQC Report URL']
                     ]);
 
                     $this->returnedData[] = [
