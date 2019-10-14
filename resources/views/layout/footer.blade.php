@@ -76,7 +76,7 @@
     <div class="footer-lower">
         <div class="container">
             <nav class="footer-lower__nav">
-                <ul class="footer-lower__menu mb-0 d-flex align-items-center justify-content-between">
+                <ul class="footer-lower__menu mb-0 d-flex flex-wrap align-items-center justify-content-between">
                     <li><a href="/terms-and-conditions">T&amp;Cs</a></li>
 {{--                    <li><a href="/accessibility">Accessibility</a></li>--}}
                     <li><a href="/privacy-policy">Privacy Policy</a></li>
