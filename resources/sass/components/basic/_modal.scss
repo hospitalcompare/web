@@ -6,15 +6,20 @@
     }
 
     .close {
-        top: 0;
-        right: 0;
         width: 61px;
         height: 29px;
         border-radius: 31px;
         background-color: #000000;
         z-index: 5;
         opacity: 1;
-        transform: translate(50%, -50%);
+        top: 5px;
+        right: 5px;
+
+        @include media-breakpoint-up(lg){
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+        }
 
         @include hover {
             opacity: 1 !important;

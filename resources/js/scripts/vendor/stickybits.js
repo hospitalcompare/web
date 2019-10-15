@@ -467,4 +467,4 @@
 }));
 
 // v3
-var stickybit = stickybits('.sort-categories-parent');
+var stickybit = stickybits('.result-item-parent');

@@ -23,4 +23,4 @@
 //
 
 // v3
-stickybits('.sort-categories-parent', {useStickyClasses: true});
+stickybits('.result-item-parent', {useStickyClasses: true});
