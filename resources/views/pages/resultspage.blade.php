@@ -14,11 +14,11 @@
 @section('content')
     @include('pages.pagesections.resultspageform', [
         'displayBlock' => false])
-    <div id="sort_categories_parent" class="sort-categories-parent">
-        <div class="sort-categories-header container">
-            <div class="sort-categories-section-1"></div>
-            <nav class="sort-categories-section-2">
-                <ul class="sort-categories-menu">
+    <div id="result_item_parent" class="result-item-parent">
+        <div class="result-item-header container">
+            <div class="result-item-section-1"></div>
+            <nav class="result-item-section-2">
+                <ul class="result-item-menu">
                     <li>
                         <p tabindex="0" data-offset="30px, 40px"
                             @include('components.basic.popover', [
@@ -133,8 +133,8 @@
                     </li>
                 </ul>
             </nav>
-            <div class="sort-categories-section-3 p-0">
-                <ul class="sort-categories-menu p-0 h-100">
+            <div class="result-item-section-3 p-0">
+                <ul class="result-item-menu p-0 h-100">
                     <li class="align-items-end justify-content-end">
                         <p class="text-center m-0 d-flex flex-column align-items-end">
                             <span class="d-inline-block mb-1">Compare</span>
@@ -158,7 +158,7 @@
         </div>
     </div>
 
-    <div class="sortCategoriesResults">
+    <div class="results">
         @if(!empty($data['hospitals']))
             @foreach($data['hospitals'] as $d)
                 @include('components.item', [

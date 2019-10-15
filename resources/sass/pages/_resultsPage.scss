@@ -187,22 +187,22 @@ $col-spacing: 18px;
         position: relative;
     }
 
-    .sort-categories-parent {
+    .result-item-parent {
         background-color: $teal;
 
 
     }
 
-    .sort-categories-header,
-    .sort-categories {
+    .result-item-header,
+    .result-item {
         @include flex;
     }
 
-    .sort-categories-header {
+    .result-item-header {
         //width: 1180px;
         margin: auto;
 
-        .sort-categories-section-3 {
+        .result-item-section-3 {
             &:before,
             &:after {
                 display: none;
@@ -210,30 +210,30 @@ $col-spacing: 18px;
         }
     }
 
-    .sort-categories {
+    .result-item {
         margin-bottom: 7px;
         background-color: $white;
     }
 
-    .sortCategoriesResults {
+    .results {
         background-color: $lighterGrey;
     }
 
-    .sort-categories-inner {
+    .result-item-inner {
         display: flex;
         margin: auto;
     }
 
-    .sort-categories-section-1 {
+    .result-item-section-1 {
         flex: 1 0 33%;
     }
 
-    .sort-categories-section-2 {
+    .result-item-section-2 {
         flex: 1 0 53%;
 
     }
 
-    .sort-categories-section-3 {
+    .result-item-section-3 {
         flex: 1 0 14%;
         padding: 10px 0 10px 10px;
         @include pseudo-border($borderGrey);
@@ -246,7 +246,7 @@ $col-spacing: 18px;
     }
 
 
-    .sort-categories-menu {
+    .result-item-menu {
         @include flex;
         width: 100%;
         margin-bottom: 0;
@@ -288,11 +288,11 @@ $col-spacing: 18px;
         }
     }
 
-    .sort-categories-section-1, .sort-categories-section-2 {
+    .result-item-section-1, .result-item-section-2 {
         @include flex;
     }
 
-    .sort-categories-section-2__child {
+    .result-item-section-2__child {
         flex: 1;
         @include flex-center;
         font-size: 16px;
@@ -314,7 +314,7 @@ $col-spacing: 18px;
         }
     }
 
-    .sort-categories-item {
+    .result-item-item {
         position: relative;
 
         &:last-child {
@@ -397,7 +397,7 @@ $col-spacing: 18px;
     //padding-top: 85.6px;
 }
 
-#sort_categories_parent {
+#result_item_parent {
     top: 0;
     left: 0;
     right: 0;

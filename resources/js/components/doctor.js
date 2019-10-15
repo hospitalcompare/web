@@ -16,7 +16,7 @@ $(document).ready(function () {
                     </div>`,
         content: $content,
         html: true,
-        trigger: 'focus',
+        trigger: 'click',
         placement: 'top'
     });
 
