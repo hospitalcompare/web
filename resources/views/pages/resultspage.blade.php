@@ -1,3 +1,5 @@
+{{--{{ dd($data['hospitals']) }}--}}
+
 @extends('layout.app')
 
 @section('title', 'Results Page')
@@ -10,7 +12,6 @@
 
 @section('body-class', 'results-page')
 
-{{--{{ dd($doctor) }}--}}
 @section('content')
     @include('pages.pagesections.resultspageform', [
         'displayBlock' => false])
@@ -184,7 +185,8 @@
                     'btnText'           => 'Make an enquiry',
                     'NHSClass'          => $d['hospitalType']['name'] == 'NHS' ? 'nhs-hospital' : 'private-hospital',
                     'fundedText'        => ($d['hospitalType']['name'] == 'NHS') ? 'NHS Hospital': 'Private Hospital',
-                    'url'               => $d['url']])
+                    'url'               => $d['url'],
+                    'reportUrl'         => $d['report_url']])
             @endforeach
         @endif
     </div>

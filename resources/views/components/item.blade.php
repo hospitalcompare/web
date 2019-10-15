@@ -38,8 +38,20 @@
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
-                        'content' => 'Currently no data available for this hospital'])>
+                        'content' => 'Currently no data available for this hospital'])
+{{--                    @includeWhen(!empty($qualityRating), 'components.basic.popover', [--}}
+{{--                            'placement'     => 'bottom',--}}
+{{--                            'trigger'       => 'hover',--}}
+{{--                            'html'          => 'true',--}}
+{{--                            'hideDelay'     =>  1000,--}}
+{{--                            'content'       => 'Source of rating: ' . '<a target="_blank" href="' . $reportUrl . '">Hello</a>'])--}}
+                >
                     {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
+                    @if(!empty($qualityRating) && !empty($reportUrl))
+                        <span>
+                            <a class="btn-link" target="_blank" href="{{ $reportUrl }}">Source&nbsp;&nbsp;<i class="fas fa-external-link-alt"></i></a>
+                        </span>
+                    @endif
                 </p>
                 <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
             </div>

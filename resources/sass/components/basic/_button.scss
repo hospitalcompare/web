@@ -537,7 +537,7 @@
     }
 }
 
-.btn-link:hover {
-    color: $darkerGrey;
+.btn-link {
+    color: $darkerGrey !important;
     cursor: pointer;
 }
