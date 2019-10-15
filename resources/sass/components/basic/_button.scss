@@ -543,6 +543,7 @@
 
     &:hover,
     &:focus {
-        color: $blue;
+        color: $teal;
+        text-decoration: none;
     }
 }
