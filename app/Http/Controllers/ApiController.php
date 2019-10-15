@@ -33,6 +33,7 @@ class ApiController {
     public function import() {
         //Set the precision to 13 for latitude and longitude
         ini_set('precision', 13);
+        ini_set('memory_limit', '-1');
         //Set execution time to 10 mins
         ini_set('max_execution_time', 600);
 
@@ -57,6 +58,7 @@ class ApiController {
                 'Maternity.csv',
                 'WaitingTimes.csv',
                 'Procedures.csv',
+                'Place.csv',
                 'Aviva.csv',
                 'SimplyHealth.csv',
                 'Axa.csv',
