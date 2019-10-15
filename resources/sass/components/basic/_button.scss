@@ -538,6 +538,11 @@
 }
 
 .btn-link {
-    color: $darkerGrey !important;
+    color: $darkerGrey;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: $blue;
+    }
 }
