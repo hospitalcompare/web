@@ -1,4 +1,10 @@
 $col-spacing: 18px;
+@mixin responsive-columns() {
+    flex-direction: column;
+    @include media-breakpoint-up(lg) {
+        flex-direction: row;
+    }
+}
 
 .results-page,
 .test-page {
@@ -99,7 +105,7 @@ $col-spacing: 18px;
 
     .postcode-radius,
     .select-proximity {
-        @include flex;
+        display: flex;
     }
 
     .postcode-radius-child,
@@ -151,13 +157,9 @@ $col-spacing: 18px;
         background-color: $lighterGrey;
     }
 
-    //#sort_parent {
-    //    display: none;
-    //}
-
     .sort-bar {
         height: 60px;
-        @include flex;
+        display: flex;
         justify-content: space-between;
         align-items: center;
 
@@ -171,7 +173,6 @@ $col-spacing: 18px;
             }
         }
     }
-
 
     .sort-page-select, .sort-by {
         width: 200px;
@@ -195,7 +196,8 @@ $col-spacing: 18px;
 
     .result-item-header,
     .result-item {
-        @include flex;
+        display: flex;
+        @include responsive-columns;
     }
 
     .result-item-header {
@@ -219,8 +221,13 @@ $col-spacing: 18px;
         background-color: $lighterGrey;
     }
 
+
     .result-item-inner {
         display: flex;
+        flex-direction: column;
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+        }
         margin: auto;
     }
 
@@ -230,7 +237,6 @@ $col-spacing: 18px;
 
     .result-item-section-2 {
         flex: 1 0 53%;
-
     }
 
     .result-item-section-3 {
@@ -247,7 +253,7 @@ $col-spacing: 18px;
 
 
     .result-item-menu {
-        @include flex;
+        display: flex;
         width: 100%;
         margin-bottom: 0;
 
@@ -288,8 +294,13 @@ $col-spacing: 18px;
         }
     }
 
-    .result-item-section-1, .result-item-section-2 {
-        @include flex;
+    .result-item-section-1,
+    .result-item-section-2 {
+        display: flex;
+    }
+
+    .result-item-section-2 {
+        @include responsive-columns;
     }
 
     .result-item-section-2__child {

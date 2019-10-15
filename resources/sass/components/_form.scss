@@ -26,7 +26,7 @@ textarea {
 }
 
 .flex-select {
-    @include flex;
+    display: flex;
 }
 
 input:not([type="range"]):not([type="submit"]):not([type="checkbox"]),
