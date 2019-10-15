@@ -142,11 +142,13 @@ $col-spacing: 18px;
             &.radius {
                 //width: 60%;
                 .col-inner {
-                    padding-left: 153px;
+                    @include media-breakpoint-up(md){
+                        padding-left: 153px;
 
-                    label {
-                        @include v-c;
-                        left: 0;
+                        label {
+                            @include v-c;
+                            left: 0;
+                        }
                     }
                 }
             }
