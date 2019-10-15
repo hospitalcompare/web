@@ -16,8 +16,8 @@
         'displayBlock' => false])
     <div id="result_item_parent" class="result-item-parent d-none d-md-flex">
         <div class="result-item-header container">
-            <div class="result-item-section-1"></div>
-            <nav class="result-item-section-2">
+            <div class="result-item-header-section-1"></div>
+            <div class="result-item-header-section-2">
                 <ul class="result-item-menu">
                     <li>
                         <p tabindex="0" data-offset="30px, 40px"
@@ -132,8 +132,8 @@
                               class="sort-arrow sort-self-pay {{Request::input('sort_by') == 16 ? 'desc':'asc' }}"></span>
                     </li>
                 </ul>
-            </nav>
-            <div class="result-item-section-3 p-0">
+            </div>
+            <div class="result-item-header-section-3 p-0">
                 <ul class="result-item-menu p-0 h-100">
                     <li class="align-items-end justify-content-end">
                         <p class="text-center m-0 d-flex flex-column align-items-end">
