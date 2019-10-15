@@ -6,7 +6,7 @@
     }
 
     .dropdown-toggle {
-        padding: 10px 40px 10px 13px;
+        padding: 0 40px 0 13px;
         background-color: $white;
         color: $darkerGrey;
         font-weight: 500;
@@ -26,13 +26,17 @@
         &:active {
             background-color: #fff !important;
         }
+
+        &:focus {
+            outline: none !important;
+        }
     }
 
     &.big {
         // Button added by BS select
         .dropdown-toggle {
             height: 60px;
-            line-height: 60px;
+            //line-height: 60px;
             padding: 0 45px 0 16px;
             width: 100%;
             border-radius: 10px;
