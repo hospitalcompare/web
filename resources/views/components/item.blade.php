@@ -73,28 +73,15 @@
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
-                        'content' => !empty($d['rating']['avg_user_rating']) ? '
-                        <p><span class="mr-2">Food rating</span>
-                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
-                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
-                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
-                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
-                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
-                        </p>
-                        <p><span class="mr-2">Food rating</span>
-                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
-                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
-                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
-                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
-                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
-                        </p>
-                        <p><span class="mr-2">Food rating</span>
-                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
-                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
-                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
-                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
-                            <img class="star-icon" src="images/icons/star.svg" alt="Whole Star">
-                        </p>' : 'Currently no data available<br>for this hospital'])>
+                        'content' => !empty($d['placeRating']) ? '
+                        <ul>
+                        <li>Cleanliness: '.number_format((float)$d['placeRating']['cleanliness'], 1).'%</li>
+                        <li>Food & Hydration: '.number_format((float)$d['placeRating']['food_hydration'], 1).'%</li>
+                        <li>Privacy, Dignity & Wellbeing: '.number_format((float)$d['placeRating']['privacy_dignity_wellbeing'], 1).'%</li>
+                        <li>Condition, Appearance & Maintainance: '.number_format((float)$d['placeRating']['condition_appearance_maintenance'], 1).'%</li>
+                        <li>Dementia Domain: '.number_format((float)$d['placeRating']['dementia'], 1).'%</li>
+                        <li>Disability Domain: '.number_format((float)$d['placeRating']['disability'], 1).'%</li>
+                        </ul>' : 'Currently no data available<br>for this hospital'])>
                     {!! html_entity_decode($stars) !!}
                 </p>
                 <span class="d-none" id="item_user_rating_{{$id}}">{!! $userRating !!}</span>
