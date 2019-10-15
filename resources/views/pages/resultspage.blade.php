@@ -14,7 +14,7 @@
 @section('content')
     @include('pages.pagesections.resultspageform', [
         'displayBlock' => false])
-    <div id="result_item_parent" class="result-item-parent">
+    <div id="result_item_parent" class="result-item-parent d-none d-md-flex">
         <div class="result-item-header container">
             <div class="result-item-section-1"></div>
             <nav class="result-item-section-2">
