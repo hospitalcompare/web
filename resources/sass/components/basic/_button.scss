@@ -538,10 +538,11 @@
 }
 
 .btn-link {
-    overflow-wrap: break-word;
+    color: $darkerGrey;
+    cursor: pointer;
 
-    &:hover {
-        color: $darkerGrey;
-        cursor: pointer;
+    &:hover,
+    &:focus {
+        color: $blue;
     }
 }
