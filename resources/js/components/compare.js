@@ -161,11 +161,11 @@ $(document).ready(function () {
     }
 
     //Set the OnClick event for the Compare button
-    $(document).on("click touchend", ".result-item-section-3 .compare", function () {
+    $(document).on("click", ".result-item-section-3 .compare", function () {
         //Get the Data that is already in the Cookies
         var compareCount = parseInt(Cookies.get("compareCount"));
         var data = JSON.parse(Cookies.get("compareHospitalsData"));
-        compareBar.slideDown();
+        // compareBar.slideDown();
 
         // $('body').addClass('modal-open');
         // compareContent.removeClass('revealed');
@@ -254,7 +254,7 @@ $(document).ready(function () {
     });
 
     //Set the OnClick event for the Remove Hospital on the Comparison table
-    $(document).on("click touchend", ".compare-hospitals-bar .remove-hospital", function (e) {
+    $(document).on("click", ".compare-hospitals-bar .remove-hospital", function (e) {
         e.stopPropagation();
         var elementId = $(this).attr('id');
         console.log(JSON.parse(Cookies.get("compareHospitalsData")));
@@ -266,7 +266,7 @@ $(document).ready(function () {
     });
 
     //Set the Onclick event for the Comparison Header
-    $(document).on("click touchend", ".compare-hospitals-bar .compare-button-title", function (e) {
+    $(document).on("click", ".compare-hospitals-bar .compare-button-title", function (e) {
         var compareCount = parseInt(Cookies.get("compareCount"));
         var openTabs = $('.special-offer-tab.open');
         if (compareCount > 0) {

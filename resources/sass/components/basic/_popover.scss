@@ -104,6 +104,8 @@
     }
 
     &-doctor {
+        //position: fixed !important;
+        max-width: inherit;
         @include media-breakpoint-up(lg) {
             max-width: 50vw;
         }
