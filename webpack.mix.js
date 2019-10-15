@@ -71,7 +71,8 @@ mix.browserSync({
     ],
     logSnippet: true,
     proxy: process.env.APP_URL,
-    port: 8080
+    port: 8080,
+    ghostMode: false
 });
 
 // Disable notification sounds
