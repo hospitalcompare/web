@@ -3,7 +3,9 @@
         <div class="sort-categories-section-1">
             <div class="sort-categories-item hospital-image">
                 <img alt="Image of {{ $title }}" src="{{ $itemImg }}">
-                <div class="{{$NHSClass}} py-1 px-2 rounded-pill m-1 {{ $NHSClass == 'private-hospital' ? 'bg-darkpink' : 'bg-teal' }}"><p class="m-0">{{$fundedText}}</p></div>
+                <div
+                    class="{{$NHSClass}} py-1 px-2 rounded-pill m-1 {{ $NHSClass == 'private-hospital' ? 'bg-darkpink' : 'bg-teal' }}">
+                    <p class="m-0">{{$fundedText}}</p></div>
                 @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', ['class' => 'default'])
                 {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
                 <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
@@ -39,17 +41,18 @@
                         'trigger' => 'hover',
                         'html' => 'true',
                         'content' => 'Currently no data available for this hospital'])
-{{--                    @includeWhen(!empty($qualityRating), 'components.basic.popover', [--}}
-{{--                            'placement'     => 'bottom',--}}
-{{--                            'trigger'       => 'hover',--}}
-{{--                            'html'          => 'true',--}}
-{{--                            'hideDelay'     =>  1000,--}}
-{{--                            'content'       => 'Source of rating: ' . '<a target="_blank" href="' . $reportUrl . '">Hello</a>'])--}}
+                    {{--                    @includeWhen(!empty($qualityRating), 'components.basic.popover', [--}}
+                    {{--                            'placement'     => 'bottom',--}}
+                    {{--                            'trigger'       => 'hover',--}}
+                    {{--                            'html'          => 'true',--}}
+                    {{--                            'hideDelay'     =>  1000,--}}
+                    {{--                            'content'       => 'Source of rating: ' . '<a target="_blank" href="' . $reportUrl . '">Hello</a>'])--}}
                 >
                     {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
                     @if(!empty($qualityRating) && !empty($reportUrl))
                         <span>
-                            <a class="btn-link" target="_blank" href="{{ $reportUrl }}">Source&nbsp;&nbsp;<i class="fas fa-external-link-alt"></i></a>
+                            <a class="btn-link" target="_blank" href="{{ $reportUrl }}">Source&nbsp;&nbsp;<i
+                                    class="fas fa-external-link-alt"></i></a>
                         </span>
                     @endif
                 </p>
@@ -86,13 +89,13 @@
                         'trigger' => 'hover',
                         'html' => 'true',
                         'content' => !empty($d['placeRating']) ? '
-                        <ul>
-                        <li>Cleanliness: '.number_format((float)$d['placeRating']['cleanliness'], 1).'%</li>
-                        <li>Food & Hydration: '.number_format((float)$d['placeRating']['food_hydration'], 1).'%</li>
-                        <li>Privacy, Dignity & Wellbeing: '.number_format((float)$d['placeRating']['privacy_dignity_wellbeing'], 1).'%</li>
-                        <li>Condition, Appearance & Maintainance: '.number_format((float)$d['placeRating']['condition_appearance_maintenance'], 1).'%</li>
-                        <li>Dementia Domain: '.number_format((float)$d['placeRating']['dementia'], 1).'%</li>
-                        <li>Disability Domain: '.number_format((float)$d['placeRating']['disability'], 1).'%</li>
+                        <ul class="nhs-user-ratings mb-0">
+                        <li>Cleanliness: '                            . '<span><strong>'  . number_format((float)$d['placeRating']['cleanliness'], 1).'%</span></strong></li>
+                        <li>Food & Hydration: '                       . '<span><strong>' . number_format((float)$d['placeRating']['food_hydration'], 1).'%</span></strong></li>
+                        <li>Privacy, Dignity & Wellbeing:     '       . '<span><strong>' . number_format((float)$d['placeRating']['privacy_dignity_wellbeing'], 1).'%</span></strong></li>
+                        <li>Condition, Appearance & Maintainance: '   . '<span><strong>' . number_format((float)$d['placeRating']['condition_appearance_maintenance'], 1).'%</span></strong></li>
+                        <li>Dementia Domain:            '             . '<span><strong>' . number_format((float)$d['placeRating']['dementia'], 1).'%</span></strong></li>
+                        <li>Disability Domain:        '               . '<span><strong>' . number_format((float)$d['placeRating']['disability'], 1).'%</span></strong></li>
                         </ul>' : 'Currently no data available<br>for this hospital'])>
                     {!! html_entity_decode($stars) !!}
                 </p>
@@ -104,7 +107,7 @@
                     @include('components.basic.popover', [
                     'trigger' => 'hover',
                     'html'    => 'true',
-                    'content' => !empty($opCancelled) ? 'National average<br> is 3.35%' : 'Currently no data available<br>for this hopsital'])>
+                    'content' => !empty($opCancelled) ? 'National average<br> is 3.35%' : 'Currently no data available<br>for this hospital'])>
                     {!! !empty($opCancelled) ? $opCancelled : "No data" !!}
                 </p>
                 <span class="d-none" id="item_op_cancelled_{{$id}}">{!! $opCancelled !!}</span>
