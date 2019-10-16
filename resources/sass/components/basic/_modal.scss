@@ -2,7 +2,7 @@
 
 .modal {
     .modal-content {
-        border-radius: 16px 0 16px 16px;
+        border-radius: 16px;
     }
 
     .close {
@@ -39,7 +39,7 @@
         }
 
         .modal-dialog {
-            width: 100%;
+            //width: 100%;
             max-width: 820px;
         }
 
@@ -66,7 +66,7 @@
         }
 
         .modal-dialog {
-            width: 100%;
+            //width: 100%;
             max-width: 820px;
         }
 
@@ -102,6 +102,7 @@
     // GMaps
     &.modal-maps {
         border-radius: 16px;
+        padding-right: 0 !important;
 
         .modal-dialog {
             max-width: 1060px;
