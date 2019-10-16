@@ -82,13 +82,19 @@
         }
 
         .form-wrap {
-            .img-wrap {
-                width: 28%;
-                padding-right: 25px;
+            > * {
+                width: 100%;
             }
 
-            form {
-                width: 72%;
+            @include media-breakpoint-up(lg){
+                .img-wrap {
+                    width: 28%;
+                    padding-right: 25px;
+                }
+
+                form {
+                    width: 72%;
+                }
             }
         }
     }
