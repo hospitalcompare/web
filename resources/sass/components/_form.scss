@@ -147,7 +147,7 @@ select::-ms-expand {
 
     // bootstrap select button
     .dropdown-toggle {
-        height: 44px;
+        padding: 12px 40px 12px 13px;
         @include font-size(16);
     }
 }
