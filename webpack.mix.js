@@ -71,7 +71,7 @@ mix.browserSync({
     ],
     logSnippet: true,
     proxy: process.env.APP_URL,
-    port: 8080,
+    port: 8081,
     ghostMode: false
 });
 
