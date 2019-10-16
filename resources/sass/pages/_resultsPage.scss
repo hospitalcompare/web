@@ -343,6 +343,7 @@ $col-spacing: 18px;
             display: inline-block;
             margin-top: 10px;
             line-height: 1;
+            width: 100%; // IE bug
         }
 
         p {
