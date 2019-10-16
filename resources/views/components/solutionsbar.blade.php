@@ -3,7 +3,7 @@
         <div class="container position-relative d-flex justify-content-between align-items-end h-100">
             @include('components.doctor')
             @if(!empty($data['special_offers']))
-                <ul class="solutions-menu align-items-end d-flex mb-0 ml-auto mr-3">
+                <ul class="solutions-menu align-items-end d-none d-md-flex mb-0 ml-auto mr-3">
                     @foreach($specialOffers as $key => $specialOffer )
                     <li class="d-block h-100">
                         @include('components.basic.specialoffertab', [

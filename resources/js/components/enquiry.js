@@ -152,8 +152,8 @@ $(document).ready(function () {
                     },
                     error: function (e) {
                         var errorMsg = JSON.parse(e.responseText).errors.error;
-                        console.log(JSON.parse(e.responseText).errors);
-                        console.log("ERROR : ", errorMsg, "status text: ", e.statusText);
+                        // console.log(JSON.parse(e.responseText).errors);
+                        // console.log("ERROR : ", errorMsg, "status text: ", e.statusText);
                         showAlert(errorMsg, false, true);
                     }
                 });

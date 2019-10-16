@@ -1,4 +1,10 @@
 $col-spacing: 18px;
+@mixin responsive-columns() {
+    flex-direction: column;
+    @include media-breakpoint-up(lg) {
+        flex-direction: row;
+    }
+}
 
 .results-page,
 .test-page {
@@ -20,16 +26,7 @@ $col-spacing: 18px;
 
 
     .filter-section {
-        //flex-basis: 85%;
-        //display: flex;
-        //margin-left: -$col-spacing;
-        //margin-right: -$col-spacing;
-
         .filter-section-child {
-            //flex: 0 0 20%;
-            //width: 20%;
-            //padding: 0 $col-spacing;
-
             &:not(:last-child) {
                 border-right: 2px solid #d7d7d7;
             }
@@ -99,7 +96,7 @@ $col-spacing: 18px;
 
     .postcode-radius,
     .select-proximity {
-        @include flex;
+        display: flex;
     }
 
     .postcode-radius-child,
@@ -136,11 +133,13 @@ $col-spacing: 18px;
             &.radius {
                 //width: 60%;
                 .col-inner {
-                    padding-left: 153px;
+                    @include media-breakpoint-up(md){
+                        padding-left: 153px;
 
-                    label {
-                        @include v-c;
-                        left: 0;
+                        label {
+                            @include v-c;
+                            left: 0;
+                        }
                     }
                 }
             }
@@ -151,13 +150,11 @@ $col-spacing: 18px;
         background-color: $lighterGrey;
     }
 
-    //#sort_parent {
-    //    display: none;
-    //}
-
     .sort-bar {
-        height: 60px;
-        @include flex;
+        @include media-breakpoint-up(lg){
+            height: 60px;
+        }
+        display: flex;
         justify-content: space-between;
         align-items: center;
 
@@ -171,7 +168,6 @@ $col-spacing: 18px;
             }
         }
     }
-
 
     .sort-page-select, .sort-by {
         width: 200px;
@@ -187,67 +183,103 @@ $col-spacing: 18px;
         position: relative;
     }
 
-    .sort-categories-parent {
+    .result-item-parent {
         background-color: $teal;
 
 
     }
 
-    .sort-categories-header,
-    .sort-categories {
-        @include flex;
+    .result-item-header,
+    .result-item {
+        display: flex;
+        @include responsive-columns;
     }
 
-    .sort-categories-header {
+    .result-item-header {
         //width: 1180px;
         margin: auto;
 
-        .sort-categories-section-3 {
+        .result-item-section-3 {
             &:before,
             &:after {
                 display: none;
             }
         }
+
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+
+            .result-item-header-section-1 {
+                //flex: 0 0 33%;
+                width: 33%;
+            }
+
+            .result-item-header-section-2 {
+                //flex: 0 0 53%;
+                width: 53%;
+            }
+
+            .result-item-header-section-3 {
+                //flex: 0 0 14%;
+                width: 14%;
+                padding: 10px 0 10px 10px;
+
+                .btn-area-lower {
+                    border-top: 1px solid #d7d7d7;
+                    padding-top: 10px;
+
+                }
+            }
+        }
     }
 
-    .sort-categories {
+    .result-item {
         margin-bottom: 7px;
         background-color: $white;
     }
 
-    .sortCategoriesResults {
+    .results {
         background-color: $lighterGrey;
     }
 
-    .sort-categories-inner {
+
+    .result-item-inner {
         display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         margin: auto;
-    }
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
 
-    .sort-categories-section-1 {
-        flex: 1 0 33%;
-    }
+            .result-item-section-1 {
+                //flex: 1 0 33%;
+                width: 33%;
+            }
 
-    .sort-categories-section-2 {
-        flex: 1 0 53%;
+            .result-item-section-2 {
+                //flex: 1 0 53%;
+                width: 53%;
+            }
 
-    }
+            .result-item-section-3 {
+                //flex: 1 0 14%;
+                width: 14%;
+                padding: 10px 0 10px 10px;
+                @include pseudo-border($borderGrey);
 
-    .sort-categories-section-3 {
-        flex: 1 0 14%;
-        padding: 10px 0 10px 10px;
-        @include pseudo-border($borderGrey);
+                .btn-area-lower {
+                    border-top: 1px solid #d7d7d7;
+                    padding-top: 10px;
 
-        .btn-area-lower {
-            border-top: 1px solid #d7d7d7;
-            padding-top: 10px;
-
+                }
+            }
         }
     }
 
 
-    .sort-categories-menu {
-        @include flex;
+
+    .result-item-menu {
+        display: flex;
         width: 100%;
         margin-bottom: 0;
 
@@ -288,12 +320,27 @@ $col-spacing: 18px;
         }
     }
 
-    .sort-categories-section-1, .sort-categories-section-2 {
-        @include flex;
+    .result-item-section-1,
+    .result-item-section-2,
+    .result-item-section-3
+    {
+        display: flex;
+        @include responsive-columns;
     }
 
-    .sort-categories-section-2__child {
-        flex: 1;
+    .result-item-section-2 {
+    }
+
+    .result-item-section-3 {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+.result-item-section-2__child {
+        flex: 1 auto;
+        @include media-breakpoint-up(md){
+            flex: 1;
+        }
         @include flex-center;
         font-size: 16px;
         font-weight: 400;
@@ -306,6 +353,7 @@ $col-spacing: 18px;
             display: inline-block;
             margin-top: 10px;
             line-height: 1;
+            width: 100%; // IE bug
         }
 
         p {
@@ -314,7 +362,7 @@ $col-spacing: 18px;
         }
     }
 
-    .sort-categories-item {
+    .result-item-item {
         position: relative;
 
         &:last-child {
@@ -397,7 +445,7 @@ $col-spacing: 18px;
     //padding-top: 85.6px;
 }
 
-#sort_categories_parent {
+#result_item_parent {
     top: 0;
     left: 0;
     right: 0;

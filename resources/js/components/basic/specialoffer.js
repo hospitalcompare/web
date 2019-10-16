@@ -2,10 +2,10 @@
 $(document).ready(function () {
     $('.toggle-special-offer').on('click', function (e) {
         // Get the row that this slide belongs to
-        var $parentRow = $(this).parents('.sort-categories');
+        var $parentRow = $(this).parents('.result-item');
         // Get the widths of the columns in the centre section of the results row
         var $leftWidth = $parentRow.find('.hospital-details').outerWidth();
-        var $rightWidth = $parentRow.find('.sort-categories-section-2').outerWidth();
+        var $rightWidth = $parentRow.find('.result-item-section-2').outerWidth();
         var $totalWidth = $leftWidth + $rightWidth;
         // console.log($totalWidth);
         $parentRow

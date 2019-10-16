@@ -12,7 +12,7 @@
                         'id' => 'input_postcode'])
                 </div>
                 <div class="postcode-radius-child radius col-12 col-md-6">
-                    <div class="col-inner pr-3 d-flex align-items-center h-100 position-relative">
+                    <div class="col-inner pr-3 d-flex flex-column flex-wrap flex-lg-row align-items-center h-100 position-relative">
                         @include('components.basic.range', [
                             'id'            => 'radiusProx',
                             'label'         => 'Within radius of:',
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="select-proximity filter-section row">
-                <div class="filter-section-child col-2">
+                <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
                         'selectClassName'       => 'w-100',
                         'showLabel'             => true,
@@ -62,7 +62,7 @@
                                      </p>'])
                     >?</a>
                 </div>
-                <div class="filter-section-child col-2">
+                <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'Waiting time', 'resultsLabel' => 'resultsLabel'])--}}
                     @include('components.basic.select', ['selectClassName' => 'w-100', 'showLabel' => true, 'options' => $data['filters']['waitingTimes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Waiting time', 'name'=>'waiting_time', 'resultsLabel' => 'resultsLabel'])
                     <a tabindex="0" data-offset="30px, 40px"
@@ -84,7 +84,7 @@
                                      </p>'])
                     >?</a>
                 </div>
-                <div class="filter-section-child col-2">
+                <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'NHS choices user rating', 'resultsLabel' => 'resultsLabel'])--}}
                     @include('components.basic.select', ['selectClassName' => 'w-100', 'showLabel' => true, 'options' => $data['filters']['userRatings'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'NHS User Rating', 'name'=>'user_rating', 'resultsLabel' => 'resultsLabel'])
                     <a tabindex="0" data-offset="30px, 40px"
@@ -106,7 +106,7 @@
                                      </p>'])
                     >?</a>
                 </div>
-                <div class="filter-section-child col-2">
+                <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
                         'showLabel' => true,
                         'options' => $data['filters']['qualityRatings'],
@@ -134,7 +134,7 @@
                                      </p>'])
                     >?</a>
                 </div>
-                <div class="filter-section-child col-2">
+                <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', ['selectClassName' => 'w-100', 'showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Hospital Type', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
                     <a tabindex="0" data-offset="30px, 40px"
                        class="help-link"
@@ -155,7 +155,7 @@
                                      </p>'])
                     >?</a>
                 </div>
-                <div class="filter-section-child col-2">
+                <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
                         'selectClassName'       => 'w-100',
                         'showLabel'             => true,
@@ -195,11 +195,11 @@
     <div class="sort-parent" id="sort_parent">
         <div class="container">
             <div class="sort-bar row">
-                <div class="show-section col-6">
+                <div class="show-section col-12 col-md-6">
                     Showing {{$data['hospitals']->total()}} hospital(s) | Ordered
                     by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating & Distance' : 'Care Quality Rating & Waiting Time') }}
                 </div>
-                <div class="sort-section col-6 d-flex justify-content-end align-items-center">
+                <div class="sort-section col-12 col-md-6 d-flex flex-wrap justify-content-end align-items-center">
                     @include('components.basic.button', [
                         'button'            => 'Filter Results',
                         'classTitle'        => 'btn btn-s btn-teal btn-grad btn-icon btn-arrow-down',

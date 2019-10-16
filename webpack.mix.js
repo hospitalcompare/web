@@ -42,6 +42,7 @@ mix.copyDirectory('resources/fonts', 'public/fonts');
 mix.copyDirectory('resources/downloads', 'public/downloads');
 mix.copy('node_modules/stickybits/dist/stickybits.min.js', 'public/js/stickybits.js');
 
+// console.log(mix.inProduction());
 // Add prefixes to css rules and fix bugs with flexbox
 mix.sass('resources/sass/app.scss', 'public/css')
     .sourceMaps()
@@ -71,7 +72,8 @@ mix.browserSync({
     ],
     logSnippet: true,
     proxy: process.env.APP_URL,
-    port: 8080
+    port: 8080,
+    ghostMode: false
 });
 
 // Disable notification sounds

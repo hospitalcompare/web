@@ -1,7 +1,7 @@
-<div class="sort-categories">
-    <div class="sort-categories-inner container">
-        <div class="sort-categories-section-1">
-            <div class="sort-categories-item hospital-image">
+<div class="result-item">
+    <div class="result-item-inner container">
+        <div class="result-item-section-1">
+            <div class="result-item-item hospital-image">
                 <img alt="Image of {{ $title }}" src="{{ $itemImg }}">
                 <div
                     class="{{$NHSClass}} py-1 px-2 rounded-pill m-1 {{ $NHSClass == 'private-hospital' ? 'bg-darkpink' : 'bg-teal' }}">
@@ -10,7 +10,7 @@
                 {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
                 <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
             </div>
-            <div class="sort-categories-item hospital-details w-100">
+            <div class="result-item-item hospital-details w-100">
                 <p class="sort-item-title SofiaPro-Medium" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
@@ -33,9 +33,9 @@
                 {{--                @endif--}}
             </div>
         </div>
-        <div class="sort-categories-section-2">
+        <div class="result-item-section-2">
             {{-- CQC rating  --}}
-            <div class="sort-categories-section-2__child">
+            <div class="result-item-section-2__child">
                 <p @includeWhen(empty($qualityRating), 'components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
@@ -59,7 +59,7 @@
                 <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
             </div>
             {{-- Waiting time --}}
-            <div class="sort-categories-section-2__child flex-column">
+            <div class="result-item-section-2__child flex-column">
                 <p @includeWhen(empty($waitTime), 'components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
@@ -83,7 +83,7 @@
                 <span class="d-none" id="item_waiting_time_{{$id}}">{{str_replace("<br>", " ", $waitTime)}}</span>
             </div>
             {{-- End waiting time --}}
-            <div class="sort-categories-section-2__child">
+            <div class="result-item-section-2__child">
                 <p @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
@@ -102,7 +102,7 @@
                 <span class="d-none" id="item_user_rating_{{$id}}">{!! $userRating !!}</span>
             </div>
             {{-- % operations cancelled --}}
-            <div class="sort-categories-section-2__child">
+            <div class="result-item-section-2__child">
                 <p
                     @include('components.basic.popover', [
                     'trigger' => 'hover',
@@ -113,7 +113,7 @@
                 <span class="d-none" id="item_op_cancelled_{{$id}}">{!! $opCancelled !!}</span>
             </div>
             {{-- Friends and family --}}
-            <div class="sort-categories-section-2__child">
+            <div class="result-item-section-2__child">
                 <p class="m-0"
                     @include('components.basic.popover', [
                         'placement' => 'bottom',
@@ -125,13 +125,13 @@
                 <span class="d-none" id="item_ff_rating_{{$id}}">{!! $FFRating !!}</span>
             </div>
             {{-- NHS funded work  --}}
-            <div class="sort-categories-section-2__child">
+            <div class="result-item-section-2__child">
                 <p>
                     {!! ($NHSClass == 'nhs-hospital') || ($NHSClass == 'private-hospital') && !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                 </p>
                 <span class="d-none" id="item_nhs_funded_{{$id}}">{!! $NHSFunded !!}</span>
             </div>
-            <div class="sort-categories-section-2__child flex-column">
+            <div class="result-item-section-2__child flex-column">
                 <p>
                     {!! !empty($privateSelfPay) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>"  !!}
                 </p>
@@ -151,7 +151,7 @@
                 <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
             </div>
         </div>
-        <div class="sort-categories-section-3 d-flex flex-column justify-content-center">
+        <div class="result-item-section-3">
             <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between"
                  @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
                 <span class="d-none" id="item_hospital_type_class_{{$id}}">{!! $NHSClass !!}</span>

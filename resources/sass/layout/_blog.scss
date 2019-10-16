@@ -14,11 +14,11 @@
     }
 
     .blogContent {
-        @include flex;
+        display: flex;
         @include justify-content(space-between);
 
         .blogWrap {
-            @include flex;
+            display: flex;
             @include flex-flow(column);
             @include justify-content(center);
             @include alignItems;
@@ -88,7 +88,7 @@
     .buttonSectionParent {
         width: $fullWidth / 1.2;
         margin: 0 auto 100px auto;
-        @include flex;
+        display: flex;
 
         p {
             margin-left: 100px;

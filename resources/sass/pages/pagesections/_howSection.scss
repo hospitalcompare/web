@@ -22,7 +22,9 @@
 
 .how-section {
     .row {
-        @include reset-row-spacing(30px);
+        @include media-breakpoint-up(md){
+            @include reset-row-spacing(30px);
+        }
     }
 }
 
@@ -32,7 +34,7 @@
     position: relative;
 
     .icon {
-        //@include flex;
+        //display: flex;
         //@include justify-content($value: center);
         margin-bottom: 25px;
         height: 120px;

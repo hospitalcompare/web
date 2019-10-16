@@ -27,7 +27,7 @@
 
 
 .branding {
-    @include flex;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -65,12 +65,12 @@
 }
 
 .main-nav {
-    @include flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
+    @include media-breakpoint-up(lg) {
+        display: flex;
+    }
 
     .main-menu {
-        @include flex;
         margin: 0;
 
         li {

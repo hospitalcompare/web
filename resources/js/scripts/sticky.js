@@ -1,6 +1,6 @@
 // // Make the search header sticky on scroll
 // $(document).ready(function () {
-//     var $stickyThing = $('#sort_categories_parent');
+//     var $stickyThing = $('#result_item_parent');
 //     var $top = $stickyThing.offset().top;
 //
 //     if ($stickyThing.length > 0) {
@@ -23,4 +23,4 @@
 //
 
 // v3
-stickybits('.sort-categories-parent', {useStickyClasses: true});
+stickybits('.result-item-parent', {useStickyClasses: true});

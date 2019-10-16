@@ -16,8 +16,8 @@ $(document).ready(function () {
                     </div>`,
         content: $content,
         html: true,
-        trigger: 'focus',
-        placement: 'top'
+        trigger: 'click',
+        placement: 'auto'
     });
 
     var $showDoctor =  Cookies.get('showDoctor');
