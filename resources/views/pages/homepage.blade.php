@@ -32,10 +32,10 @@
                         <div class="video-wrapper">
                             <video muted class="content" poster="{{ url('images/video_placeholder.png') }}">
                                 <source src="{{ asset('video/For_Wes.mp4') }}" type="video/mp4">
-                                {{--                            <source src="movie.ogg" type="video/ogg">--}}
-                                {{--                            Your browser does not support the video tag.--}}
+                                                            <source src="movie.ogg" type="video/ogg">
+                                                            Your browser does not support the video tag.
                             </video>
-                            {{--                        <div class="playerButton toggle"></div>--}}
+                                                    <div class="playerButton toggle"></div>
                         </div>
                     </div>
                 </div>

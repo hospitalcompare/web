@@ -13,8 +13,7 @@
 @section('body-class', 'results-page')
 
 @section('content')
-    @include('pages.pagesections.resultspageform', [
-        'displayBlock' => false])
+    @include('pages.pagesections.resultspageform', ['displayBlock' => false])
     <div id="result_item_parent" class="result-item-parent d-none d-lg-flex">
         <div class="result-item-header container">
             <div class="result-item-header-section-1"></div>

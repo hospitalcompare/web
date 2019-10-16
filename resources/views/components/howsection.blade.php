@@ -1,11 +1,11 @@
 <div class="how-section container {{ !empty($containerFluid) ?? ($containerFluid) ? 'container-980' : '' }}">
+    @if(!empty($sectionTitle))
+        <h2 class="section-title">{{ $sectionTitle }}</h2>
+    @endif
     <div class="row">
-        @if(!empty($sectionTitle))
-        <h2 class="section-title col-12">{{ $sectionTitle }}</h2>
-        @endif
         @if(!empty($howsections))
             @foreach($howsections as $howsection)
-                <div class="how-section__child col-12 col-md-3">
+                <div class="how-section__child  col-md-3">
                     <div class="col-inner h-100 d-flex flex-column">
                         <div class="icon" style="background-image: url('images/icons/{{ $howsection['iconImg'] }}.svg')">
 {{--                            {!! file_get_contents(asset('images/icons/' . $howsection['iconImg'] . '.svg')) !!}--}}
@@ -36,5 +36,5 @@
             </div>
         </div>
         @endif
-    </div>
+    </div>{{-- end of row --}}
 </div>

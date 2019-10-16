@@ -22,7 +22,9 @@
 
 .how-section {
     .row {
-        @include reset-row-spacing(30px);
+        @include media-breakpoint-up(md){
+            @include reset-row-spacing(30px);
+        }
     }
 }
 
