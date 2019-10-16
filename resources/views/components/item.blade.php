@@ -151,7 +151,7 @@
                 <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
             </div>
         </div>
-        <div class="result-item-section-3 d-flex flex-column justify-content-center">
+        <div class="result-item-section-3">
             <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between"
                  @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
                 <span class="d-none" id="item_hospital_type_class_{{$id}}">{!! $NHSClass !!}</span>

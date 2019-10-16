@@ -321,16 +321,23 @@ $col-spacing: 18px;
     }
 
     .result-item-section-1,
-    .result-item-section-2 {
+    .result-item-section-2,
+    .result-item-section-3
+    {
         display: flex;
-    }
-
-    .result-item-section-2 {
         @include responsive-columns;
     }
 
-    .result-item-section-2__child {
-        flex: 1;
+    .result-item-section-2 {
+    }
+
+    .result-item-section-3 {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+.result-item-section-2__child {
+        flex: 1 auto ;
         @include flex-center;
         font-size: 16px;
         font-weight: 400;
