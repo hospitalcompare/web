@@ -16,7 +16,7 @@ $(document).ready(function () {
                     </div>`,
         content: $content,
         html: true,
-        trigger: 'click',
+        trigger: 'focus',
         placement: 'auto'
     });
     // $doctor.popover({
@@ -37,7 +37,7 @@ $(document).ready(function () {
     var $showDoctor =  Cookies.get('showDoctor');
 
     if($showDoctor != 'false') {
-        // Show the doctor popover after 1 sec delay (if she hasn't already been dismissed
+        // Show the doctor popover after 1 sec delay (if she hasn't already been dismissed)
         setTimeout(function () {
             $doctor
                 .focus()
