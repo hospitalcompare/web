@@ -19,6 +19,20 @@ $(document).ready(function () {
         trigger: 'click',
         placement: 'auto'
     });
+    // $doctor.popover({
+    //     container: 'body',
+    //     template: `<div class="popover popover-large popover-doctor">
+    //                     <span class="fa fa-times close" data-dismiss=""></span>
+    //                     <div class="popover-body">
+    //                     </div>
+    //                     <div class="arrow arrow-large">
+    //                     </div>
+    //                 </div>`,
+    //     content: `<p class="bold mb-0">Need some help?</p><p>Here to help you find<br> the best hospital</p><p><a  class="btn btn-go btn-icon" >Let's Go</a></p>`,
+    //     html: true,
+    //     trigger: 'focus',
+    //     placement: 'top'
+    // });
 
     var $showDoctor =  Cookies.get('showDoctor');
 
