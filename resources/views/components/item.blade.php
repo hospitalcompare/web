@@ -86,7 +86,7 @@
             <div class="result-item-section-2__child">
                 <p @include('components.basic.popover', [
                         'placement' => 'bottom',
-                        'trigger' => 'click',
+                        'trigger' => 'hover',
                         'html' => 'true',
                         'content' => !empty($d['placeRating']) ? '
                         <ul class="nhs-user-ratings mb-0">
