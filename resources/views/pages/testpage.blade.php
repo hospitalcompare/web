@@ -133,21 +133,6 @@
                     Tooltip on left
                 </button>
                 <hr>
-                <h3>Popover trigger</h3>
-                <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
-                    @include('components.basic.popover', [
-                    'size'      => 'large',
-                    'placement' => 'top',
-                    'trigger'   => 'click',
-                    'html'      => 'true',
-                    'content'   => '<p class="bold mb-0">
-                                        What is NHS funded work?
-                                    </p>
-                                    <p>
-                                        Many private healthcare policies allow you to choose which hospital to have your elective
-                                        procedure at. Enter your provider and policy name to find the best hospital for you.
-                                    </p>'])>?</a>
-                <hr>
                 <h3>Enquire now button</h3>
                 @include('components.basic.button', [
                     'classTitle' => 'btn btn-icon btn-enquire-now mr-2',
@@ -163,7 +148,47 @@
                 <h3>Let's go button</h3>
                 @include('components.basic.button', ['classTitle' => 'btn btn-go btn-icon', 'button' => 'Close'])
                 <hr>
-                <h3>Popovers</h3>
+                <h2>Popovers</h2>
+                <h3>Popover top</h3>
+                <div class="popover popover-regular fade bs-popover-top show" role="tooltip" id="popover438743" x-placement="top" style="position: relative;">
+                    <div class="arrow" style="left: 64px;"></div>
+                    <div class="popover-body">
+                        <p><span class="mr-2">Food rating</span>
+                            <img class="star-icon" src="../images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="../images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="../images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="../images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="../images/icons/star.svg" alt="Whole Star">
+                        </p>
+                    </div>
+                </div>
+                <h3>Popover bottom</h3>
+                <div class="popover popover-regular fade bs-popover-bottom show" role="tooltip" id="popover438743" x-placement="bottom" style="position: relative;">
+                    <div class="arrow" style="left: 64px;"></div>
+                    <div class="popover-body">
+                        <p><span class="mr-2">Food rating</span>
+                            <img class="star-icon" src="../images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="../images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="../images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="../images/icons/star.svg" alt="Whole Star">
+                            <img class="star-icon" src="../images/icons/star.svg" alt="Whole Star">
+                        </p>
+                    </div>
+                </div>
+                <h3>Popover trigger</h3>
+                <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                    @include('components.basic.popover', [
+                    'size'      => 'large',
+                    'placement' => 'top',
+                    'trigger'   => 'click',
+                    'html'      => 'true',
+                    'content'   => '<p class="bold mb-0">
+                                        What is NHS funded work?
+                                    </p>
+                                    <p>
+                                        Many private healthcare policies allow you to choose which hospital to have your elective
+                                        procedure at. Enter your provider and policy name to find the best hospital for you.
+                                    </p>'])>?</a>
                 <a href="#" class="btn btn-blue"
                    data-toggle="popover"
                    data-content="Hello, this is a popover"
@@ -231,25 +256,11 @@
                     <div class="arrow" style="left: 64px;"></div>
                     <div class="popover-body">
                         <p><span class="mr-2">Food rating</span>
-                            <img src='../images/icons/star.svg' alt='Whole Star'>
-                            <img src='../images/icons/star.svg' alt='Whole Star'>
-                            <img src='../images/icons/star.svg' alt='Whole Star'>
-                            <img src='../images/icons/star.svg' alt='Whole Star'>
-                            <img src='../images/icons/star.svg' alt='Whole Star'>
-                        </p>
-                        <p><span class="mr-2">Food rating</span>
-                            <img src='../images/icons/star.svg' alt='Whole Star'>
-                            <img src='../images/icons/star.svg' alt='Whole Star'>
-                            <img src='../images/icons/star.svg' alt='Whole Star'>
-                            <img src='../images/icons/star.svg' alt='Whole Star'>
-                            <img src='../images/icons/star.svg' alt='Whole Star'>
-                        </p>
-                        <p><span class="mr-2">Food rating</span>
-                            <img src='../images/icons/star.svg' alt='Whole Star'>
-                            <img src='../images/icons/star.svg' alt='Whole Star'>
-                            <img src='../images/icons/star.svg' alt='Whole Star'>
-                            <img src='../images/icons/star.svg' alt='Whole Star'>
-                            <img src='../images/icons/star.svg' alt='Whole Star'>
+                            <img class="star-icon" src='../images/icons/star.svg' alt='Whole Star'>
+                            <img class="star-icon" src='../images/icons/star.svg' alt='Whole Star'>
+                            <img class="star-icon" src='../images/icons/star.svg' alt='Whole Star'>
+                            <img class="star-icon" src='../images/icons/star.svg' alt='Whole Star'>
+                            <img class="star-icon" src='../images/icons/star.svg' alt='Whole Star'>
                         </p>
                     </div>
                 </div>

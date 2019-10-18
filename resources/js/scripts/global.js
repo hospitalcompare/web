@@ -15,7 +15,9 @@ $(document).ready(function () {
         styleBase: ''
     });
 
+    $('.dropdown-toggle').attr('data-boundary', 'window');
     // Do something when select pickers open
+
     $pickers.on('show.bs.select', function (e, clickedIndex, isSelected, previousValue) {
         // Stop body scrolling
         $('body').addClass('select-open');
