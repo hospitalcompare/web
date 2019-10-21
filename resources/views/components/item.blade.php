@@ -36,26 +36,21 @@
         <div class="result-item-section-2">
             {{-- CQC rating  --}}
             <div class="result-item-section-2__child">
-                <p @includeWhen(empty($qualityRating), 'components.basic.popover', [
+                <p @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
-                        'content' => 'Currently no data available for this hospital'])
-                    {{--                    @includeWhen(!empty($qualityRating), 'components.basic.popover', [--}}
-                    {{--                            'placement'     => 'bottom',--}}
-                    {{--                            'trigger'       => 'hover',--}}
-                    {{--                            'html'          => 'true',--}}
-                    {{--                            'hideDelay'     =>  1000,--}}
-                    {{--                            'content'       => 'Source of rating: ' . '<a target="_blank" href="' . $reportUrl . '">Hello</a>'])--}}
-                >
+                        'content' => '
+                        <ul class="nhs-ratings mb-0">
+                        <li>Safe: '                             . '<span><strong>' . (!empty($d['rating']['safe']) ? $d['rating']['safe'] : 'No Data').'</span></strong></li>
+                        <li>Effective: '                        . '<span><strong>' . (!empty($d['rating']['effective']) ? $d['rating']['effective'] : 'No Data').'</span></strong></li>
+                        <li>Caring:     '                       . '<span><strong>' . (!empty($d['rating']['caring']) ? $d['rating']['caring'] : 'No Data').'</span></strong></li>
+                        <li>Responsive: '                       . '<span><strong>' . (!empty($d['rating']['responsive']) ? $d['rating']['responsive'] : 'No Data').'</span></strong></li>
+                        <li>Well Led:   '                       . '<span><strong>' . (!empty($d['rating']['well_led']) ? $d['rating']['well_led'] : 'No Data').'</span></strong></li>
+                        </ul>' ])>
                     {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
-{{--                    @if(!empty($qualityRating) && !empty($reportUrl))--}}
-{{--                        <span>--}}
-{{--                            <a class="btn-link" target="_blank" href="{{ $reportUrl }}">Source&nbsp;&nbsp;<i--}}
-{{--                                    class="fas fa-external-link-alt"></i></a>--}}
-{{--                        </span>--}}
-{{--                    @endif--}}
                 </p>
+
                 <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
             </div>
             {{-- Waiting time --}}

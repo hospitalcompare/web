@@ -26,7 +26,13 @@ class LocationRatings extends DefaultImport {
                     $rating = HospitalRating::updateOrCreate([
                         'hospital_id'       => $hospital->id
                     ], [
-                        'latest_rating'     => !empty($item['Latest Rating']) ? $item['Latest Rating'] : null,
+                        'latest_rating'     => !empty($item['Latest Rating'])           ? $item['Latest Rating']            : null,
+                        'safe'              => !empty($item['CQC Rating - Safe'])       ? $item['CQC Rating - Safe']        : null,
+                        'effective'         => !empty($item['CQC Rating - Effective'])  ? $item['CQC Rating - Effective']   : null,
+                        'caring'            => !empty($item['CQC Rating - Caring'])     ? $item['CQC Rating - Caring']      : null,
+                        'responsive'        => !empty($item['CQC Rating - Responsive']) ? $item['CQC Rating - Responsive']  : null,
+                        'well_led'          => !empty($item['CQC Rating - Well-Led'])   ? $item['CQC Rating - Well-Led']    : null,
+                        'report_url'        => !empty($item['URL'])                     ? $item['URL']                      : null,
                     ]);
                     $this->returnedData[] = $rating;
                 } else {
