@@ -149,6 +149,39 @@
                 @include('components.basic.button', ['classTitle' => 'btn btn-go btn-icon', 'button' => 'Close'])
                 <hr>
                 <h2>Popovers</h2>
+                <h3>Popover for CQC rating</h3>
+                <div class="popover popover-regular fade bs-popover-top show" role="tooltip" id="popover438743" x-placement="top" style="position: relative;">
+                    <div class="arrow" style="left: 64px;"></div>
+                    <div class="popover-body">
+                        <div class="left">
+
+                        </div>
+                        <div class="right">
+                            <div class="table cqc-table">
+                                <div class="cqc-row d-flex justify-content-between">
+                                    <div class="cqc-category">Safe</div>
+                                    <div class="cqc-rating ml-auto">Good<span class="cqc-colour green"></span></div>
+                                </div>
+                                <div class="cqc-row d-flex justify-content-between">
+                                    <div class="cqc-category">Safe</div>
+                                    <div class="cqc-rating ml-auto">Good<span class="cqc-colour green"></span></div>
+                                </div>
+                                <div class="cqc-row d-flex justify-content-between">
+                                    <div class="cqc-category">Safe</div>
+                                    <div class="cqc-rating ml-auto">Good<span class="cqc-colour green"></span></div>
+                                </div>
+                                <div class="cqc-row d-flex justify-content-between">
+                                    <div class="cqc-category">Safe</div>
+                                    <div class="cqc-rating ml-auto">Good<span class="cqc-colour green"></span></div>
+                                </div>
+                                <div class="cqc-row d-flex justify-content-between">
+                                    <div class="cqc-category">Safe</div>
+                                    <div class="cqc-rating ml-auto">Good<span class="cqc-colour green"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <h3>Popover top</h3>
                 <div class="popover popover-regular fade bs-popover-top show" role="tooltip" id="popover438743" x-placement="top" style="position: relative;">
                     <div class="arrow" style="left: 64px;"></div>

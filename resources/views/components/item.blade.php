@@ -47,12 +47,12 @@
                         'trigger' => 'hover',
                         'html' => 'true',
                         'content' => 'Currently no data available for this hospital'])
-                    {{--                    @includeWhen(!empty($qualityRating), 'components.basic.popover', [--}}
-                    {{--                            'placement'     => 'bottom',--}}
-                    {{--                            'trigger'       => 'hover',--}}
-                    {{--                            'html'          => 'true',--}}
-                    {{--                            'hideDelay'     =>  1000,--}}
-                    {{--                            'content'       => 'Source of rating: ' . '<a target="_blank" href="' . $reportUrl . '">Hello</a>'])--}}
+                   @includeWhen(!empty($qualityRating), 'components.basic.popover', [
+                        'placement'     => 'bottom',
+                        'trigger'       => 'hover',
+                        'html'          => 'true',
+                        'hideDelay'     =>  1000,
+                        'content'       => ''])
                 >
                     {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
                     @if(!empty($qualityRating) && !empty($reportUrl))

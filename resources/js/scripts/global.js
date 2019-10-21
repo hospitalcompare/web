@@ -128,16 +128,16 @@ window.getHtmlDashTickValue = function(value, text = "") {
     return html;
 };
 
-window.toggleContent = function() {
+window.toggleContent = function(speed = 400) {
     var $target = $($(this).data('target'));
     console.log($target);
     if($target.is(':visible'))
         $target
-            .slideUp()
+            .slideUp(speed)
             .removeClass('open');
     else
         $target
-            .slideDown()
+            .slideDown(speed)
             .removeClass('open');
 };
 
