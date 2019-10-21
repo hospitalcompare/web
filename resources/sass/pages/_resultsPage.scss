@@ -254,6 +254,19 @@ $col-spacing: 18px;
             .result-item-section-1 {
                 //flex: 1 0 33%;
                 width: 33%;
+
+                > * {
+                    position: relative;
+                }
+
+                .hospital-details {
+                    padding: 8px;
+
+                    .btn-more-info {
+                        bottom: 0;
+                        left: 8px;
+                    }
+                }
             }
 
             .result-item-section-2 {
@@ -362,13 +375,6 @@ $col-spacing: 18px;
         }
     }
 
-    .result-item-item {
-        position: relative;
-
-        &:last-child {
-            padding: 8px;
-        }
-    }
 
     .sort-item-title {
         font-size: 16px;

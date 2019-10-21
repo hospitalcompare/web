@@ -241,18 +241,25 @@
             letter-spacing: -0.6px;
             padding: 0 20px 0 12px;
 
+
+        }
+
+        &.btn-plus {
             &:after {
                 background-image: url('../images/icons/plus-solid.svg');
                 @include icon-bg-center(40%);
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: 20px;
+                @include v-c;
                 width: 20px;
                 height: 20px;
                 line-height: 20px;
             }
+        }
+
+        &.btn-more-info {
+            @include font-size(14);
+            letter-spacing: -0.6px;
+            padding: 5px 25px 5px 8px;
+            border-radius: 4px 4px 0 0;
         }
 
         &.btn-close__small {
@@ -440,19 +447,6 @@
                 height: 40px;
                 line-height: 40px;
             }
-
-            //&:after {
-            //    background-image: url('../images/icons/plus-solid.svg');
-            //    @include icon-bg-center(30%);
-            //    position: absolute;
-            //    right: 0;
-            //    top: 0;
-            //    bottom: 0;
-            //    width: 40px;
-            //    height: 40px;
-            //    line-height: 40px;
-            //}
-
         }
 
         &.btn-special-offer-reverse {

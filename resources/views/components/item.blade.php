@@ -1,7 +1,7 @@
 <div class="result-item">
     <div class="result-item-inner container">
         <div class="result-item-section-1">
-            <div class="result-item-item hospital-image">
+            <div class="hospital-image">
                 <img alt="Image of {{ $title }}" src="{{ $itemImg }}">
                 <div
                     class="{{$NHSClass}} py-1 px-2 rounded-pill m-1 {{ $NHSClass == 'private-hospital' ? 'bg-darkpink' : 'bg-teal' }}">
@@ -10,7 +10,7 @@
                 {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
                 <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
             </div>
-            <div class="result-item-item hospital-details w-100">
+            <div class="hospital-details w-100 position-relative">
                 <p class="sort-item-title SofiaPro-Medium" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
@@ -25,12 +25,14 @@
                     'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,
                     'image'             => 'images/alder-1.png'
                 ])
+                @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-teal btn-icon btn-more-info btn-plus position-absolute', 'button' => 'More info'])
                 {{--                TODO: reintroduce consultant button when we have this data --}}
                 {{--                @if(!empty($specialOffers))--}}
                 {{--                    <div class="btn-area" style="margin-top: 10px">--}}
                 {{--                        @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-teal btn-icon btn-consultant btn-plus', 'button' => 'Consultants'])--}}
                 {{--                    </div>--}}
                 {{--                @endif--}}
+
             </div>
         </div>
         <div class="result-item-section-2">
