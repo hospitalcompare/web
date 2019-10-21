@@ -49,9 +49,45 @@
                         'content' => 'Currently no data available for this hospital'])
                    @includeWhen(!empty($qualityRating), 'components.basic.popover', [
                         'placement'     => 'bottom',
+                        'size'          => 'cqc',
                         'trigger'       => 'hover',
                         'html'          => 'true',
-                        'content'       => 'Test'])
+                        'content'       => '<div class="container-fluid">
+                            <div class="row">
+                                <div class="cqc-left col-4 d-flex flex-column justify-content-center align-items-start bg-cqc-green text-white border">
+                                    <h4 class="mb-0 text-white">Overall</h4>
+                                    <h4 class="mb-0 text-white"><strong>Good</strong></h4>
+                                </div>
+                                <div class="cqc-right col-8 pr-0">
+                                    <div class="cqc-table">
+{{--                                        <div class="cqc-row d-flex justify-content-between">--}}
+{{--                                            <div class="cqc-category">Safe</div>--}}
+{{--                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour">{!! file_get_contents(asset('/images/icons/star.svg')) !!}</span></div>--}}
+{{--                                        </div>--}}
+                                        <div class="cqc-row d-flex justify-content-between">
+                                            <div class="cqc-category">Safe</div>
+                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour bg-cqc-green"></span></div>
+                                        </div>
+                                        <div class="cqc-row d-flex justify-content-between">
+                                            <div class="cqc-category">Effective</div>
+                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour bg-cqc-green"></span></div>
+                                        </div>
+                                        <div class="cqc-row d-flex justify-content-between">
+                                            <div class="cqc-category">Caring</div>
+                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour bg-cqc-green"></span></div>
+                                        </div>
+                                        <div class="cqc-row d-flex justify-content-between">
+                                            <div class="cqc-category">Responsive</div>
+                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour bg-cqc-green"></span></div>
+                                        </div>
+                                        <div class="cqc-row d-flex justify-content-between">
+                                            <div class="cqc-category">Well-Led</div>
+                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour bg-cqc-green"></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>'])
                 >
                     {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
                 </p>

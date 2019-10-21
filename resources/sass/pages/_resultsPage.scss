@@ -482,13 +482,19 @@ $col-spacing: 18px;
 }
 
 // CQC popover
+.cqc-left {
+    border-radius: 5px 0 0 5px;
+}
+
 .cqc-table {
     .cqc-row {
         line-height: 30px;
+        min-width: 200px;
 
         &:not(:last-child) {
             border-bottom: 1px solid $borderGrey;
         }
+
     }
 
     .cqc-colour {
@@ -496,11 +502,10 @@ $col-spacing: 18px;
         height: 12px;
         border-radius: 50%;
         display: inline-block;
+        margin-left: 10px;
 
-
-        &.green {
-            margin-left: 10px;
-            background-color: #458f00;
+        svg {
+            width: 100%;
         }
     }
 }
