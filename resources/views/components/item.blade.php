@@ -42,7 +42,7 @@
         <div class="result-item-section-2">
             {{-- CQC rating  --}}
             <div class="result-item-section-2__child">
-                <p @includeWhen(empty($qualityRating), 'components.basic.popover', [
+                <p class="h-50 d-flex align-items-center" @includeWhen(empty($qualityRating), 'components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
@@ -83,18 +83,18 @@
             </div>
             {{-- End waiting time --}}
             <div class="result-item-section-2__child">
-                <p @include('components.basic.popover', [
+                <p class="h-50 d-flex align-items-center" @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
                         'content' => !empty($d['placeRating']) ? '
                         <ul class="nhs-user-ratings mb-0">
-                        <li>Cleanliness:&nbsp;'                            . '<span><strong>'  . number_format((float)$d['placeRating']['cleanliness'], 1).'%</span></strong></li>
-                        <li>Food & Hydration:&nbsp;'                       . '<span><strong>' . number_format((float)$d['placeRating']['food_hydration'], 1).'%</span></strong></li>
-                        <li>Privacy, Dignity & Wellbeing:&nbsp;'       . '<span><strong>' . number_format((float)$d['placeRating']['privacy_dignity_wellbeing'], 1).'%</span></strong></li>
-                        <li>Condition, Appearance & Maintainance:&nbsp;'   . '<span><strong>' . number_format((float)$d['placeRating']['condition_appearance_maintenance'], 1).'%</span></strong></li>
-                        <li>Dementia Domain:&nbsp;            '             . '<span><strong>' . number_format((float)$d['placeRating']['dementia'], 1).'%</span></strong></li>
-                        <li>Disability Domain:&nbsp;        '               . '<span><strong>' . number_format((float)$d['placeRating']['disability'], 1).'%</span></strong></li>
+                            <li>Cleanliness:&nbsp;'                            . '<span><strong>'  . number_format((float)$d['placeRating']['cleanliness'], 1).'%</span></strong></li>
+                            <li>Food & Hydration:&nbsp;'                       . '<span><strong>' . number_format((float)$d['placeRating']['food_hydration'], 1).'%</span></strong></li>
+                            <li>Privacy, Dignity & Wellbeing:&nbsp;'       . '<span><strong>' . number_format((float)$d['placeRating']['privacy_dignity_wellbeing'], 1).'%</span></strong></li>
+                            <li>Condition, Appearance & Maintainance:&nbsp;'   . '<span><strong>' . number_format((float)$d['placeRating']['condition_appearance_maintenance'], 1).'%</span></strong></li>
+                            <li>Dementia Domain:&nbsp;            '             . '<span><strong>' . number_format((float)$d['placeRating']['dementia'], 1).'%</span></strong></li>
+                            <li>Disability Domain:&nbsp;        '               . '<span><strong>' . number_format((float)$d['placeRating']['disability'], 1).'%</span></strong></li>
                         </ul>' : 'Currently no data available<br>for this hospital'])>
                     {!! html_entity_decode($stars) !!}
                 </p>
@@ -102,7 +102,7 @@
             </div>
             {{-- % operations cancelled --}}
             <div class="result-item-section-2__child">
-                <p
+                <p class="h-50 d-flex align-items-center"
                     @include('components.basic.popover', [
                     'trigger' => 'hover',
                     'html'    => 'true',
@@ -113,7 +113,7 @@
             </div>
             {{-- Friends and family --}}
             <div class="result-item-section-2__child">
-                <p class="m-0"
+                <p class="m-0 h-50 d-flex align-items-center"
                     @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
