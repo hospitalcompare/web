@@ -51,16 +51,9 @@
                         'placement'     => 'bottom',
                         'trigger'       => 'hover',
                         'html'          => 'true',
-                        'hideDelay'     =>  1000,
-                        'content'       => ''])
+                        'content'       => 'Test'])
                 >
                     {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
-                    @if(!empty($qualityRating) && !empty($reportUrl))
-                        <span>
-                            <a class="btn-link" target="_blank" href="{{ $reportUrl }}">Source&nbsp;&nbsp;<i
-                                    class="fas fa-external-link-alt"></i></a>
-                        </span>
-                    @endif
                 </p>
                 <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
             </div>
@@ -96,12 +89,12 @@
                         'html' => 'true',
                         'content' => !empty($d['placeRating']) ? '
                         <ul class="nhs-user-ratings mb-0">
-                        <li>Cleanliness: '                            . '<span><strong>'  . number_format((float)$d['placeRating']['cleanliness'], 1).'%</span></strong></li>
-                        <li>Food & Hydration: '                       . '<span><strong>' . number_format((float)$d['placeRating']['food_hydration'], 1).'%</span></strong></li>
-                        <li>Privacy, Dignity & Wellbeing:     '       . '<span><strong>' . number_format((float)$d['placeRating']['privacy_dignity_wellbeing'], 1).'%</span></strong></li>
-                        <li>Condition, Appearance & Maintainance: '   . '<span><strong>' . number_format((float)$d['placeRating']['condition_appearance_maintenance'], 1).'%</span></strong></li>
-                        <li>Dementia Domain:            '             . '<span><strong>' . number_format((float)$d['placeRating']['dementia'], 1).'%</span></strong></li>
-                        <li>Disability Domain:        '               . '<span><strong>' . number_format((float)$d['placeRating']['disability'], 1).'%</span></strong></li>
+                        <li>Cleanliness:&nbsp;'                            . '<span><strong>'  . number_format((float)$d['placeRating']['cleanliness'], 1).'%</span></strong></li>
+                        <li>Food & Hydration:&nbsp;'                       . '<span><strong>' . number_format((float)$d['placeRating']['food_hydration'], 1).'%</span></strong></li>
+                        <li>Privacy, Dignity & Wellbeing:&nbsp;'       . '<span><strong>' . number_format((float)$d['placeRating']['privacy_dignity_wellbeing'], 1).'%</span></strong></li>
+                        <li>Condition, Appearance & Maintainance:&nbsp;'   . '<span><strong>' . number_format((float)$d['placeRating']['condition_appearance_maintenance'], 1).'%</span></strong></li>
+                        <li>Dementia Domain:&nbsp;            '             . '<span><strong>' . number_format((float)$d['placeRating']['dementia'], 1).'%</span></strong></li>
+                        <li>Disability Domain:&nbsp;        '               . '<span><strong>' . number_format((float)$d['placeRating']['disability'], 1).'%</span></strong></li>
                         </ul>' : 'Currently no data available<br>for this hospital'])>
                     {!! html_entity_decode($stars) !!}
                 </p>
