@@ -25,7 +25,11 @@
                     'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,
                     'image'             => 'images/alder-1.png'
                 ])
-                @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-teal btn-icon btn-more-info btn-plus position-absolute', 'button' => 'More info'])
+                @include('components.basic.button', [
+                    'classTitle'        => 'btn btn-xs btn-teal btn-icon btn-more-info btn-plus position-absolute',
+                    'button'            => 'More info',
+                    'dataTarget'        => '#corporate_content_hospital_' . $id
+                 ])
                 {{--                TODO: reintroduce consultant button when we have this data --}}
                 {{--                @if(!empty($specialOffers))--}}
                 {{--                    <div class="btn-area" style="margin-top: 10px">--}}
@@ -193,5 +197,12 @@
                 </div>
             @endif
         </div>
+        {{-- Corporate content area --}}
+        <div class="corporate-content bg-white" id="corporate_content_hospital_{{$id}}">
+            <div class="container">
+                <h1>This is the corporate content zone</h1>
+
+            </div>
+        </div>{{-- End of corporate content area  --}}
     </div>
 </div>
