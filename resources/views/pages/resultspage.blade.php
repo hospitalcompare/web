@@ -184,8 +184,8 @@
                     'btnText'           => 'Make an enquiry',
                     'NHSClass'          => $d['hospitalType']['name'] == 'NHS' ? 'nhs-hospital' : 'private-hospital',
                     'fundedText'        => ($d['hospitalType']['name'] == 'NHS') ? 'NHS Hospital': 'Private Hospital',
-                    'url'               => $d['url'],
-                    'reportUrl'         => $d['report_url']])
+                    'url'               => $d['url']
+                   ])
             @endforeach
         @endif
     </div>
