@@ -10,6 +10,11 @@
     width: calc(86% - 134px);
     //@extend .bg-teal;
     padding-left: 8px;
+    padding-top: 18px;
+
+    .tab-pane {
+        padding-top: 13px;
+    }
 }
 
 .corporate-content-section-3 {

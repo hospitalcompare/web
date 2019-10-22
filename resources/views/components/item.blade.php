@@ -47,47 +47,47 @@
                         'trigger' => 'hover',
                         'html' => 'true',
                         'content' => 'Currently no data available for this hospital'])
-                   @includeWhen(!empty($qualityRating), 'components.basic.popover', [
-                        'placement'     => 'bottom',
-                        'size'          => 'cqc',
-                        'trigger'       => 'hover',
-                        'html'          => 'true',
-                        'content'       => '<div class="container-fluid">
-                            <div class="row">
-                                <div class="cqc-left col-4 d-flex flex-column justify-content-center align-items-start bg-' . str_slug($qualityRating). ' text-white border">
-                                    <p class="mb-0 text-white">Overall</p>
-                                    <p class="mb-0 text-white text-left"><strong>' . $qualityRating . '</strong></p>
-                                </div>
-                                <div class="cqc-right col-8 pr-0">
-                                    <div class="cqc-table">
-{{--                                        <div class="cqc-row d-flex justify-content-between">--}}
-{{--                                            <div class="cqc-category">Safe</div>--}}
-{{--                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour">{!! file_get_contents(asset('/images/icons/star.svg')) !!}</span></div>--}}
-{{--                                        </div>--}}
-                                        <div class="cqc-row d-flex justify-content-between">
-                                            <div class="cqc-category">Safe</div>
-                                            <div class="cqc-rating ml-auto"><strong>' . $safe . '</strong><span class="cqc-colour bg-'. str_slug($safe) . '"></span></div>
-                                        </div>
-                                        <div class="cqc-row d-flex justify-content-between">
-                                            <div class="cqc-category">Effective</div>
-                                            <div class="cqc-rating ml-auto"><strong>' . $effective . '</strong><span class="cqc-colour bg-' . str_slug($effective). '"></span></div>
-                                        </div>
-                                        <div class="cqc-row d-flex justify-content-between">
-                                            <div class="cqc-category">Caring</div>
-                                            <div class="cqc-rating ml-auto"><strong>' . $caring . '</strong><span class="cqc-colour bg-' . str_slug($caring). '"></span></div>
-                                        </div>
-                                        <div class="cqc-row d-flex justify-content-between">
-                                            <div class="cqc-category">Responsive</div>
-                                            <div class="cqc-rating ml-auto"><strong>' . $responsive . '</strong><span class="cqc-colour bg-' . str_slug($responsive). '"></span></div>
-                                        </div>
-                                        <div class="cqc-row d-flex justify-content-between">
-                                            <div class="cqc-category">Well-Led</div>
-                                            <div class="cqc-rating ml-auto"><strong>' . $well_led . '</strong><span class="cqc-colour bg-' . str_slug($well_led). '"></span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>'])
+                    @includeWhen(!empty($qualityRating), 'components.basic.popover', [
+                         'placement'     => 'bottom',
+                         'size'          => 'cqc',
+                         'trigger'       => 'hover',
+                         'html'          => 'true',
+                         'content'       => '<div class="container-fluid">
+                             <div class="row">
+                                 <div class="cqc-left col-4 d-flex flex-column justify-content-center align-items-start bg-' . str_slug($qualityRating). ' text-white border">
+                                     <p class="mb-0 text-white">Overall</p>
+                                     <p class="mb-0 text-white text-left"><strong>' . $qualityRating . '</strong></p>
+                                 </div>
+                                 <div class="cqc-right col-8 pr-0">
+                                     <div class="cqc-table">
+ {{--                                        <div class="cqc-row d-flex justify-content-between">--}}
+ {{--                                            <div class="cqc-category">Safe</div>--}}
+ {{--                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour">{!! file_get_contents(asset('/images/icons/star.svg')) !!}</span></div>--}}
+ {{--                                        </div>--}}
+                                         <div class="cqc-row d-flex justify-content-between">
+                                             <div class="cqc-category">Safe</div>
+                                             <div class="cqc-rating ml-auto"><strong>' . $safe . '</strong><span class="cqc-colour bg-'. str_slug($safe) . '"></span></div>
+                                         </div>
+                                         <div class="cqc-row d-flex justify-content-between">
+                                             <div class="cqc-category">Effective</div>
+                                             <div class="cqc-rating ml-auto"><strong>' . $effective . '</strong><span class="cqc-colour bg-' . str_slug($effective). '"></span></div>
+                                         </div>
+                                         <div class="cqc-row d-flex justify-content-between">
+                                             <div class="cqc-category">Caring</div>
+                                             <div class="cqc-rating ml-auto"><strong>' . $caring . '</strong><span class="cqc-colour bg-' . str_slug($caring). '"></span></div>
+                                         </div>
+                                         <div class="cqc-row d-flex justify-content-between">
+                                             <div class="cqc-category">Responsive</div>
+                                             <div class="cqc-rating ml-auto"><strong>' . $responsive . '</strong><span class="cqc-colour bg-' . str_slug($responsive). '"></span></div>
+                                         </div>
+                                         <div class="cqc-row d-flex justify-content-between">
+                                             <div class="cqc-category">Well-Led</div>
+                                             <div class="cqc-rating ml-auto"><strong>' . $well_led . '</strong><span class="cqc-colour bg-' . str_slug($well_led). '"></span></div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>'])
                 >
                     {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
                 </p>
@@ -229,7 +229,102 @@
             <div class="d-flex">
                 <div class="corporate-content-section-1"></div>
                 <div class="corporate-content-section-2">
-                    <h1>This is where it all happens</h1>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" id="nav-tabs_{{ $id }}" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab_{{ $id }}" data-toggle="tab" href="#profile_{{ $id }}"
+                               role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="treatments-tab_{{ $id }}" data-toggle="tab"
+                               href="#treatments_{{ $id }}" role="tab" aria-controls="home" aria-selected="true">Treatments</a>
+                        </li>
+                        {{--                        <li class="nav-item">--}}
+                        {{--                            <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Messages</a>--}}
+                        {{--                        </li>--}}
+                        {{--                        <li class="nav-item">--}}
+                        {{--                            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>--}}
+                        {{--                        </li>--}}
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane" id="profile_{{ $id }}" role="tabpanel" aria-labelledby="profile-tab">
+                            <p>Situated in London, this hospital provides private patients with outstanding medical
+                                services. Both self paying and private medically insured patients will be treated using
+                                the latest techniques in a modern and calming hospital. With a team of expert
+                                specialists patients can get treatment for a range of hip, knee, spinal and foot and
+                                ankle conditions.</p>
+                            <p>Our hospitals are equipped with state of the art facilities and are focused on providing
+                                high quality healthcare. Each hospital boasts of having the latest equipment, available
+                                facilities include:</p>
+                            <p>First list</p>
+                            <ul>
+                                <li>First thing</li>
+                                <li>Second thing</li>
+                                <li>Third thing</li>
+                                <li>Fourth thing</li>
+                                <li>Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing
+                                </li>
+                            </ul>
+                            <p>Second list</p>
+                            <ul>
+                                <li>First thing</li>
+                                <li>Second thing</li>
+                                <li>Third thing</li>
+                                <li>Fourth thing</li>
+                                <li>Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane active" id="treatments_{{ $id }}" role="tabpanel"
+                             aria-labelledby="treatments-tab">
+                            <p>Situated in London, this hospital provides private patients with outstanding medical
+                                services. Both self paying and private medically insured patients will be treated using
+                                the latest techniques in a modern and calming hospital. With a team of expert
+                                specialists patients can get treatment for a range of hip, knee, spinal and foot and
+                                ankle conditions.</p>
+                            <p>Our hospitals are equipped with state of the art facilities and are focused on providing
+                                high quality healthcare. Each hospital boasts of having the latest equipment, available
+                                facilities include:</p>
+                            <p>First list</p>
+                            <ul>
+                                <li>First thing</li>
+                                <li>Second thing</li>
+                                <li>Third thing</li>
+                                <li>Fourth thing</li>
+                                <li>Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing
+                                </li>
+                            </ul>
+                            <p>Second list</p>
+                            <ul>
+                                <li>First thing</li>
+                                <li>Second thing</li>
+                                <li>Third thing</li>
+                                <li>Fourth thing</li>
+                                <li>Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing
+                                    Fifth thing
+                                </li>
+                            </ul>
+                        </div>
+                        {{--                        <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>--}}
+                        {{--                        <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>--}}
+                    </div>
                 </div>
                 <div class="corporate-content-section-3"></div>
             </div>
