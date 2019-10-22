@@ -188,8 +188,7 @@
             </div>
         </div>
         <div class="result-item-section-3">
-            <div class="btn-area"
-                 @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
+            <div class="btn-area">
                 <span class="d-none" id="item_hospital_type_class_{{$id}}">{!! $NHSClass !!}</span>
                 @if($NHSClass == 'private-hospital')
                     @include('components.basic.modalbutton', [
