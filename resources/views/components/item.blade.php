@@ -147,7 +147,7 @@
             </div>
         </div>
         <div class="result-item-section-3">
-            <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between"
+            <div class="btn-area"
                  @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
                 <span class="d-none" id="item_hospital_type_class_{{$id}}">{!! $NHSClass !!}</span>
                 @if($NHSClass == 'private-hospital')
@@ -171,20 +171,17 @@
                     'modalTarget'       => '#hc_modal_enquire_nhs',
                     'id'                => 'enquire_'.$id])
                 @endif
-                <span>
-                @include('components.basic.button', [
-                    'classTitle' => 'btn btn-green-outline compare btn-block mt-0',
-                    'button' => '', 'icon' => '',
-                    'id' => $id])
-                </span>
-            </div>
-            @if(!empty($specialOffers))
-                <div class="btn-area btn-area-lower">
+                @if(!empty($specialOffers))
                     @include('components.basic.button', [
                     'classTitle'        => 'toggle-special-offer btn btn-block btn-icon btn-pink btn-special-offer btn-plus',
                     'button'            => 'Special Offers'])
-                </div>
-            @endif
+                @endif
+                @include('components.basic.button', [
+                    'classTitle' => 'btn btn-green-outline compare btn-block',
+                    'button' => 'Compare',
+                    'icon' => 'far fa-heart',
+                    'id' => $id])
+            </div>
         </div>
     </div>
 </div>
