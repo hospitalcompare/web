@@ -73,7 +73,7 @@ class DbInit extends Migration
                 $table->string('name');
                 $table->string('tel_number')->nullable();
                 $table->string('url')->nullable();
-                $table->string('report_url')->nullable();
+//                $table->string('report_url')->nullable();
                 $table->string('status')->default("active");
                 $table->timestamps();
 
@@ -92,6 +92,12 @@ class DbInit extends Migration
                 $table->double('avg_user_rating')->nullable();
                 $table->integer('total_ratings')->nullable();
                 $table->string('latest_rating')->nullable();
+                $table->string('safe')->nullable();
+                $table->string('effective')->nullable();
+                $table->string('caring')->nullable();
+                $table->string('responsive')->nullable();
+                $table->string('well_led')->nullable();
+                $table->string('report_url')->nullable();
                 $table->string('status')->default("active");
                 $table->timestamps();
 

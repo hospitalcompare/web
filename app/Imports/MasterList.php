@@ -99,7 +99,7 @@ class MasterList extends DefaultImport {
                         'name'              => $item['Location Name'],
                         'tel_number'        => $item['Location Telephone Number'],
                         'url'               => $item['Location Web Address'],
-                        'report_url'        => $item['CQC Report URL']
+//                        'report_url'        => $item['CQC Report URL']
                     ]);
 
                     $this->returnedData[] = [
