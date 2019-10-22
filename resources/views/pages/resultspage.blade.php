@@ -184,7 +184,12 @@
                     'btnText'           => 'Make an enquiry',
                     'NHSClass'          => $d['hospitalType']['name'] == 'NHS' ? 'nhs-hospital' : 'private-hospital',
                     'fundedText'        => ($d['hospitalType']['name'] == 'NHS') ? 'NHS Hospital': 'Private Hospital',
-                    'url'               => $d['url']
+                    'url'               => $d['url'],
+                    'safe'              => $d['rating']['safe'],
+                    'effective'         => $d['rating']['effective'],
+                    'caring'            => $d['rating']['caring'],
+                    'responsive'        => $d['rating']['responsive'],
+                    'well_led'          => $d['rating']['well_led'],
                    ])
             @endforeach
         @endif

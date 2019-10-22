@@ -77,16 +77,22 @@ select.big {
     background-color: $greylight;
 }
 
-.bg-cqc-green {
+// CQC rating colours
+.bg-outstanding,
+.bg-good {
     background-color: $cqcGreen;
 }
 
-.bg-cqc-amber {
+.bg-requires-improvement {
     background-color: $cqcAmber;
 }
 
-.bg-cqc-red {
+.bg-inadequate {
     background-color: $cqcRed;
+}
+
+.bg-not-yet-rated {
+    background-color: $teal;
 }
 
 .col-teal {

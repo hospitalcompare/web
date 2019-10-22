@@ -54,9 +54,9 @@
                         'html'          => 'true',
                         'content'       => '<div class="container-fluid">
                             <div class="row">
-                                <div class="cqc-left col-4 d-flex flex-column justify-content-center align-items-start bg-cqc-green text-white border">
-                                    <h4 class="mb-0 text-white">Overall</h4>
-                                    <h4 class="mb-0 text-white"><strong>Good</strong></h4>
+                                <div class="cqc-left col-4 d-flex flex-column justify-content-center align-items-start bg-' . str_slug($qualityRating). ' text-white border">
+                                    <p class="mb-0 text-white">Overall</p>
+                                    <p class="mb-0 text-white text-left"><strong>' . $qualityRating . '</strong></p>
                                 </div>
                                 <div class="cqc-right col-8 pr-0">
                                     <div class="cqc-table">
@@ -66,23 +66,23 @@
 {{--                                        </div>--}}
                                         <div class="cqc-row d-flex justify-content-between">
                                             <div class="cqc-category">Safe</div>
-                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour bg-cqc-green"></span></div>
+                                            <div class="cqc-rating ml-auto"><strong>' . $safe . '</strong><span class="cqc-colour bg-'. str_slug($safe) . '"></span></div>
                                         </div>
                                         <div class="cqc-row d-flex justify-content-between">
                                             <div class="cqc-category">Effective</div>
-                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour bg-cqc-green"></span></div>
+                                            <div class="cqc-rating ml-auto"><strong>' . $effective . '</strong><span class="cqc-colour bg-' . str_slug($effective). '"></span></div>
                                         </div>
                                         <div class="cqc-row d-flex justify-content-between">
                                             <div class="cqc-category">Caring</div>
-                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour bg-cqc-green"></span></div>
+                                            <div class="cqc-rating ml-auto"><strong>' . $caring . '</strong><span class="cqc-colour bg-' . str_slug($caring). '"></span></div>
                                         </div>
                                         <div class="cqc-row d-flex justify-content-between">
                                             <div class="cqc-category">Responsive</div>
-                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour bg-cqc-green"></span></div>
+                                            <div class="cqc-rating ml-auto"><strong>' . $responsive . '</strong><span class="cqc-colour bg-' . str_slug($responsive). '"></span></div>
                                         </div>
                                         <div class="cqc-row d-flex justify-content-between">
                                             <div class="cqc-category">Well-Led</div>
-                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour bg-cqc-green"></span></div>
+                                            <div class="cqc-rating ml-auto"><strong>' . $well_led . '</strong><span class="cqc-colour bg-' . str_slug($well_led). '"></span></div>
                                         </div>
                                     </div>
                                 </div>
