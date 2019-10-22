@@ -69,6 +69,7 @@ select::-ms-expand {
 
 .select_half-width {
     justify-content: space-between;
+    align-items: center;
 
     label,
     select {
@@ -84,6 +85,7 @@ select::-ms-expand {
         font-size: 18px;
         letter-spacing: -0.9px;
         line-height: 19px;
+        padding-right: 45px;
     }
 
     select {
@@ -96,9 +98,10 @@ select::-ms-expand {
         content: '';
         background-image: url('../images/icons/chevron-down.svg');
         @include icon-bg-center(50%);
+        @include v-c;
         position: absolute;
         //top: 0;
-        bottom: 0;
+        //bottom: 0;
         right: 0;
         width: 45px;
         height: 45px;

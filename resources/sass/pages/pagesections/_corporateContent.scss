@@ -1,5 +1,5 @@
 .corporate-content {
-    display: none;
+    //display: none;
 }
 
 .corporate-content-section-1 {
@@ -11,6 +11,25 @@
     //@extend .bg-teal;
     padding-left: 8px;
     padding-top: 18px;
+
+    .nav-tabs {
+        box-shadow: inset 0px -2px 0px 0px rgba(236,236,236,1);
+
+        li { // nav-item
+            margin-right: 25px;
+            box-sizing: content-box;
+
+            a { // nav-link
+                color: $caretBlack;
+                @include font-size(18);
+                @extend .SofiaPro-Medium;
+
+                &.active {
+                    border-bottom: 2px solid $teal;
+                }
+            }
+        }
+    }
 
     .tab-pane {
         padding-top: 13px;

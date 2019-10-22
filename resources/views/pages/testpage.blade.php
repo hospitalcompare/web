@@ -36,7 +36,7 @@
             <p class="p-5" style="width: 300px; border: 3px solid black">
                 When you have performed a search for hospitals on your results page you can click the
                 blue “compare” icon
-                <a id="1" class="float-right display-inline btn btn-green-outline compare mt-0" target=""
+                <a id="1" class="float-right display-inline btn btn-compare compare mt-0" target=""
                    href="javascript:void(0);" role="button"><i class=""></i></a>
             </p>
         </div>

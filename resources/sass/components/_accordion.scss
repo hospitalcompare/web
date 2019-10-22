@@ -7,6 +7,7 @@
             width: 100%;
             text-align: left;
             padding-right: 90px;
+            @include font-size(24);
 
             &:after {
                 content: " ";

@@ -190,6 +190,7 @@
                     'caring'            => $d['rating']['caring'],
                     'responsive'        => $d['rating']['responsive'],
                     'well_led'          => $d['rating']['well_led'],
+                    'procedures'        => $data['filters']['procedures']
                    ])
             @endforeach
         @endif

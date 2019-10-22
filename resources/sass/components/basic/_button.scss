@@ -23,7 +23,7 @@
     svg, i {
         position: absolute;
     }
-transi
+
     //sizes
     &.btn-xs {
         @include font-size(16);
@@ -110,14 +110,14 @@ transi
         }
     }
 
-    &.btn-green-outline {
+    &.btn-compare {
         //height: 32px;
         //width: 32px;
         //border-radius: 23px;
         border: 2px solid #00cecd;
         color: $teal;
         //flex: 0 0 32px;
-        padding: 9px 15px 9px 40px;
+        padding: 5px 15px 5px 40px;
 
         svg, i {
             content: '';
@@ -350,7 +350,7 @@ transi
             @include font-size(14);
             letter-spacing: -0.7px;
             position: relative;
-            padding: 9px 15px 9px 40px;
+            padding: 5px 15px 5px 40px;
             display: inline-block;
             text-align: left;
 
@@ -440,7 +440,7 @@ transi
 
         &.btn-special-offer {
             //padding: 13px 20px 13px 40px;
-            padding: 9px 15px 9px 40px;
+            padding: 5px 15px 5px 40px;
             border-radius: 10px;
             color: $white;
             //height: 40px;
@@ -450,10 +450,9 @@ transi
             &:before {
                 background-image: url('../images/icons/special.svg');
                 @include icon-bg-center(50%);
+                @include v-c;
                 position: absolute;
                 left: 0;
-                top: 0;
-                bottom: 0;
                 width: 40px;
                 height: 40px;
                 line-height: 40px;
