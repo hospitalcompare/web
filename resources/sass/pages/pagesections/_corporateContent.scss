@@ -1,3 +1,17 @@
 .corporate-content {
     display: none;
 }
+
+.corporate-content-section-1 {
+    width: 134px;
+}
+
+.corporate-content-section-2 {
+    width: calc(86% - 134px);
+    //@extend .bg-teal;
+    padding-left: 8px;
+}
+
+.corporate-content-section-3 {
+    width: 14%;
+}

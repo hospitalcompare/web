@@ -225,10 +225,13 @@
             </div>
         </div>
         {{-- Corporate content area --}}
-        <div class="corporate-content bg-white" id="corporate_content_hospital_{{$id}}">
-            <div class="container">
-                <h1>This is the corporate content zone</h1>
-
+        <div class="corporate-content w-100" id="corporate_content_hospital_{{$id}}">
+            <div class="d-flex">
+                <div class="corporate-content-section-1"></div>
+                <div class="corporate-content-section-2">
+                    <h1>This is where it all happens</h1>
+                </div>
+                <div class="corporate-content-section-3"></div>
             </div>
         </div>{{-- End of corporate content area  --}}
     </div>
