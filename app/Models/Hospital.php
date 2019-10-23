@@ -115,6 +115,14 @@ class Hospital extends Model
     }
 
     /**
+     * corporateContent() belongs to HospitalCorporateContent
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function corporateContent() {
+        return $this->belongsTo( '\App\Models\HospitalCorporateContent', 'id', 'hospital_id');
+    }
+
+    /**
      * rating() belongs to HospitalRating
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -155,7 +163,7 @@ class Hospital extends Model
      * @return array
      */
     public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 600, $waitingTime = '', $userRating = '', $qualityRating = '', $hospitalType = '', $policyId = '', $sortBy = '') {
-        $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'policies', 'placeRating']);
+        $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'policies', 'placeRating', 'corporateContent']);
         //$userRatings    = HospitalRating::selectRaw(\DB::raw("MIN(id) as id, avg_user_rating AS name"))->groupBy(['avg_user_rating'])->whereNotNull('avg_user_rating')->get()->toArray();
         $errors = [];
         $latitude = '';
