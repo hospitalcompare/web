@@ -219,12 +219,13 @@
                 @include('components.basic.button', [
                     'classTitle' => 'btn btn-compare compare btn-block',
                     'button' => 'Compare',
-                    'icon' => 'far fa-heart',
+                    'icon' => 'fa fa-heart',
                     'id' => $id])
             </div>
         </div>
-{{--        @include('components.corporatecontent', [--}}
-{{--            'procedures' => $procedures--}}
-{{--        ])--}}
+        @include('components.corporatecontent', [
+            'procedures'        => $procedures,
+            'bulletPoints'      => ['First', 'Second', 'Third']
+        ])
     </div>
 </div>

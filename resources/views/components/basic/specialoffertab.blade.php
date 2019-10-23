@@ -22,8 +22,8 @@
     </div>
     <div class="special-offer-body">
         <div class="inner-body d-flex flex-column justify-content-between h-100">
-            <div class="bullets">
-                <ul>
+            <div>
+                <ul class="bullets">
                     @foreach($bulletPoints as $bulletPoint)
                         @if(!empty($bulletPoint))
                             <li>{{ $bulletPoint }}</li>

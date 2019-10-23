@@ -11,26 +11,32 @@
 @section('body-class', 'test-page')
 
 @section('content')
-{{--     {{ dd($doctor) }}--}}
+    {{--     {{ dd($doctor) }}--}}
+    <section>
+        @include('components.corporatecontent', [
+                'procedures'    => $data['filters']['procedures'],
+                'id'            => 1
+            ])
+    </section>
     <section>
         @include('pages.pagesections.resultspageform', [
         'displayBlock' => true])
     </section>
-{{--    <section class="pt-3">--}}
-{{--        <div class="container">--}}
-{{--            <h3>Enquiry Form</h3>--}}
-{{--            @include('components.modals.modalenquireprivate', [--}}
-{{--                       'procedures'    => $data['filters']['procedures'],--}}
-{{--                       'title'         => 'Mr',--}}
-{{--                       'firstName'     => 'Test',--}}
-{{--                       'dob'           => '1980/04/12',--}}
-{{--                       'lastName'      => 'Testing',--}}
-{{--                       'email'         => 'test@test.com',--}}
-{{--                       'phone'         => '07941939374',--}}
-{{--                       'postcode'      => 'ch423re',--}}
-{{--                       'gdpr'          => true])--}}
-{{--        </div>--}}
-{{--    </section>--}}
+    {{--    <section class="pt-3">--}}
+    {{--        <div class="container">--}}
+    {{--            <h3>Enquiry Form</h3>--}}
+    {{--            @include('components.modals.modalenquireprivate', [--}}
+    {{--                       'procedures'    => $data['filters']['procedures'],--}}
+    {{--                       'title'         => 'Mr',--}}
+    {{--                       'firstName'     => 'Test',--}}
+    {{--                       'dob'           => '1980/04/12',--}}
+    {{--                       'lastName'      => 'Testing',--}}
+    {{--                       'email'         => 'test@test.com',--}}
+    {{--                       'phone'         => '07941939374',--}}
+    {{--                       'postcode'      => 'ch423re',--}}
+    {{--                       'gdpr'          => true])--}}
+    {{--        </div>--}}
+    {{--    </section>--}}
     <div class="section pt-3 pb-5">
         <div class="container">
             <p class="p-5" style="width: 300px; border: 3px solid black">
@@ -150,40 +156,47 @@
                 <hr>
                 <h2>Popovers</h2>
                 <h3>Popover for CQC rating</h3>
-                <div class="popover popover-cqc popover-regular fade bs-popover-top show" role="tooltip" id="popover438743" x-placement="top" style="position: relative;">
+                <div class="popover popover-cqc popover-regular fade bs-popover-top show" role="tooltip"
+                     id="popover438743" x-placement="top" style="position: relative;">
                     <div class="arrow" style="left: 64px;"></div>
                     <div class="popover-body">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="cqc-left col-4 d-flex flex-column justify-content-center align-items-start bg-cqc-green text-white border">
+                                <div
+                                    class="cqc-left col-4 d-flex flex-column justify-content-center align-items-start bg-cqc-green text-white border">
                                     <h4 class="mb-0 text-white">Overall</h4>
                                     <h4 class="mb-0 text-white"><strong>Good</strong></h4>
                                 </div>
                                 <div class="cqc-right col-8 pr-0">
                                     <div class="cqc-table">
-{{--                                        <div class="cqc-row d-flex justify-content-between">--}}
-{{--                                            <div class="cqc-category">Safe</div>--}}
-{{--                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour">{!! file_get_contents(asset('/images/icons/star.svg')) !!}</span></div>--}}
-{{--                                        </div>--}}
+                                        {{--                                        <div class="cqc-row d-flex justify-content-between">--}}
+                                        {{--                                            <div class="cqc-category">Safe</div>--}}
+                                        {{--                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour">{!! file_get_contents(asset('/images/icons/star.svg')) !!}</span></div>--}}
+                                        {{--                                        </div>--}}
                                         <div class="cqc-row d-flex justify-content-between">
                                             <div class="cqc-category">Safe</div>
-                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour bg-cqc-green"></span></div>
+                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span
+                                                    class="cqc-colour bg-cqc-green"></span></div>
                                         </div>
                                         <div class="cqc-row d-flex justify-content-between">
                                             <div class="cqc-category">Effective</div>
-                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour bg-cqc-green"></span></div>
+                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span
+                                                    class="cqc-colour bg-cqc-green"></span></div>
                                         </div>
                                         <div class="cqc-row d-flex justify-content-between">
                                             <div class="cqc-category">Caring</div>
-                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour bg-cqc-green"></span></div>
+                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span
+                                                    class="cqc-colour bg-cqc-green"></span></div>
                                         </div>
                                         <div class="cqc-row d-flex justify-content-between">
                                             <div class="cqc-category">Responsive</div>
-                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour bg-cqc-green"></span></div>
+                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span
+                                                    class="cqc-colour bg-cqc-green"></span></div>
                                         </div>
                                         <div class="cqc-row d-flex justify-content-between">
                                             <div class="cqc-category">Well-Led</div>
-                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour bg-cqc-green"></span></div>
+                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span
+                                                    class="cqc-colour bg-cqc-green"></span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -192,7 +205,8 @@
                     </div>
                 </div>
                 <h3>Popover top</h3>
-                <div class="popover popover-regular fade bs-popover-top show" role="tooltip" id="popover438743" x-placement="top" style="position: relative;">
+                <div class="popover popover-regular fade bs-popover-top show" role="tooltip" id="popover438743"
+                     x-placement="top" style="position: relative;">
                     <div class="arrow" style="left: 64px;"></div>
                     <div class="popover-body">
                         <p><span class="mr-2">Food rating</span>
@@ -205,7 +219,8 @@
                     </div>
                 </div>
                 <h3>Popover bottom</h3>
-                <div class="popover popover-regular fade bs-popover-bottom show" role="tooltip" id="popover438743" x-placement="bottom" style="position: relative;">
+                <div class="popover popover-regular fade bs-popover-bottom show" role="tooltip" id="popover438743"
+                     x-placement="bottom" style="position: relative;">
                     <div class="arrow" style="left: 64px;"></div>
                     <div class="popover-body">
                         <p><span class="mr-2">Food rating</span>
@@ -407,6 +422,7 @@
                 <hr>
 
                 {{--                @include('components.modals.modalenquirenhs')--}}
+                @include('components.modals.modalvideo')
             </div>
         </div>
 @endsection

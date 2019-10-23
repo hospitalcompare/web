@@ -228,6 +228,7 @@
         'procedures' => $data['filters']['procedures']])
     {{--  Maps modal  --}}
     @include('components.modals.modalmaps')
+    @include('components.modals.modalvideo')
 
 
 @endsection

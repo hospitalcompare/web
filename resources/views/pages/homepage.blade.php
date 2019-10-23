@@ -35,7 +35,7 @@
                                                             <source src="movie.ogg" type="video/ogg">
                                                             Your browser does not support the video tag.
                             </video>
-                                                    <div class="playerButton toggle"></div>
+                            <div class="player-button toggle"></div>
                         </div>
                     </div>
                 </div>

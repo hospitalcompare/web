@@ -15,6 +15,86 @@ ol {
     list-style: none;
 }
 
+ul.bullets {
+    li {
+        list-style: none;
+        @include font-size(16);
+        //line-height: 2;
+        font-weight: 400;
+        letter-spacing: -0.65px;
+        position: relative;
+        padding-left: 30px;
+
+        &:before {
+            content: url("/images/icons/circle-check.svg");
+            width: 20px;
+            height: 20px;
+            @include v-c;
+            left: 0;
+        }
+    }
+}
+
+ul.blue-dot {
+    //padding: 0 0 0 50px;
+    margin-bottom: 30px;
+
+    > li {
+        @include font-style(false, 14px, false, false, 24px, -1px);
+        //margin: 0 0 12px 0;
+        position: relative;
+        padding: 0 0 0 30px;
+        text-align: left;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 11px;
+            height: 11px;
+            background-color: $blue;
+            border-radius: 50%;
+        }
+    }
+
+    &.blue-dot_small {
+
+        li {
+            color: $corporateContentGreen;
+
+            &:before {
+                width: 9px;
+                height: 9px;
+                background-color: $corporateContentGreen;
+            }
+        }
+    }
+}
+
+ul.blue-disc {
+    //padding: 0 0 0 50px;
+    margin: 30px 0 50px 0;
+
+    > li {
+        @include font-style(false, 20px, false, false, 24px, -1px);
+        margin: 0 0 22px 0;
+        position: relative;
+        padding: 0 0 0 40px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 11px;
+            height: 11px;
+            background-color: $blue;
+            border-radius: 50%;
+        }
+    }
+}
+
 input[type=submit] {
     padding: 0;
     border: none;
@@ -80,6 +160,10 @@ select.big {
 .bg-greylight {
     background-color: $greylight;
 }
+
+.bg-blue-grad {
+     background-image: linear-gradient(248deg, #7dacf4 0%, #216ee2 100%);
+ }
 
 // CQC rating colours
 .bg-outstanding,
@@ -163,4 +247,41 @@ select.big {
 // Prevent bootstrap adding opacity hover to close buttons
 .close {
     opacity: 1 !important;
+}
+
+// Video sections
+.video-wrapper {
+    position: relative;
+    @include aspect-ratio(497px, 349px);
+    overflow: hidden;
+
+    video {
+        width: 140% !important;
+    }
+
+    .player-button {
+        @include v-h-c;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+}
+
+.home-page {
+    .video-wrapper {
+        border: 1px solid $borderVideo;
+        border-radius: 15px;
+
+        .player-button {
+            background-image: url(../images/player_button.png);
+            background-size: cover;
+            height: 78px;
+            width: 78px;
+            z-index: 5;
+        }
+    }
 }

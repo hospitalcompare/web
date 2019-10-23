@@ -1,5 +1,5 @@
 .corporate-content {
-    //display: none;
+    display: none;
 }
 
 .corporate-content-section-1 {
@@ -31,8 +31,22 @@
         }
     }
 
-    .tab-pane {
+    .tab-pane,
+    .media-pane {
         padding-top: 13px;
+    }
+
+    .media-pane {
+        .video-wrapper {
+            .player-button {
+                width: 50%;
+                max-width: 60px;
+            }
+        }
+    }
+
+    .special-offers-tab {
+        padding: 14px 33px 17px;
     }
 }
 
