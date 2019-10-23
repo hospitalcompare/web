@@ -19,7 +19,6 @@ function showVideoModal(event) {
 function hideVideoModal(event) {
     var modal = $(this);
     var video = modal.find('video')[0];
-    console.log(video);
     video.pause();
     video.curretTime = 0;
 }

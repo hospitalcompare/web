@@ -94,7 +94,6 @@ $(document).ready(function () {
             '    <i class=""></i>' +
             '</a>';
         // Content for new hospital added to compare
-        console.log
         var newRowContent =
             '<div class="col-2 text-center" id="compare_hospital_id_' + element.id + '">' +
             '<div class="col-inner">' +

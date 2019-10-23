@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
     var initMap = function(){
-        console.log('Maps init')
+        // console.log('Maps init')
     }
     var map = null;
     var myMarker;

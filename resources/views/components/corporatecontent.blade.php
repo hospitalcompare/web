@@ -125,6 +125,7 @@
                     <div class="row mb-5">
                         <div class="col-6">
                             Slideshow here
+{{--                            {{ $d['corporate_content'] }}--}}
                         </div>
                         <div class="col-6">
                             <div class="video-wrapper position-relative">
