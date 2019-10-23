@@ -35,6 +35,7 @@ $lightGrey: $darkestWhite;
 $lighterGrey: #ececec;
 $lightestGrey: #1b1b1b;
 $darkerGrey: #1c1c1c;
+$darkestGrey: #707070;
 $sunnyYellow: #fff568;
 $footerGrey: #363636;
 $darkBlue: #1b71f3;
@@ -48,7 +49,7 @@ $cqcAmber: #FF9900;
 $cqcRed: #BF1000;
 
 // Borders
-$borderVideo: #707070;
+$borderVideo: $darkestGrey;
 $borderGrey: #d7d7d7;
 
 // Body
@@ -66,6 +67,7 @@ $centerOnPage: auto;
 $btn-border-radius: 100px;
 $btn-transition: $transition;
 $btn-border-width: 0;
+$btn-focus-box-shadow: none;
 
 // Popovers
 //$popover-border-width: 0;

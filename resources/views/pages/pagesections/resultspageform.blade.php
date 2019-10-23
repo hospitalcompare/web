@@ -41,7 +41,7 @@
                         'chevronFAClassName'    => 'fa-chevron-down black-chevron',
                         'selectClass'           => 'select-picker highlight-search-dropdown',
                         'name'                  =>'procedure_id',
-                        'resultsLabel'          => 'resultsLabel'
+                        'labelClass'          => 'font-14'
                     ])
                     <a tabindex="0" data-offset="30px, 40px"
                        class="help-link"
@@ -63,17 +63,25 @@
                     >?</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
-                    {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'Waiting time', 'resultsLabel' => 'resultsLabel'])--}}
-                    @include('components.basic.select', ['selectClassName' => 'w-100', 'showLabel' => true, 'options' => $data['filters']['waitingTimes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Waiting time', 'name'=>'waiting_time', 'resultsLabel' => 'resultsLabel'])
+                    {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'Waiting time', 'labelClass' => 'labelClass'])--}}
+                    @include('components.basic.select', [
+                        'selectClassName'       => 'w-100',
+                        'showLabel'             => true,
+                        'options'               => $data['filters']['waitingTimes'],
+                        'chevronFAClassName'    => 'fa-chevron-down black-chevron',
+                        'selectClass'           => 'results-page-select highlight',
+                        'placeholder'           =>'Waiting time',
+                        'name'                  =>'waiting_time',
+                        'labelClass'            => 'font-14'])
                     <a tabindex="0" data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [
-                        'dismissible'   => true,
-                        'placement'      => 'top',
-                        'size'           => 'large',
-                        'html'           => 'true',
-                        'trigger'        => 'focus',
-                        'content'        => '<p class="bold mb-0">
+                        'dismissible'       => true,
+                        'placement'         => 'top',
+                        'size'              => 'large',
+                        'html'              => 'true',
+                        'trigger'           => 'focus',
+                        'content'           => '<p class="bold mb-0">
                                          Waiting Time
                                      </p>
                                      <p>
@@ -85,8 +93,16 @@
                     >?</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
-                    {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'NHS choices user rating', 'resultsLabel' => 'resultsLabel'])--}}
-                    @include('components.basic.select', ['selectClassName' => 'w-100', 'showLabel' => true, 'options' => $data['filters']['userRatings'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'NHS User Rating', 'name'=>'user_rating', 'resultsLabel' => 'resultsLabel'])
+                    {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'NHS choices user rating', 'labelClass' => 'labelClass'])--}}
+                    @include('components.basic.select', [
+                        'selectClassName' => 'w-100',
+                        'showLabel' => true,
+                        'options' => $data['filters']['userRatings'],
+                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
+                        'selectClass' => 'results-page-select highlight',
+                        'placeholder'=>'NHS User Rating',
+                        'name'=>'user_rating',
+                        'labelClass' => 'font-14'])
                     <a tabindex="0" data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [
@@ -114,7 +130,7 @@
                         'selectClass' => 'results-page-select highlight',
                         'placeholder'=>'Care Quality Rating',
                         'name'=>'quality_rating',
-                        'resultsLabel' => 'resultsLabel'])
+                        'labelClass' => 'font-14'])
                     <a tabindex="0" data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [
@@ -135,7 +151,7 @@
                     >?</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
-                    @include('components.basic.select', ['selectClassName' => 'w-100', 'showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Hospital Type', 'name'=>'hospital_type', 'resultsLabel' => 'resultsLabel'])
+                    @include('components.basic.select', ['selectClassName' => 'w-100', 'showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Hospital Type', 'name'=>'hospital_type', 'labelClass' => 'font-14'])
                     <a tabindex="0" data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [
@@ -168,7 +184,7 @@
                         'selectClass'           => 'highlight-search-dropdown select-picker',
                         'placeholder'           => 'Insurance',
                         'name'                  => 'policy_id',
-                        'resultsLabel'          => 'resultsLabel'
+                        'labelClass'          => 'font-14'
                     ])
                     <a tabindex="0" data-offset="30px, 40px"
                        class="help-link"
@@ -214,7 +230,7 @@
                         'selectClassName' => 'pl-3',
                         'placeholder'=>'Sort by:',
                         'name'=>'sort_by',
-                        'resultsLabel' => 'sortLabel'])
+                        'labelClass' => 'sortLabel'])
                 </div>
             </div>
         </div>

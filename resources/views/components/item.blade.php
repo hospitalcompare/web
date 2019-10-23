@@ -223,8 +223,8 @@
                     'id' => $id])
             </div>
         </div>
-        @include('components.corporatecontent', [
-            'procedures' => $procedures
-        ])
+{{--        @include('components.corporatecontent', [--}}
+{{--            'procedures' => $procedures--}}
+{{--        ])--}}
     </div>
 </div>
