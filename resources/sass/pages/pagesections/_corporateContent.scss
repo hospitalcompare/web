@@ -37,7 +37,12 @@
     }
 
     .media-pane {
-
+        .video-wrapper {
+            .player-button {
+                width: 50%;
+                max-width: 60px;
+            }
+        }
     }
 
     .special-offers-tab {

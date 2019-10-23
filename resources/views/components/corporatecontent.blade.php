@@ -122,16 +122,26 @@
 
                 </div>
                 <div class="media-pane col-5">
-                    <div class="row">
+                    <div class="row mb-5">
                         <div class="col-6">
                             Slideshow here
                         </div>
                         <div class="col-6">
-                            Video here
+                            <div class="video-wrapper position-relative">
+                                <video class="content w-100" poster="{{ url('images/video_placeholder.png') }}">
+                                    <source src="{{ asset('video/For_Wes.mp4') }}" type="video/mp4">
+                                    <source src="movie.ogg" type="video/ogg">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="player-button toggle">{!! file_get_contents(asset('/images/icons/youtube.svg')) !!}</div>
+                            </div>
+                            <div class="video-caption">Video title here</div>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="col-12">
                             @if(!empty($specialOffers))
-                            <div class="special-offers-tab bg-blue-grad rounded">
+                            <div class="special-offers-tab bg-blue-grad rounded d-flex flex-column">
                                 <p class="special-offer-title text-white font-22 SofiaPro-SemiBold">Special Offer</p>
                                 <ul class="bullets">
                                     @foreach($bulletPoints as $bulletPoint)
@@ -145,7 +155,7 @@
                                    'hrefValue'         => $url,
                                    'hospitalTitle'     => $title,
                                    'modalTarget'       => '#hc_modal_enquire_private',
-                                   'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto',
+                                   'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto ml-auto',
                                    'target'            => 'blank',
                                    'button'            => 'Enquire now',
                                    'id'                => 'enquire_'.$id])

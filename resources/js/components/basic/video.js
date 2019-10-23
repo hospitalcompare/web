@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 // Custom controls for video players
-    var $videoPlayers = $('.videoParent');
+    var $videoPlayers = $('.video-wrapper');
     // alert($videoPlayers.length);
     if ($videoPlayers.length >= 1) {
 

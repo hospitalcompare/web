@@ -27,32 +27,7 @@
                 padding-left: 110px;
             }
 
-            .video-wrapper {
-                position: relative;
-                @include aspect-ratio(497px, 349px);
-                border: 1px solid $borderVideo;
-                border-radius: 15px;
-                overflow: hidden;
 
-                video {
-                    width: 140% !important;
-                }
-
-                .player-button {
-                    background-image: url(../images//player_button.png);
-                    background-size: cover;
-                    @include v-h-c;
-                    height: 78px;
-                    width: 78px;
-                    z-index: 5;
-                    cursor: pointer;
-                    transition: $transition;
-
-                    &:hover {
-                        opacity: 0.8;
-                    }
-                }
-            }
         }
 
         .icon {
