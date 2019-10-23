@@ -422,6 +422,7 @@
                 <hr>
 
                 {{--                @include('components.modals.modalenquirenhs')--}}
+                @include('components.modals.modalvideo')
             </div>
         </div>
 @endsection

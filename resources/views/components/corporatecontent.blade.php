@@ -129,13 +129,20 @@
                         <div class="col-6">
                             <div class="video-wrapper position-relative">
                                 <video class="content w-100" poster="{{ url('images/video_placeholder.png') }}">
-                                    <source src="{{ asset('video/For_Wes.mp4') }}" type="video/mp4">
+                                    <source src="{{ asset('/video/For_Wes.mp4') }}" type="video/mp4">
                                     <source src="movie.ogg" type="video/ogg">
                                     Your browser does not support the video tag.
                                 </video>
                                 <div class="player-button toggle">{!! file_get_contents(asset('/images/icons/youtube.svg')) !!}</div>
+                                @include('components.basic.modalbutton', [
+                                   'videoUrl'          => '/video/mov_bbb.mp4',
+                                   'modalTarget'       => '#hc_modal_video',
+                                   'classTitle'        => 'stretched-link',
+                                   'target'            => 'blank',
+                                   'button'            => '',
+                                   'id'                => 'enquire_'.$id])
                             </div>
-                            <div class="video-caption">Video title here</div>
+                            <div class="video-caption col-greydarkest font-14">Video title here</div>
                         </div>
                     </div>
                     <div class="row">

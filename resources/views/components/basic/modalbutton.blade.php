@@ -3,6 +3,9 @@
    class="{{$classTitle}}"
    role="button"
    data-toggle="modal"
+   @if($modalTarget == '#hc_modal_video')
+   data-video-url="{{ $videoUrl }}"
+   @endif
    @if($modalTarget == '#hc_modal_map')
    data-longitude="{{ $longitude ?? '' }}"
    data-latitude="{{ $latitude ?? '' }}"
