@@ -126,6 +126,12 @@
             left: 10px;
             width: 18px;
             height: 16px;
+
+            path {
+                stroke: $teal;
+                stroke-width: 50px;
+                fill: #fff;
+            }
         }
         //
         // &:after {
@@ -147,12 +153,25 @@
         //    background-color: #00cecd;
         //}
 
-        &.selected {
+        &:hover {
             background-color: $teal;
             color: #fff;
 
             svg, i {
-                fill: #fff;
+
+                path {
+                    stroke: #fff;
+                    fill: $teal;
+                }
+            }
+        }
+
+        &.selected {
+            svg {
+                path {
+                    stroke: red;
+                    fill: $red;
+                }
             }
         }
     }

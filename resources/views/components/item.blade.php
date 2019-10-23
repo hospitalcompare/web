@@ -219,7 +219,7 @@
                 @include('components.basic.button', [
                     'classTitle' => 'btn btn-compare compare btn-block',
                     'button' => 'Compare',
-                    'icon' => 'far fa-heart',
+                    'icon' => 'fa fa-heart',
                     'id' => $id])
             </div>
         </div>
