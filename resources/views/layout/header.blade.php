@@ -5,6 +5,10 @@
             @include('components.logo', ['titleParent' => 'headerLogoParent', 'logoImg' => 'headerLogoImg', 'logoTitle' => 'headerLogoTitle'])
             <nav class="main-nav">
                 <ul class="main-menu">
+                    @if(env('APP_ENV') == 'local')
+                        <li><a {{ Request::is( 'test-page') ? 'class=active' : '' }} href="/test-page">Test page</a></li>
+                        <li><a {{ Request::is( 'results-page') ? 'class=active' : '' }} href="/results-page">Results page</a></li>
+                    @endif
                     <li><a {{ Request::is( '/') ? 'class=active' : '' }} href="/">Home</a></li>
                     <li><a {{ Request::is( 'about-us') ? 'class=active' : '' }} href="/about-us">About Us</a></li>
                     <li><a {{ Request::is( 'your-rights') ? 'class=active' : '' }} href="/your-rights">Your Rights
