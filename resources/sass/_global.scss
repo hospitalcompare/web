@@ -14,6 +14,27 @@ ol {
     padding-left: 0;
     list-style: none;
 }
+
+ul.bullets {
+    li {
+        list-style: none;
+        @include font-size(16);
+        //line-height: 2;
+        font-weight: 400;
+        letter-spacing: -0.65px;
+        position: relative;
+        padding-left: 30px;
+
+        &:before {
+            content: url("/images/icons/circle-check.svg");
+            width: 20px;
+            height: 20px;
+            @include v-c;
+            left: 0;
+        }
+    }
+}
+
 ul.blue-dot {
     //padding: 0 0 0 50px;
     margin-bottom: 30px;
@@ -139,6 +160,10 @@ select.big {
 .bg-greylight {
     background-color: $greylight;
 }
+
+.bg-blue-grad {
+     background-image: linear-gradient(248deg, #7dacf4 0%, #216ee2 100%);
+ }
 
 // CQC rating colours
 .bg-outstanding,

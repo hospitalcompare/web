@@ -122,7 +122,41 @@
 
                 </div>
                 <div class="media-pane col-5">
-                    Images and videos here
+                    <div class="row">
+                        <div class="col-6">
+                            Slideshow here
+                        </div>
+                        <div class="col-6">
+                            Video here
+                        </div>
+                        <div class="col-12">
+                            @if(!empty($specialOffers))
+                            <div class="special-offers-tab bg-blue-grad rounded">
+                                <p class="special-offer-title text-white font-22 SofiaPro-SemiBold">Special Offer</p>
+                                <ul class="bullets">
+                                    @foreach($bulletPoints as $bulletPoint)
+                                        @if(!empty($bulletPoint))
+                                            <li class="text-white">{{ $bulletPoint }}</li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                                @include('components.basic.modalbutton', [
+                                   'hospitalType'      => $NHSClass,
+                                   'hrefValue'         => $url,
+                                   'hospitalTitle'     => $title,
+                                   'modalTarget'       => '#hc_modal_enquire_private',
+                                   'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto',
+                                   'target'            => 'blank',
+                                   'button'            => 'Enquire now',
+                                   'id'                => 'enquire_'.$id])
+{{--                                <a href="" id="1" class="btn btn-icon btn-enquire-now enquiry mt-auto" role="button" data-toggle="modal" data-modal-text="This is the default text for an enquiry to a private hospital" data-hospital-title="Christchurch Family Medical Centre " data-target="#hc_modal_enquire_private" data-image="" data-address="">Enquire now--}}
+{{--                                    <i class=""></i>--}}
+
+{{--                                </a>--}}
+                            </div>
+                            @endif
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
