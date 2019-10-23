@@ -1,3 +1,7 @@
+html {
+    //scroll-behavior: smooth;
+}
+
 // remove focus ring
 * {
     &:focus {
@@ -77,6 +81,24 @@ select.big {
     background-color: $greylight;
 }
 
+// CQC rating colours
+.bg-outstanding,
+.bg-good {
+    background-color: $cqcGreen;
+}
+
+.bg-requires-improvement {
+    background-color: $cqcAmber;
+}
+
+.bg-inadequate {
+    background-color: $cqcRed;
+}
+
+.bg-not-yet-rated {
+    background-color: $teal;
+}
+
 .col-teal {
     color: $teal;
 }
@@ -115,6 +137,10 @@ select.big {
 
 .col-greylight {
     color: $greylight;
+}
+
+.col-greydarkest {
+    color: $darkestGrey;
 }
 
 // In text links

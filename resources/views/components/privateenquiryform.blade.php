@@ -28,7 +28,7 @@
                         'selectClass' => 'form-control',
                         'placeholder' => 'Title*',
                         'name'=>'title',
-                        'resultsLabel' => 'resultsLabel'])
+                        'labelClass' => 'labelClass'])
                 </div>
             </div>
             <div class="form-group row align-items-end mb-0">
@@ -83,7 +83,7 @@
                         'suboptionClass'        => 'subprocedures',
                         'name'                  =>'procedure_id',
                         'selectPicker'          => 'true',
-                        'resultsLabel'          => 'resultsLabel',
+                        'labelClass'          => 'labelClass',
                         'required'              => true])
                 </div>
             </div>

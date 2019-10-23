@@ -62,7 +62,6 @@ $col-spacing: 18px;
         //width: 100%;
 
         label {
-            font-size: 14px;
             letter-spacing: -0.7px;
             line-height: 18px;
             margin-bottom: 6px;
@@ -133,7 +132,7 @@ $col-spacing: 18px;
             &.radius {
                 //width: 60%;
                 .col-inner {
-                    @include media-breakpoint-up(md){
+                    @include media-breakpoint-up(md) {
                         padding-left: 153px;
 
                         label {
@@ -151,7 +150,7 @@ $col-spacing: 18px;
     }
 
     .sort-bar {
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(lg) {
             height: 60px;
         }
         display: flex;
@@ -254,6 +253,25 @@ $col-spacing: 18px;
             .result-item-section-1 {
                 //flex: 1 0 33%;
                 width: 33%;
+
+                > * {
+                    position: relative;
+                }
+
+                .hospital-image {
+                    flex: 0 0 $hospital-image-width;
+                    width: $hospital-image-width;
+                    @include aspect-ratio(134px, 123px);
+                }
+
+                .hospital-details {
+                    padding: 8px;
+
+                    .btn-more-info {
+                        bottom: 0;
+                        left: 8px;
+                    }
+                }
             }
 
             .result-item-section-2 {
@@ -275,7 +293,6 @@ $col-spacing: 18px;
             }
         }
     }
-
 
 
     .result-item-menu {
@@ -322,8 +339,7 @@ $col-spacing: 18px;
 
     .result-item-section-1,
     .result-item-section-2,
-    .result-item-section-3
-    {
+    .result-item-section-3 {
         display: flex;
         @include responsive-columns;
     }
@@ -336,9 +352,9 @@ $col-spacing: 18px;
         flex-direction: column;
     }
 
-.result-item-section-2__child {
+    .result-item-section-2__child {
         flex: 1 auto;
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(md) {
             flex: 1;
         }
         @include flex-center;
@@ -362,13 +378,6 @@ $col-spacing: 18px;
         }
     }
 
-    .result-item-item {
-        position: relative;
-
-        &:last-child {
-            padding: 8px;
-        }
-    }
 
     .sort-item-title {
         font-size: 16px;
@@ -434,10 +443,6 @@ $col-spacing: 18px;
             line-height: 1;
         }
     }
-
-    .fa-heart {
-        padding-left: 2px;
-    }
 }
 
 
@@ -469,10 +474,39 @@ $col-spacing: 18px;
         text-align: left;
         display: flex;
         justify-content: space-between;
-        line-height: 1.3;
+        line-height: 1.7;
 
         span {
-            margin-left: auto;
+            margin-left: 50px;
+        }
+    }
+}
+
+// CQC popover
+.cqc-left {
+    border-radius: 5px 0 0 5px;
+}
+
+.cqc-table {
+    .cqc-row {
+        line-height: 30px;
+        min-width: 200px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $borderGrey;
+        }
+
+    }
+
+    .cqc-colour {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: 10px;
+
+        svg {
+            width: 100%;
         }
     }
 }

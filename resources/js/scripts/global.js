@@ -127,3 +127,19 @@ window.getHtmlDashTickValue = function(value, text = "") {
     }
     return html;
 };
+
+window.toggleContent = function(speed = 400) {
+    var $target = $($(this).data('target'));
+    // console.log($target);
+    if($target.is(':visible'))
+        $target
+            .slideUp(speed)
+            .removeClass('open');
+    else
+        $target
+            .slideDown(speed)
+            .removeClass('open');
+};
+
+
+$('.btn-more-info').on('click', toggleContent);

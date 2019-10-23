@@ -7,10 +7,12 @@ $(document).ready(function () {
     });
 
     //Smooth scroll for in page links
-    $('a[href^="#"]').on('click', function (e) {
+    $('a[href^="#"]')
+        .not('.nav-link')
+        .on('click', function (e) {
         e.preventDefault();
         var hash = this.hash;
-        // console.log(hash);
+        console.log( hash );
         scrolling = true;
         $('html, body').animate({
             scrollTop: ($(hash).offset().top)

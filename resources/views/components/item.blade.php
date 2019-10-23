@@ -1,8 +1,8 @@
 <div class="result-item">
     <div class="result-item-inner container">
         <div class="result-item-section-1">
-            <div class="result-item-item hospital-image">
-                <img alt="Image of {{ $title }}" src="{{ $itemImg }}">
+            <div class="hospital-image">
+                <img class="content" alt="Image of {{ $title }}" src="{{ $itemImg }}">
                 <div
                     class="{{$NHSClass}} py-1 px-2 rounded-pill m-1 {{ $NHSClass == 'private-hospital' ? 'bg-darkpink' : 'bg-teal' }}">
                     <p class="m-0">{{$fundedText}}</p></div>
@@ -10,7 +10,7 @@
                 {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
                 <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
             </div>
-            <div class="result-item-item hospital-details w-100">
+            <div class="hospital-details w-100 position-relative">
                 <p class="sort-item-title SofiaPro-Medium" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
@@ -25,29 +25,70 @@
                     'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,
                     'image'             => 'images/alder-1.png'
                 ])
+                @include('components.basic.button', [
+                    'classTitle'        => 'btn btn-xs btn-teal btn-icon btn-more-info btn-plus position-absolute',
+                    'button'            => 'More info',
+                    'dataTarget'        => '#corporate_content_hospital_' . $id
+                 ])
                 {{--                TODO: reintroduce consultant button when we have this data --}}
                 {{--                @if(!empty($specialOffers))--}}
                 {{--                    <div class="btn-area" style="margin-top: 10px">--}}
                 {{--                        @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-teal btn-icon btn-consultant btn-plus', 'button' => 'Consultants'])--}}
                 {{--                    </div>--}}
                 {{--                @endif--}}
+
             </div>
         </div>
         <div class="result-item-section-2">
             {{-- CQC rating  --}}
             <div class="result-item-section-2__child">
-                <p @include('components.basic.popover', [
+                <p class="h-50 d-flex align-items-center" @includeWhen(empty($qualityRating), 'components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
-                        'content' => '
-                        <ul class="nhs-ratings mb-0">
-                        <li>Safe: '                             . '<span><strong>' . (!empty($d['rating']['safe']) ? $d['rating']['safe'] : 'No Data').'</span></strong></li>
-                        <li>Effective: '                        . '<span><strong>' . (!empty($d['rating']['effective']) ? $d['rating']['effective'] : 'No Data').'</span></strong></li>
-                        <li>Caring:     '                       . '<span><strong>' . (!empty($d['rating']['caring']) ? $d['rating']['caring'] : 'No Data').'</span></strong></li>
-                        <li>Responsive: '                       . '<span><strong>' . (!empty($d['rating']['responsive']) ? $d['rating']['responsive'] : 'No Data').'</span></strong></li>
-                        <li>Well Led:   '                       . '<span><strong>' . (!empty($d['rating']['well_led']) ? $d['rating']['well_led'] : 'No Data').'</span></strong></li>
-                        </ul>' ])>
+                        'content' => 'Currently no data available for this hospital'])
+                    @includeWhen(!empty($qualityRating), 'components.basic.popover', [
+                         'placement'     => 'bottom',
+                         'size'          => 'cqc',
+                         'trigger'       => 'hover',
+                         'html'          => 'true',
+                         'content'       => '<div class="container-fluid">
+                             <div class="row">
+                                 <div class="cqc-left col-4 d-flex flex-column justify-content-center align-items-start bg-' . str_slug($qualityRating). ' text-white border">
+                                     <p class="mb-0 text-white">Overall</p>
+                                     <p class="mb-0 text-white text-left"><strong>' . $qualityRating . '</strong></p>
+                                 </div>
+                                 <div class="cqc-right col-8 pr-0">
+                                     <div class="cqc-table">
+ {{--                                        <div class="cqc-row d-flex justify-content-between">--}}
+ {{--                                            <div class="cqc-category">Safe</div>--}}
+ {{--                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour">{!! file_get_contents(asset('/images/icons/star.svg')) !!}</span></div>--}}
+ {{--                                        </div>--}}
+                                         <div class="cqc-row d-flex justify-content-between">
+                                             <div class="cqc-category">Safe</div>
+                                             <div class="cqc-rating ml-auto"><strong>' . $safe . '</strong><span class="cqc-colour bg-'. str_slug($safe) . '"></span></div>
+                                         </div>
+                                         <div class="cqc-row d-flex justify-content-between">
+                                             <div class="cqc-category">Effective</div>
+                                             <div class="cqc-rating ml-auto"><strong>' . $effective . '</strong><span class="cqc-colour bg-' . str_slug($effective). '"></span></div>
+                                         </div>
+                                         <div class="cqc-row d-flex justify-content-between">
+                                             <div class="cqc-category">Caring</div>
+                                             <div class="cqc-rating ml-auto"><strong>' . $caring . '</strong><span class="cqc-colour bg-' . str_slug($caring). '"></span></div>
+                                         </div>
+                                         <div class="cqc-row d-flex justify-content-between">
+                                             <div class="cqc-category">Responsive</div>
+                                             <div class="cqc-rating ml-auto"><strong>' . $responsive . '</strong><span class="cqc-colour bg-' . str_slug($responsive). '"></span></div>
+                                         </div>
+                                         <div class="cqc-row d-flex justify-content-between">
+                                             <div class="cqc-category">Well-Led</div>
+                                             <div class="cqc-rating ml-auto"><strong>' . $well_led . '</strong><span class="cqc-colour bg-' . str_slug($well_led). '"></span></div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>'])
+                >
                     {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
                 </p>
 
@@ -79,18 +120,18 @@
             </div>
             {{-- End waiting time --}}
             <div class="result-item-section-2__child">
-                <p @include('components.basic.popover', [
+                <p class="h-50 d-flex align-items-center" @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
                         'content' => !empty($d['placeRating']) ? '
                         <ul class="nhs-user-ratings mb-0">
-                        <li>Cleanliness: '                            . '<span><strong>'  . number_format((float)$d['placeRating']['cleanliness'], 1).'%</span></strong></li>
-                        <li>Food & Hydration: '                       . '<span><strong>' . number_format((float)$d['placeRating']['food_hydration'], 1).'%</span></strong></li>
-                        <li>Privacy, Dignity & Wellbeing:     '       . '<span><strong>' . number_format((float)$d['placeRating']['privacy_dignity_wellbeing'], 1).'%</span></strong></li>
-                        <li>Condition, Appearance & Maintainance: '   . '<span><strong>' . number_format((float)$d['placeRating']['condition_appearance_maintenance'], 1).'%</span></strong></li>
-                        <li>Dementia Domain:            '             . '<span><strong>' . number_format((float)$d['placeRating']['dementia'], 1).'%</span></strong></li>
-                        <li>Disability Domain:        '               . '<span><strong>' . number_format((float)$d['placeRating']['disability'], 1).'%</span></strong></li>
+                            <li>Cleanliness:&nbsp;'                            . '<span><strong>'  . number_format((float)$d['placeRating']['cleanliness'], 1).'%</span></strong></li>
+                            <li>Food & Hydration:&nbsp;'                       . '<span><strong>' . number_format((float)$d['placeRating']['food_hydration'], 1).'%</span></strong></li>
+                            <li>Privacy, Dignity & Wellbeing:&nbsp;'       . '<span><strong>' . number_format((float)$d['placeRating']['privacy_dignity_wellbeing'], 1).'%</span></strong></li>
+                            <li>Condition, Appearance & Maintainance:&nbsp;'   . '<span><strong>' . number_format((float)$d['placeRating']['condition_appearance_maintenance'], 1).'%</span></strong></li>
+                            <li>Dementia Domain:&nbsp;            '             . '<span><strong>' . number_format((float)$d['placeRating']['dementia'], 1).'%</span></strong></li>
+                            <li>Disability Domain:&nbsp;        '               . '<span><strong>' . number_format((float)$d['placeRating']['disability'], 1).'%</span></strong></li>
                         </ul>' : 'Currently no data available<br>for this hospital'])>
                     {!! html_entity_decode($stars) !!}
                 </p>
@@ -98,7 +139,7 @@
             </div>
             {{-- % operations cancelled --}}
             <div class="result-item-section-2__child">
-                <p
+                <p class="h-50 d-flex align-items-center"
                     @include('components.basic.popover', [
                     'trigger' => 'hover',
                     'html'    => 'true',
@@ -109,7 +150,7 @@
             </div>
             {{-- Friends and family --}}
             <div class="result-item-section-2__child">
-                <p class="m-0"
+                <p class="m-0 h-50 d-flex align-items-center"
                     @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
@@ -147,8 +188,7 @@
             </div>
         </div>
         <div class="result-item-section-3">
-            <div class="btn-area btn-area-upper d-flex align-items-center justify-content-between"
-                 @if(!empty($specialOffers) ) style="padding-bottom: 10px" @endif>
+            <div class="btn-area">
                 <span class="d-none" id="item_hospital_type_class_{{$id}}">{!! $NHSClass !!}</span>
                 @if($NHSClass == 'private-hospital')
                     @include('components.basic.modalbutton', [
@@ -171,20 +211,20 @@
                     'modalTarget'       => '#hc_modal_enquire_nhs',
                     'id'                => 'enquire_'.$id])
                 @endif
-                <span>
-                @include('components.basic.button', [
-                    'classTitle' => 'btn btn-green-outline compare btn-block mt-0',
-                    'button' => '', 'icon' => '',
-                    'id' => $id])
-                </span>
-            </div>
-            @if(!empty($specialOffers))
-                <div class="btn-area btn-area-lower">
+                @if(!empty($specialOffers))
                     @include('components.basic.button', [
                     'classTitle'        => 'toggle-special-offer btn btn-block btn-icon btn-pink btn-special-offer btn-plus',
                     'button'            => 'Special Offers'])
-                </div>
-            @endif
+                @endif
+                @include('components.basic.button', [
+                    'classTitle' => 'btn btn-compare compare btn-block',
+                    'button' => 'Compare',
+                    'icon' => 'far fa-heart',
+                    'id' => $id])
+            </div>
         </div>
+{{--        @include('components.corporatecontent', [--}}
+{{--            'procedures' => $procedures--}}
+{{--        ])--}}
     </div>
 </div>

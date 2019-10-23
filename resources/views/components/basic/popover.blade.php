@@ -1,7 +1,9 @@
 {{-- Data attributes for popover control --}}
-data-toggle="{{ isset($size) && $size == 'large' ? 'popover-large' : 'popover' }}"
+data-toggle="{{ isset($size) ? 'popover-' . $size : 'popover' }}"
 data-content="{{ urldecode($content) ?? 'Please add some content' }}"
 data-trigger="{{ $trigger ?? 'click' }}"
 data-placement="{{ $placement ?? 'bottom' }}"
-data-delay='{ "show": {{ $showDelay ?? "100" }}, "hide": {{ $hideDelay ?? "100" }} }'
+@if(!empty($showDelay) && !empty($hideDelay)))
+data-delay='{ "show": {{ $showDelay }}, "hide": {{ $hideDelay }} }'
+@endif
 data-html="{{ isset($html) && $html == 'true' ? 'true' : 'false' }}"

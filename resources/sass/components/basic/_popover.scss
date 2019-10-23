@@ -24,6 +24,7 @@
 
     &-regular {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.16);
+        //max-width: 400px;
 
         .arrow {
             background-image: url('../images/speech-point-small.svg');
@@ -152,6 +153,10 @@
 
         .arrow-large {
         }
+    }
+
+    &-cqc {
+        min-width: 400px;
     }
 }
 

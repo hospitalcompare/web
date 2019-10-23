@@ -1,6 +1,6 @@
 <div class="select-parent  {{ empty($selectClassName) ? '' : $selectClassName }}">
     @if(!empty($showLabel))
-        <label class="{{empty($resultsLabel) ? '' : $resultsLabel}}"
+        <label class="{{empty($labelClass) ? '' : $labelClass}}"
                for="{{empty($selectId) ? '' : $selectId}}">
             {{empty($placeholder) ? '': $placeholder}}
         </label>
