@@ -2,7 +2,7 @@
     <div class="result-item-inner container">
         <div class="result-item-section-1">
             <div class="hospital-image">
-                <img alt="Image of {{ $title }}" src="{{ $itemImg }}">
+                <img class="content" alt="Image of {{ $title }}" src="{{ $itemImg }}">
                 <div
                     class="{{$NHSClass}} py-1 px-2 rounded-pill m-1 {{ $NHSClass == 'private-hospital' ? 'bg-darkpink' : 'bg-teal' }}">
                     <p class="m-0">{{$fundedText}}</p></div>

@@ -259,6 +259,12 @@ $col-spacing: 18px;
                     position: relative;
                 }
 
+                .hospital-image {
+                    flex: 0 0 $hospital-image-width;
+                    width: $hospital-image-width;
+                    @include aspect-ratio(134px, 123px);
+                }
+
                 .hospital-details {
                     padding: 8px;
 
