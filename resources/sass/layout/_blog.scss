@@ -14,8 +14,7 @@
     }
 
     .blog-content {
-        //display: flex;
-        //@include justify-content(space-between);
+        @include reset-row-spacing('20px');
 
         .blog-wrap {
             text-decoration: none !important;
@@ -43,8 +42,11 @@
             //float: left;
 
             .icon {
-                margin: 20px 0;
                 position: relative;
+
+                img {
+                    width: 100%;
+                }
 
                 .overlay {
                     position: absolute;
@@ -54,18 +56,19 @@
                     height: 100%;
                     transition: $transition;
                 }
-
-                img {
-                    width: 100%;
-                }
             }
 
             .title {
-                color: #00cecd;
                 font-size: 20px;
                 font-weight: 400;
                 letter-spacing: -0.6px;
                 line-height: 24px;
+            }
+
+            .category,
+            .date {
+                color: $teal;
+                @include font-size(20);
             }
 
             .description {
