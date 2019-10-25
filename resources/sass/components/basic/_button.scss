@@ -209,12 +209,12 @@
         border-radius: 50px;
         color: #fff;
         @include font-size(22);
-        height: 46px;
-        line-height: 46px;
+        //height: 46px;
+        //line-height: 46px;
         background: #ed0373;
         background: linear-gradient(-90deg, #ed0373, #fc278d, #fc278d, #649ef7, #649ef7, #1b70f3, #1b70f3);
         transition: 0.6s;
-        padding: 0 25px;
+        padding: 7px 25px;
     }
 
     // icon buttons

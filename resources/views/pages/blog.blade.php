@@ -23,21 +23,21 @@
                                         [
                                             'iconImg'       => 'images/Layer_16.png' ,
                                             'category'      => 'Category',
-                                            'date'          => '25th October 2019',
+                                            'date'          => '25th Oct 2019',
                                             'title'         => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.',
                                             'slug'          =>  str_slug('Blog 1')
                                         ],
                                         [
                                             'iconImg'       => 'images/Layer_17.png',
                                             'category'      => 'Category',
-                                            'date'          => '25th October 2019',
+                                            'date'          => '25th Oct 2019',
                                             'title'         => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.',
                                             'slug'          =>  str_slug('Blog 2')
                                         ],
                                         [
                                             'iconImg'       => 'images/Layer_18.png' ,
                                             'category'      => 'Category',
-                                            'date'          => '25th October 2019',
+                                            'date'          => '25th Oct 2019',
                                             'title'         => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.',
                                             'slug'          =>  str_slug('Blog 3')
                                         ],
