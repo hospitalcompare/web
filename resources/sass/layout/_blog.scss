@@ -1,8 +1,8 @@
 
 // ========================BLOGS SECTION================================
-.blogSectionParent {
-    width: $pageWrap;
-    margin: 0 auto;
+.blog-section-parent {
+    //width: $pageWrap;
+    //margin: 0 auto;
     margin-bottom: 50px;
     color: #1b1b1b;
 
@@ -13,18 +13,11 @@
         line-height: 48px;
     }
 
-    .blogContent {
-        display: flex;
-        @include justify-content(space-between);
+    .blog-content {
+        //display: flex;
+        //@include justify-content(space-between);
 
-        .blogWrap {
-            display: flex;
-            @include flex-flow(column);
-            @include justify-content(center);
-            @include alignItems;
-            &:not(:last-child) {
-                margin-right: 20px;
-            }
+        .blog-wrap {
             text-decoration: none !important;
 
             a:hover {
@@ -36,9 +29,9 @@
                     background-position: right;
                 }
 
-                .icon .overlay {
-                    background-color: rgba(237,3,115,0.3);
-                }
+                //.icon .overlay {
+                //    background-color: rgba(237,3,115,0.3);
+                //}
 
             }
 
