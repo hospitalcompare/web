@@ -386,4 +386,23 @@ class Utils
 
         return $html;
     }
+
+
+    /**
+     * Generates HTML code based on a given rating ( CQC ratings )
+     *
+     * @param $rating
+     * @return string
+     */
+    public static function getDiscOrStar($rating) {
+        //Validation for an empty rating
+        if(empty($rating) || $rating > 5 )
+            return '';
+
+        $html = '';
+
+        $html = ($rating == 'Outstanding') ? '<span class="bg-cqc-star"></span>' : '<span class="cqc-colour bg-'. str_slug($rating) . '"></span>';
+
+        return $html;
+    }
 }

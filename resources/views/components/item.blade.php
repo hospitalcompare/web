@@ -50,7 +50,7 @@
                     @includeWhen(!empty($qualityRating), 'components.basic.popover', [
                          'placement'     => 'bottom',
                          'size'          => 'cqc',
-                         'trigger'       => 'hover',
+                         'trigger'       => 'click',
                          'html'          => 'true',
                          'content'       => '<div class="container-fluid">
                              <div class="row">
@@ -60,29 +60,35 @@
                                  </div>
                                  <div class="cqc-right col-8 pr-0">
                                      <div class="cqc-table">
- {{--                                        <div class="cqc-row d-flex justify-content-between">--}}
- {{--                                            <div class="cqc-category">Safe</div>--}}
- {{--                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour">{!! file_get_contents(asset('/images/icons/star.svg')) !!}</span></div>--}}
- {{--                                        </div>--}}
                                          <div class="cqc-row d-flex justify-content-between">
                                              <div class="cqc-category">Safe</div>
-                                             <div class="cqc-rating ml-auto"><strong>' . $safe . '</strong><span class="cqc-colour bg-'. str_slug($safe) . '"></span></div>
+                                             <div class="cqc-rating ml-auto"><strong>' . $safe . '</strong>'
+                                                . $safeIcon .
+                                             '</div>
                                          </div>
                                          <div class="cqc-row d-flex justify-content-between">
                                              <div class="cqc-category">Effective</div>
-                                             <div class="cqc-rating ml-auto"><strong>' . $effective . '</strong><span class="cqc-colour bg-' . str_slug($effective). '"></span></div>
+                                             <div class="cqc-rating ml-auto"><strong>' . $effective . '</strong>'
+                                                . $effectiveIcon .
+                                             '</div>
                                          </div>
                                          <div class="cqc-row d-flex justify-content-between">
-                                             <div class="cqc-category">Caring</div>
-                                             <div class="cqc-rating ml-auto"><strong>' . $caring . '</strong><span class="cqc-colour bg-' . str_slug($caring). '"></span></div>
+                                             <div class="cqc-category">Safe</div>
+                                             <div class="cqc-rating ml-auto"><strong>' . $caring . '</strong>'
+                                                . $caringIcon .
+                                             '</div>
                                          </div>
                                          <div class="cqc-row d-flex justify-content-between">
-                                             <div class="cqc-category">Responsive</div>
-                                             <div class="cqc-rating ml-auto"><strong>' . $responsive . '</strong><span class="cqc-colour bg-' . str_slug($responsive). '"></span></div>
+                                             <div class="cqc-category">Effective</div>
+                                             <div class="cqc-rating ml-auto"><strong>' . $responsive . '</strong>'
+                                                . $responsiveIcon .
+                                             '</div>
                                          </div>
                                          <div class="cqc-row d-flex justify-content-between">
-                                             <div class="cqc-category">Well-Led</div>
-                                             <div class="cqc-rating ml-auto"><strong>' . $well_led . '</strong><span class="cqc-colour bg-' . str_slug($well_led). '"></span></div>
+                                             <div class="cqc-category">Effective</div>
+                                             <div class="cqc-rating ml-auto"><strong>' . $well_led . '</strong>'
+                                                . $wellLedIcon .
+                                             '</div>
                                          </div>
                                      </div>
                                  </div>
