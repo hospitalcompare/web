@@ -50,7 +50,7 @@
                     @includeWhen(!empty($qualityRating), 'components.basic.popover', [
                          'placement'     => 'bottom',
                          'size'          => 'cqc',
-                         'trigger'       => 'click',
+                         'trigger'       => 'hover',
                          'html'          => 'true',
                          'content'       => '<div class="container-fluid">
                              <div class="row">
