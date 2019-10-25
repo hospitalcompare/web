@@ -101,6 +101,44 @@
     }
 }
 
+.blog-item-page {
+    main {
+        padding-top: 25px;
+    }
+
+    .jumbotron {
+        height: 350px;
+    }
+
+    .blog-content {
+        p {
+            @include font-size(20);
+        }
+    }
+
+    .sharing-icons {
+        li  {
+            margin-right: 12px;
+
+            svg {
+                height: 24px;
+                width: auto;
+
+                path {
+                    fill: $grey;
+                    transition: $transition;
+                }
+            }
+
+            &:hover {
+                svg path {
+                    fill: $teal;
+                }
+            }
+        }
+    }
+}
+
 
 // ========================END BLOGS SECTION=============================
 

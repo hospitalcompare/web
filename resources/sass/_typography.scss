@@ -101,21 +101,29 @@
 }
 
 .font-14 {
-    @include font-size(14);
+    @include font-size(14, true);
 }
 
 .font-16 {
-    @include font-size(16);
+    @include font-size(16, true);
 }
 
 .font-18 {
-    @include font-size(18);
+    @include font-size(18, true);
 }
 
 .font-22 {
-    @include font-size(22);
+    @include font-size(22, true);
+}
+
+.font-24 {
+    @include font-size(24, true);
 }
 
 .font-28 {
-    @include font-size(28);
+    @include font-size(28, true);
+}
+
+.font-36 {
+    @include font-size(36, true);
 }
