@@ -15,7 +15,9 @@
     <section>
         @include('components.corporatecontent', [
                 'procedures'    => $data['filters']['procedures'],
-                'id'            => 1
+                'id'            => 1,
+                'latitude'      => '52.3',
+                'longitude'     => '2.3'
             ])
     </section>
     <section>

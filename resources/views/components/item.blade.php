@@ -234,7 +234,9 @@
         </div>
         @include('components.corporatecontent', [
             'procedures'        => $procedures,
-            'bulletPoints'      => ['First', 'Second', 'Third']
+            'bulletPoints'      => ['First', 'Second', 'Third'],
+            'latitude'          => 'Hello',
+            'longitude'         => 'Hello'
         ])
     </div>
 </div>

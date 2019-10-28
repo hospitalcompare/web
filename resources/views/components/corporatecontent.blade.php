@@ -60,7 +60,17 @@
                 </div>
                 <div class="tab-pane col-7 active" id="map_{{ $id }}" role="tabpanel"
                      aria-labelledby="map-tab">
-                    <h1>Map</h1>
+                    <div class="location-map" data-latitude="{{ $latitude }}" data-longitude="{{ $longitude }}">
+                    </div>
+                    <div id="details" class="d-flex" style="padding-top: 25px">
+                        <div class="img-wrap mr-4">
+                            <img class="image" width="173" height="158" src="images/alder-1.png">
+                        </div>
+                        <div class="address">
+                            <p>No data for this hospital address</p>
+
+                        </div>
+                    </div>
 
                 </div>
                 <div class="tab-pane col-7 d-none" id="treatments_{{ $id }}" role="tabpanel"

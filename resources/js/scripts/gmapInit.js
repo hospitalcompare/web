@@ -42,6 +42,11 @@ $(document).ready(function() {
         google.maps.event.trigger(map, "resize");
         map.setCenter(myLatlng);
     });
+
+    // Maps within the tabs of corporate content
+    $('.nav-tabs a').on('show.bs.tab', function(){
+
+    });
 });
 
 
