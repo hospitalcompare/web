@@ -216,4 +216,14 @@ class WebController extends BaseController
     public function aboutUs() {
         return view('pages.aboutus');
     }
+
+    // Blog page
+    public function blogArchive() {
+        return view('pages.blog');
+    }
+
+    // Blog item page
+    public function blogItem($id) {
+        return view('pages.blogitem')->with(['id' => $id]);
+    }
 }

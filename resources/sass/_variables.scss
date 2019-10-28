@@ -6,7 +6,11 @@ $headings-font-family: 'SofiaPro-Bold', sans-serif;
 $font-family-sans-serif: 'SofiaPro-Regular', sans-serif;
 $headings-font-weight: normal; // font is bold, so normal is standard bold
 //$font-size-base: 0.9rem;
-//$line-height-base: 1.6;
+
+// Line-height
+$line-height-base: 1;
+$line-height-lg: 1;
+$line-height-sm: 1;
 
 // Colors
 $enable-gradients: true;

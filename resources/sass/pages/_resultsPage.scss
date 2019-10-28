@@ -1,10 +1,5 @@
 $col-spacing: 18px;
-@mixin responsive-columns() {
-    flex-direction: column;
-    @include media-breakpoint-up(lg) {
-        flex-direction: row;
-    }
-}
+
 
 .results-page,
 .test-page {

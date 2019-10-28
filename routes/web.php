@@ -17,6 +17,9 @@ Route::get('{anyExceptRoot}', function() {
         return redirect('/');
     })->where('anyExceptRoot', '[^/]*');
 
+Route::get('/blog/{id}','WebController@blogItem');
+
+Route::get('/blog','WebController@blogArchive');
 
 Route::get('/results-page','WebController@resultsPage');
 

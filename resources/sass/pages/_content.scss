@@ -1,18 +1,3 @@
-.cookie-page,
-.privacy-page,
-.terms-and-conditions-page,
-.faqs-page,
-.your-rights-page,
-.about-us-page {
-    main {
-        padding-top: 40px;
-    }
-}
-
-body {
-
-}
-
 .hc-content {
     p {
         @include font-style(false, 20px, false, false, 24px, -1px);
@@ -36,7 +21,7 @@ body {
         list-style-type: none;
     }
 
-    ul {
+    ul.bullets {
         //padding: 0 0 0 50px;
         margin: 30px 0 50px 0;
 
@@ -98,11 +83,8 @@ body {
     }
 
     hr {
-        border: 0;
-        float: left;
         width: 100%;
-        height: 2px;
-        background-color: $green;
+        height: 3px;
     }
 
     .btn-link {
@@ -159,8 +141,8 @@ h6 {
 }
 
 h1 {
-    @include font-style('SofiaPro-Black', 45px, false, false, 45px, -2.25px);
-    margin: 0 0 30px 0;
+    @include font-style('SofiaPro-Black', 40px, false, false, 45px, -2.25px);
+    margin: 0 0 40px 0;
 }
 
 h2 {
