@@ -10,7 +10,7 @@
                 <span class="date">{{$blog['date']}}</span>
             </p>
             <p class="title font-24 SofiaPro-SemiBold mb-4">{{$blog['title']}}</p>
-            <a class="{{ $buttonClass }} position-static stretched-link" href="/blog/{{ $blog['slug'] }}">{{$buttonTitle}}</a>
+            <a class="{{ $buttonClass }} position-static stretched-link" href="/blog/{{ $blog['id'] }}">{{$buttonTitle}}</a>
         </div>
     @endforeach
 @endif

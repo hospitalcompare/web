@@ -218,7 +218,7 @@ class WebController extends BaseController
     }
 
     // Blog page
-    public function blogArchive() {
+    public function blogs() {
         return view('pages.blog');
     }
 

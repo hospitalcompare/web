@@ -13,7 +13,7 @@
                         <li><a {{ Request::is( 'about-us') ? 'class=active' : '' }} href="/about-us">About Us</a></li>
                         <li><a {{ Request::is( 'your-rights') ? 'class=active' : '' }} href="/your-rights">Your Rights</a></li>
                         <li><a {{ Request::is( 'how-to-use') ? 'class=active' : '' }} href="/how-to-use">How To Use</a></li>
-                        <li><a {{ Request::is( 'blog') ? 'class=active' : '' }} href="/blog">Blog</a></li>
+                        <li><a {{ Request::is( 'blogs') ? 'class=active' : '' }} href="/blogs">Blog</a></li>
                     <li><a {{ Request::is( 'faqs') ? 'class=active' : '' }} href="/faqs">FAQs</a></li>
 {{--                    <li><a {{ Request::is( 'guides') ? 'class=active' : '' }} href="/guides">Guides</a></li>--}}
                 </ul>

@@ -19,7 +19,7 @@ Route::get('{anyExceptRoot}', function() {
 
 Route::get('/blog/{id}','WebController@blogItem');
 
-Route::get('/blog','WebController@blogArchive');
+Route::get('/blogs','WebController@blogs');
 
 Route::get('/results-page','WebController@resultsPage');
 
