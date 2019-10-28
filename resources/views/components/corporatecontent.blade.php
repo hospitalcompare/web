@@ -174,7 +174,7 @@
                                     <div
                                         class="player-button toggle">{!! file_get_contents(asset('/images/icons/youtube.svg')) !!}</div>
                                     @include('components.basic.modalbutton', [
-                                       'videoUrl'          => '/video/mov_bbb.mp4',
+                                       'videoUrl'          => '/video/For_Wes.mp4',
                                        'modalTarget'       => '#hc_modal_video',
                                        'classTitle'        => 'stretched-link',
                                        'target'            => 'blank',
@@ -218,7 +218,7 @@
                 </div>
                 @include('components.basic.button', [
                     'classTitle'        => 'btn btn-xs btn-icon btn-more-info btn-darkgreen position-absolute',
-                    'icon'              => 'fa fa-caret-up',
+                    'icon'              => 'fa fa-caret-up fa-sm',
                     'button'            => 'Close',
                     'dataTarget'        => '#corporate_content_hospital_' . $id
                  ])

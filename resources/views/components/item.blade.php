@@ -31,7 +31,7 @@
                 @include('components.basic.button', [
                     'classTitle'        => 'btn btn-xs btn-teal btn-icon btn-more-info position-absolute',
                     'button'            => 'More info',
-                    'icon'              => 'fa fa-plus',
+                    'icon'              => 'fa fa-plus fa-xs',
                     'dataTarget'        => '#corporate_content_hospital_' . $id
                  ])
                 {{--                TODO: reintroduce consultant button when we have this data --}}
