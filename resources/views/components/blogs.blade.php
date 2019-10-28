@@ -1,7 +1,7 @@
 @if(!empty($blogs))
     @foreach($blogs as $blog)
         <div class="blog-wrap col-12 col-md-6 col-lg-4 position-relative">
-            <div class="icon">
+            <div class="image-wrapper">
                 <img src="{{ asset($blog['iconImg']) }}">
                 <div class="overlay"></div>
             </div>
