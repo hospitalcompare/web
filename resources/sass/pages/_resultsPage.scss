@@ -1,5 +1,12 @@
 $col-spacing: 18px;
 
+.results-page {
+    background-color: $lighterGrey;
+
+    .results {
+        min-height: calc(100vh - 220px);
+    }
+}
 
 .results-page,
 .test-page {
@@ -232,9 +239,7 @@ $col-spacing: 18px;
         background-color: $white;
     }
 
-    .results {
-        background-color: $lighterGrey;
-    }
+
 
 
     .result-item-inner {

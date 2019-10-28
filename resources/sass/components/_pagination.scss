@@ -14,8 +14,10 @@
         }
 
         &.disabled {
+
             .page-link {
                 border: none;
+                background: transparent;
             }
         }
 
