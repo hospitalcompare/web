@@ -10,7 +10,11 @@
                        role="tab" aria-controls="profile" aria-selected="false">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" id="treatments-tab_{{ $id }}" data-toggle="tab"
+                    <a class="nav-link active" id="map-tab_{{ $id }}" data-toggle="tab"
+                       href="#map_{{ $id }}" role="tab" aria-controls="home" aria-selected="true">Map</a>
+                </li>
+                <li class="nav-item d-none">
+                    <a class="nav-link" id="treatments-tab_{{ $id }}" data-toggle="tab"
                        href="#treatments_{{ $id }}" role="tab" aria-controls="home" aria-selected="true">Treatments</a>
                 </li>
             </ul>
@@ -54,7 +58,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane col-7 active" id="treatments_{{ $id }}" role="tabpanel"
+                <div class="tab-pane col-7 active" id="map_{{ $id }}" role="tabpanel"
+                     aria-labelledby="map-tab">
+                    <h1>Map</h1>
+
+                </div>
+                <div class="tab-pane col-7 d-none" id="treatments_{{ $id }}" role="tabpanel"
                      aria-labelledby="treatments-tab">
                     <p class="col-greydarkest SofiaPro-SemiBold">Our hospitals are equipped with state of the art facilities and are focused on providing
                         high quality healthcare. Each hospital boasts of having the latest equipment, available

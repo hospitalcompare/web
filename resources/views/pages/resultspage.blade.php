@@ -186,10 +186,15 @@
                     'fundedText'        => ($d['hospitalType']['name'] == 'NHS') ? 'NHS Hospital': 'Private Hospital',
                     'url'               => $d['url'],
                     'safe'              => $d['rating']['safe'],
+                    'safeIcon'          => \App\Helpers\Utils::getDiscOrStar($d['rating']['safe']),
                     'effective'         => $d['rating']['effective'],
+                    'effectiveIcon'     => \App\Helpers\Utils::getDiscOrStar($d['rating']['effective']),
                     'caring'            => $d['rating']['caring'],
+                    'caringIcon'        => \App\Helpers\Utils::getDiscOrStar($d['rating']['caring']),
                     'responsive'        => $d['rating']['responsive'],
+                    'responsiveIcon'          => \App\Helpers\Utils::getDiscOrStar($d['rating']['responsive']),
                     'well_led'          => $d['rating']['well_led'],
+                    'wellLedIcon'          => \App\Helpers\Utils::getDiscOrStar($d['rating']['well_led']),
                     'procedures'        => $data['filters']['procedures']
                    ])
             @endforeach
