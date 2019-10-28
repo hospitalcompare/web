@@ -235,8 +235,9 @@
         @include('components.corporatecontent', [
             'procedures'        => $procedures,
             'bulletPoints'      => ['First', 'Second', 'Third'],
-            'latitude'          => 'Hello',
-            'longitude'         => 'Hello'
+            'latitude'          => $latitude,
+            'longitude'         => $longitude,
+            'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode
         ])
     </div>
 </div>

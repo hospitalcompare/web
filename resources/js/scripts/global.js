@@ -141,5 +141,3 @@ window.toggleContent = function(speed = 400) {
             .removeClass('open');
 };
 
-
-$('.btn-more-info').on('click', toggleContent);

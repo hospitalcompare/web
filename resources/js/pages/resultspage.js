@@ -163,3 +163,6 @@ $(document).ready(function() {
     //     $(this).toggleClass('open');
     // });
 });
+
+// Toggle the corporate content area
+$('.btn-more-info').on('click', toggleContent);

@@ -6,12 +6,20 @@
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" id="nav-tabs_{{ $id }}" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link " id="profile-tab_{{ $id }}" data-toggle="tab" href="#profile_{{ $id }}"
+                    <a class="nav-link active " id="profile-tab_{{ $id }}" data-toggle="tab" href="#profile_{{ $id }}"
                        role="tab" aria-controls="profile" aria-selected="false">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" id="map-tab_{{ $id }}" data-toggle="tab"
-                       href="#map_{{ $id }}" role="tab" aria-controls="home" aria-selected="true">Map</a>
+                    <a class="nav-link map-tab"
+                       id="map-tab_{{ $id }}"
+                       data-toggle="tab"
+                       data-longitude="{{ $longitude }}"
+                       data-latitude="{{ $latitude }}"
+                       data-map-target="#gmap_{{ $id }}"
+                       href="#map_{{ $id }}"
+                       role="tab"
+                       aria-controls="home"
+                       aria-selected="true">Map</a>
                 </li>
                 <li class="nav-item d-none">
                     <a class="nav-link" id="treatments-tab_{{ $id }}" data-toggle="tab"
@@ -21,7 +29,7 @@
 
             <!-- Tab panes -->
             <div class="tab-content row">
-                <div class="tab-pane col-7" id="profile_{{ $id }}" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="tab-pane active col-7" id="profile_{{ $id }}" role="tabpanel" aria-labelledby="profile-tab">
                     <p class="SofiaPro-SemiBold col-greydarkest">Situated in London, this hospital provides private
                         patients with outstanding medical
                         services. Both self paying and private medically insured patients will be treated using
@@ -58,16 +66,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane col-7 active" id="map_{{ $id }}" role="tabpanel"
+                <div class="tab-pane col-7"
+                     id="map_{{ $id }}"
+                     role="tabpanel"
                      aria-labelledby="map-tab">
-                    <div class="location-map" data-latitude="{{ $latitude }}" data-longitude="{{ $longitude }}">
+                    <div id="gmap_{{ $id }}" class="map-container" style="height: 200px">
                     </div>
                     <div id="details" class="d-flex" style="padding-top: 25px">
                         <div class="img-wrap mr-4">
                             <img class="image" width="173" height="158" src="images/alder-1.png">
                         </div>
                         <div class="address">
-                            <p>No data for this hospital address</p>
+                            {!! $address !!}
 
                         </div>
                     </div>
