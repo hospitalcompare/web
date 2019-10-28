@@ -73,19 +73,19 @@
                                              '</div>
                                          </div>
                                          <div class="cqc-row d-flex justify-content-between">
-                                             <div class="cqc-category">Safe</div>
+                                             <div class="cqc-category">Caring</div>
                                              <div class="cqc-rating ml-auto"><strong>' . $caring . '</strong>'
                                                 . $caringIcon .
                                              '</div>
                                          </div>
                                          <div class="cqc-row d-flex justify-content-between">
-                                             <div class="cqc-category">Effective</div>
+                                             <div class="cqc-category">Responsive</div>
                                              <div class="cqc-rating ml-auto"><strong>' . $responsive . '</strong>'
                                                 . $responsiveIcon .
                                              '</div>
                                          </div>
                                          <div class="cqc-row d-flex justify-content-between">
-                                             <div class="cqc-category">Effective</div>
+                                             <div class="cqc-category">Well Led</div>
                                              <div class="cqc-rating ml-auto"><strong>' . $well_led . '</strong>'
                                                 . $wellLedIcon .
                                              '</div>
