@@ -14,17 +14,20 @@
                 <p class="sort-item-title SofiaPro-Medium" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
-                <p class="sort-item-location">{{$location}}, {{ trim($town, ', ') }}</p>
-                @include('components.basic.modalbutton', [
-                    'hrefValue'         => '#',
-                    'classTitle'        => 'find-link',
-                    'button'            => 'Find on map',
-                    'modalTarget'       => '#hc_modal_map',
-                    'latitude'          => $latitude,
-                    'longitude'         => $longitude,
-                    'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,
-                    'image'             => 'images/alder-1.png'
-                ])
+                @if(!empty($locationSpecialism))
+                <p class="sort-item-specialism col-teal mb-1"><strong>Specialist centre:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
+                @endif
+                <p class="sort-item-location">{{$location}} {{-- trim($town, ', ') --}}</p>
+{{--                @include('components.basic.modalbutton', [--}}
+{{--                    'hrefValue'         => '#',--}}
+{{--                    'classTitle'        => 'find-link',--}}
+{{--                    'button'            => 'Find on map',--}}
+{{--                    'modalTarget'       => '#hc_modal_map',--}}
+{{--                    'latitude'          => $latitude,--}}
+{{--                    'longitude'         => $longitude,--}}
+{{--                    'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,--}}
+{{--                    'image'             => 'images/alder-1.png'--}}
+{{--                ])--}}
                 @include('components.basic.button', [
                     'classTitle'        => 'btn btn-xs btn-teal btn-icon btn-more-info btn-plus position-absolute',
                     'button'            => 'More info',
