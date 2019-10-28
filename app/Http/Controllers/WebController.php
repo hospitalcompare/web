@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Helpers\Utils;
 use App\Helpers\Validate;
+use App\Models\Blog;
 use App\Models\Faq;
 use App\Models\Hospital;
-use App\Models\Procedure;
 use Illuminate\Routing\Controller as BaseController;
 
 class WebController extends BaseController
@@ -217,13 +217,28 @@ class WebController extends BaseController
         return view('pages.aboutus');
     }
 
-    // Blog page
+    // Blogs page
     public function blogs() {
-        return view('pages.blog');
+        //Retrieve all the Blogs
+        $blogs = Blog::orderBy('created_at', 'DESC');
+        $blogs = $blogs->paginate(12);
+        $this->returnedData['success'] = true;
+        $this->returnedData['data']['blogs'] = $blogs;
+
+        return view('pages.blog', $this->returnedData);
     }
 
     // Blog item page
     public function blogItem($id) {
-        return view('pages.blogitem')->with(['id' => $id]);
+
+        $blog = Blog::where('id', $id)->first();
+        //If we don't have the Blog, redirect to Blogs ( for the moment )
+        if(empty($blog))
+            return \Redirect::to('/blogs');
+
+        $this->returnedData['success']      = true;
+        $this->returnedData['data']['blog'] = $blog;
+
+        return view('pages.blogitem', $this->returnedData);
     }
 }
