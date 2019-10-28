@@ -165,4 +165,20 @@ $(document).ready(function() {
 });
 
 // Toggle the corporate content area
-$('.btn-more-info').on('click', toggleContent);
+$('.btn-more-info').on('click', function() {
+    var $target = $($(this).data('target'));
+    // $(this).toggleClass('target-open');
+    $(this)
+        .parents('.result-item')
+        .toggleClass('corporate-content-open');
+
+    if($target.is(':visible')) {
+        $target
+            .slideUp()
+            .removeClass('open');
+    } else {
+        $target
+            .slideDown()
+            .addClass('open');
+    }
+});

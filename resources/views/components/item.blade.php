@@ -29,8 +29,9 @@
 {{--                    'image'             => 'images/alder-1.png'--}}
 {{--                ])--}}
                 @include('components.basic.button', [
-                    'classTitle'        => 'btn btn-xs btn-teal btn-icon btn-more-info btn-plus position-absolute',
+                    'classTitle'        => 'btn btn-xs btn-teal btn-icon btn-more-info position-absolute',
                     'button'            => 'More info',
+                    'icon'              => 'fa fa-plus',
                     'dataTarget'        => '#corporate_content_hospital_' . $id
                  ])
                 {{--                TODO: reintroduce consultant button when we have this data --}}
@@ -232,12 +233,12 @@
                     'id' => $id])
             </div>
         </div>
-        @include('components.corporatecontent', [
-            'procedures'        => $procedures,
-            'bulletPoints'      => ['First', 'Second', 'Third'],
-            'latitude'          => $latitude,
-            'longitude'         => $longitude,
-            'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode
-        ])
-    </div>
+    </div>{{-- container --}}
+    @include('components.corporatecontent', [
+        'procedures'        => $procedures,
+        'bulletPoints'      => ['First', 'Second', 'Third'],
+        'latitude'          => $latitude,
+        'longitude'         => $longitude,
+        'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode
+    ])
 </div>
