@@ -69,6 +69,7 @@ class DbInit extends Migration
                 $table->unsignedInteger('hospital_type_id');
                 $table->unsignedInteger('address_id');
                 $table->unsignedInteger('trust_id');
+                $table->string('location_specialism')->nullable();
                 $table->string('ods_code')->nullable();
                 $table->string('name');
                 $table->string('tel_number')->nullable();

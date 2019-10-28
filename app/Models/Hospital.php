@@ -19,7 +19,7 @@ class Hospital extends Model
      * @var array
      */
     protected $fillable = [
-        'location_id', 'organisation_id','hospital_type_id', 'address_id', 'trust_id', 'ods_code', 'name', 'tel_number', 'url', 'special_offers', 'status'
+        'location_id', 'organisation_id','hospital_type_id', 'address_id', 'trust_id', 'location_specialism', 'ods_code', 'name', 'tel_number', 'url', 'special_offers', 'status'
     ];
 
     /**
@@ -28,18 +28,19 @@ class Hospital extends Model
      * @var array
      */
     protected $casts = [
-        'location_id'       => 'string',
-        'organisation_id'   => 'string',
-        'hospital_type_id'  => 'integer',
-        'address_id'        => 'integer',
-        'trust_id'          => 'integer',
-        'ods_code'          => 'string',
-        'name'              => 'string',
-        'tel_number'        => 'string',
-        'url'               => 'string',
+        'location_id'           => 'string',
+        'organisation_id'       => 'string',
+        'hospital_type_id'      => 'integer',
+        'address_id'            => 'integer',
+        'trust_id'              => 'integer',
+        'location_specialism'   => 'string',
+        'ods_code'              => 'string',
+        'name'                  => 'string',
+        'tel_number'            => 'string',
+        'url'                   => 'string',
 //        'report_url'        => 'string',
-        'special_offers'    => 'boolean',
-        'status'            => 'string'
+        'special_offers'        => 'boolean',
+        'status'                => 'string'
     ];
 
     /**

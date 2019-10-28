@@ -92,13 +92,14 @@ class MasterList extends DefaultImport {
                         'location_id'       => $item['Location ID'],
                         'organisation_id'   => $item['Organisation Code'],
                     ], [
-                        'hospital_type_id'  => $hospitalType->id,
-                        'address_id'        => $hospitalAddress->id,
-                        'trust_id'          => $trust->id,
-                        'ods_code'          => $item['Location ODS Code'],
-                        'name'              => $item['Location Name'],
-                        'tel_number'        => $item['Location Telephone Number'],
-                        'url'               => $item['Location Web Address'],
+                        'hospital_type_id'      => $hospitalType->id,
+                        'address_id'            => $hospitalAddress->id,
+                        'trust_id'              => $trust->id,
+                        'location_specialism'   => $item['Location Specialism'],
+                        'ods_code'              => $item['Location ODS Code'],
+                        'name'                  => $item['Location Name'],
+                        'tel_number'            => $item['Location Telephone Number'],
+                        'url'                   => $item['Location Web Address'],
 //                        'report_url'        => $item['CQC Report URL']
                     ]);
 
