@@ -19,31 +19,32 @@
                 <div class="blog-section-parent">
                     <div class="blog-content row">
                         @include('components.blogs', [
-                        'blogs' => [
-                                        [
-                                            'iconImg'       => 'images/Layer_16.png' ,
-                                            'category'      => 'Category',
-                                            'date'          => '25th Oct 2019',
-                                            'title'         => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.',
-                                            'id'            =>  1
-                                        ],
-                                        [
-                                            'iconImg'       => 'images/Layer_17.png',
-                                            'category'      => 'Category',
-                                            'date'          => '25th Oct 2019',
-                                            'title'         => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.',
-                                            'id'            =>  2
-                                        ],
-                                        [
-                                            'iconImg'       => 'images/Layer_18.png' ,
-                                            'category'      => 'Category',
-                                            'date'          => '25th Oct 2019',
-                                            'title'         => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.',
-                                            'id'            =>  3
-                                        ],
-                                    ],
-                                    'buttonClass'       => 'btn btn-block btn-read-more text-center',
-                                    'buttonTitle'       => 'Read more'])
+                            'blogs' => [
+                                [
+                                    'iconImg'       => 'images/Layer_16.png' ,
+                                    'category'      => 'Category',
+                                    'date'          => '25th Oct 2019',
+                                    'title'         => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.',
+                                    'id'            =>  1
+                                ],
+                                [
+                                    'iconImg'       => 'images/Layer_17.png',
+                                    'category'      => 'Category',
+                                    'date'          => '25th Oct 2019',
+                                    'title'         => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.',
+                                    'id'            =>  2
+                                ],
+                                [
+                                    'iconImg'       => 'images/Layer_18.png' ,
+                                    'category'      => 'Category',
+                                    'date'          => '25th Oct 2019',
+                                    'title'         => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.',
+                                    'id'            =>  3
+                                ],
+                            ],
+                            'buttonClass'       => 'btn btn-block btn-read-more text-center',
+                            'buttonTitle'       => 'Read more'
+                            ])
                     </div>
                 </div>
             </div>
