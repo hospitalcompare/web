@@ -176,7 +176,6 @@ $('.btn-more-info').on('click', function () {
             .removeClass('open');
         // Scroll back to the result item
         var $scrollBack = $(this).parents('.result-item').offset().top;
-        console.log($scrollBack);
         $('html, body').animate({
             scrollTop: $scrollBack - 80
         }, 800);

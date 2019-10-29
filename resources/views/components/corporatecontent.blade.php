@@ -277,6 +277,7 @@
                 </div>
                 @include('components.basic.button', [
                     'classTitle'        => 'btn btn-xs btn-icon btn-more-info btn-darkgreen position-absolute',
+                    'style'             => 'width: 90px',
                     'icon'              => 'fa fa-caret-up fa-sm',
                     'button'            => 'Close',
                     'dataTarget'        => '#corporate_content_hospital_' . $id

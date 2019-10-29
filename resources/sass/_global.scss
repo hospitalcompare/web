@@ -36,6 +36,7 @@ ul.bullets {
         letter-spacing: -0.65px;
         position: relative;
         padding-left: 30px;
+        margin-bottom: 6px;
 
         &:before {
             content: url("/images/icons/circle-check.svg");
