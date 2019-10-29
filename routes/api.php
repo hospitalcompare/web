@@ -19,6 +19,7 @@ Route::middleware('checkToken')->group(function () {
     Route::post('/enquiry', 'ApiController@enquiry');
     Route::post('/search-faq/{postcode}', 'ApiController@searchFaq');
     Route::get('/search-faq', 'ApiController@searchFaq');
+    Route::post('/createEnquiriesFile', 'ApiController@createEnquiriesFile');
 
     //TEST ROUTES
     Route::get('/testGet', 'ApiController@testGet');

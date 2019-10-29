@@ -306,4 +306,15 @@ class ApiController {
         $this->returnedData['success'] = true;
         return $this->returnedData;
     }
+
+    public function createEnquiriesFile() {
+        //Get the request and load it as variables
+        $request    = \Request::all();
+        $startDate  = $request['start_date'] ?? '';
+        $endDate    = $request['end_date'] ?? '';
+
+        $this->returnedData['success'] = true;
+        $this->returnedData['data'] = Utils::createEnquiriesCsv($startDate, $endDate);
+        return $this->returnedData;
+    }
 }
