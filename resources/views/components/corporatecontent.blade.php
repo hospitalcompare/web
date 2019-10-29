@@ -189,26 +189,26 @@
                                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                             <span class="sr-only">Next</span>
                                         </a>
-                                        <!--/.Controls-->
-                                        <ol class="_carousel-indicators indicators row">
-                                            <li data-target="#carousel-thumb" data-slide-to="0" class="active col-3">
-                                                <div class="col-inner">
-                                                    <img class="d-block h-100" src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg" class="img-fluid">
-                                                </div>
-                                            </li>
-                                            <li data-target="#carousel-thumb" data-slide-to="1" class="col-3">
-                                                <div class="col-inner">
-                                                    <img class="d-block h-100" src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg" class="img-fluid">
-                                                </div>
-                                            </li>
-                                            <li data-target="#carousel-thumb" data-slide-to="2" class="col-3">
-                                                <div class="col-inner">
-                                                    <img class="d-block h-100" src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg" class="img-fluid">
-                                                </div>
-                                            </li>
-                                        </ol>
-                                    </div>
-                                    <!--/.Carousel Wrapper-->
+
+                                    </div><!--/.Carousel Wrapper-->
+                                    <!--/.Controls-->
+                                    <ol class="_carousel-indicators indicators row">
+                                        <li data-target="#carousel-thumb" data-slide-to="0" class="active col-3">
+                                            <div class="col-inner">
+                                                <img class="d-block h-100" src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg" class="img-fluid">
+                                            </div>
+                                        </li>
+                                        <li data-target="#carousel-thumb" data-slide-to="1" class="col-3">
+                                            <div class="col-inner">
+                                                <img class="d-block h-100" src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg" class="img-fluid">
+                                            </div>
+                                        </li>
+                                        <li data-target="#carousel-thumb" data-slide-to="2" class="col-3">
+                                            <div class="col-inner">
+                                                <img class="d-block h-100" src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg" class="img-fluid">
+                                            </div>
+                                        </li>
+                                    </ol>
 
                             </div>
                             <div class="col-6">
