@@ -1,4 +1,4 @@
-<div class="result-item">
+<div class="result-item" id="result-item_{{ $id }}">
     <div class="result-item-inner container">
         <div class="result-item-section-1">
             <div class="hospital-image">
