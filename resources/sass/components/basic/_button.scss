@@ -78,6 +78,14 @@
         }
     }
 
+    &.btn-darkgreen {
+        @include linear-gradient(90deg, $darkGreen, $darkGreen, $green);
+
+        &.btn-grad {
+            @include linear-gradient(90deg, $darkGreen, $green, $darkGreen);
+        }
+    }
+
     &.btn-blue {
         @include linear-gradient(90deg, $blue, $blue, $teal);
 
@@ -300,6 +308,11 @@
             letter-spacing: -0.6px;
             padding: 5px 25px 5px 8px;
             border-radius: 4px 4px 0 0;
+
+            svg {
+                @include v-c;
+                right: 8px;
+            }
         }
 
         &.btn-close__small {

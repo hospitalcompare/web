@@ -8,7 +8,7 @@ $(document).ready(function() {
     var myMarker;
     var myLatlng;
 
-    function initializeGMap(lat, lng) {
+    function initializeGMap(lat, lng, target) {
         myLatlng = new google.maps.LatLng(lat, lng);
 
         var myOptions = {
@@ -18,7 +18,7 @@ $(document).ready(function() {
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-        map = new google.maps.Map(document.getElementById("map"), myOptions);
+        map = new google.maps.Map(document.querySelector(target), myOptions);
 
         myMarker = new google.maps.Marker({
             position: myLatlng
@@ -30,7 +30,7 @@ $(document).ready(function() {
     // Re-init map before show modal
     $mapModal.on('show.bs.modal', function(event) {
         var button = $(event.relatedTarget);
-        initializeGMap(button.data('latitude'), button.data('longitude'));
+        initializeGMap(button.data('latitude'), button.data('longitude'), '#map');
         // $("#location-map").css("width", "100%");
         // $("#map").css("height", "400px");
         $(this).find('.address').html(button.data('address'));
@@ -41,6 +41,15 @@ $(document).ready(function() {
     $mapModal.on('shown.bs.modal', function() {
         google.maps.event.trigger(map, "resize");
         map.setCenter(myLatlng);
+    });
+
+    // Maps within the tabs of corporate content
+    $('.map-tab').one('show.bs.tab', function(e){
+        var tab = $(e.target);
+        var $targetMap = tab.data('map-target');
+        var $latitude = tab.data('latitude');
+        var $longitude = tab.data('longitude');
+        initializeGMap($latitude, $longitude, $targetMap);
     });
 });
 

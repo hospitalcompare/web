@@ -246,7 +246,7 @@
 }
 
 // Fixed aspect ratio
-@mixin aspect-ratio($width, $height) {
+@mixin aspect-ratio($width, $height, $imageWidth: 100%) {
     position: relative;
     &:before {
         display: block;
@@ -255,7 +255,7 @@
         padding-top: ($height / $width) * 100%;
     }
     > .content {
-        width: 100%;
+        width: $imageWidth;
         @include v-h-c;
     }
 }
@@ -284,13 +284,13 @@
 }
 
 // Custom BS grid gutters
-@mixin reset-row-spacing($spacing: 20px) {
-    margin-left: -$spacing;
-    margin-right: -$spacing;
+@mixin reset-row-spacing($colPadding: 20px) {
+    margin-left: -$colPadding;
+    margin-right: -$colPadding;
 
     > * {
-        padding-left: $spacing;
-        padding-right: $spacing;
+        padding-left: $colPadding;
+        padding-right: $colPadding;
     }
 }
 

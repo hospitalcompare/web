@@ -1,4 +1,4 @@
-<div class="result-item">
+<div class="result-item" id="result-item_{{ $id }}">
     <div class="result-item-inner container">
         <div class="result-item-section-1">
             <div class="hospital-image">
@@ -14,20 +14,24 @@
                 <p class="sort-item-title SofiaPro-Medium" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
-                <p class="sort-item-location">{{$location}}, {{ trim($town, ', ') }}</p>
-                @include('components.basic.modalbutton', [
-                    'hrefValue'         => '#',
-                    'classTitle'        => 'find-link',
-                    'button'            => 'Find on map',
-                    'modalTarget'       => '#hc_modal_map',
-                    'latitude'          => $latitude,
-                    'longitude'         => $longitude,
-                    'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,
-                    'image'             => 'images/alder-1.png'
-                ])
+                @if(!empty($locationSpecialism))
+                <p class="sort-item-specialism col-teal mb-1"><strong>Specialist centre:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
+                @endif
+                <p class="sort-item-location">{{$location}} {{-- trim($town, ', ') --}}</p>
+{{--                @include('components.basic.modalbutton', [--}}
+{{--                    'hrefValue'         => '#',--}}
+{{--                    'classTitle'        => 'find-link',--}}
+{{--                    'button'            => 'Find on map',--}}
+{{--                    'modalTarget'       => '#hc_modal_map',--}}
+{{--                    'latitude'          => $latitude,--}}
+{{--                    'longitude'         => $longitude,--}}
+{{--                    'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,--}}
+{{--                    'image'             => 'images/alder-1.png'--}}
+{{--                ])--}}
                 @include('components.basic.button', [
-                    'classTitle'        => 'btn btn-xs btn-teal btn-icon btn-more-info btn-plus position-absolute',
+                    'classTitle'        => 'btn btn-xs btn-teal btn-icon btn-more-info position-absolute',
                     'button'            => 'More info',
+                    'icon'              => 'fa fa-plus fa-xs',
                     'dataTarget'        => '#corporate_content_hospital_' . $id
                  ])
                 {{--                TODO: reintroduce consultant button when we have this data --}}
@@ -229,9 +233,12 @@
                     'id' => $id])
             </div>
         </div>
-        @include('components.corporatecontent', [
-            'procedures'        => $procedures,
-            'bulletPoints'      => ['First', 'Second', 'Third']
-        ])
-    </div>
+    </div>{{-- container --}}
+    @include('components.corporatecontent', [
+        'procedures'        => $procedures,
+        'bulletPoints'      => ['First', 'Second', 'Third'],
+        'latitude'          => $latitude,
+        'longitude'         => $longitude,
+        'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode
+    ])
 </div>

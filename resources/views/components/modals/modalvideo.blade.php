@@ -3,7 +3,7 @@
 <div class="modal modal-video fade" id="hc_modal_video" tabindex="-1" role="dialog"
      aria-labelledby="" aria-modal="true" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-content p-3">
             <button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true" class="text-white bg-black">Close</span>
             </button>

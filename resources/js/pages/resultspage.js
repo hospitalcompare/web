@@ -1,14 +1,14 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     //Add a delay of 10 ms because rendering is not instant for the new dropdown ( and it's acting weird, sometimes it works and sometimes it doesn't without the delay)
-    setTimeout( function() {
-            //Change the background color of the selectbox when an option with a value different than 0 is selected
-            $('.results-page .results-page-select.highlight option[value!="0"]:selected').parent().css('background-color', '#ececec');
-            $('.results-page .highlight-search-dropdown option[value!="0"]:selected').parent().next().css('background-color', '#ececec'); //Making the Background color grey for the dropdown with search
-        }, 200);
+    setTimeout(function () {
+        //Change the background color of the selectbox when an option with a value different than 0 is selected
+        $('.results-page .results-page-select.highlight option[value!="0"]:selected').parent().css('background-color', '#ececec');
+        $('.results-page .highlight-search-dropdown option[value!="0"]:selected').parent().next().css('background-color', '#ececec'); //Making the Background color grey for the dropdown with search
+    }, 200);
 
     //On click event for the sorting ( to submit without clicking the submit button )
-    $('.results-page .select-sort-by').change(function(){
+    $('.results-page .select-sort-by').change(function () {
         $('.results-page .btn-submit-results').click();
     });
 
@@ -41,45 +41,45 @@ $(document).ready(function() {
     function changeSortBy(target, direction) {
         var optionTarget = '';
 
-        if(target === "sort-waiting-time") {
-            if(direction === 'asc')
+        if (target === "sort-waiting-time") {
+            if (direction === 'asc')
                 optionTarget = $('.results-page .select-sort-by #sort_by_4');
             else
                 optionTarget = $('.results-page .select-sort-by #sort_by_3');
 
-        } else if(target === "sort-user-rating") {
-            if(direction === 'asc')
+        } else if (target === "sort-user-rating") {
+            if (direction === 'asc')
                 optionTarget = $('.results-page .select-sort-by #sort_by_6');
             else
                 optionTarget = $('.results-page .select-sort-by #sort_by_5');
-        } else if(target === "sort-op-cancelled") {
-            if(direction === 'asc')
+        } else if (target === "sort-op-cancelled") {
+            if (direction === 'asc')
                 optionTarget = $('.results-page .select-sort-by #sort_by_8');
             else
                 optionTarget = $('.results-page .select-sort-by #sort_by_7');
-        } else if(target === "sort-care-quality-rating") {
-            if(direction === 'asc')
+        } else if (target === "sort-care-quality-rating") {
+            if (direction === 'asc')
                 optionTarget = $('.results-page .select-sort-by #sort_by_10');
             else
                 optionTarget = $('.results-page .select-sort-by #sort_by_9');
-        } else if(target === "sort-ff-rating") {
-            if(direction === 'asc')
+        } else if (target === "sort-ff-rating") {
+            if (direction === 'asc')
                 optionTarget = $('.results-page .select-sort-by #sort_by_12');
             else
                 optionTarget = $('.results-page .select-sort-by #sort_by_11');
-        } else if(target === "sort-nhs-funded") {
-            if(direction === 'asc')
+        } else if (target === "sort-nhs-funded") {
+            if (direction === 'asc')
                 optionTarget = $('.results-page .select-sort-by #sort_by_14');
             else
                 optionTarget = $('.results-page .select-sort-by #sort_by_13');
-        } else if(target === "sort-self-pay") {
-            if(direction === 'asc')
+        } else if (target === "sort-self-pay") {
+            if (direction === 'asc')
                 optionTarget = $('.results-page .select-sort-by #sort_by_16');
             else
                 optionTarget = $('.results-page .select-sort-by #sort_by_15');
         }
         //Check if we have an actual value
-        if(optionTarget === '')
+        if (optionTarget === '')
             return false;
 
         optionTarget.prop('selected', true);
@@ -114,7 +114,7 @@ $(document).ready(function() {
     }
 
     //Refresh the page with the Private Hospitals filter ( for the Enquiry modal of Private hospitals )
-    $(document).on("click", ".results-page .change-url", function(event) {
+    $(document).on("click", ".results-page .change-url", function (event) {
         window.location.href = updateQueryStringParam('hospital_type', 1);
     });
 
@@ -151,7 +151,7 @@ $(document).ready(function() {
     // }
 
     // Toggle filter section
-    $('#show_filters').on('click', function(){
+    $('#show_filters').on('click', function () {
         $('#resultspage_form .filter-parent').slideToggle();
         $(this).toggleClass('open');
         // // Refresh the range slider as it is initially hidden
@@ -162,4 +162,31 @@ $(document).ready(function() {
     //     $('#sort_parent').slideToggle();
     //     $(this).toggleClass('open');
     // });
+});
+
+// Toggle the corporate content area
+$('.btn-more-info').on('click', function () {
+    var $target = $($(this).data('target'));
+    $(this)
+        .parents('.result-item')
+        .toggleClass('corporate-content-open');
+    if ($target.is(':visible')) {
+        $target
+            .slideUp()
+            .removeClass('open');
+        // Scroll back to the result item
+        var $scrollBack = $(this).parents('.result-item').offset().top;
+        console.log($scrollBack);
+        $('html, body').animate({
+            scrollTop: $scrollBack - 80
+        }, 800);
+    } else {
+        $target
+            .slideDown()
+            .addClass('open');
+        // Scroll to the corporate content area (compensate for the height of sticky header bar)
+        $('html, body').animate({
+            scrollTop: ($target.offset().top) - 80
+        }, 800);
+    }
 });

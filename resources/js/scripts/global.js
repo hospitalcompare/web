@@ -128,18 +128,20 @@ window.getHtmlDashTickValue = function(value, text = "") {
     return html;
 };
 
-window.toggleContent = function(speed = 400) {
+window.toggleContent = function(speed = 400, parent = 'body') {
     var $target = $($(this).data('target'));
     // console.log($target);
-    if($target.is(':visible'))
+    $(this).toggleClass('target-open');
+    if($target.is(':visible')) {
+        $(parent).addClass($(this).data('target') + '_open');
         $target
             .slideUp(speed)
             .removeClass('open');
-    else
+    } else {
+        $(parent).removeClass($(this).data('target') + '_open');
         $target
             .slideDown(speed)
-            .removeClass('open');
+            .addClass('open');
+    }
 };
 
-
-$('.btn-more-info').on('click', toggleContent);

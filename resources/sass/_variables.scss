@@ -25,6 +25,7 @@ $blue: #1b71f3;
 $violet: #8e00fe;
 $hanblue: #5e15d1;
 $green: #00e09d;
+$darkGreen: #21afae;
 $pink: #ed0373;
 $grey: #363636;
 $white: #ffffff;
@@ -170,3 +171,11 @@ $border-radius: 9px;
 
 // Misc
 $hospital-image-width: 150px;
+
+// Carousel
+$enable-gradients: false;
+$carousel-control-prev-icon-bg: url('../images/icons/carousel-prev.svg');
+$carousel-control-next-icon-bg: url('../images/icons/carousel-next.svg');
+$carousel-control-icon-width: 10px;
+$carousel-control-icon-height: 10px;
+$carousel-control-opacity: 1;

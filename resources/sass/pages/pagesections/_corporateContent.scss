@@ -4,6 +4,13 @@
     }
 }
 
+.corporate-content {
+    background-color: #fff;
+    //border-bottom: 20px solid $teal;
+    box-shadow: inset 0px -20px 0px 0px $teal;
+
+}
+
 .corporate-content-section-1 {
     width: $hospital-image-width;
 }
@@ -13,6 +20,7 @@
     //@extend .bg-teal;
     padding-left: 8px;
     padding-top: 18px;
+    padding-bottom: 60px;
 
     .nav-tabs {
         box-shadow: inset 0px -2px 0px 0px rgba(236, 236, 236, 1);
@@ -33,22 +41,67 @@
         }
     }
 
+    .tab-content {
+        @include reset-row-spacing(12px);
+    }
+
     .tab-pane,
     .media-pane {
         padding-top: 13px;
     }
 
     .media-pane {
+        .row {
+            @include reset-row-spacing(7.5px);
+        }
+
+        // Carousel styles
+        .carousel-inner {
+            margin-bottom: 6px;
+        }
+
+        .carousel-item {
+            @include aspect-ratio(100, 64, auto);
+        }
+
+        .indicators {
+            @include reset-row-spacing(3px);
+
+            .col-inner {
+                @include aspect-ratio(43, 40);
+                position: relative;
+                overflow: hidden;
+
+                img {
+                    @include v-h-c;
+                }
+            }
+        }
+
+        // Video
         .video-wrapper {
+            @include aspect-ratio(187, 140);
+
             .player-button {
                 width: 50%;
-                max-width: 60px;
+                max-width: 45px;
+                //@include aspect-ratio(576, 512);
             }
+        }
+
+        .video-caption {
+            margin-top: 5px;
         }
     }
 
     .special-offers-tab {
         padding: 14px 33px 17px;
+    }
+
+
+    .btn-more-info {
+        bottom: 0;
+        left: 8px;
     }
 }
 
@@ -56,3 +109,34 @@
     width: 14%;
 }
 
+// Carousel styles
+.carousel-inner {
+    margin-bottom: 10px;
+}
+
+.carousel-item {
+    @include aspect-ratio(190, 110, auto);
+}
+
+.indicators {
+    @include reset-row-spacing(5px);
+    cursor: pointer;
+
+    .col-inner {
+        @include aspect-ratio(43, 40);
+        position: relative;
+        overflow: hidden;
+
+        img {
+            @include v-h-c;
+        }
+    }
+}
+
+.modal-carousel {
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 20px;
+        height: 20px;
+    }
+}

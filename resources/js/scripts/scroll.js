@@ -9,6 +9,7 @@ $(document).ready(function () {
     //Smooth scroll for in page links
     $('a[href^="#"]')
         .not('.nav-link')
+        .not('.carousel-control')
         .on('click', function (e) {
         e.preventDefault();
         var hash = this.hash;

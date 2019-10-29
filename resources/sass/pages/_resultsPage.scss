@@ -4,7 +4,7 @@ $col-spacing: 18px;
     background-color: $lighterGrey;
 
     .results {
-        min-height: calc(100vh - 220px);
+        min-height: calc(60vh - 220px);
     }
 }
 
@@ -191,7 +191,7 @@ $col-spacing: 18px;
     }
 
     .result-item-header,
-    .result-item {
+    .result-item-inner {
         display: flex;
         @include responsive-columns;
     }
@@ -235,11 +235,12 @@ $col-spacing: 18px;
     }
 
     .result-item {
-        margin-bottom: 7px;
+        &:not(:first-child) {
+            margin-top: 7px;
+        }
+
         background-color: $white;
     }
-
-
 
 
     .result-item-inner {
@@ -445,6 +446,14 @@ $col-spacing: 18px;
     }
 }
 
+.result-item.corporate-content-open {
+    .hospital-details {
+        .btn-more-info {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+}
 
 .js-is-sticky {
     //padding-top: 85.6px;
@@ -456,7 +465,8 @@ $col-spacing: 18px;
     right: 0;
     width: 100%;
 
-    &.js-is-sticky {
+    &.js-is-sticky,
+    &.js-is-stuck {
         z-index: 1075;
     }
 }
