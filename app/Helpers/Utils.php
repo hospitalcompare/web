@@ -2,6 +2,7 @@
 
 namespace App\Helpers;
 
+use App\Models\Enquiry;
 use App\Models\Insurance;
 use App\Models\Procedure;
 use App\Models\Specialty;
@@ -404,5 +405,91 @@ class Utils
         $html = ($rating == 'Outstanding') ? '<span class="bg-cqc-star"></span>' : '<span class="cqc-colour bg-'. str_slug($rating) . '"></span>';
 
         return $html;
+    }
+
+    /**
+     * Create a CSV with Enquiries on a given period of time
+     *
+     * @param string $startDate
+     * @param string $endDate
+     * @return array
+     */
+    public static function createEnquiriesCsv($startDate = '', $endDate = '') {
+        //Check if we have the Directory
+        $path = public_path().'/enquiries';
+        \File::isDirectory($path) or \File::makeDirectory($path, 0777, true, true);
+
+        //Check if the file has already been created
+        if(empty($startDate))
+            $filename = 'All_'.date('d-m-Y').'.csv';
+        else
+            $filename = substr($startDate, 0 , 10).'_'.substr($endDate, 0 , 10).'.csv';
+
+        $file = $path.'/'.$filename;
+        //Check if the file exists
+        if(\File::exists($file))
+            return [
+                'path'      => $file,
+                'filename'  => $filename,
+                'external_link'     => url('/enquiries/'.$filename)
+            ];
+
+        $result = [];
+
+        //Get the Enquiries
+        if(empty($startDate))
+            $enquiries = Enquiry::with('specialty', 'hospital')->get();
+        else
+            $enquiries = Enquiry::whereBetween('created_at', [$startDate , $endDate])->with('specialty', 'hospital')->get();
+
+        if(!empty($enquiries)) {
+            $result[] = [
+                'Id',
+                'Specialty',
+                'Hospital Name',
+                'Hospital URL',
+                'Title',
+                'First Name',
+                'Last Name',
+                'Email',
+                'Phone Number',
+                'Postcode',
+                'Reason',
+                'Additional Information',
+                'Created At'
+            ];
+            //Loop through Enquiries and write them to disk
+            foreach($enquiries as $enquiry) {
+                $result[] = [
+                    $enquiry->id,
+                    $enquiry->specialty->name,
+                    $enquiry->hospital->name,
+                    $enquiry->hospital->url,
+                    $enquiry->title,
+                    $enquiry->first_name,
+                    $enquiry->last_name,
+                    $enquiry->email,
+                    $enquiry->phone_number,
+                    $enquiry->postcode,
+                    $enquiry->reason,
+                    $enquiry->additional_information,
+                    $enquiry->created_at
+                ];
+            }
+        }
+
+        if(!empty($result)) {
+            $fp = fopen($file, 'w');
+            foreach ($result as $fields) {
+                fputcsv($fp, $fields);
+            }
+            fclose($fp);
+        }
+
+        return [
+            'path'              => $file,
+            'filename'          => $filename,
+            'external_link'     => url('/enquiries/'.$filename)
+        ];
     }
 }
