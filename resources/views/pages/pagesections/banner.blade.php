@@ -13,7 +13,7 @@
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div class="box full-left ml-auto">
-                        <p>Find the best hospital<br>for your treatment</p><br>
+                        <p class="SofiaPro-Medium">Find the best hospital<br>for your treatment</p><br>
                         <form class="form-element" method="get" action="/results-page">
                             <div class="form-child">
                                 @include('components.basic.select', [
@@ -23,7 +23,7 @@
                                     'group'                 => true,
                                     'groupName'             => 'procedures',
                                     'suboptionClass'        => 'subprocedures',
-                                    'chevronFAClassName'    => 'fa-chevron-down aquaChevron',
+                                    'chevronFAClassName'    => 'fa-chevron-down aqua-chevron',
                                     'name'                  => 'procedure_id'
                                 ])
                                 <a tabindex="0" data-offset="30px, 40px"
@@ -81,13 +81,14 @@
 
                             <div class="form-child full-left d-flex">
                                 @include('components.basic.select', [
-                                    'showLabel' => true,
-                                    'selectClass'=> 'distance-dropdown',
-                                    'options' => \App\Helpers\Utils::radius,
-                                    'selectClassName'=> 'd-md-flex select_half-width w-100',
-                                    'placeholder' => 'How far would you like to travel?',
-                                    'chevronFAClassName' => '',
-                                    'name'=>'radius'])
+                                    'showLabel'             => true,
+                                    'selectClass'           => 'distance-dropdown',
+                                    'options'               => \App\Helpers\Utils::radius,
+                                    'selectClassName'       => 'd-md-flex select_half-width w-100',
+                                    'placeholder'           => 'How far would you travel?',
+                                    'chevronFAClassName'    => '',
+                                    'labelClass'            => 'font-18',
+                                    'name'                  =>'radius'])
                                 <a tabindex="0" data-offset="30px, 40px"
                                    class="help-link"
                                     @include('components.basic.popover', [
@@ -108,10 +109,13 @@
                                 >?</a>
                             </div>
 
-                            @include('components.basic.submit', ['classTitle' => 'btn btn-m btn-grad btn-teal', 'button' => 'Find Hospitals'])
+                            @include('components.basic.submit', [
+                                'classTitle'    => 'btn btn-m btn-grad btn-teal py-3 mb-3',
+                                'button'        => 'Find Hospitals'])
 
-                            <p class='browseButton'><a href="{{url('/results-page')}}">Browse all hospitals</a></p>
-
+                            <div class='browse-button'>
+                                <a class="SofiaPro-Medium" href="{{url('/results-page')}}">Browse all hospitals</a>
+                            </div>
                         </form>
                     </div>
                 </div>

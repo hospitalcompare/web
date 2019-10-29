@@ -33,7 +33,6 @@
 .box {
     width: 100%;
     max-width: 511px;
-    min-height: 431px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.75);
     padding: 20px 30px;
@@ -83,7 +82,6 @@
 }
 
 .promo-list {
-
     li {
         list-style: none;
         font-size: 24px;
@@ -102,21 +100,18 @@
     }
 }
 
-.browseButton {
+.browse-button {
     text-align: center;
-    font-size: 1.2em;
 
     a {
         color: $darkerGrey;
-        font-size: 14px;
+        @include font-size(14);
         font-weight: 400;
         letter-spacing: -0.7px;
-        line-height: 19px;
     }
-
 }
 
-.aquaChevron {
+.aqua-chevron {
     color: $aqua;
     position: absolute;
     right: 20px;
@@ -141,7 +136,6 @@
         max-height: 222px;
         overflow: auto;
     }
-
 }
 
 
