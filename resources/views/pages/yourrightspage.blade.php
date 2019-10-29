@@ -23,7 +23,7 @@
                         implemented the principles and policy drivers introduced in a Government White paper in 2010.
                         Among these policies were:
                     </p>
-                    <ul>
+                    <ul class="blue-dot">
                         <li><strong>Choice:</strong> putting Patients and the Public first and increasing the
                             involvement of Patients in decisions affecting them and, importantly giving patients Choice
                             of healthcare provider for their treatment, whether public sector of private sector.
@@ -74,7 +74,7 @@
                     <h2>Choosing your GP
                     </h2>
                     <p>You can:</p>
-                    <ul>
+                    <ul class="blue-dot">
                         <li>Choose which GP practice you register with.
                         </li>
                         <li>Ask to see a particular doctor or nurse at the GP practice. Your practice must make every
@@ -85,7 +85,7 @@
                     <h2>Choosing your Hospital and Consultant
                     </h2>
                     <p>You can</p>
-                    <ul>
+                    <ul class="blue-dot">
                         <li>Choose the organisation you need to be referred to as an NHS outpatient to see a consultant
                             or specialist (an outpatient appointment means you will not be admitted to a ward). You may
                             choose whenever you are referred for the first time for an appointment for a physical or

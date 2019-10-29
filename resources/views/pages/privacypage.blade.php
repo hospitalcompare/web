@@ -115,7 +115,7 @@
                                     </p>
                                     <p>We may collect, use, store and transfer different kinds of personal data about
                                         you which we have grouped together as follows:</p>
-                                    <ul>
+                                    <ul class="blue-dot">
                                         <li><strong>Identity Data</strong> includes first name, maiden name, last name,
                                             username or similar identifier, marital status, title, date of birth and
                                             gender.
@@ -204,12 +204,12 @@
                                 <div class="card-body">
                                     <p>We use different methods to collect data from and about you including through:
                                     </p>
-                                    <ul>
+                                    <ul class="blue-dot">
                                         <li><strong>Direct interactions</strong> You may give us your Identity or
                                             Contact Data by clicking links or filling in enquiry or other forms on our
                                             website or by corresponding with us by post, phone, email or otherwise. This
                                             includes personal data you provide when you:
-                                            <ul>
+                                            <ul class="blue-dot">
                                                 <li>complete an enquiry form on our website to be referred to a private
                                                     hospital or broker or other service;
                                                 </li>
@@ -229,7 +229,7 @@
                                         <li><strong>Third parties or publicly available sources</strong> We will receive
                                             personal data about you from various third parties and public sources as set
                                             out below:
-                                            <ul>
+                                            <ul class="blue-dot">
                                                 <li>
                                                     Technical Data from the following parties:
                                                     <ol class="alpha">
@@ -267,7 +267,7 @@
                                 <div class="card-body">
                                     <p>We will only use your personal data when the law allows us to. Most commonly, we
                                         will use your personal data in the following circumstances:</p>
-                                    <ul>
+                                    <ul class="blue-dot">
                                         <li>Where we need to perform a contract we are about to enter into or have
                                             entered into with you.
                                         </li>
@@ -559,7 +559,7 @@
                                         set out in the table <i>Purposes for which we will use your personal data</i>
                                         above.
                                     </p>
-                                    <ul>
+                                    <ul class="blue-dot">
                                         <li>Internal Third Parties as set out in the <a href="/glossary"
                                                                                         class="btn-link">glossary</a>.
                                         </li>
@@ -608,7 +608,7 @@
                                         degree of protection is afforded to it by ensuring at least one of the following
                                         safeguards is implemented:
                                     </p>
-                                    <ul>
+                                    <ul class="blue-dot">
                                         <li>We will only transfer your personal data to countries that have been deemed
                                             to provide an adequate level of protection for personal data by the European
                                             Commission. For further details, see European Commission: Adequacy of the
@@ -742,7 +742,7 @@
                                             <strong>Request restriction</strong> of processing of your personal data.
                                             This enables you to ask us to suspend the processing of your personal data
                                             in the following scenarios:
-                                            <ul>
+                                            <ul class="blue-dot">
                                                 <li>If you want us to establish the data's accuracy.
                                                 </li>
                                                 <li>Where our use of the data is unlawful but you do not want us to
@@ -836,7 +836,7 @@
                                         administration services and undertake leadership reporting.
                                     </p>
                                     <h3>External Third Parties</h3>
-                                    <ul>
+                                    <ul class="blue-dot">
                                         <li>Service or product providers who are also processors based within or outside
                                             the EEA who provide services or products to consumers or who provide IT and
                                             system administration services.

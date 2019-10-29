@@ -1,5 +1,5 @@
 @unless(!$showLinks)
-<ul>
+<ul class="blue-dot">
     @foreach($cards as $card)
         <li>
             <a href="#heading_{{ $loop->iteration }}" class="btn-link">{{ $card['title'] }}</a>
