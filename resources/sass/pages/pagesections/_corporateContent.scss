@@ -47,6 +47,34 @@
     }
 
     .media-pane {
+        .row {
+            @include reset-row-spacing(7.5px);
+        }
+
+        // Carousel styles
+        .carousel-inner {
+            margin-bottom: 6px;
+        }
+
+        .carousel-item {
+            @include aspect-ratio(190, 110);
+        }
+
+        .indicators {
+            @include reset-row-spacing(3px);
+
+            .col-inner {
+                @include aspect-ratio(43, 40);
+                position: relative;
+                overflow: hidden;
+
+                img {
+                    @include v-h-c;
+                }
+            }
+        }
+
+        // Video
         .video-wrapper {
             .player-button {
                 width: 50%;
