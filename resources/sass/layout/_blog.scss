@@ -117,6 +117,17 @@
         background-position: left;
         background-repeat: no-repeat;
         background-size: cover;
+
+        .svg-wrapper {
+            @include aspect-ratio(1180, 150);
+            height: 150px;
+            background-image: url('../images/icons/heart-line-blog.svg');
+            @include icon-bg-center(100%);
+
+            svg {
+                display: none;
+            }
+        }
     }
 
     .blog-content {
