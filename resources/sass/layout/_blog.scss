@@ -17,7 +17,7 @@
 
         .blog-wrap {
             text-decoration: none !important;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
 
             a {
                 text-decoration: none !important;
@@ -54,6 +54,7 @@
             .date {
                 color: $teal;
                 @include font-size(20);
+                letter-spacing: -0.6px;
             }
 
             .description {

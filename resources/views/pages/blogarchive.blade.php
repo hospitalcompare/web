@@ -18,7 +18,7 @@
                 <h1>Latest blogs</h1>
                 <div class="blog-section-parent">
                     <div class="blog-content row">
-                        @include('components.blogs', [
+                        @include('components.blogloop', [
                             'blogs' => $data['blogs'],
                             'buttonClass'       => 'btn btn-block btn-read-more text-center',
                             'buttonTitle'       => 'Read more'
