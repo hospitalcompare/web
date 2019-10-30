@@ -13,7 +13,7 @@
     }
 
     .blog-content {
-        @include reset-row-spacing('20px');
+        @include reset-row-spacing(20px);
 
         .blog-wrap {
             text-decoration: none !important;
