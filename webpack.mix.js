@@ -14,7 +14,6 @@ const webpack = require('webpack');
  */
 
 
-
 mix.webpackConfig({
     devtool: "source-map",
     plugins: [
@@ -56,11 +55,9 @@ mix.sass('resources/sass/app.scss', 'public/css')
             require('postcss-flexbugs-fixes')(),
         ],
         processCssUrls: false
-    });
-
-mix.js(['resources/js/app.js'], 'public/js');
-// mix.copy('resources/js/cookies.js', 'public/js');
-// mix.js(['resources/js/cookies.js'], 'public/js');
+    })
+    .js(['resources/js/app.js'], 'public/js')
+    .version();
 
 // Reload browser when something changes
 mix.browserSync({
@@ -74,7 +71,6 @@ mix.browserSync({
     proxy: process.env.APP_URL,
     port: 8080,
     ghostMode: false
-});
-
-// Disable notification sounds
-mix.disableSuccessNotifications();
+})
+//Disable notification sounds
+    .disableSuccessNotifications();

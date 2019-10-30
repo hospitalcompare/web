@@ -29,9 +29,9 @@
 						c-76.8,13.8-155.7-7.2-228.4-35.7c-32-12.6-63.7-26.7-97.3-34.1s-70-7.7-101.1,6.9"></path>
 					</svg>
                     </div>
-                    <div class="blog-title font-36 SofiaPro-SemiBold my-3">{!! $data['blog']['title'] !!}</div>
+                    <div class="blog-title font-36 SofiaPro-Bold my-3">{!! $data['blog']['title'] !!}</div>
                     <hr class="bg-teal">
-                    <div class="font-24 SofiaPro-Medium mt-3 mb-4">
+                    <div class="font-24 SofiaPro-SemiBold mt-3 mb-4">
                         <span class="d-inline-block col-teal">Date:&nbsp;</span>{{date('dS F Y', strtotime($data['blog']['created_at']))}}
 {{--                        <span class="ml-5 d-inline-block col-teal">Category:&nbsp;</span>Category name--}}
                     </div>
@@ -39,7 +39,7 @@
                         {!! $data['blog']['description'] !!}
                     </div>
                     <div class="sharing-is-caring">
-                        <span class="col-teal font-24 SofiaPro-Medium">Share:&nbsp;</span>
+                        <span class="col-teal font-24 SofiaPro-SemiBold">Share:&nbsp;</span>
                         <ul class="d-inline-block sharing-icons">
                             @if(!empty($data['blog']['facebook']))
                                 <li class="d-inline-block">

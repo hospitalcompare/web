@@ -43,7 +43,9 @@ $(document).ready(function () {
             // video.addEventListener('play', updateButton);
             // video.addEventListener('pause', updateButton);
 
-            toggle.addEventListener('click', togglePlay);
+            if(toggle){
+                toggle.addEventListener('click', togglePlay);
+            }
 
             // mute.addEventListener('click', toggleSound);
 
