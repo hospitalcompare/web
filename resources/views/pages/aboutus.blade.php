@@ -17,7 +17,7 @@
             <div class="col hc-content">
                 <h1>About Hospital Compare</h1>
                 <p>Hospital Compare is an independent private company whose purpose and mission is to empower you by:</p>
-                <ul>
+                <ul class="blue-dot">
                     <li>informing you of the Choices available to you in law for your hospital treatment</li>
                     <li>helping you choose the best hospital in England for your treatment</li>
                     <li>helping you to understand your available choices to have your hospital treatment performed
