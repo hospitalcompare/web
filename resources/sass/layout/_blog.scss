@@ -121,8 +121,9 @@
         .svg-wrapper {
             @include aspect-ratio(1180, 150);
             height: 150px;
-            background-image: url('../images/icons/heart-line-blog.svg');
-            @include icon-bg-center(100%);
+            margin-bottom: 30px;
+            background-image: url('../images/icons/heart-line.svg');
+            @include icon-bg-center(110%);
 
             svg {
                 display: none;
