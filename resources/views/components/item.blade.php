@@ -15,7 +15,7 @@
                     {{$title}}
                 </p>
                 @if(!empty($locationSpecialism))
-                <p class="sort-item-specialism col-teal mb-1"><strong>Specialist centre:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
+                    <p class="sort-item-specialism col-teal mb-1"><strong>Specialist centre:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
                 @endif
                 <p class="sort-item-location">{{$location}} {{-- trim($town, ', ') --}}</p>
 {{--                @include('components.basic.modalbutton', [--}}

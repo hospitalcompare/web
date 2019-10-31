@@ -164,7 +164,7 @@
                 @include('components.item', [
                     'id'                    => $d['id'],
                     'itemImg'               => 'images/alder-1.png',
-                    'title'                 => $d['name'],
+                    'title'                 => !empty($d['display_name'])? $d['display_name'] : $d['name'],
                     'location'              => (!empty($d['radius'])) ? number_format($d['radius'], 1 ) . ' miles from postcode' : '',
                     'town'                  => (!empty($d['address']['city']) ? ', ' . $d['address']['city'] : ''),
                     'county'                => (!empty($d['address']['county']) ? $d['address']['county'] : ''),

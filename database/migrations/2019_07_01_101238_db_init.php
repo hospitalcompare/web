@@ -72,6 +72,7 @@ class DbInit extends Migration
                 $table->string('location_specialism')->nullable();
                 $table->string('ods_code')->nullable();
                 $table->string('name');
+                $table->string('display_name')->nullable();
                 $table->string('tel_number')->nullable();
                 $table->string('url')->nullable();
 //                $table->string('report_url')->nullable();
