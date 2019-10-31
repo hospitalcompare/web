@@ -21,7 +21,7 @@
         list-style-type: none;
     }
 
-    ul.bullets {
+    ul.blue-dot {
         //padding: 0 0 0 50px;
         margin: 30px 0 50px 0;
 
@@ -30,6 +30,10 @@
             margin: 0 0 22px 0;
             position: relative;
             padding: 0 0 0 40px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
 
             &:before {
                 content: '';

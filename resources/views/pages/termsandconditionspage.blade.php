@@ -100,7 +100,7 @@
                                     <p>
                                             These terms of use refer to the following additional terms, which also apply to your use of our site and services:
                                     </p>
-                                    <ul>
+                                    <ul class="blue-dot">
                                         <li>Our <a href="/privacy-policy" class="btn-link">Privacy Policy</a>. This sets out information confirming how we respect your                                                     privacy. If you complete an enquiry form on our site to make an enquiry to a hospital or other service provider that hospital or service provider will have terms and conditions relating to your enquiry and privacy which you should consider.
                                         </li>
                                         <li>Our <a href="/cookie-policy" class="btn-link">Cookie Policy</a>, which sets out information about the cookies on our site.
@@ -199,7 +199,7 @@
                         ],
                         [
                             'title' => 'Our responsibility for loss or damage suffered by you',
-                            'content' => '<ul>
+                            'content' => '<ul class="blue-dot">
                                             <li>We do not exclude or limit in any way our liability to you where it would be unlawful to do so. This includes
                                                 liability for death or personal injury caused by our negligence or the negligence of our employees, agents or
                                                 subcontractors and for fraud or fraudulent misrepresentation. With these exceptions and save as mentioned below

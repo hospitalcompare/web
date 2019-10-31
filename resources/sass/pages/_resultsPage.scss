@@ -1,5 +1,3 @@
-$col-spacing: 18px;
-
 .results-page {
     background-color: $lighterGrey;
 
@@ -248,6 +246,12 @@ $col-spacing: 18px;
         flex-direction: column;
         flex-wrap: wrap;
         margin: auto;
+
+        .hospital-image {
+            width: $hospital-image-width;
+            @include aspect-ratio(134px, 123px);
+        }
+
         @include media-breakpoint-up(lg) {
             flex-direction: row;
 
@@ -261,8 +265,6 @@ $col-spacing: 18px;
 
                 .hospital-image {
                     flex: 0 0 $hospital-image-width;
-                    width: $hospital-image-width;
-                    @include aspect-ratio(134px, 123px);
                 }
 
                 .hospital-details {

@@ -159,7 +159,6 @@
                     <div class="media-pane col-5">
                         <div class="row mb-5">
                             <div class="col-6">
-                            {{ !empty($d['corporate_content']) ?? '' }}
                             <!--Carousel Wrapper-->
                                 <div class="carousel-wrapper position-relative">
                                     <div id="carousel-thumb_{{ $id }}"
@@ -182,6 +181,11 @@
                                                      src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).jpg"
                                                      alt="Third slide">
                                             </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block h-100 content"
+                                                     src="https://mdbootstrap.com/img/Photos/Slides/img%20(121).jpg"
+                                                     alt="Second slide">
+                                            </div>
                                         </div>
                                         <!--/.Slides-->
                                         <!--Controls-->
@@ -202,22 +206,25 @@
                                         <li data-target="#carousel-thumb" data-slide-to="0" class="active col-3">
                                             <div class="col-inner">
                                                 <img class="d-block h-100"
-                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg"
-                                                     class="img-fluid">
+                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg">
                                             </div>
                                         </li>
                                         <li data-target="#carousel-thumb" data-slide-to="1" class="col-3">
                                             <div class="col-inner">
                                                 <img class="d-block h-100"
-                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg"
-                                                     class="img-fluid">
+                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg">
                                             </div>
                                         </li>
                                         <li data-target="#carousel-thumb" data-slide-to="2" class="col-3">
                                             <div class="col-inner">
                                                 <img class="d-block h-100"
-                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg"
-                                                     class="img-fluid">
+                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg">
+                                            </div>
+                                        </li>
+                                        <li data-target="#carousel-thumb" data-slide-to="3" class="col-3">
+                                            <div class="col-inner">
+                                                <img class="d-block h-100"
+                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg">
                                             </div>
                                         </li>
                                     </ol>
@@ -277,6 +284,7 @@
                 </div>
                 @include('components.basic.button', [
                     'classTitle'        => 'btn btn-xs btn-icon btn-more-info btn-darkgreen position-absolute',
+                    'style'             => 'width: 90px',
                     'icon'              => 'fa fa-caret-up fa-sm',
                     'button'            => 'Close',
                     'dataTarget'        => '#corporate_content_hospital_' . $id
@@ -290,7 +298,7 @@
     'id' => $id,
     'carouselContent'   => '        <div class="carousel-wrapper position-relative">
                                         <div id="carousel-thumb_modal_' . $id .'"
-                                             class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+                                             class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel" data-interval="false">
                                             <!--Slides-->
                                             <div class="carousel-inner" role="listbox">
                                                 <div class="carousel-item active">
@@ -307,6 +315,11 @@
                                                     <img class="d-block h-100 content"
                                                          src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).jpg"
                                                          alt="Third slide">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img class="d-block h-100 content"
+                                                         src="https://mdbootstrap.com/img/Photos/Slides/img%20(88).jpg"
+                                                         alt="First slide">
                                                 </div>
                                             </div>
                                             <!--/.Slides-->
@@ -328,22 +341,25 @@
                                             <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="0" class="active col-3">
                                                 <div class="col-inner">
                                                     <img class="d-block h-100"
-                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg"
-                                                         class="img-fluid">
+                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg">
                                                 </div>
                                             </li>
                                             <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="1" class="col-3">
                                                 <div class="col-inner">
                                                     <img class="d-block h-100"
-                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg"
-                                                         class="img-fluid">
+                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg">
                                                 </div>
                                             </li>
                                             <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="2" class="col-3">
                                                 <div class="col-inner">
                                                     <img class="d-block h-100"
-                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg"
-                                                         class="img-fluid">
+                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg">
+                                                </div>
+                                            </li>
+                                            <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="3" class="col-3">
+                                                <div class="col-inner">
+                                                    <img class="d-block h-100"
+                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg">
                                                 </div>
                                             </li>
                                         </ol>

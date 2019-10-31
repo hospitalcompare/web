@@ -13,11 +13,11 @@
     }
 
     .blog-content {
-        @include reset-row-spacing('20px');
+        @include reset-row-spacing(20px);
 
         .blog-wrap {
             text-decoration: none !important;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
 
             a {
                 text-decoration: none !important;
@@ -54,6 +54,7 @@
             .date {
                 color: $teal;
                 @include font-size(20);
+                letter-spacing: -0.6px;
             }
 
             .description {
@@ -103,6 +104,10 @@
 }
 
 .blog-item-page {
+    .blog-title {
+        letter-spacing: -1.6px;
+    }
+
     main {
         padding-top: 25px;
     }
@@ -112,17 +117,31 @@
         background-position: left;
         background-repeat: no-repeat;
         background-size: cover;
+
+        .svg-wrapper {
+            @include aspect-ratio(1180, 150);
+            height: 150px;
+            margin-bottom: 30px;
+            background-image: url('../images/icons/heart-line.svg');
+            @include icon-bg-center(110%);
+
+            svg {
+                display: none;
+            }
+        }
     }
 
     .blog-content {
         p {
             @include font-size(20);
+            @extend .SofiaPro-SemiBold;
         }
     }
 
     .sharing-icons {
         li {
             margin-right: 12px;
+            width: 20px;
 
             svg {
                 height: 24px;

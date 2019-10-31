@@ -111,7 +111,7 @@
 
 // Carousel styles
 .carousel-inner {
-    margin-bottom: 10px;
+    //margin-bottom: 10px;
 }
 
 .carousel-item {
@@ -122,18 +122,29 @@
     @include reset-row-spacing(5px);
     cursor: pointer;
 
-    .col-inner {
-        @include aspect-ratio(43, 40);
-        position: relative;
-        overflow: hidden;
+    li {
+        margin-bottom: 6px;
 
-        img {
-            @include v-h-c;
+        .col-inner {
+            @include aspect-ratio(43, 40);
+            position: relative;
+            overflow: hidden;
+
+            img {
+                @include v-h-c;
+            }
         }
     }
 }
 
 .modal-carousel {
+    .indicators {
+        li {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+    }
+
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         width: 20px;

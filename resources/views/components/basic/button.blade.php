@@ -1,4 +1,5 @@
 <a id="{{ empty($id) ? '' : $id }}"
+   style="{{ $style ?? '' }}"
    class="{{$classTitle}}"
    target="{{ !empty($target) && $target == 'blank' ? '_blank' : '' }}"
    data-target="{!! $dataTarget ?? '' !!}"

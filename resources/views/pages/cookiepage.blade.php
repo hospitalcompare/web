@@ -24,7 +24,7 @@
                         drive of your computer if you agree. Cookies contain information that is transferred to your
                         computer's hard drive.</p>
                     <p>We use the following cookies:</p>
-                    <ul>
+                    <ul class="blue-dot">
                         <li><strong>Strictly necessary cookies.</strong> These are cookies that are required for the
                             operation of our website. They include, for example, cookies that enable you to log into
                             secure areas of our website.

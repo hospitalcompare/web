@@ -176,7 +176,6 @@ $('.btn-more-info').on('click', function () {
             .removeClass('open');
         // Scroll back to the result item
         var $scrollBack = $(this).parents('.result-item').offset().top;
-        console.log($scrollBack);
         $('html, body').animate({
             scrollTop: $scrollBack - 80
         }, 800);
@@ -186,7 +185,8 @@ $('.btn-more-info').on('click', function () {
             .addClass('open');
         // Scroll to the corporate content area (compensate for the height of sticky header bar)
         $('html, body').animate({
-            scrollTop: ($target.offset().top) - 80
+            scrollTop: ($(this).parents('.result-item').offset().top) - 80
+            // scrollTop: ($target.offset().top) - 80
         }, 800);
     }
 });

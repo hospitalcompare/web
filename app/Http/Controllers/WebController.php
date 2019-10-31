@@ -225,7 +225,7 @@ class WebController extends BaseController
         $this->returnedData['success'] = true;
         $this->returnedData['data']['blogs'] = $blogs;
 
-        return view('pages.blog', $this->returnedData);
+        return view('pages.blogarchive', $this->returnedData);
     }
 
     // Blog item page
