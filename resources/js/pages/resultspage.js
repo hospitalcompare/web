@@ -185,7 +185,8 @@ $('.btn-more-info').on('click', function () {
             .addClass('open');
         // Scroll to the corporate content area (compensate for the height of sticky header bar)
         $('html, body').animate({
-            scrollTop: ($target.offset().top) - 80
+            scrollTop: ($(this).parents('.result-item').offset().top) - 80
+            // scrollTop: ($target.offset().top) - 80
         }, 800);
     }
 });
