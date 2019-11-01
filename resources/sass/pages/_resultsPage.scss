@@ -78,12 +78,11 @@
 
     .results-page-select,
     .dropdown-toggle {
-        padding: 10px 40px 10px 13px;
+        padding: 8px 40px 8px 13px;
         background-color: $white;
         color: $darkerGrey;
         @include font-size(14);
         letter-spacing: -0.6px;
-        line-height: 17px;
     }
 
     .filter-parent {
@@ -112,7 +111,8 @@
 
             @include placeholder {
                 font-size: 18px;
-                //text-transform: uppercase;
+                color: #1c1c1c;
+                font-family: 'SofiaPro-Medium', sans-serif;
             }
         }
     }

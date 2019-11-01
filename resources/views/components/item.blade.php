@@ -11,7 +11,7 @@
                 <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
             </div>
             <div class="hospital-details w-100 position-relative">
-                <p class="sort-item-title SofiaPro-Medium" id="item_name_{{$id}}">
+                <p class="sort-item-title SofiaPro-SemiBold" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
                 @if(!empty($locationSpecialism))
