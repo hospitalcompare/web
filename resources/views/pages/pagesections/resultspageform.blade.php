@@ -18,6 +18,7 @@
                             'label'         => 'Within radius of:',
                             'placeholder'   => '',
                             'classTitle'    => '',
+                            'labelClass'    => 'SofiaPro-SemiBold',
                             'value'         => !empty(Request::input('radius')) ? Request::input('radius') : 4,
                             'name'          => 'radius',
                             'step'          => 1])
@@ -41,7 +42,7 @@
                         'chevronFAClassName'    => 'fa-chevron-down black-chevron',
                         'selectClass'           => 'select-picker highlight-search-dropdown',
                         'name'                  =>'procedure_id',
-                        'labelClass'          => 'font-14'
+                        'labelClass'          => 'font-14 SofiaPro-Medium'
                     ])
                     <a tabindex="0" data-offset="30px, 40px"
                        class="help-link"
@@ -72,7 +73,7 @@
                         'selectClass'           => 'results-page-select highlight',
                         'placeholder'           =>'Waiting time',
                         'name'                  =>'waiting_time',
-                        'labelClass'            => 'font-14'])
+                        'labelClass'            => 'font-14 SofiaPro-Medium'])
                     <a tabindex="0" data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [
@@ -102,7 +103,7 @@
                         'selectClass' => 'results-page-select highlight',
                         'placeholder'=>'NHS User Rating',
                         'name'=>'user_rating',
-                        'labelClass' => 'font-14'])
+                        'labelClass' => 'font-14 SofiaPro-Medium'])
                     <a tabindex="0" data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [
@@ -130,7 +131,7 @@
                         'selectClass' => 'results-page-select highlight',
                         'placeholder'=>'Care Quality Rating',
                         'name'=>'quality_rating',
-                        'labelClass' => 'font-14'])
+                        'labelClass' => 'font-14 SofiaPro-Medium'])
                     <a tabindex="0" data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [
@@ -151,7 +152,7 @@
                     >?</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
-                    @include('components.basic.select', ['selectClassName' => 'w-100', 'showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Hospital Type', 'name'=>'hospital_type', 'labelClass' => 'font-14'])
+                    @include('components.basic.select', ['selectClassName' => 'w-100', 'showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Hospital Type', 'name'=>'hospital_type', 'labelClass' => 'font-14 SofiaPro-Medium'])
                     <a tabindex="0" data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [
@@ -184,7 +185,7 @@
                         'selectClass'           => 'highlight-search-dropdown select-picker',
                         'placeholder'           => 'Insurance',
                         'name'                  => 'policy_id',
-                        'labelClass'          => 'font-14'
+                        'labelClass'          => 'font-14 SofiaPro-Medium'
                     ])
                     <a tabindex="0" data-offset="30px, 40px"
                        class="help-link"
@@ -211,7 +212,7 @@
     <div class="sort-parent" id="sort_parent">
         <div class="container">
             <div class="sort-bar row">
-                <div class="show-section col-12 col-md-6">
+                <div class="show-section col-12 col-md-6 SofiaPro-Medium">
                     Showing {{$data['hospitals']->total()}} hospital(s) | Ordered
                     by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating & Distance' : 'Care Quality Rating & Waiting Time') }}
                 </div>
@@ -226,11 +227,11 @@
                         'showLabel' => true,
                         'options' => $data['sortBy'],
                         'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                        'selectClass' => 'results-page-select select-sort-by',
+                        'selectClass' => 'results-page-select select-sort-by SofiaPro-Medium font-16',
                         'selectClassName' => 'pl-3',
                         'placeholder'=>'Sort by:',
                         'name'=>'sort_by',
-                        'labelClass' => 'sortLabel'])
+                        'labelClass' => 'sortLabel SofiaPro-Medium'])
                 </div>
             </div>
         </div>

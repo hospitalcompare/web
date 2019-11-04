@@ -45,28 +45,22 @@
                     <div class="sharing-is-caring">
                         <span class="col-teal font-24 SofiaPro-SemiBold">Share:&nbsp;</span>
                         <ul class="d-inline-block sharing-icons">
-                            @if(!empty($data['blog']['facebook']))
-                                <li class="d-inline-block">
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ $data['blog']['facebook'] }}"
-                                        target="_blank" title="Share to Facebook"><i class="fab fa-facebook-f"></i></a>
-                                </li>
-                            @endif
-                            @if(!empty($data['blog']['twitter']))
-                                <li class="d-inline-block">
-                                    <a target="_blank" href="{{$data['blog']['twitter']}}" class=""
-                                       data-show-count="false" title="Share to twitter">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                            @endif
-                            @if(!empty($data['blog']['linkedin']))
-                                <li class="d-inline-block">
-                                    <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{$data['blog']['linkedin']}}&title={{urlencode($data['blog']['title']) }}"
-                                       title="Share to LinkedIn">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                </li>
-                            @endif
+                            <li class="d-inline-block"><a
+                                    href="https://www.facebook.com/sharer/sharer.php?u={{ url()->full() }}"
+                                    target="_blank" title="Share to Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="d-inline-block">
+                                <a target="_blank" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class=""
+                                   data-show-count="false" title="Share to twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="d-inline-block">
+                                <a target="_blank"
+                                   href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(url()->full()) }}&title={{ $data['blog']['title'] }}"
+                                   title="Share to LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
                             <li class="d-inline-block">
                                 <a href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://www.hospitalcompare.co.uk"
                                    title="Share by Email"><i class="fas fa-envelope"></i>
@@ -78,8 +72,4 @@
             </div>
         </div>
     </section>
-
-@endsection
-@section('scripts')
-{{--    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>--}}
 @endsection

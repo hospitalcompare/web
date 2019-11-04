@@ -1,5 +1,5 @@
 @if(!empty($label))
-    <label for="{{empty($id)? '' : $id}}">{{ $label }}</label>
+    <label class="{{ $labelClass ?? '' }}" for="{{empty($id)? '' : $id}}">{{ $label }}</label>
 @endif
 <input class="{{ $classTitle ?? '' }}"
        type="text"

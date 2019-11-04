@@ -27,7 +27,7 @@
                 <div class="col">
                     <div class="social">
                         {{--            @include('components.logo', ['titleParent' => 'footerLogoParent', 'logoImg' => 'footerLogoImg', 'logoTitle' => 'footerLogoTitle'])--}}
-                        <p>Helping you to make the best healthcare choices</p>
+                        <p class="font-20 SofiaPro-Light">Helping you to make the best healthcare choices</p>
                         <ul class="social-list">
                             <li>
                                 <a href=""><i class="fab fa-facebook-f"></i></a>

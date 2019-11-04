@@ -11,11 +11,11 @@
                 <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
             </div>
             <div class="hospital-details w-100 position-relative">
-                <p class="sort-item-title SofiaPro-Medium" id="item_name_{{$id}}">
+                <p class="sort-item-title SofiaPro-SemiBold" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
                 @if(!empty($locationSpecialism))
-                    <p class="sort-item-specialism col-teal mb-1"><strong>Specialist centre:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
+                    <p class="sort-item-specialism col-teal mb-1"><strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
                 @endif
                 <p class="sort-item-location">{{$location}} {{-- trim($town, ', ') --}}</p>
 {{--                @include('components.basic.modalbutton', [--}}
@@ -46,7 +46,7 @@
         <div class="result-item-section-2">
             {{-- CQC rating  --}}
             <div class="result-item-section-2__child">
-                <p class="h-50 d-flex align-items-center" @includeWhen(empty($qualityRating), 'components.basic.popover', [
+                <p class="h-50 d-flex align-items-center SofiaPro-Medium" @includeWhen(empty($qualityRating), 'components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
@@ -106,7 +106,7 @@
             </div>
             {{-- Waiting time --}}
             <div class="result-item-section-2__child flex-column">
-                <p @includeWhen(empty($waitTime), 'components.basic.popover', [
+                <p class="SofiaPro-Medium" @includeWhen(empty($waitTime), 'components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
@@ -130,7 +130,7 @@
             </div>
             {{-- End waiting time --}}
             <div class="result-item-section-2__child">
-                <p class="h-50 d-flex align-items-center" @include('components.basic.popover', [
+                <p class="h-50 d-flex align-items-center SofiaPro-Medium" @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
@@ -149,7 +149,7 @@
             </div>
             {{-- % operations cancelled --}}
             <div class="result-item-section-2__child">
-                <p class="h-50 d-flex align-items-center"
+                <p class="h-50 d-flex align-items-center SofiaPro-Medium"
                     @include('components.basic.popover', [
                     'trigger' => 'hover',
                     'html'    => 'true',
@@ -160,7 +160,7 @@
             </div>
             {{-- Friends and family --}}
             <div class="result-item-section-2__child">
-                <p class="m-0 h-50 d-flex align-items-center"
+                <p class="m-0 h-50 d-flex align-items-center SofiaPro-Medium"
                     @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',

@@ -20,7 +20,8 @@
             margin-bottom: 15px;
 
             a {
-                font-size: 22px;
+                @include font-size(22);
+                @extend .SofiaPro-Medium;
             }
         }
     }
