@@ -214,7 +214,6 @@ class Hospital extends Model
         if(!empty($procedureId)) {
             $procedure = Procedure::where('id', $procedureId)->first();
             $specialtyId = $procedure->specialty_id;
-
         } else {
             $specialty = Specialty::where('name', 'Total')->first();
             $specialtyId = $specialty->id;
@@ -357,8 +356,11 @@ class Hospital extends Model
 
         //Get the special Offers
         $radius = 50;
+        $hospitalType = 'Independent';
         do {
-            $specialOffers = self::getSpecialOffers($latitude, $longitude, $radius, $specialtyId, $preHospitals);
+            if($radius > 200)
+                $hospitalType = 'NHS';
+            $specialOffers = self::getSpecialOffers($latitude, $longitude, $radius, $specialtyId, $preHospitals, $hospitalType);
             $radius += 20;
         } while (empty($specialOffers['purple']) || empty($specialOffers['pink']));
 
@@ -444,7 +446,7 @@ class Hospital extends Model
      *
      * @return array
      */
-    public static function getSpecialOffers($latitude = '', $longitude = '', $radius = 50, $specialtyId = 0, $hospitals = []) {
+    public static function getSpecialOffers($latitude = '', $longitude = '', $radius = 50, $specialtyId = 0, $hospitals = [], $hospitalType = 'Independent') {
         $specialOffers = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'policies']);
         $outstandingFlag = 0;
 
@@ -501,8 +503,8 @@ class Hospital extends Model
 
         $purple = $specialOffers->first();
         //Best Private hospital which satisfies the above (if it isn’t already the purple) or the second best private (if the purple offer is a private hospital)
-        $prePink = $specialOffers->whereHas('hospitalType', function($q) {
-            $q->where('name', '=', 'Independent');
+        $prePink = $specialOffers->whereHas('hospitalType', function($q) use($hospitalType) {
+            $q->where('name', '=', $hospitalType);
         });
         $pink = $prePink->first();
 

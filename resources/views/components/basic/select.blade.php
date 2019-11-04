@@ -17,7 +17,7 @@
             @foreach($options as $option)
                     <option name="{{$option['name']}}" id="{{'group_'.$name.'_'.$option['id']}}"
                             value="{{$option['id']}}" {{$option['id'] > 0 ? 'disabled': ''}}
-                            {{ Request::input($name)==$option['id'] ? 'selected' : ''  }} class="{{$option['class'] ?? ''}}">
+                            class="{{$option['class'] ?? ''}}">
                         {{$option['name']}}
                     </option>
                 @if(!empty($option[$groupName]))
