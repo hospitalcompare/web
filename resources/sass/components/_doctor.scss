@@ -1,4 +1,15 @@
 #doctor {
     @include v-c(fixed);
     right: 0;
+    background-color: $doctorGreen;
+    width: 150px;
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+
+    img {
+        position: absolute;
+        left: 5px;
+        bottom: calc(100% - 10px);
+    }
 }
