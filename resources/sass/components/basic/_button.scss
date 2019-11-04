@@ -344,25 +344,26 @@
 
         &.btn-go {
             color: $white;
-            height: 20px;
-            line-height: 20px;
             @include font-size(14);
             letter-spacing: -0.6px;
-            padding: 0 20px 0 12px;
-            background: linear-gradient(90deg, #003a5d, #003a5d, #00bcb4, #00bcb4);
+            padding: 6px 30px 6px 12px;
+            background: linear-gradient(90deg, #000, #000, #00bcb4, #00bcb4);
             background-size: 300% 100%;
 
-            &:after {
-                background-image: url('../images/icons/up-arrow.svg');
-                @include icon-bg-center(30%);
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: 20px;
-                height: 20px;
-                line-height: 20px;
-                transform: rotate(90deg);
+            //&:after {
+            //    background-image: url('../images/icons/up-arrow.svg');
+            //    width: 11px;
+            //    height: 11px;
+            //    @include v-c;
+            //    @include icon-bg-center(30%);
+            //    right: 20px;
+            //    transform: rotate(90deg);
+            //}
+            //
+
+            svg {
+                @include v-c;
+                right: 12px;
             }
 
             &:hover {

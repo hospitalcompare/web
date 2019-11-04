@@ -6,7 +6,11 @@
           class="d-inline-block stretched-link"
           id="doctor-popover">
         <p class="font-18 SofiaPro-Medium">Need some help? We are here to help you find the best hospital.</p>
-        <span class="btn btn-go">Let's go</span>
+        @include('components.basic.button', [
+            'classTitle'    => 'btn btn-go btn-icon',
+            'button'        => 'Let\'s Go',
+            'icon'          => 'fa fa-chevron-right'
+        ])
     </span>
     <img src="{{ asset('../images/dr-stevini.svg') }}"
          alt="Illustration of Dr Stevini"
