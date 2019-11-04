@@ -162,31 +162,33 @@ $(document).ready(function () {
     //     $('#sort_parent').slideToggle();
     //     $(this).toggleClass('open');
     // });
-});
 
 // Toggle the corporate content area
-$('.btn-more-info').on('click', function () {
-    var $target = $($(this).data('target'));
-    $(this)
-        .parents('.result-item')
-        .toggleClass('corporate-content-open');
-    if ($target.is(':visible')) {
-        $target
-            .slideUp()
-            .removeClass('open');
-        // Scroll back to the result item
-        var $scrollBack = $(this).parents('.result-item').offset().top;
-        $('html, body').animate({
-            scrollTop: $scrollBack - 80
-        }, 800);
-    } else {
-        $target
-            .slideDown()
-            .addClass('open');
-        // Scroll to the corporate content area (compensate for the height of sticky header bar)
-        $('html, body').animate({
-            scrollTop: ($(this).parents('.result-item').offset().top) - 80
-            // scrollTop: ($target.offset().top) - 80
-        }, 800);
-    }
-});
+    $('.btn-more-info').on('click', function () {
+        var $target = $($(this).data('target'));
+        $(this)
+            .parents('.result-item')
+            .toggleClass('corporate-content-open');
+        if ($target.is(':visible')) {
+            $target
+                .slideUp()
+                .removeClass('open');
+            // Scroll back to the result item
+            var $scrollBack = $(this).parents('.result-item').offset().top;
+            $('html, body').animate({
+                scrollTop: $scrollBack - 80
+            }, 800);
+        } else {
+            $target
+                .slideDown()
+                .addClass('open');
+            // Scroll to the corporate content area (compensate for the height of sticky header bar)
+            $('html, body').animate({
+                scrollTop: ($(this).parents('.result-item').offset().top) - 80
+                // scrollTop: ($target.offset().top) - 80
+            }, 800);
+        }
+    });
+
+    popupDoctor($doctor.data('message'), $doctor.data('doctor-delay'));
+}); // doc ready

@@ -35,7 +35,6 @@ window.enableButtons = function () {
 };
 
 $(document).ready(function () {
-
     //Check if we don't have the cookie and set it to 0
     var compareBar = $('.compare-hospitals-bar');
     var compareContent = $('.compare-hospitals-content');
@@ -185,6 +184,16 @@ $(document).ready(function () {
         var result = $.grep(data, function (e) {
             return e.id == elementId;
         });
+
+
+
+        // Trigger Dr S when someone adds the first hospital
+
+        if(compareCount === 0){
+            var $delay = 5000;
+            var $message = 'Great! You have added your first hospital to your shortlist. You can add up to five hospitals to your shortlist. Why not give it a try?';
+            popupDoctor($message, $delay);
+        }
 
         //Check if there are already 3 hospitals for comparison in Cookies
         if (compareCount < 5) {

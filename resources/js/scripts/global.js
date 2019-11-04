@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("select[name='procedure_id'] option:first").attr('disabled', true).attr('hidden', true);
 
     //Set the checked value of checkboxes to boolean 0/1
-    $("input[type='checkbox']").on('change', function(){
+    $("input[type='checkbox']").on('change', function () {
         $(this).val(this.checked ? 1 : 0);
     });
 
@@ -39,7 +39,7 @@ window.scrollToAlert = function () {
 };
 
 // Show the bootstrap alert bar
-window.showAlert = function(message, success = true, scroll = false) {
+window.showAlert = function (message, success = true, scroll = false) {
     var $alertClass = (success) ? 'alert-success' : 'alert-danger';
     $('#hc_alert')
         .find('.alert-text')
@@ -49,7 +49,7 @@ window.showAlert = function(message, success = true, scroll = false) {
         .addClass($alertClass + ' show')
         .slideDown();
     // Scroll to alert bar
-    if(scroll) scrollToAlert();
+    if (scroll) scrollToAlert();
 };
 
 /**
@@ -59,11 +59,11 @@ window.showAlert = function(message, success = true, scroll = false) {
  * @param rating
  * @returns {string}
  */
-window.getHtmlStars = function(rating) {
-    if(rating == null)
+window.getHtmlStars = function (rating) {
+    if (rating == null)
         return "";
 
-    if(rating == 0) {
+    if (rating == 0) {
         return "<img src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
     }
 
@@ -94,7 +94,7 @@ window.getHtmlStars = function(rating) {
     }
 
     //Check if we need to add empty stars as image
-    if(emptyStars != null && emptyStars > 0) {
+    if (emptyStars != null && emptyStars > 0) {
         for (var i = 0; i < emptyStars; i++) {
             html += "<img class='star-icon' src='../images/icons/star-outline.svg' alt='Empty Star'>"; //TODO: Add the image for the empty stars
         }
@@ -109,18 +109,18 @@ window.getHtmlStars = function(rating) {
  * @param value
  * @returns {string}
  */
-window.getHtmlDashTickValue = function(value, text = "") {
-    if(value == null)
+window.getHtmlDashTickValue = function (value, text = "") {
+    if (value == null)
         return "";
 
     var html = "";
 
     value = parseFloat(value);
 
-    if(value === 0) {
+    if (value === 0) {
         html += "<img src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
 
-    } else if(value === 1) {
+    } else if (value === 1) {
         html += "<img src=\"images/icons/tick-green.svg\" alt=\"Tick icon\">";
     } else {
         return value + text;
@@ -128,11 +128,11 @@ window.getHtmlDashTickValue = function(value, text = "") {
     return html;
 };
 
-window.toggleContent = function(speed = 400, parent = 'body') {
+window.toggleContent = function (speed = 400, parent = 'body') {
     var $target = $($(this).data('target'));
     // console.log($target);
     $(this).toggleClass('target-open');
-    if($target.is(':visible')) {
+    if ($target.is(':visible')) {
         $(parent).addClass($(this).data('target') + '_open');
         $target
             .slideUp(speed)
@@ -145,3 +145,33 @@ window.toggleContent = function(speed = 400, parent = 'body') {
     }
 };
 
+// Handle the popup of the doctor
+window.$doctor = $('#doctor-popover');
+window.popupDoctor = function (message, delay) {
+
+    $doctor.popover('dispose');
+    $doctor.popover({
+        container: 'body',
+        template: `<div class="popover popover-large popover-doctor">
+                        <span class="fa fa-times close" data-dismiss=""></span>
+                        <div class="popover-body">
+                        </div>
+                        <div class="arrow arrow-large">
+                        </div>
+                    </div>`,
+        content: `<p class="bold mb-0">${message}</p>
+                     <p class="mt-3"><a class="btn btn-close btn-close__small btn-teal btn-icon">Close</a></p>`,
+        html: true,
+        trigger: 'click',
+        placement: 'auto'
+    });
+
+    if (delay != 0 || delay != '') {
+        setTimeout(function () {
+            $doctor.trigger('click');
+        }, delay);
+        return;
+    }
+
+    $doctor.trigger('click');
+};
