@@ -42,7 +42,7 @@
                         'chevronFAClassName'    => 'fa-chevron-down black-chevron',
                         'selectClass'           => 'select-picker highlight-search-dropdown',
                         'name'                  =>'procedure_id',
-                        'labelClass'          => 'font-14 SofiaPro-Medium'
+                        'labelClass'            => 'font-14 SofiaPro-Medium'
                     ])
                     <a tabindex="0" data-offset="30px, 40px"
                        class="help-link"

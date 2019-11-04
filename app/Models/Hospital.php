@@ -161,10 +161,11 @@ class Hospital extends Model
      * @param string $hospitalType
      * @param string $policyId
      * @param string $sortBy
+     * @param string $page
      *
      * @return array
      */
-    public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 600, $waitingTime = '', $userRating = '', $qualityRating = '', $hospitalType = '', $policyId = '', $sortBy = '') {
+    public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 600, $waitingTime = '', $userRating = '', $qualityRating = '', $hospitalType = '', $policyId = '', $sortBy = '', $page = '') {
         $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'policies', 'placeRating', 'corporateContent']);
         //$userRatings    = HospitalRating::selectRaw(\DB::raw("MIN(id) as id, avg_user_rating AS name"))->groupBy(['avg_user_rating'])->whereNotNull('avg_user_rating')->get()->toArray();
         $errors = [];
@@ -273,23 +274,24 @@ class Hospital extends Model
         }
 
 //        Sorting the records
-        $doctorSort = '';
+//        $doctorSort = '';
         if(empty($sortBy)) {
             $hospitals = $hospitals->leftJoin('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
             $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 1 when hospital_ratings.latest_rating = "Good" then 2 when hospital_ratings.latest_rating = "Inadequate" then 3 when hospital_ratings.latest_rating = "Requires improvement" then 4 when hospital_ratings.latest_rating = "Not Yet Rated" then 5 end');
             if(!empty($postcode) && !empty($latitude) && !empty($longitude)) {
                 $hospitals = $hospitals->orderBy('radius', 'ASC');
-                $doctorSort = 'Care Quality Rating & Distance';
+//                $doctorSort = 'Care Quality Rating & Distance';
             } else {
                 $hospitals = $hospitals->leftJoin('hospital_waiting_time', 'hospitals.id', '=', 'hospital_waiting_time.hospital_id');
                 $hospitals = $hospitals->where('hospital_waiting_time.specialty_id', $specialtyId);
                 $hospitals = $hospitals->orderByRaw('ISNULL(hospital_waiting_time.perc_waiting_weeks), hospital_waiting_time.perc_waiting_weeks ASC');
-                $doctorSort = 'Care Quality Rating & Waiting Time';
+//                $doctorSort = 'Care Quality Rating & Waiting Time';
             }
-        } else {
-            if(array_key_exists($sortBy, Utils::sortBys))
-                $doctorSort = Utils::sortBys[$sortBy]['name'];
         }
+//        else {
+//            if(array_key_exists($sortBy, Utils::sortBys))
+//                $doctorSort = Utils::sortBys[$sortBy]['name'];
+//        }
 
         if(in_array($sortBy, [1, 2])) {
             if(!empty($postcode) && !empty($latitude) && !empty($longitude)) {
@@ -361,31 +363,66 @@ class Hospital extends Model
         } while (empty($specialOffers['purple']) || empty($specialOffers['pink']));
 
         //Generate text for Doctor Stevini
-        $doctor = "<p>Your search returned " . "<strong>" .count($preHospitals). "</strong>" . " hospitals, currently sorted by ".$doctorSort.", with the best at the top.</p>";
+//        $doctor = "<p>Your search returned " . "<strong>" .count($preHospitals). "</strong>" . " hospitals, currently sorted by ".$doctorSort.", with the best at the top.</p>";
+        $doctor = "To get the best results, why don't you use the sort by feature and/or filter the results by what is most important to you";
+        $delay = 5000; //Delay for popup, in miliseconds ( 5 seconds )
 
-        if(empty($latitude) || empty($longitude) || empty($postcode) || empty($procedureId))
-            $doctor .= '<p>The most useful results will be achieved if you input a postcode (for postcode) / treatment (for treatment type).</p>';
+//        if(empty($latitude) || empty($longitude) || empty($postcode) || empty($procedureId))
+//            $doctor .= '<p>The most useful results will be achieved if you input a postcode (for postcode) / treatment (for treatment type).</p>';
+//
+//        $doctor .= '<p>Next, you can either:</p>
+//            <ul class="highlight-page-elements">
+//                <li><span class="d-none highlight">#show_filters</span><span class="d-none animation">shake
+//                </span>Click the “Filter Results” to view all the ways in which you may wish to refine your search.</li>
+//                <li><span class="d-none highlight">.sort-arrow</span><span class="d-none animation">shake
+//                </span>Click on one of the triangles (arrows?) on the header bar to change the sort order - for example click on the waiting time to view the shortest wait in your search results.</li>
+//                <li><span class="d-none highlight">.compare</span><span class="d-none animation">heartbeat
+//                </span>Select one or more hospitals to shortlist by clicking the heart / compare logo then click on View shortlist.</li>
+//                <li><span class="d-none highlight">.enquiry</span>Make an enquiry of a particular hospital relating to NHS funded or self-pay treatment eg more information about consultants. This won’t cost you a penny and does not commit you to anything.</li>
+//                <li><span class="d-none highlight">.compare-hospitals-bar</span><span class="d-none animation">pulse
+//                </span>View the various special offers and Hospital Compare selected best alternatives (the solutions bar).</li>
+//            </ul>';
+        //Generate the doctor when there's no postcode/treatment selected
+        if(empty($latitude) || empty($longitude) || empty($postcode) || empty($procedureId)) {
+            if(empty($latitude) && empty($longitude) && empty($procedureId)) {
+                $doctor = "Why don't you enter your postcode and treatment to refine your search?";
+            } else if(empty($latitude) && empty($longitude)) {
+                $doctor = "Why don't you enter your postcode to refine your search?";
+            } else if(empty($procedureId)) {
+                $doctor = "Why don't you enter your treatment to refine your search?";
+            }
+        }
 
-        $doctor .= '<p>Next, you can either:</p>
-            <ul class="highlight-page-elements">
-                <li><span class="d-none highlight">#show_filters</span><span class="d-none animation">shake
-                </span>Click the “Filter Results” to view all the ways in which you may wish to refine your search.</li>
-                <li><span class="d-none highlight">.sort-arrow</span><span class="d-none animation">shake
-                </span>Click on one of the triangles (arrows?) on the header bar to change the sort order - for example click on the waiting time to view the shortest wait in your search results.</li>
-                <li><span class="d-none highlight">.compare</span><span class="d-none animation">heartbeat
-                </span>Select one or more hospitals to shortlist by clicking the heart / compare logo then click on View shortlist.</li>
-                <li><span class="d-none highlight">.enquiry</span>Make an enquiry of a particular hospital relating to NHS funded or self-pay treatment eg more information about consultants. This won’t cost you a penny and does not commit you to anything.</li>
-                <li><span class="d-none highlight">.compare-hospitals-bar</span><span class="d-none animation">pulse
-                </span>View the various special offers and Hospital Compare selected best alternatives (the solutions bar).</li>
-            </ul>';
+        if(!empty($latitude) && !empty($longitude) && !empty($procedureId)) {
+            //Check if the 10 weeks option has been selected
+            if(!empty($waitingTime) && $waitingTime == 10) {
+                $doctor = "Need your treatment completed quickly? Have you considered going private. You may be entitled to get this fully funded by the NHS";
+            } else if(!empty($preHospitals) && count($preHospitals) <= 5) { //Check how many results are on the page
+                $doctor = "Have you considered increasing your radius to see more hospitals?";
+            } else if(!empty($hospitalType) && $hospitalType == 2) { //Check if NHS filter has been selected
+                $doctor = "Did you know you have the legal right to have most treatments completed in a private hospital (of your choice) and paid for by the NHS? Find out more.";
+            } else if(!empty($hospitalType) && $hospitalType == 1) { //Check if Private hospitals have been selected
+                $doctor = "If you have insurance, you can use the insurance filter to see where your policy will be accepted";
+            } else if(!empty($page) && $page > 1) {
+                $doctor = "To get the best results, why don't you use the sort by feature and/or filter the results by what is most important to you";
+            } else if((!empty($latitude) && !empty($longitude) && !empty($procedureId) && !empty($sortBy)) && (!empty($waitingTime) || !empty($userRating) || !empty($qualityRating) || !empty($policyId) || !empty($hospitalType)) ) {
+                $doctor = "Now you have refined your search, why don't you add them to your shortlist so that you can compare hospitals side-by-side";
+            }
+        }
 
+        if(!empty($_COOKIE) && !empty($_COOKIE['compareCount']) && $_COOKIE['compareCount'] > 1) {
+            $doctor = "Great! You have added your first hospital to your shortlist. You can add up to five hospitals to your shortlist. Why not give it a try?";
+        }
 
         return [
             'data'              => [
                 'hospitals'         => $hospitals,
                 'special_offers'    => $specialOffers,
             ],
-            'doctor'            => $doctor,
+            'doctor'            => [
+                'text'          => $doctor,
+                'delay'         => $delay
+            ],
             'errors'            => $errors
         ];
     }
