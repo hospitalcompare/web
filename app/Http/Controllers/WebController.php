@@ -51,6 +51,7 @@ class WebController extends BaseController
         $hospitalType   = !empty($request['hospital_type'])     ? Validate::escapeString($request['hospital_type'])     : '';
         $policyId       = !empty($request['policy_id'])         ? Validate::escapeString($request['policy_id'])         : '';
         $sortBy         = !empty($request['sort_by'])           ? Validate::escapeString($request['sort_by'])           : '';
+        $page           = !empty($request['page'])              ? Validate::escapeString($request['page'])              : '';
 
         //Set procedure_id to 0 if it's -1
         if($procedureId == '-1')
@@ -67,9 +68,10 @@ class WebController extends BaseController
         else
             $radius = 50;
 
-        $hospitals      = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy);
+        $hospitals      = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy, $page);
         $errors         = $hospitals['errors'];
-        $doctor         = $hospitals['doctor'];
+        $doctor         = $hospitals['doctor']['text'];
+        $delay          = $hospitals['doctor']['delay'];
         $specialOffers  = $hospitals['data']['special_offers'];
         $hospitals      = $hospitals['data']['hospitals'];
 
@@ -88,6 +90,7 @@ class WebController extends BaseController
         $this->returnedData['data']['filters']['policies']          = $policies;
         $this->returnedData['data']['sortBy']                       = $sortBys;
         $this->returnedData['doctor']                               = $doctor;
+        $this->returnedData['delay']                                = $delay;
         $this->returnedData['hc_errors']                            = $errors;
 
         //For Live environment just show the work in progress page
