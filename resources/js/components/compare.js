@@ -187,16 +187,11 @@ $(document).ready(function () {
 
 
 
-        // Trigger Dr S when someone adds the first hospital
 
+        // Trigger Dr S when someone adds the first hospital
         if(compareCount === 0){
-            var $doctor = $('#doctor-popover');
-            var $delay = parseInt($doctor.data('doctor-delay'));
-            $doctor.data('message', 'Great! You have added your first hospital to your shortlist. You can add up to five hospitals to your shortlist. Why not give it a try?');
-            var $message = $doctor.data('message');
-            var $content = `<p class="bold mb-0">${$message}</p>
-                    <p class="mt-3"><a class="btn btn-close btn-close__small btn-teal btn-icon">Close</a></p>`;
-            popupDoctor($content, $delay);
+            var $message = 'Great! You have added your first hospital to your shortlist. You can add up to five hospitals to your shortlist. Why not give it a try?';
+            popupDoctor($message);
         }
 
         //Check if there are already 3 hospitals for comparison in Cookies

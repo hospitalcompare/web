@@ -44,14 +44,14 @@ $(document).ready(function () {
     //     }, 1000);
     // }
 
-    var $doctor = $('#doctor-popover');
-    $doctor.on('click', function(){
-       $doctor.popover('show');
-    });
-    $doctor.on('shown.bs.popover', function (e) {
-        $('.popover-doctor')
-            .find('.btn-go')
-            .addClass('popover-open');
+    // var $doctor = $('#doctor-popover');
+    // $doctor.on('click', function(){
+    //    $doctor.popover('show');
+    // });
+    // $doctor.on('shown.bs.popover', function (e) {
+    //     $('.popover-doctor')
+    //         .find('.btn-go')
+    //         .addClass('popover-open');
 
         // function highlightElements(action){
         //     // Animate page sections when hovering over the list items
@@ -67,7 +67,7 @@ $(document).ready(function () {
         // }
         //
         // $('.highlight-page-elements li').on('mouseenter', highlightElements);
-    });
+    // });
 
     // Set the showDoctor cookie to false when she is dismissed
     // $doctor.on('hide.bs.popover', function (e) {
