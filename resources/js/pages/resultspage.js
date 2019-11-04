@@ -190,5 +190,5 @@ $(document).ready(function () {
         }
     });
 
-    popupDoctor($doctor.data('message'));
+    popupDoctor($doctor.data('message'), $doctor.data('doctor-delay'));
 }); // doc ready
