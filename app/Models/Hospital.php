@@ -356,9 +356,9 @@ class Hospital extends Model
         $radius = 50;
         $hospitalType = 'Independent';
         do {
-            $specialOffers = self::getSpecialOffers($latitude, $longitude, $radius, $specialtyId, $preHospitals, $hospitalType);
-            if($radius > 100)
+            if($radius > 200)
                 $hospitalType = 'NHS';
+            $specialOffers = self::getSpecialOffers($latitude, $longitude, $radius, $specialtyId, $preHospitals, $hospitalType);
             $radius += 20;
         } while (empty($specialOffers['purple']) || empty($specialOffers['pink']));
 
