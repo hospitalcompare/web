@@ -59,6 +59,16 @@
 {{--        </div>--}}
 {{--    </section>--}}
     <section>
+        <h3>Large popover - left</h3>
+        <div class="my-5 popover popover-large fade bs-popover-left show" role="tooltip" id="popover438743"
+             x-placement="bottom"
+             style="position: relative;">
+            <div class="arrow arrow-large" style="left: 64px;"></div>
+            <div class="popover-body">Hello, this is a large, left popover <a tabindex class="text-link">Click here</a>
+            </div>
+        </div>
+    </section>
+    <section>
         @include('components.corporatecontent', [
                 'procedures'    => $data['filters']['procedures'],
                 'id'            => 1,
@@ -168,7 +178,7 @@
                     </div>
                 </div>
                 <h2>Dr Stevini</h2>
-                @include('components.doctor')
+                @include('components.doctor', ['delay' => ''])
                 <h2>Tooltips</h2>
                 <br>
                 <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top"

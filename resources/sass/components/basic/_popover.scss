@@ -85,8 +85,8 @@
         .arrow-large {
             top: calc(100% - 8px);
             //left: calc(50% - 40px) !important;
-            width: 56.6px;
-            height: 55.7px;
+            width: 56.6px !important;
+            height: 55.7px !important;
             background-image: url('../images/speech-point.svg');
             @include icon-bg-center(cover);
             z-index: 5;
@@ -105,6 +105,16 @@
                 top: auto;
                 left: calc(50% - 40px) !important;
                 transform: rotate(180deg) scaleX(-1);
+            }
+        }
+
+        &.bs-popover-left,
+        &.bs-popover-auto {
+            .arrow-large {
+                left: calc(100% - 8px) !important;
+                right: auto;
+                top: auto;
+                transform: scaleX(-1) rotate(90deg);
             }
         }
     }
@@ -152,8 +162,7 @@
             opacity: 1 !important;
         }
 
-        .arrow-large {
-        }
+
     }
 
     &-cqc {

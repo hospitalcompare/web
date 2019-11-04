@@ -235,6 +235,8 @@
     {{--  Maps modal  --}}
     @include('components.modals.modalmaps')
     @include('components.modals.modalvideo')
+    @include('components.doctor', ['delay' => 1000])
+
 
 
 @endsection

@@ -226,20 +226,20 @@
 
 // Absolute centring
 
-@mixin v-c {
-    position: absolute;
+@mixin v-c($position: absolute) {
+    position: $position;
     top: 50%;
     transform: translateY(-50%);
 }
 
-@mixin h-c {
-    position: absolute;
+@mixin h-c($position: absolute) {
+    position: $position;
     left: 50%;
     transform: translateX(-50%);
 }
 
-@mixin v-h-c {
-    position: absolute;
+@mixin v-h-c($position: absolute) {
+    position: $position;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

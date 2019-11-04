@@ -1,7 +1,7 @@
 <div class="compare-hospitals-bar {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
     <div class="compare-hospitals-header d-flex justify-content-between">
         <div class="container position-relative d-flex justify-content-between align-items-end h-100">
-            @include('components.doctor')
+{{--            @include('components.doctor', ['delay' => 0])--}}
             @if(!empty($data['special_offers']))
                 <ul class="solutions-menu align-items-end d-none d-md-flex mb-0 ml-auto mr-3">
                     @foreach($specialOffers as $key => $specialOffer )

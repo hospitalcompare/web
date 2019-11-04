@@ -145,3 +145,31 @@ window.toggleContent = function(speed = 400, parent = 'body') {
     }
 };
 
+// Handle the popup of the doctor
+window.popupDoctor = function(message, delay){
+    var $doctor = $('#doctor-popover');
+
+    $doctor.popover({
+        container: 'body',
+        template: `<div class="popover popover-large popover-doctor">
+                        <span class="fa fa-times close" data-dismiss=""></span>
+                        <div class="popover-body">
+                        </div>
+                        <div class="arrow arrow-large">
+                        </div>
+                    </div>`,
+        content: message,
+        html: true,
+        trigger: 'click',
+        placement: 'auto'
+    });
+
+    if(delay != 0 || delay != ''){
+        setTimeout(function(){
+            $doctor.trigger('click');
+        }, delay);
+        return;
+    }
+
+    $doctor.trigger('click');
+};

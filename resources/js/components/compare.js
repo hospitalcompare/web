@@ -35,7 +35,6 @@ window.enableButtons = function () {
 };
 
 $(document).ready(function () {
-
     //Check if we don't have the cookie and set it to 0
     var compareBar = $('.compare-hospitals-bar');
     var compareContent = $('.compare-hospitals-content');
@@ -186,33 +185,18 @@ $(document).ready(function () {
             return e.id == elementId;
         });
 
+
+
         // Trigger Dr S when someone adds the first hospital
-        var $doctor = $('#doctor-popover');
+
         if(compareCount === 0){
-            var $delay = $doctor.data('delay');
+            var $doctor = $('#doctor-popover');
+            var $delay = parseInt($doctor.data('doctor-delay'));
             $doctor.data('message', 'Great! You have added your first hospital to your shortlist. You can add up to five hospitals to your shortlist. Why not give it a try?');
             var $message = $doctor.data('message');
             var $content = `<p class="bold mb-0">${$message}</p>
                     <p class="mt-3"><a class="btn btn-close btn-close__small btn-teal btn-icon">Close</a></p>`;
-            $doctor.popover({
-                container: 'body',
-                template: `<div class="popover popover-large popover-doctor">
-                        <span class="fa fa-times close" data-dismiss=""></span>
-                        <div class="popover-body">
-                        </div>
-                        <div class="arrow arrow-large">
-                        </div>
-                    </div>`,
-                content: $content,
-                html: true,
-                trigger: 'manual',
-                placement: 'top'
-            });
-
-            setTimeout(function(){
-                $doctor.popover('show');
-            }, $delay)
-
+            popupDoctor($content, $delay);
         }
 
         //Check if there are already 3 hospitals for comparison in Cookies
