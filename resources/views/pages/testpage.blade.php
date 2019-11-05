@@ -178,7 +178,7 @@
                     </div>
                 </div>
                 <h2>Dr Stevini</h2>
-                @include('components.doctor', ['delay' => ''])
+{{--                @include('components.doctor', ['delay' => '500'])--}}
                 <h2>Tooltips</h2>
                 <br>
                 <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top"
