@@ -87,7 +87,7 @@
             //left: calc(50% - 40px) !important;
             width: 56.6px !important;
             height: 55.7px !important;
-            background-image: url('../images/speech-point.svg');
+            background-image: url('../images/speech-point-large.svg');
             @include icon-bg-center(cover);
             z-index: 5;
             transform: translate3d(25px, 0, 0);
@@ -111,9 +111,9 @@
         &.bs-popover-left,
         &.bs-popover-auto {
             .arrow-large {
+                top: 10px !important;
                 left: calc(100% - 8px) !important;
                 right: auto;
-                top: auto;
                 transform: scaleX(-1) rotate(90deg);
             }
         }
