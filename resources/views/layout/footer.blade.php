@@ -30,13 +30,13 @@
                         <p class="font-20 SofiaPro-Light">Helping you to make the best healthcare choices</p>
                         <ul class="social-list">
                             <li>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
                             </li>
                             <li>
-                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a href=""><i class="fab fa-instagram"></i></a>
+                                <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
                             </li>
                         </ul>
                     </div>

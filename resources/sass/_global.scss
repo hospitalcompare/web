@@ -1,12 +1,7 @@
 body {
     letter-spacing: -1px;
 
-    a {
-        &:hover {
-            text-decoration: none;
-            color: $turquoise !important;
-        }
-    }
+
 }
 
 .cookie-page,
@@ -298,17 +293,3 @@ select.big {
 
 }
 
-.home-page {
-    .video-wrapper {
-        border: 1px solid $borderVideo;
-        border-radius: 15px;
-
-        .player-button {
-            background-image: url(../images/player_button.png);
-            background-size: cover;
-            height: 78px;
-            width: 78px;
-            z-index: 5;
-        }
-    }
-}
