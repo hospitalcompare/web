@@ -20,9 +20,8 @@
             <div class="result-item-header-section-2">
                 <ul class="result-item-menu">
                     <li>
-                        <p tabindex="0" data-offset="30px, 40px"
+                        <p tabindex="0" _data-offset="30px, 40px"
                             @include('components.basic.popover', [
-                            'size'      => 'large',
                             'placement' => 'top',
                             'trigger'   => 'hover',
                             'html'      => 'true',
@@ -36,9 +35,8 @@
                               class="sort-arrow sort-care-quality-rating {{Request::input('sort_by') == 10 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p tabindex="0" data-offset="30px, 40px"
+                        <p tabindex="0" _data-offset="30px, 40px"
                             @include('components.basic.popover', [
-                            'size'      => 'large',
                             'placement' => 'top',
                             'trigger'   => 'hover',
                             'html'      => 'true',
@@ -52,9 +50,8 @@
                               class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p tabindex="0" data-offset="30px, 40px"
+                        <p tabindex="0" _data-offset="30px, 40px"
                             @include('components.basic.popover', [
-                            'size'      => 'large',
                             'placement' => 'top',
                             'trigger'   => 'hover',
                             'html'      => 'true',
@@ -68,9 +65,8 @@
                               class="sort-arrow sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p tabindex="0" data-offset="30px, 40px"
+                        <p tabindex="0" _data-offset="30px, 40px"
                             @include('components.basic.popover', [
-                            'size'      => 'large',
                             'placement' => 'top',
                             'trigger'   => 'hover',
                             'html'      => 'true',
@@ -84,9 +80,8 @@
                               class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p tabindex="0" data-offset="30px, 40px"
+                        <p tabindex="0" _data-offset="30px, 40px"
                             @include('components.basic.popover', [
-                            'size'      => 'large',
                             'placement' => 'top',
                             'trigger'   => 'hover',
                             'html'      => 'true',
@@ -100,9 +95,8 @@
                               class="sort-arrow sort-ff-rating {{Request::input('sort_by') == 12 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p tabindex="0" data-offset="30px, 40px"
+                        <p tabindex="0" _data-offset="30px, 40px"
                             @include('components.basic.popover', [
-                            'size'      => 'large',
                             'placement' => 'top',
                             'trigger'   => 'hover',
                             'html'      => 'true',
@@ -116,9 +110,8 @@
                               class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 14 ? 'desc':'asc' }}"></span>
                     </li>
                     <li>
-                        <p tabindex="0" data-offset="30px, 40px"
+                        <p tabindex="0" _data-offset="30px, 40px"
                             @include('components.basic.popover', [
-                            'size'      => 'large',
                             'placement' => 'top',
                             'trigger'   => 'hover',
                             'html'      => 'true',

@@ -49,15 +49,14 @@
                     "palette": {
                         "popup": {
                             "background": "#efefef",
-                            "text": "#1c1c1c",
-                            "highlight": {background: '#f8e71c', border: '#f8e71c', text: '#000000'},
+                            "text": "#1c1c1c"
                         },
                         "button": {
                             "background": "#00cecd",
                             "text": "#ffffff"
                         }
                     },
-                    "theme": "classic hc-cookie",
+                    "theme": "hc-cookie",
                     "position": "bottom-right",
                     "content": {
                         "href": "/cookie-policy/"

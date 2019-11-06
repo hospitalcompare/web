@@ -307,8 +307,23 @@ select.big {
 }
 
 // Cookie popup styling
-.hc-cookie {
+.cc-theme-hc-cookie {
     border: 3px solid $teal;
+    border-radius: 10px;
+    @extend .SofiaPro-Regular;
+
+    .cc-btn {
+        @extend .btn;
+        @extend .btn-m;
+        @extend .btn-grad;
+        @extend .btn-teal;
+
+        text-align: center !important;
+        display: inline-block;
+        margin: 0 auto;
+        flex: initial !important;
+        cursor: pointer;
+    }
 }
 
 

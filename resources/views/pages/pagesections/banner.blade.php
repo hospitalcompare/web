@@ -26,23 +26,21 @@
                                     'chevronFAClassName'    => 'fa-chevron-down aqua-chevron',
                                     'name'                  => 'procedure_id'
                                 ])
-                                <a tabindex="0" data-offset="30px, 40px"
+                                <a tabindex="0" _data-offset="30px, 40px"
                                    class="help-link"
                                     @include('components.basic.popover', [
                                     'dismissible'   => true,
                                     'placement'      => 'top',
-                                    'size'           => 'large',
+{{--                                    'size'           => 'large',--}}
                                     'html'           => 'true',
-                                    'trigger'        => 'focus',
+                                    'trigger'        => 'hover',
                                     'content'        => '<p class="bold mb-0">
                                                      Treatment
                                                  </p>
                                                  <p>
                                                      Select your treatment if known.
                                                  </p>
-                                                 <p>
-                                                     <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
-                                                 </p>'])
+                                                 {{--<p><a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a></p>--}}'])
                                 >?</a>
                             </div>
 
@@ -55,23 +53,22 @@
                                     'name' =>'postcode',
                                     'validation' => 'maxlength=8',
                                      'id' => 'input_postcode'])
-                                    <a tabindex="0" data-offset="30px, 40px"
+                                    <a tabindex="0" _data-offset="30px, 40px"
                                        class="help-link"
                                         @include('components.basic.popover', [
                                         'dismissible'   => true,
                                         'placement'      => 'top',
-                                        'size'           => 'large',
+{{--                                        'size'           => 'large',--}}
                                         'html'           => 'true',
-                                        'trigger'        => 'focus',
+                                        'trigger'        => 'hover',
                                         'content'        => '<p class="bold mb-0">
                                                          Postcode
                                                      </p>
                                                      <p>
                                                          Please enter your postcode for a refined search.
                                                      </p>
-                                                     <p>
-                                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
-                                                     </p>'])
+{{--                                                     <p><a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a></p>--}}
+                                                     '])
                                     >?</a>
                                 </div>
                                 <div class="postcode-autocomplete-container">
@@ -89,23 +86,22 @@
                                     'chevronFAClassName'    => '',
                                     'labelClass'            => 'font-18',
                                     'name'                  =>'radius'])
-                                <a tabindex="0" data-offset="30px, 40px"
+                                <a tabindex="0" _data-offset="30px, 40px"
                                    class="help-link"
                                     @include('components.basic.popover', [
                                     'dismissible'   => true,
                                     'placement'      => 'top',
-                                    'size'           => 'large',
+{{--                                    'size'           => 'large',--}}
                                     'html'           => 'true',
-                                    'trigger'        => 'focus',
+                                    'trigger'        => 'hover',
                                     'content'        => '<p class="bold mb-0">
                                                      Distance
                                                  </p>
                                                  <p>
                                                      Select how far you would be willing to travel for your treatment.
                                                  </p>
-                                                 <p>
-                                                     <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
-                                                 </p>'])
+{{--                                                 <p><a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a></p>--}}
+                                                 '])
                                 >?</a>
                             </div>
 

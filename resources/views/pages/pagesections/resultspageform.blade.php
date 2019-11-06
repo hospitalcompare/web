@@ -44,23 +44,23 @@
                         'name'                  =>'procedure_id',
                         'labelClass'            => 'font-14 SofiaPro-Medium'
                     ])
-                    <a tabindex="0" data-offset="30px, 40px"
+                    <a tabindex="0" _data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
                         'placement'      => 'top',
-                        'size'           => 'large',
                         'html'           => 'true',
-                        'trigger'        => 'focus',
-                        'content'        => '<p class="bold mb-0">
+                        'trigger'        => 'hover',
+                        'content'        => '<p class="SofiaPro-Medium mb-0">
                                          Surgery Type
                                      </p>
                                      <p>
                                          Select your treatment if known.
                                      </p>
-                                     <p>
-                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
-                                     </p>'])
+{{--                                     <p>--}}
+{{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
+{{--                                     </p>--}}
+                                     '])
                     >?</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
@@ -74,23 +74,23 @@
                         'placeholder'           =>'Waiting time',
                         'name'                  =>'waiting_time',
                         'labelClass'            => 'font-14 SofiaPro-Medium'])
-                    <a tabindex="0" data-offset="30px, 40px"
+                    <a tabindex="0" _data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'       => true,
                         'placement'         => 'top',
-                        'size'              => 'large',
                         'html'              => 'true',
-                        'trigger'           => 'focus',
-                        'content'           => '<p class="bold mb-0">
+                        'trigger'           => 'hover',
+                        'content'           => '<p class="SofiaPro-Medium mb-0">
                                          Waiting Time
                                      </p>
                                      <p>
                                          Select the waiting time most suitable for your needs.
                                      </p>
-                                     <p>
-                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
-                                     </p>'])
+{{--                                     <p>--}}
+{{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
+{{--                                     </p>--}}
+                                     '])
                     >?</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
@@ -104,23 +104,23 @@
                         'placeholder'=>'NHS User Rating',
                         'name'=>'user_rating',
                         'labelClass' => 'font-14 SofiaPro-Medium'])
-                    <a tabindex="0" data-offset="30px, 40px"
+                    <a tabindex="0" _data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
                         'placement'      => 'top',
-                        'size'           => 'large',
                         'html'           => 'true',
-                        'trigger'        => 'focus',
-                        'content'        => '<p class="bold mb-0">
+                        'trigger'        => 'hover',
+                        'content'        => '<p class="SofiaPro-Medium mb-0">
                                          NHS User Rating
                                      </p>
                                      <p>
                                          Five star rating system based on feedback provided by users of the NHS (five stars being the best). Information is not available on some hospitals.
                                      </p>
-                                     <p>
-                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
-                                     </p>'])
+{{--                                     <p>--}}
+{{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
+{{--                                     </p>--}}
+                                     '])
                     >?</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
@@ -132,44 +132,44 @@
                         'placeholder'=>'Care Quality Rating',
                         'name'=>'quality_rating',
                         'labelClass' => 'font-14 SofiaPro-Medium'])
-                    <a tabindex="0" data-offset="30px, 40px"
+                    <a tabindex="0" _data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
                         'placement'      => 'top',
-                        'size'           => 'large',
                         'html'           => 'true',
-                        'trigger'        => 'focus',
-                        'content'        => '<p class="bold mb-0">
+                        'trigger'        => 'hover',
+                        'content'        => '<p class="SofiaPro-Medium mb-0">
                                          Care Quality Rating
                                      </p>
                                      <p>
                                          The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
                                      </p>
-                                     <p>
-                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
-                                     </p>'])
+{{--                                     <p>--}}
+{{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
+{{--                                     </p>--}}
+                                     '])
                     >?</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', ['selectClassName' => 'w-100', 'showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Hospital Type', 'name'=>'hospital_type', 'labelClass' => 'font-14 SofiaPro-Medium'])
-                    <a tabindex="0" data-offset="30px, 40px"
+                    <a tabindex="0" _data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
                         'placement'      => 'top',
-                        'size'           => 'large',
                         'html'           => 'true',
-                        'trigger'        => 'focus',
-                        'content'        => '<p class="bold mb-0">
+                        'trigger'        => 'hover',
+                        'content'        => '<p class="SofiaPro-Medium mb-0">
                                          NHS or Private Hospitals
                                      </p>
                                      <p>
                                          Select which hospital type best suits your needs. Remember you can choose to have an NHS treatment at most private hospitals in England and Wales.
                                      </p>
-                                     <p>
-                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
-                                     </p>'])
+{{--                                     <p>--}}
+{{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
+{{--                                     </p>--}}
+                                     '])
                     >?</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
@@ -187,23 +187,23 @@
                         'name'                  => 'policy_id',
                         'labelClass'          => 'font-14 SofiaPro-Medium'
                     ])
-                    <a tabindex="0" data-offset="30px, 40px"
+                    <a tabindex="0" _data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
                         'placement'      => 'top',
-                        'size'           => 'large',
                         'html'           => 'true',
-                        'trigger'        => 'focus',
-                        'content'        => '<p class="bold mb-0">
+                        'trigger'        => 'hover',
+                        'content'        => '<p class="SofiaPro-Medium mb-0">
                                          Insurance policy
                                      </p>
                                      <p>
                                          Select your insurance provider and policy type.
                                      </p>
-                                     <p>
-                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>
-                                     </p>'])
+{{--                                     <p>--}}
+{{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
+{{--                                     </p>--}}
+                                     '])
                     >?</a>
                 </div>
             </div>
