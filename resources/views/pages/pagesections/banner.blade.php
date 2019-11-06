@@ -43,7 +43,6 @@
                                                  {{--<p><a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a></p>--}}'])
                                 >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                             </div>
-
                             <div class="form-child home-postcode-parent">
                                 <div class="input-wrapper position-relative">
                                     @include('components.basic.input', [
@@ -58,7 +57,6 @@
                                         @include('components.basic.popover', [
                                         'dismissible'   => true,
                                         'placement'      => 'top',
-{{--                                        'size'           => 'large',--}}
                                         'html'           => 'true',
                                         'trigger'        => 'hover',
                                         'content'        => '<p class="bold mb-0">
@@ -75,8 +73,7 @@
                                     <div class="ajax-box"></div>
                                 </div>
                             </div>
-
-                            <div class="form-child full-left d-flex">
+                            <div class="form-child home-radius-parent full-left">
                                 @include('components.basic.select', [
                                     'showLabel'             => true,
                                     'selectClass'           => 'distance-dropdown',
@@ -104,11 +101,9 @@
                                                  '])
                                 >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                             </div>
-
                             @include('components.basic.submit', [
                                 'classTitle'    => 'btn btn-m btn-grad btn-teal py-3 mb-3',
                                 'button'        => 'Find Hospitals'])
-
                             <div class='browse-button'>
                                 <a class="SofiaPro-Medium" href="{{url('/results-page')}}">Browse all hospitals</a>
                             </div>

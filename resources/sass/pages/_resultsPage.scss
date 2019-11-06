@@ -69,8 +69,8 @@
 
         .black-chevron {
             position: absolute;
+            bottom: 10px;
             right: 30px;
-            bottom: 12px;
             color: $caretBlack;
             pointer-events: none;
         }
@@ -164,6 +164,10 @@
         .sort-section {
             .results-page-select {
                 width: auto
+            }
+
+            .sort-by-label {
+                min-width: 60px;
             }
         }
     }

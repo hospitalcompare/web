@@ -70,7 +70,7 @@
                         'showLabel'             => true,
                         'options'               => $data['filters']['waitingTimes'],
                         'chevronFAClassName'    => 'fa-chevron-down black-chevron',
-                        'selectClass'           => 'results-page-select highlight',
+                        'selectClass'           => 'select-picker highlight-search-dropdown _results-page-select _highlight',
                         'placeholder'           =>'Waiting time',
                         'name'                  =>'waiting_time',
                         'labelClass'            => 'font-14 SofiaPro-Medium'])
@@ -100,7 +100,7 @@
                         'showLabel' => true,
                         'options' => $data['filters']['userRatings'],
                         'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                        'selectClass' => 'results-page-select highlight',
+                        'selectClass' => 'select-picker highlight-search-dropdown _results-page-select _highlight',
                         'placeholder'=>'NHS User Rating',
                         'name'=>'user_rating',
                         'labelClass' => 'font-14 SofiaPro-Medium'])
@@ -128,7 +128,7 @@
                         'showLabel' => true,
                         'options' => $data['filters']['qualityRatings'],
                         'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                        'selectClass' => 'results-page-select highlight',
+                        'selectClass' => 'select-picker highlight-search-dropdown _results-page-select _highlight',
                         'placeholder'=>'Care Quality Rating',
                         'name'=>'quality_rating',
                         'labelClass' => 'font-14 SofiaPro-Medium'])
@@ -152,7 +152,15 @@
                     >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
-                    @include('components.basic.select', ['selectClassName' => 'w-100', 'showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Hospital Type', 'name'=>'hospital_type', 'labelClass' => 'font-14 SofiaPro-Medium'])
+                    @include('components.basic.select', [
+                        'selectClassName' => 'w-100',
+                        'showLabel' => true,
+                        'options' => $data['filters']['hospitalTypes'],
+                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
+                        'selectClass' => 'select-picker highlight-search-dropdown _results-page-select _highlight',
+                        'placeholder'=>'Hospital Type',
+                        'name'=>'hospital_type',
+                        'labelClass' => 'font-14 SofiaPro-Medium'])
                     <a tabindex="0" _data-offset="30px, 40px"
                        class="help-link"
                         @include('components.basic.popover', [
@@ -221,11 +229,11 @@
                         'showLabel' => true,
                         'options' => $data['sortBy'],
                         'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                        'selectClass' => 'results-page-select select-sort-by SofiaPro-Medium font-16',
-                        'selectClassName' => 'pr-3',
+                        'selectClass' => 'select-picker _results-page-select select-sort-by SofiaPro-Medium font-16',
+                        'selectClassName' => 'pr-3 d-flex align-items-center',
                         'placeholder'=>'Sort by:',
                         'name'=>'sort_by',
-                        'labelClass' => 'sortLabel SofiaPro-Medium'
+                        'labelClass' => 'mb-0 SofiaPro-Medium sort-by-label'
                     ])
 
                     @include('components.basic.button', [
