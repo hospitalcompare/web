@@ -152,17 +152,17 @@ class Utils
         ]
     ];
 
-    //Filter Quality Ratings
+    //Filter Distance Radius
     const radius = [
         [
             'id' => 7,
-            'name'  => 'Countrywide'
+            'name'  => 'England'
         ],[
             'id' => 6,
-            'name'  => 'Up to 100 miles'
+            'name'  => 'Up to 200 miles'
         ],[
             'id' => 5,
-            'name'  => 'Up to 75 miles'
+            'name'  => 'Up to 100 miles'
         ],[
             'id' => 4,
             'name'  => 'Up to 50 miles'
@@ -177,8 +177,8 @@ class Utils
             'name'  => 'Up to 5 miles'
         ]
     ];
-    //Filter Quality Ratings
-    const sliderRange = [0, 5, 10, 25, 50, 75, 100, 600];
+    //Filter Distance Radius
+    const sliderRange = [0, 5, 10, 25, 50, 100, 200, 600];
 
     /**
      * Returns the list of Procedures with the first option as a placeholder

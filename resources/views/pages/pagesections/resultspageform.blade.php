@@ -217,21 +217,23 @@
                     by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating & Distance' : 'Care Quality Rating & Waiting Time') }}
                 </div>
                 <div class="sort-section col-12 col-md-6 d-flex flex-wrap justify-content-end align-items-center">
+                    @include('components.basic.select', [
+                        'showLabel' => true,
+                        'options' => $data['sortBy'],
+                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
+                        'selectClass' => 'results-page-select select-sort-by SofiaPro-Medium font-16',
+                        'selectClassName' => 'pr-3',
+                        'placeholder'=>'Sort by:',
+                        'name'=>'sort_by',
+                        'labelClass' => 'sortLabel SofiaPro-Medium'
+                    ])
+
                     @include('components.basic.button', [
                         'button'            => 'Filter Results',
                         'classTitle'        => 'btn btn-s btn-teal btn-grad btn-icon btn-arrow-down',
                         'id'                => 'show_filters',
                         'icon'              => 'fas fa-chevron-down'
                     ])
-                    @include('components.basic.select', [
-                        'showLabel' => true,
-                        'options' => $data['sortBy'],
-                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                        'selectClass' => 'results-page-select select-sort-by SofiaPro-Medium font-16',
-                        'selectClassName' => 'pl-3',
-                        'placeholder'=>'Sort by:',
-                        'name'=>'sort_by',
-                        'labelClass' => 'sortLabel SofiaPro-Medium'])
                 </div>
             </div>
         </div>

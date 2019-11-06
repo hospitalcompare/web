@@ -1,5 +1,18 @@
 .home-page {
 
+    .video-wrapper {
+        //border: 1px solid $borderVideo;
+        border-radius: 15px;
+
+        .player-button {
+            background-image: url(../images/player_button.png);
+            background-size: cover;
+            height: 78px;
+            width: 78px;
+            z-index: 5;
+        }
+    }
+
     //=======================WHY CHOOSE SECTION=======================
     .why-use-parent {
         background: $lighterGrey;
@@ -10,7 +23,6 @@
 
         .why-use { // container
             //color: #1b1b1b;
-
             p {
                 //font-style($family: 'SofiaPro-Regular', $size: false, $colour: $body-color, $weight: 400,  $lh: false, $ls: false);
                 @include font-style(false, 20px, false, false, 24px, -1px);
@@ -18,32 +30,23 @@
                 //letter-spacing: -1px;
                 //line-height: 24px;
             }
-
-
         }
 
         .why-use-video {
             @include media-breakpoint-up(md) {
                 padding-left: 110px;
             }
-
-
         }
 
         .icon {
             margin-bottom: 20px;
-
         }
     }
-
-
     //=======================END WHY CHOOSE SECTION=======================
-
-
 
     //=========================HEALTH CHOICE SECTION===========================
     .choose-health-parent {
-        margin: 0 auto 60px;
+        margin: 60px auto;
 
         .choose-health {
             height: 410px;
