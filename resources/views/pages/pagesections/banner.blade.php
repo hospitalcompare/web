@@ -80,6 +80,8 @@
                                     'options'               => \App\Helpers\Utils::radius,
                                     'selectClassName'       => 'd-md-flex select_half-width w-100',
                                     'placeholder'           => 'How far would you travel?',
+                                    'placeholderOption'     => 'Select Distance',
+                                    'selectedPlaceholder'   => true,
                                     'chevronFAClassName'    => '',
                                     'labelClass'            => 'font-18 pr-4',
                                     'name'                  =>'radius'])
@@ -88,7 +90,6 @@
                                     @include('components.basic.popover', [
                                     'dismissible'   => true,
                                     'placement'      => 'top',
-{{--                                    'size'           => 'large',--}}
                                     'html'           => 'true',
                                     'trigger'        => 'hover',
                                     'content'        => '<p class="bold mb-0">

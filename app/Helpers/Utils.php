@@ -155,26 +155,26 @@ class Utils
     //Filter Distance Radius
     const radius = [
         [
-            'id' => 7,
-            'name'  => 'England'
-        ],[
-            'id' => 6,
-            'name'  => 'Up to 200 miles'
-        ],[
-            'id' => 5,
-            'name'  => 'Up to 100 miles'
-        ],[
-            'id' => 4,
-            'name'  => 'Up to 50 miles'
-        ],[
-            'id' => 3,
-            'name'  => 'Up to 25 miles'
+            'id' => 1,
+            'name'  => 'Up to 5 miles'
         ],[
             'id' => 2,
             'name'  => 'Up to 10 miles'
         ],[
-            'id' => 1,
-            'name'  => 'Up to 5 miles'
+            'id' => 3,
+            'name'  => 'Up to 25 miles'
+        ],[
+            'id' => 4,
+            'name'  => 'Up to 50 miles'
+        ],[
+            'id' => 5,
+            'name'  => 'Up to 100 miles'
+        ],[
+            'id' => 6,
+            'name'  => 'Up to 200 miles'
+        ],[
+            'id' => 7,
+            'name'  => 'England'
         ]
     ];
     //Filter Distance Radius

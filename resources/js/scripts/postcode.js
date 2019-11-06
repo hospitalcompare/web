@@ -11,7 +11,7 @@ $(document).ready(function () {
 
         if($(this).val()) {
             // Third argument passes the input to the function
-            timer = setTimeout(ajaxCall, interval, $(this))
+            timer = setTimeout(ajaxCall, interval, $(this));
 
             if(valid_postcode($(this).val())){
                 $radiusInputParent.slideDown();
