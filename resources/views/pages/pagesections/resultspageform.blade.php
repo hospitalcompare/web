@@ -61,7 +61,7 @@
 {{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
-                    >?</a>
+                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'Waiting time', 'labelClass' => 'labelClass'])--}}
@@ -91,7 +91,7 @@
 {{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
-                    >?</a>
+                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'NHS choices user rating', 'labelClass' => 'labelClass'])--}}
@@ -121,7 +121,7 @@
 {{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
-                    >?</a>
+                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
@@ -149,7 +149,7 @@
 {{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
-                    >?</a>
+                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', ['selectClassName' => 'w-100', 'showLabel' => true, 'options' => $data['filters']['hospitalTypes'], 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'selectClass' => 'results-page-select highlight', 'placeholder'=>'Hospital Type', 'name'=>'hospital_type', 'labelClass' => 'font-14 SofiaPro-Medium'])
@@ -170,7 +170,7 @@
 {{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
-                    >?</a>
+                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
@@ -204,7 +204,7 @@
 {{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
-                    >?</a>
+                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                 </div>
             </div>
         </div>

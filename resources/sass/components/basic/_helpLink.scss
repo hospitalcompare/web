@@ -13,10 +13,11 @@
     text-align: center;
     z-index: 5;
     cursor: pointer;
+    @include flex-center;
 
     &.help-link__inline {
         position: initial;
-        display: inline-block;
+        display: inline-flex;
     }
 
     &:hover {

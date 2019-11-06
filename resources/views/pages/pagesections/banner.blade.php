@@ -41,7 +41,7 @@
                                                      Select your treatment if known.
                                                  </p>
                                                  {{--<p><a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a></p>--}}'])
-                                >?</a>
+                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                             </div>
 
                             <div class="form-child home-postcode-parent">
@@ -69,7 +69,7 @@
                                                      </p>
 {{--                                                     <p><a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a></p>--}}
                                                      '])
-                                    >?</a>
+                                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                                 </div>
                                 <div class="postcode-autocomplete-container">
                                     <div class="ajax-box"></div>
@@ -102,7 +102,7 @@
                                                  </p>
 {{--                                                 <p><a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a></p>--}}
                                                  '])
-                                >?</a>
+                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                             </div>
 
                             @include('components.basic.submit', [

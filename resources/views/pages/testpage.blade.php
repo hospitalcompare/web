@@ -304,7 +304,7 @@
                                     <p>
                                         Many private healthcare policies allow you to choose which hospital to have your elective
                                         procedure at. Enter your provider and policy name to find the best hospital for you.
-                                    </p>'])>?</a>
+                                    </p>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                 <a href="#" class="btn btn-blue"
                    data-toggle="popover"
                    data-content="Hello, this is a popover"

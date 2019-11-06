@@ -25,37 +25,27 @@
                         <li>your rights to choose:
                             <ul class="blue-dot">
                                 <li>if NHS funded treatment
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline" data-toggle="popover-large" data-content="
+                            <a tabindex="0" data-trigger="hover" class="help-link help-link__inline" data-toggle="popover" data-content="
                                  <p>
-                                    You can choose which NHS hospital to perform your elective procedure. Paid for by the NHS. Anywhere in England.
+                                    You can choose which NHS hospital to perform your treatment. Paid for by the NHS. Anywhere in England.
                                  </p>
                                  <p><strong>OR</strong></p>
-                                 <p> you can choose which private hospital to perform your elective procedure. Paid for by the NHS, at no extra cost to the taxpayer than an NHS hospital. Anywhere in England. See <a
+                                 <p> you can choose which private hospital to perform your treatment. Paid for by the NHS, at no extra cost to the taxpayer than an NHS hospital. Anywhere in England. See <a
                                     class=&quot;text-link&quot; href=&quot;/your-rights&quot;>Your Rights</a> for exceptions.
-                                 </p>
-                                 <p>
-                                     <a class=&quot;btn btn-close btn-close__small btn-teal btn-icon&quot; >Close</a>
-                                 </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>
+                                 </p>" data-trigger="hover" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">' . file_get_contents(asset('/images/icons/question.svg')) . '</a>
                                 </li>
                                 <li>
                                    if self-pay
-                            <a tabindex="0" data-offset="30, 40px" class="help-link help-link__inline" data-toggle="popover-large" data-content="<p>
-                                                    You can choose a private hospital to perform your elective procedure. Paid for by you. Anywhere in England.
-                                                 </p>
-
-                                                 <p>
-                                                     <a  class=&quot;btn btn-close btn-close__small btn-teal btn-icon&quot; >Close</a>
-                                                 </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>
+                            <a tabindex="0" data-trigger="hover" class="help-link help-link__inline" data-toggle="popover" data-content="<p>
+                                                    You can choose a private hospital to perform your treatment. Paid for by you. Anywhere in England.
+                                                 </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">' . file_get_contents(asset('/images/icons/question.svg')) . '</a>
                                 </li>
                                 <li>
                                     if covered by a health insurance policy
-                            <a tabindex="0" data-offset="30, 40px" class="help-link help-link__inline" data-toggle="popover-large" data-content="
+                            <a tabindex="0" data-trigger="hover" class="help-link help-link__inline" data-toggle="popover" data-content="
                                                  <p>
-                                                    You can choose which private hospital to perform your elective procedure, if covered by your healthcare insurance policy.
-                                                 </p>
-                                                 <p>
-                                                     <a  class=&quot;btn btn-close btn-close__small btn-teal btn-icon&quot; >Close</a>
-                                                 </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>
+                                                    You can choose which private hospital to perform your treatment, if covered by your healthcare insurance policy.
+                                                 </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">' . file_get_contents(asset('/images/icons/question.svg')) . '</a>
                                 </li>
                             </ul>
 
@@ -66,7 +56,7 @@
             [
                 'iconImg'=> 'search',
                 'title'=>'Step Two',
-                'description' => '<p>Use the Hospital Compare search criteria to shortlist one or more hospitals to make further enquiries of. Please note NHS hospitals typically do not respond to direct enquiries regarding NHS funded elective procedures prior to an appointment being confirmed.</p>'],
+                'description' => '<p>Use the Hospital Compare search criteria to shortlist one or more hospitals to make further enquiries of. Please note NHS hospitals typically do not respond to direct enquiries regarding NHS funded treatments prior to an appointment being confirmed.</p>'],
             [
                 'iconImg'=> 'hospital-compare',
                 'title'=>'Step Three',
