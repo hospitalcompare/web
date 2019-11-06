@@ -189,7 +189,8 @@
                     'well_led'              => $d['rating']['well_led'],
                     'wellLedIcon'           => \App\Helpers\Utils::getDiscOrStar($d['rating']['well_led']),
                     'procedures'            => $data['filters']['procedures'],
-                    'locationSpecialism'    => $d['location_specialism']
+                    'locationSpecialism'    => $d['location_specialism'],
+                    'popoverDelay'          => 2000
                    ])
             @endforeach
         @endif

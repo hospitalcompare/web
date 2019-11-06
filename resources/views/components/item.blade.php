@@ -55,7 +55,7 @@
                          'placement'     => 'bottom',
                          'size'          => 'cqc',
                          'trigger'       => 'hover',
-                         'hideDelay'     => 2000,
+                         'hideDelay'     => $popoverDelay,
                          'html'          => 'true',
                          'content'       => '<div class="container-fluid">
                              <div class="row">
@@ -130,12 +130,14 @@
                 <span class="d-none" id="item_waiting_time_{{$id}}">{{str_replace("<br>", " ", $waitTime)}}</span>
             </div>
             {{-- End waiting time --}}
+            {{-- NHS user rating --}}
             <div class="result-item-section-2__child">
                 <p class="h-50 d-flex align-items-center SofiaPro-Medium" @include('components.basic.popover', [
-                        'placement' => 'bottom',
-                        'trigger' => 'hover',
-                        'html' => 'true',
-                        'content' => !empty($d['placeRating']) ? '
+                        'placement'         => 'bottom',
+                        'trigger'           => 'hover',
+                        'html'              => 'true',
+                        'hideDelay'         => $popoverDelay,
+                        'content'           => !empty($d['placeRating']) ? '
                         <ul class="nhs-user-ratings mb-0">
                             <li>Cleanliness:&nbsp;'                            . '<span><strong>'  . number_format((float)$d['placeRating']['cleanliness'], 1).'%</span></strong></li>
                             <li>Food & Hydration:&nbsp;'                       . '<span><strong>' . number_format((float)$d['placeRating']['food_hydration'], 1).'%</span></strong></li>
@@ -148,6 +150,7 @@
                 </p>
                 <span class="d-none" id="item_user_rating_{{$id}}">{!! $userRating !!}</span>
             </div>
+            {{-- end NHS user rating --}}
             {{-- % operations cancelled --}}
             <div class="result-item-section-2__child">
                 <p class="h-50 d-flex align-items-center SofiaPro-Medium"

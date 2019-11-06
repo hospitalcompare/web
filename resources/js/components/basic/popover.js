@@ -53,7 +53,7 @@ $(document).ready(function () {
         var $trigger = $(shownEvent.target);
         var $id = $trigger.attr('aria-describedby');
         var $pops = $('#'+ $id);
-        $('.popover-regular')
+        $('.popover')
             .not($pops)
             .popover('hide');
     }
