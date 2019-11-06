@@ -55,6 +55,7 @@
                          'placement'     => 'bottom',
                          'size'          => 'cqc',
                          'trigger'       => 'hover',
+                         'hideDelay'     => 2000,
                          'html'          => 'true',
                          'content'       => '<div class="container-fluid">
                              <div class="row">
