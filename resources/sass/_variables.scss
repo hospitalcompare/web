@@ -20,7 +20,7 @@ $red: #e3342f;
 $orange: #f6993f;
 $yellow: #ffed4a;
 $cyan: #6cb2eb;
-$teal: #00cecd;
+$turq: #00cecd;
 $blue: #1b71f3;
 $violet: #8e00fe;
 $hanblue: #5e15d1;
@@ -144,13 +144,12 @@ $container-max-widths: (
 $shade-10: #1b70f3 !default;
 $shade-1: #d7dcdf !default;
 $shade-0: #fff !default;
-$teal: #1abc9c !default;
 
 // Range Slider
 $range-width: 100% !default;
 
 $range-handle-color: $shade-10 !default;
-$range-handle-color-hover: $teal !default;
+$range-handle-color-hover: $turq !default;
 $range-handle-size: 22px !default;
 
 $range-track-color: $shade-1 !default;
@@ -165,7 +164,7 @@ $nav-link-padding-y: 0.25rem;
 $nav-link-padding-x: 0;
 $nav-tabs-border-width: 0;
 $nav-tabs-border-radius: 0;
-$nav-tabs-link-hover-border-color: $teal;
+$nav-tabs-link-hover-border-color: $turq;
 
 // Borders
 $border-radius: 9px;

@@ -6,7 +6,7 @@
 
     a:hover {
         text-decoration: none;
-        color: $teal;
+        color: $turq;
     }
 }
 
@@ -89,12 +89,12 @@
                 left: 20px;
 
                 &:hover {
-                    color: $teal;
+                    color: $turq;
 
                     svg {
                         path {
-                            stroke: $teal;
-                            fill: $teal;
+                            stroke: $turq;
+                            fill: $turq;
                         }
                     }
                 }

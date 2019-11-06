@@ -6,8 +6,8 @@
 
 .corporate-content {
     background-color: #fff;
-    //border-bottom: 20px solid $teal;
-    box-shadow: inset 0px -20px 0px 0px $teal;
+    //border-bottom: 20px solid $turq;
+    box-shadow: inset 0px -20px 0px 0px $turq;
 
 }
 
@@ -35,7 +35,7 @@
                 @extend .SofiaPro-Medium;
 
                 &.active {
-                    border-bottom: 2px solid $teal;
+                    border-bottom: 2px solid $turq;
                 }
             }
         }

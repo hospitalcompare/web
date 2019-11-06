@@ -1,5 +1,5 @@
 .header-wrapper {
-    background: $teal;
+    background: $turq;
     //width: $fullWidth;
     width: 100%;
     text-align: center;
@@ -93,11 +93,11 @@
                 transition: $transition;
 
                 &.active {
-                    background-color: darken($teal, 5%);
+                    background-color: darken($turq, 5%);
                 }
 
                 &:hover {
-                    background-color: darken($teal, 5%);
+                    background-color: darken($turq, 5%);
                     text-decoration: none;
                 }
             }

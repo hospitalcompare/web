@@ -14,7 +14,7 @@
     }
 
     em {
-        color: $blue;
+        color: $turq;
     }
 
     ol, ul {
@@ -42,7 +42,7 @@
                 left: 0;
                 width: 11px;
                 height: 11px;
-                background-color: $blue;
+                background-color: $turq;
                 border-radius: 50%;
             }
         }
@@ -66,7 +66,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                color: $blue;
+                color: $turq;
                 @extend .font-semibold;
             }
         }
@@ -82,7 +82,7 @@
             margin: 0 auto 20px auto;
             text-align: center;
             font-size: 22px;
-            color: $teal;
+            color: $turq;
         }
     }
 
@@ -112,7 +112,7 @@ ol.alpha {
             position: absolute;
             top: 0;
             left: 0;
-            color: $blue;
+            color: $turq;
             @extend .font-semibold;
         }
     }
@@ -170,7 +170,7 @@ h3 {
 
 h4 {
     font-size: 24px;
-    color: $teal;
+    color: $turq;
     margin: 0 0 24px 0;
 }
 

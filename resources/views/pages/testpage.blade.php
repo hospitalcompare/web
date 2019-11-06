@@ -106,14 +106,14 @@
             </p>
         </div>
     </div>
-    <div class="section py-3 ">
-        <div class="container-fluid px-0">
-            <h2>Solutions bar </h2>
-            @include('components.solutionsbar', [
-                'position' => '',
-                'specialOffers' => $data['special_offers']])
-        </div>
-    </div>
+{{--    <div class="section py-3 ">--}}
+{{--        <div class="container-fluid px-0">--}}
+{{--            <h2>Solutions bar </h2>--}}
+{{--            @include('components.solutionsbar', [--}}
+{{--                'position' => '',--}}
+{{--                'specialOffers' => $data['special_offers']])--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <div class="section py-3 ">
         <div class="section py-3">
             <div class="container">

@@ -84,7 +84,7 @@
                                     'selectClassName'       => 'd-md-flex select_half-width w-100',
                                     'placeholder'           => 'How far would you travel?',
                                     'chevronFAClassName'    => '',
-                                    'labelClass'            => 'font-18',
+                                    'labelClass'            => 'font-18 pr-4',
                                     'name'                  =>'radius'])
                                 <a tabindex="0" _data-offset="30px, 40px"
                                    class="help-link"

@@ -52,7 +52,7 @@
 
             .category,
             .date {
-                color: $teal;
+                color: $turq;
                 @include font-size(20);
                 letter-spacing: -0.6px;
             }
@@ -155,7 +155,7 @@
 
             &:hover {
                 svg path {
-                    fill: $teal;
+                    fill: $turq;
                 }
             }
         }

@@ -71,10 +71,10 @@
 
     //colours
     &.btn-teal {
-        @include linear-gradient(90deg, $teal, $teal, $green);
+        @include linear-gradient(90deg, $turq, $turq, $green);
 
         &.btn-grad {
-            @include linear-gradient(90deg, $teal, $green, $teal);
+            @include linear-gradient(90deg, $turq, $green, $turq);
         }
     }
 
@@ -87,10 +87,10 @@
     }
 
     &.btn-blue {
-        @include linear-gradient(90deg, $blue, $blue, $teal);
+        @include linear-gradient(90deg, $blue, $blue, $turq);
 
         &.btn-grad {
-            @include linear-gradient(90deg, $blue, $teal, $blue);
+            @include linear-gradient(90deg, $blue, $turq, $blue);
         }
     }
 
@@ -111,10 +111,10 @@
     }
 
     &.btn-green {
-        @include linear-gradient(90deg, $green, $green, $teal);
+        @include linear-gradient(90deg, $green, $green, $turq);
 
         &.btn-grad {
-            @include linear-gradient(90deg, $green, $teal, $green);
+            @include linear-gradient(90deg, $green, $turq, $green);
         }
     }
 
@@ -123,7 +123,7 @@
         //width: 32px;
         //border-radius: 23px;
         border: 2px solid #00cecd;
-        color: $teal;
+        color: $turq;
         //flex: 0 0 32px;
         padding: 5px 15px 5px 40px;
 
@@ -136,7 +136,7 @@
             height: 16px;
 
             path {
-                stroke: $teal;
+                stroke: $turq;
                 stroke-width: 50px;
                 fill: #fff;
             }
@@ -162,14 +162,14 @@
         //}
 
         &:hover {
-            background-color: $teal;
+            background-color: $turq;
             color: #fff;
 
             svg, i {
 
                 path {
                     stroke: #fff;
-                    fill: $teal;
+                    fill: $turq;
                 }
             }
         }
@@ -191,7 +191,7 @@
         height: 19px;
         width: 19px;
         border-radius: 50%;
-        background-color: $teal;
+        background-color: $turq;
         background-image: url('../images/icons/plus-solid.svg');
         background-position: center center;
         background-repeat: no-repeat;
@@ -537,7 +537,7 @@
             color: $white;
             height: 60px;
             line-height: 60px;
-            background-color: $teal;
+            background-color: $turq;
             min-width: 182px;
             border-radius: 10px 10px 0 0;
             @include font-size(22);
@@ -580,7 +580,7 @@
 
     &:hover,
     &:focus {
-        color: $teal;
+        color: $turq;
         text-decoration: none;
     }
 }
