@@ -27,36 +27,26 @@
                         <li>your rights to choose:
                             <ul class="blue-dot">
                                 <li>if NHS funded treatment
-                            <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline" data-toggle="popover-large" data-content="
+                            <a tabindex="0" data-trigger="hover" class="help-link help-link__inline" data-toggle="popover" data-content="
                                  <p>
                                     You can choose which NHS hospital to perform your treatment. Paid for by the NHS. Anywhere in England.
                                  </p>
                                  <p><strong>OR</strong></p>
                                  <p> you can choose which private hospital to perform your treatment. Paid for by the NHS, at no extra cost to the taxpayer than an NHS hospital. Anywhere in England. See <a
                                     class=&quot;text-link&quot; href=&quot;/your-rights&quot;>Your Rights</a> for exceptions.
-                                 </p>
-                                 <p>
-                                     <a class=&quot;btn btn-close btn-close__small btn-teal btn-icon&quot; >Close</a>
-                                 </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>
+                                 </p>" data-trigger="hover" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>
                                 </li>
                                 <li>
                                    if self-pay
-                            <a tabindex="0" data-offset="30, 40px" class="help-link help-link__inline" data-toggle="popover-large" data-content="<p>
+                            <a tabindex="0" data-trigger="hover" class="help-link help-link__inline" data-toggle="popover" data-content="<p>
                                                     You can choose a private hospital to perform your treatment. Paid for by you. Anywhere in England.
-                                                 </p>
-
-                                                 <p>
-                                                     <a  class=&quot;btn btn-close btn-close__small btn-teal btn-icon&quot; >Close</a>
                                                  </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>
                                 </li>
                                 <li>
                                     if covered by a health insurance policy
-                            <a tabindex="0" data-offset="30, 40px" class="help-link help-link__inline" data-toggle="popover-large" data-content="
+                            <a tabindex="0" data-trigger="hover" class="help-link help-link__inline" data-toggle="popover" data-content="
                                                  <p>
                                                     You can choose which private hospital to perform your treatment, if covered by your healthcare insurance policy.
-                                                 </p>
-                                                 <p>
-                                                     <a  class=&quot;btn btn-close btn-close__small btn-teal btn-icon&quot; >Close</a>
                                                  </p>" data-trigger="focus" data-placement="top" data-delay="{ &quot;show&quot;: 100, &quot;hide&quot;: 100 }" data-html="true" data-original-title="" title="">?</a>
                                 </li>
                             </ul>
