@@ -15,11 +15,13 @@
                                 ],
                                 'closed' => [
                                     'title' => 'NHS funded operation',
-                                    'subtitle' => !empty($specialOffer['radius']) ? 'at '.$specialOffer['rating']['latest_rating'].' hospital ' . round($specialOffer['radius'], 1) . ' miles away' : 'at '.$specialOffer['rating']['latest_rating'].' hospital'
+                                    'subtitle' => ((empty($data['outstanding']) ?
+                                        'at '.$specialOffer['rating']['latest_rating'].' hospital ' :
+                                         'in '.number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1).' Weeks '). (!empty($specialOffer['radius']) ? round($specialOffer['radius'], 1) . ' miles away' : ''))
                                 ]
                             ],
                             'bulletPoints' => [
-                                $key == 'purple' ? 'Fully funded by the NHS' : 'Shortest waiting time',
+                                number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1).' Weeks ',
                                 $specialOffer['rating']['latest_rating'] . ' CQC Rating',
                                 (!empty($specialOffer['rating']['avg_user_rating'])) ? $specialOffer['rating']['avg_user_rating'] . ' star NHS Choices user rating' : null
                             ],

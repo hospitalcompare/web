@@ -13,36 +13,6 @@
 @section('content')
 
     @include('pages.pagesections.banner')
-    <section class="why-use-parent">
-        <div class="why-use-content">
-            <div class="why-use container">
-                <div class="row">
-                    <div class="why-use-text col col-12 col-md-6">
-                        <h2 class="section-title">Why use Hospital Compare?</h2>
-                        <p>Hospital Compare helps you make the best possible choice when it comes to choosing a suitable
-                            hospital for your treatment.</p>
-                        <p>Many people in the UK are not aware that they could have the option of an NHS funded operation
-                            in a private hospital. We are here to help you understand your rights and make the right
-                            choice.</p>
-                        <p>Whether you are searching for the best NHS hospital or the best private hospital, Hospital
-                            Compare is the best place that provides an accurate, up-to-date and unbiased assessment of all
-                            hospitals in the UK.</p>
-                    </div>
-                    <div class="why-use-video col col-12 col-md-6">
-                        <div class="video-wrapper">
-                            <video muted class="content" poster="{{ url('images/video_placeholder.png') }}">
-                                <source src="{{ asset('video/For_Wes.mp4') }}" type="video/mp4">
-                                                            <source src="movie.ogg" type="video/ogg">
-                                                            Your browser does not support the video tag.
-                            </video>
-{{--                            <div class="player-button toggle"></div>--}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
 
     <section class="how-section__parent">
         @include('components.howsection', [
@@ -107,6 +77,37 @@
                 'iconImg'=> 'confirm',
                 'title'=>'Step Four',
                 'description' => '<p>Call your GP surgery (if NHS funded), chosen hospital (if self-pay) or health insurance provider (if covered by a health insurance policy) to book your first appointment.</p>' ] ] ])
+    </section>
+
+    <section class="why-use-parent">
+        <div class="why-use-content">
+            <div class="why-use container">
+                <div class="row">
+                    <div class="why-use-text col col-12 col-md-6">
+                        <h2 class="section-title">Why use Hospital Compare?</h2>
+                        <p>Hospital Compare helps you make the best possible choice when it comes to choosing a suitable
+                            hospital for your treatment.</p>
+                        <p>Many people in the UK are not aware that they could have the option of an NHS funded operation
+                            in a private hospital. We are here to help you understand your rights and make the right
+                            choice.</p>
+                        <p>Whether you are searching for the best NHS hospital or the best private hospital, Hospital
+                            Compare is the best place that provides an accurate, up-to-date and unbiased assessment of all
+                            hospitals in the UK.</p>
+                    </div>
+                    <div class="why-use-video col col-12 col-md-6">
+                        <div class="video-wrapper">
+                            <video muted class="content" poster="{{ url('images/video_placeholder.png') }}">
+                                <source src="{{ asset('video/For_Wes.mp4') }}" type="video/mp4">
+                                <source src="movie.ogg" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video>
+                            {{--                            <div class="player-button toggle"></div>--}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <section class="choose-health-parent">

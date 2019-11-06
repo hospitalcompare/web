@@ -72,26 +72,28 @@ class WebController extends BaseController
         $errors         = $hospitals['errors'];
         $doctor         = $hospitals['doctor']['text'];
         $delay          = $hospitals['doctor']['delay'];
-        $specialOffers  = $hospitals['data']['special_offers'];
+        $specialOffers  = $hospitals['data']['special_offers']['items'];
+        $outstanding    = $hospitals['data']['special_offers']['outstanding'];
         $hospitals      = $hospitals['data']['hospitals'];
 
         $sortBys    = Utils::sortBys;
         $procedures = Utils::getProceduresForDropdown();
         $policies   = Utils::getInsurancePoliciesForDropdown();
 
-        $this->returnedData['success']                              = true;
-        $this->returnedData['data']['hospitals']                    = $hospitals;
-        $this->returnedData['data']['special_offers']               = $specialOffers;
-        $this->returnedData['data']['filters']['procedures']        = $procedures;
-        $this->returnedData['data']['filters']['waitingTimes']      = Utils::waitingTimes;
-        $this->returnedData['data']['filters']['userRatings']       = Utils::userRatings;
-        $this->returnedData['data']['filters']['qualityRatings']    = Utils::qualityRatings;
-        $this->returnedData['data']['filters']['hospitalTypes']     = Utils::hospitalTypes;
-        $this->returnedData['data']['filters']['policies']          = $policies;
-        $this->returnedData['data']['sortBy']                       = $sortBys;
-        $this->returnedData['doctor']                               = $doctor;
-        $this->returnedData['delay']                                = $delay;
-        $this->returnedData['hc_errors']                            = $errors;
+        $this->returnedData['success']                                  = true;
+        $this->returnedData['data']['hospitals']                        = $hospitals;
+        $this->returnedData['data']['special_offers']                   = $specialOffers;
+        $this->returnedData['data']['outstanding']                      = $outstanding;
+        $this->returnedData['data']['filters']['procedures']            = $procedures;
+        $this->returnedData['data']['filters']['waitingTimes']          = Utils::waitingTimes;
+        $this->returnedData['data']['filters']['userRatings']           = Utils::userRatings;
+        $this->returnedData['data']['filters']['qualityRatings']        = Utils::qualityRatings;
+        $this->returnedData['data']['filters']['hospitalTypes']         = Utils::hospitalTypes;
+        $this->returnedData['data']['filters']['policies']              = $policies;
+        $this->returnedData['data']['sortBy']                           = $sortBys;
+        $this->returnedData['doctor']                                   = $doctor;
+        $this->returnedData['delay']                                    = $delay;
+        $this->returnedData['hc_errors']                                = $errors;
 
         //For Live environment just show the work in progress page
         if(env('APP_ENV') == 'live')

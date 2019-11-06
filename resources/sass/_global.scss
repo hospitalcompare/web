@@ -1,5 +1,12 @@
 body {
     letter-spacing: -1px;
+
+    a {
+        &:hover {
+            text-decoration: none;
+            color: $turquoise !important;
+        }
+    }
 }
 
 .cookie-page,
