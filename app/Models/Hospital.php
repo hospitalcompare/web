@@ -362,7 +362,7 @@ class Hospital extends Model
                 $hospitalType = 'NHS';
             $specialOffers = self::getSpecialOffers($latitude, $longitude, $radius, $specialtyId, $preHospitals, $hospitalType);
             $radius += 20;
-        } while (empty($specialOffers['purple']) || empty($specialOffers['pink']));
+        } while (empty($specialOffers['items']['purple']) || empty($specialOffers['items']['pink']));
 
         //Generate text for Doctor Stevini
 //        $doctor = "<p>Your search returned " . "<strong>" .count($preHospitals). "</strong>" . " hospitals, currently sorted by ".$doctorSort.", with the best at the top.</p>";
@@ -516,8 +516,10 @@ class Hospital extends Model
                     $pink = $prePink->limit(1)->offset(1)->first();
 
         return [
-            'purple'        => !empty($purple) ? $purple->toArray() : [] ,
-            'pink'          => !empty($pink) ? $pink->toArray() : [],
+            'items' => [
+                'purple'        => !empty($purple) ? $purple->toArray() : [] ,
+                'pink'          => !empty($pink) ? $pink->toArray() : [],
+            ],
             'outstanding'   => $outstandingFlag
         ];
     }
