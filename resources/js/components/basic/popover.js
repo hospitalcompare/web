@@ -56,7 +56,6 @@ $(document).ready(function () {
         $('.popover-regular')
             .not($pops)
             .popover('hide');
-        console.log($pops);
     }
 
     // trigger the enquiry form on click of link inside popover
