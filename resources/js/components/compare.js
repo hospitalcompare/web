@@ -301,6 +301,12 @@ $(document).ready(function () {
                 .removeClass('open')
                 .find('.special-offer-body')
                 .slideUp();
+            var $isSticky = $('.result-item-parent').hasClass('js-is-sticky');
+            if($isSticky){
+                stickybits('.result-item-parent').cleanup();
+                return;
+            }
+            stickybits('.result-item-parent', {useStickyClasses: true});
         }
     });
 

@@ -472,6 +472,7 @@
     width: 100%;
 
     &.js-is-sticky,
+    &.js-is-sticky--change,
     &.js-is-stuck {
         z-index: 1075;
     }
