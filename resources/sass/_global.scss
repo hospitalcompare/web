@@ -158,8 +158,8 @@ select.big {
     background-color: $pink;
 }
 
-.bg-darkpink {
-    background-color: darken($pink, 20%);
+.bg-privateblue {
+    background-color: $privateBlue;
 }
 
 .bg-black {
@@ -312,4 +312,7 @@ select.big {
     }
 }
 
-
+// Transition for SVG paths
+path {
+    transition: $transition;
+}

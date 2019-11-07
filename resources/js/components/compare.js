@@ -75,6 +75,7 @@ $(document).ready(function () {
     function addHospitalToCompare(element) {
         var target = $('#compare_hospitals_grid');
         // Content for modal trigger button
+        var $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g><g><g><path fill="#fff" d="M10.002 18.849c-4.878 0-8.846-3.968-8.846-8.847 0-4.878 3.968-8.846 8.846-8.846 4.879 0 8.847 3.968 8.847 8.846 0 4.879-3.968 8.847-8.847 8.847zm0-18.849C4.488 0 0 4.488 0 10.002c0 5.515 4.488 10.003 10.002 10.003 5.515 0 10.003-4.488 10.003-10.003C20.005 4.488 15.517 0 10.002 0z"></path></g><g><path fill="#fff" d="M14.47 5.848l-5.665 6.375-3.34-2.67a.578.578 0 0 0-.811.088c-.2.25-.158.615.091.815l3.769 3.015a.57.57 0 0 0 .361.125c.167 0 .325-.07.433-.196l6.03-6.783a.579.579 0 0 0 .146-.42.588.588 0 0 0-.191-.4.592.592 0 0 0-.824.05z"></path></g></g></g></svg>';
         var btnContent = element.type == 'nhs-hospital' ?
             '<a id="' + element.id + '" ' +
             'class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" ' +
@@ -90,7 +91,7 @@ $(document).ready(function () {
             'data-hospital-url="' + element.url + '" ' +
             'data-hospital-title="' + element.name + '" ' +
             'data-target="#hc_modal_enquire_private">Make an enquiry' +
-            '    <i class=""></i>' +
+             $svg +
             '</a>';
         // Content for new hospital added to compare
         var newRowContent =
@@ -265,7 +266,7 @@ $(document).ready(function () {
     $(document).on("click", ".compare-hospitals-bar .remove-hospital", function (e) {
         e.stopPropagation();
         var elementId = $(this).attr('id');
-        console.log(JSON.parse(Cookies.get("compareHospitalsData")));
+        // console.log(JSON.parse(Cookies.get("compareHospitalsData")));
         var data = JSON.parse(Cookies.get("compareHospitalsData"));
         var compareCount = parseInt(Cookies.get("compareCount"));
         elementId = elementId.replace('remove_id_', '');

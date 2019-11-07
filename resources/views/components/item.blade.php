@@ -4,7 +4,7 @@
             <div class="hospital-image">
                 <img class="content h-100" width="134" height="123" alt="Image of {{ $title }}" src="{{ $itemImg }}">
                 <div
-                    class="{{$NHSClass}} py-1 px-2 rounded-pill m-1 {{ $NHSClass == 'private-hospital' ? 'bg-darkpink' : 'bg-teal' }}">
+                    class="{{$NHSClass}} py-1 px-2 rounded-pill m-1 {{ $NHSClass == 'private-hospital' ? 'bg-privateblue' : 'bg-teal' }}">
                     <p class="m-0">{{$fundedText}}</p></div>
                 @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', ['class' => 'default'])
                 {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
@@ -231,7 +231,8 @@
                 @if(!empty($specialOffers))
                     @include('components.basic.button', [
                     'classTitle'        => 'toggle-special-offer btn btn-block btn-icon btn-pink btn-special-offer btn-plus',
-                    'button'            => 'Special Offers'])
+                    'button'            => 'Special Offers',
+                    'svg'               => 'special'])
                 @endif
                 @include('components.basic.button', [
                     'classTitle'        => 'btn btn-compare compare btn-block',

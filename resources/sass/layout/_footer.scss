@@ -4,9 +4,12 @@
         color: $white;
     }
 
-    a:hover {
-        text-decoration: none;
-        color: $turq;
+    a {
+        transition: $transition;
+        &:hover {
+            text-decoration: none;
+            color: $turq;
+        }
     }
 }
 

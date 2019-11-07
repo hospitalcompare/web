@@ -481,15 +481,12 @@
             //line-height: 13px;
             //min-width: 160px;
 
-            &:before {
-                background-image: url('../images/icons/special.svg');
-                @include icon-bg-center(50%);
+            svg {
                 @include v-c;
                 position: absolute;
-                left: 0;
-                width: 40px;
-                height: 40px;
-                line-height: 40px;
+                left: 10px;
+                width: 20px;
+                height: 20px;
             }
         }
 
