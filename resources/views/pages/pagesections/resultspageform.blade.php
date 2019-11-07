@@ -12,7 +12,7 @@
                         'options' => $data['sortBy'],
                         'chevronFAClassName' => 'fa-chevron-down black-chevron',
                         'selectClass' => 'select-picker _results-page-select select-sort-by SofiaPro-Medium font-16',
-                        'selectClassName' => 'pr-3 d-flex align-items-center',
+                        'selectClassName' => 'mr-3 d-flex align-items-center',
                         'placeholder'=>'Sort by:',
                         'name'=>'sort_by',
                         'labelClass' => 'mb-0 SofiaPro-Medium sort-by-label'
