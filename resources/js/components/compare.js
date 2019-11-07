@@ -63,7 +63,9 @@ $(document).ready(function () {
         countSpan.text(compareCount);
         heartIcon.addClass('has-count');
         //Add the `active` class that will change the color to pink
-        $('.compare-hospitals-bar .solutions-compare-heart').addClass('active');
+        $('#compare_heart').addClass('active');
+    } else {
+        $('#compare_heart').removeClass('active');
     }
 
     // Check if we need to disable buttons on pageload
@@ -255,6 +257,12 @@ $(document).ready(function () {
             heartIcon.addClass('has-count');
         }, 100);
 
+        if(compareCount > 0){
+            heartIcon.addClass('active');
+        } else {
+            heartIcon.removeClass('active');
+        }
+
         //Reset compareCount and compareHospitalsData
         Cookies.set("compareCount", 0, -1);
         Cookies.set("compareHospitalsData", 0, -1);
@@ -271,6 +279,9 @@ $(document).ready(function () {
         // console.log(JSON.parse(Cookies.get("compareHospitalsData")));
         var data = JSON.parse(Cookies.get("compareHospitalsData"));
         var compareCount = parseInt(Cookies.get("compareCount"));
+        if(compareCount === 1){
+            heartIcon.removeClass('active');
+        }
         elementId = elementId.replace('remove_id_', '');
 
         removeHospitalFromCompare(elementId, data, compareCount);
