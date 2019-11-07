@@ -144,7 +144,7 @@ $(document).ready(function () {
         // Slide content down when all data removed
         if (compareCount === 0) {
             compareContent.slideUp();
-            $('body').removeClass('modal-open');
+            $('body').removeClass('shortlist-open');
             compareContent.removeClass('revealed');
             $('.compare-arrow').toggleClass('rotated');
         }
