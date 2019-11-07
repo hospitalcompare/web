@@ -1,4 +1,33 @@
 <form class="form-element" id="resultspage_form">
+    <div class="sort-parent" id="sort_parent">
+        <div class="container">
+            <div class="sort-bar row">
+                <div class="show-section col-12 col-md-6 SofiaPro-Medium">
+                    Showing {{$data['hospitals']->total()}} hospital(s) | Ordered
+                    by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating & Distance' : 'Care Quality Rating & Waiting Time') }}
+                </div>
+                <div class="sort-section col-12 col-md-6 d-flex flex-wrap justify-content-end align-items-center">
+                    @include('components.basic.select', [
+                        'showLabel' => true,
+                        'options' => $data['sortBy'],
+                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
+                        'selectClass' => 'select-picker _results-page-select select-sort-by SofiaPro-Medium font-16',
+                        'selectClassName' => 'pr-3 d-flex align-items-center',
+                        'placeholder'=>'Sort by:',
+                        'name'=>'sort_by',
+                        'labelClass' => 'mb-0 SofiaPro-Medium sort-by-label'
+                    ])
+
+                    @include('components.basic.button', [
+                        'button'            => 'Filter Results',
+                        'classTitle'        => 'btn btn-s btn-teal btn-grad btn-icon btn-arrow-down',
+                        'id'                => 'show_filters',
+                        'icon'              => 'fas fa-chevron-down'
+                    ])
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="filter-parent {{ !empty($displayBlock) && ($displayBlock) || !empty($hc_errors) ? 'd-block' : '' }}">
         <div class="filter container">
             <div class="postcode-radius row">
@@ -217,33 +246,5 @@
             </div>
         </div>
     </div>
-    <div class="sort-parent" id="sort_parent">
-        <div class="container">
-            <div class="sort-bar row">
-                <div class="show-section col-12 col-md-6 SofiaPro-Medium">
-                    Showing {{$data['hospitals']->total()}} hospital(s) | Ordered
-                    by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating & Distance' : 'Care Quality Rating & Waiting Time') }}
-                </div>
-                <div class="sort-section col-12 col-md-6 d-flex flex-wrap justify-content-end align-items-center">
-                    @include('components.basic.select', [
-                        'showLabel' => true,
-                        'options' => $data['sortBy'],
-                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                        'selectClass' => 'select-picker _results-page-select select-sort-by SofiaPro-Medium font-16',
-                        'selectClassName' => 'pr-3 d-flex align-items-center',
-                        'placeholder'=>'Sort by:',
-                        'name'=>'sort_by',
-                        'labelClass' => 'mb-0 SofiaPro-Medium sort-by-label'
-                    ])
 
-                    @include('components.basic.button', [
-                        'button'            => 'Filter Results',
-                        'classTitle'        => 'btn btn-s btn-teal btn-grad btn-icon btn-arrow-down',
-                        'id'                => 'show_filters',
-                        'icon'              => 'fas fa-chevron-down'
-                    ])
-                </div>
-            </div>
-        </div>
-    </div>
 </form>
