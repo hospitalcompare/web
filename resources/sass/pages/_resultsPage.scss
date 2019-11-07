@@ -535,3 +535,11 @@
         margin-left: 10px;
     }
 }
+
+.shortlist-open {
+    overflow: hidden;
+
+    .popover {
+        display: none !important;
+    }
+}

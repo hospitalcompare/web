@@ -293,7 +293,7 @@ $(document).ready(function () {
         var openTabs = $('.special-offer-tab.open');
         if (compareCount > 0) {
             compareContent.slideToggle();
-            $('body').toggleClass('modal-open');
+            $('body').toggleClass('shortlist-open');
             $('.compare-arrow').toggleClass('rotated');
             compareContent.toggleClass('revealed');
             // Close the special offer tabs if any are open
