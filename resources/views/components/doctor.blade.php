@@ -9,7 +9,8 @@
         @include('components.basic.button', [
             'classTitle'    => 'btn btn-go btn-icon',
             'button'        => 'Let\'s Go',
-            'icon'          => 'fa fa-chevron-right'
+            'icon'          => '',
+            'svg'           => 'chevron-right'
         ])
     </span>
     <img src="{{ asset('../images/dr-stevini.svg') }}"

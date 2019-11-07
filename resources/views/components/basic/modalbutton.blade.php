@@ -20,6 +20,10 @@
    data-target="{{ $modalTarget }}"
    data-image="{{ $image ?? '' }}"
    data-address="{{ $address ?? '' }}">{{ $button }}
-    <i class="{{ empty($icon) ? '' : $icon }}"></i>
-
+    @if(!empty($icon))
+        <i class="{{ $icon }}"></i>
+    @endif
+    @if(!empty($svg))
+        {!! file_get_contents(asset('/images/icons/' . $svg . '.svg')) !!}
+    @endif
 </a>

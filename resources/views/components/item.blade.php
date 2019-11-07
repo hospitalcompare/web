@@ -31,7 +31,8 @@
                 @include('components.basic.button', [
                     'classTitle'        => 'btn btn-xs btn-teal btn-icon btn-more-info position-absolute',
                     'button'            => 'More info',
-                    'icon'              => 'fa fa-plus fa-xs',
+                    'icon'              => '',
+                    'svg'               => 'plus-solid',
                     'dataTarget'        => '#corporate_content_hospital_' . $id
                  ])
                 {{--                TODO: reintroduce consultant button when we have this data --}}
@@ -213,7 +214,8 @@
                     'classTitle'        => 'btn btn-icon btn-enquire btn-blue enquiry mr-2 btn-block',
                     'target'            => 'blank',
                     'button'            => $btnText,
-                    'id'                => 'enquire_'.$id])
+                    'id'                => 'enquire_'.$id,
+                    'svg'               => 'circle-check'])
                 @elseif($NHSClass == 'nhs-hospital')
                     @include('components.basic.modalbutton', [
                     'hospitalType'      => $NHSClass,
@@ -223,7 +225,8 @@
                     'classTitle'        => 'btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block',
                     'button'            => $btnText,
                     'modalTarget'       => '#hc_modal_enquire_nhs',
-                    'id'                => 'enquire_'.$id])
+                    'id'                => 'enquire_'.$id,
+                    'svg'               => 'circle-check'])
                 @endif
                 @if(!empty($specialOffers))
                     @include('components.basic.button', [
@@ -231,10 +234,10 @@
                     'button'            => 'Special Offers'])
                 @endif
                 @include('components.basic.button', [
-                    'classTitle' => 'btn btn-compare compare btn-block',
-                    'button' => 'Compare',
-                    'icon' => 'fa fa-heart',
-                    'id' => $id])
+                    'classTitle'        => 'btn btn-compare compare btn-block',
+                    'button'            => 'Compare',
+                    'svg'               => 'heart-solid',
+                    'id'                => $id])
             </div>
         </div>
     </div>{{-- container --}}

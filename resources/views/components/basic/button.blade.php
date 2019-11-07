@@ -6,5 +6,10 @@
    href="{{ empty($hrefValue) ? 'javascript:void(0);' : $hrefValue }}"
    role="button">
     {{$button}}
-    <i class="{{ empty($icon) ? '' : $icon }}"></i>
+    @if(!empty($icon))
+        <i class="{{ $icon }}"></i>
+    @endif
+    @if(!empty($svg))
+        {!! file_get_contents(asset('/images/icons/' . $svg . '.svg')) !!}
+    @endif
 </a>
