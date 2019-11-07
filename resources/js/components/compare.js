@@ -52,7 +52,7 @@ $(document).ready(function () {
     //Check if we need to show the Compare hospitals div
     if (compareCount > 0) {
         // compareContent.slideDown();
-        // $('body').addClass('modal-open');
+        // $('body').addClass('shortlist-open');
         //Hide the contents and increase the span with number
         // compareContent.addClass('revealed');
         //Populate the table with the given data
@@ -170,7 +170,7 @@ $(document).ready(function () {
         var data = JSON.parse(Cookies.get("compareHospitalsData"));
         // compareBar.slideDown();
 
-        // $('body').addClass('modal-open');
+        // $('body').addClass('shortlist-open');
         // compareContent.removeClass('revealed');
 
         //Load the Cookies with the data that we need for the comparison
@@ -246,7 +246,7 @@ $(document).ready(function () {
         // Slide content down when all data removed
         if (compareCount === 0) {
             compareContent.slideUp();
-            $('body').removeClass('modal-open');
+            $('body').removeClass('shortlist-open');
             compareContent.removeClass('revealed');
             $('.compare-arrow').toggleClass('rotated');
         }
@@ -314,7 +314,7 @@ $(document).ready(function () {
         // Hide shortlist bar if clicking outside it, but only if it is already open
         if (compareBar.has(e.target).length === 0 && compareContent.hasClass('revealed')) {
             compareContent.slideUp();
-            $('body').removeClass('modal-open');
+            $('body').removeClass('shortlist-open');
             $('.compare-arrow').removeClass('rotated');
             compareContent.removeClass('revealed');
         }
