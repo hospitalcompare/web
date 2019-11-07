@@ -62,6 +62,8 @@ $(document).ready(function () {
         }
         countSpan.text(compareCount);
         heartIcon.addClass('has-count');
+        //Add the `active` class that will change the color to pink
+        $('.compare-hospitals-bar .solutions-compare-heart').addClass('active');
     }
 
     // Check if we need to disable buttons on pageload

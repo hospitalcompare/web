@@ -181,6 +181,11 @@
             }
         }
     }
+
+    .solutions-compare-heart.active {
+        fill: $pink;
+        stroke: $pink;
+    }
 }
 
 
