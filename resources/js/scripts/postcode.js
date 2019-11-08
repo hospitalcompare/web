@@ -1,19 +1,32 @@
 $(document).ready(function () {
     //POSTCODE Autocomplete
-    // $('.postcode-autocomplete-container').hide();
     var $postcode_input = $('.home-postcode-parent #input_postcode');
-
+    var $radiusInputParent = $('.home-radius-parent');
     var timer;
     var interval = 1000;
 
     // Do the ajax request with a delay
     $postcode_input.on('keyup', function() {
         clearTimeout(timer);
-        if($postcode_input.val()) {
+
+        if($(this).val()) {
             // Third argument passes the input to the function
-            timer = setTimeout(ajaxCall, interval, $(this))
+            timer = setTimeout(ajaxCall, interval, $(this));
+
+            if(valid_postcode($(this).val())){
+                $radiusInputParent.slideDown();
+            } else {
+                $radiusInputParent.slideUp();
+            }
         }
     });
+
+    // Check valid postcode
+    function valid_postcode(postcode) {
+        postcode = postcode.replace(/\s/g, "");
+        var regex = /^[A-Z]{1,2}[0-9]{1,2} ?[0-9][A-Z]{2}$/i;
+        return regex.test(postcode);
+    }
 
     function ajaxCall(input) {
         var postcode = input.val();
@@ -56,9 +69,11 @@ $(document).ready(function () {
         parent.val(newPostcode);
         ajaxBox.empty();
         $('.postcode-autocomplete-container').hide();
-    });
 
-//Hide first option tag value from displaying in select element options
-// $('.firstOption').hide();
+        // Show the radius select if postcode is selected
+        if(valid_postcode(newPostcode)){
+            $radiusInputParent.slideDown();
+        }
+    });
 });
 

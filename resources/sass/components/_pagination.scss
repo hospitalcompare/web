@@ -29,10 +29,10 @@
             width: 36px;
             height: 36px;
             background-color: $white;
-            border: 2px solid $teal;
+            border: 2px solid $turq;
             text-align: center;
             line-height: 32px;
-            color: $teal;
+            color: $turq;
             font-size: 20px;
             border-radius: 10px;
             @include transition(0.3s);
@@ -41,14 +41,14 @@
 
         &.active {
             .page-link {
-                background-color: $teal;
+                background-color: $turq;
                 color: $white;
                 cursor: default;
             }
         }
 
         &:not(.disabled):hover .page-link {
-            background-color: $teal;
+            background-color: $turq;
             color: $white;
         }
 
@@ -60,7 +60,7 @@
         height: 36px;
         text-align: center;
         line-height: 32px;
-        color: $teal;
+        color: $turq;
         font-size: 28px;
 
     }

@@ -4,9 +4,12 @@
         color: $white;
     }
 
-    a:hover {
-        text-decoration: none;
-        color: $teal;
+    a {
+        transition: $transition;
+        &:hover {
+            text-decoration: none;
+            color: $turq;
+        }
     }
 }
 
@@ -89,12 +92,12 @@
                 left: 20px;
 
                 &:hover {
-                    color: $teal;
+                    color: $turq;
 
                     svg {
                         path {
-                            stroke: $teal;
-                            fill: $teal;
+                            stroke: $turq;
+                            fill: $turq;
                         }
                     }
                 }

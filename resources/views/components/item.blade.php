@@ -4,7 +4,7 @@
             <div class="hospital-image">
                 <img class="content h-100" width="134" height="123" alt="Image of {{ $title }}" src="{{ $itemImg }}">
                 <div
-                    class="{{$NHSClass}} py-1 px-2 rounded-pill m-1 {{ $NHSClass == 'private-hospital' ? 'bg-darkpink' : 'bg-teal' }}">
+                    class="{{$NHSClass}} py-1 px-2 rounded-pill m-1 {{ $NHSClass == 'private-hospital' ? 'bg-privateblue' : 'bg-teal' }}">
                     <p class="m-0">{{$fundedText}}</p></div>
                 @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', ['class' => 'default'])
                 {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
@@ -31,7 +31,8 @@
                 @include('components.basic.button', [
                     'classTitle'        => 'btn btn-xs btn-teal btn-icon btn-more-info position-absolute',
                     'button'            => 'More info',
-                    'icon'              => 'fa fa-plus fa-xs',
+                    'icon'              => '',
+                    'svg'               => 'plus-solid',
                     'dataTarget'        => '#corporate_content_hospital_' . $id
                  ])
                 {{--                TODO: reintroduce consultant button when we have this data --}}
@@ -55,6 +56,7 @@
                          'placement'     => 'bottom',
                          'size'          => 'cqc',
                          'trigger'       => 'hover',
+                         'hideDelay'     => $popoverDelay,
                          'html'          => 'true',
                          'content'       => '<div class="container-fluid">
                              <div class="row">
@@ -129,12 +131,14 @@
                 <span class="d-none" id="item_waiting_time_{{$id}}">{{str_replace("<br>", " ", $waitTime)}}</span>
             </div>
             {{-- End waiting time --}}
+            {{-- NHS user rating --}}
             <div class="result-item-section-2__child">
                 <p class="h-50 d-flex align-items-center SofiaPro-Medium" @include('components.basic.popover', [
-                        'placement' => 'bottom',
-                        'trigger' => 'hover',
-                        'html' => 'true',
-                        'content' => !empty($d['placeRating']) ? '
+                        'placement'         => 'bottom',
+                        'trigger'           => 'hover',
+                        'html'              => 'true',
+                        'hideDelay'         => $popoverDelay,
+                        'content'           => !empty($d['placeRating']) ? '
                         <ul class="nhs-user-ratings mb-0">
                             <li>Cleanliness:&nbsp;'                            . '<span><strong>'  . number_format((float)$d['placeRating']['cleanliness'], 1).'%</span></strong></li>
                             <li>Food & Hydration:&nbsp;'                       . '<span><strong>' . number_format((float)$d['placeRating']['food_hydration'], 1).'%</span></strong></li>
@@ -147,6 +151,7 @@
                 </p>
                 <span class="d-none" id="item_user_rating_{{$id}}">{!! $userRating !!}</span>
             </div>
+            {{-- end NHS user rating --}}
             {{-- % operations cancelled --}}
             <div class="result-item-section-2__child">
                 <p class="h-50 d-flex align-items-center SofiaPro-Medium"
@@ -206,31 +211,34 @@
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'modalTarget'       => '#hc_modal_enquire_private',
-                    'classTitle'        => 'btn btn-icon btn-enquire btn-blue enquiry mr-2 btn-block',
+                    'classTitle'        => 'btn btn-icon btn-grad btn-enquire btn-blue enquiry mr-2 btn-block',
                     'target'            => 'blank',
                     'button'            => $btnText,
-                    'id'                => 'enquire_'.$id])
+                    'id'                => 'enquire_'.$id,
+                    'svg'               => 'circle-check'])
                 @elseif($NHSClass == 'nhs-hospital')
                     @include('components.basic.modalbutton', [
                     'hospitalType'      => $NHSClass,
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'hospitalUrl'       => $d['url'],
-                    'classTitle'        => 'btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block',
+                    'classTitle'        => 'btn btn-icon btn-grad btn-blue btn-enquire enquiry mr-2 btn-block',
                     'button'            => $btnText,
                     'modalTarget'       => '#hc_modal_enquire_nhs',
-                    'id'                => 'enquire_'.$id])
+                    'id'                => 'enquire_'.$id,
+                    'svg'               => 'circle-check'])
                 @endif
                 @if(!empty($specialOffers))
                     @include('components.basic.button', [
-                    'classTitle'        => 'toggle-special-offer btn btn-block btn-icon btn-pink btn-special-offer btn-plus',
-                    'button'            => 'Special Offers'])
+                    'classTitle'        => 'toggle-special-offer btn btn-block btn-grad btn-icon btn-pink btn-special-offer btn-plus',
+                    'button'            => 'Special Offers',
+                    'svg'               => 'special'])
                 @endif
                 @include('components.basic.button', [
-                    'classTitle' => 'btn btn-compare compare btn-block',
-                    'button' => 'Compare',
-                    'icon' => 'fa fa-heart',
-                    'id' => $id])
+                    'classTitle'        => 'btn btn-compare compare btn-block',
+                    'button'            => 'Compare',
+                    'svg'               => 'heart-solid',
+                    'id'                => $id])
             </div>
         </div>
     </div>{{-- container --}}

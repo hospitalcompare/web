@@ -1,5 +1,3 @@
-
-
 // Trigger the tooltip speech bubble
 .help-link {
     color: $black;
@@ -13,10 +11,11 @@
     text-align: center;
     z-index: 5;
     cursor: pointer;
+    @include flex-center;
 
     &.help-link__inline {
         position: initial;
-        display: inline-block;
+        display: inline-flex;
     }
 
     &:hover {
@@ -39,8 +38,6 @@
         right: 14px;
     }
 }
-
-
 
 .help-link:hover + .lightbox {
   display:block;

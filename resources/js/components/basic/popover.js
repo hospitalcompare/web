@@ -48,6 +48,16 @@ $(document).ready(function () {
         $('#'+ $id).addClass('popover-' + $classToAdd);
     }
 
+    // Close other popups that are open
+    function closeOtherPopups(shownEvent){
+        var $trigger = $(shownEvent.target);
+        var $id = $trigger.attr('aria-describedby');
+        var $pops = $('#'+ $id);
+        $('.popover')
+            .not($pops)
+            .popover('hide');
+    }
+
     // trigger the enquiry form on click of link inside popover
     // $("[data-toggle='popover']").on('shown.bs.popover', function (event) {
     //     var targetButton = $(event.target).parents('.sort-categories-inner').find('.btn-enquire');
@@ -59,5 +69,7 @@ $(document).ready(function () {
     // if the popover is triggered on hover, stop the flickering effect bug
     $("[data-toggle*='popover']").on('shown.bs.popover', function (event) {
         addDynamicClassToPopover(event);
+        // Close other popovers
+        closeOtherPopups(event);
     });
 });

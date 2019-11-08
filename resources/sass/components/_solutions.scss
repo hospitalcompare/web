@@ -3,7 +3,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-image: linear-gradient(to right, #00de9d 0%, #00cecb 100%);
+    background-image: linear-gradient(to right, $green 0%, $teal 100%);
     z-index: 1040;
 
     .compare-hospitals-header {
@@ -45,7 +45,7 @@
                     letter-spacing: -0.9px;
 
                     &:hover {
-                        background-color: darken($teal, 5%);
+                        background-color: darken($turq, 5%);
                         text-decoration: none;
                     }
                 }
@@ -56,13 +56,19 @@
         .compare-button-title {
             cursor: pointer;
 
-            svg {
+            svg { // #compare_heart
                 width: 30px;
                 height: 30px;
                 overflow: visible;
                 margin-right: 10px;
                 transition: $transition;
                 transform-origin: 50% 50%;
+
+                #wishlist {
+                    stroke: #fff;
+                    stroke-width: 1px;
+                    fill: $teal;
+                }
 
                 &.has-count {
                     transform-origin: 50% 50%;
@@ -80,6 +86,13 @@
                         animation: heartBeat .5s ease-in-out;
                         animation-fill-mode: forwards;
                         animation-iteration-count: 2;
+                    }
+                }
+
+                &.active {
+                    #wishlist { // The inner heart path
+                        fill: $pink;
+                        stroke: $pink;
                     }
                 }
             }
@@ -102,7 +115,7 @@
             display: inline-block;
             width: 18px;
             height: 10px;
-            background-color: $teal;
+            background-color: $turq;
             background-image: url('../images/up-arrow.svg');
             background-size: cover;
             background-repeat: no-repeat;
@@ -180,11 +193,6 @@
                 overflow: hidden;
             }
         }
-    }
-
-    .solutions-compare-heart.active {
-        fill: $pink;
-        stroke: $pink;
     }
 }
 

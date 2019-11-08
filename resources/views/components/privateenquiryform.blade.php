@@ -123,8 +123,11 @@
                         form.</label>
                 </div>
                 <div class="col-12 btn-area text-center">
-                    <a id="btn_submit" class="btn btn-icon btn-blue btn-enquire">Make an enquiry</a>
-                    {{--                    <input type="submit" id="btn_submit" class="btn btn-icon btn-blue btn-enquire" value="Make an enquiry" />--}}
+                    @include('components.basic.button', [
+                        'button'            => 'Make an enquiry',
+                        'id'                => 'btn_submit',
+                        'classTitle'        => 'btn btn-icon btn-blue btn-enquire',
+                        'svg'               => 'circle-check'])
                 </div>
             </div>
         </form>

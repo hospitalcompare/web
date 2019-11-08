@@ -24,7 +24,11 @@
 
                                 </div>
                                 <div class="btn-area">
-                                    <a href="/hospital-url" target="_blank" class="btn btn-icon btn-blue btn-enquire">Visit hospital website</a>
+                                    @include('components.basic.button', [
+                                        'target'            => 'blank',
+                                        'button'            => 'Visit hospital website',
+                                        'classTitle'        => 'btn btn-icon btn-blue btn-enquire',
+                                        'svg'               => 'circle-check'])
                                 </div>
                             </div>
                         </div>

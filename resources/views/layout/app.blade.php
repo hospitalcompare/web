@@ -56,7 +56,7 @@
                             "text": "#ffffff"
                         }
                     },
-                    "theme": "classic",
+                    "theme": "hc-cookie",
                     "position": "bottom-right",
                     "content": {
                         "href": "/cookie-policy/"

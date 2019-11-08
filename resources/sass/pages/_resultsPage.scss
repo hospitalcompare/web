@@ -69,8 +69,8 @@
 
         .black-chevron {
             position: absolute;
-            right: 30px;
-            bottom: 12px;
+            bottom: 10px;
+            right: 14px;
             color: $caretBlack;
             pointer-events: none;
         }
@@ -165,6 +165,10 @@
             .results-page-select {
                 width: auto
             }
+
+            .sort-by-label {
+                min-width: 60px;
+            }
         }
     }
 
@@ -183,7 +187,7 @@
     }
 
     .result-item-parent {
-        background-color: $teal;
+        background-color: $turq;
 
 
     }
@@ -404,7 +408,7 @@
 
         &:hover,
         &:active {
-            color: $teal;
+            color: $turq;
             text-decoration: none;
         }
     }
@@ -468,6 +472,7 @@
     width: 100%;
 
     &.js-is-sticky,
+    &.js-is-sticky--change,
     &.js-is-stuck {
         z-index: 1075;
     }
@@ -529,5 +534,13 @@
         height: 12px;
         display: inline-block;
         margin-left: 10px;
+    }
+}
+
+.shortlist-open {
+    overflow: hidden;
+
+    .popover {
+        display: none !important;
     }
 }

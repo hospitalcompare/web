@@ -160,18 +160,19 @@ window.popupDoctor = function (message, delay) {
                         </div>
                     </div>`,
         content: `<p class="bold mb-0">${message}</p>
-                     <p class="mt-3"><a class="btn btn-close btn-close__small btn-teal btn-icon">Close</a></p>`,
+<!--                     <p class="mt-3"><a class="btn btn-close btn-close__small btn-teal btn-icon">Close</a></p>-->
+`,
         html: true,
-        trigger: 'click',
+        trigger: 'focus',
         placement: 'auto'
     });
 
     if (delay != 0 || delay != '') {
         setTimeout(function () {
-            $doctor.trigger('click');
+            $doctor.focus();
         }, delay);
         return;
     }
 
-    $doctor.trigger('click');
+    $doctor.focus();
 };

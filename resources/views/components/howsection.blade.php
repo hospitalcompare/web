@@ -16,7 +16,7 @@
                         </div>
                         @endif
                         @if(!empty($howsection['description']))
-                        <div class="icon-description my-auto">
+                        <div class="icon-description">
                             {!! $howsection['description'] !!}
                         </div>
                         @endif

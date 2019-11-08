@@ -1,4 +1,9 @@
 // Popover
+
+[data-toggle*="popover"]{
+    cursor: pointer;
+}
+
 .popover {
     /* Style for "For privat" */
     color: $black;

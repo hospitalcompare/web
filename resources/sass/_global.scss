@@ -1,7 +1,5 @@
 body {
     letter-spacing: -1px;
-
-
 }
 
 .cookie-page,
@@ -68,7 +66,7 @@ ul.blue-dot {
             left: 0;
             width: 11px;
             height: 11px;
-            background-color: $blue;
+            background-color: $turq;
             border-radius: 50%;
         }
     }
@@ -76,12 +74,12 @@ ul.blue-dot {
     &.blue-dot_small {
 
         li {
-            color: $corporateContentGreen;
+            color: $black;
 
             &:before {
                 width: 9px;
                 height: 9px;
-                background-color: $corporateContentGreen;
+                background-color: $turq;
             }
         }
     }
@@ -133,7 +131,7 @@ select.big {
 }
 
 .bg-teal {
-    background-color: $teal;
+    background-color: $turq;
 }
 
 .bg-blue {
@@ -160,8 +158,8 @@ select.big {
     background-color: $pink;
 }
 
-.bg-darkpink {
-    background-color: darken($pink, 20%);
+.bg-privateblue {
+    background-color: $privateBlue;
 }
 
 .bg-black {
@@ -202,11 +200,11 @@ select.big {
 }
 
 .bg-not-yet-rated {
-    background-color: $teal;
+    background-color: $turq;
 }
 
 .col-teal {
-    color: $teal;
+    color: $turq;
 }
 
 .col-blue {
@@ -293,3 +291,28 @@ select.big {
 
 }
 
+
+// Cookie popup styling
+.cc-theme-hc-cookie {
+    border: 3px solid $turq;
+    border-radius: 10px;
+    @extend .SofiaPro-Regular;
+
+    .cc-btn {
+        @extend .btn;
+        @extend .btn-m;
+        @extend .btn-grad;
+        @extend .btn-teal;
+
+        text-align: center !important;
+        display: inline-block;
+        margin: 0 auto;
+        flex: initial !important;
+        cursor: pointer;
+    }
+}
+
+// Transition for SVG paths
+path {
+    transition: $transition;
+}
