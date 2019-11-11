@@ -352,7 +352,7 @@ class Hospital extends Model
         }]);
 
         $preHospitals =  $hospitals->get()->toArray();
-        $hospitals = $hospitals->paginate(10);
+        $hospitals = $hospitals->paginate(10)->onEachSide(2);
 
         //Get the special Offers
         $radius = 50;
