@@ -105,10 +105,13 @@
 
         #input_postcode {
             width: 100%;
-            padding: 20px 0 18px 16px;
+            //padding: 20px 0 18px 16px;
+            padding: 8px 40px 8px 13px;
+            @include font-size(14);
 
             @include placeholder {
-                font-size: 18px;
+                font-size: 14px;
+                line-height: 1.2;
                 color: #1c1c1c;
                 font-family: 'SofiaPro-Medium', sans-serif;
             }
@@ -116,13 +119,8 @@
     }
 
     .postcode-radius {
-        //margin-left: -$col-spacing;
-        //margin-right: -$col-spacing;
-
+        @include reset-row-spacing(7.5px);
         .postcode-radius-child {
-            //padding-left: $col-spacing;
-            //padding-right: $col-spacing;
-
             &:first-child {
                 //width: 40%;
             }
