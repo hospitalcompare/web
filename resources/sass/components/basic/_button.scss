@@ -7,6 +7,7 @@
     @include transition(0.3s);
     //@extend .SofiaPro-Medium;
     border-radius: 100px;
+    border: 2px solid transparent;
     color: $white;
     padding: 14px 26px;
     background-position: left;
@@ -19,7 +20,7 @@
     }
 
     &.btn-grad {
-        background-size: 300% 100% !important;
+        background-size: 500% 100% !important;
 
         &:hover {
             background-position: right !important;
@@ -97,7 +98,7 @@
         @include linear-gradient(90deg, $blue, $blue, $turq);
 
         &.btn-grad {
-            @include linear-gradient(90deg, $blue, $turq, $blue);
+            @include linear-gradient(90deg, $blue, $blue, $turq, $blue);
         }
     }
 
@@ -125,6 +126,14 @@
         }
     }
 
+    &.btn-pink {
+        @include linear-gradient(90deg, $pink, $pink, $violet);
+
+        &.btn-grad {
+            @include linear-gradient(90deg, $pink, $pink, $violet, $pink);
+        }
+    }
+
     &.btn-compare {
         //height: 32px;
         //width: 32px;
@@ -138,7 +147,7 @@
             content: '';
             position: absolute;
             @include v-c;
-            left: 10px;
+            left: 8px;
             width: 18px;
             height: 16px;
 
@@ -208,13 +217,6 @@
         padding: 0;
     }
 
-    &.btn-pink {
-        @include linear-gradient(90deg, $pink, $pink, $violet);
-
-        &.btn-grad {
-            @include linear-gradient(90deg, $pink, $violet, $pink);
-        }
-    }
 
     &.btn-black {
         @include linear-gradient(90deg, $black, $black, $pink, $pink);
@@ -299,11 +301,11 @@
         &.btn-plus {
             &:after {
                 background-image: url('../images/icons/plus-solid.svg');
-                @include icon-bg-center(40%);
+                @include icon-bg-center(100%);
                 @include v-c;
-                width: 20px;
-                height: 20px;
-                line-height: 20px;
+                right: 9px;
+                width: 14px;
+                height: 14px;
             }
         }
 
@@ -349,7 +351,7 @@
             color: $white;
             @include font-size(14);
             padding: 6px 30px 6px 12px;
-            background: linear-gradient(90deg, #000, #000, #00bcb4, #00bcb4);
+            background: linear-gradient(90deg, #000, #000, #00bcb4, #000);
             background-size: 300% 100%;
 
             //&:after {
@@ -380,11 +382,11 @@
         }
 
         &.btn-enquire {
-            border-radius: 10px;
+            //border-radius: 10px;
             color: $white !important;
             @include font-size(14);
             position: relative;
-            padding: 5px 15px 5px 40px;
+            padding: 5px 5px 5px 40px;
             display: inline-block;
             text-align: left;
 
@@ -393,7 +395,7 @@
                 //background-image: url('../images/icons/circle-check.svg');
                 //@include icon-bg-center;
                 @include v-c;
-                left: 10px;
+                left: 8px;
                 width: 20px;
                 height: 20px;
             }
@@ -474,7 +476,7 @@
         &.btn-special-offer {
             //padding: 13px 20px 13px 40px;
             padding: 5px 15px 5px 40px;
-            border-radius: 10px;
+            //border-radius: 10px;
             color: $white;
             //height: 40px;
             //line-height: 13px;
@@ -483,7 +485,7 @@
             svg {
                 @include v-c;
                 position: absolute;
-                left: 10px;
+                left: 8px;
                 width: 20px;
                 height: 20px;
             }
