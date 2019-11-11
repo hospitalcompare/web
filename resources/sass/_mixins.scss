@@ -166,12 +166,13 @@
     @if $weight {
         font-weight: $weight;
     }
-    @if $lh {
-        line-height: calc(#{strip-unit($lh)} / #{strip-unit($size)});
-    }
-    @if $ls {
-        letter-spacing: $ls;
-    }
+    //@if $lh {
+    //    line-height: calc(#{strip-unit($lh)} / #{strip-unit($size)});
+    //}
+    line-height: $line-height-base;
+    letter-spacing: $letter-spacing;
+    //@if $ls {
+    //}
 }
 
 

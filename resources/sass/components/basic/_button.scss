@@ -293,11 +293,7 @@
             height: 20px;
             line-height: 20px;
             @include font-size(14);
-
-            letter-spacing: -0.6px;
             padding: 0 20px 0 12px;
-
-
         }
 
         &.btn-plus {
@@ -313,7 +309,6 @@
 
         &.btn-more-info {
             @include font-size(14);
-            letter-spacing: -0.6px;
             padding: 5px 25px 5px 8px;
             border-radius: 4px 4px 0 0;
 
@@ -329,7 +324,6 @@
             height: 20px;
             line-height: 20px;
             @include font-size(14);
-            letter-spacing: -0.6px;
             padding: 0 20px 0 12px;
 
             &:after {
@@ -354,7 +348,6 @@
         &.btn-go {
             color: $white;
             @include font-size(14);
-            letter-spacing: -0.6px;
             padding: 6px 30px 6px 12px;
             background: linear-gradient(90deg, #000, #000, #00bcb4, #00bcb4);
             background-size: 300% 100%;
@@ -390,7 +383,6 @@
             border-radius: 10px;
             color: $white !important;
             @include font-size(14);
-            letter-spacing: -0.7px;
             position: relative;
             padding: 5px 15px 5px 40px;
             display: inline-block;
@@ -454,7 +446,6 @@
             background-color: $white;
             height: 30px;
             line-height: 30px;
-            letter-spacing: -0.6px;
             padding: 0 30px 0 12px;
 
             &:after {
@@ -545,8 +536,6 @@
     min-width: 182px;
     border-radius: 10px 10px 0 0;
     @include font-size(22);
-    letter-spacing: -0.66px;
-
     @include gradient-animation($turq, $turq, $turq, $green, 0.3s);
 
     svg {
@@ -564,7 +553,6 @@
 .btn-submit-results {
     @include font-size(18);
     background-size: 300% 100%;
-    letter-spacing: -0.9px;
     line-height: 20px;
     background-image: linear-gradient(270deg, #00cecd 0%, #00d7b5 56%, #00df9d 100%);
 
