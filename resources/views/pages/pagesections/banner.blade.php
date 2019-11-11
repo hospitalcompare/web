@@ -34,12 +34,7 @@
 {{--                                    'size'           => 'large',--}}
                                     'html'           => 'true',
                                     'trigger'        => 'hover',
-                                    'content'        => '<p class="bold mb-0">
-                                                     Treatment
-                                                 </p>
-                                                 <p>
-                                                     Select your treatment if known.
-                                                 </p>
+                                    'content'        => '<p>Select your treatment<br>if known to refine results</p>
                                                  {{--<p><a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a></p>--}}'])
                                 >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                             </div>

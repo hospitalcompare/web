@@ -208,7 +208,7 @@
                     'quality_rating'    => Request::input('quality_rating'),
                     'hospital_type'     => Request::input('hospital_type'),
                     'sort_by'           => Request::input('sort_by')
-                ])->links()
+                ])->links('vendor.pagination.hc-pagination')
             }}
         @endif
     </div>
