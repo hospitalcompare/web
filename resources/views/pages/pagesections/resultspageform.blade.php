@@ -242,7 +242,7 @@
                                      '])
                     >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                 </div>
-                <div class="filter-section-child col-6 col-md-4 col-lg-2">
+                <div class="filter-section-child col-6 col-md-4 col-lg-2 d-flex align-items-end">
                     @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-blue btn-s d-block btn-submit-results', 'button' => 'Update Results'])
                 </div>
             </div>

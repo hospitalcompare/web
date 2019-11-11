@@ -4,9 +4,7 @@
      aria-labelledby="" aria-modal="true" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true" class="text-white bg-black">Close</span>
-            </button>
+            @include('components.basic.closebutton')
             @include('components.privateenquiryform', [
                 'procedures'    => $procedures,
                 'title'         => $title ?? '',

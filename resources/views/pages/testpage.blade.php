@@ -11,6 +11,21 @@
 @section('body-class', 'test-page')
 
 @section('content')
+        <section class="pt-3">
+            <div class="container">
+                <h3>Enquiry Form</h3>
+                @include('components.modals.modalenquireprivate', [
+                           'procedures'    => $data['filters']['procedures'],
+                           'title'         => 'Mr',
+                           'firstName'     => 'Test',
+                           'dob'           => '1980/04/12',
+                           'lastName'      => 'Testing',
+                           'email'         => 'test@test.com',
+                           'phone'         => '07941939374',
+                           'postcode'      => 'ch423re',
+                           'gdpr'          => true])
+            </div>
+        </section>
     {{--     {{ dd($doctor) }}--}}
 {{--    <section>--}}
 {{--        <div class="container my-4">--}}
@@ -59,6 +74,12 @@
 {{--        </div>--}}
 {{--    </section>--}}
     <section>
+        <div class="container" style="height: 300px">
+            @include('components.basic.closebutton',
+                ['position'  => 'static'])
+        </div>
+    </section>
+    <section>
         <h3>Large popover - left</h3>
         <div class="my-5 popover popover-large fade bs-popover-left show" role="tooltip" id="popover438743"
              x-placement="bottom"
@@ -81,21 +102,7 @@
         @include('pages.pagesections.resultspageform', [
         'displayBlock' => true])
     </section>
-    {{--    <section class="pt-3">--}}
-    {{--        <div class="container">--}}
-    {{--            <h3>Enquiry Form</h3>--}}
-    {{--            @include('components.modals.modalenquireprivate', [--}}
-    {{--                       'procedures'    => $data['filters']['procedures'],--}}
-    {{--                       'title'         => 'Mr',--}}
-    {{--                       'firstName'     => 'Test',--}}
-    {{--                       'dob'           => '1980/04/12',--}}
-    {{--                       'lastName'      => 'Testing',--}}
-    {{--                       'email'         => 'test@test.com',--}}
-    {{--                       'phone'         => '07941939374',--}}
-    {{--                       'postcode'      => 'ch423re',--}}
-    {{--                       'gdpr'          => true])--}}
-    {{--        </div>--}}
-    {{--    </section>--}}
+
     <div class="section pt-3 pb-5">
         <div class="container">
             <p class="p-5" style="width: 300px; border: 3px solid black">
