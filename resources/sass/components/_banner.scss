@@ -32,7 +32,6 @@
 
 .box {
     width: 100%;
-    max-width: 511px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.75);
     padding: 20px 30px;
@@ -48,7 +47,6 @@
     p {
         color: #333333;
         @include font-size(25);
-        width: 67%;
         margin: auto;
         font-weight: 500;
     }
@@ -141,7 +139,7 @@
 
 // Home radius input
 .home-radius-parent {
-    display: none;
+    //display: none;
 }
 
 
