@@ -121,6 +121,18 @@
                 display: none;
             }
         }
+        .bottom-left-buttton {
+            position: absolute;
+            bottom: 20px;
+            //left: 0px;
+            width: 169px;
+            height: 44px;
+            border-radius: 0 10px 10px 0;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: -1px;
+            line-height: 28.8px;
+        }
     }
 
     .blog-content {
