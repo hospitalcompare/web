@@ -14,7 +14,7 @@
                 <div class="col col-12 col-lg-6">
                     <div class="box full-left ml-auto">
                         <p class="SofiaPro-Medium">Find the best hospital<br>for your treatment</p><br>
-                        <form class="form-element" method="get" action="/results-page">
+                        <form class="form-element" method="get" action="/results-page" autocomplete="off" id="homepage_form">
                             <div class="form-child">
                                 @include('components.basic.select', [
                                     'selectPicker'          => 'true',
@@ -39,14 +39,17 @@
                                 >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                             </div>
                             <div class="form-child home-postcode-parent">
+{{--                                Add this hidden input to remove the autocomplete functionality--}}
+                                <input name="fake_postcode" id="fake_postcode" type="text" style="display:none">
                                 <div class="input-wrapper position-relative">
                                     @include('components.basic.input', [
-                                    'placeholder' => 'Enter postcode',
-                                    'className' => 'postcode-text-box big',
-                                    'value' => '',
-                                    'name' =>'postcode',
-                                    'validation' => 'maxlength=8',
-                                     'id' => 'input_postcode'])
+                                        'placeholder'   => 'Enter postcode',
+                                        'className'     => 'postcode-text-box big',
+                                        'value'         => '',
+                                        'name'          =>'postcode',
+                                        'validation'    => 'maxlength=8 autocomplete="off"',
+                                        'id'            => 'input_postcode'
+                                    ])
                                     <a tabindex="0" _data-offset="30px, 40px"
                                        class="help-link"
                                         @include('components.basic.popover', [
