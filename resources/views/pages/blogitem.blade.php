@@ -35,7 +35,7 @@
                         @include('components.basic.button', [
                             'hrefValue'     => '/blogs',
                             'classTitle'    => 'btn btn-m btn-grad btn-teal bottom-left-buttton',
-                            'button'        => 'Back to blogs'
+                            'button'        => 'Back to Blogs'
 
                         ])
                     </div>
