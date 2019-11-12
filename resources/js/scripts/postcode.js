@@ -47,7 +47,7 @@ $(document).ready(function () {
                 //Check if we have at least one result in our data
                 if (!$.isEmptyObject(data.data.result)) {
                     $.each(data.data.result, function (key, obj) { //$.parseJSON() method is needed unless chrome is throwing error.
-                        ajaxBox.append("<p class='postcode-item' >" + obj.postcode + "</p>");
+                        ajaxBox.append("<p class='postcode-item' >" + obj.postcode + ', ' + 'Liverpool' + "</p>");
                     });
                     $('.postcode-autocomplete-container').show();
                 } else {

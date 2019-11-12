@@ -118,22 +118,24 @@
 }
 
 .postcode-autocomplete-container {
-    //display: none;
+    display: none;
     width: calc(100% - 18px);
     position: absolute;
+    left: 9px;
     z-index: 5;
     margin: 0 auto;
     overflow: hidden;
     transition: 1s linear;
     transition-delay: 0s;
-    //margin-top: 20px;
-    //position: absolute;
+    //border: 1px solid #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 
     .ajax-box {
         width: 100%;
         background-color: #fff;
         max-height: 222px;
         overflow: auto;
+        @extend .SofiaPro-Medium;
     }
 }
 
