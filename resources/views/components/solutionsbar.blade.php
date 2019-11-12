@@ -7,7 +7,7 @@
                     @foreach($specialOffers as $key => $specialOffer )
                     <li class="d-block h-100">
                         @include('components.basic.specialoffertab', [
-                            'bgColor' => $key,
+                            'bgColor' => 'purple',
                             'headerText' => [
                                 'open' => [
                                     'title' => $specialOffer['name'],
