@@ -219,7 +219,13 @@ class WebController extends BaseController
 
     // About us page
     public function aboutUs() {
-        return view('pages.aboutus');
+        //Retrieve the list of Procedures sorted by name ASC
+        $procedures = Utils::getProceduresForDropdown();
+
+        $this->returnedData['success']              = true;
+        $this->returnedData['data']['procedures']   = $procedures;
+
+        return view('pages.aboutus', $this->returnedData);
     }
 
     // Blogs page
