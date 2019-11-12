@@ -47,7 +47,7 @@ $(document).ready(function () {
                 //Check if we have at least one result in our data
                 if (!$.isEmptyObject(data.data.result)) {
                     $.each(data.data.result, function (key, obj) { //$.parseJSON() method is needed unless chrome is throwing error.
-                        ajaxBox.append("<p class='postcode-item' >" + obj.postcode + ', ' + 'Liverpool' + "</p>");
+                        ajaxBox.append("<p class='postcode-item' >" + obj.postcode + ', ' + obj.primary_care_trust + "</p>");
                     });
                     $('.postcode-autocomplete-container').show();
                 } else {
@@ -64,6 +64,8 @@ $(document).ready(function () {
 
     $('.ajax-box').on('click', '.postcode-item', function () {
         var newPostcode = $(this).text();
+        //Get the actual postcode (everything that's before `,`)
+        newPostcode = newPostcode.substr(0, newPostcode.indexOf(','));
         var parent = $('.home-postcode-parent #input_postcode');
         var ajaxBox = $('.postcode-autocomplete-container .ajax-box');
         parent.val(newPostcode);
