@@ -2,7 +2,7 @@
     <div class="sort-parent" id="sort_parent">
         <div class="container">
             <div class="sort-bar row">
-                <div class="show-section col-12 col-md-3 SofiaPro-Medium">
+                <div class="show-section col-12 col-md-6 SofiaPro-Medium">
                     Showing {{$data['hospitals']->total()}} hospital(s) | Ordered
                     by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating & Distance' : 'Care Quality Rating & Waiting Time') }}
                 </div>
