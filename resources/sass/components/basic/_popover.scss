@@ -9,8 +9,6 @@
     color: $black;
     @include font-size(14);
     font-weight: 400;
-    letter-spacing: -0.5px;
-    line-height: 1;
     //box-shadow: 0 0 5px rgba(0, 0, 0, 0.16);
     border-radius: 15px;
     border: none;
@@ -77,8 +75,6 @@
             padding: 25px;
             font-size: 14px;
             font-weight: 400;
-            letter-spacing: -0.7px;
-            line-height: 16.8px;
 
             // Leading heading
             .bold {

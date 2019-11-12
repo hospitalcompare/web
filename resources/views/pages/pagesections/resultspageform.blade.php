@@ -31,7 +31,42 @@
     <div class="filter-parent {{ !empty($displayBlock) && ($displayBlock) || !empty($hc_errors) ? 'd-block' : '' }}">
         <div class="filter container">
             <div class="postcode-radius row">
-                <div class="postcode-radius-child postcode col-12 col-md-4">
+                <div class="postcode-radius-child col-12 col-md-3 d-flex align-items-center">
+                    @include('components.basic.select', [
+                        'selectClassName'       => 'w-100',
+                        'showLabel'             => false,
+                        'selectPicker'          => 'true',
+                        'group'                 => true,
+                        'groupName'             => 'procedures',
+                        'options'               => $data['filters']['procedures'],
+                        'suboptionClass'        => 'subprocedures',
+                        'chevronFAClassName'    => 'fa-chevron-down black-chevron',
+                        'selectClass'           => 'select-picker highlight-search-dropdown',
+                        'name'                  =>'procedure_id'
+{{--                        'placeholder'           => 'Treatment',--}}
+{{--                        'labelClass'            => 'font-14 SofiaPro-Medium'--}}
+                    ])
+                    <a tabindex="0" _data-offset="30px, 40px"
+                       class="help-link"
+                       style="top: 11px; right: 53px"
+                        @include('components.basic.popover', [
+                        'dismissible'   => true,
+                        'placement'      => 'top',
+                        'html'           => 'true',
+                        'trigger'        => 'hover',
+                        'content'        => '<p class="SofiaPro-Medium mb-0">
+                                         Surgery Type
+                                     </p>
+                                     <p>
+                                         Select your treatment if known.
+                                     </p>
+{{--                                     <p>--}}
+{{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
+{{--                                     </p>--}}
+                                     '])
+                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
+                </div>
+                <div class="postcode-radius-child postcode col-12 col-md-3 d-flex align-items-center">
                     @include('components.basic.input', [
                         'placeholder' => 'Enter your postcode',
                         'validation' => 'maxlength=8',
@@ -53,45 +88,9 @@
                             'step'          => 1])
                     </div>
                 </div>
-                <div class="postcode-radius-child col-2">
-                    @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-blue btn-s d-block btn-submit-results', 'button' => 'Update Results'])
-                </div>
+
             </div>
             <div class="select-proximity filter-section row">
-                <div class="filter-section-child col-6 col-md-4 col-lg-2">
-                    @include('components.basic.select', [
-                        'selectClassName'       => 'w-100',
-                        'showLabel'             => true,
-                        'selectPicker'          => 'true',
-                        'group'                 => true,
-                        'groupName'             => 'procedures',
-                        'placeholder'           => 'Treatment',
-                        'options'               => $data['filters']['procedures'],
-                        'suboptionClass'        => 'subprocedures',
-                        'chevronFAClassName'    => 'fa-chevron-down black-chevron',
-                        'selectClass'           => 'select-picker highlight-search-dropdown',
-                        'name'                  =>'procedure_id',
-                        'labelClass'            => 'font-14 SofiaPro-Medium'
-                    ])
-                    <a tabindex="0" _data-offset="30px, 40px"
-                       class="help-link"
-                        @include('components.basic.popover', [
-                        'dismissible'   => true,
-                        'placement'      => 'top',
-                        'html'           => 'true',
-                        'trigger'        => 'hover',
-                        'content'        => '<p class="SofiaPro-Medium mb-0">
-                                         Surgery Type
-                                     </p>
-                                     <p>
-                                         Select your treatment if known.
-                                     </p>
-{{--                                     <p>--}}
-{{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
-{{--                                     </p>--}}
-                                     '])
-                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
-                </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'Waiting time', 'labelClass' => 'labelClass'])--}}
                     @include('components.basic.select', [
@@ -242,6 +241,9 @@
 {{--                                     </p>--}}
                                      '])
                     >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
+                </div>
+                <div class="filter-section-child col-6 col-md-4 col-lg-2 d-flex align-items-end">
+                    @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-blue btn-s d-block btn-submit-results', 'button' => 'Update Results'])
                 </div>
             </div>
         </div>

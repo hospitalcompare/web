@@ -3,7 +3,7 @@
         @include('components.basic.button', [
         'id' => 'back-to-top',
         'classTitle' => 'btn btn-icon btn-back-to-top',
-        'button' => 'Back to top',
+        'button' => '<span>Back to top</span>',
         'hrefValue' => '#top',
         'icon' => 'fa fa-chevron-up'])
     </div>

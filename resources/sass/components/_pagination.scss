@@ -7,11 +7,24 @@
     justify-content: center;
     flex-wrap: wrap;
 
-    .page-item {
-        &:first-child,
-        &:last-child {
-            display: none;
+    .pagination-next,
+    .pagination-previous {
+        a {
+            transition: 0.2s color ease;
         }
+
+        &:hover {
+            a {
+                text-decoration: none;
+            }
+        }
+
+        &.disabled {
+            opacity: 0.3;
+        }
+    }
+
+    .page-item {
 
         &.disabled {
             .page-link {

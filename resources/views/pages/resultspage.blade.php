@@ -208,22 +208,16 @@
                     'quality_rating'    => Request::input('quality_rating'),
                     'hospital_type'     => Request::input('hospital_type'),
                     'sort_by'           => Request::input('sort_by')
-                ])->links()
+                ])->links('components.basic.pagination')
             }}
         @endif
     </div>
 
-    {{--  Compare bar  --}}
-    {{--    @include('components.compare')--}}
-    {{-- New comparebar - solutions bar --}}
     @include('components.solutionsbar', [
         'specialOffers' => $data['special_offers']
         ])
-    {{--  Modal for 'make an enquiry'  --}}
     @include('components.modals.modalenquirenhs')
-    {{--  Modal for special offers  --}}
     @include('components.modals.modalspecial')
-    {{--  Modal for special offers  --}}
     @include('components.modals.modalenquireprivate', [
         'procedures' => $data['filters']['procedures']])
     {{--  Maps modal  --}}

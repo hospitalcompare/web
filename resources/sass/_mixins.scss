@@ -166,12 +166,13 @@
     @if $weight {
         font-weight: $weight;
     }
-    @if $lh {
-        line-height: calc(#{strip-unit($lh)} / #{strip-unit($size)});
-    }
-    @if $ls {
-        letter-spacing: $ls;
-    }
+    //@if $lh {
+    //    line-height: calc(#{strip-unit($lh)} / #{strip-unit($size)});
+    //}
+    line-height: $line-height-base;
+    letter-spacing: $letter-spacing;
+    //@if $ls {
+    //}
 }
 
 
@@ -323,7 +324,12 @@
     background-size: 100%;
     background-image: linear-gradient($fromStart, $toStart);
     position: relative;
-    z-index: 100;
+    z-index: 1;
+
+    span {
+        position: relative;
+        z-index: 5;
+    }
 
     &:before {
         background-image: linear-gradient($fromEnd, $toEnd);
@@ -337,7 +343,7 @@
         top: 0;
         left: 0;
         opacity: 0;
-        z-index: -100;
+        z-index: -1;
         transition: opacity $transTime ease;
     }
 
