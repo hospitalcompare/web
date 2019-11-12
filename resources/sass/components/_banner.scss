@@ -37,7 +37,10 @@
     text-align: center;
     position: relative;
     z-index: 5;
-    //display: inline-block;
+
+    &.flat-box {
+        padding: 40px 40px 30px;
+    }
 
     .form-child {
         position: relative;
