@@ -16,7 +16,7 @@
                 <div class="col col-12 {{ empty($hideText) ? 'col-lg-6' : '' }}">
                     <div class="box full-left ml-auto" style="{{ empty($hideText) ? 'max-width: 511px' : '' }}">
                         <p class="SofiaPro-Medium">Find the best hospital{!! empty($layout) ? '<br>' : '' !!}  for your treatment</p><br>
-                        <form class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-flex' : '' }}"
+                        <form class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-flex search-form-row' : '' }}"
                               method="get"
                               action="/results-page"
                                 style="">
@@ -72,9 +72,9 @@
                             <div class="form-child home-radius-parent full-left {{ !empty($layout) ? 'mr-2' : ''}}">
                                 @include('components.basic.select', [
                                     'showLabel'             => true,
-                                    'selectClass'           => 'distance-dropdown',
+                                    'selectClass'           => empty($layout) ? 'distance-dropdown': 'distance-dropdown w-100',
                                     'options'               => \App\Helpers\Utils::radius,
-                                    'selectClassName'       => empty($layout) ? 'd-md-flex select_half-width w-100' : 'w-100',
+                                    'selectClassName'       => empty($layout) ? 'd-md-flex select_half-width w-100' : 'd-md-flex flex-column align-items-start select_half-width w-100',
                                     'placeholder'           => 'How far would you travel?',
                                     'placeholderOption'     => 'Select Distance',
                                     'selectedPlaceholder'   => true,

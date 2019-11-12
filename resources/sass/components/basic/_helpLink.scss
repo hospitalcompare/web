@@ -23,12 +23,10 @@
     }
 }
 
-.home-page {
-    .box {
-        .help-link {
-            right: 60px;
-            @include v-c;
-        }
+.box {
+    .help-link {
+        right: 60px;
+        @include v-c;
     }
 }
 

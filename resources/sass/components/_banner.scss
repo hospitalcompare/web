@@ -142,4 +142,11 @@
     //display: none;
 }
 
-
+// Search form in horizontal arrangement
+.search-form-row {
+    .select_half-width {
+        label {
+            @include font-size(14);
+        }
+    }
+}
