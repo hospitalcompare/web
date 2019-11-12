@@ -192,12 +192,23 @@ class WebController extends BaseController
 
     // Your rights
     public function yourRightsPage() {
-        return view('pages.yourrightspage');
+        //Retrieve the list of Procedures sorted by name ASC
+        $procedures = Utils::getProceduresForDropdown();
+
+        $this->returnedData['success']              = true;
+        $this->returnedData['data']['procedures']   = $procedures;
+        return view('pages.yourrightspage', $this->returnedData);
     }
 
     // How to use Page
     public function howToUsePage() {
-        return view('pages.howtousepage');
+        //Retrieve the list of Procedures sorted by name ASC
+        $procedures = Utils::getProceduresForDropdown();
+
+        $this->returnedData['success']              = true;
+        $this->returnedData['data']['procedures']   = $procedures;
+
+        return view('pages.howtousepage', $this->returnedData);
     }
 
     // FAQS Page
