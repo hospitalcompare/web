@@ -3,7 +3,7 @@ $(document).ready(function () {
     var $postcode_input = $('.home-postcode-parent #input_postcode');
     var $radiusInputParent = $('.home-radius-parent');
     var timer;
-    var interval = 1000;
+    var interval = 500;
 
     // Do the ajax request with a delay
     $postcode_input.on('keyup', function() {
@@ -77,5 +77,14 @@ $(document).ready(function () {
             $radiusInputParent.slideDown();
         }
     });
+
+    //On Submit form, remove the `fake_postcode` input
+    $('#homepage_form').submit(function(){
+        $('#fake_postcode').attr("disabled", "disabled");
+
+        return true; // ensure form still submits
+    });
+
+
 });
 
