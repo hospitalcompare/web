@@ -13,10 +13,10 @@
                         </ul>
                     </div>
                 @endif
-                <div class="col col-12 {{ empty($hideText) ? 'col-lg-6' : '' }}">
-                    <div class="box full-left ml-auto" style="{{ empty($hideText) ? 'max-width: 511px' : '' }}">
+                <div class="col {{ !empty($layout) ? 'col-12 d-flex' : 'col-lg-6 col-12' }}">
+                    <div class="box {{ !empty($layout) ? 'mx-auto' : 'ml-auto' }}" style="{{ empty($hideText) ? 'max-width: 511px' : '' }}">
                         <p class="SofiaPro-Medium">Find the best hospital{!! empty($layout) ? '<br>' : '' !!}  for your treatment</p><br>
-                        <form class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-flex search-form-row' : '' }}"
+                        <form class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-flex align-items-end search-form-row' : '' }}"
                               method="get"
                               action="/results-page"
                                 style="">
@@ -74,7 +74,7 @@
                                     'showLabel'             => true,
                                     'selectClass'           => empty($layout) ? 'distance-dropdown': 'distance-dropdown w-100',
                                     'options'               => \App\Helpers\Utils::radius,
-                                    'selectClassName'       => empty($layout) ? 'd-md-flex select_half-width w-100' : 'd-md-flex flex-column align-items-start select_half-width w-100',
+                                    'selectClassName'       => empty($layout) ? 'd-md-flex select_half-width w-100' : 'd-md-flex flex-column align-items-end select_half-width w-100',
                                     'placeholder'           => 'How far would you travel?',
                                     'placeholderOption'     => 'Select Distance',
                                     'selectedPlaceholder'   => true,
@@ -99,8 +99,8 @@
                                 >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                             </div>
                             @include('components.basic.button', [
-                                'classTitle'    => 'btn btn-m btn-grad btn-teal py-3 mb-3',
-                                'button'        => 'Find Hospitals',
+                                'classTitle'    => !empty($layout) ? 'btn btn-m btn-grad btn-teal' : 'btn btn-m btn-grad btn-teal py-3 mb-3',
+                                'button'        => !empty($layout) ? 'Find<br>Hospitals' : 'Find Hospitals',
                                 'htmlButton'    => true,
                                 'style'         => !empty($layout) ? 'width: 114px; text-align: center; padding: 0; font-size: 18px; height: 62px; border-radius: 24px' : ''])
                             @unless(!empty($layout) && $layout == 'row')

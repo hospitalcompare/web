@@ -31,13 +31,13 @@
 //BANNER CONTENTS
 
 .box {
-    width: 100%;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.75);
     padding: 20px 30px;
     text-align: center;
     position: relative;
     z-index: 5;
+    //display: inline-block;
 
     .form-child {
         position: relative;
@@ -139,14 +139,22 @@
 
 // Home radius input
 .home-radius-parent {
-    //display: none;
+    display: none;
 }
 
 // Search form in horizontal arrangement
 .search-form-row {
+    .form-child {
+        margin-bottom: 0;
+    }
     .select_half-width {
         label {
-            @include font-size(14);
+            @include font-size(14, true);
+            padding-right: 0 !important;
+            width: 100%;
+            position: absolute;
+            top: -20px;
+            left: 0;
         }
     }
 }
