@@ -32,7 +32,7 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content row">
-                    <div class="tab-pane active col-7" id="profile_{{ $id }}" role="tabpanel"
+                    <div class="tab-pane active col-6" id="profile_{{ $id }}" role="tabpanel"
                          aria-labelledby="profile-tab">
                         <p class="SofiaPro-SemiBold col-greydarkest">Situated in London, this hospital provides private
                             patients with outstanding medical
@@ -72,7 +72,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane col-7"
+                    <div class="tab-pane col-6"
                          id="map_{{ $id }}"
                          role="tabpanel"
                          aria-labelledby="map-tab">
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane col-7 d-none" id="treatments_{{ $id }}" role="tabpanel"
+                    <div class="tab-pane col-6 d-none" id="treatments_{{ $id }}" role="tabpanel"
                          aria-labelledby="treatments-tab">
                         <p class="col-greydarkest SofiaPro-SemiBold">Our hospitals are equipped with state of the art
                             facilities and are focused on providing
@@ -156,7 +156,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="media-pane col-5">
+                    <div class="media-pane col-6">
                         <div class="row mb-5">
                             <div class="col-6">
                             <!--Carousel Wrapper-->
@@ -290,7 +290,7 @@
 {{--                    'dataTarget'        => '#corporate_content_hospital_' . $id--}}
 {{--                 ])--}}
             </div>
-            <div class="corporate-content-section-3"></div>
+{{--            <div class="corporate-content-section-3"></div>--}}
         </div>
     </div>{{-- End of container --}}
 </div>{{-- End of corporate content area  --}}

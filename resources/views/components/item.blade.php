@@ -30,7 +30,7 @@
 {{--                ])--}}
                 @include('components.basic.button', [
                     'classTitle'        => 'btn btn-xs btn-teal btn-icon btn-more-info position-absolute',
-                    'button'            => 'More info',
+                    'button'            => '&nbsp;',
                     'icon'              => '',
                     'svg'               => 'plus-solid',
                     'dataTarget'        => '#corporate_content_hospital_' . $id

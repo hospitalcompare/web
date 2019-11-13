@@ -444,11 +444,30 @@
     }
 }
 
-.result-item.corporate-content-open {
-    .hospital-details {
-        .btn-more-info {
-            //opacity: 0;
-            //pointer-events: none;
+.hospital-details {
+    .btn-more-info {
+        width: 92px;
+        height: 23px;
+        border-radius: 4px 3px 0 0;
+        &:before {
+            content: 'More info' !important;
+        }
+
+        &.open {
+            color: $white;
+            background: linear-gradient(90deg, #000, #000, #00bcb4, #000);
+            background-size: 300% 100%;
+            &:before {
+                content: 'Close info' !important;
+            }
+            //&:after {
+            //    content: 'Close info';
+            //}
+
+            i, svg {
+                transform: translateY(-50%) rotate3d(0, 0, 1, 45deg);
+
+            }
         }
     }
 }

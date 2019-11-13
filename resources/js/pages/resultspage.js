@@ -178,6 +178,8 @@ $(document).ready(function () {
             $('html, body').animate({
                 scrollTop: $scrollBack - 80
             }, 800);
+            //Change the `Close info` to `More info`
+            $(this).removeClass('open');
         } else {
             $target
                 .slideDown()
@@ -187,6 +189,8 @@ $(document).ready(function () {
                 scrollTop: ($(this).parents('.result-item').offset().top) - 80
                 // scrollTop: ($target.offset().top) - 80
             }, 800);
+            //Change the `More info` to `Close info`
+            $(this).addClass('open');
         }
     });
 
