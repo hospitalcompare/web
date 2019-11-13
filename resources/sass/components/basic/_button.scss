@@ -7,7 +7,6 @@
     @include transition(0.3s);
     //@extend .SofiaPro-Medium;
     border-radius: 100px;
-    border: 2px solid transparent;
     color: $white;
     padding: 14px 26px;
     background-position: left;
@@ -138,10 +137,10 @@
         //height: 32px;
         //width: 32px;
         //border-radius: 23px;
-        border: 2px solid #00cecd;
+        box-shadow: inset 0px 0px 0px 2px $teal;
         color: $turq;
         //flex: 0 0 32px;
-        padding: 5px 15px 5px 40px;
+        padding: 8px 15px 8px 40px;
 
         svg, i {
             content: '';
@@ -230,7 +229,8 @@
         //height: 46px;
         //line-height: 46px;
         background: #ed0373;
-        background: linear-gradient(-90deg, #ed0373, #fc278d, #fc278d, #649ef7, #649ef7, #1b70f3, #1b70f3);
+        background: linear-gradient(-90deg, $pink, $pink, #649ef7, #649ef7, $blue, $blue);
+        background-size: 300% 100%;
         transition: 0.6s;
         padding: 7px 25px;
     }
@@ -246,7 +246,7 @@
 
         &.btn-arrow-right {
             background: #649ef7;
-            background: linear-gradient(-90deg, #649ef7, #1b70f3, #1b70f3, #1b70f3);
+            background: linear-gradient(-90deg, #649ef7, $blue, $blue, $blue);
             background-size: 200%;
             //background-position: right;
             border-radius: 100px;
@@ -386,7 +386,7 @@
             color: $white !important;
             @include font-size(14);
             position: relative;
-            padding: 5px 5px 5px 40px;
+            padding: 8px 5px 8px 40px;
             display: inline-block;
             text-align: left;
 
@@ -475,7 +475,7 @@
 
         &.btn-special-offer {
             //padding: 13px 20px 13px 40px;
-            padding: 5px 15px 5px 40px;
+            padding: 8px 15px 8px 40px;
             //border-radius: 10px;
             color: $white;
             //height: 40px;

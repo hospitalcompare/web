@@ -100,6 +100,10 @@
     font-style: normal;
 }
 
+.font-12 {
+    @include font-size(12, true);
+}
+
 .font-14 {
     @include font-size(14, true);
 }
