@@ -66,12 +66,20 @@
             margin-bottom: 6px;
         }
 
-        .black-chevron {
+        .black-chevron,
+        svg {
             position: absolute;
+            width: 14px;
             bottom: 10px;
             right: 14px;
             color: $caretBlack;
             pointer-events: none;
+        }
+
+        .select-sort-by {
+            & + svg {
+                @include v-c;
+            }
         }
     }
 

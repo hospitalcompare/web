@@ -8,21 +8,23 @@
                 </div>
                 <div class="sort-section col-12 col-md-6 d-flex flex-wrap justify-content-end align-items-center">
                     @include('components.basic.select', [
-                        'showLabel' => true,
-                        'options' => $data['sortBy'],
-                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                        'selectClass' => 'select-picker _results-page-select select-sort-by SofiaPro-Medium font-16',
-                        'selectClassName' => 'mr-3 d-flex align-items-center',
-                        'placeholder'=>'Sort by:',
-                        'name'=>'sort_by',
-                        'labelClass' => 'mb-0 SofiaPro-Medium sort-by-label'
+                        'showLabel'             => true,
+                        'options'               => $data['sortBy'],
+{{--                        'chevronFAClassName'    => 'fas fa-chevron-down',--}}
+                        'svg'                   => 'chevron-down',
+                        'selectClass'           => 'select-picker _results-page-select select-sort-by SofiaPro-Medium font-16',
+                        'selectClassName'       => 'mr-3 d-flex align-items-center',
+                        'placeholder'           =>'Sort by:',
+                        'name'                  =>'sort_by',
+                        'labelClass'            => 'mb-0 SofiaPro-Medium sort-by-label'
                     ])
 
                     @include('components.basic.button', [
                         'button'            => 'Filter Results',
                         'classTitle'        => 'btn btn-s btn-teal btn-grad btn-icon btn-arrow-down',
                         'id'                => 'show_filters',
-                        'icon'              => 'fas fa-chevron-down'
+                        'icon'              => '',
+                        'svg'               => 'chevron-down-white'
                     ])
                 </div>
             </div>
