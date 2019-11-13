@@ -43,4 +43,7 @@
     @if(!empty($chevronFAClassName))
         <i class="fas {{empty($chevronFAClassName) ? 'fa-chevron-down' : $chevronFAClassName}}"></i>
     @endif
+    @if(!empty($svg))
+        {!! file_get_contents(asset('/images/icons/' . $svg . '.svg')) !!}
+    @endif
 </div>

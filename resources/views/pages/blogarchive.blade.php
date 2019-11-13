@@ -26,7 +26,7 @@
                     </div>
                     <div class="pagination-wrap">
                         @if(!empty($data['blogs']))
-                            {{ $data['blogs']->links() }}
+                            {{ $data['blogs']->links('components.basic.pagination') }}
                         @endif
                     </div>
                 </div>

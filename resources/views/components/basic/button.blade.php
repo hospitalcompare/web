@@ -1,4 +1,4 @@
-<a id="{{ empty($id) ? '' : $id }}"
+<{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'a' }} id="{{ empty($id) ? '' : $id }}"
    style="{{ $style ?? '' }}"
    class="{{$classTitle}}"
    target="{{ !empty($target) && $target == 'blank' ? '_blank' : '' }}"
@@ -12,4 +12,4 @@
     @if(!empty($svg))
         {!! file_get_contents(asset('/images/icons/' . $svg . '.svg')) !!}
     @endif
-</a>
+</{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'a' }}>

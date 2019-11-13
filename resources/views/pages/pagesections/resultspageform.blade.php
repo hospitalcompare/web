@@ -8,21 +8,23 @@
                 </div>
                 <div class="sort-section col-12 col-md-6 d-flex flex-wrap justify-content-end align-items-center">
                     @include('components.basic.select', [
-                        'showLabel' => true,
-                        'options' => $data['sortBy'],
-                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
-                        'selectClass' => 'select-picker _results-page-select select-sort-by SofiaPro-Medium font-16',
-                        'selectClassName' => 'mr-3 d-flex align-items-center',
-                        'placeholder'=>'Sort by:',
-                        'name'=>'sort_by',
-                        'labelClass' => 'mb-0 SofiaPro-Medium sort-by-label'
+                        'showLabel'             => true,
+                        'options'               => $data['sortBy'],
+{{--                        'chevronFAClassName'    => 'fas fa-chevron-down',--}}
+                        'svg'                   => 'chevron-down',
+                        'selectClass'           => 'select-picker _results-page-select select-sort-by SofiaPro-Medium font-16',
+                        'selectClassName'       => 'mr-3 d-flex align-items-center',
+                        'placeholder'           =>'Sort by:',
+                        'name'                  =>'sort_by',
+                        'labelClass'            => 'mb-0 SofiaPro-Medium sort-by-label'
                     ])
 
                     @include('components.basic.button', [
                         'button'            => 'Filter Results',
                         'classTitle'        => 'btn btn-s btn-teal btn-grad btn-icon btn-arrow-down',
                         'id'                => 'show_filters',
-                        'icon'              => 'fas fa-chevron-down'
+                        'icon'              => '',
+                        'svg'               => 'chevron-down-white'
                     ])
                 </div>
             </div>
@@ -46,17 +48,19 @@
 {{--                        'placeholder'           => 'Treatment',--}}
 {{--                        'labelClass'            => 'font-14 SofiaPro-Medium'--}}
                     ])
-                    <a tabindex="0" _data-offset="30px, 40px"
+                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
                        class="help-link"
                        style="top: 11px; right: 53px"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
                         'placement'      => 'top',
+                        'size'           => 'max-width',
                         'html'           => 'true',
                         'trigger'        => 'hover',
-                        'content'        => '<p class="SofiaPro-Medium mb-0">
-                                         Surgery Type
-                                     </p>
+                        'content'        => '
+{{--                        <p class="SofiaPro-Medium mb-0">--}}
+{{--                                         Surgery Type--}}
+{{--                                     </p>--}}
                                      <p>
                                          Select your treatment if known.
                                      </p>
@@ -74,6 +78,20 @@
                         'value' => !empty(Request::input('postcode')) && empty($hc_errors) ? Request::input('postcode') : '' ,
                         'name' => 'postcode',
                         'id' => 'input_postcode'])
+                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
+                       class="help-link"
+                       style="top: 11px; right: 53px"
+                        @include('components.basic.popover', [
+                        'dismissible'   => true,
+                        'placement'      => 'top',
+                        'html'           => 'true',
+                        'size'           => 'max-width',
+                        'trigger'        => 'hover',
+                        'content'        => '<p>
+                                         Please enter your postcode<br>for a refined search.
+                                     </p>
+                                     '])
+                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                 </div>
                 <div class="postcode-radius-child radius col-12 col-md-6">
                     <div class="col-inner pr-3 d-flex flex-column flex-wrap flex-lg-row align-items-center h-100 position-relative">
@@ -102,16 +120,18 @@
                         'placeholder'           =>'Waiting time',
                         'name'                  =>'waiting_time',
                         'labelClass'            => 'font-14 SofiaPro-Medium'])
-                    <a tabindex="0" _data-offset="30px, 40px"
+                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'       => true,
                         'placement'         => 'top',
                         'html'              => 'true',
+                        'size'           => 'max-width',
                         'trigger'           => 'hover',
-                        'content'           => '<p class="SofiaPro-Medium mb-0">
-                                         Waiting Time
-                                     </p>
+                        'content'           => '
+{{--                        <p class="SofiaPro-Medium mb-0">--}}
+{{--                                         Waiting Time--}}
+{{--                                     </p>--}}
                                      <p>
                                          Select the waiting time most suitable for your needs.
                                      </p>
@@ -132,16 +152,18 @@
                         'placeholder'=>'NHS User Rating',
                         'name'=>'user_rating',
                         'labelClass' => 'font-14 SofiaPro-Medium'])
-                    <a tabindex="0" _data-offset="30px, 40px"
+                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
                         'placement'      => 'top',
                         'html'           => 'true',
+                        'size'           => 'max-width',
                         'trigger'        => 'hover',
-                        'content'        => '<p class="SofiaPro-Medium mb-0">
-                                         NHS User Rating
-                                     </p>
+                        'content'        => '
+{{--                        <p class="SofiaPro-Medium mb-0">--}}
+{{--                                         NHS User Rating--}}
+{{--                                     </p>--}}
                                      <p>
                                          Five star rating system based on feedback provided by users of the NHS (five stars being the best). Information is not available on some hospitals.
                                      </p>
@@ -160,16 +182,18 @@
                         'placeholder'=>'Care Quality Rating',
                         'name'=>'quality_rating',
                         'labelClass' => 'font-14 SofiaPro-Medium'])
-                    <a tabindex="0" _data-offset="30px, 40px"
+                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
                         'placement'      => 'top',
                         'html'           => 'true',
+                        'size'           => 'max-width',
                         'trigger'        => 'hover',
-                        'content'        => '<p class="SofiaPro-Medium mb-0">
-                                         Care Quality Rating
-                                     </p>
+                        'content'        => '
+{{--                        <p class="SofiaPro-Medium mb-0">--}}
+{{--                                         Care Quality Rating--}}
+{{--                                     </p>--}}
                                      <p>
                                          The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
                                      </p>
@@ -189,16 +213,18 @@
                         'placeholder'=>'Hospital Type',
                         'name'=>'hospital_type',
                         'labelClass' => 'font-14 SofiaPro-Medium'])
-                    <a tabindex="0" _data-offset="30px, 40px"
+                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
                         'placement'      => 'top',
                         'html'           => 'true',
+                        'size'           => 'max-width',
                         'trigger'        => 'hover',
-                        'content'        => '<p class="SofiaPro-Medium mb-0">
-                                         NHS or Private Hospitals
-                                     </p>
+                        'content'        => '
+{{--                        <p class="SofiaPro-Medium mb-0">--}}
+{{--                                         NHS or Private Hospitals--}}
+{{--                                     </p>--}}
                                      <p>
                                          Select which hospital type best suits your needs. Remember you can choose to have an NHS treatment at most private hospitals in England and Wales.
                                      </p>
@@ -223,16 +249,18 @@
                         'name'                  => 'policy_id',
                         'labelClass'          => 'font-14 SofiaPro-Medium'
                     ])
-                    <a tabindex="0" _data-offset="30px, 40px"
+                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
                         'placement'      => 'top',
                         'html'           => 'true',
+                        'size'           => 'max-width',
                         'trigger'        => 'hover',
-                        'content'        => '<p class="SofiaPro-Medium mb-0">
-                                         Insurance policy
-                                     </p>
+                        'content'        => '
+{{--                        <p class="SofiaPro-Medium mb-0">--}}
+{{--                                         Insurance policy--}}
+{{--                                     </p>--}}
                                      <p>
                                          Select your insurance provider and policy type.
                                      </p>

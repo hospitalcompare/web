@@ -211,7 +211,7 @@
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'modalTarget'       => '#hc_modal_enquire_private',
-                    'classTitle'        => 'btn btn-icon btn-grad btn-enquire btn-blue enquiry mr-2 btn-block',
+                    'classTitle'        => 'btn btn-icon btn-grad btn-enquire btn-blue enquiry mr-2 btn-block font-12',
                     'target'            => 'blank',
                     'button'            => $btnText,
                     'id'                => 'enquire_'.$id,
@@ -222,7 +222,7 @@
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'hospitalUrl'       => $d['url'],
-                    'classTitle'        => 'btn btn-icon btn-grad btn-blue btn-enquire enquiry mr-2 btn-block',
+                    'classTitle'        => 'btn btn-icon btn-grad btn-blue btn-enquire enquiry mr-2 btn-block font-12',
                     'button'            => $btnText,
                     'modalTarget'       => '#hc_modal_enquire_nhs',
                     'id'                => 'enquire_'.$id,
@@ -230,13 +230,13 @@
                 @endif
                 @if(!empty($specialOffers))
                     @include('components.basic.button', [
-                    'classTitle'        => 'toggle-special-offer btn btn-block btn-grad btn-icon btn-pink btn-special-offer btn-plus',
+                    'classTitle'        => 'toggle-special-offer btn btn-block btn-grad btn-icon btn-pink btn-special-offer btn-plus font-12',
                     'button'            => 'Special Offers',
                     'svg'               => 'special'])
                 @endif
                 @include('components.basic.button', [
-                    'classTitle'        => 'btn btn-compare compare btn-block',
-                    'button'            => 'Compare',
+                    'classTitle'        => 'btn btn-compare compare btn-block font-12',
+                    'button'            => 'Compare Hospitals',
                     'svg'               => 'heart-solid',
                     'id'                => $id])
             </div>

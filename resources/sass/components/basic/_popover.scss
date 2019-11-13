@@ -1,6 +1,6 @@
 // Popover
 
-[data-toggle*="popover"]{
+[data-toggle*="popover"] {
     cursor: pointer;
 }
 
@@ -169,6 +169,10 @@
 
     &-cqc {
         min-width: 400px;
+    }
+
+    &.popover-max-width {
+        width: 200px;
     }
 }
 

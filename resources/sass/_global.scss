@@ -117,14 +117,18 @@ input.big,
 select.big {
     font-size: 18px;
     font-weight: 500;
-    height: 60px;
-    line-height: 60px;
-    padding: 0 45px 0 16px;
+    //height: 60px;
+    //line-height: 60px;
+    padding: 16px 45px 16px 16px;
 }
 
-// Custom container width
+// Custom container widths
 .container-980 {
     max-width: 980px;
+}
+
+.container-1028 {
+    max-width: 1028px;
 }
 
 .bg-teal {

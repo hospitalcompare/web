@@ -10,6 +10,7 @@
     background-size: cover;
     background-position: center center;
     position: relative;
+    padding: 45px 0;
 
     &:after {
         content: '';
@@ -23,16 +24,9 @@
     }
 }
 
-.banner-data {
-    padding: 45px 0;
-    color: $white; //inherited value
-}
-
 //BANNER CONTENTS
 
 .box {
-    width: 100%;
-    max-width: 511px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.75);
     padding: 20px 30px;
@@ -40,15 +34,22 @@
     position: relative;
     z-index: 5;
 
+    &.flat-box {
+        padding: 40px 40px 30px;
+
+        .dropdown-toggle,
+        #input_postcode {
+            max-width: 290px;
+        }
+    }
+
     .form-child {
         position: relative;
-        margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     p {
-        color: #333333;
         @include font-size(25);
-        width: 67%;
         margin: auto;
         font-weight: 500;
     }
@@ -66,9 +67,15 @@
             width: 100%;
         }
     }
+
+    .help-link {
+        @include v-c;
+        right: 50px;
+    }
 }
 
 .home-promo {
+    color: $white;
     @include media-breakpoint-up(lg) {
         padding-top: 70px;
     }
@@ -104,7 +111,6 @@
     text-align: center;
 
     a {
-        color: $darkerGrey;
         @include font-size(14);
         font-weight: 400;
     }
@@ -112,12 +118,12 @@
 
 .aqua-chevron {
     color: $aqua;
-    position: absolute;
+    @include v-c;
     right: 20px;
-    top: 25px;
+    //top: 25px;
 }
 
-.postcode-autocomplete-container {
+.postcode-results-container {
     display: none;
     width: calc(100% - 18px);
     position: absolute;
@@ -139,9 +145,46 @@
     }
 }
 
-// Home radius input
-.home-radius-parent {
-    display: none;
+// Radius input - controlling the direction of reveal
+.radius-parent {
+    &.row-layout {
+        max-width: 0;
+        visibility: hidden;
+        transition: max-width 0.8s ease;
+
+        &.revealed-right {
+            max-width: 500px;
+            visibility: visible;
+        }
+    }
+
+    &.column-layout {
+        max-height: 0;
+        visibility: hidden;
+        transition: max-height 0.8s ease;
+        margin-bottom: 0;
+
+        &.revealed-down {
+            max-height: 500px;
+            visibility: visible;
+            margin-bottom: 20px;
+        }
+    }
 }
 
-
+// Search form in horizontal arrangement
+.search-form-row {
+    .form-child {
+        margin-bottom: 0;
+    }
+    .select_half-width {
+        label {
+            @include font-size(14, true);
+            padding-right: 0 !important;
+            width: 100%;
+            position: absolute;
+            top: -20px;
+            left: 0;
+        }
+    }
+}

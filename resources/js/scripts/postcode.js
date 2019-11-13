@@ -1,9 +1,12 @@
 $(document).ready(function () {
     //POSTCODE Autocomplete
-    var $postcode_input = $('.home-postcode-parent #input_postcode');
-    var $radiusInputParent = $('.home-radius-parent');
+    var $postcode_input = $('.postcode-parent #input_postcode');
+    // The wrapper for distance dropdown
+    var $radiusParent = $('.radius-parent');
     var timer;
-    var interval = 500;
+    var interval = 200;
+    var $resultsContainer = $('.postcode-results-container');
+    var $ajaxBox = $('.ajax-box');
 
     // Do the ajax request with a delay
     $postcode_input.on('keyup', function() {
@@ -14,12 +17,22 @@ $(document).ready(function () {
             timer = setTimeout(ajaxCall, interval, $(this));
 
             if(valid_postcode($(this).val())){
-                $radiusInputParent.slideDown();
-            } else {
-                $radiusInputParent.slideUp();
+                showRadius($radiusParent);
             }
+            // else {
+            //     $radiusParent.hide();
+            // }
+        } else {
+            $ajaxBox.empty();
+            $resultsContainer.slideUp();
         }
     });
+
+    // Show the radius input
+    function showRadius(element){
+        var $direction = element.data('reveal-direction');
+        element.addClass('revealed-' + $direction);
+    }
 
     // Check valid postcode
     function valid_postcode(postcode) {
@@ -41,19 +54,19 @@ $(document).ready(function () {
             data: {},
             success: function (data) {
                 // var json_obj = $.parseJSON(data);//parse JSON
-                var ajaxBox = $(".home-postcode-parent .postcode-autocomplete-container .ajax-box");
-                ajaxBox.empty(); // remove old options
+                var $ajaxBox = $(".ajax-box");
+                $ajaxBox.empty(); // remove old options
                 $('#hc_alert').slideUp(); // Hide the alert bar
                 //Check if we have at least one result in our data
                 if (!$.isEmptyObject(data.data.result)) {
                     $.each(data.data.result, function (key, obj) { //$.parseJSON() method is needed unless chrome is throwing error.
-                        ajaxBox.append("<p class='postcode-item' >" + obj.postcode + ', ' + obj.primary_care_trust + "</p>");
+                        $ajaxBox.append("<p class='postcode-item' >" + obj.postcode + ', ' + obj.admin_district + "</p>");
                     });
-                    $('.postcode-autocomplete-container').show();
+                    $resultsContainer.slideDown();
                 } else {
                     showAlert('Invalid Postcode! Please try again.', false);
                     $postcode_input.val("");
-                    $('.postcode-autocomplete-container').hide();
+                    $resultsContainer.slideUp();
                 }
             },
             error: function (data) {
@@ -62,29 +75,27 @@ $(document).ready(function () {
         })
     }
 
-    $('.ajax-box').on('click', '.postcode-item', function () {
+    $ajaxBox.on('click', '.postcode-item', function () {
         var newPostcode = $(this).text();
         //Get the actual postcode (everything that's before `,`)
         newPostcode = newPostcode.substr(0, newPostcode.indexOf(','));
-        var parent = $('.home-postcode-parent #input_postcode');
-        var ajaxBox = $('.postcode-autocomplete-container .ajax-box');
+        var parent = $('.postcode-parent #input_postcode');
+
         parent.val(newPostcode);
-        ajaxBox.empty();
-        $('.postcode-autocomplete-container').hide();
+        $ajaxBox.empty();
+        $resultsContainer.slideUp();
 
         // Show the radius select if postcode is selected
         if(valid_postcode(newPostcode)){
-            $radiusInputParent.slideDown();
+            showRadius($radiusParent);
         }
     });
 
     //On Submit form, remove the `fake_postcode` input
-    $('#homepage_form').submit(function(){
+    $('#search_form').on('submit', function(){
         $('#fake_postcode').attr("disabled", "disabled");
 
         return true; // ensure form still submits
     });
-
-
 });
 

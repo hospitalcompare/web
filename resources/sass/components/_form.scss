@@ -168,7 +168,7 @@ select::-ms-expand {
 
                 &:before {
                     content: '';
-                    background-image: url('../images/icons/check-solid.svg');
+                    background-image: url('../images/icons/check-solid-white.svg');
                     @include icon-bg-center(70%);
                 }
             }
@@ -189,16 +189,16 @@ select::-ms-expand {
 
         &:before {
             content: "";
-            background-color: #fff;
+            background-color: transparent;
             display: inline-block;
-            width: 26px;
-            height: 26px;
-            border-radius: 10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
             border: 2px solid $darkestWhite;
-            flex: 0 0 26px;
+            flex: 0 0 20px;
             margin-right: 11px;
             text-align: center;
-            line-height: 26px;
+            line-height: 20px;
             cursor: pointer;
         }
     }
