@@ -34,19 +34,19 @@
                 <div class="tab-content row">
                     <div class="tab-pane active col-6" id="profile_{{ $id }}" role="tabpanel"
                          aria-labelledby="profile-tab">
-                        <p class="SofiaPro-SemiBold col-greydarkest">Situated in London, this hospital provides private
+                        <p class="SofiaPro-SemiBold">Situated in London, this hospital provides private
                             patients with outstanding medical
                             services. Both self paying and private medically insured patients will be treated using
                             the latest techniques in a modern and calming hospital. With a team of expert
                             specialists patients can get treatment for a range of hip, knee, spinal and foot and
                             ankle conditions.</p>
-                        <p class="col-greydarkest">Our hospitals are equipped with state of the art facilities and are
+                        <p class="">Our hospitals are equipped with state of the art facilities and are
                             focused on providing
                             high quality healthcare. Each hospital boasts of having the latest equipment, available
                             facilities include:</p>
                         <div class="row">
                             <div class="col-6">
-                                <p class="col-greydarkest SofiaPro-SemiBold">First list</p>
+                                <p class=" SofiaPro-SemiBold">First list</p>
                                 <ul class="blue-dot blue-dot_small">
                                     <li>First thing</li>
                                     <li>Second thing</li>
@@ -59,7 +59,7 @@
                                 </ul>
                             </div>
                             <div class="col-6">
-                                <p class="col-greydarkest SofiaPro-SemiBold">Second list</p>
+                                <p class=" SofiaPro-SemiBold">Second list</p>
                                 <ul class="blue-dot blue-dot_small">
                                     <li>First thing</li>
                                     <li>Second thing</li>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="tab-pane col-6 d-none" id="treatments_{{ $id }}" role="tabpanel"
                          aria-labelledby="treatments-tab">
-                        <p class="col-greydarkest SofiaPro-SemiBold">Our hospitals are equipped with state of the art
+                        <p class=" SofiaPro-SemiBold">Our hospitals are equipped with state of the art
                             facilities and are focused on providing
                             high quality healthcare. Each hospital boasts of having the latest equipment, available
                             facilities include:</p>
@@ -128,7 +128,7 @@
                         </form>
                         <div class="row">
                             <div class="col-12">
-                                <p class="col-greydarkest SofiaPro-SemiBold">Intro text for column area</p>
+                                <p class=" SofiaPro-SemiBold">Intro text for column area</p>
                             </div>
                             <div class="col-6">
                                 <ul class="blue-dot blue-dot_small">
@@ -251,7 +251,7 @@
                                        'button'            => '',
                                        'id'                => 'enquire_'.$id])
                                 </div>
-                                <div class="video-caption col-greydarkest font-14">Video title here</div>
+                                <div class="video-caption font-14">Video title here</div>
                             </div>
                         </div>
                         <div class="row">
