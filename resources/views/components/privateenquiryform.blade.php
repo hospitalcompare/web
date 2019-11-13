@@ -1,6 +1,5 @@
 <div class="modal-inner">
-
-    <h3 class="text-center text-white private-modal-enquiry-title">Enquire now for <span class="hospital-title">this hospital</span></h3>
+    <p class="text-center font-24 SofiaPro-Medium text-white private-modal-enquiry-title">Enquire now for <span class="hospital-title">this hospital</span></p>
     <p class="text-white text-center private-modal-enquiry-description">
 {{--        <div id="info_text" class="mt-2 text-white">--}}
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -127,11 +126,11 @@
                     <label class="small-print" for="gdpr">Please accept the Terms & Conditions before submitting the
                         form.</label>
                 </div>
-                <div class="col-12 btn-area text-center">
+                <div class="col-12 btn-area text-right">
                     @include('components.basic.button', [
                         'button'            => 'Make an enquiry',
                         'id'                => 'btn_submit',
-                        'classTitle'        => 'btn btn-icon btn-blue btn-enquire-private-hospital',
+                        'classTitle'        => 'btn btn-icon btn-blue btn-grad btn-enquire-private-hospital',
                         'svg'               => 'circle-check'])
                 </div>
             </div>

@@ -381,7 +381,8 @@
             }
         }
 
-        &.btn-enquire, &.btn-enquire-private-hospital {
+        &.btn-enquire,
+        &.btn-enquire-private-hospital {
             //border-radius: 10px;
             color: $white !important;
             @include font-size(14);
@@ -403,15 +404,11 @@
 
         &.btn-enquire-private-hospital {
             /* Style for "Make an en" */
-            width: 187px;
-            height: 47px;
+            //width: 187px;
             @include font-size(16);
-            font-weight: 400;
-            letter-spacing: -0.8px;
-            line-height: 35px;
-            background: $darkBlue;
             border-radius: 10px;
-            text-align:center;
+            text-align: center;
+            padding: 15px 25px 15px 45px;
 
             svg {
                 //content: '';
