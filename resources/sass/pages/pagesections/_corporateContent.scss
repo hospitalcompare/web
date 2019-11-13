@@ -16,18 +16,21 @@
 }
 
 .corporate-content-section-2 {
-    width: calc(86% - 134px);
+    //width: calc(86% - 134px);
+    width: calc(100% - 134px);
     //@extend .bg-teal;
     padding-left: 8px;
-    padding-top: 18px;
+    //padding-top: 18px;
     padding-bottom: 60px;
 
     .nav-tabs {
-        box-shadow: inset 0px -2px 0px 0px rgba(236, 236, 236, 1);
-
+        //box-shadow: inset 0px -2px 0px 0px rgba(236, 236, 236, 1);
+        border-top: 2px solid #ececec;
+        border-bottom: 2px solid #ececec;
         li { // nav-item
             margin-right: 25px;
             box-sizing: content-box;
+            padding-top: 5px;
 
             a { // nav-link
                 color: $caretBlack;
