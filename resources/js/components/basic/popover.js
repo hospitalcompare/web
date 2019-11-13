@@ -20,6 +20,16 @@ $(document).ready(function () {
                         </div>`,
         });
 
+    $('[data-toggle="popover-max-width"]')
+        .popover({
+            template: `<div class="popover popover-max-width popover-regular">
+                            <div class="popover-body">
+                            </div>
+                            <div class="arrow">
+                            </div>
+                        </div>`,
+        });
+
     // Larger, speech bubble popover
     $('[data-toggle="popover-large"]')
         .popover({
@@ -44,6 +54,9 @@ $(document).ready(function () {
     function addDynamicClassToPopover(shownEvent) {
         var $trigger = $(shownEvent.target);
         var $classToAdd = $trigger.data('trigger');
+        // if($trigger.parents('#resultspage_form')){
+        //     $classToAdd += ' popover-200';
+        // }
         var $id = $trigger.attr('aria-describedby');
         $('#'+ $id).addClass('popover-' + $classToAdd);
     }

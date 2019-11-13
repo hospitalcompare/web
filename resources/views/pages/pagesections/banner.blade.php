@@ -33,7 +33,7 @@
                                     'chevronFAClassName'    => 'fa-chevron-down aqua-chevron',
                                     'name'                  => 'procedure_id'
                                 ])
-                                <a tabindex="0" _data-offset="30px, 40px"
+                                <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
                                    class="help-link"
                                     @include('components.basic.popover', [
                                     'dismissible'   => true,
@@ -58,7 +58,7 @@
                                         'validation'    => 'maxlength=8 autocomplete="off"',
                                         'id'            => 'input_postcode'
                                     ])
-                                    <a tabindex="0" _data-offset="30px, 40px"
+                                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
                                        class="help-link"
                                         @include('components.basic.popover', [
                                         'dismissible'   => true,
@@ -87,7 +87,7 @@
                                     'chevronFAClassName'    => '',
                                     'labelClass'            => 'font-18 pr-4',
                                     'name'                  =>'radius'])
-                                <a tabindex="0" _data-offset="30px, 40px"
+                                <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
                                    class="help-link"
                                     @include('components.basic.popover', [
                                     'dismissible'   => true,
