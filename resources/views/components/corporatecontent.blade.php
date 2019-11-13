@@ -34,19 +34,19 @@
                 <div class="tab-content row">
                     <div class="tab-pane active col-6" id="profile_{{ $id }}" role="tabpanel"
                          aria-labelledby="profile-tab">
-                        <p class="SofiaPro-SemiBold col-greydarkest">Situated in London, this hospital provides private
+                        <p class="SofiaPro-SemiBold col-caretBlack">Situated in London, this hospital provides private
                             patients with outstanding medical
                             services. Both self paying and private medically insured patients will be treated using
                             the latest techniques in a modern and calming hospital. With a team of expert
                             specialists patients can get treatment for a range of hip, knee, spinal and foot and
                             ankle conditions.</p>
-                        <p class="col-greydarkest">Our hospitals are equipped with state of the art facilities and are
+                        <p class="col-caretBlack">Our hospitals are equipped with state of the art facilities and are
                             focused on providing
                             high quality healthcare. Each hospital boasts of having the latest equipment, available
                             facilities include:</p>
                         <div class="row">
                             <div class="col-6">
-                                <p class="col-greydarkest SofiaPro-SemiBold">First list</p>
+                                <p class="col-caretBlack SofiaPro-SemiBold">First list</p>
                                 <ul class="blue-dot blue-dot_small">
                                     <li>First thing</li>
                                     <li>Second thing</li>
@@ -59,7 +59,7 @@
                                 </ul>
                             </div>
                             <div class="col-6">
-                                <p class="col-greydarkest SofiaPro-SemiBold">Second list</p>
+                                <p class="col-caretBlack SofiaPro-SemiBold">Second list</p>
                                 <ul class="blue-dot blue-dot_small">
                                     <li>First thing</li>
                                     <li>Second thing</li>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="tab-pane col-6 d-none" id="treatments_{{ $id }}" role="tabpanel"
                          aria-labelledby="treatments-tab">
-                        <p class="col-greydarkest SofiaPro-SemiBold">Our hospitals are equipped with state of the art
+                        <p class="col-caretBlack SofiaPro-SemiBold">Our hospitals are equipped with state of the art
                             facilities and are focused on providing
                             high quality healthcare. Each hospital boasts of having the latest equipment, available
                             facilities include:</p>
@@ -128,7 +128,7 @@
                         </form>
                         <div class="row">
                             <div class="col-12">
-                                <p class="col-greydarkest SofiaPro-SemiBold">Intro text for column area</p>
+                                <p class="col-caretBlack SofiaPro-SemiBold">Intro text for column area</p>
                             </div>
                             <div class="col-6">
                                 <ul class="blue-dot blue-dot_small">
@@ -157,8 +157,8 @@
                         </div>
                     </div>
                     <div class="media-pane col-6">
-                        <div class="row mb-5">
-                            <div class="col-6">
+                        <div class="row">
+                            <div class="{{!empty($specialOffers) ? 'col-5' : 'col-12'}}">
                             <!--Carousel Wrapper-->
                                 <div class="carousel-wrapper position-relative">
                                     <div id="carousel-thumb_{{ $id }}"
@@ -235,28 +235,27 @@
                                         ])
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="video-wrapper position-relative">
-                                    <video class="content w-100" poster="{{ url('images/video_placeholder.png') }}">
-                                        <source src="{{ asset('/video/For_Wes.mp4') }}" type="video/mp4">
-                                        <source src="movie.ogg" type="video/ogg">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                    <div class="player-button toggle">{!! file_get_contents(asset('/images/icons/youtube.svg')) !!}</div>
-                                    @include('components.basic.modalbutton', [
-                                       'videoUrl'          => '/video/For_Wes.mp4',
-                                       'modalTarget'       => '#hc_modal_video',
-                                       'classTitle'        => 'stretched-link',
-                                       'target'            => 'blank',
-                                       'button'            => '',
-                                       'id'                => 'enquire_'.$id])
-                                </div>
-                                <div class="video-caption col-greydarkest font-14">Video title here</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                @if(!empty($specialOffers))
+                            @if(!empty($specialOffers))
+                                <div class="col-7">
+{{--                                    <div class="col-5">--}}
+{{--                                        <div class="video-wrapper position-relative">--}}
+{{--                                            <video class="content w-100" poster="{{ url('images/video_placeholder.png') }}">--}}
+{{--                                                <source src="{{ asset('/video/For_Wes.mp4') }}" type="video/mp4">--}}
+{{--                                                <source src="movie.ogg" type="video/ogg">--}}
+{{--                                                Your browser does not support the video tag.--}}
+{{--                                            </video>--}}
+{{--                                            <div class="player-button toggle">{!! file_get_contents(asset('/images/icons/youtube.svg')) !!}</div>--}}
+{{--                                            @include('components.basic.modalbutton', [--}}
+{{--                                               'videoUrl'          => '/video/For_Wes.mp4',--}}
+{{--                                               'modalTarget'       => '#hc_modal_video',--}}
+{{--                                               'classTitle'        => 'stretched-link',--}}
+{{--                                               'target'            => 'blank',--}}
+{{--                                               'button'            => '',--}}
+{{--                                               'id'                => 'enquire_'.$id])--}}
+{{--                                        </div>--}}
+{{--                                        <div class="video-caption col-caretBlack font-14">Video title here</div>--}}
+{{--                                    </div>--}}
+
                                     <div class="special-offers-tab bg-blue-grad rounded d-flex flex-column">
                                         <p class="special-offer-title text-white font-22 SofiaPro-SemiBold">Special
                                             Offer</p>
@@ -277,8 +276,8 @@
                                            'button'            => 'Enquire now',
                                            'id'                => 'enquire_'.$id])
                                     </div>
-                                @endif
-                            </div>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 </div>
