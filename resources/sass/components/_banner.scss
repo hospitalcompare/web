@@ -44,7 +44,7 @@
 
     .form-child {
         position: relative;
-        margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     p {
@@ -140,9 +140,31 @@
     }
 }
 
-// Home radius input
+// Radius input - controlling the direction of reveal
 .radius-parent {
-    display: none;
+    &.row-layout {
+        max-width: 0;
+        visibility: hidden;
+        transition: max-width 0.8s ease;
+
+        &.revealed-right {
+            max-width: 500px;
+            visibility: visible;
+        }
+    }
+
+    &.column-layout {
+        max-height: 0;
+        visibility: hidden;
+        transition: max-height 0.8s ease;
+        margin-bottom: 0;
+
+        &.revealed-down {
+            max-height: 500px;
+            visibility: visible;
+            margin-bottom: 20px;
+        }
+    }
 }
 
 // Search form in horizontal arrangement

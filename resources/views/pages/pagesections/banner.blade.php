@@ -75,7 +75,7 @@
                                     <div class="ajax-box"></div>
                                 </div>
                             </div>
-                            <div class="form-child radius-parent full-left {{ !empty($layout) ? 'mr-4' : ''}}">
+                            <div data-reveal-direction="{{ !empty($layout) ? 'right' : 'down'}}" class="form-child radius-parent full-left {{ !empty($layout) ? 'row-layout' : 'column-layout'}}">
                                 @include('components.basic.select', [
                                     'showLabel'             => true,
                                     'selectClass'           => empty($layout) ? 'distance-dropdown': 'distance-dropdown w-100',
@@ -105,7 +105,7 @@
                                 >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                             </div>
                             @include('components.basic.button', [
-                                'classTitle'    => !empty($layout) ? 'btn btn-m btn-grad btn-teal' : 'btn btn-m btn-grad btn-teal py-3 mb-3',
+                                'classTitle'    => !empty($layout) ? 'btn btn-m btn-grad btn-teal ml-4' : 'btn btn-m btn-grad btn-teal py-3 mb-3',
                                 'button'        => !empty($layout) ? 'Find<br>Hospitals' : 'Find Hospitals',
                                 'htmlButton'    => true,
                                 'style'         => !empty($layout) ? 'width: 114px; text-align: center; padding: 0; font-size: 18px; height: 62px; border-radius: 24px' : ''])

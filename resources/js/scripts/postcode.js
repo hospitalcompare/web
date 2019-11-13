@@ -17,7 +17,7 @@ $(document).ready(function () {
             timer = setTimeout(ajaxCall, interval, $(this));
 
             if(valid_postcode($(this).val())){
-                $radiusParent.show();
+                showRadius($radiusParent);
             }
             // else {
             //     $radiusParent.hide();
@@ -27,6 +27,12 @@ $(document).ready(function () {
             $resultsContainer.slideUp();
         }
     });
+
+    // Show the radius input
+    function showRadius(element){
+        var $direction = element.data('reveal-direction');
+        element.addClass('revealed-' + $direction);
+    }
 
     // Check valid postcode
     function valid_postcode(postcode) {
@@ -81,7 +87,7 @@ $(document).ready(function () {
 
         // Show the radius select if postcode is selected
         if(valid_postcode(newPostcode)){
-            $radiusParent.slideDown();
+            showRadius($radiusParent);
         }
     });
 
