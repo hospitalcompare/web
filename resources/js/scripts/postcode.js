@@ -4,7 +4,9 @@ $(document).ready(function () {
     // The wrapper for distance dropdown
     var $radiusParent = $('.radius-parent');
     var timer;
-    var interval = 500;
+    var interval = 200;
+    var $resultsContainer = $('.postcode-results-container');
+    var $ajaxBox = $('.ajax-box');
 
     // Do the ajax request with a delay
     $postcode_input.on('keyup', function() {
@@ -20,6 +22,9 @@ $(document).ready(function () {
             // else {
             //     $radiusParent.hide();
             // }
+        } else {
+            $ajaxBox.empty();
+            $resultsContainer.slideUp();
         }
     });
 
@@ -43,19 +48,19 @@ $(document).ready(function () {
             data: {},
             success: function (data) {
                 // var json_obj = $.parseJSON(data);//parse JSON
-                var ajaxBox = $(".ajax-box");
-                ajaxBox.empty(); // remove old options
-                $('#hc_alert').hide(); // Hide the alert bar
+                var $ajaxBox = $(".ajax-box");
+                $ajaxBox.empty(); // remove old options
+                $('#hc_alert').slideUp(); // Hide the alert bar
                 //Check if we have at least one result in our data
                 if (!$.isEmptyObject(data.data.result)) {
                     $.each(data.data.result, function (key, obj) { //$.parseJSON() method is needed unless chrome is throwing error.
-                        ajaxBox.append("<p class='postcode-item' >" + obj.postcode + ', ' + obj.primary_care_trust + "</p>");
+                        $ajaxBox.append("<p class='postcode-item' >" + obj.postcode + ', ' + obj.admin_district + "</p>");
                     });
-                    $('.postcode-results-container').slideDown();
+                    $resultsContainer.slideDown();
                 } else {
                     showAlert('Invalid Postcode! Please try again.', false);
                     $postcode_input.val("");
-                    $('.postcode-results-container').slideUp();
+                    $resultsContainer.slideUp();
                 }
             },
             error: function (data) {
@@ -64,19 +69,19 @@ $(document).ready(function () {
         })
     }
 
-    $('.ajax-box').on('click', '.postcode-item', function () {
+    $ajaxBox.on('click', '.postcode-item', function () {
         var newPostcode = $(this).text();
         //Get the actual postcode (everything that's before `,`)
         newPostcode = newPostcode.substr(0, newPostcode.indexOf(','));
         var parent = $('.postcode-parent #input_postcode');
-        var ajaxBox = $('.postcode-results-container .ajax-box');
+
         parent.val(newPostcode);
-        ajaxBox.empty();
-        $('.postcode-results-container').hide();
+        $ajaxBox.empty();
+        $resultsContainer.slideUp();
 
         // Show the radius select if postcode is selected
         if(valid_postcode(newPostcode)){
-            $radiusParent.show();
+            $radiusParent.slideDown();
         }
     });
 
