@@ -456,15 +456,23 @@
     .btn-more-info {
         width: 92px;
         height: 23px;
+        line-height: 23px;
         border-radius: 4px 3px 0 0;
+        transition: 0.3s all ease;
+
         &:before {
             content: 'More info' !important;
+        }
+
+        svg {
+            transition: 0.1s all ease;
         }
 
         &.open {
             color: $white;
             background: linear-gradient(90deg, #000, #000, #00bcb4, #000);
             background-size: 300% 100%;
+
             &:before {
                 content: 'Close info' !important;
             }
@@ -473,7 +481,7 @@
             //}
 
             i, svg {
-                transform: translateY(-50%) rotate3d(0, 0, 1, 45deg);
+                transform: translateY(-50%) rotate3d(0, 0, 1, 45deg) !important;
 
             }
         }

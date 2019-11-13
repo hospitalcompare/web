@@ -75,6 +75,7 @@
 }
 
 .home-promo {
+    color: $white;
     @include media-breakpoint-up(lg) {
         padding-top: 70px;
     }
