@@ -24,7 +24,7 @@
                              {{--<p><a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a></p>--}}'])
             >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
         </div>
-        <div class="form-child home-postcode-parent">
+        <div class="form-child postcode-parent">
             <div class="input-wrapper position-relative">
                 @include('components.basic.input', [
                 'placeholder' => 'Enter postcode',
@@ -46,11 +46,11 @@
                                  '])
                 >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
             </div>
-            <div class="postcode-autocomplete-container">
+            <div class="postcode-results-container">
                 <div class="ajax-box"></div>
             </div>
         </div>
-        <div class="form-child home-radius-parent full-left">
+        <div class="form-child radius-parent full-left">
             @include('components.basic.select', [
                 'showLabel'             => true,
                 'selectClass'           => 'distance-dropdown',

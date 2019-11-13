@@ -16,8 +16,10 @@
                 <div class="col {{ !empty($layout) ? 'col-12 d-flex' : 'col-lg-6 col-12' }}">
                     <div class="box {{ !empty($layout) ? 'mx-auto flat-box' : 'ml-auto' }}" style="{{ empty($hideText) ? 'max-width: 511px' : '' }}">
                         <p class="SofiaPro-Medium">Find the best hospital{!! empty($layout) ? '<br>' : '' !!}  for your treatment</p><br>
-                        <form class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-flex align-items-end search-form-row' : '' }}"
-                              method="get"
+                        <form
+                            id="search_form"
+                            class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-flex align-items-end search-form-row' : '' }}"
+                            method="get"
                               action="/results-page"
                                 style="">
                             <div class="form-child {{ !empty($layout) ? 'mr-2' : ''}}">
@@ -43,7 +45,7 @@
                                                  {{--<p><a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a></p>--}}'])
                                 >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                             </div>
-                            <div class="form-child home-postcode-parent {{ !empty($layout) ? 'mr-2' : ''}}">
+                            <div class="form-child postcode-parent {{ !empty($layout) ? 'mr-2' : ''}}">
 {{--                                Add this hidden input to remove the autocomplete functionality--}}
                                 <input name="fake_postcode" id="fake_postcode" type="text" style="display:none">
 
@@ -69,11 +71,11 @@
                                                      '])
                                     >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                                 </div>
-                                <div class="postcode-autocomplete-container">
+                                <div class="postcode-results-container">
                                     <div class="ajax-box"></div>
                                 </div>
                             </div>
-                            <div class="form-child home-radius-parent full-left {{ !empty($layout) ? 'mr-4' : ''}}">
+                            <div class="form-child radius-parent full-left {{ !empty($layout) ? 'mr-4' : ''}}">
                                 @include('components.basic.select', [
                                     'showLabel'             => true,
                                     'selectClass'           => empty($layout) ? 'distance-dropdown': 'distance-dropdown w-100',
