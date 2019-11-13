@@ -443,12 +443,16 @@
 
         // Button inside special offer tabs in solutions bar
         &.btn-enquire-now {
-            font-family: "SofiaPro-Bold", sans-serif;
+            font-family: "SofiaPro", sans-serif;
             color: $pink;
             background-color: $white;
-            height: 30px;
-            line-height: 30px;
-            padding: 0 30px 0 12px;
+            height: 29px;
+            width:122px;
+            line-height: 24px;
+            padding: 0 30px 0 17px;
+            font-weight: 400;
+            letter-spacing: -0.7px;
+            @include font-size(14);
 
             &:after {
                 background-image: url('../images/icons/up-arrow-pink.svg');
@@ -458,7 +462,7 @@
                 top: 0;
                 bottom: 0;
                 width: 30px;
-                height: 30px;
+                //height: 30px;
                 line-height: 30px;
                 transform: rotate(90deg);
             }
