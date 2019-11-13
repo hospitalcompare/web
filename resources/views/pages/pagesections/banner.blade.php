@@ -1,7 +1,7 @@
 <section class="banner-parent">
     <div class="banner">
         <div class="container {{ !empty($layout) && $layout == 'row' ? 'container-1028' : '' }}">
-            <div class="banner-data row">
+            <div class="row">
                 @if(empty($hideText))
                     <div class="home-promo col col-12 col-lg-6">
                         <p>The quality of care and waiting times in England vary greatly between hospitals. You have the
