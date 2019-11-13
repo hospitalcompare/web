@@ -40,6 +40,11 @@
 
     &.flat-box {
         padding: 40px 40px 30px;
+
+        .dropdown-toggle,
+        #input_postcode {
+            max-width: 290px;
+        }
     }
 
     .form-child {
@@ -66,6 +71,11 @@
             cursor: pointer;
             width: 100%;
         }
+    }
+
+    .help-link {
+        @include v-c;
+        right: 50px;
     }
 }
 
@@ -113,9 +123,9 @@
 
 .aqua-chevron {
     color: $aqua;
-    position: absolute;
+    @include v-c;
     right: 20px;
-    top: 25px;
+    //top: 25px;
 }
 
 .postcode-results-container {
