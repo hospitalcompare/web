@@ -113,6 +113,8 @@
     a {
         @include font-size(14);
         font-weight: 400;
+        color: $darkerGrey;
+        letter-spacing: -0.7px;
     }
 }
 

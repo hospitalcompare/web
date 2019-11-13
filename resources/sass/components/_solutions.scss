@@ -3,7 +3,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-image: linear-gradient(to right, $green 0%, $teal 100%);
+    //background-image: linear-gradient(to right, $green 0%, $teal 100%);
+    background: $footerGrey;
     z-index: 1040;
 
     .compare-hospitals-header {
@@ -66,7 +67,7 @@
                 #wishlist {
                     stroke: #fff;
                     stroke-width: 1px;
-                    fill: $teal;
+                    fill: $footerGrey;
                 }
 
                 &.has-count {
@@ -114,7 +115,7 @@
             display: inline-block;
             width: 18px;
             height: 10px;
-            background-color: $turq;
+            background-color: $footerGrey;
             background-image: url('../images/up-arrow.svg');
             background-size: cover;
             background-repeat: no-repeat;

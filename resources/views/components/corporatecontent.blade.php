@@ -158,7 +158,7 @@
                     </div>
                     <div class="media-pane col-6">
                         <div class="row">
-                            <div class="col-5">
+                            <div class="{{!empty($specialOffers)? 'col-5':'col-12'}}">
                             <!--Carousel Wrapper-->
                                 <div class="carousel-wrapper position-relative">
                                     <div id="carousel-thumb_{{ $id }}"

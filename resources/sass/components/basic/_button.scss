@@ -133,6 +133,14 @@
         }
     }
 
+    &.btn-grey {
+        //@include linear-gradient(90deg, $pink, $pink, $violet);
+        background: $footerGrey;
+        &.btn-grad {
+            //@include linear-gradient(90deg, $pink, $pink, $violet, $pink);
+        }
+    }
+
     &.btn-compare {
         //height: 32px;
         //width: 32px;
