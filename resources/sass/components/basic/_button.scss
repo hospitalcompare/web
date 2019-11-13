@@ -381,7 +381,7 @@
             }
         }
 
-        &.btn-enquire {
+        &.btn-enquire, &.btn-enquire-private-hospital {
             //border-radius: 10px;
             color: $white !important;
             @include font-size(14);
@@ -399,6 +399,33 @@
                 width: 20px;
                 height: 20px;
             }
+        }
+
+        &.btn-enquire-private-hospital {
+            /* Style for "Make an en" */
+            width: 187px;
+            height: 47px;
+            @include font-size(16);
+            font-weight: 400;
+            letter-spacing: -0.8px;
+            line-height: 35px;
+            background: $darkBlue;
+            border-radius: 10px;
+            text-align:center;
+
+            svg {
+                //content: '';
+                //background-image: url('../images/icons/circle-check.svg');
+                //@include icon-bg-center;
+                @include v-c;
+                left: 8px;
+                width: 30px;
+                height: 25px;
+            }
+        }
+
+        input[type="submit"].btn-enquire {
+
         }
 
         &.btn-enquire-pink {

@@ -34,6 +34,29 @@
 
     // Private hospital enquiry
     &.modal-enquire-form {
+        .private-modal-enquiry-title {
+            margin-bottom: 0;
+            /* Style for "Enquire no" */
+            height: 35px;
+            color: #ffffff;
+            font-weight: 500;
+            letter-spacing: -1.2px;
+            line-height: 35px;
+        }
+
+        .private-modal-enquiry-description {
+            @include font-size(14);
+        }
+
+        .your-details {
+            /* Style for "Your Details" */
+            color: #ffffff;
+            @include font-size(18);
+            font-weight: 500;
+            letter-spacing: -0.9px;
+            line-height: 23px;
+        }
+
         .modal-inner {
             padding: 16px 55px 25px 55px;
         }
@@ -44,7 +67,7 @@
         }
 
         .modal-content {
-            background-color: $turq;
+            background-color: $darkestBlue;
         }
 
         // Force it to show on test page

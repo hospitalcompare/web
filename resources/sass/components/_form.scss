@@ -123,10 +123,10 @@ select::-ms-expand {
 #enquiry_form {
     input:not([type="submit"]),
     select {
-        height: 44px;
+        height: 35px;
         //line-height: 44px;
         border-radius: 10px;
-        border: 2px solid $darkestWhite;
+        border: 0;
         background-color: #ffffff;
 
     }
@@ -148,8 +148,9 @@ select::-ms-expand {
 
     // bootstrap select button
     .dropdown-toggle {
-        padding: 12px 40px 12px 13px;
+        padding: 6px 40px 6px 13px;
         @include font-size(16);
+
     }
 }
 
@@ -223,6 +224,7 @@ textarea {
     border: 2px solid $darkestWhite;
     background-color: #ffffff;
     padding: 1rem;
+    padding-top: 7px;
 
     @include placeholder {
         color: $darkerGrey;

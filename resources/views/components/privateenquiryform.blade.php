@@ -1,17 +1,20 @@
 <div class="modal-inner">
 
-    <h3 class="text-center text-white">Enquire now for <span class="hospital-title">this hospital</span></h3>
-    <p class="text-white text-center"></p>
+    <h3 class="text-center text-white private-modal-enquiry-title">Enquire now for <span class="hospital-title">this hospital</span></h3>
+    <p class="text-white text-center private-modal-enquiry-description">
+{{--        <div id="info_text" class="mt-2 text-white">--}}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+{{--        </div>--}}
+    </p>
     <div class="form-wrap d-flex flex-wrap">
         <div class="img-wrap">
             <img width="173" height="158" src="images/alder-1.png">
-            <div id="info_text" class="mt-2 text-white">
-                Default text for enquiry form
-            </div>
         </div>
         <form id="enquiry_form">
             {{--            <input type="hidden" name="specialty_id" value="3">--}}
             <input type="hidden" name="hospital_id" value="1">
+            <p class="your-details text-white">Your Details</p>
             <div class="form-group row align-items-end mb-0">
                 <div class="col col-6">
                     @include('components.basic.select', [
@@ -30,17 +33,22 @@
                         'name'=>'title',
                         'labelClass' => 'labelClass'])
                 </div>
-            </div>
-            <div class="form-group row align-items-end mb-0">
-                {{-- First name --}}
                 <div class="col col-6">
+                    {{-- First name --}}
                     <input required name="first_name" type="text" class="form-control" id="firstName"
                            placeholder="First Name*" value="{{ !empty($firstName) ? $firstName : '' }}" />
                 </div>
+
+            </div>
+            <div class="form-group row align-items-end mb-0">
                 {{-- Last name --}}
                 <div class="col col-6">
                     <input required name="last_name" type="text" class="form-control" id="lastName"
                            placeholder="Last Name*" value="{{ !empty($lastName) ? $lastName : '' }}">
+                </div>
+                <div class="col col-6">
+                    <input required name="phone_number" type="text" class="form-control" id="phoneNumber"
+                           placeholder="Phone Number*" value="{{ !empty($phone) ? $phone : '' }}" />
                 </div>
                 {{-- DOB - the field to select dob--}}
 {{--                <div class="col col-6">--}}
@@ -63,14 +71,11 @@
             </div>
             <div class="form-group row align-items-end mb-0">
                 <div class="col col-6">
-                    <input required name="phone_number" type="text" class="form-control" id="phoneNumber"
-                           placeholder="Phone Number*" value="{{ !empty($phone) ? $phone : '' }}" />
-                </div>
-                <div class="col col-6">
                     <input required name="postcode" type="text" class="form-control" id="postcode"
                            placeholder="Postcode*" value="{{ !empty($postcode) ? $postcode : '' }}" />
                 </div>
             </div>
+            <p class="your-details text-white">Your Treatment</p>
             <div class="form-group row align-items-end mb-0">
                 <div class="col col-12">
                     @include('components.basic.select', [
@@ -110,7 +115,7 @@
                     <textarea
                         class=""
                         name="additional_information"
-                        placeholder="Additional information"
+                        placeholder="Additional Comments"
                         id="additional_information"
                         rows="5"
                     ></textarea>
@@ -126,7 +131,7 @@
                     @include('components.basic.button', [
                         'button'            => 'Make an enquiry',
                         'id'                => 'btn_submit',
-                        'classTitle'        => 'btn btn-icon btn-blue btn-enquire',
+                        'classTitle'        => 'btn btn-icon btn-blue btn-enquire-private-hospital',
                         'svg'               => 'circle-check'])
                 </div>
             </div>
