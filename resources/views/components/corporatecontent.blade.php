@@ -191,12 +191,12 @@
                                         <!--Controls-->
                                         <a class="carousel-control-prev" href="#carousel-thumb_{{ $id }}" role="button"
                                            data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="carousel-control-prev-icon" aria-hidden="true">{!! file_get_contents(asset('/images/icons/carousel-left.svg')) !!}</span>
                                             <span class="sr-only">Previous</span>
                                         </a>
                                         <a class="carousel-control-next" href="#carousel-thumb_{{ $id }}" role="button"
                                            data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="carousel-control-next-icon" aria-hidden="true">{!! file_get_contents(asset('/images/icons/carousel-right.svg')) !!}</span>
                                             <span class="sr-only">Next</span>
                                         </a>
 
@@ -229,7 +229,7 @@
                                         </li>
                                     </ol>
                                     @include('components.basic.modalbutton', [
-                                        'classTitle'        => 'stretched-link',
+                                        'classTitle'        => 'stretched -link',
                                         'modalTarget'       => '#hc_modal_carousel_'. $id,
                                         'button'            => '',
                                         ])
@@ -325,12 +325,11 @@
                                             <!--Controls-->
                                             <a class="carousel-control-prev carousel-control" href="#carousel-thumb_modal_'. $id .'" role="button"
                                                data-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Previous</span>
+                                                <span class="carousel-control-prev-icon" aria-hidden="true">' . file_get_contents(asset('/images/icons/carousel-left.svg')) . '</span>
                                             </a>
                                             <a class="carousel-control-next carousel-control" href="#carousel-thumb_modal_'. $id .'" role="button"
                                                data-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="carousel-control-next-icon" aria-hidden="true">' . file_get_contents(asset('/images/icons/carousel-right.svg')) . ' </span>
                                                 <span class="sr-only">Next</span>
                                             </a>
 

@@ -12,6 +12,15 @@
 
 @section('content')
     <section>
+        @include('components.corporatecontent', [
+                'procedures'    => $data['filters']['procedures'],
+                'id'            => 1,
+                'latitude'      => '52.3',
+                'longitude'     => '2.3',
+                'address'       => '<strong>Hospital name</strong><br>Hospital address<br>Hospital Town<br>Hospital County<br>Hospital Postcode'
+            ])
+    </section>
+    <section>
         @include('pages.pagesections.resultspageform', [
         'displayBlock' => true])
     </section>
@@ -93,17 +102,6 @@
             </div>
         </div>
     </section>
-    <section>
-        @include('components.corporatecontent', [
-                'procedures'    => $data['filters']['procedures'],
-                'id'            => 1,
-                'latitude'      => '52.3',
-                'longitude'     => '2.3',
-                'address'       => '<strong>Hospital name</strong><br>Hospital address<br>Hospital Town<br>Hospital County<br>Hospital Postcode'
-            ])
-    </section>
-
-
     <div class="section pt-3 pb-5">
         <div class="container">
             <p class="p-5" style="width: 300px; border: 3px solid black">
