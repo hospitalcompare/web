@@ -5,8 +5,11 @@
             <div class="corporate-content-section-1"></div>
             <div class="corporate-content-section-2 position-relative">
                 @include('components.basic.button', [
-                    'buttonText'            => 'Close info',
-                    'classTitle'        => 'btn btn-black'])
+                    'buttonText'        => 'Close Info',
+                    'classTitle'        => 'btn btn-cc-close position-absolute',
+                    'svg'               => 'times',
+                    'dataTarget'        => '#corporate_content_hospital_' . $id,
+                    'style'             => 'right: 0; top: 9px'])
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" id="nav-tabs_{{ $id }}" role="tablist">
                     <li class="nav-item">

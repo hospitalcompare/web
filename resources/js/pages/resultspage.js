@@ -164,7 +164,7 @@ $(document).ready(function () {
     // });
 
 // Toggle the corporate content area
-    $('.btn-more-info').on('click', function () {
+    $('.btn-more-info, .btn-cc-close').on('click', function () {
         var $target = $($(this).data('target'));
         $(this)
             .parents('.result-item')
