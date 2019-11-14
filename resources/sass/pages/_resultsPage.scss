@@ -553,7 +553,8 @@
     }
 
     .bg-cqc-star {
-        background: url('../images/icons/star.svg');
+        //background: url('../images/icons/star.svg');
+        background: url('../images/icons/star-green.svg');
         @include icon-bg-center(cover);
         width: 12px;
         height: 12px;

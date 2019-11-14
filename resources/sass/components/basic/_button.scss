@@ -134,10 +134,10 @@
     }
 
     &.btn-grey {
+        @include linear-gradient(90deg, $footerGrey, $footerGrey, $pink);
         //@include linear-gradient(90deg, $pink, $pink, $violet);
-        background: $footerGrey;
         &.btn-grad {
-            //@include linear-gradient(90deg, $pink, $pink, $violet, $pink);
+            @include linear-gradient(90deg, $footerGrey, $footerGrey, $pink, $footerGrey);
         }
     }
 
