@@ -1,6 +1,21 @@
 .results-page {
     background-color: $lighterGrey;
 
+    // Mask when shortlist is open
+    &:before {
+        pointer-events: none;
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1035; // To be just below the open shortlist
+        width: 100vw;
+        height: 100vh;
+        background-color: $modal-backdrop-bg;
+        opacity: 0;
+        transition: $transition;
+    }
+
     .results {
         min-height: calc(60vh - 220px);
     }
@@ -593,13 +608,9 @@
         visibility: hidden;
     }
 
+    // Fade in the mask when shortlist is open
     &:before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #1b1b1b;
-        opacity: 0.6;
-        z-index: 5;
+        opacity: $modal-backdrop-opacity;
+        pointer-events: initial;
     }
 }

@@ -237,7 +237,7 @@
                 @include('components.basic.button', [
                     'classTitle'        => 'btn btn-compare compare btn-block font-14',
 {{--                    'button'            => 'Compare Hospitals',--}}
-                    'button'            => 'Compare',
+                    'button'            => 'Add to compare',
                     'svg'               => 'heart-solid',
                     'id'                => $id])
             </div>
