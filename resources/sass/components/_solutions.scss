@@ -54,6 +54,7 @@
 
 
         .compare-button-title {
+            background-color: #535353;
             cursor: pointer;
 
             svg { // #compare_heart
@@ -67,7 +68,6 @@
                 #wishlist {
                     stroke: #fff;
                     stroke-width: 1px;
-                    fill: $footerGrey;
                 }
 
                 &.has-count {
@@ -115,7 +115,7 @@
             display: inline-block;
             width: 18px;
             height: 10px;
-            background-color: $footerGrey;
+            //background-color: $footerGrey;
             background-image: url('../images/up-arrow.svg');
             background-size: cover;
             background-repeat: no-repeat;
@@ -223,9 +223,14 @@
         //background: linear-gradient(264deg, #8e00fe,#1b71f3,#8e00fe);
     }
 
+    &.blue__offer {
+        background-image: linear-gradient(87deg, #0563aa 0%, #033860 100%);
+    }
+
     &.private-hospital__offer,
     &.pink__offer {
-        background-image: linear-gradient(249deg, #8e00fe, #1b71f3);
+        background-image: linear-gradient(266deg, #ed0373 0%, #fd409d 100%);
+        //background-image: linear-gradient(249deg, #8e00fe, #1b71f3);
         //background-image: linear-gradient(249deg, #1b71f3 0%, #ed0373 0%, #cc6d9b 100%);
     }
 

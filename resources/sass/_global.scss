@@ -185,7 +185,8 @@ select.big {
 
 // CQC rating colours
 .bg-outstanding {
-    background: $goldStar;
+    //background: $goldStar;
+    background-color: $cqcGreen;
 }
 
 .bg-good {
