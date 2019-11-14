@@ -120,6 +120,13 @@
             max-width: inherit;
         }
     }
+
+    &#hc_modal_enquire_private {
+        .dropdown-toggle,
+        textarea {
+            border: none;
+        }
+    }
 }
 
 .modal-close {

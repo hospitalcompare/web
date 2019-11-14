@@ -145,7 +145,7 @@
         //height: 32px;
         //width: 32px;
         //border-radius: 23px;
-        box-shadow: inset 0px 0px 0px 2px $teal;
+        box-shadow: inset 0px 0px 0px 2px $turq;
         color: $turq;
         //flex: 0 0 32px;
         padding: 8px 15px 8px 40px;
@@ -321,11 +321,16 @@
             @include font-size(14);
             padding: 0 25px 0 8px;
             border-radius: 4px 4px 0 0;
+            background-color: $turq;
 
             svg {
                 @include v-c;
                 right: 8px;
                 width: 0.6rem;
+            }
+
+            &:hover {
+                opacity: 0.6;
             }
         }
 

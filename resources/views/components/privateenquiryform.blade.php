@@ -126,7 +126,7 @@
                     <label class="small-print" for="gdpr">Please accept the Terms & Conditions before submitting the
                         form.</label>
                 </div>
-                <div class="col-12 btn-area text-right">
+                <div class="col col-12 btn-area text-right">
                     @include('components.basic.button', [
                         'button'            => 'Make an enquiry',
                         'id'                => 'btn_submit',

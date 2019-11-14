@@ -29,7 +29,7 @@
 {{--                    'image'             => 'images/alder-1.png'--}}
 {{--                ])--}}
                 @include('components.basic.button', [
-                    'classTitle'        => 'btn btn-xs btn-turq btn-icon btn-more-info position-absolute',
+                    'classTitle'        => 'btn btn-xs btn-icon btn-more-info position-absolute',
                     'button'            => '&nbsp;',
                     'icon'              => '',
                     'svg'               => 'plus-solid',
@@ -211,7 +211,7 @@
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'modalTarget'       => '#hc_modal_enquire_private',
-                    'classTitle'        => 'btn btn-icon btn-grad btn-enquire btn-blue enquiry mr-2 btn-block font-12',
+                    'classTitle'        => 'btn btn-icon btn-grad btn-enquire btn-blue enquiry mr-2 btn-block font-14',
                     'target'            => 'blank',
                     'button'            => $btnText,
                     'id'                => 'enquire_'.$id,
@@ -222,7 +222,7 @@
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'hospitalUrl'       => $d['url'],
-                    'classTitle'        => 'btn btn-icon btn-grad btn-blue btn-enquire enquiry mr-2 btn-block font-12',
+                    'classTitle'        => 'btn btn-icon btn-grad btn-blue btn-enquire enquiry mr-2 btn-block font-14',
                     'button'            => $btnText,
                     'modalTarget'       => '#hc_modal_enquire_nhs',
                     'id'                => 'enquire_'.$id,
@@ -230,13 +230,14 @@
                 @endif
                 @if(!empty($specialOffers))
                     @include('components.basic.button', [
-                    'classTitle'        => 'toggle-special-offer btn btn-block btn-grad btn-icon btn-pink btn-special-offer btn-plus font-12',
+                    'classTitle'        => 'toggle-special-offer btn btn-block btn-grad btn-icon btn-pink btn-special-offer btn-plus font-14',
                     'button'            => 'Special Offers',
                     'svg'               => 'special'])
                 @endif
                 @include('components.basic.button', [
-                    'classTitle'        => 'btn btn-compare compare btn-block font-12',
-                    'button'            => 'Compare Hospitals',
+                    'classTitle'        => 'btn btn-compare compare btn-block font-14',
+{{--                    'button'            => 'Compare Hospitals',--}}
+                    'button'            => 'Compare',
                     'svg'               => 'heart-solid',
                     'id'                => $id])
             </div>

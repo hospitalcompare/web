@@ -50,7 +50,7 @@
                     ])
                     <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
                        class="help-link"
-                       style="top: 11px; right: 53px"
+                       style="right: 53px"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
                         'placement'      => 'top',
@@ -80,7 +80,7 @@
                         'id' => 'input_postcode'])
                     <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
                        class="help-link"
-                       style="top: 11px; right: 53px"
+                       style="right: 53px"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
                         'placement'      => 'top',

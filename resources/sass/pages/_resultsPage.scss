@@ -115,6 +115,7 @@
             width: 100%;
             //padding: 20px 0 18px 16px;
             padding: 8px 40px 8px 13px;
+
             @include font-size(14);
 
             @include placeholder {
@@ -128,6 +129,7 @@
 
     .postcode-radius {
         @include reset-row-spacing(7.5px);
+
         .postcode-radius-child {
             &:first-child {
                 //width: 40%;
@@ -145,6 +147,19 @@
                         }
                     }
                 }
+            }
+
+            #input_postcode,
+            .dropdown-toggle {
+                padding: 13px 40px 13px 13px;
+            }
+
+            .bootstrap-select + .black-chevron {
+                @include v-c;
+            }
+
+            .help-link {
+                @include v-c;
             }
         }
     }
@@ -474,6 +489,7 @@
             &:before {
                 content: 'Close info' !important;
             }
+
             //&:after {
             //    content: 'Close info';
             //}
@@ -563,10 +579,17 @@
     }
 }
 
+// Compare shortlist area open
 .shortlist-open {
-    overflow: hidden;
+    overflow: hidden; // Stop body scrolling
 
     .popover {
         display: none !important;
+    }
+
+    // Hide the special offer tabs
+    .solutions-menu {
+        opacity: 0;
+        visibility: hidden;
     }
 }
