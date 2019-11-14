@@ -77,11 +77,11 @@
     }
 
     //colours
-    &.btn-teal {
+    &.btn-turq {
         @include linear-gradient(90deg, $turq, $turq, $green);
 
         &.btn-grad {
-            @include linear-gradient(90deg, $turq, $green, $turq);
+            @include linear-gradient(90deg, $turq, $green, $green);
         }
     }
 
