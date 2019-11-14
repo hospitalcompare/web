@@ -30,7 +30,7 @@
                                     'group'                 => true,
                                     'groupName'             => 'procedures',
                                     'suboptionClass'        => 'subprocedures',
-                                    'chevronFAClassName'    => 'fa-chevron-down aqua-chevron',
+                                    'svg'                   => 'chevron-down-aqua',
                                     'name'                  => 'procedure_id'
                                 ])
                                 <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
