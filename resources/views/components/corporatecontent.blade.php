@@ -4,6 +4,9 @@
         <div class="d-flex">
             <div class="corporate-content-section-1"></div>
             <div class="corporate-content-section-2 position-relative">
+                @include('components.basic.button', [
+                    'buttonText'            => 'Close info',
+                    'classTitle'        => 'btn btn-black'])
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" id="nav-tabs_{{ $id }}" role="tablist">
                     <li class="nav-item">
@@ -231,7 +234,7 @@
                                     @include('components.basic.modalbutton', [
                                         'classTitle'        => 'stretched -link',
                                         'modalTarget'       => '#hc_modal_carousel_'. $id,
-                                        'button'            => '',
+                                        'buttonText'            => '',
                                         ])
                                 </div>
                             </div>
@@ -250,7 +253,7 @@
 {{--                                               'modalTarget'       => '#hc_modal_video',--}}
 {{--                                               'classTitle'        => 'stretched-link',--}}
 {{--                                               'target'            => 'blank',--}}
-{{--                                               'button'            => '',--}}
+{{--                                               'buttonText'            => '',--}}
 {{--                                               'id'                => 'enquire_'.$id])--}}
 {{--                                        </div>--}}
 {{--                                        <div class="video-caption  font-14">Video title here</div>--}}
@@ -273,7 +276,7 @@
                                            'modalTarget'       => '#hc_modal_enquire_private',
                                            'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto ml-auto',
                                            'target'            => 'blank',
-                                           'button'            => 'Enquire now',
+                                           'buttonText'            => 'Enquire now',
                                            'id'                => 'enquire_'.$id])
                                     </div>
                                 </div>
@@ -285,7 +288,7 @@
 {{--                    'classTitle'        => 'btn btn-xs btn-icon btn-more-info btn-darkgreen position-absolute',--}}
 {{--                    'style'             => 'width: 90px',--}}
 {{--                    'icon'              => 'fa fa-caret-up fa-sm',--}}
-{{--                    'button'            => 'Close',--}}
+{{--                    'buttonText'            => 'Close',--}}
 {{--                    'dataTarget'        => '#corporate_content_hospital_' . $id--}}
 {{--                 ])--}}
             </div>

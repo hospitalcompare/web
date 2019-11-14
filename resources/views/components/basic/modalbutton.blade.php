@@ -19,7 +19,7 @@
    data-hospital-title="{{ $hospitalTitle ?? '' }}"
    data-target="{{ $modalTarget }}"
    data-image="{{ $image ?? '' }}"
-   data-address="{{ $address ?? '' }}">{{ $button }}
+   data-address="{{ $address ?? '' }}">{{ $buttonText }}
     @if(!empty($icon))
         <i class="{{ $icon }}"></i>
     @endif

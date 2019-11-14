@@ -24,7 +24,7 @@
                                 <div class="btn-area">
                                     @include('components.basic.button', [
                                         'target'            => 'blank',
-                                        'button'            => 'Visit hospital website',
+                                        'buttonText'            => 'Visit hospital website',
                                         'classTitle'        => 'btn btn-icon btn-blue btn-enquire',
                                         'svg'               => 'circle-check'])
                                 </div>

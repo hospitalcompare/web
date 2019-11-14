@@ -20,7 +20,7 @@
                     ])
 
                     @include('components.basic.button', [
-                        'button'            => 'Filter Results',
+                        'buttonText'            => 'Filter Results',
                         'classTitle'        => 'btn btn-s btn-grey btn-grad btn-icon btn-arrow-down',
                         'id'                => 'show_filters',
                         'icon'              => '',
@@ -271,7 +271,7 @@
                     >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2 d-flex align-items-end">
-                    @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-blue btn-s d-block btn-submit-results', 'button' => 'Update Results'])
+                    @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-blue btn-s d-block btn-submit-results', 'buttonText' => 'Update Results'])
                 </div>
             </div>
         </div>

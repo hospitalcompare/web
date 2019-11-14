@@ -2,5 +2,5 @@
     @if(!empty($helpChar))
         <div class="help-link @if(!empty($className)) {{$className}} @endif">{{$helpChar}}</div>
     @endif
-    @include('components.basic.lightbox', ['helpText' => $helpText , 'button' => 'Find hospitals'])
+    @include('components.basic.lightbox', ['helpText' => $helpText , 'buttonText' => 'Find hospitals'])
 </div>

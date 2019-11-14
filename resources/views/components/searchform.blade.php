@@ -81,7 +81,7 @@
         </div>
         @include('components.basic.submit', [
             'classTitle'    => 'btn btn-m btn-grad btn-turq py-3 mb-3',
-            'button'        => 'Find Hospitals'])
+            'buttonText'        => 'Find Hospitals'])
         <div class='browse-button'>
             <a class="SofiaPro-Medium" href="{{url('/results-page')}}">Browse all hospitals</a>
         </div>

@@ -207,17 +207,17 @@
                 <h3>Enquire now button</h3>
                 @include('components.basic.button', [
                     'classTitle' => 'btn btn-icon btn-enquire-now mr-2',
-                    'button' => 'Enquire Now'])
+                    'buttonText' => 'Enquire Now'])
                 <h3>Special offer button</h3>
-                @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer mr-2', 'button' => 'Special Offers'])
+                @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer mr-2', 'buttonText' => 'Special Offers'])
                 <h3>Special offer button reversed</h3>
-                @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer-reverse mr-2', 'button' => 'Special Offers'])
+                @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer-reverse mr-2', 'buttonText' => 'Special Offers'])
                 <h3>Enquiry button</h3>
-                @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-enquire enquiry', 'button' => 'Make an enquiry'])
+                @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-enquire enquiry', 'buttonText' => 'Make an enquiry'])
                 <h3>Close button</h3>
-                @include('components.basic.button', ['classTitle' => 'btn btn-close__small btn-turq btn-icon', 'button' => 'Close'])
+                @include('components.basic.button', ['classTitle' => 'btn btn-close__small btn-turq btn-icon', 'buttonText' => 'Close'])
                 <h3>Let's go button</h3>
-                @include('components.basic.button', ['classTitle' => 'btn btn-go btn-icon', 'button' => 'Close'])
+                @include('components.basic.button', ['classTitle' => 'btn btn-go btn-icon', 'buttonText' => 'Close'])
                 <hr>
                 <h2>Popovers</h2>
                 <h3>Popover for CQC rating</h3>

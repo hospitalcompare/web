@@ -30,7 +30,7 @@
                 @include('components.basic.button', [
                     'hrefValue'     => '/results-page',
                     'classTitle'    => 'btn btn-m btn-grad btn-turq',
-                    'button'        => 'Find Hospitals'
+                    'buttonText'        => 'Find Hospitals'
 
                 ])
             </div>
