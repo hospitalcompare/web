@@ -60,7 +60,7 @@
             [
                 'iconImg'=> 'search',
                 'title'=>'Step Two',
-                'description' => '<p>Use this site to search and compare both NHS and private hospitals across England.</p>'],
+                'description' => '<p>Use this site to search and compare both NHS and private (self-pay) hospitals across England. You can also search and compare by your health insurance policy.</p>'],
             [
                 'iconImg'=> 'hospital-compare',
                 'title'=>'Step Three',
