@@ -30,7 +30,7 @@
                                     'group'                 => true,
                                     'groupName'             => 'procedures',
                                     'suboptionClass'        => 'subprocedures',
-                                    'chevronFAClassName'    => 'fa-chevron-down aqua-chevron',
+                                    'svg'                   => 'chevron-down-aqua',
                                     'name'                  => 'procedure_id'
                                 ])
                                 <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
@@ -42,7 +42,7 @@
                                     'html'           => 'true',
                                     'trigger'        => 'hover',
                                     'content'        => '<p>Select your treatment<br>if known to refine results</p>
-                                                 {{--<p><a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a></p>--}}'])
+                                                 {{--<p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}'])
                                 >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                             </div>
                             <div class="form-child postcode-parent {{ !empty($layout) ? 'mr-2' : ''}}">
@@ -100,13 +100,13 @@
                                                  <p>
                                                      Select how far you would be willing to travel for your treatment.
                                                  </p>
-{{--                                                 <p><a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a></p>--}}
+{{--                                                 <p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}
                                                  '])
                                 >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                             </div>
                             @include('components.basic.button', [
-                                'classTitle'    => !empty($layout) ? 'btn btn-m btn-grad btn-teal ml-4' : 'btn btn-m btn-grad btn-teal py-3 mb-3',
-                                'button'        => !empty($layout) ? 'Find<br>Hospitals' : 'Find Hospitals',
+                                'classTitle'    => !empty($layout) ? 'btn btn-m btn-grad btn-turq ml-4' : 'btn btn-m btn-grad btn-turq py-3 mb-3',
+                                'buttonText'        => !empty($layout) ? 'Find<br>Hospitals' : 'Find Hospitals',
                                 'htmlButton'    => true,
                                 'style'         => !empty($layout) ? 'width: 114px; text-align: center; padding: 0; font-size: 18px; height: 62px; border-radius: 24px' : ''])
                             @unless(!empty($layout) && $layout == 'row')

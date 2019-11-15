@@ -5,7 +5,7 @@
    data-target="{!! $dataTarget ?? '' !!}"
    href="{{ empty($hrefValue) ? 'javascript:void(0);' : $hrefValue }}"
    role="button">
-    {!! $button !!}
+    {!! $buttonText !!}
     @if(!empty($icon))
         <i class="{{ $icon }}"></i>
     @endif

@@ -201,12 +201,11 @@
 
 .solutions-menu {
     pointer-events: none;
+    transition: $transition;
 
     > li {
         pointer-events: initial;
     }
-
-
 }
 
 .special-offer-tab {

@@ -1,5 +1,5 @@
 
-<input type="submit" class="{{$classTitle}}" value="{{$button}}" role="button" style="{{ !empty($style) ? $style : '' }}">
+<input type="submit" class="{{$classTitle}}" value="{{$buttonText}}" role="button" style="{{ !empty($style) ? $style : '' }}">
 <i class="{{ empty($icon) ? '' : $icon }}" ></i>
 
 

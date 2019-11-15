@@ -29,8 +29,8 @@
             <div class="btn-area text-center">
                 @include('components.basic.button', [
                     'hrefValue'     => '/results-page',
-                    'classTitle'    => 'btn btn-m btn-grad btn-teal',
-                    'button'        => 'Find Hospitals'
+                    'classTitle'    => 'btn btn-m btn-grad btn-turq',
+                    'buttonText'        => 'Find Hospitals'
 
                 ])
             </div>
