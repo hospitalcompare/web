@@ -18,8 +18,9 @@
     ])
     <section class="how-section__parent">
         @include('components.howsection', [
-        'sectionTitle' => 'How does it work?',
-        'howsections' => [
+        'hideButton'        => true,
+        'sectionTitle'      => 'How does it work?',
+        'howsections'       => [
             [
                 'iconImg'=> 'doctor',
                 'title'=>'Step One',

@@ -56,7 +56,7 @@
                          'placement'     => 'bottom',
                          'size'          => 'cqc',
                          'trigger'       => 'hover',
-                         'hideDelay'     => $popoverDelay,
+{{--                         'hideDelay'     => $popoverDelay,--}}
                          'html'          => 'true',
                          'content'       => '<div class="container-fluid">
                              <div class="row">
@@ -137,7 +137,7 @@
                         'placement'         => 'bottom',
                         'trigger'           => 'hover',
                         'html'              => 'true',
-                        'hideDelay'         => $popoverDelay,
+{{--                        'hideDelay'         => $popoverDelay,--}}
                         'content'           => !empty($d['placeRating']) ? '
                         <ul class="nhs-user-ratings mb-0">
                             <li>Cleanliness:&nbsp;'                            . '<span><strong>'  . number_format((float)$d['placeRating']['cleanliness'], 1).'%</span></strong></li>

@@ -84,7 +84,7 @@
                          aria-labelledby="map-tab">
                         <div id="gmap_{{ $id }}" class="map-container" style="height: 200px">
                         </div>
-                        <div id="details" class="d-flex" style="padding-top: 25px">
+                        <div class="corporate-content-details d-flex mb-3" style="padding-top: 25px">
                             <div class="img-wrap mr-4">
                                 <img class="image" width="173" height="158" src="images/alder-1.png">
                             </div>

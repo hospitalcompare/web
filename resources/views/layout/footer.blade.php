@@ -28,15 +28,15 @@
                     <div class="social">
                         {{--            @include('components.logo', ['titleParent' => 'footerLogoParent', 'logoImg' => 'footerLogoImg', 'logoTitle' => 'footerLogoTitle'])--}}
                         <p class="font-20 SofiaPro-Light">Helping you to make the best healthcare choices</p>
-                        <ul class="social-list">
-                            <li>
-                                <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <ul class="social-list d-flex justify-content-end">
+                            <li class="facebook-social">
+                                <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/facebook.svg')) !!}</a>
                             </li>
-                            <li>
-                                <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <li class="twitter-social">
+                                <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/twitter.svg')) !!}</a>
                             </li>
-                            <li>
-                                <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <li class="instagram-social">
+                                <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/instagram.svg')) !!}</a>
                             </li>
                         </ul>
                     </div>

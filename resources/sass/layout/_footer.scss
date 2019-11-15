@@ -84,9 +84,28 @@
         li {
             list-style: none;
             margin-left: 20px;
-            display: inline-block;
+            display: inline-flex;
+
+            &.facebook-social {
+                svg {
+                    width: 20px;
+                }
+            }
+
+            &.twitter-social {
+                svg {
+                    width: 38px;
+                }
+            }
+
+            &.instagram-social {
+                svg {
+                    width: 38px;
+                }
+            }
 
             a {
+                display: inline-flex;
                 color: $white;
                 font-size: 2.5em;
                 left: 20px;
