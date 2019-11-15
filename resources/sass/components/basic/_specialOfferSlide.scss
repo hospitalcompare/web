@@ -2,19 +2,27 @@
 
 .special-offers-slide {
     position: absolute;
-    //max-width: 870px;
+    /* Style for "Rounded Re" */
+    width: 404px;
+    //height: 162px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 20px;
+    background-image: linear-gradient(258deg, #ed0373 0%, #ffffff 100%);
+    background-position: right top;
+    background-size: 180%;
     top: 0;
-    left: 100%;
-    min-width: 50vw;
+    right: 0;
     color: $white;
-    background-image: linear-gradient(252deg, #d57ca6 0%, #ed0373 100%);
-    padding: 22px;
+    //min-width: 50vw;
+    //background-image: linear-gradient(252deg, #d57ca6 0%, #ed0373 100%);
+    //padding: 22px;
+    padding: 15px;
     transform: rotate3d(0, 1, 0, 90deg);
     transition: $transition;
-    transform-origin: left;
+    transform-origin: right top;
     opacity: 0;
     pointer-events: none;
-    border-radius: 0 10px 10px 10px;
+    //border-radius: 0 10px 10px 10px;
 
     &.show {
         transform: rotate3d(0, 1, 0, 0deg);
@@ -24,18 +32,33 @@
         pointer-events: initial;
     }
 
-    .close {
-        right: -6px;
-        top: -6px;
+    .close-offer {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        //right: -6px;
+        //top: -6px;
         //transform: translate(50%, -50%);
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
-        background-color: #80efce;
-        background-image: url('../images/icons/times.svg');
-        @include icon-bg-center(46%);
-        border-radius: 50%;
-        z-index: 10;
+        //width: 25px;
+        //height: 25px;
+        //line-height: 25px;
+        //background-color: #80efce;
+        //background-image: url('../images/icons/times.svg');
+        //@include icon-bg-center(46%);
+        //border-radius: 50%;
+        //z-index: 10;
+
+        svg {
+            width: 10px;
+            height: 10px;
+
+            path {
+                fill: #fff;
+            }
+        }
     }
 
     .special-offer-title {
@@ -49,15 +72,15 @@
 
     ul {
         width: 80%;
-        border-left: 1px solid #fff;
+        //border-left: 1px solid #fff;
         padding-left: 25px;
 
         li {
             list-style: none;
-            @include font-size(14);
-            font-weight: 400;
+            @include font-size(12);
             position: relative;
-            padding-left: 30px;
+            margin-bottom: 12px;
+            //padding-left: 30px;
 
             &:before {
                 content: url("/images/icons/circle-check.svg");

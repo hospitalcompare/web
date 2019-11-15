@@ -12,6 +12,35 @@
 
 @section('content')
     <section>
+        <div class="container">
+            <h1>Special offers slide out</h1>
+            @include('components.basic.specialofferslide', ['class' => 'show'])
+{{--            <h3>Select styling</h3>--}}
+{{--            <h4>Plain select</h4>--}}
+{{--            <select class="" id="" name="sort_by">--}}
+
+{{--                <option name="Distance from Postcode ascending" id="sort_by_0" value="0">--}}
+{{--                    Distance from Postcode ascending--}}
+{{--                </option>--}}
+{{--                <option name="Distance from Postcode descending" id="sort_by_1" value="1">--}}
+{{--                    Distance from Postcode descending--}}
+{{--                </option>--}}
+{{--                <option name="Waiting time ascending" id="sort_by_2" value="2">--}}
+{{--                    Waiting time ascending--}}
+{{--                </option>--}}
+{{--                <option name="Waiting time descending" id="sort_by_3" value="3">--}}
+{{--                    Waiting time descending--}}
+{{--                </option>--}}
+{{--                <option name="User Rating ascending" id="sort_by_4" value="4">--}}
+{{--                    User Rating ascending--}}
+{{--                </option>--}}
+{{--                <option name="User Rating descending" id="sort_by_5" value="5">--}}
+{{--                    User Rating descending--}}
+{{--                </option>--}}
+{{--            </select>--}}
+        </div>
+    </section>
+    <section>
         @include('components.corporatecontent', [
                 'procedures'    => $data['filters']['procedures'],
                 'id'            => 1,
@@ -426,31 +455,7 @@
 
 
                 <hr>
-                <h1>Special offers slide out</h1>
-                @include('components.basic.specialofferslide', ['class' => 'show'])
-                <h3>Select styling</h3>
-                <h4>Plain select</h4>
-                <select class="" id="" name="sort_by">
 
-                    <option name="Distance from Postcode ascending" id="sort_by_0" value="0">
-                        Distance from Postcode ascending
-                    </option>
-                    <option name="Distance from Postcode descending" id="sort_by_1" value="1">
-                        Distance from Postcode descending
-                    </option>
-                    <option name="Waiting time ascending" id="sort_by_2" value="2">
-                        Waiting time ascending
-                    </option>
-                    <option name="Waiting time descending" id="sort_by_3" value="3">
-                        Waiting time descending
-                    </option>
-                    <option name="User Rating ascending" id="sort_by_4" value="4">
-                        User Rating ascending
-                    </option>
-                    <option name="User Rating descending" id="sort_by_5" value="5">
-                        User Rating descending
-                    </option>
-                </select>
                 <h4>Styled select</h4>
                 <div class="select-parent  ">
                     <label class="_select-box sortLabel" for="">

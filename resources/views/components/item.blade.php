@@ -6,7 +6,7 @@
                 <div
                     class="{{$NHSClass}} py-1 px-2 rounded-pill m-1 {{ $NHSClass == 'private-hospital' ? 'bg-privateblue' : 'bg-teal' }}">
                     <p class="m-0">{{$fundedText}}</p></div>
-                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', ['class' => 'default'])
+
                 {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
                 <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
             </div>
@@ -229,11 +229,15 @@
                     'svg'               => 'circle-check'])
                 @endif
                 @if(!empty($specialOffers))
-                    @include('components.basic.button', [
-                    'classTitle'        => 'toggle-special-offer btn btn-block btn-grad btn-icon btn-pink btn-special-offer btn-plus font-14',
-                    'buttonText'            => 'Special Offers',
-                    'svg'               => 'special'])
-                @endif
+                    <div class="position-relative btn-block">
+                        @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
+                            'class' => 'default'])
+                        @include('components.basic.button', [
+                            'classTitle'        => 'toggle-special-offer btn btn-block btn-grad btn-icon btn-pink btn-special-offer btn-plus font-14',
+                            'buttonText'        => 'Special Offers',
+                            'svg'               => 'special'])
+                    </div>
+            @endif
                 @include('components.basic.button', [
                     'classTitle'        => 'btn btn-compare compare btn-block font-14',
 {{--                    'buttonText'            => 'Compare Hospitals',--}}
