@@ -10,7 +10,6 @@
                     @include('components.basic.select', [
                         'showLabel'             => true,
                         'options'               => $data['sortBy'],
-{{--                        'chevronFAClassName'    => 'fas fa-chevron-down',--}}
                         'svg'                   => 'chevron-down',
                         'selectClass'           => 'select-picker _results-page-select select-sort-by SofiaPro-Medium font-16',
                         'selectClassName'       => 'mr-3 d-flex align-items-center',
@@ -42,7 +41,7 @@
                         'groupName'             => 'procedures',
                         'options'               => $data['filters']['procedures'],
                         'suboptionClass'        => 'subprocedures',
-                        'chevronFAClassName'    => 'fa-chevron-down black-chevron',
+                        'svg'                   => 'chevron-down',
                         'selectClass'           => 'select-picker highlight-search-dropdown',
                         'name'                  =>'procedure_id'
 {{--                        'placeholder'           => 'Treatment',--}}
@@ -110,12 +109,11 @@
             </div>
             <div class="select-proximity filter-section row">
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
-                    {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'Waiting time', 'labelClass' => 'labelClass'])--}}
                     @include('components.basic.select', [
                         'selectClassName'       => 'w-100',
                         'showLabel'             => true,
                         'options'               => $data['filters']['waitingTimes'],
-                        'chevronFAClassName'    => 'fa-chevron-down black-chevron',
+                        'svg'                   => 'chevron-down',
                         'selectClass'           => 'select-picker highlight-search-dropdown _results-page-select _highlight',
                         'placeholder'           =>'Waiting time',
                         'name'                  =>'waiting_time',
@@ -142,12 +140,12 @@
                     >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
-                    {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'chevronFAClassName' => 'fa-chevron-down black-chevron', 'placeholder' => 'NHS choices user rating', 'labelClass' => 'labelClass'])--}}
+                    {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'svg' => 'chevron-down', 'placeholder' => 'NHS choices user rating', 'labelClass' => 'labelClass'])--}}
                     @include('components.basic.select', [
                         'selectClassName' => 'w-100',
                         'showLabel' => true,
                         'options' => $data['filters']['userRatings'],
-                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
+                        'svg' => 'chevron-down',
                         'selectClass' => 'select-picker highlight-search-dropdown _results-page-select _highlight',
                         'placeholder'=>'NHS User Rating',
                         'name'=>'user_rating',
@@ -177,7 +175,7 @@
                     @include('components.basic.select', [
                         'showLabel' => true,
                         'options' => $data['filters']['qualityRatings'],
-                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
+                        'svg' => 'chevron-down',
                         'selectClass' => 'select-picker highlight-search-dropdown _results-page-select _highlight',
                         'placeholder'=>'Care Quality Rating',
                         'name'=>'quality_rating',
@@ -208,7 +206,7 @@
                         'selectClassName' => 'w-100',
                         'showLabel' => true,
                         'options' => $data['filters']['hospitalTypes'],
-                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
+                        'svg' => 'chevron-down',
                         'selectClass' => 'select-picker highlight-search-dropdown _results-page-select _highlight',
                         'placeholder'=>'Hospital Type',
                         'name'=>'hospital_type',
@@ -243,7 +241,7 @@
                         'suboptionClass'        => 'policies',
                         'group'                 => true,
                         'groupName'             => 'policies',
-                        'chevronFAClassName'    => 'fa-chevron-down black-chevron',
+                        'svg'                   => 'chevron-down',
                         'selectClass'           => 'highlight-search-dropdown select-picker',
                         'placeholder'           => 'Insurance',
                         'name'                  => 'policy_id',

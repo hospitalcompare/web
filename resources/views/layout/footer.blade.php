@@ -5,7 +5,7 @@
         'classTitle' => 'btn btn-icon btn-back-to-top',
         'buttonText' => '<span>Back to top</span>',
         'hrefValue' => '#top',
-        'icon' => 'fa fa-chevron-up'])
+        'svg'  => 'chevron-up'])
     </div>
 </div>
 <footer class="footer">
