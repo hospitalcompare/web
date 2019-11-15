@@ -8,7 +8,7 @@
         <p class="font-18 SofiaPro-Medium">Need some help? We are here to help you find the best hospital.</p>
         @include('components.basic.button', [
             'classTitle'    => 'btn btn-go btn-icon',
-            'button'        => 'Let\'s Go',
+            'buttonText'        => 'Let\'s Go',
             'icon'          => '',
             'svg'           => 'chevron-right'
         ])

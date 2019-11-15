@@ -6,7 +6,7 @@
                 <div
                     class="{{$NHSClass}} py-1 px-2 rounded-pill m-1 {{ $NHSClass == 'private-hospital' ? 'bg-privateblue' : 'bg-teal' }}">
                     <p class="m-0">{{$fundedText}}</p></div>
-                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', ['class' => 'default'])
+
                 {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
                 <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
             </div>
@@ -21,7 +21,7 @@
 {{--                @include('components.basic.modalbutton', [--}}
 {{--                    'hrefValue'         => '#',--}}
 {{--                    'classTitle'        => 'find-link',--}}
-{{--                    'button'            => 'Find on map',--}}
+{{--                    'buttonText'            => 'Find on map',--}}
 {{--                    'modalTarget'       => '#hc_modal_map',--}}
 {{--                    'latitude'          => $latitude,--}}
 {{--                    'longitude'         => $longitude,--}}
@@ -29,8 +29,8 @@
 {{--                    'image'             => 'images/alder-1.png'--}}
 {{--                ])--}}
                 @include('components.basic.button', [
-                    'classTitle'        => 'btn btn-xs btn-turq btn-icon btn-more-info position-absolute',
-                    'button'            => '&nbsp;',
+                    'classTitle'        => 'btn btn-xs btn-icon btn-more-info position-absolute',
+                    'buttonText'            => '&nbsp;',
                     'icon'              => '',
                     'svg'               => 'plus-solid',
                     'dataTarget'        => '#corporate_content_hospital_' . $id
@@ -38,7 +38,7 @@
                 {{--                TODO: reintroduce consultant button when we have this data --}}
                 {{--                @if(!empty($specialOffers))--}}
                 {{--                    <div class="btn-area" style="margin-top: 10px">--}}
-                {{--                        @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-turq btn-icon btn-consultant btn-plus', 'button' => 'Consultants'])--}}
+                {{--                        @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-turq btn-icon btn-consultant btn-plus', 'buttonText' => 'Consultants'])--}}
                 {{--                    </div>--}}
                 {{--                @endif--}}
 
@@ -125,7 +125,7 @@
 {{--                                'classTitle'        => 'text-link enquire-times',--}}
 {{--                                'target'            => 'blank',--}}
 {{--                                'modalText'         => 'Information for waiting time enquiry',--}}
-{{--                                'button'            => 'waiting time enquiry'])--}}
+{{--                                'buttonText'            => 'waiting time enquiry'])--}}
 {{--                    </span>--}}
 {{--                @endif--}}
                 <span class="d-none" id="item_waiting_time_{{$id}}">{{str_replace("<br>", " ", $waitTime)}}</span>
@@ -196,7 +196,7 @@
 {{--                                'classTitle'        => 'text-link enquire-prices',--}}
 {{--                                'target'            => 'blank',--}}
 {{--                                'modalText'         => 'This is the text about prices',--}}
-{{--                                'button'            => 'prices'])--}}
+{{--                                'buttonText'            => 'prices'])--}}
 {{--                    </span>--}}
 {{--                @endif--}}
                 <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
@@ -211,9 +211,9 @@
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'modalTarget'       => '#hc_modal_enquire_private',
-                    'classTitle'        => 'btn btn-icon btn-grad btn-enquire btn-blue enquiry mr-2 btn-block font-12',
+                    'classTitle'        => 'btn btn-icon btn-grad btn-enquire btn-blue enquiry mr-2 btn-block font-14',
                     'target'            => 'blank',
-                    'button'            => $btnText,
+                    'buttonText'            => $btnText,
                     'id'                => 'enquire_'.$id,
                     'svg'               => 'circle-check'])
                 @elseif($NHSClass == 'nhs-hospital')
@@ -222,21 +222,26 @@
                     'hrefValue'         => $url,
                     'hospitalTitle'     => $title,
                     'hospitalUrl'       => $d['url'],
-                    'classTitle'        => 'btn btn-icon btn-grad btn-blue btn-enquire enquiry mr-2 btn-block font-12',
-                    'button'            => $btnText,
+                    'classTitle'        => 'btn btn-icon btn-grad btn-blue btn-enquire enquiry mr-2 btn-block font-14',
+                    'buttonText'            => $btnText,
                     'modalTarget'       => '#hc_modal_enquire_nhs',
                     'id'                => 'enquire_'.$id,
                     'svg'               => 'circle-check'])
                 @endif
                 @if(!empty($specialOffers))
-                    @include('components.basic.button', [
-                    'classTitle'        => 'toggle-special-offer btn btn-block btn-grad btn-icon btn-pink btn-special-offer btn-plus font-12',
-                    'button'            => 'Special Offers',
-                    'svg'               => 'special'])
-                @endif
+                    <div class="position-relative btn-block">
+                        @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
+                            'class' => 'default'])
+                        @include('components.basic.button', [
+                            'classTitle'        => 'toggle-special-offer btn btn-block btn-grad btn-icon btn-pink btn-special-offer btn-plus font-14',
+                            'buttonText'        => 'Special Offers',
+                            'svg'               => 'special'])
+                    </div>
+            @endif
                 @include('components.basic.button', [
-                    'classTitle'        => 'btn btn-compare compare btn-block font-12',
-                    'button'            => 'Compare Hospitals',
+                    'classTitle'        => 'btn btn-compare compare btn-block font-14',
+{{--                    'buttonText'            => 'Compare Hospitals',--}}
+                    'buttonText'            => 'Add to compare',
                     'svg'               => 'heart-solid',
                     'id'                => $id])
             </div>

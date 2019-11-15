@@ -291,7 +291,9 @@ $(document).ready(function () {
     $(document).on("click", ".compare-hospitals-bar .compare-button-title", function (e) {
         var compareCount = parseInt(Cookies.get("compareCount"));
         var openTabs = $('.special-offer-tab.open');
-        if (compareCount > 0) {
+        // var solutionsBar = $('.compare-hospitals-bar');
+        if (compareCount > -1) {
+            // solutionsBar.toggleClass('open');
             compareContent.slideToggle();
             $('body').toggleClass('shortlist-open');
             $('.compare-arrow').toggleClass('rotated');

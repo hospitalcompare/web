@@ -12,6 +12,44 @@
 
 @section('content')
     <section>
+        <div class="container">
+            <h1>Special offers slide out</h1>
+            @include('components.basic.specialofferslide', ['class' => 'show'])
+{{--            <h3>Select styling</h3>--}}
+{{--            <h4>Plain select</h4>--}}
+{{--            <select class="" id="" name="sort_by">--}}
+
+{{--                <option name="Distance from Postcode ascending" id="sort_by_0" value="0">--}}
+{{--                    Distance from Postcode ascending--}}
+{{--                </option>--}}
+{{--                <option name="Distance from Postcode descending" id="sort_by_1" value="1">--}}
+{{--                    Distance from Postcode descending--}}
+{{--                </option>--}}
+{{--                <option name="Waiting time ascending" id="sort_by_2" value="2">--}}
+{{--                    Waiting time ascending--}}
+{{--                </option>--}}
+{{--                <option name="Waiting time descending" id="sort_by_3" value="3">--}}
+{{--                    Waiting time descending--}}
+{{--                </option>--}}
+{{--                <option name="User Rating ascending" id="sort_by_4" value="4">--}}
+{{--                    User Rating ascending--}}
+{{--                </option>--}}
+{{--                <option name="User Rating descending" id="sort_by_5" value="5">--}}
+{{--                    User Rating descending--}}
+{{--                </option>--}}
+{{--            </select>--}}
+        </div>
+    </section>
+    <section>
+        @include('components.corporatecontent', [
+                'procedures'    => $data['filters']['procedures'],
+                'id'            => 1,
+                'latitude'      => '52.3',
+                'longitude'     => '2.3',
+                'address'       => '<strong>Hospital name</strong><br>Hospital address<br>Hospital Town<br>Hospital County<br>Hospital Postcode'
+            ])
+    </section>
+    <section>
         @include('pages.pagesections.resultspageform', [
         'displayBlock' => true])
     </section>
@@ -93,17 +131,6 @@
             </div>
         </div>
     </section>
-    <section>
-        @include('components.corporatecontent', [
-                'procedures'    => $data['filters']['procedures'],
-                'id'            => 1,
-                'latitude'      => '52.3',
-                'longitude'     => '2.3',
-                'address'       => '<strong>Hospital name</strong><br>Hospital address<br>Hospital Town<br>Hospital County<br>Hospital Postcode'
-            ])
-    </section>
-
-
     <div class="section pt-3 pb-5">
         <div class="container">
             <p class="p-5" style="width: 300px; border: 3px solid black">
@@ -209,17 +236,17 @@
                 <h3>Enquire now button</h3>
                 @include('components.basic.button', [
                     'classTitle' => 'btn btn-icon btn-enquire-now mr-2',
-                    'button' => 'Enquire Now'])
+                    'buttonText' => 'Enquire Now'])
                 <h3>Special offer button</h3>
-                @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer mr-2', 'button' => 'Special Offers'])
+                @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer mr-2', 'buttonText' => 'Special Offers'])
                 <h3>Special offer button reversed</h3>
-                @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer-reverse mr-2', 'button' => 'Special Offers'])
+                @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-special-offer-reverse mr-2', 'buttonText' => 'Special Offers'])
                 <h3>Enquiry button</h3>
-                @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-enquire enquiry', 'button' => 'Make an enquiry'])
+                @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-enquire enquiry', 'buttonText' => 'Make an enquiry'])
                 <h3>Close button</h3>
-                @include('components.basic.button', ['classTitle' => 'btn btn-close__small btn-turq btn-icon', 'button' => 'Close'])
+                @include('components.basic.button', ['classTitle' => 'btn btn-close__small btn-turq btn-icon', 'buttonText' => 'Close'])
                 <h3>Let's go button</h3>
-                @include('components.basic.button', ['classTitle' => 'btn btn-go btn-icon', 'button' => 'Close'])
+                @include('components.basic.button', ['classTitle' => 'btn btn-go btn-icon', 'buttonText' => 'Close'])
                 <hr>
                 <h2>Popovers</h2>
                 <h3>Popover for CQC rating</h3>
@@ -428,31 +455,7 @@
 
 
                 <hr>
-                <h1>Special offers slide out</h1>
-                @include('components.basic.specialofferslide', ['class' => 'show'])
-                <h3>Select styling</h3>
-                <h4>Plain select</h4>
-                <select class="" id="" name="sort_by">
 
-                    <option name="Distance from Postcode ascending" id="sort_by_0" value="0">
-                        Distance from Postcode ascending
-                    </option>
-                    <option name="Distance from Postcode descending" id="sort_by_1" value="1">
-                        Distance from Postcode descending
-                    </option>
-                    <option name="Waiting time ascending" id="sort_by_2" value="2">
-                        Waiting time ascending
-                    </option>
-                    <option name="Waiting time descending" id="sort_by_3" value="3">
-                        Waiting time descending
-                    </option>
-                    <option name="User Rating ascending" id="sort_by_4" value="4">
-                        User Rating ascending
-                    </option>
-                    <option name="User Rating descending" id="sort_by_5" value="5">
-                        User Rating descending
-                    </option>
-                </select>
                 <h4>Styled select</h4>
                 <div class="select-parent  ">
                     <label class="_select-box sortLabel" for="">

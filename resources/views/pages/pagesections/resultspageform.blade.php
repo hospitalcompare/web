@@ -20,9 +20,8 @@
                     ])
 
                     @include('components.basic.button', [
-                        'button'            => 'Filter Results',
-{{--                        'classTitle'        => 'btn btn-s btn-grey btn-grad btn-icon btn-arrow-down',--}}
-                        'classTitle'        => 'btn btn-s btn-turq btn-grad btn-icon btn-arrow-down',
+                        'buttonText'            => 'Filter Results',
+                        'classTitle'        => 'btn btn-s btn-grey btn-grad btn-icon btn-arrow-down',
                         'id'                => 'show_filters',
                         'icon'              => '',
                         'svg'               => 'chevron-down-white'
@@ -51,7 +50,7 @@
                     ])
                     <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
                        class="help-link"
-                       style="top: 11px; right: 53px"
+                       style="right: 53px"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
                         'placement'      => 'top',
@@ -81,7 +80,7 @@
                         'id' => 'input_postcode'])
                     <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
                        class="help-link"
-                       style="top: 11px; right: 53px"
+                       style="right: 53px"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
                         'placement'      => 'top',
@@ -272,7 +271,7 @@
                     >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2 d-flex align-items-end">
-                    @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-blue btn-s d-block btn-submit-results', 'button' => 'Update Results'])
+                    @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-blue btn-s d-block btn-submit-results', 'buttonText' => 'Update Results'])
                 </div>
             </div>
         </div>

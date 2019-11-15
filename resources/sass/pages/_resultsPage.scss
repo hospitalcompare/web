@@ -1,6 +1,21 @@
 .results-page {
     background-color: $lighterGrey;
 
+    // Mask when shortlist is open
+    &:before {
+        pointer-events: none;
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1035; // To be just below the open shortlist
+        width: 100vw;
+        height: 100vh;
+        background-color: $modal-backdrop-bg;
+        opacity: 0;
+        transition: $transition;
+    }
+
     .results {
         min-height: calc(60vh - 220px);
     }
@@ -115,6 +130,7 @@
             width: 100%;
             //padding: 20px 0 18px 16px;
             padding: 8px 40px 8px 13px;
+
             @include font-size(14);
 
             @include placeholder {
@@ -128,6 +144,7 @@
 
     .postcode-radius {
         @include reset-row-spacing(7.5px);
+
         .postcode-radius-child {
             &:first-child {
                 //width: 40%;
@@ -145,6 +162,19 @@
                         }
                     }
                 }
+            }
+
+            #input_postcode,
+            .dropdown-toggle {
+                padding: 13px 40px 13px 13px;
+            }
+
+            .bootstrap-select + .black-chevron {
+                @include v-c;
+            }
+
+            .help-link {
+                @include v-c;
             }
         }
     }
@@ -475,6 +505,7 @@
             &:before {
                 content: 'Close info' !important;
             }
+
             //&:after {
             //    content: 'Close info';
             //}
@@ -564,10 +595,23 @@
     }
 }
 
+// Compare shortlist area open
 .shortlist-open {
-    overflow: hidden;
+    overflow: hidden; // Stop body scrolling
 
     .popover {
         display: none !important;
+    }
+
+    // Hide the special offer tabs
+    .solutions-menu {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    // Fade in the mask when shortlist is open
+    &:before {
+        opacity: $modal-backdrop-opacity;
+        pointer-events: initial;
     }
 }

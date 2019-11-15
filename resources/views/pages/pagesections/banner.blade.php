@@ -30,7 +30,7 @@
                                     'group'                 => true,
                                     'groupName'             => 'procedures',
                                     'suboptionClass'        => 'subprocedures',
-                                    'chevronFAClassName'    => 'fa-chevron-down aqua-chevron',
+                                    'svg'                   => 'chevron-down-aqua',
                                     'name'                  => 'procedure_id'
                                 ])
                                 <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
@@ -106,7 +106,7 @@
                             </div>
                             @include('components.basic.button', [
                                 'classTitle'    => !empty($layout) ? 'btn btn-m btn-grad btn-turq ml-4' : 'btn btn-m btn-grad btn-turq py-3 mb-3',
-                                'button'        => !empty($layout) ? 'Find<br>Hospitals' : 'Find Hospitals',
+                                'buttonText'        => !empty($layout) ? 'Find<br>Hospitals' : 'Find Hospitals',
                                 'htmlButton'    => true,
                                 'style'         => !empty($layout) ? 'width: 114px; text-align: center; padding: 0; font-size: 18px; height: 62px; border-radius: 24px' : ''])
                             @unless(!empty($layout) && $layout == 'row')
