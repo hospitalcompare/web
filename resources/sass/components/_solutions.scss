@@ -4,7 +4,8 @@
     left: 0;
     width: 100%;
     //background-image: linear-gradient(to right, $green 0%, $teal 100%);
-    background: $footerGrey;
+    background-color: $turq;
+    //background: $footerGrey;
     z-index: 1040;
 
     .compare-hospitals-header {
@@ -54,7 +55,7 @@
 
 
         .compare-button-title {
-            background-color: #535353;
+            //background-color: #535353;
             cursor: pointer;
 
             svg { // #compare_heart

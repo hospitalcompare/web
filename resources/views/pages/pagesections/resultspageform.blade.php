@@ -20,7 +20,7 @@
 
                     @include('components.basic.button', [
                         'buttonText'            => 'Filter Results',
-                        'classTitle'        => 'btn btn-s btn-grey btn-grad btn-icon btn-arrow-down',
+                        'classTitle'        => 'btn btn-s btn-turq btn-grad btn-icon btn-arrow-down',
                         'id'                => 'show_filters',
                         'icon'              => '',
                         'svg'               => 'chevron-down-white'
