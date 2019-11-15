@@ -34,7 +34,7 @@
 {{--                        </div>--}}
                         @include('components.basic.button', [
                             'hrefValue'     => '/blogs',
-                            'classTitle'    => 'btn btn-m btn-grad btn-teal bottom-left-buttton',
+                            'classTitle'    => 'btn btn-m btn-grad btn-turq bottom-left-buttton',
                             'button'        => 'Back to Blogs'
 
                         ])

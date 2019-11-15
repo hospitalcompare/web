@@ -3,7 +3,7 @@ $(document).ready(function () {
     // var $doctor = $('#doctor-popover');
     // var $message = $('#doctor').data('message');
     // var $content = `<p class="bold mb-0">${$message}</p>
-    //                 <p class="mt-3"><a class="btn btn-close btn-close__small btn-teal btn-icon">Close</a></p>`;
+    //                 <p class="mt-3"><a class="btn btn-close btn-close__small btn-turq btn-icon">Close</a></p>`;
     // // console.log($content);
     // $doctor.popover({
     //     container: 'body',

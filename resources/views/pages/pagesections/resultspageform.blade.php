@@ -21,7 +21,8 @@
 
                     @include('components.basic.button', [
                         'button'            => 'Filter Results',
-                        'classTitle'        => 'btn btn-s btn-grey btn-grad btn-icon btn-arrow-down',
+{{--                        'classTitle'        => 'btn btn-s btn-grey btn-grad btn-icon btn-arrow-down',--}}
+                        'classTitle'        => 'btn btn-s btn-turq btn-grad btn-icon btn-arrow-down',
                         'id'                => 'show_filters',
                         'icon'              => '',
                         'svg'               => 'chevron-down-white'
@@ -65,7 +66,7 @@
                                          Select your treatment if known.
                                      </p>
 {{--                                     <p>--}}
-{{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
+{{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
                     >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
@@ -136,7 +137,7 @@
                                          Select the waiting time most suitable for your needs.
                                      </p>
 {{--                                     <p>--}}
-{{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
+{{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
                     >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
@@ -168,7 +169,7 @@
                                          Five star rating system based on feedback provided by users of the NHS (five stars being the best). Information is not available on some hospitals.
                                      </p>
 {{--                                     <p>--}}
-{{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
+{{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
                     >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
@@ -198,7 +199,7 @@
                                          The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
                                      </p>
 {{--                                     <p>--}}
-{{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
+{{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
                     >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
@@ -229,7 +230,7 @@
                                          Select which hospital type best suits your needs. Remember you can choose to have an NHS treatment at most private hospitals in England and Wales.
                                      </p>
 {{--                                     <p>--}}
-{{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
+{{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
                     >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
@@ -265,7 +266,7 @@
                                          Select your insurance provider and policy type.
                                      </p>
 {{--                                     <p>--}}
-{{--                                         <a  class="btn btn-close btn-close__small btn-teal btn-icon" >Close</a>--}}
+{{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
                     >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>

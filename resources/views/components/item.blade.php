@@ -29,7 +29,7 @@
 {{--                    'image'             => 'images/alder-1.png'--}}
 {{--                ])--}}
                 @include('components.basic.button', [
-                    'classTitle'        => 'btn btn-xs btn-teal btn-icon btn-more-info position-absolute',
+                    'classTitle'        => 'btn btn-xs btn-turq btn-icon btn-more-info position-absolute',
                     'button'            => '&nbsp;',
                     'icon'              => '',
                     'svg'               => 'plus-solid',
@@ -38,7 +38,7 @@
                 {{--                TODO: reintroduce consultant button when we have this data --}}
                 {{--                @if(!empty($specialOffers))--}}
                 {{--                    <div class="btn-area" style="margin-top: 10px">--}}
-                {{--                        @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-teal btn-icon btn-consultant btn-plus', 'button' => 'Consultants'])--}}
+                {{--                        @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-turq btn-icon btn-consultant btn-plus', 'button' => 'Consultants'])--}}
                 {{--                    </div>--}}
                 {{--                @endif--}}
 
