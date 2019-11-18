@@ -18,7 +18,9 @@
                 <p class="distance mb-0">{{ $headerText['open']['subtitle'] }}</p>
             </div>
         </div>
-        <span class="fa fa-chevron-up toggle-special-offer"></span>
+        <span class="toggle-special-offer">
+            {!! file_get_contents(asset('images/icons/chevron-up.svg')) !!}
+        </span>
     </div>
     <div class="special-offer-body">
         <div class="inner-body d-flex flex-column justify-content-between h-100">

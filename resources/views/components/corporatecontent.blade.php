@@ -84,7 +84,7 @@
                          aria-labelledby="map-tab">
                         <div id="gmap_{{ $id }}" class="map-container" style="height: 200px">
                         </div>
-                        <div id="details" class="d-flex" style="padding-top: 25px">
+                        <div class="corporate-content-details d-flex mb-3" style="padding-top: 25px">
                             <div class="img-wrap mr-4">
                                 <img class="image" width="173" height="158" src="images/alder-1.png">
                             </div>
@@ -109,7 +109,6 @@
                                         'labelClass'            => 'text-white font-18 pr-3 SofiaPro-Medium',
                                         'selectClassName'       => 'd-md-flex select_half-width w-100',
                                         'placeholder'           => 'Check to see if your treatment is available at this hospital',
-                                        'chevronFAClassName'    => '',
                                         'name'                  =>'radius'])
                                     {{--                                <a tabindex="0" data-offset="30px, 40px"--}}
                                     {{--                                   class="help-link"--}}
@@ -235,7 +234,7 @@
                                         </li>
                                     </ol>
                                     @include('components.basic.modalbutton', [
-                                        'classTitle'        => 'stretched -link',
+                                        'classTitle'        => 'stretched-link',
                                         'modalTarget'       => '#hc_modal_carousel_'. $id,
                                         'buttonText'            => '',
                                         ])

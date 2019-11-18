@@ -65,7 +65,8 @@ mix.browserSync({
     files: [
         'resources/sass/**/*.scss',
         'resources/js/**/*.js',
-        'resources/views/**/*.blade.php'
+        'resources/views/**/*.blade.php',
+        'public/images/**/*'
     ],
     logSnippet: true,
     proxy: process.env.APP_URL,

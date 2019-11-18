@@ -16,12 +16,13 @@
 
     <section class="how-section__parent">
         @include('components.howsection', [
-        'sectionTitle' => 'How does it work?',
-        'howsections' => [
+            'hideButton'    => true,
+            'sectionTitle' => 'How does it work?',
+            'howsections' => [
             [
-                'iconImg'=> 'doctor',
-                'title'=>'Step One',
-                'description' => '
+                'iconImg'       => 'doctor',
+                'title'         =>'Step One',
+                'description'   => '
                     <p>Understand your right to have an NHS-funded elective treatment at a private hospital of your choice. You do not need to choose a hospital during your GP appointment.</p>
 {{--                    <ul>--}}
 {{--                        <li>your rights to choose:--}}
@@ -77,11 +78,13 @@
                         <h2 class="section-title">Why use Hospital Compare?</h2>
                         <p>Hospital Compare helps you make the best possible choice when it comes to choosing a suitable
                             hospital for your treatment.</p>
-                        <p>Many people in the UK are not aware that they could have the option of an NHS funded operation
+                        <p>Many people in the UK are not aware that they could have the option of an NHS funded
+                            operation
                             in a private hospital. We are here to help you understand your rights and make the right
                             choice.</p>
                         <p>Whether you are searching for the best NHS hospital or the best private hospital, Hospital
-                            Compare is the best place that provides an accurate, up-to-date and unbiased assessment of all
+                            Compare is the best place that provides an accurate, up-to-date and unbiased assessment of
+                            all
                             hospitals in the UK.</p>
                     </div>
                     <div class="why-use-video col col-12 col-md-6">

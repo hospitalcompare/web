@@ -14,7 +14,12 @@
     <section>
         <div class="container">
             <h1>Special offers slide out</h1>
-            @include('components.basic.specialofferslide', ['class' => 'show'])
+            @include('components.basic.specialofferslide', [
+            'class'         => 'show',
+            'url'           => 'hello.com',
+            'NHSClass'      => 'private-hospital',
+            'title'         => 'Budget hospitals dot com',
+            'id'            => '1'])
 {{--            <h3>Select styling</h3>--}}
 {{--            <h4>Plain select</h4>--}}
 {{--            <select class="" id="" name="sort_by">--}}

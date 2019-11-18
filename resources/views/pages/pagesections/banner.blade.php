@@ -84,7 +84,6 @@
                                     'placeholder'           => 'How far would you travel?',
                                     'placeholderOption'     => 'Select Distance',
                                     'selectedPlaceholder'   => true,
-                                    'chevronFAClassName'    => '',
                                     'labelClass'            => 'font-18 pr-4',
                                     'name'                  =>'radius'])
                                 <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"

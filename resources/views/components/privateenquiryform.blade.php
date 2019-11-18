@@ -26,7 +26,7 @@
                             ['id'=>'Prof.', 'name'=>'Prof.'],
                             ['id'=>'Rev.', 'name'=>'Rev.']
                         ],
-                        'chevronFAClassName' => 'fa-chevron-down black-chevron',
+                        'svg'           => 'chevron-down',
                         'selectClass' => 'form-control',
                         'placeholder' => 'Title*',
                         'name'=>'title',
@@ -79,7 +79,7 @@
                 <div class="col col-12">
                     @include('components.basic.select', [
                         'options'               => $procedures,
-                        'chevronFAClassName'    => 'fa-chevron-down black-chevron',
+                        'svg'                   => 'chevron-down',
                         'selectClass'           => 'select-picker',
                         'placeholder'           => 'Surgery Type',
                         'group'                 => true,
@@ -102,8 +102,8 @@
                                 ['id'=>'consultants', 'name'=>'My choice of consultants for self-pay']
                             ],
                             'selectId'              => 'reason_for_contact',
-                            'chevronFAClassName'    => 'fa-chevron-down black-chevron',
                             'selectClass'           => 'form-control',
+                            'svg'                   => 'chevron-down',
                             'placeholder'           => 'Reason for contact',
                             'name'                  =>'reason_for_contact',
                             'selectPicker'          => 'true',
