@@ -130,7 +130,7 @@
                             labore non pariatur tempore.</p>
                         <div class="btn-area">
                             @include('components.basic.button', [
-                            'classTitle'       => 'btn btn-blue font-18',
+                            'classTitle'       => 'btn btn-blue btn-grad font-18',
                             'hrefValue'        => '/results-page?hospital_type=2',
                             'buttonText'       => 'View all NHS hospitals'])
                         </div>
@@ -175,9 +175,10 @@
                                 'labelClass'            => 'col-turq font-20 SofiaPro-Medium mr-3',
                                 'showLabel'             => true,
                                 'name'                  => 'policy_id',
+                                'selectId'              => 'how_to_use_policies',
                                 'placeholder'           => 'Select your insurance provider:&nbsp;'])
                             @include('components.basic.button', [
-                                'classTitle'            => 'btn btn-blue font-18',
+                                'classTitle'            => 'btn btn-blue btn-grad font-18',
                                 'buttonText'            => 'View all private hospitals covered on your policy',
                                 'htmlButton'            => true])
                         </form>
@@ -211,7 +212,7 @@
                             labore non pariatur tempore.</p>
                         <div class="btn-area">
                             @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-blue font-18',
+                            'classTitle'        => 'btn btn-blue btn-grad font-18',
                             'buttonText'        => 'Self-pay at a private hospital',
                             'hrefValue'         => '/results-page?hospital_type=1'])
                         </div>

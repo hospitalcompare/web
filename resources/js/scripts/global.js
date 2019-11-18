@@ -28,7 +28,14 @@ $(document).ready(function () {
         $('body').removeClass('select-open');
     });
 
+    var $howToUseSelectPlaceholder = 'Select';
+    // Change text on the dropdown in how to use page
+    $('.how-to-use-page .dropdown-toggle .filter-option-inner-inner').text($howToUseSelectPlaceholder);
 
+    $('#how_to_use_policies').on('shown.bs.select', function(){
+        console.log($howToUseSelectPlaceholder);
+        $('.dropdown-menu li:first-child a').text($howToUseSelectPlaceholder);
+    })
 });
 
 // Scroll up to show alert bar
@@ -175,4 +182,5 @@ window.popupDoctor = function (message, delay) {
     }
 
     $doctor.focus();
+
 };
