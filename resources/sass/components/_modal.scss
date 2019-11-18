@@ -139,6 +139,18 @@
 
         .carousel-item-copy {
             padding: 15px 25px 15px 125px;
+            @include font-size(13);
+
+            .image-wrapper {
+                left: 0;
+                bottom: 0;
+                width: 99px;
+                height: 105px;
+
+                img {
+                    width: 100%;
+                }
+            }
         }
     }
 }
