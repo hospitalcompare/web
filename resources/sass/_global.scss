@@ -325,6 +325,12 @@ path {
 
 
 //=========================HEALTH CHOICE SECTION===========================
+.your-rights-page {
+    section {
+        padding: 40px 0;
+    }
+}
+
 .choose-health-parent {
     margin: 60px auto;
 
@@ -358,6 +364,10 @@ path {
         .your-rights-page & {
             background: url('../images/ladycoffeesofa.jpg');
             background-position: 40% 60%;
+        }
+
+        .your-rights-page & {
+            margin: 0;
         }
     }
 

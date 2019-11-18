@@ -12,19 +12,19 @@
 
 @section('content')
 
-    <section>
+    <section class="py-0">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     {{--                    <h1>Patient Choice</h1>--}}
-                    <h1 class="font-36 SofiaPro-SemiBold">Your Rights</h1>
+                    <h1 class="font-36 SofiaPro-SemiBold mb-3">Your Rights</h1>
                     <p class="col-turq font-26 SofiaPro-Medium">
                         The Health and Social Care Act 2013 (the “<span>Act</span>”) introduced a number of
                         significant changes to the way health care services are managed and delivered in England and
                         implemented the principles and policy drivers introduced in a Government White paper in 2010.
                         Among these policies were:
                     </p>
-                    <ul class="blue-dot">
+                    <ul class="blue-dot mb-0">
                         <li><span>Choice:</span> putting Patients and the Public first and increasing the
                             involvement of Patients in decisions affecting them and, importantly giving patients Choice
                             of healthcare provider for their treatment, whether public sector of private sector.
@@ -42,8 +42,10 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col col-12 col-md-7">
+                <div class="col col-12">
                     <p class="font-28 col-turq SofiaPro-SemiBold">The Act</p>
+                </div>
+                <div class="col col-12 col-md-7">
                     <p>The Act also introduced a number of other important policies and created bodies and structures to
                         authorise monitor and regulate all primary care providers (<span>GPs</span>) and Secondary
                         care provider
@@ -55,7 +57,7 @@
                         to tell patients where they can find information about the choices they have. Clinical
                         Commissioning Groups (<span>CCGs</span>) were created which oversee the provision of
                         healthcare in designated
-                        regions, authorised by NHS England, and themselves are obliged to consider patient <strong><i>Choice</i></strong>
+                        regions, authorised by NHS England, and themselves are obliged to consider patient <span>Choice</span>
                         and to
                         procure providers best suited to provide value for money, quality and efficiency of healthcare
                         services, whether procured from the public or private sector, at set prices known as the NHS
@@ -91,7 +93,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-greylight">
+    <section class="bg-greylight pb-0">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -117,7 +119,7 @@
             </div>
         </div>
     </section>
-    <section class="choose-health-parent">
+    <section class="choose-health-parent my-0">
         <div class="container">
             <div class="choose-health animated fade-in" data-animation="fade-in">
                 <div class="choose-health-text d-flex flex-column">
@@ -134,59 +136,123 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="pt-0">
         <div class="container">
-            <div class="row">
-                <p class="font-24 SofiaPro-SemiBold">You can:</p>
-                <ul class="blue-dot">
-                    <li>Choose the organisation you need to be referred to as an NHS outpatient to see a consultant
-                        or specialist (an outpatient appointment means you will not be admitted to a ward). You may
-                        choose whenever you are referred for the first time for an appointment for a physical or
-                        mental health condition. This could be an NHS hospital or a private sector hospital that has
-                        contracted to provide these services at the NHS Tariff, which in practice is most private
-                        hospitals. There are exceptions.
-                    </li>
-                    <li>Choose which clinical team will be in charge of your NHS treatment within your chosen
-                        organisation. For a physical health condition, you will be seen by the consultant or by a
-                        clinician who works in the consultant’s team. For a mental health condition, you will be
-                        seen by the consultant or named healthcare professional who leads the mental health team or
-                        by another health care professional in the team.
-                    </li>
-                </ul>
-                <p>Essentially, you should always have a conversation with the healthcare professional who is
-                    referring you to discuss the choices available for you in your circumstances.
-                </p>
-                <p>Hospital Compare exists to help you and healthcare professionals who are advising you to show you
-                    in a clear and transparent way what your hospital choice options might be, and to compare these
-                    choices with other hospitals offering similar services in your local area or further afield, in
-                    England, if you are prepared to travel. This is relevant to you whether you are choosing a
-                    procedure to be performed at an NHS hospital or private sector hospital paid for by the NHS (at
-                    the NHS Tariff) or if you are choosing a private hospital paid for by your healthcare insurer or
-                    if you are paying for the procedure yourself.
-                </p>
-                <p>Remember, choosing to have your procedure performed at a private hospital paid for by the NHS, is
-                    at no extra cost to the taxpayer.
-                </p>
-                <p>If you want to find out more about your choices or the restrictions on your choices visit:
-                </p>
-                <h3>The NHS Choice Framework</h3>
-                <p>
-                    <a class="btn-link" target="_blank"
-                       href="https://www.gov.uk/government/publications/the-nhs-choice-framework/the-nhs-choice-framework-what-choices-are-available-to-me-in-the-nhs"
-                    >https://www.gov.uk/government/publications/the-nhs-choice-framework/the-nhs-choice-framework-what-choices-are-available-to-me-in-the-nhs</a>
-                </p>
-                <h3>NHS England’s website</h3>
-                <p>
-                    <a class="btn-link" target="_blank" href="https://www.england.nhs.uk/?s=patient+choice">https://www.england.nhs.uk/?s=patient+choice</a>
-                </p>
-                <h3>NHS Constitution</h3>
-                <p>
-                    <a class="btn-link" target="_blank"
-                       href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england">https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england</a>
-                </p>
-            </div>{{-- hc-content --}}
-        </div>
+            <p class="font-28 col-turq SofiaPro-SemiBold">Choosing your Hospital and Consultant</p>
+            <p class="font-24 SofiaPro-SemiBold">You can:</p>
+            <ul class="blue-dot">
+                <li>Choose the organisation you need to be referred to as an NHS outpatient to see a consultant
+                    or specialist (an outpatient appointment means you will not be admitted to a ward). You may
+                    choose whenever you are referred for the first time for an appointment for a physical or
+                    mental health condition. This could be an NHS hospital or a private sector hospital that has
+                    contracted to provide these services at the NHS Tariff, which in practice is most private
+                    hospitals. There are exceptions.
+                </li>
+                <li>Choose which clinical team will be in charge of your NHS treatment within your chosen
+                    organisation. For a physical health condition, you will be seen by the consultant or by a
+                    clinician who works in the consultant’s team. For a mental health condition, you will be
+                    seen by the consultant or named healthcare professional who leads the mental health team or
+                    by another health care professional in the team.
+                </li>
+            </ul>
+            <p>Essentially, you should always have a conversation with the healthcare professional who is
+                referring you to discuss the choices available for you in your circumstances.
+            </p>
+            <p>Hospital Compare exists to help you and healthcare professionals who are advising you to show you
+                in a clear and transparent way what your hospital choice options might be, and to compare these
+                choices with other hospitals offering similar services in your local area or further afield, in
+                England, if you are prepared to travel. This is relevant to you whether you are choosing a
+                procedure to be performed at an NHS hospital or private sector hospital paid for by the NHS (at
+                the NHS Tariff) or if you are choosing a private hospital paid for by your healthcare insurer or
+                if you are paying for the procedure yourself.
+            </p>
+            <p>Remember, choosing to have your procedure performed at a private hospital paid for by the NHS, is
+                at no extra cost to the taxpayer.
+            </p>
+
+
         </div>
     </section>
+    <section class="bg-greylight">
+        <div class="container">
+            <div class="row">
+                <div class="col col-12 col-md-7">
+                    <p>If you want to find out more about your choices or the restrictions on your choices visit:
+                    </p>
+                    <p class="SofiaPro-SemiBold mb-0">The NHS Choice Framework</p>
+                    <p>
+                        <a class="btn-link" target="_blank"
+                           href="https://www.gov.uk/government/publications/the-nhs-choice-framework/the-nhs-choice-framework-what-choices-are-available-to-me-in-the-nhs"
+                        >https://www.gov.uk/government/publications/the-nhs-choice-framework/the-nhs-choice-framework-what-choices-are-available-to-me-in-the-nhs</a>
+                    </p>
+                    <p class="SofiaPro-SemiBold mb-0">NHS England’s website</p>
+                    <p>
+                        <a class="btn-link" target="_blank" href="https://www.england.nhs.uk/?s=patient+choice">https://www.england.nhs.uk/?s=patient+choice</a>
+                    </p>
+                    <p class="SofiaPro-SemiBold mb-0">NHS Constitution</p>
+                    <p>
+                        <a class="btn-link" target="_blank"
+                           href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england">https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england</a>
+                    </p>
+                </div>
+                <div class="col col-12 col-md-5">
+                    <div class="image-wrapper">
+                        <img class="w-100" src="{{ asset('/images/video_placeholder.png') }}"
+                             alt="People sat round a table having a chin wag ">
+                    </div>
+                </div>
+            </div>
+    </section>
+    {{--    <section>--}}
+    {{--        <div class="">--}}
+    {{--            <p class="font-24 SofiaPro-SemiBold col-turq">You can:</p>--}}
+    {{--            <ul class="blue-dot">--}}
+    {{--                <li>Choose the organisation you need to be referred to as an NHS outpatient to see a consultant--}}
+    {{--                    or specialist (an outpatient appointment means you will not be admitted to a ward). You may--}}
+    {{--                    choose whenever you are referred for the first time for an appointment for a physical or--}}
+    {{--                    mental health condition. This could be an NHS hospital or a private sector hospital that has--}}
+    {{--                    contracted to provide these services at the NHS Tariff, which in practice is most private--}}
+    {{--                    hospitals. There are exceptions.--}}
+    {{--                </li>--}}
+    {{--                <li>Choose which clinical team will be in charge of your NHS treatment within your chosen--}}
+    {{--                    organisation. For a physical health condition, you will be seen by the consultant or by a--}}
+    {{--                    clinician who works in the consultant’s team. For a mental health condition, you will be--}}
+    {{--                    seen by the consultant or named healthcare professional who leads the mental health team or--}}
+    {{--                    by another health care professional in the team.--}}
+    {{--                </li>--}}
+    {{--            </ul>--}}
+    {{--            <p>Essentially, you should always have a conversation with the healthcare professional who is--}}
+    {{--                referring you to discuss the choices available for you in your circumstances.--}}
+    {{--            </p>--}}
+    {{--            <p>Hospital Compare exists to help you and healthcare professionals who are advising you to show you--}}
+    {{--                in a clear and transparent way what your hospital choice options might be, and to compare these--}}
+    {{--                choices with other hospitals offering similar services in your local area or further afield, in--}}
+    {{--                England, if you are prepared to travel. This is relevant to you whether you are choosing a--}}
+    {{--                procedure to be performed at an NHS hospital or private sector hospital paid for by the NHS (at--}}
+    {{--                the NHS Tariff) or if you are choosing a private hospital paid for by your healthcare insurer or--}}
+    {{--                if you are paying for the procedure yourself.--}}
+    {{--            </p>--}}
+    {{--            <p>Remember, choosing to have your procedure performed at a private hospital paid for by the NHS, is--}}
+    {{--                at no extra cost to the taxpayer.--}}
+    {{--            </p>--}}
+    {{--            <p>If you want to find out more about your choices or the restrictions on your choices visit:--}}
+    {{--            </p>--}}
+    {{--            <h3>The NHS Choice Framework</h3>--}}
+    {{--            <p>--}}
+    {{--                <a class="btn-link" target="_blank"--}}
+    {{--                   href="https://www.gov.uk/government/publications/the-nhs-choice-framework/the-nhs-choice-framework-what-choices-are-available-to-me-in-the-nhs"--}}
+    {{--                >https://www.gov.uk/government/publications/the-nhs-choice-framework/the-nhs-choice-framework-what-choices-are-available-to-me-in-the-nhs</a>--}}
+    {{--            </p>--}}
+    {{--            <h3>NHS England’s website</h3>--}}
+    {{--            <p>--}}
+    {{--                <a class="btn-link" target="_blank" href="https://www.england.nhs.uk/?s=patient+choice">https://www.england.nhs.uk/?s=patient+choice</a>--}}
+    {{--            </p>--}}
+    {{--            <h3>NHS Constitution</h3>--}}
+    {{--            <p>--}}
+    {{--                <a class="btn-link" target="_blank"--}}
+    {{--                   href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england">https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england</a>--}}
+    {{--            </p>--}}
+    {{--        </div>--}}
+    {{--    </section>--}}
 
 @endsection
