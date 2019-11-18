@@ -10,13 +10,80 @@
         <div class="modal-content p-3">
             @include('components.basic.closebutton')
             <div class="carousel-wrapper position-relative">
-                <div id="carousel_tour" class="carousel slide carousel-fade carousel-thumbnails"
-                     data-ride="carousel" data-interval="false">
+                <div id="carousel_tour" class="carousel slide" data-ride="carousel">
                     <!--Slides-->
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <div class="carousel-item-inner">
-                                <img class="d-block h-100 content"
+                                <img class="d-block h-100 w-100 content"
+                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                            </div>
+                            <div class="carousel-item-copy bg-greylight position-relative">
+                                <div class="image-wrapper position-absolute ml-1">
+                                    <img class="" src="{{ asset('/images/dr-stevini.svg') }}" alt="Dr Stevini Illustration">
+                                </div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-item-inner">
+                                <img class="d-block h-100 w-100 content"
+                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                            </div>
+                            <div class="carousel-item-copy bg-greylight position-relative">
+                                <div class="image-wrapper position-absolute ml-1">
+                                    <img class="" src="{{ asset('/images/dr-stevini.svg') }}" alt="Dr Stevini Illustration">
+                                </div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-item-inner">
+                                <img class="d-block h-100 w-100 content"
+                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                            </div>
+                            <div class="carousel-item-copy bg-greylight position-relative">
+                                <div class="image-wrapper position-absolute ml-1">
+                                    <img class="" src="{{ asset('/images/dr-stevini.svg') }}" alt="Dr Stevini Illustration">
+                                </div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-item-inner">
+                                <img class="d-block h-100 w-100 content"
+                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                            </div>
+                            <div class="carousel-item-copy bg-greylight position-relative">
+                                <div class="image-wrapper position-absolute ml-1">
+                                    <img class="" src="{{ asset('/images/dr-stevini.svg') }}" alt="Dr Stevini Illustration">
+                                </div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-item-inner">
+                                <img class="d-block h-100 w-100 content"
                                      src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
                             </div>
                             <div class="carousel-item-copy bg-greylight position-relative">
