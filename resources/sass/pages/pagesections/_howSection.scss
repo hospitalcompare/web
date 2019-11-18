@@ -80,3 +80,56 @@
 }
 
 //============================ END HOW SECTION=============================
+
+//============================ HOW PAGE =============================
+.how-section__extra {
+    padding: 40px 0;
+
+    .row {
+        .col:first-child {
+            padding-right: 100px;
+        }
+
+        .col:last-child {
+            padding-left: 0;
+        }
+    }
+
+    .flex-row-reverse {
+        .col:first-child {
+            padding-left: 100px;
+        }
+
+        .col:last-child {
+            padding-right: 0;
+        }
+    }
+
+    form {
+        padding-right: 90px;
+    }
+
+    .bootstrap-select {
+        max-width: 220px;
+    }
+
+    .select-parent {
+
+        label {
+            width: 100%;
+            max-width: 260px;
+        }
+
+        svg {
+            position: absolute;
+            @include v-c;
+            right: 14px;
+        }
+    }
+
+    //max-width: 230px;
+
+    .dropdown-toggle {
+        padding: 8px 40px 8px 13px;
+    }
+}
