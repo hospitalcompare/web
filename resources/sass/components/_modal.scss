@@ -123,5 +123,23 @@
             border: none;
         }
     }
+
+    // Take the tour modal
+
+    &.modal-tour {
+        .modal-dialog {
+            max-width: 890px;
+        }
+
+        .modal-content {
+            border-radius: 0;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.38);
+            padding-bottom: 60px !important;
+        }
+
+        .carousel-item-copy {
+            padding: 15px 25px 15px 125px;
+        }
+    }
 }
 

@@ -1,5 +1,6 @@
 <a href=""
    id="{{ empty($id) ? '' : $id }}"
+   style="{{ empty($style) ? '' : $style }}"
    class="{{$classTitle}}"
    role="button"
    data-toggle="modal"
