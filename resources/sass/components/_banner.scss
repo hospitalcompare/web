@@ -35,11 +35,15 @@
     z-index: 5;
 
     &.flat-box {
-        padding: 40px 40px 30px;
+        padding: 30px 40px 30px;
 
         .dropdown-toggle,
         #input_postcode {
             max-width: 290px;
+        }
+
+        .form-child {
+            margin-top: 30px;
         }
     }
 

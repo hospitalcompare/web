@@ -162,7 +162,7 @@
                             deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
                             quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
                             labore non pariatur tempore.</p>
-                        <form action="/results-page">
+                        <form id="how_to_use_filter_policies" action="/results-page">
                             @include('components.basic.select', [
                                 'selectPicker'          => 'true',
                                 'options'               => $data['filters']['policies'],
