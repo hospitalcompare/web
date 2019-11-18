@@ -193,7 +193,6 @@ $(document).ready(function () {
 
 
         // Trigger Dr S when someone adds the first hospital
-
         if(compareCount === 0){
             var $delay = 5000;
             var $message = 'Great! You have added your first hospital to your shortlist. You can add up to five hospitals to your shortlist. Why not give it a try?';
