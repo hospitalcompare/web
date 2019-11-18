@@ -253,29 +253,29 @@
         }
 
         &.btn-arrow-right {
-            background: #649ef7;
-            background: linear-gradient(-90deg, #649ef7, $blue, $blue, $blue);
+            //background: #649ef7;
+            //background: linear-gradient(-90deg, #649ef7, $blue, $blue, $blue);
             background-size: 200%;
             //background-position: right;
             border-radius: 100px;
-            height: 50px;
-            line-height: 50px;
+            //height: 50px;
+            //line-height: 50px;
             @include font-size(22);
-            padding: 0 60px 0 20px;
+            padding: 12px 65px 12px 30px;
             position: relative;
 
-            &:after {
-                background-image: url('../images/icons/up-arrow.svg');
-                @include icon-bg-center(30%);
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: 50px;
-                height: 50px;
-                line-height: 50px;
-                transform: rotate(90deg);
-            }
+            //&:after {
+            //    background-image: url('../images/icons/up-arrow.svg');
+            //    @include icon-bg-center(30%);
+            //    position: absolute;
+            //    right: 0;
+            //    top: 0;
+            //    bottom: 0;
+            //    width: 50px;
+            //    height: 50px;
+            //    line-height: 50px;
+            //    transform: rotate(90deg);
+            //}
 
             &:hover {
                 background-position: left;
