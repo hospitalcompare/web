@@ -1,6 +1,7 @@
 <div class="compare-hospitals-bar {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
     <div class="compare-hospitals-header d-flex justify-content-between">
         <div class="container position-relative d-flex justify-content-between align-items-end h-100">
+
             {{--            @include('components.doctor', ['delay' => 0])--}}
             @if(!empty($data['special_offers']))
                 <ul class="solutions-menu align-items-end d-none d-md-flex mb-0 ml-auto mr-3">
@@ -93,10 +94,19 @@
     </div>
     <div class="compare-hospitals-content">
         <div class="container">
+            <span class="d-none" id="multiple_enquiry_ids"></span>
             <div id="compare_hospitals_grid" class="row">
                 <div class="col-2">
                     <div class="col-inner h-100">
-                        <div class=""></div>
+                        <div class="">
+{{--                            @include('components.basic.button', [--}}
+{{--                                'buttonText'            => 'Multiple Enquiries',--}}
+{{--                                'classTitle'        => 'btn btn-s btn-turq btn-grad',--}}
+{{--                                'id'                => 'multiple_enquiries_button',--}}
+{{--                                'icon'              => '',--}}
+{{--                                'svg'               => 'chevron-down-white'--}}
+{{--                            ])--}}
+                        </div>
                         <div class=""></div>
                         <div class="cell">Average Waiting Time</div>
                         <div class="cell">NHS User Rating</div>
