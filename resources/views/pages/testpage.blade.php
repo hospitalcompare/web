@@ -11,10 +11,10 @@
 @section('body-class', 'test-page')
 
 @section('content')
-    <section>
-        @include('components.modals.modaltour',
-            ['displayBlock' => 'true'])
-    </section>
+{{--    <section>--}}
+{{--        @include('components.modals.modaltour',--}}
+{{--            ['displayBlock' => 'true'])--}}
+{{--    </section>--}}
     <section>
         <div class="container">
             <h1>Special offers slide out</h1>

@@ -96,7 +96,7 @@
                             labore non pariatur tempore.</p>
                         <div class="btn-area">
                             @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-blue font-18',
+                            'classTitle'        => 'btn btn-blue btn-grad font-18',
                             'buttonText'        => 'View NHS funded private hospitals',
                             'hrefValue'         => '/results-page/?hospital_type=1'])
                         </div>
