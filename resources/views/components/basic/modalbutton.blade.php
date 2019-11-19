@@ -1,4 +1,4 @@
-<a href=""
+<button href=""
    id="{{ empty($id) ? '' : $id }}"
    style="{{ empty($style) ? '' : $style }}"
    class="{{$classTitle}}"
@@ -27,4 +27,4 @@
     @if(!empty($svg))
         {!! file_get_contents(asset('/images/icons/' . $svg . '.svg')) !!}
     @endif
-</a>
+</button>

@@ -86,7 +86,9 @@
                         </div>
                         <div class="corporate-content-details d-flex mb-3" style="padding-top: 25px">
                             <div class="img-wrap mr-4">
-                                <img class="image" width="173" height="158" src="images/alder-1.png">
+                                <img class="image" width="173" height="158"
+                                     src="images/alder-1.png"
+                                     alt="Image of {{ $hospitalTitle }}">
                             </div>
                             <div class="address">
                                 {!! $address !!}
@@ -211,25 +213,29 @@
                                         <li data-target="#carousel-thumb" data-slide-to="0" class="active col-3">
                                             <div class="col-inner">
                                                 <img class="d-block h-100"
-                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg">
+                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg"
+                                                     alt="Thumbnail image for first slide">
                                             </div>
                                         </li>
                                         <li data-target="#carousel-thumb" data-slide-to="1" class="col-3">
                                             <div class="col-inner">
                                                 <img class="d-block h-100"
-                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg">
+                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg"
+                                                     alt="Thumbnail image for seconf slide">
                                             </div>
                                         </li>
                                         <li data-target="#carousel-thumb" data-slide-to="2" class="col-3">
                                             <div class="col-inner">
                                                 <img class="d-block h-100"
-                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg">
+                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg"
+                                                     alt="Thumbnail image for third slide">
                                             </div>
                                         </li>
                                         <li data-target="#carousel-thumb" data-slide-to="3" class="col-3">
                                             <div class="col-inner">
                                                 <img class="d-block h-100"
-                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg">
+                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg"
+                                                     alt="Thumbnail image for fourth slide">
                                             </div>
                                         </li>
                                     </ol>
@@ -346,25 +352,29 @@
                                             <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="0" class="active col-3">
                                                 <div class="col-inner">
                                                     <img class="d-block h-100"
-                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg">
+                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg"
+                                                         alt="Thumbnail image for first slide">
                                                 </div>
                                             </li>
                                             <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="1" class="col-3">
                                                 <div class="col-inner">
                                                     <img class="d-block h-100"
-                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg">
+                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg"
+                                                         alt="Thumbnail image for first slide">
                                                 </div>
                                             </li>
                                             <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="2" class="col-3">
                                                 <div class="col-inner">
                                                     <img class="d-block h-100"
-                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg">
+                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg"
+                                                         alt="Thumbnail image for first slide">
                                                 </div>
                                             </li>
                                             <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="3" class="col-3">
                                                 <div class="col-inner">
                                                     <img class="d-block h-100"
-                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg">
+                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg"
+                                                         alt="Thumbnail image for first slide">
                                                 </div>
                                             </li>
                                         </ol>

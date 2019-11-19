@@ -173,6 +173,7 @@ $(document).ready(function () {
             $target
                 .slideUp()
                 .removeClass('open');
+            $(this).find('span').text('More info');
             // Scroll back to the result item
             var $scrollBack = $(this).parents('.result-item').offset().top;
             $('html, body').animate({
@@ -191,6 +192,7 @@ $(document).ready(function () {
             }, 800);
             //Change the `More info` to `Close info`
             $(this).addClass('open');
+            $(this).find('span').text('Close info');
         }
     });
 

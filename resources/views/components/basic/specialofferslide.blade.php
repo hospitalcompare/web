@@ -8,7 +8,10 @@
         </span>
         <div class="mr-2">
             <div class="img-wrap">
-                <img width="71" height="65" src="images/alder-1.png">
+                <img width="71"
+                     height="65"
+                     src="images/alder-1.png"
+                     alt="Image of {{ $title }}">
             </div>
         </div>
         <div class="mr-2" style="max-width: 150px">

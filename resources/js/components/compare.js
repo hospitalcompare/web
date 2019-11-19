@@ -120,7 +120,7 @@ $(document).ready(function () {
             '</div>';
         target.append(newRowContent);
         //Toggle the full heart or empty heart  class of the button
-        $('a#' + element.id + '.compare').addClass('selected');
+        $('button#' + element.id + '.compare').addClass('selected');
     }
 
     /**
@@ -133,7 +133,7 @@ $(document).ready(function () {
 
     function removeHospitalFromCompare(elementId, data, compareCount) {
         $('#compare_hospital_id_' + elementId).remove();
-        $('a#' + elementId + '.compare').removeClass('selected');
+        $('button#' + elementId + '.compare').removeClass('selected');
 
         // property found, access the foo property using result[0].foo
         data = $.grep(data, function (e) {
