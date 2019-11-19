@@ -78,7 +78,7 @@
                 width: 100%;
             }
 
-            @include media-breakpoint-up(lg){
+            @include media-breakpoint-up(lg) {
                 .img-wrap {
                     width: 28%;
                     padding-right: 25px;
@@ -137,20 +137,72 @@
             padding-bottom: 60px !important;
         }
 
-        .carousel-item-copy {
-            padding: 15px 25px 15px 125px;
-            @include font-size(13);
+        #slide-number {
+            position: absolute;
+            left: -55px;
+            top: -55px;
+            background-color: #fff;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 45px;
+            @extend .SofiaPro-SemiBold;
+            width: 77px;
+            height: 77px;
+            box-shadow: inset 0px 0px 0px 5px $turq;
+            line-height: 77px;
+            z-index: 5;
+        }
 
+        .carousel-inner {
             .image-wrapper {
                 left: 0;
                 bottom: 0;
                 width: 99px;
                 height: 105px;
+                z-index: 5;
 
                 img {
                     width: 100%;
                 }
             }
+        }
+
+        .carousel-controls {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            > * {
+            }
+
+            .carousel-indicators {
+                position: static;
+
+                li {
+                    background: transparent;
+                    box-shadow: inset 0px 0px 0px 2px $turq;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    border: none;
+                    opacity: 1;
+                    flex: 0 0 15px;
+
+                    &.active {
+                        background: $turq;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+
+        .carousel-item-copy {
+            padding: 15px 25px 15px 125px;
+            @include font-size(13);
+
         }
     }
 }

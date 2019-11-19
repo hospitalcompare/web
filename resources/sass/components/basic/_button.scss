@@ -648,7 +648,7 @@
     transition: $transition;
     @include font-size(14);
 
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
         top: 0;
         right: 0;
         transform: translate(50%, -50%);
@@ -671,6 +671,58 @@
 
         path {
             fill: #fff;
+        }
+    }
+
+}
+
+// Modal tour carousel buttons - prev/next
+.btn-tour-control {
+    box-shadow: inset 0px 0px 0px 2px $turq !important;
+    color: $body-color;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    transition: $transition;
+    position: relative;
+
+    svg {
+        path {
+            fill: $body-color;
+        }
+    }
+
+    &.prev {
+        padding-left: 30px;
+        padding-right: 12px;
+
+        svg {
+            left: 10px;
+        }
+    }
+
+    &.next {
+        padding-right: 30px;
+        padding-left: 12px;
+
+        svg {
+            right: 10px;
+        }
+    }
+
+    &:focus {
+        box-shadow: inset 0px 0px 0px 2px $turq !important;
+        color: $body-color;
+    }
+
+    &:hover {
+        box-shadow: inset 0px 0px 0px 2px $turq !important;
+        background-color: $turq;
+        color: $white;
+
+        svg {
+            path {
+                fill: $white;
+            }
         }
     }
 }
