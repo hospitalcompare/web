@@ -199,7 +199,7 @@ $(document).ready(function () {
         // do something…
         var nextSlideNo = event.to;
         nextSlideNo += 1;
-        $('#slide_number').text(nextSlideNo);
+        $('#slide_number span').text(nextSlideNo);
     });
 
     popupDoctor($doctor.data('message'), $doctor.data('doctor-delay'));

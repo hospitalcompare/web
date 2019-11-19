@@ -128,6 +128,7 @@
 
     &.modal-tour {
         .modal-dialog {
+            margin-top: 100px;
             max-width: 890px;
         }
 
@@ -152,6 +153,10 @@
             //line-height: 77px;
             @include flex-center;
             z-index: 5;
+
+            span {
+                margin-bottom: 3px;
+            }
         }
 
         .carousel-inner {

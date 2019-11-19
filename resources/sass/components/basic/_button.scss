@@ -686,6 +686,9 @@
     position: relative;
 
     svg {
+        width: 7px;
+        height: 11px;
+
         path {
             fill: $body-color;
         }
