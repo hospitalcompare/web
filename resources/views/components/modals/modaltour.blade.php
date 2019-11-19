@@ -11,8 +11,8 @@
             @include('components.basic.closebutton')
             <div class="carousel-wrapper position-relative">
                 <!-- Slide number indicator -->
-                <div id="slide-number">1</div>
-                <div id="carousel_tour" class="carousel slide" data-ride="_carousel">
+                <div id="slide_number"><span class="d-inline-block">1</span></div>
+                <div id="carousel_tour" class="carousel slide" data-ride="carousel" data-interval="false">
                     <!--Slides-->
                     <div class="carousel-inner" role="listbox">
                         <div class="image-wrapper position-absolute ml-1">

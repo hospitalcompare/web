@@ -11,8 +11,12 @@
 @section('body-class', 'your-rights-page hc-content')
 
 @section('content')
+    @include('pages.pagesections.banner', [
+        'layout'    => 'row',
+        'hideText'  => 'true'
 
-    <section class="py-0">
+    ])
+    <section class="pb-0">
         <div class="container">
             <div class="row">
                 <div class="col-12">

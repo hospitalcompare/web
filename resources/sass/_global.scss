@@ -6,7 +6,7 @@ body, * {
 .privacy-page,
 .terms-and-conditions-page,
 .faqs-page,
-.your-rights-page,
+//.your-rights-page,
 .about-us-page,
 .blog-page {
     main {
@@ -326,7 +326,7 @@ path {
 
 //=========================HEALTH CHOICE SECTION===========================
 .your-rights-page {
-    section {
+    section:not(:first-child) {
         padding: 40px 0;
     }
 }

@@ -137,12 +137,11 @@
             padding-bottom: 60px !important;
         }
 
-        #slide-number {
+        #slide_number {
             position: absolute;
             left: -55px;
             top: -55px;
             background-color: #fff;
-            display: inline-block;
             border-radius: 50%;
             text-align: center;
             font-size: 45px;
@@ -150,7 +149,8 @@
             width: 77px;
             height: 77px;
             box-shadow: inset 0px 0px 0px 5px $turq;
-            line-height: 77px;
+            //line-height: 77px;
+            @include flex-center;
             z-index: 5;
         }
 
