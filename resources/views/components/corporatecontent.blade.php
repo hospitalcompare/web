@@ -271,15 +271,17 @@
                                                 @endif
                                             @endforeach
                                         </ul>
-                                        @include('components.basic.modalbutton', [
-                                           'hospitalType'      => $NHSClass,
-                                           'hrefValue'         => $url,
-                                           'hospitalTitle'     => $title,
-                                           'modalTarget'       => '#hc_modal_enquire_private',
-                                           'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto ml-auto',
-                                           'target'            => 'blank',
-                                           'buttonText'            => 'Enquire now',
-                                           'id'                => 'enquire_'.$id])
+                                        <div class="btn-area w-100 text-right">
+                                            @include('components.basic.modalbutton', [
+                                               'hospitalType'      => $NHSClass,
+                                               'hrefValue'         => $url,
+                                               'hospitalTitle'     => $title,
+                                               'modalTarget'       => '#hc_modal_enquire_private',
+                                               'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto ml-auto',
+                                               'target'            => 'blank',
+                                               'buttonText'            => 'Enquire now',
+                                               'id'                => 'enquire_'.$id])
+                                        </div>
                                     </div>
                                 </div>
                             @endif

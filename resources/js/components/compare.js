@@ -63,9 +63,9 @@ $(document).ready(function () {
         countSpan.text(compareCount);
         heartIcon.addClass('has-count');
         //Add the `active` class that will change the color to pink
-        $('#compare_heart').addClass('active');
+        heartIcon.addClass('active');
     } else {
-        $('#compare_heart').removeClass('active');
+        heartIcon.removeClass('active');
     }
 
     // Check if we need to disable buttons on pageload
@@ -87,7 +87,7 @@ $(document).ready(function () {
             'data-hospital-url="' + element.url + '" ' +
             'data-hospital-title="' + element.name + '" ' +
             'data-target="#hc_modal_enquire_nhs">Make an enquiry' +
-            '    <i class=""></i>' +
+             $svg +
             '</a>' :
             '<a id="' + element.id + '" ' +
             'class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" ' +
