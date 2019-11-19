@@ -85,7 +85,7 @@
         svg {
             position: absolute;
             width: 14px;
-            bottom: 10px;
+            bottom: 12px;
             right: 14px;
             color: $caretBlack;
             pointer-events: none;
@@ -161,6 +161,12 @@
                             left: 0;
                         }
                     }
+                }
+            }
+
+            .bootstrap-select {
+                & + svg {
+                    @include v-c;
                 }
             }
 

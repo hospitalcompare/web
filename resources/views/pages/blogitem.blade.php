@@ -45,14 +45,14 @@
                     <hr class="bg-teal">
                     <div class="font-24 SofiaPro-SemiBold mt-3 mb-4">
                         <span
-                            class="d-inline-block col-teal">Date:&nbsp;</span>{{date('dS F Y', strtotime($data['blog']['created_at']))}}
-                        {{--                        <span class="ml-5 d-inline-block col-teal">Category:&nbsp;</span>Category name--}}
+                            class="d-inline-block col-turq">Date:&nbsp;</span>{{date('dS F Y', strtotime($data['blog']['created_at']))}}
+                        {{--                        <span class="ml-5 d-inline-block col-turq">Category:&nbsp;</span>Category name--}}
                     </div>
                     <div class="blog-content mb-4">
                         {!! $data['blog']['description'] !!}
                     </div>
                     <div class="d-flex align-items-center sharing-is-caring">
-                        <div class="col-teal font-24 SofiaPro-SemiBold">Share:&nbsp;</div>
+                        <div class="col-turq font-24 SofiaPro-SemiBold">Share:&nbsp;</div>
                         <ul class="sharing-icons mb-0">
                             <li class="d-inline-block"><a
                                     href="https://www.facebook.com/sharer/sharer.php?u={{ url()->full() }}"
