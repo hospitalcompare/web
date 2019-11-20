@@ -76,7 +76,7 @@
             <div class="row">
                 <div class="col col-12 col-md-6">
                     <div class="image-wrapper">
-                        <img src="{{ asset('/images/video_placeholder.png') }}"
+                        <img src="{{ asset('/images/video_placeholder.jpg') }}"
                              alt="People around a desk chatting with laptops">
                     </div>
                 </div>
@@ -110,7 +110,7 @@
             <div class="row flex-row-reverse">
                 <div class="col col-12 col-md-6">
                     <div class="image-wrapper">
-                        <img src="{{ asset('/images/video_placeholder.png') }}"
+                        <img src="{{ asset('/images/video_placeholder.jpg') }}"
                              alt="People around a desk chatting with laptops">
                     </div>
                 </div>
@@ -144,7 +144,7 @@
             <div class="row">
                 <div class="col col-12 col-md-6">
                     <div class="image-wrapper">
-                        <img src="{{ asset('/images/video_placeholder.png') }}"
+                        <img src="{{ asset('/images/video_placeholder.jpg') }}"
                              alt="People around a desk chatting with laptops">
                     </div>
                 </div>
@@ -192,7 +192,7 @@
             <div class="row flex-row-reverse">
                 <div class="col col-12 col-md-6">
                     <div class="image-wrapper">
-                        <img src="{{ asset('/images/video_placeholder.png') }}"
+                        <img src="{{ asset('/images/video_placeholder.jpg') }}"
                              alt="People around a desk chatting with laptops">
                     </div>
                 </div>

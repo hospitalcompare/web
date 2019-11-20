@@ -6,7 +6,7 @@
         <div class="modal-content p-3">
             @include('components.basic.closebutton')
             <div class="video-wrapper position-relative">
-                <video class="content w-100" poster="{{ url('images/video_placeholder.png') }}">
+                <video class="content w-100" poster="{{ url('images/video_placeholder.jpg') }}">
                     <source src="{{ asset('/video/For_Wes.mp4') }}" type="video/mp4">
                     <source src="movie.ogg" type="video/ogg">
                     Your browser does not support the video tag.
