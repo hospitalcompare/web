@@ -9,7 +9,8 @@
                     'classTitle'        => 'btn btn-cc-close position-absolute',
                     'svg'               => 'times',
                     'dataTarget'        => '#corporate_content_hospital_' . $id,
-                    'style'             => 'right: 0; top: 9px'])
+                    'style'             => 'right: 0; top: 9px',
+                    'id'                => 'close_cc_' . $id])
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" id="nav-tabs_{{ $id }}" role="tablist">
                     <li class="nav-item">
@@ -244,8 +245,9 @@
                                     </ol>
                                     @include('components.basic.modalbutton', [
                                         'classTitle'        => 'stretched-link',
+                                        'id'                => 'modal_trigger_' . $id,
                                         'modalTarget'       => '#hc_modal_carousel_'. $id,
-                                        'buttonText'            => '',
+                                        'buttonText'        => '',
                                         ])
                                 </div>
                             </div>
@@ -288,8 +290,8 @@
                                                'modalTarget'       => '#hc_modal_enquire_private',
                                                'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto ml-auto',
                                                'target'            => 'blank',
-                                               'buttonText'            => 'Enquire now',
-                                               'id'                => 'enquire_'.$id])
+                                               'buttonText'        => 'Enquire now',
+                                               'id'                => 'enquire_special_'.$id])
                                         </div>
                                     </div>
                                 </div>

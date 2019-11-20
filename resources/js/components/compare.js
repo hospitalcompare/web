@@ -102,7 +102,7 @@ $(document).ready(function () {
             '<div class="col-2 text-center" id="compare_hospital_id_' + element.id + '">' +
             '<div class="col-inner">' +
             '<div class="image-wrapper mx-auto">' +
-            '<img class="" src="images/alder-1.jpg">' +
+            '<img class="" src="images/alder-1.png">' +
             '<div class="remove-hospital" id="remove_id_' + element.id + '"></div>' +
             '</div>' +
             '<div class="details">' +

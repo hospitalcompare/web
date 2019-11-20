@@ -33,6 +33,7 @@
                     'buttonText'        => '<span>More info</span>',
                     'htmlButton'        => true,
                     'icon'              => '',
+                    'id'                => 'more_info_' . $id,
                     'svg'               => 'plus-solid',
                     'dataTarget'        => '#corporate_content_hospital_' . $id
                  ])
@@ -235,6 +236,7 @@
                         @include('components.basic.button', [
                             'classTitle'        => 'toggle-special-offer btn btn-block btn-grad btn-icon btn-pink btn-special-offer btn-plus font-14',
                             'htmlButton'        => true,
+                            'id'                => 'special_' . $id,
                             'buttonText'        => 'Special Offers',
                             'svg'               => 'special'])
                     </div>
