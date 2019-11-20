@@ -223,7 +223,7 @@
     {{--  Maps modal  --}}
     @include('components.modals.modalmaps')
     @include('components.modals.modalvideo')
-    @include('components.doctor')
+{{--    @include('components.doctor')--}}
 
 
 

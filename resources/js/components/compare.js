@@ -45,11 +45,11 @@ $(document).ready(function () {
 
     if (typeof Cookies.get("compareCount") === 'undefined') {
         Cookies.set("compareCount", 0, {expires: 10000});
-        Cookies.set("compareHospitalsData", JSON.stringify([{}]), {expires: 10000});
+        Cookies.set("compareHospitalsData", '', {expires: 10000});
     }
 
     var compareCount = Cookies.get('compareCount');
-    var compareData = JSON.parse(Cookies.get('compareHospitalsData'));
+    var compareData = Cookies.get('compareHospitalsData');
 
     //Check if we need to show the Compare hospitals div
     if (compareCount > 0) {
@@ -58,16 +58,19 @@ $(document).ready(function () {
         //Hide the contents and increase the span with number
         // compareContent.addClass('revealed');
         //Populate the table with the given data
-        for (i = 1; i <= compareCount; i++) {
-            var element = compareData[i];
-            //Add the IDs on the hidden span
-            compareHospitalIds += element.id + ',';
-
-        }
+        // for (i = 1; i <= compareCount; i++) {
+        //     var element = compareData[i];
+        //     //Add the IDs on the hidden span
+        //     compareHospitalIds += element.id + ',';
+        //
         //Remove the last , after all the ids have been added
-        compareHospitalIds = compareHospitalIds.slice(0,-1);
+        // get the hospital ids from the cookie
+        // }
+        compareHospitalIds = compareData;
+        // compareHospitalIds = compareHospitalIds.slice(0,-1);
+
         //Set the new value
-        compareHospitalIdsSpan.val(compareHospitalIds);
+        //compareHospitalIdsSpan.val(compareHospitalIds);
         //Ajax request to retrieve all the Hospitals to compare
         var returned = getHospitalsByIds(compareHospitalIds);
         if(compareHospitalIds.length > 0) {
@@ -76,6 +79,7 @@ $(document).ready(function () {
             //     console.log(item)
             // }
             $.each(returned, function (key, element) { //$.parseJSON() method is needed unless chrome is throwing error.
+                console.log(element);
                 addHospitalToCompare(element);
             });
         }
@@ -84,9 +88,9 @@ $(document).ready(function () {
         countSpan.text(compareCount);
         heartIcon.addClass('has-count');
         //Add the `active` class that will change the color to pink
-        $('#compare_heart').addClass('active');
+        heartIcon.addClass('active');
     } else {
-        $('#compare_heart').removeClass('active');
+        heartIcon.removeClass('active');
     }
 
     // Check if we need to disable buttons on pageload
@@ -98,14 +102,15 @@ $(document).ready(function () {
      * @param element
      */
     function addHospitalToCompare(element) {
-        console.log(element);
+        // console.log(element);
         var target = $('#compare_hospitals_grid');
         // Content for modal trigger button
         var $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g><g><g><path fill="#fff" d="M10.002 18.849c-4.878 0-8.846-3.968-8.846-8.847 0-4.878 3.968-8.846 8.846-8.846 4.879 0 8.847 3.968 8.847 8.846 0 4.879-3.968 8.847-8.847 8.847zm0-18.849C4.488 0 0 4.488 0 10.002c0 5.515 4.488 10.003 10.002 10.003 5.515 0 10.003-4.488 10.003-10.003C20.005 4.488 15.517 0 10.002 0z"></path></g><g><path fill="#fff" d="M14.47 5.848l-5.665 6.375-3.34-2.67a.578.578 0 0 0-.811.088c-.2.25-.158.615.091.815l3.769 3.015a.57.57 0 0 0 .361.125c.167 0 .325-.07.433-.196l6.03-6.783a.579.579 0 0 0 .146-.42.588.588 0 0 0-.191-.4.592.592 0 0 0-.824.05z"></path></g></g></g></svg>';
         var nhsRating = 1;
         var cancelledOps = null;
         if(element.cancelled_op !== null) {
-            cancelledOps = element.cancelled_op.perc_cancelled_ops;
+            // cancelledOps = element.cancelled_op.perc_cancelled_ops;
+            cancelledOps = element.cancelled_op;
         }
         var btnContent = element.type == 'nhs-hospital' ?
             '<a id="' + element.id + '" ' +
@@ -186,7 +191,7 @@ $(document).ready(function () {
         Cookies.set("compareCount", 0, -1);
         Cookies.set("compareHospitalsData", 0, -1);
         //Set them back again
-        Cookies.set("compareHospitalsData", JSON.stringify(data), {expires: 10000});
+        Cookies.set("compareHospitalsData", data, {expires: 10000});
         Cookies.set("compareCount", compareCount, {expires: 10000});
     }
 
@@ -194,14 +199,14 @@ $(document).ready(function () {
     $(document).on("click", ".result-item-section-3 .compare", function () {
         //Get the Data that is already in the Cookies
         var compareCount = parseInt(Cookies.get("compareCount"));
-        var data = JSON.parse(Cookies.get("compareHospitalsData"));
-        // compareBar.slideDown();
-
-        // $('body').addClass('shortlist-open');
-        // compareContent.removeClass('revealed');
+        var data = Cookies.get("compareHospitalsData");
 
         //Load the Cookies with the data that we need for the comparison
         var elementId = $(this).attr('id');
+
+        // Do the AJAX request
+        console.log(getHospitalsByIds(elementId));
+
         // var enquireBtn = $('#enquire_' + elementId).outerHTML;
         var name = $('#item_name_' + elementId).text();
         var url = $('#item_hospital_url_' + elementId).text();
@@ -226,7 +231,7 @@ $(document).ready(function () {
             popupDoctor($message, $delay);
         }
 
-        //Check if there are already 3 hospitals for comparison in Cookies
+        //Check if there are already 5 hospitals for comparison in Cookies
         if (compareCount < 5) {
             //Check if we don't have the hospital in our comparison and add it
             if (result.length === 0) {
@@ -245,8 +250,8 @@ $(document).ready(function () {
                     // 'nhsPrivatePay': nhsPrivatePay
                 };
                 //Add data to Cookies and send the element to populate the table
-                data.push(element);
-                addHospitalToCompare(element);
+                data += elementId + ',';
+                addHospitalToCompare(getHospitalsByIds(elementId)[0]);
                 compareCount = parseInt(compareCount) + 1;
                 // Disable buttons if we have reached the max number of items
                 if (compareCount === 5) {
@@ -293,7 +298,7 @@ $(document).ready(function () {
         Cookies.set("compareCount", 0, -1);
         Cookies.set("compareHospitalsData", 0, -1);
         //Set them back again
-        Cookies.set("compareHospitalsData", JSON.stringify(data), {expires: 10000});
+        Cookies.set("compareHospitalsData", data, {expires: 10000});
         Cookies.set("compareCount", compareCount, {expires: 10000});
 
     });
@@ -303,7 +308,7 @@ $(document).ready(function () {
         e.stopPropagation();
         var elementId = $(this).attr('id');
         // console.log(JSON.parse(Cookies.get("compareHospitalsData")));
-        var data = JSON.parse(Cookies.get("compareHospitalsData"));
+        var data = Cookies.get("compareHospitalsData");
         var compareCount = parseInt(Cookies.get("compareCount"));
         if(compareCount === 1){
             heartIcon.removeClass('active');
@@ -382,5 +387,3 @@ $(document).ready(function () {
         return items;
     }
 });
-
-// TODO: refactor the toggling classes into a function

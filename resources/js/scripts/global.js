@@ -110,7 +110,7 @@ window.getHtmlStars = function (rating) {
  * @returns {string}
  */
 window.getHtmlDashTickValue = function (value, text = "") {
-    if (value == null)
+    if (value == null || value == 'null')
         return "";
 
     var html = "";
