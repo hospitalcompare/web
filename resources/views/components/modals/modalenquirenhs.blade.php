@@ -14,7 +14,7 @@
                                 <h3 class="modal-title mb-3">Hospital title</h3>
                                 <div class="d-flex mb-3">
                                     <div class="image-wrapper mr-3">
-                                        <img class="mr-3" src="images/alder-1.png">
+                                        <img class="mr-3" src="images/alder-1.jpg">
                                     </div>
                                     <div class="modal-copy">
                                         <p>This NHS hospital does not respond to direct enquiries regarding NHS funded elective procedures prior to an appointment being confirmed.</p>

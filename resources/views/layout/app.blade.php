@@ -23,7 +23,7 @@
         </script>
         <script type="text/javascript" src="{{ asset('fonts/MyFontsWebfontsKit.js') }}"></script>
         {{-- Stickybits is the script for handling position sticky cross browser --}}
-        <script type="text/javascript" src="{{ asset('js/stickybits.js') }}"></script>
+        <script type="text/javascript" defer async src="{{ asset('js/stickybits.js') }}"></script>
         @yield('scripts')
 
     </head>
