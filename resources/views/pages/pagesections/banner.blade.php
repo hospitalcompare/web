@@ -15,7 +15,7 @@
                 @endif
                 <div class="col {{ !empty($layout) ? 'col-12 d-flex' : 'col-lg-6 col-12' }}">
                     <div class="box {{ !empty($layout) ? 'mx-auto flat-box' : 'ml-auto' }}" style="{{ empty($hideText) ? 'max-width: 511px' : '' }}">
-                        <p class="SofiaPro-Medium">Find the best hospital{!! empty($layout) ? '<br>' : '' !!}  for your treatment</p><br>
+                        <p class="SofiaPro-Medium">Find the best hospital{!! empty($layout) ? '<br>' : '' !!}  for your treatment</p>
                         <form
                             id="search_form"
                             class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-flex align-items-end search-form-row' : '' }}"

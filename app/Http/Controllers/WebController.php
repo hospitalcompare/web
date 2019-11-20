@@ -204,6 +204,9 @@ class WebController extends BaseController
     public function howToUsePage() {
         //Retrieve the list of Procedures sorted by name ASC
         $procedures = Utils::getProceduresForDropdown();
+        $policies   = Utils::getInsurancePoliciesForDropdown();
+
+        $this->returnedData['data']['filters']['policies']          = $policies;
 
         $this->returnedData['success']              = true;
         $this->returnedData['data']['procedures']   = $procedures;

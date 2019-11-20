@@ -15,7 +15,7 @@
                     {{$title}}
                 </p>
                 @if(!empty($locationSpecialism))
-                    <p class="sort-item-specialism col-teal mb-1"><strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
+                    <p class="sort-item-specialism col-turq mb-1"><strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
                 @endif
                 <p class="sort-item-location">{{$location}} {{-- trim($town, ', ') --}}</p>
 {{--                @include('components.basic.modalbutton', [--}}
@@ -30,7 +30,8 @@
 {{--                ])--}}
                 @include('components.basic.button', [
                     'classTitle'        => 'btn btn-xs btn-icon btn-more-info position-absolute',
-                    'buttonText'            => '&nbsp;',
+                    'buttonText'        => '<span>More info</span>',
+                    'htmlButton'        => true,
                     'icon'              => '',
                     'svg'               => 'plus-solid',
                     'dataTarget'        => '#corporate_content_hospital_' . $id
@@ -234,14 +235,15 @@
                             'class' => 'default'])
                         @include('components.basic.button', [
                             'classTitle'        => 'toggle-special-offer btn btn-block btn-grad btn-icon btn-pink btn-special-offer btn-plus font-14',
+                            'htmlButton'        => true,
                             'buttonText'        => 'Special Offers',
                             'svg'               => 'special'])
                     </div>
             @endif
                 @include('components.basic.button', [
                     'classTitle'        => 'btn btn-compare compare btn-block font-14',
-{{--                    'buttonText'            => 'Compare Hospitals',--}}
-                    'buttonText'            => 'Add to compare',
+                    'htmlButton'        => true,
+                    'buttonText'        => 'Add to compare',
                     'svg'               => 'heart-solid',
                     'id'                => $id])
             </div>
@@ -252,6 +254,7 @@
         'bulletPoints'      => ['Shortest waiting time', 'Outstanding CQC rating', '5 Star NHS Rating'],
         'latitude'          => $latitude,
         'longitude'         => $longitude,
-        'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode
+        'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,
+        'hospitalTitle'     => $title
     ])
 </div>

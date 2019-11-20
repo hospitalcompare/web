@@ -71,5 +71,155 @@
                 'title'=>'Step Four',
                 'description' => '<p>Request a referral from your GP if you selected an NHS hospital, or wait for your chosen private hospital to contact you about your appointment.</p>' ] ] ])
     </section>
+    <section class="how-section__extra bg-greylight">
+        <div class="container">
+            <div class="row">
+                <div class="col col-12 col-md-6">
+                    <div class="image-wrapper">
+                        <img src="{{ asset('/images/video_placeholder.png') }}"
+                             alt="People around a desk chatting with laptops">
+                    </div>
+                </div>
+                <div class="col col-12 col-md-6">
+                    <div>
+                        <div class="font-32 SofiaPro-SemiBold mb-4">NHS funded in a private hospital</div>
+                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
+                            necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
+                            voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
+                            distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
+                            voluptates? Ea, odio!
+                        </p>
+                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
+                            repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
+                            deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
+                            quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
+                            labore non pariatur tempore.</p>
+                        <div class="btn-area">
+                            @include('components.basic.button', [
+                            'classTitle'        => 'btn btn-blue btn-grad font-18',
+                            'buttonText'        => 'View NHS funded private hospitals',
+                            'hrefValue'         => '/results-page/?hospital_type=1'])
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="how-section__extra">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col col-12 col-md-6">
+                    <div class="image-wrapper">
+                        <img src="{{ asset('/images/video_placeholder.png') }}"
+                             alt="People around a desk chatting with laptops">
+                    </div>
+                </div>
+                <div class="col col-12 col-md-6">
+                    <div>
+                        <div class="font-32 SofiaPro-SemiBold mb-4">Standard procedure at an NHS Hospital</div>
+                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
+                            necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
+                            voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
+                            distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
+                            voluptates? Ea, odio!
+                        </p>
+                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
+                            repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
+                            deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
+                            quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
+                            labore non pariatur tempore.</p>
+                        <div class="btn-area">
+                            @include('components.basic.button', [
+                            'classTitle'       => 'btn btn-blue btn-grad font-18',
+                            'hrefValue'        => '/results-page?hospital_type=2',
+                            'buttonText'       => 'View all NHS hospitals'])
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="how-section__extra bg-greylight">
+        <div class="container">
+            <div class="row">
+                <div class="col col-12 col-md-6">
+                    <div class="image-wrapper">
+                        <img src="{{ asset('/images/video_placeholder.png') }}"
+                             alt="People around a desk chatting with laptops">
+                    </div>
+                </div>
+                <div class="col col-12 col-md-6">
+                    <div>
+                        <div class="font-32 SofiaPro-SemiBold mb-4">Private healthcare insurance</div>
+                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
+                            necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
+                            voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
+                            distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
+                            voluptates? Ea, odio!
+                        </p>
+                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
+                            repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
+                            deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
+                            quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
+                            labore non pariatur tempore.</p>
+                        <form id="how_to_use_filter_policies" action="/results-page">
+                            @include('components.basic.select', [
+                                'selectPicker'          => 'true',
+                                'options'               => $data['filters']['policies'],
+                                'suboptionClass'        => 'policies',
+                                'group'                 => true,
+                                'groupName'             => 'policies',
+                                'svg'                   => 'chevron-down',
+                                'selectClassName'       => 'd-flex align-items-center mb-4',
+                                'selectClass'           => 'select-picker',
+                                'labelClass'            => 'col-turq font-20 SofiaPro-Medium mr-3',
+                                'showLabel'             => true,
+                                'name'                  => 'policy_id',
+                                'selectId'              => 'how_to_use_policies',
+                                'placeholder'           => 'Select your insurance provider:&nbsp;'])
+                            @include('components.basic.button', [
+                                'classTitle'            => 'btn btn-blue btn-grad font-18',
+                                'buttonText'            => 'View all private hospitals covered on your policy',
+                                'htmlButton'            => true])
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="how-section__extra">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col col-12 col-md-6">
+                    <div class="image-wrapper">
+                        <img src="{{ asset('/images/video_placeholder.png') }}"
+                             alt="People around a desk chatting with laptops">
+                    </div>
+                </div>
+                <div class="col col-12 col-md-6">
+                    <div>
+                        <div class="font-32 SofiaPro-SemiBold mb-4">Self-pay at a private hospital</div>
+                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
+                            necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
+                            voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
+                            distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
+                            voluptates? Ea, odio!
+                        </p>
+                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
+                            repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
+                            deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
+                            quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
+                            labore non pariatur tempore.</p>
+                        <div class="btn-area">
+                            @include('components.basic.button', [
+                            'classTitle'        => 'btn btn-blue btn-grad font-18',
+                            'buttonText'        => 'Self-pay at a private hospital',
+                            'hrefValue'         => '/results-page?hospital_type=1'])
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 @endsection

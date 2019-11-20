@@ -221,10 +221,15 @@
     @include('components.modals.modalenquireprivate', [
         'procedures' => $data['filters']['procedures']])
     {{--  Maps modal  --}}
-    @include('components.modals.modalmaps')
+{{--    @include('components.modals.modalmaps')--}}
     @include('components.modals.modalvideo')
-    @include('components.doctor')
-
+    @include('components.modals.modaltour')
+{{--    @include('components.doctor')--}}
+    @include('components.basic.modalbutton', [
+        'classTitle'    => 'btn btn-blue position-fixed',
+        'buttonText'    => 'Help ?',
+        'modalTarget'   => '#hc_modal_tour',
+        'style'         => 'z-index: 1040; bottom: 100px; left: 100px'])
 
 
 @endsection

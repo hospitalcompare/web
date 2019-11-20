@@ -173,6 +173,7 @@ $(document).ready(function () {
             $target
                 .slideUp()
                 .removeClass('open');
+            $(this).find('span').text('More info');
             // Scroll back to the result item
             var $scrollBack = $(this).parents('.result-item').offset().top;
             $('html, body').animate({
@@ -191,7 +192,16 @@ $(document).ready(function () {
             }, 800);
             //Change the `More info` to `Close info`
             $(this).addClass('open');
+            $(this).find('span').text('Close info');
         }
+    });
+
+    // Dr S tour carousel modal schtooooff
+    $('#carousel_tour').on('slid.bs.carousel', function (event) {
+        // do something…
+        var nextSlideNo = event.to;
+        nextSlideNo += 1;
+        $('#slide_number span').text(nextSlideNo);
     });
 
     popupDoctor($doctor.data('message'), $doctor.data('doctor-delay'));

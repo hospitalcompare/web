@@ -2,7 +2,7 @@
     @if(!empty($showLabel))
         <label class="{{empty($labelClass) ? '' : $labelClass}}"
                for="{{empty($selectId) ? '' : $selectId}}">
-            {{empty($placeholder) ? '': $placeholder}}
+            {!! empty($placeholder) ? '': $placeholder !!}
         </label>
     @endif
     <select class="{{empty($selectClass) ? '' : $selectClass}}"

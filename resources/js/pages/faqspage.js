@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var $faqSearch = $('.faqs-page .faq-search-input');
+    var $faqSearch = $('.faqs-page #faq_search_input');
     var $accordion = $(".faqs-page #faqs_accordion");
     var $originalData = $accordion.html();
 

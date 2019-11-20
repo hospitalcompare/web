@@ -23,21 +23,22 @@
     //padding-bottom: 60px;
 
     .nav-tabs {
-        //box-shadow: inset 0px -2px 0px 0px rgba(236, 236, 236, 1);
-        border-top: 2px solid #ececec;
-        border-bottom: 2px solid #ececec;
+        box-shadow: inset 0px -2px 0px 0px rgba(236, 236, 236, 1), inset 0px 2px 0px 0px rgba(236,236,236,1);
+
         li { // nav-item
             margin-right: 25px;
             box-sizing: content-box;
-            padding-top: 5px;
 
             a { // nav-link
                 color: $caretBlack;
                 @include font-size(18);
                 @extend .SofiaPro-Medium;
+                @extend .py-2;
+                background-color: transparent;
 
                 &.active {
                     border-bottom: 2px solid $turq;
+                    background-color: transparent;
                 }
             }
         }
@@ -118,35 +119,36 @@
     width: 14%;
 }
 
-// Carousel styles
-.carousel-inner {
-    //margin-bottom: 10px;
-}
 
-.carousel-item {
-    @include aspect-ratio(190, 110, auto);
-}
+.modal-carousel {
+    // Carousel styles
+    .carousel-inner {
+        //margin-bottom: 10px;
+    }
 
-.indicators {
-    @include reset-row-spacing(5px);
-    cursor: pointer;
+    .carousel-item {
+        @include aspect-ratio(190, 110, auto);
+    }
 
-    li {
-        margin-bottom: 6px;
+    .indicators {
+        @include reset-row-spacing(5px);
+        cursor: pointer;
 
-        .col-inner {
-            @include aspect-ratio(43, 40);
-            position: relative;
-            overflow: hidden;
+        li {
+            margin-bottom: 6px;
 
-            img {
-                @include v-h-c;
+            .col-inner {
+                @include aspect-ratio(43, 40);
+                position: relative;
+                overflow: hidden;
+
+                img {
+                    @include v-h-c;
+                }
             }
         }
     }
-}
 
-.modal-carousel {
     .indicators {
         li {
             margin-top: 10px;

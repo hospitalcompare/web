@@ -1,5 +1,6 @@
-<a href=""
+<button href=""
    id="{{ empty($id) ? '' : $id }}"
+   style="{{ empty($style) ? '' : $style }}"
    class="{{$classTitle}}"
    role="button"
    data-toggle="modal"
@@ -26,4 +27,4 @@
     @if(!empty($svg))
         {!! file_get_contents(asset('/images/icons/' . $svg . '.svg')) !!}
     @endif
-</a>
+</button>

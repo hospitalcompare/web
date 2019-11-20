@@ -41,6 +41,7 @@
                         'groupName'             => 'procedures',
                         'options'               => $data['filters']['procedures'],
                         'suboptionClass'        => 'subprocedures',
+                        'selectId'              => 'resultspage_treatment_dropdown',
                         'svg'                   => 'chevron-down',
                         'selectClass'           => 'select-picker highlight-search-dropdown',
                         'name'                  =>'procedure_id'

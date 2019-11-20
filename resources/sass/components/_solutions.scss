@@ -152,9 +152,9 @@
                     width: 25px;
                     height: 25px;
                     line-height: 25px;
-                    background-color: #6F6F6F;
+                    background-color: $body-color;
                     background-image: url('../images/icons/plus-solid.svg');
-                    @include icon-bg-center(70%);
+                    @include icon-bg-center(50%);
                     border-radius: 50%;
                     z-index: 10;
                     opacity: 1;

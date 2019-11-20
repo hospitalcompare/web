@@ -28,7 +28,15 @@ $(document).ready(function () {
         $('body').removeClass('select-open');
     });
 
+    var $howToUseSelectPlaceholder = 'Select';
+    // Change text on the dropdowns in how to use page
+    $('.flat-box .dropdown-toggle .filter-option-inner-inner').text('Choose treatment');
+    $('#how_to_use_filter_policies .dropdown-toggle .filter-option-inner-inner').text($howToUseSelectPlaceholder);
 
+    $('#how_to_use_policies').on('shown.bs.select', function(){
+        console.log($howToUseSelectPlaceholder);
+        $('.dropdown-menu li:first-child a').text($howToUseSelectPlaceholder);
+    })
 });
 
 // Scroll up to show alert bar
@@ -175,4 +183,5 @@ window.popupDoctor = function (message, delay) {
     }
 
     $doctor.focus();
+
 };

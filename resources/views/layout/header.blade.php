@@ -3,7 +3,7 @@
     <div class="container">
         <div class="branding">
             @include('components.logo', ['titleParent' => 'headerLogoParent', 'logoImg' => 'headerLogoImg', 'logoTitle' => 'headerLogoTitle'])
-            <nav class="main-nav">
+            <nav class="main-nav" role="navigation">
                 <ul class="main-menu">
                     @if(env('APP_ENV') == 'local')
                         <li><a {{ Request::is( 'test-page') ? 'class=active' : '' }} href="/test-page">Test page</a></li>
