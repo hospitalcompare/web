@@ -73,6 +73,7 @@ ul.blue-dot {
 
         li {
             color: $black;
+            margin-bottom: 5px;
 
             &:before {
                 width: 9px;
@@ -391,3 +392,9 @@ path {
 }
 
 //=========================END HEALTH CHOICE SECTION====================
+
+.stretched-link {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+}

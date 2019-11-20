@@ -13,7 +13,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <nav class="footer-upper__nav">
+                    <nav class="footer-upper__nav" role="navigation">
                         <ul class="footer-upper__menu">
                             <li><a href="/">Home</a></li>
                             <li><a href="/about-us">About Us</a></li>

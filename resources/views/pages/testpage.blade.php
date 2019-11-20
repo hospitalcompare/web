@@ -52,6 +52,7 @@
     <section>
         @include('components.corporatecontent', [
                 'procedures'    => $data['filters']['procedures'],
+                'hospitalTitle' => 'Dr Nick\'s dodgy ops',
                 'id'            => 1,
                 'latitude'      => '52.3',
                 'longitude'     => '2.3',

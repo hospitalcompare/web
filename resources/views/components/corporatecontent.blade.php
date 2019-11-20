@@ -40,16 +40,18 @@
                 <div class="tab-content row">
                     <div class="tab-pane active col-6" id="profile_{{ $id }}" role="tabpanel"
                          aria-labelledby="profile-tab">
-                        <p class="SofiaPro-SemiBold ">Situated in London, this hospital provides private
-                            patients with outstanding medical
-                            services. Both self paying and private medically insured patients will be treated using
-                            the latest techniques in a modern and calming hospital. With a team of expert
-                            specialists patients can get treatment for a range of hip, knee, spinal and foot and
-                            ankle conditions.</p>
-                        <p class="">Our hospitals are equipped with state of the art facilities and are
-                            focused on providing
-                            high quality healthcare. Each hospital boasts of having the latest equipment, available
-                            facilities include:</p>
+                        <div class="profile-intro mb-5">
+                            <p class="SofiaPro-SemiBold ">Situated in London, this hospital provides private
+                                patients with outstanding medical
+                                services. Both self paying and private medically insured patients will be treated using
+                                the latest techniques in a modern and calming hospital. With a team of expert
+                                specialists patients can get treatment for a range of hip, knee, spinal and foot and
+                                ankle conditions.</p>
+                            <p class="">Our hospitals are equipped with state of the art facilities and are
+                                focused on providing
+                                high quality healthcare. Each hospital boasts of having the latest equipment, available
+                                facilities include:</p>
+                        </div>
                         <div class="row">
                             <div class="col-6">
                                 <p class=" SofiaPro-SemiBold">First list</p>
