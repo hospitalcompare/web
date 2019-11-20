@@ -158,6 +158,47 @@ class ApiController {
     }
 
     /**
+     * Gets a list of multiple Hospitals based on the given ids
+     *
+     * @param $hospitalIds
+     * @param $procedureId
+     * @return array
+     */
+    public function getHospitalsByIds($hospitalIds, $procedureId = 0) {
+        $data                               = [];
+        $this->returnedData['success']      = false;
+        if(!empty($hospitalIds)) {
+            //Explode the ids
+            $hospitalIds = explode(',', $hospitalIds);
+            foreach($hospitalIds as $hospitalId) {
+                $hospital = Hospital::where('id', $hospitalId)->with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'placeRating']);
+                //Check if we have the `procedure_id` and retrieve the relation Waiting Times
+                if(!empty($procedureId)) {
+                    $procedure = Procedure::where('id', $procedureId)->first();
+                    $specialtyId = $procedure->specialty_id;
+                } else {
+                    $specialty = Specialty::where('name', 'Total')->first();
+                    $specialtyId = $specialty->id;
+                }
+                $hospital = $hospital->with(['waitingTime' => function ($query) use($specialtyId) {
+                    $query->bySpecialty($specialtyId);
+                }]);
+                $hospital = $hospital->first();
+                if(!empty($hospital)) {
+                    $hospital = $hospital->toArray();
+                    $data[] = $hospital;
+                }
+
+            }
+
+            $this->returnedData['data']    = $data;
+            $this->returnedData['success'] = true;
+        }
+
+        return $this->returnedData;
+    }
+
+    /**
      * Returns a list of Hospitals filtered by Distance (given by a Postcode)
      *
      * @param $postcode

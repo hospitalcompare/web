@@ -94,7 +94,7 @@
     </div>
     <div class="compare-hospitals-content">
         <div class="container">
-            <span class="d-none" id="multiple_enquiry_ids"></span>
+            <span class="d-none" id="compare_hospital_ids"></span>
             <div id="compare_hospitals_grid" class="row">
                 <div class="col-2">
                     <div class="col-inner h-100">

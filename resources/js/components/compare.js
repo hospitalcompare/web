@@ -40,6 +40,8 @@ $(document).ready(function () {
     var compareContent = $('.compare-hospitals-content');
     var countSpan = $('#compare_number');
     var heartIcon = $('#compare_heart');
+    var compareHospitalIdsSpan = $('#compare_hospital_ids');
+    var compareHospitalIds = '';
 
     if (typeof Cookies.get("compareCount") === 'undefined') {
         Cookies.set("compareCount", 0, {expires: 10000});
@@ -58,8 +60,27 @@ $(document).ready(function () {
         //Populate the table with the given data
         for (i = 1; i <= compareCount; i++) {
             var element = compareData[i];
-            addHospitalToCompare(element);
+            //Add the IDs on the hidden span
+            compareHospitalIds += element.id + ',';
+
         }
+        //Remove the last , after all the ids have been added
+        compareHospitalIds = compareHospitalIds.slice(0,-1);
+        //Set the new value
+        compareHospitalIdsSpan.val(compareHospitalIds);
+        //Ajax request to retrieve all the Hospitals to compare
+        var returned = getHospitalsByIds(compareHospitalIds);
+        if(compareHospitalIds.length > 0) {
+            // console.log(returned);
+            // for (var item in returned) {
+            //     console.log(item)
+            // }
+            $.each(returned, function (key, element) { //$.parseJSON() method is needed unless chrome is throwing error.
+                addHospitalToCompare(element);
+            });
+        }
+        // console.log(elements, element);
+
         countSpan.text(compareCount);
         heartIcon.addClass('has-count');
         //Add the `active` class that will change the color to pink
@@ -77,9 +98,11 @@ $(document).ready(function () {
      * @param element
      */
     function addHospitalToCompare(element) {
+        console.log(element);
         var target = $('#compare_hospitals_grid');
         // Content for modal trigger button
         var $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g><g><g><path fill="#fff" d="M10.002 18.849c-4.878 0-8.846-3.968-8.846-8.847 0-4.878 3.968-8.846 8.846-8.846 4.879 0 8.847 3.968 8.847 8.846 0 4.879-3.968 8.847-8.847 8.847zm0-18.849C4.488 0 0 4.488 0 10.002c0 5.515 4.488 10.003 10.002 10.003 5.515 0 10.003-4.488 10.003-10.003C20.005 4.488 15.517 0 10.002 0z"></path></g><g><path fill="#fff" d="M14.47 5.848l-5.665 6.375-3.34-2.67a.578.578 0 0 0-.811.088c-.2.25-.158.615.091.815l3.769 3.015a.57.57 0 0 0 .361.125c.167 0 .325-.07.433-.196l6.03-6.783a.579.579 0 0 0 .146-.42.588.588 0 0 0-.191-.4.592.592 0 0 0-.824.05z"></path></g></g></g></svg>';
+        var nhsRating = 0;
         var btnContent = element.type == 'nhs-hospital' ?
             '<a id="' + element.id + '" ' +
             'class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" ' +
@@ -109,11 +132,11 @@ $(document).ready(function () {
             '<p class="w-100">' + element.name + '</p>' +
             btnContent +
             '</div>' +
-            '<div class="cell">' + getHtmlDashTickValue(element.waitingTime, " Weeks") + '</div>' +
-            '<div class="cell">' + getHtmlStars(element.userRating) + '</div>' +
-            '<div class="cell">' + getHtmlDashTickValue(element.opCancelled, "%") + '</div>' +
-            '<div class="cell">' + element.qualityRating + '</div>' +
-            '<div class="cell">' + getHtmlDashTickValue(element.ffRating, "%") + '</div>' +
+            '<div class="cell">' + getHtmlDashTickValue(element.waiting_time[0].perc_waiting_weeks, " Weeks") + '</div>' +
+            '<div class="cell">' + getHtmlStars(element.rating.avg_user_rating) + '</div>' +
+            '<div class="cell">' + getHtmlDashTickValue(element.cancelled_op.perc_cancelled_ops, "%") + '</div>' +
+            '<div class="cell">' + element.rating.latest_rating + '</div>' +
+            '<div class="cell">' + getHtmlDashTickValue(element.rating.friends_family_rating, "%") + '</div>' +
             '<div class="cell">' + getHtmlDashTickValue(element.nhsFunded) + '</div>' +
             '<div class="cell">' + getHtmlDashTickValue(element.nhsPrivatePay) + '</div>' +
             '</div>' +
@@ -206,16 +229,16 @@ $(document).ready(function () {
                 var element = {
                     'id': elementId,
                     // 'enquireBtn': enquireBtn,
-                    'name': name.trim(),
-                    'url': url,
-                    'type': type,
-                    'waitingTime': waitingTime,
-                    'userRating': userRating,
-                    'opCancelled': opCancelled,
-                    'qualityRating': qualityRating,
-                    'ffRating': ffRating,
-                    'nhsFunded': nhsFunded,
-                    'nhsPrivatePay': nhsPrivatePay
+                    // 'name': name.trim(),
+                    // 'url': url,
+                    // 'type': type,
+                    // 'waitingTime': waitingTime,
+                    // 'userRating': userRating,
+                    // 'opCancelled': opCancelled,
+                    // 'qualityRating': qualityRating,
+                    // 'ffRating': ffRating,
+                    // 'nhsFunded': nhsFunded,
+                    // 'nhsPrivatePay': nhsPrivatePay
                 };
                 //Add data to Cookies and send the element to populate the table
                 data.push(element);
@@ -320,6 +343,40 @@ $(document).ready(function () {
             compareContent.removeClass('revealed');
         }
     });
+
+    function getHospitalsByIds(hospitalIds) {
+        var procedureId = 0;
+        var items = [];
+
+        $.ajax({
+            url: 'api/getHospitalsByIds/' + hospitalIds +'/' + procedureId,
+            type: 'GET',
+            headers: {
+                'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
+            },
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            async: false,
+            // data: [],
+            success: function (data) {
+                // console.log(data.data.hospitals);
+                //Check if we have at least one result in our data
+                if (!$.isEmptyObject(data.data)) {
+                    items = data.data;
+                }
+                // else {
+                //     showAlert('Invalid Postcode! Please try again.', false);
+                //     $postcode_input.val("");
+                //     $resultsContainer.slideUp();
+                // }
+            },
+            error: function (data) {
+                showAlert('Something went wrong! Please try again.', false)
+            },
+        });
+
+        return items;
+    }
 });
 
 // TODO: refactor the toggling classes into a function
