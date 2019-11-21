@@ -101,13 +101,20 @@
                         <div class="col-header">
                             <p class="SofiaPro-SemiBold">You are comparing:</p>
                             <p><span id="nhs-hospital-count">0</span>&nbsp;NHS hospital(s) &</p>
-                            <p><span id="private-hospital-count">0</span>&nbsp;Private hospital(s)</p>
-                            @include('components.basic.button', [
-                                'buttonText'        => 'Make an enquiry to all your chosen hospitals',
-                                'classTitle'        => 'btn btn-squared btn-blue btn-enquiry font-14',
-                                'id'                => 'multiple_enquiries_button',
-                                'svg'               => 'circle-check'
-                            ])
+                            <p><span id="private-hospital-count">0</span>&nbsp;Private hospital(s)
+                            <form action="/api/enquiry" method="POST">
+                                <label for="multiple_enquiries_button" class="sr-only">
+                                    <input type="hidden" value="68" >
+                                </label>
+                                @include('components.basic.button', [
+                                    'htmlButton'        => true,
+                                    'buttonText'        => 'Make an enquiry to all your chosen hospitals',
+                                    'classTitle'        => 'btn btn-squared btn-blue btn-enquiry font-14',
+                                    'id'                => 'multiple_enquiries_button',
+                                    'svg'               => 'circle-check'
+                                ])
+
+                            </form>
                         </div>
                         <div class=""></div>
                         <div class="cell">Hospital Type</div>
