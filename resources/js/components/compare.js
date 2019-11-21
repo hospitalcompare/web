@@ -74,7 +74,6 @@ $(document).ready(function () {
     var compareContent = $('.compare-hospitals-content');
     var countSpan = $('#compare_number');
     var heartIcon = $('#compare_heart');
-    var compareHospitalIdsSpan = $('#compare_hospital_ids');
     var compareHospitalIds = '';
 
     if (typeof Cookies.get("compareCount") === 'undefined') {
@@ -84,7 +83,7 @@ $(document).ready(function () {
     }
 
     var compareCount = Cookies.get('compareCount');
-    var compareData = Cookies.get('compareHospitalsData');
+    var compareData = JSON.parse(Cookies.get('compareHospitalsData'));
     console.log('Page load data: ' + compareData);
 
     //Check if we need to show the Compare hospitals div
@@ -168,23 +167,24 @@ $(document).ready(function () {
         // Content for new hospital added to compare
         var newRowContent =
             '<div class="col-2 text-center" id="compare_hospital_id_' + element.id + '">' +
-            '<div class="col-inner">' +
-            '<div class="image-wrapper mx-auto">' +
-            '<img class="" src="images/alder-1.png">' +
-            '<div class="remove-hospital" id="remove_id_' + element.id + '"></div>' +
-            '</div>' +
-            '<div class="details">' +
-            '<p class="w-100">' + element.name + '</p>' +
-            btnContent +
-            '</div>' +
-            '<div class="cell">' + getHtmlDashTickValue(element.waiting_time[0].perc_waiting_weeks, " Weeks") + '</div>' +
-            '<div class="cell">' + getHtmlStars(element.rating.avg_user_rating) + '</div>' +
-            '<div class="cell">' + getHtmlDashTickValue(cancelledOps, "%") + '</div>' +
-            '<div class="cell">' + element.rating.latest_rating + '</div>' +
-            '<div class="cell">' + getHtmlDashTickValue(element.rating.friends_family_rating, "%") + '</div>' +
-            '<div class="cell">' + getHtmlDashTickValue(element.nhsRating) + '</div>' +
-            '<div class="cell">' + getHtmlDashTickValue(element.nhsRating) + '</div>' +
-            '</div>' +
+                '<div class="col-inner">' +
+                    '<div class="image-wrapper mx-auto">' +
+                        '<img class="" src="images/alder-1.png">' +
+                        '<div class="remove-hospital" id="remove_id_' + element.id + '"></div>' +
+                    '</div>' +
+                    '<div class="details">' +
+                        '<p class="w-100">' + element.name + '</p>' +
+                        btnContent +
+                    '</div>' +
+                    '<div class="cell">' + element.hospital_type_id + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(element.waiting_time[0].perc_waiting_weeks, " Weeks") + '</div>' +
+                    '<div class="cell">' + getHtmlStars(element.rating.avg_user_rating) + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(cancelledOps, "%") + '</div>' +
+                    '<div class="cell">' + element.rating.latest_rating + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(element.rating.friends_family_rating, "%") + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(element.nhsRating) + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(element.nhsRating) + '</div>' +
+                '</div>' +
             '</div>';
         target.append(newRowContent);
         //Toggle the full heart or empty heart  class of the button
@@ -229,7 +229,7 @@ $(document).ready(function () {
 
         //Reset compareCount and compareHospitalsData
         Cookies.set("compareCount", 0, -1);
-        Cookies.set("compareHospitalsData", '', -1);
+        Cookies.set("compareHospitalsData", JSON.stringify('data'), -1);
         //Set them back again
         Cookies.set("compareCount", compareCount, {expires: 10000});
         Cookies.set("compareHospitalsData", JSON.stringify(data), {expires: 10000});
@@ -356,7 +356,7 @@ $(document).ready(function () {
 
         //Reset compareCount and compareHospitalsData
         Cookies.set("compareCount", 0, -1);
-        Cookies.set("compareHospitalsData", 0, -1);
+        Cookies.set("compareHospitalsData", JSON.stringify('data'), {expires: 10000});
         //Set them back again
         Cookies.set("compareHospitalsData", JSON.stringify(data), {expires: 10000});
         Cookies.set("compareCount", compareCount, {expires: 10000});
