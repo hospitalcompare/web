@@ -41,45 +41,6 @@
     }
     //=======================END WHY CHOOSE SECTION=======================
 
-    //=========================HEALTH CHOICE SECTION===========================
-    .choose-health-parent {
-        margin: 60px auto;
 
-        .choose-health {
-            height: 410px;
-            background: url('../images/placeholder.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-            border-radius: 20px;
-            position: relative;
-            @include mask($lightestGrey, 1);
-
-            &:before {
-                transition: 0.3s opacity ease-in;
-            }
-
-            &.fade-in {
-                &:before {
-                    opacity: 0.38;
-                }
-            }
-        }
-
-        .choose-health-text {
-            color: $white;
-            font-size: 27px;
-            font-weight: 600;
-            @include v-h-c;
-            text-align: center;
-        }
-
-        .choose-health-text p {
-            margin-top: 50px;
-            text-align: center;
-        }
-    }
-
-    //=========================END HEALTH CHOICE SECTION====================
 
 }

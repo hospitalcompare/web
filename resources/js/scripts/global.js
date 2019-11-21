@@ -28,7 +28,15 @@ $(document).ready(function () {
         $('body').removeClass('select-open');
     });
 
+    var $howToUseSelectPlaceholder = 'Select';
+    // Change text on the dropdowns in how to use page
+    $('.flat-box .dropdown-toggle .filter-option-inner-inner').text('Choose treatment');
+    $('#how_to_use_filter_policies .dropdown-toggle .filter-option-inner-inner').text($howToUseSelectPlaceholder);
 
+    $('#how_to_use_policies').on('shown.bs.select', function(){
+        console.log($howToUseSelectPlaceholder);
+        $('.dropdown-menu li:first-child a').text($howToUseSelectPlaceholder);
+    })
 });
 
 // Scroll up to show alert bar
@@ -175,6 +183,7 @@ window.popupDoctor = function (message, delay) {
     }
 
     $doctor.focus();
+
 };
 
 // Slugify a string
@@ -192,4 +201,76 @@ window.slugify = function(string) {
         .replace(/\-\-+/g, '-') // Replace multiple - with single -
         .replace(/^-+/, '') // Trim - from start of text
         .replace(/-+$/, '') // Trim - from end of text
-}
+};
+
+// Compare functions
+/**
+ * Disable compare buttons if we have reached the max no of items
+ *
+ */
+window.disableButtons = function (modifier = 0) {
+    compareCount = Cookies.get('compareCount');
+    compareCount = parseInt(compareCount);
+
+    var $notSelected = $('.compare').not($('.selected'));
+
+    if (compareCount + modifier === 5) {
+        // console.log(compareCount, 'Disabling buttons');
+        $notSelected
+            .addClass('disabled')
+            .parent()
+        // .prop('title', 'Sorry, you have reached the limit of hospitals to compare.')
+        // .attr('data-toggle', 'tooltip');
+        // enable tooltips
+        // $('[data-toggle="tooltip"]').tooltip();
+    }
+};
+
+// Reenable buttons to allow to add to compare
+window.enableButtons = function () {
+    compareCount = Cookies.get('compareCount');
+    compareCount = parseInt(compareCount);
+
+    if (compareCount === 5) {
+        $('.compare')
+            .removeClass('disabled')
+            .parent()
+            .prop('title', '');
+        // .attr('data-toggle', '');
+    }
+};
+
+window.getHospitalsByIds = function(hospitalIds) {
+    var procedureId = 0;
+    var items = [];
+
+    $.ajax({
+        url: 'api/getHospitalsByIds/' + hospitalIds +'/' + procedureId,
+        type: 'GET',
+        headers: {
+            'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
+        },
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        async: false,
+        // data: [],
+        success: function (data) {
+            // console.log(data.data.hospitals);
+            //Check if we have at least one result in our data
+            if (!$.isEmptyObject(data.data)) {
+                items = data.data;
+            }
+            // else {
+            //     showAlert('Invalid Postcode! Please try again.', false);
+            //     $postcode_input.val("");
+            //     $resultsContainer.slideUp();
+            // }
+        },
+        error: function (data) {
+            showAlert('Something went wrong! Please try again.', false)
+        },
+    });
+
+    return items;
+};
+

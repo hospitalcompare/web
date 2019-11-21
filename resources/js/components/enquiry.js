@@ -173,5 +173,77 @@ $(document).ready(function () {
     $("[data-hide]").on("click", function () {
         $(this).closest("." + $(this).attr("data-hide")).slideUp();
     });
+
+    // Submit multi - enquiry form from comparison area
+    // Get form
+    var $multiForm = $('#multiple_enquiries_form');
+
+    // Only run if the page contains the enquiry form
+    if ($multiForm.length > 0) {
+
+        // jquery validate options
+        $multiForm.validate({
+            rules: {
+                hospital_id: {
+                    required: true
+                }
+            },
+            messages: {
+                hospital_id: "There is no hospital id specified",
+                procedure_id: "Please select the procedure required",
+            },
+            errorPlacement: function (error, element) {
+                //console.dir(error, element);
+                var customError = $([
+                    '<span class="invalid-feedback d-block">',
+                    '  <span class="mb-0 d-block">',
+                    '  </span>',
+                    '</span>'
+                ].join(""));
+
+                // Add `form-error-message` class to the error element
+                error.addClass("form-error-message");
+
+                // Insert it inside the span that has `mb-0` class
+                error.appendTo(customError.find("span.mb-0"));
+
+                // Insert your custom error
+                customError.insertBefore(element).slideDown();
+            },
+            // Submit handler - what happens when form submitted
+            submitHandler: function () {
+                // Create an FormData object
+                var data = new FormData($multiForm[0]);
+
+                // If you want to add an extra field for the FormData
+                // data.append("CustomField", "This is some extra data, testing);
+
+                $.ajax({
+                    type: "POST",
+                    enctype: 'multipart/form-data',
+                    url: "/api/enquiry",
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    cache: false,
+                    timeout: 600000,
+                    headers: {
+                        'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
+                    },
+                    success: function (data) {
+                        // alert('Thanks, your enquiry has been submitted');
+                        // $('#hc_modal_enquire_private').modal('hide');
+                        showAlert('Thank you ' + data.data.first_name + ', your enquiry has been successfully sent!', true, true);
+                    },
+                    error: function (e) {
+                        var errorMsg = JSON.parse(e.responseText).errors.error;
+                        // console.log(JSON.parse(e.responseText).errors);
+                        // console.log("ERROR : ", errorMsg, "status text: ", e.statusText);
+                        showAlert(errorMsg, false, true);
+                    }
+                });
+            }
+        })
+    }
 });
 

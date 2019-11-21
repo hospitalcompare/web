@@ -92,24 +92,24 @@
                 </div>
             </div>
             <div class="form-group row align-items-end">
-                <div class="col col-12">
+{{--                <div class="col col-12">--}}
 {{--                    Reason for contact --}}
-                    @include('components.basic.select', [
-                            'options'               => [
-                                ['id'=>'waiting_time_nhs_funded', 'name'=>'Likely waiting time for NHS funded treatment'],
-                                ['id'=>'price_range', 'name'=>'Likely price range for treatment'],
-                                ['id'=>'waiting_time_self_pay', 'name'=>'Likely waiting time for self-pay'],
-                                ['id'=>'consultants', 'name'=>'My choice of consultants for self-pay']
-                            ],
-                            'selectId'              => 'reason_for_contact',
-                            'selectClass'           => 'form-control',
-                            'svg'                   => 'chevron-down',
-                            'placeholder'           => 'Reason for contact',
-                            'name'                  =>'reason_for_contact',
-                            'selectPicker'          => 'true',
-                            'required'              => true])
+{{--                    @include('components.basic.select', [--}}
+{{--                            'options'               => [--}}
+{{--                                ['id'=>'waiting_time_nhs_funded', 'name'=>'Likely waiting time for NHS funded treatment'],--}}
+{{--                                ['id'=>'price_range', 'name'=>'Likely price range for treatment'],--}}
+{{--                                ['id'=>'waiting_time_self_pay', 'name'=>'Likely waiting time for self-pay'],--}}
+{{--                                ['id'=>'consultants', 'name'=>'My choice of consultants for self-pay']--}}
+{{--                            ],--}}
+{{--                            'selectId'              => 'reason_for_contact',--}}
+{{--                            'selectClass'           => 'form-control',--}}
+{{--                            'svg'                   => 'chevron-down',--}}
+{{--                            'placeholder'           => 'Reason for contact',--}}
+{{--                            'name'                  =>'reason_for_contact',--}}
+{{--                            'selectPicker'          => 'true',--}}
+{{--                            'required'              => true])--}}
 
-                </div>
+{{--                </div>--}}
                 <div class="col col-12" id="col_additional_information">
                     <textarea
                         class=""

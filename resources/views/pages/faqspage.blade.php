@@ -27,7 +27,8 @@
                 @include('components.basic.input', [
                     'type'        => 'search',
                     'results'     => '5',
-                    'className'   => 'faq-search-input w-100',
+                    'id'          => 'faq_search_input',
+                    'className'   => 'w-100',
                     'placeholder' => 'Search',
                     'value'       => '',
                     'name'        => 'search'

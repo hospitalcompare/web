@@ -102,10 +102,18 @@
                             <p class="SofiaPro-SemiBold">You are comparing:</p>
                             <p><span id="nhs-hospital-count">0</span>&nbsp;NHS hospital(s) &</p>
                             <p><span id="private-hospital-count">0</span>&nbsp;Private hospital(s)
-                            <form action="/api/enquiry" method="POST">
-                                <label for="multiple_enquiries_button" class="sr-only">
-                                    <input type="hidden" value="68" >
-                                </label>
+                            <form id="multiple_enquiries_form">
+{{--                                <input class="d-none" type="number" name="procedure_id" value="{{ !empty(Request::input('procedure_id')) ? Request::input('procedure_id') : '' }}">--}}
+                                <input id="multiple_enquiries_hospital_ids" class="d--none" type="text" name="hospital_id" value="">
+                                <input class="d--none" type="text" name="title" value="Mr">
+                                <input class="d--none" type="text" name="first_name" value="Hello">
+                                <input class="d--none" type="text" name="last_name" value="Hello">
+                                <input class="d--none" type="email" name="email" value="hello@mello.yello">
+                                <input class="d--none" type="email" name="confirm_email" value="hello@mello.yello">
+                                <input class="d--none" type="text" name="phone_number" value="01234567891">
+                                <input class="d--none" type="text" name="postcode" value="ch23ae">
+                                <input class="d--none" type="checkbox" value="on">
+                                <input class="d--none" type="text" name="additional_information" value="Some info">
                                 @include('components.basic.button', [
                                     'htmlButton'        => true,
                                     'buttonText'        => 'Make an enquiry to all your chosen hospitals',

@@ -257,29 +257,29 @@
         }
 
         &.btn-arrow-right {
-            background: #649ef7;
-            background: linear-gradient(-90deg, #649ef7, $blue, $blue, $blue);
+            //background: #649ef7;
+            //background: linear-gradient(-90deg, #649ef7, $blue, $blue, $blue);
             background-size: 200%;
             //background-position: right;
             border-radius: 100px;
-            height: 50px;
-            line-height: 50px;
+            //height: 50px;
+            //line-height: 50px;
             @include font-size(22);
-            padding: 0 60px 0 20px;
+            padding: 12px 65px 12px 30px;
             position: relative;
 
-            &:after {
-                background-image: url('../images/icons/up-arrow.svg');
-                @include icon-bg-center(30%);
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: 50px;
-                height: 50px;
-                line-height: 50px;
-                transform: rotate(90deg);
-            }
+            //&:after {
+            //    background-image: url('../images/icons/up-arrow.svg');
+            //    @include icon-bg-center(30%);
+            //    position: absolute;
+            //    right: 0;
+            //    top: 0;
+            //    bottom: 0;
+            //    width: 50px;
+            //    height: 50px;
+            //    line-height: 50px;
+            //    transform: rotate(90deg);
+            //}
 
             &:hover {
                 background-position: left;
@@ -652,7 +652,7 @@
     transition: $transition;
     @include font-size(14);
 
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
         top: 0;
         right: 0;
         transform: translate(50%, -50%);
@@ -675,6 +675,61 @@
 
         path {
             fill: #fff;
+        }
+    }
+
+}
+
+// Modal tour carousel buttons - prev/next
+.btn-tour-control {
+    box-shadow: inset 0px 0px 0px 2px $turq !important;
+    color: $body-color;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    transition: $transition;
+    position: relative;
+
+    svg {
+        width: 7px;
+        height: 11px;
+
+        path {
+            fill: $body-color;
+        }
+    }
+
+    &.prev {
+        padding-left: 30px;
+        padding-right: 12px;
+
+        svg {
+            left: 10px;
+        }
+    }
+
+    &.next {
+        padding-right: 30px;
+        padding-left: 12px;
+
+        svg {
+            right: 10px;
+        }
+    }
+
+    &:focus {
+        box-shadow: inset 0px 0px 0px 2px $turq !important;
+        color: $body-color;
+    }
+
+    &:hover {
+        box-shadow: inset 0px 0px 0px 2px $turq !important;
+        background-color: $turq;
+        color: $white;
+
+        svg {
+            path {
+                fill: $white;
+            }
         }
     }
 }

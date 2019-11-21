@@ -1,19 +1,19 @@
-<div class="back-top-wrapper mt-4">
-    <div class="container back-top-content d-flex justify-content-end">
-        @include('components.basic.button', [
-        'id' => 'back-to-top',
-        'classTitle' => 'btn btn-icon btn-back-to-top',
-        'buttonText' => '<span>Back to top</span>',
-        'hrefValue' => '#top',
-        'svg'  => 'chevron-up'])
-    </div>
-</div>
 <footer class="footer">
+    <div class="back-top-wrapper mt-4">
+        <div class="container back-top-content d-flex justify-content-end">
+            @include('components.basic.button', [
+            'id' => 'back-to-top',
+            'classTitle' => 'btn btn-icon btn-back-to-top',
+            'buttonText' => '<span>Back to top</span>',
+            'hrefValue' => '#top',
+            'svg'  => 'chevron-up'])
+        </div>
+    </div>
     <div class="footer-upper">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <nav class="footer-upper__nav">
+                    <nav class="footer-upper__nav" role="navigation">
                         <ul class="footer-upper__menu">
                             <li><a href="/">Home</a></li>
                             <li><a href="/about-us">About Us</a></li>
@@ -30,13 +30,19 @@
                         <p class="font-20 SofiaPro-Light">Helping you to make the best healthcare choices</p>
                         <ul class="social-list d-flex justify-content-end">
                             <li class="facebook-social">
-                                <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/facebook.svg')) !!}</a>
+                                <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/facebook.svg')) !!}
+                                    <span class="sr-only">Facebook link</span>
+                                </a>
                             </li>
                             <li class="twitter-social">
-                                <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/twitter.svg')) !!}</a>
+                                <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/twitter.svg')) !!}
+                                    <span class="sr-only">Twitter link</span>
+                                </a>
                             </li>
                             <li class="instagram-social">
-                                <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/instagram.svg')) !!}</a>
+                                <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/instagram.svg')) !!}
+                                    <span class="sr-only">Instagram link</span>
+                                </a>
                             </li>
                         </ul>
                     </div>

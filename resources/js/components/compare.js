@@ -1,73 +1,3 @@
-/**
- * Disable compare buttons if we have reached the max no of items
- *
- */
-window.disableButtons = function (modifier = 0) {
-    compareCount = Cookies.get('compareCount');
-    compareCount = parseInt(compareCount);
-
-    var $notSelected = $('.compare').not($('.selected'));
-
-    if (compareCount + modifier === 5) {
-        // console.log(compareCount, 'Disabling buttons');
-        $notSelected
-            .addClass('disabled')
-            .parent()
-            // .prop('title', 'Sorry, you have reached the limit of hospitals to compare.')
-            // .attr('data-toggle', 'tooltip');
-        // enable tooltips
-        // $('[data-toggle="tooltip"]').tooltip();
-    }
-};
-
-// Reenable buttons to allow to add to compare
-window.enableButtons = function () {
-    compareCount = Cookies.get('compareCount');
-    compareCount = parseInt(compareCount);
-
-    if (compareCount === 5) {
-        $('.compare')
-            .removeClass('disabled')
-            .parent()
-            .prop('title', '');
-            // .attr('data-toggle', '');
-    }
-};
-
-window.getHospitalsByIds = function(hospitalIds) {
-    var procedureId = 0;
-    var items = [];
-
-    $.ajax({
-        url: 'api/getHospitalsByIds/' + hospitalIds +'/' + procedureId,
-        type: 'GET',
-        headers: {
-            'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
-        },
-        dataType: "json",
-        contentType: "application/json; charset=utf-8",
-        async: false,
-        // data: [],
-        success: function (data) {
-            // console.log(data.data.hospitals);
-            //Check if we have at least one result in our data
-            if (!$.isEmptyObject(data.data)) {
-                items = data.data;
-            }
-            // else {
-            //     showAlert('Invalid Postcode! Please try again.', false);
-            //     $postcode_input.val("");
-            //     $resultsContainer.slideUp();
-            // }
-        },
-        error: function (data) {
-            showAlert('Something went wrong! Please try again.', false)
-        },
-    });
-
-    return items;
-}
-
 $(document).ready(function () {
     //Check if we don't have the cookie and set it to 0
     var compareBar = $('.compare-hospitals-bar');
@@ -75,12 +5,17 @@ $(document).ready(function () {
     var countSpan = $('#compare_number');
     var heartIcon = $('#compare_heart');
     // Where we hold the counts of hospital types
+    // No of each type of hospital in compare
     var nhsCountHolder = $('#nhs-hospital-count');
     var privateCountHolder = $('#private-hospital-count');
-    // No of each type of hospital in compare
+
+
+    var multiEnquiryHospitalIds = $('input[name=hospital_id]');
+    console.log('Hello ' + multiEnquiryHospitalIds);
     var nhsHospitalCount = 0;
     var privateHospitalCount = 0;
     var compareHospitalIds = '';
+    var privateHospitalIds = '';
 
     if (typeof Cookies.get("compareCount") === 'undefined') {
         Cookies.set("compareCount", 0, {expires: 10000});
@@ -90,9 +25,8 @@ $(document).ready(function () {
 
     var compareCount = Cookies.get('compareCount');
     var compareData = JSON.parse(Cookies.get('compareHospitalsData'));
-    console.log('Page load data: ' + compareData);
 
-    //Check if we need to show the Compare hospitals div
+    // Check if we need to show the Compare hospitals div
     if (compareCount > 0) {
         // compareContent.slideDown();
         // $('body').addClass('shortlist-open');
@@ -108,7 +42,7 @@ $(document).ready(function () {
         // get the hospital ids from the cookie
         // }
         compareHospitalIds = compareData;
-        // compareHospitalIds = compareHospitalIds.slice(0,-1);
+
 
         //Set the new value
         //compareHospitalIdsSpan.val(compareHospitalIds);
@@ -120,7 +54,7 @@ $(document).ready(function () {
             //     console.log(item)
             // }
             $.each(returned, function (key, element) { //$.parseJSON() method is needed unless chrome is throwing error.
-                console.log(element);
+                // console.log(element);
                 addHospitalToCompare(element);
             });
         }
@@ -161,7 +95,7 @@ $(document).ready(function () {
             'data-hospital-url="' + element.url + '" ' +
             'data-hospital-title="' + element.name + '" ' +
             'data-target="#hc_modal_enquire_nhs">Make an enquiry' +
-            '    <i class=""></i>' +
+             $svg +
             '</a>' :
             '<a id="' + element.id + '" ' +
             'class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" ' +
@@ -172,12 +106,18 @@ $(document).ready(function () {
              $svg +
             '</a>';
         // Content for new hospital added to compare
-        console.log(element.hospital_type_id);
+        // console.log(element.hospital_type_id);
         var hospitalType = element.hospital_type_id == 1 ? 'Private Hospital' : 'NHS Hospital';
 
         if(hospitalType == 'Private Hospital') {
             privateHospitalCount += 1;
-            privateCountHolder.text(privateHospitalCount)
+            privateCountHolder.text(privateHospitalCount);
+            // Add the id to the list for mulitiple enquiries
+            privateHospitalIds += element.id + ',';
+            console.log(privateHospitalIds);
+            // Update the value of the enquiry form
+            $('input[name=hospital_id]').val(privateHospitalIds.replace(/,\s*$/, ""));
+
         } else {
             nhsHospitalCount += 1;
             nhsCountHolder.text(nhsHospitalCount);
@@ -207,7 +147,7 @@ $(document).ready(function () {
             '</div>';
         target.append(newRowContent);
         //Toggle the full heart or empty heart  class of the button
-        $('a#' + element.id + '.compare').addClass('selected');
+        $('button#' + element.id + '.compare').addClass('selected');
     }
 
     /**
@@ -219,9 +159,8 @@ $(document).ready(function () {
      */
 
     function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) {
-        console.log(hospitalType);
         $('#compare_hospital_id_' + elementId).remove();
-        $('a#' + elementId + '.compare').removeClass('selected');
+        $('button#' + elementId + '.compare').removeClass('selected');
 
         // property found, access the foo property using result[0].foo
         // Filter out the clicked item from the data
@@ -230,7 +169,7 @@ $(document).ready(function () {
         dataArr.splice(elementIndex, 1);
         data = dataArr.join(',');
 
-        console.log('Data after removing this item: ' + data);
+        // console.log('Data after removing this item: ' + data);
         compareCount = parseInt(compareCount) - 1;
 
         if(hospitalType == 'private-hospital') {
@@ -270,9 +209,9 @@ $(document).ready(function () {
         var hospitalTypeClicked = $(this).data('hospital-type');
         //Get the Data that is already in the Cookies
         var compareCount = parseInt(Cookies.get("compareCount"));
-        console.log('Compare count: ' + compareCount);
+        // console.log('Compare count: ' + compareCount);
         var data = JSON.parse(Cookies.get("compareHospitalsData"));
-        console.log('Data: ' + data);
+        // console.log('Data: ' + data);
         //Load the Cookies with the data that we need for the comparison
         var elementId = $(this).attr('id');
 
@@ -310,7 +249,7 @@ $(document).ready(function () {
             break;
         }
 
-        console.log('Result: ' + result);
+        // console.log('Result: ' + result);
 
         // Trigger Dr S when someone adds the first hospital
         // if(compareCount === 0){
@@ -354,7 +293,7 @@ $(document).ready(function () {
         // Check if we have to remove the data of the element that has been clicked - if true, it is already in the data
 
         if (result) {
-            console.log('Already added, now removing');
+            // console.log('Already added, now removing');
             //Remove the hospital from the comparison table
             removeHospitalFromCompare(elementId, data, compareCount, hospitalTypeClicked);
             var dataArr = data.split(',');
