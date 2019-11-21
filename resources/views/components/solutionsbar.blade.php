@@ -98,16 +98,19 @@
             <div id="compare_hospitals_grid" class="row">
                 <div class="col-2">
                     <div class="col-inner h-100">
-                        <div class="">
-{{--                            @include('components.basic.button', [--}}
-{{--                                'buttonText'            => 'Multiple Enquiries',--}}
-{{--                                'classTitle'        => 'btn btn-s btn-turq btn-grad',--}}
-{{--                                'id'                => 'multiple_enquiries_button',--}}
-{{--                                'icon'              => '',--}}
-{{--                                'svg'               => 'chevron-down-white'--}}
-{{--                            ])--}}
+                        <div class="col-header">
+                            <p class="SofiaPro-SemiBold">You are comparing:</p>
+                            <p><span id="nhs-hospital-count">0</span>&nbsp;NHS hospital(s) &</p>
+                            <p><span id="private-hospital-count">0</span>&nbsp;Private hospital(s)</p>
+                            @include('components.basic.button', [
+                                'buttonText'        => 'Make an enquiry to all your chosen hospitals',
+                                'classTitle'        => 'btn btn-squared btn-blue btn-enquiry font-14',
+                                'id'                => 'multiple_enquiries_button',
+                                'svg'               => 'circle-check'
+                            ])
                         </div>
                         <div class=""></div>
+                        <div class="cell">Hospital Type</div>
                         <div class="cell">Average Waiting Time</div>
                         <div class="cell">NHS User Rating</div>
                         <div class="cell">% Operations cancelled</div>
@@ -115,6 +118,18 @@
                         <div class="cell">Friends & Family Rating</div>
                         <div class="cell">NHS Funded Work</div>
                         <div class="cell">Private Self Pay</div>
+                        <div class="cell column-break SofiaPro-SemiBold">Care Quality Rating</div>
+                        <div class="cell">Safe</div>
+                        <div class="cell">Effective</div>
+                        <div class="cell">Caring</div>
+                        <div class="cell">Responsive</div>
+                        <div class="cell">Well led</div>
+                        <div class="cell column-break SofiaPro-SemiBold">NHS User Rating</div>
+                        <div class="cell">Cleanliness</div>
+                        <div class="cell">Food & Hygiene</div>
+                        <div class="cell">Privacy, Dignity & Wellbeing</div>
+                        <div class="cell">Dementia Domain</div>
+                        <div class="cell">Disability Domain</div>
                     </div>
                 </div>
             </div>

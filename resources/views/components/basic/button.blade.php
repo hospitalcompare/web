@@ -4,8 +4,13 @@
    target="{{ !empty($target) && $target == 'blank' ? '_blank' : '' }}"
    data-target="{!! $dataTarget ?? '' !!}"
    href="{{ empty($hrefValue) ? 'javascript:void(0);' : $hrefValue }}"
-   role="button">
+   role="button"
+    @if(!empty($hospitalType))
+        data-hospital-type="{{ $hospitalType }}"
+    @endif
+>
     {!! $buttonText !!}
+
     @if(!empty($icon))
         <i class="{{ $icon }}"></i>
     @endif

@@ -138,10 +138,14 @@
         #compare_hospitals_grid {
             padding-bottom: 30px;
 
+            .col-header {
+                min-height: 230px;
+            }
+
             .image-wrapper {
                 position: relative;
                 width: 134px;
-                height: 123px;
+                //height: 123px;
                 text-align: center;
 
                 .remove-hospital {
@@ -163,7 +167,7 @@
             }
 
             .details {
-                height: 130px;
+                //height: 130px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;

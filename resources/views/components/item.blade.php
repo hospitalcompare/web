@@ -240,8 +240,8 @@
             @endif
                 @include('components.basic.button', [
                     'classTitle'        => 'btn btn-compare compare btn-block font-14',
-{{--                    'buttonText'            => 'Compare Hospitals',--}}
-                    'buttonText'            => 'Add to compare',
+                    'buttonText'        => 'Add to compare',
+                    'hospitalType'      => $NHSClass,
                     'svg'               => 'heart-solid',
                     'id'                => $id])
             </div>

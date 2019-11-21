@@ -61,7 +61,7 @@ window.showAlert = function (message, success = true, scroll = false) {
  */
 window.getHtmlStars = function (rating) {
     if (rating == null)
-        return "";
+        return "No data";
 
     if (rating == 0) {
         return "<img src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
@@ -111,7 +111,7 @@ window.getHtmlStars = function (rating) {
  */
 window.getHtmlDashTickValue = function (value, text = "") {
     if (value == null)
-        return "";
+        return "No data";
 
     var html = "";
 
@@ -176,3 +176,20 @@ window.popupDoctor = function (message, delay) {
 
     $doctor.focus();
 };
+
+// Slugify a string
+
+window.slugify = function(string) {
+    const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
+    const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
+    const p = new RegExp(a.split('').join('|'), 'g')
+
+    return string.toString().toLowerCase()
+        .replace(/\s+/g, '-') // Replace spaces with -
+        .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
+        .replace(/&/g, '-and-') // Replace & with 'and'
+        .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+        .replace(/\-\-+/g, '-') // Replace multiple - with single -
+        .replace(/^-+/, '') // Trim - from start of text
+        .replace(/-+$/, '') // Trim - from end of text
+}

@@ -74,6 +74,12 @@ $(document).ready(function () {
     var compareContent = $('.compare-hospitals-content');
     var countSpan = $('#compare_number');
     var heartIcon = $('#compare_heart');
+    // Where we hold the counts of hospital types
+    var nhsCountHolder = $('#nhs-hospital-count');
+    var privateCountHolder = $('#private-hospital-count');
+    // No of each type of hospital in compare
+    var nhsHospitalCount = 0;
+    var privateHospitalCount = 0;
     var compareHospitalIds = '';
 
     if (typeof Cookies.get("compareCount") === 'undefined') {
@@ -143,6 +149,7 @@ $(document).ready(function () {
         var $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g><g><g><path fill="#fff" d="M10.002 18.849c-4.878 0-8.846-3.968-8.846-8.847 0-4.878 3.968-8.846 8.846-8.846 4.879 0 8.847 3.968 8.847 8.846 0 4.879-3.968 8.847-8.847 8.847zm0-18.849C4.488 0 0 4.488 0 10.002c0 5.515 4.488 10.003 10.002 10.003 5.515 0 10.003-4.488 10.003-10.003C20.005 4.488 15.517 0 10.002 0z"></path></g><g><path fill="#fff" d="M14.47 5.848l-5.665 6.375-3.34-2.67a.578.578 0 0 0-.811.088c-.2.25-.158.615.091.815l3.769 3.015a.57.57 0 0 0 .361.125c.167 0 .325-.07.433-.196l6.03-6.783a.579.579 0 0 0 .146-.42.588.588 0 0 0-.191-.4.592.592 0 0 0-.824.05z"></path></g></g></g></svg>';
         var nhsRating = 1;
         var cancelledOps = null;
+
         if(element.cancelled_op !== null) {
             // cancelledOps = element.cancelled_op.perc_cancelled_ops;
             cancelledOps = element.cancelled_op;
@@ -165,18 +172,30 @@ $(document).ready(function () {
              $svg +
             '</a>';
         // Content for new hospital added to compare
+        console.log(element.hospital_type_id);
+        var hospitalType = element.hospital_type_id == 1 ? 'Private Hospital' : 'NHS Hospital';
+
+        if(hospitalType == 'Private Hospital') {
+            privateHospitalCount += 1;
+            privateCountHolder.text(privateHospitalCount)
+        } else {
+            nhsHospitalCount += 1;
+            nhsCountHolder.text(nhsHospitalCount);
+        }
         var newRowContent =
             '<div class="col-2 text-center" id="compare_hospital_id_' + element.id + '">' +
                 '<div class="col-inner">' +
-                    '<div class="image-wrapper mx-auto">' +
-                        '<img class="" src="images/alder-1.png">' +
-                        '<div class="remove-hospital" id="remove_id_' + element.id + '"></div>' +
+                    '<div class=" mx-auto col-header d-flex flex-column justify-content-between">' +
+                        '<div class="image-wrapper h-100">' +
+                            '<img class="" src="images/alder-1.jpg" alt="Image of ' + element.name + '">' +
+                            '<div class="remove-hospital" id="remove_id_' + element.id + '" data-hospital-type="' + slugify(hospitalType) + '"></div>' +
+                                '<div class="details">' +
+                                '<p class="w-100 mt-auto">' + element.name + '</p>' +
+                                btnContent +
+                            '</div>' +
+                        '</div>' +
                     '</div>' +
-                    '<div class="details">' +
-                        '<p class="w-100">' + element.name + '</p>' +
-                        btnContent +
-                    '</div>' +
-                    '<div class="cell">' + element.hospital_type_id + '</div>' +
+                    '<div class="cell">' + hospitalType + '</div>' +
                     '<div class="cell">' + getHtmlDashTickValue(element.waiting_time[0].perc_waiting_weeks, " Weeks") + '</div>' +
                     '<div class="cell">' + getHtmlStars(element.rating.avg_user_rating) + '</div>' +
                     '<div class="cell">' + getHtmlDashTickValue(cancelledOps, "%") + '</div>' +
@@ -199,7 +218,8 @@ $(document).ready(function () {
      * @param compareCount
      */
 
-    function removeHospitalFromCompare(elementId, data, compareCount) {
+    function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) {
+        console.log(hospitalType);
         $('#compare_hospital_id_' + elementId).remove();
         $('a#' + elementId + '.compare').removeClass('selected');
 
@@ -212,6 +232,14 @@ $(document).ready(function () {
 
         console.log('Data after removing this item: ' + data);
         compareCount = parseInt(compareCount) - 1;
+
+        if(hospitalType == 'private-hospital') {
+            privateHospitalCount -= 1;
+            privateCountHolder.text(privateHospitalCount)
+        } else {
+            nhsHospitalCount -= 1;
+            nhsCountHolder.text(nhsHospitalCount);
+        }
 
         // Slide content down when all data removed
         if (compareCount === 0) {
@@ -238,6 +266,8 @@ $(document).ready(function () {
 
     //Set the OnClick event for the Compare button
     $(document).on("click", ".result-item-section-3 .compare", function () {
+        // Get hsopital type of item whose button has been clicked to remove it
+        var hospitalTypeClicked = $(this).data('hospital-type');
         //Get the Data that is already in the Cookies
         var compareCount = parseInt(Cookies.get("compareCount"));
         console.log('Compare count: ' + compareCount);
@@ -326,7 +356,7 @@ $(document).ready(function () {
         if (result) {
             console.log('Already added, now removing');
             //Remove the hospital from the comparison table
-            removeHospitalFromCompare(elementId, data, compareCount);
+            removeHospitalFromCompare(elementId, data, compareCount, hospitalTypeClicked);
             var dataArr = data.split(',');
             var elementIndex = dataArr.indexOf(elementId);
             dataArr.splice(elementIndex, 1);
@@ -365,6 +395,7 @@ $(document).ready(function () {
 
     //Set the OnClick event for the Remove Hospital on the Comparison table
     $(document).on("click", ".compare-hospitals-bar .remove-hospital", function (e) {
+        var hospitalTypeClicked = $(this).data('hospital-type');
         e.stopPropagation();
         var elementId = $(this).attr('id');
         // console.log(JSON.parse(Cookies.get("compareHospitalsData")));
@@ -375,7 +406,7 @@ $(document).ready(function () {
         }
         elementId = elementId.replace('remove_id_', '');
 
-        removeHospitalFromCompare(elementId, data, compareCount);
+        removeHospitalFromCompare(elementId, data, compareCount, hospitalTypeClicked);
     });
 
     //Set the Onclick event for the Comparison Header
