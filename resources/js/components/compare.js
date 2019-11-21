@@ -34,6 +34,40 @@ window.enableButtons = function () {
     }
 };
 
+window.getHospitalsByIds = function(hospitalIds) {
+    var procedureId = 0;
+    var items = [];
+
+    $.ajax({
+        url: 'api/getHospitalsByIds/' + hospitalIds +'/' + procedureId,
+        type: 'GET',
+        headers: {
+            'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
+        },
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        async: false,
+        // data: [],
+        success: function (data) {
+            // console.log(data.data.hospitals);
+            //Check if we have at least one result in our data
+            if (!$.isEmptyObject(data.data)) {
+                items = data.data;
+            }
+            // else {
+            //     showAlert('Invalid Postcode! Please try again.', false);
+            //     $postcode_input.val("");
+            //     $resultsContainer.slideUp();
+            // }
+        },
+        error: function (data) {
+            showAlert('Something went wrong! Please try again.', false)
+        },
+    });
+
+    return items;
+}
+
 $(document).ready(function () {
     //Check if we don't have the cookie and set it to 0
     var compareBar = $('.compare-hospitals-bar');
@@ -50,6 +84,7 @@ $(document).ready(function () {
 
     var compareCount = Cookies.get('compareCount');
     var compareData = Cookies.get('compareHospitalsData');
+    console.log('Page load data: ' + compareData);
 
     //Check if we need to show the Compare hospitals div
     if (compareCount > 0) {
@@ -201,7 +236,7 @@ $(document).ready(function () {
         var compareCount = parseInt(Cookies.get("compareCount"));
         console.log('Compare count: ' + compareCount);
         var data = Cookies.get("compareHospitalsData");
-
+        console.log('Data: ' + data);
         //Load the Cookies with the data that we need for the comparison
         var elementId = $(this).attr('id');
 
@@ -221,10 +256,25 @@ $(document).ready(function () {
         var nhsPrivatePay = $('#item_nhs_private_pay_' + elementId).text();
 
         // Return the matching elements from the array
-        var result = $.grep(data, function (e) {
-            return e.id == elementId;
-        });
-        console.log('Result: ' + result.length);
+        // var result = $.grep(data, function (e) {
+        //     return e.id == elementId;
+        // });
+        // Remove trailing comma
+        // data = data.slice(0, -1);
+
+        // Split data string into Array
+        var dataArr = data.split(',');
+        // Check if value is in array
+        var result = false;
+        for (var i = 0; i < dataArr.length; i++) {
+            var stringPart = dataArr[i];
+            if (stringPart != elementId) continue;
+
+            result = true;
+            break;
+        }
+
+        console.log('Result: ' + result);
 
         // Trigger Dr S when someone adds the first hospital
         // if(compareCount === 0){
@@ -235,8 +285,8 @@ $(document).ready(function () {
 
         //Check if there are already 5 hospitals for comparison in Cookies
         if (compareCount < 5) {
-            //Check if we don't have the hospital in our comparison and add it
-            if (result.length === 0) {
+            //Check if we don't have the hospital in our comparison and add it - if not true then add to compare
+            if (!result) {
                 var element = {
                     'id': elementId,
                     // 'enquireBtn': enquireBtn,
@@ -267,7 +317,7 @@ $(document).ready(function () {
 
         //Check if we have to remove the data of the element that has been clicked
 
-        if (result.length === 1) {
+        if (result) {
             console.log('Already added, now removing');
             //Remove the hospital from the comparison table
             removeHospitalFromCompare(elementId, data, compareCount);
@@ -356,37 +406,5 @@ $(document).ready(function () {
         }
     });
 
-    function getHospitalsByIds(hospitalIds) {
-        var procedureId = 0;
-        var items = [];
 
-        $.ajax({
-            url: 'api/getHospitalsByIds/' + hospitalIds +'/' + procedureId,
-            type: 'GET',
-            headers: {
-                'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
-            },
-            dataType: "json",
-            contentType: "application/json; charset=utf-8",
-            async: false,
-            // data: [],
-            success: function (data) {
-                // console.log(data.data.hospitals);
-                //Check if we have at least one result in our data
-                if (!$.isEmptyObject(data.data)) {
-                    items = data.data;
-                }
-                // else {
-                //     showAlert('Invalid Postcode! Please try again.', false);
-                //     $postcode_input.val("");
-                //     $resultsContainer.slideUp();
-                // }
-            },
-            error: function (data) {
-                showAlert('Something went wrong! Please try again.', false)
-            },
-        });
-
-        return items;
-    }
 });
