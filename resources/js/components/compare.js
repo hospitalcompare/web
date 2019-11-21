@@ -199,13 +199,14 @@ $(document).ready(function () {
     $(document).on("click", ".result-item-section-3 .compare", function () {
         //Get the Data that is already in the Cookies
         var compareCount = parseInt(Cookies.get("compareCount"));
+        console.log('Compare count: ' + compareCount);
         var data = Cookies.get("compareHospitalsData");
 
         //Load the Cookies with the data that we need for the comparison
         var elementId = $(this).attr('id');
 
         // Do the AJAX request
-        console.log(getHospitalsByIds(elementId));
+        // console.log(getHospitalsByIds(elementId));
 
         // var enquireBtn = $('#enquire_' + elementId).outerHTML;
         var name = $('#item_name_' + elementId).text();
@@ -218,18 +219,19 @@ $(document).ready(function () {
         var ffRating = $('#item_ff_rating_' + elementId).text();
         var nhsFunded = $('#item_nhs_funded_' + elementId).text();
         var nhsPrivatePay = $('#item_nhs_private_pay_' + elementId).text();
+
+        // Return the matching elements from the array
         var result = $.grep(data, function (e) {
             return e.id == elementId;
         });
-
-
+        console.log('Result: ' + result.length);
 
         // Trigger Dr S when someone adds the first hospital
-        if(compareCount === 0){
-            var $delay = 5000;
-            var $message = 'Great! You have added your first hospital to your shortlist. You can add up to five hospitals to your shortlist. Why not give it a try?';
-            popupDoctor($message, $delay);
-        }
+        // if(compareCount === 0){
+        //     var $delay = 5000;
+        //     var $message = 'Great! You have added your first hospital to your shortlist. You can add up to five hospitals to your shortlist. Why not give it a try?';
+        //     popupDoctor($message, $delay);
+        // }
 
         //Check if there are already 5 hospitals for comparison in Cookies
         if (compareCount < 5) {
@@ -266,6 +268,7 @@ $(document).ready(function () {
         //Check if we have to remove the data of the element that has been clicked
 
         if (result.length === 1) {
+            console.log('Already added, now removing');
             //Remove the hospital from the comparison table
             removeHospitalFromCompare(elementId, data, compareCount);
             data = $.grep(data, function (e) {
