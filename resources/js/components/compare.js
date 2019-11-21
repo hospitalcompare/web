@@ -79,7 +79,8 @@ $(document).ready(function () {
 
     if (typeof Cookies.get("compareCount") === 'undefined') {
         Cookies.set("compareCount", 0, {expires: 10000});
-        Cookies.set("compareHospitalsData", '', {expires: 10000});
+        // Cookies.set("compareHospitalsData", '', {expires: 10000});
+        Cookies.set("compareHospitalsData", JSON.stringify(''), {expires: 10000});
     }
 
     var compareCount = Cookies.get('compareCount');
@@ -203,9 +204,13 @@ $(document).ready(function () {
         $('a#' + elementId + '.compare').removeClass('selected');
 
         // property found, access the foo property using result[0].foo
-        data = $.grep(data, function (e) {
-            return e.id != elementId;
-        });
+        // Filter out the clicked item from the data
+        var dataArr = data.split(',');
+        var elementIndex = dataArr.indexOf(elementId);
+        dataArr.splice(elementIndex, 1);
+        data = dataArr.join(',');
+
+        console.log('Data after removing this item: ' + data);
         compareCount = parseInt(compareCount) - 1;
 
         // Slide content down when all data removed
@@ -224,10 +229,11 @@ $(document).ready(function () {
 
         //Reset compareCount and compareHospitalsData
         Cookies.set("compareCount", 0, -1);
-        Cookies.set("compareHospitalsData", 0, -1);
+        Cookies.set("compareHospitalsData", '', -1);
         //Set them back again
-        Cookies.set("compareHospitalsData", data, {expires: 10000});
         Cookies.set("compareCount", compareCount, {expires: 10000});
+        Cookies.set("compareHospitalsData", JSON.stringify(data), {expires: 10000});
+
     }
 
     //Set the OnClick event for the Compare button
@@ -235,7 +241,7 @@ $(document).ready(function () {
         //Get the Data that is already in the Cookies
         var compareCount = parseInt(Cookies.get("compareCount"));
         console.log('Compare count: ' + compareCount);
-        var data = Cookies.get("compareHospitalsData");
+        var data = JSON.parse(Cookies.get("compareHospitalsData"));
         console.log('Data: ' + data);
         //Load the Cookies with the data that we need for the comparison
         var elementId = $(this).attr('id');
@@ -315,15 +321,16 @@ $(document).ready(function () {
             }
         }
 
-        //Check if we have to remove the data of the element that has been clicked
+        // Check if we have to remove the data of the element that has been clicked - if true, it is already in the data
 
         if (result) {
             console.log('Already added, now removing');
             //Remove the hospital from the comparison table
             removeHospitalFromCompare(elementId, data, compareCount);
-            data = $.grep(data, function (e) {
-                return e.id != elementId;
-            });
+            var dataArr = data.split(',');
+            var elementIndex = dataArr.indexOf(elementId);
+            dataArr.splice(elementIndex, 1);
+            data = dataArr.join(',');
             compareCount = parseInt(compareCount) - 1;
         }
 
@@ -351,7 +358,7 @@ $(document).ready(function () {
         Cookies.set("compareCount", 0, -1);
         Cookies.set("compareHospitalsData", 0, -1);
         //Set them back again
-        Cookies.set("compareHospitalsData", data, {expires: 10000});
+        Cookies.set("compareHospitalsData", JSON.stringify(data), {expires: 10000});
         Cookies.set("compareCount", compareCount, {expires: 10000});
 
     });
@@ -361,7 +368,7 @@ $(document).ready(function () {
         e.stopPropagation();
         var elementId = $(this).attr('id');
         // console.log(JSON.parse(Cookies.get("compareHospitalsData")));
-        var data = Cookies.get("compareHospitalsData");
+        var data = JSON.parse(Cookies.get("compareHospitalsData"));
         var compareCount = parseInt(Cookies.get("compareCount"));
         if(compareCount === 1){
             heartIcon.removeClass('active');
