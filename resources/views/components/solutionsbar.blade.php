@@ -41,7 +41,7 @@
                     {{--                    <li><a href="">Medical Negligence</a></li>--}}
                 </ul>
             @endif
-            <div class="compare-button-title d-flex align-items-center h-100 px-4">
+            <div class="compare-button-title d-flex align-items-center h-100">
                 {{--                @svg('compare-heart', 'compare-heart')--}}
                 <svg id="compare_heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
                     {{--                    <path id="outer-circle" d="M15 0c8.3 0 15 6.7 15 15s-6.7 15-15 15S0 23.3 0 15 6.7 0 15 0z"/>--}}
@@ -59,9 +59,20 @@
     </div>
     <div class="compare-hospitals-content">
         <div class="container">
-            <span class="d-none" id="compare_hospital_ids"></span>
-            <div  class="row">
-                <div class="col-2">
+            <div class="row">
+                <div class="col-2" id="no_items_added">
+                    <div class="col-inner">
+                        <div class="col-header_small">
+                            <p class="font-16 SofiaPro-SemiBold mb-5">You haven’t added any
+                                products to compare yet. </p>
+                            <p>Click the        next to the
+                                hospital to add the
+                                choseninto the
+                                comparison dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="compare_hospitals_headings" class="col-2 d-none">
                     <div class="col-inner h-100">
                         <div class="col-header">
                             <p class="SofiaPro-SemiBold">You are comparing:</p>

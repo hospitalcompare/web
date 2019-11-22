@@ -18,12 +18,12 @@ $(document).ready(function () {
     // The target for the content to be added
     var target = $('#compare_hospitals_grid');
     // The content for any empty column in the comparison
-    var emptyCol = '<div class="col-2">\n' +
+    var emptyCol = '<div class="col">\n' +
         '                    <div class="col-inner">\n' +
         '                        <div class="col-header">\n' +
-        '                            <p>Further selected Hospital\n' +
+        '                            <p class="text-center">Selected Hospital<br>\n' +
         '                                will appear here.</p>\n' +
-        '                            <p> Add more hospitals to your\n' +
+        '                            <p class="text-center"> Add more hospitals to your\n' +
         '                                Shortlist by clicking the&nbsp;SVG here\n' +
         '                            </p>\n' +
         '                        </div>\n' +
@@ -40,8 +40,12 @@ $(document).ready(function () {
     var compareData = JSON.parse(Cookies.get('compareHospitalsData'));
 
 
-    // Check if we need to show the Compare hospitals div
+    // Check if we need to show the Compare hospitals div (on page load)
     if (compareCount > 0) {
+        // Show the comparison row headings and hide the existing column
+        $('#compare_hospitals_headings').removeClass('d-none');
+        $('#no_items_added').addClass('d-none');
+        // Hide the "you haven't added any items..."
         compareHospitalIds = compareData;
         // Update the value of the enquiry form
         console.log('Add to compare ids: ' + compareHospitalIds);
@@ -79,7 +83,7 @@ $(document).ready(function () {
      *
      * @param element
      */
-    function addHospitalToCompare(element, compareCount) {
+    function addHospitalToCompare(element) {
         compareHospitalIds = JSON.parse(Cookies.get('compareHospitalsData'));
         // console.log(element);
 
@@ -122,7 +126,7 @@ $(document).ready(function () {
         }
 
         var newColumn =
-            '<div class="col-2 text-center" id="compare_hospital_id_' + element.id + '">' +
+            '<div class="col text-center" id="compare_hospital_id_' + element.id + '">' +
                 '<div class="col-inner">' +
                     '<div class=" mx-auto col-header d-flex flex-column justify-content-between">' +
                         '<div class="image-wrapper h-100">' +
@@ -185,6 +189,10 @@ $(document).ready(function () {
 
         // Slide content down when all data removed
         if (compareCount === 0) {
+            // Switch the first column round
+            $('#compare_hospitals_headings').addClass('d-none');
+            $('#no_items_added').removeClass('d-none');
+            // Hide the comparison area
             compareContent.slideUp();
             $('body').removeClass('shortlist-open');
             compareContent.removeClass('revealed');
@@ -208,37 +216,14 @@ $(document).ready(function () {
 
     //Set the OnClick event for the Compare button
     $(document).on("click", ".result-item-section-3 .compare", function () {
-        // Get hsopital type of item whose button has been clicked to remove it
+        // Get hospital type of item whose button has been clicked to remove it
         var hospitalTypeClicked = $(this).data('hospital-type');
         //Get the Data that is already in the Cookies
         var compareCount = parseInt(Cookies.get("compareCount"));
-        // console.log('Compare count: ' + compareCount);
         var data = JSON.parse(Cookies.get("compareHospitalsData"));
         // console.log('Data: ' + data);
         //Load the Cookies with the data that we need for the comparison
         var elementId = $(this).attr('id');
-
-        // Do the AJAX request
-        // console.log(getHospitalsByIds(elementId));
-
-        // var enquireBtn = $('#enquire_' + elementId).outerHTML;
-        var name = $('#item_name_' + elementId).text();
-        var url = $('#item_hospital_url_' + elementId).text();
-        var type = $('#item_hospital_type_class_' + elementId).text();
-        var waitingTime = $('#item_waiting_time_' + elementId).text();
-        var userRating = $('#item_user_rating_' + elementId).text();
-        var opCancelled = $('#item_op_cancelled_' + elementId).text();
-        var qualityRating = $('#item_quality_rating_' + elementId).text();
-        var ffRating = $('#item_ff_rating_' + elementId).text();
-        var nhsFunded = $('#item_nhs_funded_' + elementId).text();
-        var nhsPrivatePay = $('#item_nhs_private_pay_' + elementId).text();
-
-        // Return the matching elements from the array
-        // var result = $.grep(data, function (e) {
-        //     return e.id == elementId;
-        // });
-        // Remove trailing comma
-        // data = data.slice(0, -1);
 
         // Split data string into Array
         var dataArr = data.split(',');
@@ -252,17 +237,19 @@ $(document).ready(function () {
             break;
         }
 
-        // Trigger Dr S when someone adds the first hospital
-        // if(compareCount === 0){
-        //     var $delay = 5000;
-        //     var $message = 'Great! You have added your first hospital to your shortlist. You can add up to five hospitals to your shortlist. Why not give it a try?';
-        //     popupDoctor($message, $delay);
-        // }
-
         //Check if there are already 5 hospitals for comparison in Cookies
         if (compareCount < 5) {
             //Check if we don't have the hospital in our comparison and add it - if not true then add to compare - also add the id to the enquiry form
             if (!result) {
+                // Show the headings column when first item added, and it's not already in the
+                if (compareCount == 0) {
+                    console.log('first one in the bag');
+                    // Toggle the first column of comparison
+                    // Switch the first column round
+                    $('#compare_hospitals_headings').removeClass('d-none');
+                    $('#no_items_added').addClass('d-none');
+
+                }
                 var element = {
                     'id': elementId,
                     // 'enquireBtn': enquireBtn,
@@ -285,7 +272,7 @@ $(document).ready(function () {
                 compareCount = parseInt(compareCount) + 1;
                 // Disable buttons if we have reached the max number of items
                 if (compareCount === 5) {
-                    // console.log('Max reached');
+                    console.log('Max reached');
                     disableButtons(1);
                 }
                 // Remove placeholder column
@@ -295,10 +282,12 @@ $(document).ready(function () {
                 // Add to the comparison area
                 addHospitalToCompare(getHospitalsByIds(elementId)[0], compareCount);
             }
+            // Adding the first item to compare, i
+
+
         }
 
         // Check if we have to remove the data of the element that has been clicked - if true, it is already in the data
-
         if (result) {
             // console.log('Already added, now removing');
             //Remove the hospital from the comparison table
@@ -310,13 +299,6 @@ $(document).ready(function () {
             compareCount = parseInt(compareCount) - 1;
         }
 
-        // Slide content down when all data removed
-        if (compareCount === 0) {
-            compareContent.slideUp();
-            $('body').removeClass('shortlist-open');
-            compareContent.removeClass('revealed');
-            $('.compare-arrow').toggleClass('rotated');
-        }
 
         // Pulsate the heart every time there is an action
         heartIcon.removeClass('has-count');
@@ -349,6 +331,7 @@ $(document).ready(function () {
         var compareCount = parseInt(Cookies.get("compareCount"));
         if(compareCount === 1){
             heartIcon.removeClass('active');
+
         }
         elementId = elementId.replace('remove_id_', '');
 
