@@ -7,6 +7,7 @@
     background-color: $turq;
     //background: $footerGrey;
     z-index: 1040;
+    max-height: calc(100vh - 140px);
 
     .compare-hospitals-header {
         position: relative;

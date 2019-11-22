@@ -10,12 +10,11 @@ $(document).ready(function () {
     var privateCountHolder = $('#private-hospital-count');
 
 
-    var multiEnquiryHospitalIds = $('input[name=hospital_id]');
-    console.log('Hello ' + multiEnquiryHospitalIds);
+    var multiEnquiryIdInput = $('input[name=hospital_id]');
     var nhsHospitalCount = 0;
     var privateHospitalCount = 0;
     var compareHospitalIds = '';
-    var privateHospitalIds = '';
+    // var privateHospitalIds = '';
 
     if (typeof Cookies.get("compareCount") === 'undefined') {
         Cookies.set("compareCount", 0, {expires: 10000});
@@ -26,39 +25,22 @@ $(document).ready(function () {
     var compareCount = Cookies.get('compareCount');
     var compareData = JSON.parse(Cookies.get('compareHospitalsData'));
 
+
     // Check if we need to show the Compare hospitals div
     if (compareCount > 0) {
-        // compareContent.slideDown();
-        // $('body').addClass('shortlist-open');
-        //Hide the contents and increase the span with number
-        // compareContent.addClass('revealed');
-        //Populate the table with the given data
-        // for (i = 1; i <= compareCount; i++) {
-        //     var element = compareData[i];
-        //     //Add the IDs on the hidden span
-        //     compareHospitalIds += element.id + ',';
-        //
-        //Remove the last , after all the ids have been added
-        // get the hospital ids from the cookie
-        // }
         compareHospitalIds = compareData;
+        // Update the value of the enquiry form
+        console.log('Add to compare ids: ' + compareHospitalIds);
+        multiEnquiryIdInput.val(removeTrailingCharacter(compareHospitalIds));
 
-
-        //Set the new value
-        //compareHospitalIdsSpan.val(compareHospitalIds);
-        //Ajax request to retrieve all the Hospitals to compare
+        // Ajax request to retrieve all the Hospitals to compare
         var returned = getHospitalsByIds(compareHospitalIds);
         if(compareHospitalIds.length > 0) {
-            // console.log(returned);
-            // for (var item in returned) {
-            //     console.log(item)
-            // }
             $.each(returned, function (key, element) { //$.parseJSON() method is needed unless chrome is throwing error.
                 // console.log(element);
                 addHospitalToCompare(element);
             });
         }
-        // console.log(elements, element);
 
         countSpan.text(compareCount);
         heartIcon.addClass('has-count');
@@ -77,6 +59,7 @@ $(document).ready(function () {
      * @param element
      */
     function addHospitalToCompare(element) {
+        compareHospitalIds = JSON.parse(Cookies.get('compareHospitalsData'));
         // console.log(element);
         var target = $('#compare_hospitals_grid');
         // Content for modal trigger button
@@ -96,7 +79,7 @@ $(document).ready(function () {
             'data-hospital-title="' + element.name + '" ' +
             'data-target="#hc_modal_enquire_nhs">Make an enquiry' +
              $svg +
-            '</a>' :
+            '</a>' : // If private
             '<a id="' + element.id + '" ' +
             'class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" ' +
             'role="button" data-toggle="modal" ' +
@@ -112,16 +95,12 @@ $(document).ready(function () {
         if(hospitalType == 'Private Hospital') {
             privateHospitalCount += 1;
             privateCountHolder.text(privateHospitalCount);
-            // Add the id to the list for mulitiple enquiries
-            privateHospitalIds += element.id + ',';
-            console.log(privateHospitalIds);
-            // Update the value of the enquiry form
-            $('input[name=hospital_id]').val(privateHospitalIds.replace(/,\s*$/, ""));
-
         } else {
             nhsHospitalCount += 1;
             nhsCountHolder.text(nhsHospitalCount);
         }
+
+
         var newRowContent =
             '<div class="col-2 text-center" id="compare_hospital_id_' + element.id + '">' +
                 '<div class="col-inner">' +
@@ -162,14 +141,15 @@ $(document).ready(function () {
         $('#compare_hospital_id_' + elementId).remove();
         $('button#' + elementId + '.compare').removeClass('selected');
 
-        // property found, access the foo property using result[0].foo
         // Filter out the clicked item from the data
         var dataArr = data.split(',');
         var elementIndex = dataArr.indexOf(elementId);
         dataArr.splice(elementIndex, 1);
         data = dataArr.join(',');
 
-        // console.log('Data after removing this item: ' + data);
+        // Update the ids in the multi enquiry form
+        multiEnquiryIdInput.val(removeTrailingCharacter(data));
+
         compareCount = parseInt(compareCount) - 1;
 
         if(hospitalType == 'private-hospital') {
@@ -249,8 +229,6 @@ $(document).ready(function () {
             break;
         }
 
-        // console.log('Result: ' + result);
-
         // Trigger Dr S when someone adds the first hospital
         // if(compareCount === 0){
         //     var $delay = 5000;
@@ -260,7 +238,7 @@ $(document).ready(function () {
 
         //Check if there are already 5 hospitals for comparison in Cookies
         if (compareCount < 5) {
-            //Check if we don't have the hospital in our comparison and add it - if not true then add to compare
+            //Check if we don't have the hospital in our comparison and add it - if not true then add to compare - also add the id to the enquiry form
             if (!result) {
                 var element = {
                     'id': elementId,
@@ -278,6 +256,8 @@ $(document).ready(function () {
                 };
                 //Add data to Cookies and send the element to populate the table
                 data += elementId + ',';
+                // Update the enquiry form
+                multiEnquiryIdInput.val(removeTrailingCharacter(data));
                 addHospitalToCompare(getHospitalsByIds(elementId)[0]);
                 compareCount = parseInt(compareCount) + 1;
                 // Disable buttons if we have reached the max number of items

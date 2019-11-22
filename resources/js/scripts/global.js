@@ -39,6 +39,11 @@ $(document).ready(function () {
     })
 });
 
+// Remove trailing comma from comparison ids
+window.removeTrailingCharacter = function(string, char){
+    return string.replace(/,\s*$/, "")
+};
+
 // Scroll up to show alert bar
 window.scrollToAlert = function () {
     $('html, body').animate({

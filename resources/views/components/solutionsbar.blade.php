@@ -52,42 +52,7 @@
                               d="M18.8 8c-1.3 0-2.6.7-3.3 1.8-.2.2-.3.5-.4.7-.1-.2-.3-.5-.4-.7-.7-1.1-2-1.8-3.3-1.8-2.6.1-4.4 2-4.4 4.4v.1c0 2.8 2.3 4.7 5.7 7.7.6.6 1.3 1.1 1.9 1.7.1.1.3.1.4.1.1 0 .2 0 .3-.1l2.1-1.8c3.2-2.7 5.6-4.7 5.6-7.6.1-2.4-1.7-4.4-4.1-4.6l-.1.1z"/>
                     </g>
                 </svg>
-                {{--                <svg id="compare_heart" xmlns="http://www.w3.org/2000/svg" width="30" height="30">--}}
-                {{--                    <g data-name="Group 263">--}}
-                {{--                        <g data-name="Group 133">--}}
-                {{--                            <g data-name="Rounded Rectangle 1 copy 8"--}}
-                {{--                               fill="rgba(27,112,243,0)"--}}
-                {{--                               stroke="#fff"--}}
-                {{--                               stroke-linejoin="round"--}}
-                {{--                               stroke-width="2">--}}
-                {{--                                <rect width="30" height="30" rx="15" stroke="none"/>--}}
-                {{--                                <rect id="outer-circle" x="1" y="1" width="28" height="28" rx="14" fill="none"/>--}}
-                {{--                            </g>--}}
-                {{--                        </g>--}}
-                {{--                        <g data-name="Group 132" class="solutions-compare-heart">--}}
-                {{--                            <path id="wishlist" data-name="Path 80"--}}
-                {{--                                  d="M19.049 8.388a4.056 4.056 0 0 0-3.335 1.827 6.3 6.3 0 0 0-.448.713 6.039 6.039 0 0 0-.433-.71 3.972 3.972 0 0 0-3.319-1.83 4.321 4.321 0 0 0-4.2 4.56c0 2.814 2.266 4.74 5.7 7.667a263.55 263.55 0 0 1 1.933 1.662.463.463 0 0 0 .305.111.469.469 0 0 0 .308-.115c.722-.632 1.4-1.2 2.051-1.762 3.2-2.708 5.64-4.719 5.64-7.567a4.321 4.321 0 0 0-4.202-4.556zm-2.042 11.421c-.563.479-1.142.971-1.756 1.5-.57-.495-1.111-.956-1.634-1.4-3.29-2.805-5.375-4.579-5.375-6.961a3.4 3.4 0 0 1 3.272-3.632 3.049 3.049 0 0 1 2.539 1.422 5.465 5.465 0 0 1 .75 1.51.466.466 0 0 0 .9.006c.011-.028.887-2.938 3.346-2.938a3.4 3.4 0 0 1 3.275 3.632c0 2.354-2.12 4.146-5.317 6.861z"--}}
-                {{--                                  fill="#fff"/>--}}
-                {{--                        </g>--}}
-                {{--                    </g>--}}
-                {{--                </svg>--}}
-                <p class="font-26">Compare&nbsp;(<span id="compare_number">0</span>)<span class="compare-arrow ml-3">
-{{--                <p>Comparison&nbsp;(<span id="compare_number">0</span>)<span class="compare-arrow ml-3">--}}
-{{--                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"--}}
-{{--                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"--}}
-{{--                             y="0px"--}}
-{{--                             width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929"--}}
-{{--                             style="enable-background:new 0 0 284.929 284.929;"--}}
-{{--                             xml:space="preserve">--}}
-{{--                            <g>--}}
-{{--                                <path fill="#fff" d="M282.082,195.285L149.028,62.24c-1.901-1.903-4.088-2.856-6.562-2.856s-4.665,0.953-6.567,2.856L2.856,195.285--}}
-{{--                                    C0.95,197.191,0,199.378,0,201.853c0,2.474,0.953,4.664,2.856,6.566l14.272,14.271c1.903,1.903,4.093,2.854,6.567,2.854--}}
-{{--                                    c2.474,0,4.664-0.951,6.567-2.854l112.204-112.202l112.208,112.209c1.902,1.903,4.093,2.848,6.563,2.848--}}
-{{--                                    c2.478,0,4.668-0.951,6.57-2.848l14.274-14.277c1.902-1.902,2.847-4.093,2.847-6.566--}}
-{{--                                    C284.929,199.378,283.984,197.188,282.082,195.285z"/>--}}
-{{--                            </g>--}}
-{{--                        </svg>--}}
-                    </span>
+                <p class="font-26">Compare&nbsp;(<span id="compare_number">0</span>)<span class="compare-arrow ml-3"></span>
                 </p>
             </div>
         </div>
@@ -105,15 +70,15 @@
                             <form id="multiple_enquiries_form">
 {{--                                <input class="d-none" type="number" name="procedure_id" value="{{ !empty(Request::input('procedure_id')) ? Request::input('procedure_id') : '' }}">--}}
                                 <input id="multiple_enquiries_hospital_ids" class="d--none" type="text" name="hospital_id" value="">
-                                <input class="d--none" type="text" name="title" value="Mr">
-                                <input class="d--none" type="text" name="first_name" value="Hello">
-                                <input class="d--none" type="text" name="last_name" value="Hello">
-                                <input class="d--none" type="email" name="email" value="hello@mello.yello">
-                                <input class="d--none" type="email" name="confirm_email" value="hello@mello.yello">
-                                <input class="d--none" type="text" name="phone_number" value="01234567891">
-                                <input class="d--none" type="text" name="postcode" value="ch23ae">
-                                <input class="d--none" type="checkbox" value="on">
-                                <input class="d--none" type="text" name="additional_information" value="Some info">
+                                <input class="d-none" type="text" name="title" value="Mr">
+                                <input class="d-none" type="text" name="first_name" value="Hello">
+                                <input class="d-none" type="text" name="last_name" value="Hello">
+                                <input class="d-none" type="email" name="email" value="hello@mello.yello">
+                                <input class="d-none" type="email" name="confirm_email" value="hello@mello.yello">
+                                <input class="d-none" type="text" name="phone_number" value="01234567891">
+                                <input class="d-none" type="text" name="postcode" value="ch23ae">
+                                <input class="d-none" type="checkbox" value="on">
+                                <input class="d-none" type="text" name="additional_information" value="Some info">
                                 @include('components.basic.button', [
                                     'htmlButton'        => true,
                                     'buttonText'        => 'Make an enquiry to all your chosen hospitals',
