@@ -60,7 +60,7 @@
     <div class="compare-hospitals-content">
         <div class="container">
             <span class="d-none" id="compare_hospital_ids"></span>
-            <div id="compare_hospitals_grid" class="row">
+            <div  class="row">
                 <div class="col-2">
                     <div class="col-inner h-100">
                         <div class="col-header">
@@ -112,6 +112,22 @@
                         <div class="cell">Disability Domain</div>
                     </div>
                 </div>
+                <div class="col-10">
+                    <div class="row" id="compare_hospitals_grid">
+                        <!-- Items added here -->
+                    </div>
+                </div>
+{{--                <div class="col-2">--}}
+{{--                    <div class="col-inner">--}}
+{{--                        <div class="col-header">--}}
+{{--                            <p>Further selected Hospital--}}
+{{--                                will appear here.</p>--}}
+{{--                            <p> Add more hospitals to your--}}
+{{--                                Shortlist by clicking the&nbsp;{!! file_get_contents(asset('/images/icons/heart.svg')) !!}--}}
+{{--                            </p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>

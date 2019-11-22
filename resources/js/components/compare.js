@@ -15,6 +15,20 @@ $(document).ready(function () {
     var privateHospitalCount = 0;
     var compareHospitalIds = '';
     // var privateHospitalIds = '';
+    // The target for the content to be added
+    var target = $('#compare_hospitals_grid');
+    // The content for any empty column in the comparison
+    var emptyCol = '<div class="col-2">\n' +
+        '                    <div class="col-inner">\n' +
+        '                        <div class="col-header">\n' +
+        '                            <p>Further selected Hospital\n' +
+        '                                will appear here.</p>\n' +
+        '                            <p> Add more hospitals to your\n' +
+        '                                Shortlist by clicking the&nbsp;SVG here\n' +
+        '                            </p>\n' +
+        '                        </div>\n' +
+        '                    </div>\n' +
+        '                </div>';
 
     if (typeof Cookies.get("compareCount") === 'undefined') {
         Cookies.set("compareCount", 0, {expires: 10000});
@@ -42,12 +56,19 @@ $(document).ready(function () {
             });
         }
 
+        // Appending the extra empty columns
+        // console.log(newColumn);
+        var remainingColCount = 5 - compareCount;
+        target.append(repeatStringNumTimes(emptyCol, remainingColCount));
+        // console.log(newColumn);
+
         countSpan.text(compareCount);
         heartIcon.addClass('has-count');
         //Add the `active` class that will change the color to pink
         heartIcon.addClass('active');
     } else {
         heartIcon.removeClass('active');
+        target.append(repeatStringNumTimes(emptyCol, 5))
     }
 
     // Check if we need to disable buttons on pageload
@@ -58,10 +79,10 @@ $(document).ready(function () {
      *
      * @param element
      */
-    function addHospitalToCompare(element) {
+    function addHospitalToCompare(element, compareCount) {
         compareHospitalIds = JSON.parse(Cookies.get('compareHospitalsData'));
         // console.log(element);
-        var target = $('#compare_hospitals_grid');
+
         // Content for modal trigger button
         var $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g><g><g><path fill="#fff" d="M10.002 18.849c-4.878 0-8.846-3.968-8.846-8.847 0-4.878 3.968-8.846 8.846-8.846 4.879 0 8.847 3.968 8.847 8.846 0 4.879-3.968 8.847-8.847 8.847zm0-18.849C4.488 0 0 4.488 0 10.002c0 5.515 4.488 10.003 10.002 10.003 5.515 0 10.003-4.488 10.003-10.003C20.005 4.488 15.517 0 10.002 0z"></path></g><g><path fill="#fff" d="M14.47 5.848l-5.665 6.375-3.34-2.67a.578.578 0 0 0-.811.088c-.2.25-.158.615.091.815l3.769 3.015a.57.57 0 0 0 .361.125c.167 0 .325-.07.433-.196l6.03-6.783a.579.579 0 0 0 .146-.42.588.588 0 0 0-.191-.4.592.592 0 0 0-.824.05z"></path></g></g></g></svg>';
         var nhsRating = 1;
@@ -100,8 +121,7 @@ $(document).ready(function () {
             nhsCountHolder.text(nhsHospitalCount);
         }
 
-
-        var newRowContent =
+        var newColumn =
             '<div class="col-2 text-center" id="compare_hospital_id_' + element.id + '">' +
                 '<div class="col-inner">' +
                     '<div class=" mx-auto col-header d-flex flex-column justify-content-between">' +
@@ -124,7 +144,9 @@ $(document).ready(function () {
                     '<div class="cell">' + getHtmlDashTickValue(element.nhsRating) + '</div>' +
                 '</div>' +
             '</div>';
-        target.append(newRowContent);
+        // Add new item
+        target.prepend(newColumn);
+
         //Toggle the full heart or empty heart  class of the button
         $('button#' + element.id + '.compare').addClass('selected');
     }
@@ -139,6 +161,7 @@ $(document).ready(function () {
 
     function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) {
         $('#compare_hospital_id_' + elementId).remove();
+        target.append(emptyCol);
         $('button#' + elementId + '.compare').removeClass('selected');
 
         // Filter out the clicked item from the data
@@ -258,15 +281,19 @@ $(document).ready(function () {
                 data += elementId + ',';
                 // Update the enquiry form
                 multiEnquiryIdInput.val(removeTrailingCharacter(data));
-                addHospitalToCompare(getHospitalsByIds(elementId)[0]);
+                // Update compare count
                 compareCount = parseInt(compareCount) + 1;
                 // Disable buttons if we have reached the max number of items
                 if (compareCount === 5) {
                     // console.log('Max reached');
                     disableButtons(1);
                 }
+                // Remove placeholder column
+                target.children().last().remove();
                 // var countSpan = $('#compare_number');
                 countSpan.text(compareCount);
+                // Add to the comparison area
+                addHospitalToCompare(getHospitalsByIds(elementId)[0], compareCount);
             }
         }
 

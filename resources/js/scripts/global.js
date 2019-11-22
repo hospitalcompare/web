@@ -39,6 +39,16 @@ $(document).ready(function () {
     })
 });
 
+// Repeat string x times
+window.repeatStringNumTimes = function(string, times) {
+    var repeatedString = "";
+    while (times > 0) {
+        repeatedString += string;
+        times--;
+    }
+    return repeatedString;
+};
+
 // Remove trailing comma from comparison ids
 window.removeTrailingCharacter = function(string, char){
     return string.replace(/,\s*$/, "")
