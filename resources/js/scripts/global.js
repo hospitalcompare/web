@@ -50,7 +50,7 @@ window.repeatStringNumTimes = function(string, times) {
 };
 
 // Remove trailing comma from comparison ids
-window.removeTrailingCharacter = function(string, char){
+window.removeTrailingCharacter = function(string){
     return string.replace(/,\s*$/, "")
 };
 
@@ -224,8 +224,8 @@ window.slugify = function(string) {
  *
  */
 window.disableButtons = function (modifier = 0) {
-    compareCount = Cookies.get('compareCount');
-    compareCount = parseInt(compareCount);
+    var compareCount = parseInt(Cookies.get('compareCount'));
+    console.log('Compare count: ' + compareCount);
 
     var $notSelected = $('.compare').not($('.selected'));
 

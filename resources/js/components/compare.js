@@ -24,7 +24,7 @@ $(document).ready(function () {
         '                            <p class="text-center">Selected Hospital<br>\n' +
         '                                will appear here.</p>\n' +
         '                            <p class="text-center"> Add more hospitals to your\n' +
-        '                                Shortlist by clicking the&nbsp;SVG here\n' +
+        '                                Shortlist by clicking the&nbsp;<img width="14" height="12" src="/images/icons/heart.svg" alt="Heart icon">\n' +
         '                            </p>\n' +
         '                        </div>\n' +
         '                    </div>\n' +
@@ -270,17 +270,18 @@ $(document).ready(function () {
                 multiEnquiryIdInput.val(removeTrailingCharacter(data));
                 // Update compare count
                 compareCount = parseInt(compareCount) + 1;
-                // Disable buttons if we have reached the max number of items
-                if (compareCount === 5) {
-                    console.log('Max reached');
-                    disableButtons(1);
-                }
+
                 // Remove placeholder column
                 target.children().last().remove();
                 // var countSpan = $('#compare_number');
                 countSpan.text(compareCount);
                 // Add to the comparison area
-                addHospitalToCompare(getHospitalsByIds(elementId)[0], compareCount);
+                addHospitalToCompare(getHospitalsByIds(elementId)[0]);
+                // Disable buttons if we have reached the max number of items
+                if (compareCount === 5) {
+                    console.log('Max reached');
+                    disableButtons(1);
+                }
             }
             // Adding the first item to compare, i
 

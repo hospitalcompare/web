@@ -64,11 +64,8 @@
                     <div class="col-inner">
                         <div class="col-header_small">
                             <p class="font-16 SofiaPro-SemiBold mb-5">You haven’t added any
-                                products to compare yet. </p>
-                            <p>Click the        next to the
-                                hospital to add the
-                                choseninto the
-                                comparison dashboard.</p>
+                                hospitals to compare yet. </p>
+                            <p>Click the the&nbsp;<img width="14" height="12" src="/images/icons/heart.svg" alt="Heart icon">&nbsp;next to the hospital to add the chosen hospital into the comparison dashboard.</p>
                         </div>
                     </div>
                 </div>
@@ -80,7 +77,7 @@
                             <p><span id="private-hospital-count">0</span>&nbsp;Private hospital(s)
                             <form id="multiple_enquiries_form">
 {{--                                <input class="d-none" type="number" name="procedure_id" value="{{ !empty(Request::input('procedure_id')) ? Request::input('procedure_id') : '' }}">--}}
-                                <input id="multiple_enquiries_hospital_ids" class="d--none" type="text" name="hospital_id" value="">
+                                <input id="multiple_enquiries_hospital_ids" class="d-none" type="text" name="hospital_id" value="">
                                 <input class="d-none" type="text" name="title" value="Mr">
                                 <input class="d-none" type="text" name="first_name" value="Hello">
                                 <input class="d-none" type="text" name="last_name" value="Hello">
