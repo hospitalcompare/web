@@ -65,7 +65,8 @@ $cqcRed: #BF1000;
 
 // Borders
 $borderVideo: $darkestGrey;
-$borderGrey: #d7d7d7;
+//$borderGrey: #d7d7d7;
+$borderGrey: #ededed;
 
 // Body
 $body-bg: #fff;
@@ -175,6 +176,7 @@ $nav-tabs-link-hover-border-color: $turq;
 
 // Borders
 $border-radius: 9px;
+$greyBorder: 1px solid $borderGrey;
 
 // Misc
 $hospital-image-width: 150px;

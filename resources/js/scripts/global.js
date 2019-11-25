@@ -39,6 +39,21 @@ $(document).ready(function () {
     })
 });
 
+// Repeat string x times
+window.repeatStringNumTimes = function(string, times) {
+    var repeatedString = "";
+    while (times > 0) {
+        repeatedString += string;
+        times--;
+    }
+    return repeatedString;
+};
+
+// Remove trailing comma from comparison ids
+window.removeTrailingCharacter = function(string){
+    return string.replace(/,\s*$/, "")
+};
+
 // Scroll up to show alert bar
 window.scrollToAlert = function () {
     $('html, body').animate({
@@ -69,7 +84,7 @@ window.showAlert = function (message, success = true, scroll = false) {
  */
 window.getHtmlStars = function (rating) {
     if (rating == null)
-        return "";
+        return "No data";
 
     if (rating == 0) {
         return "<img src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
@@ -119,7 +134,7 @@ window.getHtmlStars = function (rating) {
  */
 window.getHtmlDashTickValue = function (value, text = "") {
     if (value == null)
-        return "";
+        return "No data";
 
     var html = "";
 
@@ -185,3 +200,107 @@ window.popupDoctor = function (message, delay) {
     $doctor.focus();
 
 };
+
+// Slugify a string
+
+window.slugify = function(string) {
+    const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
+    const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
+    const p = new RegExp(a.split('').join('|'), 'g')
+
+    return string.toString().toLowerCase()
+        .replace(/\s+/g, '-') // Replace spaces with -
+        .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
+        .replace(/&/g, '-and-') // Replace & with 'and'
+        .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+        .replace(/\-\-+/g, '-') // Replace multiple - with single -
+        .replace(/^-+/, '') // Trim - from start of text
+        .replace(/-+$/, '') // Trim - from end of text
+};
+
+// Compare functions
+/**
+ * Disable compare buttons if we have reached the max no of items
+ *
+ */
+window.disableButtons = function (modifier = 0) {
+    var compareCount = parseInt(Cookies.get('compareCount'));
+    console.log('Compare count: ' + compareCount);
+
+    var $notSelected = $('.compare').not($('.selected'));
+
+    if (compareCount + modifier === 5) {
+        // console.log(compareCount, 'Disabling buttons');
+        $notSelected
+            .addClass('disabled')
+            .parent()
+        // .prop('title', 'Sorry, you have reached the limit of hospitals to compare.')
+        // .attr('data-toggle', 'tooltip');
+        // enable tooltips
+        // $('[data-toggle="tooltip"]').tooltip();
+    }
+};
+
+// Reenable buttons to allow to add to compare
+window.enableButtons = function () {
+    compareCount = Cookies.get('compareCount');
+    compareCount = parseInt(compareCount);
+
+    if (compareCount === 5) {
+        $('.compare')
+            .removeClass('disabled')
+            .parent()
+            .prop('title', '');
+        // .attr('data-toggle', '');
+    }
+};
+
+window.getHospitalsByIds = function(hospitalIds) {
+    var procedureId = 0;
+    var items = [];
+
+    $.ajax({
+        url: 'api/getHospitalsByIds/' + hospitalIds +'/' + procedureId,
+        type: 'GET',
+        headers: {
+            'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
+        },
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        async: false,
+        // data: [],
+        success: function (data) {
+            // console.log(data.data.hospitals);
+            //Check if we have at least one result in our data
+            if (!$.isEmptyObject(data.data)) {
+                items = data.data;
+            }
+            // else {
+            //     showAlert('Invalid Postcode! Please try again.', false);
+            //     $postcode_input.val("");
+            //     $resultsContainer.slideUp();
+            // }
+        },
+        error: function (data) {
+            showAlert('Something went wrong! Please try again.', false)
+        },
+    });
+
+    return items;
+};
+
+// Truncate sentence
+window.textTruncate = function(str, length, ending) {
+    if (length == null) {
+        length = 100;
+    }
+    if (ending == null) {
+        ending = '...';
+    }
+    if (str.length > length) {
+        return str.substring(0, length - ending.length) + ending;
+    } else {
+        return str;
+    }
+};
+

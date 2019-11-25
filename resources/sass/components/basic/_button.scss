@@ -95,6 +95,7 @@
 
     &.btn-blue {
         @include linear-gradient(90deg, $blue, $blue, $turq);
+        background-size: 200%;
 
         &.btn-grad {
             @include linear-gradient(90deg, $blue, $blue, $turq, $blue);
@@ -138,6 +139,18 @@
         //@include linear-gradient(90deg, $pink, $pink, $violet);
         &.btn-grad {
             @include linear-gradient(90deg, $footerGrey, $footerGrey, $pink, $footerGrey);
+        }
+    }
+
+    &.btn-squared {
+        border-radius: 10px !important;
+        padding: 15px 15px 15px 45px;
+        //max-width: 160px;
+
+        svg {
+            position: absolute;
+            top: 15px;
+            left: 15px;
         }
     }
 

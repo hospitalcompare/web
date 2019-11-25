@@ -30,6 +30,17 @@ $(document).ready(function () {
                         </div>`,
         });
 
+    // Popovers within the comparison area
+    $('[data-toggle="popover-comparison"]')
+        .popover({
+            template: `<div class="popover popover-comparison popover-regular popover-max-width">
+                            <div class="popover-body">
+                            </div>
+                            <div class="arrow">
+                            </div>
+                        </div>`
+        });
+
     // Larger, speech bubble popover
     $('[data-toggle="popover-large"]')
         .popover({
@@ -40,6 +51,8 @@ $(document).ready(function () {
                             </div>
                         </div>`
         });
+
+
 
     // Popover with close button or x button
     $(document).on("click", ".popover .btn-close", hidePopover);

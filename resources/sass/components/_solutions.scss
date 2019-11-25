@@ -7,6 +7,7 @@
     background-color: $turq;
     //background: $footerGrey;
     z-index: 1040;
+    max-height: calc(100vh - 140px);
 
     .compare-hospitals-header {
         position: relative;
@@ -130,28 +131,53 @@
     }
 
     .compare-hospitals-content {
+        padding-bottom: 30px;
         background-color: #fff;
         display: none;
-        max-height: calc(100vh - 50px);
+        height: calc(100vh - 190px);
         overflow-y: scroll;
 
+        .row {
+            @include reset-row-spacing(0);
+        }
+
+        .col-header {
+            height: 230px;
+            border-bottom: $greyBorder;
+            border-right: $greyBorder;
+        }
+
         #compare_hospitals_grid {
-            padding-bottom: 30px;
+            .col-empty {
+                @extend .border-right-0;
+            }
+
+            .col {
+                &:last-child {
+                    @extend .border-right-0;
+
+                    .col-header {
+                        @extend .border-right-0;
+                    }
+                }
+            }
 
             .image-wrapper {
                 position: relative;
-                width: 134px;
-                height: 123px;
                 text-align: center;
+                //overflow: hidden;
+                width: 100%;
+                max-width: 120px;
+                @include aspect-ratio(120, 120, 150%);
 
                 .remove-hospital {
                     cursor: pointer;
                     position: absolute;
                     right: 0;
                     top: 0;
-                    width: 25px;
-                    height: 25px;
-                    line-height: 25px;
+                    width: 20px;
+                    height: 20px;
+                    line-height: 20px;
                     background-color: $body-color;
                     background-image: url('../images/icons/plus-solid.svg');
                     @include icon-bg-center(50%);
@@ -163,11 +189,16 @@
             }
 
             .details {
-                height: 130px;
+                height: 36px;
+                overflow: hidden;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: flex-end;
+                justify-content: flex-start;
+            }
+
+            .col-empty:last-child {
+                border-right: none;
             }
         }
 
@@ -182,16 +213,32 @@
             padding: 0 20px;
         }
 
+        .col {
+            margin-top: 20px;
+        }
+
         .col-inner {
-            padding-top: 30px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
+            //justify-content: flex-end;
 
             .cell {
                 height: 40px;
                 line-height: 40px;
-                overflow: hidden;
+                overflow: visible;
+                border-bottom: $greyBorder;
+                border-right: $greyBorder;
+
+                &.column-break {
+                    @extend .border-right-0;
+                    height: 50px;
+                    line-height: 50px;
+                }
+
+                .help-link {
+                    @include v-c;
+                    right: -15px;
+                }
             }
         }
     }
@@ -281,8 +328,8 @@
             }
         }
 
-        svg,
-        span {
+        > svg,
+        > span {
             position: absolute;
             @include v-c;
             right: 20px;

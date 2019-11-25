@@ -398,3 +398,12 @@ path {
     background-color: transparent;
     border: none;
 }
+
+// Grey borders
+.grey-border-bottom {
+    border-bottom: 1px solid $borderGrey;
+}
+
+.grey-border-top {
+    border-top: 1px solid $borderGrey;
+}

@@ -245,6 +245,7 @@
                     'classTitle'        => 'btn btn-compare compare btn-block font-14',
                     'htmlButton'        => true,
                     'buttonText'        => 'Add to compare',
+                    'hospitalType'      => $NHSClass,
                     'svg'               => 'heart-solid',
                     'id'                => $id])
             </div>

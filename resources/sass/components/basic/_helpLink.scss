@@ -13,7 +13,7 @@
     cursor: pointer;
     @include flex-center;
 
-    &.help-link__inline {
+    &__inline {
         position: initial;
         display: inline-flex;
     }
