@@ -1,4 +1,4 @@
-<section class="banner-parent">
+<section class="banner-parent py-0">
     <div class="banner">
         <div class="container {{ !empty($layout) && $layout == 'row' ? 'container-1028' : '' }}">
             <div class="row">
@@ -31,7 +31,10 @@
                                     'groupName'             => 'procedures',
                                     'suboptionClass'        => 'subprocedures',
                                     'svg'                   => 'chevron-down-aqua',
-                                    'name'                  => 'procedure_id'
+                                    'name'                  => 'procedure_id',
+                                    'selectId'              => 'choose_procedure',
+                                    'showLabel'             => true,
+                                    'labelClass'            => 'd-none'
                                 ])
                                 <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
                                    class="help-link"
@@ -47,6 +50,7 @@
                             </div>
                             <div class="form-child postcode-parent {{ !empty($layout) ? 'mr-2' : ''}}">
 {{--                                Add this hidden input to remove the autocomplete functionality--}}
+                                <label for="fake_postcode" class="d-none"></label>
                                 <input name="fake_postcode" id="fake_postcode" type="text" style="display:none">
 
                                 <div class="input-wrapper position-relative">

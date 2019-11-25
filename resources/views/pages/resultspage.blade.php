@@ -156,7 +156,7 @@
             @foreach($data['hospitals'] as $d)
                 @include('components.item', [
                     'id'                    => $d['id'],
-                    'itemImg'               => 'images/alder-1.png',
+                    'itemImg'               => 'images/alder-1.jpg',
                     'title'                 => !empty($d['display_name'])? $d['display_name'] : $d['name'],
                     'location'              => (!empty($d['radius'])) ? number_format($d['radius'], 1 ) . ' miles from postcode' : '',
                     'town'                  => (!empty($d['address']['city']) ? ', ' . $d['address']['city'] : ''),
@@ -217,12 +217,12 @@
         'specialOffers' => $data['special_offers']
         ])
     @include('components.modals.modalenquirenhs')
-    @include('components.modals.modalspecial')
+{{--    @include('components.modals.modalspecial')--}}
     @include('components.modals.modalenquireprivate', [
         'procedures' => $data['filters']['procedures']])
     {{--  Maps modal  --}}
 {{--    @include('components.modals.modalmaps')--}}
-    @include('components.modals.modalvideo')
+{{--    @include('components.modals.modalvideo')--}}
     @include('components.modals.modaltour')
 {{--    @include('components.doctor')--}}
     @include('components.basic.modalbutton', [

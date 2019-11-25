@@ -7,7 +7,6 @@
 .corporate-content {
     background-color: #fff;
     //box-shadow: inset 0px -20px 0px 0px $turq;
-
 }
 
 .corporate-content-section-1 {
@@ -175,4 +174,9 @@
             fill: $turq;
         }
     }
+}
+
+.carousel-item {
+    background-size: cover;
+    background-repeat: no-repeat;
 }

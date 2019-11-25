@@ -15,6 +15,7 @@
                         'selectClassName'       => 'mr-3 d-flex align-items-center',
                         'placeholder'           =>'Sort by:',
                         'name'                  =>'sort_by',
+                        'selectId'              => 'sort_by_select',
                         'labelClass'            => 'mb-0 SofiaPro-Medium sort-by-label'
                     ])
 

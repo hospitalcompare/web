@@ -9,7 +9,8 @@
                     'classTitle'        => 'btn btn-cc-close position-absolute',
                     'svg'               => 'times',
                     'dataTarget'        => '#corporate_content_hospital_' . $id,
-                    'style'             => 'right: 0; top: 9px'])
+                    'style'             => 'right: 0; top: 9px',
+                    'id'                => 'close_cc_' . $id])
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" id="nav-tabs_{{ $id }}" role="tablist">
                     <li class="nav-item">
@@ -89,7 +90,7 @@
                         <div class="corporate-content-details d-flex mb-3" style="padding-top: 25px">
                             <div class="img-wrap mr-4">
                                 <img class="image" width="173" height="158"
-                                     src="images/alder-1.png"
+                                     src="images/alder-1.jpg"
                                      alt="Image of {{ $hospitalTitle }}">
                             </div>
                             <div class="address">
@@ -175,26 +176,27 @@
                                          data-interval="false">
                                         <!--Slides-->
                                         <div class="carousel-inner" role="listbox">
-                                            <div class="carousel-item active">
-                                                <img class="d-block h-100 content"
-                                                     src="https://mdbootstrap.com/img/Photos/Slides/img%20(88).jpg"
-                                                     alt="First slide">
+                                            <div class="carousel-item active" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
+{{--                                                <img class="d-block h-100 content"--}}
+{{--                                                     src="/images/alder-1.jpg"--}}
+{{--                                                     alt="First slide">--}}
                                             </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block h-100 content"
-                                                     src="https://mdbootstrap.com/img/Photos/Slides/img%20(121).jpg"
-                                                     alt="Second slide">
+                                            <div class="carousel-item" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
+{{--                                                <img class="d-block h-100 content"--}}
+{{--                                                     src="/images/alder-1.jpg"--}}
+{{--                                                     alt="First slide">--}}
                                             </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block h-100 content"
-                                                     src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).jpg"
-                                                     alt="Third slide">
+                                            <div class="carousel-item" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
+{{--                                                <img class="d-block h-100 content"--}}
+{{--                                                     src="/images/alder-1.jpg"--}}
+{{--                                                     alt="First slide">--}}
                                             </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block h-100 content"
-                                                     src="https://mdbootstrap.com/img/Photos/Slides/img%20(121).jpg"
-                                                     alt="Second slide">
+                                            <div class="carousel-item" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
+{{--                                                <img class="d-block h-100 content"--}}
+{{--                                                     src="/images/alder-1.jpg"--}}
+{{--                                                     alt="First slide">--}}
                                             </div>
+
                                         </div>
                                         <!--/.Slides-->
                                         <!--Controls-->
@@ -215,36 +217,37 @@
                                         <li data-target="#carousel-thumb" data-slide-to="0" class="active col-3">
                                             <div class="col-inner">
                                                 <img class="d-block h-100"
-                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg"
+                                                     src="/images/alder-1.jpg"
                                                      alt="Thumbnail image for first slide">
                                             </div>
                                         </li>
                                         <li data-target="#carousel-thumb" data-slide-to="1" class="col-3">
                                             <div class="col-inner">
                                                 <img class="d-block h-100"
-                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg"
+                                                     src="/images/alder-1.jpg"
                                                      alt="Thumbnail image for seconf slide">
                                             </div>
                                         </li>
                                         <li data-target="#carousel-thumb" data-slide-to="2" class="col-3">
                                             <div class="col-inner">
                                                 <img class="d-block h-100"
-                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg"
+                                                     src="/images/alder-1.jpg"
                                                      alt="Thumbnail image for third slide">
                                             </div>
                                         </li>
                                         <li data-target="#carousel-thumb" data-slide-to="3" class="col-3">
                                             <div class="col-inner">
                                                 <img class="d-block h-100"
-                                                     src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg"
+                                                     src="/images/alder-1.jpg"
                                                      alt="Thumbnail image for fourth slide">
                                             </div>
                                         </li>
                                     </ol>
                                     @include('components.basic.modalbutton', [
                                         'classTitle'        => 'stretched-link',
+                                        'id'                => 'modal_trigger_' . $id,
                                         'modalTarget'       => '#hc_modal_carousel_'. $id,
-                                        'buttonText'            => '',
+                                        'buttonText'        => '',
                                         ])
                                 </div>
                             </div>
@@ -252,7 +255,7 @@
                                 <div class="col-7">
 {{--                                    <div class="col-5">--}}
 {{--                                        <div class="video-wrapper position-relative">--}}
-{{--                                            <video class="content w-100" poster="{{ url('images/video_placeholder.png') }}">--}}
+{{--                                            <video class="content w-100" poster="{{ url('images/video_placeholder.jpg') }}">--}}
 {{--                                                <source src="{{ asset('/video/For_Wes.mp4') }}" type="video/mp4">--}}
 {{--                                                <source src="movie.ogg" type="video/ogg">--}}
 {{--                                                Your browser does not support the video tag.--}}
@@ -287,8 +290,8 @@
                                                'modalTarget'       => '#hc_modal_enquire_private',
                                                'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto ml-auto',
                                                'target'            => 'blank',
-                                               'buttonText'            => 'Enquire now',
-                                               'id'                => 'enquire_'.$id])
+                                               'buttonText'        => 'Enquire now',
+                                               'id'                => 'enquire_special_'.$id])
                                         </div>
                                     </div>
                                 </div>
@@ -312,29 +315,13 @@
     'id' => $id,
     'carouselContent'   => '        <div class="carousel-wrapper position-relative">
                                         <div id="carousel-thumb_modal_' . $id .'"
-                                             class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel" data-interval="false">
+                                             class="carousel slide carousel-slide carousel-thumbnails" data-ride="carousel" data-interval="false">
                                             <!--Slides-->
                                             <div class="carousel-inner" role="listbox">
-                                                <div class="carousel-item active">
-                                                    <img class="d-block h-100 content"
-                                                         src="https://mdbootstrap.com/img/Photos/Slides/img%20(88).jpg"
-                                                         alt="First slide">
-                                                </div>
-                                                <div class="carousel-item">
-                                                    <img class="d-block h-100 content"
-                                                         src="https://mdbootstrap.com/img/Photos/Slides/img%20(121).jpg"
-                                                         alt="Second slide">
-                                                </div>
-                                                <div class="carousel-item">
-                                                    <img class="d-block h-100 content"
-                                                         src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).jpg"
-                                                         alt="Third slide">
-                                                </div>
-                                                <div class="carousel-item">
-                                                    <img class="d-block h-100 content"
-                                                         src="https://mdbootstrap.com/img/Photos/Slides/img%20(88).jpg"
-                                                         alt="First slide">
-                                                </div>
+                                                <div class="carousel-item active" style="background-image: url(\'/images/alder-1.jpg\')"></div>
+                                                <div class="carousel-item" style="background-image: url(\'/images/alder-1.jpg\')"></div>
+                                                <div class="carousel-item" style="background-image: url(\'/images/alder-1.jpg\')"></div>
+                                                <div class="carousel-item" style="background-image: url(\'/images/alder-1.jpg\')"></div>
                                             </div>
                                             <!--/.Slides-->
                                             <!--Controls-->
@@ -352,31 +339,22 @@
                                         <!--/.Controls-->
                                         <ol class="_carousel-indicators indicators row mb-0">
                                             <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="0" class="active col-3">
-                                                <div class="col-inner">
+                                                <div class="col-inner" style="background-image: url(\'/images/alder-1.jpg\')">
                                                     <img class="d-block h-100"
-                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg"
+                                                         src="/images/alder-1.jpg"
                                                          alt="Thumbnail image for first slide">
                                                 </div>
                                             </li>
                                             <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="1" class="col-3">
-                                                <div class="col-inner">
-                                                    <img class="d-block h-100"
-                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg"
-                                                         alt="Thumbnail image for first slide">
+                                                <div class="col-inner" style="background-image: url(\'/images/alder-1.jpg\')">
                                                 </div>
                                             </li>
                                             <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="2" class="col-3">
-                                                <div class="col-inner">
-                                                    <img class="d-block h-100"
-                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg"
-                                                         alt="Thumbnail image for first slide">
+                                                <div class="col-inner" style="background-image: url(\'/images/alder-1.jpg\')">
                                                 </div>
                                             </li>
                                             <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="3" class="col-3">
-                                                <div class="col-inner">
-                                                    <img class="d-block h-100"
-                                                         src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg"
-                                                         alt="Thumbnail image for first slide">
+                                                <div class="col-inner" style="background-image: url(\'/images/alder-1.jpg\')">
                                                 </div>
                                             </li>
                                         </ol>

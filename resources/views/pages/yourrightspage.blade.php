@@ -70,13 +70,13 @@
                 </div>
                 <div class="col col-12 col-md-5">
                     <div class="image-wrapper">
-                        <img class="w-100" src="{{ asset('/images/video_placeholder.png') }}"
+                        <img class="w-100" src="{{ asset('/images/video_placeholder.jpg') }}"
                              alt="People sat round a table having a chin wag ">
                     </div>
                 </div>
                 <div class="col col-12 col-md-5">
                     <div class="image-wrapper">
-                        <img class="w-100" src="{{ asset('/images/video_placeholder.png') }}"
+                        <img class="w-100" src="{{ asset('/images/video_placeholder.jpg') }}"
                              alt="People sat round a table having a chin wag ">
                     </div>
                 </div>
@@ -201,7 +201,7 @@
                 </div>
                 <div class="col col-12 col-md-5">
                     <div class="image-wrapper">
-                        <img class="w-100" src="{{ asset('/images/video_placeholder.png') }}"
+                        <img class="w-100" src="{{ asset('/images/video_placeholder.jpg') }}"
                              alt="People sat round a table having a chin wag ">
                     </div>
                 </div>

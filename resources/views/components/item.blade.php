@@ -33,6 +33,7 @@
                     'buttonText'        => '<span>More info</span>',
                     'htmlButton'        => true,
                     'icon'              => '',
+                    'id'                => 'more_info_' . $id,
                     'svg'               => 'plus-solid',
                     'dataTarget'        => '#corporate_content_hospital_' . $id
                  ])
@@ -138,7 +139,6 @@
                         'placement'         => 'bottom',
                         'trigger'           => 'hover',
                         'html'              => 'true',
-{{--                        'hideDelay'         => $popoverDelay,--}}
                         'content'           => !empty($d['placeRating']) ? '
                         <ul class="nhs-user-ratings mb-0">
                             <li>Cleanliness:&nbsp;'                            . '<span><strong>'  . number_format((float)$d['placeRating']['cleanliness'], 1).'%</span></strong></li>
@@ -215,7 +215,7 @@
                     'classTitle'        => 'btn btn-icon btn-grad btn-enquire btn-blue enquiry mr-2 btn-block font-14',
                     'target'            => 'blank',
                     'buttonText'            => $btnText,
-                    'id'                => 'enquire_'.$id,
+                    'id'                => 'enquire_private_'.$id,
                     'svg'               => 'circle-check'])
                 @elseif($NHSClass == 'nhs-hospital')
                     @include('components.basic.modalbutton', [
@@ -226,7 +226,7 @@
                     'classTitle'        => 'btn btn-icon btn-grad btn-blue btn-enquire enquiry mr-2 btn-block font-14',
                     'buttonText'            => $btnText,
                     'modalTarget'       => '#hc_modal_enquire_nhs',
-                    'id'                => 'enquire_'.$id,
+                    'id'                => 'enquire_nhs'.$id,
                     'svg'               => 'circle-check'])
                 @endif
                 @if(!empty($specialOffers))
@@ -236,6 +236,7 @@
                         @include('components.basic.button', [
                             'classTitle'        => 'toggle-special-offer btn btn-block btn-grad btn-icon btn-pink btn-special-offer btn-plus font-14',
                             'htmlButton'        => true,
+                            'id'                => 'special_' . $id,
                             'buttonText'        => 'Special Offers',
                             'svg'               => 'special'])
                     </div>
