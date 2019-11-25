@@ -1,4 +1,4 @@
-<section class="banner-parent">
+<section class="banner-parent py-0">
     <div class="banner">
         <div class="container {{ !empty($layout) && $layout == 'row' ? 'container-1028' : '' }}">
             <div class="row">

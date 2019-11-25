@@ -1,4 +1,9 @@
 .hc-content {
+
+    section {
+        padding: 40px 0;
+    }
+
     p {
         @include font-style(false, 20px, false, false, 24px, -1px);
     }
@@ -109,7 +114,8 @@ ol.alpha {
         text-align: left;
 
         &:before {
-            content: '(' counter(counter, lower-alpha) ')';
+            //content: '(' counter(counter, lower-alpha) ')';
+            content: counter(counter, upper-alpha) '.';
             position: absolute;
             top: 0;
             left: 0;
