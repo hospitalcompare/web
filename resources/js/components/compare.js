@@ -48,7 +48,7 @@ $(document).ready(function () {
         // Hide the "you haven't added any items..."
         compareHospitalIds = compareData;
         // Update the value of the enquiry form
-        console.log('Add to compare ids: ' + compareHospitalIds);
+        // console.log('Add to compare ids: ' + compareHospitalIds);
         multiEnquiryIdInput.val(removeTrailingCharacter(compareHospitalIds));
 
         // Ajax request to retrieve all the Hospitals to compare
@@ -96,7 +96,8 @@ $(document).ready(function () {
             // cancelledOps = element.cancelled_op.perc_cancelled_ops;
             cancelledOps = element.cancelled_op;
         }
-        var btnContent = element.type == 'nhs-hospital' ?
+        console.log(element.name, element.hospital_type.name);
+        var btnContent = element.hospital_type.name == 'NHS' ? // = "NHS"
             '<a id="' + element.id + '" ' +
             'class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" ' +
             'role="button" data-toggle="modal" ' +
@@ -104,7 +105,7 @@ $(document).ready(function () {
             'data-hospital-title="' + element.name + '" ' +
             'data-target="#hc_modal_enquire_nhs">Make an enquiry' +
              $svg +
-            '</a>' : // If private
+            '</a>' : // If private == "Independent"
             '<a id="' + element.id + '" ' +
             'class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" ' +
             'role="button" data-toggle="modal" ' +
@@ -243,7 +244,6 @@ $(document).ready(function () {
             if (!result) {
                 // Show the headings column when first item added, and it's not already in the
                 if (compareCount == 0) {
-                    console.log('first one in the bag');
                     // Toggle the first column of comparison
                     // Switch the first column round
                     $('#compare_hospitals_headings').removeClass('d-none');
