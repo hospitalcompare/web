@@ -133,15 +133,16 @@
     .compare-hospitals-content {
         background-color: #fff;
         display: none;
-        max-height: calc(100vh - 50px);
+        height: calc(100vh - 190px);
         overflow-y: scroll;
+
+        .col-header {
+            height: 230px;
+        }
 
         #compare_hospitals_grid {
             padding-bottom: 30px;
 
-            .col-header {
-                min-height: 230px;
-            }
 
             .image-wrapper {
                 position: relative;
