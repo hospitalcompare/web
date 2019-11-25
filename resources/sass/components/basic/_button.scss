@@ -95,6 +95,7 @@
 
     &.btn-blue {
         @include linear-gradient(90deg, $blue, $blue, $turq);
+        background-size: 200%;
 
         &.btn-grad {
             @include linear-gradient(90deg, $blue, $blue, $turq, $blue);

@@ -93,13 +93,12 @@ $(document).ready(function () {
         var cancelledOps = null;
 
         if(element.cancelled_op !== null) {
-            // cancelledOps = element.cancelled_op.perc_cancelled_ops;
-            cancelledOps = element.cancelled_op;
+            cancelledOps = element.cancelled_op.perc_cancelled_ops;
+            // cancelledOps = element.cancelled_op;
         }
-        console.log(element.name, element.hospital_type.name);
         var btnContent = element.hospital_type.name == 'NHS' ? // = "NHS"
             '<a id="' + element.id + '" ' +
-            'class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" ' +
+            'class="btn btn-icon btn-blue btn-grad btn-enquire enquiry mr-2 btn-block" ' +
             'role="button" data-toggle="modal" ' +
             'data-hospital-url="' + element.url + '" ' +
             'data-hospital-title="' + element.name + '" ' +
@@ -107,7 +106,7 @@ $(document).ready(function () {
              $svg +
             '</a>' : // If private == "Independent"
             '<a id="' + element.id + '" ' +
-            'class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block" ' +
+            'class="btn btn-icon btn-blue btn-grad btn-enquire enquiry mr-2 btn-block" ' +
             'role="button" data-toggle="modal" ' +
             'data-hospital-url="' + element.url + '" ' +
             'data-hospital-title="' + element.name + '" ' +
@@ -146,7 +145,19 @@ $(document).ready(function () {
                     '<div class="cell">' + element.rating.latest_rating + '</div>' +
                     '<div class="cell">' + getHtmlDashTickValue(element.rating.friends_family_rating, "%") + '</div>' +
                     '<div class="cell">' + getHtmlDashTickValue(element.nhsRating) + '</div>' +
-                    '<div class="cell">' + getHtmlDashTickValue(element.nhsRating) + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(element.hospital === 'Independent' ? 1 : 0) + '</div>' +
+                    '<div class="cell column-break"></div>' +
+                    '<div class="cell">' + element.rating.safe + '</div>' +
+                    '<div class="cell">' + element.rating.effective + '</div>' +
+                    '<div class="cell">' + element.rating.caring + '</div>' +
+                    '<div class="cell">' + element.rating.responsive + '</div>' +
+                    '<div class="cell">' + element.rating.well_led + '</div>' +
+                    '<div class="cell column-break"></div>' +
+                    '<div class="cell">' + (element.place_rating !== null && element.place_rating.cleanliness !== null ? getHtmlDashTickValue(element.place_rating.cleanliness, "%") : 'No data') + '</div>' +
+                    '<div class="cell">' + (element.place_rating !== null && element.place_rating.food_hydration !== null ? getHtmlDashTickValue(element.place_rating.food_hydration, "%") : 'No data') + '</div>' +
+                    '<div class="cell">' + (element.place_rating !== null && element.place_rating.privacy_dignity_wellbeing !== null ? getHtmlDashTickValue(element.place_rating.privacy_dignity_wellbeing, "%") : 'No data') + '</div>' +
+                    '<div class="cell">' + (element.place_rating !== null && element.place_rating.dementia !== null ? getHtmlDashTickValue(element.place_rating.dementia, "%") : 'No data') + '</div>' +
+                    '<div class="cell">' + (element.place_rating !== null && element.place_rating.disability !== null ? getHtmlDashTickValue(element.place_rating.disability, "%") : 'No data') + '</div>' +
                 '</div>' +
             '</div>';
         // Add new item
@@ -279,7 +290,7 @@ $(document).ready(function () {
                 addHospitalToCompare(getHospitalsByIds(elementId)[0]);
                 // Disable buttons if we have reached the max number of items
                 if (compareCount === 5) {
-                    console.log('Max reached');
+                    // console.log('Max reached');
                     disableButtons(1);
                 }
             }

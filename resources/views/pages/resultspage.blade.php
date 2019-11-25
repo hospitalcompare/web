@@ -226,8 +226,8 @@
     @include('components.modals.modaltour')
 {{--    @include('components.doctor')--}}
     @include('components.basic.modalbutton', [
-        'classTitle'    => 'btn btn-blue position-fixed',
-        'buttonText'    => 'Help ?',
+        'classTitle'    => 'btn btn-hanblue btn-grad position-fixed',
+        'buttonText'    => 'Help?',
         'modalTarget'   => '#hc_modal_tour',
         'style'         => 'z-index: 1040; bottom: 100px; left: 100px'])
 

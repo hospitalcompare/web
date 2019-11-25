@@ -606,7 +606,7 @@
 .shortlist-open {
     overflow: hidden; // Stop body scrolling
 
-    .popover {
+    .popover:not(.popover-comparison) {
         display: none !important;
     }
 

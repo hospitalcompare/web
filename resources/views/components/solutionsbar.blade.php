@@ -52,7 +52,8 @@
                               d="M18.8 8c-1.3 0-2.6.7-3.3 1.8-.2.2-.3.5-.4.7-.1-.2-.3-.5-.4-.7-.7-1.1-2-1.8-3.3-1.8-2.6.1-4.4 2-4.4 4.4v.1c0 2.8 2.3 4.7 5.7 7.7.6.6 1.3 1.1 1.9 1.7.1.1.3.1.4.1.1 0 .2 0 .3-.1l2.1-1.8c3.2-2.7 5.6-4.7 5.6-7.6.1-2.4-1.7-4.4-4.1-4.6l-.1.1z"/>
                     </g>
                 </svg>
-                <p class="font-26">Compare&nbsp;(<span id="compare_number">0</span>)<span class="compare-arrow ml-3"></span>
+                <p class="font-26">Compare&nbsp;(<span id="compare_number">0</span>)<span
+                        class="compare-arrow ml-3"></span>
                 </p>
             </div>
         </div>
@@ -65,7 +66,9 @@
                         <div class="col-header_small">
                             <p class="font-16 SofiaPro-SemiBold mb-5">You haven’t added any
                                 hospitals to compare yet. </p>
-                            <p>Click the the&nbsp;<img width="14" height="12" src="/images/icons/heart.svg" alt="Heart icon">&nbsp;next to the hospital to add the chosen hospital into the comparison dashboard.</p>
+                            <p>Click the the&nbsp;<img width="14" height="12" src="/images/icons/heart.svg"
+                                                       alt="Heart icon">&nbsp;next to the hospital to add the chosen
+                                hospital into the comparison dashboard.</p>
                         </div>
                     </div>
                 </div>
@@ -76,8 +79,9 @@
                             <p><span id="nhs-hospital-count">0</span>&nbsp;NHS hospital(s) &</p>
                             <p><span id="private-hospital-count">0</span>&nbsp;Private hospital(s)
                             <form id="multiple_enquiries_form">
-{{--                                <input class="d-none" type="number" name="procedure_id" value="{{ !empty(Request::input('procedure_id')) ? Request::input('procedure_id') : '' }}">--}}
-                                <input id="multiple_enquiries_hospital_ids" class="d-none" type="text" name="hospital_id" value="">
+                                {{--                                <input class="d-none" type="number" name="procedure_id" value="{{ !empty(Request::input('procedure_id')) ? Request::input('procedure_id') : '' }}">--}}
+                                <input id="multiple_enquiries_hospital_ids" class="d-none" type="text"
+                                       name="hospital_id" value="">
                                 <input class="d-none" type="text" name="title" value="Mr">
                                 <input class="d-none" type="text" name="first_name" value="Hello">
                                 <input class="d-none" type="text" name="last_name" value="Hello">
@@ -90,7 +94,7 @@
                                 @include('components.basic.button', [
                                     'htmlButton'        => true,
                                     'buttonText'        => 'Make an enquiry to all your chosen hospitals',
-                                    'classTitle'        => 'btn btn-squared btn-blue btn-enquiry font-14',
+                                    'classTitle'        => 'btn btn-squared btn-blue btn-grad btn-enquiry font-14',
                                     'id'                => 'multiple_enquiries_button',
                                     'svg'               => 'circle-check'
                                 ])
@@ -98,26 +102,274 @@
                             </form>
                         </div>
                         <div class=""></div>
-                        <div class="cell">Hospital Type</div>
-                        <div class="cell">Average Waiting Time</div>
-                        <div class="cell">NHS User Rating</div>
-                        <div class="cell">% Operations cancelled</div>
-                        <div class="cell">Care Quality Rating</div>
-                        <div class="cell">Friends & Family Rating</div>
-                        <div class="cell">NHS Funded Work</div>
-                        <div class="cell">Private Self Pay</div>
+                        <div class="cell">
+                            <span class="position-relative">Hospital Type&nbsp&nbsp;
+                                <span tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
+                                  class="help-link"
+                                    @include('components.basic.popover', [
+                                    'dismissible'   => true,
+                                    'placement'      => 'top',
+                                    'html'           => 'true',
+                                    'size'           => 'comparison',
+                                    'trigger'        => 'hover',
+                                    'content'        => '
+                                                 <span>
+                                                     NHS or Private Hospital
+                                                 </span>
+                                                 '])
+                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">Average Waiting Time&nbsp;&nbsp;
+                                <span tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'dismissible'   => true,
+                                    'placement'      => 'top',
+                                    'html'           => 'true',
+                                    'size'           => 'comparison',
+                                    'trigger'        => 'hover',
+                                    'content'        => '
+                                                    <span>
+                                                        Our waiting time data is based on NHS data, specifically the number of weeks that 92 out or 100 people wait for their treatment to start.
+                                                    </span>'])
+                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">NHS User Rating&nbsp;&nbsp;
+                                <span tabindex="0" data-offset="0 5px"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'dismissible'   => true,
+                                    'placement'      => 'top',
+                                    'html'           => 'true',
+                                    'size'           => 'comparison',
+                                    'trigger'        => 'hover',
+                                    'content'        => '
+                                                 <span>
+                                                     The average waiting time for procedures at this hospital
+                                                 </span>
+                                                 '])
+                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">% Operations cancelled&nbsp;&nbsp;
+                                <span tabindex="0" data-offset="0 5px"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'dismissible'   => true,
+                                    'placement'      => 'top',
+                                    'html'           => 'true',
+                                    'size'           => 'comparison',
+                                    'trigger'        => 'hover',
+                                    'content'        => '
+                                                 <span>
+                                                    The percentage of operations cancelled during the last reporting period. Data only available for NHS hospitals at this time.
+                                                 </span>'])
+                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">Care Quality Rating&nbsp;&nbsp;
+                                <span tabindex="0"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'placement' => 'top',
+                                    'trigger'   => 'hover',
+                                    'html'      => 'true',
+                                    'size'      => 'comparison',
+                                    'content'   => '<span>
+                                                        The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
+                                                    </span>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">Friends & Family Rating&nbsp;&nbsp;
+                                <span tabindex="0"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'placement' => 'top',
+                                    'trigger'   => 'hover',
+                                    'html'      => 'true',
+                                    'size'      => 'comparison',
+                                    'content'   => '<span>
+                                                        The percentage of people who would recommend this hospital to family and friends.
+                                                    </span>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">NHS Funded Work&nbsp;&nbsp;
+                                <span tabindex="0"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'placement' => 'top',
+                                    'trigger'   => 'hover',
+                                    'html'      => 'true',
+                                    'size'      => 'comparison',
+                                    'content'   => '<span>
+                                                        This hospital provides treatments funded by the NHS. Remember you can have an NHS treatment at most private hospitals.
+                                                    </span>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">Private Self Pay&nbsp;&nbsp;
+                                <span tabindex="0"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'placement' => 'top',
+                                    'trigger'   => 'hover',
+                                    'html'      => 'true',
+                                    'size'      => 'comparison',
+                                    'content'   => '<span>
+                                                        Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
+                                                    </span>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
                         <div class="cell column-break SofiaPro-SemiBold">Care Quality Rating</div>
-                        <div class="cell">Safe</div>
-                        <div class="cell">Effective</div>
-                        <div class="cell">Caring</div>
-                        <div class="cell">Responsive</div>
-                        <div class="cell">Well led</div>
+                        <div class="cell">
+                            <span class="position-relative">Safe&nbsp;&nbsp;
+                                <span tabindex="0"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'placement' => 'top',
+                                    'trigger'   => 'hover',
+                                    'html'      => 'true',
+                                    'size'      => 'comparison',
+                                    'content'   => '<span>
+                                                        Info here
+                                                    </span>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">Effective&nbsp;&nbsp;
+                                <span tabindex="0"
+                                      class="help-link"
+                                @include('components.basic.popover', [
+                                'placement' => 'top',
+                                'trigger'   => 'hover',
+                                'html'      => 'true',
+                                'size'      => 'comparison',
+                                'content'   => '<span>
+                                                    Info here
+                                                </span>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">Caring&nbsp;&nbsp;
+                                <span tabindex="0"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'placement' => 'top',
+                                    'trigger'   => 'hover',
+                                    'html'      => 'true',
+                                    'size'      => 'comparison',
+                                    'content'   => '<span>
+                                                        Info here
+                                                    </span>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">Responsive&nbsp;&nbsp;
+                                <span tabindex="0"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'placement' => 'top',
+                                    'trigger'   => 'hover',
+                                    'html'      => 'true',
+                                    'size'      => 'comparison',
+                                    'content'   => '<span>
+                                                        Info here
+                                                    </span>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">Well Led&nbsp;&nbsp;
+                                <span tabindex="0"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'placement' => 'top',
+                                    'trigger'   => 'hover',
+                                    'html'      => 'true',
+                                    'size'      => 'comparison',
+                                    'content'   => '<span>
+                                                        Info here
+                                                    </span>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
                         <div class="cell column-break SofiaPro-SemiBold">NHS User Rating</div>
-                        <div class="cell">Cleanliness</div>
-                        <div class="cell">Food & Hygiene</div>
-                        <div class="cell">Privacy, Dignity & Wellbeing</div>
-                        <div class="cell">Dementia Domain</div>
-                        <div class="cell">Disability Domain</div>
+                        <div class="cell">
+                            <span class="position-relative">Cleanliness&nbsp;&nbsp;
+                                <span tabindex="0"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'placement' => 'top',
+                                    'trigger'   => 'hover',
+                                    'html'      => 'true',
+                                    'size'      => 'comparison',
+                                    'content'   => '<span>
+                                                        Info here
+                                                    </span>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">Food & Hygiene&nbsp;&nbsp;
+                                <span tabindex="0"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'placement' => 'top',
+                                    'trigger'   => 'hover',
+                                    'html'      => 'true',
+                                    'size'      => 'comparison',
+                                    'content'   => '<span>
+                                                        Info here
+                                                    </span>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">Privacy, Dignity & Wellbeing&nbsp;&nbsp;
+                                <span tabindex="0"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'placement' => 'top',
+                                    'trigger'   => 'hover',
+                                    'html'      => 'true',
+                                    'size'      => 'comparison',
+                                    'content'   => '<span>
+                                                        Info here
+                                                    </span>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">Dementia Domain&nbsp;&nbsp;
+                                <span tabindex="0"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'placement' => 'top',
+                                    'trigger'   => 'hover',
+                                    'html'      => 'true',
+                                    'size'      => 'comparison',
+                                    'content'   => '<span>
+                                                        Info here
+                                                    </span>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">Disability Domain&nbsp;&nbsp;
+                                <span tabindex="0"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'placement' => 'top',
+                                    'trigger'   => 'hover',
+                                    'html'      => 'true',
+                                    'size'      => 'comparison',
+                                    'content'   => '<span>
+                                                        Info here
+                                                    </span>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-10">
@@ -125,17 +377,17 @@
                         <!-- Items added here -->
                     </div>
                 </div>
-{{--                <div class="col-2">--}}
-{{--                    <div class="col-inner">--}}
-{{--                        <div class="col-header">--}}
-{{--                            <p>Further selected Hospital--}}
-{{--                                will appear here.</p>--}}
-{{--                            <p> Add more hospitals to your--}}
-{{--                                Shortlist by clicking the&nbsp;{!! file_get_contents(asset('/images/icons/heart.svg')) !!}--}}
-{{--                            </p>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                {{--                <div class="col-2">--}}
+                {{--                    <div class="col-inner">--}}
+                {{--                        <div class="col-header">--}}
+                {{--                            <p>Further selected Hospital--}}
+                {{--                                will appear here.</p>--}}
+                {{--                            <p> Add more hospitals to your--}}
+                {{--                                Shortlist by clicking the&nbsp;{!! file_get_contents(asset('/images/icons/heart.svg')) !!}--}}
+                {{--                            </p>--}}
+                {{--                        </div>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
             </div>
         </div>
     </div>
