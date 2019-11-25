@@ -249,12 +249,14 @@
 // Fixed aspect ratio
 @mixin aspect-ratio($width, $height, $imageWidth: 100%) {
     position: relative;
+
     &:before {
         display: block;
         content: "";
         width: 100%;
         padding-top: ($height / $width) * 100%;
     }
+
     > .content {
         width: $imageWidth;
         @include v-h-c;

@@ -18,9 +18,9 @@ $(document).ready(function () {
     // The target for the content to be added
     var target = $('#compare_hospitals_grid');
     // The content for any empty column in the comparison
-    var emptyCol = '<div class="col">\n' +
+    var emptyCol = '<div class="col col-empty">\n' +
         '                    <div class="col-inner">\n' +
-        '                        <div class="col-header">\n' +
+        '                        <div class="col-header border-bottom-0">\n' +
         '                            <p class="text-center">Selected Hospital<br>\n' +
         '                                will appear here.</p>\n' +
         '                            <p class="text-center"> Add more hospitals to your\n' +
@@ -98,7 +98,7 @@ $(document).ready(function () {
         }
         var btnContent = element.hospital_type.name == 'NHS' ? // = "NHS"
             '<a id="' + element.id + '" ' +
-            'class="btn btn-icon btn-blue btn-grad btn-enquire enquiry mr-2 btn-block" ' +
+            'class="btn btn-icon btn-blue btn-grad btn-enquire enquiry btn-block font-12" ' +
             'role="button" data-toggle="modal" ' +
             'data-hospital-url="' + element.url + '" ' +
             'data-hospital-title="' + element.name + '" ' +
@@ -106,7 +106,7 @@ $(document).ready(function () {
              $svg +
             '</a>' : // If private == "Independent"
             '<a id="' + element.id + '" ' +
-            'class="btn btn-icon btn-blue btn-grad btn-enquire enquiry mr-2 btn-block" ' +
+            'class="btn btn-icon btn-blue btn-grad btn-enquire enquiry btn-block font-12" ' +
             'role="button" data-toggle="modal" ' +
             'data-hospital-url="' + element.url + '" ' +
             'data-hospital-title="' + element.name + '" ' +
@@ -115,7 +115,7 @@ $(document).ready(function () {
             '</a>';
         // Content for new hospital added to compare
         // console.log(element.hospital_type_id);
-        var hospitalType = element.hospital_type_id == 1 ? 'Private Hospital' : 'NHS Hospital';
+        var hospitalType = element.hospital_type_id == 1 ? 'Private' : 'NHS';
 
         if(hospitalType == 'Private Hospital') {
             privateHospitalCount += 1;
@@ -128,15 +128,13 @@ $(document).ready(function () {
         var newColumn =
             '<div class="col text-center" id="compare_hospital_id_' + element.id + '">' +
                 '<div class="col-inner">' +
-                    '<div class=" mx-auto col-header d-flex flex-column justify-content-between">' +
-                        '<div class="image-wrapper h-100">' +
-                            '<img class="" src="images/alder-1.jpg" alt="Image of ' + element.name + '">' +
+                    '<div class="col-header d-flex flex-column justify-content-between align-items-center px-4 pb-3">' +
+                        '<div class="image-wrapper" style="background-image: url(' + '/images/alder-1.jpg' + ')">' +
+                            // '<img class="content" src="images/alder-1.jpg" alt="Image of ' + element.name + '">' +
                             '<div class="remove-hospital" id="remove_id_' + element.id + '" data-hospital-type="' + slugify(hospitalType) + '"></div>' +
-                                '<div class="details">' +
-                                '<p class="w-100 mt-auto">' + element.name + '</p>' +
-                                btnContent +
-                            '</div>' +
                         '</div>' +
+                        '<div class="w-100 details font-16 SofiaPro-SemiBold">' + textTruncate(element.name, 30, '...') + '</div>' +
+                        btnContent +
                     '</div>' +
                     '<div class="cell">' + hospitalType + '</div>' +
                     '<div class="cell">' + getHtmlDashTickValue(element.waiting_time[0].perc_waiting_weeks, " Weeks") + '</div>' +

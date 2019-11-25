@@ -123,7 +123,6 @@
             background-repeat: no-repeat;
             background-position: center;
             transition: $transition;
-            transition: $transition;
 
             &.rotated {
                 transform: rotate(180deg);
@@ -136,33 +135,51 @@
             @include reset-row-spacing(0);
         }
 
+        .col {
+            border-right: 1px solid #d7d7d7;
+        }
+
         background-color: #fff;
-        display: none;
+        //display: none;
         height: calc(100vh - 190px);
         overflow-y: scroll;
 
         .col-header {
             height: 230px;
+            border-bottom: $greyBorder;
         }
 
         #compare_hospitals_grid {
             padding-bottom: 30px;
 
+            .col:last-child  {
+                @extend .border-right-0;
+
+                .cell {
+                    border-right: $greyBorder;
+                }
+
+                .col-header {
+                    @extend .border-right-0;
+                }
+            }
 
             .image-wrapper {
                 position: relative;
-                width: 134px;
-                //height: 123px;
                 text-align: center;
+                //overflow: hidden;
+                width: 100%;
+                max-width: 120px;
+                @include aspect-ratio(120, 120, 150%);
 
                 .remove-hospital {
                     cursor: pointer;
                     position: absolute;
                     right: 0;
                     top: 0;
-                    width: 25px;
-                    height: 25px;
-                    line-height: 25px;
+                    width: 20px;
+                    height: 20px;
+                    line-height: 20px;
                     background-color: $body-color;
                     background-image: url('../images/icons/plus-solid.svg');
                     @include icon-bg-center(50%);
@@ -174,11 +191,16 @@
             }
 
             .details {
-                //height: 130px;
+                height: 36px;
+                overflow: hidden;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: flex-end;
+                justify-content: flex-start;
+            }
+
+            .col-empty:last-child {
+                border-right: none;
             }
         }
 
@@ -193,8 +215,11 @@
             padding: 0 20px;
         }
 
+        .col {
+            margin-top: 20px;
+        }
+
         .col-inner {
-            padding-top: 20px;
             display: flex;
             flex-direction: column;
             //justify-content: flex-end;
@@ -202,7 +227,8 @@
             .cell {
                 height: 40px;
                 line-height: 40px;
-                //overflow: hidden;
+                overflow: visible;
+                border-bottom: $greyBorder;
 
                 .help-link {
                     @include v-c;

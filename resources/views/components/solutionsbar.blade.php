@@ -61,10 +61,10 @@
     <div class="compare-hospitals-content">
         <div class="container">
             <div class="row">
-                <div class="col-2" id="no_items_added">
-                    <div class="col-inner">
+                <div class="col col-2" id="no_items_added">
+                    <div class="col-inner pr-3">
                         <div class="col-header_small">
-                            <p class="font-16 SofiaPro-SemiBold mb-5">You haven’t added any
+                            <p class="font-16 SofiaPro-SemiBold pb-4 grey-border-bottom">You haven’t added any
                                 hospitals to compare yet. </p>
                             <p>Click the the&nbsp;<img width="14" height="12" src="/images/icons/heart.svg"
                                                        alt="Heart icon">&nbsp;next to the hospital to add the chosen
@@ -72,34 +72,34 @@
                         </div>
                     </div>
                 </div>
-                <div id="compare_hospitals_headings" class="col-2 d-none">
+                <div id="compare_hospitals_headings" class="col col-2 d-none">
                     <div class="col-inner h-100">
-                        <div class="col-header">
-                            <p class="SofiaPro-SemiBold">You are comparing:</p>
-                            <p><span id="nhs-hospital-count">0</span>&nbsp;NHS hospital(s) &</p>
-                            <p><span id="private-hospital-count">0</span>&nbsp;Private hospital(s)
-                            <form id="multiple_enquiries_form">
-                                {{--                                <input class="d-none" type="number" name="procedure_id" value="{{ !empty(Request::input('procedure_id')) ? Request::input('procedure_id') : '' }}">--}}
-                                <input id="multiple_enquiries_hospital_ids" class="d-none" type="text"
-                                       name="hospital_id" value="">
-                                <input class="d-none" type="text" name="title" value="Mr">
-                                <input class="d-none" type="text" name="first_name" value="Hello">
-                                <input class="d-none" type="text" name="last_name" value="Hello">
-                                <input class="d-none" type="email" name="email" value="hello@mello.yello">
-                                <input class="d-none" type="email" name="confirm_email" value="hello@mello.yello">
-                                <input class="d-none" type="text" name="phone_number" value="01234567891">
-                                <input class="d-none" type="text" name="postcode" value="ch23ae">
-                                <input class="d-none" type="checkbox" value="on">
-                                <input class="d-none" type="text" name="additional_information" value="Some info">
-                                @include('components.basic.button', [
-                                    'htmlButton'        => true,
-                                    'buttonText'        => 'Make an enquiry to all your chosen hospitals',
-                                    'classTitle'        => 'btn btn-squared btn-blue btn-grad btn-enquiry font-14',
-                                    'id'                => 'multiple_enquiries_button',
-                                    'svg'               => 'circle-check'
-                                ])
-
-                            </form>
+                        <div class="col-header pr-3">
+                            <p class="SofiaPro-SemiBold mb-1">You are comparing:</p>
+                            <p class="mb-3"><span id="nhs-hospital-count">0</span>&nbsp;NHS hospital(s) &<br><span id="private-hospital-count">0</span>&nbsp;Private hospital(s)</p>
+                            <div class="form-wrapper pt-3 grey-border-top">
+                                <form id="multiple_enquiries_form">
+                                    {{--                                <input class="d-none" type="number" name="procedure_id" value="{{ !empty(Request::input('procedure_id')) ? Request::input('procedure_id') : '' }}">--}}
+                                    <input id="multiple_enquiries_hospital_ids" class="d-none" type="text"
+                                           name="hospital_id" value="">
+                                    <input class="d-none" type="text" name="title" value="Mr">
+                                    <input class="d-none" type="text" name="first_name" value="Hello">
+                                    <input class="d-none" type="text" name="last_name" value="Hello">
+                                    <input class="d-none" type="email" name="email" value="hello@mello.yello">
+                                    <input class="d-none" type="email" name="confirm_email" value="hello@mello.yello">
+                                    <input class="d-none" type="text" name="phone_number" value="01234567891">
+                                    <input class="d-none" type="text" name="postcode" value="ch23ae">
+                                    <input class="d-none" type="checkbox" value="on">
+                                    <input class="d-none" type="text" name="additional_information" value="Some info">
+                                    @include('components.basic.button', [
+                                        'htmlButton'        => true,
+                                        'buttonText'        => 'Make an enquiry to all your chosen hospitals',
+                                        'classTitle'        => 'btn btn-squared btn-blue btn-grad btn-enquiry font-14',
+                                        'id'                => 'multiple_enquiries_button',
+                                        'svg'               => 'circle-check'
+                                    ])
+                                </form>
+                            </div>
                         </div>
                         <div class=""></div>
                         <div class="cell">
@@ -372,7 +372,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-10">
+                <div class="col col-10 mt-0 border-right-0">
                     <div class="row" id="compare_hospitals_grid">
                         <!-- Items added here -->
                     </div>

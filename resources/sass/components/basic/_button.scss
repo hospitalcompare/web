@@ -144,6 +144,13 @@
 
     &.btn-squared {
         border-radius: 10px !important;
+        padding: 15px 15px 15px 45px;
+        //max-width: 160px;
+
+        svg {
+            @include v-c;
+            left: 15px;
+        }
     }
 
     &.btn-compare {
