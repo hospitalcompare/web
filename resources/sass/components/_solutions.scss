@@ -328,8 +328,8 @@
             }
         }
 
-        svg,
-        span {
+        > svg,
+        > span {
             position: absolute;
             @include v-c;
             right: 20px;
