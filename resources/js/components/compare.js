@@ -8,7 +8,14 @@ $(document).ready(function () {
     // No of each type of hospital in compare
     var nhsCountHolder = $('#nhs-hospital-count');
     var privateCountHolder = $('#private-hospital-count');
-
+    $("body").on('DOMSubtreeModified', privateCountHolder, function() {
+        // code here
+        if(parseInt($('#private-hospital-count').text()) > 0){
+           $('#multiple_enquiries_button').prop('disabled', false);
+        } else {
+            $('#multiple_enquiries_button').prop('disabled', true);
+        }
+    });
 
     var multiEnquiryIdInput = $('input[name=hospital_id]');
     var nhsHospitalCount = 0;
@@ -18,7 +25,7 @@ $(document).ready(function () {
     // The target for the content to be added
     var target = $('#compare_hospitals_grid');
     // The content for any empty column in the comparison
-    var emptyCol = '<div class="col col-empty">\n' +
+    var emptyCol = '<div class="col col-empty h-100">\n' +
         '                    <div class="col-inner">\n' +
         '                        <div class="col-header border-bottom-0">\n' +
         '                            <p class="text-center">Selected Hospital<br>\n' +
@@ -117,7 +124,7 @@ $(document).ready(function () {
         // console.log(element.hospital_type_id);
         var hospitalType = element.hospital_type_id == 1 ? 'Private' : 'NHS';
 
-        if(hospitalType == 'Private Hospital') {
+        if(hospitalType == 'Private') {
             privateHospitalCount += 1;
             privateCountHolder.text(privateHospitalCount);
         } else {
@@ -131,7 +138,7 @@ $(document).ready(function () {
                     '<div class="col-header d-flex flex-column justify-content-between align-items-center px-4 pb-3">' +
                         '<div class="image-wrapper" style="background-image: url(' + '/images/alder-1.jpg' + ')">' +
                             // '<img class="content" src="images/alder-1.jpg" alt="Image of ' + element.name + '">' +
-                            '<div class="remove-hospital" id="remove_id_' + element.id + '" data-hospital-type="' + slugify(hospitalType) + '"></div>' +
+                            '<div class="remove-hospital" id="remove_id_' + element.id + '" data-hospital-type="' + slugify(hospitalType) + '-hospital"></div>' +
                         '</div>' +
                         '<div class="w-100 details font-16 SofiaPro-SemiBold">' + textTruncate(element.name, 30, '...') + '</div>' +
                         btnContent +
@@ -174,6 +181,7 @@ $(document).ready(function () {
      */
 
     function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) {
+        // console.log(hospitalType);
         $('#compare_hospital_id_' + elementId).remove();
         target.append(emptyCol);
         $('button#' + elementId + '.compare').removeClass('selected');
@@ -189,7 +197,7 @@ $(document).ready(function () {
 
         compareCount = parseInt(compareCount) - 1;
 
-        if(hospitalType == 'private-hospital') {
+        if(hospitalType == 'private-hospital' || hospitalType == 'private') {
             privateHospitalCount -= 1;
             privateCountHolder.text(privateHospitalCount)
         } else {
@@ -341,7 +349,6 @@ $(document).ready(function () {
         var compareCount = parseInt(Cookies.get("compareCount"));
         if(compareCount === 1){
             heartIcon.removeClass('active');
-
         }
         elementId = elementId.replace('remove_id_', '');
 

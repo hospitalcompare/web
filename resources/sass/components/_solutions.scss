@@ -131,36 +131,34 @@
     }
 
     .compare-hospitals-content {
+        padding-bottom: 30px;
+        background-color: #fff;
+        display: none;
+        height: calc(100vh - 190px);
+        overflow-y: scroll;
+
         .row {
             @include reset-row-spacing(0);
         }
 
-        .col {
-            border-right: 1px solid #d7d7d7;
-        }
-
-        background-color: #fff;
-        //display: none;
-        height: calc(100vh - 190px);
-        overflow-y: scroll;
-
         .col-header {
             height: 230px;
             border-bottom: $greyBorder;
+            border-right: $greyBorder;
         }
 
         #compare_hospitals_grid {
-            padding-bottom: 30px;
-
-            .col:last-child  {
+            .col-empty {
                 @extend .border-right-0;
+            }
 
-                .cell {
-                    border-right: $greyBorder;
-                }
-
-                .col-header {
+            .col {
+                &:last-child {
                     @extend .border-right-0;
+
+                    .col-header {
+                        @extend .border-right-0;
+                    }
                 }
             }
 
@@ -229,6 +227,13 @@
                 line-height: 40px;
                 overflow: visible;
                 border-bottom: $greyBorder;
+                border-right: $greyBorder;
+
+                &.column-break {
+                    @extend .border-right-0;
+                    height: 50px;
+                    line-height: 50px;
+                }
 
                 .help-link {
                     @include v-c;

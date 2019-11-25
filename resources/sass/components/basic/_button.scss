@@ -148,7 +148,8 @@
         //max-width: 160px;
 
         svg {
-            @include v-c;
+            position: absolute;
+            top: 15px;
             left: 15px;
         }
     }

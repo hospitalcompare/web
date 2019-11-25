@@ -93,10 +93,11 @@
                                     <input class="d-none" type="text" name="additional_information" value="Some info">
                                     @include('components.basic.button', [
                                         'htmlButton'        => true,
-                                        'buttonText'        => 'Make an enquiry to all your chosen hospitals',
+                                        'buttonText'        => 'Make an enquiry<br>to all your chosen<br> hospitals',
                                         'classTitle'        => 'btn btn-squared btn-blue btn-grad btn-enquiry font-14',
                                         'id'                => 'multiple_enquiries_button',
-                                        'svg'               => 'circle-check'
+                                        'svg'               => 'circle-check',
+                                        'disabled'          => true
                                     ])
                                 </form>
                             </div>
