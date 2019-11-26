@@ -170,6 +170,22 @@ class DbInit extends Migration
             });
         }
 
+        //Check if the Table `hospital_inpatients` exists
+        if (!Schema::hasTable('hospital_inpatients')) {
+            Schema::create('hospital_inpatients', function (Blueprint $table) {
+                $table->increments('id');
+                $table->unsignedInteger('hospital_id');
+                $table->unsignedInteger('specialty_id');
+                $table->integer('total_admitted');
+                $table->double('perc_95');
+                $table->string('status')->default("active");
+                $table->timestamps();
+
+                $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade')->onUpdate('cascade');
+                $table->foreign('specialty_id')->references('id')->on('specialties')->onDelete('cascade')->onUpdate('cascade');
+            });
+        }
+
         //Check if the Table `hospital_admitted` exists
         if (!Schema::hasTable('hospital_admitted')) {
             Schema::create('hospital_admitted', function (Blueprint $table) {
@@ -232,6 +248,7 @@ class DbInit extends Migration
         Schema::dropIfExists('hospital_maternity');
         Schema::dropIfExists('hospital_emergencies');
         Schema::dropIfExists('hospital_admitted');
+        Schema::dropIfExists('hospital_inpatients');
         Schema::dropIfExists('hospital_outpatients');
         Schema::dropIfExists('hospital_cancelled_ops');
         Schema::dropIfExists('hospital_waiting_time');

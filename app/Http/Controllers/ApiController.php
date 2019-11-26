@@ -53,6 +53,7 @@ class ApiController {
                 'Choices.csv',
                 'CancelledOps.csv',
                 'Outpatient.csv',
+                'Inpatient.csv',
                 'Admitted.csv',
                 'Emergency.csv',
                 'Maternity.csv',
