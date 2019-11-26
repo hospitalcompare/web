@@ -47,7 +47,8 @@
                     'modalTarget'       => '#hc_modal_enquire_private',
                     'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto',
                     'target'            => 'blank',
-                    'buttonText'            => 'Enquire now'
+                    'buttonText'            => 'Enquire now',
+                    'hospitalIds'       => $hospitalId
                     ])
                 @includeWhen($hospitalType == 'nhs-hospital' ,'components.basic.modalbutton', [
                     'hospitalType'      => $hospitalType,
@@ -57,6 +58,7 @@
                     'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto',
                     'target'            => 'blank',
                     'buttonText'            => 'Enquire now',
+                    'hospitalIds'       => $hospitalId
                     ])
             </div>
         </div>

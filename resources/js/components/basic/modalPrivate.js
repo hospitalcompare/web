@@ -17,7 +17,8 @@ $(document).ready(function () {
 
         var hospitalTitle   = $button.data('hospital-title');// Extract info from data-* attributes
         var modal           = $(this);
-        var hospitalId      = $button.attr('id').replace('enquire_', '');
+        // var hospitalId      = $button.attr('id').replace('enquire_', '');
+        var hospitalId      = $button.data('hospital-id');
 
         modal.find('.hospital-title').html(hospitalTitle);
         modal.find("input[name='hospital_id']").val(hospitalId);

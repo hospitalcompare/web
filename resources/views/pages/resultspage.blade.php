@@ -13,6 +13,9 @@
 @section('body-class', 'results-page')
 
 @section('content')
+{{--    @if(!empty($data['special_offers']))--}}
+{{--        {{ dd($data['special_offers']) }}--}}
+{{--        @endif--}}
     @include('pages.pagesections.resultspageform', ['displayBlock' => false])
     <div id="result_item_parent" class="result-item-parent d-none d-lg-flex">
         <div class="result-item-header container">

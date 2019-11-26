@@ -17,7 +17,7 @@ $(document).ready(function () {
         }
     });
 
-    var multiEnquiryIdInput = $('input[name=hospital_id]');
+    var multiEnquiryIdInput = $('#multiple_enquiries_button');
     var nhsHospitalCount = 0;
     var privateHospitalCount = 0;
     var compareHospitalIds = '';
@@ -56,7 +56,7 @@ $(document).ready(function () {
         compareHospitalIds = compareData;
         // Update the value of the enquiry form
         // console.log('Add to compare ids: ' + compareHospitalIds);
-        multiEnquiryIdInput.val(removeTrailingCharacter(compareHospitalIds));
+        multiEnquiryIdInput.data('hospital-id', removeTrailingCharacter(compareHospitalIds));
 
         // Ajax request to retrieve all the Hospitals to compare
         var returned = getHospitalsByIds(compareHospitalIds);
@@ -117,6 +117,7 @@ $(document).ready(function () {
             'role="button" data-toggle="modal" ' +
             'data-hospital-url="' + element.url + '" ' +
             'data-hospital-title="' + element.name + '" ' +
+            'data-hospital-id="' + element.id + '" ' +
             'data-target="#hc_modal_enquire_private">Make an enquiry' +
              $svg +
             '</a>';
@@ -193,7 +194,7 @@ $(document).ready(function () {
         data = dataArr.join(',');
 
         // Update the ids in the multi enquiry form
-        multiEnquiryIdInput.val(removeTrailingCharacter(data));
+        multiEnquiryIdInput.data('hospital-id', removeTrailingCharacter(data));
 
         compareCount = parseInt(compareCount) - 1;
 
@@ -284,7 +285,7 @@ $(document).ready(function () {
                 //Add data to Cookies and send the element to populate the table
                 data += elementId + ',';
                 // Update the enquiry form
-                multiEnquiryIdInput.val(removeTrailingCharacter(data));
+                multiEnquiryIdInput.data('hospital-id', removeTrailingCharacter(data));
                 // Update compare count
                 compareCount = parseInt(compareCount) + 1;
 
