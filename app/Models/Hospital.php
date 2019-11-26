@@ -416,6 +416,7 @@ class Hospital extends Model
             $doctor = "Great! You have added your first hospital to your shortlist. You can add up to five hospitals to your shortlist. Why not give it a try?";
         }
 
+        //
         return [
             'data'              => [
                 'hospitals'         => $hospitals,
