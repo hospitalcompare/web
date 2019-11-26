@@ -134,6 +134,11 @@
                                         <div class="d-table-cell">'.$waitingTimeRanking.'</div>
                                     </div>
                                     <div class="d-table-row">
+                                        <div class="d-table-cell SofiaPro-SemiBold">Waiting Times for Treated Patients</div>
+                                        <div class="d-table-cell"></div>
+                                        <div class="d-table-cell"></div>
+                                    </div>
+                                    <div class="d-table-row">
                                         <div class="d-table-cell">Outpatients Treated</div>
                                         <div class="d-table-cell">'.$outpatient.'</div>
                                         <div class="d-table-cell">'.$outpatientRank.'</div>
