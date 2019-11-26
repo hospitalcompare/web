@@ -225,10 +225,11 @@ window.slugify = function(string) {
  */
 window.disableButtons = function (modifier = 0) {
     var compareCount = parseInt(Cookies.get('compareCount'));
+    // console.log('Compare count: ' + compareCount);
+
     var $notSelected = $('.compare').not($('.selected'));
 
     if (compareCount + modifier === 5) {
-        // console.log(compareCount, 'Disabling buttons');
         $notSelected
             .addClass('disabled')
             .parent()
@@ -249,7 +250,6 @@ window.enableButtons = function () {
             .removeClass('disabled')
             .parent()
             .prop('title', '');
-        // .attr('data-toggle', '');
     }
 };
 
@@ -301,4 +301,5 @@ window.textTruncate = function(str, length, ending) {
         return str;
     }
 };
+
 

@@ -1,10 +1,7 @@
 <div class="modal-inner">
     <p class="text-center font-24 SofiaPro-Medium text-white private-modal-enquiry-title">Enquire now for <span class="hospital-title">this hospital</span></p>
     <p class="text-white text-center private-modal-enquiry-description">
-{{--        <div id="info_text" class="mt-2 text-white">--}}
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
-{{--        </div>--}}
+        Complete this form and we'll pass your enquiry onto this hospital immediately.<br>You can normally expect a response within three to four days.
     </p>
     <div class="form-wrap d-flex flex-wrap">
         <div class="img-wrap">

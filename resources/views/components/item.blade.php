@@ -256,8 +256,9 @@
                     'modalTarget'       => '#hc_modal_enquire_private',
                     'classTitle'        => 'btn btn-icon btn-grad btn-enquire btn-blue enquiry mr-2 btn-block font-14',
                     'target'            => 'blank',
-                    'buttonText'            => $btnText,
+                    'buttonText'        => $btnText,
                     'id'                => 'enquire_private_'.$id,
+                    'hospitalIds'       => $id,
                     'svg'               => 'circle-check'])
                 @elseif($NHSClass == 'nhs-hospital')
                     @include('components.basic.modalbutton', [
@@ -269,6 +270,7 @@
                     'buttonText'            => $btnText,
                     'modalTarget'       => '#hc_modal_enquire_nhs',
                     'id'                => 'enquire_nhs'.$id,
+                    'hospitalIds'       => $id,
                     'svg'               => 'circle-check'])
                 @endif
                 @if(!empty($specialOffers))
