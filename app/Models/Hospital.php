@@ -166,6 +166,7 @@ class Hospital extends Model
      * @return array
      */
     public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 50, $waitingTime = '', $userRating = '', $qualityRating = '', $hospitalType = '', $policyId = '', $sortBy = '', $page = '') {
+        $before = microtime(true);
         $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'rating', 'address', 'policies', 'placeRating']);
         //$userRatings    = HospitalRating::selectRaw(\DB::raw("MIN(id) as id, avg_user_rating AS name"))->groupBy(['avg_user_rating'])->whereNotNull('avg_user_rating')->get()->toArray();
         $errors = [];
@@ -416,7 +417,8 @@ class Hospital extends Model
             $doctor = "Great! You have added your first hospital to your shortlist. You can add up to five hospitals to your shortlist. Why not give it a try?";
         }
 
-        //
+        $after = microtime(true);
+        dd($after-$before);
         return [
             'data'              => [
                 'hospitals'         => $hospitals,
