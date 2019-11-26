@@ -355,6 +355,47 @@ class Hospital extends Model
         $preHospitals =  $hospitals->get()->toArray();
         $hospitals = $hospitals->paginate(10)->onEachSide(1);
 
+        //Build the Rankings for the Waiting Times tooltip
+        $outpatientRankings = $inpatientRankings = [];
+        if(!empty($preHospitals)) {
+            foreach($preHospitals as $preHospital) {
+                //Check if we have Outpatient
+                if(!empty($preHospital['waiting_time'][0]['outpatient_perc_95'])) {
+                    $outpatientRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => $preHospital['waiting_time'][0]['outpatient_perc_95']];
+                } else {
+                    $outpatientRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => 100];
+                }
+
+                //Check if we have Inpatient
+                if(!empty($preHospital['waiting_time'][0]['inpatient_perc_95'])) {
+                    $inpatientRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => $preHospital['waiting_time'][0]['inpatient_perc_95']];
+                } else {
+                    $inpatientRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => 100];
+                }
+            }
+        }
+
+
+        usort($outpatientRankings, function($a, $b) {
+            return $a['ranking'] <=> $b['ranking'];
+        });
+
+        usort($inpatientRankings, function($a, $b) {
+            return $a['ranking'] <=> $b['ranking'];
+        });
+
+        if(!empty($inpatientRankings)) {
+            foreach($inpatientRankings as $inpKey => &$inpatient) {
+                $inpatient['position'] = $inpKey+1;
+            }
+        }
+
+        if(!empty($outpatientRankings)) {
+            foreach($outpatientRankings as $outKey => &$outpatientRanking) {
+                $outpatientRanking['position'] = $outKey+1;
+            }
+        }
+
         //Get the special Offers
         $radius = 50;
         $hospitalType = 'Independent';
@@ -420,8 +461,10 @@ class Hospital extends Model
 //        dd("Time:  " . number_format(( microtime(true) - $startTime), 4) . " Seconds\n");
         return [
             'data'              => [
-                'hospitals'         => $hospitals,
-                'special_offers'    => $specialOffers,
+                'hospitals'             => $hospitals,
+                'special_offers'        => $specialOffers,
+                'outpatientRanking'     => $outpatientRankings,
+                'inpatientRanking'      => $inpatientRankings
             ],
             'doctor'            => [
                 'text'          => $doctor,

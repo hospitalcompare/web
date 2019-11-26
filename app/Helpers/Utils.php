@@ -492,4 +492,15 @@ class Utils
             'external_link'     => url('/enquiries/'.$filename)
         ];
     }
+
+    /**
+     * Gets the position of an array based on a Hospital ID given
+     *
+     * @param $ranking
+     * @param $hospitalId
+     * @return false|int|string
+     */
+    public static function getRankingPosition($ranking, $hospitalId) {
+        return array_search($hospitalId, array_column($ranking, 'hospital_id')) + 1;
+    }
 }
