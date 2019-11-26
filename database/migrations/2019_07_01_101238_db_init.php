@@ -158,21 +158,20 @@ class DbInit extends Migration
             });
         }
 
-//        //Check if the Table `hospital_outpatients` exists
-//        if (!Schema::hasTable('hospital_outpatients')) {
-//            Schema::create('hospital_outpatients', function (Blueprint $table) {
-//                $table->increments('id');
-//                $table->unsignedInteger('hospital_id');
-//                $table->unsignedInteger('specialty_id');
-//                $table->integer('total_non_admitted');
-//                $table->double('perc_95');
-//                $table->string('status')->default("active");
-//                $table->timestamps();
-//
-//                $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade')->onUpdate('cascade');
-//                $table->foreign('specialty_id')->references('id')->on('specialties')->onDelete('cascade')->onUpdate('cascade');
-//            });
-//        }
+        //Check if the Table `hospital_outpatients` exists
+        if (!Schema::hasTable('hospital_outpatients')) {
+            Schema::create('hospital_outpatients', function (Blueprint $table) {
+                $table->increments('id');
+                $table->unsignedInteger('hospital_id');
+                $table->integer('total_responses');
+                $table->integer('total_eligible');
+                $table->double('perc_recommended');
+                $table->string('status')->default("active");
+                $table->timestamps();
+
+                $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade')->onUpdate('cascade');
+            });
+        }
 //
 //        //Check if the Table `hospital_inpatients` exists
 //        if (!Schema::hasTable('hospital_inpatients')) {

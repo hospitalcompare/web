@@ -167,7 +167,7 @@ class Hospital extends Model
      */
     public static function getHospitalsWithParams($postcode = '', $procedureId = '', $radius = 50, $waitingTime = '', $userRating = '', $qualityRating = '', $hospitalType = '', $policyId = '', $sortBy = '', $page = '') {
 //        $startTime = microtime(true);
-        $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'rating', 'address', 'policies', 'placeRating']);
+        $hospitals = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'rating', 'address', 'policies', 'outpatient', 'placeRating']);
         //$userRatings    = HospitalRating::selectRaw(\DB::raw("MIN(id) as id, avg_user_rating AS name"))->groupBy(['avg_user_rating'])->whereNotNull('avg_user_rating')->get()->toArray();
         $errors = [];
         $latitude = '';
@@ -449,7 +449,7 @@ class Hospital extends Model
      * @return array
      */
     public static function getSpecialOffers($latitude = '', $longitude = '', $radius = 50, $specialtyId = 0, $hospitals = [], $hospitalType = 'Independent') {
-        $specialOffers = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'rating', 'address', 'policies']);
+        $specialOffers = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'rating', 'outpatient', 'address', 'policies']);
         $outstandingFlag = 0;
 
         //Parse the hospitals to check if there is an outstanding hospital
