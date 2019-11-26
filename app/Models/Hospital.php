@@ -449,7 +449,7 @@ class Hospital extends Model
      * @return array
      */
     public static function getSpecialOffers($latitude = '', $longitude = '', $radius = 50, $specialtyId = 0, $hospitals = [], $hospitalType = 'Independent') {
-        $specialOffers = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'policies']);
+        $specialOffers = Hospital::with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'rating', 'address', 'policies']);
         $outstandingFlag = 0;
 
         //Parse the hospitals to check if there is an outstanding hospital

@@ -16,7 +16,7 @@ class HospitalWaitingTime extends Model
      * @var array
      */
     protected $fillable = [
-        'hospital_id', 'specialty_id', 'total_within_18_weeks', 'total_incomplete', 'avg_waiting_weeks', 'perc_waiting_weeks', 'status'
+        'hospital_id', 'specialty_id', 'total_within_18_weeks', 'total_incomplete', 'avg_waiting_weeks', 'perc_waiting_weeks', 'outpatient_total_non_admitted', 'outpatient_perc_95', 'inpatient_total_admitted', 'inpatient_perc_95', 'status'
     ];
 
     /**
@@ -25,13 +25,17 @@ class HospitalWaitingTime extends Model
      * @var array
      */
     protected $casts = [
-        'hospital_id'           => 'integer',
-        'specialty_id'          => 'integer',
-        'total_within_18_weeks' => 'integer',
-        'total_incomplete'      => 'integer',
-        'avg_waiting_weeks'     => 'double',
-        'perc_waiting_weeks'    => 'double',
-        'status'                => 'string'
+        'hospital_id'                   => 'integer',
+        'specialty_id'                  => 'integer',
+        'total_within_18_weeks'         => 'integer',
+        'total_incomplete'              => 'integer',
+        'outpatient_total_non_admitted' => 'integer',
+        'inpatient_total_admitted'      => 'integer',
+        'avg_waiting_weeks'             => 'double',
+        'outpatient_perc_95'            => 'double',
+        'inpatient_perc_95'             => 'double',
+        'perc_waiting_weeks'            => 'double',
+        'status'                        => 'string'
     ];
 
     /**

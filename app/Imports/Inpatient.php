@@ -5,6 +5,7 @@ namespace App\Imports;
 
 use App\Models\Hospital;
 use App\Models\HospitalInpatient;
+use App\Models\HospitalWaitingTime;
 use App\Models\Specialty;
 use App\Models\Trust;
 
@@ -51,12 +52,12 @@ class Inpatient extends DefaultImport {
                 if(!empty($hospitals)) {
                     foreach($hospitals as $hospital) {
                         //Check if we already have an OutpatientOp for that Hospital and update it
-                        $outpatient = HospitalInpatient::updateOrCreate([
+                        $outpatient = HospitalWaitingTime::updateOrCreate([
                             'hospital_id'           => $hospital->id,
                             'specialty_id'          => $specialty->id
                         ], [
-                            'total_admitted'        => $item['Total Admitted'],
-                            'perc_95'               => rtrim($item['95th percentile waiting time (in weeks)'], '%') ?? 0,
+                            'inpatient_total_admitted'        => $item['Total Admitted'],
+                            'inpatient_perc_95'               => rtrim($item['95th percentile waiting time (in weeks)'], '%') ?? 0,
                         ]);
 
                         $this->returnedData[] = $outpatient;
