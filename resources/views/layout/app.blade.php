@@ -8,7 +8,6 @@
         <meta name='keywords' content='@yield('keywords')'>
         <meta name="viewport" content="@yield('mobile')">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/icons/apple-touch-icon.png') }}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/icons/favicon-32x32.png') }}">
@@ -23,7 +22,7 @@
         </script>
         <script type="text/javascript" src="{{ asset('fonts/MyFontsWebfontsKit.js') }}"></script>
         {{-- Stickybits is the script for handling position sticky cross browser --}}
-        <script type="text/javascript" defer async src="{{ asset('js/stickybits.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/stickybits.js') }}"></script>
         @yield('scripts')
 
     </head>

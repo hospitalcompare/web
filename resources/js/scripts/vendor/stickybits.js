@@ -66,7 +66,7 @@
       - .removeInstance = removes an instance
       - .cleanup = removes all Stickybits instances and cleans up dom from stickybits
     */
-    var Stickybits =
+    window.Stickybits =
         /*#__PURE__*/
         function () {
             function Stickybits(target, obj) {
@@ -466,5 +466,4 @@
 
 }));
 
-// v3
-var stickybit = stickybits('.result-item-parent');
+

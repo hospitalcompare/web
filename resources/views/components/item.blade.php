@@ -110,11 +110,52 @@
             </div>
             {{-- Waiting time --}}
             <div class="result-item-section-2__child flex-column">
-                <p class="SofiaPro-Medium" @includeWhen(empty($waitTime), 'components.basic.popover', [
+                <p class="h-50 d-flex align-items-center SofiaPro-Medium"
+                    @includeWhen(empty($waitTime), 'components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
-                        'content' => 'Currently no data available for this hospital'])>
+                        'content' => 'Currently no data available for this hospital'])
+                    @includeWhen(!empty($waitTime), 'components.basic.popover', [
+                        'placement'         => 'bottom',
+                        'trigger'           => 'hover',
+                        'html'              => 'true',
+                        'content'           =>
+                                    '<div>
+                                        <div class="d-table w-100">
+                                            <div class="d-table-row">
+                                                <div class="d-table-cell"></div>
+                                                <div class="d-table-cell SofiaPro-Medium">Weeks</div>
+                                                <div class="d-table-cell SofiaPro-Medium">Ranking</div>
+                                            </div>
+                                            <div class="d-table-row">
+                                                <div class="d-table-cell">Current Waiting Time</div>
+                                                <div class="d-table-cell">20.4</div>
+                                                <div class="d-table-cell">X of Y</div>
+                                            </div>
+                                            <div class="d-table-row">
+                                                <div class="d-table-cell SofiaPro-SemiBold">Waiting Times for Treated Patients</div>
+                                                <div class="d-table-cell"></div>
+                                                <div class="d-table-cell"></div>
+                                            </div>
+                                            <div class="d-table-row">
+                                                <div class="d-table-cell">Outpatients Treated</div>
+                                                <div class="d-table-cell">34</div>
+                                                <div class="d-table-cell">X of Y</div>
+                                            </div>
+                                            <div class="d-table-row">
+                                                <div class="d-table-cell">Inpatients treated</div>
+                                                <div class="d-table-cell">23</div>
+                                                <div class="d-table-cell">X of Y</div>
+                                            </div>
+                                            <div class="d-table-row">
+                                                <div class="d-table-cell">Diagnostics - % waiting 6+ weeks</div>
+                                                <div class="d-table-cell">XX%</div>
+                                                <div class="d-table-cell">X of Y</div>
+                                            </div>
+                                        </div>
+                                        <small>NB - Diagnostics is a % of current waiting list waiting 6+ weeks (national target is 1%)</small>
+                                    </div>'])>
                     {!! !empty($waitTime) ? $waitTime : "No data" !!}
                 </p>
 {{--                @if($NHSClass == 'private-hospital')--}}
@@ -135,7 +176,8 @@
             {{-- End waiting time --}}
             {{-- NHS user rating --}}
             <div class="result-item-section-2__child">
-                <p class="h-50 d-flex align-items-center SofiaPro-Medium" @include('components.basic.popover', [
+                <p class="h-50 d-flex align-items-center SofiaPro-Medium"
+                    @include('components.basic.popover', [
                         'placement'         => 'bottom',
                         'trigger'           => 'hover',
                         'html'              => 'true',
@@ -214,8 +256,9 @@
                     'modalTarget'       => '#hc_modal_enquire_private',
                     'classTitle'        => 'btn btn-icon btn-grad btn-enquire btn-blue enquiry mr-2 btn-block font-14',
                     'target'            => 'blank',
-                    'buttonText'            => $btnText,
+                    'buttonText'        => $btnText,
                     'id'                => 'enquire_private_'.$id,
+                    'hospitalIds'       => $id,
                     'svg'               => 'circle-check'])
                 @elseif($NHSClass == 'nhs-hospital')
                     @include('components.basic.modalbutton', [
@@ -227,6 +270,7 @@
                     'buttonText'            => $btnText,
                     'modalTarget'       => '#hc_modal_enquire_nhs',
                     'id'                => 'enquire_nhs'.$id,
+                    'hospitalIds'       => $id,
                     'svg'               => 'circle-check'])
                 @endif
                 @if(!empty($specialOffers))

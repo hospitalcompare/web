@@ -33,6 +33,7 @@
                     'classTitle'        => 'btn btn-enquire-pink btn-icon',
                     'target'            => 'blank',
                     'buttonText'        => 'Make an enquiry',
+                    'hospitalIds'       => $id,
                     'id'                => 'enquire_'.$id])
         </div>
         {{--            <div class="col-3">--}}

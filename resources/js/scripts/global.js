@@ -34,7 +34,7 @@ $(document).ready(function () {
     $('#how_to_use_filter_policies .dropdown-toggle .filter-option-inner-inner').text($howToUseSelectPlaceholder);
 
     $('#how_to_use_policies').on('shown.bs.select', function(){
-        console.log($howToUseSelectPlaceholder);
+        // console.log($howToUseSelectPlaceholder);
         $('.dropdown-menu li:first-child a').text($howToUseSelectPlaceholder);
     })
 });
@@ -225,12 +225,11 @@ window.slugify = function(string) {
  */
 window.disableButtons = function (modifier = 0) {
     var compareCount = parseInt(Cookies.get('compareCount'));
-    console.log('Compare count: ' + compareCount);
+    // console.log('Compare count: ' + compareCount);
 
     var $notSelected = $('.compare').not($('.selected'));
 
     if (compareCount + modifier === 5) {
-        // console.log(compareCount, 'Disabling buttons');
         $notSelected
             .addClass('disabled')
             .parent()
@@ -251,7 +250,6 @@ window.enableButtons = function () {
             .removeClass('disabled')
             .parent()
             .prop('title', '');
-        // .attr('data-toggle', '');
     }
 };
 
@@ -303,4 +301,5 @@ window.textTruncate = function(str, length, ending) {
         return str;
     }
 };
+
 

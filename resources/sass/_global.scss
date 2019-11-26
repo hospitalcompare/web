@@ -407,3 +407,7 @@ path {
 .grey-border-top {
     border-top: 1px solid $borderGrey;
 }
+
+.d-table-cell {
+    @extend .p-2;
+}

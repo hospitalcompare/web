@@ -26,9 +26,10 @@
                                     $specialOffer['rating']['latest_rating'] . ' CQC Rating',
                                     (!empty($specialOffer['rating']['avg_user_rating'])) ? $specialOffer['rating']['avg_user_rating'] . ' star NHS Choices user rating' : null
                                 ],
-                                'offerPrice' => null,
-                                'hospitalType' => $specialOffer['hospital_type']['name'] == 'Independent' ? 'private-hospital' : 'nhs-hospital',
-                                'hospitalUrl' => $specialOffer['url']
+                                'offerPrice'    => null,
+                                'hospitalType'  => $specialOffer['hospital_type']['name'] == 'Independent' ? 'private-hospital' : 'nhs-hospital',
+                                'hospitalUrl'   => $specialOffer['url'],
+                                'hospitalId'    => $specialOffer['id']
                             ])
                         </li>
                     @endforeach
@@ -78,28 +79,17 @@
                             <p class="SofiaPro-SemiBold mb-1">You are comparing:</p>
                             <p class="mb-3"><span id="nhs-hospital-count">0</span>&nbsp;NHS hospital(s) &<br><span id="private-hospital-count">0</span>&nbsp;Private hospital(s)</p>
                             <div class="form-wrapper pt-3 grey-border-top">
-                                <form id="multiple_enquiries_form">
-                                    {{--                                <input class="d-none" type="number" name="procedure_id" value="{{ !empty(Request::input('procedure_id')) ? Request::input('procedure_id') : '' }}">--}}
-                                    <input id="multiple_enquiries_hospital_ids" class="d-none" type="text"
-                                           name="hospital_id" value="">
-                                    <input class="d-none" type="text" name="title" value="Mr">
-                                    <input class="d-none" type="text" name="first_name" value="Hello">
-                                    <input class="d-none" type="text" name="last_name" value="Hello">
-                                    <input class="d-none" type="email" name="email" value="hello@mello.yello">
-                                    <input class="d-none" type="email" name="confirm_email" value="hello@mello.yello">
-                                    <input class="d-none" type="text" name="phone_number" value="01234567891">
-                                    <input class="d-none" type="text" name="postcode" value="ch23ae">
-                                    <input class="d-none" type="checkbox" value="on">
-                                    <input class="d-none" type="text" name="additional_information" value="Some info">
-                                    @include('components.basic.button', [
-                                        'htmlButton'        => true,
-                                        'buttonText'        => 'Make an enquiry<br>to all your chosen<br> hospitals',
-                                        'classTitle'        => 'btn btn-squared btn-blue btn-grad btn-enquiry font-14',
-                                        'id'                => 'multiple_enquiries_button',
-                                        'svg'               => 'circle-check',
-                                        'disabled'          => true
-                                    ])
-                                </form>
+                                @include('components.basic.modalbutton', [
+                                    'htmlButton'        => true,
+                                    'buttonText'        => 'Make an enquiry<br>to all your chosen<br>hospitals',
+                                    'classTitle'        => 'btn btn-squared btn-blue btn-grad btn-enquiry font-14',
+                                    'id'                => 'multiple_enquiries_button',
+                                    'svg'               => 'circle-check',
+                                    'modalTarget'       => '#hc_modal_enquire_private',
+                                    'disabled'          => true,
+                                    'hospitalTitle'     => 'your selected hospitals',
+                                    'hospitalIds'       => ''
+                                ])
                             </div>
                         </div>
                         <div class=""></div>
