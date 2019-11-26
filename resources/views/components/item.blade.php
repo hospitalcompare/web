@@ -121,31 +121,37 @@
                         'trigger'           => 'hover',
                         'html'              => 'true',
                         'content'           =>
-                                    '<div>
-                                        <div class="d-table w-100">
-                                            <div class="d-table-row">
-                                                <div class="d-table-cell"></div>
-                                                <div class="d-table-cell SofiaPro-Medium">Weeks</div>
-                                                <div class="d-table-cell SofiaPro-Medium">Ranking</div>
-                                            </div>
-                                            <div class="d-table-row">
-                                                <div class="d-table-cell">Current Waiting Time</div>
-                                                <div class="d-table-cell">'.$waitTime.'</div>
-                                                <div class="d-table-cell">'.$waitingTimeRanking.'</div>
-                                            </div>
-                                            <div class="d-table-row">
-                                                <div class="d-table-cell">Outpatients Treated</div>
-                                                <div class="d-table-cell">'.$outpatient.'</div>
-                                                <div class="d-table-cell">'.$outpatientRank.'</div>
-                                            </div>
-                                            <div class="d-table-row">
-                                                <div class="d-table-cell">Inpatients treated</div>
-                                                <div class="d-table-cell">'.$inpatient.'</div>
-                                                <div class="d-table-cell">'.$inpatientRank.'</div>
-                                            </div>
-                                        </div>
-                                        <small>NB - Diagnostics is a % of current waiting list waiting 6+ weeks (national target is 1%)</small>
-                                    </div>'])>
+                            '<div>
+                                <div class="d-table w-100">
+                                    <div class="d-table-row">
+                                        <div class="d-table-cell"></div>
+                                        <div class="d-table-cell SofiaPro-Medium">Weeks</div>
+                                        <div class="d-table-cell SofiaPro-Medium">Ranking</div>
+                                    </div>
+                                    <div class="d-table-row">
+                                        <div class="d-table-cell">Current Waiting Time</div>
+                                        <div class="d-table-cell">'.$waitTime.'</div>
+                                        <div class="d-table-cell">'.$waitingTimeRanking.'</div>
+                                    </div>
+                                    <div class="d-table-row">
+                                        <div class="d-table-cell">Outpatients Treated</div>
+                                        <div class="d-table-cell">'.$outpatient.'</div>
+                                        <div class="d-table-cell">'.$outpatientRank.'</div>
+                                    </div>
+                                    <div class="d-table-row">
+                                        <div class="d-table-cell">Inpatients treated</div>
+                                        <div class="d-table-cell">'.$inpatient.'</div>
+                                        <div class="d-table-cell">'.$inpatientRank.'</div>
+                                    </div>
+                                    <div class="d-table-row">
+                                        <div class="d-table-cell">Diagnostics - % waiting 6+ weeks</div>
+                                        <div class="d-table-cell">-</div>
+                                        <div class="d-table-cell">-</div>
+                                    </div>
+                                </div>
+                                <small>NB - Diagnostics is a % of current waiting list waiting 6+ weeks (national target is 1%)</small>
+                            </div>'
+                        ])>
                     {!! !empty($waitTime) ? $waitTime.'<br>Weeks' : "No data" !!}
                 </p>
 {{--                @if($NHSClass == 'private-hospital')--}}
