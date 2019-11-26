@@ -5,9 +5,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class HospitalWaitingTime extends Model
+class HospitalInpatient extends Model
 {
-    public $table = 'hospital_waiting_time';
+    public $table = 'hospital_inpatients';
     public $timestamps = true;
 
     /**
@@ -16,7 +16,7 @@ class HospitalWaitingTime extends Model
      * @var array
      */
     protected $fillable = [
-        'hospital_id', 'specialty_id', 'total_within_18_weeks', 'total_incomplete', 'avg_waiting_weeks', 'perc_waiting_weeks', 'outpatient_total_non_admitted', 'outpatient_perc_95', 'inpatient_total_admitted', 'inpatient_perc_95', 'status'
+        'hospital_id', 'specialty_id', 'total_admitted', 'perc_95', 'status'
     ];
 
     /**
@@ -25,17 +25,11 @@ class HospitalWaitingTime extends Model
      * @var array
      */
     protected $casts = [
-        'hospital_id'                   => 'integer',
-        'specialty_id'                  => 'integer',
-        'total_within_18_weeks'         => 'integer',
-        'total_incomplete'              => 'integer',
-        'outpatient_total_non_admitted' => 'integer',
-        'inpatient_total_admitted'      => 'integer',
-        'avg_waiting_weeks'             => 'double',
-        'outpatient_perc_95'            => 'double',
-        'inpatient_perc_95'             => 'double',
-        'perc_waiting_weeks'            => 'double',
-        'status'                        => 'string'
+        'hospital_id'           => 'integer',
+        'specialty_id'          => 'integer',
+        'total_admitted'        => 'integer',
+        'perc_95'               => 'double',
+        'status'                => 'string'
     ];
 
     /**

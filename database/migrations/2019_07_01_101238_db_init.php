@@ -125,10 +125,14 @@ class DbInit extends Migration
                 $table->increments('id');
                 $table->unsignedInteger('hospital_id');
                 $table->unsignedInteger('specialty_id');
-                $table->integer('total_within_18_weeks');
-                $table->integer('total_incomplete');
+                $table->integer('total_within_18_weeks')->nullable();
+                $table->integer('total_incomplete')->nullable();
                 $table->float('avg_waiting_weeks')->nullable();
                 $table->float('perc_waiting_weeks')->nullable();
+                $table->integer('outpatient_total_non_admitted')->nullable();
+                $table->double('outpatient_perc_95')->nullable();
+                $table->integer('inpatient_total_admitted')->nullable();
+                $table->double('inpatient_perc_95')->nullable();
                 $table->string('status')->default("active");
                 $table->timestamps();
 
@@ -168,6 +172,22 @@ class DbInit extends Migration
                 $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade')->onUpdate('cascade');
             });
         }
+//
+//        //Check if the Table `hospital_inpatients` exists
+//        if (!Schema::hasTable('hospital_inpatients')) {
+//            Schema::create('hospital_inpatients', function (Blueprint $table) {
+//                $table->increments('id');
+//                $table->unsignedInteger('hospital_id');
+//                $table->unsignedInteger('specialty_id');
+//                $table->integer('total_admitted');
+//                $table->double('perc_95');
+//                $table->string('status')->default("active");
+//                $table->timestamps();
+//
+//                $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade')->onUpdate('cascade');
+//                $table->foreign('specialty_id')->references('id')->on('specialties')->onDelete('cascade')->onUpdate('cascade');
+//            });
+//        }
 
         //Check if the Table `hospital_admitted` exists
         if (!Schema::hasTable('hospital_admitted')) {
@@ -231,6 +251,7 @@ class DbInit extends Migration
         Schema::dropIfExists('hospital_maternity');
         Schema::dropIfExists('hospital_emergencies');
         Schema::dropIfExists('hospital_admitted');
+        Schema::dropIfExists('hospital_inpatients');
         Schema::dropIfExists('hospital_outpatients');
         Schema::dropIfExists('hospital_cancelled_ops');
         Schema::dropIfExists('hospital_waiting_time');
