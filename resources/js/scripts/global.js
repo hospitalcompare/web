@@ -302,3 +302,4 @@ window.textTruncate = function(str, length, ending) {
     }
 };
 
+
