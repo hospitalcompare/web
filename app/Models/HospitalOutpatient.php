@@ -16,7 +16,7 @@ class HospitalOutpatient extends Model
      * @var array
      */
     protected $fillable = [
-        'hospital_id', 'total_responses', 'total_eligible', 'perc_recommended', 'status'
+        'hospital_id', 'specialty_id', 'total_non_admitted', 'perc_95', 'status'
     ];
 
     /**
@@ -26,9 +26,9 @@ class HospitalOutpatient extends Model
      */
     protected $casts = [
         'hospital_id'           => 'integer',
-        'total_responses'       => 'integer',
-        'total_eligible'        => 'integer',
-        'perc_recommended'      => 'double',
+        'specialty_id'          => 'integer',
+        'total_non_admitted'    => 'integer',
+        'perc_95'               => 'double',
         'status'                => 'string'
     ];
 
@@ -41,13 +41,32 @@ class HospitalOutpatient extends Model
     }
 
     /**
+     * specialty() belongs to Specialty
+     * @return mixed
+     */
+    public function specialty() {
+        return $this->belongsTo( '\App\Models\Specialty', 'specialty_id');
+    }
+
+    /**
      * Used to build Queries
      *
      * @param $query
      * @param $hospital
      * @return mixed
      */
-    public function scopeByHospital($query, $hospital){
+    public function scopeByHospital($query, $hospital) {
         return $query->where('hospital_id', $hospital);
+    }
+
+    /**
+     * Used to build Queries
+     *
+     * @param $query
+     * @param $specialty
+     * @return mixed
+     */
+    public function scopeBySpecialty($query, $specialty) {
+        return $query->where('specialty_id', $specialty);
     }
 }

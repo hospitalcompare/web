@@ -159,13 +159,14 @@ class DbInit extends Migration
             Schema::create('hospital_outpatients', function (Blueprint $table) {
                 $table->increments('id');
                 $table->unsignedInteger('hospital_id');
-                $table->integer('total_responses');
-                $table->integer('total_eligible');
-                $table->double('perc_recommended');
+                $table->unsignedInteger('specialty_id');
+                $table->integer('total_non_admitted');
+                $table->double('perc_95');
                 $table->string('status')->default("active");
                 $table->timestamps();
 
                 $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade')->onUpdate('cascade');
+                $table->foreign('specialty_id')->references('id')->on('specialties')->onDelete('cascade')->onUpdate('cascade');
             });
         }
 
