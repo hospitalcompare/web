@@ -130,33 +130,23 @@
                                             </div>
                                             <div class="d-table-row">
                                                 <div class="d-table-cell">Current Waiting Time</div>
-                                                <div class="d-table-cell">20.4</div>
-                                                <div class="d-table-cell">X of Y</div>
-                                            </div>
-                                            <div class="d-table-row">
-                                                <div class="d-table-cell SofiaPro-SemiBold">Waiting Times for Treated Patients</div>
-                                                <div class="d-table-cell"></div>
-                                                <div class="d-table-cell"></div>
+                                                <div class="d-table-cell">'.$waitTime.'</div>
+                                                <div class="d-table-cell">'.$waitingTimeRanking.'</div>
                                             </div>
                                             <div class="d-table-row">
                                                 <div class="d-table-cell">Outpatients Treated</div>
-                                                <div class="d-table-cell">34</div>
-                                                <div class="d-table-cell">X of Y</div>
+                                                <div class="d-table-cell">'.$outpatient.'</div>
+                                                <div class="d-table-cell">'.$outpatientRank.'</div>
                                             </div>
                                             <div class="d-table-row">
                                                 <div class="d-table-cell">Inpatients treated</div>
-                                                <div class="d-table-cell">23</div>
-                                                <div class="d-table-cell">X of Y</div>
-                                            </div>
-                                            <div class="d-table-row">
-                                                <div class="d-table-cell">Diagnostics - % waiting 6+ weeks</div>
-                                                <div class="d-table-cell">XX%</div>
-                                                <div class="d-table-cell">X of Y</div>
+                                                <div class="d-table-cell">'.$inpatient.'</div>
+                                                <div class="d-table-cell">'.$inpatientRank.'</div>
                                             </div>
                                         </div>
                                         <small>NB - Diagnostics is a % of current waiting list waiting 6+ weeks (national target is 1%)</small>
                                     </div>'])>
-                    {!! !empty($waitTime) ? $waitTime : "No data" !!}
+                    {!! !empty($waitTime) ? $waitTime.'<br>Weeks' : "No data" !!}
                 </p>
 {{--                @if($NHSClass == 'private-hospital')--}}
 {{--                    <span>--}}

@@ -356,7 +356,7 @@ class Hospital extends Model
         $hospitals = $hospitals->paginate(10)->onEachSide(1);
 
         //Build the Rankings for the Waiting Times tooltip
-        $outpatientRankings = $inpatientRankings = [];
+        $outpatientRankings = $inpatientRankings = $waitingTimeRankings = [];
         if(!empty($preHospitals)) {
             foreach($preHospitals as $preHospital) {
                 //Check if we have Outpatient
@@ -372,6 +372,13 @@ class Hospital extends Model
                 } else {
                     $inpatientRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => 100];
                 }
+
+                //Check if we have Waiting Time
+                if(!empty($preHospital['waiting_time'][0]['perc_waiting_weeks'])) {
+                    $waitingTimeRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => $preHospital['waiting_time'][0]['perc_waiting_weeks']];
+                } else {
+                    $waitingTimeRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => 100];
+                }
             }
         }
 
@@ -384,6 +391,10 @@ class Hospital extends Model
             return $a['ranking'] <=> $b['ranking'];
         });
 
+        usort($waitingTimeRankings, function($a, $b) {
+            return $a['ranking'] <=> $b['ranking'];
+        });
+
         if(!empty($inpatientRankings)) {
             foreach($inpatientRankings as $inpKey => &$inpatient) {
                 $inpatient['position'] = $inpKey+1;
@@ -393,6 +404,12 @@ class Hospital extends Model
         if(!empty($outpatientRankings)) {
             foreach($outpatientRankings as $outKey => &$outpatientRanking) {
                 $outpatientRanking['position'] = $outKey+1;
+            }
+        }
+
+        if(!empty($waitingTimeRankings)) {
+            foreach($waitingTimeRankings as $wtKey => &$waitingTimeRanking) {
+                $waitingTimeRanking['position'] = $wtKey+1;
             }
         }
 
@@ -463,8 +480,9 @@ class Hospital extends Model
             'data'              => [
                 'hospitals'             => $hospitals,
                 'special_offers'        => $specialOffers,
-                'outpatientRanking'     => $outpatientRankings,
-                'inpatientRanking'      => $inpatientRankings
+                'outpatientRankings'    => $outpatientRankings,
+                'inpatientRankings'     => $inpatientRankings,
+                'waitingTimeRanking'    => $waitingTimeRankings
             ],
             'doctor'            => [
                 'text'          => $doctor,

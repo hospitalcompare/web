@@ -68,13 +68,16 @@ class WebController extends BaseController
         else
             $radius = 50;
 
-        $hospitals      = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy, $page);
-        $errors         = $hospitals['errors'];
-        $doctor         = $hospitals['doctor']['text'];
-        $delay          = $hospitals['doctor']['delay'];
-        $specialOffers  = $hospitals['data']['special_offers']['items'];
-        $outstanding    = $hospitals['data']['special_offers']['outstanding'];
-        $hospitals      = $hospitals['data']['hospitals'];
+        $hospitals              = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius, $waitingTime, $userRating, $qualityRating, $hospitalType, $policyId, $sortBy, $page);
+        $errors                 = $hospitals['errors'];
+        $doctor                 = $hospitals['doctor']['text'];
+        $delay                  = $hospitals['doctor']['delay'];
+        $specialOffers          = $hospitals['data']['special_offers']['items'];
+        $outstanding            = $hospitals['data']['special_offers']['outstanding'];
+        $outpatientRankings     = $hospitals['data']['outpatientRankings'];
+        $inpatientRankings      = $hospitals['data']['inpatientRankings'];
+        $waitingTimeRankings    = $hospitals['data']['waitingTimeRanking'];
+        $hospitals              = $hospitals['data']['hospitals'];
 
         $sortBys    = Utils::sortBys;
         $procedures = Utils::getProceduresForDropdown();
@@ -82,6 +85,9 @@ class WebController extends BaseController
 
         $this->returnedData['success']                                  = true;
         $this->returnedData['data']['hospitals']                        = $hospitals;
+        $this->returnedData['data']['outpatientRankings']               = $outpatientRankings;
+        $this->returnedData['data']['inpatientRankings']                = $inpatientRankings;
+        $this->returnedData['data']['waitingTimeRankings']              = $waitingTimeRankings;
         $this->returnedData['data']['special_offers']                   = $specialOffers;
         $this->returnedData['data']['outstanding']                      = $outstanding;
         $this->returnedData['data']['filters']['procedures']            = $procedures;
