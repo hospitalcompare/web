@@ -16,662 +16,706 @@
     {{--            ['displayBlock' => 'true'])--}}
     {{--    </section>--}}
     <section>
-        <div class="compare-hospitals-bar ">
-            <div class="compare-hospitals-header d-flex justify-content-between">
-                <div class="container position-relative d-flex justify-content-between align-items-end h-100">
-
-
-                    <ul class="solutions-menu align-items-end d-none d-md-flex mb-0 ml-auto mr-3">
-                        <li class="d-block h-100 ">
-                            <div class="special-offer-tab blue__offer blue">
-                                <div class="special-offer-header d-flex align-items-center">
-
-
-                                    <div class="offer-text">
-                                        <div class="closed-text">
-                                            <p class="offer-title mb-0">NHS funded operation</p>
-                                            <p class="offer-subtitle mb-0">in 4.3 Weeks </p>
-                                        </div>
-                                        <div class="open-text">
-                                            <p class="hospital-name mb-0">Frimley Park Hospital - Scanning Centre </p>
-                                            <p class="distance mb-0"></p>
-                                        </div>
-                                    </div>
-                                    <span class="toggle-special-offer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12"><g><g><path fill="#fff"
-                                                                                                           d="M9.72 3.84l7.277 7.276c.2.2.467.31.752.31s.552-.11.752-.31l.638-.638c.2-.2.31-.467.31-.752s-.11-.552-.31-.752L10.475.31c-.2-.2-.469-.31-.754-.31-.286 0-.554.11-.755.31L.31 8.966c-.2.2-.311.467-.311.752s.11.552.31.752l.638.638c.415.414 1.09.414 1.505 0z"></path></g></g></svg>
-        </span>
-                                </div>
-                                <div class="special-offer-body">
-                                    <div class="inner-body d-flex flex-column justify-content-between h-100">
-                                        <div>
-                                            <ul class="bullets">
-                                                <li>4.3 Weeks</li>
-                                                <li>Good CQC Rating</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="btn-area text-right">
-                                            <button href="" id="1" style=""
-                                                    class="btn btn-icon btn-enquire-now enquiry mt-auto" role="button"
-                                                    data-toggle="modal"
-                                                    data-modal-text="This is the default text for an enquiry to a private hospital"
-                                                    data-hospital-title="Frimley Park Hospital - Scanning Centre "
-                                                    data-target="#hc_modal_enquire_private" data-image=""
-                                                    data-address="">Enquire now
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="d-block h-100 ml-4">
-                            <div class="special-offer-tab pink__offer pink">
-                                <div class="special-offer-header d-flex align-items-center">
-
-
-                                    <div class="offer-text">
-                                        <div class="closed-text">
-                                            <p class="offer-title mb-0">NHS funded operation</p>
-                                            <p class="offer-subtitle mb-0">in 4.3 Weeks </p>
-                                        </div>
-                                        <div class="open-text">
-                                            <p class="hospital-name mb-0">Inhealth Radiology Department </p>
-                                            <p class="distance mb-0"></p>
-                                        </div>
-                                    </div>
-                                    <span class="toggle-special-offer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12"><g><g><path fill="#fff"
-                                                                                                           d="M9.72 3.84l7.277 7.276c.2.2.467.31.752.31s.552-.11.752-.31l.638-.638c.2-.2.31-.467.31-.752s-.11-.552-.31-.752L10.475.31c-.2-.2-.469-.31-.754-.31-.286 0-.554.11-.755.31L.31 8.966c-.2.2-.311.467-.311.752s.11.552.31.752l.638.638c.415.414 1.09.414 1.505 0z"></path></g></g></svg>
-        </span>
-                                </div>
-                                <div class="special-offer-body">
-                                    <div class="inner-body d-flex flex-column justify-content-between h-100">
-                                        <div>
-                                            <ul class="bullets">
-                                                <li>4.3 Weeks</li>
-                                                <li>Good CQC Rating</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="btn-area text-right">
-                                            <button href="" id="1" style=""
-                                                    class="btn btn-icon btn-enquire-now enquiry mt-auto" role="button"
-                                                    data-toggle="modal"
-                                                    data-modal-text="This is the default text for an enquiry to a private hospital"
-                                                    data-hospital-title="Inhealth Radiology Department "
-                                                    data-target="#hc_modal_enquire_private" data-image=""
-                                                    data-address="">Enquire now
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-
-                    </ul>
-                    <div class="compare-button-title d-flex align-items-center h-100">
-
-                        <svg id="compare_heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"
-                             class="has-count active">
-
-                            <path id="outer-circle" fill="transparent" stroke-width="2" stroke="#fff"
-                                  d="M15 1c7.7 0 14 6.3 14 14s-6.3 14-14 14S1 22.7 1 15 7.3 1 15 1z"></path>
-                            <g>
-                                <path id="wishlist" fill="transparent"
-                                      d="M18.8 8c-1.3 0-2.6.7-3.3 1.8-.2.2-.3.5-.4.7-.1-.2-.3-.5-.4-.7-.7-1.1-2-1.8-3.3-1.8-2.6.1-4.4 2-4.4 4.4v.1c0 2.8 2.3 4.7 5.7 7.7.6.6 1.3 1.1 1.9 1.7.1.1.3.1.4.1.1 0 .2 0 .3-.1l2.1-1.8c3.2-2.7 5.6-4.7 5.6-7.6.1-2.4-1.7-4.4-4.1-4.6l-.1.1z"></path>
-                            </g>
-                        </svg>
-                        <p class="font-26">Compare&nbsp;(<span id="compare_number">2</span>)<span
-                                class="compare-arrow ml-3 rotated"></span>
-                        </p>
+        <h3>Waiting times popover</h3>
+        <div class="popover popover-regular fade bs-popover-top show" role="tooltip"
+             id="popover438743" x-placement="top" style="position: relative;">
+            <div class="arrow"></div>
+            <div class="popover-body">
+                <div class="d-table w-100">
+                    <div class="d-table-row">
+                        <div class="d-table-cell"></div>
+                        <div class="d-table-cell SofiaPro-Medium">Weeks</div>
+                        <div class="d-table-cell SofiaPro-Medium">Ranking</div>
                     </div>
-                </div>
-            </div>
-            <div class="compare-hospitals-content revealed" style="display: block;">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-2 d-none" id="no_items_added">
-                            <div class="col-inner">
-                                <div class="col-header_small">
-                                    <p class="font-16 SofiaPro-SemiBold mb-5">You haven’t added any
-                                        hospitals to compare yet. </p>
-                                    <p>Click the the&nbsp;<img width="14" height="12" src="/images/icons/heart.svg"
-                                                               alt="Heart icon">&nbsp;next to the hospital to add the
-                                        chosen
-                                        hospital into the comparison dashboard.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="compare_hospitals_headings" class="col-2">
-                            <div class="col-inner h-100">
-                                <div class="col-header">
-                                    <p class="SofiaPro-SemiBold mb-1">You are comparing:</p>
-                                    <p>
-                                        <span id="nhs-hospital-count">1</span>&nbsp;NHS hospital(s) &amp;<br>
-                                        <span id="private-hospital-count">1</span>&nbsp;Private hospital(s)
-                                    </p>
-                                    <form id="multiple_enquiries_form" novalidate="novalidate">
-
-                                        <input id="multiple_enquiries_hospital_ids" class="d-none" type="text"
-                                               name="hospital_id" value="">
-                                        <input class="d-none" type="text" name="title" value="Mr">
-                                        <input class="d-none" type="text" name="first_name" value="Hello">
-                                        <input class="d-none" type="text" name="last_name" value="Hello">
-                                        <input class="d-none" type="email" name="email" value="hello@mello.yello">
-                                        <input class="d-none" type="email" name="confirm_email"
-                                               value="hello@mello.yello">
-                                        <input class="d-none" type="text" name="phone_number" value="01234567891">
-                                        <input class="d-none" type="text" name="postcode" value="ch23ae">
-                                        <input class="d-none" type="checkbox" value="on">
-                                        <input class="d-none" type="text" name="additional_information"
-                                               value="Some info">
-                                        <button id="multiple_enquiries_button" style=""
-                                                class="btn btn-squared btn-blue btn-grad btn-enquiry font-14" target=""
-                                                data-target="" href="javascript:void(0);" role="button">
-                                            Make an enquiry to all your chosen hospitals
-
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                 viewBox="0 0 20 20">
-                                                <g>
-                                                    <g>
-                                                        <g>
-                                                            <path fill="#fff"
-                                                                  d="M10.002 18.849c-4.878 0-8.846-3.968-8.846-8.847 0-4.878 3.968-8.846 8.846-8.846 4.879 0 8.847 3.968 8.847 8.846 0 4.879-3.968 8.847-8.847 8.847zm0-18.849C4.488 0 0 4.488 0 10.002c0 5.515 4.488 10.003 10.002 10.003 5.515 0 10.003-4.488 10.003-10.003C20.005 4.488 15.517 0 10.002 0z"></path>
-                                                        </g>
-                                                        <g>
-                                                            <path fill="#fff"
-                                                                  d="M14.47 5.848l-5.665 6.375-3.34-2.67a.578.578 0 0 0-.811.088c-.2.25-.158.615.091.815l3.769 3.015a.57.57 0 0 0 .361.125c.167 0 .325-.07.433-.196l6.03-6.783a.579.579 0 0 0 .146-.42.588.588 0 0 0-.191-.4.592.592 0 0 0-.824.05z"></path>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                        </button>
-
-                                    </form>
-                                </div>
-                                <div class=""></div>
-                                <div class="cell">
-                            <span class="position-relative">Hospital Type&nbsp;&nbsp;
-                                <span tabindex="0" _data-offset="30px, 40px" data-offset="0 5px" class="help-link"
-                                      data-toggle="popover-comparison" data-content="
-                                                 <span>
-                                                     NHS or Private Hospital
-                                                 </span>
-                                                 " data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell">
-                            <span class="position-relative">Average Waiting Time&nbsp;&nbsp;
-                                <span tabindex="0" _data-offset="30px, 40px" data-offset="0 5px" class="help-link"
-                                      data-toggle="popover-comparison" data-content="
-                                                    <span>
-                                                        Our waiting time data is based on NHS data, specifically the number of weeks that 92 out or 100 people wait for their treatment to start.
-                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell">
-                            <span class="position-relative">NHS User Rating&nbsp;&nbsp;
-                                <span tabindex="0" data-offset="0 5px" class="help-link"
-                                      data-toggle="popover-comparison" data-content="
-                                                 <span>
-                                                     The average waiting time for procedures at this hospital
-                                                 </span>
-                                                 " data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell">
-                            <span class="position-relative">% Operations cancelled&nbsp;&nbsp;
-                                <span tabindex="0" data-offset="0 5px" class="help-link"
-                                      data-toggle="popover-comparison" data-content="
-                                                 <span>
-                                                    The percentage of operations cancelled during the last reporting period. Data only available for NHS hospitals at this time.
-                                                 </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell">
-                            <span class="position-relative">Care Quality Rating&nbsp;&nbsp;
-                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>
-                                                        The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
-                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell">
-                            <span class="position-relative">Friends &amp; Family Rating&nbsp;&nbsp;
-                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>
-                                                        The percentage of people who would recommend this hospital to family and friends.
-                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell">
-                            <span class="position-relative">NHS Funded Work&nbsp;&nbsp;
-                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>
-                                                        This hospital provides treatments funded by the NHS. Remember you can have an NHS treatment at most private hospitals.
-                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell">
-                            <span class="position-relative">Private Self Pay&nbsp;&nbsp;
-                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>
-                                                        Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
-                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell column-break SofiaPro-SemiBold">Care Quality Rating</div>
-                                <div class="cell">
-                            <span class="position-relative">Safe&nbsp;&nbsp;
-                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>
-                                                        Info here
-                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell">
-                            <span class="position-relative">Effective&nbsp;&nbsp;
-                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>
-                                                    Info here
-                                                </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell">
-                            <span class="position-relative">Caring&nbsp;&nbsp;
-                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>
-                                                        Info here
-                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell">
-                            <span class="position-relative">Responsive&nbsp;&nbsp;
-                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>
-                                                        Info here
-                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell">
-                            <span class="position-relative">Well Led&nbsp;&nbsp;
-                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>
-                                                        Info here
-                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell column-break SofiaPro-SemiBold">NHS User Rating</div>
-                                <div class="cell">
-                            <span class="position-relative">Cleanliness&nbsp;&nbsp;
-                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>
-                                                        Info here
-                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell">
-                            <span class="position-relative">Food &amp; Hygiene&nbsp;&nbsp;
-                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>
-                                                        Info here
-                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell">
-                            <span class="position-relative">Privacy, Dignity &amp; Wellbeing&nbsp;&nbsp;
-                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>
-                                                        Info here
-                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell">
-                            <span class="position-relative">Dementia Domain&nbsp;&nbsp;
-                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>
-                                                        Info here
-                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                                <div class="cell">
-                            <span class="position-relative">Disability Domain&nbsp;&nbsp;
-                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>
-                                                        Info here
-                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"
-                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"
-                                                                           height="8" viewBox="0 0 6 8">
-    <g>
-        <g>
-            <path
-                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>
-        </g>
-    </g>
-</svg>
-</span>
-                            </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-10">
-                            <div class="row" id="_compare_hospitals_grid">
-                                <div class="col text-center" id="compare_hospital_id_783">
-                                    <div class="col-inner">
-                                        <div class="col-header d-flex flex-column justify-content-between">
-                                            <div class="image-wrapper h-100"><img class="" src="images/alder-1.jpg"
-                                                                                  alt="Image of Walkergate Park ">
-                                                <div class="remove-hospital" id="remove_id_783"
-                                                     data-hospital-type="nhs-hospital"></div>
-                                                <div class="details"><p class="w-100 mt-auto">Walkergate Park </p><a
-                                                        id="783"
-                                                        class="btn btn-icon btn-blue btn-grad btn-enquire enquiry mr-2 btn-block"
-                                                        role="button" data-toggle="modal"
-                                                        data-hospital-url="www.ntw.nhs.uk"
-                                                        data-hospital-title="Walkergate Park "
-                                                        data-target="#hc_modal_enquire_nhs">Make an enquiry
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                             viewBox="0 0 20 20">
-                                                            <g>
-                                                                <g>
-                                                                    <g>
-                                                                        <path fill="#fff"
-                                                                              d="M10.002 18.849c-4.878 0-8.846-3.968-8.846-8.847 0-4.878 3.968-8.846 8.846-8.846 4.879 0 8.847 3.968 8.847 8.846 0 4.879-3.968 8.847-8.847 8.847zm0-18.849C4.488 0 0 4.488 0 10.002c0 5.515 4.488 10.003 10.002 10.003 5.515 0 10.003-4.488 10.003-10.003C20.005 4.488 15.517 0 10.002 0z"></path>
-                                                                    </g>
-                                                                    <g>
-                                                                        <path fill="#fff"
-                                                                              d="M14.47 5.848l-5.665 6.375-3.34-2.67a.578.578 0 0 0-.811.088c-.2.25-.158.615.091.815l3.769 3.015a.57.57 0 0 0 .361.125c.167 0 .325-.07.433-.196l6.03-6.783a.579.579 0 0 0 .146-.42.588.588 0 0 0-.191-.4.592.592 0 0 0-.824.05z"></path>
-                                                                    </g>
-                                                                </g>
-                                                            </g>
-                                                        </svg>
-                                                    </a></div>
-                                            </div>
-                                        </div>
-                                        <div class="cell">NHS Hospital</div>
-                                        <div class="cell">11.92 Weeks</div>
-                                        <div class="cell">No data</div>
-                                        <div class="cell">No data</div>
-                                        <div class="cell">Outstanding</div>
-                                        <div class="cell">No data</div>
-                                        <div class="cell">No data</div>
-                                        <div class="cell"><img src="images/icons/dash-black.svg" alt="Dash icon"></div>
-                                        <div class="cell column-break"></div>
-                                        <div class="cell">Good</div>
-                                        <div class="cell">Outstanding</div>
-                                        <div class="cell">Outstanding</div>
-                                        <div class="cell">Outstanding</div>
-                                        <div class="cell">Outstanding</div>
-                                        <div class="cell column-break"></div>
-                                        <div class="cell">100%</div>
-                                        <div class="cell">92.77%</div>
-                                        <div class="cell">100%</div>
-                                        <div class="cell">93.8%</div>
-                                        <div class="cell">98.62%</div>
-                                    </div>
-                                </div>
-                                <div class="col text-center" id="compare_hospital_id_272">
-                                    <div class="col-inner">
-                                        <div class="col-header d-flex flex-column justify-content-between">
-                                            <div class="image-wrapper h-100"><img class="" src="images/alder-1.jpg"
-                                                                                  alt="Image of Caterham Dene Hospital ">
-                                                <div class="remove-hospital" id="remove_id_272"
-                                                     data-hospital-type="private-hospital"></div>
-                                                <div class="details"><p class="w-100 mt-auto">Caterham Dene
-                                                        Hospital </p><a id="272"
-                                                                        class="btn btn-icon btn-blue btn-grad btn-enquire enquiry mr-2 btn-block"
-                                                                        role="button" data-toggle="modal"
-                                                                        data-hospital-url="www.firstcommunityhealthcare.co.uk/caterham-dene-community-hospital"
-                                                                        data-hospital-title="Caterham Dene Hospital "
-                                                                        data-target="#hc_modal_enquire_private">Make an
-                                                        enquiry
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                             viewBox="0 0 20 20">
-                                                            <g>
-                                                                <g>
-                                                                    <g>
-                                                                        <path fill="#fff"
-                                                                              d="M10.002 18.849c-4.878 0-8.846-3.968-8.846-8.847 0-4.878 3.968-8.846 8.846-8.846 4.879 0 8.847 3.968 8.847 8.846 0 4.879-3.968 8.847-8.847 8.847zm0-18.849C4.488 0 0 4.488 0 10.002c0 5.515 4.488 10.003 10.002 10.003 5.515 0 10.003-4.488 10.003-10.003C20.005 4.488 15.517 0 10.002 0z"></path>
-                                                                    </g>
-                                                                    <g>
-                                                                        <path fill="#fff"
-                                                                              d="M14.47 5.848l-5.665 6.375-3.34-2.67a.578.578 0 0 0-.811.088c-.2.25-.158.615.091.815l3.769 3.015a.57.57 0 0 0 .361.125c.167 0 .325-.07.433-.196l6.03-6.783a.579.579 0 0 0 .146-.42.588.588 0 0 0-.191-.4.592.592 0 0 0-.824.05z"></path>
-                                                                    </g>
-                                                                </g>
-                                                            </g>
-                                                        </svg>
-                                                    </a></div>
-                                            </div>
-                                        </div>
-                                        <div class="cell">Private Hospital</div>
-                                        <div class="cell">9.58 Weeks</div>
-                                        <div class="cell">No data</div>
-                                        <div class="cell">No data</div>
-                                        <div class="cell">Outstanding</div>
-                                        <div class="cell">No data</div>
-                                        <div class="cell">No data</div>
-                                        <div class="cell"><img src="images/icons/dash-black.svg" alt="Dash icon"></div>
-                                        <div class="cell column-break"></div>
-                                        <div class="cell">Good</div>
-                                        <div class="cell">Good</div>
-                                        <div class="cell">Outstanding</div>
-                                        <div class="cell">Outstanding</div>
-                                        <div class="cell">Outstanding</div>
-                                        <div class="cell column-break"></div>
-                                        <div class="cell">No data</div>
-                                        <div class="cell">No data</div>
-                                        <div class="cell">No data</div>
-                                        <div class="cell">No data</div>
-                                        <div class="cell">No data</div>
-                                    </div>
-                                </div>
-                                <!-- Items added here -->
-                                <div class="col">
-                                    <div class="col-inner">
-                                        <div class="col-header">
-                                            <p class="text-center">Selected Hospital<br>
-                                                will appear here.</p>
-                                            <p class="text-center"> Add more hospitals to your
-                                                Shortlist by clicking the&nbsp;<img width="14" height="12"
-                                                                                    src="/images/icons/heart.svg"
-                                                                                    alt="Heart icon">
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="col-inner">
-                                        <div class="col-header">
-                                            <p class="text-center">Selected Hospital<br>
-                                                will appear here.</p>
-                                            <p class="text-center"> Add more hospitals to your
-                                                Shortlist by clicking the&nbsp;<img width="14" height="12"
-                                                                                    src="/images/icons/heart.svg"
-                                                                                    alt="Heart icon">
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="col-inner">
-                                        <div class="col-header">
-                                            <p class="text-center">Selected Hospital<br>
-                                                will appear here.</p>
-                                            <p class="text-center"> Add more hospitals to your
-                                                Shortlist by clicking the&nbsp;<img width="14" height="12"
-                                                                                    src="/images/icons/heart.svg"
-                                                                                    alt="Heart icon">
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
+                    <div class="d-table-row">
+                        <div class="d-table-cell">Current Waiting Time</div>
+                        <div class="d-table-cell">20.4</div>
+                        <div class="d-table-cell">X of Y</div>
+                    </div>
+                    <div class="d-table-row">
+                        <div class="d-table-cell SofiaPro-SemiBold">Waiting Times for Treated Patients</div>
+                        <div class="d-table-cell"></div>
+                        <div class="d-table-cell"></div>
+                    </div>
+                    <div class="d-table-row">
+                        <div class="d-table-cell">Outpatients Treated</div>
+                        <div class="d-table-cell">34</div>
+                        <div class="d-table-cell">X of Y</div>
+                    </div>
+                    <div class="d-table-row">
+                        <div class="d-table-cell">Inpatients treated</div>
+                        <div class="d-table-cell">23</div>
+                        <div class="d-table-cell">X of Y</div>
+                    </div>
+                    <div class="d-table-row">
+                        <div class="d-table-cell">Diagnostics - % waiting 6+ weeks</div>
+                        <div class="d-table-cell">XX%</div>
+                        <div class="d-table-cell">X of Y</div>
+                    </div>
+                    <div class="d-table-row">
+                        <small>NB - Diagnostics is a % of current waiting list waiting 6+ weeks (national target is 1%)</small>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    {{--    <section>--}}
+    {{--        <div class="compare-hospitals-bar ">--}}
+    {{--            <div class="compare-hospitals-header d-flex justify-content-between">--}}
+    {{--                <div class="container position-relative d-flex justify-content-between align-items-end h-100">--}}
+
+
+    {{--                    <ul class="solutions-menu align-items-end d-none d-md-flex mb-0 ml-auto mr-3">--}}
+    {{--                        <li class="d-block h-100 ">--}}
+    {{--                            <div class="special-offer-tab blue__offer blue">--}}
+    {{--                                <div class="special-offer-header d-flex align-items-center">--}}
+
+
+    {{--                                    <div class="offer-text">--}}
+    {{--                                        <div class="closed-text">--}}
+    {{--                                            <p class="offer-title mb-0">NHS funded operation</p>--}}
+    {{--                                            <p class="offer-subtitle mb-0">in 4.3 Weeks </p>--}}
+    {{--                                        </div>--}}
+    {{--                                        <div class="open-text">--}}
+    {{--                                            <p class="hospital-name mb-0">Frimley Park Hospital - Scanning Centre </p>--}}
+    {{--                                            <p class="distance mb-0"></p>--}}
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                    <span class="toggle-special-offer">--}}
+    {{--            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12"><g><g><path fill="#fff"--}}
+    {{--                                                                                                           d="M9.72 3.84l7.277 7.276c.2.2.467.31.752.31s.552-.11.752-.31l.638-.638c.2-.2.31-.467.31-.752s-.11-.552-.31-.752L10.475.31c-.2-.2-.469-.31-.754-.31-.286 0-.554.11-.755.31L.31 8.966c-.2.2-.311.467-.311.752s.11.552.31.752l.638.638c.415.414 1.09.414 1.505 0z"></path></g></g></svg>--}}
+    {{--        </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="special-offer-body">--}}
+    {{--                                    <div class="inner-body d-flex flex-column justify-content-between h-100">--}}
+    {{--                                        <div>--}}
+    {{--                                            <ul class="bullets">--}}
+    {{--                                                <li>4.3 Weeks</li>--}}
+    {{--                                                <li>Good CQC Rating</li>--}}
+    {{--                                            </ul>--}}
+    {{--                                        </div>--}}
+
+    {{--                                        <div class="btn-area text-right">--}}
+    {{--                                            <button href="" id="1" style=""--}}
+    {{--                                                    class="btn btn-icon btn-enquire-now enquiry mt-auto" role="button"--}}
+    {{--                                                    data-toggle="modal"--}}
+    {{--                                                    data-modal-text="This is the default text for an enquiry to a private hospital"--}}
+    {{--                                                    data-hospital-title="Frimley Park Hospital - Scanning Centre "--}}
+    {{--                                                    data-target="#hc_modal_enquire_private" data-image=""--}}
+    {{--                                                    data-address="">Enquire now--}}
+    {{--                                            </button>--}}
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </li>--}}
+    {{--                        <li class="d-block h-100 ml-4">--}}
+    {{--                            <div class="special-offer-tab pink__offer pink">--}}
+    {{--                                <div class="special-offer-header d-flex align-items-center">--}}
+
+
+    {{--                                    <div class="offer-text">--}}
+    {{--                                        <div class="closed-text">--}}
+    {{--                                            <p class="offer-title mb-0">NHS funded operation</p>--}}
+    {{--                                            <p class="offer-subtitle mb-0">in 4.3 Weeks </p>--}}
+    {{--                                        </div>--}}
+    {{--                                        <div class="open-text">--}}
+    {{--                                            <p class="hospital-name mb-0">Inhealth Radiology Department </p>--}}
+    {{--                                            <p class="distance mb-0"></p>--}}
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                    <span class="toggle-special-offer">--}}
+    {{--            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12"><g><g><path fill="#fff"--}}
+    {{--                                                                                                           d="M9.72 3.84l7.277 7.276c.2.2.467.31.752.31s.552-.11.752-.31l.638-.638c.2-.2.31-.467.31-.752s-.11-.552-.31-.752L10.475.31c-.2-.2-.469-.31-.754-.31-.286 0-.554.11-.755.31L.31 8.966c-.2.2-.311.467-.311.752s.11.552.31.752l.638.638c.415.414 1.09.414 1.505 0z"></path></g></g></svg>--}}
+    {{--        </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="special-offer-body">--}}
+    {{--                                    <div class="inner-body d-flex flex-column justify-content-between h-100">--}}
+    {{--                                        <div>--}}
+    {{--                                            <ul class="bullets">--}}
+    {{--                                                <li>4.3 Weeks</li>--}}
+    {{--                                                <li>Good CQC Rating</li>--}}
+    {{--                                            </ul>--}}
+    {{--                                        </div>--}}
+
+    {{--                                        <div class="btn-area text-right">--}}
+    {{--                                            <button href="" id="1" style=""--}}
+    {{--                                                    class="btn btn-icon btn-enquire-now enquiry mt-auto" role="button"--}}
+    {{--                                                    data-toggle="modal"--}}
+    {{--                                                    data-modal-text="This is the default text for an enquiry to a private hospital"--}}
+    {{--                                                    data-hospital-title="Inhealth Radiology Department "--}}
+    {{--                                                    data-target="#hc_modal_enquire_private" data-image=""--}}
+    {{--                                                    data-address="">Enquire now--}}
+    {{--                                            </button>--}}
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </li>--}}
+
+
+    {{--                    </ul>--}}
+    {{--                    <div class="compare-button-title d-flex align-items-center h-100">--}}
+
+    {{--                        <svg id="compare_heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"--}}
+    {{--                             class="has-count active">--}}
+
+    {{--                            <path id="outer-circle" fill="transparent" stroke-width="2" stroke="#fff"--}}
+    {{--                                  d="M15 1c7.7 0 14 6.3 14 14s-6.3 14-14 14S1 22.7 1 15 7.3 1 15 1z"></path>--}}
+    {{--                            <g>--}}
+    {{--                                <path id="wishlist" fill="transparent"--}}
+    {{--                                      d="M18.8 8c-1.3 0-2.6.7-3.3 1.8-.2.2-.3.5-.4.7-.1-.2-.3-.5-.4-.7-.7-1.1-2-1.8-3.3-1.8-2.6.1-4.4 2-4.4 4.4v.1c0 2.8 2.3 4.7 5.7 7.7.6.6 1.3 1.1 1.9 1.7.1.1.3.1.4.1.1 0 .2 0 .3-.1l2.1-1.8c3.2-2.7 5.6-4.7 5.6-7.6.1-2.4-1.7-4.4-4.1-4.6l-.1.1z"></path>--}}
+    {{--                            </g>--}}
+    {{--                        </svg>--}}
+    {{--                        <p class="font-26">Compare&nbsp;(<span id="compare_number">2</span>)<span--}}
+    {{--                                class="compare-arrow ml-3 rotated"></span>--}}
+    {{--                        </p>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+    {{--            <div class="compare-hospitals-content revealed" style="display: block;">--}}
+    {{--                <div class="container">--}}
+    {{--                    <div class="row">--}}
+    {{--                        <div class="col-2 d-none" id="no_items_added">--}}
+    {{--                            <div class="col-inner">--}}
+    {{--                                <div class="col-header_small">--}}
+    {{--                                    <p class="font-16 SofiaPro-SemiBold mb-5">You haven’t added any--}}
+    {{--                                        hospitals to compare yet. </p>--}}
+    {{--                                    <p>Click the the&nbsp;<img width="14" height="12" src="/images/icons/heart.svg"--}}
+    {{--                                                               alt="Heart icon">&nbsp;next to the hospital to add the--}}
+    {{--                                        chosen--}}
+    {{--                                        hospital into the comparison dashboard.</p>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                        <div id="compare_hospitals_headings" class="col-2">--}}
+    {{--                            <div class="col-inner h-100">--}}
+    {{--                                <div class="col-header">--}}
+    {{--                                    <p class="SofiaPro-SemiBold mb-1">You are comparing:</p>--}}
+    {{--                                    <p>--}}
+    {{--                                        <span id="nhs-hospital-count">1</span>&nbsp;NHS hospital(s) &amp;<br>--}}
+    {{--                                        <span id="private-hospital-count">1</span>&nbsp;Private hospital(s)--}}
+    {{--                                    </p>--}}
+    {{--                                    <form id="multiple_enquiries_form" novalidate="novalidate">--}}
+
+    {{--                                        <input id="multiple_enquiries_hospital_ids" class="d-none" type="text"--}}
+    {{--                                               name="hospital_id" value="">--}}
+    {{--                                        <input class="d-none" type="text" name="title" value="Mr">--}}
+    {{--                                        <input class="d-none" type="text" name="first_name" value="Hello">--}}
+    {{--                                        <input class="d-none" type="text" name="last_name" value="Hello">--}}
+    {{--                                        <input class="d-none" type="email" name="email" value="hello@mello.yello">--}}
+    {{--                                        <input class="d-none" type="email" name="confirm_email"--}}
+    {{--                                               value="hello@mello.yello">--}}
+    {{--                                        <input class="d-none" type="text" name="phone_number" value="01234567891">--}}
+    {{--                                        <input class="d-none" type="text" name="postcode" value="ch23ae">--}}
+    {{--                                        <input class="d-none" type="checkbox" value="on">--}}
+    {{--                                        <input class="d-none" type="text" name="additional_information"--}}
+    {{--                                               value="Some info">--}}
+    {{--                                        <button id="multiple_enquiries_button" style=""--}}
+    {{--                                                class="btn btn-squared btn-blue btn-grad btn-enquiry font-14" target=""--}}
+    {{--                                                data-target="" href="javascript:void(0);" role="button">--}}
+    {{--                                            Make an enquiry to all your chosen hospitals--}}
+
+    {{--                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"--}}
+    {{--                                                 viewBox="0 0 20 20">--}}
+    {{--                                                <g>--}}
+    {{--                                                    <g>--}}
+    {{--                                                        <g>--}}
+    {{--                                                            <path fill="#fff"--}}
+    {{--                                                                  d="M10.002 18.849c-4.878 0-8.846-3.968-8.846-8.847 0-4.878 3.968-8.846 8.846-8.846 4.879 0 8.847 3.968 8.847 8.846 0 4.879-3.968 8.847-8.847 8.847zm0-18.849C4.488 0 0 4.488 0 10.002c0 5.515 4.488 10.003 10.002 10.003 5.515 0 10.003-4.488 10.003-10.003C20.005 4.488 15.517 0 10.002 0z"></path>--}}
+    {{--                                                        </g>--}}
+    {{--                                                        <g>--}}
+    {{--                                                            <path fill="#fff"--}}
+    {{--                                                                  d="M14.47 5.848l-5.665 6.375-3.34-2.67a.578.578 0 0 0-.811.088c-.2.25-.158.615.091.815l3.769 3.015a.57.57 0 0 0 .361.125c.167 0 .325-.07.433-.196l6.03-6.783a.579.579 0 0 0 .146-.42.588.588 0 0 0-.191-.4.592.592 0 0 0-.824.05z"></path>--}}
+    {{--                                                        </g>--}}
+    {{--                                                    </g>--}}
+    {{--                                                </g>--}}
+    {{--                                            </svg>--}}
+    {{--                                        </button>--}}
+
+    {{--                                    </form>--}}
+    {{--                                </div>--}}
+    {{--                                <div class=""></div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">Hospital Type&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" _data-offset="30px, 40px" data-offset="0 5px" class="help-link"--}}
+    {{--                                      data-toggle="popover-comparison" data-content="--}}
+    {{--                                                 <span>--}}
+    {{--                                                     NHS or Private Hospital--}}
+    {{--                                                 </span>--}}
+    {{--                                                 " data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">Average Waiting Time&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" _data-offset="30px, 40px" data-offset="0 5px" class="help-link"--}}
+    {{--                                      data-toggle="popover-comparison" data-content="--}}
+    {{--                                                    <span>--}}
+    {{--                                                        Our waiting time data is based on NHS data, specifically the number of weeks that 92 out or 100 people wait for their treatment to start.--}}
+    {{--                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">NHS User Rating&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" data-offset="0 5px" class="help-link"--}}
+    {{--                                      data-toggle="popover-comparison" data-content="--}}
+    {{--                                                 <span>--}}
+    {{--                                                     The average waiting time for procedures at this hospital--}}
+    {{--                                                 </span>--}}
+    {{--                                                 " data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">% Operations cancelled&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" data-offset="0 5px" class="help-link"--}}
+    {{--                                      data-toggle="popover-comparison" data-content="--}}
+    {{--                                                 <span>--}}
+    {{--                                                    The percentage of operations cancelled during the last reporting period. Data only available for NHS hospitals at this time.--}}
+    {{--                                                 </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">Care Quality Rating&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>--}}
+    {{--                                                        The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.--}}
+    {{--                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">Friends &amp; Family Rating&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>--}}
+    {{--                                                        The percentage of people who would recommend this hospital to family and friends.--}}
+    {{--                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">NHS Funded Work&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>--}}
+    {{--                                                        This hospital provides treatments funded by the NHS. Remember you can have an NHS treatment at most private hospitals.--}}
+    {{--                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">Private Self Pay&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>--}}
+    {{--                                                        Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.--}}
+    {{--                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell column-break SofiaPro-SemiBold">Care Quality Rating</div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">Safe&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>--}}
+    {{--                                                        Info here--}}
+    {{--                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">Effective&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>--}}
+    {{--                                                    Info here--}}
+    {{--                                                </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">Caring&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>--}}
+    {{--                                                        Info here--}}
+    {{--                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">Responsive&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>--}}
+    {{--                                                        Info here--}}
+    {{--                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">Well Led&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>--}}
+    {{--                                                        Info here--}}
+    {{--                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell column-break SofiaPro-SemiBold">NHS User Rating</div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">Cleanliness&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>--}}
+    {{--                                                        Info here--}}
+    {{--                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">Food &amp; Hygiene&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>--}}
+    {{--                                                        Info here--}}
+    {{--                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">Privacy, Dignity &amp; Wellbeing&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>--}}
+    {{--                                                        Info here--}}
+    {{--                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">Dementia Domain&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>--}}
+    {{--                                                        Info here--}}
+    {{--                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="cell">--}}
+    {{--                            <span class="position-relative">Disability Domain&nbsp;&nbsp;--}}
+    {{--                                <span tabindex="0" class="help-link" data-toggle="popover-comparison" data-content="<span>--}}
+    {{--                                                        Info here--}}
+    {{--                                                    </span>" data-trigger="hover" data-placement="top" data-html="true"--}}
+    {{--                                      data-original-title="" title=""><svg xmlns="http://www.w3.org/2000/svg" width="6"--}}
+    {{--                                                                           height="8" viewBox="0 0 6 8">--}}
+    {{--    <g>--}}
+    {{--        <g>--}}
+    {{--            <path--}}
+    {{--                d="M1.7 7.086c0 .437.385.75.828.75.454 0 .826-.313.826-.75 0-.436-.372-.76-.826-.76-.443 0-.827.324-.827.76zm1.421-2.003c0-.526.291-.716.768-.85.91-.269 1.654-1.03 1.654-2.115 0-1.343-1.094-2.183-2.41-2.183C1.84-.065.804.842.804 2.275h1.153c0-.74.547-1.198 1.176-1.198.64 0 1.223.414 1.223 1.04 0 .303-.164.638-.467.84-1.106.716-1.955.604-1.955 2.126v.57h1.164z"></path>--}}
+    {{--        </g>--}}
+    {{--    </g>--}}
+    {{--</svg>--}}
+    {{--</span>--}}
+    {{--                            </span>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                        <div class="col-10">--}}
+    {{--                            <div class="row" id="_compare_hospitals_grid">--}}
+    {{--                                <div class="col text-center" id="compare_hospital_id_783">--}}
+    {{--                                    <div class="col-inner">--}}
+    {{--                                        <div class="col-header d-flex flex-column justify-content-between">--}}
+    {{--                                            <div class="image-wrapper h-100"><img class="" src="images/alder-1.jpg"--}}
+    {{--                                                                                  alt="Image of Walkergate Park ">--}}
+    {{--                                                <div class="remove-hospital" id="remove_id_783"--}}
+    {{--                                                     data-hospital-type="nhs-hospital"></div>--}}
+    {{--                                                <div class="details"><p class="w-100 mt-auto">Walkergate Park </p><a--}}
+    {{--                                                        id="783"--}}
+    {{--                                                        class="btn btn-icon btn-blue btn-grad btn-enquire enquiry mr-2 btn-block"--}}
+    {{--                                                        role="button" data-toggle="modal"--}}
+    {{--                                                        data-hospital-url="www.ntw.nhs.uk"--}}
+    {{--                                                        data-hospital-title="Walkergate Park "--}}
+    {{--                                                        data-target="#hc_modal_enquire_nhs">Make an enquiry--}}
+    {{--                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"--}}
+    {{--                                                             viewBox="0 0 20 20">--}}
+    {{--                                                            <g>--}}
+    {{--                                                                <g>--}}
+    {{--                                                                    <g>--}}
+    {{--                                                                        <path fill="#fff"--}}
+    {{--                                                                              d="M10.002 18.849c-4.878 0-8.846-3.968-8.846-8.847 0-4.878 3.968-8.846 8.846-8.846 4.879 0 8.847 3.968 8.847 8.846 0 4.879-3.968 8.847-8.847 8.847zm0-18.849C4.488 0 0 4.488 0 10.002c0 5.515 4.488 10.003 10.002 10.003 5.515 0 10.003-4.488 10.003-10.003C20.005 4.488 15.517 0 10.002 0z"></path>--}}
+    {{--                                                                    </g>--}}
+    {{--                                                                    <g>--}}
+    {{--                                                                        <path fill="#fff"--}}
+    {{--                                                                              d="M14.47 5.848l-5.665 6.375-3.34-2.67a.578.578 0 0 0-.811.088c-.2.25-.158.615.091.815l3.769 3.015a.57.57 0 0 0 .361.125c.167 0 .325-.07.433-.196l6.03-6.783a.579.579 0 0 0 .146-.42.588.588 0 0 0-.191-.4.592.592 0 0 0-.824.05z"></path>--}}
+    {{--                                                                    </g>--}}
+    {{--                                                                </g>--}}
+    {{--                                                            </g>--}}
+    {{--                                                        </svg>--}}
+    {{--                                                    </a></div>--}}
+    {{--                                            </div>--}}
+    {{--                                        </div>--}}
+    {{--                                        <div class="cell">NHS Hospital</div>--}}
+    {{--                                        <div class="cell">11.92 Weeks</div>--}}
+    {{--                                        <div class="cell">No data</div>--}}
+    {{--                                        <div class="cell">No data</div>--}}
+    {{--                                        <div class="cell">Outstanding</div>--}}
+    {{--                                        <div class="cell">No data</div>--}}
+    {{--                                        <div class="cell">No data</div>--}}
+    {{--                                        <div class="cell"><img src="images/icons/dash-black.svg" alt="Dash icon"></div>--}}
+    {{--                                        <div class="cell column-break"></div>--}}
+    {{--                                        <div class="cell">Good</div>--}}
+    {{--                                        <div class="cell">Outstanding</div>--}}
+    {{--                                        <div class="cell">Outstanding</div>--}}
+    {{--                                        <div class="cell">Outstanding</div>--}}
+    {{--                                        <div class="cell">Outstanding</div>--}}
+    {{--                                        <div class="cell column-break"></div>--}}
+    {{--                                        <div class="cell">100%</div>--}}
+    {{--                                        <div class="cell">92.77%</div>--}}
+    {{--                                        <div class="cell">100%</div>--}}
+    {{--                                        <div class="cell">93.8%</div>--}}
+    {{--                                        <div class="cell">98.62%</div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="col text-center" id="compare_hospital_id_272">--}}
+    {{--                                    <div class="col-inner">--}}
+    {{--                                        <div class="col-header d-flex flex-column justify-content-between">--}}
+    {{--                                            <div class="image-wrapper h-100"><img class="" src="images/alder-1.jpg"--}}
+    {{--                                                                                  alt="Image of Caterham Dene Hospital ">--}}
+    {{--                                                <div class="remove-hospital" id="remove_id_272"--}}
+    {{--                                                     data-hospital-type="private-hospital"></div>--}}
+    {{--                                                <div class="details"><p class="w-100 mt-auto">Caterham Dene--}}
+    {{--                                                        Hospital </p><a id="272"--}}
+    {{--                                                                        class="btn btn-icon btn-blue btn-grad btn-enquire enquiry mr-2 btn-block"--}}
+    {{--                                                                        role="button" data-toggle="modal"--}}
+    {{--                                                                        data-hospital-url="www.firstcommunityhealthcare.co.uk/caterham-dene-community-hospital"--}}
+    {{--                                                                        data-hospital-title="Caterham Dene Hospital "--}}
+    {{--                                                                        data-target="#hc_modal_enquire_private">Make an--}}
+    {{--                                                        enquiry--}}
+    {{--                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"--}}
+    {{--                                                             viewBox="0 0 20 20">--}}
+    {{--                                                            <g>--}}
+    {{--                                                                <g>--}}
+    {{--                                                                    <g>--}}
+    {{--                                                                        <path fill="#fff"--}}
+    {{--                                                                              d="M10.002 18.849c-4.878 0-8.846-3.968-8.846-8.847 0-4.878 3.968-8.846 8.846-8.846 4.879 0 8.847 3.968 8.847 8.846 0 4.879-3.968 8.847-8.847 8.847zm0-18.849C4.488 0 0 4.488 0 10.002c0 5.515 4.488 10.003 10.002 10.003 5.515 0 10.003-4.488 10.003-10.003C20.005 4.488 15.517 0 10.002 0z"></path>--}}
+    {{--                                                                    </g>--}}
+    {{--                                                                    <g>--}}
+    {{--                                                                        <path fill="#fff"--}}
+    {{--                                                                              d="M14.47 5.848l-5.665 6.375-3.34-2.67a.578.578 0 0 0-.811.088c-.2.25-.158.615.091.815l3.769 3.015a.57.57 0 0 0 .361.125c.167 0 .325-.07.433-.196l6.03-6.783a.579.579 0 0 0 .146-.42.588.588 0 0 0-.191-.4.592.592 0 0 0-.824.05z"></path>--}}
+    {{--                                                                    </g>--}}
+    {{--                                                                </g>--}}
+    {{--                                                            </g>--}}
+    {{--                                                        </svg>--}}
+    {{--                                                    </a></div>--}}
+    {{--                                            </div>--}}
+    {{--                                        </div>--}}
+    {{--                                        <div class="cell">Private Hospital</div>--}}
+    {{--                                        <div class="cell">9.58 Weeks</div>--}}
+    {{--                                        <div class="cell">No data</div>--}}
+    {{--                                        <div class="cell">No data</div>--}}
+    {{--                                        <div class="cell">Outstanding</div>--}}
+    {{--                                        <div class="cell">No data</div>--}}
+    {{--                                        <div class="cell">No data</div>--}}
+    {{--                                        <div class="cell"><img src="images/icons/dash-black.svg" alt="Dash icon"></div>--}}
+    {{--                                        <div class="cell column-break"></div>--}}
+    {{--                                        <div class="cell">Good</div>--}}
+    {{--                                        <div class="cell">Good</div>--}}
+    {{--                                        <div class="cell">Outstanding</div>--}}
+    {{--                                        <div class="cell">Outstanding</div>--}}
+    {{--                                        <div class="cell">Outstanding</div>--}}
+    {{--                                        <div class="cell column-break"></div>--}}
+    {{--                                        <div class="cell">No data</div>--}}
+    {{--                                        <div class="cell">No data</div>--}}
+    {{--                                        <div class="cell">No data</div>--}}
+    {{--                                        <div class="cell">No data</div>--}}
+    {{--                                        <div class="cell">No data</div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                                <!-- Items added here -->--}}
+    {{--                                <div class="col">--}}
+    {{--                                    <div class="col-inner">--}}
+    {{--                                        <div class="col-header">--}}
+    {{--                                            <p class="text-center">Selected Hospital<br>--}}
+    {{--                                                will appear here.</p>--}}
+    {{--                                            <p class="text-center"> Add more hospitals to your--}}
+    {{--                                                Shortlist by clicking the&nbsp;<img width="14" height="12"--}}
+    {{--                                                                                    src="/images/icons/heart.svg"--}}
+    {{--                                                                                    alt="Heart icon">--}}
+    {{--                                            </p>--}}
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="col">--}}
+    {{--                                    <div class="col-inner">--}}
+    {{--                                        <div class="col-header">--}}
+    {{--                                            <p class="text-center">Selected Hospital<br>--}}
+    {{--                                                will appear here.</p>--}}
+    {{--                                            <p class="text-center"> Add more hospitals to your--}}
+    {{--                                                Shortlist by clicking the&nbsp;<img width="14" height="12"--}}
+    {{--                                                                                    src="/images/icons/heart.svg"--}}
+    {{--                                                                                    alt="Heart icon">--}}
+    {{--                                            </p>--}}
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="col">--}}
+    {{--                                    <div class="col-inner">--}}
+    {{--                                        <div class="col-header">--}}
+    {{--                                            <p class="text-center">Selected Hospital<br>--}}
+    {{--                                                will appear here.</p>--}}
+    {{--                                            <p class="text-center"> Add more hospitals to your--}}
+    {{--                                                Shortlist by clicking the&nbsp;<img width="14" height="12"--}}
+    {{--                                                                                    src="/images/icons/heart.svg"--}}
+    {{--                                                                                    alt="Heart icon">--}}
+    {{--                                            </p>--}}
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+
+
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--    </section>--}}
     <section>
         <div class="container">
             <h1>Special offers slide out</h1>
