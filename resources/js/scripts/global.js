@@ -271,7 +271,7 @@ window.getHospitalsByIds = function(hospitalIds) {
             // console.log(data.data);
             //Check if we have at least one result in our data
             if (!$.isEmptyObject(data.data)) {
-                console.log('Data:', data.data[0]);
+                // console.log('Data:', data.data[0]);
 
                 $.each(data.data, function (key, element) { //$.parseJSON() method is needed unless chrome is throwing error.
                     // console.log(key, element);

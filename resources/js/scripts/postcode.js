@@ -1,7 +1,3 @@
-$(document).ready(function () {
-
-});
-
 //POSTCODE Autocomplete
 var $postcode_input = $('.postcode-parent #input_postcode');
 // The wrapper for distance dropdown
