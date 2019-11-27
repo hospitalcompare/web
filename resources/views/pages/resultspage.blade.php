@@ -174,6 +174,8 @@
                     'outpatientRank'        => !empty($d['waitingTime'][0]['outpatient_perc_95']) ? \App\Helpers\Utils::getRankingPosition($data['outpatientRankings'], $d['id']).' of '.$data['hospitals']->total() : '-',
                     'inpatient'             => !empty($d['waitingTime'][0]['inpatient_perc_95']) ? number_format((float)$d['waitingTime'][0]['inpatient_perc_95'], 1) : '-',
                     'inpatientRank'         => !empty($d['waitingTime'][0]['inpatient_perc_95']) ? \App\Helpers\Utils::getRankingPosition($data['inpatientRankings'], $d['id']).' of '.$data['hospitals']->total() : '-',
+                    'diagnosticRank'        => !empty($d['waitingTime'][0]['diagnostics_perc_6']) ? \App\Helpers\Utils::getRankingPosition($data['diagnosticRankings'], $d['id']).' of '.$data['hospitals']->total() : '-',
+                    'diagnostic'            => !empty($d['waitingTime'][0]['diagnostics_perc_6']) ? $d['waitingTime'][0]['diagnostics_perc_6'].'%' : '-',
                     'userRating'            => !empty($d['rating']['avg_user_rating']) ? $d['rating']['avg_user_rating'] : 0,
                     'stars'                 => !empty($d['rating']['avg_user_rating']) ? \App\Helpers\Utils::getHtmlStars($d['rating']['avg_user_rating']) : "No data",
                     'opCancelled'           => !empty($d['cancelledOp']['perc_cancelled_ops'])? number_format((float)$d['cancelledOp']['perc_cancelled_ops'], 1).'%': 0,

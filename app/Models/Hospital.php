@@ -356,7 +356,7 @@ class Hospital extends Model
         $hospitals = $hospitals->paginate(10)->onEachSide(1);
 
         //Build the Rankings for the Waiting Times tooltip
-        $outpatientRankings = $inpatientRankings = $waitingTimeRankings = [];
+        $outpatientRankings = $inpatientRankings = $waitingTimeRankings = $diagnosticRankings = [];
         if(!empty($preHospitals)) {
             foreach($preHospitals as $preHospital) {
                 //Check if we have Outpatient
@@ -379,6 +379,13 @@ class Hospital extends Model
                 } else {
                     $waitingTimeRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => 100];
                 }
+
+                //Check if we have Diagnostics
+                if(!empty($preHospital['waiting_time'][0]['diagnostics_perc_6'])) {
+                    $diagnosticRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => $preHospital['waiting_time'][0]['diagnostics_perc_6']];
+                } else {
+                    $diagnosticRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => 100];
+                }
             }
         }
 
@@ -393,6 +400,10 @@ class Hospital extends Model
 
         usort($waitingTimeRankings, function($a, $b) {
             return $a['ranking'] <=> $b['ranking'];
+        });
+
+        usort($diagnosticRankings, function($a, $b) {
+            return $a['ranking'] >= $b['ranking'];
         });
 
         if(!empty($inpatientRankings)) {
@@ -410,6 +421,12 @@ class Hospital extends Model
         if(!empty($waitingTimeRankings)) {
             foreach($waitingTimeRankings as $wtKey => &$waitingTimeRanking) {
                 $waitingTimeRanking['position'] = $wtKey+1;
+            }
+        }
+
+        if(!empty($diagnosticRankings)) {
+            foreach($diagnosticRankings as $dtKey => &$diagnosticRanking) {
+                $diagnosticRanking['position'] = $dtKey+1;
             }
         }
 
@@ -482,7 +499,8 @@ class Hospital extends Model
                 'special_offers'        => $specialOffers,
                 'outpatientRankings'    => $outpatientRankings,
                 'inpatientRankings'     => $inpatientRankings,
-                'waitingTimeRanking'    => $waitingTimeRankings
+                'waitingTimeRanking'    => $waitingTimeRankings,
+                'diagnosticRankings'    => $diagnosticRankings
             ],
             'doctor'            => [
                 'text'          => $doctor,

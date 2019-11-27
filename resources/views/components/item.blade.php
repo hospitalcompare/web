@@ -150,8 +150,8 @@
                                     </div>
                                     <div class="d-table-row">
                                         <div class="d-table-cell">Diagnostics - % waiting 6+ weeks</div>
-                                        <div class="d-table-cell">-</div>
-                                        <div class="d-table-cell">-</div>
+                                        <div class="d-table-cell">'.$diagnostic.'</div>
+                                        <div class="d-table-cell">'.$diagnosticRank.'</div>
                                     </div>
                                 </div>
                                 <small>NB - Diagnostics is a % of current waiting list waiting 6+ weeks (national target is 1%)</small>

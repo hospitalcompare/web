@@ -77,6 +77,7 @@ class WebController extends BaseController
         $outpatientRankings     = $hospitals['data']['outpatientRankings'];
         $inpatientRankings      = $hospitals['data']['inpatientRankings'];
         $waitingTimeRankings    = $hospitals['data']['waitingTimeRanking'];
+        $diagnosticRankings     = $hospitals['data']['diagnosticRankings'];
         $hospitals              = $hospitals['data']['hospitals'];
 
         $sortBys    = Utils::sortBys;
@@ -88,6 +89,7 @@ class WebController extends BaseController
         $this->returnedData['data']['outpatientRankings']               = $outpatientRankings;
         $this->returnedData['data']['inpatientRankings']                = $inpatientRankings;
         $this->returnedData['data']['waitingTimeRankings']              = $waitingTimeRankings;
+        $this->returnedData['data']['diagnosticRankings']               = $diagnosticRankings;
         $this->returnedData['data']['special_offers']                   = $specialOffers;
         $this->returnedData['data']['outstanding']                      = $outstanding;
         $this->returnedData['data']['filters']['procedures']            = $procedures;
