@@ -38,6 +38,7 @@
         "bootstrap-slider": "^10.6.2",
         "cookieconsent": "^3.1.1",
         "jquery-validation": "^1.19.1",
+        "js-cookie": "^2.2.1",
         "webpack-jquery-ui": "^2.0.1"
     }
 }

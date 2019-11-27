@@ -1,42 +1,43 @@
+//Set the first option of the Procedures dropdown to 'Not Known'
+$("select[name='procedure_id'] option:first").attr('disabled', true).attr('hidden', true);
+
+//Set the checked value of checkboxes to boolean 0/1
+$("input[type='checkbox']").on('change', function () {
+    $(this).val(this.checked ? 1 : 0);
+});
+
+// Bootstrap select pickers - searchable dropdowns
+var $pickers = $('.select-picker');
+// Initiate select-pickers
+$pickers.selectpicker({
+    style: '',
+    styleBase: ''
+});
+
+$('.dropdown-toggle').attr('data-boundary', 'window');
+
+// Do something when select pickers open
+$pickers.on('show.bs.select', function (e, clickedIndex, isSelected, previousValue) {
+    // Stop body scrolling
+    $('body').addClass('select-open');
+});
+
+$pickers.on('hide.bs.select', function (e, clickedIndex, isSelected, previousValue) {
+    // Stop body scrolling
+    $('body').removeClass('select-open');
+});
+
+var $howToUseSelectPlaceholder = 'Select';
+// Change text on the dropdowns in how to use page
+$('.flat-box .dropdown-toggle .filter-option-inner-inner').text('Choose treatment');
+$('#how_to_use_filter_policies .dropdown-toggle .filter-option-inner-inner').text($howToUseSelectPlaceholder);
+
+$('#how_to_use_policies').on('shown.bs.select', function(){
+    // console.log($howToUseSelectPlaceholder);
+    $('.dropdown-menu li:first-child a').text($howToUseSelectPlaceholder);
+})
 $(document).ready(function () {
-    //Set the first option of the Procedures dropdown to 'Not Known'
-    $("select[name='procedure_id'] option:first").attr('disabled', true).attr('hidden', true);
 
-    //Set the checked value of checkboxes to boolean 0/1
-    $("input[type='checkbox']").on('change', function () {
-        $(this).val(this.checked ? 1 : 0);
-    });
-
-    // Bootstrap select pickers - searchable dropdowns
-    var $pickers = $('.select-picker');
-    // Initiate select-pickers
-    $pickers.selectpicker({
-        style: '',
-        styleBase: ''
-    });
-
-    $('.dropdown-toggle').attr('data-boundary', 'window');
-
-    // Do something when select pickers open
-    $pickers.on('show.bs.select', function (e, clickedIndex, isSelected, previousValue) {
-        // Stop body scrolling
-        $('body').addClass('select-open');
-    });
-
-    $pickers.on('hide.bs.select', function (e, clickedIndex, isSelected, previousValue) {
-        // Stop body scrolling
-        $('body').removeClass('select-open');
-    });
-
-    var $howToUseSelectPlaceholder = 'Select';
-    // Change text on the dropdowns in how to use page
-    $('.flat-box .dropdown-toggle .filter-option-inner-inner').text('Choose treatment');
-    $('#how_to_use_filter_policies .dropdown-toggle .filter-option-inner-inner').text($howToUseSelectPlaceholder);
-
-    $('#how_to_use_policies').on('shown.bs.select', function(){
-        // console.log($howToUseSelectPlaceholder);
-        $('.dropdown-menu li:first-child a').text($howToUseSelectPlaceholder);
-    })
 });
 
 // Repeat string x times
@@ -169,37 +170,37 @@ window.toggleContent = function (speed = 400, parent = 'body') {
 };
 
 // Handle the popup of the doctor
-window.$doctor = $('#doctor-popover');
-window.popupDoctor = function (message, delay) {
-
-    $doctor.popover('dispose');
-    $doctor.popover({
-        container: 'body',
-        template: `<div class="popover popover-large popover-doctor">
-                        <span class="fa fa-times close" data-dismiss=""></span>
-                        <div class="popover-body">
-                        </div>
-                        <div class="arrow arrow-large">
-                        </div>
-                    </div>`,
-        content: `<p class="bold mb-0">${message}</p>
-<!--                     <p class="mt-3"><a class="btn btn-close btn-close__small btn-turq btn-icon">Close</a></p>-->
-`,
-        html: true,
-        trigger: 'focus',
-        placement: 'auto'
-    });
-
-    if (delay != 0 || delay != '') {
-        setTimeout(function () {
-            $doctor.focus();
-        }, delay);
-        return;
-    }
-
-    $doctor.focus();
-
-};
+// window.$doctor = $('#doctor-popover');
+// window.popupDoctor = function (message, delay) {
+//
+//     $doctor.popover('dispose');
+//     $doctor.popover({
+//         container: 'body',
+//         template: `<div class="popover popover-large popover-doctor">
+//                         <span class="fa fa-times close" data-dismiss=""></span>
+//                         <div class="popover-body">
+//                         </div>
+//                         <div class="arrow arrow-large">
+//                         </div>
+//                     </div>`,
+//         content: `<p class="bold mb-0">${message}</p>
+// <!--                     <p class="mt-3"><a class="btn btn-close btn-close__small btn-turq btn-icon">Close</a></p>-->
+// `,
+//         html: true,
+//         trigger: 'focus',
+//         placement: 'auto'
+//     });
+//
+//     if (delay != 0 || delay != '') {
+//         setTimeout(function () {
+//             $doctor.focus();
+//         }, delay);
+//         return;
+//     }
+//
+//     $doctor.focus();
+//
+// };
 
 // Slugify a string
 
@@ -265,7 +266,7 @@ window.getHospitalsByIds = function(hospitalIds) {
         },
         dataType: "json",
         contentType: "application/json; charset=utf-8",
-        async: false,
+        // async: false,
         // data: [],
         success: function (data) {
             // console.log(data.data.hospitals);

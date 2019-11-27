@@ -1,56 +1,54 @@
 // Open a modal with gmap loaded
 $(document).ready(function() {
 
-    var initMap = function(){
-        // console.log('Maps init')
-    }
-    var map = null;
-    var myMarker;
-    var myLatlng;
+});
 
-    function initializeGMap(lat, lng, target) {
-        myLatlng = new google.maps.LatLng(lat, lng);
+var map = null;
+var myMarker;
+var myLatlng;
 
-        var myOptions = {
-            zoom: 14,
-            zoomControl: true,
-            center: myLatlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
+function initializeGMap(lat, lng, target) {
+    myLatlng = new google.maps.LatLng(lat, lng);
 
-        map = new google.maps.Map(document.querySelector(target), myOptions);
+    var myOptions = {
+        zoom: 14,
+        zoomControl: true,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
 
-        myMarker = new google.maps.Marker({
-            position: myLatlng
-        });
-        myMarker.setMap(map);
-    }
+    map = new google.maps.Map(document.querySelector(target), myOptions);
 
-    var $mapModal = $('#hc_modal_map');
-    // Re-init map before show modal
-    $mapModal.on('show.bs.modal', function(event) {
-        var button = $(event.relatedTarget);
-        initializeGMap(button.data('latitude'), button.data('longitude'), '#map');
-        // $("#location-map").css("width", "100%");
-        // $("#map").css("height", "400px");
-        $(this).find('.address').html(button.data('address'));
-        $(this).find('.image').prop('src', button.data('image'));
+    myMarker = new google.maps.Marker({
+        position: myLatlng
     });
+    myMarker.setMap(map);
+}
 
-    // Trigger map resize event after modal shown
-    $mapModal.on('shown.bs.modal', function() {
-        google.maps.event.trigger(map, "resize");
-        map.setCenter(myLatlng);
-    });
+var $mapModal = $('#hc_modal_map');
+// Re-init map before show modal
+$mapModal.on('show.bs.modal', function(event) {
+    var button = $(event.relatedTarget);
+    initializeGMap(button.data('latitude'), button.data('longitude'), '#map');
+    // $("#location-map").css("width", "100%");
+    // $("#map").css("height", "400px");
+    $(this).find('.address').html(button.data('address'));
+    $(this).find('.image').prop('src', button.data('image'));
+});
 
-    // Maps within the tabs of corporate content
-    $('.map-tab').one('show.bs.tab', function(e){
-        var tab = $(e.target);
-        var $targetMap = tab.data('map-target');
-        var $latitude = tab.data('latitude');
-        var $longitude = tab.data('longitude');
-        initializeGMap($latitude, $longitude, $targetMap);
-    });
+// Trigger map resize event after modal shown
+$mapModal.on('shown.bs.modal', function() {
+    google.maps.event.trigger(map, "resize");
+    map.setCenter(myLatlng);
+});
+
+// Maps within the tabs of corporate content
+$('.map-tab').one('show.bs.tab', function(e){
+    var tab = $(e.target);
+    var $targetMap = tab.data('map-target');
+    var $latitude = tab.data('latitude');
+    var $longitude = tab.data('longitude');
+    initializeGMap($latitude, $longitude, $targetMap);
 });
 
 

@@ -4,17 +4,12 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-// jquery imported through webpack.mix.js
+// jquery, popper, Cookies imported through webpack.mix.js
 // VENDOR
-window.Popper = require('popper.js');
-window.Cookies = require('./scripts/cookies');              // Cookie/compare functionality
-// import 'webpack-jquery-ui/datepicker';                      // Jquery UI datepicker
-// import 'webpack-jquery-ui/css';                             // Styling for the above
 import 'bootstrap';                                         // Required for bootstrap tooltips
 import 'bootstrap-select';                                  // Searchable dropdowns
 import 'cookieconsent';                                     // Cookie consent plugin
-// import '@fortawesome/fontawesome-free/js/all.min';
-import './scripts/vendor/stickybits';                                                  // Position: sticky stuff https://www.npmjs.com/package/stickybits
+
 import 'jquery-validation/dist/additional-methods.min';     // Plugin for jquery validate
 import 'jquery-validation/dist/jquery.validate';            // Frontend form validation
 import './scripts/vendor/highlight';                        // Highlight search terms without
@@ -29,24 +24,26 @@ import './scripts/sticky';                                  // Make the search h
 import './scripts/bootstrapSlider';                         // Init the bs slider plugin
 // window.Vue = require('vue');                             // Vue.js
 
-// COMPONENTS
-import './components/compare';
-import './components/doctor';
+
 
 // Components > Basic
-import './components/basic/video';                          // Video controller
+// import './components/basic/video';                          // Video controller
 import './components/basic/specialoffer';                   // Toggling special offer slide out
 import './components/basic/popover';                        // Trigger bootstrap tooltip
 import './components/basic/tooltip';                        // Trigger bootstrap popover
 import './components/basic/modalNhs';                       // Trigger bootstrap modal
 import './components/basic/modalPrivate';                   // Trigger bootstrap modal
-import './components/basic/modalVideo';                     // Trigger bootstrap modal
-import './components/enquiry' ;                             // Private hospital enquiry form
+// import './components/basic/modalVideo';                     // Trigger bootstrap modal
+import './components/enquiry';                             // Private hospital enquiry form
 
 // PAGES
 import './pages/homepage';                                  // Jquery used for the Homepage
 import './pages/resultspage';                               // Jquery used for the Results Page
 import './pages/faqspage';                                  // Jquery used for the FAQs Page
+
+// COMPONENTS
+import './components/compare';
+// import './components/doctor';
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
