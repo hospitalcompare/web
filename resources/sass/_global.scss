@@ -21,6 +21,10 @@ body, * {
     }
 }
 
+a {
+    color: #1b70f3;
+}
+
 ul,
 ol {
     padding-left: 0;
@@ -259,10 +263,11 @@ select.big {
 .text-link {
     cursor: pointer;
     color: inherit;
-    text-decoration: underline !important;
+    transition: $transition;
+    //text-decoration: underline !important;
 
     &:hover {
-        color: inherit;
+        color: $turq;
     }
 }
 
