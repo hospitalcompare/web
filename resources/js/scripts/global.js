@@ -266,7 +266,7 @@ window.getHospitalsByIds = function(hospitalIds) {
         },
         dataType: "json",
         contentType: "application/json; charset=utf-8",
-        // async: false,
+        async: false,
         // data: [],
         success: function (data) {
             // console.log(data.data.hospitals);
