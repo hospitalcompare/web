@@ -123,10 +123,6 @@
             background-repeat: no-repeat;
             background-position: center;
             transition: $transition;
-
-            &.rotated {
-                transform: rotate(180deg);
-            }
         }
     }
 

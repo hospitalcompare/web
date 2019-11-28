@@ -12,7 +12,7 @@
                 'svg'                   => 'chevron-down-aqua',
                 'name'                  => 'procedure_id'
             ])
-            <a tabindex="0" _data-offset="30px, 40px"
+            <a tabindex="0"
                class="help-link"
                 @include('components.basic.popover', [
                 'dismissible'   => true,
@@ -33,7 +33,7 @@
                 'name' =>'postcode',
                 'validation' => 'maxlength=8',
                  'id' => 'input_postcode'])
-                <a tabindex="0" _data-offset="30px, 40px"
+                <a tabindex="0"
                    class="help-link"
                     @include('components.basic.popover', [
                     'dismissible'   => true,
@@ -62,7 +62,7 @@
                 'chevronFAClassName'    => '',
                 'labelClass'            => 'font-18 pr-4',
                 'name'                  =>'radius'])
-            <a tabindex="0" _data-offset="30px, 40px"
+            <a tabindex="0"
                class="help-link"
                 @include('components.basic.popover', [
                 'dismissible'   => true,
