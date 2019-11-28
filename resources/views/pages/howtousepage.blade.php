@@ -8,7 +8,7 @@
 
 @section('mobile', 'width=device-width, initial-scale=1')
 
-@section('body-class', 'how-to-use-page')
+@section('body-class', 'how-to-use-page hc-content')
 
 @section('content')
     @include('pages.pagesections.banner', [
@@ -82,7 +82,7 @@
                 </div>
                 <div class="col col-12 col-md-6">
                     <div>
-                        <div class="font-32 SofiaPro-SemiBold mb-4">NHS funded in a private hospital</div>
+                        <h2 class="font-32 SofiaPro-SemiBold mb-4">NHS funded in a private hospital</h2>
                         <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
                             necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
                             voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
@@ -116,7 +116,7 @@
                 </div>
                 <div class="col col-12 col-md-6">
                     <div>
-                        <div class="font-32 SofiaPro-SemiBold mb-4">Standard procedure at an NHS Hospital</div>
+                        <h2 class="font-32 SofiaPro-SemiBold mb-4">Standard procedure at an NHS Hospital</h2>
                         <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
                             necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
                             voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
@@ -150,7 +150,7 @@
                 </div>
                 <div class="col col-12 col-md-6">
                     <div>
-                        <div class="font-32 SofiaPro-SemiBold mb-4">Private healthcare insurance</div>
+                        <h2 class="font-32 SofiaPro-SemiBold mb-4">Private healthcare insurance</h2>
                         <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
                             necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
                             voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
@@ -198,7 +198,7 @@
                 </div>
                 <div class="col col-12 col-md-6">
                     <div>
-                        <div class="font-32 SofiaPro-SemiBold mb-4">Self-pay at a private hospital</div>
+                        <h2 class="font-32 SofiaPro-SemiBold mb-4">Self-pay at a private hospital</h2>
                         <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
                             necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
                             voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
