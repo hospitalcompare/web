@@ -256,7 +256,6 @@ window.enableButtons = function () {
 
 window.getHospitalsByIds = function(hospitalIds) {
     var procedureId = 0;
-    var items = [];
 
     $.ajax({
         url: 'api/getHospitalsByIds/' + hospitalIds +'/' + procedureId,
@@ -266,26 +265,31 @@ window.getHospitalsByIds = function(hospitalIds) {
         },
         dataType: "json",
         contentType: "application/json; charset=utf-8",
-        async: false,
-        // data: [],
+        data: {},
         success: function (data) {
-            // console.log(data.data.hospitals);
+            // console.log(data.data);
             //Check if we have at least one result in our data
             if (!$.isEmptyObject(data.data)) {
-                items = data.data;
+                // console.log('Data:', data.data[0]);
+
+                $.each(data.data, function (key, element) { //$.parseJSON() method is needed unless chrome is throwing error.
+                    // console.log(key, element);
+                    //Toggle the full heart or empty heart  class of the button
+                    $('button#' + element.id + '.compare').addClass('selected');
+                    addHospitalToCompare(element);
+                });
+
+                // console.log('Data added to compare, ', parseInt(Cookies.get('compareCount')));
+                // Disable buttons if we have reached the max number of items
+                if (parseInt(Cookies.get('compareCount')) === 5) {
+                    disableButtons();
+                }
             }
-            // else {
-            //     showAlert('Invalid Postcode! Please try again.', false);
-            //     $postcode_input.val("");
-            //     $resultsContainer.slideUp();
-            // }
         },
         error: function (data) {
             showAlert('Something went wrong! Please try again.', false)
         },
     });
-
-    return items;
 };
 
 // Truncate sentence
@@ -302,5 +306,3 @@ window.textTruncate = function(str, length, ending) {
         return str;
     }
 };
-
-
