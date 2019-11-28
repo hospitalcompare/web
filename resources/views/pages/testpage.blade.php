@@ -238,7 +238,7 @@
     {{--                                <div class=""></div>--}}
     {{--                                <div class="cell">--}}
     {{--                            <span class="position-relative">Hospital Type&nbsp;&nbsp;--}}
-    {{--                                <span tabindex="0" _data-offset="30px, 40px" data-offset="0 5px" class="help-link"--}}
+    {{--                                <span tabindex="0" data-offset="0 5px" class="help-link"--}}
     {{--                                      data-toggle="popover-comparison" data-content="--}}
     {{--                                                 <span>--}}
     {{--                                                     NHS or Private Hospital--}}
@@ -258,7 +258,7 @@
     {{--                                </div>--}}
     {{--                                <div class="cell">--}}
     {{--                            <span class="position-relative">Average Waiting Time&nbsp;&nbsp;--}}
-    {{--                                <span tabindex="0" _data-offset="30px, 40px" data-offset="0 5px" class="help-link"--}}
+    {{--                                <span tabindex="0" data-offset="0 5px" class="help-link"--}}
     {{--                                      data-toggle="popover-comparison" data-content="--}}
     {{--                                                    <span>--}}
     {{--                                                        Our waiting time data is based on NHS data, specifically the number of weeks that 92 out or 100 people wait for their treatment to start.--}}
@@ -1038,7 +1038,7 @@
                     </div>
                 </div>
                 <h3>Popover trigger</h3>
-                <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                <a tabindex="0" data-offset="30px 40px" class="help-link help-link__inline"
                     @include('components.basic.popover', [
                     'size'      => 'large',
                     'placement' => 'top',

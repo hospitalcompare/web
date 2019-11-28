@@ -115,7 +115,7 @@
                                         'selectClassName'       => 'd-md-flex select_half-width w-100',
                                         'placeholder'           => 'Check to see if your treatment is available at this hospital',
                                         'name'                  =>'radius'])
-                                    {{--                                <a tabindex="0" data-offset="30px, 40px"--}}
+                                    {{--                                <a tabindex="0" data-offset="30px 40px"--}}
                                     {{--                                   class="help-link"--}}
                                     {{--                                    @include('components.basic.popover', [--}}
                                     {{--                                    'dismissible'   => true,--}}

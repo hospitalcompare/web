@@ -16,7 +16,7 @@ $("body").on('DOMSubtreeModified', privateCountHolder, function() {
     }
 });
 
-var multiEnquiryIdInput = $('#multiple_enquiries_button');
+var multiEnquiryButton = $('#multiple_enquiries_button');
 var nhsHospitalCount = 0;
 var privateHospitalCount = 0;
 var compareHospitalIds = '';
@@ -36,13 +36,11 @@ var emptyCol = '<div class="col col-empty h-100">\n' +
     '                    </div>\n' +
     '                </div>';
 
-if (typeof Cookies.get("compareCount") === 'undefined') {
-    Cookies.set("compareCount", 0, {expires: 10000});
-    // Cookies.set("compareHospitalsData", '', {expires: 10000});
+if (typeof Cookies.get("compareHospitalsData") === 'undefined') {
     Cookies.set("compareHospitalsData", '', {expires: 10000});
 }
 
-var compareCount = Cookies.get('compareCount');
+var compareCount = getCompareCount();
 var compareData = Cookies.get('compareHospitalsData');
 
 // Check if we need to show the Compare hospitals div (on page load)
@@ -53,16 +51,10 @@ if (compareCount > 0) {
     // Hide the "you haven't added any items..."
     compareHospitalIds = compareData;
     // Update the value of the enquiry form
-    multiEnquiryIdInput.data('hospital-id', removeTrailingCharacter(compareHospitalIds));
+    multiEnquiryButton.data('hospital-id', removeTrailingComma(compareHospitalIds));
 
     // Ajax request to retrieve all the Hospitals to compare
-    getHospitalsByIds(removeTrailingCharacter(compareHospitalIds));
-    // var returned = getHospitalsByIds(removeTrailingCharacter(compareHospitalIds));
-    // if(compareHospitalIds.length > 0) {
-    //     $.each(returned, function (key, element) { //$.parseJSON() method is needed unless chrome is throwing error.
-    //         addHospitalToCompare(element);
-    //     });
-    // }
+    getHospitalsByIds(removeTrailingComma(compareHospitalIds));
 
     // Appending the extra empty columns
     var remainingColCount = 5 - compareCount;
@@ -76,17 +68,6 @@ if (compareCount > 0) {
     target.append(repeatStringNumTimes(emptyCol, 5))
 }
 
-// Check if we need to disable buttons on pageload
-// disableButtons(0);
-
-
-/**
- * Removes a Hospital from the Comparison Table
- *
- * @param elementId
- * @param data
- * @param compareCount
- */
 /**
  * Adds the element to the Comparison Table
  *
@@ -168,8 +149,6 @@ window.addHospitalToCompare = function(element) {
         '</div>';
     // Add new item
     target.prepend(newColumn);
-
-
 };
 
 function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) {
@@ -184,7 +163,7 @@ function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) 
     data = dataArr.join(',');
 
     // Update the ids in the multi enquiry form
-    multiEnquiryIdInput.data('hospital-id', removeTrailingCharacter(data));
+    multiEnquiryButton.data('hospital-id', removeTrailingComma(data));
 
     compareCount = parseInt(compareCount) - 1;
 
@@ -205,7 +184,6 @@ function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) 
         compareContent.slideUp();
         $('body').removeClass('shortlist-open');
         compareContent.removeClass('revealed');
-        $('.compare-arrow').toggleClass('rotated');
     }
 
     // Check to see if we need to re-enable the buttons
@@ -214,11 +192,7 @@ function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) 
     // var countSpan = $('#compare_number');
     countSpan.text(compareCount);
 
-    //Reset compareCount and compareHospitalsData
-    Cookies.set("compareCount", 0, -1);
-    Cookies.set("compareHospitalsData", '', -1);
-    //Set them back again
-    Cookies.set("compareCount", compareCount, {expires: 10000});
+    // Set the data cookie
     Cookies.set("compareHospitalsData", data, {expires: 10000});
 
 }
@@ -228,7 +202,7 @@ $(document).on("click", ".result-item-section-3 .compare", function () {
     // Get hospital type of item whose button has been clicked to remove it
     var hospitalTypeClicked = $(this).data('hospital-type');
     //Get the Data that is already in the Cookies
-    var compareCount = parseInt(Cookies.get("compareCount"));
+    var compareCount = getCompareCount();
     var data = Cookies.get("compareHospitalsData");
     //Load the Cookies with the data that we need for the comparison
     var elementId = $(this).attr('id');
@@ -260,28 +234,18 @@ $(document).on("click", ".result-item-section-3 .compare", function () {
             //Add data to Cookies and send the element to populate the table
             data += elementId + ',';
             // Update the enquiry form
-            multiEnquiryIdInput.data('hospital-id', removeTrailingCharacter(data));
-
+            multiEnquiryButton.data('hospital-id', removeTrailingComma(data));
 
             // Remove placeholder column
             target.children().last().remove();
-            // var countSpan = $('#compare_number');
 
             // Add to the comparison area
             getHospitalsByIds(elementId);
 
-            // addHospitalToCompare();
-            // Disable buttons if we have reached the max number of items
             // Update compare count
             compareCount = parseInt(compareCount) + 1;
             countSpan.text(compareCount);
-            // if (compareCount === 5) {
-            //     disableButtons();
-            // }
         }
-        // Adding the first item to compare, i
-
-
     }
 
     // Check if we have to remove the data of the element that has been clicked - if true, it is already in the data
@@ -295,7 +259,6 @@ $(document).on("click", ".result-item-section-3 .compare", function () {
         compareCount = parseInt(compareCount) - 1;
     }
 
-
     // Pulsate the heart every time there is an action
     heartIcon.removeClass('has-count');
     setTimeout(function () {
@@ -308,13 +271,8 @@ $(document).on("click", ".result-item-section-3 .compare", function () {
         heartIcon.removeClass('active');
     }
 
-    //Reset compareCount and compareHospitalsData
-    Cookies.set("compareCount", 0, -1);
-    Cookies.set("compareHospitalsData", '', {expires: 10000});
-    //Set them back again
+    // Set compareHospitalsData
     Cookies.set("compareHospitalsData", data, {expires: 10000});
-    Cookies.set("compareCount", compareCount, {expires: 10000});
-
 });
 
 //Set the OnClick event for the Remove Hospital on the Comparison table
@@ -323,25 +281,24 @@ $(document).on("click", ".compare-hospitals-bar .remove-hospital", function (e) 
     e.stopPropagation();
     var elementId = $(this).attr('id');
     var data = Cookies.get("compareHospitalsData");
-    var compareCount = parseInt(Cookies.get("compareCount"));
+    var compareCount = getCompareCount();
     if(compareCount === 1){
         heartIcon.removeClass('active');
     }
     elementId = elementId.replace('remove_id_', '');
-
     removeHospitalFromCompare(elementId, data, compareCount, hospitalTypeClicked);
 });
 
-//Set the Onclick event for the Comparison Header
+//Set the Onclick event for the Comparison Header - toggle open and closed
 $(document).on("click", ".compare-hospitals-bar .compare-button-title", function (e) {
-    var compareCount = parseInt(Cookies.get("compareCount"));
+    var compareCount = getCompareCount();
     var openTabs = $('.special-offer-tab.open');
     // var solutionsBar = $('.compare-hospitals-bar');
     if (compareCount > -1) {
         // solutionsBar.toggleClass('open');
         compareContent.slideToggle();
         $('body').toggleClass('shortlist-open');
-        $('.compare-arrow').toggleClass('rotated');
+        // $('.compare-arrow').toggleClass('rotated');
         compareContent.toggleClass('revealed');
         // Close the special offer tabs if any are open
         openTabs
@@ -357,12 +314,12 @@ $(document).on("click", ".compare-hospitals-bar .compare-button-title", function
     }
 });
 
+// Hide shortlist bar if clicking outside it, but only if it is already open
 $(document).on('click', function (e) {
-    // Hide shortlist bar if clicking outside it, but only if it is already open
     if (compareBar.has(e.target).length === 0 && compareContent.hasClass('revealed')) {
         compareContent.slideUp();
         $('body').removeClass('shortlist-open');
-        $('.compare-arrow').removeClass('rotated');
+        // $('.compare-arrow').removeClass('rotated');
         compareContent.removeClass('revealed');
     }
 });

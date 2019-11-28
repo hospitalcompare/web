@@ -49,7 +49,7 @@
 {{--                        'placeholder'           => 'Treatment',--}}
 {{--                        'labelClass'            => 'font-14 SofiaPro-Medium'--}}
                     ])
-                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
+                    <a tabindex="0" data-offset="0 5px"
                        class="help-link"
                        style="right: 53px"
                         @include('components.basic.popover', [
@@ -79,7 +79,7 @@
                         'value' => !empty(Request::input('postcode')) && empty($hc_errors) ? Request::input('postcode') : '' ,
                         'name' => 'postcode',
                         'id' => 'input_postcode'])
-                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
+                    <a tabindex="0" data-offset="0 5px"
                        class="help-link"
                        style="right: 53px"
                         @include('components.basic.popover', [
@@ -120,7 +120,7 @@
                         'placeholder'           =>'Waiting time',
                         'name'                  =>'waiting_time',
                         'labelClass'            => 'font-14 SofiaPro-Medium'])
-                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
+                    <a tabindex="0" data-offset="0 5px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'       => true,
@@ -152,7 +152,7 @@
                         'placeholder'=>'NHS User Rating',
                         'name'=>'user_rating',
                         'labelClass' => 'font-14 SofiaPro-Medium'])
-                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
+                    <a tabindex="0" data-offset="0 5px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
@@ -182,7 +182,7 @@
                         'placeholder'=>'Care Quality Rating',
                         'name'=>'quality_rating',
                         'labelClass' => 'font-14 SofiaPro-Medium'])
-                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
+                    <a tabindex="0" data-offset="0 5px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
@@ -213,7 +213,7 @@
                         'placeholder'=>'Hospital Type',
                         'name'=>'hospital_type',
                         'labelClass' => 'font-14 SofiaPro-Medium'])
-                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
+                    <a tabindex="0" data-offset="0 5px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'   => true,
@@ -249,7 +249,7 @@
                         'name'                  => 'policy_id',
                         'labelClass'          => 'font-14 SofiaPro-Medium'
                     ])
-                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
+                    <a tabindex="0" data-offset="0 5px"
                        class="help-link"
                         @include('components.basic.popover', [
                         'dismissible'   => true,

@@ -95,7 +95,7 @@
                         <div class=""></div>
                         <div class="cell">
                             <span class="position-relative">Hospital Type&nbsp&nbsp;
-                                <span tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
+                                <span tabindex="0" data-offset="0 5px"
                                   class="help-link"
                                     @include('components.basic.popover', [
                                     'dismissible'   => true,
@@ -113,7 +113,7 @@
                         </div>
                         <div class="cell">
                             <span class="position-relative">Average Waiting Time&nbsp;&nbsp;
-                                <span tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
+                                <span tabindex="0" data-offset="0 5px"
                                       class="help-link"
                                     @include('components.basic.popover', [
                                     'dismissible'   => true,
