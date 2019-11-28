@@ -300,13 +300,6 @@ window.disableButtons = function (modifier = 0) {
     $notSelected
         .addClass('disabled')
         .parent();
-    // if (compareCount + modifier === 5) {
-    //
-    //     // .prop('title', 'Sorry, you have reached the limit of hospitals to compare.')
-    //     // .attr('data-toggle', 'tooltip');
-    //     // enable tooltips
-    //     // $('[data-toggle="tooltip"]').tooltip();
-    // }
 };
 
 // Reenable buttons to allow to add to compare
