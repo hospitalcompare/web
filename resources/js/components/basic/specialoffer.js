@@ -1,6 +1,4 @@
 // Special offer slide out in search result item
-$(document).ready(function () {
-});
 $('.toggle-special-offer').on('click', function (e) {
     // Get the row that this slide belongs to
     var $parentRow = $(this).parents('.result-item');

@@ -59,7 +59,4 @@ function ajaxCall(input) {
         // Show the full list when the search is empty, or deleted
         $accordion.html($originalData);
     }
-}
-
-$(document).ready(function () {
-});
+};

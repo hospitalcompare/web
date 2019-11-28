@@ -1,7 +1,4 @@
 // // Make the search header sticky on scroll
-$(document).ready(function () {
-
-});
 // var $stickyThing = $('#result_item_parent');
 // var $top = $stickyThing.offset().top;
 //

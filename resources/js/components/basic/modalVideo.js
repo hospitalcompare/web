@@ -1,7 +1,4 @@
 // Bootstrap modal
-$(document).ready(function () {
-});
-
 var $modalVideo = $('#hc_modal_video');
 $modalVideo.on('show.bs.modal', showVideoModal);
 $modalVideo.on('hide.bs.modal', hideVideoModal);

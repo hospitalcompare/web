@@ -1,7 +1,4 @@
 // Bootstrap modal
-$(document).ready(function () {
-// If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-});
 function showNhsModal(event) {
 
     var $button = $(event.relatedTarget);// Button that triggered the modal

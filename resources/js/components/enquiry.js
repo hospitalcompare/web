@@ -1,7 +1,5 @@
 // Submitting and validating the private hospital enquiry form
-$(document).ready(function () {
 
-});
 // $.extend($.datepicker, {
 //     _checkOffset: function (inst, offset, isFixed) {
 //         // If the container is pos fixed, alter the coordinates accordingly

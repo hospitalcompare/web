@@ -1,8 +1,4 @@
 // Open a modal with gmap loaded
-$(document).ready(function() {
-
-});
-
 var map = null;
 var myMarker;
 var myLatlng;

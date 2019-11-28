@@ -1,5 +1,3 @@
-$(document).ready(function () {
-});
 // Initialise the bootstrap slider
 $("#radiusProx").slider({
     ticks: [1, 2, 3, 4, 5, 6, 7],

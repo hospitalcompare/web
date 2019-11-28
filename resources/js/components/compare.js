@@ -1,7 +1,3 @@
-$(document).ready(function () {
-
-
-});
 //Check if we don't have the cookie and set it to 0
 var compareBar = $('.compare-hospitals-bar');
 var compareContent = $('.compare-hospitals-content');

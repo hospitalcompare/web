@@ -1,6 +1,4 @@
 // Bootstrap popover - speech bubble with advanced contents
-$(document).ready(function () {
-});
 $('[data-toggle="popover"]')
     .popover({
         template: `<div class="popover popover-regular">

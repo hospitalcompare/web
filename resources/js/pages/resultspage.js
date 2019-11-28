@@ -1,6 +1,3 @@
-$(document).ready(function () {
-}); // doc ready
-
 //Add a delay of 10 ms because rendering is not instant for the new dropdown ( and it's acting weird, sometimes it works and sometimes it doesn't without the delay)
 setTimeout(function () {
     //Change the background color of the selectbox when an option with a value different than 0 is selected
