@@ -1,50 +1,46 @@
 // Bootstrap modal
-$(document).ready(function () {
-    var $privateModal = $('#hc_modal_enquire_private');
+var $privateModal = $('#hc_modal_enquire_private');
 // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
 // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    // Private enquiry form - show title of hospital clicked
-    $privateModal.on('show.bs.modal', function (event) {
+// Private enquiry form - show title of hospital clicked
+$privateModal.on('show.bs.modal', function (event) {
 
-        var $button = $(event.relatedTarget);// Button that triggered the modal
-        // Pre-check the checkboxes
-        if($button.hasClass('enquire-prices')){
-            $('#reason_for_contact_price_range').prop('selected', true);
-        } else if($button.hasClass('enquire-times')){
-            $('#reason_for_contact_waiting_time_nhs_funded').prop('selected', true);
-        }
-        $('#info_text').text($button.data('modal-text'));
+    var $button = $(event.relatedTarget);// Button that triggered the modal
+    // Pre-check the checkboxes
+    if($button.hasClass('enquire-prices')){
+        $('#reason_for_contact_price_range').prop('selected', true);
+    } else if($button.hasClass('enquire-times')){
+        $('#reason_for_contact_waiting_time_nhs_funded').prop('selected', true);
+    }
+    $('#info_text').text($button.data('modal-text'));
 
-        var hospitalTitle   = $button.data('hospital-title');// Extract info from data-* attributes
-        var modal           = $(this);
-        // var hospitalId      = $button.attr('id').replace('enquire_', '');
-        var hospitalId      = $button.data('hospital-id');
+    var hospitalTitle   = $button.data('hospital-title');// Extract info from data-* attributes
+    var modal           = $(this);
+    // var hospitalId      = $button.attr('id').replace('enquire_', '');
+    var hospitalId      = $button.data('hospital-id');
 
-        modal.find('.hospital-title').html(hospitalTitle);
-        modal.find("input[name='hospital_id']").val(hospitalId);
-    });
-
-    var $info = $('#col_additional_information');
-    // Clear form checkboxes inputs when closing modal
-    $privateModal.on('hide.bs.modal', function (event) {
-        $(this)
-            .find('input[type=checkbox]')
-            .prop('checked', false);
-
-        // Close the info box and empty contents
-        $info
-            .find('textarea')
-            .val('');
-    });
-
-    // Toggle the additional info box when clicking on the 'other' checkbox
-    $('#other').on('click', function(){
-
-        $info.toggleClass('open');
-        // if($("#other").is(':checked')) {
-        //     $info.addClass()
-        // }
-    })
-
-
+    modal.find('.hospital-title').html(hospitalTitle);
+    modal.find("input[name='hospital_id']").val(hospitalId);
 });
+
+var $info = $('#col_additional_information');
+// Clear form checkboxes inputs when closing modal
+$privateModal.on('hide.bs.modal', function (event) {
+    $(this)
+        .find('input[type=checkbox]')
+        .prop('checked', false);
+
+    // Close the info box and empty contents
+    $info
+        .find('textarea')
+        .val('');
+});
+
+// Toggle the additional info box when clicking on the 'other' checkbox
+$('#other').on('click', function(){
+
+    $info.toggleClass('open');
+    // if($("#other").is(':checked')) {
+    //     $info.addClass()
+    // }
+})

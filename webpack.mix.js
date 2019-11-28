@@ -15,11 +15,13 @@ const webpack = require('webpack');
 
 
 mix.webpackConfig({
-    devtool: "source-map",
+    devtool: (mix.inProduction()) ? "" : "source-map",
     plugins: [
         new webpack.ProvidePlugin({
             $: "jquery",
-            jQuery: "jquery"
+            jQuery: "jquery",
+            Cookies: "js-cookie",
+            Popper: "popper"
         })
     ],
     // module: {
@@ -41,23 +43,41 @@ mix.copyDirectory('resources/fonts', 'public/fonts');
 mix.copyDirectory('resources/downloads', 'public/downloads');
 mix.copy('node_modules/stickybits/dist/stickybits.min.js', 'public/js/stickybits.js');
 
-// console.log(mix.inProduction());
-// Add prefixes to css rules and fix bugs with flexbox
-mix.sass('resources/sass/app.scss', 'public/css')
-    .sourceMaps()
-    .options({
-        autoprefixer: false,
-        postCss: [
-            require('autoprefixer')({
-                remove: false,
-                // browsers: ['last 2 version', 'safari 5', 'ie 6', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'ios 7', 'ios 8', 'ios 9', 'android 4'],
-            }),
-            require('postcss-flexbugs-fixes')(),
-        ],
-        processCssUrls: false
-    })
-    .js(['resources/js/app.js'], 'public/js')
-    .version();
+console.log(mix.inProduction());
+if(mix.inProduction()){ // Don't add sourcemaps
+    mix.sass('resources/sass/app.scss', 'public/css')
+        .options({
+            autoprefixer: false,
+            postCss: [
+                require('autoprefixer')({ // Add prefixes to css rules and fix bugs with flexbox
+                    remove: false,
+                    // browsers: ['last 2 version', 'safari 5', 'ie 6', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'ios 7', 'ios 8', 'ios 9', 'android 4'],
+                }),
+                require('postcss-flexbugs-fixes')(),
+            ],
+            processCssUrls: false
+        })
+        .js(['resources/js/app.js'], 'public/js')
+        .version();
+} else { // If in dev mode, add sourcemaps
+    mix.sass('resources/sass/app.scss', 'public/css')
+        .sourceMaps()
+        .options({
+            autoprefixer: false,
+            postCss: [
+                require('autoprefixer')({
+                    remove: false,
+                    // browsers: ['last 2 version', 'safari 5', 'ie 6', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'ios 7', 'ios 8', 'ios 9', 'android 4'],
+                }),
+                require('postcss-flexbugs-fixes')(),
+            ],
+            processCssUrls: false
+        })
+        .js(['resources/js/app.js'], 'public/js')
+        .version();
+}
+
+
 
 // Reload browser when something changes
 mix.browserSync({
