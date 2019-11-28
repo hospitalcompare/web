@@ -20,8 +20,8 @@
             <div class="row">
                 <div class="col col-12 hc-content">
                     <h1 class="SofiaPro-SemiBold mb-3">About Hospital Compare</h1>
-                    <p class="SofiaPro-SemiBold col-turq font-28">Feel better faster by knowing your legal right to
-                        choose.</p>
+                    <h2 class="SofiaPro-SemiBold col-turq font-28">Feel better faster by knowing your legal right to
+                        choose.</h2>
                 </div>
                 <div class="col col-7">
                     <p>Hospital Compare is the unique healthcare comparison website that empowers you to know rights and
@@ -49,23 +49,32 @@
                 <div>
                     <p class="SofiaPro-SemiBold font-24">For example, did you know:</p>
                     <ul class="blue-dot">
-                        <li>informing you of the Choices available to you in law for your hospital treatment</li>
-                        <li>helping you choose the best hospital in England for your treatment</li>
-                        <li>helping you to understand your available choices to have your hospital treatment performed
-                        </li>
+                        <li>You have the legal right to choose where you have your NHS treatment?</li>
+                        <li>That if you’ve already been waiting 18 weeks for that treatment, you have the legal right to select a different hospital?</li>
+                        <li>You can even choose to have your NHS-funded elective surgery at a private hospital?</li>
+{{--                        <li>informing you of the Choices available to you in law for your hospital treatment</li>--}}
+{{--                        <li>helping you choose the best hospital in England for your treatment</li>--}}
+{{--                        <li>helping you to understand your available choices to have your hospital treatment performed--}}
+{{--                        </li>--}}
                     </ul>
                     <p class="SofiaPro-SemiBold font-24">If the answer to any of those questions is ‘no’, Hospital
                         Compare can help you. It’s our aim to:</p>
                     <ul class="blue-dot">
-                        <li>informing you of the Choices available to you in law for your hospital treatment</li>
-                        <li>helping you choose the best hospital in England for your treatment</li>
-                        <li>helping you to understand your available choices to have your hospital treatment performed
+                        <li>Make you aware of the choices available to you</li>
+                        <li>Help you choose the best hospital in England for your treatment</li>
+                        <li>Help you understand the choices available to you, so your treatment can be performed…</li>
+{{--                        <li>informing you of the Choices available to you in law for your hospital treatment</li>--}}
+{{--                        <li>helping you choose the best hospital in England for your treatment</li>--}}
+{{--                        <li>helping you to understand your available choices to have your hospital treatment performed--}}
                             <ol class="alpha">
-                                <li>sooner, by comparing waiting times at different hospitals</li>
-                                <li>at the best quality hospital, by comparing hospital quality rankings</li>
-                                <li>at a private hospital paid for by the NHS or paid for you self, or by your insurer,
-                                    if that is your preference
-                                </li>
+                                <li>Make you aware of the choices available to you</li>
+                                <li>Help you choose the best hospital in England for your treatment</li>
+                                <li>Help you understand the choices available to you, so your treatment can be performed…</li>
+{{--                                <li>sooner, by comparing waiting times at different hospitals</li>--}}
+{{--                                <li>at the best quality hospital, by comparing hospital quality rankings</li>--}}
+{{--                                <li>at a private hospital paid for by the NHS or paid for you self, or by your insurer,--}}
+{{--                                    if that is your preference--}}
+{{--                                </li>--}}
                                 {{--                                <li>to bring you self- pay offers from time to time, provided by private hospitals, so--}}
                                 {{--                                    you can have your treatment performed quicker and more cost effectively, if you or--}}
                                 {{--                                    your insurer wish to pay--}}
@@ -97,7 +106,7 @@
         <div class="container">
             <div class="row">
                 <div class="col col-12">
-                    <p class="SofiaPro-SemiBold col-turq font-28">Background</p>
+                    <h2 class="SofiaPro-SemiBold col-turq font-28">Background</h2>
                 </div>
                 <div class="col col-7">
                     <p>

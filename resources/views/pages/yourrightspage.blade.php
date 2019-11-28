@@ -45,9 +45,9 @@
     </section>
     <section>
         <div class="container">
-            <div class="row">
+            <div class="row mb-4">
                 <div class="col col-12">
-                    <p class="font-28 col-turq SofiaPro-SemiBold">The Act</p>
+                    <h2 class="font-28 col-turq SofiaPro-SemiBold">The Act</h2>
                 </div>
                 <div class="col col-12 col-md-7">
                     <p>The Act also introduced a number of other important policies and created bodies and structures to
@@ -74,6 +74,8 @@
                              alt="People sat round a table having a chin wag ">
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col col-12 col-md-5">
                     <div class="image-wrapper">
                         <img class="w-100" src="{{ asset('/images/video_placeholder.jpg') }}"
@@ -101,7 +103,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <p class="font-28 col-turq SofiaPro-SemiBold">What this means for you as a Patient?</p>
+                    <h2 class="font-28 col-turq SofiaPro-SemiBold">What this means for you as a Patient?</h2>
                     <p>You have legal rights to choice of healthcare services delivered in the public or private sector
                         paid for by the NHS and you must be given these choices by law.
                     </p>
@@ -109,7 +111,7 @@
                         about your care. This is what the government has asked health care professionals to do.
                     </p>
 
-                    <p class="font-28 col-turq SofiaPro-SemiBold">Choosing your GP</p>
+                    <h2 class="font-28 col-turq SofiaPro-SemiBold">Choosing your GP</h2>
                     <p class="font-24 SofiaPro-SemiBold">You can:</p>
                     <ul class="blue-dot">
                         <li>Choose which GP practice you register with.
@@ -142,7 +144,7 @@
     </section>
     <section class="pt-0">
         <div class="container">
-            <p class="font-28 col-turq SofiaPro-SemiBold">Choosing your Hospital and Consultant</p>
+            <h2 class="font-28 col-turq SofiaPro-SemiBold">Choosing your Hospital and Consultant</h2>
             <p class="font-24 SofiaPro-SemiBold">You can:</p>
             <ul class="blue-dot">
                 <li>Choose the organisation you need to be referred to as an NHS outpatient to see a consultant
