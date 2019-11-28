@@ -34,7 +34,7 @@ class WaitingTimes extends DefaultImport {
 
                 $hospitals = [];
                 //First we check if we can find the Hospital based on the given code
-                $hospitals[] = Hospital::where('location_id', $item['Provider Code'])->orWhere('organisation_id', $item['Provider Code'])->first();
+                $hospitals[] = Hospital::where('location_id', $item['Location ID'])->orWhere('organisation_id', $item['Location ID'])->first();
                 //If we still don't have the hospital, try to get all the hospitals within the Trust
                 if(empty($hospitals[0])) {
                     $trust = Trust::where('trust_id', $item['Provider Code'])->orWhere('provider_id', $item['Provider Code'])->first();

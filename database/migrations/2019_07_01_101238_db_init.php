@@ -133,6 +133,8 @@ class DbInit extends Migration
                 $table->double('outpatient_perc_95')->nullable();
                 $table->integer('inpatient_total_admitted')->nullable();
                 $table->double('inpatient_perc_95')->nullable();
+                $table->integer('diagnostics_total')->nullable();
+                $table->double('diagnostics_perc_6')->nullable();
                 $table->string('status')->default("active");
                 $table->timestamps();
 
