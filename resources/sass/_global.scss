@@ -1,5 +1,5 @@
 body, * {
-    letter-spacing: $letter-spacing;
+    //letter-spacing: $letter-spacing;
 }
 
 .cookie-page,
@@ -55,7 +55,7 @@ ul.blue-dot {
     margin-bottom: 30px;
 
     > li {
-        @include font-style(false, 14px, false, false, 24px, -1px);
+        //@include font-style(false, 14px, false, false, 24px, -1px);
         //margin: 0 0 12px 0;
         position: relative;
         padding: 0 0 0 30px;
@@ -93,7 +93,8 @@ ul.blue-disc {
     margin: 30px 0 50px 0;
 
     > li {
-        @include font-style(false, 20px, false, false, 24px, -1px);
+        //@include font-style(false, 20px, false, false, 24px, -1px);
+        @include font-size(20);
         margin: 0 0 22px 0;
         position: relative;
         padding: 0 0 0 40px;

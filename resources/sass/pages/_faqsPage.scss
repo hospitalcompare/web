@@ -17,7 +17,8 @@
         @include font-size(25);
 
         @include placeholder {
-            @include font-style(false, false, #000, false, false, -1.6px);
+            //@include font-style(false, false, #000, false, false, -1.6px);
+            @include font-size(25);
         }
     }
 

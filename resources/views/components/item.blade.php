@@ -144,7 +144,7 @@
                                         <div class="d-table-cell">'.$outpatientRank.'</div>
                                     </div>
                                     <div class="d-table-row">
-                                        <div class="d-table-cell">Inpatients treated</div>
+                                        <div class="d-table-cell">Inpatients Treated</div>
                                         <div class="d-table-cell">'.$inpatient.'</div>
                                         <div class="d-table-cell">'.$inpatientRank.'</div>
                                     </div>

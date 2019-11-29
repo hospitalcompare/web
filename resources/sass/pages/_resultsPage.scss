@@ -438,7 +438,7 @@
     }
 
     .find-link {
-        @include font-style('SofiaPro-Bold', 14px, $body-color, false, 14px, -0.7px);
+        @extend .SofiaPro-Bold;
         cursor: pointer;
 
         &:hover,

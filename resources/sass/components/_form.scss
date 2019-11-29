@@ -89,7 +89,8 @@ select::-ms-expand {
     select {
         height: 45px;
         padding: 0 100px 0 16px;
-        @include font-style('SofiaPro-Medium', 18px, false, false, 20px, -0.9px);
+        @include font-size(18);
+        @extend .SofiaPro-Medium;
     }
 
     &:after {

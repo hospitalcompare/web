@@ -139,22 +139,26 @@ h6 {
 }
 
 h1 {
-    @include font-style('SofiaPro-Black', 40px, false, false, 45px, -2.25px);
+    @include font-size(40);
+    //@include font-style('SofiaPro-Black', 40px, false, false, 45px, -2.25px);
     margin: 0 0 40px 0;
 }
 
 h2 {
-    @include font-style('SofiaPro-Bold', 28px, false, false, 35px, -2.25px);
+    @include font-size(28);
+    //@include font-style('SofiaPro-Bold', 28px, false, false, 35px, -2.25px);
     margin: 0 0 28px 0;
 }
 
 .section-title {
-    @include font-style('SofiaPro-Bold', 40px, false, false, 48px, -2px);
+    @include font-size(40);
+    //@include font-style('SofiaPro-Bold', 40px, false, false, 48px, -2px);
     margin-bottom: 40px;
 }
 
 .page-subtitle {
-    @include font-style('SofiaPro-SemiBold', 28px, false, false, 35px, -1.45px);
+    @include font-size(28);
+    //@include font-style('SofiaPro-SemiBold', 28px, false, false, 35px, -1.45px);
 }
 
 h3 {
@@ -177,10 +181,6 @@ h5 {
 h6 {
     font-size: 22px;
     margin: 0 0 22px 0;
-}
-
-p {
-    @include font-style(false, 14px, false, false, 16.8px, -1px);
 }
 
 .image-wrapper {
