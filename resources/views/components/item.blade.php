@@ -228,22 +228,28 @@
                     <span class="d-none" id="item_nhs_funded_{{$id}}">{!! $NHSFunded !!}</span>
                 </div>
                 <div class="result-item-section-2__child flex-column">
-                    <p>
-                        {!! !empty($privateSelfPay) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>"  !!}
-                    </p>
-                    {{--                @if($NHSClass == 'private-hospital')--}}
-                    {{--                    <span>--}}
-                    {{--                        Click for<br>--}}
-                    {{--                        @include('components.basic.modalbutton', [--}}
-                    {{--                                'hrefValue'         => $url,--}}
-                    {{--                                'hospitalTitle'     => $title,--}}
-                    {{--                                'modalTarget'       => '#hc_modal_enquire_private',--}}
-                    {{--                                'classTitle'        => 'text-link enquire-prices',--}}
-                    {{--                                'target'            => 'blank',--}}
-                    {{--                                'modalText'         => 'This is the text about prices',--}}
-                    {{--                                'buttonText'            => 'prices'])--}}
-                    {{--                    </span>--}}
-                    {{--                @endif--}}
+{{--                    <p>--}}
+{{--                        {!! !empty($privateSelfPay) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : ""  !!}--}}
+{{--                    </p>--}}
+                        @if(!empty($privateSelfPay))
+                            @if($NHSClass == 'private-hospital')
+                                <p>
+                                    @include('components.basic.modalbutton', [
+                                            'hrefValue'         => $url,
+                                            'hospitalTitle'     => $title,
+                                            'modalTarget'       => '#hc_modal_enquire_private',
+                                            'classTitle'        => 'text-link enquire-prices',
+                                            'target'            => 'blank',
+                                            'modalText'         => 'This is the text about prices',
+                                            'hospitalIds'       => $id,
+                                            'buttonText'            => 'Click<br>for prices'])
+                                </p>
+                            @else
+                                <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>
+                            @endif
+                        @else
+                            <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>
+                        @endif
                     <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
                 </div>
             </div>

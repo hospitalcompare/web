@@ -265,6 +265,9 @@ select.big {
     cursor: pointer;
     color: inherit;
     transition: $transition;
+    appearance: none;
+    background-color: transparent;
+    border: none;
     //text-decoration: underline !important;
 
     &:hover {
