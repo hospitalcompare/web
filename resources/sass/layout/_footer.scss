@@ -14,7 +14,7 @@
 }
 
 .footer-upper {
-    background-color: #1b1b1b;
+    background-color: $body-color;
     padding-top: 75px;
 
     &__menu {
@@ -22,6 +22,7 @@
 
         li {
             margin-bottom: 15px;
+            display: inline-block;
 
             a {
                 @include font-size(22);
@@ -60,7 +61,7 @@
     background-color: $footerGrey;
 
     &__menu {
-        margin-left: -25px;
+        margin-left: -15px;
         list-style-type: none;
 
         li {
@@ -68,7 +69,7 @@
 
             > a {
                 display: inline-block;
-                padding: 25px;
+                padding: 0 15px;
             }
         }
     }

@@ -151,6 +151,7 @@ $(document).on("click", ".results-page .change-url", function (event) {
 // Toggle filter section
 $('#show_filters').on('click', function () {
     $('#resultspage_form .filter-parent').slideToggle();
+    $('body').toggleClass('filters-open');
     $(this).toggleClass('open');
     // // Refresh the range slider as it is initially hidden
     $("#radiusProx").slider('relayout');

@@ -305,12 +305,12 @@ $(document).on("click", ".compare-hospitals-bar .compare-button-title", function
             .removeClass('open')
             .find('.special-offer-body')
             .slideUp();
-        var $isSticky = $('.result-item-parent').hasClass('js-is-sticky');
+        var $isSticky = $('#resultspage_form').hasClass('js-is-sticky');
         if($isSticky){
-            stickybits('.result-item-parent').cleanup();
+            stickybits('#resultspage_form').cleanup();
             return;
         }
-        stickybits('.result-item-parent', {useStickyClasses: true});
+        stickybits('#resultspage_form', {useStickyClasses: true});
     }
 });
 
