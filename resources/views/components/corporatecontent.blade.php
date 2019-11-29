@@ -172,16 +172,20 @@
                          id="map_{{ $id }}"
                          role="tabpanel"
                          aria-labelledby="map-tab">
-                        <div id="gmap_{{ $id }}" class="map-container" style="height: 200px">
-                        </div>
-                        <div class="corporate-content-details d-flex mb-3" style="padding-top: 25px">
-                            <div class="img-wrap mr-4">
-                                <img class="image" width="173" height="158"
-                                     src="images/alder-1.jpg"
-                                     alt="Image of {{ $hospitalTitle }}">
+                        <div class="row">
+                            <div class="corporate-content-details d-flex col col-2">
+{{--                                <div class="img-wrap mr-4">--}}
+{{--                                    <img class="image" width="173" height="158"--}}
+{{--                                         src="images/alder-1.jpg"--}}
+{{--                                         alt="Image of {{ $hospitalTitle }}">--}}
+{{--                                </div>--}}
+                                <div class="address">
+                                    {!! $address !!}
+                                </div>
                             </div>
-                            <div class="address">
-                                {!! $address !!}
+                            <div class="col-10">
+                                <div id="gmap_{{ $id }}" class="map-container" style="height: 400px">
+                                </div>
                             </div>
                         </div>
                     </div>
