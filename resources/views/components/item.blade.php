@@ -262,7 +262,7 @@
                         'hrefValue'         => $url,
                         'hospitalTitle'     => $title,
                         'modalTarget'       => '#hc_modal_enquire_private',
-                        'classTitle'        => 'btn btn-icon btn-grad btn-enquire btn-blue enquiry mr-2 btn-block font-14',
+                        'classTitle'        => 'btn btn-icon btn-grad btn-enquire btn-blue enquiry mr-2 btn-block font-12',
                         'target'            => 'blank',
                         'buttonText'        => $btnText,
                         'id'                => 'enquire_private_'.$id,
@@ -274,7 +274,7 @@
                         'hrefValue'         => $url,
                         'hospitalTitle'     => $title,
                         'hospitalUrl'       => $d['url'],
-                        'classTitle'        => 'btn btn-icon btn-grad btn-blue btn-enquire enquiry mr-2 btn-block font-14',
+                        'classTitle'        => 'btn btn-icon btn-grad btn-blue btn-enquire enquiry mr-2 btn-block font-12',
                         'buttonText'            => $btnText,
                         'modalTarget'       => '#hc_modal_enquire_nhs',
                         'id'                => 'enquire_nhs'.$id,
@@ -286,7 +286,7 @@
                             @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
                                 'class' => 'default'])
                             @include('components.basic.button', [
-                                'classTitle'        => 'toggle-special-offer btn btn-block btn-grad btn-icon btn-pink btn-special-offer btn-plus font-14',
+                                'classTitle'        => 'toggle-special-offer btn btn-block btn-grad btn-icon btn-pink btn-special-offer btn-plus font-12',
                                 'htmlButton'        => true,
                                 'id'                => 'special_' . $id,
                                 'buttonText'        => 'Special Offers',
@@ -294,7 +294,7 @@
                         </div>
                     @endif
                     @include('components.basic.button', [
-                        'classTitle'        => 'btn btn-compare compare btn-block font-14',
+                        'classTitle'        => 'btn btn-compare compare btn-block font-12',
                         'htmlButton'        => true,
                         'buttonText'        => 'Add to compare',
                         'hospitalType'      => $NHSClass,

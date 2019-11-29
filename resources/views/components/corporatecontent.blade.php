@@ -1,9 +1,9 @@
 {{-- Corporate content area --}}
 <div class="corporate-content w-100" id="corporate_content_hospital_{{$id}}">
     <div class="container">
-        <div class="d-flex">
+        <div class="corporate-content-inner d-flex">
             <div class="corporate-content-section-1"></div>
-            <div class="corporate-content-section-2 position-relative">
+            <div class="corporate-content-section-2 position-relative w-100">
                 @include('components.basic.button', [
                     'buttonText'        => 'Close Info',
                     'classTitle'        => 'btn btn-cc-close position-absolute',
@@ -39,49 +39,136 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content row">
-                    <div class="tab-pane active col-6" id="profile_{{ $id }}" role="tabpanel"
+                    <div class="tab-pane active col-12" id="profile_{{ $id }}" role="tabpanel"
                          aria-labelledby="profile-tab">
-                        <div class="profile-intro mb-5">
-                            <p class="SofiaPro-SemiBold ">Situated in London, this hospital provides private
-                                patients with outstanding medical
-                                services. Both self paying and private medically insured patients will be treated using
-                                the latest techniques in a modern and calming hospital. With a team of expert
-                                specialists patients can get treatment for a range of hip, knee, spinal and foot and
-                                ankle conditions.</p>
-                            <p class="">Our hospitals are equipped with state of the art facilities and are
-                                focused on providing
-                                high quality healthcare. Each hospital boasts of having the latest equipment, available
-                                facilities include:</p>
-                        </div>
+
                         <div class="row">
                             <div class="col-6">
-                                <p class=" SofiaPro-SemiBold">First list</p>
-                                <ul class="blue-dot blue-dot_small">
-                                    <li>First thing</li>
-                                    <li>Second thing</li>
-                                    <li>Third thing</li>
-                                    <li>Fourth thing</li>
-                                    <li>Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth
-                                        thing
-                                        Fifth thing
-                                    </li>
-                                </ul>
+                                <div class="profile-intro">
+                                    <p class="">Situated in London, this hospital provides private
+                                        patients with outstanding medical
+                                        services. Both self paying and private medically insured patients will be treated using
+                                        the latest techniques in a modern and calming hospital. With a team of expert
+                                        specialists patients can get treatment for a range of hip, knee, spinal and foot and
+                                        ankle conditions.</p>
+                                    <p class="">Our hospitals are equipped with state of the art facilities and are
+                                        focused on providing
+                                        high quality healthcare. Each hospital boasts of having the latest equipment, available
+                                        facilities include:</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class=" SofiaPro-SemiBold">First list</p>
+                                        <ul class="blue-dot blue-dot_small">
+                                            <li>First thing</li>
+                                            <li>Second thing</li>
+                                            <li>Third thing</li>
+                                            <li>Fourth thing</li>
+                                            <li>Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth
+                                                thing
+                                                Fifth thing
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class=" SofiaPro-SemiBold">Second list</p>
+                                        <ul class="blue-dot blue-dot_small">
+                                            <li>First thing</li>
+                                            <li>Second thing</li>
+                                            <li>Third thing</li>
+                                            <li>Fourth thing</li>
+                                            <li>Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth
+                                                thing
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-6">
-                                <p class=" SofiaPro-SemiBold">Second list</p>
-                                <ul class="blue-dot blue-dot_small">
-                                    <li>First thing</li>
-                                    <li>Second thing</li>
-                                    <li>Third thing</li>
-                                    <li>Fourth thing</li>
-                                    <li>Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth thing Fifth
-                                        thing
-                                    </li>
-                                </ul>
+                                <div class="carousel-wrapper position-relative pl-md-5">
+                                    <div id="carousel-thumb_{{ $id }}"
+                                         class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel"
+                                         data-interval="false">
+                                        <!--Slides-->
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="carousel-item active" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
+                                                {{--                                                <img class="d-block h-100 content"--}}
+                                                {{--                                                     src="/images/alder-1.jpg"--}}
+                                                {{--                                                     alt="First slide">--}}
+                                            </div>
+                                            <div class="carousel-item" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
+                                                {{--                                                <img class="d-block h-100 content"--}}
+                                                {{--                                                     src="/images/alder-1.jpg"--}}
+                                                {{--                                                     alt="First slide">--}}
+                                            </div>
+                                            <div class="carousel-item" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
+                                                {{--                                                <img class="d-block h-100 content"--}}
+                                                {{--                                                     src="/images/alder-1.jpg"--}}
+                                                {{--                                                     alt="First slide">--}}
+                                            </div>
+                                            <div class="carousel-item" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
+                                                {{--                                                <img class="d-block h-100 content"--}}
+                                                {{--                                                     src="/images/alder-1.jpg"--}}
+                                                {{--                                                     alt="First slide">--}}
+                                            </div>
+
+                                        </div>
+                                        <!--/.Slides-->
+                                        <!--Controls-->
+                                        <a class="carousel-control-prev" href="#carousel-thumb_{{ $id }}" role="button"
+                                           data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true">{!! file_get_contents(asset('/images/icons/chevron-left.svg')) !!}</span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel-thumb_{{ $id }}" role="button"
+                                           data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true">{!! file_get_contents(asset('/images/icons/chevron-right.svg')) !!}</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+
+                                    </div><!--/.Carousel Wrapper-->
+                                    <!--/.Controls-->
+                                    <ol class="_carousel-indicators indicators row">
+                                        <li data-target="#carousel-thumb" data-slide-to="0" class="active col-3">
+                                            <div class="col-inner">
+                                                <img class="d-block h-100"
+                                                     src="/images/alder-1.jpg"
+                                                     alt="Thumbnail image for first slide">
+                                            </div>
+                                        </li>
+                                        <li data-target="#carousel-thumb" data-slide-to="1" class="col-3">
+                                            <div class="col-inner">
+                                                <img class="d-block h-100"
+                                                     src="/images/alder-1.jpg"
+                                                     alt="Thumbnail image for seconf slide">
+                                            </div>
+                                        </li>
+                                        <li data-target="#carousel-thumb" data-slide-to="2" class="col-3">
+                                            <div class="col-inner">
+                                                <img class="d-block h-100"
+                                                     src="/images/alder-1.jpg"
+                                                     alt="Thumbnail image for third slide">
+                                            </div>
+                                        </li>
+                                        <li data-target="#carousel-thumb" data-slide-to="3" class="col-3">
+                                            <div class="col-inner">
+                                                <img class="d-block h-100"
+                                                     src="/images/alder-1.jpg"
+                                                     alt="Thumbnail image for fourth slide">
+                                            </div>
+                                        </li>
+                                    </ol>
+{{--                                    @include('components.basic.modalbutton', [--}}
+{{--                                        'classTitle'        => 'stretched-link',--}}
+{{--                                        'id'                => 'modal_trigger_' . $id,--}}
+{{--                                        'modalTarget'       => '#hc_modal_carousel_'. $id,--}}
+{{--                                        'buttonText'        => '',--}}
+{{--                                        ])--}}
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane col-6"
+                    <div class="tab-pane col-12"
                          id="map_{{ $id }}"
                          role="tabpanel"
                          aria-labelledby="map-tab">
@@ -166,7 +253,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="media-pane col-6">
+                    <div class="media-pane col-6 d-none">
                         <div class="row">
                             <div class="col-5">
                             <!--Carousel Wrapper-->
@@ -202,12 +289,12 @@
                                         <!--Controls-->
                                         <a class="carousel-control-prev" href="#carousel-thumb_{{ $id }}" role="button"
                                            data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true">{!! file_get_contents(asset('/images/icons/carousel-left.svg')) !!}</span>
+                                            <span class="carousel-control-prev-icon" aria-hidden="true">{!! file_get_contents(asset('/images/icons/chevron-left.svg')) !!}</span>
                                             <span class="sr-only">Previous</span>
                                         </a>
                                         <a class="carousel-control-next" href="#carousel-thumb_{{ $id }}" role="button"
                                            data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true">{!! file_get_contents(asset('/images/icons/carousel-right.svg')) !!}</span>
+                                            <span class="carousel-control-next-icon" aria-hidden="true">{!! file_get_contents(asset('/images/icons/chevron-right.svg')) !!}</span>
                                             <span class="sr-only">Next</span>
                                         </a>
 
@@ -243,12 +330,12 @@
                                             </div>
                                         </li>
                                     </ol>
-                                    @include('components.basic.modalbutton', [
-                                        'classTitle'        => 'stretched-link',
-                                        'id'                => 'modal_trigger_' . $id,
-                                        'modalTarget'       => '#hc_modal_carousel_'. $id,
-                                        'buttonText'        => '',
-                                        ])
+{{--                                    @include('components.basic.modalbutton', [--}}
+{{--                                        'classTitle'        => 'stretched-link',--}}
+{{--                                        'id'                => 'modal_trigger_' . $id,--}}
+{{--                                        'modalTarget'       => '#hc_modal_carousel_'. $id,--}}
+{{--                                        'buttonText'        => '',--}}
+{{--                                        ])--}}
                                 </div>
                             </div>
                             @if(!empty($specialOffers))
@@ -312,52 +399,52 @@
         </div>
     </div>{{-- End of container --}}
 </div>{{-- End of corporate content area  --}}
-@include('components.modals.modalCarousel', [
-    'id' => $id,
-    'carouselContent'   => '        <div class="carousel-wrapper position-relative">
-                                        <div id="carousel-thumb_modal_' . $id .'"
-                                             class="carousel slide carousel-slide carousel-thumbnails" data-ride="carousel" data-interval="false">
-                                            <!--Slides-->
-                                            <div class="carousel-inner" role="listbox">
-                                                <div class="carousel-item active" style="background-image: url(\'/images/alder-1.jpg\')"></div>
-                                                <div class="carousel-item" style="background-image: url(\'/images/alder-1.jpg\')"></div>
-                                                <div class="carousel-item" style="background-image: url(\'/images/alder-1.jpg\')"></div>
-                                                <div class="carousel-item" style="background-image: url(\'/images/alder-1.jpg\')"></div>
-                                            </div>
-                                            <!--/.Slides-->
-                                            <!--Controls-->
-                                            <a class="carousel-control-prev carousel-control" href="#carousel-thumb_modal_'. $id .'" role="button"
-                                               data-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true">' . file_get_contents(asset('/images/icons/carousel-left.svg')) . '</span>
-                                            </a>
-                                            <a class="carousel-control-next carousel-control" href="#carousel-thumb_modal_'. $id .'" role="button"
-                                               data-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true">' . file_get_contents(asset('/images/icons/carousel-right.svg')) . ' </span>
-                                                <span class="sr-only">Next</span>
-                                            </a>
+{{--@include('components.modals.modalCarousel', [--}}
+{{--    'id' => $id,--}}
+{{--    'carouselContent'   => '        <div class="carousel-wrapper position-relative">--}}
+{{--                                        <div id="carousel-thumb_modal_' . $id .'"--}}
+{{--                                             class="carousel slide carousel-slide carousel-thumbnails" data-ride="carousel" data-interval="false">--}}
+{{--                                            <!--Slides-->--}}
+{{--                                            <div class="carousel-inner" role="listbox">--}}
+{{--                                                <div class="carousel-item active" style="background-image: url(\'/images/alder-1.jpg\')"></div>--}}
+{{--                                                <div class="carousel-item" style="background-image: url(\'/images/alder-1.jpg\')"></div>--}}
+{{--                                                <div class="carousel-item" style="background-image: url(\'/images/alder-1.jpg\')"></div>--}}
+{{--                                                <div class="carousel-item" style="background-image: url(\'/images/alder-1.jpg\')"></div>--}}
+{{--                                            </div>--}}
+{{--                                            <!--/.Slides-->--}}
+{{--                                            <!--Controls-->--}}
+{{--                                            <a class="carousel-control-prev carousel-control" href="#carousel-thumb_modal_'. $id .'" role="button"--}}
+{{--                                               data-slide="prev">--}}
+{{--                                                <span class="carousel-control-prev-icon" aria-hidden="true">' . file_get_contents(asset('/images/icons/carousel-left.svg')) . '</span>--}}
+{{--                                            </a>--}}
+{{--                                            <a class="carousel-control-next carousel-control" href="#carousel-thumb_modal_'. $id .'" role="button"--}}
+{{--                                               data-slide="next">--}}
+{{--                                                <span class="carousel-control-next-icon" aria-hidden="true">' . file_get_contents(asset('/images/icons/carousel-right.svg')) . ' </span>--}}
+{{--                                                <span class="sr-only">Next</span>--}}
+{{--                                            </a>--}}
 
-                                        </div>
-                                        <!--/.Controls-->
-                                        <ol class="_carousel-indicators indicators row mb-0">
-                                            <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="0" class="active col-3">
-                                                <div class="col-inner" style="background-image: url(\'/images/alder-1.jpg\')">
-                                                    <img class="d-block h-100"
-                                                         src="/images/alder-1.jpg"
-                                                         alt="Thumbnail image for first slide">
-                                                </div>
-                                            </li>
-                                            <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="1" class="col-3">
-                                                <div class="col-inner" style="background-image: url(\'/images/alder-1.jpg\')">
-                                                </div>
-                                            </li>
-                                            <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="2" class="col-3">
-                                                <div class="col-inner" style="background-image: url(\'/images/alder-1.jpg\')">
-                                                </div>
-                                            </li>
-                                            <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="3" class="col-3">
-                                                <div class="col-inner" style="background-image: url(\'/images/alder-1.jpg\')">
-                                                </div>
-                                            </li>
-                                        </ol>
-                                    </div><!--/.Carousel Wrapper-->
-                                    '])
+{{--                                        </div>--}}
+{{--                                        <!--/.Controls-->--}}
+{{--                                        <ol class="_carousel-indicators indicators row mb-0">--}}
+{{--                                            <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="0" class="active col-3">--}}
+{{--                                                <div class="col-inner" style="background-image: url(\'/images/alder-1.jpg\')">--}}
+{{--                                                    <img class="d-block h-100"--}}
+{{--                                                         src="/images/alder-1.jpg"--}}
+{{--                                                         alt="Thumbnail image for first slide">--}}
+{{--                                                </div>--}}
+{{--                                            </li>--}}
+{{--                                            <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="1" class="col-3">--}}
+{{--                                                <div class="col-inner" style="background-image: url(\'/images/alder-1.jpg\')">--}}
+{{--                                                </div>--}}
+{{--                                            </li>--}}
+{{--                                            <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="2" class="col-3">--}}
+{{--                                                <div class="col-inner" style="background-image: url(\'/images/alder-1.jpg\')">--}}
+{{--                                                </div>--}}
+{{--                                            </li>--}}
+{{--                                            <li data-target="#carousel-thumb_modal_'. $id .'" data-slide-to="3" class="col-3">--}}
+{{--                                                <div class="col-inner" style="background-image: url(\'/images/alder-1.jpg\')">--}}
+{{--                                                </div>--}}
+{{--                                            </li>--}}
+{{--                                        </ol>--}}
+{{--                                    </div><!--/.Carousel Wrapper-->--}}
+{{--                                    '])--}}

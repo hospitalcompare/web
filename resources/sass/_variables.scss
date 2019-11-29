@@ -84,7 +84,7 @@ $centerOnPage: auto;
 $btn-border-radius: 100px;
 $btn-transition: $transition;
 $btn-border-width: 0;
-$btn-focus-box-shadow: none;
+//$btn-focus-box-shadow: none;
 
 // Popovers
 //$popover-border-width: 0;
@@ -184,10 +184,12 @@ $hospital-image-width: 150px;
 
 // Carousel
 $enable-gradients: false;
-$carousel-control-prev-icon-bg: url('../images/icons/carousel-left.svg');
-$carousel-control-next-icon-bg: url('../images/icons/carousel-right.svg');
-$carousel-control-icon-width: 24px;
-$carousel-control-icon-height: 24px;
+//$carousel-control-prev-icon-bg: url('../images/icons/chevron-left.svg');
+//$carousel-control-next-icon-bg: url('../images/icons/chevron-right.svg');
+$carousel-control-prev-icon-bg: none;
+$carousel-control-next-icon-bg: none;
+$carousel-control-icon-width: 40px;
+$carousel-control-icon-height: 40px;
 $carousel-control-opacity: 1;
 $carousel-control-width: auto;
 
