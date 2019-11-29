@@ -16,6 +16,10 @@
     {{--            ['displayBlock' => 'true'])--}}
     {{--    </section>--}}
     <section>
+        @include('pages.pagesections.resultspageform', [
+        'displayBlock' => true])
+    </section>
+    <section>
         <h3>Waiting times popover</h3>
         <div class="popover popover-regular fade bs-popover-top show" role="tooltip"
              id="popover438743" x-placement="top" style="position: relative;">
@@ -760,10 +764,7 @@
                 'address'       => '<strong>Hospital name</strong><br>Hospital address<br>Hospital Town<br>Hospital County<br>Hospital Postcode'
             ])
     </section>
-    <section>
-        @include('pages.pagesections.resultspageform', [
-        'displayBlock' => true])
-    </section>
+
     <section class="pt-3">
         <div class="container">
             <h3>Enquiry Form</h3>
