@@ -95,6 +95,11 @@
                     'popoverDelay'          => 2000
                    ])
             @endforeach
+            @if($data['hospitals']->total() < 10)
+                <div class="container">
+                    <h1>Try tweaking the filters for more results</h1>
+                </div>
+            @endif
         @endif
     </div>
 
