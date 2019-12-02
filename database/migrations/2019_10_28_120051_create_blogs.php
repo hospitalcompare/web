@@ -13,32 +13,80 @@ class CreateBlogs extends Migration
      */
     public function up()
     {
-//        Schema::create('blog_categories', function (Blueprint $table) {
-//            $table->increments('id');
-//            $table->string('name');
-//            $table->string('status')->default("active");
-//            $table->timestamps();
-//
-//        });
+        Schema::dropIfExists('blogs');
+        Schema::dropIfExists('blog_authors');
+        Schema::dropIfExists('blog_categories');
 
-        Schema::create('blogs', function (Blueprint $table) {
-            $table->increments('id');
-//            $table->unsignedInteger('blog_category_id');
-            $table->string('title');
-            $table->longText('description');
-            $table->string('image')->nullable();
-            $table->string('facebook')->nullable();
-            $table->string('twitter')->nullable();
-            $table->string('linkedin')->nullable();
-            $table->string('status')->default("active");
-            $table->timestamps();
+        if (!Schema::hasTable('blog_authors')) {
+            Schema::create('blog_authors', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('name');
+                $table->longText('description');
+                $table->string('image');
+                $table->string('status')->default("active");
+                $table->timestamps();
 
-//            $table->foreign('blog_category_id')->references('id')->on('blog_categories')->onDelete('cascade')->onUpdate('cascade');
-        });
+            });
+        }
+        if (!Schema::hasTable('blog_categories')) {
+            Schema::create('blog_categories', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('name');
+                $table->string('icon');
+                $table->string('colour');
+                $table->string('status')->default("active");
+                $table->timestamps();
+
+            });
+        }
+        if (!Schema::hasTable('blogs')) {
+            Schema::create('blogs', function (Blueprint $table) {
+                $table->increments('id');
+                $table->unsignedInteger('blog_category_id');
+                $table->unsignedInteger('blog_author_id');
+                $table->string('title');
+                $table->longText('description');
+                $table->integer('time_to_read');
+                $table->string('image');
+                $table->string('status')->default("active");
+                $table->timestamps();
+
+                $table->foreign('blog_category_id')->references('id')->on('blog_categories')->onDelete('cascade')->onUpdate('cascade');
+                $table->foreign('blog_author_id')->references('id')->on('blog_authors')->onDelete('cascade')->onUpdate('cascade');
+            });
+        }
+        //TODO: Remove these Example Authors
+        $preAuthor = [
+            'name'          => 'Lucian Niculescu',
+            'description'   => 'Gingerbread tiramisu cake cake halvah. Bonbon soufflé toffee gummies biscuit. Macaroon
+                                chocolate cake toffee lemon drops sesame snaps lollipop. Marshmallow ice cream candy canes
+                                pudding jujubes danish. Marzipan tar',
+            'image'         => 'images/Layer_16.png'
+        ];
+        //TODO: Remove these Example Categories
+        $preCategories = [
+            [
+                'name'      => 'Category One',
+                'colour'    => '#0000FF'
+            ],[
+                'name'      => 'Category Two',
+                'colour'    => '#8A2BE2'
+            ],[
+                'name'      => 'Category Three',
+                'colour'    => '#4B0082'
+            ],[
+                'name'      => 'Category Four',
+                'colour'    => '#C71585'
+            ],[
+                'name'      => 'Category Five',
+                'colour'    => '#C71585'
+            ]
+        ];
+
         //TODO: Remove these Example Blogs
         $preBlogs = [
             [
-                'title'         => 'Blog Title 1',
+                'title'         => 'Example 1',
                 'description'   => '<p class="font-28 SofiaPro-Medium">Tootsie roll toffee lemon drops jelly tart chocolate cake
                             sweet. Croissant jujubes cake sweet
                             cake sweet brownie. Jelly ice cream bonbon.</p>
@@ -61,9 +109,10 @@ class CreateBlogs extends Migration
                             candy. Tart pudding lollipop brownie macaroon. Chocolate topping tiramisu jelly-o. Candy
                             canes muffin bonbon. Cheesecake ice cream dragée icing sweet dragée bonbon.</p>',
                 'image'         => 'images/Layer_16.png',
-                'facebook'      => 'https://facebook.com',
-                'twitter'       => 'https://twitter.com',
-                'linkedin'      => 'https://linkedin.com',
+//                'facebook'      => 'https://facebook.com',
+//                'twitter'       => 'https://twitter.com',
+//                'linkedin'      => 'https://linkedin.com',
+                ''
             ],[
                 'title'         => 'Blog Title 2',
                 'description'   => '<p class="font-28 SofiaPro-Medium">Tootsie roll toffee lemon drops jelly tart chocolate cake
@@ -88,7 +137,6 @@ class CreateBlogs extends Migration
                             candy. Tart pudding lollipop brownie macaroon. Chocolate topping tiramisu jelly-o. Candy
                             canes muffin bonbon. Cheesecake ice cream dragée icing sweet dragée bonbon.</p>',
                 'image'         => 'images/Layer_17.png',
-                'facebook'      => 'https://facebook.com',
             ],[
                 'title'         => 'Blog Title 3',
                 'description'   => '<p class="font-28 SofiaPro-Medium">Tootsie roll toffee lemon drops jelly tart chocolate cake
@@ -137,7 +185,6 @@ class CreateBlogs extends Migration
                             candy. Tart pudding lollipop brownie macaroon. Chocolate topping tiramisu jelly-o. Candy
                             canes muffin bonbon. Cheesecake ice cream dragée icing sweet dragée bonbon.</p>',
                 'image'         => 'images/Layer_17.png',
-                'facebook'      => 'https://facebook.com',
             ],[
                 'title'         => 'Blog Title 3',
                 'description'   => '<p class="font-28 SofiaPro-Medium">Tootsie roll toffee lemon drops jelly tart chocolate cake
@@ -186,7 +233,6 @@ class CreateBlogs extends Migration
                             candy. Tart pudding lollipop brownie macaroon. Chocolate topping tiramisu jelly-o. Candy
                             canes muffin bonbon. Cheesecake ice cream dragée icing sweet dragée bonbon.</p>',
                 'image'         => 'images/Layer_17.png',
-                'facebook'      => 'https://facebook.com',
             ],[
                 'title'         => 'Blog Title 3',
                 'description'   => '<p class="font-28 SofiaPro-Medium">Tootsie roll toffee lemon drops jelly tart chocolate cake
@@ -235,7 +281,6 @@ class CreateBlogs extends Migration
                             candy. Tart pudding lollipop brownie macaroon. Chocolate topping tiramisu jelly-o. Candy
                             canes muffin bonbon. Cheesecake ice cream dragée icing sweet dragée bonbon.</p>',
                 'image'         => 'images/Layer_17.png',
-                'facebook'      => 'https://facebook.com',
             ],[
                 'title'         => 'Blog Title 3',
                 'description'   => '<p class="font-28 SofiaPro-Medium">Tootsie roll toffee lemon drops jelly tart chocolate cake
@@ -284,7 +329,6 @@ class CreateBlogs extends Migration
                             candy. Tart pudding lollipop brownie macaroon. Chocolate topping tiramisu jelly-o. Candy
                             canes muffin bonbon. Cheesecake ice cream dragée icing sweet dragée bonbon.</p>',
                 'image'         => 'images/Layer_17.png',
-                'facebook'      => 'https://facebook.com',
             ],[
                 'title'         => 'Blog Title 3',
                 'description'   => '<p class="font-28 SofiaPro-Medium">Tootsie roll toffee lemon drops jelly tart chocolate cake
@@ -333,7 +377,6 @@ class CreateBlogs extends Migration
                             candy. Tart pudding lollipop brownie macaroon. Chocolate topping tiramisu jelly-o. Candy
                             canes muffin bonbon. Cheesecake ice cream dragée icing sweet dragée bonbon.</p>',
                 'image'         => 'images/Layer_17.png',
-                'facebook'      => 'https://facebook.com',
             ],[
                 'title'         => 'Blog Title 3',
                 'description'   => '<p class="font-28 SofiaPro-Medium">Tootsie roll toffee lemon drops jelly tart chocolate cake
@@ -357,18 +400,32 @@ class CreateBlogs extends Migration
                         <p>Sweet roll oat cake chocolate lemon drops liquorice tart pie macaroon danish. Cake liquorice
                             candy. Tart pudding lollipop brownie macaroon. Chocolate topping tiramisu jelly-o. Candy
                             canes muffin bonbon. Cheesecake ice cream dragée icing sweet dragée bonbon.</p>',
-                'image'         => 'images/Layer_18.png'
+                'image'         => 'images/Layer_18.png',
             ]
         ];
+
+        $author = new \App\Models\BlogAuthor();
+        $author->name = $preAuthor['name'];
+        $author->description = $preAuthor['description'];
+        $author->image = $preAuthor['image'];
+        $author->save();
+
+        foreach( $preCategories as $preCategory ) {
+            $category = new \App\Models\BlogCategory();
+            $category->name = $preCategory['name'];
+            $category->icon = 'images/icons/heart-solid.svg';
+            $category->colour = $preCategory['colour'];
+            $category->save();
+        }
 
         foreach( $preBlogs as $preBlog ) {
             $blog = new \App\Models\Blog();
             $blog->title = $preBlog['title'];
             $blog->description = $preBlog['description'];
             $blog->image  = $preBlog['image'];
-            $blog->facebook = $preBlog['facebook'] ?? '';
-            $blog->twitter = $preBlog['twitter'] ?? '';
-            $blog->linkedin = $preBlog['linkedin'] ?? '';
+            $blog->time_to_read = rand(1, 10);
+            $blog->blog_category_id = rand(1, 5);
+            $blog->blog_author_id = 1;
             $blog->save();
         }
     }
@@ -380,7 +437,9 @@ class CreateBlogs extends Migration
      */
     public function down()
     {
-//        Schema::dropIfExists('blog_categories');
         Schema::dropIfExists('blogs');
+        Schema::dropIfExists('blog_authors');
+        Schema::dropIfExists('blog_categories');
+
     }
 }

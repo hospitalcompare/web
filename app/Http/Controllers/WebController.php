@@ -257,8 +257,21 @@ class WebController extends BaseController
     // Blogs page
     public function blogs() {
         //Retrieve all the Blogs
-        $blogs = Blog::orderBy('created_at', 'DESC');
-        $blogs = $blogs->paginate(12);
+        $blogs = Blog::orderBy('created_at', 'DESC')->with('category');
+        $blogs = $blogs->paginate(12)->onEachSide(1);
+        $this->returnedData['success'] = true;
+        $this->returnedData['data']['blogs'] = $blogs;
+
+        return view('pages.blogarchive', $this->returnedData);
+    }
+
+    // Blogs page
+    public function blogCategory($categoryId) {
+        if(empty($categoryId))
+            $categoryId = 1;
+        //Retrieve all the Blogs
+        $blogs = Blog::where('blog_category_id', $categoryId)->orderBy('created_at', 'DESC')->with('category');
+        $blogs = $blogs->paginate(12)->onEachSide(1);
         $this->returnedData['success'] = true;
         $this->returnedData['data']['blogs'] = $blogs;
 
