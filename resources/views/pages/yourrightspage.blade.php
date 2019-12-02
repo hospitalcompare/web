@@ -21,24 +21,30 @@
             <div class="row">
                 <div class="col-12">
                     {{--                    <h1>Patient Choice</h1>--}}
-                    <h1 class="font-36 SofiaPro-SemiBold mb-3">Your Rights</h1>
-                    <p class="col-turq font-26 SofiaPro-Medium">
+                    <h1 class="font-36 SofiaPro-SemiBold mb-3 text-center">Your <span class="col-turq">Rights</span></h1>
+                    <p class="text-center font-26 SofiaPro-Medium">
                         The Health and Social Care Act 2013 (the “<span>Act</span>”) introduced a number of
                         significant changes to the way health care services are managed and delivered in England and
                         implemented the principles and policy drivers introduced in a Government White paper in 2010.
                         Among these policies were:
                     </p>
-                    <ul class="blue-dot mb-0">
-                        <li><span>Choice:</span> putting Patients and the Public first and increasing the
-                            involvement of Patients in decisions affecting them and, importantly giving patients Choice
-                            of healthcare provider for their treatment, whether public sector of private sector.
-                        </li>
-                        <li><span>NHS Tariff:</span> introducing a national standard price for health care
-                            procedures known as the “NHS Tariff”.This was aimed at creating a level playing field for
-                            all providers of NHS services regardless of their status as a public or private sector
-                            organisation.
-                        </li>
-                    </ul>
+                    <div class="card shadow mb-3 border-0">
+                        <div class="card-body">
+                            <p>Choice</p>
+                            <p>Putting Patients and the Public first and increasing the
+                                involvement of Patients in decisions affecting them and, importantly giving patients Choice
+                                of healthcare provider for their treatment, whether public sector of private sector.</p>
+                        </div>
+                    </div>
+                    <div class="card shadow border-0">
+                        <div class="card-body">
+                            <p>NHS Tariff</p>
+                            <p>Introducing a national standard price for health care
+                                procedures known as the “NHS Tariff”.This was aimed at creating a level playing field for
+                                all providers of NHS services regardless of their status as a public or private sector
+                                organisation.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

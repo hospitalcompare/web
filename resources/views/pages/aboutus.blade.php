@@ -286,7 +286,7 @@
     </section>
     <section class="about-us-contacts">
         <div class="container text-center SofiaPro-Medium">
-            <div class="social">
+            <div class="social-links">
                 <ul class="social-list d-flex justify-content-end">
                     <li class="facebook-social">
                         <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/facebook.svg')) !!}
