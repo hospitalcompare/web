@@ -16,173 +16,89 @@
         'hideText'  => 'true'
 
     ])
-    <section class="your-rights-intro">
+    <section class="pb-0">
         <div class="container">
             <div class="row">
-                <div class="col-6">
-                    <h1>Feel <span class="col-turq">better faster</span> by<br>knowing your legal<br> right to choose
-                    </h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi cupiditate error natus,
-                        necessitatibus quos ratione reprehenderit voluptatem voluptatibus. Alias exercitationem maiores
-                        saepe sed voluptates?</p>
-                    <div class="btn-area mb-5">
-                        @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-squared btn-turq',
-                            'buttonText'        => 'Find the right hospital',
-                            'hrefValue'         => '/results-page',
-                            ''
-                        ])
-                        @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-link',
-                            'buttonText'        => 'Read our FAQs',
-                            'hrefValue'         => '/faqs',
-                            'svg'               => 'chevron-right'
-                        ])
-                    </div>
-                    @include('components.basic.testimonial',
-                        [
-                            'single'    => true,
-                            'stars'     => 4.5
-                        ]
-                    )
+                <div class="col-12">
+                    {{--                    <h1>Patient Choice</h1>--}}
+                    <h1 class="font-36 SofiaPro-SemiBold mb-3">Your Rights</h1>
+                    <p class="col-turq font-26 SofiaPro-Medium">
+                        The Health and Social Care Act 2013 (the “<span>Act</span>”) introduced a number of
+                        significant changes to the way health care services are managed and delivered in England and
+                        implemented the principles and policy drivers introduced in a Government White paper in 2010.
+                        Among these policies were:
+                    </p>
+                    <ul class="blue-dot mb-0">
+                        <li><span>Choice:</span> putting Patients and the Public first and increasing the
+                            involvement of Patients in decisions affecting them and, importantly giving patients Choice
+                            of healthcare provider for their treatment, whether public sector of private sector.
+                        </li>
+                        <li><span>NHS Tariff:</span> introducing a national standard price for health care
+                            procedures known as the “NHS Tariff”.This was aimed at creating a level playing field for
+                            all providers of NHS services regardless of their status as a public or private sector
+                            organisation.
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
     <section>
         <div class="container">
-            <div class="row mb-5">
-                <div class="col-10 offset-1">
-                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem et facere
-                        ipsum laboriosam magnam
-                        maxime nesciunt rerum temporibus vitae voluptate! Accusamus architecto beatae harum, inventore
-                        nemo praesentium quidem ullam? Reiciendis!</p>
-                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum,
-                        perferendis? A ad at atque
-                        autem blanditiis consectetur dicta dignissimos dolor dolore doloremque est eum facilis fugit
-                        inventore, itaque maxime modi mollitia nam nesciunt officiis qui recusandae rem sequi similique
-                        sit tempore ut. Deserunt illum pariatur praesentium, reprehenderit saepe veniam.</p>
+            <div class="row mb-4">
+                <div class="col col-12">
+                    <h2 class="font-28 col-turq SofiaPro-SemiBold">The Act</h2>
+                </div>
+                <div class="col col-12 col-md-7">
+                    <p>The Act also introduced a number of other important policies and created bodies and structures to
+                        authorise monitor and regulate all primary care providers (<span>GPs</span>) and Secondary
+                        care provider
+                        (hospitals, in public and private sector).The Secretary of State for Health and NHS England and
+                        other authorised bodies oversee this regime and every healthcare provider needs to be registered
+                        with the Care Quality Commission (<span>CQC</span>).
+                    </p>
+                    <p>Under the new regime GPs are required to notify patients when they have a choice of provider and
+                        to tell patients where they can find information about the choices they have. Clinical
+                        Commissioning Groups (<span>CCGs</span>) were created which oversee the provision of
+                        healthcare in designated
+                        regions, authorised by NHS England, and themselves are obliged to consider patient <span>Choice</span>
+                        and to
+                        procure providers best suited to provide value for money, quality and efficiency of healthcare
+                        services, whether procured from the public or private sector, at set prices known as the NHS
+                        Tariff.
+                    </p>
+                </div>
+                <div class="col col-12 col-md-5">
+                    <div class="image-wrapper">
+                        <img class="w-100" src="{{ asset('/images/video_placeholder.jpg') }}"
+                             alt="People sat round a table having a chin wag ">
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-4">
-                    <div class="col-inner text-center bg-greylight p-4 SofiaPro-Medium">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias consectetur doloribus ducimus
-                        eligendi eos esse incidunt magni neque placeat?
+                <div class="col col-12 col-md-5">
+                    <div class="image-wrapper">
+                        <img class="w-100" src="{{ asset('/images/video_placeholder.jpg') }}"
+                             alt="People sat round a table having a chin wag ">
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="col-inner text-center bg-greylight p-4 SofiaPro-Medium">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias consectetur doloribus ducimus
-                        eligendi eos esse incidunt magni neque placeat?
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="col-inner text-center bg-greylight p-4 SofiaPro-Medium">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias consectetur doloribus ducimus
-                        eligendi eos esse incidunt magni neque placeat?
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="swirl"><h2>Swirly thing in here</h2></div>
-                </div>
-                <div class="col-12">
-                    <h2>Understand your available choices</h2>
-                </div>
-                <div class="col-3">
-                    <div class="col-inner"></div>
-                    <div class="icon-wrapper">
-                        {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
+                <div class="col col-12 col-md-7">
+                    <p>The Act provides that paid for NHS Healthcare services must be in accordance with the NHS Tariff,
+                        which is published by NHS Improvement (formerly known as Monitor, an NHS responsible body) which
+                        among other things promotes, oversees, and regulates competition in health care services in
+                        England.
+                    </p>
+                    <p>In summary, licensed healthcare providers are obliged to promote <span>Choice</span>
+                        and they cannot be
+                        prejudiced to public or private providers so that no provider gets an unfair advantage in
+                        competing with others, whether public or private sector.
+                    </p>
+                    <p>These rights are reflected in the NHS Constitution.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-    {{--    <section class="pb-0">--}}
-    {{--        <div class="container">--}}
-    {{--            <div class="row">--}}
-    {{--                <div class="col-12">--}}
-    {{--                    --}}{{--                    <h1>Patient Choice</h1>--}}
-    {{--                    <h1 class="font-36 SofiaPro-SemiBold mb-3">Your Rights</h1>--}}
-    {{--                    <p class="col-turq font-26 SofiaPro-Medium">--}}
-    {{--                        The Health and Social Care Act 2013 (the “<span>Act</span>”) introduced a number of--}}
-    {{--                        significant changes to the way health care services are managed and delivered in England and--}}
-    {{--                        implemented the principles and policy drivers introduced in a Government White paper in 2010.--}}
-    {{--                        Among these policies were:--}}
-    {{--                    </p>--}}
-    {{--                    <ul class="blue-dot mb-0">--}}
-    {{--                        <li><span>Choice:</span> putting Patients and the Public first and increasing the--}}
-    {{--                            involvement of Patients in decisions affecting them and, importantly giving patients Choice--}}
-    {{--                            of healthcare provider for their treatment, whether public sector of private sector.--}}
-    {{--                        </li>--}}
-    {{--                        <li><span>NHS Tariff:</span> introducing a national standard price for health care--}}
-    {{--                            procedures known as the “NHS Tariff”.This was aimed at creating a level playing field for--}}
-    {{--                            all providers of NHS services regardless of their status as a public or private sector--}}
-    {{--                            organisation.--}}
-    {{--                        </li>--}}
-    {{--                    </ul>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--    </section>--}}
-    {{--    <section>--}}
-    {{--        <div class="container">--}}
-    {{--            <div class="row mb-4">--}}
-    {{--                <div class="col col-12">--}}
-    {{--                    <h2 class="font-28 col-turq SofiaPro-SemiBold">The Act</h2>--}}
-    {{--                </div>--}}
-    {{--                <div class="col col-12 col-md-7">--}}
-    {{--                    <p>The Act also introduced a number of other important policies and created bodies and structures to--}}
-    {{--                        authorise monitor and regulate all primary care providers (<span>GPs</span>) and Secondary--}}
-    {{--                        care provider--}}
-    {{--                        (hospitals, in public and private sector).The Secretary of State for Health and NHS England and--}}
-    {{--                        other authorised bodies oversee this regime and every healthcare provider needs to be registered--}}
-    {{--                        with the Care Quality Commission (<span>CQC</span>).--}}
-    {{--                    </p>--}}
-    {{--                    <p>Under the new regime GPs are required to notify patients when they have a choice of provider and--}}
-    {{--                        to tell patients where they can find information about the choices they have. Clinical--}}
-    {{--                        Commissioning Groups (<span>CCGs</span>) were created which oversee the provision of--}}
-    {{--                        healthcare in designated--}}
-    {{--                        regions, authorised by NHS England, and themselves are obliged to consider patient--}}
-    {{--                        <span>Choice</span>--}}
-    {{--                        and to--}}
-    {{--                        procure providers best suited to provide value for money, quality and efficiency of healthcare--}}
-    {{--                        services, whether procured from the public or private sector, at set prices known as the NHS--}}
-    {{--                        Tariff.--}}
-    {{--                    </p>--}}
-    {{--                </div>--}}
-    {{--                <div class="col col-12 col-md-5">--}}
-    {{--                    <div class="image-wrapper">--}}
-    {{--                        <img class="w-100" src="{{ asset('/images/video_placeholder.jpg') }}"--}}
-    {{--                             alt="People sat round a table having a chin wag ">--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--            <div class="row">--}}
-    {{--                <div class="col col-12 col-md-5">--}}
-    {{--                    <div class="image-wrapper">--}}
-    {{--                        <img class="w-100" src="{{ asset('/images/video_placeholder.jpg') }}"--}}
-    {{--                             alt="People sat round a table having a chin wag ">--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--                <div class="col col-12 col-md-7">--}}
-    {{--                    <p>The Act provides that paid for NHS Healthcare services must be in accordance with the NHS Tariff,--}}
-    {{--                        which is published by NHS Improvement (formerly known as Monitor, an NHS responsible body) which--}}
-    {{--                        among other things promotes, oversees, and regulates competition in health care services in--}}
-    {{--                        England.--}}
-    {{--                    </p>--}}
-    {{--                    <p>In summary, licensed healthcare providers are obliged to promote <span>Choice</span>--}}
-    {{--                        and they cannot be--}}
-    {{--                        prejudiced to public or private providers so that no provider gets an unfair advantage in--}}
-    {{--                        competing with others, whether public or private sector.--}}
-    {{--                    </p>--}}
-    {{--                    <p>These rights are reflected in the NHS Constitution.--}}
-    {{--                    </p>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--    </section>--}}
     <section class="bg-greylight pb-0">
         <div class="container">
             <div class="row">

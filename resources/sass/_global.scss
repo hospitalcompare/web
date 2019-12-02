@@ -14,6 +14,12 @@ body, * {
     }
 }
 
+main {
+    section:last-child {
+        padding-bottom: 100px !important;
+    }
+}
+
 // remove focus ring
 * {
     &:focus {

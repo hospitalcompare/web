@@ -1,0 +1,64 @@
+.about-us-intro {
+    background-image: url('/images/Layer_16.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-bottom: $greyBorder;
+}
+
+.about-us-page {
+    .social {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                list-style: none;
+                margin-left: 20px;
+                display: inline-flex;
+
+                svg {
+                    path {
+                        stroke: $turq;
+                        fill: $turq;
+                    }
+                }
+
+                &.facebook-social {
+                    svg {
+                        width: 20px;
+                    }
+                }
+
+                &.twitter-social {
+                    svg {
+                        width: 38px;
+                    }
+                }
+
+                &.instagram-social {
+                    svg {
+                        width: 38px;
+                    }
+                }
+
+                a {
+                    &:hover {
+                        svg {
+                            path {
+                                stroke: $body-color;
+                                fill: $body-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
