@@ -15,6 +15,137 @@
     'layout'    => 'row',
     'hideText'  => 'true'
 ])
+    <section class="about-us-intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h1>Feel <span class="col-turq">better faster</span> by<br>knowing your legal<br> right to choose
+                    </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi cupiditate error natus,
+                        necessitatibus quos ratione reprehenderit voluptatem voluptatibus. Alias exercitationem maiores
+                        saepe sed voluptates?</p>
+                    <div class="btn-area mb-5">
+                        @include('components.basic.button', [
+                            'classTitle'        => 'btn btn-squared btn-turq',
+                            'buttonText'        => 'Find the right hospital',
+                            'hrefValue'         => '/results-page',
+                            ''
+                        ])
+                        @include('components.basic.button', [
+                            'classTitle'        => 'btn btn-link',
+                            'buttonText'        => 'Read our FAQs',
+                            'hrefValue'         => '/faqs',
+                            'svg'               => 'chevron-right'
+                        ])
+                    </div>
+                    @include('components.basic.testimonial',
+                        [
+                            'single'    => true,
+                            'stars'     => 4.5
+                        ]
+                    )
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-10 offset-1">
+                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem et facere
+                        ipsum laboriosam magnam
+                        maxime nesciunt rerum temporibus vitae voluptate! Accusamus architecto beatae harum, inventore
+                        nemo praesentium quidem ullam? Reiciendis!</p>
+                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum,
+                        perferendis? A ad at atque
+                        autem blanditiis consectetur dicta dignissimos dolor dolore doloremque est eum facilis fugit
+                        inventore, itaque maxime modi mollitia nam nesciunt officiis qui recusandae rem sequi similique
+                        sit tempore ut. Deserunt illum pariatur praesentium, reprehenderit saepe veniam.</p>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-4">
+                    <div class="col-inner text-center bg-greylight p-4 SofiaPro-Medium">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias consectetur doloribus ducimus
+                        eligendi eos esse incidunt magni neque placeat?
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="col-inner text-center bg-greylight p-4 SofiaPro-Medium">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias consectetur doloribus ducimus
+                        eligendi eos esse incidunt magni neque placeat?
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="col-inner text-center bg-greylight p-4 SofiaPro-Medium">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias consectetur doloribus ducimus
+                        eligendi eos esse incidunt magni neque placeat?
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="swirl"><h2>Swirly thing in here</h2></div>
+                </div>
+                <div class="col-12">
+                    <h2 class="text-center">Understand your available choices</h2>
+                </div>
+                <div class="col-3">
+                    <div class="col-inner text-center">
+                        <div class="icon-wrapper mb-3">
+                            {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="col-inner text-center">
+                        <div class="icon-wrapper mb-3">
+                            {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="col-inner text-center">
+                        <div class="icon-wrapper mb-3">
+                            {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="col-inner text-center">
+                        <div class="icon-wrapper mb-3">
+                            {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 offset-3">
+                    <div class="image-wrapper mb-4">
+                        <img src="/images/video_placeholder.jpg" alt="People in a meetin talking">
+                    </div>
+                    <h2>Impartial Advice: NHS vs Private</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusamus ad autem beatae
+                        dignissimos dolor eveniet explicabo impedit labore nulla, praesentium ut veniam voluptatem.
+                        Consequuntur explicabo inventore minima odio provident?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusamus ad autem beatae
+                        dignissimos dolor eveniet explicabo impedit labore nulla, praesentium ut veniam voluptatem.
+                        Consequuntur explicabo inventore minima odio provident?</p>
+                    @include('components.basic.button', [
+                        'buttonText'    => 'Find the right hospital',
+                        'classTitle'    => 'btn btn-turq btn-squared',
+                        'hrefValue'     => '/results-page'
+                    ])
+                </div>
+            </div>
+        </div>
+    </section>
     <section>
         <div class="container">
             <div class="row">

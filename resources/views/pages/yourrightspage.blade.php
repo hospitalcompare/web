@@ -64,7 +64,7 @@
                         sit tempore ut. Deserunt illum pariatur praesentium, reprehenderit saepe veniam.</p>
                 </div>
             </div>
-            <div class="row ">
+            <div class="row">
                 <div class="col-4">
                     <div class="col-inner text-center bg-greylight p-4 SofiaPro-Medium">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias consectetur doloribus ducimus
@@ -87,62 +87,14 @@
                     <div class="swirl"><h2>Swirly thing in here</h2></div>
                 </div>
                 <div class="col-12">
-                    <h2 class="text-center">Understand your available choices</h2>
+                    <h2>Understand your available choices</h2>
                 </div>
                 <div class="col-3">
-                    <div class="col-inner text-center">
-                        <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
+                    <div class="col-inner"></div>
+                    <div class="icon-wrapper">
+                        {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
                     </div>
-                </div>
-                <div class="col-3">
-                    <div class="col-inner text-center">
-                        <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="col-inner text-center">
-                        <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="col-inner text-center">
-                        <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-6 offset-3">
-                    <div class="image-wrapper mb-4">
-                        <img src="/images/video_placeholder.jpg" alt="People in a meetin talking">
-                    </div>
-                    <h2>Impartial Advice: NHS vs Private</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusamus ad autem beatae
-                        dignissimos dolor eveniet explicabo impedit labore nulla, praesentium ut veniam voluptatem.
-                        Consequuntur explicabo inventore minima odio provident?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusamus ad autem beatae
-                        dignissimos dolor eveniet explicabo impedit labore nulla, praesentium ut veniam voluptatem.
-                        Consequuntur explicabo inventore minima odio provident?</p>
-                    @include('components.basic.button', [
-                        'buttonText'    => 'Find the right hospital',
-                        'classTitle'    => 'btn btn-turq btn-squared',
-                        'hrefValue'     => '/results-page'
-                    ])
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
                 </div>
             </div>
         </div>
