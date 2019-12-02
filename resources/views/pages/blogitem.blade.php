@@ -42,7 +42,7 @@
                         ])
                     </div>
                     <div class="blog-title font-36 SofiaPro-Bold my-3">{!! $data['blog']['title'] !!}</div>
-                    <hr class="bg-teal">
+                    <hr class="bg-turq">
                     <div class="font-24 SofiaPro-SemiBold mt-3 mb-4">
                         <span
                             class="d-inline-block col-turq">Date:&nbsp;</span>{{date('dS F Y', strtotime($data['blog']['created_at']))}}

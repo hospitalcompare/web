@@ -3,19 +3,19 @@
         <div class="container {{ !empty($layout) && $layout == 'row' ? 'container-1028' : '' }}">
             <div class="row">
                 @if(empty($hideText))
-                    <div class="home-promo col col-12 col-lg-6">
+                    <div class="banner-text col col-12 col-lg-6">
                         <h1>Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment</span></h1>
                         <p>The quality of care and waiting times in England vary greatly between hospitals. You have the
                             legal right to
                             choose where to have your treatment*. It can be at: </p>
-                        <ul class="promo-list">
+                        <ul class="banner-list">
                             <li>An NHS or private hospital, funded by the NHS</li>
                             <li>A private hospital of your choice, paid for by you or your insurance</li>
                         </ul>
                     </div>
                 @endif
                 <div class="col {{ !empty($layout) ? 'col-12 d-flex' : 'col-lg-6 col-12' }}">
-                    <div class="box {{ !empty($layout) ? 'mx-auto flat-box' : 'ml-auto' }}" style="{{ empty($hideText) ? 'max-width: 511px' : '' }}">
+                    <div class="banner-form-wrapper {{ !empty($layout) ? 'mx-auto flat-box' : 'ml-auto' }}" style="">
                         <p class="SofiaPro-Medium">Find the best hospitals</p>
                         <form
                             id="search_form"
@@ -109,8 +109,8 @@
                                 >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                             </div>
                             @include('components.basic.button', [
-                                'classTitle'    => !empty($layout) ? 'btn btn-m btn-grad btn-turq ml-4' : 'btn btn-m btn-grad btn-turq py-3 mb-3',
-                                'buttonText'        => !empty($layout) ? 'Find<br>Hospitals' : 'Find Hospitals',
+                                'classTitle'    => !empty($layout) ? 'btn btn-m btn-grad btn-squared btn-turq ml-4' : 'btn btn-m btn-grad btn-squared btn-block text-center btn-turq py-3 mb-3',
+                                'buttonText'    => !empty($layout) ? 'Find<br>Hospitals' : 'Find Hospitals',
                                 'htmlButton'    => true,
                                 'style'         => !empty($layout) ? 'width: 114px; text-align: center; padding: 0; font-size: 18px; height: 62px; border-radius: 24px' : ''])
                             @unless(!empty($layout) && $layout == 'row')

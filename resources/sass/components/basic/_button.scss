@@ -153,6 +153,10 @@
 
     &.btn-squared {
         border-radius: 10px !important;
+
+    }
+
+    &.btn-enquire-all {
         padding: 15px 15px 15px 45px;
         //max-width: 160px;
 
@@ -695,7 +699,13 @@
             fill: #fff;
         }
     }
+}
 
+// Reset styles from standard button
+.btn-plain {
+    appearance: none;
+    border: none;
+    background-color: transparent;
 }
 
 // Modal tour carousel buttons - prev/next

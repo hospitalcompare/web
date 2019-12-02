@@ -5,7 +5,7 @@
     .icon-title,
     .icon-description {
         //width:89%;
-        color: $lightestGrey;
+        //color: $lightestGrey;
     }
 
     .icon-title {
@@ -16,9 +16,8 @@
     }
 
     .icon-description {
-        li, p {
-            //@include font-style(false, 20px, false, false, 24px, -1px);
-            @include font-size(20);
+        li,
+        p {
         }
     }
 }
@@ -26,7 +25,7 @@
 .how-section {
     .row {
         @include media-breakpoint-up(md){
-            @include reset-row-spacing(30px);
+            @include reset-row-spacing(10px);
         }
     }
 }
@@ -35,6 +34,10 @@
     text-align: center;
     //padding: 0 5.5%;
     position: relative;
+
+    .col-inner {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    }
 
     .icon {
         //display: flex;
@@ -55,27 +58,23 @@
     .icon-description {
         > ul {
             //padding: 0 0 0 50px;
-            margin: 30px 0 50px 0;
+            //margin-bottom: 50px;
             counter-reset: counter;
 
             > li {
-                margin: 0 0 22px 0;
+                margin: 0 0 10px 0;
+                padding-left: 15px;
                 position: relative;
                 counter-increment: counter;
 
                 &:before {
                     content: counter(counter) '.';
                     position: absolute;
+                    left: 0;
                     top: 0;
-                    right: calc(100% + 10px);
+                    //right: calc(100% + 10px);
                     color: $blue;
                     @extend .font-semibold;
-                }
-
-                ul {
-                    li {
-
-                    }
                 }
             }
         }

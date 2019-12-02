@@ -196,7 +196,7 @@
                             high quality healthcare. Each hospital boasts of having the latest equipment, available
                             facilities include:</p>
                         <form action="" class="mb-3">
-                            <div class="bg-teal rounded p-4">
+                            <div class="bg-turq rounded p-4">
                                 <div class="form-child full-left d-flex">
                                     @include('components.basic.select', [
                                         'showLabel'             => true,
