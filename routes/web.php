@@ -12,14 +12,17 @@
 */
 Route::get('/','WebController@homepage');
 
-if(env('APP_ENV') == 'live')
-Route::get('{anyExceptRoot}', function() {
+if(env('APP_ENV') == 'live') {
+    Route::get('{anyExceptRoot}', function() {
         return redirect('/');
     })->where('anyExceptRoot', '[^/]*');
-
-Route::get('/blog/{id}','WebController@blogItem');
+}
 
 Route::get('/blogs','WebController@blogs');
+
+Route::get('/blogs/category/{categoryId}','WebController@blogCategory');
+
+Route::get('/blog/{id}','WebController@blogItem');
 
 Route::get('/results-page','WebController@resultsPage');
 

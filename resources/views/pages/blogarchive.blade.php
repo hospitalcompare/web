@@ -15,7 +15,22 @@
     <div class="container">
         <div class="row">
             <div class="col hc-content">
-                <h1>Latest blogs</h1>
+                <h1>Latest <span class="col-turq">healtchare</span> news</h1>
+                <h3>Informative, impartial and helpful information <br>
+                    surrounding the healthcare industy.</h3>
+
+                <div class="filter">
+                    <span class="text">Filter articles</span>
+                    <div class="categories">
+                        @if(!empty($data['categories']))
+                            @foreach($data['categories'] as $cat)
+                                <a href="/blogs/category/{{$cat->id}}" class="btn category" style="color: {{ (empty($data['categoryId']) ? $cat->colour : (($data['categoryId'] == $cat->id) ? $cat->colour : 'grey'))}}">{{$cat->name}}</a>
+                            @endforeach
+                        @endif
+                    </div>
+                </div>
+
+
                 <div class="blog-section-parent">
                     <div class="blog-content row">
                         @include('components.blogloop', [
