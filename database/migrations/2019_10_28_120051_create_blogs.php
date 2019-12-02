@@ -33,6 +33,7 @@ class CreateBlogs extends Migration
                 $table->increments('id');
                 $table->string('name');
                 $table->string('icon');
+                $table->string('colour');
                 $table->string('status')->default("active");
                 $table->timestamps();
 
@@ -65,15 +66,20 @@ class CreateBlogs extends Migration
         //TODO: Remove these Example Categories
         $preCategories = [
             [
-                'name'  => 'Category One'
+                'name'      => 'Category One',
+                'colour'    => '#0000FF'
             ],[
-                'name'  => 'Category Two'
+                'name'      => 'Category Two',
+                'colour'    => '#8A2BE2'
             ],[
-                'name'  => 'Category Three'
+                'name'      => 'Category Three',
+                'colour'    => '#4B0082'
             ],[
-                'name'  => 'Category Four'
+                'name'      => 'Category Four',
+                'colour'    => '#C71585'
             ],[
-                'name'  => 'Category Five'
+                'name'      => 'Category Five',
+                'colour'    => '#C71585'
             ]
         ];
 
@@ -408,6 +414,7 @@ class CreateBlogs extends Migration
             $category = new \App\Models\BlogCategory();
             $category->name = $preCategory['name'];
             $category->icon = 'images/icons/heart-solid.svg';
+            $category->colour = $preCategory['colour'];
             $category->save();
         }
 

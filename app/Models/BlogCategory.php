@@ -16,7 +16,7 @@ class BlogCategory extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'icon', 'status'
+        'name', 'icon', 'colour', 'status'
     ];
 
     /**
@@ -27,6 +27,7 @@ class BlogCategory extends Model
     protected $casts = [
         'name'      => 'string',
         'icon'      => 'string',
+        'colour'    => 'string',
         'status'    => 'string'
     ];
 
