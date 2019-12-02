@@ -92,57 +92,9 @@
                 <div class="col-12">
                     <h2 class="text-center">3 great reasons to use Hospital Compare</h2>
                 </div>
-                <div class="col-4">
-                    <div class="col-inner text-center">
-                        <p>
-                            "Use Hospital Compare to make the very best choice for your treatment"
-                        </p>
-                        <div class="star-rating mb-3">
-                            {!! \App\Helpers\Utils::getHtmlStars(5) !!}
-                        </div>
-                        <div class="signature mb-2">
-                            Dr Stevini
-                        </div>
-                        <div class="job-title text-uppercase">
-                            Hospital Compare,<br>
-                            Head of development
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="col-inner text-center">
-                        <p>
-                            "Use Hospital Compare to make the very best choice for your treatment"
-                        </p>
-                        <div class="star-rating mb-3">
-                            {!! \App\Helpers\Utils::getHtmlStars(5) !!}
-                        </div>
-                        <div class="signature mb-2">
-                            Dr Stevini
-                        </div>
-                        <div class="job-title text-uppercase">
-                            Hospital Compare,<br>
-                            Head of development
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="col-inner text-center">
-                        <p>
-                            "Use Hospital Compare to make the very best choice for your treatment"
-                        </p>
-                        <div class="star-rating mb-3">
-                            {!! \App\Helpers\Utils::getHtmlStars(5) !!}
-                        </div>
-                        <div class="signature mb-2">
-                            Dr Stevini
-                        </div>
-                        <div class="job-title text-uppercase">
-                            Hospital Compare,<br>
-                            Head of development
-                        </div>
-                    </div>
-                </div>
+                @include('components.basic.testimonial', ['stars' => 4.5])
+                @include('components.basic.testimonial', ['stars' => 4.5])
+                @include('components.basic.testimonial', ['stars' => 4.5])
                 <div class="col-12 mt-5">
                     <div class="btn-area text-center">
                         @include('components.basic.button', [

@@ -16,7 +16,7 @@
                 @endif
                 <div class="col {{ !empty($layout) ? 'col-12 d-flex' : 'col-lg-6 col-12' }}">
                     <div class="banner-form-wrapper {{ !empty($layout) ? 'mx-auto flat-box' : 'ml-auto' }}" style="">
-                        <p class="SofiaPro-Medium">Find the best hospitals</p>
+                        <p class="SofiaPro-Medium">{!! !empty($layout) ? 'Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment' : 'Find the best hospitals' !!}</p>
                         <form
                             id="search_form"
                             class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-flex align-items-end search-form-row' : '' }}"
@@ -37,17 +37,17 @@
                                     'showLabel'             => true,
                                     'labelClass'            => 'd-none'
                                 ])
-                                <a tabindex="0" data-offset="0 5px"
-                                   class="help-link"
-                                    @include('components.basic.popover', [
-                                    'dismissible'   => true,
-                                    'placement'      => 'top',
+{{--                                <a tabindex="0" data-offset="0 5px"--}}
+{{--                                   class="help-link"--}}
+{{--                                    @include('components.basic.popover', [--}}
+{{--                                    'dismissible'   => true,--}}
+{{--                                    'placement'      => 'top',--}}
 {{--                                    'size'           => 'large',--}}
-                                    'html'           => 'true',
-                                    'trigger'        => 'hover',
-                                    'content'        => '<p>Select your treatment<br>if known to refine results</p>
-                                                 {{--<p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}'])
-                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
+{{--                                    'html'           => 'true',--}}
+{{--                                    'trigger'        => 'hover',--}}
+{{--                                    'content'        => '<p>Select your treatment<br>if known to refine results</p>--}}
+{{--                                                 --}}{{--<p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}{{--'])--}}
+{{--                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
                             </div>
                             <div class="form-child postcode-parent {{ !empty($layout) ? 'mr-2' : ''}}">
 {{--                                Add this hidden input to remove the autocomplete functionality--}}
@@ -63,18 +63,18 @@
                                         'validation'    => 'maxlength=8 autocomplete="off"',
                                         'id'            => 'input_postcode'
                                     ])
-                                    <a tabindex="0" data-offset="0 5px"
-                                       class="help-link"
-                                        @include('components.basic.popover', [
-                                        'dismissible'   => true,
-                                        'placement'      => 'top',
-                                        'html'           => 'true',
-                                        'trigger'        => 'hover',
-                                        'content'        => '<p>
-                                                         Please enter your postcode<br>for a refined search.
-                                                     </p>
-                                                     '])
-                                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
+{{--                                    <a tabindex="0" data-offset="0 5px"--}}
+{{--                                       class="help-link"--}}
+{{--                                        @include('components.basic.popover', [--}}
+{{--                                        'dismissible'   => true,--}}
+{{--                                        'placement'      => 'top',--}}
+{{--                                        'html'           => 'true',--}}
+{{--                                        'trigger'        => 'hover',--}}
+{{--                                        'content'        => '<p>--}}
+{{--                                                         Please enter your postcode<br>for a refined search.--}}
+{{--                                                     </p>--}}
+{{--                                                     '])--}}
+{{--                                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
                                 </div>
                                 <div class="postcode-results-container">
                                     <div class="ajax-box"></div>
@@ -110,9 +110,9 @@
                             </div>
                             @include('components.basic.button', [
                                 'classTitle'    => !empty($layout) ? 'btn btn-m btn-grad btn-squared btn-turq ml-4' : 'btn btn-m btn-grad btn-squared btn-block text-center btn-turq py-3 mb-3',
-                                'buttonText'    => !empty($layout) ? 'Find<br>Hospitals' : 'Find Hospitals',
+                                'buttonText'    => !empty($layout) ? 'Find Hospitals' : 'Find Hospitals',
                                 'htmlButton'    => true,
-                                'style'         => !empty($layout) ? 'width: 114px; text-align: center; padding: 0; font-size: 18px; height: 62px; border-radius: 24px' : ''])
+                                'style'         => !empty($layout) ? 'text-align: center; font-size: 18px; height: 62px;' : ''])
                             @unless(!empty($layout) && $layout == 'row')
                                 <div class='browse-button'>
                                     <a class="SofiaPro-Medium" href="{{url('/results-page')}}">Browse all hospitals</a>
