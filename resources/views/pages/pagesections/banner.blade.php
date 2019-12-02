@@ -4,6 +4,7 @@
             <div class="row">
                 @if(empty($hideText))
                     <div class="home-promo col col-12 col-lg-6">
+                        <h1>Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment</span></h1>
                         <p>The quality of care and waiting times in England vary greatly between hospitals. You have the
                             legal right to
                             choose where to have your treatment*. It can be at: </p>
@@ -20,8 +21,8 @@
                             id="search_form"
                             class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-flex align-items-end search-form-row' : '' }}"
                             method="get"
-                              action="/results-page"
-                                style="">
+                            action="/results-page"
+                            style="">
                             <div class="form-child {{ !empty($layout) ? 'mr-2' : ''}}">
                                 @include('components.basic.select', [
                                     'selectPicker'          => 'true',
