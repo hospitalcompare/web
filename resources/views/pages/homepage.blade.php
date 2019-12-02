@@ -86,14 +86,109 @@
 
         </div>
     </section>
-
-    <section class="choose-health-parent">
-        @include('components.healthchoice', [
-            'choosehealthbanner' => '',
-            'buttonName' => 'Choose your health',
-            'classTitle' => 'btn btn-icon btn-arrow-right mx-auto' ] )
-
+    <section class="testimonial-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center">3 great reasons to use Hospital Compare</h2>
+                </div>
+                <div class="col-4">
+                    <div class="col-inner text-center">
+                        <p>
+                            "Use Hospital Compare to make the very best choice for your treatment"
+                        </p>
+                        <div class="star-rating mb-3">
+                            {!! \App\Helpers\Utils::getHtmlStars(5) !!}
+                        </div>
+                        <div class="signature mb-2">
+                            Dr Stevini
+                        </div>
+                        <div class="job-title text-uppercase">
+                            Hospital Compare,<br>
+                            Head of development
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="col-inner text-center">
+                        <p>
+                            "Use Hospital Compare to make the very best choice for your treatment"
+                        </p>
+                        <div class="star-rating mb-3">
+                            {!! \App\Helpers\Utils::getHtmlStars(5) !!}
+                        </div>
+                        <div class="signature mb-2">
+                            Dr Stevini
+                        </div>
+                        <div class="job-title text-uppercase">
+                            Hospital Compare,<br>
+                            Head of development
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="col-inner text-center">
+                        <p>
+                            "Use Hospital Compare to make the very best choice for your treatment"
+                        </p>
+                        <div class="star-rating mb-3">
+                            {!! \App\Helpers\Utils::getHtmlStars(5) !!}
+                        </div>
+                        <div class="signature mb-2">
+                            Dr Stevini
+                        </div>
+                        <div class="job-title text-uppercase">
+                            Hospital Compare,<br>
+                            Head of development
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-5">
+                    <div class="btn-area text-center">
+                        @include('components.basic.button', [
+                            'classTitle'        => 'btn btn-squared btn-turq',
+                            'buttonText'        => 'Find the right hospital',
+                            'hrefValue'         => '/results-page'
+                        ])
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    @if(!empty($data['faqs']))
+        <section class="faqs-section bg-greylight mt-5 py-5">
+            <div class="container container-980">
+                <div class="row">
+                    <div class="col hc-content">
+                        <h2>Frequently asked questions</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eligendi in nihil quibusdam!
+                            veritatis voluptas. Doloremque id ipsum labore quibusdam quo quod repudiandae voluptatem!</p>
+                        <div class="accordion" id="faqs_accordion">
+                            @foreach($data['faqs'] as $faq)
+                                <div class="card">
+                                    {!! $faq->question !!}
+                                    {!! $faq->answer !!}
+                                </div>
+                            @endforeach
+                        </div>{{-- Accordion --}}
+                        @include('components.basic.button', [
+                            'buttonText'    => 'View all FAQs',
+                            'classTitle'    => 'btn btn-turq btn-squared mt-4',
+                            'hrefValue'     => '/faqs'
+                        ])
+                    </div>{{-- hc-content --}}
+                </div>
+            </div>
+        </section>
+    @endif
+
+    {{--    <section class="choose-health-parent">--}}
+    {{--        @include('components.healthchoice', [--}}
+    {{--            'choosehealthbanner' => '',--}}
+    {{--            'buttonName' => 'Choose your health',--}}
+    {{--            'classTitle' => 'btn btn-icon btn-arrow-right mx-auto' ] )--}}
+
+    {{--    </section>--}}
 
     {{--    <div class="blogSectionParent">--}}
     {{--        <h1 class="pageTitle">Making the right choice</h1>--}}
