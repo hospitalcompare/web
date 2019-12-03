@@ -43,7 +43,7 @@ mix.copyDirectory('resources/fonts', 'public/fonts');
 mix.copyDirectory('resources/downloads', 'public/downloads');
 mix.copy('node_modules/stickybits/dist/stickybits.min.js', 'public/js/stickybits.js');
 
-console.log(mix.inProduction());
+console.log('Production mode', mix.inProduction());
 if(mix.inProduction()){ // Don't add sourcemaps
     mix.sass('resources/sass/app.scss', 'public/css')
         .options({

@@ -94,6 +94,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Brown Pen';
+    src: url('../fonts/webfonts/fontbrownpen.woff2') format('woff2'),
+    url('../fonts/webfonts/fontbrownpen.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .font-semibold {
     font-family: SofiaPro-SemiBold, sans-serif;
     font-weight: normal;

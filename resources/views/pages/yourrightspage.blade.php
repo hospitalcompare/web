@@ -185,7 +185,6 @@
             </div>
         </div>
     </section>
-    @include('pages.pagesections.social')
     <section class="">
         <div class="container">
             <div class="row">
@@ -207,12 +206,6 @@
                         <a class="btn-link" target="_blank"
                            href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england">https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england</a>
                     </p>
-                </div>
-                <div class="col col-12 col-md-5">
-                    <div class="image-wrapper">
-                        <img class="w-100" src="{{ asset('/images/video_placeholder.jpg') }}"
-                             alt="People sat round a table having a chin wag ">
-                    </div>
                 </div>
             </div>
     </section>
@@ -267,5 +260,5 @@
     {{--            </p>--}}
     {{--        </div>--}}
     {{--    </section>--}}
-
+    @include('pages.pagesections.social')
 @endsection
