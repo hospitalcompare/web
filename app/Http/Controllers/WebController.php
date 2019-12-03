@@ -289,13 +289,15 @@ class WebController extends BaseController
     // Blog item page
     public function blogItem($id) {
 
-        $blog = Blog::where('id', $id)->first();
+        $blog = Blog::where('id', $id)->with('author', 'category')->first();
+        $latestBlogs = Blog::orderBy('created_at', 'DESC')->with('author', 'category')->limit(4)->get();
         //If we don't have the Blog, redirect to Blogs ( for the moment )
         if(empty($blog))
             return \Redirect::to('/blogs');
 
         $this->returnedData['success']      = true;
         $this->returnedData['data']['blog'] = $blog;
+        $this->returnedData['data']['latestBlogs'] = $latestBlogs;
 
         return view('pages.blogitem', $this->returnedData);
     }
