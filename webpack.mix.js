@@ -15,7 +15,7 @@ const webpack = require('webpack');
 
 
 mix.webpackConfig({
-    devtool: (mix.inProduction()) ? "" : "source-map",
+    devtool: (mix.inProduction()) ? "" : "inline-source-map",
     plugins: [
         new webpack.ProvidePlugin({
             $: "jquery",
@@ -44,8 +44,9 @@ mix.copyDirectory('resources/downloads', 'public/downloads');
 mix.copy('node_modules/stickybits/dist/stickybits.min.js', 'public/js/stickybits.js');
 
 console.log('Production mode', mix.inProduction());
-if(mix.inProduction()){ // Don't add sourcemaps
-    mix.sass('resources/sass/app.scss', 'public/css')
+
+if (mix.inProduction()) { // Don't add sourcemaps
+    mix
         .options({
             autoprefixer: false,
             postCss: [
@@ -57,11 +58,10 @@ if(mix.inProduction()){ // Don't add sourcemaps
             ],
             processCssUrls: false
         })
-        .js(['resources/js/app.js'], 'public/js')
-        .version();
+        .sass('resources/sass/app.scss', 'public/css')
+        .js(['resources/js/app.js'], 'public/js');
 } else { // If in dev mode, add sourcemaps
-    mix.sass('resources/sass/app.scss', 'public/css')
-        .sourceMaps()
+    mix
         .options({
             autoprefixer: false,
             postCss: [
@@ -73,10 +73,11 @@ if(mix.inProduction()){ // Don't add sourcemaps
             ],
             processCssUrls: false
         })
+        .sourceMaps(false, 'inline-source-map')
+        .sass('resources/sass/app.scss', 'public/css')
         .js(['resources/js/app.js'], 'public/js')
         .version();
 }
-
 
 
 // Reload browser when something changes
