@@ -59,39 +59,50 @@
                 //}
             }
 
-            .title {
-                @include font-size(20);
-                line-height: 24px;
-            }
+            .blog-item-content {
+                padding: 20px;
+                .title {
+                    @include font-size(20);
+                    line-height: 24px;
+                }
 
-            .category,
-            .date {
-                color: $turq;
-                @include font-size(20);
-            }
 
-            .description {
-                color: $darkerGrey;
-                font-size: 24px;
-                font-weight: 600;
-                line-height: 28.8px;
-            }
+                .category,
+                .date {
+                    color: $turq;
+                    @include font-size(20);
+                }
 
-            &:hover {
-                //top: -289.25px;
-                //box-shadow: 0 0 0 #3686a3;
-                text-decoration: none !important;
+                .description {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    height: 200px;
+                    color: $darkerGrey;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 28.8px;
+                }
 
-                .image-wrapper {
-                    img {
-                        transform: scale3d(1.1, 1.1, 1.1);
+                &:hover {
+                    //top: -289.25px;
+                    //box-shadow: 0 0 0 #3686a3;
+                    text-decoration: none !important;
+
+                    .image-wrapper {
+                        img {
+                            //transform: scale3d(1.1, 1.1, 1.1);
+                        }
+                    }
+
+                    .btn-read-more {
+                        background-position: right;
                     }
                 }
 
-                .btn-read-more {
-                    background-position: right;
-                }
             }
+
+
         }
     }
 

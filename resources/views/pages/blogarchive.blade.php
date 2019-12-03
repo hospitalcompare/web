@@ -43,8 +43,9 @@
                     <div class="blog-content row">
                         @include('components.blogloop', [
                             'blogs' => $data['blogs'],
-                            'buttonClass'       => 'btn btn-block btn-read-more text-center',
-                            'buttonTitle'       => 'Read more'
+{{--                            'buttonClass'       => 'btn btn-block btn-read-more text-center',--}}
+                            'buttonClass'       => 'text-left',
+                            'buttonTitle'       => 'Continue reading >'
                             ])
                     </div>
                     <div class="pagination-wrap">
