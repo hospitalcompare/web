@@ -264,10 +264,16 @@
 }
 
 // Center background icons in pseudo elements
-@mixin icon-bg-center($bgSize: 50%) {
+@mixin icon-bg-center($bgSize: 50%, $width: false, $height: false) {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: $bgSize;
+    @if($width){
+        width: $width;
+    }
+    @if($height) {
+        height: $height;
+    }
 }
 
 // Add partial height border to an element
