@@ -31,22 +31,16 @@
     </section>
     <section class="bg-greylight pt-5">
         <div class="container">
-            <div class="row">
-                <div class="col hc-content">
-                    <div class="accordion" id="faqs_accordion">
-
-                        @if(!empty($data['faqs']))
-                            @foreach($data['faqs'] as $faq)
-                                <div class="card shadow border-0 mb-2 bg-white">
-                                    {!! $faq->question !!}
-                                    {!! $faq->answer !!}
-                                </div>
-                            @endforeach
-                        @endif
-
-                    </div>{{-- Accordion --}}
-                </div>{{-- hc-content --}}
-            </div>
+            <div class="accordion" id="faqs_accordion">
+                @if(!empty($data['faqs']))
+                    @foreach($data['faqs'] as $faq)
+                        <div class="card">
+                            {!! $faq->question !!}
+                            {!! $faq->answer !!}
+                        </div>
+                    @endforeach
+                @endif
+            </div>{{-- Accordion --}}
         </div>
     </section>
 
