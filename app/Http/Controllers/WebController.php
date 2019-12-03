@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Helpers\Utils;
 use App\Helpers\Validate;
 use App\Models\Blog;
+use App\Models\BlogCategory;
 use App\Models\Faq;
 use App\Models\Hospital;
 use Illuminate\Routing\Controller as BaseController;
@@ -256,24 +257,35 @@ class WebController extends BaseController
 
     // Blogs page
     public function blogs() {
+        //Retrieve the Blog Categories
+        $categories = BlogCategory::all();
+
         //Retrieve all the Blogs
         $blogs = Blog::orderBy('created_at', 'DESC')->with('category');
         $blogs = $blogs->paginate(12)->onEachSide(1);
-        $this->returnedData['success'] = true;
-        $this->returnedData['data']['blogs'] = $blogs;
+
+        //Return Data
+        $this->returnedData['success']              = true;
+        $this->returnedData['data']['categories']   = $categories;
+        $this->returnedData['data']['blogs']        = $blogs;
 
         return view('pages.blogarchive', $this->returnedData);
     }
 
-    // Blogs page
+    // Blog Category page
     public function blogCategory($categoryId) {
         if(empty($categoryId))
-            $categoryId = 1;
+            return \Redirect::to('/blogs');
+        //Retrieve the Blog Categories
+        $categories = BlogCategory::all();
         //Retrieve all the Blogs
         $blogs = Blog::where('blog_category_id', $categoryId)->orderBy('created_at', 'DESC')->with('category');
         $blogs = $blogs->paginate(12)->onEachSide(1);
-        $this->returnedData['success'] = true;
-        $this->returnedData['data']['blogs'] = $blogs;
+
+        $this->returnedData['success']              = true;
+        $this->returnedData['data']['blogs']        = $blogs;
+        $this->returnedData['data']['categories']   = $categories;
+        $this->returnedData['data']['categoryId']   = $categoryId;
 
         return view('pages.blogarchive', $this->returnedData);
     }
@@ -281,13 +293,15 @@ class WebController extends BaseController
     // Blog item page
     public function blogItem($id) {
 
-        $blog = Blog::where('id', $id)->first();
+        $blog = Blog::where('id', $id)->with('author', 'category')->first();
+        $latestBlogs = Blog::orderBy('created_at', 'DESC')->with('author', 'category')->limit(4)->get();
         //If we don't have the Blog, redirect to Blogs ( for the moment )
         if(empty($blog))
             return \Redirect::to('/blogs');
 
         $this->returnedData['success']      = true;
         $this->returnedData['data']['blog'] = $blog;
+        $this->returnedData['data']['latestBlogs'] = $latestBlogs;
 
         return view('pages.blogitem', $this->returnedData);
     }

@@ -44,7 +44,7 @@ var compareCount = getCompareCount();
 var compareData = Cookies.get('compareHospitalsData');
 
 // Check if we need to show the Compare hospitals div (on page load)
-if (compareCount > 0) {
+if (compareCount > 0 && window.location.href.indexOf("results-page") > '-1') {
     // Show the comparison row headings and hide the existing column
     $('#compare_hospitals_headings').removeClass('d-none');
     $('#no_items_added').addClass('d-none');
