@@ -1,4 +1,20 @@
 // ========================BLOGS SECTION================================
+.blog-page {
+
+    .filters {
+
+        .text {
+            margin: auto 0;
+        }
+
+        //.categories {
+        //    .category {
+        //        text-align: right;
+        //    }
+        //}
+    }
+}
+
 .blog-section-parent {
     //width: $pageWrap;
     //margin: 0 auto;
@@ -17,8 +33,6 @@
         .blog-wrap {
             text-decoration: none !important;
             margin-bottom: 40px;
-            border-radius: 2px;
-            border: 1px solid $newGrey;
 
             a {
                 text-decoration: none !important;

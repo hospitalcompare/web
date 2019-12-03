@@ -19,18 +19,26 @@
                 <h3>Informative, impartial and helpful information <br>
                     surrounding the healthcare industy.</h3>
 
-                <div class="filter">
-                    <span class="text">Filter articles</span>
-                    <div class="categories">
+                <div class="filters row">
+                    <div class="text text-left col-2">Filter articles</div>
+                    <div class="categories col-10">
                         @if(!empty($data['categories']))
-                            @foreach($data['categories'] as $cat)
-                                <a href="/blogs/category/{{$cat->id}}" class="btn category" style="color: {{ (empty($data['categoryId']) ? $cat->colour : (($data['categoryId'] == $cat->id) ? $cat->colour : 'grey'))}}">{{$cat->name}}</a>
-                            @endforeach
+                            <div class="row">
+                                <div class="offset-2"></div>
+                                @foreach($data['categories'] as $cat)
+                                    <a href="/blogs/category/{{$cat->id}}" class="btn category text-right col-2" style="color: {{ (empty($data['categoryId']) ? $cat->colour : (($data['categoryId'] == $cat->id) ? $cat->colour : 'grey'))}}">{{$cat->name}}</a>
+                                @endforeach
+                            </div>
                         @endif
                     </div>
                 </div>
-
-
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col hc-content">
                 <div class="blog-section-parent">
                     <div class="blog-content row">
                         @include('components.blogloop', [
@@ -47,6 +55,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 @endsection
