@@ -101,17 +101,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="offset-2 col-8">
-                    <h2 class="font-28 SofiaPro-SemiBold">Choosing your GP</h2>
+                <div class="col-12">
+                    <h2 class="font-28 SofiaPro-SemiBold text-center">Choosing your GP</h2>
                     <div class="bg-white p-3 shadow">
                         <p class="font-24 SofiaPro-SemiBold text-center">You can:</p>
                         <ul class="row">
-                            <li class="col-6">
+                            <li class="col-6 border-right border-green">
                                 <p class="green-tick">Choose a GP practice</p>
                                 <p>Choose which GP practice you register with.</p>
                             </li>
                             <li class="col-6">
-                                <p>Ask a doctor or nurse</p>
+                                <p class="green-tick">Ask a doctor or nurse</p>
                                 <p> Ask to see a particular doctor or nurse at the GP practice. Your practice must make every
                                     effort to meet your preferences to see the doctor or nurse you have asked for, although
                                     there are some occasions when this might not be possible.</p>
@@ -146,7 +146,7 @@
             <div class="bg-white p-3 shadow mb-5">
                 <p class="font-24 SofiaPro-SemiBold text-center">You can:</p>
                 <ul class="row">
-                    <li class="col-6">
+                    <li class="col-6 border-right border-green">
                         <p class="green-tick">Choose the organisation</p>
                         <p> Choose the organisation you need to be referred to as an NHS outpatient to see a consultant
                             or specialist (an outpatient appointment means you will not be admitted to a ward). You may
@@ -188,23 +188,20 @@
     <section class="">
         <div class="container">
             <div class="row">
-                <div class="col col-12 col-md-7">
+                <div class="col col-md-8 offset-2 text-center">
                     <p>If you want to find out more about your choices or the restrictions on your choices visit:
                     </p>
-                    <p class="SofiaPro-SemiBold mb-0">The NHS Choice Framework</p>
                     <p>
                         <a class="btn-link" target="_blank"
                            href="https://www.gov.uk/government/publications/the-nhs-choice-framework/the-nhs-choice-framework-what-choices-are-available-to-me-in-the-nhs"
-                        >https://www.gov.uk/government/publications/the-nhs-choice-framework/the-nhs-choice-framework-what-choices-are-available-to-me-in-the-nhs</a>
+                        >The NHS Choice Framework</a>
                     </p>
-                    <p class="SofiaPro-SemiBold mb-0">NHS England’s website</p>
                     <p>
-                        <a class="btn-link" target="_blank" href="https://www.england.nhs.uk/?s=patient+choice">https://www.england.nhs.uk/?s=patient+choice</a>
+                        <a class="btn-link" target="_blank" href="https://www.england.nhs.uk/?s=patient+choice">NHS England’s website</a>
                     </p>
-                    <p class="SofiaPro-SemiBold mb-0">NHS Constitution</p>
                     <p>
                         <a class="btn-link" target="_blank"
-                           href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england">https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england</a>
+                           href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england">NHS Constitution</a>
                     </p>
                 </div>
             </div>

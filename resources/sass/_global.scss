@@ -433,12 +433,13 @@ path {
     text-align: left;
 
     &:before {
-        content: 'Tick';
-        position: absolute;
+        content: '';
+        background-image: url('/images/icons/tick-green.svg');
+        @include icon-bg-center(100%);
+        @include v-c;
         left: 0;
-        width: 11px;
-        height: 11px;
-        border-radius: 50%;
+        width: $green-tick-size;
+        height: $green-tick-size;
     }
 }
 
@@ -447,4 +448,12 @@ path {
     font-family: "Brown Pen", cursive;
     @include font-size(28);
     font-weight: bold;
+}
+
+.border {
+    &-right {
+        &.border-green {
+            border-right: 2px solid $turq !important;
+        }
+    }
 }
