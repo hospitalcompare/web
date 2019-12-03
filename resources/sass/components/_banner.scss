@@ -102,13 +102,13 @@
             padding-left: 63px;
             margin-bottom: 20px;
 
-            &:before {
-                content: url("/images/tick.svg");
-                width: 30px;
-                height: 28px;
-                @include v-c;
-                left: 0;
-            }
+            //&:before {
+            //    content: url("/images/tick.svg");
+            //    width: 30px;
+            //    height: 28px;
+            //    @include v-c;
+            //    left: 0;
+            //}
         }
     }
 }

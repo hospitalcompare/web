@@ -593,12 +593,11 @@
     min-width: 182px;
     border-radius: 10px 10px 0 0;
     @include font-size(22);
-    @include gradient-animation($turq, $turq, $turq, $green, 0.3s);
+    @include gradient-animation($body-color, $body-color, $turq, $turq, 0.3s);
 
     svg {
-        position: absolute;
+        @include v-c;
         right: 20px;
-        top: 20px;
     }
 }
 

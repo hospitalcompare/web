@@ -434,7 +434,7 @@ path {
 
     &:before {
         content: '';
-        background-image: url('/images/icons/tick-green.svg');
+        background-image: url('/images/icons/icon-tick.svg');
         @include icon-bg-center(100%);
         @include v-c;
         left: 0;

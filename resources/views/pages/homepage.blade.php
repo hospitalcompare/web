@@ -17,34 +17,34 @@
     <section class="how-section__parent">
         @include('components.howsection', [
             'hideButton'    => false,
-            'sectionTitle' => 'How does it work?',
+            'sectionTitle' => 'How to use Hospital Compare',
             'howsections' => [
             [
-                'iconImg'       => 'doctor',
+                'iconImg'       => 'how-does-it-work-step-1',
                 'step'          => 'One',
                 'title'         => 'Your rights to choose:',
                 'color'         => 'turq',
                 'description'   => '
-                            <ul class="tick-list">
-                                <li>if NHS funded treatment</li>
-                                <li>if self-pay</li>
-                                <li>if covered by a health insurance policy</li>
+                            <ul class="">
+                                <li class="green-tick text-center">if NHS funded treatment</li>
+                                <li class="green-tick text-center">if self-pay</li>
+                                <li class="green-tick text-center">if covered by a health insurance policy</li>
                             </ul>'
             ],
             [
-                'iconImg'       => 'search',
+                'iconImg'       => 'how-does-it-work-step-2',
                 'step'          => 'Two',
                 'title'         => 'Search & compare:',
                 'color'         => 'violet',
                 'description'   => '<p>Use this site to search and compare both NHS and private (self-pay) hospitals across England. You can also search and compare by your health insurance policy.</p>'],
             [
-                'iconImg'       => 'hospital-compare',
+                'iconImg'       => 'how-does-it-work-step-3',
                 'step'          => 'Three',
                 'title'         => 'Make enquiry:',
                 'color'         => 'pink',
                 'description'   => '<p>Contact your chosen hospital(s) and ask any questions before deciding the one that’s right for you.</p>'],
             [
-                'iconImg'       => 'confirm',
+                'iconImg'       => 'how-does-it-work-step-4',
                 'step'          => 'Four',
                 'title'         => 'Request a referral:',
                 'color'         => 'blue',
@@ -83,10 +83,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
-
     @if(!empty($data['faqs']))
         <section class="faqs-section bg-greylight mt-5 py-5">
             <div class="container container-980">

@@ -57,25 +57,23 @@
 
     .icon-description {
         > ul {
-            //padding: 0 0 0 50px;
-            //margin-bottom: 50px;
-            counter-reset: counter;
+            //counter-reset: counter;
 
             > li {
-                margin: 0 0 10px 0;
-                padding-left: 15px;
-                position: relative;
-                counter-increment: counter;
-
-                &:before {
-                    content: counter(counter) '.';
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    //right: calc(100% + 10px);
-                    color: $blue;
-                    @extend .font-semibold;
-                }
+                //margin: 0 0 10px 0;
+                //padding-left: 15px;
+                //position: relative;
+                //counter-increment: counter;
+                //
+                //&:before {
+                //    content: counter(counter) '.';
+                //    position: absolute;
+                //    left: 0;
+                //    top: 0;
+                //    //right: calc(100% + 10px);
+                //    color: $blue;
+                //    @extend .font-semibold;
+                //}
             }
         }
     }
@@ -86,26 +84,6 @@
 //============================ HOW PAGE =============================
 .how-section__extra {
     padding: 40px 0;
-
-    .row {
-        .col:first-child {
-            padding-right: 100px;
-        }
-
-        .col:last-child {
-            padding-left: 0;
-        }
-    }
-
-    .flex-row-reverse {
-        .col:first-child {
-            padding-left: 100px;
-        }
-
-        .col:last-child {
-            padding-right: 0;
-        }
-    }
 
     form {
         padding-right: 90px;

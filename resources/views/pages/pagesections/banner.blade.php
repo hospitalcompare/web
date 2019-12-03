@@ -9,8 +9,8 @@
                             legal right to
                             choose where to have your treatment*. It can be at: </p>
                         <ul class="banner-list">
-                            <li>An NHS or private hospital, funded by the NHS</li>
-                            <li>A private hospital of your choice, paid for by you or your insurance</li>
+                            <li class="green-tick green-tick-large">An NHS or private hospital, funded by the NHS</li>
+                            <li class="green-tick green-tick-large">A private hospital of your choice, paid for by you or your insurance</li>
                         </ul>
                     </div>
                 @endif
