@@ -28,7 +28,7 @@
                             @if(!empty($data['categories']))
                                 <div class="row justify-content-end">
                                     @foreach($data['categories'] as $cat)
-                                        <button href="/blogs/category/{{$cat->id}}" class="btn btn-category category rounded text-center col-2 ml-2" style="background-color: {{ (empty($data['categoryId']) ? $cat->colour : (($data['categoryId'] == $cat->id) ? $cat->colour : 'grey'))}}">{{$cat->name}}</button>
+                                        <a href="/blogs/category/{{$cat->id}}" class="btn btn-category category rounded text-center col-2 ml-2" style="background-color: {{ (empty($data['categoryId']) ? $cat->colour : (($data['categoryId'] == $cat->id) ? $cat->colour : 'grey'))}}">{{$cat->name}}</a>
                                     @endforeach
                                 </div>
                             @endif

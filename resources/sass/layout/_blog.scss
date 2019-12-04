@@ -105,16 +105,11 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-        .svg-wrapper {
-            @include aspect-ratio(1180, 150);
-            height: 150px;
-            margin-bottom: 30px;
-            background-image: url('../images/icons/heart-line.svg');
-            @include icon-bg-center(110%);
-
-            svg {
-                display: none;
-            }
+        svg {
+            @include v-c;
+            left: 10px;
+            width: 10px;
+            height: 10px;
         }
 
         .btn-blog-back {
