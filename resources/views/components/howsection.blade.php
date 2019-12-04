@@ -6,7 +6,7 @@
         @if(!empty($howsections))
             @foreach($howsections as $howsection)
                 <div class="how-section__child col-md-3 mb-5">
-                    <div class="col-inner h-100 d-flex flex-column p-4">
+                    <div class="col-inner h-100 d-flex flex-column">
                         <div class="icon" style="background-image: url('images/icons/{{ $howsection['iconImg'] }}.svg')">
 {{--                            {!! file_get_contents(asset('images/icons/' . $howsection['iconImg'] . '.svg')) !!}--}}
                         </div>
@@ -30,7 +30,7 @@
                             'html'      => true,
                             'content'   => 'This is the content',
                             'trigger'   => 'hover'
-                        ])>More info <span class="help-link help-link__inline">{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span></p>
+                        ])>More info <span class="help-link help-link__inline help-link__inline-red">{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span></p>
                     </div>
                 </div>
             @endforeach
@@ -40,7 +40,7 @@
             <div class="btn-area text-center">
                 @include('components.basic.button', [
                     'hrefValue'     => '/your-rights',
-                    'classTitle'    => 'btn btn-squared btn-grad btn-turq',
+                    'classTitle'    => 'btn btn-squared btn-turq font-18',
                     'buttonText'        => 'Your Rights'
 
                 ])

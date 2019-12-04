@@ -1,12 +1,6 @@
 //============================HOW SECTION=============================
 .how-section__parent {
-    padding: 45px 0 90px;
-
-    .icon-title,
-    .icon-description {
-        //width:89%;
-        //color: $lightestGrey;
-    }
+    padding: 75px 0;
 
     .icon-title {
         //@include font-style('SofiaPro-Medium', 22px, false, #000, 26px, -0.9px);
@@ -18,6 +12,8 @@
     .icon-description {
         li,
         p {
+            @extend .col-grey;
+            line-height: 1.4;
         }
     }
 }
@@ -25,57 +21,30 @@
 .how-section {
     .row {
         @include media-breakpoint-up(md){
-            @include reset-row-spacing(10px);
+            @include reset-row-spacing(8px);
         }
     }
 }
 
 .how-section__child {
     text-align: center;
-    //padding: 0 5.5%;
     position: relative;
 
     .col-inner {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+        box-shadow: $box-shadow;
+        padding: 30px;
     }
 
     .icon {
-        //display: flex;
-        //@include justify-content($value: center);
-        margin-bottom: 25px;
-        height: 120px;
+        margin-bottom: 20px;
+        height: 60px;
         @include icon-bg-center(100%);
         background-size: contain;
-
-        svg {
-            transform-origin: 50% 50%;
-            height: 100%;
-            width: auto;
-            fill: $turq;
-        }
     }
 
-    .icon-description {
-        > ul {
-            //counter-reset: counter;
-
-            > li {
-                //margin: 0 0 10px 0;
-                //padding-left: 15px;
-                //position: relative;
-                //counter-increment: counter;
-                //
-                //&:before {
-                //    content: counter(counter) '.';
-                //    position: absolute;
-                //    left: 0;
-                //    top: 0;
-                //    //right: calc(100% + 10px);
-                //    color: $blue;
-                //    @extend .font-semibold;
-                //}
-            }
-        }
+    .icon-title {
+        @include font-size(1.2rem);
+        margin-bottom: 15px;
     }
 }
 

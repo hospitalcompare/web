@@ -247,7 +247,7 @@ select.big {
 }
 
 .col-grey {
-    color: $grey;
+    color: $fontGrey;
 }
 
 .col-white {
@@ -261,6 +261,8 @@ select.big {
 .col-greydarkest {
     color: $darkestGrey;
 }
+
+.col-
 
 .col-caretBlack {
     color: $caretBlack;
@@ -457,4 +459,19 @@ path {
             border-right: 2px solid $turq !important;
         }
     }
+}
+
+// Padding
+.p-30 {
+    padding: 30px;
+}
+
+// line-height
+.lh-14 {
+    line-height: 1.4;
+}
+
+// line-height
+.lh-16 {
+    line-height: 1.6;
 }

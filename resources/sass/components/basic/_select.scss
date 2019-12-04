@@ -11,7 +11,7 @@
         color: $darkerGrey;
         font-weight: 500;
         border: 2px solid $darkestWhite;
-        border-radius: 10px;
+        border-radius: $border-radius;
 
         &:after {
             display: none;
@@ -36,7 +36,7 @@
         .dropdown-toggle {
             padding: 16px 60px;
             width: 100%;
-            border-radius: 10px;
+            //border-radius: 10px;
             color: $darkerGrey;
             @include font-size(18);
             @extend .SofiaPro-Medium;

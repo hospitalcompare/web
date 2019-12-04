@@ -1,4 +1,8 @@
 .home-page {
+    section {
+        padding: 75px 0;
+    }
+
     .video-wrapper {
         .player-button {
             background-image: url(../images/player_button.png);
@@ -13,14 +17,11 @@
     .why-use-parent {
         background: $lighterGrey;
 
-        .why-use-content {
-            padding: 70px 0 60px;
-        }
-
         .why-use { // container
-             p {
+            p {
                 //font-style($family: 'SofiaPro-Regular', $size: false, $colour: $body-color, $weight: 400,  $lh: false, $ls: false);
-                @include font-size(20);
+                @include font-size(1.1rem);
+                line-height: 1.6;
             }
         }
 
@@ -29,4 +30,59 @@
         }
     }
 }
+
 //=======================END WHY CHOOSE SECTION=======================
+
+//======================= TESTIMONIALS =======================
+.job-title {
+    @include font-size(11);
+}
+
+//======================= Home faqs =======================
+.faqs-section {
+    .accordion {
+        .card {
+            @extend .p-0;
+            padding-left: 180px !important;
+            margin-bottom: 20px !important;
+
+            &:before {
+                content: '';
+                background-image: url('/images/icons/faq-data.svg');
+                width: 60px;
+                height: 60px;
+                @include v-c;
+                left: 60px;
+            }
+
+            .btn-link {
+                @include font-size(1.1rem);
+                &:after {
+                    display: none !important;
+                }
+            }
+
+            .card-header {
+
+            }
+
+            .btn-link,
+            .card-body {
+                @extend .pl-0;
+            }
+
+            .card-body {
+                @extend .pt-0;
+                p {
+                    @extend .col-grey;
+                    @include font-size(16);
+                    @extend .lh-16;
+                }
+            }
+        }
+
+        .collapse {
+            display: block !important;
+        }
+    }
+}

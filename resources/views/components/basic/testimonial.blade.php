@@ -1,6 +1,6 @@
 <div class="{{ empty($single) ? 'col-4' : '' }}">
-    <div class="col-inner {{ empty($single) ? 'text-center' : '' }}">
-        <p>
+    <div class="col-inner p-30 {{ empty($single) ? 'text-center' : '' }}">
+        <p class="font-20">
             "Use Hospital Compare to make the very best choice for your treatment"
         </p>
         <div class="star-rating mb-3">

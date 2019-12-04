@@ -1,4 +1,10 @@
-//FOOTER SECTION
+// Back to top styles
+.back-top-wrapper {
+    bottom: 100%;
+    width: 100%;
+}
+
+// FOOTER SECTION
 .footer {
     * {
         color: $white;
@@ -27,6 +33,7 @@
             a {
                 @include font-size(22);
                 @extend .SofiaPro-Medium;
+                padding-right: 20px;
             }
         }
     }
@@ -110,7 +117,7 @@
 }
 
 .footer-lower {
-    background-color: $footerGrey;
+    background-color: $footerBackgroundColour;
 
     &__menu {
         margin-left: -15px;
@@ -127,9 +134,3 @@
     }
 }
 
-
-//Back to top styles
-.back-top-wrapper {
-    bottom: 100%;
-    width: 100%;
-}

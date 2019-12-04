@@ -5,17 +5,17 @@
                 @if(empty($hideText))
                     <div class="banner-text col col-12 col-lg-6">
                         <h1>Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment</span></h1>
-                        <p>The quality of care and waiting times in England vary greatly between hospitals. You have the
+                        <p class="col-grey">The quality of care and waiting times in England vary greatly between hospitals. You have the
                             legal right to
                             choose where to have your treatment*. It can be at: </p>
-                        <ul class="banner-list">
+                        <ul class="banner-list col-grey">
                             <li class="green-tick green-tick-large">An NHS or private hospital, funded by the NHS</li>
                             <li class="green-tick green-tick-large">A private hospital of your choice, paid for by you or your insurance</li>
                         </ul>
                     </div>
                 @endif
                 <div class="col {{ !empty($layout) ? 'col-12 d-flex' : 'col-lg-6 col-12' }}">
-                    <div class="banner-form-wrapper {{ !empty($layout) ? 'mx-auto flat-box' : 'ml-auto' }}" style="">
+                    <div class="banner-form-wrapper rounded {{ !empty($layout) ? 'mx-auto flat-box' : 'ml-auto' }}" style="">
                         <p class="SofiaPro-Medium">{!! !empty($layout) ? 'Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment' : 'Find the best hospitals' !!}</p>
                         <form
                             id="search_form"
@@ -115,7 +115,7 @@
                                 'style'         => !empty($layout) ? 'text-align: center; font-size: 18px; height: 62px;' : ''])
                             @unless(!empty($layout) && $layout == 'row')
                                 <div class='browse-button'>
-                                    <a class="SofiaPro-Medium" href="{{url('/results-page')}}">Browse all hospitals</a>
+                                    <a class="col-grey" href="{{url('/results-page')}}">Browse all hospitals</a>
                                 </div>
                             @endunless
                         </form>

@@ -78,20 +78,20 @@
 
     //colours
     &.btn-turq {
-        @include linear-gradient(90deg, $turq, $turq, $green);
+        background-color: $turq;
 
-        &.btn-grad {
-            @include linear-gradient(90deg, $turq, $green, $green);
+        &:hover {
+            background-color: $blue;
         }
     }
-
-    &.btn-darkgreen {
-        @include linear-gradient(90deg, $darkGreen, $darkGreen, $green);
-
-        &.btn-grad {
-            @include linear-gradient(90deg, $darkGreen, $green, $darkGreen);
-        }
-    }
+    //
+    //&.btn-darkgreen {
+    //    @include linear-gradient(90deg, $darkGreen, $darkGreen, $green);
+    //
+    //    &.btn-grad {
+    //        @include linear-gradient(90deg, $darkGreen, $green, $darkGreen);
+    //    }
+    //}
 
     &.btn-blue {
         @include linear-gradient(90deg, $blue, $blue, $turq);
@@ -135,10 +135,10 @@
     }
 
     &.btn-grey {
-        @include linear-gradient(90deg, $footerGrey, $footerGrey, $pink);
+        @include linear-gradient(90deg, $footerBackgroundColour, $footerBackgroundColour, $pink);
         //@include linear-gradient(90deg, $pink, $pink, $violet);
         &.btn-grad {
-            @include linear-gradient(90deg, $footerGrey, $footerGrey, $pink, $footerGrey);
+            @include linear-gradient(90deg, $footerBackgroundColour, $footerBackgroundColour, $pink, $footerBackgroundColour);
         }
     }
 
@@ -147,13 +147,13 @@
         @include linear-gradient(90deg, $lighterGrey, $lighterGrey, $lighterGrey);
         //@include linear-gradient(90deg, $pink, $pink, $violet);
         &.btn-grad {
-            @include linear-gradient(90deg, $footerGrey, $footerGrey, $pink, $footerGrey);
+            @include linear-gradient(90deg, $footerBackgroundColour, $footerBackgroundColour, $pink, $footerBackgroundColour);
         }
     }
 
     &.btn-squared {
-        border-radius: 10px !important;
-
+        border-radius: $border-radius;
+        padding: 25px 56px;
     }
 
     &.btn-enquire-all {

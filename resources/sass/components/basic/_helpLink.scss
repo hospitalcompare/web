@@ -16,6 +16,14 @@
     &__inline {
         position: initial;
         display: inline-flex;
+
+        &-red {
+            background-color: $helplinkRed;
+
+            svg path {
+                fill: #fff;
+            }
+        }
     }
 
     &:hover {

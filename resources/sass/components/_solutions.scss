@@ -5,7 +5,7 @@
     width: 100%;
     //background-image: linear-gradient(to right, $green 0%, $teal 100%);
     background-color: $turq;
-    //background: $footerGrey;
+    //background: $footerBackgroundColour;
     z-index: 1040;
     max-height: calc(100vh - 140px);
 
@@ -117,7 +117,7 @@
             display: inline-block;
             width: 18px;
             height: 10px;
-            //background-color: $footerGrey;
+            //background-color: $footerBackgroundColour;
             background-image: url('../images/up-arrow.svg');
             background-size: cover;
             background-repeat: no-repeat;

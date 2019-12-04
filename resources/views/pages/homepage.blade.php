@@ -60,13 +60,13 @@
                 <div class="row">
                     <div class="why-use-text col col-12 col-md-6">
                         <h2 class="section-title">Why use Hospital Compare?</h2>
-                        <p>Hospital Compare helps you make the best possible choice when it comes to choosing a suitable
+                        <p class="p-intro">Hospital Compare helps you make the best possible choice when it comes to choosing a suitable
                             hospital for your treatment.</p>
-                        <p>Many people in the UK are not aware that they could have the option of an NHS funded
+                        <p class="col-grey">Many people in the UK are not aware that they could have the option of an NHS funded
                             operation
                             in a private hospital. We are here to help you understand your rights and make the right
                             choice.</p>
-                        <p>Whether you are searching for the best NHS hospital or the best private hospital, Hospital
+                        <p class="col-grey">Whether you are searching for the best NHS hospital or the best private hospital, Hospital
                             Compare is the best place that provides an accurate, up-to-date and unbiased assessment of
                             all
                             hospitals in the UK.</p>
@@ -85,15 +85,16 @@
             </div>
         </div>
     </section>
+    @include('pages.pagesections.testimonials')
     @if(!empty($data['faqs']))
-        <section class="faqs-section bg-greylight mt-5 py-5">
+        <section class="faqs-section bg-greylight">
             <div class="container container-980">
                 <div class="row">
                     <div class="col hc-content">
-                        <h2>Frequently asked questions</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eligendi in nihil quibusdam!
+                        <h2 class="section-title">Frequently asked questions</h2>
+                        <p class="col-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eligendi in nihil quibusdam!
                             veritatis voluptas. Doloremque id ipsum labore quibusdam quo quod repudiandae voluptatem!</p>
-                        <div class="accordion" id="faqs_accordion">
+                        <div class="accordion pt-3" id="_faqs_accordion">
                             @foreach($data['faqs'] as $faq)
                                 <div class="card">
                                     {!! $faq->question !!}
@@ -103,7 +104,7 @@
                         </div>{{-- Accordion --}}
                         @include('components.basic.button', [
                             'buttonText'    => 'View all FAQs',
-                            'classTitle'    => 'btn btn-turq btn-squared mt-4',
+                            'classTitle'    => 'btn btn-turq btn-squared mt-4 font-18',
                             'hrefValue'     => '/faqs'
                         ])
                     </div>{{-- hc-content --}}
