@@ -8,7 +8,7 @@
 
 @section('mobile', 'width=device-width, initial-scale=1')
 
-@section('body-class', 'how-to-use-page hc-content')
+@section('body-class', 'how-to-use-page')
 
 @section('content')
     @include('pages.pagesections.banner', [

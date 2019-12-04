@@ -15,21 +15,20 @@
         <div class="container">
             <h1>Latest <span class="col-turq">healthcare</span> news</h1>
             <h3>Informative, impartial and helpful information <br>
-                surrounding the healthcare industy.</h3>
+                surrounding the healthcare industry.</h3>
         </div>
     </section>
-    <section>
+    <section class="blog-filters border-bottom">
         <div class="container">
-            <div class="row">
+            <div class="row py-4">
                 <div class="col ">
                     <div class="filters row">
                         <div class="text text-left col-2">Filter articles</div>
                         <div class="categories col-10">
                             @if(!empty($data['categories']))
-                                <div class="row">
-                                    <div class="offset-2"></div>
+                                <div class="row justify-content-end">
                                     @foreach($data['categories'] as $cat)
-                                        <a href="/blogs/category/{{$cat->id}}" class="btn category text-right col-2" style="color: {{ (empty($data['categoryId']) ? $cat->colour : (($data['categoryId'] == $cat->id) ? $cat->colour : 'grey'))}}">{{$cat->name}}</a>
+                                        <button href="/blogs/category/{{$cat->id}}" class="btn btn-category category rounded text-center col-2 ml-2" style="background-color: {{ (empty($data['categoryId']) ? $cat->colour : (($data['categoryId'] == $cat->id) ? $cat->colour : 'grey'))}}">{{$cat->name}}</button>
                                     @endforeach
                                 </div>
                             @endif
@@ -39,28 +38,21 @@
             </div>
         </div>
     </section>
-    <hr>
-    <div class="container">
-        <div class="row">
-            <div class="col hc-content">
-                <div class="blog-section-parent">
-                    <div class="blog-content row">
-                        @include('components.blogloop', [
-                            'blogs' => $data['blogs'],
+    <section class="blog-list pt-4">
+        <div class="container">
+            <div class="blog-content row">
+                @include('components.blogloop', [
+                    'blogs' => $data['blogs'],
 {{--                            'buttonClass'       => 'btn btn-block btn-read-more text-center',--}}
-                            'buttonClass'       => 'text-left',
-                            'buttonTitle'       => 'Continue reading >'
-                            ])
-                    </div>
-                    <div class="pagination-wrap">
-                        @if(!empty($data['blogs']))
-                            {{ $data['blogs']->links('components.basic.pagination') }}
-                        @endif
-                    </div>
-                </div>
+                    'buttonClass'       => 'text-left',
+                    'buttonTitle'       => 'Continue reading >'
+                    ])
+            </div>
+            <div class="pagination-wrap">
+                @if(!empty($data['blogs']))
+                    {{ $data['blogs']->links('components.basic.pagination') }}
+                @endif
             </div>
         </div>
-
-    </div>
-
+    </section>
 @endsection
