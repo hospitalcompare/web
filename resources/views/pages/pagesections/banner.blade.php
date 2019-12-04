@@ -1,6 +1,6 @@
 <section class="banner-parent py-0">
     <div class="banner">
-        <div class="container {{ !empty($layout) && $layout == 'row' ? 'container-1028' : '' }}">
+        <div class="container {{ !empty($layout) && $layout == 'row' ? '_container-1028' : '' }}">
             <div class="row">
                 @if(empty($hideText))
                     <div class="banner-text col col-12 col-lg-6">
@@ -109,10 +109,11 @@
                                 >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                             </div>
                             @include('components.basic.button', [
-                                'classTitle'    => !empty($layout) ? 'btn btn-m btn-grad btn-squared btn-turq ml-4' : 'btn btn-m btn-grad btn-squared btn-block text-center btn-turq py-3 mb-3',
+                                'classTitle'    => !empty($layout) ? 'btn btn-squared btn-turq font-18 text-center' : 'btn btn-squared btn-block text-center btn-turq py-3 mb-3 font-18',
                                 'buttonText'    => !empty($layout) ? 'Find Hospitals' : 'Find Hospitals',
                                 'htmlButton'    => true,
-                                'style'         => !empty($layout) ? 'text-align: center; font-size: 18px; height: 62px;' : ''])
+                                'style'         => !empty($layout) ? 'padding: 16px 45px; border: 2px solid transparent' : '',
+                            ])
                             @unless(!empty($layout) && $layout == 'row')
                                 <div class='browse-button'>
                                     <a class="col-grey" href="{{url('/results-page')}}">Browse all hospitals</a>

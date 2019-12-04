@@ -18,6 +18,10 @@
         position: relative;
         z-index: 5;
     }
+
+    .row {
+        @include reset-row-spacing(60px);
+    }
 }
 
 //BANNER CONTENTS
@@ -174,6 +178,7 @@
         &.revealed-right {
             max-width: 500px;
             visibility: visible;
+            @extend .mr-2;
         }
     }
 
