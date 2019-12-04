@@ -175,22 +175,30 @@ class ApiController {
             foreach($hospitalIds as $hospitalId) {
                 $hospital = Hospital::where('id', $hospitalId)->with(['trust', 'hospitalType', 'admitted', 'cancelledOp', 'emergency', 'maternity', 'outpatient', 'rating', 'address', 'placeRating']);
                 //Check if we have the `procedure_id` and retrieve the relation Waiting Times
-                if(!empty($procedureId)) {
+                $specialty = Specialty::where('name', 'Total')->first();
+                $specialtyId = $totalSpecialty = $specialty->id;
+
+                if(!empty($procedureId) && $procedureId !== '-1') {
                     $procedure = Procedure::where('id', $procedureId)->first();
                     $specialtyId = $procedure->specialty_id;
-                } else {
-                    $specialty = Specialty::where('name', 'Total')->first();
-                    $specialtyId = $specialty->id;
                 }
+
                 $hospital = $hospital->with(['waitingTime' => function ($query) use($specialtyId) {
                     $query->bySpecialty($specialtyId);
                 }]);
                 $hospital = $hospital->first();
+
                 if(!empty($hospital)) {
                     $hospital = $hospital->toArray();
                     $data[] = $hospital;
+                } else {
+                    $hospital = $hospital->with(['waitingTime' => function ($query) use($totalSpecialty) {
+                        $query->bySpecialty($totalSpecialty);
+                    }]);
+                    $hospital = $hospital->first();
+                    $hospital = $hospital->toArray();
+                    $data[] = $hospital;
                 }
-
             }
 
             $this->returnedData['data']    = $data;

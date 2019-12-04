@@ -35,9 +35,6 @@ $('#how_to_use_filter_policies .dropdown-toggle .filter-option-inner-inner').tex
 $('#how_to_use_policies').on('shown.bs.select', function(){
     // console.log($howToUseSelectPlaceholder);
     $('.dropdown-menu li:first-child a').text($howToUseSelectPlaceholder);
-})
-$(document).ready(function () {
-
 });
 
 // Repeat string x times
@@ -255,7 +252,7 @@ window.enableButtons = function () {
 };
 
 window.getHospitalsByIds = function(hospitalIds) {
-    var procedureId = 0;
+    var procedureId = getUrlParameter('procedure_id');
 
     $.ajax({
         url: 'api/getHospitalsByIds/' + hospitalIds +'/' + procedureId,
@@ -304,5 +301,21 @@ window.textTruncate = function(str, length, ending) {
         return str.substring(0, length - ending.length) + ending;
     } else {
         return str;
+    }
+};
+
+//Check if we have a parameter in the URL
+window.getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
     }
 };

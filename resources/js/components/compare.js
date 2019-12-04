@@ -97,12 +97,39 @@ window.addHospitalToCompare = function(element) {
     compareHospitalIds = Cookies.get('compareHospitalsData');
     // Content for modal trigger button
     var $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g><g><g><path fill="#fff" d="M10.002 18.849c-4.878 0-8.846-3.968-8.846-8.847 0-4.878 3.968-8.846 8.846-8.846 4.879 0 8.847 3.968 8.847 8.846 0 4.879-3.968 8.847-8.847 8.847zm0-18.849C4.488 0 0 4.488 0 10.002c0 5.515 4.488 10.003 10.002 10.003 5.515 0 10.003-4.488 10.003-10.003C20.005 4.488 15.517 0 10.002 0z"></path></g><g><path fill="#fff" d="M14.47 5.848l-5.665 6.375-3.34-2.67a.578.578 0 0 0-.811.088c-.2.25-.158.615.091.815l3.769 3.015a.57.57 0 0 0 .361.125c.167 0 .325-.07.433-.196l6.03-6.783a.579.579 0 0 0 .146-.42.588.588 0 0 0-.191-.4.592.592 0 0 0-.824.05z"></path></g></g></g></svg>';
-    var nhsRating = 1;
     var cancelledOps = null;
+    var waitingTime = null;
+    // Content for new hospital added to compare
+    var hospitalType = element.hospital_type.name === 'Independent' ? 'Private' : 'NHS';
+    var nhsRating = element.hospital_type.name === 'Independent' ? 1 : 0;
+    var userRating = 0;
+    var latestRating = 'No Data';
+    var friendsAndFamilyRating = null;
 
-    if(element.cancelled_op != null) {
+    if(element.rating !== null && typeof element.rating.friends_family_rating !== "undefined" && element.rating.friends_family_rating !== null) {
+        friendsAndFamilyRating = element.rating.friends_family_rating;
+    }
+
+    if(element.rating !== null && typeof element.rating.latest_rating !== "undefined" && element.rating.latest_rating !== null) {
+        latestRating = element.rating.latest_rating;
+    }
+
+    if(element.rating !== null && typeof element.rating.avg_user_rating !== "undefined" && element.rating.avg_user_rating !== null) {
+        userRating = element.rating.avg_user_rating;
+    }
+
+    if(element.waiting_time.length > 0 && typeof element.waiting_time[0].perc_waiting_weeks !== "undefined" && element.waiting_time[0].perc_waiting_weeks != null) {
+        waitingTime = element.waiting_time[0].perc_waiting_weeks;
+    }
+
+    if(element.cancelled_op !== null && typeof element.cancelled_op.perc_cancelled_ops !== "undefined" && element.cancelled_op.perc_cancelled_ops != null) {
         cancelledOps = element.cancelled_op.perc_cancelled_ops;
         // cancelledOps = element.cancelled_op;
+    }
+    //NHS Funded work = 1 when private hospital + waiting time OR NHS hospital
+    var nhsFundedWork = 0;
+    if(nhsRating === 0 || (nhsRating === 1 && waitingTime !== null)) {
+        nhsFundedWork = 1;
     }
     var btnContent = element.hospital_type.name == 'NHS' ? // = "NHS"
         '<a id="' + element.id + '" ' +
@@ -122,8 +149,6 @@ window.addHospitalToCompare = function(element) {
         'data-target="#hc_modal_enquire_private">Make an enquiry' +
         $svg +
         '</a>';
-    // Content for new hospital added to compare
-    var hospitalType = element.hospital_type_id == 1 ? 'Private' : 'NHS';
 
     if(hospitalType == 'Private') {
         privateHospitalCount += 1;
@@ -145,19 +170,19 @@ window.addHospitalToCompare = function(element) {
         btnContent +
         '</div>' +
         '<div class="cell">' + hospitalType + '</div>' +
-        '<div class="cell">' + getHtmlDashTickValue(element.waiting_time[0].perc_waiting_weeks, " Weeks") + '</div>' +
-        '<div class="cell">' + getHtmlStars(element.rating.avg_user_rating) + '</div>' +
+        '<div class="cell">' + getHtmlDashTickValue(waitingTime, " Weeks") + '</div>' +
+        '<div class="cell">' + getHtmlStars(userRating) + '</div>' +
         '<div class="cell">' + getHtmlDashTickValue(cancelledOps, "%") + '</div>' +
-        '<div class="cell">' + element.rating.latest_rating + '</div>' +
-        '<div class="cell">' + getHtmlDashTickValue(element.rating.friends_family_rating, "%") + '</div>' +
-        '<div class="cell">' + getHtmlDashTickValue(element.nhsRating) + '</div>' +
-        '<div class="cell">' + getHtmlDashTickValue(element.hospital === 'Independent' ? 1 : 0) + '</div>' +
+        '<div class="cell">' + latestRating + '</div>' +
+        '<div class="cell">' + getHtmlDashTickValue(friendsAndFamilyRating, "%") + '</div>' +
+        '<div class="cell">' + getHtmlDashTickValue(nhsFundedWork) + '</div>' +
+        '<div class="cell">' + getHtmlDashTickValue(nhsRating) + '</div>' +
         '<div class="cell column-break"></div>' +
-        '<div class="cell">' + element.rating.safe + '</div>' +
-        '<div class="cell">' + element.rating.effective + '</div>' +
-        '<div class="cell">' + element.rating.caring + '</div>' +
-        '<div class="cell">' + element.rating.responsive + '</div>' +
-        '<div class="cell">' + element.rating.well_led + '</div>' +
+        '<div class="cell">' + (element.rating !== null && element.rating.safe !== null ? element.rating.safe : 'No Data') + '</div>' +
+        '<div class="cell">' + (element.rating !== null && element.rating.effective !== null ? element.rating.effective : 'No Data') + '</div>' +
+        '<div class="cell">' + (element.rating !== null && element.rating.caring !== null ? element.rating.caring : 'No Data') + '</div>' +
+        '<div class="cell">' + (element.rating !== null && element.rating.responsive !== null ? element.rating.responsive : 'No Data') + '</div>' +
+        '<div class="cell">' + (element.rating !== null && element.rating.well_led !== null ? element.rating.well_led : 'No Data') + '</div>' +
         '<div class="cell column-break"></div>' +
         '<div class="cell">' + (element.place_rating !== null && element.place_rating.cleanliness !== null ? getHtmlDashTickValue(element.place_rating.cleanliness, "%") : 'No data') + '</div>' +
         '<div class="cell">' + (element.place_rating !== null && element.place_rating.food_hydration !== null ? getHtmlDashTickValue(element.place_rating.food_hydration, "%") : 'No data') + '</div>' +
