@@ -19,7 +19,11 @@
 }
 
 .how-section {
-
+    .row {
+        @include media-breakpoint-up(md){
+            @include reset-row-spacing(8px);
+        }
+    }
 }
 
 .how-section__child {

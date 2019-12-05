@@ -294,7 +294,6 @@
                 .btn-area-lower {
                     border-top: 1px solid #d7d7d7;
                     padding-top: 10px;
-
                 }
             }
         }
@@ -312,6 +311,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         margin: auto;
+        border-bottom: $greyBorder;
 
         .hospital-image {
             width: $hospital-image-width;
@@ -362,7 +362,6 @@
             }
         }
     }
-
 
     .result-item-menu {
         display: flex;

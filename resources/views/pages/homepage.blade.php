@@ -26,9 +26,9 @@
                 'color'         => 'turq',
                 'description'   => '
                             <ul class="">
-                                <li class="green-tick text-center">if NHS funded treatment</li>
-                                <li class="green-tick text-center">if self-pay</li>
-                                <li class="green-tick text-center">if covered by a health insurance policy</li>
+                                <li><span class="green-tick text-center">if NHS funded treatment</span></li>
+                                <li><span class="green-tick text-center">if self-pay</span></li>
+                                <li><span class="green-tick text-center">if covered by a health insurance policy</span></li>
                             </ul>'
             ],
             [

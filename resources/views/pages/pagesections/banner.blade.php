@@ -1,7 +1,7 @@
 <section class="banner-parent py-0">
     <div class="banner">
         <div class="container {{ !empty($layout) && $layout == 'row' ? '_container-1028' : '' }}">
-            <div class="row">
+            <div class="row align-items-center">
                 @if(empty($hideText))
                     <div class="banner-text col col-12 col-lg-6">
                         <h1>Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment</span></h1>

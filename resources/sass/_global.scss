@@ -434,14 +434,15 @@ path {
 
 .green-tick {
     position: relative;
-    padding: 0 0 0 30px;
+    padding: 0 0 0 15px;
     text-align: left;
 
     &:before {
         content: '';
         background-image: url('/images/icons/icon-tick.svg');
         @include icon-bg-center(100%);
-        @include v-c;
+        position: absolute;
+        top: $green-tick-size * 0.4;
         left: 0;
         width: $green-tick-size;
         height: $green-tick-size;
@@ -483,9 +484,7 @@ path {
 
 // Carousels on mobile
 .carousel-mobile {
-    //@include media-breakpoint-up(md){
-    //    @include reset-row-spacing(8px);
-    //}
+
 
     @include media-breakpoint-up(md){
         .carousel-inner {
