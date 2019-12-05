@@ -222,6 +222,8 @@ window.slugify = function(string) {
 // Compare functions
 window.getHospitalsByIds = function(hospitalIds) {
     var procedureId = getUrlParameter('procedure_id');
+    if(typeof procedureId == "undefined")
+        procedureId = 0;
 
     $.ajax({
         url: 'api/getHospitalsByIds/' + hospitalIds +'/' + procedureId,
