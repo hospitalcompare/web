@@ -19,20 +19,18 @@
 }
 
 .how-section {
-    .row {
-        @include media-breakpoint-up(md){
-            @include reset-row-spacing(8px);
-        }
-    }
+
 }
 
 .how-section__child {
+
     text-align: center;
     position: relative;
 
     .col-inner {
-        box-shadow: $box-shadow;
+        //box-shadow: $box-shadow;
         padding: 30px;
+        height: 380px;
     }
 
     .icon {

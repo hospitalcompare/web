@@ -480,3 +480,21 @@ path {
 .lh-16 {
     line-height: 1.6;
 }
+
+// Carousels on mobile
+.carousel-mobile {
+    //@include media-breakpoint-up(md){
+    //    @include reset-row-spacing(8px);
+    //}
+
+    @include media-breakpoint-up(md){
+        .carousel-inner {
+            overflow-y: visible;
+        }
+
+        .carousel-item {
+            display: block;
+            margin-right: auto;
+        }
+    }
+}

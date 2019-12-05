@@ -19,11 +19,11 @@
                         <p class="SofiaPro-Medium">{!! !empty($layout) ? 'Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment' : 'Find the best hospitals' !!}</p>
                         <form
                             id="search_form"
-                            class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-flex align-items-end search-form-row' : '' }}"
+                            class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-lg-flex align-items-end search-form-row' : '' }}"
                             method="get"
                             action="/results-page"
                             style="">
-                            <div class="form-child {{ !empty($layout) ? 'mr-2' : ''}}">
+                            <div class="form-child">
                                 @include('components.basic.select', [
                                     'selectPicker'          => 'true',
                                     'selectClass'           => 'big select-picker',
@@ -49,7 +49,7 @@
 {{--                                                 --}}{{--<p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}{{--'])--}}
 {{--                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
                             </div>
-                            <div class="form-child postcode-parent {{ !empty($layout) ? 'mr-2' : ''}}">
+                            <div class="form-child postcode-parent">
 {{--                                Add this hidden input to remove the autocomplete functionality--}}
                                 <label for="fake_postcode" class="d-none"></label>
                                 <input name="fake_postcode" id="fake_postcode" type="text" style="display:none">
