@@ -306,7 +306,7 @@
 // Add opacity mask over image
 @mixin mask($bgColor: $turq, $opacity: 0.8) {
     position: relative;
-    overflow: hidden;
+    //overflow: hidden;
 
     &:before {
         position: absolute;
