@@ -1,23 +1,30 @@
 body, * {
-    letter-spacing: $letter-spacing;
+    //letter-spacing: $letter-spacing;
 }
 
-.cookie-page,
-.privacy-page,
-.terms-and-conditions-page,
-.faqs-page,
+//.cookie-page,
+//.privacy-page,
+//.terms-and-conditions-page,
+//.faqs-page,
 //.your-rights-page,
 //.about-us-page,
-.blog-page {
-    main {
-        padding-top: 40px;
+//.blog-page
+//{
+//    main {
+//        padding-top: 40px;
+//    }
+//}
+
+main {
+    section:last-child {
+        padding-bottom: 100px !important;
     }
 }
 
 // remove focus ring
 * {
     &:focus {
-        outline: none !important;
+        //outline: none !important;
     }
 }
 
@@ -55,7 +62,7 @@ ul.blue-dot {
     margin-bottom: 30px;
 
     > li {
-        @include font-style(false, 14px, false, false, 24px, -1px);
+        //@include font-style(false, 14px, false, false, 24px, -1px);
         //margin: 0 0 12px 0;
         position: relative;
         padding: 0 0 0 30px;
@@ -93,7 +100,8 @@ ul.blue-disc {
     margin: 30px 0 50px 0;
 
     > li {
-        @include font-style(false, 20px, false, false, 24px, -1px);
+        //@include font-style(false, 20px, false, false, 24px, -1px);
+        @include font-size(20);
         margin: 0 0 22px 0;
         position: relative;
         padding: 0 0 0 40px;
@@ -136,7 +144,7 @@ select.big {
     max-width: 1028px;
 }
 
-.bg-teal {
+.bg-turq {
     background-color: $turq;
 }
 
@@ -239,7 +247,7 @@ select.big {
 }
 
 .col-grey {
-    color: $grey;
+    color: $fontGrey;
 }
 
 .col-white {
@@ -254,6 +262,8 @@ select.big {
     color: $darkestGrey;
 }
 
+.col-
+
 .col-caretBlack {
     color: $caretBlack;
 }
@@ -264,6 +274,9 @@ select.big {
     cursor: pointer;
     color: inherit;
     transition: $transition;
+    appearance: none;
+    background-color: transparent;
+    border: none;
     //text-decoration: underline !important;
 
     &:hover {
@@ -415,4 +428,49 @@ path {
 
 .d-table-cell {
     @extend .p-2;
+}
+
+.green-tick {
+    position: relative;
+    padding: 0 0 0 30px;
+    text-align: left;
+
+    &:before {
+        content: '';
+        background-image: url('/images/icons/icon-tick.svg');
+        @include icon-bg-center(100%);
+        @include v-c;
+        left: 0;
+        width: $green-tick-size;
+        height: $green-tick-size;
+    }
+}
+
+// Signature font
+.signature {
+    font-family: "Brown Pen", cursive;
+    @include font-size(28);
+    font-weight: bold;
+}
+
+.border {
+    &-right {
+        &.border-green {
+            border-right: 2px solid $turq !important;
+        }
+    }
+}
+
+// Padding
+.p-30 {
+    padding: 30px;
+}
+
+// line-height
+.lh-14 {
+    line-height: 1.4;
+}
+
+.lh-16 {
+    line-height: 1.6;
 }

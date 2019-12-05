@@ -1,0 +1,19 @@
+.your-rights-intro {
+    border-bottom: $greyBorder;
+}
+
+.your-rights-act {
+    background-image: url('/images/Layer_16.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-bottom: $greyBorder;
+}
+
+.your-rights-what {
+    background-image: url('/images/placeholder.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include mask(#fff, 0.8)
+}

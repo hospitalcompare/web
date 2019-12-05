@@ -5,7 +5,7 @@
 .btn {
     @include font-size(14);
     @include transition(0.3s);
-    //@extend .SofiaPro-Medium;
+    letter-spacing: $letter-spacing;
     border-radius: 100px;
     color: $white;
     padding: 14px 26px;
@@ -78,20 +78,20 @@
 
     //colours
     &.btn-turq {
-        @include linear-gradient(90deg, $turq, $turq, $green);
+        background-color: $turq;
 
-        &.btn-grad {
-            @include linear-gradient(90deg, $turq, $green, $green);
+        &:hover {
+            background-color: $blue;
         }
     }
-
-    &.btn-darkgreen {
-        @include linear-gradient(90deg, $darkGreen, $darkGreen, $green);
-
-        &.btn-grad {
-            @include linear-gradient(90deg, $darkGreen, $green, $darkGreen);
-        }
-    }
+    //
+    //&.btn-darkgreen {
+    //    @include linear-gradient(90deg, $darkGreen, $darkGreen, $green);
+    //
+    //    &.btn-grad {
+    //        @include linear-gradient(90deg, $darkGreen, $green, $darkGreen);
+    //    }
+    //}
 
     &.btn-blue {
         @include linear-gradient(90deg, $blue, $blue, $turq);
@@ -135,15 +135,28 @@
     }
 
     &.btn-grey {
-        @include linear-gradient(90deg, $footerGrey, $footerGrey, $pink);
+        @include linear-gradient(90deg, $footerBackgroundColour, $footerBackgroundColour, $pink);
         //@include linear-gradient(90deg, $pink, $pink, $violet);
         &.btn-grad {
-            @include linear-gradient(90deg, $footerGrey, $footerGrey, $pink, $footerGrey);
+            @include linear-gradient(90deg, $footerBackgroundColour, $footerBackgroundColour, $pink, $footerBackgroundColour);
+        }
+    }
+
+    &.btn-lightgrey {
+        color: $body-color;
+        @include linear-gradient(90deg, $lighterGrey, $lighterGrey, $lighterGrey);
+        //@include linear-gradient(90deg, $pink, $pink, $violet);
+        &.btn-grad {
+            @include linear-gradient(90deg, $footerBackgroundColour, $footerBackgroundColour, $pink, $footerBackgroundColour);
         }
     }
 
     &.btn-squared {
-        border-radius: 10px !important;
+        border-radius: $border-radius;
+        padding: 25px 56px;
+    }
+
+    &.btn-enquire-all {
         padding: 15px 15px 15px 45px;
         //max-width: 160px;
 
@@ -580,12 +593,11 @@
     min-width: 182px;
     border-radius: 10px 10px 0 0;
     @include font-size(22);
-    @include gradient-animation($turq, $turq, $turq, $green, 0.3s);
+    @include gradient-animation($body-color, $body-color, $turq, $turq, 0.3s);
 
     svg {
-        position: absolute;
+        @include v-c;
         right: 20px;
-        top: 20px;
     }
 }
 
@@ -686,7 +698,13 @@
             fill: #fff;
         }
     }
+}
 
+// Reset styles from standard button
+.btn-plain {
+    appearance: none;
+    border: none;
+    background-color: transparent;
 }
 
 // Modal tour carousel buttons - prev/next
@@ -742,3 +760,4 @@
         }
     }
 }
+

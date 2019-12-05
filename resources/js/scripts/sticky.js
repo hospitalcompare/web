@@ -18,5 +18,5 @@
 //     });
 // }
 // v3
-stickybits('.result-item-parent', {useStickyClasses: true});
+stickybits('#resultspage_form', {useStickyClasses: true});
 

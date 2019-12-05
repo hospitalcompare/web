@@ -2,9 +2,10 @@
 $transition: 0.3s all ease;
 
 // Fonts
-$headings-font-family: 'SofiaPro-Bold', sans-serif;
+$headings-font-family: 'SofiaPro-Regular', sans-serif;
 $font-family-sans-serif: 'SofiaPro-Regular', sans-serif;
 $headings-font-weight: normal; // font is bold, so normal is standard bold
+$font-size-base: 14;
 //$font-size-base: 0.9rem;
 
 // Line-height
@@ -13,30 +14,31 @@ $line-height-base: 1.2;
 //$line-height-sm: 1;
 
 // Letter spacing
-$letter-spacing: -0.05em;
+$letter-spacing: 0em;
+
+// Borders
+$border-radius: 5px;
 
 // Colors
 $enable-gradients: true;
 $indigo: #6574cd;
 $purple: #9561e2;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$cyan: #6cb2eb;
+//$red: #e3342f;
 $turq: #00cecd;
 $violet: #8e00fe;
+
 $blue: #1b71f3;
 $hanblue: #5e15d1;
 $privateBlue: #033860;
+
 $green: #00e09d;
-$darkGreen: #21afae;
+//$darkGreen: #21afae;
+
 $pink: #ed0373;
-$grey: #363636;
 $white: #ffffff;
-$greylight: #F6F6F6;
-$greylightbg: #F7F7F7;
 $goldStar: #FAC917;
 $doctorGreen: #80efce;
+
 
 //Main Template colours
 $darkerWhite: #f5f5f5;
@@ -44,19 +46,28 @@ $darkestWhite: #ebebeb;
 $darkestBlue: #03385f;
 $aqua: #00cecd;
 $darkerAqua: #00b5b4;
+
+$footerBackgroundColour: #363636;
+$hotpink: #ed0373;
+$caretBlack: #040202;
+$bannerMaskGreen: #00cfcc;
+$corporateContentGreen: #026867;
+
+$grey: #363636;
+$greylight: #F6F6F6;
+$greylightbg: #F7F7F7;
 $lightGrey: $darkestWhite;
 $lighterGrey: #ececec;
 $lightestGrey: #1b1b1b;
 $darkerGrey: #1c1c1c;
 $darkestGrey: #707070;
-$newGrey: #747474;
-$sunnyYellow: #fff568;
-$footerGrey: #363636;
-$darkBlue: #1b71f3;
-$hotpink: #ed0373;
-$caretBlack: #040202;
-$bannerMaskGreen: #19a2a1;
-$corporateContentGreen: #026867;
+
+
+// Snap design variables
+$fontGrey: #757575;
+$helplinkRed: #de026d;
+
+// End of snap design variables
 
 // CQC RAG rating colours
 $cqcGreen: #458f00;
@@ -64,9 +75,9 @@ $cqcAmber: #FF9900;
 $cqcRed: #BF1000;
 
 // Borders
-$borderVideo: $darkestGrey;
-//$borderGrey: #d7d7d7;
 $borderGrey: #ededed;
+$greyBorder: 1px solid $borderGrey;
+
 
 // Body
 $body-bg: #fff;
@@ -83,7 +94,7 @@ $centerOnPage: auto;
 $btn-border-radius: 100px;
 $btn-transition: $transition;
 $btn-border-width: 0;
-$btn-focus-box-shadow: none;
+//$btn-focus-box-shadow: none;
 
 // Popovers
 //$popover-border-width: 0;
@@ -115,7 +126,7 @@ $input-height: 30px;
 $input-line-height: 1;
 $input-placeholder-color: $darkerGrey;
 $input-font-weight: 500;
-$input-border-radius: 10px;
+$input-border-radius: $border-radius;
 $input-border-color: $darkestWhite;
 $input-border-width: 2px;
 
@@ -174,19 +185,17 @@ $nav-tabs-border-width: 0;
 $nav-tabs-border-radius: 0;
 $nav-tabs-link-hover-border-color: $turq;
 
-// Borders
-$border-radius: 9px;
-$greyBorder: 1px solid $borderGrey;
-
 // Misc
 $hospital-image-width: 150px;
 
 // Carousel
 $enable-gradients: false;
-$carousel-control-prev-icon-bg: url('../images/icons/carousel-left.svg');
-$carousel-control-next-icon-bg: url('../images/icons/carousel-right.svg');
-$carousel-control-icon-width: 24px;
-$carousel-control-icon-height: 24px;
+//$carousel-control-prev-icon-bg: url('../images/icons/chevron-left.svg');
+//$carousel-control-next-icon-bg: url('../images/icons/chevron-right.svg');
+$carousel-control-prev-icon-bg: none;
+$carousel-control-next-icon-bg: none;
+$carousel-control-icon-width: 40px;
+$carousel-control-icon-height: 40px;
 $carousel-control-opacity: 1;
 $carousel-control-width: auto;
 
@@ -197,3 +206,9 @@ $pagination-link-height: 35px;
 //$table-cell-padding: 0.5rem;
 //$table-cell-padding-small: 0.5rem;
 //$table-border-width: 0;
+
+// Box shadows
+$box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+
+// Tick lists
+$green-tick-size: 20px;

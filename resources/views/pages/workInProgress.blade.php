@@ -76,7 +76,7 @@
         /*}*/
     </style>
 </head>
-<body class="bg-teal" style="height: 100vh">
+<body class="bg-turq" style="height: 100vh">
 <div class="d-flex justify-content-center align-items-center w-100 h-100">
 {{--    @if (Route::has('login'))--}}
 {{--        <div class="top-right links">--}}

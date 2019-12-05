@@ -82,7 +82,7 @@
                                 @include('components.basic.modalbutton', [
                                     'htmlButton'        => true,
                                     'buttonText'        => 'Make an enquiry<br>to all your chosen<br>hospitals',
-                                    'classTitle'        => 'btn btn-squared btn-blue btn-grad btn-enquiry font-14',
+                                    'classTitle'        => 'btn btn-squared btn-blue btn-grad btn-enquire-all font-14',
                                     'id'                => 'multiple_enquiries_button',
                                     'svg'               => 'circle-check',
                                     'modalTarget'       => '#hc_modal_enquire_private',
@@ -95,7 +95,7 @@
                         <div class=""></div>
                         <div class="cell">
                             <span class="position-relative">Hospital Type&nbsp&nbsp;
-                                <span tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
+                                <span tabindex="0" data-offset="0 5px"
                                   class="help-link"
                                     @include('components.basic.popover', [
                                     'dismissible'   => true,
@@ -113,7 +113,7 @@
                         </div>
                         <div class="cell">
                             <span class="position-relative">Average Waiting Time&nbsp;&nbsp;
-                                <span tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
+                                <span tabindex="0" data-offset="0 5px"
                                       class="help-link"
                                     @include('components.basic.popover', [
                                     'dismissible'   => true,

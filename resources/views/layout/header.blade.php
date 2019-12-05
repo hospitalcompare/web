@@ -2,7 +2,7 @@
 <header class="header" id="top">
     <div class="container">
         <div class="branding">
-            @include('components.logo', ['titleParent' => 'headerLogoParent', 'logoImg' => 'headerLogoImg', 'logoTitle' => 'headerLogoTitle'])
+            @include('components.logo', ['titleParent' => 'header-logo-parent', 'logoImg' => 'header-logo-image', 'logoTitle' => 'headerLogoTitle'])
             <nav class="main-nav" role="navigation">
                 <ul class="main-menu">
                     @if(env('APP_ENV') == 'local')

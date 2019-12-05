@@ -1,4 +1,10 @@
-//FOOTER SECTION
+// Back to top styles
+.back-top-wrapper {
+    bottom: 100%;
+    width: 100%;
+}
+
+// FOOTER SECTION
 .footer {
     * {
         color: $white;
@@ -14,7 +20,7 @@
 }
 
 .footer-upper {
-    background-color: #1b1b1b;
+    background-color: $body-color;
     padding-top: 75px;
 
     &__menu {
@@ -22,10 +28,64 @@
 
         li {
             margin-bottom: 15px;
+            display: inline-block;
 
             a {
                 @include font-size(22);
                 @extend .SofiaPro-Medium;
+                padding-right: 20px;
+            }
+        }
+    }
+
+
+    .social {
+        //margin-top: 80px;
+        text-align: right;
+
+        ul {
+            margin-top: 30px;
+
+            li {
+                list-style: none;
+                margin-left: 20px;
+                display: inline-flex;
+
+                &.facebook-social {
+                    svg {
+                        width: 20px;
+                    }
+                }
+
+                &.twitter-social {
+                    svg {
+                        width: 38px;
+                    }
+                }
+
+                &.instagram-social {
+                    svg {
+                        width: 38px;
+                    }
+                }
+
+                a {
+                    display: inline-flex;
+                    color: $white;
+                    font-size: 2.5em;
+                    left: 20px;
+
+                    &:hover {
+                        color: $turq;
+
+                        svg {
+                            path {
+                                stroke: $turq;
+                                fill: $turq;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -57,10 +117,10 @@
 }
 
 .footer-lower {
-    background-color: $footerGrey;
+    background-color: $footerBackgroundColour;
 
     &__menu {
-        margin-left: -25px;
+        margin-left: -15px;
         list-style-type: none;
 
         li {
@@ -68,75 +128,9 @@
 
             > a {
                 display: inline-block;
-                padding: 25px;
+                padding: 0 15px;
             }
         }
     }
 }
 
-.social {
-    //margin-top: 80px;
-    text-align: right;
-
-    ul {
-        margin-top: 30px;
-
-        li {
-            list-style: none;
-            margin-left: 20px;
-            display: inline-flex;
-
-            &.facebook-social {
-                svg {
-                    width: 20px;
-                }
-            }
-
-            &.twitter-social {
-                svg {
-                    width: 38px;
-                }
-            }
-
-            &.instagram-social {
-                svg {
-                    width: 38px;
-                }
-            }
-
-            a {
-                display: inline-flex;
-                color: $white;
-                font-size: 2.5em;
-                left: 20px;
-
-                &:hover {
-                    color: $turq;
-
-                    svg {
-                        path {
-                            stroke: $turq;
-                            fill: $turq;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-//Back to top styles
-.backTopHolder {
-    margin: auto;
-
-    .backTopContent {
-        //width: 150px;
-    }
-
-    .backToTop {
-        color: $white;
-        padding: 27px;
-        display: block;
-    }
-}

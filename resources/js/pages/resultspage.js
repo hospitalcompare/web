@@ -11,7 +11,8 @@ $('.results-page .select-sort-by').change(function () {
 });
 
 //Sorting asc/desc when the arrows are clicked
-$(document).on("click touchend", ".result-item-menu .sort-arrow", function () {
+$(document).on("click touchend", ".sort-bar .sort-arrow", function () {
+    console.log('Sorting')
     //Get all the classes from the element
     var elementClasses = $(this).attr('class');
     //Get the actual target class
@@ -148,12 +149,28 @@ $(document).on("click", ".results-page .change-url", function (event) {
 // }
 
 // Toggle filter section
-$('#show_filters').on('click', function () {
+$showFilters = $('#show_filters');
+$showFilters.on('click', function () {
     $('#resultspage_form .filter-parent').slideToggle();
+    $('body').toggleClass('filters-open');
     $(this).toggleClass('open');
     // // Refresh the range slider as it is initially hidden
     $("#radiusProx").slider('relayout');
 });
+//
+// $('*').on('focus', function(e){
+//     console.log(e.target);
+// });
+
+// Open the filters form when tabbing off the 'Filter resutls' button
+$showFilters.bind('keydown', function(e) {
+    var keyCode = e.keyCode || e.which;
+    if (keyCode == 9) {  //If it's the tab key
+        $(this).trigger('click'); //Force a click outside the dropdown, so it forces a close
+        $('button[data-id="resultspage_treatment_dropdown"]').focus();
+    }
+});
+
 // Toggle sort dropdown
 // $('#show_sort').on('click', function(){
 //     $('#sort_parent').slideToggle();
@@ -202,3 +219,5 @@ $('#carousel_tour').on('slid.bs.carousel', function (event) {
 });
 
 // popupDoctor($doctor.data('message'), $doctor.data('doctor-delay'));
+
+

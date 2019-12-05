@@ -1,5 +1,5 @@
-<footer class="footer">
-    <div class="back-top-wrapper mt-4">
+<footer class="footer position-relative">
+    <div class="back-top-wrapper mt-4 position-absolute">
         <div class="container back-top-content d-flex justify-content-end">
             @include('components.basic.button', [
             'id' => 'back-to-top',
@@ -21,6 +21,14 @@
 {{--                            <li><a href="/patient-choice">Patient choice</a></li>--}}
                             {{--                <li><a href="/our-blogs">Our blogs</a></li>--}}
                             <li><a href="mailto:hello@hospitalcompare.co.uk">Contact us</a></li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <ul class="footer-lower__menu mb-0">
+                            <li class="d-inline-block"><a href="/terms-and-conditions">T&amp;Cs</a></li>
+                            {{--                    <li><a href="/accessibility">Accessibility</a></li>--}}
+                            <li class="d-inline-block"><a href="/privacy-policy">Privacy Policy</a></li>
+                            <li class="d-inline-block"><a href="/cookie-policy">Cookie Policy</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -69,6 +77,7 @@
 					</svg>
 
         </div>
+
         <div class="container">
             <p>
                 *your legal right to choose may be restricted in some circumstances. For more
@@ -76,24 +85,17 @@
                     class="text-link"
                     href="/your-rights">Your Rights</a>
             </p>
+            <p><time id="thisYear">{{ date('Y') }}</time><a href="/"> Hospital Compare<sup>TM</sup></a>. All rights reserved</p>
           </div>
     </div>
 
-    <div class="footer-lower">
-        <div class="container">
-            <nav class="footer-lower__nav">
-                <ul class="footer-lower__menu mb-0 d-flex flex-wrap align-items-center justify-content-between">
-                    <li><a href="/terms-and-conditions">T&amp;Cs</a></li>
-{{--                    <li><a href="/accessibility">Accessibility</a></li>--}}
-                    <li><a href="/privacy-policy">Privacy Policy</a></li>
-                    <li><a href="/cookie-policy">Cookie Policy</a></li>
-                    <li class="ml-auto"><span>
-                            <time id="thisYear">{{ date('Y') }}</time>
-                            <a href="/"> Hospital Compare<sup>TM</sup></a>. All rights reserved</span></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+{{--    <div class="footer-lower">--}}
+{{--        <div class="container">--}}
+{{--            <nav class="footer-lower__nav">--}}
+
+{{--            </nav>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 </footer>
 
 

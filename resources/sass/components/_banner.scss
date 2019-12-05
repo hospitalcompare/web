@@ -10,29 +10,47 @@
     background-size: cover;
     background-position: center center;
     position: relative;
-    padding: 45px 0;
+    padding: 75px 0;
 
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: $bannerMaskGreen;
-        opacity: 0.85;
+    @include mask($bannerMaskGreen, 0.06);
+
+    > * {
+        position: relative;
+        z-index: 5;
+    }
+
+    .row {
+        @include reset-row-spacing(60px);
     }
 }
 
 //BANNER CONTENTS
 
-.box {
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.75);
-    padding: 20px 30px;
+.banner-form-wrapper {
+    border-radius: 5px;
+    background-color: #fff;
+    //background-color: rgba(255, 255, 255, 0.75);
+    padding: 40px 30px;
     text-align: center;
     position: relative;
     z-index: 5;
+    @extend .shadow;
+
+    .postcode-parent {
+        .input-wrapper {
+            &:before {
+                content: '';
+                background-image: url('/images/icons/icon-location.svg');
+                @include icon-bg-center(100%, 15px, 25px);
+                @include v-c;
+                left: 20px;
+            }
+
+            input {
+                padding-left: 60px;
+            }
+        }
+    }
 
     &.flat-box {
         padding: 30px 40px 30px;
@@ -49,13 +67,12 @@
 
     .form-child {
         position: relative;
-        margin-top: 20px;
+        @extend .mt-2;
     }
 
     p {
         @include font-size(25);
-        margin: auto;
-        font-weight: 500;
+        margin: 0 auto 25px;
     }
 
     .postcode-item {
@@ -65,7 +82,7 @@
         padding: 9px;
 
         &:hover {
-            background-color: $newGrey;
+            background-color: $fontGrey;
             color: $white;
             cursor: pointer;
             width: 100%;
@@ -78,35 +95,35 @@
     }
 }
 
-.home-promo {
-    color: $white;
+.banner-text {
+    //color: $white;
     @include media-breakpoint-up(lg) {
-        padding-top: 70px;
+        //padding-top: 70px;
     }
     position: relative;
     z-index: 5;
 
     p {
-        font-size: 24px;
-        //line-height: 32px;
+        line-height: 1.6;
     }
-}
 
-.promo-list {
+    p,
     li {
-        list-style: none;
-        font-size: 24px;
-        //line-height: 28px;
-        position: relative;
-        padding-left: 63px;
-        margin-bottom: 20px;
+        @include font-size(1.2rem);
+    }
 
-        &:before {
-            content: url("/images/tick.svg");
-            width: 30px;
-            height: 28px;
-            @include v-c;
-            left: 0;
+    .banner-list {
+        li {
+            list-style: none;
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 20px;
+            line-height: 24px;
+
+            &:before {
+                width: 26px;
+                height: 26px;
+            }
         }
     }
 }
@@ -161,6 +178,7 @@
         &.revealed-right {
             max-width: 500px;
             visibility: visible;
+            @extend .mr-2;
         }
     }
 

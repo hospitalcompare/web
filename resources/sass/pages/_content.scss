@@ -1,112 +1,109 @@
-.hc-content {
-
-    section {
-        padding: 40px 0;
-    }
-
-    p {
-        @include font-size(20);
-
-        //&:last-child {
-        //    @extend .mb-0;
-        //}
-    }
-
-    table {
-        ol, ul {
-            margin: 0;
-
-            li {
-                font-size: inherit
-            }
-        }
-    }
-
-    em {
-        color: $turq;
-    }
-
-    ol, ul {
-        list-style-type: none;
-    }
-
-    ul.blue-dot {
-        //padding: 0 0 0 50px;
-        margin: 30px 0 50px 0;
-
-        > li {
-            @include font-size(22);
-            margin: 0 0 22px 40px;
-            position: relative;
-            padding: 0 0 0 40px;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-
-            &:before {
-                content: '';
-                position: absolute;
-                top: 5px;
-                left: 0;
-                width: 11px;
-                height: 11px;
-                background-color: $turq;
-                border-radius: 50%;
-            }
-        }
-    }
-
-    ol {
-        //padding: 0 0 0 50px;
-        margin: 30px 0 50px 0;
-        counter-reset: counter;
-
-        li {
-            font-size: 22px;
-            margin: 0 0 22px 0;
-            position: relative;
-            padding: 0 0 0 40px;
-            counter-increment: counter;
-            line-height: 1;
-
-            &:before {
-                content: counter(counter) '.';
-                position: absolute;
-                top: 0;
-                left: 0;
-                color: $turq;
-                @extend .font-semibold;
-            }
-        }
-    }
-
-
-
-    blockquote {
-        padding: 40px 0;
-
-        p {
-            max-width: 80%;
-            margin: 0 auto 20px auto;
-            text-align: center;
-            font-size: 22px;
-            color: $turq;
-        }
-    }
-
-    hr {
-        width: 100%;
-        height: 4px;
-        border: 0;
-    }
-
-    .btn-link {
-        color: $darkerGrey;
-    }
-
-
-}
+//.hc-content {
+//    section {
+//        padding: 40px 0;
+//    }
+//
+//    p {
+//        @include font-size(20);
+//
+//        //&:last-child {
+//        //    @extend .mb-0;
+//        //}
+//    }
+//
+//    table {
+//        ol, ul {
+//            margin: 0;
+//
+//            li {
+//                font-size: inherit
+//            }
+//        }
+//    }
+//
+//    em {
+//        color: $turq;
+//    }
+//
+//    ol, ul {
+//        list-style-type: none;
+//    }
+//
+//    ul.blue-dot {
+//        //padding: 0 0 0 50px;
+//        margin: 30px 0 50px 0;
+//
+//        > li {
+//            @include font-size(22);
+//            margin: 0 0 22px 40px;
+//            position: relative;
+//            padding: 0 0 0 40px;
+//
+//            &:last-child {
+//                margin-bottom: 0;
+//            }
+//
+//            &:before {
+//                content: '';
+//                position: absolute;
+//                top: 5px;
+//                left: 0;
+//                width: 11px;
+//                height: 11px;
+//                background-color: $turq;
+//                border-radius: 50%;
+//            }
+//        }
+//    }
+//
+//    ol {
+//        //padding: 0 0 0 50px;
+//        margin: 30px 0 50px 0;
+//        counter-reset: counter;
+//
+//        li {
+//            font-size: 22px;
+//            margin: 0 0 22px 0;
+//            position: relative;
+//            padding: 0 0 0 40px;
+//            counter-increment: counter;
+//            line-height: 1;
+//
+//            &:before {
+//                content: counter(counter) '.';
+//                position: absolute;
+//                top: 0;
+//                left: 0;
+//                color: $turq;
+//                @extend .font-semibold;
+//            }
+//        }
+//    }
+//
+//    blockquote {
+//        padding: 40px 0;
+//
+//        p {
+//            max-width: 80%;
+//            margin: 0 auto 20px auto;
+//            text-align: center;
+//            font-size: 22px;
+//            color: $turq;
+//        }
+//    }
+//
+//    hr {
+//        width: 100%;
+//        height: 4px;
+//        border: 0;
+//    }
+//
+//    .btn-link {
+//        color: $darkerGrey;
+//    }
+//
+//
+//}
 
 ol.alpha {
     counter-reset: counter;
@@ -139,22 +136,26 @@ h6 {
 }
 
 h1 {
-    @include font-style('SofiaPro-Black', 40px, false, false, 45px, -2.25px);
-    margin: 0 0 40px 0;
+    @include font-size(40);
+    //@include font-style('SofiaPro-Black', 40px, false, false, 45px, -2.25px);
+    margin: 0 0 25px 0;
 }
 
 h2 {
-    @include font-style('SofiaPro-Bold', 28px, false, false, 35px, -2.25px);
+    @include font-size(28);
+    //@include font-style('SofiaPro-Bold', 28px, false, false, 35px, -2.25px);
     margin: 0 0 28px 0;
 }
 
 .section-title {
-    @include font-style('SofiaPro-Bold', 40px, false, false, 48px, -2px);
-    margin-bottom: 40px;
+    @include font-size(1.8rem);
+    margin-bottom: 25px;
+    font-weight: 500;
 }
 
 .page-subtitle {
-    @include font-style('SofiaPro-SemiBold', 28px, false, false, 35px, -1.45px);
+    @include font-size(28);
+    //@include font-style('SofiaPro-SemiBold', 28px, false, false, 35px, -1.45px);
 }
 
 h3 {
@@ -179,8 +180,10 @@ h6 {
     margin: 0 0 22px 0;
 }
 
-p {
-    @include font-style(false, 14px, false, false, 16.8px, -1px);
+.p-intro {
+    @include font-size(1.2rem);
+    line-height: 1.6;
+    @extend .SofiaPro-Medium;
 }
 
 .image-wrapper {

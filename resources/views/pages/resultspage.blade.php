@@ -17,122 +17,14 @@
 {{--        {{ dd($data['special_offers']) }}--}}
 {{--        @endif--}}
     @include('pages.pagesections.resultspageform', ['displayBlock' => false])
-    <div id="result_item_parent" class="result-item-parent d-none d-lg-flex">
-        <div class="result-item-header container">
-            <div class="result-item-header-section-1"></div>
-            <div class="result-item-header-section-2">
-                <ul class="result-item-menu">
-                    <li>
-                        <p tabindex="0" _data-offset="30px, 40px"
-                            @include('components.basic.popover', [
-                            'placement' => 'top',
-                            'trigger'   => 'hover',
-                            'html'      => 'true',
-                            'content'   => '<p class="bold mb-0">
-                                                Care Quality Rating
-                                            </p>
-                                            <p>
-                                                The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
-                                            </p>'])>Care Quality<br>Rating</p>
-                        <span title="Sort by this column"
-                              class="sort-arrow sort-care-quality-rating {{Request::input('sort_by') == 10 ? 'desc':'asc' }}"></span>
-                    </li>
-                    <li>
-                        <p tabindex="0" _data-offset="30px, 40px"
-                            @include('components.basic.popover', [
-                            'placement' => 'top',
-                            'trigger'   => 'hover',
-                            'html'      => 'true',
-                            'content'   => '<p class="bold mb-0">
-                                                Waiting Time (NHS Funded)
-                                            </p>
-                                            <p>
-                                                Our waiting time data is based on NHS data, specifically the number of weeks that 92 out or 100 people wait for their treatment to start.
-                                            </p>'])>Waiting time <br>(NHS Funded)</p>
-                        <span title="Sort by this column"
-                              class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}"></span>
-                    </li>
-                    <li>
-                        <p tabindex="0" _data-offset="30px, 40px"
-                            @include('components.basic.popover', [
-                            'placement' => 'top',
-                            'trigger'   => 'hover',
-                            'html'      => 'true',
-                            'content'   => '<p class="bold mb-0">
-                                                NHS User Rating
-                                            </p>
-                                            <p>
-                                                Five star rating system based on feedback provided by users of the NHS, five stars being the best. Information is not available on some hospitals.
-                                            </p>'])>NHS User<br> Rating&nbsp;<br></p>
-                        <span title="Sort by this column"
-                              class="sort-arrow sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }}"></span>
-                    </li>
-                    <li>
-                        <p tabindex="0" _data-offset="30px, 40px"
-                            @include('components.basic.popover', [
-                            'placement' => 'top',
-                            'trigger'   => 'hover',
-                            'html'      => 'true',
-                            'content'   => '<p class="bold mb-0">
-                                                % of Operations Cancelled
-                                            </p>
-                                            <p>
-                                                The percentage of operations cancelled during the last reporting period. Data only available for NHS hospitals at this time.
-                                            </p>'])>% Operations<br>Cancelled</p>
-                        <span title="Sort by this column"
-                              class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }}"></span>
-                    </li>
-                    <li>
-                        <p tabindex="0" _data-offset="30px, 40px"
-                            @include('components.basic.popover', [
-                            'placement' => 'top',
-                            'trigger'   => 'hover',
-                            'html'      => 'true',
-                            'content'   => '<p class="bold mb-0">
-                                                Friends & Family Rating
-                                            </p>
-                                            <p>
-                                                The percentage of people who would recommend this hospital to family and friends.
-                                            </p>'])>Friends &<br>Family Rating</p>
-                        <span title="Sort by this column"
-                              class="sort-arrow sort-ff-rating {{Request::input('sort_by') == 12 ? 'desc':'asc' }}"></span>
-                    </li>
-                    <li>
-                        <p tabindex="0" _data-offset="30px, 40px"
-                            @include('components.basic.popover', [
-                            'placement' => 'top',
-                            'trigger'   => 'hover',
-                            'html'      => 'true',
-                            'content'   => '<p class="bold mb-0">
-                                                NHS Funded Work
-                                            </p>
-                                            <p>
-                                                This hospital provides treatments funded by the NHS. Remember you can have an NHS treatment at most private hospitals.
-                                            </p>'])>NHS<br>Funded Work</p>
-                        <span title="Sort by this column"
-                              class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 14 ? 'desc':'asc' }}"></span>
-                    </li>
-                    <li>
-                        <p tabindex="0" _data-offset="30px, 40px"
-                            @include('components.basic.popover', [
-                            'placement' => 'top',
-                            'trigger'   => 'hover',
-                            'html'      => 'true',
-                            'content'   => '<p class="bold mb-0">
-                                                Private Self Pay
-                                            </p>
-                                            <p>
-                                                Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
-                                            </p>'])>Private<br>Self Pay</p>
-                        <span title="Sort by this column"
-                              class="sort-arrow sort-self-pay {{Request::input('sort_by') == 16 ? 'desc':'asc' }}"></span>
-                    </li>
-                </ul>
-            </div>
-            <div class="result-item-header-section-3 p-0">
-                <ul class="result-item-menu p-0 h-100">
-                    <li class="align-items-end justify-content-end">
-                        <p class="text-center m-0 d-flex flex-column align-items-end">
+{{--    <div id="result_item_parent" class="result-item-parent d-none d-lg-flex">--}}
+{{--        <div class="result-item-header container">--}}
+{{--            <div class="result-item-header-section-1"></div>--}}
+
+{{--            <div class="result-item-header-section-3 p-0">--}}
+{{--                <ul class="result-item-menu p-0 h-100">--}}
+{{--                    <li class="align-items-end justify-content-end">--}}
+{{--                        <p class="text-center m-0 d-flex flex-column align-items-end">--}}
 {{--                            <span class="d-inline-block mb-1">Compare</span>--}}
 {{--                            <svg id="" xmlns="http://www.w3.org/2000/svg" width="30" height="30">--}}
 {{--                                <g data-name="Group 263">--}}
@@ -147,12 +39,12 @@
 {{--                                    </g>--}}
 {{--                                </g>--}}
 {{--                            </svg>--}}
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+{{--                        </p>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 
     <div class="results">
         @if(!empty($data['hospitals']))
@@ -203,6 +95,11 @@
                     'popoverDelay'          => 2000
                    ])
             @endforeach
+            @if($data['hospitals']->total() < 10)
+                <div class="container">
+                    <h1>Try tweaking the filters for more results</h1>
+                </div>
+            @endif
         @endif
     </div>
 

@@ -1,27 +1,28 @@
 <section class="banner-parent py-0">
     <div class="banner">
-        <div class="container {{ !empty($layout) && $layout == 'row' ? 'container-1028' : '' }}">
+        <div class="container {{ !empty($layout) && $layout == 'row' ? '_container-1028' : '' }}">
             <div class="row">
                 @if(empty($hideText))
-                    <div class="home-promo col col-12 col-lg-6">
-                        <p>The quality of care and waiting times in England vary greatly between hospitals. You have the
+                    <div class="banner-text col col-12 col-lg-6">
+                        <h1>Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment</span></h1>
+                        <p class="col-grey">The quality of care and waiting times in England vary greatly between hospitals. You have the
                             legal right to
                             choose where to have your treatment*. It can be at: </p>
-                        <ul class="promo-list">
-                            <li>An NHS or private hospital, funded by the NHS</li>
-                            <li>A private hospital of your choice, paid for by you or your insurance</li>
+                        <ul class="banner-list col-grey">
+                            <li class="green-tick green-tick-large">An NHS or private hospital, funded by the NHS</li>
+                            <li class="green-tick green-tick-large">A private hospital of your choice, paid for by you or your insurance</li>
                         </ul>
                     </div>
                 @endif
                 <div class="col {{ !empty($layout) ? 'col-12 d-flex' : 'col-lg-6 col-12' }}">
-                    <div class="box {{ !empty($layout) ? 'mx-auto flat-box' : 'ml-auto' }}" style="{{ empty($hideText) ? 'max-width: 511px' : '' }}">
-                        <p class="SofiaPro-Medium">Find the best hospital{!! empty($layout) ? '<br>' : '' !!}  for your treatment</p>
+                    <div class="banner-form-wrapper rounded {{ !empty($layout) ? 'mx-auto flat-box' : 'ml-auto' }}" style="">
+                        <p class="SofiaPro-Medium">{!! !empty($layout) ? 'Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment' : 'Find the best hospitals' !!}</p>
                         <form
                             id="search_form"
                             class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-flex align-items-end search-form-row' : '' }}"
                             method="get"
-                              action="/results-page"
-                                style="">
+                            action="/results-page"
+                            style="">
                             <div class="form-child {{ !empty($layout) ? 'mr-2' : ''}}">
                                 @include('components.basic.select', [
                                     'selectPicker'          => 'true',
@@ -36,17 +37,17 @@
                                     'showLabel'             => true,
                                     'labelClass'            => 'd-none'
                                 ])
-                                <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
-                                   class="help-link"
-                                    @include('components.basic.popover', [
-                                    'dismissible'   => true,
-                                    'placement'      => 'top',
+{{--                                <a tabindex="0" data-offset="0 5px"--}}
+{{--                                   class="help-link"--}}
+{{--                                    @include('components.basic.popover', [--}}
+{{--                                    'dismissible'   => true,--}}
+{{--                                    'placement'      => 'top',--}}
 {{--                                    'size'           => 'large',--}}
-                                    'html'           => 'true',
-                                    'trigger'        => 'hover',
-                                    'content'        => '<p>Select your treatment<br>if known to refine results</p>
-                                                 {{--<p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}'])
-                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
+{{--                                    'html'           => 'true',--}}
+{{--                                    'trigger'        => 'hover',--}}
+{{--                                    'content'        => '<p>Select your treatment<br>if known to refine results</p>--}}
+{{--                                                 --}}{{--<p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}{{--'])--}}
+{{--                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
                             </div>
                             <div class="form-child postcode-parent {{ !empty($layout) ? 'mr-2' : ''}}">
 {{--                                Add this hidden input to remove the autocomplete functionality--}}
@@ -62,18 +63,18 @@
                                         'validation'    => 'maxlength=8 autocomplete="off"',
                                         'id'            => 'input_postcode'
                                     ])
-                                    <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
-                                       class="help-link"
-                                        @include('components.basic.popover', [
-                                        'dismissible'   => true,
-                                        'placement'      => 'top',
-                                        'html'           => 'true',
-                                        'trigger'        => 'hover',
-                                        'content'        => '<p>
-                                                         Please enter your postcode<br>for a refined search.
-                                                     </p>
-                                                     '])
-                                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
+{{--                                    <a tabindex="0" data-offset="0 5px"--}}
+{{--                                       class="help-link"--}}
+{{--                                        @include('components.basic.popover', [--}}
+{{--                                        'dismissible'   => true,--}}
+{{--                                        'placement'      => 'top',--}}
+{{--                                        'html'           => 'true',--}}
+{{--                                        'trigger'        => 'hover',--}}
+{{--                                        'content'        => '<p>--}}
+{{--                                                         Please enter your postcode<br>for a refined search.--}}
+{{--                                                     </p>--}}
+{{--                                                     '])--}}
+{{--                                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
                                 </div>
                                 <div class="postcode-results-container">
                                     <div class="ajax-box"></div>
@@ -90,7 +91,7 @@
                                     'selectedPlaceholder'   => true,
                                     'labelClass'            => 'font-18 pr-4',
                                     'name'                  =>'radius'])
-                                <a tabindex="0" _data-offset="30px, 40px" data-offset="0 5px"
+                                <a tabindex="0" data-offset="0 5px"
                                    class="help-link"
                                     @include('components.basic.popover', [
                                     'dismissible'   => true,
@@ -108,13 +109,14 @@
                                 >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                             </div>
                             @include('components.basic.button', [
-                                'classTitle'    => !empty($layout) ? 'btn btn-m btn-grad btn-turq ml-4' : 'btn btn-m btn-grad btn-turq py-3 mb-3',
-                                'buttonText'        => !empty($layout) ? 'Find<br>Hospitals' : 'Find Hospitals',
+                                'classTitle'    => !empty($layout) ? 'btn btn-squared btn-turq font-18 text-center' : 'btn btn-squared btn-block text-center btn-turq py-3 mb-3 font-18',
+                                'buttonText'    => !empty($layout) ? 'Find Hospitals' : 'Find Hospitals',
                                 'htmlButton'    => true,
-                                'style'         => !empty($layout) ? 'width: 114px; text-align: center; padding: 0; font-size: 18px; height: 62px; border-radius: 24px' : ''])
+                                'style'         => !empty($layout) ? 'padding: 16px 45px; border: 2px solid transparent' : '',
+                            ])
                             @unless(!empty($layout) && $layout == 'row')
                                 <div class='browse-button'>
-                                    <a class="SofiaPro-Medium" href="{{url('/results-page')}}">Browse all hospitals</a>
+                                    <a class="col-grey" href="{{url('/results-page')}}">Browse all hospitals</a>
                                 </div>
                             @endunless
                         </form>

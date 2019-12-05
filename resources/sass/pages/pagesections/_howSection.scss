@@ -1,21 +1,19 @@
 //============================HOW SECTION=============================
 .how-section__parent {
-    padding: 45px 0 90px;
-
-    .icon-title,
-    .icon-description {
-        //width:89%;
-        color: $lightestGrey;
-    }
+    padding: 75px 0;
 
     .icon-title {
-        @include font-style('SofiaPro-Medium', 22px, false, #000, 26px, -0.9px);
+        //@include font-style('SofiaPro-Medium', 22px, false, #000, 26px, -0.9px);
+        @include font-size(22);
+        @extend .SofiaPro-Medium;
         margin-bottom: 25px;
     }
 
     .icon-description {
-        li, p {
-            @include font-style(false, 20px, false, false, 24px, -1px);
+        li,
+        p {
+            @extend .col-grey;
+            line-height: 1.4;
         }
     }
 }
@@ -23,59 +21,30 @@
 .how-section {
     .row {
         @include media-breakpoint-up(md){
-            @include reset-row-spacing(30px);
+            @include reset-row-spacing(8px);
         }
     }
 }
 
 .how-section__child {
     text-align: center;
-    //padding: 0 5.5%;
     position: relative;
 
-    .icon {
-        //display: flex;
-        //@include justify-content($value: center);
-        margin-bottom: 25px;
-        height: 120px;
-        @include icon-bg-center(100%);
-        background-size: contain;
-
-        svg {
-            transform-origin: 50% 50%;
-            height: 100%;
-            width: auto;
-            fill: $turq;
-        }
+    .col-inner {
+        box-shadow: $box-shadow;
+        padding: 30px;
     }
 
-    .icon-description {
-        > ul {
-            //padding: 0 0 0 50px;
-            margin: 30px 0 50px 0;
-            counter-reset: counter;
+    .icon {
+        margin-bottom: 20px;
+        height: 60px;
+        @include icon-bg-center(100%);
+        background-size: contain;
+    }
 
-            > li {
-                margin: 0 0 22px 0;
-                position: relative;
-                counter-increment: counter;
-
-                &:before {
-                    content: counter(counter) '.';
-                    position: absolute;
-                    top: 0;
-                    right: calc(100% + 10px);
-                    color: $blue;
-                    @extend .font-semibold;
-                }
-
-                ul {
-                    li {
-
-                    }
-                }
-            }
-        }
+    .icon-title {
+        @include font-size(1.2rem);
+        margin-bottom: 15px;
     }
 }
 
@@ -84,26 +53,6 @@
 //============================ HOW PAGE =============================
 .how-section__extra {
     padding: 40px 0;
-
-    .row {
-        .col:first-child {
-            padding-right: 100px;
-        }
-
-        .col:last-child {
-            padding-left: 0;
-        }
-    }
-
-    .flex-row-reverse {
-        .col:first-child {
-            padding-left: 100px;
-        }
-
-        .col:last-child {
-            padding-right: 0;
-        }
-    }
 
     form {
         padding-right: 90px;

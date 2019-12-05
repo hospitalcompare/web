@@ -16,6 +16,10 @@
     {{--            ['displayBlock' => 'true'])--}}
     {{--    </section>--}}
     <section>
+        @include('pages.pagesections.resultspageform', [
+        'displayBlock' => true])
+    </section>
+    <section>
         <h3>Waiting times popover</h3>
         <div class="popover popover-regular fade bs-popover-top show" role="tooltip"
              id="popover438743" x-placement="top" style="position: relative;">
@@ -238,7 +242,7 @@
     {{--                                <div class=""></div>--}}
     {{--                                <div class="cell">--}}
     {{--                            <span class="position-relative">Hospital Type&nbsp;&nbsp;--}}
-    {{--                                <span tabindex="0" _data-offset="30px, 40px" data-offset="0 5px" class="help-link"--}}
+    {{--                                <span tabindex="0" data-offset="0 5px" class="help-link"--}}
     {{--                                      data-toggle="popover-comparison" data-content="--}}
     {{--                                                 <span>--}}
     {{--                                                     NHS or Private Hospital--}}
@@ -258,7 +262,7 @@
     {{--                                </div>--}}
     {{--                                <div class="cell">--}}
     {{--                            <span class="position-relative">Average Waiting Time&nbsp;&nbsp;--}}
-    {{--                                <span tabindex="0" _data-offset="30px, 40px" data-offset="0 5px" class="help-link"--}}
+    {{--                                <span tabindex="0" data-offset="0 5px" class="help-link"--}}
     {{--                                      data-toggle="popover-comparison" data-content="--}}
     {{--                                                    <span>--}}
     {{--                                                        Our waiting time data is based on NHS data, specifically the number of weeks that 92 out or 100 people wait for their treatment to start.--}}
@@ -760,10 +764,7 @@
                 'address'       => '<strong>Hospital name</strong><br>Hospital address<br>Hospital Town<br>Hospital County<br>Hospital Postcode'
             ])
     </section>
-    <section>
-        @include('pages.pagesections.resultspageform', [
-        'displayBlock' => true])
-    </section>
+
     <section class="pt-3">
         <div class="container">
             <h3>Enquiry Form</h3>
@@ -1038,7 +1039,7 @@
                     </div>
                 </div>
                 <h3>Popover trigger</h3>
-                <a tabindex="0" data-offset="30px, 40px" class="help-link help-link__inline"
+                <a tabindex="0" data-offset="30px 40px" class="help-link help-link__inline"
                     @include('components.basic.popover', [
                     'size'      => 'large',
                     'placement' => 'top',

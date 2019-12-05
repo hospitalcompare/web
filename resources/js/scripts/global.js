@@ -48,8 +48,11 @@ window.repeatStringNumTimes = function(string, times) {
 };
 
 // Remove trailing comma from comparison ids
-window.removeTrailingCharacter = function(string){
-    return string.replace(/,\s*$/, "")
+window.removeTrailingComma = function(string){
+    if (string.charAt(string.length - 1) === ',') {
+        return string.replace(/,\s*$/, "");
+    }
+    return string;
 };
 
 // Scroll up to show alert bar
@@ -217,40 +220,6 @@ window.slugify = function(string) {
 };
 
 // Compare functions
-/**
- * Disable compare buttons if we have reached the max no of items
- *
- */
-window.disableButtons = function (modifier = 0) {
-    var compareCount = parseInt(Cookies.get('compareCount'));
-    // console.log('Compare count: ' + compareCount);
-
-    var $notSelected = $('.compare').not($('.selected'));
-
-    if (compareCount + modifier === 5) {
-        $notSelected
-            .addClass('disabled')
-            .parent()
-        // .prop('title', 'Sorry, you have reached the limit of hospitals to compare.')
-        // .attr('data-toggle', 'tooltip');
-        // enable tooltips
-        // $('[data-toggle="tooltip"]').tooltip();
-    }
-};
-
-// Reenable buttons to allow to add to compare
-window.enableButtons = function () {
-    compareCount = Cookies.get('compareCount');
-    compareCount = parseInt(compareCount);
-
-    if (compareCount === 5) {
-        $('.compare')
-            .removeClass('disabled')
-            .parent()
-            .prop('title', '');
-    }
-};
-
 window.getHospitalsByIds = function(hospitalIds) {
     var procedureId = getUrlParameter('procedure_id');
 
@@ -278,7 +247,7 @@ window.getHospitalsByIds = function(hospitalIds) {
 
                 // console.log('Data added to compare, ', parseInt(Cookies.get('compareCount')));
                 // Disable buttons if we have reached the max number of items
-                if (parseInt(Cookies.get('compareCount')) === 5) {
+                if (getCompareCount() === 5) {
                     disableButtons();
                 }
             }
@@ -318,4 +287,41 @@ window.getUrlParameter = function getUrlParameter(sParam) {
             return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
         }
     }
+};
+
+
+// Get compare count from compare hospitals data
+window.getCompareCount = function(){
+    if(Cookies.get("compareHospitalsData") != ""){
+        return parseInt(removeTrailingComma(Cookies.get('compareHospitalsData')).split(',').length);
+    }
+    return 0;
+};
+
+// Remove trailing comma from comparison ids
+window.removeTrailingComma = function(string){
+    if (string.charAt(string.length - 1) === ',') {
+        return string.replace(/,\s*$/, "");
+    }
+    return string;
+};
+
+// Compare functions
+/**
+ * Disable compare buttons if we have reached the max no of items
+ *
+ */
+window.disableButtons = function (modifier = 0) {
+    var $notSelected = $('.compare').not($('.selected'));
+    $notSelected
+        .addClass('disabled')
+        .parent();
+};
+
+// Reenable buttons to allow to add to compare
+window.enableButtons = function () {
+    $('.compare')
+        .removeClass('disabled')
+        .parent()
+        .prop('title', '');
 };

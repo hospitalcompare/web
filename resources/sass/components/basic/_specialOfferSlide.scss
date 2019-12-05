@@ -62,12 +62,9 @@
     }
 
     .special-offer-title {
-        @include font-style('SofiaPro-Medium', 22px, false, false, 19.2px, -1.1px);
+        @include font-size(22);
+        @extend .SofiaPro-Medium;
         margin-bottom: 0.4rem;
-    }
-
-    .special-offer-copy {
-        @include font-style('SofiaPro-Regular', 15px, false, false, 19.2px, -0.75px);
     }
 
     ul {

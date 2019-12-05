@@ -32,7 +32,7 @@ textarea {
 input:not([type="range"]):not([type="submit"]):not([type="checkbox"]),
 select:not([class^="ui-datepicker"]) {
     border: 2px solid $darkestWhite; /*Removes border*/
-    border-radius: 10px;
+    border-radius: $border-radius;
     appearance: none;
     color: $darkerGrey;
     background-color: $white;
@@ -50,7 +50,7 @@ select::-ms-expand {
 }
 
 // Homepage banner form
-.box {
+.banner-form-wrapper {
     select,
     input {
         //padding-left: 16px;
@@ -89,7 +89,8 @@ select::-ms-expand {
     select {
         height: 45px;
         padding: 0 100px 0 16px;
-        @include font-style('SofiaPro-Medium', 18px, false, false, 20px, -0.9px);
+        @include font-size(18);
+        @extend .SofiaPro-Medium;
     }
 
     &:after {
@@ -104,7 +105,7 @@ select::-ms-expand {
         width: 45px;
         height: 45px;
         line-height: 45px;
-        border-radius: 0 10px 10px 0;
+        border-radius: 0 $border-radius $border-radius 0;
         border: 2px solid $darkestWhite;
         background-color: $darkestWhite;
         pointer-events: none;

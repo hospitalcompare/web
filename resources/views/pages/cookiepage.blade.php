@@ -65,18 +65,18 @@
                                 </td>
                                 <td>Used for security reasons to protect your security while navigating our site.</td>
                             </tr>
-                            <tr>
-                                <th scope="row">compareCount</th>
-                                <td>compareCount</td>
-                                <td>Number that is showing how many items you are comparing.</td>
-                                <td>Used for the comparison functionality so you can compare hospitals on our site.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">compareHospitalsData</th>
-                                <td>compareHospitalsData</td>
-                                <td>String that contains the actual data that the user is comparing.</td>
-                                <td>Used for the comparison functionality so you can compare hospitals on our site</td>
-                            </tr>
+{{--                            <tr>--}}
+{{--                                <th scope="row">compareCount</th>--}}
+{{--                                <td>compareCount</td>--}}
+{{--                                <td>Number that is showing how many items you are comparing.</td>--}}
+{{--                                <td>Used for the comparison functionality so you can compare hospitals on our site.</td>--}}
+{{--                            </tr>--}}
+{{--                            <tr>--}}
+{{--                                <th scope="row">compareHospitalsData</th>--}}
+{{--                                <td>compareHospitalsData</td>--}}
+{{--                                <td>String that contains the actual data that the user is comparing.</td>--}}
+{{--                                <td>Used for the comparison functionality so you can compare hospitals on our site</td>--}}
+{{--                            </tr>--}}
                             <tr>
                                 <th scope="row">showDoctor</th>
                                 <td>showDoctor</td>
@@ -84,12 +84,12 @@
                                 </td>
                                 <td>Stops the doctor popup appearing multiple times.</td>
                             </tr>
-                            <tr>
-                                <th scope="row">compareCount</th>
-                                <td>compareCount</td>
-                                <td>Number that is showing how many items you are comparing.</td>
-                                <td>Used for the comparison functionality so you can compare hospitals on our site.</td>
-                            </tr>
+{{--                            <tr>--}}
+{{--                                <th scope="row">compareCount</th>--}}
+{{--                                <td>compareCount</td>--}}
+{{--                                <td>Number that is showing how many items you are comparing.</td>--}}
+{{--                                <td>Used for the comparison functionality so you can compare hospitals on our site.</td>--}}
+{{--                            </tr>--}}
                             <tr>
                                 <th scope="row">compareHospitalsData</th>
                                 <td>compareHospitalsData</td>

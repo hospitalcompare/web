@@ -5,24 +5,28 @@
 }
 
 .corporate-content {
-    background-color: #fff;
     //box-shadow: inset 0px -20px 0px 0px $turq;
+
+    .corporate-content-inner {
+        background-color: #fff;
+        padding: 30px;
+    }
 }
 
 .corporate-content-section-1 {
     width: $hospital-image-width;
+    display: none;
 }
 
 .corporate-content-section-2 {
     //width: calc(86% - 134px);
-    width: calc(100% - 134px);
-    //@extend .bg-teal;
-    padding-left: 8px;
+    //width: calc(100% - 134px);
+    //padding-left: 8px;
     //padding-top: 18px;
     //padding-bottom: 60px;
 
     .nav-tabs {
-        box-shadow: inset 0px -2px 0px 0px rgba(236, 236, 236, 1), inset 0px 2px 0px 0px rgba(236,236,236,1);
+        //box-shadow: inset 0px -2px 0px 0px rgba(236, 236, 236, 1), inset 0px 2px 0px 0px rgba(236,236,236,1);
 
         li { // nav-item
             margin-right: 25px;
@@ -32,7 +36,8 @@
                 color: $caretBlack;
                 @include font-size(18);
                 @extend .SofiaPro-Medium;
-                @extend .py-2;
+                @extend .pt-0;
+                @extend .pb-2;
                 background-color: transparent;
 
                 &.active {
@@ -47,6 +52,44 @@
         @include reset-row-spacing(12px);
     }
 
+    // Carousel styles
+    .carousel-inner {
+        margin-bottom: 6px;
+    }
+
+    .carousel-item {
+        @include aspect-ratio(100, 64, auto);
+    }
+
+    .indicators {
+        @include reset-row-spacing(3px);
+
+        .col-inner {
+            @include aspect-ratio(43, 40);
+            position: relative;
+            overflow: hidden;
+
+            img {
+                @include v-h-c;
+            }
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        align-items: flex-end;
+    }
+
+    //
+    //.carousel-control-prev {
+    //    left: -12px;
+    //}
+    //.carousel-control-next {
+    //    right: -12px;
+    //}
+
+    // End carousel
+
     .tab-pane,
     .media-pane {
         padding-top: 13px;
@@ -57,28 +100,6 @@
             @include reset-row-spacing(7.5px);
         }
 
-        // Carousel styles
-        .carousel-inner {
-            margin-bottom: 6px;
-        }
-
-        .carousel-item {
-            @include aspect-ratio(100, 64, auto);
-        }
-
-        .indicators {
-            @include reset-row-spacing(3px);
-
-            .col-inner {
-                @include aspect-ratio(43, 40);
-                position: relative;
-                overflow: hidden;
-
-                img {
-                    @include v-h-c;
-                }
-            }
-        }
 
         // Video
         .video-wrapper {
@@ -95,12 +116,6 @@
             margin-top: 5px;
         }
 
-        .carousel-control-prev {
-            left: -12px;
-        }
-        .carousel-control-next {
-            right: -12px;
-        }
     }
 
     .special-offers-tab {
@@ -119,52 +134,56 @@
 }
 
 
-.modal-carousel {
-    // Carousel styles
-    .carousel-inner {
-        //margin-bottom: 10px;
-    }
-
-    .carousel-item {
-        @include aspect-ratio(190, 110, auto);
-    }
-
-    .indicators {
-        @include reset-row-spacing(5px);
-        cursor: pointer;
-
-        li {
-            margin-bottom: 6px;
-
-            .col-inner {
-                @include aspect-ratio(43, 40);
-                position: relative;
-                overflow: hidden;
-
-                img {
-                    @include v-h-c;
-                }
-            }
-        }
-    }
-
-    .indicators {
-        li {
-            margin-top: 10px;
-            margin-bottom: 0;
-        }
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        width: 20px;
-        height: 20px;
-    }
-}
+//.modal-carousel {
+//    // Carousel styles
+//    .carousel-inner {
+//        //margin-bottom: 10px;
+//    }
+//
+//    .carousel-item {
+//        @include aspect-ratio(190, 110, auto);
+//    }
+//
+//    .indicators {
+//        @include reset-row-spacing(5px);
+//        cursor: pointer;
+//
+//        li {
+//            margin-bottom: 6px;
+//
+//            .col-inner {
+//                @include aspect-ratio(43, 40);
+//                position: relative;
+//                overflow: hidden;
+//
+//                img {
+//                    @include v-h-c;
+//                }
+//            }
+//        }
+//    }
+//
+//    .indicators {
+//        li {
+//            margin-top: 10px;
+//            margin-bottom: 0;
+//        }
+//    }
+//
+//    .carousel-control-prev-icon,
+//    .carousel-control-next-icon {
+//        width: 20px;
+//        height: 20px;
+//    }
+//}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     transition: $transition;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
         .carousel-arrow-bg {

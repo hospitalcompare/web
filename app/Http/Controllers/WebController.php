@@ -24,6 +24,10 @@ class WebController extends BaseController
     public function homepage() {
         //Retrieve the list of Procedures sorted by name ASC
         $procedures = Utils::getProceduresForDropdown();
+        //Get all the FAQs from DB
+        $faqs  = Faq::with('category')->get()->take(3);
+        $this->returnedData['success']      = true;
+        $this->returnedData['data']['faqs'] = $faqs;
 
         $this->returnedData['success']              = true;
         $this->returnedData['data']['procedures']   = $procedures;

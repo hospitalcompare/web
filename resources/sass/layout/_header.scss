@@ -3,33 +3,15 @@
     //width: $fullWidth;
     width: 100%;
     text-align: center;
-
-    .header {
-        .fa-chevron-down {
-            color: $white;
-            position: relative;
-            left: 5px;
-
-        }
-
-        .fa-cross {
-            position: absolute;
-            top: 4px;
-            left: 0;
-            color: $white;
-        }
-    }
 }
 
 //HEADER SECTION
-
-
 .branding {
     display: flex;
     justify-content: space-between;
 }
 
-.headerLogoParent {
+.header-logo-parent {
     display: flex;
     align-items: center;
 
@@ -39,27 +21,11 @@
             text-decoration: none;
         }
 
-        .headerLogoImg {
+        .header-logo-image {
             //width: 34px;
             //height: 34px;
         }
     }
-}
-
-.headerLogoTitle {
-    color: $white;
-    font-size: 20px;
-    margin-left: 15px;
-
-}
-
-.titleParent {
-    h1 {
-        font-size: 1.3em;
-        color: $white;
-    }
-
-    position: relative;
 }
 
 .main-nav {
@@ -103,7 +69,7 @@
     }
 }
 
-.dropdownMenu {
+.submenu {
     position: absolute;
     background: $darkerAqua;
     width: 200px;
@@ -114,12 +80,12 @@
     z-index: 99;
 }
 
-.main-menu li:hover > .dropdownMenu {
+.main-menu li:hover > .submenu {
     //display:block;
     opacity: 1;
 }
 
-.main-nav .dropdownMenu li a {
+.main-nav .submenu li a {
     padding: 0;
 }
 
