@@ -49,13 +49,14 @@
             }
 
             input {
-                padding-left: 60px;
+                padding-left: 50px;
             }
         }
     }
 
-    &.flat-box {
+    &.flat-form {
         padding: 30px 40px 30px;
+        min-width: 1028px;
 
         .dropdown-toggle,
         #input_postcode {
@@ -63,11 +64,19 @@
             max-width: 230px;
         }
 
+        .dropdown-toggle,
+        #input_postcode,
+        #submit_search {
+            max-height: 57px;
+        }
+
         .form-child {
             margin-top: 30px;
         }
 
-
+        #submit_search {
+            width: 100%;
+        }
     }
 
     .form-child {
@@ -181,6 +190,7 @@
         transition: max-width 0.8s ease;
 
         &.revealed-right {
+            min-width: 200px;
             max-width: 500px;
             visibility: visible;
             @extend .mr-2;

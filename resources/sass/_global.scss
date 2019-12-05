@@ -266,8 +266,6 @@ select.big {
     color: $darkestGrey;
 }
 
-.col-
-
 .col-caretBlack {
     color: $caretBlack;
 }
@@ -468,6 +466,10 @@ path {
 // Padding
 .p-30 {
     padding: 30px;
+}
+
+.mb-40 {
+    margin-bottom: 40px !important;
 }
 
 // line-height

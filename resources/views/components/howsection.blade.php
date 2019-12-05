@@ -1,6 +1,6 @@
 <div class="how-section container {{ !empty($containerFluid) ?? ($containerFluid) ? 'container-980' : '' }}">
     @if(!empty($sectionTitle))
-        <h2 class="section-title text-center">{{ $sectionTitle }}</h2>
+        <h2 class="section-title text-center mb-40">{{ $sectionTitle }}</h2>
     @endif
     <div class="row">
         @if(!empty($howsections))
