@@ -49,8 +49,8 @@
             //border: 2px solid $turq;
             text-align: center;
             color: $turq;
-            font-size: 20px;
-            border-radius: 10px;
+            @include font-size(20);
+            border-radius: $border-radius;
             @include transition(0.3s);
             @extend .SofiaPro-SemiBold;
         }
@@ -79,6 +79,5 @@
         line-height: 32px;
         color: $turq;
         font-size: 28px;
-
     }
 }
