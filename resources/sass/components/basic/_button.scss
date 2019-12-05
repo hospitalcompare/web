@@ -159,6 +159,10 @@
     &.btn-squared {
         border-radius: $border-radius;
         padding: 25px 56px;
+
+        &_slim {
+            padding: 14px 26px;
+        }
     }
 
     &.btn-enquire-all {

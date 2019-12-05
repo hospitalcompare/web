@@ -52,18 +52,16 @@
 
 //============================ HOW PAGE =============================
 .how-section__extra {
-    padding: 40px 0;
 
     form {
-        padding-right: 90px;
+        //padding-right: 90px;
     }
 
     .bootstrap-select {
-        max-width: 220px;
+        //max-width: 220px;
     }
 
     .select-parent {
-
         label {
             width: 100%;
             max-width: 260px;
@@ -72,7 +70,7 @@
         svg {
             position: absolute;
             @include v-c;
-            right: 14px;
+            right: 30px;
         }
     }
 
@@ -80,5 +78,14 @@
 
     .dropdown-toggle {
         padding: 8px 40px 8px 13px;
+        @include font-size(16);
     }
+}
+
+#how_to_use_filter_policies .select-parent {
+    background-color: #fff !important;
+    padding: 1rem !important;
+    border: .05rem solid #d7d7d7 !important;
+    border-radius: 5px !important;
+    width: 100% !important;
 }

@@ -16,6 +16,10 @@ body, * {
 //}
 
 main {
+    section {
+        padding: 75px 0;
+    }
+
     section:last-child {
         padding-bottom: 100px !important;
     }

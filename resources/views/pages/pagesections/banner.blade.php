@@ -1,6 +1,6 @@
 <section class="banner-parent py-0">
     <div class="banner">
-        <div class="container {{ !empty($layout) && $layout == 'row' ? '_container-1028' : '' }}">
+        <div class="container {{ !empty($layout) && $layout == 'row' ? 'container-1028' : '' }}">
             <div class="row">
                 @if(empty($hideText))
                     <div class="banner-text col col-12 col-lg-6">
@@ -15,7 +15,7 @@
                     </div>
                 @endif
                 <div class="col {{ !empty($layout) ? 'col-12 d-flex' : 'col-lg-6 col-12' }}">
-                    <div class="banner-form-wrapper rounded {{ !empty($layout) ? 'mx-auto flat-box' : 'ml-auto' }}" style="">
+                    <div class="banner-form-wrapper rounded {{ !empty($layout) ? 'mx-auto flat-box w-100' : 'ml-auto' }}" style="">
                         <p class="SofiaPro-Medium">{!! !empty($layout) ? 'Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment' : 'Find the best hospitals' !!}</p>
                         <form
                             id="search_form"
