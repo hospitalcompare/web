@@ -49,495 +49,65 @@ class SearchFaqs extends Migration
 
         //All questions that will be populated
         $questions = [
-            '<div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseOne" aria-expanded="false"
-                            aria-controls="collapseOne">
-                        1 Can I choose to have my procedure performed at a private hospital and the NHS
-                        will pay?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingTwo">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTwo" aria-expanded="false"
-                            aria-controls="collapseTwo">
-                        1.1 Do I have a legal right to have my procedure at a private hospital and for
-                        the NHS to pay for it ?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingThree">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseThree" aria-expanded="false"
-                            aria-controls="collapseThree">
-                        1.2 How do I compare information on several hospitals?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingFour">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseFour" aria-expanded="false"
-                            aria-controls="collapseFour">
-                        1.3 Can I make enquiries of more than one hospital for the same procedure?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingFive">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseFive" aria-expanded="false"
-                            aria-controls="collapseFive">
-                        1.4 Will the NHS pay for a special offer listed on your site?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingSix">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseSix" aria-expanded="false"
-                            aria-controls="collapseSix">
-                        1.5 How do I find a consultant of my choice?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingSeven">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseSeven" aria-expanded="false"
-                            aria-controls="collapseSeven">
-                        1.6 Can I choose a consultant?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingEight">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseEight" aria-expanded="false"
-                            aria-controls="collapseEight">
-                        1.7 Do the hospitals listed carry out cosmetic surgery?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingNine">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseNine" aria-expanded="false"
-                            aria-controls="collapseNine">
-                        1.8 If I have booked an appointment with an NHS hospital already can I change to
-                        have my procedure at a private hospital paid for by the NHS?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingTen">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTen" aria-expanded="false"
-                            aria-controls="collapseTen">
-                        1.9 I have seen a consultant at an NHS hospital, can I change to a consultant at
-                        a private hospital?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingEleven">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseEleven" aria-expanded="false"
-                            aria-controls="collapseEleven">
-                        1.10 I have seen a consultant at an NHS hospital can I make an appointment for a
-                        second opinion through your site? Will the NHS pay for that?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingTwelve">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTwelve" aria-expanded="false"
-                            aria-controls="collapseTwelve">
-                        1.11 I only need an outpatient appointment can I book that through your website?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingThirteen">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseThirteen" aria-expanded="false"
-                            aria-controls="collapseThirteen">
-                        1.12 Can I book an appointment with a named consultant through your website?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingFourteen">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseFourteen" aria-expanded="false"
-                            aria-controls="collapseFourteen">
-                        1.13 Where do I find information about consultants on your site?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingFifteen">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseFifteen" aria-expanded="false"
-                            aria-controls="collapseFifteen">
-                        1.14 Can I compare consultants on your site?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingSixteen">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseSixteen" aria-expanded="false"
-                            aria-controls="collapseSixteen">
-                        2 I have private healthcare insurance, can I choose to have my procedure at any
-                        of the hospitals you feature?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingSeventeen">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseSeventeen" aria-expanded="false"
-                            aria-controls="collapseSeventeen">
-                        2.1 How can I find out if my insurance policy covers the hospitals, procedures
-                        or consultants mentioned on your site?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingEighteen">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseEighteen" aria-expanded="false"
-                            aria-controls="collapseEighteen">
-                        3 Am I going to be charged for using your comparison site?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingNineteen">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseNineteen" aria-expanded="false"
-                            aria-controls="collapseNineteen">
-                        4 Do you cover all hospitals in England? Wales? Scotland ? Northern Ireland?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingTwenty">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTwenty" aria-expanded="false"
-                            aria-controls="collapseTwenty">
-                        5 Do you cover all hospitals in the UK?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingTwentyOne">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTwentyOne" aria-expanded="false"
-                            aria-controls="collapseTwentyOne">
-                        6 Are you a charity? How do you make money?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingTwentyTwo">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTwentyTwo" aria-expanded="false"
-                            aria-controls="collapseTwentyTwo">
-                        7 Are there any hidden charges for using your site?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingTwentyThree">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTwentyThree" aria-expanded="false"
-                            aria-controls="collapseTwentyThree">
-                        8 Are you sponsored by a private hospital group?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingTwentyFour">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTwentyFour" aria-expanded="false"
-                            aria-controls="collapseTwentyFour">
-                        9 Is the information you provide impartial?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingTwentyFive">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTwentyFive" aria-expanded="false"
-                            aria-controls="collapseTwentyFive">
-                        10 What are the strengths and weaknesses of this site?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingTwentySix">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTwentySix" aria-expanded="false"
-                            aria-controls="collapseTwentySix">
-                        11 Are you making recommendations?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingTwentySeven">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTwentySeven" aria-expanded="false"
-                            aria-controls="collapseTwentySeven">
-                        12 Are you giving insurance or financial advice?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingTwentyEight">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTwentyEight" aria-expanded="false"
-                            aria-controls="collapseTwentyEight">
-                        13 Are you giving medical recommendations for my procedure?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingTwentyNine">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseTwentyNine" aria-expanded="false"
-                            aria-controls="collapseTwentyNine">
-                        14 Are you financially incentivised or sponsored by private hospitals?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingThirty">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseThirty" aria-expanded="false"
-                            aria-controls="collapseThirty">
-                        15 Have you investigated any of these hospitals to verify waiting times and
-                        quality and so on?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingThirtyOne">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseThirtyOne" aria-expanded="false"
-                            aria-controls="collapseThirtyOne">
-                        16 How can I trust that the information you are giving is true?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingThirtyTwo">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseThirtyTwo" aria-expanded="false"
-                            aria-controls="collapseThirtyTwo">
-                        17 Has your site or service been approved by the NHS or CQC?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingThirtyThree">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseThirtyThree" aria-expanded="false"
-                            aria-controls="collapseThirtyThree">
-                        18 What happens to my information entered on an enquiry form?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingThirtyFour">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseThirtyFour" aria-expanded="false"
-                            aria-controls="collapseThirtyFour">
-                        19 Why can’t I make an enquiry of an NHS hospital but I can for a private
-                        hospital?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingThirtyFive">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseThirtyFive" aria-expanded="false"
-                            aria-controls="collapseThirtyFive">
-                        20 Is your information biased towards private hospitals?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingThirtySix">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseThirtySix" aria-expanded="false"
-                            aria-controls="collapseThirtySix">
-                        21 Who verifies the information on your site ? How can I trust it?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingThirtySeven">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseThirtySeven" aria-expanded="false"
-                            aria-controls="collapseThirtySeven">
-                        22 How can I complain about you or thank you or give feedback?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingThirtyEight">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseThirtyEight" aria-expanded="false"
-                            aria-controls="collapseThirtyEight">
-                        23 How can I complain about a Hospital or other service provider on your site?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingThirtyNine">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseThirtyNine" aria-expanded="false"
-                            aria-controls="collapseThirtyNine">
-                        24 When will I receive a reply to my enquiries?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingForty">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseForty" aria-expanded="false"
-                            aria-controls="collapseForty">
-                        25 If I make an enquiry are you going to use my information to send me marketing
-                        information?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingFortyOne">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseFortyOne" aria-expanded="false"
-                            aria-controls="collapseFortyOne">
-                        26 What happens to my data if I make an enquiry?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingFortyTwo">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseFortyTwo" aria-expanded="false"
-                            aria-controls="collapseFortyTwo">
-                        27 What happens to my data if I compare hospitals on your site?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingFortyThree">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseFortyThree" aria-expanded="false"
-                            aria-controls="collapseFortyThree">
-                        28 Where are you storing my personal information?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingFortyFour">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseFortyFour" aria-expanded="false"
-                            aria-controls="collapseFortyFour">
-                        29 Are you using any of my information for marketing to me?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingFortyFive">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseFortyFive" aria-expanded="false"
-                            aria-controls="collapseFortyFive">
-                        30 How often do you update your data?
-                    </button>
-                </h2>
-            </div>',
-            '<div class="card-header" id="headingFortySix">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed text-left" type="button"
-                            data-toggle="collapse"
-                            data-target="#collapseFortySix" aria-expanded="false"
-                            aria-controls="collapseFortySix">
-                        31 Is you site regulated?
-                    </button>
-                </h2>
-            </div>'
+            'Can I choose to have my procedure performed at a private hospital and the NHS will pay?',
+            'Do I have a legal right to have my procedure at a private hospital and for the NHS to pay for it?',
+            'How do I compare information on several hospitals?',
+            'Can I make enquiries of more than one hospital for the same procedure?',
+            'Will the NHS pay for a special offer listed on your site?',
+            'How do I find a consultant of my choice?',
+            'Can I choose a consultant?',
+            'Do the hospitals listed carry out cosmetic surgery?',
+            'If I have booked an appointment with an NHS hospital already can I change to have my procedure at a private hospital paid for by the NHS?',
+            'I have seen a consultant at an NHS hospital, can I change to a consultant at a private hospital?',
+            'I have seen a consultant at an NHS hospital can I make an appointment for a second opinion through your site? Will the NHS pay for that?',
+            'I only need an outpatient appointment can I book that through your website?',
+            'Can I book an appointment with a named consultant through your website?',
+            'Where do I find information about consultants on your site?',
+            'Can I compare consultants on your site?',
+            'I have private healthcare insurance, can I choose to have my procedure at any of the hospitals you feature?',
+            'How can I find out if my insurance policy covers the hospitals, procedures or consultants mentioned on your site?',
+            'Am I going to be charged for using your comparison site?',
+            'Do you cover all hospitals in England? Wales? Scotland ? Northern Ireland?',
+            'Do you cover all hospitals in the UK?',
+            'Are you a charity? How do you make money?',
+            'Are there any hidden charges for using your site?',
+            'Are you sponsored by a private hospital group?',
+            'Is the information you provide impartial?',
+            'What are the strengths and weaknesses of this site?',
+            'Are you making recommendations?',
+            'Are you giving insurance or financial advice?',
+            'Are you giving medical recommendations for my procedure?',
+            'Are you financially incentivised or sponsored by private hospitals?',
+            'Have you investigated any of these hospitals to verify waiting times and quality and so on?',
+            'How can I trust that the information you are giving is true?',
+            'Has your site or service been approved by the NHS or CQC?',
+            'What happens to my information entered on an enquiry form?',
+            'Why can’t I make an enquiry of an NHS hospital but I can for a private hospital?',
+            'Is your information biased towards private hospitals?',
+            'Who verifies the information on your site ? How can I trust it?',
+            'How can I complain about you or thank you or give feedback?',
+            'How can I complain about a Hospital or other service provider on your site?',
+            'When will I receive a reply to my enquiries?',
+            'If I make an enquiry are you going to use my information to send me marketing information?',
+            'What happens to my data if I make an enquiry?',
+            'What happens to my data if I compare hospitals on your site?',
+            'Where are you storing my personal information?',
+            'Are you using any of my information for marketing to me?',
+            'How often do you update your data?',
+            'Is you site regulated?',
         ];
 
         //All answers related to the given question that will be populated
         $answers = [
-            '<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+            '<p>
                         Yes you can. This is your legal right under the Health and Social Care Act 2013
                         and
                         this right is enshrined in the NHS constitution. In fact the NHS contract every
                         year
                         with private hospitals to provide resources to meet the demand for health
                         services. The NHS pay for these services not you.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         Yes you can. This is your legal right under theHealth and Social Care Act 2013
                         and
                         this right is enshrined in the NHS constitution. To take up your rights you will
@@ -552,12 +122,8 @@ class SearchFaqs extends Migration
                         In fact the NHS contract every year with private hospitals to provide resources
                         to meet the
                         demand for health services. The NHS pay for these services not you.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         When you have performed a search for hospitals on your results page you can
                         click the
                         blue “compare” icon
@@ -569,21 +135,13 @@ class SearchFaqs extends Migration
                         right a link which once clicked will compare the hospitals you have chosen to
                         compare.
 
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         Yes you can. You can do so on our site by clicking the “Make and Enquiry“
                         button on the right hand side of your screen opposite the hospital concerned
                         once you have performed a search.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         The NHS work in partnership with private hospitals and the private healthcare
                         sector
                         to perform thousands of procedures a year, paid for by the NHS. The terms upon
@@ -611,12 +169,8 @@ class SearchFaqs extends Migration
                     <p>
                         Generally, the Special Offers may relate to procedures which are paid for by the
                         patient or possibly by the Insurer, but not usually by the NHS.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         You can find a list of consultants who work at a hospital appearing in your
                         search
                         results for your procedure by clicking on the “consultants” button under the
@@ -637,12 +191,8 @@ class SearchFaqs extends Migration
                     </p>
                     <p>
                         [Note this functionality is not yet enable on the site]
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         You can choose a team to perform your procedure led by a consultant of your
                         choosing at an NHS hospital. This is your legal right. There are exceptions.
                     </p>
@@ -683,12 +233,8 @@ class SearchFaqs extends Migration
                         information about how to contact the NHS hospital concerned. You can also
                         discuss
                         how to contact your NHS Hospital with your GP.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         You can search for a hospital of your choice to perform your required
                         procedure by clicking the “Surgery Type “ button at the top left hand side of
                         your search results page and choosing a procedure, if known, from the drop down
@@ -713,12 +259,8 @@ class SearchFaqs extends Migration
                         may have exceptions that apply. You can clarify this with your insurers or make
                         an enquiry at the hospital or hospitals concerned by clicking the enquiry button
                         on your search results, as mentioned above.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         This depends on the circumstances. Generally, unless you are paying for the
                         treatment
                         yourself or it is being provided under the terms of your healthcare insurance
@@ -732,12 +274,8 @@ class SearchFaqs extends Migration
                         further information you can speak to your GP. You can also find out more
                         <a href="https://www.gov.uk/government/publications/the-nhs-choice-framework/the-nhs-choice-framework-what-choices-are-available-to-me-in-the-nh"
                            class="btn-link" target="_blank">here</a>
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         This depends on the circumstances. Generally, unless you decide to pay for the
                         treatment yourself or it is being provided under the terms of your healthcare
                         insurance policy, you do not have legal rights to change your consultant
@@ -752,34 +290,22 @@ class SearchFaqs extends Migration
                         more
                         <a href="https://www.gov.uk/government/publications/the-nhs-choice-framework/the-nhs-choice-framework-what-choices-are-available-to-me-in-the-nh"
                            class="btn-link" target="_blank">here</a>
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         Generally no, unless you are paying for that second opinion
                         privately or it is covered by the terms of your health insurance policy.
                         For more information on this issue you should speak to your GP or your health
                         insurance provider.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         Yes you can. Just perform a search for hospitals in the usual way, then click
                         the
                         “Make an Enquiry” button on the right hand side of your screen for the relevant
                         hospital.
                         The hospital will contact you and you can discuss the details with them.
                         Exceptions may apply.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         You can choose a team to perform your procedure led by a consultant of your
                         choosing at an
                         NHS hospital. This is your legal right. There are exceptions.
@@ -822,12 +348,8 @@ class SearchFaqs extends Migration
                         to their website where you will see all information about how to contact the NHS
                         hospital concerned.
                         You can also discuss how to contact them with your GP.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         You can find a list of consultants who work at each hospital appearing in your
                         search results
                         for your procedure by clicking on the “Consultants” button under the name of the
@@ -843,12 +365,8 @@ class SearchFaqs extends Migration
                         they will give you more information about the consultants or their team who
                         perform the procedure
                         you require at their hospital and their availability.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         No this facility is not currently available. Our primary purpose is to compare
                         hospitals.
                         However, you can find a list of consultants who work at a hospital appearing in
@@ -865,12 +383,8 @@ class SearchFaqs extends Migration
                         information about the
                         consultants or their team who perform the procedure you require at their
                         hospital and their availability.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         The terms of your insurance policy determine which hospital and which
                         consultants are authorised to
                         treat you if the procedure is to be paid for by your insurer. If you are unsure
@@ -886,12 +400,8 @@ class SearchFaqs extends Migration
                         reference to the hospitals authorised by that policy. If you are unsure either
                         ask your insurer or make
                         an enquiry of your hospital of choice and they will help you.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         Try clicking the filter button on the top right hand side of your search results
                         page called “Private healthcare policies”.
                         There you should be able to find the name of your health insurer and the name of
@@ -902,33 +412,17 @@ class SearchFaqs extends Migration
                     <p>
                         If you are unsure either ask your insurer or make an enquiry of your hospital of
                         choice and they will help you.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseEighteen" class="collapse" aria-labelledby="headingEighteen" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         Our services are and will always be free to consumers.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseNineteen" class="collapse" aria-labelledby="headingNineteen" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         No, at this point in time we only cover hospitals in England.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseTwenty" class="collapse" aria-labelledby="headingTwenty" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         No, at this point in time we only cover hospitals in England.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseTwentyOne" class="collapse" aria-labelledby="headingTwentyOne" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         We are not a charity we are a business and for that reason we have costs to
                         cover and seek to make money for providing a valued service. So if you make an
                         enquiry
@@ -947,12 +441,8 @@ class SearchFaqs extends Migration
                         the same format, in the same way so you can compare true waiting times from each
                         as disclosed by
                         them publicly on a like for like basis.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseTwentyTwo" class="collapse" aria-labelledby="headingTwentyTwo" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         Our services are and will always be free to consumers. But we are not a charity,
                         we
                         are a business and for that reason we have costs to cover and seek to make money
@@ -972,24 +462,16 @@ class SearchFaqs extends Migration
                         the same format, in the same way so you can compare true waiting times from each
                         as disclosed by
                         them publicly on a like for like basis.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseTwentyThree" class="collapse" aria-labelledby="headingTwentyThree" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         No we are not. We are an independent company and receive no sponsorship from
                         private hospital
                         groups and no private hospital group is a shareholder in our company.One of our
                         principles
                         is that we always strive to provide fair and impartial advice on hospital
                         choice.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseTwentyFour" class="collapse" aria-labelledby="headingTwentyFour" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         One of our key principles is to provide impartial advice at all times on
                         hospital availability
                         and choice based on the search criteria we provide for you. We are not a
@@ -1011,12 +493,8 @@ class SearchFaqs extends Migration
                         the same format, in the same way so you can compare true waiting times from each
                         as disclosed by
                         them publicly on a like for like basis.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseTwentyFive" class="collapse" aria-labelledby="headingTwentyFive" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         It’s important to understand that we give you the very best impartial advice on
                         hospital choice,
                         quickly and in a form that’s easy to digest. We compile the information we
@@ -1045,12 +523,8 @@ class SearchFaqs extends Migration
                         responsibility if
                         your procedure goes wrong or if the products or services you choose are not
                         right for you.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseTwentySix" class="collapse" aria-labelledby="headingTwentySix" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         No we do not give any form of recommendations of any nature. This will be a
                         matter for the
                         service provider to whom we connect you, whether it be a hospital, a medical
@@ -1073,12 +547,8 @@ class SearchFaqs extends Migration
                         you with other
                         specialists on other matters but we never give advice on medical or financial
                         matters.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseTwentySeven" class="collapse" aria-labelledby="headingTwentySeven" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         No we do not give any form of financial services or insurance advice. This will
                         be a matter for
                         the service provider to whom we connect you, whether it be an insurance broker,
@@ -1096,12 +566,8 @@ class SearchFaqs extends Migration
                         circumstances. Remember we give you impartial information on choice not
                         financial advice or
                         financial services advice.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseTwentyEight" class="collapse" aria-labelledby="headingTwentyEight" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         No we do not give medical advice or recommendations. This will be a matter for
                         the service provider
                         to whom we connect you, whether it be a private hospital or medical
@@ -1116,12 +582,8 @@ class SearchFaqs extends Migration
                         practitioners for your
                         particular circumstances. Remember we give you impartial information on choice
                         not medical advice or recommendations.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseTwentyNine" class="collapse" aria-labelledby="headingTwentyNine" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         One of our key objectives is to provide impartial advice at all times on
                         hospital availability
                         and choice based on the search criteria we provide for you. We are not a
@@ -1143,12 +605,8 @@ class SearchFaqs extends Migration
                         the same format, in the same way so you can compare true waiting times from each
                         as disclosed by
                         them publicly on a like for like basis.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseThirty" class="collapse" aria-labelledby="headingThirty" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         We compile the waiting times and other information on hospitals we present on
                         our site
                         from information which is published by the hospital concerned and the CQC and
@@ -1162,12 +620,8 @@ class SearchFaqs extends Migration
                         information on hospital choice in a clear and understandable way so that you can
                         compare hospitals
                         against other hospitals in a like for like manner.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseThirtyOne" class="collapse" aria-labelledby="headingThirtyOne" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p >',
+            '<p>
                         We do our best to ensure you get the very best available, impartial information
                         on hospital choice in
                         a clear and understandable way so that you can compare hospitals against other
@@ -1188,12 +642,8 @@ class SearchFaqs extends Migration
                         the right service from the right hospital and practitioners for your particular
                         circumstances. Remember we give
                         you impartial information on choice not medical advice or recommendations.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseThirtyTwo" class="collapse" aria-labelledby="headingThirtyTwo" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         No, it does not need to be. We compile the information we present to you from
                         information which is publicly available,
                         including from the NHS and CQC, but which may be difficult to find, hard to
@@ -1204,12 +654,8 @@ class SearchFaqs extends Migration
                         easy to understand formats, so you can compare
                         hospitals on a like for like basis; so you can form quick and clear comparisons
                         of the choices available to you.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseThirtyThree" class="collapse" aria-labelledby="headingThirtyThree" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         Once you have completed an enquiry form this will be sent to the hospital or
                         hospitals of your choice.
                         We keep a copy of the enquiry on our servers as a record. Your privacy is
@@ -1220,24 +666,16 @@ class SearchFaqs extends Migration
                         Once the enquiry is with the hospital it will be treated in accordance with
                         their terms and conditions
                         and privacy policy which you can access from their website.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseThirtyFour" class="collapse" aria-labelledby="headingThirtyFour" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         It’s simply that NHS hospitals do not have the facility or resources available
                         to answer your enquiry in this way.
                         The only way of making an enquiry of them is to ask them yourself. However, you
                         can book an appointment at a
                         National Health hospital through the NHS “E- Referral” booking system which you
                         can ask your GP about and they will guide you.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseThirtyFive" class="collapse" aria-labelledby="headingThirtyFive" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         No, we are always impartial, fair and unbiased displaying only factual
                         information and data. We have no bias
                         towards or against the NHS, private hospitals in general or any particular
@@ -1251,29 +689,20 @@ class SearchFaqs extends Migration
                         their mistakes. We do our best, however, to ensure you get the very best
                         available impartial information on hospital
                         choice in a clear and understandable way so that you can compare hospitals
-                        against other hospitals in a like for like manner.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseThirtySix" class="collapse" aria-labelledby="headingThirtySix" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                        against other hospitals in a like for like manner .
+                    </p >',
+            '<p>
                         We compile the waiting times and other information on hospitals we present on
                         our site from factual information which
                         is published by the hospital concerned, and we carry out a series of accuracy
                         and validation checks. If a hospital or
                         the CQC has given wrong or incomplete information that is not our responsibility
-                        and we can\'t be held liable for their
-                        mistakes. We do our best, however, to ensure you get the very best available
+                        and we can\'t be held liable for their mistakes. We do our best, however, to ensure you get the very best available
                         impartial information on hospital choice in
                         a clear and understandable way so that you can compare hospitals against other
-                        hospitals in a like for like manner.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseThirtySeven" class="collapse" aria-labelledby="headingThirtySeven" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                        hospitals in a like for like manner .
+                    </p >',
+            '<p>
                         You can contact to make a complaint and to give us feedback good or bad by
                         emailing to
                         <a class="btn-link" href="mailto:customerservice@hospitalcompare.co.uk">customerservice@hospitalcompare.co.uk</a>.
@@ -1281,12 +710,8 @@ class SearchFaqs extends Migration
                         all issues which you raise. All feedback is good, thank you, and will be used to
                         improve our services.
                         And if we have done something well, it’s good to hear.Thank you !
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseThirtyEight" class="collapse" aria-labelledby="headingThirtyEight" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         We do not represent any of the hospitals or practitioners you find on our site.
                         If you have a complaint about a hospital or
                         practitioner we suggest you contact them directly. Details of how to complain
@@ -1296,24 +721,16 @@ class SearchFaqs extends Migration
                         make contact with a solicitor through our site.To do this you will find contact
                         details at the bottom of our home page, if you
                         scroll down, under the heading “ If things go wrong”
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseThirtyNine" class="collapse" aria-labelledby="headingThirtyNine" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         This depends on the hospital to whom you have sent your enquiry. This is not
                         within our control and will generally be determined by
                         the hospital’s service standards. Most hospitals will tell you when you can
                         expect to receive a response on their website and in the
                         terms and conditions of their website. But you should expect to receive contact
                         within a few days.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseForty" class="collapse" aria-labelledby="headingForty" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         No we are not. Your privacy is important to us and we would only send you
                         marketing information if you expressly
                         consented to receiving it. Also you could stop receiving it at anytime by
@@ -1322,12 +739,8 @@ class SearchFaqs extends Migration
                         or by clicking the request to
                         unsubscribe from marketing information which will be found on all marketing
                         messages we might send you.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseFortyOne" class="collapse" aria-labelledby="headingFortyOne" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         Once you have completed an enquiry form this will be sent to the hospital or
                         hospitals of your choice. We keep a copy of
                         the enquiry on our servers as a record. Your privacy is important to us and we
@@ -1336,12 +749,8 @@ class SearchFaqs extends Migration
                         policy]. Once the enquiry is with the hospital it
                         will be treated in accordance with their terms and conditions and privacy policy
                         which you can access from their website.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseFortyTwo" class="collapse" aria-labelledby="headingFortyTwo" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         Your privacy is important to us. Unless you tell us who you are by making an
                         enquiry of a hospital. We don’t know who you are.
                         We may know your device identity as you search our site and we may have your IP
@@ -1352,21 +761,13 @@ class SearchFaqs extends Migration
                         find <a href="/privacy-policy" class="btn-link">here</a>
                         and from our Terms and Conditions which you can find <a
                             href="/terms-and-conditions" class="btn-link">here</a>.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseFortyThree" class="collapse" aria-labelledby="headingFortyThree" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         Your privacy is important to us. You can find out how we respect and protect
                         your privacy by reading our “Privacy Policy” which can be found
                         <a href="/privacy-policy" class="btn-link">here</a>.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseFortyFour" class="collapse" aria-labelledby="headingFortyFour" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         No we are not. Your privacy is important to us and we would only send you
                         marketing information if you expressly
                         consented to receiving it. Also you could stop receiving it at anytime by
@@ -1374,12 +775,8 @@ class SearchFaqs extends Migration
                         contacting us at <a class="btn-link" href="mailto:datamanager@hospitalcompare.co.uk">datamanager@hospitalcompare.co.uk</a>
                         or by clicking the request to terminate receiving marketing information which
                         will be found on all marketing messages we might send you.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseFortyFive" class="collapse" aria-labelledby="headingFortyFive" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         We monitor the site continually and update our information as soon as new
                         information is available to us and our experts are able to
                         cleanse and compile the comparison information into a form that can be easily
@@ -1389,12 +786,8 @@ class SearchFaqs extends Migration
                         this site on a monthly basis. There are exceptions.
                         Sometimes the information is available sooner sometimes later. Sometimes a
                         hospital will not update its information and sometimes they will supply no data.
-                    </p>
-                </div>
-            </div>',
-            '<div id="collapseFortySix" class="collapse" aria-labelledby="headingFortySix" data-parent="#faqs_accordion">
-                <div class="card-body">
-                    <p>
+                    </p>',
+            '<p>
                         No, it does not need to be. This is because we do not give medical advice or
                         recommendations and we do not give
                         financial advice either. This will be a matter for the service provider to whom
@@ -1413,9 +806,7 @@ class SearchFaqs extends Migration
                         practitioners and experts for your particular circumstances.
                         Remember we give you impartial information on choice not medical advice or
                         financial advice.
-                    </p>
-                </div>
-            </div>'
+                    </p>'
         ];
 
         //Faqs

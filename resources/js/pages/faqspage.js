@@ -36,15 +36,23 @@ function ajaxCall(input) {
                 //Check if we have at least one result in our data
                 // console.log(data.data.faqs);
                 if (!$.isEmptyObject(data.data.faqs)) {
-                    // console.log(data.faqs);
                     $.each(data.data.faqs, function (key, obj) { //$.parseJSON() method is needed unless chrome is throwing error.
                         // var regex = new RegExp(search, 'gi');
-                        var result = obj.question + obj.answer;
                         // Replace the search term within the results with a highlighted span
-
                         // result = result.replace(regex, `<span class="hl">${search}</span>`);
-                        ajaxBox
-                            .append('<div class="card">' + result + "</div>")
+                        ajaxBox.append('<div class="card"><div class="card-header" id="heading'+key+'">\n' +
+                                '                                <h2 class="mb-0">\n' +
+                                '                                    <button class="btn btn-link collapsed text-left" type="button"\n' +
+                                '                                            data-toggle="collapse"\n' +
+                                '                                            data-target="#collapse'+key+'" aria-expanded="false"\n' +
+                                '                                            aria-controls="collapse'+key+'">' + obj.question + "</button>\n" +
+                                "                                </h2>\n" +
+                                '                            </div><div id="collapse'+key+'" class="collapse" aria-labelledby="heading'+key+'" data-parent="#faqs_accordion">\n' +
+                            '<div class="card-body">\n' +
+                            '<p>' + obj.answer + '</button>\n' +
+                            '  </p>\n' +
+                            '</div>\n' +
+                            '</div></div>');
                     });
                     ajaxBox.highlight(search); // Use the highlight API to search for keyword, not including HTML tags
                 } else {
