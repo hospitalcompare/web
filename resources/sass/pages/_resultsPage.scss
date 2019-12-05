@@ -398,6 +398,11 @@
             span.sort-arrow.desc {
                 transform: rotateX(180deg);
             }
+
+            p {
+                @extend .SofiaPro-Medium;
+                white-space: nowrap;
+            }
         }
     }
 

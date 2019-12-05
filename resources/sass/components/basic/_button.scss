@@ -94,8 +94,13 @@
     //}
 
     &.btn-blue {
-        @include linear-gradient(90deg, $blue, $blue, $turq);
+        background-color: $blue;
+        //@include linear-gradient(90deg, $blue, $blue, $turq);
         background-size: 200%;
+
+        &:hover {
+            background-color: $turq;
+        }
 
         &.btn-grad {
             @include linear-gradient(90deg, $blue, $blue, $turq, $blue);
@@ -346,13 +351,13 @@
         &.btn-more-info {
             @include font-size(14);
             padding: 0 25px 0 8px;
-            border-radius: 4px 4px 0 0;
+            border-radius: $border-radius $border-radius 0 0;
             background-color: $turq;
 
             svg {
                 @include v-c;
                 right: 8px;
-                width: 0.6rem;
+                width: 0.8rem;
             }
 
             &:hover {
@@ -588,12 +593,12 @@
 
 // Back to top button
 .btn-back-to-top {
-    padding: 16px 50px 16px 20px;
     color: $white;
     min-width: 182px;
-    border-radius: 10px 10px 0 0;
-    @include font-size(22);
+    border-radius: $border-radius $border-radius 0 0;
+    @include font-size(1.1rem);
     @include gradient-animation($body-color, $body-color, $turq, $turq, 0.3s);
+    padding:px 50px 16px 20px;
 
     svg {
         @include v-c;

@@ -1,5 +1,6 @@
 .pagination-wrap {
     margin-top: 30px;
+    margin-bottom: 160px;
 }
 
 .pagination {
@@ -42,14 +43,15 @@
             margin: 0 3px;
             width: $pagination-link-height;
             height: $pagination-link-height;
-            line-height: $pagination-link-height;
+            //line-height: $pagination-link-height;
+            line-height: 33px;
             background-color: $white;
             box-shadow: inset 0 0 0 2px $turq;
             border: none;
             //border: 2px solid $turq;
             text-align: center;
             color: $turq;
-            @include font-size(20);
+            @include font-size(16);
             border-radius: $border-radius;
             @include transition(0.3s);
             @extend .SofiaPro-SemiBold;

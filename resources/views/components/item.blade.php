@@ -242,7 +242,7 @@
                                             'target'            => 'blank',
                                             'modalText'         => 'This is the text about prices',
                                             'hospitalIds'       => $id,
-                                            'buttonText'            => 'Click<br>for prices'])
+                                            'buttonText'            => 'Click for<br>prices'])
                                 </p>
                             @else
                                 <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>
