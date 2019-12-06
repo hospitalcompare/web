@@ -87,7 +87,6 @@
                             <p class="author-name">{{$data['blog']['author']['name']}}</p>
                             <p class="author-description">{{$data['blog']['author']['description']}}</p>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-4">

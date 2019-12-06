@@ -2,7 +2,7 @@
     @foreach($blogs as $blog)
         <div class="col-12 col-md-6 col-lg-4 position-relative">
             <div class="blog-wrap shadow">
-                <div class="image-wrapper position-relative">
+                <div class="image-wrapper blog-item-image position-relative">
                     <img class="content" alt="Image related to {{ $blog['title'] }}" src="{{ asset($blog['image']) }}">
 {{--                    <div class="overlay"></div>--}}
                     <div class="blog-item-category position-absolute rounded-circle p-2" style="background-color:{{$blog->category->colour}}">
