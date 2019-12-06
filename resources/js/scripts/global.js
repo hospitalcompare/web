@@ -29,7 +29,7 @@ $pickers.on('hide.bs.select', function (e, clickedIndex, isSelected, previousVal
 
 var $howToUseSelectPlaceholder = 'Select';
 // Change text on the dropdowns in how to use page
-$('.flat-box .dropdown-toggle .filter-option-inner-inner').text('Choose treatment');
+$('.flat-form .dropdown-toggle .filter-option-inner-inner').text('Choose treatment');
 $('#how_to_use_filter_policies .dropdown-toggle .filter-option-inner-inner').text($howToUseSelectPlaceholder);
 
 $('#how_to_use_policies').on('shown.bs.select', function(){

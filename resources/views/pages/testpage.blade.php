@@ -216,7 +216,7 @@
     {{--                                        <input class="d-none" type="text" name="additional_information"--}}
     {{--                                               value="Some info">--}}
     {{--                                        <button id="multiple_enquiries_button" style=""--}}
-    {{--                                                class="btn btn-squared btn-blue btn-grad btn-enquiry font-14" target=""--}}
+    {{--                                                class="btn btn-squared btn-blue btn-enquiry font-14" target=""--}}
     {{--                                                data-target="" href="javascript:void(0);" role="button">--}}
     {{--                                            Make an enquiry to all your chosen hospitals--}}
 
@@ -571,7 +571,7 @@
     {{--                                                     data-hospital-type="nhs-hospital"></div>--}}
     {{--                                                <div class="details"><p class="w-100 mt-auto">Walkergate Park </p><a--}}
     {{--                                                        id="783"--}}
-    {{--                                                        class="btn btn-icon btn-blue btn-grad btn-enquire enquiry mr-2 btn-block"--}}
+    {{--                                                        class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block"--}}
     {{--                                                        role="button" data-toggle="modal"--}}
     {{--                                                        data-hospital-url="www.ntw.nhs.uk"--}}
     {{--                                                        data-hospital-title="Walkergate Park "--}}
@@ -625,7 +625,7 @@
     {{--                                                     data-hospital-type="private-hospital"></div>--}}
     {{--                                                <div class="details"><p class="w-100 mt-auto">Caterham Dene--}}
     {{--                                                        Hospital </p><a id="272"--}}
-    {{--                                                                        class="btn btn-icon btn-blue btn-grad btn-enquire enquiry mr-2 btn-block"--}}
+    {{--                                                                        class="btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block"--}}
     {{--                                                                        role="button" data-toggle="modal"--}}
     {{--                                                                        data-hospital-url="www.firstcommunityhealthcare.co.uk/caterham-dene-community-hospital"--}}
     {{--                                                                        data-hospital-title="Caterham Dene Hospital "--}}

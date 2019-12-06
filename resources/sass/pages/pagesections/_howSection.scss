@@ -27,12 +27,14 @@
 }
 
 .how-section__child {
+
     text-align: center;
     position: relative;
 
     .col-inner {
-        box-shadow: $box-shadow;
+        //box-shadow: $box-shadow;
         padding: 30px;
+        height: 380px;
     }
 
     .icon {
@@ -52,18 +54,7 @@
 
 //============================ HOW PAGE =============================
 .how-section__extra {
-    padding: 40px 0;
-
-    form {
-        padding-right: 90px;
-    }
-
-    .bootstrap-select {
-        max-width: 220px;
-    }
-
     .select-parent {
-
         label {
             width: 100%;
             max-width: 260px;
@@ -72,7 +63,7 @@
         svg {
             position: absolute;
             @include v-c;
-            right: 14px;
+            right: 30px;
         }
     }
 
@@ -80,5 +71,14 @@
 
     .dropdown-toggle {
         padding: 8px 40px 8px 13px;
+        @include font-size(16);
     }
+}
+
+#how_to_use_filter_policies .select-parent {
+    background-color: #fff;
+    padding: 1rem;
+    border: $greyBorder;
+    border-radius: $border-radius;
+    width: 100% !important;
 }

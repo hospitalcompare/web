@@ -2,11 +2,11 @@
     <div class="back-top-wrapper mt-4 position-absolute">
         <div class="container back-top-content d-flex justify-content-end">
             @include('components.basic.button', [
-            'id' => 'back-to-top',
-            'classTitle' => 'btn btn-icon btn-back-to-top',
-            'buttonText' => '<span>Back to top</span>',
-            'hrefValue' => '#top',
-            'svg'  => 'chevron-up'])
+            'id'            => 'back-to-top',
+            'classTitle'    => 'btn btn-icon btn-back-to-top',
+            'buttonText'    => '<span>Back to top</span>',
+            'hrefValue'     => '#top',
+            'svg'           => 'chevron-up'])
         </div>
     </div>
     <div class="footer-upper">

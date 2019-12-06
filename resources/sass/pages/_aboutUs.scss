@@ -1,9 +1,28 @@
 .about-us-intro {
-    background-image: url('/images/Layer_16.png');
+    background-image: url('/images/about-hero.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
     border-bottom: $greyBorder;
+}
+
+.swirl {
+    svg {
+        path {
+            fill: $turq;
+        }
+    }
+}
+
+.our-background {
+    .icon-wrapper {
+        height: 60px;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
 }
 
 .social-contacts {

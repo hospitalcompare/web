@@ -7,8 +7,6 @@
                     <div
                         class="{{$NHSClass}} py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-pink' : 'bg-blue' }}">
                         <p class="m-0">{{$fundedText}}</p></div>
-
-                    {{--                    <span class="btn btn-green-plus btn-block toggle-special-offer"></span>--}}
                     <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
                 </div>
                 <div class="hospital-details w-100 position-relative">
@@ -242,7 +240,7 @@
                                             'target'            => 'blank',
                                             'modalText'         => 'This is the text about prices',
                                             'hospitalIds'       => $id,
-                                            'buttonText'            => 'Click<br>for prices'])
+                                            'buttonText'            => 'Click for<br>prices'])
                                 </p>
                             @else
                                 <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>
@@ -262,7 +260,7 @@
                         'hrefValue'         => $url,
                         'hospitalTitle'     => $title,
                         'modalTarget'       => '#hc_modal_enquire_private',
-                        'classTitle'        => 'btn btn-icon btn-grad btn-enquire btn-blue enquiry mr-2 btn-block font-12',
+                        'classTitle'        => 'btn btn-icon btn-enquire btn-blue enquiry mr-2 btn-block font-12',
                         'target'            => 'blank',
                         'buttonText'        => $btnText,
                         'id'                => 'enquire_private_'.$id,
@@ -274,7 +272,7 @@
                         'hrefValue'         => $url,
                         'hospitalTitle'     => $title,
                         'hospitalUrl'       => $d['url'],
-                        'classTitle'        => 'btn btn-icon btn-grad btn-blue btn-enquire enquiry mr-2 btn-block font-12',
+                        'classTitle'        => 'btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block font-12',
                         'buttonText'            => $btnText,
                         'modalTarget'       => '#hc_modal_enquire_nhs',
                         'id'                => 'enquire_nhs'.$id,
@@ -286,7 +284,7 @@
                             @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
                                 'class' => 'default'])
                             @include('components.basic.button', [
-                                'classTitle'        => 'toggle-special-offer btn btn-block btn-grad btn-icon btn-pink btn-special-offer btn-plus font-12',
+                                'classTitle'        => 'toggle-special-offer btn btn-block btn-icon btn-pink btn-special-offer btn-plus font-12',
                                 'htmlButton'        => true,
                                 'id'                => 'special_' . $id,
                                 'buttonText'        => 'Special Offers',

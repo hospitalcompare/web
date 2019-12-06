@@ -67,9 +67,7 @@
                 <div class="col col-12 col-md-6">
                     <div>
                         <h2 class="font-32 SofiaPro-SemiBold mb-4">NHS funded in a private hospital</h2>
-                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
-                            necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
-                            voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
+                        <p class="font-20 mb-4 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
                             distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
                             voluptates? Ea, odio!
                         </p>
@@ -80,7 +78,7 @@
                             labore non pariatur tempore.</p>
                         <div class="btn-area">
                             @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-squared btn-turq btn-grad font-18',
+                            'classTitle'        => 'btn btn-squared btn-squared_slim btn-turq font-18',
                             'buttonText'        => 'View NHS funded private hospitals',
                             'hrefValue'         => '/results-page/?hospital_type=1'])
                         </div>
@@ -101,10 +99,8 @@
                 <div class="col col-12 col-lg-6">
                     <div>
                         <h2 class="font-32 SofiaPro-SemiBold mb-4">Standard procedure at an NHS Hospital</h2>
-                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
+                        <p class="font-20 mb-4 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
                             necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
-                            voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
-                            distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
                             voluptates? Ea, odio!
                         </p>
                         <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
@@ -114,7 +110,7 @@
                             labore non pariatur tempore.</p>
                         <div class="btn-area">
                             @include('components.basic.button', [
-                            'classTitle'       => 'btn btn-turq btn-squared btn-grad font-18',
+                            'classTitle'       => 'btn btn-turq btn-squared btn-squared_slim font-18',
                             'hrefValue'        => '/results-page?hospital_type=2',
                             'buttonText'       => 'View all NHS hospitals'])
                         </div>
@@ -135,9 +131,7 @@
                 <div class="col col-12 col-lg-6">
                     <div>
                         <h2 class="font-32 SofiaPro-SemiBold mb-4">Private healthcare insurance</h2>
-                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
-                            necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
-                            voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
+                        <p class="font-20 mb-4 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
                             distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
                             voluptates? Ea, odio!
                         </p>
@@ -146,7 +140,7 @@
                             deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
                             quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
                             labore non pariatur tempore.</p>
-                        <form id="how_to_use_filter_policies" action="/results-page">
+                        <form id="how_to_use_filter_policies" action="/results-page" class="w-100">
                             @include('components.basic.select', [
                                 'selectPicker'          => 'true',
                                 'options'               => $data['filters']['policies'],
@@ -162,7 +156,7 @@
                                 'selectId'              => 'how_to_use_policies',
                                 'placeholder'           => 'Select your insurance provider:&nbsp;'])
                             @include('components.basic.button', [
-                                'classTitle'            => 'btn btn-turq btn-squared btn-grad font-18',
+                                'classTitle'            => 'btn btn-turq btn-squared btn-squared_slim font-18',
                                 'buttonText'            => 'View all private hospitals covered on your policy',
                                 'htmlButton'            => true])
                         </form>
@@ -183,8 +177,7 @@
                 <div class="col col-12 col-lg-6">
                     <div>
                         <h2 class="font-32 SofiaPro-SemiBold mb-4">Self-pay at a private hospital</h2>
-                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
-                            necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
+                        <p class="font-20 mb-4 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
                             voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
                             distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
                             voluptates? Ea, odio!
@@ -196,7 +189,7 @@
                             labore non pariatur tempore.</p>
                         <div class="btn-area">
                             @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-grad btn-turq btn-squared font-18',
+                            'classTitle'        => 'btn btn-turq btn-squared btn-squared_slim font-18',
                             'buttonText'        => 'Self-pay at a private hospital',
                             'hrefValue'         => '/results-page?hospital_type=1'])
                         </div>

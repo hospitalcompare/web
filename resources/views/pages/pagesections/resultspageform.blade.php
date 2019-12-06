@@ -2,8 +2,8 @@
     <div class="sort-parent" id="sort_parent">
         <div class="container">
             <div class="sort-bar">
-                <div class="show-section section-1 SofiaPro-Medium">
-                    Showing {{$data['hospitals']->total()}} hospital(s) <br> Ordered
+                <div class="show-section section-1 SofiaPro-Medium font-16">
+                    <span class="SofiaPro-SemiBold">Showing {{$data['hospitals']->total()}} hospital(s)</span><br> Ordered
                     by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating & Distance' : 'Care Quality Rating & Waiting Time') }}
                 </div>
                 <div class="section-2">
@@ -130,10 +130,10 @@
 
                     @include('components.basic.button', [
                         'buttonText'        => 'Filter Results',
-                        'classTitle'        => 'btn btn-s btn-lightgrey btn-icon btn-arrow-down font-14',
+                        'classTitle'        => 'btn btn-turq btn-icon btn-arrow-down font-16 pl-3',
                         'id'                => 'show_filters',
                         'icon'              => '',
-                        'svg'               => 'chevron-down'
+                        'svg'               => 'chevron-down-white'
                     ])
                 </div>
             </div>
@@ -204,7 +204,7 @@
                     >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                 </div>
                 <div class="postcode-radius-child radius col-12 col-md-6">
-                    <div class="col-inner pr-3 d-flex flex-column flex-wrap flex-lg-row align-items-center h-100 position-relative">
+                    <div class="col-inner pr-4 d-flex flex-column flex-wrap flex-lg-row align-items-center h-100 position-relative">
                         @include('components.basic.range', [
                             'id'            => 'radiusProx',
                             'label'         => 'Within radius of:',
@@ -380,7 +380,7 @@
                     >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2 d-flex align-items-end">
-                    @include('components.basic.submit', ['classTitle' => 'btn btn-grad btn-turq btn-s d-block btn-submit-results', 'buttonText' => 'Update Results'])
+                    @include('components.basic.submit', ['classTitle' => 'btn btn-blue btn-s d-block btn-submit-results font-16', 'buttonText' => 'Update Results'])
                 </div>
             </div>
         </div>

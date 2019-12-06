@@ -11,9 +11,13 @@
                 </div>
                 <div class="blog-item-content">
                     <div class="blog-item-details d-flex justify-content-start align-items-center mb-3">
-                        <span class="mr-2">{!! file_get_contents(asset('/images/icons/clock-regular.svg')) !!}</span>
+                        <div class="mr-2">
+                            <img src="{{ asset('/images/icons/clock-regular.svg') }}" alt="Clock icon">
+                        </div>
                         <span class="time-to-read mr-3">{{$blog->time_to_read}}min</span>
-                        <span class="mr-2">{!! file_get_contents(asset('/images/icons/clock-regular.svg')) !!}</span>
+                        <div class="mr-2">
+                            <img src="{{ asset('/images/icons/clock-regular.svg') }}" alt="Clock icon">
+                        </div>
                         <span class="date SofiaPro-Bold">{{ date('d.m.Y', strtotime($blog['created_at'])) }}</span>
                     </div>
                     <p class="title font-24 SofiaPro-SemiBold mb-4">{{$blog['title']}}</p>

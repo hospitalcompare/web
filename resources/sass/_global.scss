@@ -16,6 +16,10 @@ body, * {
 //}
 
 main {
+    section {
+        padding: 75px 0;
+    }
+
     section:last-child {
         padding-bottom: 100px !important;
     }
@@ -87,8 +91,8 @@ ul.blue-dot {
             margin-bottom: 5px;
 
             &:before {
-                width: 9px;
-                height: 9px;
+                width: 5px;
+                height: 5px;
                 background-color: $turq;
             }
         }
@@ -262,8 +266,6 @@ select.big {
     color: $darkestGrey;
 }
 
-.col-
-
 .col-caretBlack {
     color: $caretBlack;
 }
@@ -326,8 +328,8 @@ select.big {
     .cc-btn {
         @extend .btn;
         @extend .btn-m;
-        @extend .btn-grad;
         @extend .btn-turq;
+        @extend .btn-squared;
 
         text-align: center !important;
         display: inline-block;
@@ -432,14 +434,15 @@ path {
 
 .green-tick {
     position: relative;
-    padding: 0 0 0 30px;
+    padding: 0 0 0 15px;
     text-align: left;
 
     &:before {
         content: '';
         background-image: url('/images/icons/icon-tick.svg');
         @include icon-bg-center(100%);
-        @include v-c;
+        position: absolute;
+        top: $green-tick-size * 0.4;
         left: 0;
         width: $green-tick-size;
         height: $green-tick-size;
@@ -466,6 +469,10 @@ path {
     padding: 30px;
 }
 
+.mb-40 {
+    margin-bottom: 40px !important;
+}
+
 // line-height
 .lh-14 {
     line-height: 1.4;
@@ -473,4 +480,20 @@ path {
 
 .lh-16 {
     line-height: 1.6;
+}
+
+// Carousels on mobile
+.carousel-mobile {
+
+
+    @include media-breakpoint-up(md){
+        .carousel-inner {
+            overflow-y: visible;
+        }
+
+        .carousel-item {
+            display: block;
+            margin-right: auto;
+        }
+    }
 }

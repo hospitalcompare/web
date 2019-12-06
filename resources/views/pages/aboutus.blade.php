@@ -80,8 +80,10 @@
                         eligendi eos esse incidunt magni neque placeat?
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="swirl"><h2>Swirly thing in here</h2></div>
+                <div class="col-5 offset-5 my-3">
+                    <div class="swirl">
+                        {!! file_get_contents(asset('/images/icons/icon-swirl.svg')) !!}
+                    </div>
                 </div>
                 <div class="col-12">
                     <h2 class="text-center">Understand your available choices</h2>
@@ -89,7 +91,7 @@
                 <div class="col-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
+                            {!! file_get_contents(asset('/images/icons/icon-understanding-choices-1.svg')) !!}
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
                     </div>
@@ -97,7 +99,7 @@
                 <div class="col-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
+                            {!! file_get_contents(asset('/images/icons/icon-understanding-choices-2.svg')) !!}
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
                     </div>
@@ -105,7 +107,7 @@
                 <div class="col-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
+                            {!! file_get_contents(asset('/images/icons/icon-understanding-choices-3.svg')) !!}
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
                     </div>
@@ -113,7 +115,7 @@
                 <div class="col-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
+                            {!! file_get_contents(asset('/images/icons/icon-understanding-choices-4.svg')) !!}
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
                     </div>
@@ -231,7 +233,7 @@
     {{--            </div>--}}
     {{--        </div>--}}
     {{--    </section>--}}
-    <section>
+    <section class="our-background pb-0">
         <div class="container">
             <div class="row">
                 <div class="col col-12">
@@ -243,7 +245,7 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="icon-wrapper mb-3">
-                                {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
+                                <img src="{{asset('/images/icons/icon-our-background-1.svg')}}" alt="Comparison icon">
                             </div>
                             <p class="mb-3 SofiaPro-SemiBold">Comparison Website</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque delectus dicta nemo odio
@@ -252,7 +254,7 @@
                         </div>
                         <div class="col-6">
                             <div class="icon-wrapper mb-3">
-                                {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
+                                <img src="{{asset('/images/icons/icon-our-background-2.svg')}}" alt="Clock icon">
                             </div>
                             <p class="mb-3 SofiaPro-SemiBold">Comparison Website</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque delectus dicta nemo odio
@@ -261,7 +263,7 @@
                         </div>
                         <div class="col-6">
                             <div class="icon-wrapper mb-3">
-                                {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
+                                <img src="{{asset('/images/icons/icon-our-background-3.svg')}}" alt="Gavel icon">
                             </div>
                             <p class="mb-3 SofiaPro-SemiBold">Comparison Website</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque delectus dicta nemo odio
@@ -270,7 +272,7 @@
                         </div>
                         <div class="col-6">
                             <div class="icon-wrapper mb-3">
-                                {!! file_get_contents(asset('/images/icons/doctor.svg')) !!}
+                                <img src="{{asset('/images/icons/icon-our-background-4.svg')}}" alt="Calendar icon">
                             </div>
                             <p class="mb-3 SofiaPro-SemiBold">Comparison Website</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque delectus dicta nemo odio

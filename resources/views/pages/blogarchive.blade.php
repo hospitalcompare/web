@@ -18,7 +18,7 @@
                 surrounding the healthcare industry.</h3>
         </div>
     </section>
-    <section class="blog-filters border-bottom">
+    <section class="blog-filters border-bottom py-0">
         <div class="container">
             <div class="row py-4">
                 <div class="col ">

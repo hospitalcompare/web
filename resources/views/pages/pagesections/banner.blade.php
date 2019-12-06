@@ -1,7 +1,7 @@
 <section class="banner-parent py-0">
     <div class="banner">
         <div class="container {{ !empty($layout) && $layout == 'row' ? '_container-1028' : '' }}">
-            <div class="row">
+            <div class="row align-items-center">
                 @if(empty($hideText))
                     <div class="banner-text col col-12 col-lg-6">
                         <h1>Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment</span></h1>
@@ -15,15 +15,15 @@
                     </div>
                 @endif
                 <div class="col {{ !empty($layout) ? 'col-12 d-flex' : 'col-lg-6 col-12' }}">
-                    <div class="banner-form-wrapper rounded {{ !empty($layout) ? 'mx-auto flat-box' : 'ml-auto' }}" style="">
+                    <div class="banner-form-wrapper rounded {{ !empty($layout) ? 'mx-auto flat-form d-inline-block' : 'ml-auto' }}" style="">
                         <p class="SofiaPro-Medium">{!! !empty($layout) ? 'Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment' : 'Find the best hospitals' !!}</p>
                         <form
                             id="search_form"
-                            class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-flex align-items-end search-form-row' : '' }}"
+                            class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-lg-flex align-items-end search-form-row' : '' }}"
                             method="get"
                             action="/results-page"
                             style="">
-                            <div class="form-child {{ !empty($layout) ? 'mr-2' : ''}}">
+                            <div class="form-child">
                                 @include('components.basic.select', [
                                     'selectPicker'          => 'true',
                                     'selectClass'           => 'big select-picker',
@@ -49,7 +49,7 @@
 {{--                                                 --}}{{--<p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}{{--'])--}}
 {{--                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
                             </div>
-                            <div class="form-child postcode-parent {{ !empty($layout) ? 'mr-2' : ''}}">
+                            <div class="form-child postcode-parent">
 {{--                                Add this hidden input to remove the autocomplete functionality--}}
                                 <label for="fake_postcode" class="d-none"></label>
                                 <input name="fake_postcode" id="fake_postcode" type="text" style="display:none">
@@ -112,6 +112,7 @@
                                 'classTitle'    => !empty($layout) ? 'btn btn-squared btn-turq font-18 text-center' : 'btn btn-squared btn-block text-center btn-turq py-3 mb-3 font-18',
                                 'buttonText'    => !empty($layout) ? 'Find Hospitals' : 'Find Hospitals',
                                 'htmlButton'    => true,
+                                'id'            => 'submit_search',
                                 'style'         => !empty($layout) ? 'padding: 16px 45px; border: 2px solid transparent' : '',
                             ])
                             @unless(!empty($layout) && $layout == 'row')

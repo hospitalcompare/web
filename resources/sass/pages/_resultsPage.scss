@@ -54,11 +54,11 @@
         left: 0;
         right: 0;
         width: 100%;
+        z-index: 1035;
 
         &.js-is-sticky,
         &.js-is-sticky--change,
         &.js-is-stuck {
-            z-index: 1075;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
         }
 
@@ -294,7 +294,6 @@
                 .btn-area-lower {
                     border-top: 1px solid #d7d7d7;
                     padding-top: 10px;
-
                 }
             }
         }
@@ -312,6 +311,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         margin: auto;
+        border-bottom: $greyBorder;
 
         .hospital-image {
             width: $hospital-image-width;
@@ -363,7 +363,6 @@
         }
     }
 
-
     .result-item-menu {
         display: flex;
         width: 100%;
@@ -397,6 +396,11 @@
 
             span.sort-arrow.desc {
                 transform: rotateX(180deg);
+            }
+
+            p {
+                @extend .SofiaPro-Medium;
+                white-space: nowrap;
             }
         }
     }

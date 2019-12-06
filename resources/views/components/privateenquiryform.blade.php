@@ -127,7 +127,7 @@
                     @include('components.basic.button', [
                         'buttonText'            => 'Make an enquiry',
                         'id'                => 'btn_submit',
-                        'classTitle'        => 'btn btn-icon btn-blue btn-grad btn-enquire-private-hospital',
+                        'classTitle'        => 'btn btn-icon btn-blue btn-enquire-private-hospital',
                         'svg'               => 'circle-check'])
                 </div>
             </div>
