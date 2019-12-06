@@ -131,7 +131,7 @@
 {{--                    hendrerit dui. Pellentesque habitant morbi tristique senectus et netus.”--}}
 {{--                    @include('components.basic.button', [--}}
 {{--                        'buttonText'        => 'Choose your health',--}}
-{{--                        'classTitle'        => 'btn btn-blue btn-grad btn-icon btn-arrow-right mt-4 mx-auto SofiaPro-Regular',--}}
+{{--                        'classTitle'        => 'btn btn-blue btn-icon btn-arrow-right mt-4 mx-auto SofiaPro-Regular',--}}
 {{--                        'svg'               => 'chevron-right',--}}
 {{--                        'hrefValue'         => '/results-page'--}}
 {{--                    ])--}}

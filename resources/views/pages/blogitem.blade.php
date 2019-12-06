@@ -25,7 +25,7 @@
                         </span>
 {{--                        @include('components.basic.button', [--}}
 {{--                            'hrefValue'     => '/',--}}
-{{--                            'classTitle'    => 'btn btn-m btn-grad btn-turq btn-blog-back',--}}
+{{--                            'classTitle'    => 'btn btn-m btn-turq btn-blog-back',--}}
 {{--                            'buttonText'    => $data['blog']['category']['name'],--}}
 {{--                            'svg'           => substr($data['blog']['category']['icon'], 3, 0) //Remove the .svg extension--}}
 

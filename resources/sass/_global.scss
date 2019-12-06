@@ -328,8 +328,8 @@ select.big {
     .cc-btn {
         @extend .btn;
         @extend .btn-m;
-        @extend .btn-grad;
         @extend .btn-turq;
+        @extend .btn-squared;
 
         text-align: center !important;
         display: inline-block;

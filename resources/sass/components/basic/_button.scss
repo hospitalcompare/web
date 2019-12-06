@@ -18,15 +18,6 @@
         color: $white;
     }
 
-    &.btn-grad {
-        background-size: 500% 100% !important;
-
-        &:hover {
-            background-position: right !important;
-        }
-    }
-
-
     svg, i {
         position: absolute;
     }
@@ -84,75 +75,37 @@
             background-color: $blue;
         }
     }
-    //
-    //&.btn-darkgreen {
-    //    @include linear-gradient(90deg, $darkGreen, $darkGreen, $green);
-    //
-    //    &.btn-grad {
-    //        @include linear-gradient(90deg, $darkGreen, $green, $darkGreen);
-    //    }
-    //}
 
     &.btn-blue {
         background-color: $blue;
-        //@include linear-gradient(90deg, $blue, $blue, $turq);
         background-size: 200%;
 
         &:hover {
             background-color: $turq;
         }
-
-        &.btn-grad {
-            @include linear-gradient(90deg, $blue, $blue, $turq, $blue);
-        }
     }
 
     &.btn-violet {
-        @include linear-gradient(90deg, $violet, $violet, $blue);
+        background-color: $violet;
 
-        &.btn-grad {
-            @include linear-gradient(90deg, $violet, $blue, $violet);
+        &:hover {
+            background-color: $purple;
         }
     }
 
     &.btn-hanblue {
-        @include linear-gradient(90deg, $hanblue, $hanblue, $violet);
+        background-color: $hanblue;
 
-        &.btn-grad {
-            @include linear-gradient(90deg, $hanblue, $violet, $hanblue);
-        }
-    }
-
-    &.btn-green {
-        @include linear-gradient(90deg, $green, $green, $turq);
-
-        &.btn-grad {
-            @include linear-gradient(90deg, $green, $turq, $green);
+        &:hover {
+            background-color: $purple;
         }
     }
 
     &.btn-pink {
-        @include linear-gradient(90deg, $pink, $pink, $violet);
+        background-color: $pink;
 
-        &.btn-grad {
-            @include linear-gradient(90deg, $pink, $pink, $violet, $pink);
-        }
-    }
-
-    &.btn-grey {
-        @include linear-gradient(90deg, $footerBackgroundColour, $footerBackgroundColour, $pink);
-        //@include linear-gradient(90deg, $pink, $pink, $violet);
-        &.btn-grad {
-            @include linear-gradient(90deg, $footerBackgroundColour, $footerBackgroundColour, $pink, $footerBackgroundColour);
-        }
-    }
-
-    &.btn-lightgrey {
-        color: $body-color;
-        @include linear-gradient(90deg, $lighterGrey, $lighterGrey, $lighterGrey);
-        //@include linear-gradient(90deg, $pink, $pink, $violet);
-        &.btn-grad {
-            @include linear-gradient(90deg, $footerBackgroundColour, $footerBackgroundColour, $pink, $footerBackgroundColour);
+        &:hover {
+            background-color: #000;
         }
     }
 
@@ -177,12 +130,8 @@
     }
 
     &.btn-compare {
-        //height: 32px;
-        //width: 32px;
-        //border-radius: 23px;
         box-shadow: inset 0px 0px 0px 2px $turq;
         color: $turq;
-        //flex: 0 0 32px;
         padding: 8px 15px 8px 40px;
 
         svg, i {
@@ -199,26 +148,6 @@
                 fill: #fff;
             }
         }
-
-        //
-        // &:after {
-        //    content: '';
-        //    position: absolute;
-        //    @include v-c;
-        //    left: 0;
-        //    width: 32px;
-        //    height: 32px;
-        //    border-radius: 50%;
-        //    background-image: url('../images/icons/heart.svg');
-        //    background-position: center center;
-        //    background-repeat: no-repeat;
-        //    background-size: 50% !important;
-        //}
-
-        //&.selected:after {
-        //    background-image: url('../images/icons/heart-selected.svg');
-        //    background-color: #00cecd;
-        //}
 
         &:hover {
             background-color: $turq;
@@ -243,34 +172,18 @@
         }
     }
 
-    &.btn-green-plus {
-        position: absolute;
-        right: 10px;
-        top: 90px;
-        height: 19px;
-        width: 19px;
-        border-radius: 50%;
-        background-color: $turq;
-        background-image: url('../images/icons/plus-solid.svg');
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 50%;
-        flex: 0 0 32px;
-        padding: 0;
-    }
-
-
     &.btn-black {
-        @include linear-gradient(90deg, $black, $black, $pink, $pink);
-        background-size: 300% !important;
+        background-color: #000;
+
+        &:hover {
+            background-color: $pink;
+        }
     }
 
     &.btn-read-more {
         border-radius: 50px;
         color: #fff;
         @include font-size(22);
-        //height: 46px;
-        //line-height: 46px;
         background: #ed0373;
         background: linear-gradient(-90deg, $pink, $pink, #649ef7, #649ef7, $blue, $blue);
         background-size: 300% 100%;
@@ -288,29 +201,11 @@
         }
 
         &.btn-arrow-right {
-            //background: #649ef7;
-            //background: linear-gradient(-90deg, #649ef7, $blue, $blue, $blue);
             background-size: 200%;
-            //background-position: right;
             border-radius: 100px;
-            //height: 50px;
-            //line-height: 50px;
             @include font-size(22);
             padding: 12px 65px 12px 30px;
             position: relative;
-
-            //&:after {
-            //    background-image: url('../images/icons/up-arrow.svg');
-            //    @include icon-bg-center(30%);
-            //    position: absolute;
-            //    right: 0;
-            //    top: 0;
-            //    bottom: 0;
-            //    width: 50px;
-            //    height: 50px;
-            //    line-height: 50px;
-            //    transform: rotate(90deg);
-            //}
 
             &:hover {
                 background-position: left;
@@ -402,17 +297,6 @@
             background: linear-gradient(90deg, #000, #000, #00bcb4, #000);
             background-size: 300% 100%;
 
-            //&:after {
-            //    background-image: url('../images/icons/up-arrow.svg');
-            //    width: 11px;
-            //    height: 11px;
-            //    @include v-c;
-            //    @include icon-bg-center(30%);
-            //    right: 20px;
-            //    transform: rotate(90deg);
-            //}
-            //
-
             svg {
                 @include v-c;
                 right: 12px;
@@ -431,7 +315,7 @@
 
         &.btn-enquire,
         &.btn-enquire-private-hospital {
-            //border-radius: 10px;
+            //border-radius: $border-radius;
             color: $white !important;
             @include font-size(14);
             position: relative;
@@ -440,9 +324,6 @@
             text-align: left;
 
             svg {
-                //content: '';
-                //background-image: url('../images/icons/circle-check.svg');
-                //@include icon-bg-center;
                 @include v-c;
                 left: 8px;
                 width: 20px;
@@ -451,17 +332,12 @@
         }
 
         &.btn-enquire-private-hospital {
-            /* Style for "Make an en" */
-            //width: 187px;
             @include font-size(16);
-            border-radius: 10px;
+            border-radius: $border-radius;
             text-align: center;
             padding: 15px 25px 15px 45px;
 
             svg {
-                //content: '';
-                //background-image: url('../images/icons/circle-check.svg');
-                //@include icon-bg-center;
                 @include v-c;
                 left: 8px;
                 width: 30px;
@@ -469,12 +345,7 @@
             }
         }
 
-        input[type="submit"].btn-enquire {
-
-        }
-
         &.btn-enquire-pink {
-            //border-radius: 10px;
             border-radius: 20px;
             background: $white;
             color: $pink;
@@ -538,13 +409,8 @@
         }
 
         &.btn-special-offer {
-            //padding: 13px 20px 13px 40px;
             padding: 8px 15px 8px 40px;
-            //border-radius: 10px;
             color: $white;
-            //height: 40px;
-            //line-height: 13px;
-            //min-width: 160px;
 
             svg {
                 @include v-c;
@@ -557,7 +423,7 @@
 
         &.btn-special-offer-reverse {
             padding: 13px 20px;
-            border-radius: 10px;
+            border-radius: $border-radius;
             border: 1px solid $pink;
             color: $pink;
             height: 40px;
@@ -610,11 +476,6 @@
     }
 }
 
-// Container for buttons
-.btn-area {
-    line-height: 1;
-}
-
 .btn-submit-results {
     @include font-size(18);
     background-size: 300% 100%;
@@ -625,7 +486,6 @@
         background-position: right;
     }
 }
-
 
 .btn-link {
     color: $darkerGrey;
@@ -668,8 +528,6 @@
 }
 
 .btn-modal-close {
-    //width: 60px;
-    //height: 29px;
     padding: 6px 24px 6px 8px;
     display: inline-block;
     border: none;
