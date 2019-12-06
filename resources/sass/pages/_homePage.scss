@@ -38,7 +38,6 @@
 .faqs-section {
     .accordion {
         .card {
-            @extend .p-0;
             padding-left: 180px !important;
             margin-bottom: 20px !important;
 
@@ -73,6 +72,10 @@
                     @extend .col-grey;
                     @include font-size(16);
                     @extend .lh-16;
+
+                    &:last-child {
+                        @extend .mb-0;
+                    }
                 }
             }
         }

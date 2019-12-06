@@ -31,18 +31,24 @@
 
 {{--                        ])--}}
                     </div>
-                    <div>
-                        <span class="time-to-read">{{$data['blog']['time_to_read']}}min</span>
-                        <span class="date">{{date('d.m.Y', strtotime($data['blog']['created_at']))}}</span>
+                    <div class="blog-item-details d-flex justify-content-start align-items-center mb-3">
+                        <div class="mr-2">
+                            <img src="{{ asset('/images/icons/clock-regular.svg') }}" alt="Clock icon">
+                        </div>
+                        <span class="time-to-read mr-3">{{$data['blog']['time_to_read']}}min</span>
+                        <div class="mr-2">
+                            <img src="{{ asset('/images/icons/clock-regular.svg') }}" alt="Calendar icon">
+                        </div>
+                        <span class="date SofiaPro-Bold">{{ date('d.m.Y', strtotime($data['blog']['created_at'])) }}</span>
                     </div>
                     <div class="blog-title font-36 SofiaPro-Bold my-3">{!! $data['blog']['title'] !!}</div>
                     <div class="font-24 SofiaPro-SemiBold mt-3 mb-4"></div>
                     <div class="blog-content mb-4">
                         {!! $data['blog']['description'] !!}
                     </div>
-                    <div class="d-flex align-items-center sharing-is-caring">
-                        <div class="col-turq font-24 SofiaPro-SemiBold">Share:&nbsp;</div>
-                        <ul class="sharing-icons mb-0">
+                    <div class="sharing-is-caring">
+                        <div class="font-24 SofiaPro-SemiBold mb-4">Share this article</div>
+                        <ul class="sharing-icons d-block">
                             <li class="d-inline-block"><a
                                     href="https://www.facebook.com/sharer/sharer.php?u={{ url()->full() }}"
                                     target="_blank" title="Share to Facebook">
@@ -71,11 +77,13 @@
                         </ul>
                     </div>
 
-                    <div class="author row">
-                        <div class="col-4">
-                            <img src="../{{$data['blog']['author']['image']}}" alt="" class="src">
+                    <div class="author d-flex bg-greylight p-30">
+                        <div class="">
+                            <div class="image-wrapper mr-4">
+                                <img class="w-100 content" src="../{{$data['blog']['author']['image']}}" alt="Image of {{ $data['blog']['author'] }}" >
+                            </div>
                         </div>
-                        <div class="col-8">
+                        <div class="">
                             <p class="author-name">{{$data['blog']['author']['name']}}</p>
                             <p class="author-description">{{$data['blog']['author']['description']}}</p>
                         </div>
@@ -85,11 +93,15 @@
                 <div class="col-4">
                     @if(!empty($data['latestBlogs']))
                         @foreach($data['latestBlogs'] as $latestBlog)
-                            <div class="latest-blog">
-                                <div class="latest-blog-image"><img src="../{{$latestBlog['image']}}" alt="" class="src"></div>
-                                <div class="latest-blog-title">{{$latestBlog['title']}}</div>
-                                <div class="latest-blog-title">{!! substr($latestBlog['description'], 0, 100) !!}</div>
-                                <a class="btn-plain position-static stretched-link" href="/blog/{{ $latestBlog['id'] }}">Continue reading</a>
+                            <div class="latest-blog mb-4">
+                                <div class="latest-blog-image overflow-hidden">
+                                    <img src="../{{$latestBlog['image']}}" alt="" class="content">
+                                </div>
+                                <div class="latest-blog-content p-3">
+                                    <div class="latest-blog-title mb-3">{{$latestBlog['title']}}</div>
+                                    <div class="latest-blog-description">{!! substr($latestBlog['description'], 0, 100) !!}</div>
+                                    <a class="btn-plain position-static stretched-link" href="/blog/{{ $latestBlog['id'] }}">Continue reading</a>
+                                </div>
                             </div>
                         @endforeach
                     @endif

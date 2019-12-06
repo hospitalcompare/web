@@ -96,23 +96,22 @@
                             veritatis voluptas. Doloremque id ipsum labore quibusdam quo quod repudiandae voluptatem!</p>
                         <div class="accordion pt-3" id="_faqs_accordion">
                             @foreach($data['faqs'] as $key => $faq)
-                                <div class="card">
-                                    <div class="card-header" id="heading{{$key}}">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-link collapsed text-left" type="button"
-                                                    data-toggle="collapse"
-                                                    data-target="#collapse{{$key}}" aria-expanded="false"
-                                                    aria-controls="collapse{{$key}}">
-                                                {!! $faq->question !!}
-                                            </button>
-                                        </h2>
+                                <div class="card p-30">
+                                    <div class="card-header mb-3" id="heading{{$key}}">
+                                        <p class="mb-0 font-16 SofiaPro-Medium">
+                                            {!! $faq->question !!}
+{{--                                            <button class="btn btn-link collapsed text-left pb-0" type="button"--}}
+{{--                                                    data-toggle="collapse"--}}
+{{--                                                    data-target="#collapse{{$key}}" aria-expanded="false"--}}
+{{--                                                    aria-controls="collapse{{$key}}">--}}
+{{--                                                --}}
+{{--                                            </button>--}}
+                                        </p>
                                     </div>
 
                                     <div id="collapse{{$key}}" class="collapse" aria-labelledby="heading{{$key}}" data-parent="#faqs_accordion">
-                                        <div class="card-body">
-                                            <p>
-                                                {!! $faq->answer !!}
-                                            </p>
+                                        <div class="card-body pr-0 pb-0">
+                                            {!! $faq->answer !!}
                                         </div>
                                     </div>
                                 </div>
