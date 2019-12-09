@@ -2,22 +2,12 @@ body, * {
     //letter-spacing: $letter-spacing;
 }
 
-//.cookie-page,
-//.privacy-page,
-//.terms-and-conditions-page,
-//.faqs-page,
-//.your-rights-page,
-//.about-us-page,
-//.blog-page
-//{
-//    main {
-//        padding-top: 40px;
-//    }
-//}
-
 main {
     section {
-        padding: 75px 0;
+        padding: 45px 0;
+        @include media-breakpoint-up(lg) {
+            padding: 75px 0;
+        }
     }
 
     section:last-child {
@@ -184,8 +174,12 @@ select.big {
     background-color: $black;
 }
 
+//.bg-grey {
+//    background-color: $grey;
+//}
+
 .bg-grey {
-    background-color: $grey;
+    background-color: $lighterGrey;
 }
 
 .bg-white {
@@ -197,8 +191,8 @@ select.big {
 }
 
 .bg-blue-grad {
-     background-image: linear-gradient(248deg, #7dacf4 0%, #216ee2 100%);
- }
+    background-image: linear-gradient(248deg, #7dacf4 0%, #216ee2 100%);
+}
 
 // CQC rating colours
 .bg-outstanding {
@@ -469,8 +463,16 @@ path {
     padding: 30px;
 }
 
+.mb-25 {
+    margin-bottom: 25px !important;
+}
+
 .mb-40 {
     margin-bottom: 40px !important;
+}
+
+.mb-60 {
+    margin-bottom: 60px !important;
 }
 
 // line-height
@@ -486,7 +488,7 @@ path {
 .carousel-mobile {
 
 
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(md) {
         .carousel-inner {
             overflow-y: visible;
         }

@@ -60,13 +60,16 @@
                 <div class="row">
                     <div class="why-use-text col col-12 col-md-6">
                         <h2 class="section-title">Why use Hospital Compare?</h2>
-                        <p class="p-intro">Hospital Compare helps you make the best possible choice when it comes to choosing a suitable
+                        <p class="p-intro">Hospital Compare helps you make the best possible choice when it comes to
+                            choosing a suitable
                             hospital for your treatment.</p>
-                        <p class="col-grey">Many people in the UK are not aware that they could have the option of an NHS funded
+                        <p class="col-grey">Many people in the UK are not aware that they could have the option of an
+                            NHS funded
                             operation
                             in a private hospital. We are here to help you understand your rights and make the right
                             choice.</p>
-                        <p class="col-grey">Whether you are searching for the best NHS hospital or the best private hospital, Hospital
+                        <p class="col-grey">Whether you are searching for the best NHS hospital or the best private
+                            hospital, Hospital
                             Compare is the best place that provides an accurate, up-to-date and unbiased assessment of
                             all
                             hospitals in the UK.</p>
@@ -87,29 +90,25 @@
     </section>
     @include('pages.pagesections.testimonials')
     @if(!empty($data['faqs']))
-        <section class="faqs-section bg-greylight">
-            <div class="container container-980">
+        <section class="faqs-section bg-grey">
+            <div class="container">
                 <div class="row">
-                    <div class="col hc-content">
+                    <div class="col-12">
                         <h2 class="section-title">Frequently asked questions</h2>
-                        <p class="col-grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eligendi in nihil quibusdam!
-                            veritatis voluptas. Doloremque id ipsum labore quibusdam quo quod repudiandae voluptatem!</p>
+                        <p class="col-grey lh-16 font-18">Still have a few things you'd like to clear up? We've put together the
+                            following simple answers to questions frequently thought, but rarely asked, about finding
+                            the right hospital for your treament.</p>
                         <div class="accordion pt-3" id="_faqs_accordion">
                             @foreach($data['faqs'] as $key => $faq)
                                 <div class="card p-30">
                                     <div class="card-header mb-3" id="heading{{$key}}">
                                         <p class="mb-0 font-16 SofiaPro-Medium">
                                             {!! $faq->question !!}
-{{--                                            <button class="btn btn-link collapsed text-left pb-0" type="button"--}}
-{{--                                                    data-toggle="collapse"--}}
-{{--                                                    data-target="#collapse{{$key}}" aria-expanded="false"--}}
-{{--                                                    aria-controls="collapse{{$key}}">--}}
-{{--                                                --}}
-{{--                                            </button>--}}
                                         </p>
                                     </div>
 
-                                    <div id="collapse{{$key}}" class="collapse" aria-labelledby="heading{{$key}}" data-parent="#faqs_accordion">
+                                    <div id="collapse{{$key}}" class="collapse" aria-labelledby="heading{{$key}}"
+                                         data-parent="#faqs_accordion">
                                         <div class="card-body pr-0 pb-0">
                                             {!! $faq->answer !!}
                                         </div>
@@ -117,34 +116,16 @@
                                 </div>
                             @endforeach
                         </div>{{-- Accordion --}}
-                        @include('components.basic.button', [
-                            'buttonText'    => 'View all FAQs',
-                            'classTitle'    => 'btn btn-turq btn-squared mt-4 font-18',
-                            'hrefValue'     => '/faqs'
-                        ])
-                    </div>{{-- hc-content --}}
+                        <div class="btn-area text-center text-lg-left">
+                            @include('components.basic.button', [
+                                'buttonText'    => 'View all FAQs',
+                                'classTitle'    => 'btn btn-turq btn-squared mt-4 font-18',
+                                'hrefValue'     => '/faqs'
+                            ])
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     @endif
-
-    {{--    <section class="choose-health-parent">--}}
-    {{--        @include('components.healthchoice', [--}}
-    {{--            'choosehealthbanner' => '',--}}
-    {{--            'buttonName' => 'Choose your health',--}}
-    {{--            'classTitle' => 'btn btn-icon btn-arrow-right mx-auto' ] )--}}
-
-    {{--    </section>--}}
-
-    {{--    <div class="blogSectionParent">--}}
-    {{--        <h1 class="pageTitle">Making the right choice</h1>--}}
-    {{--        <div class="blogContent">--}}
-    {{--            @include('components.blogs', ['blogs' =>--}}
-    {{--            [--}}
-    {{--                ['iconImg'=> 'images/Layer_16.png' , 'title'=>'Blog', 'description' => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.', 'url' => url('/blog/1')],--}}
-    {{--                ['iconImg'=> 'images/Layer_17.png' , 'title'=>'Blog', 'description' => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.', 'url' => url('/blog/2')],--}}
-    {{--                ['iconImg'=> 'images/Layer_18.png' , 'title'=>'Blog', 'description' => 'Lorem ipsum dolor sit amet elit. In sit amet sem ut magna ornare.', 'url' => url('/blog/3')]--}}
-    {{--            ], 'classTitle'=> '', 'buttonTitle' => 'Read more', 'buttonClass' => 'btn btn-block btn-read-more' ])--}}
-    {{--        </div>--}}
-    {{--    </div>--}}
 @endsection

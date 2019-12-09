@@ -50,23 +50,6 @@
         padding: 14px 34px;
     }
 
-    //margins
-    &.btn-mg-right {
-        margin-right: 20px;
-    }
-
-    &.btn-mg-bottom {
-        margin-bottom: 20px;
-    }
-
-    &.btn-mg-left {
-        margin-left: 20px;
-    }
-
-    &.btn-mg-top {
-        margin-top: 20px;
-    }
-
     //colours
     &.btn-turq {
         background-color: $turq;
@@ -468,7 +451,7 @@
     border-radius: $border-radius $border-radius 0 0;
     @include font-size(1.1rem);
     @include gradient-animation($body-color, $body-color, $turq, $turq, 0.3s);
-    padding:px 50px 16px 20px;
+    padding: 19px 50px 19px 20px;
 
     svg {
         @include v-c;

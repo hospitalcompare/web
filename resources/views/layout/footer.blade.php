@@ -12,8 +12,8 @@
     <div class="footer-upper">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <nav class="footer-upper__nav" role="navigation">
+                <div class="col-12 col-lg-6 mb-60">
+                    <nav class="footer-upper__nav mb-25" role="navigation">
                         <ul class="footer-upper__menu">
                             <li><a href="/">Home</a></li>
                             <li><a href="/about-us">About Us</a></li>
@@ -24,7 +24,7 @@
                         </ul>
                     </nav>
                     <nav>
-                        <ul class="footer-lower__menu mb-0">
+                        <ul class="footer-upper__secondary-menu mb-0">
                             <li class="d-inline-block"><a href="/terms-and-conditions">T&amp;Cs</a></li>
                             {{--                    <li><a href="/accessibility">Accessibility</a></li>--}}
                             <li class="d-inline-block"><a href="/privacy-policy">Privacy Policy</a></li>
@@ -32,11 +32,11 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col">
-                    <div class="social">
+                <div class="col-12 col-lg-6">
+                    <div class="social text-left text-lg-right">
                         {{--            @include('components.logo', ['titleParent' => 'footerLogoParent', 'logoImg' => 'footerLogoImg', 'logoTitle' => 'footerLogoTitle'])--}}
-                        <p class="font-20 SofiaPro-Light">Helping you to make the best healthcare choices</p>
-                        <ul class="social-list d-flex justify-content-end">
+                        <p class="SofiaPro-Light helping-you">Helping you to make the best healthcare choices</p>
+                        <ul class="social-list d-flex justify-content-lg-end">
                             <li class="facebook-social">
                                 <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/facebook.svg')) !!}
                                     <span class="sr-only">Facebook link</span>
@@ -61,8 +61,8 @@
 
     </div>
 
-    <div class="footer-middle">
-        <div class="svg-wrap animated" data-animation="draw">
+    <div class="footer-lower">
+        <div class="svg-wrap animated mb-4" data-animation="draw">
 {{--            @svg('heart-line')--}}
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                  y="0px" viewBox="0 0 1742 216" style="enable-background:new 0 0 1742 216;" xml:space="preserve">
@@ -79,13 +79,13 @@
         </div>
 
         <div class="container">
-            <p>
+            <p class="mb-4">
                 *your legal right to choose may be restricted in some circumstances. For more
                 information see <a
                     class="text-link"
                     href="/your-rights">Your Rights</a>
             </p>
-            <p><time id="thisYear">{{ date('Y') }}</time><a href="/"> Hospital Compare<sup>TM</sup></a>. All rights reserved</p>
+            <p><time>{{ date('Y') }}</time><a href="/"> Hospital Compare<sup>TM</sup></a>. All rights reserved</p>
           </div>
     </div>
 
