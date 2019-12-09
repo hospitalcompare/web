@@ -11,11 +11,7 @@
 @section('body-class', 'your-rights-page hc-content')
 
 @section('content')
-    @include('pages.pagesections.banner', [
-        'layout'    => 'row',
-        'hideText'  => 'true'
-
-    ])
+    @include('pages.pagesections.flatbanner')
     <section class="your-rights-intro">
         <div class="container">
             <div class="row">

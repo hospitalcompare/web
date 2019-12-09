@@ -1,25 +1,23 @@
 <section class="banner">
-    <div class="container {{ !empty($layout) && $layout == 'row' ? '_container-1028' : '' }}">
+    <div class="container">
         <div class="row align-items-center">
-            @if(empty($hideText))
-                <div class="banner-text col col-12 col-lg-6">
-                    <h1>Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment</span></h1>
-                    <h3 class="font-20 d-lg-none">Find which NHS and Private hospitals are available and fully funded.</h3>
-                    <p class="col-grey d-none d-lg-block">The quality of care and waiting times in England vary greatly between hospitals. You have the
-                        legal right to
-                        choose where to have your treatment*. It can be at: </p>
-                    <ul class="banner-list col-grey  d-none d-lg-block">
-                        <li class="green-tick green-tick-large">An NHS or private hospital, funded by the NHS</li>
-                        <li class="green-tick green-tick-large">A private hospital of your choice, paid for by you or your insurance</li>
-                    </ul>
-                </div>
-            @endif
-            <div class="col {{ !empty($layout) ? 'col-12 d-flex' : 'col-lg-6 col-12' }}">
-                <div class="banner-form-wrapper rounded {{ !empty($layout) ? 'mx-auto flat-form d-inline-block' : 'ml-auto' }}" style="">
-                    <p class="SofiaPro-Medium d-none d-lg-block">{!! !empty($layout) ? 'Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment' : 'Find the best hospitals' !!}</p>
+            <div class="banner-text col col-12 col-lg-6">
+                <h1>Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment</span></h1>
+                <h3 class="font-20 d-lg-none">Find which NHS and Private hospitals are available and fully funded.</h3>
+                <p class="col-grey d-none d-lg-block">The quality of care and waiting times in England vary greatly between hospitals. You have the
+                    legal right to
+                    choose where to have your treatment*. It can be at: </p>
+                <ul class="banner-list col-grey  d-none d-lg-block">
+                    <li class="green-tick green-tick-large">An NHS or private hospital, funded by the NHS</li>
+                    <li class="green-tick green-tick-large">A private hospital of your choice, paid for by you or your insurance</li>
+                </ul>
+            </div>
+            <div class="col col-lg-6 col-12">
+                <div class="banner-form-wrapper rounded ml-auto">
+                    <p class="SofiaPro-Medium d-none d-lg-block">Find the best hospitals</p>
                     <form
                         id="search_form"
-                        class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-lg-flex align-items-end search-form-row' : '' }}"
+                        class="form-element"
                         method="get"
                         action="/results-page"
                         style="">
@@ -80,12 +78,12 @@
                                 <div class="ajax-box"></div>
                             </div>
                         </div>
-                        <div data-reveal-direction="{{ !empty($layout) ? 'right' : 'down'}}" class="form-child radius-parent full-left {{ !empty($layout) ? 'row-layout' : 'column-layout'}}">
+                        <div data-reveal-direction="down" class="form-child radius-parent full-left column-layout">
                             @include('components.basic.select', [
                                 'showLabel'             => true,
-                                'selectClass'           => empty($layout) ? 'distance-dropdown': 'distance-dropdown w-100',
+                                'selectClass'           => 'distance-dropdown',
                                 'options'               => \App\Helpers\Utils::radius,
-                                'selectClassName'       => empty($layout) ? 'd-md-flex select_half-width w-100' : 'd-md-flex flex-column align-items-end select_half-width w-100',
+                                'selectClassName'       => 'd-md-flex select_half-width w-100',
                                 'placeholder'           => 'How far would you travel?',
                                 'placeholderOption'     => 'Select Distance',
                                 'selectedPlaceholder'   => true,
@@ -109,17 +107,23 @@
                             >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                         </div>
                         @include('components.basic.button', [
-                            'classTitle'    => !empty($layout) ? 'btn btn-squared btn-turq font-18 text-center' : 'btn btn-squared btn-block text-center btn-turq py-3 mb-3 font-18',
-                            'buttonText'    => !empty($layout) ? 'Find Hospitals' : 'Find Hospitals',
+                            'classTitle'    => 'btn btn-squared btn-block text-center btn-turq py-3 mb-3 font-18',
+                            'buttonText'    => 'Find Hospitals',
                             'htmlButton'    => true,
                             'id'            => 'submit_search',
-                            'style'         => !empty($layout) ? 'padding: 16px 45px; border: 2px solid transparent' : '',
                         ])
-                        @unless(!empty($layout) && $layout == 'row')
-                            <div class='browse-button'>
-                                <a class="col-grey" href="{{url('/results-page')}}">Browse all hospitals</a>
-                            </div>
-                        @endunless
+                        <div class='browse-button text-left text-lg-center'>
+                            @include('components.basic.button', [
+                                'classTitle'    => 'col-grey pl-0 btn-plain btn-icon-arrow position-relative',
+                                'buttonText'    => 'Browse all hospitals',
+                                'htmlButton'    => true,
+                                'svg'           => 'icon-arrow',
+                                'hrefValue'     => '/results-page'
+                            ])
+{{--                            <a class="col-grey" href="{{url('/results-page')}}">Browse all hospitals--}}
+{{--                                {!! file_get_contents(asset('/images/icons/icon-arrow.svg')) !!}--}}
+{{--                            </a>--}}
+                        </div>
                     </form>
                 </div>
             </div>

@@ -45,8 +45,11 @@
 .banner-form-wrapper {
     border-radius: 5px;
     background-color: #fff;
-    padding: 30px 40px;
-    box-shadow: $box-shadow;
+    @include media-breakpoint-up(lg){
+        padding: 30px 40px;
+        box-shadow: $box-shadow;
+    }
+
     text-align: center;
     position: relative;
     z-index: 5;
@@ -209,6 +212,15 @@
 
 .mobile-choice {
     @extend .home-bg-mask;
+}
+
+// Horizontal version form
+
+.banner-flatform-wrapper {
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 30px 40px;
+    box-shadow: $box-shadow;
 }
 
 .flat-form {

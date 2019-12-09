@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col col-12">
-                <div class="banner-form-wrapper rounded mx-auto flat-form" style="">
+                <div class="banner-form-wrapper banner-flatform-wrapper rounded mx-auto flat-form" style="">
                     <p class="SofiaPro-Medium d-lg-block">Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment</p>
                     <form
                         id="search_form"

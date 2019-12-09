@@ -11,10 +11,7 @@
 @section('body-class', 'about-us-page hc-content')
 
 @section('content')
-    @include('pages.pagesections.banner', [
-    'layout'    => 'row',
-    'hideText'  => 'true'
-])
+    @include('pages.pagesections.flatbanner')
     <section class="about-us-intro">
         <div class="container">
             <div class="row">
