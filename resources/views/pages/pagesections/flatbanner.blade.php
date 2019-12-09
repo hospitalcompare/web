@@ -2,11 +2,11 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col col-12">
-                <div class="banner-form-wrapper rounded mx-auto flat-form d-inline-block" style="">
-                    <p class="SofiaPro-Medium d-none d-lg-block">{!! !empty($layout) ? 'Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment' : 'Find the best hospitals' !!}</p>
+                <div class="banner-form-wrapper rounded mx-auto flat-form" style="">
+                    <p class="SofiaPro-Medium d-lg-block">Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment</p>
                     <form
                         id="search_form"
-                        class="form-element {{ !empty($layout) && $layout == 'row' ? 'd-lg-flex align-items-end search-form-row' : '' }}"
+                        class="form-element d-lg-flex align-items-end search-form-row"
                         method="get"
                         action="/results-page"
                         style="">
@@ -36,11 +36,10 @@
                             {{--                                                 --}}{{--<p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}{{--'])--}}
                             {{--                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
                         </div>
-                        <div class="form-child postcode-parent">
+                        <div class="form-child postcode-parent position-relative">
                             {{--                                Add this hidden input to remove the autocomplete functionality--}}
                             <label for="fake_postcode" class="d-none"></label>
-                            <input name="fake_postcode" id="fake_postcode" type="text" style="display:none">
-
+                            <input name="fake_postcode" id="fake_postcode" type="text" class="d-none">
                             <div class="input-wrapper position-relative">
                                 @include('components.basic.input', [
                                     'placeholder'   => 'Enter postcode',
@@ -50,29 +49,29 @@
                                     'validation'    => 'maxlength=8 autocomplete="off"',
                                     'id'            => 'input_postcode'
                                 ])
-                                {{--                                    <a tabindex="0" data-offset="0 5px"--}}
-                                {{--                                       class="help-link"--}}
-                                {{--                                        @include('components.basic.popover', [--}}
-                                {{--                                        'dismissible'   => true,--}}
-                                {{--                                        'placement'      => 'top',--}}
-                                {{--                                        'html'           => 'true',--}}
-                                {{--                                        'trigger'        => 'hover',--}}
-                                {{--                                        'content'        => '<p>--}}
-                                {{--                                                         Please enter your postcode<br>for a refined search.--}}
-                                {{--                                                     </p>--}}
-                                {{--                                                     '])--}}
-                                {{--                                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
                             </div>
                             <div class="postcode-results-container">
                                 <div class="ajax-box"></div>
                             </div>
+                            {{--                                    <a tabindex="0" data-offset="0 5px"--}}
+                            {{--                                       class="help-link"--}}
+                            {{--                                        @include('components.basic.popover', [--}}
+                            {{--                                        'dismissible'   => true,--}}
+                            {{--                                        'placement'      => 'top',--}}
+                            {{--                                        'html'           => 'true',--}}
+                            {{--                                        'trigger'        => 'hover',--}}
+                            {{--                                        'content'        => '<p>--}}
+                            {{--                                                         Please enter your postcode<br>for a refined search.--}}
+                            {{--                                                     </p>--}}
+                            {{--                                                     '])--}}
+                            {{--                                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
                         </div>
-                        <div data-reveal-direction="{{ !empty($layout) ? 'right' : 'down'}}" class="form-child radius-parent full-left {{ !empty($layout) ? 'row-layout' : 'column-layout'}}">
+                        <div data-reveal-direction="right" class="form-child radius-parent full-left row-layout position-relative">
                             @include('components.basic.select', [
                                 'showLabel'             => true,
-                                'selectClass'           => empty($layout) ? 'distance-dropdown': 'distance-dropdown w-100',
+                                'selectClass'           => 'distance-dropdown w-100',
                                 'options'               => \App\Helpers\Utils::radius,
-                                'selectClassName'       => empty($layout) ? 'd-md-flex select_half-width w-100' : 'd-md-flex flex-column align-items-end select_half-width w-100',
+                                'selectClassName'       => 'd-flex flex-lg-column select_half-width w-100',
                                 'placeholder'           => 'How far would you travel?',
                                 'placeholderOption'     => 'Select Distance',
                                 'selectedPlaceholder'   => true,
@@ -96,38 +95,18 @@
                             >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                         </div>
                         @include('components.basic.button', [
-                            'classTitle'    => !empty($layout) ? 'btn btn-squared btn-turq font-18 text-center' : 'btn btn-squared btn-block text-center btn-turq py-3 mb-3 font-18',
-                            'buttonText'    => !empty($layout) ? 'Find Hospitals' : 'Find Hospitals',
+                            'classTitle'    => 'btn btn-squared btn-turq font-18 text-center',
+                            'buttonText'    => 'Find Hospitals',
                             'htmlButton'    => true,
                             'id'            => 'submit_search',
-                            'style'         => !empty($layout) ? 'padding: 16px 45px; border: 2px solid transparent' : '',
+                            'style'         => 'padding: 16px 45px; border: 2px solid transparent',
                         ])
-                        @unless(!empty($layout) && $layout == 'row')
-                            <div class='browse-button'>
-                                <a class="col-grey" href="{{url('/results-page')}}">Browse all hospitals</a>
-                            </div>
-                        @endunless
+                        <div class='browse-button w-100 d-none'>
+                            <a class="col-grey" href="{{url('/results-page')}}">Browse all hospitals</a>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
-@if(empty($hideText))
-    <section class="mobile-choice d-lg-none text-center p-y-75">
-        <div class="row">
-            <div class="container">
-                <div class="banner-text col col-12 col-lg-6">
-                    <h2 class="h1">You have a <span class="col-turq">choice</span></h2>
-                    <p class="col-grey">The quality of care and waiting times in England vary greatly between hospitals. You have the
-                        legal right to
-                        choose where to have your treatment*. It can be at: </p>
-                    <ul class="banner-list col-grey">
-                        <li class="green-tick green-tick-large text-center">An NHS or private hospital, funded by the NHS</li>
-                        <li class="green-tick green-tick-large text-center">A private hospital of your choice, paid for by you or your insurance</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-@endif

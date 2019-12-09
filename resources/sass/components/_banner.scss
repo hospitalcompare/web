@@ -8,7 +8,7 @@
 }
 
 .banner {
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
         background-image: url(/images/banner-flipped.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -23,9 +23,9 @@
         z-index: 5;
     }
 
-    .container:not(.container-1028){
+    .container:not(.container-1028) {
         .row {
-            @media (min-width: 768px){
+            @media (min-width: 768px) {
                 @include reset-row-spacing(60px);
             }
         }
@@ -45,10 +45,8 @@
 .banner-form-wrapper {
     border-radius: 5px;
     background-color: #fff;
-    @include media-breakpoint-up(lg){
-        padding: 40px 30px;
-        box-shadow: $box-shadow;
-    }
+    padding: 30px 40px;
+    box-shadow: $box-shadow;
     text-align: center;
     position: relative;
     z-index: 5;
@@ -69,11 +67,8 @@
         }
     }
 
-    &
-
     .form-child {
-        position: relative;
-        @extend .mt-2;
+        margin-top: 10px;
     }
 
     p {
@@ -178,25 +173,33 @@
 .radius-parent {
     &.row-layout {
         max-width: 0;
+        max-height: 0;
         visibility: hidden;
         transition: max-width 0.8s ease;
         @extend .mr-0;
 
         &.revealed-right {
             min-width: 200px;
-            max-width: 500px;
+            max-width: 1000px;
+            width: 100%;
+            max-height: 500px;
             visibility: visible;
             @extend .mr-2;
+            @include media-breakpoint-down(md) {
+                margin-bottom: 10px !important;
+            }
         }
     }
 
     &.column-layout {
+        max-width: 0;
         max-height: 0;
         visibility: hidden;
         transition: max-height 0.8s ease;
         margin-bottom: 0;
 
         &.revealed-down {
+            max-width: 500px;
             max-height: 500px;
             visibility: visible;
             margin-bottom: 20px;
@@ -204,31 +207,12 @@
     }
 }
 
-// Search form in horizontal arrangement
-.search-form-row {
-    .form-child {
-        margin-bottom: 0;
-    }
-    .select_half-width {
-        label {
-            @include font-size(14, true);
-            padding-right: 0 !important;
-            width: 100%;
-            position: absolute;
-            top: -20px;
-            left: 0;
-        }
-    }
-}
-
-
-
 .mobile-choice {
     @extend .home-bg-mask;
 }
 
 .flat-form {
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
         min-width: 1028px;
 
         .dropdown-toggle,
@@ -245,13 +229,39 @@
     }
 
     .form-child {
-        margin-top: 30px;
-        @media (min-width: 992px){
+        @media (min-width: 992px) {
             margin-right: 0.5rem;
         }
     }
 
     #submit_search {
         width: 100%;
+    }
+
+    // Search form in horizontal arrangement
+    .search-form-row {
+        .form-child {
+            margin-bottom: 0;
+        }
+
+        .select_half-width {
+            @include media-breakpoint-down(md) {
+                > * {
+                    width: 50%;
+                    flex-basis: 50%;
+                }
+            }
+
+            label {
+                @include font-size(14, true);
+                @include media-breakpoint-up(lg) {
+                    padding-right: 0 !important;
+                    width: 100%;
+                    position: absolute;
+                    top: -20px;
+                    left: 0;
+                }
+            }
+        }
     }
 }
