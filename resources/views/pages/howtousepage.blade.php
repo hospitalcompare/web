@@ -11,11 +11,7 @@
 @section('body-class', 'how-to-use-page')
 
 @section('content')
-    @include('pages.pagesections.banner', [
-        'layout'    => 'row',
-        'hideText'  => 'true'
-
-    ])
+    @include('pages.pagesections.flatbanner')
     <section class="how-section__parent">
         @include('components.howsection', [
             'hideButton'    => false,

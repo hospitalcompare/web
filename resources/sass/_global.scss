@@ -463,6 +463,11 @@ path {
     padding: 30px;
 }
 
+.p-y-75 {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
 .mb-25 {
     margin-bottom: 25px !important;
 }
@@ -486,8 +491,6 @@ path {
 
 // Carousels on mobile
 .carousel-mobile {
-
-
     @include media-breakpoint-up(md) {
         .carousel-inner {
             overflow-y: visible;
@@ -497,5 +500,94 @@ path {
             display: block;
             margin-right: auto;
         }
+    }
+}
+
+// From old hc-content
+ol.alpha {
+    counter-reset: counter;
+
+    li {
+        position: relative;
+        counter-increment: counter;
+        padding-left: 40px;
+        text-align: left;
+
+        &:before {
+            //content: '(' counter(counter, lower-alpha) ')';
+            content: counter(counter, upper-alpha) '.';
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: $turq;
+            @extend .font-semibold;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    //@extend .font-semibold;
+}
+
+h1,
+.h1 {
+    @include font-size(40);
+    //@include font-style('SofiaPro-Black', 40px, false, false, 45px, -2.25px);
+    margin: 0 0 25px 0;
+}
+
+h2 {
+    @include font-size(28);
+    //@include font-style('SofiaPro-Bold', 28px, false, false, 35px, -2.25px);
+    margin: 0 0 25px 0;
+}
+
+.section-title {
+    @include font-size(1.8rem);
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.page-subtitle {
+    @include font-size(28);
+    //@include font-style('SofiaPro-SemiBold', 28px, false, false, 35px, -1.45px);
+}
+
+h3 {
+    font-size: 24px;
+    margin: 0 0 24px 0;
+}
+
+h4 {
+    font-size: 24px;
+    color: $turq;
+    margin: 0 0 24px 0;
+}
+
+h5 {
+    font-size: 22px;
+    color: $pink;
+    margin: 0 0 22px 0;
+}
+
+h6 {
+    font-size: 22px;
+    margin: 0 0 22px 0;
+}
+
+.p-intro {
+    @include font-size(1.2rem);
+    line-height: 1.6;
+    @extend .SofiaPro-Medium;
+}
+
+.image-wrapper {
+    img {
+        width: 100%;
     }
 }

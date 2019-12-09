@@ -1,4 +1,12 @@
 //BANNER SECTION
+.home-bg-mask {
+    background-image: url(/images/banner-flipped.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    @include mask($bannerMaskGreen, 0.06);
+}
+
 .banner {
     @include media-breakpoint-up(lg){
         background-image: url(/images/banner-flipped.jpg);
@@ -21,6 +29,14 @@
                 @include reset-row-spacing(60px);
             }
         }
+    }
+}
+
+.flat-banner {
+    @extend .home-bg-mask;
+
+    .banner-form-wrapper {
+
     }
 }
 
@@ -53,34 +69,7 @@
         }
     }
 
-    &.flat-form {
-        @include media-breakpoint-up(lg){
-            min-width: 1028px;
-
-            .dropdown-toggle,
-            #input_postcode {
-                min-width: 230px;
-                max-width: 230px;
-            }
-        }
-
-        .dropdown-toggle,
-        #input_postcode,
-        #submit_search {
-            max-height: 57px;
-        }
-
-        .form-child {
-            margin-top: 30px;
-            @media (min-width: 992px){
-                margin-right: 0.5rem;
-            }
-        }
-
-        #submit_search {
-            width: 100%;
-        }
-    }
+    &
 
     .form-child {
         position: relative;
@@ -111,6 +100,7 @@
         right: 50px;
     }
 }
+
 
 .banner-text {
     //color: $white;
@@ -228,5 +218,40 @@
             top: -20px;
             left: 0;
         }
+    }
+}
+
+
+
+.mobile-choice {
+    @extend .home-bg-mask;
+}
+
+.flat-form {
+    @include media-breakpoint-up(lg){
+        min-width: 1028px;
+
+        .dropdown-toggle,
+        #input_postcode {
+            min-width: 230px;
+            max-width: 230px;
+        }
+    }
+
+    .dropdown-toggle,
+    #input_postcode,
+    #submit_search {
+        max-height: 57px;
+    }
+
+    .form-child {
+        margin-top: 30px;
+        @media (min-width: 992px){
+            margin-right: 0.5rem;
+        }
+    }
+
+    #submit_search {
+        width: 100%;
     }
 }

@@ -17,7 +17,7 @@
     <section class="how-section__parent">
         @include('components.howsection', [
             'hideButton'    => false,
-            'sectionTitle' => 'How to use Hospital Compare',
+            'sectionTitle' => 'How does it work?',
             'howsections' => [
             [
                 'iconImg'       => 'how-does-it-work-step-1',
