@@ -9,6 +9,7 @@ use App\Models\BlogCategory;
 use App\Models\Faq;
 use App\Models\Hospital;
 use Illuminate\Routing\Controller as BaseController;
+use Jenssegers\Agent\Facades\Agent;
 
 class WebController extends BaseController
 {
@@ -111,7 +112,11 @@ class WebController extends BaseController
         //For Live environment just show the work in progress page
         if(env('APP_ENV') == 'live')
             return view('pages.workInProgress', $this->returnedData);
-        return view('pages.resultspage', $this->returnedData);
+
+        if(Agent::isDesktop())
+            return view('pages.resultspage', $this->returnedData);
+        else
+            return view('mobile.pages.resultspage', $this->returnedData);
     }
 
     // Return generic view for pages without specific route
