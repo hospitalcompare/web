@@ -4,7 +4,7 @@
         {{--                    aria-label="Close">--}}
         {{--            </button>--}}
         <span class="position-absolute close-offer toggle-special-offer d-inline-flex">
-            {!! file_get_contents(asset('images/icons/times.svg')) !!}
+            @svg('times')
         </span>
         <div class="mr-2">
             <div class="img-wrap">
