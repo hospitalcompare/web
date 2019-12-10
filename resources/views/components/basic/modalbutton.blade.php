@@ -26,6 +26,6 @@
         <i class="{{ $icon }}"></i>
     @endif
     @if(!empty($svg))
-        {!! file_get_contents(asset('/images/icons/' . $svg . '.svg')) !!}
+        {!! file_get_contents('./images/icons/' . $svg . '.svg') !!}
     @endif
 </button>

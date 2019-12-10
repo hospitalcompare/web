@@ -94,7 +94,7 @@
                         <!--Controls-->
                         <a class="carousel-control-prev carousel-control btn btn-tour-control prev" href="#carousel_tour" role="button"
                            data-slide="prev">
-                            {!! file_get_contents(asset('/images/icons/chevron-left.svg')) !!}
+                            {!! file_get_contents('./images/icons/chevron-left.svg') !!}
                             Previous Step
                             {{--                    <span class="carousel-control-prev-icon" aria-hidden="true">Previous Step</span>--}}
                         </a>
@@ -107,7 +107,7 @@
                         </ol>
                         <a class="carousel-control-next carousel-control btn btn-tour-control next" href="#carousel_tour" role="button"
                            data-slide="next">Next Step
-                            {!! file_get_contents(asset('/images/icons/chevron-right.svg')) !!}
+                            {!! file_get_contents('./images/icons/chevron-right.svg') !!}
                             {{--                    <span class="carousel-control-next-icon" aria-hidden="true">Next Step</span>--}}
                             {{--                    <span class="sr-only">Next</span>--}}
                         </a>

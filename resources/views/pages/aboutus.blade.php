@@ -82,7 +82,7 @@
                 </div>
                 <div class="col-5 offset-5 my-3">
                     <div class="swirl">
-                        {!! file_get_contents(asset('/images/icons/icon-swirl.svg')) !!}
+                        {!! file_get_contents('./images/icons/icon-swirl.svg') !!}
                     </div>
                 </div>
                 <div class="col-12">
@@ -91,7 +91,7 @@
                 <div class="col-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/icon-understanding-choices-1.svg')) !!}
+                            {!! file_get_contents('./images/icons/icon-understanding-choices-1.svg') !!}
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
                     </div>
@@ -99,7 +99,7 @@
                 <div class="col-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/icon-understanding-choices-2.svg')) !!}
+                            {!! file_get_contents('./images/icons/icon-understanding-choices-2.svg') !!}
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
                     </div>
@@ -107,7 +107,7 @@
                 <div class="col-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/icon-understanding-choices-3.svg')) !!}
+                            {!! file_get_contents('./images/icons/icon-understanding-choices-3.svg') !!}
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
                     </div>
@@ -115,7 +115,7 @@
                 <div class="col-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/icon-understanding-choices-4.svg')) !!}
+                            {!! file_get_contents('./images/icons/icon-understanding-choices-4.svg') !!}
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
                     </div>

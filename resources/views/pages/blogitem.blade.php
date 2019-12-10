@@ -52,26 +52,26 @@
                             <li class="d-inline-block"><a
                                     href="https://www.facebook.com/sharer/sharer.php?u={{ url()->full() }}"
                                     target="_blank" title="Share to Facebook">
-                                    {!! file_get_contents(asset('/images/icons/social/facebook.svg')) !!}
+                                    {!! file_get_contents('./images/icons/social/facebook.svg') !!}
                                 </a>
                             </li>
                             <li class="d-inline-block">
                                 <a target="_blank" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class=""
                                    data-show-count="false" title="Share to twitter">
-                                    {!! file_get_contents(asset('/images/icons/social/twitter.svg')) !!}
+                                    {!! file_get_contents('./images/icons/social/twitter.svg') !!}
                                 </a>
                             </li>
                             <li class="d-inline-block">
                                 <a target="_blank"
                                    href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(url()->full()) }}&title={{ $data['blog']['title'] }}"
                                    title="Share to LinkedIn">
-                                    {!! file_get_contents(asset('/images/icons/social/linkedin.svg')) !!}
+                                    {!! file_get_contents('./images/icons/social/linkedin.svg') !!}
                                 </a>
                             </li>
                             <li class="d-inline-block">
                                 <a href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://www.hospitalcompare.co.uk"
                                    title="Share by Email">
-                                    {!! file_get_contents(asset('/images/icons/social/mail.svg')) !!}
+                                    {!! file_get_contents('./images/icons/social/mail.svg') !!}
                                 </a>
                             </li>
                         </ul>

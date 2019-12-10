@@ -11,7 +11,7 @@
                     <source src="movie.ogg" type="video/ogg">
                     Your browser does not support the video tag.
                 </video>
-{{--                <div class="player-button toggle">{!! file_get_contents(asset('/images/icons/youtube.svg')) !!}</div>--}}
+{{--                <div class="player-button toggle">{!! file_get_contents('./images/icons/youtube.svg')) !!}</div>--}}
             </div>
         </div>
     </div>

@@ -35,7 +35,7 @@
                                 'content'   => 'This is the content',
                                 'trigger'   => 'hover'
                             ])>More info <span
-                                    class="help-link help-link__inline help-link__inline-red">{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                                    class="help-link help-link__inline help-link__inline-red">{!! file_get_contents('./images/icons/question.svg') !!}</span>
                             </p>
                         </div>
                     </div>

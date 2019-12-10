@@ -977,7 +977,7 @@
                                     <div class="cqc-table">
                                         {{--                                        <div class="cqc-row d-flex justify-content-between">--}}
                                         {{--                                            <div class="cqc-category">Safe</div>--}}
-                                        {{--                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour">{!! file_get_contents(asset('/images/icons/star.svg')) !!}</span></div>--}}
+                                        {{--                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour">{!! file_get_contents('./images/icons/star.svg')) !!}</span></div>--}}
                                         {{--                                        </div>--}}
                                         <div class="cqc-row d-flex justify-content-between">
                                             <div class="cqc-category">Safe</div>
@@ -1051,7 +1051,7 @@
                                     <p>
                                         Many private healthcare policies allow you to choose which hospital to have your elective
                                         procedure at. Enter your provider and policy name to find the best hospital for you.
-                                    </p>'])>{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
+                                    </p>'])>{!! file_get_contents('./images/icons/question.svg') !!}</a>
                 <a href="#" class="btn btn-blue"
                    data-toggle="popover"
                    data-content="Hello, this is a popover"

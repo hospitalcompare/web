@@ -47,7 +47,7 @@
 {{--                                    'trigger'        => 'hover',--}}
 {{--                                    'content'        => '<p>Select your treatment<br>if known to refine results</p>--}}
 {{--                                                 --}}{{--<p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}{{--'])--}}
-{{--                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
+{{--                                >{!! file_get_contents('./images/icons/question.svg') !!}</a>--}}
                             </div>
                             <div class="form-child postcode-parent">
 {{--                                Add this hidden input to remove the autocomplete functionality--}}
@@ -74,7 +74,7 @@
 {{--                                                         Please enter your postcode<br>for a refined search.--}}
 {{--                                                     </p>--}}
 {{--                                                     '])--}}
-{{--                                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
+{{--                                    >{!! file_get_contents('./images/icons/question.svg') !!}</a>--}}
                                 </div>
                                 <div class="postcode-results-container">
                                     <div class="ajax-box"></div>
@@ -106,7 +106,7 @@
                                                  </p>
 {{--                                                 <p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}
                                                  '])
-                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
+                                >{!! file_get_contents('./images/icons/question.svg') !!}</a>
                             </div>
                             @include('components.basic.button', [
                                 'classTitle'    => !empty($layout) ? 'btn btn-squared btn-turq font-18 text-center' : 'btn btn-squared btn-block text-center btn-turq py-3 mb-3 font-18',
