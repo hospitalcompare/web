@@ -21,7 +21,7 @@
                         method="get"
                         action="/results-page"
                         style="">
-                        <div class="form-child">
+                        <div class="form-child position-relative">
                             @include('components.basic.select', [
                                 'selectPicker'          => 'true',
                                 'selectClass'           => 'big select-picker',
@@ -35,19 +35,17 @@
                                 'showLabel'             => true,
                                 'labelClass'            => 'd-none'
                             ])
-                            {{--                                <a tabindex="0" data-offset="0 5px"--}}
-                            {{--                                   class="help-link"--}}
-                            {{--                                    @include('components.basic.popover', [--}}
-                            {{--                                    'dismissible'   => true,--}}
-                            {{--                                    'placement'      => 'top',--}}
-                            {{--                                    'size'           => 'large',--}}
-                            {{--                                    'html'           => 'true',--}}
-                            {{--                                    'trigger'        => 'hover',--}}
-                            {{--                                    'content'        => '<p>Select your treatment<br>if known to refine results</p>--}}
-                            {{--                                                 --}}{{--<p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}{{--'])--}}
-                            {{--                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
+                            <a tabindex="0"
+                               class="help-link"
+                                @include('components.basic.popover', [
+                                'dismissible'   => true,
+                                'placement'      => 'top',
+                                'html'           => 'true',
+                                'trigger'        => 'hover',
+                                'content'        => '<p>Select your treatment<br>if known to refine results</p>'])
+                            >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                         </div>
-                        <div class="form-child postcode-parent">
+                        <div class="form-child postcode-parent position-relative">
                             {{--                                Add this hidden input to remove the autocomplete functionality--}}
                             <label for="fake_postcode" class="d-none"></label>
                             <input name="fake_postcode" id="fake_postcode" type="text" style="display:none">
@@ -61,24 +59,24 @@
                                     'validation'    => 'maxlength=8 autocomplete="off"',
                                     'id'            => 'input_postcode'
                                 ])
-                                {{--                                    <a tabindex="0" data-offset="0 5px"--}}
-                                {{--                                       class="help-link"--}}
-                                {{--                                        @include('components.basic.popover', [--}}
-                                {{--                                        'dismissible'   => true,--}}
-                                {{--                                        'placement'      => 'top',--}}
-                                {{--                                        'html'           => 'true',--}}
-                                {{--                                        'trigger'        => 'hover',--}}
-                                {{--                                        'content'        => '<p>--}}
-                                {{--                                                         Please enter your postcode<br>for a refined search.--}}
-                                {{--                                                     </p>--}}
-                                {{--                                                     '])--}}
-                                {{--                                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
+                                <a tabindex="0" data-offset="0 5px"
+                                   class="help-link"
+                                    @include('components.basic.popover', [
+                                    'dismissible'   => true,
+                                    'placement'      => 'top',
+                                    'html'           => 'true',
+                                    'trigger'        => 'hover',
+                                    'content'        => '<p>
+                                                     Please enter your postcode<br>for a refined search.
+                                                 </p>
+                                                 '])
+                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
                             </div>
                             <div class="postcode-results-container">
                                 <div class="ajax-box"></div>
                             </div>
                         </div>
-                        <div data-reveal-direction="down" class="form-child radius-parent full-left column-layout">
+                        <div data-reveal-direction="down" class="form-child radius-parent full-left column-layout position-relative">
                             @include('components.basic.select', [
                                 'showLabel'             => true,
                                 'selectClass'           => 'distance-dropdown',

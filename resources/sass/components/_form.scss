@@ -45,8 +45,8 @@ select::-ms-expand {
 }
 
 .select-wrapper {
-    padding-left: 0;
-    overflow: hidden;
+    //padding-left: 0;
+    //overflow: hidden;
 }
 
 // Homepage banner form
@@ -73,7 +73,7 @@ select::-ms-expand {
     align-items: center;
 
     label,
-    select {
+    .select-wrapper {
         @include media-breakpoint-up(md) {
             width: 50%;
         }
@@ -88,27 +88,30 @@ select::-ms-expand {
 
     select {
         height: 45px;
+        width: 100%;
         padding: 0 100px 0 16px;
         @include font-size(18);
         @extend .SofiaPro-Medium;
     }
 
-    &:after {
-        content: '';
-        background-image: url('../images/icons/chevron-down.svg');
-        @include icon-bg-center(50%);
-        @include v-c;
-        position: absolute;
-        //top: 0;
-        //bottom: 0;
-        right: 0;
-        width: 45px;
-        height: 45px;
-        line-height: 45px;
-        border-radius: 0 $border-radius $border-radius 0;
-        border: 2px solid $darkestWhite;
-        background-color: $darkestWhite;
-        pointer-events: none;
+    .select-wrapper {
+        &:after {
+            content: '';
+            background-image: url('../images/icons/chevron-down.svg');
+            @include icon-bg-center(50%);
+            @include v-c;
+            position: absolute;
+            //top: 0;
+            //bottom: 0;
+            right: 0;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 0 $border-radius $border-radius 0;
+            border: 2px solid $darkestWhite;
+            background-color: $darkestWhite;
+            pointer-events: none;
+        }
     }
 
     + .help-link {

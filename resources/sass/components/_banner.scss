@@ -95,7 +95,7 @@
 
     .help-link {
         @include v-c;
-        right: 50px;
+        right: 60px;
     }
 }
 
@@ -172,14 +172,18 @@
     }
 }
 
+.hidden-form-element {
+    max-width: 0;
+    max-height: 0;
+    visibility: hidden;
+}
 // Radius input - controlling the direction of reveal
 .radius-parent {
     &.row-layout {
-        max-width: 0;
-        max-height: 0;
-        visibility: hidden;
+
         transition: max-width 0.8s ease;
         @extend .mr-0;
+        @extend .hidden-form-element;
 
         &.revealed-right {
             min-width: 200px;
@@ -195,14 +199,12 @@
     }
 
     &.column-layout {
-        max-width: 0;
-        max-height: 0;
-        visibility: hidden;
+        @extend .hidden-form-element;
         transition: max-height 0.8s ease;
         margin-bottom: 0;
 
         &.revealed-down {
-            max-width: 500px;
+            max-width: 1000px;
             max-height: 500px;
             visibility: visible;
             margin-bottom: 20px;
