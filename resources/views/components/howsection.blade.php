@@ -48,14 +48,14 @@
                 class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a>
 
     </div>
-    @if( empty($hideButton) )
-        <div class="btn-area text-center">
-            @include('components.basic.button', [
-                'hrefValue'     => '/your-rights',
-                'classTitle'    => 'btn btn-squared btn-turq font-18',
-                'buttonText'        => 'Your Rights'
+{{--    @if( empty($hideButton) )--}}
+{{--        <div class="btn-area text-center">--}}
+{{--            @include('components.basic.button', [--}}
+{{--                'hrefValue'     => '/your-rights',--}}
+{{--                'classTitle'    => 'btn btn-squared btn-turq font-18',--}}
+{{--                'buttonText'        => 'Your Rights'--}}
 
-            ])
-        </div>
-    @endif
+{{--            ])--}}
+{{--        </div>--}}
+{{--    @endif--}}
 </div>

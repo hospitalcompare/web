@@ -16,8 +16,8 @@
                     <nav class="footer-upper__nav mb-25" role="navigation">
                         <ul class="footer-upper__menu">
                             <li><a href="/">Home</a></li>
-                            <li><a href="/about-us">About Us</a></li>
-                            <li><a href="/your-rights">Your rights</a></li>
+{{--                            <li><a href="/about-us">About Us</a></li>--}}
+{{--                            <li><a href="/your-rights">Your rights</a></li>--}}
 {{--                            <li><a href="/patient-choice">Patient choice</a></li>--}}
                             {{--                <li><a href="/our-blogs">Our blogs</a></li>--}}
                             <li><a href="mailto:hello@hospitalcompare.co.uk">Contact us</a></li>
@@ -80,10 +80,11 @@
 
         <div class="container">
             <p class="mb-4">
-                *your legal right to choose may be restricted in some circumstances. For more
-                information see <a
-                    class="text-link"
-                    href="/your-rights">Your Rights</a>
+                *your legal right to choose may be restricted in some circumstances.
+{{--                For more--}}
+{{--                information see <a--}}
+{{--                    class="text-link"--}}
+{{--                    href="/your-rights">Your Rights</a>--}}
             </p>
             <p><time>{{ date('Y') }}</time><a href="/"> Hospital Compare<sup>TM</sup></a>. All rights reserved</p>
           </div>
