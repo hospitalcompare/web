@@ -10,7 +10,7 @@
                         method="get"
                         action="/results-page"
                         style="">
-                        <div class="form-child">
+                        <div class="form-child treatment-parent">
                             @include('components.basic.select', [
                                 'selectPicker'          => 'true',
                                 'selectClass'           => 'big select-picker',
@@ -66,7 +66,7 @@
                             {{--                                                     '])--}}
                             {{--                                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
                         </div>
-                        <div data-reveal-direction="right" class="form-child radius-parent full-left row-layout position-relative">
+                        <div class="form-child radius-parent full-left row-layout position-relative" data-reveal-direction="right" >
                             @include('components.basic.select', [
                                 'showLabel'             => true,
                                 'selectClass'           => 'distance-dropdown w-100',

@@ -21,7 +21,7 @@
                         method="get"
                         action="/results-page"
                         style="">
-                        <div class="form-child position-relative">
+                        <div class="form-child treatment-parent position-relative">
                             @include('components.basic.select', [
                                 'selectPicker'          => 'true',
                                 'selectClass'           => 'big select-picker',
@@ -76,7 +76,7 @@
                                 <div class="ajax-box"></div>
                             </div>
                         </div>
-                        <div data-reveal-direction="down" class="form-child radius-parent full-left column-layout position-relative">
+                        <div class="form-child radius-parent full-left column-layout position-relative" data-reveal-direction="down" >
                             @include('components.basic.select', [
                                 'showLabel'             => true,
                                 'selectClass'           => 'distance-dropdown',

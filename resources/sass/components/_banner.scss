@@ -143,11 +143,12 @@
     }
 }
 
-.aqua-chevron {
-    //color: $aqua;
-    @include v-c;
-    right: 20px;
-    //top: 25px;
+.treatment-parent {
+    .select-wrapper {
+        svg {
+            right: 20px;
+        }
+    }
 }
 
 .postcode-results-container {
