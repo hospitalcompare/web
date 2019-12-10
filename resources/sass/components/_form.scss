@@ -75,7 +75,7 @@ select::-ms-expand {
     label,
     .select-wrapper {
         @include media-breakpoint-up(md) {
-            width: 50%;
+            width: 100%;
         }
     }
 
@@ -154,12 +154,12 @@ select::-ms-expand {
     .dropdown-toggle {
         padding: 6px 40px 6px 13px;
         @include font-size(16);
-
     }
 }
 
 .dropdown-toggle {
     cursor: auto !important;
+    @extend .form-control;
 }
 
 .checkbox {

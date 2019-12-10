@@ -123,12 +123,15 @@ $close-font-size: 1rem;
 $input-padding-y: 0;
 $input-padding-x: 1rem;
 $input-height: 30px;
-$input-line-height: 1;
+$input-line-height: $line-height-base;
 $input-placeholder-color: $darkerGrey;
 $input-font-weight: 500;
 $input-border-radius: $border-radius;
 $input-border-color: $darkestWhite;
 $input-border-width: 2px;
+$input-height: initial;
+$input-focus-box-shadow: none;
+$input-focus-border-color: $turq !important;
 
 // Select picker
 

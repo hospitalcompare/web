@@ -226,7 +226,7 @@
 }
 
 .flat-form {
-    @include media-breakpoint-up(lg) {
+    @media (min-width: 1200px){
         min-width: 1028px;
 
         .dropdown-toggle,

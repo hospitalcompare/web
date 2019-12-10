@@ -146,7 +146,7 @@
                                 'svg'                   => 'chevron-down',
                                 'selectClassName'       => 'd-lg-flex align-items-center mb-4',
                                 'selectClass'           => 'select-picker',
-                                'labelClass'            => 'col-turq font-20 SofiaPro-Medium mr-3',
+                                'labelClass'            => 'col-turq font-20 SofiaPro-Medium mr-3 w-100 w-lg-50',
                                 'showLabel'             => true,
                                 'name'                  => 'policy_id',
                                 'selectId'              => 'how_to_use_policies',
@@ -178,7 +178,7 @@
                             distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
                             voluptates? Ea, odio!
                         </p>
-                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
+                        <p class="mb-4 p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
                             repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
                             deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
                             quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa

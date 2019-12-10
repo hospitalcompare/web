@@ -6,7 +6,7 @@
         </label>
     @endif
     <div class="select-wrapper position-relative">
-        <select class="{{empty($selectClass) ? '' : $selectClass}}"
+        <select class="{{empty($selectClass) ? '' : $selectClass}} form-control"
                 id="{{empty($selectId) ? '' : $selectId}}"
                 data-live-search="{{ !empty($selectPicker) ? $selectPicker : ''}}"
                 name="{{$name}}"
