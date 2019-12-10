@@ -54,7 +54,7 @@
     <section class="how-section__extra bg-greylight">
         <div class="container">
             <div class="row">
-                <div class="col col-12 col-md-6">
+                <div class="col col-12 col-md-6 mb-25">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/video_placeholder.jpg') }}"
                              alt="People around a desk chatting with laptops">
@@ -62,12 +62,12 @@
                 </div>
                 <div class="col col-12 col-md-6">
                     <div>
-                        <h2 class="font-32 SofiaPro-SemiBold mb-4">NHS funded in a private hospital</h2>
-                        <p class="font-20 mb-4 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
+                        <h2 class="SofiaPro-Medium mb-4">NHS funded in a private hospital</h2>
+                        <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
                             distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
                             voluptates? Ea, odio!
                         </p>
-                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
+                        <p class="mb-4 col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
                             repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
                             deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
                             quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
@@ -86,7 +86,7 @@
     <section class="how-section__extra">
         <div class="container">
             <div class="row flex-lg-row-reverse">
-                <div class="col col-12 col-lg-6">
+                <div class="col col-12 col-lg-6 mb-25">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/video_placeholder.jpg') }}"
                              alt="People around a desk chatting with laptops">
@@ -94,12 +94,12 @@
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div>
-                        <h2 class="font-32 SofiaPro-SemiBold mb-4">Standard procedure at an NHS Hospital</h2>
-                        <p class="font-20 mb-4 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
+                        <h2 class="mb-4">Standard procedure at an NHS Hospital</h2>
+                        <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
                             necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
                             voluptates? Ea, odio!
                         </p>
-                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
+                        <p class="mb-3 p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
                             repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
                             deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
                             quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
@@ -118,7 +118,7 @@
     <section class="how-section__extra bg-greylight">
         <div class="container">
             <div class="row">
-                <div class="col col-12 col-lg-6">
+                <div class="col col-12 col-lg-6 mb-25">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/video_placeholder.jpg') }}"
                              alt="People around a desk chatting with laptops">
@@ -126,12 +126,12 @@
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div>
-                        <h2 class="font-32 SofiaPro-SemiBold mb-4">Private healthcare insurance</h2>
-                        <p class="font-20 mb-4 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
+                        <h2 class="mb-4">Private healthcare insurance</h2>
+                        <p class="mb-4 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
                             distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
                             voluptates? Ea, odio!
                         </p>
-                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
+                        <p class="mb-4 p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
                             repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
                             deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
                             quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
@@ -144,7 +144,7 @@
                                 'group'                 => true,
                                 'groupName'             => 'policies',
                                 'svg'                   => 'chevron-down',
-                                'selectClassName'       => 'd-flex align-items-center mb-4',
+                                'selectClassName'       => 'd-lg-flex align-items-center mb-4',
                                 'selectClass'           => 'select-picker',
                                 'labelClass'            => 'col-turq font-20 SofiaPro-Medium mr-3',
                                 'showLabel'             => true,
@@ -164,7 +164,7 @@
     <section class="how-section__extra">
         <div class="container">
             <div class="row flex-lg-row-reverse">
-                <div class="col col-12 col-lg-6">
+                <div class="col col-12 col-lg-6 mb-25">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/video_placeholder.jpg') }}"
                              alt="People around a desk chatting with laptops">
@@ -172,13 +172,13 @@
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div>
-                        <h2 class="font-32 SofiaPro-SemiBold mb-4">Self-pay at a private hospital</h2>
-                        <p class="font-20 mb-4 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
+                        <h2 class="mb-4">Self-pay at a private hospital</h2>
+                        <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
                             voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
                             distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
                             voluptates? Ea, odio!
                         </p>
-                        <p class="font-20 mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
                             repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
                             deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
                             quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa

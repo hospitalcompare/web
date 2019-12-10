@@ -583,7 +583,13 @@ h6 {
 .p-intro {
     @include font-size(1.2rem);
     line-height: 1.6;
-    @extend .SofiaPro-Medium;
+    //@extend .SofiaPro-Medium;
+}
+
+.p-secondary {
+    @include font-size(1.1rem);
+    line-height: 1.6;
+    //@extend .SofiaPro-Medium;
 }
 
 .image-wrapper {
