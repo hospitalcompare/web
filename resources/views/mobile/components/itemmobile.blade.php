@@ -1,7 +1,8 @@
 <div class="result-item result-item-mobile col-12 col-md-6 mb-3" id="result-item_{{ $id }}">
     <div class="result-item-inner position-relative shadow p-3 pt-5">
-        <div class="{{$NHSClass}} position-absolute px-2 {{ $NHSClass == 'private-hospital' ? 'bg-pink' : 'bg-blue' }}">
-            <p class="m-0">{{ $fundedText }}</p></div>
+        <div class="{{$NHSClass}} hospital-type position-absolute p-2 {{ $NHSClass == 'private-hospital' ? 'bg-violet' : 'bg-blue' }}">
+            <p class="m-0">{{ $fundedText }}</p>
+        </div>
         @if(!empty($specialOffers))
             <div class="position-absolute btn-block">
 {{--                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [--}}
@@ -15,14 +16,14 @@
             </div>
         @endif
         @include('components.basic.button', [
-            'classTitle'        => 'btn btn-compare compare font-12 shadow-none position-absolute',
+            'classTitle'        => 'btn btn-compare compare font-12 shadow-none position-absolute mt-2 mr-2',
             'htmlButton'        => true,
             'buttonText'        => 'Add to compare',
             'hospitalType'      => $NHSClass,
             'svg'               => 'heart-solid',
             'id'                => $id])
-        <div class="result-item-mobile-section-1">
-            <div class="hospital-details w-100 position-relative">
+        <div class="result-item-mobile-section-1 w-100">
+            <div class="hospital-details w-100 position-relative mb-5">
                 <p class="sort-item-title SofiaPro-SemiBold" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
@@ -51,19 +52,19 @@
 
             </div>
         </div>
-        <div class="result-item-mobile-section-2">
+        <div class="result-item-mobile-section-2 w-100">
             {{-- CQC rating  --}}
             <div class="result-item-section-2__child">
-                <p class="h-50 d-flex align-items-center SofiaPro-Medium" @includeWhen(empty($qualityRating), 'components.basic.popover', [
+                <p>Care Quality Rating</p>
+                <p class="h-50 d-flex  SofiaPro-Medium" @includeWhen(empty($qualityRating), 'components.basic.popover', [
                         'placement' => 'bottom',
-                        'trigger' => 'hover',
+                        'trigger' => 'click',
                         'html' => 'true',
                         'content' => 'Currently no data available for this hospital'])
                     @includeWhen(!empty($qualityRating), 'components.basic.popover', [
                          'placement'     => 'bottom',
                          'size'          => 'cqc',
-                         'trigger'       => 'hover',
-{{--                         'hideDelay'     => $popoverDelay,--}}
+                         'trigger'       => 'click',
                          'html'          => 'true',
                          'content'       => '<div class="container-fluid">
                              <div class="row">
@@ -114,16 +115,17 @@
                 <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
             </div>
             {{-- Waiting time --}}
-            <div class="result-item-section-2__child flex-column">
-                <p class="h-50 d-flex align-items-center SofiaPro-Medium"
+            <div class="result-item-section-2__child">
+                <p>Waiting Time NHS (Funded)</p>
+                <p class="h-50 d-flex  SofiaPro-Medium"
                     @includeWhen(empty($waitTime), 'components.basic.popover', [
                         'placement' => 'bottom',
-                        'trigger' => 'hover',
+                        'trigger' => 'click',
                         'html' => 'true',
                         'content' => 'Currently no data available for this hospital'])
                     @includeWhen(!empty($waitTime), 'components.basic.popover', [
                         'placement'         => 'bottom',
-                        'trigger'           => 'hover',
+                        'trigger'           => 'click',
                         'html'              => 'true',
                         'content'           =>
                             '<div>
@@ -162,7 +164,7 @@
                                 <small>NB - Diagnostics is a % of current waiting list waiting 6+ weeks (national target is 1%)</small>
                             </div>'
                         ])>
-                    {!! !empty($waitTime) ? $waitTime.'<br>Weeks' : "No data" !!}
+                    {!! !empty($waitTime) ? $waitTime.'&nbsp;Weeks' : "No data" !!}
                 </p>
                 {{--                @if($NHSClass == 'private-hospital')--}}
                 {{--                    <span>--}}
@@ -180,12 +182,47 @@
                 <span class="d-none" id="item_waiting_time_{{$id}}">{{str_replace("<br>", " ", $waitTime)}}</span>
             </div>
             {{-- End waiting time --}}
+
+            {{-- end NHS user rating --}}
+            {{-- % operations cancelled --}}
+            <div class="result-item-section-2__child">
+                <p>% Operations Cancelled</p>
+                <p class="h-50 d-flex  SofiaPro-Medium"
+                    @include('components.basic.popover', [
+                    'trigger' => 'click',
+                    'html'    => 'true',
+                    'content' => !empty($opCancelled) ? 'National average<br> is 3.35%' : 'Currently no data available<br>for this hospital'])>
+                    {!! !empty($opCancelled) ? $opCancelled : "No data" !!}
+                </p>
+                <span class="d-none" id="item_op_cancelled_{{$id}}">{!! $opCancelled !!}</span>
+            </div>
+            {{-- Friends and family --}}
+            <div class="result-item-section-2__child">
+                <p>Friends & Family Rating</p>
+                <p class="m-0 h-50 d-flex  SofiaPro-Medium"
+                    @include('components.basic.popover', [
+                        'placement' => 'bottom',
+                        'trigger' => 'click',
+                        'html' => 'true',
+                        'content' => !empty($FFRating) ? 'National average<br>is 98.85%' : 'Currently no data available<br>for this hospital'])>
+                    {!! !empty($FFRating) ? $FFRating : "No data" !!}
+                </p>
+                <span class="d-none" id="item_ff_rating_{{$id}}">{!! $FFRating !!}</span>
+            </div>
+            {{-- NHS funded work  --}}
+{{--            <div class="result-item-section-2__child">--}}
+{{--                <p>--}}
+{{--                    {!! ($NHSClass == 'nhs-hospital') || ($NHSClass == 'private-hospital') && !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}--}}
+{{--                </p>--}}
+{{--                <span class="d-none" id="item_nhs_funded_{{$id}}">{!! $NHSFunded !!}</span>--}}
+{{--            </div>--}}
             {{-- NHS user rating --}}
             <div class="result-item-section-2__child">
-                <p class="h-50 d-flex align-items-center SofiaPro-Medium"
+                <p>NHS User Rating</p>
+                <p class="h-50 d-flex  SofiaPro-Medium"
                     @include('components.basic.popover', [
                         'placement'         => 'bottom',
-                        'trigger'           => 'hover',
+                        'trigger'           => 'click',
                         'html'              => 'true',
                         'content'           => !empty($d['placeRating']) ? '
                         <ul class="nhs-user-ratings mb-0">
@@ -200,41 +237,8 @@
                 </p>
                 <span class="d-none" id="item_user_rating_{{$id}}">{!! $userRating !!}</span>
             </div>
-            {{-- end NHS user rating --}}
-            {{-- % operations cancelled --}}
-            <div class="result-item-section-2__child">
-                <p class="h-50 d-flex align-items-center SofiaPro-Medium"
-                    @include('components.basic.popover', [
-                    'trigger' => 'hover',
-                    'html'    => 'true',
-                    'content' => !empty($opCancelled) ? 'National average<br> is 3.35%' : 'Currently no data available<br>for this hospital'])>
-                    {!! !empty($opCancelled) ? $opCancelled : "No data" !!}
-                </p>
-                <span class="d-none" id="item_op_cancelled_{{$id}}">{!! $opCancelled !!}</span>
-            </div>
-            {{-- Friends and family --}}
-            <div class="result-item-section-2__child">
-                <p class="m-0 h-50 d-flex align-items-center SofiaPro-Medium"
-                    @include('components.basic.popover', [
-                        'placement' => 'bottom',
-                        'trigger' => 'hover',
-                        'html' => 'true',
-                        'content' => !empty($FFRating) ? 'National average<br>is 98.85%' : 'Currently no data available<br>for this hospital'])>
-                    {!! !empty($FFRating) ? $FFRating : "No data" !!}
-                </p>
-                <span class="d-none" id="item_ff_rating_{{$id}}">{!! $FFRating !!}</span>
-            </div>
-            {{-- NHS funded work  --}}
-            <div class="result-item-section-2__child">
-                <p>
-                    {!! ($NHSClass == 'nhs-hospital') || ($NHSClass == 'private-hospital') && !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
-                </p>
-                <span class="d-none" id="item_nhs_funded_{{$id}}">{!! $NHSFunded !!}</span>
-            </div>
-            <div class="result-item-section-2__child flex-column">
-                {{--                    <p>--}}
-                {{--                        {!! !empty($privateSelfPay) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : ""  !!}--}}
-                {{--                    </p>--}}
+            {{-- Click for self pay --}}
+            <div class="result-item-section-2__child justify-content-center">
                 @if(!empty($privateSelfPay))
                     @if($NHSClass == 'private-hospital')
                         <p>
@@ -242,24 +246,23 @@
                                     'hrefValue'         => $url,
                                     'hospitalTitle'     => $title,
                                     'modalTarget'       => '#hc_modal_enquire_private',
-                                    'classTitle'        => 'text-link enquire-prices',
+                                    'classTitle'        => 'text-link enquire-prices mb-2',
                                     'target'            => 'blank',
                                     'modalText'         => 'This is the text about prices',
                                     'hospitalIds'       => $id,
-                                    'buttonText'            => 'Click for<br>prices'])
+                                    'buttonText'        => 'Click for self pay prices'])
                         </p>
-                    @else
-                        <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>
+{{--                    @else--}}
+{{--                        <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>--}}
                     @endif
-                @else
-                    <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>
+{{--                @else--}}
+{{--                    <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>--}}
                 @endif
                 <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
             </div>
         </div>
-        <div class="result-item-mobile-section-3 container">
+        <div class="result-item-mobile-section-3 w-100">
             <div class="row">
-                <span class="d-none" id="item_hospital_type_class_{{$id}}">{!! $NHSClass !!}</span>
                 <!-- More info button -->
                 <div class="button-wrapper col-6">
                     @include('components.basic.button', [
@@ -299,17 +302,17 @@
                             'id'                => 'enquire_nhs'.$id,
                             'hospitalIds'       => $id,
                             'svg'               => 'circle-check'])
-                    @endif
-                </div>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
-    {{--    @include('components.corporatecontent', [--}}
-    {{--        'procedures'        => $procedures,--}}
-    {{--        'bulletPoints'      => ['Shortest waiting time', 'Outstanding CQC rating', '5 Star NHS Rating'],--}}
-    {{--        'latitude'          => $latitude,--}}
-    {{--        'longitude'         => $longitude,--}}
-    {{--        'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,--}}
-    {{--        'hospitalTitle'     => $title--}}
-    {{--    ])--}}
 </div>
+{{--    @include('components.corporatecontent', [--}}
+{{--        'procedures'        => $procedures,--}}
+{{--        'bulletPoints'      => ['Shortest waiting time', 'Outstanding CQC rating', '5 Star NHS Rating'],--}}
+{{--        'latitude'          => $latitude,--}}
+{{--        'longitude'         => $longitude,--}}
+{{--        'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,--}}
+{{--        'hospitalTitle'     => $title--}}
+{{--    ])--}}

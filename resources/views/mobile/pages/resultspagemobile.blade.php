@@ -47,7 +47,7 @@
                             'specialOffers'         => $d['special_offers'],
                             'btnText'               => 'Make an enquiry',
                             'NHSClass'              => $d['hospitalType']['name'] == 'NHS' ? 'nhs-hospital' : 'private-hospital',
-                            'fundedText'            => ($d['hospitalType']['name'] == 'NHS') ? 'NHS Hospital': 'Private Hospital',
+                            'fundedText'            => ($d['hospitalType']['name'] == 'NHS') ? 'NHS': 'Private',
                             'url'                   => $d['url'],
                             'safe'                  => $d['rating']['safe'],
                             'safeIcon'              => \App\Helpers\Utils::getDiscOrStar($d['rating']['safe']),
@@ -64,13 +64,31 @@
                             'popoverDelay'          => 2000
                            ])
                     @endforeach
-                    @if($data['hospitals']->total() < 10)
-                        <div class="container">
-                            <h1>Try tweaking the filters for more results</h1>
-                        </div>
-                    @endif
                 @endif
+            </div><!-- row -->
+        </div><!-- container -->
+        @if($data['hospitals']->total() < 10)
+            <div class="container">
+                <h1>Try tweaking the filters for more results</h1>
             </div>
-        </div>
-    </div>
+        @endif
+    </div><!-- results -->
+
+    @include('components.solutionsbar', [
+      'specialOffers' => $data['special_offers']
+      ])
+    @include('components.modals.modalenquirenhs')
+    {{--    @include('components.modals.modalspecial')--}}
+    @include('components.modals.modalenquireprivate', [
+        'procedures' => $data['filters']['procedures']])
+    {{--  Maps modal  --}}
+    {{--    @include('components.modals.modalmaps')--}}
+    {{--    @include('components.modals.modalvideo')--}}
+    @include('components.modals.modaltour')
+    {{--    @include('components.doctor')--}}
+    @include('components.basic.modalbutton', [
+        'classTitle'    => 'btn btn-hanblue position-fixed',
+        'buttonText'    => 'Help?',
+        'modalTarget'   => '#hc_modal_tour',
+        'style'         => 'z-index: 1040; bottom: 100px; left: 100px'])
 @endsection

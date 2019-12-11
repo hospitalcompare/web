@@ -647,7 +647,21 @@
 
 /********* Mobile results layout ************/
 .results-page-mobile {
-    .results-item-mobile {
+    .result-item-mobile {
+        .compare {
+            top: 0px;
+            right: 0px;
+        }
 
+        .hospital-type {
+            top: 0;
+            left: 0;
+            bottom: auto;
+            width: auto;
+        }
+
+        .result-item-section-2__child {
+            justify-content: space-between;
+        }
     }
 }

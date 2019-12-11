@@ -223,7 +223,7 @@ function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) 
 }
 
 //Set the OnClick event for the Compare button
-$(document).on("click", ".result-item-section-3 .compare", function () {
+$(document).on("click", ".compare", function () {
     // Get hospital type of item whose button has been clicked to remove it
     var hospitalTypeClicked = $(this).data('hospital-type');
     //Get the Data that is already in the Cookies
