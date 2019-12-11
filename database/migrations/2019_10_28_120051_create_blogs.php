@@ -413,7 +413,7 @@ class CreateBlogs extends Migration
         foreach( $preCategories as $preCategory ) {
             $category = new \App\Models\BlogCategory();
             $category->name = $preCategory['name'];
-            $category->icon = 'images/icons/heart-solid.svg';
+            $category->icon = 'heart-solid';
             $category->colour = $preCategory['colour'];
             $category->save();
         }

@@ -6,7 +6,8 @@
                     <img class="content" alt="Image related to {{ $blog['title'] }}" src="{{ asset($blog['image']) }}">
 {{--                    <div class="overlay"></div>--}}
                     <div class="blog-item-category position-absolute rounded-circle p-2" style="background-color:{{$blog->category->colour}}">
-                        {!! file_get_contents(asset($blog->category->icon)) !!}
+{{--                        {!! file_get_contents(asset($blog->category->icon)) !!}--}}
+                        @svg($blog->category->icon)
                     </div>
                 </div>
                 <div class="blog-item-content">

@@ -113,6 +113,10 @@ class WebController extends BaseController
         if(env('APP_ENV') == 'live')
             return view('pages.workInProgress', $this->returnedData);
 
+        //If we want to set the headers only for mobile ( dev only )
+//        Agent::setUserAgent('Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148');
+
+        //Returning different views for Desktop, Mobile or Tablet
         if(Agent::isDesktop())
             return view('pages.resultspage', $this->returnedData);
         else
