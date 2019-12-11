@@ -38,17 +38,17 @@
                         <p class="SofiaPro-Light helping-you">Helping you to make the best healthcare choices</p>
                         <ul class="social-list d-flex justify-content-lg-end">
                             <li class="facebook-social">
-                                <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/facebook.svg')) !!}
+                                <a href="" target="_blank">@svg('facebook')
                                     <span class="sr-only">Facebook link</span>
                                 </a>
                             </li>
                             <li class="twitter-social">
-                                <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/twitter.svg')) !!}
+                                <a href="" target="_blank">@svg('twitter')
                                     <span class="sr-only">Twitter link</span>
                                 </a>
                             </li>
                             <li class="instagram-social">
-                                <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/instagram.svg')) !!}
+                                <a href="" target="_blank">@svg('instagram')
                                     <span class="sr-only">Instagram link</span>
                                 </a>
                             </li>

@@ -975,10 +975,6 @@
                                 </div>
                                 <div class="cqc-right col-8 pr-0">
                                     <div class="cqc-table">
-                                        {{--                                        <div class="cqc-row d-flex justify-content-between">--}}
-                                        {{--                                            <div class="cqc-category">Safe</div>--}}
-                                        {{--                                            <div class="cqc-rating ml-auto"><strong>Good</strong><span class="cqc-colour">{!! file_get_contents(asset('/images/icons/star.svg')) !!}</span></div>--}}
-                                        {{--                                        </div>--}}
                                         <div class="cqc-row d-flex justify-content-between">
                                             <div class="cqc-category">Safe</div>
                                             <div class="cqc-rating ml-auto"><strong>Good</strong><span
