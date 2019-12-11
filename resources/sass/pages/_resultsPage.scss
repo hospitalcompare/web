@@ -301,6 +301,7 @@
 
     .result-item {
         margin-top: 7px;
+
         &:not(:first-child) {
         }
     }
@@ -648,9 +649,14 @@
 /********* Mobile results layout ************/
 .results-page-mobile {
     .result-item-mobile {
+        .item-tags {
+            top: 0;
+            left: 0;
+        }
+
         .compare {
-            top: 0px;
-            right: 0px;
+            top: 0;
+            right: 0;
         }
 
         .hospital-type {
@@ -658,6 +664,32 @@
             left: 0;
             bottom: auto;
             width: auto;
+            height: 30px;
+            line-height: 30px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 100%;
+                top: 0;
+                width: 30px;
+                height: 30px;
+
+            }
+
+            &.nhs-hospital:after {
+                border-bottom: solid 15px transparent;
+                border-right: solid 15px transparent;
+                border-left: solid 15px $blue;
+                border-top: solid 15px $blue;
+            }
+
+            &.private-hospital:after {
+                border-bottom: solid 15px transparent;
+                border-right: solid 15px transparent;
+                border-left: solid 15px $violet;
+                border-top: solid 15px $violet;
+            }
         }
 
         .result-item-section-2__child {

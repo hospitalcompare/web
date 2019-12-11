@@ -1,20 +1,22 @@
 <div class="result-item result-item-mobile col-12 col-md-6 mb-3" id="result-item_{{ $id }}">
     <div class="result-item-inner position-relative shadow p-3 pt-5">
-        <div class="{{$NHSClass}} hospital-type position-absolute p-2 {{ $NHSClass == 'private-hospital' ? 'bg-violet' : 'bg-blue' }}">
-            <p class="m-0">{{ $fundedText }}</p>
-        </div>
-        @if(!empty($specialOffers))
-            <div class="position-absolute btn-block">
-{{--                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [--}}
-{{--                    'class' => 'default'])--}}
-                @include('components.basic.button', [
-                    'classTitle'        => 'toggle-special-offer btn btn-block btn-icon btn-pink btn-special-offer btn-plus font-12',
-                    'htmlButton'        => true,
-                    'id'                => 'special_' . $id,
-                    'buttonText'        => 'Special Offers',
-                    'svg'               => 'special'])
+        <div class="item-tags position-absolute w-50">
+            <div class="{{$NHSClass}} hospital-type pp-2 {{ $NHSClass == 'private-hospital' ? 'bg-violet' : 'bg-blue' }} position-relative d-inline-block">
+                <p class="m-0">{{ $fundedText }}</p>
             </div>
-        @endif
+            @if(!empty($specialOffers))
+                <div class="d-inline-block">
+                    {{--                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [--}}
+                    {{--                    'class' => 'default'])--}}
+                    @include('components.basic.button', [
+                        'classTitle'        => 'toggle-special-offer btn btn-icon btn-pink btn-special-offer_mobile font-12',
+                        'htmlButton'        => true,
+                        'id'                => 'special_' . $id,
+                        'buttonText'        => 'Special Offers',
+                        'svg'               => 'special'])
+                </div>
+            @endif
+        </div>
         @include('components.basic.button', [
             'classTitle'        => 'btn btn-compare compare font-12 shadow-none position-absolute mt-2 mr-2',
             'htmlButton'        => true,
@@ -301,7 +303,7 @@
                             'modalTarget'       => '#hc_modal_enquire_nhs',
                             'id'                => 'enquire_nhs'.$id,
                             'hospitalIds'       => $id,
-                            'svg'               => 'circle-check'])
+                            ])
                     </div>
                 @endif
             </div>
