@@ -19,7 +19,7 @@
             </div>
         </div>
         <span class="toggle-special-offer d-inline-flex align-items-center">
-            {!! file_get_contents(asset('images/icons/chevron-up.svg')) !!}
+            @svg('chevron-up')
         </span>
     </div>
     <div class="special-offer-body">

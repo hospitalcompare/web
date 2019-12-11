@@ -3,7 +3,7 @@
 @endif
 <input
     id="{{empty($id)? '' : $id}}"
-    class="{{empty($className)? '' : $className}}"
+    class="{{empty($className)? '' : $className}} form-control"
     type="{{ $type ?? 'text' }}"
 {{--    results="{{ !empty($type) && $type == 'search' ?? $results }}"--}}
     placeholder="{{$placeholder}}"

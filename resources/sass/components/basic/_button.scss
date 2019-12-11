@@ -50,23 +50,6 @@
         padding: 14px 34px;
     }
 
-    //margins
-    &.btn-mg-right {
-        margin-right: 20px;
-    }
-
-    &.btn-mg-bottom {
-        margin-bottom: 20px;
-    }
-
-    &.btn-mg-left {
-        margin-left: 20px;
-    }
-
-    &.btn-mg-top {
-        margin-top: 20px;
-    }
-
     //colours
     &.btn-turq {
         background-color: $turq;
@@ -191,274 +174,277 @@
         padding: 7px 25px;
     }
 
-    // icon buttons
-    &.btn-icon {
-        &:before,
-        &:after {
-            content: '';
-            position: absolute;
-            @include icon-bg-center;
+}
+
+
+// icon buttons
+.btn-icon {
+    &:before,
+    &:after,
+    svg {
+        content: '';
+        position: absolute;
+        @include icon-bg-center;
+    }
+
+    &.btn-arrow-right {
+        background-size: 200%;
+        border-radius: 100px;
+        @include font-size(22);
+        padding: 12px 65px 12px 30px;
+        position: relative;
+
+        &:hover {
+            background-position: left;
+        }
+    }
+
+    &.btn-arrow-down {
+        padding-right: 50px;
+
+        i, svg {
+            @include v-c;
+            right: 20px;
+            transition: $transition;
         }
 
-        &.btn-arrow-right {
-            background-size: 200%;
-            border-radius: 100px;
-            @include font-size(22);
-            padding: 12px 65px 12px 30px;
-            position: relative;
-
-            &:hover {
-                background-position: left;
-            }
-        }
-
-        &.btn-arrow-down {
-            padding-right: 50px;
-
+        &.open {
             i, svg {
-                @include v-c;
-                right: 20px;
-                transition: $transition;
-            }
-
-            &.open {
-                i, svg {
-                    transform: translateY(-50%) rotate3d(0, 0, 1, 180deg);
-                }
+                transform: translateY(-50%) rotate3d(0, 0, 1, 180deg);
             }
         }
+    }
 
-        &.btn-consultant {
-            /* Style for "Consultant" */
+    &.btn-consultant {
+        /* Style for "Consultant" */
+        height: 20px;
+        line-height: 20px;
+        @include font-size(14);
+        padding: 0 20px 0 12px;
+    }
+
+    &.btn-plus {
+        &:after {
+            background-image: url('../images/icons/plus-solid.svg');
+            @include icon-bg-center(100%);
+            @include v-c;
+            right: 9px;
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    &.btn-more-info {
+        @include font-size(14);
+        padding: 0 25px 0 8px;
+        border-radius: $border-radius $border-radius 0 0;
+        background-color: $turq;
+
+        svg {
+            @include v-c;
+            right: 8px;
+            width: 0.8rem;
+        }
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    &.btn-close__small {
+        color: $white;
+        height: 20px;
+        line-height: 20px;
+        @include font-size(14);
+        padding: 0 20px 0 12px;
+
+        &:after {
+            background-image: url('../images/icons/up-arrow.svg');
+            @include icon-bg-center(30%);
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 20px;
             height: 20px;
             line-height: 20px;
-            @include font-size(14);
-            padding: 0 20px 0 12px;
+            transform: rotate(90deg);
         }
 
-        &.btn-plus {
-            &:after {
-                background-image: url('../images/icons/plus-solid.svg');
-                @include icon-bg-center(100%);
-                @include v-c;
-                right: 9px;
-                width: 14px;
-                height: 14px;
-            }
-        }
-
-        &.btn-more-info {
-            @include font-size(14);
-            padding: 0 25px 0 8px;
-            border-radius: $border-radius $border-radius 0 0;
-            background-color: $turq;
-
-            svg {
-                @include v-c;
-                right: 8px;
-                width: 0.8rem;
-            }
-
-            &:hover {
-                opacity: 0.6;
-            }
-        }
-
-        &.btn-close__small {
+        &:hover {
             color: $white;
+
+        }
+    }
+
+    &.btn-go {
+        color: $white;
+        @include font-size(14);
+        padding: 6px 30px 6px 12px;
+        background: linear-gradient(90deg, #000, #000, #00bcb4, #000);
+        background-size: 300% 100%;
+
+        svg {
+            @include v-c;
+            right: 12px;
+        }
+
+        &:hover {
+            color: $white;
+            background-position: 0%;
+        }
+
+        &:focus {
+            animation-name: bg-reverse;
+            animation-duration: 5s;
+        }
+    }
+
+    &.btn-enquire,
+    &.btn-enquire-private-hospital {
+        //border-radius: $border-radius;
+        color: $white !important;
+        @include font-size(14);
+        position: relative;
+        padding: 8px 5px 8px 40px;
+        display: inline-block;
+        text-align: left;
+
+        svg {
+            @include v-c;
+            left: 8px;
+            width: 20px;
             height: 20px;
-            line-height: 20px;
-            @include font-size(14);
-            padding: 0 20px 0 12px;
+        }
+    }
+
+    &.btn-enquire-private-hospital {
+        @include font-size(16);
+        border-radius: $border-radius;
+        text-align: center;
+        padding: 15px 25px 15px 45px;
+
+        svg {
+            @include v-c;
+            left: 8px;
+            width: 30px;
+            height: 25px;
+        }
+    }
+
+    &.btn-enquire-pink {
+        border-radius: 20px;
+        background: $white;
+        color: $pink;
+        @include font-size(12);
+        position: relative;
+        padding: 10px 10px 10px 35px;
+        display: inline-block;
+        text-align: left;
+        width: 131px;
+
+        &:before {
+            content: '';
+            background-image: url('../images/icons/circle-check-pink.svg');
+            @include icon-bg-center(100%);
+            @include v-c;
+            left: 10px;
+            width: 20px;
+            height: 20px;
+        }
+
+        &:hover {
+            color: $white;
+            background-color: $pink;
+            text-decoration: none;
+
+            &:before {
+                background-image: url('../images/icons/circle-check.svg');
+
+            }
+        }
+    }
+
+    // Button inside special offer tabs in solutions bar
+    &.btn-enquire-now {
+        color: $pink;
+        background-color: $white;
+        padding: 7px 30px 7px 17px;
+        @include font-size(14);
+
+        &:after {
+            background-image: url('../images/icons/up-arrow-pink.svg');
+            @include icon-bg-center(30%);
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 30px;
+            //height: 30px;
+            line-height: 30px;
+            transform: rotate(90deg);
+        }
+
+        &:hover {
+            color: $white;
+            background-color: $pink;
 
             &:after {
                 background-image: url('../images/icons/up-arrow.svg');
-                @include icon-bg-center(30%);
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: 20px;
-                height: 20px;
-                line-height: 20px;
-                transform: rotate(90deg);
-            }
-
-            &:hover {
-                color: $white;
-
             }
         }
-
-        &.btn-go {
-            color: $white;
-            @include font-size(14);
-            padding: 6px 30px 6px 12px;
-            background: linear-gradient(90deg, #000, #000, #00bcb4, #000);
-            background-size: 300% 100%;
-
-            svg {
-                @include v-c;
-                right: 12px;
-            }
-
-            &:hover {
-                color: $white;
-                background-position: 0%;
-            }
-
-            &:focus {
-                animation-name: bg-reverse;
-                animation-duration: 5s;
-            }
-        }
-
-        &.btn-enquire,
-        &.btn-enquire-private-hospital {
-            //border-radius: $border-radius;
-            color: $white !important;
-            @include font-size(14);
-            position: relative;
-            padding: 8px 5px 8px 40px;
-            display: inline-block;
-            text-align: left;
-
-            svg {
-                @include v-c;
-                left: 8px;
-                width: 20px;
-                height: 20px;
-            }
-        }
-
-        &.btn-enquire-private-hospital {
-            @include font-size(16);
-            border-radius: $border-radius;
-            text-align: center;
-            padding: 15px 25px 15px 45px;
-
-            svg {
-                @include v-c;
-                left: 8px;
-                width: 30px;
-                height: 25px;
-            }
-        }
-
-        &.btn-enquire-pink {
-            border-radius: 20px;
-            background: $white;
-            color: $pink;
-            @include font-size(12);
-            position: relative;
-            padding: 10px 10px 10px 35px;
-            display: inline-block;
-            text-align: left;
-            width: 131px;
-
-            &:before {
-                content: '';
-                background-image: url('../images/icons/circle-check-pink.svg');
-                @include icon-bg-center(100%);
-                @include v-c;
-                left: 10px;
-                width: 20px;
-                height: 20px;
-            }
-
-            &:hover {
-                color: $white;
-                background-color: $pink;
-                text-decoration: none;
-
-                &:before {
-                    background-image: url('../images/icons/circle-check.svg');
-
-                }
-            }
-        }
-
-        // Button inside special offer tabs in solutions bar
-        &.btn-enquire-now {
-            color: $pink;
-            background-color: $white;
-            padding: 7px 30px 7px 17px;
-            @include font-size(14);
-
-            &:after {
-                background-image: url('../images/icons/up-arrow-pink.svg');
-                @include icon-bg-center(30%);
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: 30px;
-                //height: 30px;
-                line-height: 30px;
-                transform: rotate(90deg);
-            }
-
-            &:hover {
-                color: $white;
-                background-color: $pink;
-
-                &:after {
-                    background-image: url('../images/icons/up-arrow.svg');
-                }
-            }
-        }
-
-        &.btn-special-offer {
-            padding: 8px 15px 8px 40px;
-            color: $white;
-
-            svg {
-                @include v-c;
-                position: absolute;
-                left: 8px;
-                width: 20px;
-                height: 20px;
-            }
-        }
-
-        &.btn-special-offer-reverse {
-            padding: 13px 20px;
-            border-radius: $border-radius;
-            border: 1px solid $pink;
-            color: $pink;
-            height: 40px;
-            line-height: 13px;
-            background-color: $white;
-            min-width: 160px;
-
-            &:before {
-                background-image: url('../images/icons/special-pink.svg');
-                @include icon-bg-center(50%);
-                position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                width: 40px;
-                height: 40px;
-                line-height: 40px;
-            }
-
-            &:after {
-                background-image: url('../images/icons/plus-solid-pink.svg');
-                @include icon-bg-center(30%);
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: 40px;
-                height: 40px;
-                line-height: 40px;
-            }
-
-        }
-
-        // Button on the floating green bar
     }
+
+    &.btn-special-offer {
+        padding: 8px 15px 8px 40px;
+        color: $white;
+
+        svg {
+            @include v-c;
+            position: absolute;
+            left: 8px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &.btn-special-offer-reverse {
+        padding: 13px 20px;
+        border-radius: $border-radius;
+        border: 1px solid $pink;
+        color: $pink;
+        height: 40px;
+        line-height: 13px;
+        background-color: $white;
+        min-width: 160px;
+
+        &:before {
+            background-image: url('../images/icons/special-pink.svg');
+            @include icon-bg-center(50%);
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        &:after {
+            background-image: url('../images/icons/plus-solid-pink.svg');
+            @include icon-bg-center(30%);
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+    }
+
+    // Button on the floating green bar
 }
 
 // Back to top button
@@ -468,7 +454,7 @@
     border-radius: $border-radius $border-radius 0 0;
     @include font-size(1.1rem);
     @include gradient-animation($body-color, $body-color, $turq, $turq, 0.3s);
-    padding:px 50px 16px 20px;
+    padding: 19px 50px 19px 20px;
 
     svg {
         @include v-c;
@@ -628,3 +614,11 @@
     }
 }
 
+// Browse more button
+.btn-icon-arrow svg {
+    width: 16px;
+    margin-left: 5px;
+    margin-top: -2px;
+    @extend .d-lg-none;
+
+}

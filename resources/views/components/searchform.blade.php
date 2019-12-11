@@ -22,7 +22,7 @@
                 'trigger'        => 'hover',
                 'content'        => '<p>Select your treatment<br>if known to refine results</p>
                              {{--<p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}'])
-            >{!! file_get_contents('./images/icons/question.svg') !!}</a>
+            >@svg('question')</a>
         </div>
         <div class="form-child postcode-parent">
             <div class="input-wrapper position-relative">
@@ -44,7 +44,7 @@
                                      Please enter your postcode<br>for a refined search.
                                  </p>
                                  '])
-                >{!! file_get_contents('./images/icons/question.svg') !!}</a>
+                >@svg('question')</a>
             </div>
             <div class="postcode-results-container">
                 <div class="ajax-box"></div>
@@ -77,7 +77,7 @@
                              </p>
 {{--                                                 <p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}
                              '])
-            >{!! file_get_contents('./images/icons/question.svg') !!}</a>
+            >@svg('question')</a>
         </div>
         @include('components.basic.submit', [
             'classTitle'    => 'btn btn-m btn-turq py-3 mb-3',

@@ -178,7 +178,7 @@
 {{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
-                    >{!! file_get_contents('./images/icons/question.svg') !!}</a>
+                    >@svg('question')</a>
                 </div>
                 <div class="postcode-radius-child postcode col-12 col-md-3 d-flex align-items-center">
                     @include('components.basic.input', [
@@ -201,7 +201,7 @@
                                          Please enter your postcode<br>for a refined search.
                                      </p>
                                      '])
-                    >{!! file_get_contents('./images/icons/question.svg') !!}</a>
+                    >@svg('question')</a>
                 </div>
                 <div class="postcode-radius-child radius col-12 col-md-6">
                     <div class="col-inner pr-4 d-flex flex-column flex-wrap flex-lg-row align-items-center h-100 position-relative">
@@ -248,7 +248,7 @@
 {{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
-                    >{!! file_get_contents('./images/icons/question.svg') !!}</a>
+                    >@svg('question')</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'svg' => 'chevron-down', 'placeholder' => 'NHS choices user rating', 'labelClass' => 'labelClass'])--}}
@@ -280,7 +280,7 @@
 {{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
-                    >{!! file_get_contents('./images/icons/question.svg') !!}</a>
+                    >@svg('question')</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
@@ -310,7 +310,7 @@
 {{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
-                    >{!! file_get_contents('./images/icons/question.svg') !!}</a>
+                    >@svg('question')</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
@@ -341,7 +341,7 @@
 {{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
-                    >{!! file_get_contents('./images/icons/question.svg') !!}</a>
+                    >@svg('question')</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
@@ -377,7 +377,7 @@
 {{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
 {{--                                     </p>--}}
                                      '])
-                    >{!! file_get_contents('./images/icons/question.svg') !!}</a>
+                    >@svg('question')</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2 d-flex align-items-end">
                     @include('components.basic.submit', ['classTitle' => 'btn btn-blue btn-s d-block btn-submit-results font-16', 'buttonText' => 'Update Results'])

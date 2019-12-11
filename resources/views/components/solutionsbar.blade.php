@@ -108,7 +108,7 @@
                                                      NHS or Private Hospital
                                                  </span>
                                                  '])
-                                >{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                >@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -125,7 +125,7 @@
                                                     <span>
                                                         Our waiting time data is based on NHS data, specifically the number of weeks that 92 out or 100 people wait for their treatment to start.
                                                     </span>'])
-                                >{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                >@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -143,7 +143,7 @@
                                                      The average waiting time for procedures at this hospital
                                                  </span>
                                                  '])
-                                >{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                >@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -160,7 +160,7 @@
                                                  <span>
                                                     The percentage of operations cancelled during the last reporting period. Data only available for NHS hospitals at this time.
                                                  </span>'])
-                                >{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                >@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -174,7 +174,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
-                                                    </span>'])>{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                                    </span>'])>@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -188,7 +188,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         The percentage of people who would recommend this hospital to family and friends.
-                                                    </span>'])>{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                                    </span>'])>@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -202,7 +202,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         This hospital provides treatments funded by the NHS. Remember you can have an NHS treatment at most private hospitals.
-                                                    </span>'])>{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                                    </span>'])>@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -216,7 +216,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
-                                                    </span>'])>{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                                    </span>'])>@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell column-break SofiaPro-SemiBold">Care Quality Rating</div>
@@ -231,7 +231,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         Info here
-                                                    </span>'])>{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                                    </span>'])>@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -245,7 +245,7 @@
                                 'size'      => 'comparison',
                                 'content'   => '<span>
                                                     Info here
-                                                </span>'])>{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                                </span>'])>@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -259,7 +259,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         Info here
-                                                    </span>'])>{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                                    </span>'])>@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -273,7 +273,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         Info here
-                                                    </span>'])>{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                                    </span>'])>@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -287,7 +287,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         Info here
-                                                    </span>'])>{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                                    </span>'])>@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell column-break SofiaPro-SemiBold">NHS User Rating</div>
@@ -302,7 +302,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         Info here
-                                                    </span>'])>{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                                    </span>'])>@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -316,7 +316,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         Info here
-                                                    </span>'])>{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                                    </span>'])>@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -330,7 +330,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         Info here
-                                                    </span>'])>{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                                    </span>'])>@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -344,7 +344,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         Info here
-                                                    </span>'])>{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                                    </span>'])>@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -358,7 +358,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         Info here
-                                                    </span>'])>{!! file_get_contents('./images/icons/question.svg') !!}</span>
+                                                    </span>'])>@svg('question')</span>
                             </span>
                         </div>
                     </div>
@@ -368,17 +368,6 @@
                         <!-- Items added here -->
                     </div>
                 </div>
-                {{--                <div class="col-2">--}}
-                {{--                    <div class="col-inner">--}}
-                {{--                        <div class="col-header">--}}
-                {{--                            <p>Further selected Hospital--}}
-                {{--                                will appear here.</p>--}}
-                {{--                            <p> Add more hospitals to your--}}
-                {{--                                Shortlist by clicking the&nbsp;{!! file_get_contents('./images/icons/heart.svg')) !!}--}}
-                {{--                            </p>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-                {{--                </div>--}}
             </div>
         </div>
     </div>

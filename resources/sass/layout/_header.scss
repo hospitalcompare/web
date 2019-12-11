@@ -1,8 +1,9 @@
 .header-wrapper {
     background: $turq;
-    //width: $fullWidth;
-    width: 100%;
     text-align: center;
+    @include media-breakpoint-down(md){
+        padding: 10px 0;
+    }
 }
 
 //HEADER SECTION
@@ -19,11 +20,6 @@
         display: flex;
         &:hover {
             text-decoration: none;
-        }
-
-        .header-logo-image {
-            //width: 34px;
-            //height: 34px;
         }
     }
 }

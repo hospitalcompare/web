@@ -54,21 +54,6 @@
 
 //============================ HOW PAGE =============================
 .how-section__extra {
-    .select-parent {
-        label {
-            width: 100%;
-            max-width: 260px;
-        }
-
-        svg {
-            position: absolute;
-            @include v-c;
-            right: 30px;
-        }
-    }
-
-    //max-width: 230px;
-
     .dropdown-toggle {
         padding: 8px 40px 8px 13px;
         @include font-size(16);
@@ -76,9 +61,27 @@
 }
 
 #how_to_use_filter_policies .select-parent {
+
     background-color: #fff;
     padding: 1rem;
     border: $greyBorder;
     border-radius: $border-radius;
     width: 100% !important;
+
+    label {
+        width: 100%;
+    }
+
+    svg {
+        position: absolute;
+        @include v-c;
+        right: 15px;
+    }
+
+    .select-wrapper,
+    label {
+        @include media-breakpoint-up(lg) {
+            width: 50% !important;
+        }
+    }
 }

@@ -52,26 +52,26 @@
                             <li class="d-inline-block"><a
                                     href="https://www.facebook.com/sharer/sharer.php?u={{ url()->full() }}"
                                     target="_blank" title="Share to Facebook">
-                                    {!! file_get_contents('./images/icons/social/facebook.svg') !!}
+                                    @svg('facebook')
                                 </a>
                             </li>
                             <li class="d-inline-block">
                                 <a target="_blank" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class=""
                                    data-show-count="false" title="Share to twitter">
-                                    {!! file_get_contents('./images/icons/social/twitter.svg') !!}
+                                    @svg('twitter')
                                 </a>
                             </li>
                             <li class="d-inline-block">
                                 <a target="_blank"
                                    href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(url()->full()) }}&title={{ $data['blog']['title'] }}"
                                    title="Share to LinkedIn">
-                                    {!! file_get_contents('./images/icons/social/linkedin.svg') !!}
+                                    @svg('linkedin')
                                 </a>
                             </li>
                             <li class="d-inline-block">
                                 <a href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site https://www.hospitalcompare.co.uk"
                                    title="Share by Email">
-                                    {!! file_get_contents('./images/icons/social/mail.svg') !!}
+                                    @svg('mail')
                                 </a>
                             </li>
                         </ul>
@@ -87,7 +87,6 @@
                             <p class="author-name">{{$data['blog']['author']['name']}}</p>
                             <p class="author-description">{{$data['blog']['author']['description']}}</p>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-4">

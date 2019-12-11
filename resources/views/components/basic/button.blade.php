@@ -12,10 +12,7 @@
         data-hospital-type="{{ $hospitalType }}"
     @endif>
     {!! $buttonText !!}
-    @if(!empty($icon))
-        <i class="{{ $icon }}"></i>
-    @endif
     @if(!empty($svg))
-        {!! file_get_contents('./images/icons/' . $svg . '.svg') !!}
+        @svg($svg, 'svg-icon')
     @endif
 </{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'a' }}>

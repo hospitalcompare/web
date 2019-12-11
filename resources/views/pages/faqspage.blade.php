@@ -16,7 +16,7 @@
             <h1 class="mb-0">How can we <span class="col-turq">help</span>?</h1>
             <h2 class="page-subtitle">Type a keyword into the search bar below and scroll down for all questions</h2>
             <div class="input-wrapper position-relative">
-                {!! file_get_contents('./images/icons/search-icon.svg') !!}
+                @svg('search-icon')
                 @include('components.basic.input', [
                     'type'        => 'search',
                     'results'     => '5',

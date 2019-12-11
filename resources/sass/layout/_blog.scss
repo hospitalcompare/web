@@ -1,17 +1,9 @@
 // ========================BLOGS SECTION================================
 .blog-page {
-
     .filters {
-
         .text {
             margin: auto 0;
         }
-
-        //.categories {
-        //    .category {
-        //        text-align: right;
-        //    }
-        //}
     }
 }
 
@@ -100,8 +92,10 @@
             }
 
             &:hover {
-                img {
-                    transform: scale3d(1.1, 1.1, 1.1) translate3d(-50%, -50%, 0) !important;
+                .blog-item-image {
+                    img {
+                        transform: scale3d(1.1, 1.1, 1.1) translate3d(-50%, -50%, 0) !important;
+                    }
                 }
             }
         }

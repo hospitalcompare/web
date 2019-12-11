@@ -22,10 +22,10 @@
    data-target="{{ $modalTarget }}"
    data-image="{{ $image ?? '' }}"
    data-address="{{ $address ?? '' }}">{!! $buttonText !!}
-    @if(!empty($icon))
-        <i class="{{ $icon }}"></i>
-    @endif
+{{--    @if(!empty($icon))--}}
+{{--        <i class="{{ $icon }}"></i>--}}
+{{--    @endif--}}
     @if(!empty($svg))
-        {!! file_get_contents('./images/icons/' . $svg . '.svg') !!}
+        @svg($svg)
     @endif
 </button>
