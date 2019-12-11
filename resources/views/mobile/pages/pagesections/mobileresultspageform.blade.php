@@ -121,7 +121,7 @@
                         'options'               => $data['sortBy'],
                         'svg'                   => 'chevron-down',
                         'selectClass'           => 'select-sort-by SofiaPro-Medium font-16',
-                        'selectClassName'       => 'mr-3 d-none align-items-center',
+                        'selectClassName'       => 'mr-3 align-items-center',
                         'placeholder'           =>'Sort by:',
                         'name'                  =>'sort_by',
                         'selectId'              => 'sort_by_select',

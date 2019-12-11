@@ -204,24 +204,25 @@
     .sort-bar {
         @include media-breakpoint-up(lg) {
             //height: 60px;
+            .section-1 {
+                width: 33%;
+            }
+
+            .section-2 {
+                width: 53%;
+                transition: $transition;
+            }
+
+            .section-3 {
+                width: 14%;
+            }
         }
 
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        .section-1 {
-            width: 33%;
-        }
 
-        .section-2 {
-            width: 53%;
-            transition: $transition;
-        }
-
-        .section-3 {
-            width: 14%;
-        }
 
         .show-section {
             margin: auto auto auto 0;

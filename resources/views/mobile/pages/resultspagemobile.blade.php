@@ -13,6 +13,8 @@
 @section('body-class', 'results-page results-page-mobile')
 
 @section('content')
+    @include('mobile.pages.pagesections.mobileresultspageform', ['displayBlock' => false])
+
     <div class="results">
         <div class="container">
             <div class="row">
@@ -74,6 +76,23 @@
         @endif
     </div><!-- results -->
 
+    <div class="pagination-wrap">
+        @if(!empty($data['hospitals']))
+            {{
+                $data['hospitals']->appends([
+                    'postcode'          => Request::input('postcode'),
+                    'radius'            => Request::input('radius'),
+                    'procedure_id'      => Request::input('procedure_id'),
+                    'waiting_time'      => Request::input('waiting_time'),
+                    'user_rating'       => Request::input('user_rating'),
+                    'quality_rating'    => Request::input('quality_rating'),
+                    'hospital_type'     => Request::input('hospital_type'),
+                    'sort_by'           => Request::input('sort_by')
+                ])->links('components.basic.pagination')
+            }}
+        @endif
+    </div>
+
     @include('components.solutionsbar', [
       'specialOffers' => $data['special_offers']
       ])
@@ -86,9 +105,9 @@
     {{--    @include('components.modals.modalvideo')--}}
     @include('components.modals.modaltour')
     {{--    @include('components.doctor')--}}
-    @include('components.basic.modalbutton', [
-        'classTitle'    => 'btn btn-hanblue position-fixed',
-        'buttonText'    => 'Help?',
-        'modalTarget'   => '#hc_modal_tour',
-        'style'         => 'z-index: 1040; bottom: 100px; left: 100px'])
+{{--    @include('components.basic.modalbutton', [--}}
+{{--        'classTitle'    => 'btn btn-hanblue position-fixed',--}}
+{{--        'buttonText'    => 'Help?',--}}
+{{--        'modalTarget'   => '#hc_modal_tour',--}}
+{{--        'style'         => 'z-index: 1040; bottom: 100px; left: 100px'])--}}
 @endsection
