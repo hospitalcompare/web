@@ -42,7 +42,7 @@
             @endif
         </select>
         @if(!empty($svg))
-            {!! file_get_contents(asset('/images/icons/' . $svg . '.svg')) !!}
+            @svg($svg, 'position-absolute v-c')
         @endif
     </div>
 </div>

@@ -117,12 +117,12 @@
                                         <!--Controls-->
                                         <a class="carousel-control-prev" href="#carousel-thumb_{{ $id }}" role="button"
                                            data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true">{!! file_get_contents(asset('/images/icons/chevron-left.svg')) !!}</span>
+                                            <span class="carousel-control-prev-icon" aria-hidden="true">@svg('chevron-left')</span>
                                             <span class="sr-only">Previous</span>
                                         </a>
                                         <a class="carousel-control-next" href="#carousel-thumb_{{ $id }}" role="button"
                                            data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true">{!! file_get_contents(asset('/images/icons/chevron-right.svg')) !!}</span>
+                                            <span class="carousel-control-next-icon" aria-hidden="true">@svg('chevron-right')</span>
                                             <span class="sr-only">Next</span>
                                         </a>
 
@@ -293,12 +293,12 @@
                                         <!--Controls-->
                                         <a class="carousel-control-prev" href="#carousel-thumb_{{ $id }}" role="button"
                                            data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true">{!! file_get_contents(asset('/images/icons/chevron-left.svg')) !!}</span>
+                                            <span class="carousel-control-prev-icon" aria-hidden="true">@svg('chevron-left')</span>
                                             <span class="sr-only">Previous</span>
                                         </a>
                                         <a class="carousel-control-next" href="#carousel-thumb_{{ $id }}" role="button"
                                            data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true">{!! file_get_contents(asset('/images/icons/chevron-right.svg')) !!}</span>
+                                            <span class="carousel-control-next-icon" aria-hidden="true">@svg('chevron-right')</span>
                                             <span class="sr-only">Next</span>
                                         </a>
 

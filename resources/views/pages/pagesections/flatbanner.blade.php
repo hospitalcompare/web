@@ -10,7 +10,7 @@
                         method="get"
                         action="/results-page"
                         style="">
-                        <div class="form-child">
+                        <div class="form-child treatment-parent">
                             @include('components.basic.select', [
                                 'selectPicker'          => 'true',
                                 'selectClass'           => 'big select-picker',
@@ -34,7 +34,7 @@
                             {{--                                    'trigger'        => 'hover',--}}
                             {{--                                    'content'        => '<p>Select your treatment<br>if known to refine results</p>--}}
                             {{--                                                 --}}{{--<p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}{{--'])--}}
-                            {{--                                >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
+                            {{--                                >@svg('question')</a>--}}
                         </div>
                         <div class="form-child postcode-parent position-relative">
                             {{--                                Add this hidden input to remove the autocomplete functionality--}}
@@ -64,9 +64,9 @@
                             {{--                                                         Please enter your postcode<br>for a refined search.--}}
                             {{--                                                     </p>--}}
                             {{--                                                     '])--}}
-                            {{--                                    >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>--}}
+                            {{--                                    >@svg('question')</a>--}}
                         </div>
-                        <div data-reveal-direction="right" class="form-child radius-parent full-left row-layout position-relative">
+                        <div class="form-child radius-parent full-left row-layout position-relative" data-reveal-direction="right" >
                             @include('components.basic.select', [
                                 'showLabel'             => true,
                                 'selectClass'           => 'distance-dropdown w-100',
@@ -92,7 +92,7 @@
                                              </p>
 {{--                                                 <p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}
                                              '])
-                            >{!! file_get_contents(asset('/images/icons/question.svg')) !!}</a>
+                            >@svg('question')</a>
                         </div>
                         @include('components.basic.button', [
                             'classTitle'    => 'btn btn-squared btn-turq font-18 text-center',

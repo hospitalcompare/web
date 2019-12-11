@@ -11,7 +11,6 @@
                         <div class="col-inner shadow h-100 d-flex flex-column">
                             <div class="icon"
                                  style="background-image: url('images/icons/{{ $howsection['iconImg'] }}.svg')">
-                                {{--                            {!! file_get_contents(asset('images/icons/' . $howsection['iconImg'] . '.svg')) !!}--}}
                             </div>
                             @if(!empty($howsection['step']))
                                 <div
@@ -35,7 +34,7 @@
                                 'content'   => 'This is the content',
                                 'trigger'   => 'hover'
                             ])>More info <span
-                                    class="help-link help-link__inline help-link__inline-red">{!! file_get_contents(asset('/images/icons/question.svg')) !!}</span>
+                                    class="help-link help-link__inline help-link__inline-red">@svg('question')</span>
                             </p>
                         </div>
                     </div>
@@ -48,14 +47,14 @@
                 class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a>
 
     </div>
-    @if( empty($hideButton) )
-        <div class="btn-area text-center">
-            @include('components.basic.button', [
-                'hrefValue'     => '/your-rights',
-                'classTitle'    => 'btn btn-squared btn-turq font-18',
-                'buttonText'        => 'Your Rights'
+{{--    @if( empty($hideButton) )--}}
+{{--        <div class="btn-area text-center">--}}
+{{--            @include('components.basic.button', [--}}
+{{--                'hrefValue'     => '/your-rights',--}}
+{{--                'classTitle'    => 'btn btn-squared btn-turq font-18',--}}
+{{--                'buttonText'        => 'Your Rights'--}}
 
-            ])
-        </div>
-    @endif
+{{--            ])--}}
+{{--        </div>--}}
+{{--    @endif--}}
 </div>

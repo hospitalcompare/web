@@ -16,8 +16,8 @@
                     <nav class="footer-upper__nav mb-25" role="navigation">
                         <ul class="footer-upper__menu">
                             <li><a href="/">Home</a></li>
-                            <li><a href="/about-us">About Us</a></li>
-                            <li><a href="/your-rights">Your rights</a></li>
+{{--                            <li><a href="/about-us">About Us</a></li>--}}
+{{--                            <li><a href="/your-rights">Your rights</a></li>--}}
 {{--                            <li><a href="/patient-choice">Patient choice</a></li>--}}
                             {{--                <li><a href="/our-blogs">Our blogs</a></li>--}}
                             <li><a href="mailto:hello@hospitalcompare.co.uk">Contact us</a></li>
@@ -38,17 +38,17 @@
                         <p class="SofiaPro-Light helping-you">Helping you to make the best healthcare choices</p>
                         <ul class="social-list d-flex justify-content-lg-end">
                             <li class="facebook-social">
-                                <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/facebook.svg')) !!}
+                                <a href="" target="_blank">@svg('facebook')
                                     <span class="sr-only">Facebook link</span>
                                 </a>
                             </li>
                             <li class="twitter-social">
-                                <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/twitter.svg')) !!}
+                                <a href="" target="_blank">@svg('twitter')
                                     <span class="sr-only">Twitter link</span>
                                 </a>
                             </li>
                             <li class="instagram-social">
-                                <a href="" target="_blank">{!! file_get_contents(asset('images/icons/social/instagram.svg')) !!}
+                                <a href="" target="_blank">@svg('instagram')
                                     <span class="sr-only">Instagram link</span>
                                 </a>
                             </li>
@@ -80,10 +80,11 @@
 
         <div class="container">
             <p class="mb-4">
-                *your legal right to choose may be restricted in some circumstances. For more
-                information see <a
-                    class="text-link"
-                    href="/your-rights">Your Rights</a>
+                *your legal right to choose may be restricted in some circumstances.
+{{--                For more--}}
+{{--                information see <a--}}
+{{--                    class="text-link"--}}
+{{--                    href="/your-rights">Your Rights</a>--}}
             </p>
             <p><time>{{ date('Y') }}</time><a href="/"> Hospital Compare<sup>TM</sup></a>. All rights reserved</p>
           </div>

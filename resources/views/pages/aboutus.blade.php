@@ -79,7 +79,7 @@
                 </div>
                 <div class="col-5 offset-5 my-3">
                     <div class="swirl">
-                        {!! file_get_contents(asset('/images/icons/icon-swirl.svg')) !!}
+                        @svg('icon-swirl')
                     </div>
                 </div>
                 <div class="col-12">
@@ -88,7 +88,7 @@
                 <div class="col-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/icon-understanding-choices-1.svg')) !!}
+                            @svg('icon-understanding-choices-1')
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
                     </div>
@@ -96,7 +96,7 @@
                 <div class="col-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/icon-understanding-choices-2.svg')) !!}
+                            @svg('icon-understanding-choices-2')
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
                     </div>
@@ -104,7 +104,7 @@
                 <div class="col-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/icon-understanding-choices-3.svg')) !!}
+                            @svg('icon-understanding-choices-3')
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
                     </div>
@@ -112,7 +112,7 @@
                 <div class="col-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            {!! file_get_contents(asset('/images/icons/icon-understanding-choices-4.svg')) !!}
+                            @svg('icon-understanding-choices-4')
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
                     </div>
