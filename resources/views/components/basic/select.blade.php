@@ -1,11 +1,11 @@
-<div class="select-parent {{ empty($selectClassName) ? '' : $selectClassName }}">
+<div class="select-parent {{ empty($selectParentClass) ? '' : $selectParentClass }}">
     @if(!empty($showLabel))
         <label class="{{empty($labelClass) ? '' : $labelClass}}"
                for="{{empty($selectId) ? '' : $selectId}}">
             {!! empty($placeholder) ? '': $placeholder !!}
         </label>
     @endif
-    <div class="select-wrapper position-relative">
+    <div class="select-wrapper position-relative {{ empty($selectWrapperClass) ? '' : $selectWrapperClass }}">
         <select class="{{empty($selectClass) ? '' : $selectClass}} form-control"
                 id="{{empty($selectId) ? '' : $selectId}}"
                 data-live-search="{{ !empty($selectPicker) ? $selectPicker : ''}}"

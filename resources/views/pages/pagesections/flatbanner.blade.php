@@ -71,7 +71,7 @@
                                 'showLabel'             => true,
                                 'selectClass'           => 'distance-dropdown w-100',
                                 'options'               => \App\Helpers\Utils::radius,
-                                'selectClassName'       => 'd-flex flex-lg-column select_half-width w-100',
+                                'selectParentClass'       => 'd-flex flex-lg-column select_half-width w-100',
                                 'placeholder'           => 'How far would you travel?',
                                 'placeholderOption'     => 'Select Distance',
                                 'selectedPlaceholder'   => true,

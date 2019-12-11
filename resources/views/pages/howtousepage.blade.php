@@ -144,7 +144,7 @@
                                 'group'                 => true,
                                 'groupName'             => 'policies',
                                 'svg'                   => 'chevron-down',
-                                'selectClassName'       => 'd-lg-flex align-items-center mb-4',
+                                'selectParentClass'       => 'd-lg-flex align-items-center mb-4',
                                 'selectClass'           => 'select-picker',
                                 'labelClass'            => 'col-turq font-20 SofiaPro-Medium mr-3 w-100 w-lg-50',
                                 'showLabel'             => true,

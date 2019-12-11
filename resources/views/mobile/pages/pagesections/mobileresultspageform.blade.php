@@ -1,139 +1,32 @@
 <form class="form-element" id="resultspage_form">
     <div class="sort-parent" id="sort_parent">
         <div class="container">
-            <div class="sort-bar">
-                <div class="show-section section-1 SofiaPro-Medium font-16">
+            <div class="row pb-3">
+                <div class="col-12 py-3">
                     <span class="SofiaPro-SemiBold">Showing {{$data['hospitals']->total()}} hospital(s)</span><br> Ordered
                     by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating & Distance' : 'Care Quality Rating & Waiting Time') }}
                 </div>
-                <div class="section-2 d-none d-lg-block">
-                    <ul class="result-item-menu">
-                        <li>
-                            <p tabindex="0"
-                                @include('components.basic.popover', [
-                                'placement' => 'top',
-                                'trigger'   => 'hover',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    Care Quality Rating
-                                                </p>
-                                                <p>
-                                                    The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
-                                                </p>'])>Care Quality<br>Rating</p>
-                            <span title="Sort by this column"
-                                  class="sort-arrow sort-care-quality-rating {{Request::input('sort_by') == 10 ? 'desc':'asc' }}"></span>
-                        </li>
-                        <li>
-                            <p tabindex="0"
-                                @include('components.basic.popover', [
-                                'placement' => 'top',
-                                'trigger'   => 'hover',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    Waiting Time (NHS Funded)
-                                                </p>
-                                                <p>
-                                                    Our waiting time data is based on NHS data, specifically the number of weeks that 92 out or 100 people wait for their treatment to start.
-                                                </p>'])>Waiting time <br>(NHS Funded)</p>
-                            <span title="Sort by this column"
-                                  class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}"></span>
-                        </li>
-                        <li>
-                            <p tabindex="0"
-                                @include('components.basic.popover', [
-                                'placement' => 'top',
-                                'trigger'   => 'hover',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    NHS User Rating
-                                                </p>
-                                                <p>
-                                                    Five star rating system based on feedback provided by users of the NHS, five stars being the best. Information is not available on some hospitals.
-                                                </p>'])>NHS User<br> Rating&nbsp;<br></p>
-                            <span title="Sort by this column"
-                                  class="sort-arrow sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }}"></span>
-                        </li>
-                        <li>
-                            <p tabindex="0"
-                                @include('components.basic.popover', [
-                                'placement' => 'top',
-                                'trigger'   => 'hover',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    % of Operations Cancelled
-                                                </p>
-                                                <p>
-                                                    The percentage of operations cancelled during the last reporting period. Data only available for NHS hospitals at this time.
-                                                </p>'])>% Operations<br>Cancelled</p>
-                            <span title="Sort by this column"
-                                  class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }}"></span>
-                        </li>
-                        <li>
-                            <p tabindex="0"
-                                @include('components.basic.popover', [
-                                'placement' => 'top',
-                                'trigger'   => 'hover',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    Friends & Family Rating
-                                                </p>
-                                                <p>
-                                                    The percentage of people who would recommend this hospital to family and friends.
-                                                </p>'])>Friends &<br>Family Rating</p>
-                            <span title="Sort by this column"
-                                  class="sort-arrow sort-ff-rating {{Request::input('sort_by') == 12 ? 'desc':'asc' }}"></span>
-                        </li>
-                        <li>
-                            <p tabindex="0"
-                                @include('components.basic.popover', [
-                                'placement' => 'top',
-                                'trigger'   => 'hover',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    NHS Funded Work
-                                                </p>
-                                                <p>
-                                                    This hospital provides treatments funded by the NHS. Remember you can have an NHS treatment at most private hospitals.
-                                                </p>'])>NHS<br>Funded Work</p>
-                            <span title="Sort by this column"
-                                  class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 14 ? 'desc':'asc' }}"></span>
-                        </li>
-                        <li>
-                            <p tabindex="0"
-                                @include('components.basic.popover', [
-                                'placement' => 'top',
-                                'trigger'   => 'hover',
-                                'html'      => 'true',
-                                'content'   => '<p class="bold mb-0">
-                                                    Private Self Pay
-                                                </p>
-                                                <p>
-                                                    Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
-                                                </p>'])>Private<br>Self Pay</p>
-                            <span title="Sort by this column"
-                                  class="sort-arrow sort-self-pay {{Request::input('sort_by') == 16 ? 'desc':'asc' }}"></span>
-                        </li>
-                    </ul>
+                <div class="col-6">
+                    @include('components.basic.button', [
+                        'buttonText'        => 'Filter Results',
+                        'classTitle'        => 'btn btn-turq btn-squared btn-squared_slim btn-arrow-down font-12 pl-5 btn-block',
+                        'id'                => 'show_filters',
+                        'icon'              => '',
+                        'svg'               => 'filter'
+                    ])
                 </div>
-                <div class="sort-section section-3 d-flex flex-wrap justify-content-end align-items-center">
+                <div class="col-6">
                     @include('components.basic.select', [
                         'showLabel'             => false,
                         'options'               => $data['sortBy'],
                         'svg'                   => 'chevron-down',
-                        'selectClass'           => 'select-sort-by SofiaPro-Medium font-16',
-                        'selectClassName'       => 'mr-3 align-items-center',
+                        'selectClass'           => 'select-sort-by SofiaPro-Medium font-12 bg-grey h-100',
+                        'selectWrapperClass'    => 'h-100',
+                        'selectParentClass'     => 'align-items-center h-100',
                         'placeholder'           =>'Sort by:',
                         'name'                  =>'sort_by',
                         'selectId'              => 'sort_by_select',
                         'labelClass'            => 'mb-0 SofiaPro-Medium sort-by-label'
-                    ])
-
-                    @include('components.basic.button', [
-                        'buttonText'        => 'Filter Results',
-                        'classTitle'        => 'btn btn-turq btn-icon btn-arrow-down font-16 pl-3',
-                        'id'                => 'show_filters',
-                        'icon'              => '',
-                        'svg'               => 'chevron-down-white'
                     ])
                 </div>
             </div>
@@ -144,7 +37,7 @@
             <div class="postcode-radius row">
                 <div class="postcode-radius-child col-12 col-md-3 d-flex align-items-center">
                     @include('components.basic.select', [
-                        'selectClassName'       => 'w-100',
+                        'selectParentClass'       => 'w-100',
                         'showLabel'             => false,
                         'selectPicker'          => 'true',
                         'group'                 => true,
@@ -221,7 +114,7 @@
             <div class="select-proximity filter-section row">
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
-                        'selectClassName'       => 'w-100',
+                        'selectParentClass'       => 'w-100',
                         'showLabel'             => true,
                         'options'               => $data['filters']['waitingTimes'],
                         'svg'                   => 'chevron-down',
@@ -253,7 +146,7 @@
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'svg' => 'chevron-down', 'placeholder' => 'NHS choices user rating', 'labelClass' => 'labelClass'])--}}
                     @include('components.basic.select', [
-                        'selectClassName' => 'w-100',
+                        'selectParentClass' => 'w-100',
                         'showLabel' => true,
                         'options' => $data['filters']['userRatings'],
                         'svg' => 'chevron-down',
@@ -314,7 +207,7 @@
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
-                        'selectClassName' => 'w-100',
+                        'selectParentClass' => 'w-100',
                         'showLabel' => true,
                         'options' => $data['filters']['hospitalTypes'],
                         'svg' => 'chevron-down',
@@ -345,7 +238,7 @@
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
-                        'selectClassName'       => 'w-100',
+                        'selectParentClass'       => 'w-100',
                         'showLabel'             => true,
                         'selectPicker'          => 'true',
                         'options'               => $data['filters']['policies'],

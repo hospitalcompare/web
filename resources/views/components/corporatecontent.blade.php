@@ -203,7 +203,7 @@
                                         'selectClass'           => 'distance-dropdown',
                                         'options'               => $procedures,
                                         'labelClass'            => 'text-white font-18 pr-3 SofiaPro-Medium',
-                                        'selectClassName'       => 'd-md-flex select_half-width w-100',
+                                        'selectParentClass'       => 'd-md-flex select_half-width w-100',
                                         'placeholder'           => 'Check to see if your treatment is available at this hospital',
                                         'name'                  =>'radius'])
                                     {{--                                <a tabindex="0" data-offset="30px 40px"--}}

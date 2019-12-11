@@ -309,11 +309,11 @@
         </div>
     </div>
 </div>
-{{--    @include('components.corporatecontent', [--}}
-{{--        'procedures'        => $procedures,--}}
-{{--        'bulletPoints'      => ['Shortest waiting time', 'Outstanding CQC rating', '5 Star NHS Rating'],--}}
-{{--        'latitude'          => $latitude,--}}
-{{--        'longitude'         => $longitude,--}}
-{{--        'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,--}}
-{{--        'hospitalTitle'     => $title--}}
-{{--    ])--}}
+    @include('components.corporatecontent', [
+        'procedures'        => $procedures,
+        'bulletPoints'      => ['Shortest waiting time', 'Outstanding CQC rating', '5 Star NHS Rating'],
+        'latitude'          => $latitude,
+        'longitude'         => $longitude,
+        'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,
+        'hospitalTitle'     => $title
+    ])

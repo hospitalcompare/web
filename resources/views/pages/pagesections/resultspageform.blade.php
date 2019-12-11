@@ -121,7 +121,7 @@
                         'options'               => $data['sortBy'],
                         'svg'                   => 'chevron-down',
                         'selectClass'           => 'select-sort-by SofiaPro-Medium font-16',
-                        'selectClassName'       => 'mr-3 d-none align-items-center',
+                        'selectParentClass'       => 'mr-3 d-none align-items-center',
                         'placeholder'           =>'Sort by:',
                         'name'                  =>'sort_by',
                         'selectId'              => 'sort_by_select',
@@ -144,7 +144,7 @@
             <div class="postcode-radius row">
                 <div class="postcode-radius-child col-12 col-md-3 d-flex align-items-center">
                     @include('components.basic.select', [
-                        'selectClassName'       => 'w-100',
+                        'selectParentClass'       => 'w-100',
                         'showLabel'             => false,
                         'selectPicker'          => 'true',
                         'group'                 => true,
@@ -221,7 +221,7 @@
             <div class="select-proximity filter-section row">
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
-                        'selectClassName'       => 'w-100',
+                        'selectParentClass'       => 'w-100',
                         'showLabel'             => true,
                         'options'               => $data['filters']['waitingTimes'],
                         'svg'                   => 'chevron-down',
@@ -253,7 +253,7 @@
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'svg' => 'chevron-down', 'placeholder' => 'NHS choices user rating', 'labelClass' => 'labelClass'])--}}
                     @include('components.basic.select', [
-                        'selectClassName' => 'w-100',
+                        'selectParentClass' => 'w-100',
                         'showLabel' => true,
                         'options' => $data['filters']['userRatings'],
                         'svg' => 'chevron-down',
@@ -314,7 +314,7 @@
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
-                        'selectClassName' => 'w-100',
+                        'selectParentClass' => 'w-100',
                         'showLabel' => true,
                         'options' => $data['filters']['hospitalTypes'],
                         'svg' => 'chevron-down',
@@ -345,7 +345,7 @@
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
-                        'selectClassName'       => 'w-100',
+                        'selectParentClass'       => 'w-100',
                         'showLabel'             => true,
                         'selectPicker'          => 'true',
                         'options'               => $data['filters']['policies'],

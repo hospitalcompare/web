@@ -649,6 +649,15 @@
 
 /********* Mobile results layout ************/
 .results-page-mobile {
+    #show_filters {
+        svg {
+            @include v-c;
+            width: 20px;
+            height: 20px;
+            left: 16px;
+        }
+    }
+
     .result-item-mobile {
         .item-tags {
             top: 0;
