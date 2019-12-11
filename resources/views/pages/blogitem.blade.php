@@ -20,7 +20,7 @@
                         <span class="rounded-pill d-inline-block m-3 p-2 pl-4 position-absolute col-white"
                               style="background-color: {{ $data['blog']['category']['colour'] }}">
 {{--                            {!! file_get_contents(asset($data['blog']['category']['icon'])) !!}--}}
-                            @svg({{$blog->category->icon}})
+                            @svg($data['blog']['category']['icon'])
 {{--                            <span class="position-absolute blog-item-category-icon-wrap d-inline-block"></span>--}}
                             {{ $data['blog']['category']['name'] }}
                         </span>
