@@ -116,7 +116,7 @@ class WebController extends BaseController
         if(Agent::isDesktop())
             return view('pages.resultspage', $this->returnedData);
         else
-            return view('mobile.pages.resultspage', $this->returnedData);
+            return view('mobile.pages.resultspagemobile', $this->returnedData);
     }
 
     // Return generic view for pages without specific route
