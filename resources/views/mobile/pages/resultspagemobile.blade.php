@@ -45,7 +45,7 @@
                             'NHSFunded'             => ($d['hospitalType']['name'] === 'NHS' || ($d['hospitalType']['name'] === 'Independent' && !empty($d['waitingTime'][0]['perc_waiting_weeks']))) ? 1 : 0,
                             'privateSelfPay'        => $d['hospitalType']['name'] === 'Independent' ? 1 : 0,
                             'specialOffers'         => $d['special_offers'],
-                            'btnText'               => 'Make an enquiry',
+                            'btnText'               => 'Make enquiry',
                             'NHSClass'              => $d['hospitalType']['name'] == 'NHS' ? 'nhs-hospital' : 'private-hospital',
                             'fundedText'            => ($d['hospitalType']['name'] == 'NHS') ? 'NHS': 'Private',
                             'url'                   => $d['url'],

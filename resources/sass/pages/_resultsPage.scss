@@ -664,17 +664,20 @@
             left: 0;
             bottom: auto;
             width: auto;
-            height: 30px;
-            line-height: 30px;
+
+            p {
+                height: 30px;
+                line-height: 30px;
+            }
 
             &:after {
                 content: '';
                 position: absolute;
+                z-index: 5;
                 left: 100%;
                 top: 0;
                 width: 30px;
                 height: 30px;
-
             }
 
             &.nhs-hospital:after {

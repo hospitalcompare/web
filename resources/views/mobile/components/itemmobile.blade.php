@@ -1,15 +1,15 @@
 <div class="result-item result-item-mobile col-12 col-md-6 mb-3" id="result-item_{{ $id }}">
     <div class="result-item-inner position-relative shadow p-3 pt-5">
-        <div class="item-tags position-absolute w-50">
+        <div class="item-tags position-absolute d-flex">
             <div class="{{$NHSClass}} hospital-type pp-2 {{ $NHSClass == 'private-hospital' ? 'bg-violet' : 'bg-blue' }} position-relative d-inline-block">
-                <p class="m-0">{{ $fundedText }}</p>
+                <p class="px-3 m-0 font-12">{{ $fundedText }}</p>
             </div>
             @if(!empty($specialOffers))
                 <div class="d-inline-block">
-                    {{--                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [--}}
-                    {{--                    'class' => 'default'])--}}
+                    @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
+                        'class' => 'default'])
                     @include('components.basic.button', [
-                        'classTitle'        => 'toggle-special-offer btn btn-icon btn-pink btn-special-offer_mobile font-12',
+                        'classTitle'        => 'toggle-special-offer btn btn-icon btn-pink btn-special-offer btn-special-offer_mobile font-12 rounded-0 pl-5',
                         'htmlButton'        => true,
                         'id'                => 'special_' . $id,
                         'buttonText'        => 'Special Offers',
@@ -109,8 +109,7 @@
                                      </div>
                                  </div>
                              </div>
-                         </div>'])
-                >
+                         </div>'])>
                     {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
                 </p>
 
@@ -219,7 +218,7 @@
 {{--                <span class="d-none" id="item_nhs_funded_{{$id}}">{!! $NHSFunded !!}</span>--}}
 {{--            </div>--}}
             {{-- NHS user rating --}}
-            <div class="result-item-section-2__child">
+            <div class="result-item-section-2__child mb-2">
                 <p>NHS User Rating</p>
                 <p class="h-50 d-flex  SofiaPro-Medium"
                     @include('components.basic.popover', [
@@ -268,7 +267,7 @@
                 <!-- More info button -->
                 <div class="button-wrapper col-6">
                     @include('components.basic.button', [
-                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-turq btn-more-info w-100 text-center',
+                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-turq btn-more-info w-100 text-center font-12',
                        'buttonText'        => '<span>More info</span>',
                        'htmlButton'        => true,
                        'icon'              => '',
