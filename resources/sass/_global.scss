@@ -319,21 +319,24 @@ select.big {
 
 // Cookie popup styling
 .cc-theme-hc-cookie {
-    border: 3px solid $turq;
-    border-radius: 10px;
     @extend .SofiaPro-Regular;
+    @extend .rounded;
 
     .cc-btn {
         @extend .btn;
-        @extend .btn-m;
+        //@extend .btn-m;
         @extend .btn-turq;
         @extend .btn-squared;
+        @include font-size(1.1rem, true);
 
         text-align: center !important;
         display: inline-block;
-        margin: 0 auto;
         flex: initial !important;
         cursor: pointer;
+
+        &:hover {
+            background-color: $blue !important;
+        }
     }
 }
 
