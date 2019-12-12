@@ -5,7 +5,7 @@
                 <div class="hospital-image">
                     <img class="content h-100" width="134" height="123" alt="Image of {{ $title }}" src="{{ $itemImg }}">
                     <div
-                        class="{{$NHSClass}} py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-pink' : 'bg-blue' }}">
+                        class="{{$NHSClass}} py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-violet' : 'bg-blue' }}">
                         <p class="m-0">{{$fundedText}}</p></div>
                     <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
                 </div>
@@ -28,7 +28,7 @@
                     {{--                    'image'             => 'images/alder-1.png'--}}
                     {{--                ])--}}
                     @include('components.basic.button', [
-                        'classTitle'        => 'btn btn-xs btn-icon btn-more-info position-absolute',
+                        'classTitle'        => 'btn btn-xs btn-icon btn-more-info position-absolute font-12',
                         'buttonText'        => '<span>More info</span>',
                         'htmlButton'        => true,
                         'icon'              => '',

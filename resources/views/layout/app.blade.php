@@ -8,6 +8,10 @@
         <meta name='keywords' content='@yield('keywords')'>
         <meta name="viewport" content="@yield('mobile')">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Block indexing bots apart from live site -->
+        @if(env('APP_ENV') !== 'live')
+            <meta name="robots" content="noindex">
+        @endif
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/icons/apple-touch-icon.png') }}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/icons/favicon-32x32.png') }}">
