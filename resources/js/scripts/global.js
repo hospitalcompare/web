@@ -1,3 +1,8 @@
+// Reveal the main menu on mobile
+$('#menu_toggle').on('click', function(){
+   $('body').toggleClass('menu-open');
+});
+
 //Set the first option of the Procedures dropdown to 'Not Known'
 $("select[name='procedure_id'] option:first").attr('disabled', true).attr('hidden', true);
 
@@ -327,3 +332,7 @@ window.enableButtons = function () {
         .parent()
         .prop('title', '');
 };
+
+// Refresh the page on resize, so that the currentt version is showing
+if($('body').hasClass('results-page'))
+    $(window).resize(function(){location.reload();});
