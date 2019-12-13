@@ -4,14 +4,14 @@
         <div class="corporate-content-inner d-flex">
             <div class="corporate-content-section-1"></div>
             <div class="corporate-content-section-2 position-relative w-100">
-                @include('components.basic.button', [
-                    'buttonText'        => 'Close Info',
-                    'classTitle'        => 'btn btn-cc-close position-absolute',
-                    'svg'               => 'times',
-                    'dataTarget'        => '#corporate_content_hospital_' . $id,
-                    'style'             => 'right: 0; top: 9px',
-                    'id'                => 'close_cc_' . $id])
-                <!-- Nav tabs -->
+            @include('components.basic.button', [
+                'buttonText'        => 'Close Info',
+                'classTitle'        => 'btn btn-cc-close position-absolute',
+                'svg'               => 'times',
+                'dataTarget'        => '#corporate_content_hospital_' . $id,
+                'style'             => 'right: 0; top: 9px',
+                'id'                => 'close_cc_' . $id])
+            <!-- Nav tabs -->
                 <ul class="nav nav-tabs" id="nav-tabs_{{ $id }}" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active " id="profile-tab_{{ $id }}" data-toggle="tab"
@@ -43,6 +43,89 @@
                          aria-labelledby="profile-tab">
 
                         <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="carousel-wrapper position-relative pl-md-5">
+                                    <div id="carousel-thumb_{{ $id }}"
+                                         class="carousel slide carousel-slide carousel-thumbnails" data-ride="carousel"
+                                         data-interval="false">
+                                        <!--Slides-->
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="carousel-item active" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
+                                                {{--                                                <img class="d-block h-100 content"--}}
+                                                {{--                                                     src="/images/alder-1.jpg"--}}
+                                                {{--                                                     alt="First slide">--}}
+                                            </div>
+                                            <div class="carousel-item" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
+                                                {{--                                                <img class="d-block h-100 content"--}}
+                                                {{--                                                     src="/images/alder-1.jpg"--}}
+                                                {{--                                                     alt="First slide">--}}
+                                            </div>
+                                            <div class="carousel-item" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
+                                                {{--                                                <img class="d-block h-100 content"--}}
+                                                {{--                                                     src="/images/alder-1.jpg"--}}
+                                                {{--                                                     alt="First slide">--}}
+                                            </div>
+                                            <div class="carousel-item" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
+                                                {{--                                                <img class="d-block h-100 content"--}}
+                                                {{--                                                     src="/images/alder-1.jpg"--}}
+                                                {{--                                                     alt="First slide">--}}
+                                            </div>
+
+                                        </div>
+                                        <!--/.Slides-->
+                                        <!--Controls-->
+                                        <a class="carousel-control-prev" href="#carousel-thumb_{{ $id }}" role="button"
+                                           data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true">@svg('chevron-left')</span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carousel-thumb_{{ $id }}" role="button"
+                                           data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true">@svg('chevron-right')</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+
+                                    </div><!--/.Carousel Wrapper-->
+                                    <!--/.Controls-->
+{{--                                    <ol class="_carousel-indicators indicators row">--}}
+{{--                                        <li data-target="#carousel-thumb" data-slide-to="0" class="active col-3">--}}
+{{--                                            <div class="col-inner">--}}
+{{--                                                <img class="d-block h-100"--}}
+{{--                                                     src="/images/alder-1.jpg"--}}
+{{--                                                     alt="Thumbnail image for first slide">--}}
+{{--                                            </div>--}}
+{{--                                        </li>--}}
+{{--                                        <li data-target="#carousel-thumb" data-slide-to="1" class="col-3">--}}
+{{--                                            <div class="col-inner">--}}
+{{--                                                <img class="d-block h-100"--}}
+{{--                                                     src="/images/alder-1.jpg"--}}
+{{--                                                     alt="Thumbnail image for seconf slide">--}}
+{{--                                            </div>--}}
+{{--                                        </li>--}}
+{{--                                        <li data-target="#carousel-thumb" data-slide-to="2" class="col-3">--}}
+{{--                                            <div class="col-inner">--}}
+{{--                                                <img class="d-block h-100"--}}
+{{--                                                     src="/images/alder-1.jpg"--}}
+{{--                                                     alt="Thumbnail image for third slide">--}}
+{{--                                            </div>--}}
+{{--                                        </li>--}}
+{{--                                        <li data-target="#carousel-thumb" data-slide-to="3" class="col-3">--}}
+{{--                                            <div class="col-inner">--}}
+{{--                                                <img class="d-block h-100"--}}
+{{--                                                     src="/images/alder-1.jpg"--}}
+{{--                                                     alt="Thumbnail image for fourth slide">--}}
+{{--                                            </div>--}}
+{{--                                        </li>--}}
+{{--                                    </ol>--}}
+                                    {{--                                    @include('components.basic.modalbutton', [--}}
+                                    {{--                                        'classTitle'        => 'stretched-link',--}}
+                                    {{--                                        'id'                => 'modal_trigger_' . $id,--}}
+                                    {{--                                        'modalTarget'       => '#hc_modal_carousel_'. $id,--}}
+                                    {{--                                        'buttonText'        => '',--}}
+                                    {{--                                        ])--}}
+                                </div>
+                            </div>
+
                             <div class="col-12 col-md-6">
                                 <div class="profile-intro">
                                     <p class="">Situated in London, this hospital provides private
@@ -84,88 +167,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="carousel-wrapper position-relative pl-md-5">
-                                    <div id="carousel-thumb_{{ $id }}"
-                                         class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel"
-                                         data-interval="false">
-                                        <!--Slides-->
-                                        <div class="carousel-inner" role="listbox">
-                                            <div class="carousel-item active" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
-                                                {{--                                                <img class="d-block h-100 content"--}}
-                                                {{--                                                     src="/images/alder-1.jpg"--}}
-                                                {{--                                                     alt="First slide">--}}
-                                            </div>
-                                            <div class="carousel-item" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
-                                                {{--                                                <img class="d-block h-100 content"--}}
-                                                {{--                                                     src="/images/alder-1.jpg"--}}
-                                                {{--                                                     alt="First slide">--}}
-                                            </div>
-                                            <div class="carousel-item" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
-                                                {{--                                                <img class="d-block h-100 content"--}}
-                                                {{--                                                     src="/images/alder-1.jpg"--}}
-                                                {{--                                                     alt="First slide">--}}
-                                            </div>
-                                            <div class="carousel-item" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
-                                                {{--                                                <img class="d-block h-100 content"--}}
-                                                {{--                                                     src="/images/alder-1.jpg"--}}
-                                                {{--                                                     alt="First slide">--}}
-                                            </div>
-
-                                        </div>
-                                        <!--/.Slides-->
-                                        <!--Controls-->
-                                        <a class="carousel-control-prev" href="#carousel-thumb_{{ $id }}" role="button"
-                                           data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true">@svg('chevron-left')</span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#carousel-thumb_{{ $id }}" role="button"
-                                           data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true">@svg('chevron-right')</span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-
-                                    </div><!--/.Carousel Wrapper-->
-                                    <!--/.Controls-->
-                                    <ol class="_carousel-indicators indicators row">
-                                        <li data-target="#carousel-thumb" data-slide-to="0" class="active col-3">
-                                            <div class="col-inner">
-                                                <img class="d-block h-100"
-                                                     src="/images/alder-1.jpg"
-                                                     alt="Thumbnail image for first slide">
-                                            </div>
-                                        </li>
-                                        <li data-target="#carousel-thumb" data-slide-to="1" class="col-3">
-                                            <div class="col-inner">
-                                                <img class="d-block h-100"
-                                                     src="/images/alder-1.jpg"
-                                                     alt="Thumbnail image for seconf slide">
-                                            </div>
-                                        </li>
-                                        <li data-target="#carousel-thumb" data-slide-to="2" class="col-3">
-                                            <div class="col-inner">
-                                                <img class="d-block h-100"
-                                                     src="/images/alder-1.jpg"
-                                                     alt="Thumbnail image for third slide">
-                                            </div>
-                                        </li>
-                                        <li data-target="#carousel-thumb" data-slide-to="3" class="col-3">
-                                            <div class="col-inner">
-                                                <img class="d-block h-100"
-                                                     src="/images/alder-1.jpg"
-                                                     alt="Thumbnail image for fourth slide">
-                                            </div>
-                                        </li>
-                                    </ol>
-{{--                                    @include('components.basic.modalbutton', [--}}
-{{--                                        'classTitle'        => 'stretched-link',--}}
-{{--                                        'id'                => 'modal_trigger_' . $id,--}}
-{{--                                        'modalTarget'       => '#hc_modal_carousel_'. $id,--}}
-{{--                                        'buttonText'        => '',--}}
-{{--                                        ])--}}
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="tab-pane col-12"
@@ -174,11 +175,11 @@
                          aria-labelledby="map-tab">
                         <div class="row">
                             <div class="corporate-content-details d-flex col col-2">
-{{--                                <div class="img-wrap mr-4">--}}
-{{--                                    <img class="image" width="173" height="158"--}}
-{{--                                         src="images/alder-1.jpg"--}}
-{{--                                         alt="Image of {{ $hospitalTitle }}">--}}
-{{--                                </div>--}}
+                                {{--                                <div class="img-wrap mr-4">--}}
+                                {{--                                    <img class="image" width="173" height="158"--}}
+                                {{--                                         src="images/alder-1.jpg"--}}
+                                {{--                                         alt="Image of {{ $hospitalTitle }}">--}}
+                                {{--                                </div>--}}
                                 <div class="address">
                                     {!! $address !!}
                                 </div>
@@ -260,108 +261,28 @@
                     <div class="media-pane col-6 d-none">
                         <div class="row">
                             <div class="col-5">
-                            <!--Carousel Wrapper-->
-                                <div class="carousel-wrapper position-relative">
-                                    <div id="carousel-thumb_{{ $id }}"
-                                         class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel"
-                                         data-interval="false">
-                                        <!--Slides-->
-                                        <div class="carousel-inner" role="listbox">
-                                            <div class="carousel-item active" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
-{{--                                                <img class="d-block h-100 content"--}}
-{{--                                                     src="/images/alder-1.jpg"--}}
-{{--                                                     alt="First slide">--}}
-                                            </div>
-                                            <div class="carousel-item" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
-{{--                                                <img class="d-block h-100 content"--}}
-{{--                                                     src="/images/alder-1.jpg"--}}
-{{--                                                     alt="First slide">--}}
-                                            </div>
-                                            <div class="carousel-item" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
-{{--                                                <img class="d-block h-100 content"--}}
-{{--                                                     src="/images/alder-1.jpg"--}}
-{{--                                                     alt="First slide">--}}
-                                            </div>
-                                            <div class="carousel-item" style="background-image: url('{{ asset('/images/alder-1.jpg') }}')">
-{{--                                                <img class="d-block h-100 content"--}}
-{{--                                                     src="/images/alder-1.jpg"--}}
-{{--                                                     alt="First slide">--}}
-                                            </div>
 
-                                        </div>
-                                        <!--/.Slides-->
-                                        <!--Controls-->
-                                        <a class="carousel-control-prev" href="#carousel-thumb_{{ $id }}" role="button"
-                                           data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true">@svg('chevron-left')</span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#carousel-thumb_{{ $id }}" role="button"
-                                           data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true">@svg('chevron-right')</span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-
-                                    </div><!--/.Carousel Wrapper-->
-                                    <!--/.Controls-->
-                                    <ol class="_carousel-indicators indicators row">
-                                        <li data-target="#carousel-thumb" data-slide-to="0" class="active col-3">
-                                            <div class="col-inner">
-                                                <img class="d-block h-100"
-                                                     src="/images/alder-1.jpg"
-                                                     alt="Thumbnail image for first slide">
-                                            </div>
-                                        </li>
-                                        <li data-target="#carousel-thumb" data-slide-to="1" class="col-3">
-                                            <div class="col-inner">
-                                                <img class="d-block h-100"
-                                                     src="/images/alder-1.jpg"
-                                                     alt="Thumbnail image for seconf slide">
-                                            </div>
-                                        </li>
-                                        <li data-target="#carousel-thumb" data-slide-to="2" class="col-3">
-                                            <div class="col-inner">
-                                                <img class="d-block h-100"
-                                                     src="/images/alder-1.jpg"
-                                                     alt="Thumbnail image for third slide">
-                                            </div>
-                                        </li>
-                                        <li data-target="#carousel-thumb" data-slide-to="3" class="col-3">
-                                            <div class="col-inner">
-                                                <img class="d-block h-100"
-                                                     src="/images/alder-1.jpg"
-                                                     alt="Thumbnail image for fourth slide">
-                                            </div>
-                                        </li>
-                                    </ol>
-{{--                                    @include('components.basic.modalbutton', [--}}
-{{--                                        'classTitle'        => 'stretched-link',--}}
-{{--                                        'id'                => 'modal_trigger_' . $id,--}}
-{{--                                        'modalTarget'       => '#hc_modal_carousel_'. $id,--}}
-{{--                                        'buttonText'        => '',--}}
-{{--                                        ])--}}
-                                </div>
                             </div>
                             @if(!empty($specialOffers))
                                 <div class="col-7">
-{{--                                    <div class="col-5">--}}
-{{--                                        <div class="video-wrapper position-relative">--}}
-{{--                                            <video class="content w-100" poster="{{ url('images/video_placeholder.jpg') }}">--}}
-{{--                                                <source src="{{ asset('/video/For_Wes.mp4') }}" type="video/mp4">--}}
-{{--                                                <source src="movie.ogg" type="video/ogg">--}}
-{{--                                                Your browser does not support the video tag.--}}
-{{--                                            </video>--}}
-{{--                                            <div class="player-button toggle">{!! file_get_contents(asset('/images/icons/youtube.svg')) !!}</div>--}}
-{{--                                            @include('components.basic.modalbutton', [--}}
-{{--                                               'videoUrl'          => '/video/For_Wes.mp4',--}}
-{{--                                               'modalTarget'       => '#hc_modal_video',--}}
-{{--                                               'classTitle'        => 'stretched-link',--}}
-{{--                                               'target'            => 'blank',--}}
-{{--                                               'buttonText'            => '',--}}
-{{--                                               'id'                => 'enquire_'.$id])--}}
-{{--                                        </div>--}}
-{{--                                        <div class="video-caption  font-14">Video title here</div>--}}
-{{--                                    </div>--}}
+                                    {{--                                    <div class="col-5">--}}
+                                    {{--                                        <div class="video-wrapper position-relative">--}}
+                                    {{--                                            <video class="content w-100" poster="{{ url('images/video_placeholder.jpg') }}">--}}
+                                    {{--                                                <source src="{{ asset('/video/For_Wes.mp4') }}" type="video/mp4">--}}
+                                    {{--                                                <source src="movie.ogg" type="video/ogg">--}}
+                                    {{--                                                Your browser does not support the video tag.--}}
+                                    {{--                                            </video>--}}
+                                    {{--                                            <div class="player-button toggle">{!! file_get_contents(asset('/images/icons/youtube.svg')) !!}</div>--}}
+                                    {{--                                            @include('components.basic.modalbutton', [--}}
+                                    {{--                                               'videoUrl'          => '/video/For_Wes.mp4',--}}
+                                    {{--                                               'modalTarget'       => '#hc_modal_video',--}}
+                                    {{--                                               'classTitle'        => 'stretched-link',--}}
+                                    {{--                                               'target'            => 'blank',--}}
+                                    {{--                                               'buttonText'            => '',--}}
+                                    {{--                                               'id'                => 'enquire_'.$id])--}}
+                                    {{--                                        </div>--}}
+                                    {{--                                        <div class="video-caption  font-14">Video title here</div>--}}
+                                    {{--                                    </div>--}}
 
                                     <div class="special-offers-tab bg-blue-grad rounded d-flex flex-column">
                                         <p class="special-offer-title text-white font-22 SofiaPro-SemiBold">Special
@@ -392,7 +313,7 @@
                     </div>
                 </div>
             </div>
-{{--            <div class="corporate-content-section-3"></div>--}}
+            {{--            <div class="corporate-content-section-3"></div>--}}
         </div>
     </div>{{-- End of container --}}
 </div>{{-- End of corporate content area  --}}

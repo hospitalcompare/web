@@ -309,7 +309,7 @@
         </div>
     </div>
 </div>
-    @include('components.corporatecontent', [
+    @include('mobile.components.corporatecontentmobile', [
         'procedures'        => $procedures,
         'bulletPoints'      => ['Shortest waiting time', 'Outstanding CQC rating', '5 Star NHS Rating'],
         'latitude'          => $latitude,
