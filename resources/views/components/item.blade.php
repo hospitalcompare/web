@@ -100,8 +100,7 @@
                                          </div>
                                      </div>
                                  </div>
-                             </div>'])
-                    >
+                             </div>'])>
                         {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
                     </p>
 

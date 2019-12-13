@@ -94,8 +94,16 @@
 
 // Reveal the menu
 .menu-open {
+    overflow: hidden;
+
     .main-nav {
         transform: translate3d(0, 0, 0);
+
+        .main-menu {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height: calc(100vh - 54px);
+        }
     }
 }
 
