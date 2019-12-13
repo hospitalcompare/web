@@ -2,7 +2,7 @@
 
 .modal {
     .modal-content {
-        border-radius: 16px;
+        border-radius: $border-radius;
     }
 
     &.modal-enquire {
@@ -92,7 +92,7 @@
 
     // GMaps
     &.modal-maps {
-        border-radius: 16px;
+        border-radius: $border-radius;
         padding-right: 0 !important;
 
         .modal-dialog {

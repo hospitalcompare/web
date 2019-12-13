@@ -13,7 +13,7 @@
 @section('body-class', 'results-page results-page-mobile')
 
 @section('content')
-    @include('mobile.pages.pagesections.mobileresultspageform', ['displayBlock' => false])
+    @include('mobile.pages.pagesections.resultspageformmobile', ['displayBlock' => false])
 
     <div class="results">
         <div class="container">

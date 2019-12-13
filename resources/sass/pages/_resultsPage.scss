@@ -21,6 +21,16 @@
     }
 }
 
+.results-page:not(.results-page-mobile) {
+    .filter-section {
+        .filter-section-child {
+            &:not(:last-child) {
+                border-right: 2px solid #d7d7d7;
+            }
+        }
+    }
+}
+
 .results-page,
 .test-page {
     margin-bottom: 49px;
@@ -37,15 +47,6 @@
         //    //flex-basis: 1.6666%;
         //    width: 19.6666%;
         //}
-    }
-
-
-    .filter-section {
-        .filter-section-child {
-            &:not(:last-child) {
-                border-right: 2px solid #d7d7d7;
-            }
-        }
     }
 
     // Hide filters on pageload
@@ -617,6 +618,10 @@
 // Compare shortlist area open
 .shortlist-open {
     overflow: hidden; // Stop body scrolling
+    
+    #resultspage_form {
+        z-index: initial;
+    }
 
     .popover:not(.popover-comparison) {
         display: none !important;
@@ -641,14 +646,27 @@
 
 // Body class when filters are open
 .filters-open {
+    overflow: hidden;
+
     .section-2 {
         opacity: 0;
         pointer-events: none;
     }
+
+
 }
 
 /********* Mobile results layout ************/
 .results-page-mobile {
+    .filter-parent {
+        height: 70vh;
+        overflow: scroll;
+    }
+
+    .row {
+        @include reset-row-spacing(0.5rem);
+    }
+
     #show_filters {
         svg {
             @include v-c;

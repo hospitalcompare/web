@@ -2,20 +2,8 @@
     <div class="result-item-inner position-relative shadow p-3 pt-5">
         <div class="item-tags position-absolute d-flex">
             <div class="{{$NHSClass}} hospital-type pp-2 {{ $NHSClass == 'private-hospital' ? 'bg-violet' : 'bg-blue' }} position-relative d-inline-block">
-                <p class="px-3 m-0 font-12">{{ $fundedText }}</p>
+                <p class="px-3 m-0 font-12 text-uppercase">{{ $fundedText }}</p>
             </div>
-            @if(!empty($specialOffers))
-                <div class="d-inline-block">
-                    @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
-                        'class' => 'default'])
-                    @include('components.basic.button', [
-                        'classTitle'        => 'toggle-special-offer btn btn-icon btn-pink btn-special-offer btn-special-offer_mobile font-12 rounded-0 pl-5',
-                        'htmlButton'        => true,
-                        'id'                => 'special_' . $id,
-                        'buttonText'        => 'Special Offers',
-                        'svg'               => 'special'])
-                </div>
-            @endif
         </div>
         @include('components.basic.button', [
             'classTitle'        => 'btn btn-compare compare font-12 shadow-none position-absolute mt-2 mr-2',
@@ -239,7 +227,7 @@
                 <span class="d-none" id="item_user_rating_{{$id}}">{!! $userRating !!}</span>
             </div>
             {{-- Click for self pay --}}
-            <div class="result-item-section-2__child justify-content-center">
+            <div class="result-item-section-2__child justify-content-between">
                 @if(!empty($privateSelfPay))
                     @if($NHSClass == 'private-hospital')
                         <p>
@@ -247,7 +235,7 @@
                                     'hrefValue'         => $url,
                                     'hospitalTitle'     => $title,
                                     'modalTarget'       => '#hc_modal_enquire_private',
-                                    'classTitle'        => 'text-link enquire-prices mb-2',
+                                    'classTitle'        => 'btn btn-link enquire-prices mb-2',
                                     'target'            => 'blank',
                                     'modalText'         => 'This is the text about prices',
                                     'hospitalIds'       => $id,
@@ -259,7 +247,19 @@
 {{--                @else--}}
 {{--                    <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>--}}
                 @endif
-                <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
+                    @if(!empty($specialOffers))
+                        <div class="d-inline-block">
+                            @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
+                                'class' => 'default'])
+                            @include('components.basic.button', [
+                                'classTitle'        => 'toggle-special-offer btn btn-icon btn-link btn-special-offer btn-special-offer_mobile font-12 pl-5 col-pink rounded-0',
+                                'htmlButton'        => true,
+                                'id'                => 'special_' . $id,
+                                'buttonText'        => 'Special Offers',
+                                'svg'               => 'special-pink'])
+                        </div>
+                    @endif
+                    <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
             </div>
         </div>
         <div class="result-item-mobile-section-3 w-100">
