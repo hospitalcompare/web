@@ -235,7 +235,7 @@
                                     'hrefValue'         => $url,
                                     'hospitalTitle'     => $title,
                                     'modalTarget'       => '#hc_modal_enquire_private',
-                                    'classTitle'        => 'btn btn-link enquire-prices mb-2',
+                                    'classTitle'        => 'btn btn-link enquire-prices mb-2 p-0',
                                     'target'            => 'blank',
                                     'modalText'         => 'This is the text about prices',
                                     'hospitalIds'       => $id,
@@ -252,7 +252,7 @@
                             @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
                                 'class' => 'default'])
                             @include('components.basic.button', [
-                                'classTitle'        => 'toggle-special-offer btn btn-icon btn-link btn-special-offer btn-special-offer_mobile font-12 pl-5 col-pink rounded-0',
+                                'classTitle'        => 'toggle-special-offer btn btn-icon btn-link btn-special-offer btn-special-offer_mobile pl-5 col-pink rounded-0',
                                 'htmlButton'        => true,
                                 'id'                => 'special_' . $id,
                                 'buttonText'        => 'Special Offers',
@@ -308,7 +308,7 @@
             </div>
         </div>
     </div>
-</div>
+    <!-- Corporate content area -->
     @include('mobile.components.corporatecontentmobile', [
         'procedures'        => $procedures,
         'bulletPoints'      => ['Shortest waiting time', 'Outstanding CQC rating', '5 Star NHS Rating'],
@@ -317,3 +317,4 @@
         'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,
         'hospitalTitle'     => $title
     ])
+</div>

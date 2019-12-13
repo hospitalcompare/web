@@ -36,7 +36,6 @@
                            aria-selected="true">Treatments</a>
                     </li>
                 </ul>
-
                 <!-- Tab panes -->
                 <div class="tab-content row">
                     <div class="tab-pane active col-12" id="profile_{{ $id }}" role="tabpanel"

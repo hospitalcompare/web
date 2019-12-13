@@ -8,7 +8,9 @@
         @extend .border-0;
         @extend .mb-2;
         @extend .bg-white;
-        @extend .p-30;
+        @include media-breakpoint-up(lg) {
+            padding: 2rem;
+        }
     }
 
     .card-header {
@@ -21,20 +23,25 @@
         .btn {
             width: 100%;
             text-align: left;
-            @extend .p-4;
             padding-right: 90px;
-            @include font-size(24);
+            @include media-breakpoint-up(lg) {
+                @include font-size(24);
+                padding: 2rem;
+            }
 
             &:after {
                 content: " ";
                 @include v-c;
-                right: 30px;
-                width: 27px;
-                height: 16px;
                 background-image: url('/images/icons/chevron-down.svg');
                 background-size: 100%;
                 transition: $transition;
                 transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, -180deg);
+
+                @include media-breakpoint-up(lg) {
+                    right: 30px;
+                    width: 27px;
+                    height: 16px;
+                }
             }
 
             &.collapsed:after {
