@@ -1,6 +1,6 @@
 <!-- _partials/header.blade.php -->
 <header class="header" id="top">
-    <div class="container d-flex align-items-center justify-content-between">
+    <div class="container d-flex align-items-center justify-content-center justify-content-lg-between">
         <div class="branding">
             @include('components.logo', ['titleParent' => 'header-logo-parent', 'logoImg' => 'header-logo-image', 'logoTitle' => 'headerLogoTitle'])
         </div>

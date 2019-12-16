@@ -22,24 +22,15 @@
                         <strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
                 @endif
                 <p class="sort-item-location">{{$location}} {{-- trim($town, ', ') --}}</p>
-                {{--                @include('components.basic.modalbutton', [--}}
-                {{--                    'hrefValue'         => '#',--}}
-                {{--                    'classTitle'        => 'find-link',--}}
-                {{--                    'buttonText'            => 'Find on map',--}}
-                {{--                    'modalTarget'       => '#hc_modal_map',--}}
-                {{--                    'latitude'          => $latitude,--}}
-                {{--                    'longitude'         => $longitude,--}}
-                {{--                    'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,--}}
-                {{--                    'image'             => 'images/alder-1.png'--}}
-                {{--                ])--}}
-
-                {{--                TODO: reintroduce consultant button when we have this data --}}
-                {{--                @if(!empty($specialOffers))--}}
-                {{--                    <div class="btn-area" style="margin-top: 10px">--}}
-                {{--                        @include('components.basic.button', ['classTitle' => 'btn btn-turq btn-icon btn-consultant btn-plus', 'buttonText' => 'Consultants'])--}}
-                {{--                    </div>--}}
-                {{--                @endif--}}
-
+                <!-- Corporate content area -->
+                @include('mobile.components.corporatecontentmobile', [
+                    'procedures'        => $procedures,
+                    'bulletPoints'      => ['Shortest waiting time', 'Outstanding CQC rating', '5 Star NHS Rating'],
+                    'latitude'          => $latitude,
+                    'longitude'         => $longitude,
+                    'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,
+                    'hospitalTitle'     => $title
+                ])
             </div>
         </div>
         <div class="result-item-mobile-section-2 w-100">
@@ -267,7 +258,7 @@
                 <!-- More info button -->
                 <div class="button-wrapper col-6">
                     @include('components.basic.button', [
-                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-turq btn-more-info w-100 text-center font-12',
+                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-turq _btn-cc-close btn-more-info w-100 text-center font-12',
                        'buttonText'        => 'More info',
                        'htmlButton'        => true,
                        'icon'              => '',
@@ -308,13 +299,5 @@
             </div>
         </div>
     </div>
-    <!-- Corporate content area -->
-    @include('mobile.components.corporatecontentmobile', [
-        'procedures'        => $procedures,
-        'bulletPoints'      => ['Shortest waiting time', 'Outstanding CQC rating', '5 Star NHS Rating'],
-        'latitude'          => $latitude,
-        'longitude'         => $longitude,
-        'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,
-        'hospitalTitle'     => $title
-    ])
+
 </div>
