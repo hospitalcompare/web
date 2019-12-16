@@ -22,32 +22,12 @@
         position: absolute;
     }
 
-    //sizes
-    &.btn-xs {
-        @include font-size(16);
-        padding: 6px 18px;
-    }
-
-    &.btn-s {
-        @include font-size(18);
-        height: 45px;
-        line-height: 45px;
-        padding: 0 30px;
-    }
-
-    &.btn-m {
-        @include font-size(22);
-        padding: 10px 47px;
-    }
-
-    &.btn-l {
-        @include font-size(28);
-        padding: 12px 30px;
-    }
-
-    &.btn-xl {
-        @include font-size(32);
-        padding: 14px 34px;
+    span,
+    div {
+        @include media-breakpoint-down(lg) {
+            //display: inline-block;
+            padding-top: 1px;
+        }
     }
 
     //colours

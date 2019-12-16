@@ -80,7 +80,7 @@
             >@svg('question')</a>
         </div>
         @include('components.basic.submit', [
-            'classTitle'    => 'btn btn-m btn-turq py-3 mb-3',
+            'classTitle'    => 'btn btn-turq py-3 mb-3',
             'buttonText'        => 'Find Hospitals'])
         <div class='browse-button'>
             <a class="SofiaPro-Medium" href="{{url('/results-page')}}">Browse all hospitals</a>

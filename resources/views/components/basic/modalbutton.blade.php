@@ -21,10 +21,8 @@
    data-hospital-title="{{ $hospitalTitle ?? '' }}"
    data-target="{{ $modalTarget }}"
    data-image="{{ $image ?? '' }}"
-   data-address="{{ $address ?? '' }}">{!! $buttonText !!}
-{{--    @if(!empty($icon))--}}
-{{--        <i class="{{ $icon }}"></i>--}}
-{{--    @endif--}}
+   data-address="{{ $address ?? '' }}">
+    <div>{!! $buttonText !!}</div>
     @if(!empty($svg))
         @svg($svg)
     @endif

@@ -297,7 +297,7 @@
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2 d-flex align-items-end">
                     @include('components.basic.submit', [
-                        'classTitle' => 'btn btn-blue btn-s d-block btn-submit-results font-16',
+                        'classTitle' => 'btn btn-blue d-block btn-submit-results font-16',
                         'buttonText' => 'Update Results'])
                 </div>
             </div>

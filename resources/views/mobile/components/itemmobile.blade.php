@@ -36,7 +36,7 @@
                 {{--                TODO: reintroduce consultant button when we have this data --}}
                 {{--                @if(!empty($specialOffers))--}}
                 {{--                    <div class="btn-area" style="margin-top: 10px">--}}
-                {{--                        @include('components.basic.button', ['classTitle' => 'btn btn-xs btn-turq btn-icon btn-consultant btn-plus', 'buttonText' => 'Consultants'])--}}
+                {{--                        @include('components.basic.button', ['classTitle' => 'btn btn-turq btn-icon btn-consultant btn-plus', 'buttonText' => 'Consultants'])--}}
                 {{--                    </div>--}}
                 {{--                @endif--}}
 
@@ -268,7 +268,7 @@
                 <div class="button-wrapper col-6">
                     @include('components.basic.button', [
                        'classTitle'        => 'btn btn-squared btn-squared_slim btn-turq btn-more-info w-100 text-center font-12',
-                       'buttonText'        => '<span>More info</span>',
+                       'buttonText'        => 'More info',
                        'htmlButton'        => true,
                        'icon'              => '',
                        'id'                => 'more_info_' . $id,
