@@ -274,11 +274,12 @@
                             'hrefValue'         => $url,
                             'hospitalTitle'     => $title,
                             'modalTarget'       => '#hc_modal_enquire_private',
-                            'classTitle'        => 'btn btn-squared btn-squared_slim btn-blue text-center enquiry font-12 w-100 text-center',
+                            'classTitle'        => 'btn btn-squared btn-squared_slim btn-blue text-center enquiry font-12 w-100 text-center d-flex justify-content-between align-items-center px-1',
                             'target'            => 'blank',
                             'buttonText'        => $btnText,
                             'id'                => 'enquire_private_'.$id,
                             'hospitalIds'       => $id,
+                            'svg'               => 'circle-check'
                         ])
                     </div>
                 @elseif($NHSClass == 'nhs-hospital')
