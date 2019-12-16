@@ -334,5 +334,5 @@ window.enableButtons = function () {
 };
 
 // Refresh the page on resize, so that the currentt version is showing
-if($('body').hasClass('results-page'))
-    $(window).resize(function(){location.reload();});
+// if($('body').hasClass('results-page'))
+//     $(window).resize(function(){location.reload();});
