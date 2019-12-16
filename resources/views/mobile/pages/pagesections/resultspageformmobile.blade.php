@@ -32,7 +32,7 @@
             </div>
         </div>
     </div>
-    <div class="filter-parent {{ !empty($displayBlock) && ($displayBlock) || !empty($hc_errors) ? 'd-block' : '' }} pt-0">
+    <div class="filter-parent pt-0">
         <div class="filter container">
             <div class="postcode-radius row">
                 <!-- Postcode -->
@@ -295,10 +295,20 @@
 {{--                                     '])--}}
 {{--                    >@svg('question')</a>--}}
                 </div>
-                <div class="filter-section-child col-6 col-md-4 col-lg-2 d-flex align-items-end">
-                    @include('components.basic.submit', [
-                        'classTitle' => 'btn btn-blue d-block btn-submit-results font-16',
-                        'buttonText' => 'Update Results'])
+                <div class="filter-section-child col-12 w-100">
+                    <div class="row">
+                        <div class="col-6 button-wrapper">
+                            @include('components.basic.button', [
+                                'classTitle'    => 'text-center btn btn-black btn-squared btn-squared_slim d-block font-14',
+                                'buttonText'    => 'Close',
+                                'id'            => 'close_mobile_filters'])
+                        </div>
+                        <div class="col-6 button-wrapper">
+                            @include('components.basic.submit', [
+                                'classTitle' => 'text-center btn btn-turq btn-squared btn-squared_slim d-block font-14',
+                                'buttonText' => 'Update Results'])
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

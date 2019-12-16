@@ -151,11 +151,18 @@ $(document).on("click", ".results-page .change-url", function (event) {
 // Toggle filter section
 $showFilters = $('#show_filters');
 $showFilters.on('click', function () {
-    $('#resultspage_form .filter-parent').slideToggle();
+    if( $('body').hasClass('results-page-desktop') ){
+        $('#resultspage_form .filter-parent').slideToggle();
+    }
     $('body').toggleClass('filters-open');
     $(this).toggleClass('open');
     // // Refresh the range slider as it is initially hidden
     $("#radiusProx").slider('relayout');
+});
+
+$hideFilters = $('#close_mobile_filters');
+$hideFilters.on('click', function(){
+   $('body').removeClass('filters-open');
 });
 //
 // $('*').on('focus', function(e){

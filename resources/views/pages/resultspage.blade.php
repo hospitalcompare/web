@@ -10,7 +10,7 @@
 
 @section('mobile', 'width=device-width, initial-scale=1')
 
-@section('body-class', 'results-page')
+@section('body-class', 'results-page results-page-desktop')
 
 @section('content')
 {{--    @if(!empty($data['special_offers']))--}}
