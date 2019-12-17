@@ -1,6 +1,9 @@
 <!-- _partials/header.blade.php -->
 <header class="header" id="top">
     <div class="container d-flex align-items-center justify-content-center justify-content-lg-between">
+        <div id="menu_toggle" class="d-lg-none mr-auto"><img width="20px" height="20px"
+                                                     src="{{URL::asset('/images/icons/icon-menu.svg')}}"
+                                                     alt="Menu icon"></div>
         <div class="branding">
             @include('components.logo', ['titleParent' => 'header-logo-parent', 'logoImg' => 'header-logo-image', 'logoTitle' => 'headerLogoTitle'])
         </div>
@@ -51,9 +54,10 @@
                 @endif
             </ul>
         </nav>
-        <div id="menu_toggle" class="d-lg-none"><img width="20px" height="20px"
-                                                     src="{{URL::asset('/images/icons/bars-solid.svg')}}"
+        <div id="search_toggle" class="d-lg-none ml-auto"><img width="20px" height="20px"
+                                                     src="{{URL::asset('/images/icons/icon-search.svg')}}"
                                                      alt="Menu icon"></div>
+
     </div>
 </header>
 

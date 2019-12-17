@@ -2,7 +2,7 @@
 
 <div class="modal modal-mobile-tooltip fade" id="hc_modal_mobile_tooltip" tabindex="-1" role="dialog"
      aria-labelledby="" aria-modal="true" aria-hidden="true">
-    <div class="modal-dialog h-100" role="document">
+    <div class="modal-dialog" role="document">
         <div class="modal-content p-3 h-100">
             <div class="modal-body">
 

@@ -1,4 +1,4 @@
-<section class="flat-banner">
+<section class="flat-banner d-none d-lg-block">
     <div class="container">
         <div class="row align-items-center">
             <div class="col col-12">

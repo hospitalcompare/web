@@ -12,15 +12,14 @@
                         'buttonText'        => 'Filter Results',
                         'classTitle'        => 'btn btn-turq btn-squared btn-squared_slim btn-arrow-down font-12 pl-5 btn-block',
                         'id'                => 'show_filters',
-                        'icon'              => '',
-                        'svg'               => 'filter'
+                        'svg'               => 'icon-filter'
                     ])
                 </div>
                 <div class="col-6">
                     @include('components.basic.select', [
                         'showLabel'             => false,
                         'options'               => $data['sortBy'],
-                        'svg'                   => 'icon-chevron',
+                        'svg'                   => 'icon-order-by',
                         'selectClass'           => 'select-sort-by SofiaPro-Medium font-12 bg-grey h-100',
                         'selectWrapperClass'    => 'h-100',
                         'selectParentClass'     => 'align-items-center h-100',
@@ -176,26 +175,6 @@
                             <p>
                                 The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
                             </p>'])
-                    {{--                    <a tabindex="0" data-offset="0 5px"--}}
-                    {{--                       class="help-link"--}}
-                    {{--                        @include('components.basic.popover', [--}}
-                    {{--                        'dismissible'   => true,--}}
-                    {{--                        'placement'      => 'top',--}}
-                    {{--                        'html'           => 'true',--}}
-                    {{--                        'size'           => 'max-width',--}}
-                    {{--                        'trigger'        => 'hover',--}}
-                    {{--                        'content'        => '--}}
-                    {{--                        <p class="SofiaPro-Medium mb-0">--}}
-                    {{--                                         Care Quality Rating--}}
-                    {{--                                     </p>--}}
-                    {{--                                     <p>--}}
-                    {{--                                         --}}
-                    {{--                                     </p>--}}
-                    {{--                                     <p>--}}
-                    {{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
-                    {{--                                     </p>--}}
-                    {{--                                     '])--}}
-                    {{--                    >@svg('question')</a>--}}
                 </div>
                 <!-- Hospital type -->
                 <div class="filter-mobile col-12 col-md-4 col-lg-2">
@@ -208,27 +187,14 @@
                         'selectClass'       => 'select-picker highlight-search-dropdown ',
                         'placeholder'       => 'Hospital Type',
                         'name'              => 'hospital_type',
-                        'labelClass'        => ''])
-                    {{--                    <a tabindex="0" data-offset="0 5px"--}}
-                    {{--                       class="help-link"--}}
-                    {{--                        @include('components.basic.popover', [--}}
-                    {{--                        'dismissible'   => true,--}}
-                    {{--                        'placement'      => 'top',--}}
-                    {{--                        'html'           => 'true',--}}
-                    {{--                        'size'           => 'max-width',--}}
-                    {{--                        'trigger'        => 'hover',--}}
-                    {{--                        'content'        => '--}}
-                    {{--                        <p class="SofiaPro-Medium mb-0">--}}
-                    {{--                                         NHS or Private Hospitals--}}
-                    {{--                                     </p>--}}
-                    {{--                                     <p>--}}
-                    {{--                                         Select which hospital type best suits your needs. Remember you can choose to have an NHS treatment at most private hospitals in England and Wales.--}}
-                    {{--                                     </p>--}}
-                    {{--                                     <p>--}}
-                    {{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
-                    {{--                                     </p>--}}
-                    {{--                                     '])--}}
-                    {{--                    >@svg('question')</a>--}}
+                        'showTooltip'       => true,
+                        'modalText'         =>
+                            '<p class="SofiaPro-SemiBold mb-3 font-18">
+                                 NHS or Private Hospitals
+                            </p>
+                            <p>
+                                Select which hospital type best suits your needs. Remember you can choose to have an NHS treatment at most private hospitals in England and Wales.
+                            </p>'])
                 </div>
                 <!-- Insurance -->
                 <div class="filter-mobile col-12 col-md-4 col-lg-2">
@@ -245,28 +211,14 @@
                         'selectClass'           => 'highlight-search-dropdown select-picker',
                         'placeholder'           => 'Insurance',
                         'name'                  => 'policy_id',
-                        'labelClass'            => ''
-                    ])
-                    {{--                    <a tabindex="0" data-offset="0 5px"--}}
-                    {{--                       class="help-link"--}}
-                    {{--                        @include('components.basic.popover', [--}}
-                    {{--                        'dismissible'   => true,--}}
-                    {{--                        'placement'      => 'top',--}}
-                    {{--                        'html'           => 'true',--}}
-                    {{--                        'size'           => 'max-width',--}}
-                    {{--                        'trigger'        => 'hover',--}}
-                    {{--                        'content'        => '--}}
-                    {{--                        <p class="SofiaPro-Medium mb-0">--}}
-                    {{--                                         Insurance policy--}}
-                    {{--                                     </p>--}}
-                    {{--                                     <p>--}}
-                    {{--                                         Select your insurance provider and policy type.--}}
-                    {{--                                     </p>--}}
-                    {{--                                     <p>--}}
-                    {{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
-                    {{--                                     </p>--}}
-                    {{--                                     '])--}}
-                    {{--                    >@svg('question')</a>--}}
+                        'showTooltip'       => true,
+                        'modalText'         =>
+                            '<p class="SofiaPro-SemiBold mb-3 font-18">
+                                 Insurance policy
+                            </p>
+                            <p>
+                                Select your insurance provider and policy type.
+                            </p>'])
                 </div>
                 <div class="col-12 w-100">
                     <div class="row">

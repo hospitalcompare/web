@@ -114,6 +114,7 @@
         height: calc(100vh - #{$mobile-header-height});
 
         .modal-dialog {
+            height: calc(100vh - 1rem - #{$mobile-header-height});
 
         }
     }
