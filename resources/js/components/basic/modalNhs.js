@@ -1,6 +1,5 @@
 // Bootstrap modal
 function showNhsModal(event) {
-
     var $button = $(event.relatedTarget);// Button that triggered the modal
     var $title = $button.data('hospital-title');// Extract info from data-* attributes
     var $url = $button.data('hospital-url');// Extract info from data-* attributes

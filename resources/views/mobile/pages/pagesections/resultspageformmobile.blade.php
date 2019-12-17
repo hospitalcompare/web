@@ -3,7 +3,8 @@
         <div class="container">
             <div class="row pb-3">
                 <div class="col-12 py-3">
-                    <span class="SofiaPro-SemiBold">Showing {{$data['hospitals']->total()}} hospital(s)</span><br> Ordered
+                    <span class="SofiaPro-SemiBold">Showing {{$data['hospitals']->total()}} hospital(s)</span><br>
+                    Ordered
                     by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating & Distance' : 'Care Quality Rating & Waiting Time') }}
                 </div>
                 <div class="col-6">
@@ -19,7 +20,7 @@
                     @include('components.basic.select', [
                         'showLabel'             => false,
                         'options'               => $data['sortBy'],
-                        'svg'                   => 'chevron-down',
+                        'svg'                   => 'icon-chevron',
                         'selectClass'           => 'select-sort-by SofiaPro-Medium font-12 bg-grey h-100',
                         'selectWrapperClass'    => 'h-100',
                         'selectParentClass'     => 'align-items-center h-100',
@@ -46,7 +47,8 @@
                         'inputParentClassName'  => 'w-100',
                         'value'                 => !empty(Request::input('postcode')) && empty($hc_errors) ? Request::input('postcode') : '' ,
                         'name'                  => 'postcode',
-                        'id'                    => 'input_postcode'])
+                        'id'                    => 'input_postcode',
+                      ])
                     {{--                    <a tabindex="0" data-offset="0 5px"--}}
                     {{--                       class="help-link"--}}
                     {{--                       style="right: 53px"--}}
@@ -63,8 +65,8 @@
                     {{--                    >@svg('question')</a>--}}
                 </div>
                 <!-- Accordion for filters -->
-{{--                @include('mobile.components.filteraccordion')--}}
-                <!-- End of accordion for filters -->
+            {{--                @include('mobile.components.filteraccordion')--}}
+            <!-- End of accordion for filters -->
                 <!-- Procedures -->
                 <div class="filter-mobile col-12 col-md-4 d-flex align-items-center">
                     @include('components.basic.select', [
@@ -77,31 +79,18 @@
                         'options'               => $data['filters']['procedures'],
                         'suboptionClass'        => 'subprocedures',
                         'selectId'              => 'resultspage_treatment_dropdown',
-                        'svg'                   => 'chevron-down',
+                        'svg'                   => 'icon-chevron-down',
                         'selectClass'           => 'select-picker highlight-search-dropdown',
-                        'name'                  => 'procedure_id'
-                    ])
-{{--                    <a tabindex="0" data-offset="0 5px"--}}
-{{--                       class="help-link"--}}
-{{--                       style="right: 53px"--}}
-{{--                        @include('components.basic.popover', [--}}
-{{--                        'dismissible'   => true,--}}
-{{--                        'placement'      => 'top',--}}
-{{--                        'size'           => 'max-width',--}}
-{{--                        'html'           => 'true',--}}
-{{--                        'trigger'        => 'hover',--}}
-{{--                        'content'        => '--}}
-{{--                        <p class="SofiaPro-Medium mb-0">--}}
-{{--                                         Surgery Type--}}
-{{--                                     </p>--}}
-{{--                                     <p>--}}
-{{--                                         Select your treatment if known.--}}
-{{--                                     </p>--}}
-{{--                                     <p>--}}
-{{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
-{{--                                     </p>--}}
-{{--                                     '])--}}
-{{--                    >@svg('question')</a>--}}
+                        'name'                  => 'procedure_id',
+                        'showTooltip'           => true,
+                        'modalText'             =>
+                            '<p class="SofiaPro-SemiBold mb-3 font-18">
+                                 Surgery Type
+                            </p>
+                            <p>
+                                Select your treatment if known.
+                            </p>'
+                        ])
                 </div>
                 <!-- Radius -->
                 <div class="filter-mobile radius col-12 col-md-4">
@@ -116,23 +105,16 @@
                                 'placeholderOption'     => 'Select Distance',
                                 'selectedPlaceholder'   => true,
                                 'labelClass'            => '',
-                                'svg'                   => 'chevron-down',
-                                'name'                  =>'radius'])
-{{--                        <a tabindex="0" data-offset="0 5px"--}}
-{{--                           class="help-link"--}}
-{{--                            @include('components.basic.popover', [--}}
-{{--                            'dismissible'   => true,--}}
-{{--                            'placement'      => 'top',--}}
-{{--                            'html'           => 'true',--}}
-{{--                            'trigger'        => 'hover',--}}
-{{--                            'content'        => '<p class="bold mb-0">--}}
-{{--                                             Distance--}}
-{{--                                         </p>--}}
-{{--                                         <p>--}}
-{{--                                             Select how far you would be willing to travel for your treatment.--}}
-{{--                                         </p>--}}
-{{--                                         '])--}}
-{{--                        >@svg('question')</a>--}}
+                                'svg'                   => 'icon-chevron-down',
+                                'name'                  =>'radius',
+                                'showTooltip'           => true,
+                                'modalText'             =>
+                                    '<p class="SofiaPro-SemiBold mb-3 font-18">
+                                         Distance
+                                    </p>
+                                    <p>
+                                        Select how far you would be willing to travel for your treatment..
+                                    </p>'])
                     </div>
                 </div>
                 <!-- Waiting time -->
@@ -142,31 +124,19 @@
                         'showLabel'             => true,
                         'placeholder'           => 'Waiting time',
                         'options'               => $data['filters']['waitingTimes'],
-                        'svg'                   => 'chevron-down',
+                        'svg'                   => 'icon-chevron-down',
                         'selectClass'           => 'select-picker highlight-search-dropdown ',
                         'placeholder'           =>'Waiting time',
                         'name'                  =>'waiting_time',
-                        'labelClass'            => ''])
-                    {{--                    <a tabindex="0" data-offset="0 5px"--}}
-                    {{--                       class="help-link"--}}
-                    {{--                        @include('components.basic.popover', [--}}
-                    {{--                        'dismissible'       => true,--}}
-                    {{--                        'placement'         => 'top',--}}
-                    {{--                        'html'              => 'true',--}}
-                    {{--                        'size'           => 'max-width',--}}
-                    {{--                        'trigger'           => 'hover',--}}
-                    {{--                        'content'           => '--}}
-                    {{--                        <p class="SofiaPro-Medium mb-0">--}}
-                    {{--                                         Waiting Time--}}
-                    {{--                                     </p>--}}
-                    {{--                                     <p>--}}
-                    {{--                                         Select the waiting time most suitable for your needs.--}}
-                    {{--                                     </p>--}}
-                    {{--                                     <p>--}}
-                    {{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
-                    {{--                                     </p>--}}
-                    {{--                                     '])--}}
-                    {{--                    >@svg('question')</a>--}}
+                        'labelClass'            => '',
+                        'showTooltip'           => true,
+                        'modalText'             =>
+                            '<p class="SofiaPro-SemiBold mb-3 font-18">
+                                 Waiting time
+                            </p>
+                            <p>
+                                Select the waiting time most suitable for your needs.
+                            </p>'])
                 </div>
                 <!-- NHS user rating -->
                 <div class="filter-mobile col-12 col-md-4 col-lg-2">
@@ -175,31 +145,18 @@
                         'showLabel'             => true,
                         'placeholder'           => 'NHS User Rating',
                         'options'               => $data['filters']['userRatings'],
-                        'svg'                   => 'chevron-down',
+                        'svg'                   => 'icon-chevron-down',
                         'selectClass'           => 'select-picker highlight-search-dropdown',
                         'placeholder'           => 'NHS User Rating',
                         'name'                  => 'user_rating',
-                        'labelClass'            => ''])
-                    {{--                    <a tabindex="0" data-offset="0 5px"--}}
-                    {{--                       class="help-link"--}}
-                    {{--                        @include('components.basic.popover', [--}}
-                    {{--                        'dismissible'   => true,--}}
-                    {{--                        'placement'      => 'top',--}}
-                    {{--                        'html'           => 'true',--}}
-                    {{--                        'size'           => 'max-width',--}}
-                    {{--                        'trigger'        => 'hover',--}}
-                    {{--                        'content'        => '--}}
-                    {{--                        <p class="SofiaPro-Medium mb-0">--}}
-                    {{--                                         NHS User Rating--}}
-                    {{--                                     </p>--}}
-                    {{--                                     <p>--}}
-                    {{--                                         Five star rating system based on feedback provided by users of the NHS (five stars being the best). Information is not available on some hospitals.--}}
-                    {{--                                     </p>--}}
-                    {{--                                     <p>--}}
-                    {{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
-                    {{--                                     </p>--}}
-                    {{--                                     '])--}}
-                    {{--                    >@svg('question')</a>--}}
+                        'showTooltip'           => true,
+                        'modalText'             =>
+                            '<p class="SofiaPro-SemiBold mb-3 font-18">
+                                 NHS User Rating
+                            </p>
+                            <p>
+                                Five star rating system based on feedback provided by users of the NHS (five stars being the best). Information is not available on some hospitals.
+                            </p>'])
                 </div>
                 <!-- CQC rating -->
                 <div class="filter-mobile col-12 col-md-4 col-lg-2">
@@ -207,11 +164,18 @@
                         'showLabel'         => true,
                         'placeholder'       => 'Care Quality Rating',
                         'options'           => $data['filters']['qualityRatings'],
-                        'svg'               => 'chevron-down',
+                        'svg'               => 'icon-chevron-down',
                         'selectClass'       => 'select-picker highlight-search-dropdown',
                         'placeholder'       => 'Care Quality Rating',
                         'name'              => 'quality_rating',
-                        'labelClass'        => ''])
+                        'showTooltip'       => true,
+                        'modalText'         =>
+                            '<p class="SofiaPro-SemiBold mb-3 font-18">
+                                 Care quality rating
+                            </p>
+                            <p>
+                                The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
+                            </p>'])
                     {{--                    <a tabindex="0" data-offset="0 5px"--}}
                     {{--                       class="help-link"--}}
                     {{--                        @include('components.basic.popover', [--}}
@@ -225,7 +189,7 @@
                     {{--                                         Care Quality Rating--}}
                     {{--                                     </p>--}}
                     {{--                                     <p>--}}
-                    {{--                                         The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.--}}
+                    {{--                                         --}}
                     {{--                                     </p>--}}
                     {{--                                     <p>--}}
                     {{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
@@ -240,7 +204,7 @@
                         'showLabel'         => true,
                         'placeholder'       => 'Hospital Type',
                         'options'           => $data['filters']['hospitalTypes'],
-                        'svg'               => 'chevron-down',
+                        'svg'               => 'icon-chevron-down',
                         'selectClass'       => 'select-picker highlight-search-dropdown ',
                         'placeholder'       => 'Hospital Type',
                         'name'              => 'hospital_type',
@@ -277,7 +241,7 @@
                         'suboptionClass'        => 'policies',
                         'group'                 => true,
                         'groupName'             => 'policies',
-                        'svg'                   => 'chevron-down',
+                        'svg'                   => 'icon-chevron-down',
                         'selectClass'           => 'highlight-search-dropdown select-picker',
                         'placeholder'           => 'Insurance',
                         'name'                  => 'policy_id',

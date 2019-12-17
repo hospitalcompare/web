@@ -33,9 +33,10 @@ import './components/basic/popover';                        // Trigger bootstrap
 import './components/basic/tooltip';                        // Trigger bootstrap popover
 import './components/basic/modalNhs';                       // Trigger bootstrap modal
 import './components/basic/modalPrivate';                   // Trigger bootstrap modal
+import './components/basic/modalMobileTooltips';            // Trigger bootstrap modal
 import './components/basic/carousel';                       // Init mobile carousels
-// import './components/basic/modalVideo';                     // Trigger bootstrap modal
-import './components/enquiry';                             // Private hospital enquiry form
+// import './components/basic/modalVideo';                  // Trigger bootstrap modal
+import './components/enquiry';                              // Private hospital enquiry form
 
 // PAGES
 import './pages/homepage';                                  // Jquery used for the Homepage

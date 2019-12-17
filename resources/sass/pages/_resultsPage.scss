@@ -733,6 +733,13 @@
             svg {
                 right: 0;
             }
+
+            label {
+                svg {
+                    @extend .help-link;
+                    @extend .help-link__inline;
+                }
+            }
         }
 
         .dropdown-toggle {

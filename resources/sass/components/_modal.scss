@@ -108,6 +108,16 @@
         }
     }
 
+    // Mobile tooltips
+    &.modal-mobile-tooltip {
+        top: $mobile-header-height;
+        height: calc(100vh - #{$mobile-header-height});
+
+        .modal-dialog {
+
+        }
+    }
+
     &#hc_modal_enquire_nhs {
         .btn-enquire {
             padding: 0 15px 0 40px;
