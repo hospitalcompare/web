@@ -221,17 +221,15 @@
             <div class="result-item-section-2__child justify-content-between">
                 @if(!empty($privateSelfPay))
                     @if($NHSClass == 'private-hospital')
-                        <p>
-                            @include('components.basic.modalbutton', [
-                                    'hrefValue'         => $url,
-                                    'hospitalTitle'     => $title,
-                                    'modalTarget'       => '#hc_modal_enquire_private',
-                                    'classTitle'        => 'btn btn-link enquire-prices mb-2 p-0',
-                                    'target'            => 'blank',
-                                    'modalText'         => 'This is the text about prices',
-                                    'hospitalIds'       => $id,
-                                    'buttonText'        => 'Click for self pay prices'])
-                        </p>
+                        @include('components.basic.modalbutton', [
+                                'hrefValue'         => $url,
+                                'hospitalTitle'     => $title,
+                                'modalTarget'       => '#hc_modal_enquire_private',
+                                'classTitle'        => 'btn btn-link enquire-prices mb-3 mr-auto p-0',
+                                'target'            => 'blank',
+                                'modalText'         => 'This is the text about prices',
+                                'hospitalIds'       => $id,
+                                'buttonText'        => 'Click for self pay prices'])
 {{--                    @else--}}
 {{--                        <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>--}}
                     @endif
@@ -274,7 +272,7 @@
                             'hrefValue'         => $url,
                             'hospitalTitle'     => $title,
                             'modalTarget'       => '#hc_modal_enquire_private',
-                            'classTitle'        => 'btn btn-squared btn-squared_slim btn-blue text-center enquiry font-12 w-100 text-center d-flex justify-content-between align-items-center px-1',
+                            'classTitle'        => 'btn btn-squared btn-enquire btn-squared_slim btn-blue text-center enquiry btn-enquiry font-12 w-100 text-center d-flex justify-content-center align-items-center flex-row-reverse px-3',
                             'target'            => 'blank',
                             'buttonText'        => $btnText,
                             'id'                => 'enquire_private_'.$id,
@@ -289,11 +287,12 @@
                             'hrefValue'         => $url,
                             'hospitalTitle'     => $title,
                             'hospitalUrl'       => $d['url'],
-                            'classTitle'        => 'btn btn-blue btn-enquire btn-squared btn-squared_slim enquiry font-12 w-100 text-center',
+                            'classTitle'        => 'btn btn-blue btn-enquire btn-squared btn-squared_slim enquiry btn-enquiry font-12 w-100 text-center d-flex justify-content-center flex-row-reverse px-3',
                             'buttonText'        => $btnText,
                             'modalTarget'       => '#hc_modal_enquire_nhs',
                             'id'                => 'enquire_nhs'.$id,
                             'hospitalIds'       => $id,
+                            'svg'               => 'circle-check'
                             ])
                     </div>
                 @endif

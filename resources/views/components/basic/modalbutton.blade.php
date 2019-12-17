@@ -1,6 +1,6 @@
 <span
    id="{{ empty($id) ? '' : $id }}"
-   style="{{ empty($style) ? '' : $style }}"
+   style="display: inline-block; {{ empty($style) ? '' : $style }}"
    class="{{$classTitle}}"
    role="button"
    data-toggle="modal"

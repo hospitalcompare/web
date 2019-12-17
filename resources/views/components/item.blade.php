@@ -230,17 +230,15 @@
 {{--                    </p>--}}
                         @if(!empty($privateSelfPay))
                             @if($NHSClass == 'private-hospital')
-                                <p>
-                                    @include('components.basic.modalbutton', [
-                                            'hrefValue'         => $url,
-                                            'hospitalTitle'     => $title,
-                                            'modalTarget'       => '#hc_modal_enquire_private',
-                                            'classTitle'        => 'text-link enquire-prices',
-                                            'target'            => 'blank',
-                                            'modalText'         => 'This is the text about prices',
-                                            'hospitalIds'       => $id,
-                                            'buttonText'            => 'Click for<br>prices'])
-                                </p>
+                            @include('components.basic.modalbutton', [
+                                    'hrefValue'         => $url,
+                                    'hospitalTitle'     => $title,
+                                    'modalTarget'       => '#hc_modal_enquire_private',
+                                    'classTitle'        => 'text-link enquire-prices',
+                                    'target'            => 'blank',
+                                    'modalText'         => 'This is the text about prices',
+                                    'hospitalIds'       => $id,
+                                    'buttonText'        => 'Click for<br>prices'])
                             @else
                                 <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>
                             @endif
@@ -272,7 +270,7 @@
                         'hospitalTitle'     => $title,
                         'hospitalUrl'       => $d['url'],
                         'classTitle'        => 'btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block font-12',
-                        'buttonText'            => $btnText,
+                        'buttonText'        => $btnText,
                         'modalTarget'       => '#hc_modal_enquire_nhs',
                         'id'                => 'enquire_nhs'.$id,
                         'hospitalIds'       => $id,
