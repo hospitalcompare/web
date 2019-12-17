@@ -67,6 +67,7 @@
     }
 
     .main-menu {
+        display: flex;
         margin: 0;
 
         li {
@@ -84,6 +85,10 @@
                 &.active {
                     background-color: darken($turq, 5%);
                     color: #fff;
+
+                    @include media-breakpoint-down(md) {
+                        padding-left: 1rem;
+                    }
 
                     svg {
                         path {

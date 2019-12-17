@@ -230,8 +230,8 @@
                         </div>
                         <div class="col-6 button-wrapper">
                             @include('components.basic.submit', [
-                                'classTitle' => 'text-center btn btn-turq btn-squared btn-squared_slim d-block font-14 w-100',
-                                'buttonText' => 'Update Results'])
+                                'classTitle'    => 'btn-submit-results text-center btn btn-turq btn-squared btn-squared_slim d-block font-14 w-100',
+                                'buttonText'    => 'Update Results'])
                         </div>
                     </div>
                 </div>

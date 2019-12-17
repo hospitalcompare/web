@@ -12,7 +12,7 @@ $('.results-page .select-sort-by').change(function () {
 
 //Sorting asc/desc when the arrows are clicked
 $(document).on("click touchend", ".sort-bar .sort-arrow", function () {
-    console.log('Sorting')
+    console.log('Sorting');
     //Get all the classes from the element
     var elementClasses = $(this).attr('class');
     //Get the actual target class
