@@ -35,21 +35,6 @@
 .test-page {
     margin-bottom: 49px;
 
-    .filter {
-        //display: flex;
-        //
-        //.filter-left {
-        //    //flex-basis: 80.3333%;
-        //    width: 80.3333%;
-        //}
-        //
-        //.filter-right {
-        //    //flex-basis: 1.6666%;
-        //    width: 19.6666%;
-        //}
-    }
-
-    // Hide filters on pageload
     #resultspage_form {
         top: 0;
         left: 0;
@@ -62,7 +47,6 @@
         &.js-is-stuck {
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
         }
-
     }
 
     .submit-section {
@@ -77,7 +61,6 @@
     }
 
     // Shared style for selects on results page
-
     .select-parent {
         position: relative;
         //width: 100%;
@@ -218,7 +201,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
 
 
         .show-section {
@@ -409,9 +391,6 @@
     .result-item-section-3 {
         display: flex;
         @include responsive-columns;
-    }
-
-    .result-item-section-2 {
     }
 
     .result-item-section-3 {
@@ -645,9 +624,15 @@
         }
     }
 
+    .postcode {
+        input {
+            padding-top: 2rem !important;
+        }
+    }
+
     .filter-parent {
         padding-top: 1rem;
-        transform: translate3d(-100%, 0, 0);
+        //transform: translate3d(-100%, 0, 0);
         overflow: scroll;
         position: fixed;
         top: 54px;
@@ -659,6 +644,14 @@
         transition: $transition;
     }
 
+    // Make the dropdown expand rather than overlay
+    .dropdown-menu {
+        //position: static !important;
+        //float: none;
+        //transform: none !important;
+    }
+
+    // Body class when filters are open
     &.filters-open {
         .filter-parent {
             transform: translate3d(0, 0, 0);
@@ -723,5 +716,39 @@
 
     .special-offer-header {
         height: 50px !important;
+    }
+
+    // Filter form styles
+    #resultspage_form {
+        .filter-mobile {
+            @extend .mb-2;
+        }
+
+        label {
+            @extend .SofiaPro-SemiBold;
+            @extend .font-18;
+        }
+
+        .filter-mobile {
+            svg {
+                right: 0;
+            }
+        }
+
+        .dropdown-toggle {
+            border-radius: 0 !important;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            @extend .pl-0;
+            @extend .pt-0;
+            @extend .pb-2;
+            //background-color: red;
+        }
+
+        .dropdown-menu {
+            min-width: initial !important;
+            width: 100% !important;
+        }
     }
 }
