@@ -5,7 +5,7 @@
     </p>
     <div class="form-wrap d-flex flex-wrap">
         <div class="img-wrap">
-            <img width="173" height="158" src="images/alder-1.jpg">
+            <img class="modal-enquire-private-image" width="173" height="158" src="./images/hospitals/no_image.png">
         </div>
         <form id="enquiry_form">
             {{--            <input type="hidden" name="specialty_id" value="3">--}}

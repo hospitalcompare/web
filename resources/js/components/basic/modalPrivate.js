@@ -18,9 +18,11 @@ $privateModal.on('show.bs.modal', function (event) {
     var modal           = $(this);
     // var hospitalId      = $button.attr('id').replace('enquire_', '');
     var hospitalId      = $button.data('hospital-id');
+    var picture         = $button.data('image');
 
     modal.find('.hospital-title').html(hospitalTitle);
     modal.find("input[name='hospital_id']").val(hospitalId);
+    modal.find('.modal-enquire-private-image').attr("src", picture);
 });
 
 var $info = $('#col_additional_information');

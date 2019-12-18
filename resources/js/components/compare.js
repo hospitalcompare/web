@@ -74,7 +74,6 @@ if (compareCount > 0 && window.location.href.indexOf("results-page") > '-1') {
  * @param element
  */
 window.addHospitalToCompare = function(element) {
-    // console.log('Element', element);
     compareHospitalIds = Cookies.get('compareHospitalsData');
     // Content for modal trigger button
     var $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g><g><g><path fill="#fff" d="M10.002 18.849c-4.878 0-8.846-3.968-8.846-8.847 0-4.878 3.968-8.846 8.846-8.846 4.879 0 8.847 3.968 8.847 8.846 0 4.879-3.968 8.847-8.847 8.847zm0-18.849C4.488 0 0 4.488 0 10.002c0 5.515 4.488 10.003 10.002 10.003 5.515 0 10.003-4.488 10.003-10.003C20.005 4.488 15.517 0 10.002 0z"></path></g><g><path fill="#fff" d="M14.47 5.848l-5.665 6.375-3.34-2.67a.578.578 0 0 0-.811.088c-.2.25-.158.615.091.815l3.769 3.015a.57.57 0 0 0 .361.125c.167 0 .325-.07.433-.196l6.03-6.783a.579.579 0 0 0 .146-.42.588.588 0 0 0-.191-.4.592.592 0 0 0-.824.05z"></path></g></g></g></svg>';
@@ -118,6 +117,7 @@ window.addHospitalToCompare = function(element) {
         'role="button" data-toggle="modal" ' +
         'data-hospital-url="' + element.url + '" ' +
         'data-hospital-title="' + element.name + '" ' +
+        'data-image="' + element.image + '" ' +
         'data-target="#hc_modal_enquire_nhs">Make an enquiry' +
         $svg +
         '</a>' : // If private == "Independent"
@@ -127,6 +127,7 @@ window.addHospitalToCompare = function(element) {
         'data-hospital-url="' + element.url + '" ' +
         'data-hospital-title="' + element.name + '" ' +
         'data-hospital-id="' + element.id + '" ' +
+        'data-image="' + element.image + '" ' +
         'data-target="#hc_modal_enquire_private">Make an enquiry' +
         $svg +
         '</a>';
@@ -143,7 +144,7 @@ window.addHospitalToCompare = function(element) {
         '<div class="col text-center" id="compare_hospital_id_' + element.id + '">' +
         '<div class="col-inner">' +
         '<div class="col-header d-flex flex-column justify-content-between align-items-center px-4 pb-3">' +
-        '<div class="image-wrapper" style="background-image: url(' + '/images/alder-1.jpg' + ')">' +
+        '<div class="image-wrapper" style="background: url(' + element.image + ') no-repeat scroll center center / cover">' +
         // '<img class="content" src="images/alder-1.jpg" alt="Image of ' + element.name + '">' +
         '<div class="remove-hospital" id="remove_id_' + element.id + '" data-hospital-type="' + slugify(hospitalType) + '-hospital"></div>' +
         '</div>' +

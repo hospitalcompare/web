@@ -240,6 +240,7 @@
                                             'target'            => 'blank',
                                             'modalText'         => 'This is the text about prices',
                                             'hospitalIds'       => $id,
+                                            'image'             => $itemImg,
                                             'buttonText'            => 'Click for<br>prices'])
                                 </p>
                             @else
@@ -265,6 +266,7 @@
                         'buttonText'        => $btnText,
                         'id'                => 'enquire_private_'.$id,
                         'hospitalIds'       => $id,
+                        'image'             => $itemImg,
                         'svg'               => 'circle-check'])
                     @elseif($NHSClass == 'nhs-hospital')
                         @include('components.basic.modalbutton', [
@@ -277,6 +279,7 @@
                         'modalTarget'       => '#hc_modal_enquire_nhs',
                         'id'                => 'enquire_nhs'.$id,
                         'hospitalIds'       => $id,
+                        'image'             => $itemImg,
                         'svg'               => 'circle-check'])
                     @endif
                     @if(!empty($specialOffers))

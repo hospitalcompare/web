@@ -188,17 +188,16 @@ class ApiController {
                 }]);
                 $hospital = $hospital->first();
 
-                if(!empty($hospital)) {
-                    $hospital = $hospital->toArray();
-                    $data[] = $hospital;
-                } else {
+                if(empty($hospital)) {
                     $hospital = $hospital->with(['waitingTime' => function ($query) use($totalSpecialty) {
                         $query->bySpecialty($totalSpecialty);
                     }]);
                     $hospital = $hospital->first();
-                    $hospital = $hospital->toArray();
-                    $data[] = $hospital;
                 }
+
+                $hospital = $hospital->toArray();
+                $hospital['image'] = \File::exists("images/hospitals/{$hospital['location_id']}.jpg") ? "images/hospitals/{$hospital['location_id']}.jpg" : "images/hospitals/no_image.png";
+                $data[] = $hospital;
             }
 
             $this->returnedData['data']    = $data;
