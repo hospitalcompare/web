@@ -68,30 +68,33 @@
                     @endforeach
                 @endif
             </div><!-- row -->
+            <div class="mobile-pagination-wrap">
+                @if(!empty($data['hospitals']))
+                    {{
+                        $data['hospitals']->appends([
+                            'postcode'          => Request::input('postcode'),
+                            'radius'            => Request::input('radius'),
+                            'procedure_id'      => Request::input('procedure_id'),
+                            'waiting_time'      => Request::input('waiting_time'),
+                            'user_rating'       => Request::input('user_rating'),
+                            'quality_rating'    => Request::input('quality_rating'),
+                            'hospital_type'     => Request::input('hospital_type'),
+                            'sort_by'           => Request::input('sort_by')
+                        ])->links('mobile.components.basic.mobilepagination')
+                    }}
+                @endif
+            </div>
         </div><!-- container -->
         @if($data['hospitals']->total() < 10)
             <div class="container">
                 <h1>Try tweaking the filters for more results</h1>
             </div>
         @endif
+
+
     </div><!-- results -->
 
-    <div class="pagination-wrap">
-        @if(!empty($data['hospitals']))
-            {{
-                $data['hospitals']->appends([
-                    'postcode'          => Request::input('postcode'),
-                    'radius'            => Request::input('radius'),
-                    'procedure_id'      => Request::input('procedure_id'),
-                    'waiting_time'      => Request::input('waiting_time'),
-                    'user_rating'       => Request::input('user_rating'),
-                    'quality_rating'    => Request::input('quality_rating'),
-                    'hospital_type'     => Request::input('hospital_type'),
-                    'sort_by'           => Request::input('sort_by')
-                ])->links('components.basic.pagination')
-            }}
-        @endif
-    </div>
+
 
     @include('mobile.components.solutionsbarmobile', [
       'specialOffers' => $data['special_offers']

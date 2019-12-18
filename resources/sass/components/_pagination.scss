@@ -1,6 +1,23 @@
-.pagination-wrap {
+.pagination-wrap, .mobile-pagination-wrap {
     margin-top: 30px;
     margin-bottom: 160px;
+}
+
+.mobile-pagination-wrap {
+    background-color: $white;
+    box-shadow: inset 0 0 0 2px $turq;
+    border: none;
+    //border: 2px solid $turq;
+    text-align: center;
+    color: $turq;
+    @include font-size(16);
+    border-radius: $border-radius;
+    @include transition(0.3s);
+    @extend .SofiaPro-SemiBold;
+
+    .mobile-current-page {
+        @include font-size(20);
+    }
 }
 
 .pagination {
