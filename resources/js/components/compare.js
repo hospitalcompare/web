@@ -44,7 +44,16 @@ var emptyColDesktop = '<div class="col col-empty h-100">\n' +
     '                        </div>\n' +
     '                    </div>\n' +
     '                </div>';
-var emptyColMobile = '<div class="card w-100">TEST</div>';
+
+var emptyColMobile = '<div class="card w-100">\n' +
+    '                        <div class="col-header border-bottom-0">\n' +
+    '                            <p class="text-center">Selected Hospital<br>\n' +
+    '                                will appear here.</p>\n' +
+    '                            <p class="text-center"> Add more hospitals to your\n' +
+    '                                Shortlist by clicking the&nbsp;<img width="14" height="12" src="/images/icons/heart.svg" alt="Heart icon">\n' +
+    '                            </p>\n' +
+    '                        </div>\n' +
+    '                    </div>\n';
 
 var emptyCol = ($("body").hasClass("results-page-mobile")) ? emptyColMobile : emptyColDesktop;
 
@@ -136,25 +145,6 @@ window.addHospitalToCompare = function (element) {
             data-target="#hc_modal_enquire_private">Make an enquiry
         ${$svg}
         </a>`;
-
-    // var btnContentMobile = element.hospital_type.name == 'NHS' ? // = "NHS"
-    //     '<a id="' + element.id + '" ' +
-    //     'class="btn btn-icon btn-blue btn-enquire enquiry btn-squared btn-squared_slim font-12" ' +
-    //     'role="button" data-toggle="modal" ' +
-    //     'data-hospital-url="' + element.url + '" ' +
-    //     'data-hospital-title="' + element.name + '" ' +
-    //     'data-target="#hc_modal_enquire_nhs">Make an enquiry' +
-    //     $svg +
-    //     '</a>' : // If private == "Independent"
-    //     '<a id="' + element.id + '" ' +
-    //     'class="btn btn-icon btn-blue btn-enquire enquiry btn-squared btn-squared_slim font-12" ' +
-    //     'role="button" data-toggle="modal" ' +
-    //     'data-hospital-url="' + element.url + '" ' +
-    //     'data-hospital-title="' + element.name + '" ' +
-    //     'data-hospital-id="' + element.id + '" ' +
-    //     'data-target="#hc_modal_enquire_private">Make an enquiry' +
-    //     $svg +
-    //     '</a>';
 
     if (hospitalType == 'Private') {
         privateHospitalCount += 1;
