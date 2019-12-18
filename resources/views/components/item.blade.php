@@ -7,7 +7,6 @@
                     <div
                         class="{{$NHSClass}} py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-violet' : 'bg-blue' }}">
                         <p class="m-0">{{$fundedText}}</p></div>
-                    <span class="d-none" id="item_hospital_url_{{$id}}">{{$d['url']}}</span>
                 </div>
                 <div class="hospital-details w-100 position-relative">
                     <p class="sort-item-title SofiaPro-SemiBold" id="item_name_{{$id}}">
@@ -103,8 +102,6 @@
                              </div>'])>
                         {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
                     </p>
-
-                    <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
                 </div>
                 {{-- Waiting time --}}
                 <div class="result-item-section-2__child flex-column">
@@ -157,20 +154,6 @@
                             ])>
                         {!! !empty($waitTime) ? $waitTime.'<br>Weeks' : "No data" !!}
                     </p>
-                    {{--                @if($NHSClass == 'private-hospital')--}}
-                    {{--                    <span>--}}
-                    {{--                        Click for<br>--}}
-                    {{--                        @include('components.basic.modalbutton', [--}}
-                    {{--                                'hrefValue'         => $url,--}}
-                    {{--                                'hospitalTitle'     => $title,--}}
-                    {{--                                'modalTarget'       => '#hc_modal_enquire_private',--}}
-                    {{--                                'classTitle'        => 'text-link enquire-times',--}}
-                    {{--                                'target'            => 'blank',--}}
-                    {{--                                'modalText'         => 'Information for waiting time enquiry',--}}
-                    {{--                                'buttonText'            => 'waiting time enquiry'])--}}
-                    {{--                    </span>--}}
-                    {{--                @endif--}}
-                    <span class="d-none" id="item_waiting_time_{{$id}}">{{str_replace("<br>", " ", $waitTime)}}</span>
                 </div>
                 {{-- End waiting time --}}
                 {{-- NHS user rating --}}
@@ -191,7 +174,6 @@
                             </ul>' : 'Currently no data available<br>for this hospital'])>
                         {!! html_entity_decode($stars) !!}
                     </p>
-                    <span class="d-none" id="item_user_rating_{{$id}}">{!! $userRating !!}</span>
                 </div>
                 {{-- end NHS user rating --}}
                 {{-- % operations cancelled --}}
@@ -203,7 +185,6 @@
                         'content' => !empty($opCancelled) ? 'National average<br> is 3.35%' : 'Currently no data available<br>for this hospital'])>
                         {!! !empty($opCancelled) ? $opCancelled : "No data" !!}
                     </p>
-                    <span class="d-none" id="item_op_cancelled_{{$id}}">{!! $opCancelled !!}</span>
                 </div>
                 {{-- Friends and family --}}
                 <div class="result-item-section-2__child">
@@ -215,14 +196,12 @@
                             'content' => !empty($FFRating) ? 'National average<br>is 98.85%' : 'Currently no data available<br>for this hospital'])>
                         {!! !empty($FFRating) ? $FFRating : "No data" !!}
                     </p>
-                    <span class="d-none" id="item_ff_rating_{{$id}}">{!! $FFRating !!}</span>
                 </div>
                 {{-- NHS funded work  --}}
                 <div class="result-item-section-2__child">
                     <p>
                         {!! ($NHSClass == 'nhs-hospital') || ($NHSClass == 'private-hospital') && !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                     </p>
-                    <span class="d-none" id="item_nhs_funded_{{$id}}">{!! $NHSFunded !!}</span>
                 </div>
                 <div class="result-item-section-2__child flex-column">
 {{--                    <p>--}}
@@ -245,12 +224,10 @@
                         @else
                             <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>
                         @endif
-                    <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
                 </div>
             </div>
             <div class="result-item-section-3">
                 <div class="btn-area">
-                    <span class="d-none" id="item_hospital_type_class_{{$id}}">{!! $NHSClass !!}</span>
                     @if($NHSClass == 'private-hospital')
                         @include('components.basic.modalbutton', [
                         'hospitalType'      => $NHSClass,

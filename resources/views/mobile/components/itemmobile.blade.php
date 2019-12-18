@@ -1,7 +1,8 @@
 <div class="result-item result-item-mobile col-12 col-md-6 mb-3" id="result-item_{{ $id }}">
     <div class="result-item-inner position-relative shadow p-3 pt-5">
         <div class="item-tags position-absolute d-flex">
-            <div class="{{$NHSClass}} hospital-type pp-2 {{ $NHSClass == 'private-hospital' ? 'bg-violet' : 'bg-blue' }} position-relative d-inline-block">
+            <div
+                class="{{$NHSClass}} hospital-type pp-2 {{ $NHSClass == 'private-hospital' ? 'bg-violet' : 'bg-blue' }} position-relative d-inline-block">
                 <p class="px-3 m-0 font-12 text-uppercase">{{ $fundedText }}</p>
             </div>
         </div>
@@ -12,8 +13,8 @@
             'hospitalType'      => $NHSClass,
             'svg'               => 'heart-solid',
             'id'                => $id])
-        <div class="result-item-mobile-section-1 w-100">
-            <div class="hospital-details w-100 position-relative mb-5">
+        <div class="result-item-mobile-section-1 w-100 mb-3">
+            <div class="hospital-details w-100 position-relative">
                 <p class="sort-item-title SofiaPro-SemiBold" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
@@ -37,7 +38,7 @@
             {{-- CQC rating  --}}
             <div class="result-item-section-2__child">
                 <p>Care Quality Rating</p>
-                <p class="h-50 d-flex  SofiaPro-Medium" @includeWhen(empty($qualityRating), 'components.basic.popover', [
+                <p class="d-flex SofiaPro-Medium" @includeWhen(empty($qualityRating), 'components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'click',
                         'html' => 'true',
@@ -91,13 +92,11 @@
                          </div>'])>
                     {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
                 </p>
-
-                <span class="d-none" id="item_quality_rating_{{$id}}">{!! $qualityRating !!}</span>
             </div>
             {{-- Waiting time --}}
             <div class="result-item-section-2__child">
                 <p>Waiting Time NHS (Funded)</p>
-                <p class="h-50 d-flex  SofiaPro-Medium"
+                <p class=" d-flex  SofiaPro-Medium"
                     @includeWhen(empty($waitTime), 'components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'click',
@@ -146,20 +145,6 @@
                         ])>
                     {!! !empty($waitTime) ? $waitTime.'&nbsp;Weeks' : "No data" !!}
                 </p>
-                {{--                @if($NHSClass == 'private-hospital')--}}
-                {{--                    <span>--}}
-                {{--                        Click for<br>--}}
-                {{--                        @include('components.basic.modalbutton', [--}}
-                {{--                                'hrefValue'         => $url,--}}
-                {{--                                'hospitalTitle'     => $title,--}}
-                {{--                                'modalTarget'       => '#hc_modal_enquire_private',--}}
-                {{--                                'classTitle'        => 'text-link enquire-times',--}}
-                {{--                                'target'            => 'blank',--}}
-                {{--                                'modalText'         => 'Information for waiting time enquiry',--}}
-                {{--                                'buttonText'            => 'waiting time enquiry'])--}}
-                {{--                    </span>--}}
-                {{--                @endif--}}
-                <span class="d-none" id="item_waiting_time_{{$id}}">{{str_replace("<br>", " ", $waitTime)}}</span>
             </div>
             {{-- End waiting time --}}
 
@@ -167,19 +152,18 @@
             {{-- % operations cancelled --}}
             <div class="result-item-section-2__child">
                 <p>% Operations Cancelled</p>
-                <p class="h-50 d-flex  SofiaPro-Medium"
+                <p class=" d-flex  SofiaPro-Medium"
                     @include('components.basic.popover', [
                     'trigger' => 'click',
                     'html'    => 'true',
                     'content' => !empty($opCancelled) ? 'National average<br> is 3.35%' : 'Currently no data available<br>for this hospital'])>
                     {!! !empty($opCancelled) ? $opCancelled : "No data" !!}
                 </p>
-                <span class="d-none" id="item_op_cancelled_{{$id}}">{!! $opCancelled !!}</span>
             </div>
             {{-- Friends and family --}}
             <div class="result-item-section-2__child">
                 <p>Friends & Family Rating</p>
-                <p class="m-0 h-50 d-flex  SofiaPro-Medium"
+                <p class="m-0  d-flex  SofiaPro-Medium"
                     @include('components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'click',
@@ -187,19 +171,11 @@
                         'content' => !empty($FFRating) ? 'National average<br>is 98.85%' : 'Currently no data available<br>for this hospital'])>
                     {!! !empty($FFRating) ? $FFRating : "No data" !!}
                 </p>
-                <span class="d-none" id="item_ff_rating_{{$id}}">{!! $FFRating !!}</span>
             </div>
-            {{-- NHS funded work  --}}
-{{--            <div class="result-item-section-2__child">--}}
-{{--                <p>--}}
-{{--                    {!! ($NHSClass == 'nhs-hospital') || ($NHSClass == 'private-hospital') && !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}--}}
-{{--                </p>--}}
-{{--                <span class="d-none" id="item_nhs_funded_{{$id}}">{!! $NHSFunded !!}</span>--}}
-{{--            </div>--}}
             {{-- NHS user rating --}}
             <div class="result-item-section-2__child mb-2">
                 <p>NHS User Rating</p>
-                <p class="h-50 d-flex  SofiaPro-Medium"
+                <p class=" d-flex  SofiaPro-Medium"
                     @include('components.basic.popover', [
                         'placement'         => 'bottom',
                         'trigger'           => 'click',
@@ -215,7 +191,6 @@
                         </ul>' : 'Currently no data available<br>for this hospital'])>
                     {!! html_entity_decode($stars) !!}
                 </p>
-                <span class="d-none" id="item_user_rating_{{$id}}">{!! $userRating !!}</span>
             </div>
             {{-- Click for self pay --}}
             <div class="result-item-section-2__child justify-content-between">
@@ -230,25 +205,24 @@
                                 'modalText'         => 'This is the text about prices',
                                 'hospitalIds'       => $id,
                                 'buttonText'        => 'Click for self pay prices'])
-{{--                    @else--}}
-{{--                        <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>--}}
+                        {{--                    @else--}}
+                        {{--                        <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>--}}
                     @endif
-{{--                @else--}}
-{{--                    <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>--}}
+                    {{--                @else--}}
+                    {{--                    <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>--}}
                 @endif
-                    @if(!empty($specialOffers))
-                        <div class="d-inline-block">
-                            @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
-                                'class' => 'default'])
-                            @include('components.basic.button', [
-                                'classTitle'        => 'toggle-special-offer btn btn-icon btn-link btn-special-offer btn-special-offer_mobile pl-5 col-pink rounded-0',
-                                'htmlButton'        => true,
-                                'id'                => 'special_' . $id,
-                                'buttonText'        => 'Special Offers',
-                                'svg'               => 'special-pink'])
-                        </div>
-                    @endif
-                    <span class="d-none" id="item_nhs_private_pay_{{$id}}">{!! $privateSelfPay !!}</span>
+                @if(!empty($specialOffers))
+                    <div class="d-inline-block">
+                        @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
+                            'class' => 'default'])
+                        @include('components.basic.button', [
+                            'classTitle'        => 'toggle-special-offer btn btn-icon btn-link btn-special-offer btn-special-offer_mobile pl-5 col-pink rounded-0',
+                            'htmlButton'        => true,
+                            'id'                => 'special_' . $id,
+                            'buttonText'        => 'Special Offers',
+                            'svg'               => 'special-pink'])
+                    </div>
+                @endif
             </div>
         </div>
         <div class="result-item-mobile-section-3 w-100">
@@ -299,5 +273,4 @@
             </div>
         </div>
     </div>
-
 </div>

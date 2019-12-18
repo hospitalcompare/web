@@ -16,7 +16,9 @@
     @endif
     <div class="select-wrapper position-relative {{ empty($selectWrapperClass) ? '' : $selectWrapperClass }}">
         <select class="{{empty($selectClass) ? '' : $selectClass}} form-control"
-                id="{{empty($selectId) ? '' : $selectId}}"
+                @if(!empty($selectId))
+                    id="{{ $selectId }}"
+                @endif
                 data-live-search="{{ !empty($selectPicker) ? $selectPicker : ''}}"
                 name="{{$name}}"
             {{ !empty($required) && ($required) ? 'required' : '' }}>
