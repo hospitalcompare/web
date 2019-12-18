@@ -609,3 +609,50 @@ h6 {
     width: 10px;
     height: 10px;
 }
+
+// SVG classes
+.circle-check {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+// Animations
+
+.heartbeat {
+    transform-origin: 50% 50%;
+    animation: heartBeat .5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+}
+
+.shake {
+    transform-origin: 50% 50%;
+    animation: shake .8s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.pulse {
+    transform-origin: 50% 50%;
+    animation: pulse .5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+}
+
+// Star icons
+.star-icon {
+    width: 16px;
+    height: 15px;
+}
+
+// Pulse effect when highlighting page elements
+.dr-highlight {
+    transform-origin: 50% 50%;
+    //animation: bounce .8s ease-in-out;
+    //animation: wobble .5s ease-in-out;
+    //animation: shake .8s ease-in-out;
+    //animation: flash .8s ease-in-out;
+    animation: pulse .5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+}

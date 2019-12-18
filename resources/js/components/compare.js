@@ -315,7 +315,7 @@ $(document).on("click", ".compare-hospitals-bar .remove-hospital", function (e) 
 });
 
 //Set the Onclick event for the Comparison Header - toggle open and closed
-$(document).on("click", ".compare-hospitals-bar .compare-button-title", function (e) {
+$(document).on("click", "#compare_button_title", function (e) {
     var compareCount = getCompareCount();
     var openTabs = $('.special-offer-tab.open');
     // var solutionsBar = $('.compare-hospitals-bar');

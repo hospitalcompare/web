@@ -1,4 +1,4 @@
-<div class="compare-hospitals-bar {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
+<div class="compare-hospitals-bar_desktop {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
     <div class="compare-hospitals-header d-flex justify-content-between">
         <div class="container position-relative d-flex justify-content-between align-items-end h-100">
 
@@ -33,26 +33,10 @@
                             ])
                         </li>
                     @endforeach
-                    {{--            <li class="d-block ml-3">--}}
-                    {{--                <a href="" class="btn btn-icon btn-special-tab">Special Offers</a>--}}
-                    {{--            </li>--}}
-                    {{--                    <li><a href="">Virtual GP</a></li>--}}
-                    {{--                    <li><a href="">Operation Funding</a></li>--}}
-                    {{--                    <li><a href="">Insurance Guide</a></li>--}}
-                    {{--                    <li><a href="">Medical Negligence</a></li>--}}
                 </ul>
             @endif
-            <div class="compare-button-title d-flex align-items-center h-100">
-                {{--                @svg('compare-heart', 'compare-heart')--}}
-                <svg id="compare_heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-                    {{--                    <path id="outer-circle" d="M15 0c8.3 0 15 6.7 15 15s-6.7 15-15 15S0 23.3 0 15 6.7 0 15 0z"/>--}}
-                    <path id="outer-circle" fill="transparent" stroke-width="2" stroke="#fff"
-                          d="M15 1c7.7 0 14 6.3 14 14s-6.3 14-14 14S1 22.7 1 15 7.3 1 15 1z"/>
-                    <g>
-                        <path id="wishlist" fill="transparent"
-                              d="M18.8 8c-1.3 0-2.6.7-3.3 1.8-.2.2-.3.5-.4.7-.1-.2-.3-.5-.4-.7-.7-1.1-2-1.8-3.3-1.8-2.6.1-4.4 2-4.4 4.4v.1c0 2.8 2.3 4.7 5.7 7.7.6.6 1.3 1.1 1.9 1.7.1.1.3.1.4.1.1 0 .2 0 .3-.1l2.1-1.8c3.2-2.7 5.6-4.7 5.6-7.6.1-2.4-1.7-4.4-4.1-4.6l-.1.1z"/>
-                    </g>
-                </svg>
+            <div id="compare_button_title" class="compare-button-title d-flex align-items-center h-100">
+                @svg('compare-heart', 'compare-heart')
                 <p class="font-26">Compare&nbsp;(<span id="compare_number">0</span>)<span
                         class="compare-arrow ml-3"></span>
                 </p>

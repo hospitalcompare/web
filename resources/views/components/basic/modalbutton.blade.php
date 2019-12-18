@@ -25,7 +25,9 @@
    data-image="{{ $image ?? '' }}"
    data-address="{{ $address ?? '' }}">
     <div>{!! $buttonText !!}</div>
-    @if(!empty($svg))
+    @if(!empty($svg) && empty($svgClass))
         @svg($svg)
+    @elseif(!empty($svg) && !empty($svgClass))
+        @svg($svg, $svgClass)
     @endif
 </span>

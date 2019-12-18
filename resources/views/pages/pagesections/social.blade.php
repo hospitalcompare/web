@@ -3,17 +3,17 @@
         <div class="social-links">
             <ul class="social-list d-flex justify-content-end">
                 <li class="facebook-social">
-                    <a href="" target="_blank">@svg('facebook')
+                    <a href="https://www.facebook.com/hospitalcompare" target="_blank">@svg('facebook')
                         <span class="sr-only">Facebook link</span>
                     </a>
                 </li>
                 <li class="twitter-social">
-                    <a href="" target="_blank">@svg('twitter')
+                    <a href="https://www.twitter.com/HospCompare" target="_blank">@svg('twitter')
                         <span class="sr-only">Twitter link</span>
                     </a>
                 </li>
                 <li class="instagram-social">
-                    <a href="" target="_blank">@svg('instagram')
+                    <a href="https://www.instagram.com/hospitalcompare/" target="_blank">@svg('instagram')
                         <span class="sr-only">Instagram link</span>
                     </a>
                 </li>
