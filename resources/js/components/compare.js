@@ -45,11 +45,11 @@ var emptyColDesktop = '<div class="col col-empty h-100">\n' +
     '                    </div>\n' +
     '                </div>';
 
-var emptyColMobile = '<div class="card w-100">\n' +
-    '                        <div class="col-header border-bottom-0">\n' +
-    '                            <p class="text-center">Selected Hospital<br>\n' +
+var emptyColMobile = '<div class="card w-100 rounded-0 border-top-0 border-left-0 border-right-0 border-bottom">\n' +
+    '                        <div class="border-bottom">\n' +
+    '                            <p class="">Selected Hospital<br>\n' +
     '                                will appear here.</p>\n' +
-    '                            <p class="text-center"> Add more hospitals to your\n' +
+    '                            <p class=""> Add more hospitals to your\n' +
     '                                Shortlist by clicking the&nbsp;<img width="14" height="12" src="/images/icons/heart.svg" alt="Heart icon">\n' +
     '                            </p>\n' +
     '                        </div>\n' +
@@ -67,8 +67,10 @@ var compareData = Cookies.get('compareHospitalsData');
 // Check if we need to show the Compare hospitals div (on page load)
 if (compareCount > 0 && window.location.href.indexOf("results-page") > '-1') {
     // Show the comparison row headings and hide the existing column
+    // Show the comparison row headings and hide the existing column
     $('#compare_hospitals_headings').removeClass('d-none');
     $('#no_items_added').addClass('d-none');
+
     // Hide the "you haven't added any items..."
     compareHospitalIds = compareData;
     // Update the value of the enquiry form
@@ -95,7 +97,7 @@ if (compareCount > 0 && window.location.href.indexOf("results-page") > '-1') {
  * @param element
  */
 window.addHospitalToCompare = function (element) {
-    // console.log('Element', element);
+    console.log('Element', element);
     compareHospitalIds = Cookies.get('compareHospitalsData');
     // Content for modal trigger button
     var $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g><g><g><path fill="#fff" d="M10.002 18.849c-4.878 0-8.846-3.968-8.846-8.847 0-4.878 3.968-8.846 8.846-8.846 4.879 0 8.847 3.968 8.847 8.846 0 4.879-3.968 8.847-8.847 8.847zm0-18.849C4.488 0 0 4.488 0 10.002c0 5.515 4.488 10.003 10.002 10.003 5.515 0 10.003-4.488 10.003-10.003C20.005 4.488 15.517 0 10.002 0z"></path></g><g><path fill="#fff" d="M14.47 5.848l-5.665 6.375-3.34-2.67a.578.578 0 0 0-.811.088c-.2.25-.158.615.091.815l3.769 3.015a.57.57 0 0 0 .361.125c.167 0 .325-.07.433-.196l6.03-6.783a.579.579 0 0 0 .146-.42.588.588 0 0 0-.191-.4.592.592 0 0 0-.824.05z"></path></g></g></g></svg>';
@@ -140,7 +142,7 @@ window.addHospitalToCompare = function (element) {
             class="${btnClass}"
             role="button" data-toggle="modal"
             data-hospital-url="${element.url}"
-            data-hospital-title="${element.name}"
+            data-hospital-title="${element.display_name}"
             data-hospital-id="${element.id}"
             data-target="#hc_modal_enquire_private">Make an enquiry
         ${$svg}
@@ -159,10 +161,9 @@ window.addHospitalToCompare = function (element) {
                 '<div class="col-inner">' +
                     '<div class="col-header d-flex flex-column justify-content-between align-items-center px-4 pb-3">' +
                         '<div class="image-wrapper" style="background-image: url(' + '/images/alder-1.jpg' + ')">' +
-                            // '<img class="content" src="images/alder-1.jpg" alt="Image of ' + element.name + '">' +
                             '<div class="remove-hospital" id="remove_id_' + element.id + '" data-hospital-type="' + slugify(hospitalType) + '-hospital"></div>' +
                             '</div>' +
-                        '<div class="w-100 details font-16 SofiaPro-SemiBold">' + textTruncate(element.name, 30, '...') + '</div>' +
+                        '<div class="w-100 details font-16 SofiaPro-SemiBold">' + textTruncate(element.display_name, 30, '...') + '</div>' +
                         btnContent +
                     '</div>' +
                     '<div class="cell">' + hospitalType + '</div>' +
@@ -191,19 +192,75 @@ window.addHospitalToCompare = function (element) {
         target.prepend(newColumn);
     } else if(isMobile) {
         var newRow =
-            `<div class="card w-100 p-0 border-0 border-bottom rounded-0">
-                <div class="card-header p-0 bg-white" id="heading${element.id}">
+            `<div id="compare_hospital_id_${element.id}" class="card w-100 p-0 border-top-0 border-left-0 border-right-0 border-bottom rounded-0 shadow-none">
+                <div class="card-header p-0 pb-2 bg-white" id="heading${element.id}">
                      <button class="btn btn-link collapsed text-decoration-none p-0" data-toggle="collapse" data-target="#collapse${element.id}" aria-expanded="true" aria-controls="collapse${element.id}">
-                         <h4 class="font-18">${textTruncate(element.name, 30, '...')}</h4>
-                         <p class="col-grey">${$svgMapIcon}${element.address.city}</p>
-                         <p>${latestRating}&nbsp;|&nbsp;${getHtmlDashTickValue(waitingTime, " Weeks Average Waiting")}</p>
+                         <p class="font-18 SofiaPro-SemiBold mb-2">${textTruncate(element.display_name, 30, '...')}</p>
+                         <p class="col-grey mb-2">${$svgMapIcon}${element.address.city}</p>
+                         <p class="mb-2">${latestRating}&nbsp;|&nbsp;${getHtmlDashTickValue(waitingTime, " Weeks Average Waiting")}</p>
                      </button>
-                     <div class="btn-area">${btnContent}</div>
+                     <div class="btn-area d-flex align-items-center">
+                        ${btnContent}
+                        <span class="remove-hospital col-turq ml-2 font-12" id="remove_id_${element.id}" data-hospital-type="${slugify(hospitalType)}-hospital">Remove</span>
+                     </div>
                 </div>
                 <div id="collapse${element.id}" class="collapse" aria-labelledby="heading${element.id}" data-parent="#compare_hospitals_grid">
-                    <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
+                    <div class="card-body p-0 pb-2 pt-3">
+                        <div class="row">
+                            <div class="col-6 border-right">
+                                <div class="col-inner h-100">
+                                    <div class="mobile-cell">Hospital Type</div>
+                                    <div class="mobile-cell">Average Waiting Time</div>
+                                    <div class="mobile-cell">NHS User Rating</div>
+                                    <div class="mobile-cell">% Operations cancelled</div>
+                                    <div class="mobile-cell">Care Quality Rating</div>
+                                    <div class="mobile-cell">Friends & Family Rating</div>
+                                    <div class="mobile-cell">NHS Funded Work</div>
+                                    <div class="mobile-cell">Private Self Pay</div>
+                                    <div class="mobile-cell column-break"></div>
+                                    <div class="mobile-cell SofiaPro-SemiBold">Care Quality Rating</div>
+                                    <div class="mobile-cell">Safe</div>
+                                    <div class="mobile-cell">Effective</div>
+                                    <div class="mobile-cell">Caring</div>
+                                    <div class="mobile-cell">Responsive</div>
+                                    <div class="mobile-cell">Well Led</div>
+                                    <div class="mobile-cell column-break"></div>
+                                    <div class="mobile-cell SofiaPro-SemiBold">NHS User Rating</div>
+                                    <div class="mobile-cell">Cleanliness</div>
+                                    <div class="mobile-cell">Food & Hygiene</div>
+                                    <div class="mobile-cell">Privacy, Dignity & Wellbeing</div>
+                                    <div class="mobile-cell">Dementia Domain</div>
+                                    <div class="mobile-cell">Disability Domain</div>
+                                </div>
+                            </div>
+                            <div class="col-6 text-center">
+                                <div class="col-inner">
+                                    <div class="mobile-cell">${hospitalType}</div>
+                                    <div class="mobile-cell">${getHtmlDashTickValue(waitingTime, " Weeks")}</div>
+                                    <div class="mobile-cell">${getHtmlStars(userRating)}</div>
+                                    <div class="mobile-cell">${getHtmlDashTickValue(cancelledOps, "%")}</div>
+                                    <div class="mobile-cell">${latestRating}</div>
+                                    <div class="mobile-cell">${getHtmlDashTickValue(friendsAndFamilyRating, "%")}</div>
+                                    <div class="mobile-cell">${getHtmlDashTickValue(nhsFundedWork)}</div>
+                                    <div class="mobile-cell">${getHtmlDashTickValue(nhsRating)}</div>
+                                    <div class="mobile-cell column-break"></div>
+                                    <div class="mobile-cell"></div>
+                                    <div class="mobile-cell">${element.rating !== null && element.rating.safe !== null ? element.rating.safe : 'No Data'}</div>
+                                    <div class="mobile-cell">${element.rating !== null && element.rating.effective !== null ? element.rating.effective : 'No Data'}</div>
+                                    <div class="mobile-cell">${element.rating !== null && element.rating.caring !== null ? element.rating.caring : 'No Data'}</div>
+                                    <div class="mobile-cell">${element.rating !== null && element.rating.responsive !== null ? element.rating.responsive : 'No Data'}</div>
+                                    <div class="mobile-cell">${element.rating !== null && element.rating.well_led !== null ? element.rating.well_led : 'No Data'}</div>
+                                    <div class="mobile-cell column-break"></div>
+                                    <div class="mobile-cell"></div>
+                                    <div class="mobile-cell">${element.place_rating !== null && element.place_rating.cleanliness !== null ? getHtmlDashTickValue(element.place_rating.cleanliness, "%") : 'No data'}</div>
+                                    <div class="mobile-cell">${(element.place_rating !== null && element.place_rating.food_hydration !== null ? getHtmlDashTickValue(element.place_rating.food_hydration, "%") : 'No data')}</div>
+                                    <div class="mobile-cell">${(element.place_rating !== null && element.place_rating.privacy_dignity_wellbeing !== null ? getHtmlDashTickValue(element.place_rating.privacy_dignity_wellbeing, "%") : 'No data')}</div>
+                                    <div class="mobile-cell">${(element.place_rating !== null && element.place_rating.dementia !== null ? getHtmlDashTickValue(element.place_rating.dementia, "%") : 'No data')}</div>
+                                    <div class="mobile-cell">${(element.place_rating !== null && element.place_rating.disability !== null ? getHtmlDashTickValue(element.place_rating.disability, "%") : 'No data')}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>`;
         target.prepend(newRow);

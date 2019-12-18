@@ -1,10 +1,10 @@
-.compare-hospitals-bar_desktop {
+.compare-hospitals-bar {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     background-color: $turq;
-    z-index: 1040;
+    z-index: 1030;
     max-height: calc(100vh - 140px);
 
     .compare-hospitals-header {
@@ -112,7 +112,7 @@
     .compare-hospitals-content {
         padding-bottom: 30px;
         background-color: #fff;
-        //display: none;
+        display: none;
         height: calc(100vh - 190px);
         overflow-y: scroll;
 
@@ -217,6 +217,17 @@
                 .help-link {
                     @include v-c;
                     right: -15px;
+                }
+            }
+
+            .mobile-cell {
+                height: 20px;
+                line-height: 20px;
+                @include font-size(12px);
+
+                &.column-break {
+                    height: 30px;
+                    //line-height: 50px;
                 }
             }
         }
@@ -352,5 +363,14 @@
     }
 }
 
-
-
+.compare-hospitals-bar_mobile {
+    .hc-accordion {
+        .card-header {
+            button {
+                &:after {
+                    right: 0;
+                }
+            }
+        }
+    }
+}

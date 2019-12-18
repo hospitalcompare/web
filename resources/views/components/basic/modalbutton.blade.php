@@ -1,7 +1,8 @@
-<span
+<{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'span' }} id="{{ empty($id) ? '' : $id }}"
+    {{ !empty($disabled) && ($disabled) ? 'disabled' : ''}}
    id="{{ empty($id) ? '' : $id }}"
    style="display: inline-block; {{ empty($style) ? '' : $style }}"
-   class="{{$classTitle}}"
+   class="{{$classTitle}} "
    role="button"
    data-toggle="modal"
    @if($modalTarget == '#hc_modal_video')
@@ -24,10 +25,10 @@
    data-target="{{ $modalTarget }}"
    data-image="{{ $image ?? '' }}"
    data-address="{{ $address ?? '' }}">
-    <div>{!! $buttonText !!}</div>
+    <span>{!! $buttonText !!}</span>
     @if(!empty($svg) && empty($svgClass))
         @svg($svg)
     @elseif(!empty($svg) && !empty($svgClass))
         @svg($svg, $svgClass)
     @endif
-</span>
+</{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'span' }} id="{{ empty($id) ? '' : $id }}">

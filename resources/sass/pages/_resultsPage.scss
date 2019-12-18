@@ -8,7 +8,6 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 1035; // To be just below the open shortlist
         width: 100vw;
         height: 100vh;
         background-color: $modal-backdrop-bg;
@@ -553,45 +552,7 @@
     }
 }
 
-// Compare shortlist area open
-.shortlist-open {
-    overflow: hidden; // Stop body scrolling
 
-    #resultspage_form {
-        z-index: initial;
-    }
-
-    .popover:not(.popover-comparison) {
-        display: none !important;
-    }
-
-    // Hide the special offer tabs
-    .solutions-menu {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    // Fade in the mask when shortlist is open
-    &:before {
-        opacity: $modal-backdrop-opacity;
-        pointer-events: initial;
-    }
-
-    .compare-arrow {
-        transform: rotate3d(0, 0, 1, 180deg);
-    }
-}
-
-// Body class when filters are open
-.filters-open {
-    overflow: hidden;
-
-    .section-2 {
-        opacity: 0;
-        pointer-events: none;
-    }
-
-}
 
 /********* Desktop results layout *************************************************************************************/
 /********* Desktop results layout *************************************************************************************/
