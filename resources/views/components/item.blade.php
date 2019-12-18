@@ -15,17 +15,7 @@
                     @if(!empty($locationSpecialism))
                         <p class="sort-item-specialism col-turq mb-1"><strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
                     @endif
-                    <p class="sort-item-location">{{$location}} {{-- trim($town, ', ') --}}</p>
-                    {{--                @include('components.basic.modalbutton', [--}}
-                    {{--                    'hrefValue'         => '#',--}}
-                    {{--                    'classTitle'        => 'find-link',--}}
-                    {{--                    'buttonText'            => 'Find on map',--}}
-                    {{--                    'modalTarget'       => '#hc_modal_map',--}}
-                    {{--                    'latitude'          => $latitude,--}}
-                    {{--                    'longitude'         => $longitude,--}}
-                    {{--                    'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,--}}
-                    {{--                    'image'             => 'images/alder-1.png'--}}
-                    {{--                ])--}}
+                    <p class="sort-item-location">{{$location}}</p>
                     @include('components.basic.button', [
                         'classTitle'        => 'btn btn-icon btn-more-info position-absolute font-12',
                         'buttonText'        => '<span>More info</span>',

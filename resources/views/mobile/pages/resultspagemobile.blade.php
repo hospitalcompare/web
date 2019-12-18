@@ -93,7 +93,7 @@
         @endif
     </div>
 
-    @include('mobile.components.mobilesolutionsbar', [
+    @include('mobile.components.solutionsbarmobile', [
       'specialOffers' => $data['special_offers']
       ])
     @include('components.modals.modalenquirenhs')

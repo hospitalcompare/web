@@ -69,6 +69,7 @@
                                     'classTitle'        => 'btn btn-squared btn-blue btn-enquire-all font-14',
                                     'id'                => 'multiple_enquiries_button',
                                     'svg'               => 'circle-check',
+                                    'svgClass'          => 'circle-check',
                                     'modalTarget'       => '#hc_modal_enquire_private',
                                     'disabled'          => true,
                                     'hospitalTitle'     => 'your selected hospitals',

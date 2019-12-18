@@ -639,10 +639,17 @@ h6 {
     animation-iteration-count: 2;
 }
 
-// Star icons
+// Icons
 .star-icon {
     width: 16px;
     height: 15px;
+}
+
+.map-icon {
+    width: 10px;
+    height: 15px;
+    margin-right: 10px;
+    position: static !important;
 }
 
 // Pulse effect when highlighting page elements
