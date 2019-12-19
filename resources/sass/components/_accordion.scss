@@ -5,7 +5,10 @@
         border-radius: $border-radius !important;
         @extend .w-100;
         //@extend .shadow;
-        //@extend .border-0;
+        @extend .border-top-0;
+        @extend .border-right-0;
+        @extend .border-left-0;
+        @extend .border-bottom;
         @extend .mb-2;
         @extend .bg-white;
         @include media-breakpoint-up(lg) {

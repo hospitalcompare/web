@@ -98,10 +98,10 @@
                         <p class="col-grey lh-16 font-18">Still have a few things you'd like to clear up? We've put together the
                             following simple answers to questions frequently thought, but rarely asked, about finding
                             the right hospital for your treament.</p>
-                        <div class="accordion pt-3" id="_faqs_accordion">
+                        <div class="hc-faqs-accordion pt-3" id="_faqs_accordion">
                             @foreach($data['faqs'] as $key => $faq)
                                 <div class="card p-30">
-                                    <div class="card-header mb-3" id="heading{{$key}}">
+                                    <div class="card-header mb-3 rounded-0 p-0 bg-white border-0" id="heading{{$key}}">
                                         <p class="mb-0 font-16 SofiaPro-Medium">
                                             {!! $faq->question !!}
                                         </p>

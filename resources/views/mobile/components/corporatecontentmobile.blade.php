@@ -46,8 +46,8 @@
                 <div class="tab-pane active col-12" id="stats_{{ $id }}" role="tabpanel"
                      aria-labelledby="stats-tab">
                     <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="accordion p-0" id="hospital_stats">
+                        <div class="col-12">
+                            <div class="hc-accordion p-0" id="hospital_stats">
                                 @if(!empty($qualityRating))
                                     <div class="card">
                                         <div class="card-header" id="headingOne_{{ $id }}">
@@ -287,8 +287,8 @@
                 <div class="tab-pane col-12" id="profile_{{ $id }}" role="tabpanel"
                      aria-labelledby="profile-tab">
                     <div class="row">
-                        <div class="col-12 col-md-6 mb-3">
-                            <div class="carousel-wrapper position-relative pl-md-5">
+                        <div class="col-12 mb-3">
+                            <div class="carousel-wrapper position-relative">
                                 <div id="carousel-thumb_{{ $id }}"
                                      class="carousel slide carousel-slide carousel-thumbnails" data-ride="carousel"
                                      data-interval="false">
@@ -375,7 +375,7 @@
                                 {{--                                        ])--}}
                             </div>
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="col-12">
                             <div class="profile-intro">
                                 <p class="">Situated in London, this hospital provides private
                                     patients with outstanding medical
@@ -393,7 +393,7 @@
                                     facilities include:</p>
                             </div>
                             <div class="row">
-                                <div class="col-12 col-md-6">
+                                <div class="col-12">
                                     <p class=" SofiaPro-SemiBold">First list</p>
                                     <ul class="blue-dot blue-dot_small">
                                         <li>First thing</li>
@@ -407,7 +407,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-12 col-md-6">
+                                <div class="col-12">
                                     <p class=" SofiaPro-SemiBold">Second list</p>
                                     <ul class="blue-dot blue-dot_small">
                                         <li>First thing</li>
@@ -430,13 +430,8 @@
                      aria-labelledby="map-tab">
                     <div class="row">
                         <div class="corporate-content-details d-flex col-12 mb-3">
-                            {{--                                <div class="img-wrap mr-4">--}}
-                            {{--                                    <img class="image" width="173" height="158"--}}
-                            {{--                                         src="images/alder-1.jpg"--}}
-                            {{--                                         alt="Image of {{ $hospitalTitle }}">--}}
-                            {{--                                </div>--}}
                             <div class="address">
-                                {!! $address !!}
+                                {!! $town !!},&nbsp;{{ $postcode }}
                             </div>
                         </div>
                         <div class="col-12">
