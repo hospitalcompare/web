@@ -108,7 +108,7 @@ $popover-max-width: 500px;
 
 // Modal
 $modal-inner-padding: 0;
-$modal-content-border-radius: 16px;
+$modal-content-border-radius: $border-radius;
 $modal-content-border-width: 0;
 $zindex-modal-backdrop: 1080;
 $zindex-modal: 1085;
@@ -237,3 +237,6 @@ $card-spacer-x:                     1.25rem !default;
 //$card-columns-count:                3 !default;
 //$card-columns-gap:                  1.25rem !default;
 //$card-columns-margin:               $card-spacer-y !default;
+
+// Header
+$mobile-header-height: 54px;

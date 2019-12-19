@@ -16,8 +16,8 @@
     <div class="p-5 w-100 text-center">
         <a href="/"><img class="w-100 mb-3" src="{{ asset('/images/logo-desktop.svg') }}" style="max-width: 500px"></a>
         <h1 class="text-white">404 error | Sorry, page not found</h1>
-        <a class="btn btn-blue btn-s mr-md-2" href="/">Back to homepage</a>
-        <a class="btn btn-blue btn-s" href="/results-page">Back to searchpage</a>
+        <a class="btn btn-blue mr-md-2" href="/">Back to homepage</a>
+        <a class="btn btn-blue" href="/results-page">Back to searchpage</a>
     </div>
 </section>
 

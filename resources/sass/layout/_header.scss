@@ -1,7 +1,7 @@
 .header-wrapper {
     background: $turq;
     text-align: center;
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
         padding: 10px 0;
     }
 }
@@ -18,52 +18,119 @@
 
     a {
         display: flex;
+
         &:hover {
             text-decoration: none;
         }
     }
 }
 
+
 .main-nav {
-    display: none;
+    @include media-breakpoint-down(md) {
+        position: fixed;
+        top: 54px;
+        left: 0;
+        width: calc(100% - 2rem);
+        height: calc(100vh - 54px);
+        background-color: #fff;
+        z-index: 2000;
+        transform: translate3d(-100%, 0, 0);
+        transition: $transition;
+        box-shadow: $box-shadow;
+
+        .main-menu {
+            display: flex;
+            flex-direction: column;
+            padding-left: 1rem;
+
+            li {
+                display: inline-block;
+                border-bottom: 2px solid $borderGrey;
+                position: relative;
+
+                svg {
+                    @include v-c;
+                    right: 1rem;
+                }
+
+                a {
+                    color: $body-color;
+                    padding: 1rem 0;
+                }
+            }
+        }
+    }
+
     @include media-breakpoint-up(lg) {
         display: flex;
     }
 
     .main-menu {
-        margin: 0;
         display: flex;
+        margin: 0;
 
         li {
             position: relative;
             display: inline-block;
 
-            &:last-child {
-                margin-right: -15px;
-            }
 
             > a {
                 height: 100%;
                 display: flex;
                 align-items: center;
-                color: $white;
-                font-size: 1.3em;
-                padding: 30px 15px;
-                line-height: 1;
+
                 transition: $transition;
 
                 &.active {
                     background-color: darken($turq, 5%);
+                    color: #fff;
+
+                    @include media-breakpoint-down(md) {
+                        padding-left: 1rem;
+                    }
+
+                    svg {
+                        path {
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                svg {
+                    path {
+                        fill: #fff;
+                    }
                 }
 
-                &:hover {
+                a {
                     background-color: darken($turq, 5%);
                     text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            li {
+                &:last-child {
+                    margin-right: -15px;
+                }
+
+                a {
+                    @include font-size(1.3rem);
+                    padding: 30px 15px;
+                    line-height: 1;
+                    color: #fff;
+
                 }
             }
         }
     }
 }
+
 
 .submenu {
     position: absolute;
@@ -84,20 +151,3 @@
 .main-nav .submenu li a {
     padding: 0;
 }
-
-
-//OVERWRITE BOOTSTRAP
-.btn-lg, .btn-group-lg > .btn {
-
-    line-height: 2 !important;
-
-}
-
-//select, input{
-//  width: 300px;
-//  height: 30px;
-//  border-radius: 7px;
-//}
-
-
-

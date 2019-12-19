@@ -12,7 +12,7 @@ $('.results-page .select-sort-by').change(function () {
 
 //Sorting asc/desc when the arrows are clicked
 $(document).on("click touchend", ".sort-bar .sort-arrow", function () {
-    console.log('Sorting')
+    console.log('Sorting');
     //Get all the classes from the element
     var elementClasses = $(this).attr('class');
     //Get the actual target class
@@ -151,11 +151,18 @@ $(document).on("click", ".results-page .change-url", function (event) {
 // Toggle filter section
 $showFilters = $('#show_filters');
 $showFilters.on('click', function () {
-    $('#resultspage_form .filter-parent').slideToggle();
+    if( $('body').hasClass('results-page-desktop') ){
+        $('#resultspage_form .filter-parent').slideToggle();
+    }
     $('body').toggleClass('filters-open');
     $(this).toggleClass('open');
     // // Refresh the range slider as it is initially hidden
     $("#radiusProx").slider('relayout');
+});
+
+$hideFilters = $('#close_mobile_filters');
+$hideFilters.on('click', function(){
+   $('body').removeClass('filters-open');
 });
 //
 // $('*').on('focus', function(e){
@@ -187,7 +194,7 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
         $target
             .slideUp()
             .removeClass('open');
-        $(this).find('span').text('More info');
+        $(this).find('span, div').text('More info');
         // Scroll back to the result item
         var $scrollBack = $(this).parents('.result-item').offset().top;
         $('html, body').animate({
@@ -206,7 +213,7 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
         }, 800);
         //Change the `More info` to `Close info`
         $(this).addClass('open');
-        $(this).find('span').text('Close info');
+        $(this).find('span, div').text('Close info');
     }
 });
 

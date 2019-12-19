@@ -51,12 +51,12 @@
                 window.cookieconsent.initialise({
                     "palette": {
                         "popup": {
-                            "background": "#efefef",
-                            "text": "#1c1c1c"
+                            "background": "#1d1d1d",
+                            "text": "#fff"
                         },
                         "button": {
                             "background": "#00cecd",
-                            "text": "#ffffff"
+                            "text": "#ffffff",
                         }
                     },
                     "theme": "hc-cookie",

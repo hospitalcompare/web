@@ -8,7 +8,6 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 1035; // To be just below the open shortlist
         width: 100vw;
         height: 100vh;
         background-color: $modal-backdrop-bg;
@@ -21,25 +20,7 @@
     }
 }
 
-.results-page,
-.test-page {
-    margin-bottom: 49px;
-
-    .filter {
-        //display: flex;
-        //
-        //.filter-left {
-        //    //flex-basis: 80.3333%;
-        //    width: 80.3333%;
-        //}
-        //
-        //.filter-right {
-        //    //flex-basis: 1.6666%;
-        //    width: 19.6666%;
-        //}
-    }
-
-
+.results-page:not(.results-page-mobile) {
     .filter-section {
         .filter-section-child {
             &:not(:last-child) {
@@ -47,8 +28,12 @@
             }
         }
     }
+}
 
-    // Hide filters on pageload
+.results-page,
+.test-page {
+    margin-bottom: 49px;
+
     #resultspage_form {
         top: 0;
         left: 0;
@@ -60,14 +45,6 @@
         &.js-is-sticky--change,
         &.js-is-stuck {
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-        }
-
-        .filter-parent {
-            //display: none;
-
-            .dropdown-toggle {
-                @include font-size(14);
-            }
         }
     }
 
@@ -83,7 +60,6 @@
     }
 
     // Shared style for selects on results page
-
     .select-parent {
         position: relative;
         //width: 100%;
@@ -122,7 +98,10 @@
         width: $fullWidth;
         background-color: $white;
         padding-top: 23px;
-        display: none;
+
+        .dropdown-toggle {
+            @include font-size(14);
+        }
     }
 
     .postcode-radius,
@@ -221,7 +200,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
 
 
         .show-section {
@@ -414,9 +392,6 @@
         @include responsive-columns;
     }
 
-    .result-item-section-2 {
-    }
-
     .result-item-section-3 {
         justify-content: center;
         flex-direction: column;
@@ -436,7 +411,7 @@
         span {
             @include font-size(14);
             display: inline-block;
-            margin-top: 10px;
+            //margin-top: 10px;
             line-height: 1;
             width: 100%; // IE bug
         }
@@ -481,20 +456,6 @@
         width: 100%;
     }
 
-    .nhs-hospital {
-        //border-bottom: solid 30px $darkBlue;
-        //border-right: solid 30px $darkBlue;
-        //border-left: solid 30px transparent;
-        //border-top: solid 30px transparent;
-    }
-
-    .private-hospital {
-        //border-bottom: solid 30px $hotpink;
-        //border-right: solid 30px $hotpink;
-        //border-left: solid 30px transparent;
-        //border-top: solid 30px transparent;
-    }
-
     .nhs-hospital,
     .private-hospital {
         text-align: center;
@@ -511,49 +472,26 @@
     }
 }
 
-.hospital-details {
-    .btn-more-info {
-        width: 92px;
-        height: 23px;
-        line-height: 23px;
-        border-radius: 3px 3px 0 0;
-        transition: 0.3s all ease;
+.btn-more-info {
 
-        //&:before {
-        //    content: 'More info' !important;
-        //    @include v-c;
-        //}
+    transition: 0.3s all ease;
 
-        svg {
-            transition: 0.1s all ease;
-        }
+    svg {
+        transition: 0.1s all ease;
+    }
 
-        &.open {
-            color: $white;
-            background: linear-gradient(90deg, #000, #000, #00bcb4, #000);
-            background-size: 300% 100%;
+    &.open {
+        color: $white;
+        background-color: #000 !important;
 
-            //&:before {
-            //    content: 'Close info' !important;
-            //}
+        i, svg {
+            transform: translateY(-50%) rotate3d(0, 0, 1, 45deg) !important;
 
-            //&:after {
-            //    content: 'Close info';
-            //}
-
-            i, svg {
-                transform: translateY(-50%) rotate3d(0, 0, 1, 45deg) !important;
-
-            }
         }
     }
 }
 
-.js-is-sticky {
-    //padding-top: 85.6px;
-}
-
-
+// Compare buttons when compareCount = 5
 .compare {
     &.disabled {
         opacity: 0.3;
@@ -614,47 +552,80 @@
     }
 }
 
-// Compare shortlist area open
-.shortlist-open {
-    overflow: hidden; // Stop body scrolling
 
-    .popover:not(.popover-comparison) {
-        display: none !important;
+
+/********* Desktop results layout *************************************************************************************/
+/********* Desktop results layout *************************************************************************************/
+.results-page-desktop {
+    .filter-parent {
+        display: none;
     }
 
-    // Hide the special offer tabs
-    .solutions-menu {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    // Fade in the mask when shortlist is open
-    &:before {
-        opacity: $modal-backdrop-opacity;
-        pointer-events: initial;
-    }
-
-    .compare-arrow {
-        transform: rotate3d(0, 0, 1, 180deg);
+    .btn-more-info {
+        width: 92px;
+        height: 23px;
+        line-height: 23px;
+        border-radius: 3px 3px 0 0;
     }
 }
 
-// Body class when filters are open
-.filters-open {
-    .section-2 {
-        opacity: 0;
-        pointer-events: none;
-    }
-}
-
-/********* Mobile results layout ************/
+/********* Mobile results layout *************************************************************************************/
+/********* Mobile results layout *************************************************************************************/
 .results-page-mobile {
+    .row {
+        @include reset-row-spacing(0.5rem);
+    }
+
     #show_filters {
         svg {
             @include v-c;
             width: 20px;
             height: 20px;
             left: 16px;
+        }
+    }
+
+    .postcode {
+        input {
+            padding-top: 2rem !important;
+        }
+    }
+
+    .filter-parent {
+        padding-top: 1rem;
+        transform: translate3d(-100%, 0, 0);
+        overflow: scroll;
+        position: fixed;
+        top: 54px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 54px);
+        background-color: #fff;
+        z-index: 2000;
+        transition: $transition;
+    }
+
+    .result-item-mobile-section-2 {
+        * {
+            @extend .font-12;
+        }
+    }
+
+    // Make the dropdown expand rather than overlay
+    .dropdown-menu {
+        //position: static !important;
+        //float: none;
+        //transform: none !important;
+    }
+
+    // Body class when filters are open
+    &.filters-open {
+        .filter-parent {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .compare-hospitals-bar {
+            max-height: 0;
         }
     }
 
@@ -712,5 +683,45 @@
 
     .special-offer-header {
         height: 50px !important;
+    }
+
+    // Filter form styles
+    #resultspage_form {
+        .filter-mobile {
+            @extend .mb-2;
+        }
+
+        label {
+            @extend .SofiaPro-SemiBold;
+            @extend .font-18;
+        }
+
+        .filter-mobile {
+            svg {
+                right: 0;
+            }
+
+            label {
+                svg {
+                    @extend .help-link;
+                    @extend .help-link__inline;
+                }
+            }
+        }
+
+        .dropdown-toggle {
+            border-radius: 0 !important;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            @extend .pl-0;
+            @extend .pt-0;
+            @extend .pb-2;
+        }
+
+        .dropdown-menu {
+            min-width: initial !important;
+            width: 100% !important;
+        }
     }
 }

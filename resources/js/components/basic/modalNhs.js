@@ -4,8 +4,8 @@ function showNhsModal(event) {
     var button     = $(event.relatedTarget);// Button that triggered the modal
     var title      = button.data('hospital-title');// Extract info from data-* attributes
     var url        = button.data('hospital-url');// Extract info from data-* attributes
-    var picture     = button.data('image');// Extract info from data-* attributes
-    var modal       = $(this);
+    var picture    = button.data('image');// Extract info from data-* attributes
+    var modal      = $(this);
 
     modal.find('.modal-title').html(title);
     modal.find('.btn-enquire').attr("href", 'http://' + url);

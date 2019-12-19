@@ -22,32 +22,12 @@
         position: absolute;
     }
 
-    //sizes
-    &.btn-xs {
-        @include font-size(16);
-        padding: 6px 18px;
-    }
-
-    &.btn-s {
-        @include font-size(18);
-        height: 45px;
-        line-height: 45px;
-        padding: 0 30px;
-    }
-
-    &.btn-m {
-        @include font-size(22);
-        padding: 10px 47px;
-    }
-
-    &.btn-l {
-        @include font-size(28);
-        padding: 12px 30px;
-    }
-
-    &.btn-xl {
-        @include font-size(32);
-        padding: 14px 34px;
+    span,
+    div {
+        @include media-breakpoint-down(lg) {
+            //display: inline-block;
+            padding-top: 1px;
+        }
     }
 
     //colours
@@ -408,18 +388,19 @@
         }
 
         &_mobile {
-            &:after {
-                content: '';
-                position: absolute;
-                left: 100%;
-                top: 0;
-                width: 30px;
-                height: 30px;
-                border-bottom: solid 15px transparent;
-                border-right: solid 15px transparent;
-                border-left: solid 15px $pink;
-                border-top: solid 15px $pink;
-            }
+            color: $pink;
+            //&:after {
+            //    content: '';
+            //    position: absolute;
+            //    left: 100%;
+            //    top: 0;
+            //    width: 30px;
+            //    height: 30px;
+            //    border-bottom: solid 15px transparent;
+            //    border-right: solid 15px transparent;
+            //    border-left: solid 15px $pink;
+            //    border-top: solid 15px $pink;
+            //}
         }
     }
 
@@ -462,6 +443,15 @@
     // Button on the floating green bar
 }
 
+.btn-enquiry {
+    svg {
+        width: 15px;
+        height: 15px;
+        position: static !important;
+        margin: 0 8px;
+    }
+}
+
 // Back to top button
 .btn-back-to-top {
     color: $white;
@@ -477,20 +467,13 @@
     }
 }
 
-.btn-submit-results {
-    @include font-size(18);
-    background-size: 300% 100%;
-    line-height: 20px;
-    background-image: linear-gradient(270deg, #00cecd 0%, #00d7b5 56%, #00df9d 100%);
-
-    &:hover {
-        background-position: right;
-    }
-}
-
 .btn-link {
     color: $darkerGrey;
     cursor: pointer;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
 
     &:hover,
     &:focus {

@@ -36,14 +36,13 @@
                            aria-selected="true">Treatments</a>
                     </li>
                 </ul>
-
                 <!-- Tab panes -->
                 <div class="tab-content row">
                     <div class="tab-pane active col-12" id="profile_{{ $id }}" role="tabpanel"
                          aria-labelledby="profile-tab">
 
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-12 col-md-6">
                                 <div class="profile-intro">
                                     <p class="">Situated in London, this hospital provides private
                                         patients with outstanding medical
@@ -57,7 +56,7 @@
                                         facilities include:</p>
                                 </div>
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-12 col-md-6">
                                         <p class=" SofiaPro-SemiBold">First list</p>
                                         <ul class="blue-dot blue-dot_small">
                                             <li>First thing</li>
@@ -70,7 +69,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-12 col-md-6">
                                         <p class=" SofiaPro-SemiBold">Second list</p>
                                         <ul class="blue-dot blue-dot_small">
                                             <li>First thing</li>

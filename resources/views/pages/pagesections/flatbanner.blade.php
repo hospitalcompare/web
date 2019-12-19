@@ -1,4 +1,4 @@
-<section class="flat-banner">
+<section class="flat-banner d-none d-lg-block">
     <div class="container">
         <div class="row align-items-center">
             <div class="col col-12">
@@ -43,7 +43,7 @@
                             <div class="input-wrapper position-relative">
                                 @include('components.basic.input', [
                                     'placeholder'   => 'Enter postcode',
-                                    'className'     => 'postcode-text-box big',
+                                    'inputClassName'     => 'postcode-text-box big',
                                     'value'         => '',
                                     'name'          =>'postcode',
                                     'validation'    => 'maxlength=8 autocomplete="off"',

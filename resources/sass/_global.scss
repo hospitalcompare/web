@@ -2,6 +2,80 @@ body, * {
     //letter-spacing: $letter-spacing;
 }
 
+.menu-open,
+.shortlist-open {
+    &.results-page {
+        overflow: hidden; // Stop body scrolling
+
+        #resultspage_form {
+            z-index: initial;
+            position: static;
+        }
+
+        // Fade in the mask when shortlist is open
+        &:before {
+            opacity: $modal-backdrop-opacity;
+            pointer-events: initial;
+            z-index: 1035; // To be just below the open shortlist
+        }
+    }
+}
+
+.results-page.results-page-mobile {
+    // Fade in the mask when shortlist is open
+    &:before {
+        pointer-events: initial;
+        top: $mobile-header-height;
+        height: calc(100vh - #{$mobile-header-height});
+    }
+}
+
+// Reveal the menu
+.menu-open {
+    overflow: hidden;
+
+    &:before {
+        opacity: 0.5 !important;
+    }
+
+    .main-nav {
+        transform: translate3d(0, 0, 0);
+
+        .main-menu {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height: calc(100vh - 54px);
+        }
+    }
+}
+
+// Body class when filters are open
+.filters-open {
+    overflow: hidden;
+
+    .section-2 {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+// Compare shortlist area open
+.shortlist-open {
+    .popover:not(.popover-comparison) {
+        display: none !important;
+    }
+
+    // Hide the special offer tabs
+    .solutions-menu {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .compare-arrow {
+        transform: rotate3d(0, 0, 1, 180deg);
+    }
+}
+
 main {
     section {
         padding: 45px 0;
@@ -319,21 +393,23 @@ select.big {
 
 // Cookie popup styling
 .cc-theme-hc-cookie {
-    border: 3px solid $turq;
-    border-radius: 10px;
     @extend .SofiaPro-Regular;
+    @extend .rounded;
 
     .cc-btn {
         @extend .btn;
-        @extend .btn-m;
+        //@extend .btn-m;
         @extend .btn-turq;
         @extend .btn-squared;
-
+        @include font-size(1.1rem, true);
         text-align: center !important;
         display: inline-block;
-        margin: 0 auto;
         flex: initial !important;
         cursor: pointer;
+
+        &:hover {
+            background-color: $blue !important;
+        }
     }
 }
 
@@ -600,4 +676,64 @@ h6 {
     img {
         width: 100%;
     }
+}
+
+// Tooltip trigger on mobile
+.more-info-please {
+    width: 15px;
+    height: 15px;
+}
+
+// SVG classes
+.circle-check {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+// Animations
+
+.heartbeat {
+    transform-origin: 50% 50%;
+    animation: heartBeat .5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+}
+
+.shake {
+    transform-origin: 50% 50%;
+    animation: shake .8s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.pulse {
+    transform-origin: 50% 50%;
+    animation: pulse .5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+}
+
+// Icons
+.star-icon {
+    width: 16px;
+    height: 15px;
+}
+
+.map-icon {
+    width: 10px;
+    height: 15px;
+    margin-right: 10px;
+    position: static !important;
+}
+
+// Pulse effect when highlighting page elements
+.dr-highlight {
+    transform-origin: 50% 50%;
+    //animation: bounce .8s ease-in-out;
+    //animation: wobble .5s ease-in-out;
+    //animation: shake .8s ease-in-out;
+    //animation: flash .8s ease-in-out;
+    animation: pulse .5s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
 }

@@ -1,14 +1,16 @@
-.accordion {
+.hc-accordion {
     width: 100%;
 
     .card {
         border-radius: $border-radius !important;
         @extend .w-100;
-        @extend .shadow;
-        @extend .border-0;
+        //@extend .shadow;
+        //@extend .border-0;
         @extend .mb-2;
         @extend .bg-white;
-        @extend .p-30;
+        @include media-breakpoint-up(lg) {
+            padding: 2rem;
+        }
     }
 
     .card-header {
@@ -18,27 +20,33 @@
         @extend .border-0;
         border-radius: $border-radius !important;
 
-        .btn {
+        button {
             width: 100%;
             text-align: left;
-            @extend .p-4;
             padding-right: 90px;
-            @include font-size(24);
+            @include media-breakpoint-up(lg) {
+                @include font-size(24);
+                padding: 2rem;
+            }
 
             &:after {
                 content: " ";
                 @include v-c;
+                background-image: url('/images/icons/icon-chevron.svg');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                transition: $transition;
+                transform: translate3d(0, -50%, 0) ;
                 right: 30px;
                 width: 27px;
                 height: 16px;
-                background-image: url('/images/icons/chevron-down.svg');
-                background-size: 100%;
-                transition: $transition;
-                transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, -180deg);
+
+                @include media-breakpoint-up(lg) {
+                }
             }
 
             &.collapsed:after {
-                transform: translate3d(0, -50%, 0) rotate3d(0, 0, 0, 0);
+                transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, -180deg);
             }
         }
     }

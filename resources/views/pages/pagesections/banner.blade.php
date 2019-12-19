@@ -53,7 +53,7 @@
                             <div class="input-wrapper position-relative">
                                 @include('components.basic.input', [
                                     'placeholder'   => 'Enter postcode',
-                                    'className'     => 'postcode-text-box big',
+                                    'inputClassName'     => 'postcode-text-box big',
                                     'value'         => '',
                                     'name'          =>'postcode',
                                     'validation'    => 'maxlength=8 autocomplete="off"',
@@ -100,7 +100,6 @@
                                              <p>
                                                  Select how far you would be willing to travel for your treatment.
                                              </p>
-{{--                                                 <p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}
                                              '])
                             >@svg('question')</a>
                         </div>

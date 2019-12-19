@@ -3,11 +3,22 @@
         <label class="{{empty($labelClass) ? '' : $labelClass}}"
                for="{{empty($selectId) ? '' : $selectId}}">
             {!! empty($placeholder) ? '': $placeholder !!}
+            @if(!empty($modalText) && ($showTooltip))
+                @include('components.basic.modalbutton', [
+                    'modalTarget'           => '#hc_modal_mobile_tooltip',
+                    'classTitle'            => 'more-info-please',
+                    'buttonText'            => '',
+                    'style'                 => 'display: inline-block;',
+                    'svg'                   => 'icon-more-info',
+                    'modalText'             => $modalText])
+            @endif
         </label>
     @endif
     <div class="select-wrapper position-relative {{ empty($selectWrapperClass) ? '' : $selectWrapperClass }}">
         <select class="{{empty($selectClass) ? '' : $selectClass}} form-control"
-                id="{{empty($selectId) ? '' : $selectId}}"
+                @if(!empty($selectId))
+                    id="{{ $selectId }}"
+                @endif
                 data-live-search="{{ !empty($selectPicker) ? $selectPicker : ''}}"
                 name="{{$name}}"
             {{ !empty($required) && ($required) ? 'required' : '' }}>

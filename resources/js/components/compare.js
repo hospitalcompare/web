@@ -3,13 +3,20 @@ var compareBar = $('.compare-hospitals-bar');
 var compareContent = $('.compare-hospitals-content');
 var countSpan = $('#compare_number');
 var heartIcon = $('#compare_heart');
+var $svgMapIcon =
+    `<svg class="map-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.37 49.61">
+        <g id="Layer_1" data-name="Layer 1">
+            <path fill="#00cfcc" d="M26.38 34.66c4.77-8.54 7-14.25 7-18A16.69 16.69 0 000 16.68c0 3.73 2.22 9.44 7 18 2.9 5.2 5.81 9.72 6.63 11l2.37 3.6a.82.82 0 001.33 0l2.36-3.58c.37-.54 3.52-5.36 6.69-11.04zm-9.7 12.75L15 44.83s-3.28-5-6.61-10.93C3.86 25.82 1.58 20 1.58 16.68a15.11 15.11 0 0130.21 0c0 3.35-2.28 9.14-6.79 17.22-2.93 5.24-5.78 9.66-6.59 10.89z"/>
+            <path fill="#00cfcc" d="M16.68 12.56a4 4 0 104 4 4 4 0 00-4-4z"/>
+        </g>
+    </svg>`;
 // Where we hold the counts of hospital types
 // No of each type of hospital in compare
 var nhsCountHolder = $('#nhs-hospital-count');
 var privateCountHolder = $('#private-hospital-count');
-$("body").on('DOMSubtreeModified', privateCountHolder, function() {
+$("body").on('DOMSubtreeModified', privateCountHolder, function () {
     // code here
-    if(parseInt($('#private-hospital-count').text()) > 0){
+    if (parseInt($('#private-hospital-count').text()) > 0) {
         $('#multiple_enquiries_button').prop('disabled', false);
     } else {
         $('#multiple_enquiries_button').prop('disabled', true);
@@ -24,7 +31,7 @@ var compareHospitalIds = '';
 // The target for the content to be added
 var target = $('#compare_hospitals_grid');
 // The content for any empty column in the comparison
-var emptyCol = '<div class="col col-empty h-100">\n' +
+var emptyColDesktop = '<div class="col col-empty h-100">\n' +
     '                    <div class="col-inner">\n' +
     '                        <div class="col-header border-bottom-0">\n' +
     '                            <p class="text-center">Selected Hospital<br>\n' +
@@ -35,6 +42,18 @@ var emptyCol = '<div class="col col-empty h-100">\n' +
     '                        </div>\n' +
     '                    </div>\n' +
     '                </div>';
+
+var emptyColMobile = '<div class="card w-100 rounded-0 border-top-0 border-left-0 border-right-0 border-bottom">\n' +
+    '                        <div class="border-bottom">\n' +
+    '                            <p class="">Selected Hospital<br>\n' +
+    '                                will appear here.</p>\n' +
+    '                            <p class=""> Add more hospitals to your\n' +
+    '                                Shortlist by clicking the&nbsp;<img width="14" height="12" src="/images/icons/heart.svg" alt="Heart icon">\n' +
+    '                            </p>\n' +
+    '                        </div>\n' +
+    '                    </div>\n';
+
+var emptyCol = ($("body").hasClass("results-page-mobile")) ? emptyColMobile : emptyColDesktop;
 
 if (typeof Cookies.get("compareHospitalsData") === 'undefined') {
     Cookies.set("compareHospitalsData", '', {expires: 10000});
@@ -48,6 +67,7 @@ if (compareCount > 0 && window.location.href.indexOf("results-page") > '-1') {
     // Show the comparison row headings and hide the existing column
     $('#compare_hospitals_headings').removeClass('d-none');
     $('#no_items_added').addClass('d-none');
+
     // Hide the "you haven't added any items..."
     compareHospitalIds = compareData;
     // Update the value of the enquiry form
@@ -86,95 +106,162 @@ window.addHospitalToCompare = function(element) {
     var latestRating = 'No Data';
     var friendsAndFamilyRating = null;
 
-    if(element.rating !== null && typeof element.rating.friends_family_rating !== "undefined" && element.rating.friends_family_rating !== null) {
+    if (element.rating !== null && typeof element.rating.friends_family_rating !== "undefined" && element.rating.friends_family_rating !== null) {
         friendsAndFamilyRating = element.rating.friends_family_rating;
     }
 
-    if(element.rating !== null && typeof element.rating.latest_rating !== "undefined" && element.rating.latest_rating !== null) {
+    if (element.rating !== null && typeof element.rating.latest_rating !== "undefined" && element.rating.latest_rating !== null) {
         latestRating = element.rating.latest_rating;
     }
 
-    if(element.rating !== null && typeof element.rating.avg_user_rating !== "undefined" && element.rating.avg_user_rating !== null) {
+    if (element.rating !== null && typeof element.rating.avg_user_rating !== "undefined" && element.rating.avg_user_rating !== null) {
         userRating = element.rating.avg_user_rating;
     }
 
-    if(element.waiting_time.length > 0 && typeof element.waiting_time[0].perc_waiting_weeks !== "undefined" && element.waiting_time[0].perc_waiting_weeks != null) {
+    if (element.waiting_time.length > 0 && typeof element.waiting_time[0].perc_waiting_weeks !== "undefined" && element.waiting_time[0].perc_waiting_weeks != null) {
         waitingTime = element.waiting_time[0].perc_waiting_weeks;
     }
 
-    if(element.cancelled_op !== null && typeof element.cancelled_op.perc_cancelled_ops !== "undefined" && element.cancelled_op.perc_cancelled_ops != null) {
+    if (element.cancelled_op !== null && typeof element.cancelled_op.perc_cancelled_ops !== "undefined" && element.cancelled_op.perc_cancelled_ops != null) {
         cancelledOps = element.cancelled_op.perc_cancelled_ops;
         // cancelledOps = element.cancelled_op;
     }
     //NHS Funded work = 1 when private hospital + waiting time OR NHS hospital
     var nhsFundedWork = 0;
-    if(nhsRating === 0 || (nhsRating === 1 && waitingTime !== null)) {
+    if (nhsRating === 0 || (nhsRating === 1 && waitingTime !== null)) {
         nhsFundedWork = 1;
     }
-    var btnContent = element.hospital_type.name == 'NHS' ? // = "NHS"
-        '<a id="' + element.id + '" ' +
-        'class="btn btn-icon btn-blue btn-grad btn-enquire enquiry btn-block font-12" ' +
-        'role="button" data-toggle="modal" ' +
-        'data-hospital-url="' + element.url + '" ' +
-        'data-hospital-title="' + element.name + '" ' +
-        'data-image="' + element.image + '" ' +
-        'data-target="#hc_modal_enquire_nhs">Make an enquiry' +
-        $svg +
-        '</a>' : // If private == "Independent"
-        '<a id="' + element.id + '" ' +
-        'class="btn btn-icon btn-blue btn-grad btn-enquire enquiry btn-block font-12" ' +
-        'role="button" data-toggle="modal" ' +
-        'data-hospital-url="' + element.url + '" ' +
-        'data-hospital-title="' + element.name + '" ' +
-        'data-hospital-id="' + element.id + '" ' +
-        'data-image="' + element.image + '" ' +
-        'data-target="#hc_modal_enquire_private">Make an enquiry' +
-        $svg +
-        '</a>';
 
-    if(hospitalType == 'Private') {
+    var btnClass = (isDesktop) ? 'btn btn-icon btn-blue  btn-enquire enquiry btn-block font-12' : 'btn btn-icon btn-blue btn-enquire enquiry btn-squared btn-squared_slim font-12';
+    var btnContent =
+        `<a id="${element.id}"
+            class="${btnClass}"
+            role="button" data-toggle="modal"
+            data-hospital-url="${element.url}"
+            data-hospital-title="${element.display_name}"
+            data-hospital-id="${element.id}"
+            data-image="${element.image}"
+            data-target="#hc_modal_enquire_private">Make an enquiry
+        ${$svg}
+        </a>`;
+
+    if (hospitalType == 'Private') {
         privateHospitalCount += 1;
         privateCountHolder.text(privateHospitalCount);
     } else {
         nhsHospitalCount += 1;
         nhsCountHolder.text(nhsHospitalCount);
     }
-
-    var newColumn =
-        '<div class="col text-center" id="compare_hospital_id_' + element.id + '">' +
-        '<div class="col-inner">' +
-        '<div class="col-header d-flex flex-column justify-content-between align-items-center px-4 pb-3">' +
-        '<div class="image-wrapper" style="background: url(' + element.image + ') no-repeat scroll center center / cover">' +
-        // '<img class="content" src="images/alder-1.jpg" alt="Image of ' + element.name + '">' +
-        '<div class="remove-hospital" id="remove_id_' + element.id + '" data-hospital-type="' + slugify(hospitalType) + '-hospital"></div>' +
-        '</div>' +
-        '<div class="w-100 details font-16 SofiaPro-SemiBold">' + textTruncate(element.name, 30, '...') + '</div>' +
-        btnContent +
-        '</div>' +
-        '<div class="cell">' + hospitalType + '</div>' +
-        '<div class="cell">' + getHtmlDashTickValue(waitingTime, " Weeks") + '</div>' +
-        '<div class="cell">' + getHtmlStars(userRating) + '</div>' +
-        '<div class="cell">' + getHtmlDashTickValue(cancelledOps, "%") + '</div>' +
-        '<div class="cell">' + latestRating + '</div>' +
-        '<div class="cell">' + getHtmlDashTickValue(friendsAndFamilyRating, "%") + '</div>' +
-        '<div class="cell">' + getHtmlDashTickValue(nhsFundedWork) + '</div>' +
-        '<div class="cell">' + getHtmlDashTickValue(nhsRating) + '</div>' +
-        '<div class="cell column-break"></div>' +
-        '<div class="cell">' + (element.rating !== null && element.rating.safe !== null ? element.rating.safe : 'No Data') + '</div>' +
-        '<div class="cell">' + (element.rating !== null && element.rating.effective !== null ? element.rating.effective : 'No Data') + '</div>' +
-        '<div class="cell">' + (element.rating !== null && element.rating.caring !== null ? element.rating.caring : 'No Data') + '</div>' +
-        '<div class="cell">' + (element.rating !== null && element.rating.responsive !== null ? element.rating.responsive : 'No Data') + '</div>' +
-        '<div class="cell">' + (element.rating !== null && element.rating.well_led !== null ? element.rating.well_led : 'No Data') + '</div>' +
-        '<div class="cell column-break"></div>' +
-        '<div class="cell">' + (element.place_rating !== null && element.place_rating.cleanliness !== null ? getHtmlDashTickValue(element.place_rating.cleanliness, "%") : 'No data') + '</div>' +
-        '<div class="cell">' + (element.place_rating !== null && element.place_rating.food_hydration !== null ? getHtmlDashTickValue(element.place_rating.food_hydration, "%") : 'No data') + '</div>' +
-        '<div class="cell">' + (element.place_rating !== null && element.place_rating.privacy_dignity_wellbeing !== null ? getHtmlDashTickValue(element.place_rating.privacy_dignity_wellbeing, "%") : 'No data') + '</div>' +
-        '<div class="cell">' + (element.place_rating !== null && element.place_rating.dementia !== null ? getHtmlDashTickValue(element.place_rating.dementia, "%") : 'No data') + '</div>' +
-        '<div class="cell">' + (element.place_rating !== null && element.place_rating.disability !== null ? getHtmlDashTickValue(element.place_rating.disability, "%") : 'No data') + '</div>' +
-        '</div>' +
-        '</div>';
-    // Add new item
-    target.prepend(newColumn);
+    if (isDesktop) {
+        var newColumn =
+            '<div class="col text-center" id="compare_hospital_id_' + element.id + '">' +
+                '<div class="col-inner">' +
+                    '<div class="col-header d-flex flex-column justify-content-between align-items-center px-4 pb-3">' +
+                        '<div class="image-wrapper" style="background: url(' + element.image + ') no-repeat scroll center center / cover">' +
+                            '<div class="remove-hospital" id="remove_id_' + element.id + '" data-hospital-type="' + slugify(hospitalType) + '-hospital"></div>' +
+                            '</div>' +
+                        '<div class="w-100 details font-16 SofiaPro-SemiBold">' + textTruncate(element.display_name, 30, '...') + '</div>' +
+                        btnContent +
+                    '</div>' +
+                    '<div class="cell">' + hospitalType + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(waitingTime, " Weeks") + '</div>' +
+                    '<div class="cell">' + getHtmlStars(userRating) + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(cancelledOps, "%") + '</div>' +
+                    '<div class="cell">' + latestRating + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(friendsAndFamilyRating, "%") + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(nhsFundedWork) + '</div>' +
+                    '<div class="cell">' + getHtmlDashTickValue(nhsRating) + '</div>' +
+                    '<div class="cell column-break"></div>' +
+                    '<div class="cell">' + (element.rating !== null && element.rating.safe !== null ? element.rating.safe : 'No Data') + '</div>' +
+                    '<div class="cell">' + (element.rating !== null && element.rating.effective !== null ? element.rating.effective : 'No Data') + '</div>' +
+                    '<div class="cell">' + (element.rating !== null && element.rating.caring !== null ? element.rating.caring : 'No Data') + '</div>' +
+                    '<div class="cell">' + (element.rating !== null && element.rating.responsive !== null ? element.rating.responsive : 'No Data') + '</div>' +
+                    '<div class="cell">' + (element.rating !== null && element.rating.well_led !== null ? element.rating.well_led : 'No Data') + '</div>' +
+                    '<div class="cell column-break"></div>' +
+                    '<div class="cell">' + (element.place_rating !== null && element.place_rating.cleanliness !== null ? getHtmlDashTickValue(element.place_rating.cleanliness, "%") : 'No data') + '</div>' +
+                    '<div class="cell">' + (element.place_rating !== null && element.place_rating.food_hydration !== null ? getHtmlDashTickValue(element.place_rating.food_hydration, "%") : 'No data') + '</div>' +
+                    '<div class="cell">' + (element.place_rating !== null && element.place_rating.privacy_dignity_wellbeing !== null ? getHtmlDashTickValue(element.place_rating.privacy_dignity_wellbeing, "%") : 'No data') + '</div>' +
+                    '<div class="cell">' + (element.place_rating !== null && element.place_rating.dementia !== null ? getHtmlDashTickValue(element.place_rating.dementia, "%") : 'No data') + '</div>' +
+                    '<div class="cell">' + (element.place_rating !== null && element.place_rating.disability !== null ? getHtmlDashTickValue(element.place_rating.disability, "%") : 'No data') + '</div>' +
+                '</div>' +
+            '</div>';
+        // Add new item
+        target.prepend(newColumn);
+    } else if(isMobile) {
+        var newRow =
+            `<div id="compare_hospital_id_${element.id}" class="card w-100 p-0 border-top-0 border-left-0 border-right-0 border-bottom rounded-0 shadow-none">
+                <div class="card-header p-0 pb-2 bg-white" id="heading${element.id}">
+                     <button class="btn btn-link collapsed text-decoration-none p-0" data-toggle="collapse" data-target="#collapse${element.id}" aria-expanded="true" aria-controls="collapse${element.id}">
+                         <p class="font-18 SofiaPro-SemiBold mb-2">${textTruncate(element.display_name, 30, '...')}</p>
+                         <p class="col-grey mb-2">${$svgMapIcon}${element.address.city}</p>
+                         <p class="mb-2">${latestRating}&nbsp;|&nbsp;${getHtmlDashTickValue(waitingTime, " Weeks Average Waiting")}</p>
+                     </button>
+                     <div class="btn-area d-flex align-items-center">
+                        ${btnContent}
+                        <span class="remove-hospital col-turq ml-2 font-12" id="remove_id_${element.id}" data-hospital-type="${slugify(hospitalType)}-hospital">Remove</span>
+                     </div>
+                </div>
+                <div id="collapse${element.id}" class="collapse" aria-labelledby="heading${element.id}" data-parent="#compare_hospitals_grid">
+                    <div class="card-body p-0 pb-2 pt-3">
+                        <div class="row">
+                            <div class="col-6 border-right">
+                                <div class="col-inner h-100">
+                                    <div class="mobile-cell">Hospital Type</div>
+                                    <div class="mobile-cell">Average Waiting Time</div>
+                                    <div class="mobile-cell">NHS User Rating</div>
+                                    <div class="mobile-cell">% Operations cancelled</div>
+                                    <div class="mobile-cell">Care Quality Rating</div>
+                                    <div class="mobile-cell">Friends & Family Rating</div>
+                                    <div class="mobile-cell">NHS Funded Work</div>
+                                    <div class="mobile-cell">Private Self Pay</div>
+                                    <div class="mobile-cell column-break"></div>
+                                    <div class="mobile-cell SofiaPro-SemiBold">Care Quality Rating</div>
+                                    <div class="mobile-cell">Safe</div>
+                                    <div class="mobile-cell">Effective</div>
+                                    <div class="mobile-cell">Caring</div>
+                                    <div class="mobile-cell">Responsive</div>
+                                    <div class="mobile-cell">Well Led</div>
+                                    <div class="mobile-cell column-break"></div>
+                                    <div class="mobile-cell SofiaPro-SemiBold">NHS User Rating</div>
+                                    <div class="mobile-cell">Cleanliness</div>
+                                    <div class="mobile-cell">Food & Hygiene</div>
+                                    <div class="mobile-cell">Privacy, Dignity & Wellbeing</div>
+                                    <div class="mobile-cell">Dementia Domain</div>
+                                    <div class="mobile-cell">Disability Domain</div>
+                                </div>
+                            </div>
+                            <div class="col-6 text-center">
+                                <div class="col-inner">
+                                    <div class="mobile-cell">${hospitalType}</div>
+                                    <div class="mobile-cell">${getHtmlDashTickValue(waitingTime, " Weeks")}</div>
+                                    <div class="mobile-cell">${getHtmlStars(userRating)}</div>
+                                    <div class="mobile-cell">${getHtmlDashTickValue(cancelledOps, "%")}</div>
+                                    <div class="mobile-cell">${latestRating}</div>
+                                    <div class="mobile-cell">${getHtmlDashTickValue(friendsAndFamilyRating, "%")}</div>
+                                    <div class="mobile-cell">${getHtmlDashTickValue(nhsFundedWork)}</div>
+                                    <div class="mobile-cell">${getHtmlDashTickValue(nhsRating)}</div>
+                                    <div class="mobile-cell column-break"></div>
+                                    <div class="mobile-cell"></div>
+                                    <div class="mobile-cell">${element.rating !== null && element.rating.safe !== null ? element.rating.safe : 'No Data'}</div>
+                                    <div class="mobile-cell">${element.rating !== null && element.rating.effective !== null ? element.rating.effective : 'No Data'}</div>
+                                    <div class="mobile-cell">${element.rating !== null && element.rating.caring !== null ? element.rating.caring : 'No Data'}</div>
+                                    <div class="mobile-cell">${element.rating !== null && element.rating.responsive !== null ? element.rating.responsive : 'No Data'}</div>
+                                    <div class="mobile-cell">${element.rating !== null && element.rating.well_led !== null ? element.rating.well_led : 'No Data'}</div>
+                                    <div class="mobile-cell column-break"></div>
+                                    <div class="mobile-cell"></div>
+                                    <div class="mobile-cell">${element.place_rating !== null && element.place_rating.cleanliness !== null ? getHtmlDashTickValue(element.place_rating.cleanliness, "%") : 'No data'}</div>
+                                    <div class="mobile-cell">${(element.place_rating !== null && element.place_rating.food_hydration !== null ? getHtmlDashTickValue(element.place_rating.food_hydration, "%") : 'No data')}</div>
+                                    <div class="mobile-cell">${(element.place_rating !== null && element.place_rating.privacy_dignity_wellbeing !== null ? getHtmlDashTickValue(element.place_rating.privacy_dignity_wellbeing, "%") : 'No data')}</div>
+                                    <div class="mobile-cell">${(element.place_rating !== null && element.place_rating.dementia !== null ? getHtmlDashTickValue(element.place_rating.dementia, "%") : 'No data')}</div>
+                                    <div class="mobile-cell">${(element.place_rating !== null && element.place_rating.disability !== null ? getHtmlDashTickValue(element.place_rating.disability, "%") : 'No data')}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        target.prepend(newRow);
+    }
 };
 
 function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) {
@@ -193,7 +280,7 @@ function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) 
 
     compareCount = parseInt(compareCount) - 1;
 
-    if(hospitalType == 'private-hospital' || hospitalType == 'private') {
+    if (hospitalType == 'private-hospital' || hospitalType == 'private') {
         privateHospitalCount -= 1;
         privateCountHolder.text(privateHospitalCount)
     } else {
@@ -291,7 +378,7 @@ $(document).on("click", ".compare", function () {
         heartIcon.addClass('has-count');
     }, 100);
 
-    if(compareCount > 0){
+    if (compareCount > 0) {
         heartIcon.addClass('active');
     } else {
         heartIcon.removeClass('active');
@@ -302,13 +389,13 @@ $(document).on("click", ".compare", function () {
 });
 
 //Set the OnClick event for the Remove Hospital on the Comparison table
-$(document).on("click", ".compare-hospitals-bar .remove-hospital", function (e) {
+$(document).on("click", ".remove-hospital", function (e) {
     var hospitalTypeClicked = $(this).data('hospital-type');
     e.stopPropagation();
     var elementId = $(this).attr('id');
     var data = Cookies.get("compareHospitalsData");
     var compareCount = getCompareCount();
-    if(compareCount === 1){
+    if (compareCount === 1) {
         heartIcon.removeClass('active');
     }
     elementId = elementId.replace('remove_id_', '');
@@ -316,7 +403,7 @@ $(document).on("click", ".compare-hospitals-bar .remove-hospital", function (e) 
 });
 
 //Set the Onclick event for the Comparison Header - toggle open and closed
-$(document).on("click", ".compare-hospitals-bar .compare-button-title", function (e) {
+$(document).on("click", "#compare_button_title", function (e) {
     var compareCount = getCompareCount();
     var openTabs = $('.special-offer-tab.open');
     // var solutionsBar = $('.compare-hospitals-bar');
@@ -332,7 +419,7 @@ $(document).on("click", ".compare-hospitals-bar .compare-button-title", function
             .find('.special-offer-body')
             .slideUp();
         var $isSticky = $('#resultspage_form').hasClass('js-is-sticky');
-        if($isSticky){
+        if ($isSticky) {
             stickybits('#resultspage_form').cleanup();
             return;
         }

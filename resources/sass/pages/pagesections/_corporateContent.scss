@@ -9,7 +9,10 @@
 
     .corporate-content-inner {
         background-color: #fff;
-        padding: 30px;
+        padding: 1rem;
+        @include media-breakpoint-up(lg) {
+            padding: 30px;
+        }
     }
 }
 

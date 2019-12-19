@@ -13,7 +13,7 @@
 @section('body-class', 'results-page results-page-mobile')
 
 @section('content')
-    @include('mobile.pages.pagesections.mobileresultspageform', ['displayBlock' => false])
+    @include('mobile.pages.pagesections.resultspageformmobile')
 
     <div class="results">
         <div class="container">
@@ -68,32 +68,35 @@
                     @endforeach
                 @endif
             </div><!-- row -->
+            <div class="mobile-pagination-wrap">
+                @if(!empty($data['hospitals']))
+                    {{
+                        $data['hospitals']->appends([
+                            'postcode'          => Request::input('postcode'),
+                            'radius'            => Request::input('radius'),
+                            'procedure_id'      => Request::input('procedure_id'),
+                            'waiting_time'      => Request::input('waiting_time'),
+                            'user_rating'       => Request::input('user_rating'),
+                            'quality_rating'    => Request::input('quality_rating'),
+                            'hospital_type'     => Request::input('hospital_type'),
+                            'sort_by'           => Request::input('sort_by')
+                        ])->links('mobile.components.basic.mobilepagination')
+                    }}
+                @endif
+            </div>
         </div><!-- container -->
         @if($data['hospitals']->total() < 10)
             <div class="container">
                 <h1>Try tweaking the filters for more results</h1>
             </div>
         @endif
+
+
     </div><!-- results -->
 
-    <div class="pagination-wrap">
-        @if(!empty($data['hospitals']))
-            {{
-                $data['hospitals']->appends([
-                    'postcode'          => Request::input('postcode'),
-                    'radius'            => Request::input('radius'),
-                    'procedure_id'      => Request::input('procedure_id'),
-                    'waiting_time'      => Request::input('waiting_time'),
-                    'user_rating'       => Request::input('user_rating'),
-                    'quality_rating'    => Request::input('quality_rating'),
-                    'hospital_type'     => Request::input('hospital_type'),
-                    'sort_by'           => Request::input('sort_by')
-                ])->links('components.basic.pagination')
-            }}
-        @endif
-    </div>
 
-    @include('mobile.components.mobilesolutionsbar', [
+
+    @include('mobile.components.solutionsbarmobile', [
       'specialOffers' => $data['special_offers']
       ])
     @include('components.modals.modalenquirenhs')
@@ -104,6 +107,7 @@
     {{--    @include('components.modals.modalmaps')--}}
     {{--    @include('components.modals.modalvideo')--}}
     @include('components.modals.modaltour')
+    @include('mobile.components.modals.modalMobileTooltip')
     {{--    @include('components.doctor')--}}
 {{--    @include('components.basic.modalbutton', [--}}
 {{--        'classTitle'    => 'btn btn-hanblue position-fixed',--}}

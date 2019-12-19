@@ -21,7 +21,7 @@
                     'type'        => 'search',
                     'results'     => '5',
                     'id'          => 'faq_search_input',
-                    'className'   => 'w-100',
+                    'inputClassName'   => 'w-100',
                     'placeholder' => 'Search',
                     'value'       => '',
                     'name'        => 'search'
