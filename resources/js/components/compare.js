@@ -23,6 +23,8 @@ $("body").on('DOMSubtreeModified', privateCountHolder, function () {
     }
 });
 
+var isDesktop = $('body').hasClass('results-page-desktop');
+var isMobile = $('body').hasClass('results-page-mobile');
 var multiEnquiryButton = $('#multiple_enquiries_button');
 var nhsHospitalCount = 0;
 var privateHospitalCount = 0;
