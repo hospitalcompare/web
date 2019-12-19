@@ -7,7 +7,7 @@
         <div class="branding">
             @include('components.logo', ['titleParent' => 'header-logo-parent', 'logoImg' => 'header-logo-image', 'logoTitle' => 'headerLogoTitle'])
         </div>
-        <nav class="main-nav" role="navigation">
+        <nav id="main_nav" class="main-nav" role="navigation">
             <ul class="main-menu">
                 <li>
                     <a href="/">Home</a>

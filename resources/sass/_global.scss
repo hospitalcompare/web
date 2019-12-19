@@ -1,5 +1,17 @@
-body, * {
-    //letter-spacing: $letter-spacing;
+body {
+    // Mask when shortlist is open
+    &:before {
+        pointer-events: none;
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: $modal-backdrop-bg;
+        opacity: 0;
+        transition: $transition;
+    }
 }
 
 .menu-open,
@@ -9,26 +21,43 @@ body, * {
 
         #resultspage_form {
             z-index: initial;
-            position: static;
+            //position: static !important;
         }
 
         // Fade in the mask when shortlist is open
         &:before {
             opacity: $modal-backdrop-opacity;
             pointer-events: initial;
-            z-index: 1035; // To be just below the open shortlist
         }
     }
 }
 
-.results-page.results-page-mobile {
+.menu-open {
     // Fade in the mask when shortlist is open
     &:before {
-        pointer-events: initial;
-        top: $mobile-header-height;
-        height: calc(100vh - #{$mobile-header-height});
+        z-index: 1045;
     }
 }
+
+.shortlist-open {
+    &.results-page {
+        // Fade in the mask when shortlist is open
+        &:before {
+            z-index: 1035;
+        }
+    }
+}
+
+
+//
+//.results-page.results-page-mobile {
+//    // Fade in the mask when shortlist is open
+//    &:before {
+//        pointer-events: initial;
+//        top: $mobile-header-height;
+//        height: calc(100vh - #{$mobile-header-height});
+//    }
+//}
 
 // Reveal the menu
 .menu-open {
@@ -426,64 +455,64 @@ path {
     }
 }
 
-.choose-health-parent {
-    margin: 60px auto;
-
-    .choose-health {
-        height: 410px;
-        background: url('../images/placeholder.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        border-radius: 20px;
-        position: relative;
-        @include mask($lightestGrey, 1);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 0 132px;
-        @include font-size(28);
-        @extend .SofiaPro-SemiBold;
-
-        &:before {
-            transition: 0.3s opacity ease-in;
-        }
-
-        &.fade-in {
-            &:before {
-                opacity: 0.38;
-            }
-        }
-
-        .your-rights-page & {
-            background: url('../images/ladycoffeesofa.jpg');
-            background-position: 40% 60%;
-        }
-
-        .your-rights-page & {
-            margin: 0;
-        }
-    }
-
-    .choose-health-text {
-        color: $white;
-        text-align: center;
-        width: 100%;
-        max-width: 912px;
-        position: relative;
-        z-index: 5;
-
-        .btn {
-            svg {
-                @include v-c;
-                right: 30px;
-                width: 9px;
-                height: 16px;
-            }
-        }
-    }
-}
+//.choose-health-parent {
+//    margin: 60px auto;
+//
+//    .choose-health {
+//        height: 410px;
+//        background: url('../images/placeholder.jpg');
+//        background-repeat: no-repeat;
+//        background-size: cover;
+//        background-position: center center;
+//        border-radius: 20px;
+//        position: relative;
+//        @include mask($lightestGrey, 1);
+//        display: flex;
+//        justify-content: center;
+//        align-items: center;
+//        flex-direction: column;
+//        padding: 0 132px;
+//        @include font-size(28);
+//        @extend .SofiaPro-SemiBold;
+//
+//        &:before {
+//            transition: 0.3s opacity ease-in;
+//        }
+//
+//        &.fade-in {
+//            &:before {
+//                opacity: 0.38;
+//            }
+//        }
+//
+//        .your-rights-page & {
+//            background: url('../images/ladycoffeesofa.jpg');
+//            background-position: 40% 60%;
+//        }
+//
+//        .your-rights-page & {
+//            margin: 0;
+//        }
+//    }
+//
+//    .choose-health-text {
+//        color: $white;
+//        text-align: center;
+//        width: 100%;
+//        max-width: 912px;
+//        position: relative;
+//        z-index: 5;
+//
+//        .btn {
+//            svg {
+//                @include v-c;
+//                right: 30px;
+//                width: 9px;
+//                height: 16px;
+//            }
+//        }
+//    }
+//}
 
 //=========================END HEALTH CHOICE SECTION====================
 

@@ -15,7 +15,7 @@
 @section('content')
     @include('mobile.pages.pagesections.resultspageformmobile')
 
-    <div class="results">
+    <div class="results pt-3">
         <div class="container">
             <div class="row">
                 @if(!empty($data['hospitals']))

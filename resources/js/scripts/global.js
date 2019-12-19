@@ -336,3 +336,14 @@ window.enableButtons = function () {
 // Refresh the page on resize, so that the currentt version is showing
 // if($('body').hasClass('results-page'))
 //     $(window).resize(function(){location.reload();});
+
+// Close menu if clicking outside it, but only if it is already open
+var $body = $('body');
+var $mainNav = $('#main_nav');
+$(document).on('click', function (e) {
+    if($body.hasClass('menu-open')) {
+        if ( $mainNav.has(e.target).length === 0 && $('#menu_toggle').has(e.target).length === 0 ) {
+            $body.removeClass('menu-open');
+        }
+    }
+});
