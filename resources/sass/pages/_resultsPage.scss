@@ -558,6 +558,8 @@
 /********* Mobile results layout *************************************************************************************/
 /********* Mobile results layout *************************************************************************************/
 .results-page-mobile {
+    background-color: $lighterGrey;
+
     .row {
         @include reset-row-spacing(0.5rem);
     }
