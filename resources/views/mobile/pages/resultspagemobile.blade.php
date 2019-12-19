@@ -107,7 +107,7 @@
     {{--    @include('components.modals.modalmaps')--}}
     {{--    @include('components.modals.modalvideo')--}}
     @include('components.modals.modaltour')
-    @include('mobile.components.modals.modalMobileTooltip')
+    @include('mobile.components.modals.modalmobiletooltip')
     {{--    @include('components.doctor')--}}
 {{--    @include('components.basic.modalbutton', [--}}
 {{--        'classTitle'    => 'btn btn-hanblue position-fixed',--}}

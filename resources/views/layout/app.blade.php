@@ -66,6 +66,7 @@
                     }
                 })});
         </script>
+        @include('mobile.components.modals.modalmobilesearchform')
 
     </body>
 

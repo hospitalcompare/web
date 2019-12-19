@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="banner-text col col-12 col-lg-6">
-                <h1>Choose the <span class="col-turq">best hospital&nbsp;</span>for your&nbsp;<span class="col-turq">treatment</span></h1>
+                <h1>Choose the <span class="col-turq">Right Hospital&nbsp;</span>for your&nbsp;<span class="col-turq">Treatment</span></h1>
                 <h3 class="font-20 d-lg-none">Find which NHS and Private hospitals are available and fully funded.</h3>
                 <p class="col-grey d-none d-lg-block">The quality of care and waiting times in England vary greatly between hospitals. You have the
                     legal right to

@@ -27,15 +27,18 @@ import './scripts/bootstrapSlider';                         // Init the bs slide
 
 
 // Components > Basic
-// import './components/basic/video';                          // Video controller
 import './components/basic/specialoffer';                   // Toggling special offer slide out
 import './components/basic/popover';                        // Trigger bootstrap tooltip
 import './components/basic/tooltip';                        // Trigger bootstrap popover
-import './components/basic/modalNhs';                       // Trigger bootstrap modal
-import './components/basic/modalPrivate';                   // Trigger bootstrap modal
-import './components/basic/modalMobileTooltips';            // Trigger bootstrap modal
 import './components/basic/carousel';                       // Init mobile carousels
-// import './components/basic/modalVideo';                  // Trigger bootstrap modal
+
+// Modals
+import './components/modals/modalNhs';                       // Trigger bootstrap modal
+import './components/modals/modalPrivate';                   // Trigger bootstrap modal
+import './components/modals/modalMobileTooltips';            // Trigger bootstrap modal
+import './components/modals/modalMobileSearchForm';          // Trigger bootstrap modal
+
+
 import './components/enquiry';                              // Private hospital enquiry form
 
 // PAGES

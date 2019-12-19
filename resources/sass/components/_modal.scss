@@ -222,3 +222,22 @@
     }
 }
 
+// Popop search form
+#hc_modal_mobile_search {
+    //@extend .d-block;
+    //opacity: 1 !important;
+
+    .modal-dialog {
+        margin: 1rem;
+
+        height: calc(100vh - 2rem);
+    }
+
+    .modal-body {
+        @extend .p-3;
+    }
+
+    .modal-footer {
+        @extend .p-2;
+    }
+}
