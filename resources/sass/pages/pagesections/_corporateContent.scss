@@ -92,6 +92,17 @@
 
     // End carousel
 
+    // Stats tab
+    .rating-name {
+        @extend .font-16;
+        @extend .SofiaPro-SemiBold;
+        @extend .mb-1;
+    }
+
+    .rating-value {
+        @extend .mb-1;
+    }
+
     .tab-pane,
     .media-pane {
         padding-top: 13px;
