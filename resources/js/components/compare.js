@@ -35,6 +35,7 @@ var target = $('#compare_hospitals_grid');
 // The content for any empty column in the comparison
 var emptyColDesktop = '<div class="col col-empty h-100">\n' +
     '                    <div class="col-inner">\n' +
+
     '                        <div class="col-header border-bottom-0">\n' +
     '                            <p class="text-center">Selected Hospital<br>\n' +
     '                                will appear here.</p>\n' +

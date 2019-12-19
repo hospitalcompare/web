@@ -67,7 +67,7 @@
             {{--                @include('mobile.components.filteraccordion')--}}
             <!-- End of accordion for filters -->
                 <!-- Procedures -->
-                <div class="filter-mobile col-12 col-md-4 d-flex align-items-center">
+                <div class="filter-mobile col-12 d-flex align-items-center">
                     @include('components.basic.select', [
                         'selectParentClass'     => 'w-100',
                         'showLabel'             => true,
@@ -92,32 +92,30 @@
                         ])
                 </div>
                 <!-- Radius -->
-                <div class="filter-mobile radius col-12 col-md-4">
-                    <div class="h-100 position-relative">
-                        @include('components.basic.select', [
-                                'showLabel'             => true,
-                                'placeholder'           => 'Within radius of',
-                                'selectClass'           => 'select-picker distance-dropdown',
-                                'selectWrapperClass'    => 'w-100',
-                                'selectParentClass'     => 'd-md-flex w-100',
-                                'options'               => \App\Helpers\Utils::radius,
-                                'placeholderOption'     => 'Select Distance',
-                                'selectedPlaceholder'   => true,
-                                'labelClass'            => '',
-                                'svg'                   => 'icon-chevron-down',
-                                'name'                  =>'radius',
-                                'showTooltip'           => true,
-                                'modalText'             =>
-                                    '<p class="SofiaPro-SemiBold mb-3 font-18">
-                                         Distance
-                                    </p>
-                                    <p>
-                                        Select how far you would be willing to travel for your treatment..
-                                    </p>'])
-                    </div>
+                <div class="filter-mobile radius col-12 d-flex align-items-center">
+                    @include('components.basic.select', [
+                            'showLabel'             => true,
+                            'placeholder'           => 'Within radius of',
+                            'selectClass'           => 'select-picker distance-dropdown',
+                            'selectWrapperClass'    => 'w-100',
+                            'selectParentClass'     => 'w-100',
+                            'options'               => \App\Helpers\Utils::radius,
+                            'placeholderOption'     => 'Select Distance',
+                            'selectedPlaceholder'   => true,
+                            'labelClass'            => '',
+                            'svg'                   => 'icon-chevron-down',
+                            'name'                  =>'radius',
+                            'showTooltip'           => true,
+                            'modalText'             =>
+                                '<p class="SofiaPro-SemiBold mb-3 font-18">
+                                     Distance
+                                </p>
+                                <p>
+                                    Select how far you would be willing to travel for your treatment..
+                                </p>'])
                 </div>
                 <!-- Waiting time -->
-                <div class="filter-mobile col-12 col-md-4 col-lg-2">
+                <div class="filter-mobile col-12">
                     @include('components.basic.select', [
                         'selectParentClass'     => 'w-100',
                         'showLabel'             => true,
@@ -138,7 +136,7 @@
                             </p>'])
                 </div>
                 <!-- NHS user rating -->
-                <div class="filter-mobile col-12 col-md-4 col-lg-2">
+                <div class="filter-mobile col-12">
                     @include('components.basic.select', [
                         'selectParentClass'     => 'w-100',
                         'showLabel'             => true,
@@ -158,7 +156,7 @@
                             </p>'])
                 </div>
                 <!-- CQC rating -->
-                <div class="filter-mobile col-12 col-md-4 col-lg-2">
+                <div class="filter-mobile col-12">
                     @include('components.basic.select', [
                         'showLabel'         => true,
                         'placeholder'       => 'Care Quality Rating',
@@ -177,7 +175,7 @@
                             </p>'])
                 </div>
                 <!-- Hospital type -->
-                <div class="filter-mobile col-12 col-md-4 col-lg-2">
+                <div class="filter-mobile col-12">
                     @include('components.basic.select', [
                         'selectParentClass' => 'w-100',
                         'showLabel'         => true,
@@ -197,7 +195,7 @@
                             </p>'])
                 </div>
                 <!-- Insurance -->
-                <div class="filter-mobile col-12 col-md-4 col-lg-2">
+                <div class="filter-mobile col-12">
                     @include('components.basic.select', [
                         'selectParentClass'     => 'w-100',
                         'showLabel'             => true,

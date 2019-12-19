@@ -1,5 +1,17 @@
-body, * {
-    //letter-spacing: $letter-spacing;
+body {
+    // Mask when shortlist is open
+    &:before {
+        pointer-events: none;
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: $modal-backdrop-bg;
+        opacity: 0;
+        transition: $transition;
+    }
 }
 
 .menu-open,
@@ -9,17 +21,34 @@ body, * {
 
         #resultspage_form {
             z-index: initial;
-            position: static;
+            //position: static !important;
         }
 
         // Fade in the mask when shortlist is open
         &:before {
             opacity: $modal-backdrop-opacity;
             pointer-events: initial;
-            z-index: 1035; // To be just below the open shortlist
         }
     }
 }
+
+.menu-open {
+    // Fade in the mask when shortlist is open
+    &:before {
+        z-index: 1045;
+    }
+}
+
+.shortlist-open {
+    &.results-page {
+        // Fade in the mask when shortlist is open
+        &:before {
+            z-index: 1035;
+        }
+    }
+}
+
+
 
 .results-page.results-page-mobile {
     // Fade in the mask when shortlist is open

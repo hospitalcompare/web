@@ -1,20 +1,6 @@
 .results-page {
     background-color: $lighterGrey;
 
-    // Mask when shortlist is open
-    &:before {
-        pointer-events: none;
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: $modal-backdrop-bg;
-        opacity: 0;
-        transition: $transition;
-    }
-
     .results {
         min-height: calc(60vh - 220px);
     }
