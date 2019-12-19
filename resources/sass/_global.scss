@@ -49,15 +49,15 @@ body {
 }
 
 
-
-.results-page.results-page-mobile {
-    // Fade in the mask when shortlist is open
-    &:before {
-        pointer-events: initial;
-        top: $mobile-header-height;
-        height: calc(100vh - #{$mobile-header-height});
-    }
-}
+//
+//.results-page.results-page-mobile {
+//    // Fade in the mask when shortlist is open
+//    &:before {
+//        pointer-events: initial;
+//        top: $mobile-header-height;
+//        height: calc(100vh - #{$mobile-header-height});
+//    }
+//}
 
 // Reveal the menu
 .menu-open {
