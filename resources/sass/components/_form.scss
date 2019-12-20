@@ -30,11 +30,12 @@ textarea {
 }
 
 input:not([type="range"]):not([type="submit"]):not([type="checkbox"]),
-select:not([class^="ui-datepicker"]) {
+select:not([class^="ui-datepicker"]),
+textarea {
     border: 2px solid $darkestWhite; /*Removes border*/
     border-radius: $border-radius;
     appearance: none;
-    color: $darkerGrey;
+    //color: $darkerGrey;
     background-color: $white;
     //text-indent: 0.01px; /* Removes default arrow from firefox*/
     //text-overflow: "";  /*Removes default arrow from firefox*/
@@ -126,34 +127,29 @@ select::-ms-expand {
 
 #enquiry_form {
     input:not([type="submit"]),
-    select {
-        height: 35px;
+    select,
+    textarea {
+        //height: 35px;
         //line-height: 44px;
         border-radius: $border-radius;
-        border: 0;
         background-color: #ffffff;
-
     }
 
     select.form-control {
         padding-right: 40px;
     }
 
-    .row {
-        margin-left: -6px;
-        margin-right: -6px;
-
-        .col {
-            padding-left: 6px;
-            padding-right: 6px;
-            margin-bottom: 12px;
-        }
-    }
-
     // bootstrap select button
-    .dropdown-toggle {
+    .dropdown-toggle,
+    input:not([type="submit"]),
+    select,
+    textarea {
         padding: 6px 40px 6px 13px;
-        @include font-size(16);
+        @include font-size(14);
+
+        @include placeholder() {
+            color: $body-color;
+        }
     }
 }
 
@@ -228,10 +224,6 @@ textarea {
     background-color: #ffffff;
     padding: 1rem;
     padding-top: 7px;
-
-    @include placeholder {
-        color: $darkerGrey;
-    }
 }
 
 // jquery validate error messages

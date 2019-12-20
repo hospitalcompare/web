@@ -463,64 +463,6 @@ path {
     }
 }
 
-//.choose-health-parent {
-//    margin: 60px auto;
-//
-//    .choose-health {
-//        height: 410px;
-//        background: url('../images/placeholder.jpg');
-//        background-repeat: no-repeat;
-//        background-size: cover;
-//        background-position: center center;
-//        border-radius: 20px;
-//        position: relative;
-//        @include mask($lightestGrey, 1);
-//        display: flex;
-//        justify-content: center;
-//        align-items: center;
-//        flex-direction: column;
-//        padding: 0 132px;
-//        @include font-size(28);
-//        @extend .SofiaPro-SemiBold;
-//
-//        &:before {
-//            transition: 0.3s opacity ease-in;
-//        }
-//
-//        &.fade-in {
-//            &:before {
-//                opacity: 0.38;
-//            }
-//        }
-//
-//        .your-rights-page & {
-//            background: url('../images/ladycoffeesofa.jpg');
-//            background-position: 40% 60%;
-//        }
-//
-//        .your-rights-page & {
-//            margin: 0;
-//        }
-//    }
-//
-//    .choose-health-text {
-//        color: $white;
-//        text-align: center;
-//        width: 100%;
-//        max-width: 912px;
-//        position: relative;
-//        z-index: 5;
-//
-//        .btn {
-//            svg {
-//                @include v-c;
-//                right: 30px;
-//                width: 9px;
-//                height: 16px;
-//            }
-//        }
-//    }
-//}
 
 //=========================END HEALTH CHOICE SECTION====================
 

@@ -132,6 +132,7 @@ $input-border-width: 2px;
 $input-height: initial;
 $input-focus-box-shadow: none;
 $input-focus-border-color: $turq !important;
+$form-group-margin-bottom: 0.25rem;
 
 // Select picker
 
@@ -144,7 +145,7 @@ $width-default: 100%;
 //$zindex-select-dropdown: 1060 !default; // must be higher than a modal background (1050)
 //
 //** Placeholder text color
-$input-color-placeholder: $darkerGrey;
+$input-color-placeholder: $body-color;
 $input-alt-color-placeholder: $darkerGrey;
 //
 //$input-padding-y-sm: .25rem !default;
