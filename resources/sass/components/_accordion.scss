@@ -12,7 +12,7 @@
 
         @extend .mb-2;
         @extend .bg-white;
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(xl) {
             padding: 2rem;
         }
     }

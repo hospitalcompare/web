@@ -31,4 +31,4 @@
     @elseif(!empty($svg) && !empty($svgClass))
         @svg($svg, $svgClass)
     @endif
-</{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'span' }} id="{{ empty($id) ? '' : $id }}">
+</{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'span' }}>

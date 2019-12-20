@@ -109,7 +109,7 @@
 {{--                </div>--}}
                 <div class="col col-12" id="col_additional_information">
                     <textarea
-                        class=""
+                        class="form-control"
                         name="additional_information"
                         placeholder="Additional Comments"
                         id="additional_information"

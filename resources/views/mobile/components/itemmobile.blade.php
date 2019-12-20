@@ -212,16 +212,13 @@
                     {{--                    <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>--}}
                 @endif
                 @if(!empty($specialOffers))
-                    <div class="d-inline-block">
-                        @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
-                            'class' => 'default'])
-                        @include('components.basic.button', [
-                            'classTitle'        => 'toggle-special-offer btn btn-icon btn-link btn-special-offer btn-special-offer_mobile pl-5 col-pink rounded-0',
-                            'htmlButton'        => true,
-                            'id'                => 'special_' . $id,
-                            'buttonText'        => 'Special Offers',
-                            'svg'               => 'special-pink'])
-                    </div>
+                    @include('components.basic.modalbutton', [
+                        'classTitle'        => 'toggle-special-offer btn btn-icon btn-link btn-special-offer btn-special-offer_mobile pl-5 col-pink rounded-0',
+                        'htmlButton'        => true,
+                        'modalTarget'       => '#hc_modal_mobile_special_offer_' . $id,
+                        'id'                => 'special_' . $id,
+                        'buttonText'        => 'Special Offers',
+                        'svg'               => 'special-pink'])
                 @endif
             </div>
         </div>
@@ -273,4 +270,9 @@
             </div>
         </div>
     </div>
+    {{-- Modal for special offer --}}
+    @if(!empty($specialOffers))
+        @includeWhen(!empty($specialOffers), 'mobile.components.modals.modalmobilespecialoffer', [
+            'class' => 'default'])
+    @endif
 </div>
