@@ -25,7 +25,7 @@
 
     .container:not(.container-1028) {
         .row {
-            @media (min-width: 768px) {
+            @media (min-width: 992px) {
                 @include reset-row-spacing(60px);
             }
         }

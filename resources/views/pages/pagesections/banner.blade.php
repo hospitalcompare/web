@@ -126,8 +126,8 @@
 </section>
 @if(empty($hideText))
     <section class="mobile-choice d-lg-none text-center p-y-75">
-        <div class="row">
-            <div class="container">
+        <div class="container">
+            <div class="row">
                 <div class="banner-text col col-12 col-lg-6">
                     <h2 class="h1">You have a <span class="col-turq">choice</span></h2>
                     <p class="col-grey">The quality of care and waiting times in England vary greatly between hospitals. You have the

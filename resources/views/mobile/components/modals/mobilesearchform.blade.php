@@ -28,15 +28,15 @@
                             'showLabel'             => true,
                             'labelClass'            => 'd-none'
                         ])
-                        <a tabindex="0"
-                           class="help-link"
-                            @include('components.basic.popover', [
-                            'dismissible'   => true,
-                            'placement'      => 'top',
-                            'html'           => 'true',
-                            'trigger'        => 'hover',
-                            'content'        => '<p>Select your treatment<br>if known to refine results</p>'])
-                        >@svg('question')</a>
+{{--                        <a tabindex="0"--}}
+{{--                           class="help-link"--}}
+{{--                            @include('components.basic.popover', [--}}
+{{--                            'dismissible'   => true,--}}
+{{--                            'placement'      => 'top',--}}
+{{--                            'html'           => 'true',--}}
+{{--                            'trigger'        => 'hover',--}}
+{{--                            'content'        => '<p>Select your treatment<br>if known to refine results</p>'])--}}
+{{--                        >@svg('question')</a>--}}
                     </div>
                     <div class="form-child postcode-parent position-relative">
                         {{--                                Add this hidden input to remove the autocomplete functionality--}}
@@ -108,6 +108,6 @@
         </div>
     </div>
 </div>
-<div class="svg-wrapper animated mb-4 draw" data-animation="draw" style="">
+<div class="svg-wrapper">
 {{--    @svg('heart-line', 'stroke-turq')--}}
 </div>
