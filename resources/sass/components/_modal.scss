@@ -38,6 +38,9 @@
 
     // Private hospital enquiry
     &.modal-enquire-form {
+        .row {
+            @include reset-row-spacing(0.125rem);
+        }
 
         .private-modal-enquiry-description {
             @include font-size(14);
@@ -119,13 +122,6 @@
             padding: 0 15px 0 40px;
             line-height: 40px;
             max-width: inherit;
-        }
-    }
-
-    &#hc_modal_enquire_private {
-        .dropdown-toggle,
-        textarea {
-            border: none;
         }
     }
 

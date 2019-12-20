@@ -1,6 +1,6 @@
 <div class="modal-inner">
-    <p class="text-center font-24 SofiaPro-Medium text-white private-modal-enquiry-title">Enquire now for <span class="hospital-title">this hospital</span></p>
-    <p class="text-white text-center private-modal-enquiry-description">
+    <p class="text-center font-24 SofiaPro-Medium  private-modal-enquiry-title">Enquire now for <span class="hospital-title">this hospital</span></p>
+    <p class=" text-center private-modal-enquiry-description">
         Complete this form and we'll pass your enquiry onto this hospital immediately.<br>You can normally expect a response within three to four days.
     </p>
     <div class="form-wrap d-flex flex-wrap">
@@ -10,8 +10,8 @@
         <form id="enquiry_form">
             {{--            <input type="hidden" name="specialty_id" value="3">--}}
             <input type="hidden" name="hospital_id" value="1">
-            <p class="your-details text-white">Your Details</p>
-            <div class="form-group row align-items-end mb-0">
+            <p class="your-details ">Your Details</p>
+            <div class="form-group row align-items-end">
                 <div class="col col-6">
                     @include('components.basic.select', [
                         'options' => [
@@ -36,7 +36,7 @@
                 </div>
 
             </div>
-            <div class="form-group row align-items-end mb-0">
+            <div class="form-group row align-items-end">
                 {{-- Last name --}}
                 <div class="col col-6">
                     <input required name="last_name" type="text" class="form-control" id="lastName"
@@ -55,7 +55,7 @@
 {{--                </div>--}}
             </div> {{-- end row --}}
                 {{-- Email address --}}
-            <div class="form-group row align-items-end mb-0">
+            <div class="form-group row align-items-end">
                 <div class="col col-6">
                     <input required name="email" type="email" class="form-control" id="email"
                            placeholder="Email Address*" value="{{ !empty($email) ? $email : '' }}" />
@@ -65,14 +65,14 @@
                            placeholder="Confirm Email Address*" value="{{ !empty($email) ? $email : '' }}" />
                 </div>
             </div>
-            <div class="form-group row align-items-end mb-0">
+            <div class="form-group row align-items-end">
                 <div class="col col-6">
                     <input required name="postcode" type="text" class="form-control" id="postcode"
                            placeholder="Postcode*" value="{{ !empty($postcode) ? $postcode : '' }}" />
                 </div>
             </div>
-            <p class="your-details text-white">Your Treatment</p>
-            <div class="form-group row align-items-end mb-0">
+            <p class="your-details ">Your Treatment</p>
+            <div class="form-group row align-items-end">
                 <div class="col col-12">
                     @include('components.basic.select', [
                         'options'               => $procedures,
@@ -117,7 +117,7 @@
                     ></textarea>
                 </div>
 
-                <div class="col col-12 checkbox">
+                <div class="col col-12 checkbox mb-2">
                     <input required name="gdpr" type="checkbox"
                            id="gdpr" {{ !empty($gdpr) && ($gdpr) ? 'checked' : '' }} />
                     <label class="small-print" for="gdpr">Please accept the Terms & Conditions before submitting the

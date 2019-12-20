@@ -1,4 +1,4 @@
-<div class="modal-inner">
+<div class="modal-body p-3">
     <p class="text-center font-24 SofiaPro-Medium private-modal-enquiry-title">Enquire now for <span
             class="hospital-title">this hospital</span></p>
     <p class="text-center private-modal-enquiry-description col-grey">
