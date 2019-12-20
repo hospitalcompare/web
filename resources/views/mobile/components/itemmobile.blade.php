@@ -199,7 +199,7 @@
                         @include('components.basic.modalbutton', [
                                 'hrefValue'         => $url,
                                 'hospitalTitle'     => $title,
-                                'modalTarget'       => '#hc_modal_enquire_private',
+                                'modalTarget'       => '#hc_modal_mobile_enquire_private',
                                 'classTitle'        => 'btn btn-link enquire-prices mb-3 mr-auto p-0',
                                 'target'            => 'blank',
                                 'modalText'         => 'This is the text about prices',
@@ -245,7 +245,7 @@
                             'hospitalType'      => $NHSClass,
                             'hrefValue'         => $url,
                             'hospitalTitle'     => $title,
-                            'modalTarget'       => '#hc_modal_enquire_private',
+                            'modalTarget'       => '#hc_modal_mobile_enquire_private',
                             'classTitle'        => 'btn btn-squared btn-enquire btn-squared_slim btn-blue text-center enquiry btn-enquiry font-12 w-100 text-center d-flex justify-content-center align-items-center flex-row-reverse px-3',
                             'target'            => 'blank',
                             'buttonText'        => $btnText,

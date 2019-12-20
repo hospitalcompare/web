@@ -172,7 +172,7 @@ select::-ms-expand {
 
                 &:before {
                     content: '';
-                    background-image: url('../images/icons/check-solid-white.svg');
+                    background-image: url('../images/icons/icon-tick.svg');
                     @include icon-bg-center(70%);
                 }
             }
@@ -183,7 +183,6 @@ select::-ms-expand {
         display: flex;
         align-items: center;
         cursor: pointer;
-        color: $white;
         margin-bottom: 0;
 
         &.small-print {

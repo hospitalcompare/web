@@ -11,19 +11,23 @@
 @section('body-class', 'test-page')
 
 @section('content')
+
     {{--    <section>--}}
     {{--        @include('components.modals.modaltour',--}}
     {{--            ['displayBlock' => 'true'])--}}
     {{--    </section>--}}
+{{--    <section>--}}
+{{--        @include('mobile.components.corporatecontentmobile', [--}}
+{{--                'procedures'    => $data['filters']['procedures'],--}}
+{{--                'hospitalTitle' => 'Dr Nick\'s dodgy ops',--}}
+{{--                'id'            => 1,--}}
+{{--                'latitude'      => '52.3',--}}
+{{--                'longitude'     => '2.3',--}}
+{{--                'address'       => '<strong>Hospital name</strong><br>Hospital address<br>Hospital Town<br>Hospital County<br>Hospital Postcode'--}}
+{{--            ])--}}
+{{--    </section>--}}
     <section>
-        @include('mobile.components.corporatecontentmobile', [
-                'procedures'    => $data['filters']['procedures'],
-                'hospitalTitle' => 'Dr Nick\'s dodgy ops',
-                'id'            => 1,
-                'latitude'      => '52.3',
-                'longitude'     => '2.3',
-                'address'       => '<strong>Hospital name</strong><br>Hospital address<br>Hospital Town<br>Hospital County<br>Hospital Postcode'
-            ])
+        @include('mobile.components.modals.modalenquireprivatemobile', ['procedures'    => $data['filters']['procedures'],])
     </section>
     <section>
         @include('pages.pagesections.resultspageform', [

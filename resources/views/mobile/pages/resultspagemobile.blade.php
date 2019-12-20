@@ -101,7 +101,7 @@
       ])
     @include('components.modals.modalenquirenhs')
     {{--    @include('components.modals.modalspecial')--}}
-    @include('components.modals.modalenquireprivate', [
+    @include('mobile.components.modals.modalenquireprivatemobile', [
         'procedures' => $data['filters']['procedures']])
     {{--  Maps modal  --}}
     {{--    @include('components.modals.modalmaps')--}}
