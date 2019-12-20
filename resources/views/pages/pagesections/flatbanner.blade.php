@@ -42,12 +42,12 @@
                             <input name="fake_postcode" id="fake_postcode" type="text" class="d-none">
                             <div class="input-wrapper position-relative">
                                 @include('components.basic.input', [
-                                    'placeholder'   => 'Enter postcode',
-                                    'inputClassName'     => 'postcode-text-box big',
-                                    'value'         => '',
-                                    'name'          =>'postcode',
-                                    'validation'    => 'maxlength=8 autocomplete="off"',
-                                    'id'            => 'input_postcode'
+                                    'placeholder'           => 'Enter postcode',
+                                    'inputClassName'        => 'input-postcode postcode-text-box big',
+                                    'value'                 => '',
+                                    'name'                  => 'postcode',
+                                    'validation'            => 'maxlength=8 autocomplete="off"',
+                                    'id'                    => 'input_postcode'
                                 ])
                             </div>
                             <div class="postcode-results-container">

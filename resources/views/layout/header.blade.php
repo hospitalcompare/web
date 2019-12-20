@@ -55,7 +55,6 @@
             </ul>
         </nav>
         @include('components.basic.modalbutton', [
-            'htmlButton'    => true,
             'id'            => 'search_toggle',
             'classTitle'    => 'd-lg-none ml-auto',
             'modalTarget'   => '#hc_modal_mobile_search',

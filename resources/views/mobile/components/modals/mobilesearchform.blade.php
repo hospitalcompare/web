@@ -1,7 +1,8 @@
 <div class="mobile-search-form">
     <div class="align-items-center">
         <div class="text">
-            <h3 class="font-28 SofiaPro-Medium">Choose the <span class="col-turq">Right Hospital&nbsp;</span>for your&nbsp;<span class="col-turq">Treatment</span></h3>
+            <h3 class="font-28 SofiaPro-Medium">Choose the <span class="col-turq">Right Hospital&nbsp;</span>for your&nbsp;<span
+                    class="col-turq">Treatment</span></h3>
             <p class="font-20 d-lg-none">Find which NHS and Private hospitals are available and fully funded.</p>
         </div>
         <div class="">
@@ -44,12 +45,12 @@
 
                         <div class="input-wrapper position-relative">
                             @include('components.basic.input', [
-                                'placeholder'   => 'Enter postcode',
-                                'inputClassName'     => 'postcode-text-box big',
-                                'value'         => '',
-                                'name'          =>'postcode',
-                                'validation'    => 'maxlength=8 autocomplete="off"',
-                                'id'            => 'input_postcode'
+                                'placeholder'           => 'Enter postcode',
+                                'inputClassName'        => 'input-postcode postcode-text-box big',
+                                'value'                 => '',
+                                'name'                  => 'postcode',
+                                'validation'            => 'maxlength=8 autocomplete="off"',
+                                'id'                    => 'input_postcode'
                             ])
                             {{--                                <a tabindex="0" data-offset="0 5px"--}}
                             {{--                                   class="help-link"--}}
@@ -68,7 +69,8 @@
                             <div class="ajax-box"></div>
                         </div>
                     </div>
-                    <div class="form-child radius-parent full-left column-layout position-relative" data-reveal-direction="down" >
+                    <div class="form-child radius-parent full-left column-layout position-relative"
+                         data-reveal-direction="down">
                         @include('components.basic.select', [
                             'showLabel'             => true,
                             'selectClass'           => 'distance-dropdown',
@@ -105,4 +107,7 @@
             </div>
         </div>
     </div>
+</div>
+<div class="svg-wrapper animated mb-4 draw" data-animation="draw" style="">
+{{--    @svg('heart-line', 'stroke-turq')--}}
 </div>

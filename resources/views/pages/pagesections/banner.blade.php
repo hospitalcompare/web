@@ -52,12 +52,12 @@
 
                             <div class="input-wrapper position-relative">
                                 @include('components.basic.input', [
-                                    'placeholder'   => 'Enter postcode',
-                                    'inputClassName'     => 'postcode-text-box big',
-                                    'value'         => '',
-                                    'name'          =>'postcode',
-                                    'validation'    => 'maxlength=8 autocomplete="off"',
-                                    'id'            => 'input_postcode'
+                                    'placeholder'       => 'Enter postcode',
+                                    'inputClassName'    => 'postcode-text-box big input-postcode',
+                                    'value'             => '',
+                                    'name'              => 'postcode',
+                                    'validation'        => 'maxlength=8 autocomplete="off"',
+                                    'id'                => 'input_postcode'
                                 ])
                                 <a tabindex="0" data-offset="0 5px"
                                    class="help-link"

@@ -48,6 +48,14 @@ body {
     }
 }
 
+// SVG colours
+.fill-turq path {
+    fill: $turq;
+}
+
+.stroke-turq path {
+    stroke: $turq;
+}
 
 //
 //.results-page.results-page-mobile {
@@ -765,4 +773,23 @@ h6 {
     animation: pulse .5s ease-in-out;
     animation-fill-mode: forwards;
     animation-iteration-count: 2;
+}
+
+#search_form {
+    .dropdown-menu {
+        width: 100%;
+        transform: none;
+    }
+
+}
+
+.modal-mobile-search {
+    .svg-wrapper {
+        background-image: url('/images/icons/heart-line-turq.svg');
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: 89% top;
+        height: 200px;
+        margin: 0 -1rem;
+    }
 }

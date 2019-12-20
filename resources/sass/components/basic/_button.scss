@@ -613,10 +613,15 @@
 }
 
 // Browse more button
-.btn-icon-arrow svg {
-    width: 16px;
-    margin-left: 5px;
-    margin-top: -2px;
-    @extend .d-lg-none;
+.btn-icon-arrow {
+    display: flex;
+    align-items: center;
 
+    svg {
+        width: 16px;
+        margin-left: 5px;
+        margin-top: 2px;
+        @extend .d-lg-none;
+    }
 }
+
