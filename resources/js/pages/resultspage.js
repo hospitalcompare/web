@@ -187,6 +187,7 @@ $showFilters.bind('keydown', function(e) {
 // Toggle the corporate content area
 $('.btn-more-info, .btn-cc-close').on('click', function () {
     var $target = $($(this).data('target'));
+    var $isToggleButton = $(this).hasClass('btn-more-info');
     $(this)
         .parents('.result-item')
         .toggleClass('corporate-content-open');
@@ -194,7 +195,9 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
         $target
             .slideUp()
             .removeClass('open');
-        $(this).find('span, div').text('More info');
+        // Only change text for 'More info' button
+        if($isToggleButton)
+            $(this).find('span, div').text('More info');
         // Scroll back to the result item
         var $scrollBack = $(this).parents('.result-item').offset().top;
         $('html, body').animate({
@@ -213,7 +216,9 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
         }, 800);
         //Change the `More info` to `Close info`
         $(this).addClass('open');
-        $(this).find('span, div').text('Close info');
+        // Only change text for 'More info' button
+        if($isToggleButton)
+            $(this).find('span, div').text('Close info');
     }
 });
 
