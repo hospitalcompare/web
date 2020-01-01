@@ -294,7 +294,7 @@ select.big {
 //}
 
 .bg-grey {
-    background-color: $lighterGrey !important;
+    background-color: $bgGrey !important;
 }
 
 .bg-white {
@@ -302,7 +302,7 @@ select.big {
 }
 
 .bg-greylight {
-    background-color: $greylightbg;
+    background-color: $bgGrey;
 }
 
 .bg-blue-grad {
@@ -360,7 +360,7 @@ select.big {
 }
 
 .col-grey {
-    color: $fontGrey !important;
+    color: $textGrey !important;
 }
 
 .col-white {
@@ -368,11 +368,11 @@ select.big {
 }
 
 .col-greylight {
-    color: $greylight;
+    color: $textGrey;
 }
 
 .col-greydarkest {
-    color: $darkestGrey;
+    color: $textGrey;
 }
 
 .col-caretBlack {

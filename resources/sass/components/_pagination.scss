@@ -24,13 +24,13 @@
         width: 15px;
 
         path {
-            fill: $grey;
+            fill: $paginationColor;
         }
     }
 
     .disabled {
         path {
-            fill: $lighterGrey;
+            fill: $paginationDisabledColor;
         }
     }
 }

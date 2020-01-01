@@ -8,9 +8,9 @@
     .dropdown-toggle {
         //padding: 0 40px 0 13px;
         background-color: $white;
-        color: $darkerGrey;
+        color: $textGrey;
         font-weight: 500;
-        border: 2px solid $darkestWhite;
+        border: 2px solid $border-color;
         border-radius: $border-radius;
 
         &:after {
@@ -18,7 +18,7 @@
         }
 
         &:hover {
-            color: $darkerGrey;
+            color: $textGrey;
             background-color: #fff;
         }
 
@@ -37,10 +37,10 @@
             padding: 16px 60px 16px 50px;
             width: 100%;
             //border-radius: 10px;
-            color: $darkerGrey;
+            color: $textGrey;
             @include font-size(18);
             @extend .SofiaPro-Medium;
-            border: 2px solid $darkestWhite;
+            border: 2px solid $border-color;
 
             &:before {
                 content: '';

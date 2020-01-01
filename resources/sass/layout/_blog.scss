@@ -75,7 +75,7 @@
                 }
 
                 .description {
-                    color: $darkerGrey;
+                    color: $textGrey;
                     @include font-size(24);
                 }
 
@@ -156,7 +156,7 @@
                 width: 25px;
 
                 path {
-                    fill: $grey;
+                    fill: $textGrey;
                     transition: $transition;
                 }
             }

@@ -1,9 +1,9 @@
 // Trigger the tooltip speech bubble
 .help-link {
-    color: $black;
+    color: #fff !important;
     position: absolute;
     border-radius: 50%;
-    background: $lightGrey;
+    background: $bgGrey;
     width: 15px;
     height: 15px;
     line-height: 15px;
