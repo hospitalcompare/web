@@ -49,11 +49,11 @@ $('#other').on('click', function(){
     // }
 });
 
-
-$('#hc_modal_mobile_enquire_private').on('shown.bs.modal', function (event) {
+// Mobile event handling of the private enquiry form
+$('#hc_modal_mobile_enquire_private').on('show.bs.modal', function (event) {
     // Close other modals that are open
+    console.log($(this));
     $('.modal')
-        .not($(this))
-        .modal('hide')
+        .modal('hide');
 });
 
