@@ -11,8 +11,11 @@
 
     &.modal-enquire {
         .modal-copy {
-            font-size: 16px;
-            font-weight: 400;
+            @include font-size(16);
+        }
+
+        .modal-content {
+            overflow: hidden;
         }
 
         .modal-dialog {
@@ -31,7 +34,7 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                border-radius: 0 0 16px 0;
+                //border-radius: 0 0 16px 0;
             }
         }
     }

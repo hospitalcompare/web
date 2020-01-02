@@ -394,7 +394,7 @@
         line-height: 20px;
         text-align: center;
 
-        span {
+        > span {
             @include font-size(14);
             display: inline-block;
             //margin-top: 10px;

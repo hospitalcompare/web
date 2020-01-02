@@ -1,5 +1,5 @@
 <div id="hc_modal_mobile_special_offer_{{ $id }}" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog shadow" role="document">
+    <div class="modal-dialog shadow m-3" role="document">
         <div class="modal-content">
             <div class="modal-header flex-column align-items-center">
                 <h5 class="special-offer-title col-pink font-18 text-center w-100 mb-2">Special Offer</h5>
@@ -41,7 +41,7 @@
                                     'hospitalType'      => $NHSClass,
                                     'hrefValue'         => $url,
                                     'hospitalTitle'     => $title,
-                                    'modalTarget'       => '#hc_modal_enquire_private',
+                                    'modalTarget'       => '#hc_modal_mobile_enquire_private',
                                     'classTitle'        => 'btn-nested-enquire btn btn-squared btn-enquire btn-squared_slim btn-blue text-center enquiry btn-enquiry font-12 w-100 d-flex justify-content-center align-items-center flex-row-reverse px-3',
                                     'svg'               => 'circle-check',
                                     'target'            => 'blank',

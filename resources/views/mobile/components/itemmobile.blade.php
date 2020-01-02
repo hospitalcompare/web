@@ -175,7 +175,7 @@
             {{-- NHS user rating --}}
             <div class="result-item-section-2__child mb-2">
                 <p>NHS User Rating</p>
-                <p class=" d-flex  SofiaPro-Medium"
+                <p class="d-flex SofiaPro-Medium"
                     @include('components.basic.popover', [
                         'placement'         => 'bottom',
                         'trigger'           => 'click',
@@ -193,14 +193,14 @@
                 </p>
             </div>
             {{-- Click for self pay --}}
-            <div class="result-item-section-2__child justify-content-between">
+            <div class="result-item-section-2__child justify-content-between align-items-center">
                 @if(!empty($privateSelfPay))
                     @if($NHSClass == 'private-hospital')
                         @include('components.basic.modalbutton', [
                                 'hrefValue'         => $url,
                                 'hospitalTitle'     => $title,
                                 'modalTarget'       => '#hc_modal_mobile_enquire_private',
-                                'classTitle'        => 'btn btn-link enquire-prices mb-3 mr-auto p-0',
+                                'classTitle'        => 'btn btn-link enquire-prices mr-auto p-0 w-50',
                                 'target'            => 'blank',
                                 'modalText'         => 'This is the text about prices',
                                 'hospitalIds'       => $id,
@@ -213,7 +213,7 @@
                 @endif
                 @if(!empty($specialOffers))
                     @include('components.basic.modalbutton', [
-                        'classTitle'        => 'toggle-special-offer btn btn-icon btn-link btn-special-offer btn-special-offer_mobile pl-5 col-pink rounded-0',
+                        'classTitle'        => 'toggle-special-offer btn btn-icon btn-link btn-special-offer btn-special-offer_mobile pl-5 col-pink rounded-0 w-50',
                         'htmlButton'        => true,
                         'modalTarget'       => '#hc_modal_mobile_special_offer_' . $id,
                         'id'                => 'special_' . $id,
