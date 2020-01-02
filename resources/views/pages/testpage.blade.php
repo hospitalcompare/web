@@ -26,13 +26,25 @@
 {{--                'address'       => '<strong>Hospital name</strong><br>Hospital address<br>Hospital Town<br>Hospital County<br>Hospital Postcode'--}}
 {{--            ])--}}
 {{--    </section>--}}
-    <section>
-        @include('mobile.components.modals.modalenquireprivatemobile', ['procedures'    => $data['filters']['procedures'],])
-    </section>
-    <section>
-        @include('pages.pagesections.resultspageform', [
-        'displayBlock' => true])
-    </section>
+{{--    <section>--}}
+{{--        @include('mobile.components.modals.modalenquireprivatemobile', ['procedures'    => $data['filters']['procedures'],])--}}
+{{--    </section>--}}
+    <div>
+        @include('mobile.components.modals.modalmobilespecialoffer',
+            [
+                'id'            => 200,
+                'title'         => 'Hospital Name',
+                'NHSClass'      => 'private-hospital',
+                'url'           => '/',
+                'location'      => '91.5 miles away',
+                'fundedText'    => 'Private',
+                'radius'        => 50
+            ])
+    </div>
+{{--    <section>--}}
+{{--        @include('pages.pagesections.resultspageform', [--}}
+{{--        'displayBlock' => true])--}}
+{{--    </section>--}}
     <section>
         <h3>Waiting times popover</h3>
         <div class="popover popover-regular fade bs-popover-top show" role="tooltip"

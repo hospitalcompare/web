@@ -232,3 +232,12 @@
         @extend .p-2;
     }
 }
+
+.test-page {
+    #hc_modal_mobile_special_offer_200 {
+        position: static !important;
+        display: block !important;
+        opacity: 1;
+        overflow: visible;
+    }
+}

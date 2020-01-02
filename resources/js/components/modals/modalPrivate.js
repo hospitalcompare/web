@@ -46,3 +46,7 @@ $('#other').on('click', function(){
     //     $info.addClass()
     // }
 })
+
+$('.btn-nested-enquire').on('click', function(){
+
+})
