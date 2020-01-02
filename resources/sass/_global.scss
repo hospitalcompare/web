@@ -502,6 +502,26 @@ path {
     }
 }
 
+.pink-tick {
+    position: relative;
+    padding: 0 0 0 25px;
+    text-align: left;
+    margin-bottom: 10px;
+
+    &:before {
+        content: '';
+        background-image: url('/images/icons/icon-pink-tick.svg');
+        @include icon-bg-center(100%);
+        //position: absolute;
+        //top: $pink-tick-size * 0.4;
+        //left: 0;
+        @include v-c;
+        left: 0;
+        width: $pink-tick-size;
+        height: $pink-tick-size;
+    }
+}
+
 // Signature font
 .signature {
     font-family: "Brown Pen", cursive;

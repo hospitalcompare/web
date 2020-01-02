@@ -15,15 +15,15 @@
                 <div class="special-offers_mobile">
                     <div class="">
                         <div class="">
-                            <p class="special-offer-copy font-14">Get your Knee operation done in under 2 weeks on our
+                            <p class="special-offer-copy font-16 SofiaPro-Medium">Get your Knee operation done in under 2 weeks on our
                                 self-pay
                                 programme for £8,999 (reduced from £10,500).</p>
                         </div>
                         <div>
-                            <ul class="pl-2 mr-0 mb-3">
-                                <li class="green-tick">2 weeks</li>
-                                <li class="green-tick">Outstanding</li>
-                                <li class="green-tick">5 star user rating</li>
+                            <ul class="mr-0 mb-3 font-16 SofiaPro-Medium">
+                                <li class="pink-tick">2 weeks</li>
+                                <li class="pink-tick">Outstanding</li>
+                                <li class="pink-tick">5 star user rating</li>
                             </ul>
                         </div>
                     </div>
