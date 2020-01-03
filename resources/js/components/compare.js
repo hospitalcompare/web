@@ -14,7 +14,7 @@ var $svgMapIcon =
 // No of each type of hospital in compare
 var nhsCountHolder = $('#nhs-hospital-count');
 var privateCountHolder = $('#private-hospital-count');
-$("body").on('DOMSubtreeModified', privateCountHolder, function () {
+$body.on('DOMSubtreeModified', privateCountHolder, function () {
     // code here
     if (parseInt($('#private-hospital-count').text()) > 0) {
         $('#multiple_enquiries_button').prop('disabled', false);
@@ -23,8 +23,7 @@ $("body").on('DOMSubtreeModified', privateCountHolder, function () {
     }
 });
 
-var isDesktop = $('body').hasClass('results-page-desktop');
-var isMobile = $('body').hasClass('results-page-mobile');
+
 var multiEnquiryButton = $('#multiple_enquiries_button');
 var nhsHospitalCount = 0;
 var privateHospitalCount = 0;
@@ -144,7 +143,7 @@ window.addHospitalToCompare = function(element) {
             data-hospital-title="${element.display_name}"
             data-hospital-id="${element.id}"
             data-image="${element.image}"
-            data-target="#hc_modal_enquire_private">Make an enquiry
+            data-target="${ hospitalType == 'Private' ? '#hc_modal_mobile_enquire_private' : '#hc_modal_enquire_nhs'}">Make an enquiry
         ${$svg}
         </a>`;
 
@@ -196,7 +195,7 @@ window.addHospitalToCompare = function(element) {
                 <div class="card-header p-0 pb-2 bg-white" id="heading${element.id}">
                      <button class="btn btn-link collapsed text-decoration-none p-0" data-toggle="collapse" data-target="#collapse${element.id}" aria-expanded="true" aria-controls="collapse${element.id}">
                          <p class="font-18 SofiaPro-SemiBold mb-2">${textTruncate(element.display_name, 30, '...')}</p>
-                         <p class="col-grey mb-2">${$svgMapIcon}${element.address.city}</p>
+                         <p class="col-grey mb-2">${$svgMapIcon}${element.address.city} | ${hospitalType}</p>
                          <p class="mb-2">${latestRating}&nbsp;|&nbsp;${getHtmlDashTickValue(waitingTime, " Weeks Average Waiting")}</p>
                      </button>
                      <div class="btn-area d-flex align-items-center">
@@ -298,7 +297,7 @@ function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) 
         $('#no_items_added').removeClass('d-none');
         // Hide the comparison area
         compareContent.slideUp();
-        $('body').removeClass('shortlist-open');
+        $body.removeClass('shortlist-open');
         compareContent.removeClass('revealed');
     }
 
@@ -415,7 +414,7 @@ $(document).on("click", "#compare_button_title", function (e) {
     if (compareCount > -1) {
         // solutionsBar.toggleClass('open');
         compareContent.slideToggle();
-        $('body').toggleClass('shortlist-open');
+        $body.toggleClass('shortlist-open');
         // $('.compare-arrow').toggleClass('rotated');
         compareContent.toggleClass('revealed');
         // Close the special offer tabs if any are open
@@ -436,7 +435,7 @@ $(document).on("click", "#compare_button_title", function (e) {
 $(document).on('click', function (e) {
     if (compareBar.has(e.target).length === 0 && compareContent.hasClass('revealed')) {
         compareContent.slideUp();
-        $('body').removeClass('shortlist-open');
+        $body.removeClass('shortlist-open');
         // $('.compare-arrow').removeClass('rotated');
         compareContent.removeClass('revealed');
     }
@@ -445,9 +444,9 @@ $(document).on('click', function (e) {
 // Add custom class to body when mobile special offer tab is open
 var $specialOfferMobileTab = $('#hc_modal_mobile_special_offer_tab');
 $specialOfferMobileTab.on('show.bs.modal', function(){
-   $('body').addClass('mobile-special-offer-open');
+   $body.addClass('mobile-special-offer-open');
 });
 
 $specialOfferMobileTab.on('hidden.bs.modal', function(){
-   $('body').removeClass('mobile-special-offer-open');
+   $body.removeClass('mobile-special-offer-open');
 });

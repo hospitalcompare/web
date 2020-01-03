@@ -7,7 +7,7 @@
                         class="compare-arrow ml-3"></span>
                 </p>
             </div>
-            @include('components.basic.modalbutton', [
+            @includeWhen(!empty($data['special_offers']), 'components.basic.modalbutton', [
                 'id'                => 'hc_modal_mobile_special_offer_tab_trigger',
                 'modalTarget'       => '#hc_modal_mobile_special_offer_tab',
                 'classTitle'        => 'bg-pink col-white w-50 h-100 d-flex justify-content-center align-items-center',

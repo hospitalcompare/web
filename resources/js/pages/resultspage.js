@@ -188,6 +188,8 @@ $showFilters.bind('keydown', function(e) {
 $('.btn-more-info, .btn-cc-close').on('click', function () {
     var $target = $($(this).data('target'));
     var $isToggleButton = $(this).hasClass('btn-more-info');
+    // The offset
+    var scrollOffset = isDesktop ? 80 : 125;
     $(this)
         .parents('.result-item')
         .toggleClass('corporate-content-open');
@@ -201,7 +203,7 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
         // Scroll back to the result item
         var $scrollBack = $(this).parents('.result-item').offset().top;
         $('html, body').animate({
-            scrollTop: $scrollBack - 80
+            scrollTop: $scrollBack - scrollOffset
         }, 800);
         //Change the `Close info` to `More info`
         $(this).removeClass('open');
@@ -211,8 +213,8 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
             .addClass('open');
         // Scroll to the corporate content area (compensate for the height of sticky header bar)
         $('html, body').animate({
-            scrollTop: ($(this).parents('.result-item').offset().top) - 80
-            // scrollTop: ($target.offset().top) - 80
+            scrollTop: ($(this).parents('.result-item').offset().top) - scrollOffset
+            // scrollTop: ($target.offset().top) - scrollOffset
         }, 800);
         //Change the `More info` to `Close info`
         $(this).addClass('open');
