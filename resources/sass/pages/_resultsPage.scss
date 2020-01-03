@@ -558,6 +558,13 @@
 /********* Mobile results layout *************************************************************************************/
 /********* Mobile results layout *************************************************************************************/
 .results-page-mobile {
+    // CLear the solutions bar
+    .modal-backdrop {
+        top: auto;
+        bottom: 50px;
+        height: calc(100vh - 50px);
+    }
+
     background-color: $bgGrey;
 
     .row {

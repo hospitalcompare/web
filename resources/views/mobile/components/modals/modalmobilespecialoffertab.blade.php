@@ -16,7 +16,7 @@
             <div class="modal-header flex-column align-items-center">
                 <h5 class="special-offer-title font-18 text-center w-100 mb-2">Lowest Waiting time</h5>
                 <p class="mb-2 SofiaPro-SemiBold font-16">{{ $specialOffer['name'] }}</p>
-                <p class="col-grey mb-1"> {{ !empty($d['radius']) ? $d['radius'] . ' miles away' : '' }}</p>
+                <p class="col-grey mb-1"> {{ !empty($d['radius']) ? round($d['radius'], 1) . ' miles away' : '' }}</p>
             </div>
 {{--            <div class="img-wrap w-100">--}}
 {{--                <img class="w-100"--}}
