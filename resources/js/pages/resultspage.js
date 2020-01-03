@@ -189,7 +189,7 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
     var $target = $($(this).data('target'));
     var $isToggleButton = $(this).hasClass('btn-more-info');
     // The offset
-    var scrollOffset = isDesktop ? 80 : 125;
+    var scrollOffset = isDesktop ? 87 : 150;
     $(this)
         .parents('.result-item')
         .toggleClass('corporate-content-open');
