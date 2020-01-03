@@ -13,6 +13,7 @@
 @section('body-class', 'results-page results-page-mobile')
 
 @section('content')
+{{--    {{dd($data['special_offers'])}}--}}
     @include('mobile.pages.pagesections.resultspageformmobile')
 
     <div class="results pt-3">
@@ -108,6 +109,9 @@
     {{--    @include('components.modals.modalvideo')--}}
     @include('components.modals.modaltour')
     @include('mobile.components.modals.modalmobiletooltip')
+    @includeWhen(!empty($data['special_offers']), 'mobile.components.modals.modalmobilespecialoffertab', [
+        'specialOffer'      => $data['special_offers']['pink']
+    ])
     {{--    @include('components.doctor')--}}
 {{--    @include('components.basic.modalbutton', [--}}
 {{--        'classTitle'    => 'btn btn-hanblue position-fixed',--}}

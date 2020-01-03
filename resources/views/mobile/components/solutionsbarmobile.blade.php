@@ -9,7 +9,9 @@
             </div>
             @include('components.basic.modalbutton', [
                 'modalTarget'       => '#hc_modal_mobile_special_offer_tab',
-                'classTitle'        => 'bg-pink col-white w-50',
+                'classTitle'        => 'bg-pink col-white w-50 h-100 d-flex justify-content-center align-items-center',
+                'svg'               => 'chevron-up',
+                'svgClass'          => 'ml-3',
                 'buttonText'        => 'Special Offer'
             ])
         </div>
