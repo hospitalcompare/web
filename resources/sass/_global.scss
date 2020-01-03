@@ -103,7 +103,8 @@ body {
     }
 
     // Hide the special offer tabs
-    .solutions-menu {
+    .solutions-menu,
+    #hc_modal_mobile_special_offer_tab_trigger {
         opacity: 0;
         visibility: hidden;
     }

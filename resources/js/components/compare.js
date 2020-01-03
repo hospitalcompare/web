@@ -407,6 +407,8 @@ $(document).on("click", ".remove-hospital", function (e) {
 
 //Set the Onclick event for the Comparison Header - toggle open and closed
 $(document).on("click", "#compare_button_title", function (e) {
+    // Close all open modals
+    $('.modal').modal('hide');
     var compareCount = getCompareCount();
     var openTabs = $('.special-offer-tab.open');
     // var solutionsBar = $('.compare-hospitals-bar');
@@ -438,4 +440,14 @@ $(document).on('click', function (e) {
         // $('.compare-arrow').removeClass('rotated');
         compareContent.removeClass('revealed');
     }
+});
+
+// Add custom class to body when mobile special offer tab is open
+var $specialOfferMobileTab = $('#hc_modal_mobile_special_offer_tab');
+$specialOfferMobileTab.on('show.bs.modal', function(){
+   $('body').addClass('mobile-special-offer-open');
+});
+
+$specialOfferMobileTab.on('hidden.bs.modal', function(){
+   $('body').removeClass('mobile-special-offer-open');
 });

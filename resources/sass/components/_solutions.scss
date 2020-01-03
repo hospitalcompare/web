@@ -368,4 +368,25 @@
             }
         }
     }
+
+    #hc_modal_mobile_special_offer_tab_trigger {
+        transition: $transition;
+
+        svg {
+            transition: $transition;
+        }
+
+        .mobile-special-offer-open & {
+            background-color: #fff;
+            color: $pink;
+
+            svg {
+                transform: rotate3d(0, 0, 1, 180deg);
+
+                path {
+                    fill: $pink;
+                }
+            }
+        }
+    }
 }
