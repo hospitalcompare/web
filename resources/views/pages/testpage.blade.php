@@ -12,10 +12,10 @@
 
 @section('content')
 
-    {{--    <section>--}}
-    {{--        @include('components.modals.modaltour',--}}
-    {{--            ['displayBlock' => 'true'])--}}
-    {{--    </section>--}}
+        <section>
+            @include('components.modals.modaltour',
+                ['displayBlock' => 'true'])
+        </section>
 {{--    <section>--}}
 {{--        @include('mobile.components.corporatecontentmobile', [--}}
 {{--                'procedures'    => $data['filters']['procedures'],--}}
@@ -29,18 +29,18 @@
 {{--    <section>--}}
 {{--        @include('mobile.components.modals.modalenquireprivatemobile', ['procedures'    => $data['filters']['procedures'],])--}}
 {{--    </section>--}}
-    <div>
-        @include('mobile.components.modals.modalmobilespecialoffer',
-            [
-                'id'            => 200,
-                'title'         => 'Hospital Name',
-                'NHSClass'      => 'private-hospital',
-                'url'           => '/',
-                'location'      => '91.5 miles away',
-                'fundedText'    => 'Private',
-                'radius'        => 50
-            ])
-    </div>
+{{--    <div>--}}
+{{--        @include('mobile.components.modals.modalmobilespecialoffer',--}}
+{{--            [--}}
+{{--                'id'            => 200,--}}
+{{--                'title'         => 'Hospital Name',--}}
+{{--                'NHSClass'      => 'private-hospital',--}}
+{{--                'url'           => '/',--}}
+{{--                'location'      => '91.5 miles away',--}}
+{{--                'fundedText'    => 'Private',--}}
+{{--                'radius'        => 50--}}
+{{--            ])--}}
+{{--    </div>--}}
 {{--    <section>--}}
 {{--        @include('pages.pagesections.resultspageform', [--}}
 {{--        'displayBlock' => true])--}}
