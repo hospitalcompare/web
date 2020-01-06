@@ -563,23 +563,6 @@
     color: #fff;
     transition: $transition;
     position: relative;
-
-    &:focus {
-        box-shadow: inset 0px 0px 0px 2px $turq !important;
-        color: $body-color;
-    }
-
-    &:hover {
-        box-shadow: inset 0px 0px 0px 2px $turq !important;
-        background-color: $turq;
-        color: $white;
-
-        svg {
-            path {
-                fill: $white;
-            }
-        }
-    }
 }
 
 // Browse more button
