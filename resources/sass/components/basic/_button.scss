@@ -560,39 +560,9 @@
 
 // Modal tour carousel buttons - prev/next
 .btn-tour-control {
-    box-shadow: inset 0px 0px 0px 2px $turq !important;
-    color: $body-color;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    color: #fff;
     transition: $transition;
     position: relative;
-
-    svg {
-        width: 7px;
-        height: 11px;
-
-        path {
-            fill: $body-color;
-        }
-    }
-
-    &.prev {
-        padding-left: 30px;
-        padding-right: 12px;
-
-        svg {
-            left: 10px;
-        }
-    }
-
-    &.next {
-        padding-right: 30px;
-        padding-left: 12px;
-
-        svg {
-            right: 10px;
-        }
-    }
 
     &:focus {
         box-shadow: inset 0px 0px 0px 2px $turq !important;

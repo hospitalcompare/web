@@ -25,13 +25,6 @@
                         'svg'               => 'plus-solid',
                         'dataTarget'        => '#corporate_content_hospital_' . $id
                      ])
-                    {{--                TODO: reintroduce consultant button when we have this data --}}
-                    {{--                @if(!empty($specialOffers))--}}
-                    {{--                    <div class="btn-area" style="margin-top: 10px">--}}
-                    {{--                        @include('components.basic.button', ['classTitle' => 'btn btn-turq btn-icon btn-consultant btn-plus', 'buttonText' => 'Consultants'])--}}
-                    {{--                    </div>--}}
-                    {{--                @endif--}}
-
                 </div>
             </div>
             <div class="result-item-section-2">
@@ -46,7 +39,6 @@
                              'placement'     => 'bottom',
                              'size'          => 'cqc',
                              'trigger'       => 'hover',
-    {{--                         'hideDelay'     => $popoverDelay,--}}
                              'html'          => 'true',
                              'content'       => '<div class="container-fluid">
                                  <div class="row">
