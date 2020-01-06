@@ -265,9 +265,8 @@
     }
 
     .result-item {
-        margin-top: 7px;
-
-        &:not(:first-child) {
+        @include media-breakpoint-up(xl){
+            margin-top: 7px;
         }
     }
 

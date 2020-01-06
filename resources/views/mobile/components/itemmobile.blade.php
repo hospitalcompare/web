@@ -1,5 +1,5 @@
 <div class="result-item result-item-mobile col-12 col-md-6 mb-3" id="result-item_{{ $id }}">
-    <div class="result-item-inner position-relative shadow p-3 pt-5">
+    <div class="result-item-inner position-relative shadow p-3 pt-5 h-100 d-flex flex-column">
         <div class="item-tags position-absolute d-flex">
             <div
                 class="{{$NHSClass}} hospital-type pp-2 {{ $NHSClass == 'private-hospital' ? 'bg-violet' : 'bg-blue' }} position-relative d-inline-block">
@@ -222,7 +222,7 @@
                 @endif
             </div>
         </div>
-        <div class="result-item-mobile-section-3 w-100">
+        <div class="result-item-mobile-section-3 w-100 mt-auto">
             <div class="row">
                 <!-- More info button -->
                 <div class="button-wrapper col-6">
