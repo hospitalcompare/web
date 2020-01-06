@@ -7,26 +7,14 @@
                         class="compare-arrow ml-3"></span>
                 </p>
             </div>
-            @if(!empty($data['special_offers']))
-                <ul class="solutions-menu align-items-end d-md-flex mb-0 ml-auto w-50">
-                    <li class="d-block h-100 w-100">
-                        {{--Special offers tabs in solutions bar --}}
-                        <div class="special-offer-tab pink__offer pink w-100 rounded-0">
-                            <div class="special-offer-header d-flex align-items-center font-12">
-                                Lowest waiting time
-                                <span class="toggle-special-offer d-inline-flex align-items-center">
-                                    @svg('chevron-up')
-                                </span>
-                            </div>
-                            <div class="special-offer-body">
-                                <div class="inner-body d-flex flex-column justify-content-between h-100">
-                                    Body
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            @endif
+            @includeWhen(!empty($data['special_offers']), 'components.basic.modalbutton', [
+                'id'                => 'hc_modal_mobile_special_offer_tab_trigger',
+                'modalTarget'       => '#hc_modal_mobile_special_offer_tab',
+                'classTitle'        => 'bg-pink col-white w-50 h-100 d-flex justify-content-center align-items-center',
+                'svg'               => 'chevron-up',
+                'svgClass'          => 'ml-3',
+                'buttonText'        => 'Special Offer'
+            ])
         </div>
     </div>
     <div class="compare-hospitals-content">

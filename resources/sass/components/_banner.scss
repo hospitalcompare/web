@@ -25,7 +25,7 @@
 
     .container:not(.container-1028) {
         .row {
-            @media (min-width: 768px) {
+            @media (min-width: 992px) {
                 @include reset-row-spacing(60px);
             }
         }
@@ -56,17 +56,17 @@
 
     .postcode-parent {
         .input-wrapper {
-            &:before {
-                content: '';
-                background-image: url('/images/icons/icon-location.svg');
-                @include icon-bg-center(100%, 15px, 25px);
-                @include v-c;
-                left: 20px;
-            }
-
-            input {
-                padding-left: 50px;
-            }
+            //&:before {
+            //    content: '';
+            //    background-image: url('/images/icons/icon-location.svg');
+            //    @include icon-bg-center(100%, 15px, 25px);
+            //    @include v-c;
+            //    left: 20px;
+            //}
+            //
+            //input {
+            //    padding-left: 50px;
+            //}
         }
     }
 
@@ -86,7 +86,7 @@
         padding: 9px;
 
         &:hover {
-            background-color: $fontGrey;
+            background-color: $textGrey;
             color: $white;
             cursor: pointer;
             width: 100%;
@@ -139,7 +139,7 @@
     a {
         @include font-size(14);
         font-weight: 400;
-        color: $darkerGrey;
+        color: $textGrey;
     }
 }
 

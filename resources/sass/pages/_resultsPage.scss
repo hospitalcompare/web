@@ -1,5 +1,5 @@
 .results-page {
-    background-color: $lighterGrey;
+    background-color: $bgGrey;
 
     .results {
         min-height: calc(60vh - 220px);
@@ -10,7 +10,7 @@
     .filter-section {
         .filter-section-child {
             &:not(:last-child) {
-                border-right: 2px solid #d7d7d7;
+                border-right: 2px solid $border-color;
             }
         }
     }
@@ -76,12 +76,12 @@
     .dropdown-toggle {
         padding: 8px 40px 8px 13px;
         background-color: $white;
-        color: $darkerGrey;
+        color: $textGrey;
         @include font-size(14);
     }
 
     .filter-parent {
-        width: $fullWidth;
+        width: 100%;
         background-color: $white;
         padding-top: 23px;
 
@@ -113,7 +113,7 @@
             @include placeholder {
                 font-size: 14px;
                 line-height: 1.2;
-                color: $darkerGrey;
+                color: $textGrey;
                 font-family: 'SofiaPro-Medium', sans-serif;
             }
         }
@@ -265,9 +265,8 @@
     }
 
     .result-item {
-        margin-top: 7px;
-
-        &:not(:first-child) {
+        @include media-breakpoint-up(xl){
+            margin-top: 7px;
         }
     }
 
@@ -394,7 +393,7 @@
         line-height: 20px;
         text-align: center;
 
-        span {
+        > span {
             @include font-size(14);
             display: inline-block;
             //margin-top: 10px;
@@ -558,7 +557,17 @@
 /********* Mobile results layout *************************************************************************************/
 /********* Mobile results layout *************************************************************************************/
 .results-page-mobile {
-    background-color: $lighterGrey;
+    // CLear the solutions bar
+
+    &:not(.shortlist-open) {
+        .modal-backdrop {
+            top: auto;
+            bottom: 50px;
+            height: calc(100vh - 50px);
+        }
+    }
+
+    background-color: $bgGrey;
 
     .row {
         @include reset-row-spacing(0.5rem);

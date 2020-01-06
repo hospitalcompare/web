@@ -25,6 +25,10 @@
     }
 }
 
+#search_toggle {
+    width: 20px;
+    height: 20px;
+}
 
 .main-nav {
     @include media-breakpoint-down(md) {
@@ -134,7 +138,7 @@
 
 .submenu {
     position: absolute;
-    background: $darkerAqua;
+    background: $turq;
     width: 200px;
     //display:none;
     opacity: 0;

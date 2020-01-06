@@ -17,56 +17,44 @@ $line-height-base: 1.2;
 $letter-spacing: 0em;
 
 // Borders
-$border-radius: 5px;
+$border-radius: 3px;
 
 // Colors
 $enable-gradients: true;
 $indigo: #6574cd;
 $purple: #9561e2;
-//$red: #e3342f;
 $turq: #00cecd;
 $violet: #8e00fe;
 
 $blue: #1b71f3;
 $hanblue: #5e15d1;
 $privateBlue: #033860;
-
 $green: #00e09d;
-//$darkGreen: #21afae;
-
 $pink: #ed0373;
 $white: #ffffff;
 $goldStar: #FAC917;
 $doctorGreen: #80efce;
 
-
 //Main Template colours
-$darkerWhite: #f5f5f5;
-$darkestWhite: #ebebeb;
-$darkestBlue: #03385f;
-$aqua: #00cecd;
-$darkerAqua: #00b5b4;
-
 $footerBackgroundColour: #363636;
-$hotpink: #ed0373;
 $caretBlack: #040202;
 $bannerMaskGreen: #00cfcc;
 $corporateContentGreen: #026867;
 
-$grey: #363636;
-$greylight: #F6F6F6;
-$greylightbg: #F7F7F7;
-$lightGrey: $darkestWhite;
-$lighterGrey: #ececec;
-//$lightestGrey: #1b1b1b;
-$darkerGrey: #1c1c1c;
-$darkestGrey: #707070;
-
+$textGrey: #757575;
+$bgGrey: #ECECEC;
 
 // Snap design variables
-$fontGrey: #757575;
+//Full width background grey: #ECECEC
+//Grey text: #757575
+//Fields outline colour: #EDEDED
+//Field Placeholder Text Grey text: #757575
+//Full width lines on pages: #EDEDED
+//Table border colour: #EDEDED
+//Listing card vertical line split (before buttons): #D7D7D7 (this could be updated to #EDEDED)
+//Pagination (Previous): #C0C0C0
+//Pagination (Next): #595959
 $helplinkRed: #de026d;
-
 // End of snap design variables
 
 // CQC RAG rating colours
@@ -82,13 +70,6 @@ $greyBorder: 1px solid $borderGrey;
 // Body
 $body-bg: #fff;
 $body-color: #1b1b1b;
-
-// Full width
-$fullWidth: 100%;
-//center on page
-
-$pageWrap: auto;
-$centerOnPage: auto;
 
 // ************** BS overrides ****************** //
 $btn-border-radius: 100px;
@@ -124,14 +105,15 @@ $input-padding-y: 0;
 $input-padding-x: 1rem;
 $input-height: 30px;
 $input-line-height: $line-height-base;
-$input-placeholder-color: $darkerGrey;
+$input-placeholder-color: $textGrey;
 $input-font-weight: 500;
 $input-border-radius: $border-radius;
-$input-border-color: $darkestWhite;
+$input-border-color: #ededed;
 $input-border-width: 2px;
 $input-height: initial;
 $input-focus-box-shadow: none;
 $input-focus-border-color: $turq !important;
+$form-group-margin-bottom: 0.25rem;
 
 // Select picker
 
@@ -144,8 +126,8 @@ $width-default: 100%;
 //$zindex-select-dropdown: 1060 !default; // must be higher than a modal background (1050)
 //
 //** Placeholder text color
-$input-color-placeholder: $darkerGrey;
-$input-alt-color-placeholder: $darkerGrey;
+$input-color-placeholder: $body-color;
+$input-alt-color-placeholder: $body-color;
 //
 //$input-padding-y-sm: .25rem !default;
 //$input-padding-x-sm: .5rem !default;
@@ -162,24 +144,6 @@ $container-max-widths: (
     xl: 1200px
 );
 
-//// Base Colors for range slider
-//$shade-10: #1b70f3 !default;
-//$shade-1: #d7dcdf !default;
-//$shade-0: #fff !default;
-//
-//// Range Slider
-//$range-width: 100% !default;
-//
-//$range-handle-color: $shade-10 !default;
-//$range-handle-color-hover: $turq !default;
-//$range-handle-size: 22px !default;
-//
-//$range-track-color: $shade-1 !default;
-//$range-track-height: 4px !default;
-//
-//$range-label-color: $shade-10 !default;
-//$range-label-width: 60px !default;
-
 // Navs and tabs
 
 $nav-link-padding-y: 0.25rem;
@@ -193,8 +157,6 @@ $hospital-image-width: 150px;
 
 // Carousel
 $enable-gradients: false;
-//$carousel-control-prev-icon-bg: url('../images/icons/chevron-left.svg');
-//$carousel-control-next-icon-bg: url('../images/icons/chevron-right.svg');
 $carousel-control-prev-icon-bg: none;
 $carousel-control-next-icon-bg: none;
 $carousel-control-icon-width: 40px;
@@ -204,39 +166,22 @@ $carousel-control-width: auto;
 
 // Pagination
 $pagination-link-height: 35px;
+$paginationColor: #595959;
+$paginationDisabledColor: #C0C0C0;
 
-// Tables
-//$table-cell-padding: 0.5rem;
-//$table-cell-padding-small: 0.5rem;
-//$table-border-width: 0;
+
 
 // Box shadows
 $box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
 
 // Tick lists
 $green-tick-size: 12px;
+$pink-tick-size: 15px;
 
 // Cards
 
 $card-spacer-y:                     2rem;
 $card-spacer-x:                     1.25rem !default;
-//$card-border-width:                 $border-width !default;
-//$card-border-radius:                $border-radius !default;
-//$card-border-color:                 rgba($black, .125) !default;
-//$card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width}) !default;
-//$card-cap-bg:                       rgba($black, .03) !default;
-//$card-cap-color:                    null !default;
-//$card-color:                        null !default;
-//$card-bg:                           $white !default;
-//
-//$card-img-overlay-padding:          1.25rem !default;
-//
-//$card-group-margin:                 $grid-gutter-width / 2 !default;
-//$card-deck-margin:                  $card-group-margin !default;
-//
-//$card-columns-count:                3 !default;
-//$card-columns-gap:                  1.25rem !default;
-//$card-columns-margin:               $card-spacer-y !default;
 
 // Header
 $mobile-header-height: 54px;

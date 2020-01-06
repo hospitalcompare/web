@@ -48,6 +48,18 @@ body {
     }
 }
 
+// SVG colours
+.fill-turq path {
+    fill: $turq;
+}
+
+.fill-turq path {
+    fill: $turq;
+}
+
+.stroke-turq path {
+    stroke: $turq;
+}
 
 //
 //.results-page.results-page-mobile {
@@ -95,7 +107,8 @@ body {
     }
 
     // Hide the special offer tabs
-    .solutions-menu {
+    .solutions-menu,
+    #hc_modal_mobile_special_offer_tab_trigger {
         opacity: 0;
         visibility: hidden;
     }
@@ -225,7 +238,7 @@ input[type=submit] {
 // Larger input/select
 input.big,
 select.big {
-    font-size: 18px;
+    @include font-size(16);
     font-weight: 500;
     //height: 60px;
     //line-height: 60px;
@@ -286,7 +299,7 @@ select.big {
 //}
 
 .bg-grey {
-    background-color: $lighterGrey !important;
+    background-color: $bgGrey !important;
 }
 
 .bg-white {
@@ -294,7 +307,7 @@ select.big {
 }
 
 .bg-greylight {
-    background-color: $greylightbg;
+    background-color: $bgGrey;
 }
 
 .bg-blue-grad {
@@ -352,7 +365,7 @@ select.big {
 }
 
 .col-grey {
-    color: $fontGrey !important;
+    color: $textGrey !important;
 }
 
 .col-white {
@@ -360,11 +373,11 @@ select.big {
 }
 
 .col-greylight {
-    color: $greylight;
+    color: $textGrey;
 }
 
 .col-greydarkest {
-    color: $darkestGrey;
+    color: $textGrey;
 }
 
 .col-caretBlack {
@@ -455,64 +468,6 @@ path {
     }
 }
 
-//.choose-health-parent {
-//    margin: 60px auto;
-//
-//    .choose-health {
-//        height: 410px;
-//        background: url('../images/placeholder.jpg');
-//        background-repeat: no-repeat;
-//        background-size: cover;
-//        background-position: center center;
-//        border-radius: 20px;
-//        position: relative;
-//        @include mask($lightestGrey, 1);
-//        display: flex;
-//        justify-content: center;
-//        align-items: center;
-//        flex-direction: column;
-//        padding: 0 132px;
-//        @include font-size(28);
-//        @extend .SofiaPro-SemiBold;
-//
-//        &:before {
-//            transition: 0.3s opacity ease-in;
-//        }
-//
-//        &.fade-in {
-//            &:before {
-//                opacity: 0.38;
-//            }
-//        }
-//
-//        .your-rights-page & {
-//            background: url('../images/ladycoffeesofa.jpg');
-//            background-position: 40% 60%;
-//        }
-//
-//        .your-rights-page & {
-//            margin: 0;
-//        }
-//    }
-//
-//    .choose-health-text {
-//        color: $white;
-//        text-align: center;
-//        width: 100%;
-//        max-width: 912px;
-//        position: relative;
-//        z-index: 5;
-//
-//        .btn {
-//            svg {
-//                @include v-c;
-//                right: 30px;
-//                width: 9px;
-//                height: 16px;
-//            }
-//        }
-//    }
-//}
 
 //=========================END HEALTH CHOICE SECTION====================
 
@@ -544,11 +499,47 @@ path {
         content: '';
         background-image: url('/images/icons/icon-tick.svg');
         @include icon-bg-center(100%);
+        position: relative;
+        display: inline-block;
+        top: 2px;
+        margin-right: 6px;
+        //top: $green-tick-size * 0.4;
+        left: 0;
+        width: $green-tick-size;
+        height: $green-tick-size;
+    }
+}
+
+.green-tick-large {
+    &:before {
+        content: '';
+        background-image: url('/images/icons/icon-tick.svg');
+        @include icon-bg-center(100%);
         position: absolute;
         top: $green-tick-size * 0.4;
         left: 0;
         width: $green-tick-size;
         height: $green-tick-size;
+    }
+}
+
+.pink-tick {
+    position: relative;
+    padding: 0 0 0 25px;
+    text-align: left;
+    margin-bottom: 10px;
+
+    &:before {
+        content: '';
+        background-image: url('/images/icons/icon-pink-tick.svg');
+        @include icon-bg-center(100%);
+        //position: absolute;
+        //top: $pink-tick-size * 0.4;
+        //left: 0;
+        @include v-c;
+        left: 0;
+        width: $pink-tick-size;
+        height: $pink-tick-size;
     }
 }
 
@@ -680,7 +671,7 @@ h4 {
 
 h5 {
     font-size: 22px;
-    color: $pink;
+    //color: $pink;
     margin: 0 0 22px 0;
 }
 
@@ -765,4 +756,23 @@ h6 {
     animation: pulse .5s ease-in-out;
     animation-fill-mode: forwards;
     animation-iteration-count: 2;
+}
+
+#search_form {
+    .dropdown-menu {
+        width: 100%;
+        transform: none;
+    }
+
+}
+
+.modal-mobile-search {
+    .svg-wrapper {
+        background-image: url('/images/icons/heart-line-turq.svg');
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: 89% top;
+        height: 80px;
+        margin: 0 -1rem;
+    }
 }

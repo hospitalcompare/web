@@ -39,24 +39,28 @@
                     </a>
                 </li>
                 {{--                    <li><a {{ Request::is( 'guides') ? 'class=active' : '' }} href="/guides">Guides</a></li>--}}
-                @if(env('APP_ENV') === 'local')
-                    <li>
-                        <a {{ Request::is( 'results-page') ? 'class=active' : '' }} href="/results-page">Results
-                            page
-                            @svg('chevron-right-grey', 'd-lg-none')
-                        </a>
-                    </li>
-                    <li>
-                        <a {{ Request::is( 'test-page') ? 'class=active' : '' }} href="/test-page">Test page
-                            @svg('chevron-right-grey', 'd-lg-none')
-                        </a>
-                    </li>
-                @endif
+{{--                @if(env('APP_ENV') === 'local')--}}
+{{--                    <li>--}}
+{{--                        <a {{ Request::is( 'results-page') ? 'class=active' : '' }} href="/results-page">Results--}}
+{{--                            page--}}
+{{--                            @svg('chevron-right-grey', 'd-lg-none')--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <a {{ Request::is( 'test-page') ? 'class=active' : '' }} href="/test-page">Test page--}}
+{{--                            @svg('chevron-right-grey', 'd-lg-none')--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                @endif--}}
             </ul>
         </nav>
-        <div id="search_toggle" class="d-lg-none ml-auto"><img width="20px" height="20px"
-                                                     src="{{URL::asset('/images/icons/icon-search.svg')}}"
-                                                     alt="Menu icon"></div>
+        @include('components.basic.modalbutton', [
+            'id'            => 'search_toggle',
+            'classTitle'    => 'd-lg-none ml-auto',
+            'modalTarget'   => '#hc_modal_mobile_search',
+            'svg'           => 'icon-search',
+            'buttonText'    => ''
+        ])
 
     </div>
 </header>

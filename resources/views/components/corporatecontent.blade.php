@@ -4,13 +4,13 @@
         <div class="corporate-content-inner d-flex">
             <div class="corporate-content-section-1"></div>
             <div class="corporate-content-section-2 position-relative w-100">
-                @include('components.basic.button', [
-                    'buttonText'        => 'Close Info',
-                    'classTitle'        => 'btn btn-cc-close position-absolute',
-                    'svg'               => 'times',
-                    'dataTarget'        => '#corporate_content_hospital_' . $id,
-                    'style'             => 'right: 0; top: 9px',
-                    'id'                => 'close_cc_' . $id])
+{{--                @include('components.basic.button', [--}}
+{{--                    'buttonText'        => 'Close Info',--}}
+{{--                    'classTitle'        => 'btn btn-cc-close position-absolute',--}}
+{{--                    'svg'               => 'times',--}}
+{{--                    'dataTarget'        => '#corporate_content_hospital_' . $id,--}}
+{{--                    'style'             => 'right: 0; top: 9px',--}}
+{{--                    'id'                => 'close_cc_' . $id])--}}
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" id="nav-tabs_{{ $id }}" role="tablist">
                     <li class="nav-item">

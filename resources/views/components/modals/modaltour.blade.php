@@ -7,113 +7,267 @@
      role="dialog"
      aria-labelledby="" aria-modal="true" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content p-3">
-            @include('components.basic.closebutton')
-            <div class="carousel-wrapper position-relative">
-                <!-- Slide number indicator -->
-                <div id="slide_number"><span class="d-inline-block">1</span></div>
-                <div id="carousel_tour" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <!--Slides-->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="image-wrapper position-absolute ml-1">
-                            <img class="" src="{{ asset('/images/dr-stevini.svg') }}" alt="Dr Stevini Illustration">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between border-bottom">
+                <div id="slide_number" class="col-turq"><span class="d-inline-block">1</span>&nbsp;of 9</div>
+                <span>Help Guide Steps</span>
+                <button type="button" class="btn-plain" data-dismiss="modal" aria-label="Close">
+                    @svg('times-black')
+                </button>
+
+            </div>
+            <div class="modal-body p-3 position-relative">
+                <div class="carousel-wrapper position-relative">
+                    <!-- Slide number indicator -->
+                    <div id="carousel_tour" class="carousel slide _carousel-fade" data-ride="carousel" data-interval="false">
+                        <!--Slides-->
+
+                        <!--/.Slides-->
+                        <div class="carousel-inner position-relative" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="carousel-item-inner">
+                                    <div class="row">
+                                        <div class="carousel-item-copy col-4">
+                                            <h5>How to Use...</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud
+                                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                Duis aute irure
+                                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                                nulla pariatur.
+                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                                officia
+                                                deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                        <div class="carousel-item-image col-8">
+                                            <img class="d-block h-100 w-100 content"
+                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-item-inner">
+                                    <div class="row">
+                                        <div class="carousel-item-copy col-4">
+                                            <h5>How to Use...</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud
+                                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                Duis aute irure
+                                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                                nulla pariatur.
+                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                                officia
+                                                deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                        <div class="carousel-item-image col-8">
+                                            <img class="d-block h-100 w-100 content"
+                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-item-inner">
+                                    <div class="row">
+                                        <div class="carousel-item-copy col-4">
+                                            <h5>How to Use...</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud
+                                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                Duis aute irure
+                                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                                nulla pariatur.
+                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                                officia
+                                                deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                        <div class="carousel-item-image col-8">
+                                            <img class="d-block h-100 w-100 content"
+                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-item-inner">
+                                    <div class="row">
+                                        <div class="carousel-item-copy col-4">
+                                            <h5>How to Use...</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud
+                                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                Duis aute irure
+                                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                                nulla pariatur.
+                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                                officia
+                                                deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                        <div class="carousel-item-image col-8">
+                                            <img class="d-block h-100 w-100 content"
+                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-item-inner">
+                                    <div class="row">
+                                        <div class="carousel-item-copy col-4">
+                                            <h5>How to Use...</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud
+                                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                Duis aute irure
+                                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                                nulla pariatur.
+                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                                officia
+                                                deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                        <div class="carousel-item-image col-8">
+                                            <img class="d-block h-100 w-100 content"
+                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-item-inner">
+                                    <div class="row">
+                                        <div class="carousel-item-copy col-4">
+                                            <h5>How to Use...</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud
+                                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                Duis aute irure
+                                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                                nulla pariatur.
+                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                                officia
+                                                deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                        <div class="carousel-item-image col-8">
+                                            <img class="d-block h-100 w-100 content"
+                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-item-inner">
+                                    <div class="row">
+                                        <div class="carousel-item-copy col-4">
+                                            <h5>How to Use...</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud
+                                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                Duis aute irure
+                                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                                nulla pariatur.
+                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                                officia
+                                                deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                        <div class="carousel-item-image col-8">
+                                            <img class="d-block h-100 w-100 content"
+                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-item-inner">
+                                    <div class="row">
+                                        <div class="carousel-item-copy col-4">
+                                            <h5>How to Use...</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud
+                                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                Duis aute irure
+                                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                                nulla pariatur.
+                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                                officia
+                                                deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                        <div class="carousel-item-image col-8">
+                                            <img class="d-block h-100 w-100 content"
+                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-item-inner">
+                                    <div class="row">
+                                        <div class="carousel-item-copy col-4">
+                                            <h5>How to Use...</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud
+                                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                Duis aute irure
+                                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                                nulla pariatur.
+                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                                officia
+                                                deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                        <div class="carousel-item-image col-8">
+                                            <img class="d-block h-100 w-100 content"
+                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="carousel-item active">
-                            <div class="carousel-item-inner">
-                                <img class="d-block h-100 w-100 content"
-                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
-                            </div>
-                            <div class="carousel-item-copy bg-greylight position-relative">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt mollit anim id est laborum.
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="carousel-item-inner">
-                                <img class="d-block h-100 w-100 content"
-                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
-                            </div>
-                            <div class="carousel-item-copy bg-greylight position-relative">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt mollit anim id est laborum.
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="carousel-item-inner">
-                                <img class="d-block h-100 w-100 content"
-                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
-                            </div>
-                            <div class="carousel-item-copy bg-greylight position-relative">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt mollit anim id est laborum.
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="carousel-item-inner">
-                                <img class="d-block h-100 w-100 content"
-                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
-                            </div>
-                            <div class="carousel-item-copy bg-greylight position-relative">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt mollit anim id est laborum.
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="carousel-item-inner">
-                                <img class="d-block h-100 w-100 content"
-                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
-                            </div>
-                            <div class="carousel-item-copy bg-greylight position-relative">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt mollit anim id est laborum.
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.Slides-->
-                    <div class="carousel-controls position-absolute">
-                        <!--Controls-->
-                        <a class="carousel-control-prev carousel-control btn btn-tour-control prev" href="#carousel_tour" role="button"
-                           data-slide="prev">
-                            @svg('chevron-left')
-                            Previous Step
-                            {{--                    <span class="carousel-control-prev-icon" aria-hidden="true">Previous Step</span>--}}
-                        </a>
-                        <ol class="carousel-indicators mb-0 mx-4">
-                            <li data-target="#carousel_tour" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel_tour" data-slide-to="1" class=""></li>
-                            <li data-target="#carousel_tour" data-slide-to="2" class=""></li>
-                            <li data-target="#carousel_tour" data-slide-to="3" class=""></li>
-                            <li data-target="#carousel_tour" data-slide-to="4" class=""></li>
-                        </ol>
-                        <a class="carousel-control-next carousel-control btn btn-tour-control next" href="#carousel_tour" role="button"
-                           data-slide="next">Next Step
-                            @svg('chevron-right')
-                            {{--                    <span class="carousel-control-next-icon" aria-hidden="true">Next Step</span>--}}
-                            {{--                    <span class="sr-only">Next</span>--}}
-                        </a>
-                        <!--/.Controls-->
                     </div>
                 </div>
+                <!--/.Controls-->
+                <div class="carousel-controls position-absolute w-100">
+                    <div class="container-fluid">
+                        <div class="row w-100">
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <a class="carousel-control-prev carousel-control btn btn-squared btn-squared_slim btn-black btn-tour-control prev"
+                                           href="#carousel_tour" role="button"
+                                           data-slide="prev">
+                                            Previous
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="carousel-control-next carousel-control btn btn-squared btn-squared_slim btn-turq col-white btn-tour-control next"
+                                           href="#carousel_tour" role="button"
+                                           data-slide="next">Next
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Controls-->
             </div>
         </div>
     </div>

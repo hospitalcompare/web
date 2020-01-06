@@ -20,7 +20,7 @@ textarea {
     }
 
     //label {
-    //    color: $darkerGrey;
+    //    color: $textGrey;
     //    font-weight: 500;
     //}
 }
@@ -30,11 +30,12 @@ textarea {
 }
 
 input:not([type="range"]):not([type="submit"]):not([type="checkbox"]),
-select:not([class^="ui-datepicker"]) {
-    border: 2px solid $darkestWhite; /*Removes border*/
+select:not([class^="ui-datepicker"]),
+textarea {
+    border: 2px solid $border-color; /*Removes border*/
     border-radius: $border-radius;
     appearance: none;
-    color: $darkerGrey;
+    //color: $textGrey;
     background-color: $white;
     //text-indent: 0.01px; /* Removes default arrow from firefox*/
     //text-overflow: "";  /*Removes default arrow from firefox*/
@@ -59,7 +60,7 @@ select::-ms-expand {
     input:not([type="submit"]) {
         width: 100%;
         @include placeholder {
-            color: $darkerGrey;
+            color: $textGrey;
             opacity: 1; // To fix a bug in firefox
             font-family: 'SofiaPro-Medium', sans-serif;
         }
@@ -81,7 +82,7 @@ select::-ms-expand {
 
     label {
         text-align: left;
-        color: $darkerGrey;
+        color: $textGrey;
         @extend .font-semibold;
         line-height: 19px;
     }
@@ -108,8 +109,8 @@ select::-ms-expand {
             height: 45px;
             line-height: 45px;
             border-radius: 0 $border-radius $border-radius 0;
-            border: 2px solid $darkestWhite;
-            background-color: $darkestWhite;
+            border: 2px solid $border-color;
+            background-color: $border-color;
             pointer-events: none;
         }
     }
@@ -126,34 +127,29 @@ select::-ms-expand {
 
 #enquiry_form {
     input:not([type="submit"]),
-    select {
-        height: 35px;
+    select,
+    textarea {
+        //height: 35px;
         //line-height: 44px;
         border-radius: $border-radius;
-        border: 0;
         background-color: #ffffff;
-
     }
 
     select.form-control {
         padding-right: 40px;
     }
 
-    .row {
-        margin-left: -6px;
-        margin-right: -6px;
-
-        .col {
-            padding-left: 6px;
-            padding-right: 6px;
-            margin-bottom: 12px;
-        }
-    }
-
     // bootstrap select button
-    .dropdown-toggle {
+    .dropdown-toggle,
+    input:not([type="submit"]),
+    select,
+    textarea {
         padding: 6px 40px 6px 13px;
-        @include font-size(16);
+        @include font-size(14);
+
+        @include placeholder() {
+            color: $body-color;
+        }
     }
 }
 
@@ -172,7 +168,7 @@ select::-ms-expand {
 
                 &:before {
                     content: '';
-                    background-image: url('../images/icons/check-solid-white.svg');
+                    background-image: url('../images/icons/icon-tick.svg');
                     @include icon-bg-center(70%);
                 }
             }
@@ -183,7 +179,6 @@ select::-ms-expand {
         display: flex;
         align-items: center;
         cursor: pointer;
-        color: $white;
         margin-bottom: 0;
 
         &.small-print {
@@ -198,7 +193,7 @@ select::-ms-expand {
             width: 20px;
             height: 20px;
             border-radius: 5px;
-            border: 2px solid $darkestWhite;
+            border: 2px solid $border-color;
             flex: 0 0 20px;
             margin-right: 11px;
             text-align: center;
@@ -225,14 +220,9 @@ select::-ms-expand {
 textarea {
     width: 100%;
     border-radius: $border-radius;
-    //border: 2px solid $darkestWhite;
     background-color: #ffffff;
     padding: 1rem;
     padding-top: 7px;
-
-    @include placeholder {
-        color: $darkerGrey;
-    }
 }
 
 // jquery validate error messages

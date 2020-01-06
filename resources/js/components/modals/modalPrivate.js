@@ -16,6 +16,7 @@ $privateModal.on('show.bs.modal', function (event) {
 
     var hospitalTitle   = $button.data('hospital-title');// Extract info from data-* attributes
     var modal           = $(this);
+    console.log(hospitalTitle);
     // var hospitalId      = $button.attr('id').replace('enquire_', '');
     var hospitalId      = $button.data('hospital-id');
     var picture         = $button.data('image');
@@ -23,6 +24,7 @@ $privateModal.on('show.bs.modal', function (event) {
     modal.find('.hospital-title').html(hospitalTitle);
     modal.find("input[name='hospital_id']").val(hospitalId);
     modal.find('.modal-enquire-private-image').attr("src", picture);
+
 });
 
 var $info = $('#col_additional_information');
@@ -45,4 +47,13 @@ $('#other').on('click', function(){
     // if($("#other").is(':checked')) {
     //     $info.addClass()
     // }
-})
+});
+
+// Mobile event handling of the private enquiry form
+$('#hc_modal_mobile_enquire_private').on('show.bs.modal', function (event) {
+    // Close other modals that are open
+    console.log($(this));
+    $('.modal')
+        .modal('hide');
+});
+

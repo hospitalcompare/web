@@ -468,7 +468,7 @@
 }
 
 .btn-link {
-    color: $darkerGrey;
+    color: $textGrey;
     cursor: pointer;
     appearance: none;
     border: none;
@@ -560,63 +560,21 @@
 
 // Modal tour carousel buttons - prev/next
 .btn-tour-control {
-    box-shadow: inset 0px 0px 0px 2px $turq !important;
-    color: $body-color;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    color: #fff;
     transition: $transition;
     position: relative;
-
-    svg {
-        width: 7px;
-        height: 11px;
-
-        path {
-            fill: $body-color;
-        }
-    }
-
-    &.prev {
-        padding-left: 30px;
-        padding-right: 12px;
-
-        svg {
-            left: 10px;
-        }
-    }
-
-    &.next {
-        padding-right: 30px;
-        padding-left: 12px;
-
-        svg {
-            right: 10px;
-        }
-    }
-
-    &:focus {
-        box-shadow: inset 0px 0px 0px 2px $turq !important;
-        color: $body-color;
-    }
-
-    &:hover {
-        box-shadow: inset 0px 0px 0px 2px $turq !important;
-        background-color: $turq;
-        color: $white;
-
-        svg {
-            path {
-                fill: $white;
-            }
-        }
-    }
 }
 
 // Browse more button
-.btn-icon-arrow svg {
-    width: 16px;
-    margin-left: 5px;
-    margin-top: -2px;
-    @extend .d-lg-none;
+.btn-icon-arrow {
+    display: flex;
+    align-items: center;
 
+    svg {
+        width: 16px;
+        margin-left: 5px;
+        margin-top: 2px;
+        @extend .d-lg-none;
+    }
 }
+

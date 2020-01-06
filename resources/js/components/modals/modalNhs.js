@@ -10,6 +10,7 @@ function showNhsModal(event) {
     modal.find('.modal-title').html(title);
     modal.find('.btn-enquire').attr("href", 'http://' + url);
     modal.find('.modal-enquire-nhs-image').attr("src", picture);
+    console.log('NHS form')
 }
 
 // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.

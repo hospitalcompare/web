@@ -9,7 +9,6 @@
 
     .corporate-content-inner {
         background-color: #fff;
-        padding: 1rem;
         @include media-breakpoint-up(lg) {
             padding: 30px;
         }
@@ -92,6 +91,17 @@
     //}
 
     // End carousel
+
+    // Stats tab
+    .rating-name {
+        @extend .font-16;
+        @extend .SofiaPro-SemiBold;
+        @extend .mb-1;
+    }
+
+    .rating-value {
+        @extend .mb-1;
+    }
 
     .tab-pane,
     .media-pane {

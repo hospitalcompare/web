@@ -1,6 +1,10 @@
+window.$body = $('body');
+window.isDesktop = $body.hasClass('results-page-desktop');
+window.isMobile = $body.hasClass('results-page-mobile');
+
 // Reveal the main menu on mobile
 $('#menu_toggle').on('click', function(){
-   $('body').toggleClass('menu-open');
+   $body.toggleClass('menu-open');
 });
 
 //Set the first option of the Procedures dropdown to 'Not Known'
@@ -24,12 +28,12 @@ $('.dropdown-toggle').attr('data-boundary', 'window');
 // Do something when select pickers open
 $pickers.on('show.bs.select', function (e, clickedIndex, isSelected, previousValue) {
     // Stop body scrolling
-    $('body').addClass('select-open');
+    $body.addClass('select-open');
 });
 
 $pickers.on('hide.bs.select', function (e, clickedIndex, isSelected, previousValue) {
     // Stop body scrolling
-    $('body').removeClass('select-open');
+    $body.removeClass('select-open');
 });
 
 var $howToUseSelectPlaceholder = 'Select';
@@ -334,11 +338,10 @@ window.enableButtons = function () {
 };
 
 // Refresh the page on resize, so that the currentt version is showing
-// if($('body').hasClass('results-page'))
+// if($body.hasClass('results-page'))
 //     $(window).resize(function(){location.reload();});
 
 // Close menu if clicking outside it, but only if it is already open
-var $body = $('body');
 var $mainNav = $('#main_nav');
 $(document).on('click', function (e) {
     if($body.hasClass('menu-open')) {

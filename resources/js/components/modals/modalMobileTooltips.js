@@ -1,6 +1,5 @@
 // Bootstrap modal
 function showMobileInfoModal(event) {
-    console.log('Test');
     var $button = $(event.relatedTarget);// Button that triggered the modal
     var $content = $button.data('modal-text');// Extract info from data-* attributes
     var modal = $(this);

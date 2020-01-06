@@ -46,8 +46,8 @@
                 <div class="tab-pane active col-12" id="stats_{{ $id }}" role="tabpanel"
                      aria-labelledby="stats-tab">
                     <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="accordion p-0" id="hospital_stats">
+                        <div class="col-12">
+                            <div class="hc-accordion p-0" id="hospital_stats">
                                 @if(!empty($qualityRating))
                                     <div class="card">
                                         <div class="card-header" id="headingOne_{{ $id }}">
@@ -55,8 +55,8 @@
                                                 <button class=" btn btn-link collapsed" type="button"
                                                         data-toggle="collapse" data-target="#collapseOne_{{ $id }}"
                                                         aria-expanded="true" aria-controls="collapseOne_{{ $id }}">
-                                                    <p>Care Quality Rating</p>
-                                                    <p class="pt-0">{{ $qualityRating }}</p>
+                                                    <p class="rating-name">Care Quality Rating</p>
+                                                    <p class="rating-value pt-0">{{ $qualityRating }}</p>
                                                 </button>
                                             </h2>
 
@@ -66,12 +66,12 @@
                                             <div class="card-body">
                                                 <div class="container-fluid p-0">
                                                     <div class="row">
-                                                        <div
-                                                            class="col-12 p-2 cqc-left d-flex flex-column justify-content-center align-items-start bg-{{ str_slug($qualityRating) }} text-white rounded">
-                                                            <p class="mb-0 text-white">Overall</p>
-                                                            <p class="mb-0 text-white text-left">
-                                                                <strong>{{ $qualityRating }}</strong></p>
-                                                        </div>
+{{--                                                        <div--}}
+{{--                                                            class="col-12 p-2 cqc-left d-flex flex-column justify-content-center align-items-start bg-{{ str_slug($qualityRating) }} text-white rounded">--}}
+{{--                                                            <p class="mb-0 text-white">Overall</p>--}}
+{{--                                                            <p class="mb-0 text-white text-left">--}}
+{{--                                                                <strong>{{ $qualityRating }}</strong></p>--}}
+{{--                                                        </div>--}}
                                                         <div class="col-12 cqc-right">
                                                             <div class="cqc-table">
                                                                 <div class="cqc-row d-flex justify-content-between">
@@ -125,13 +125,13 @@
                                                         data-toggle="collapse"
                                                         data-target="#collapseTwo_{{ $id }}" aria-expanded="false"
                                                         aria-controls="collapseTwo_{{ $id }}">
-                                                    <p>Waiting Time</p>
-                                                    <p class="pt-0">{{ $waitTime }} Weeks</p>
+                                                    <p class="rating-name">Waiting Time</p>
+                                                    <p class="rating-value pt-0">{{ $waitTime }} Weeks</p>
 
                                                 </button>
                                             </h2>
                                         </div>
-                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo_{{ $id }}"
+                                        <div id="collapseTwo_{{ $id }}" class="collapse" aria-labelledby="headingTwo_{{ $id }}"
                                              data-parent="#hospital_stats">
                                             <div class="card-body">
                                                 <div>
@@ -184,8 +184,8 @@
                                                     data-toggle="collapse"
                                                     data-target="#collapseThree_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseThree_{{ $id }}">
-                                                <p>NHS User Rating</p>
-                                                <p>{!! html_entity_decode($stars) !!}</p>
+                                                <p class="rating-name">NHS User Rating</p>
+                                                <p class="rating-value">{!! html_entity_decode($stars) !!}</p>
                                             </button>
                                         </h2>
                                     </div>
@@ -216,8 +216,8 @@
                                                     data-toggle="collapse"
                                                     data-target="#collapseFour_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseFour_{{ $id }}">
-                                                <p>Operations Cancelled</p>
-                                                <p>{{ $opCancelled ?? 'No data'}}</p>
+                                                <p class="rating-name">Operations Cancelled</p>
+                                                <p class="rating-value">{{ $opCancelled ?? 'No data'}}</p>
                                             </button>
                                         </h2>
                                     </div>
@@ -239,8 +239,8 @@
                                                     data-toggle="collapse"
                                                     data-target="#collapseFive_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseFive_{{ $id }}">
-                                                <p>Friends and Family Rating</p>
-                                                <p>{{ $FFRating ?? 'No data'}}</p>
+                                                <p class="rating-name">Friends and Family Rating</p>
+                                                <p class="rating-value">{{ $FFRating ?? 'No data'}}</p>
                                             </button>
                                         </h2>
                                     </div>
@@ -262,8 +262,8 @@
                                                     data-toggle="collapse"
                                                     data-target="#collapseSix_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseSix_{{ $id }}">
-                                                <p>NHS Funded Work</p>
-                                                <p>
+                                                <p class="rating-name">NHS Funded Work</p>
+                                                <p class="rating-value">
                                                     {!! ($NHSClass == 'nhs-hospital') || ($NHSClass == 'private-hospital') && !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                                                 </p>
                                             </button>
@@ -287,8 +287,8 @@
                 <div class="tab-pane col-12" id="profile_{{ $id }}" role="tabpanel"
                      aria-labelledby="profile-tab">
                     <div class="row">
-                        <div class="col-12 col-md-6 mb-3">
-                            <div class="carousel-wrapper position-relative pl-md-5">
+                        <div class="col-12 mb-3">
+                            <div class="carousel-wrapper position-relative">
                                 <div id="carousel-thumb_{{ $id }}"
                                      class="carousel slide carousel-slide carousel-thumbnails" data-ride="carousel"
                                      data-interval="false">
@@ -375,7 +375,7 @@
                                 {{--                                        ])--}}
                             </div>
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="col-12">
                             <div class="profile-intro">
                                 <p class="">Situated in London, this hospital provides private
                                     patients with outstanding medical
@@ -393,7 +393,7 @@
                                     facilities include:</p>
                             </div>
                             <div class="row">
-                                <div class="col-12 col-md-6">
+                                <div class="col-12">
                                     <p class=" SofiaPro-SemiBold">First list</p>
                                     <ul class="blue-dot blue-dot_small">
                                         <li>First thing</li>
@@ -407,7 +407,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-12 col-md-6">
+                                <div class="col-12">
                                     <p class=" SofiaPro-SemiBold">Second list</p>
                                     <ul class="blue-dot blue-dot_small">
                                         <li>First thing</li>
@@ -430,13 +430,8 @@
                      aria-labelledby="map-tab">
                     <div class="row">
                         <div class="corporate-content-details d-flex col-12 mb-3">
-                            {{--                                <div class="img-wrap mr-4">--}}
-                            {{--                                    <img class="image" width="173" height="158"--}}
-                            {{--                                         src="images/alder-1.jpg"--}}
-                            {{--                                         alt="Image of {{ $hospitalTitle }}">--}}
-                            {{--                                </div>--}}
                             <div class="address">
-                                {!! $address !!}
+                                {!! $town !!},&nbsp;{{ $postcode }}
                             </div>
                         </div>
                         <div class="col-12">

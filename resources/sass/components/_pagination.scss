@@ -18,6 +18,21 @@
     .mobile-current-page {
         @include font-size(20);
     }
+
+    .pagination-arrow {
+        height: 30px;
+        width: 15px;
+
+        path {
+            fill: $paginationColor;
+        }
+    }
+
+    .disabled {
+        path {
+            fill: $paginationDisabledColor;
+        }
+    }
 }
 
 .pagination {

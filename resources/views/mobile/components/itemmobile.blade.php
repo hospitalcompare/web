@@ -1,5 +1,5 @@
 <div class="result-item result-item-mobile col-12 col-md-6 mb-3" id="result-item_{{ $id }}">
-    <div class="result-item-inner position-relative shadow p-3 pt-5">
+    <div class="result-item-inner position-relative shadow p-3 pt-5 h-100 d-flex flex-column">
         <div class="item-tags position-absolute d-flex">
             <div
                 class="{{$NHSClass}} hospital-type pp-2 {{ $NHSClass == 'private-hospital' ? 'bg-violet' : 'bg-blue' }} position-relative d-inline-block">
@@ -175,7 +175,7 @@
             {{-- NHS user rating --}}
             <div class="result-item-section-2__child mb-2">
                 <p>NHS User Rating</p>
-                <p class=" d-flex  SofiaPro-Medium"
+                <p class="d-flex SofiaPro-Medium"
                     @include('components.basic.popover', [
                         'placement'         => 'bottom',
                         'trigger'           => 'click',
@@ -193,14 +193,14 @@
                 </p>
             </div>
             {{-- Click for self pay --}}
-            <div class="result-item-section-2__child justify-content-between">
+            <div class="result-item-section-2__child justify-content-between align-items-center">
                 @if(!empty($privateSelfPay))
                     @if($NHSClass == 'private-hospital')
                         @include('components.basic.modalbutton', [
                                 'hrefValue'         => $url,
                                 'hospitalTitle'     => $title,
-                                'modalTarget'       => '#hc_modal_enquire_private',
-                                'classTitle'        => 'btn btn-link enquire-prices mb-3 mr-auto p-0',
+                                'modalTarget'       => '#hc_modal_mobile_enquire_private',
+                                'classTitle'        => 'btn btn-link enquire-prices mr-auto p-0 w-50',
                                 'target'            => 'blank',
                                 'modalText'         => 'This is the text about prices',
                                 'hospitalIds'       => $id,
@@ -212,20 +212,17 @@
                     {{--                    <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>--}}
                 @endif
                 @if(!empty($specialOffers))
-                    <div class="d-inline-block">
-                        @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
-                            'class' => 'default'])
-                        @include('components.basic.button', [
-                            'classTitle'        => 'toggle-special-offer btn btn-icon btn-link btn-special-offer btn-special-offer_mobile pl-5 col-pink rounded-0',
-                            'htmlButton'        => true,
-                            'id'                => 'special_' . $id,
-                            'buttonText'        => 'Special Offers',
-                            'svg'               => 'special-pink'])
-                    </div>
+                    @include('components.basic.modalbutton', [
+                        'classTitle'        => 'toggle-special-offer btn btn-icon btn-link btn-special-offer btn-special-offer_mobile pl-5 col-pink rounded-0 w-50',
+                        'htmlButton'        => true,
+                        'modalTarget'       => '#hc_modal_mobile_special_offer_' . $id,
+                        'id'                => 'special_' . $id,
+                        'buttonText'        => 'Special Offers',
+                        'svg'               => 'special-pink'])
                 @endif
             </div>
         </div>
-        <div class="result-item-mobile-section-3 w-100">
+        <div class="result-item-mobile-section-3 w-100 mt-auto">
             <div class="row">
                 <!-- More info button -->
                 <div class="button-wrapper col-6">
@@ -245,7 +242,7 @@
                             'hospitalType'      => $NHSClass,
                             'hrefValue'         => $url,
                             'hospitalTitle'     => $title,
-                            'modalTarget'       => '#hc_modal_enquire_private',
+                            'modalTarget'       => '#hc_modal_mobile_enquire_private',
                             'classTitle'        => 'btn btn-squared btn-enquire btn-squared_slim btn-blue text-center enquiry btn-enquiry font-12 w-100 text-center d-flex justify-content-center align-items-center flex-row-reverse px-3',
                             'target'            => 'blank',
                             'buttonText'        => $btnText,
@@ -273,4 +270,9 @@
             </div>
         </div>
     </div>
+    {{-- Modal for special offer --}}
+    @if(!empty($specialOffers))
+        @includeWhen(!empty($specialOffers), 'mobile.components.modals.modalmobilespecialoffer', [
+            'class' => 'default'])
+    @endif
 </div>
