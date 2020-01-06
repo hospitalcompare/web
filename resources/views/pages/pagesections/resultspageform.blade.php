@@ -155,8 +155,6 @@
                         'svg'                   => 'chevron-down',
                         'selectClass'           => 'select-picker highlight-search-dropdown',
                         'name'                  =>'procedure_id'
-{{--                        'placeholder'           => 'Treatment',--}}
-{{--                        'labelClass'            => 'font-14 SofiaPro-Medium'--}}
                     ])
                     <a tabindex="0" data-offset="0 5px"
                        class="help-link"
@@ -168,26 +166,18 @@
                         'html'           => 'true',
                         'trigger'        => 'hover',
                         'content'        => '
-{{--                        <p class="SofiaPro-Medium mb-0">--}}
-{{--                                         Surgery Type--}}
-{{--                                     </p>--}}
-                                     <p>
-                                         Select your treatment if known.
-                                     </p>
-{{--                                     <p>--}}
-{{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
-{{--                                     </p>--}}
-                                     '])
+                        '])
                     >@svg('question')</a>
                 </div>
                 <div class="postcode-radius-child postcode col-12 col-md-3 d-flex align-items-center">
                     @include('components.basic.input', [
-                        'placeholder' => 'Enter your postcode',
-                        'validation' => 'maxlength=8',
-                        'inputClassName' => 'inputClass',
-                        'value' => !empty(Request::input('postcode')) && empty($hc_errors) ? Request::input('postcode') : '' ,
-                        'name' => 'postcode',
-                        'id' => 'input_postcode'])
+                        'placeholder'               => 'Enter your postcode',
+                        'validation'                => 'maxlength=8',
+                        'inputParentClassName'      => 'w-100',
+                        'inputClassName'            => 'inputClass',
+                        'value'                     => !empty(Request::input('postcode')) && empty($hc_errors) ? Request::input('postcode') : '' ,
+                        'name'                      => 'postcode',
+                        'id'                        => 'input_postcode'])
                     <a tabindex="0" data-offset="0 5px"
                        class="help-link"
                        style="right: 53px"

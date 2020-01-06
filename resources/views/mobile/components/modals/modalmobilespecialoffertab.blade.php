@@ -18,19 +18,9 @@
                 <p class="mb-2 SofiaPro-SemiBold font-16">{{ $specialOffer['name'] }}</p>
                 <p class="col-grey mb-1"> {{ !empty($d['radius']) ? round($d['radius'], 1) . ' miles away' : '' }}</p>
             </div>
-{{--            <div class="img-wrap w-100">--}}
-{{--                <img class="w-100"--}}
-{{--                     src="images/alder-1.jpg"--}}
-{{--                     alt="Image of {{ $specialOffer['name'] }}">--}}
-{{--            </div>--}}
             <div class="modal-body p-3">
                 <div class="special-offers_mobile">
                     <div class="">
-{{--                        <div class="">--}}
-{{--                            <p class="special-offer-copy font-16 SofiaPro-Medium">Get your Knee operation done in under 2 weeks on our--}}
-{{--                                self-pay--}}
-{{--                                programme for £8,999 (reduced from £10,500).</p>--}}
-{{--                        </div>--}}
                         <div>
                             <ul class="mr-0 mb-3 font-16 SofiaPro-Medium">
                                 <li class="pink-tick">{{ number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1).' Weeks ' }}</li>
@@ -66,39 +56,3 @@
         </div>
     </div>
 </div>
-
-
-{{--@if(!empty($data['special_offers']))--}}
-{{--    <ul class="solutions-menu align-items-end d-md-flex mb-0 ml-auto w-50">--}}
-{{--        @foreach($specialOffers as $key => $specialOffer )--}}
-{{--            @if($loop->first)--}}
-{{--                <li class="d-block h-100">--}}
-{{--                    @include('components.basic.specialoffertab', [--}}
-{{--                        'bgColor' => 'pink',--}}
-{{--                        'headerText' => [--}}
-{{--                            'open' => [--}}
-{{--                                'title' => $specialOffer['name'],--}}
-{{--                                'subtitle' => !empty($specialOffer['radius']) ? round($specialOffer['radius'], 1) . ' miles away' : ''--}}
-{{--                            ],--}}
-{{--                            'closed' => [--}}
-{{--                                'title' => 'NHS funded operation',--}}
-{{--                                'subtitle' => ((empty($data['outstanding']) ?--}}
-{{--                                    'at '.$specialOffer['rating']['latest_rating'].' hospital ' :--}}
-{{--                                     'in '.number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1).' Weeks '). (!empty($specialOffer['radius']) ? round($specialOffer['radius'], 1) . ' miles away' : ''))--}}
-{{--                            ]--}}
-{{--                        ],--}}
-{{--                        'bulletPoints' => [--}}
-{{--                            number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1).' Weeks ',--}}
-{{--                            $specialOffer['rating']['latest_rating'] . ' CQC Rating',--}}
-{{--                            (!empty($specialOffer['rating']['avg_user_rating'])) ? $specialOffer['rating']['avg_user_rating'] . ' star NHS Choices user rating' : null--}}
-{{--                        ],--}}
-{{--                        'offerPrice'    => null,--}}
-{{--                        'hospitalType'  => $specialOffer['hospital_type']['name'] == 'Independent' ? 'private-hospital' : 'nhs-hospital',--}}
-{{--                        'hospitalUrl'   => $specialOffer['url'],--}}
-{{--                        'hospitalId'    => $specialOffer['id']--}}
-{{--                    ])--}}
-{{--                </li>--}}
-{{--            @endif--}}
-{{--        @endforeach--}}
-{{--    </ul>--}}
-{{--@endif--}}
