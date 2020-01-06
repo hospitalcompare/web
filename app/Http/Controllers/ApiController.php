@@ -17,6 +17,7 @@ use App\Models\Specialty;
 use App\Models\Trust;
 use App\Services\Location;
 use Request;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class ApiController {
 
@@ -196,7 +197,7 @@ class ApiController {
                 }
 
                 $hospital = $hospital->toArray();
-                $hospital['image'] = \File::exists("images/hospitals/{$hospital['location_id']}.jpg") ? "images/hospitals/{$hospital['location_id']}.jpg" : "images/hospitals/no_image.png";
+                $hospital['image'] = \File::exists("images/hospitals/{$hospital['location_id']}_thumb.jpg") ? "images/hospitals/{$hospital['location_id']}_thumb.jpg" : "images/hospitals/no_image.png";
                 $data[] = $hospital;
             }
 
@@ -390,6 +391,34 @@ class ApiController {
 
         $this->returnedData['success'] = true;
         $this->returnedData['data'] = Utils::createEnquiriesCsv($startDate, $endDate);
+        return $this->returnedData;
+    }
+
+    public function createHospitalImagesThumbs() {
+        //Get all the files
+        $path = resource_path('images/hospitals');
+        $files = \File::files($path);
+
+        $this->returnedData['success'] = false;
+        $this->returnedData['data'] = [];
+
+
+        //Parse through all the images
+        foreach($files as $image) {
+            $filename    = $image->getBaseName('.jpg');
+
+            //Check if the image already has a thumbnail
+            if(!file_exists($path. '/' .$filename.'_thumb.jpg') && strpos($filename, '_thumb') === false) {
+                $image_resize = Image::make($image->getRealPath());
+                //Resize the image as a thumbnail
+                $image_resize->resize(300, 300);
+                //Save the image
+                $image_resize->save($path. '/' .$filename.'_thumb.jpg');
+                $this->returnedData['data'][] = $filename;
+            }
+        }
+
+        $this->returnedData['success'] = true;
         return $this->returnedData;
     }
 }
