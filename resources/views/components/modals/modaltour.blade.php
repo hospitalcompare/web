@@ -19,36 +19,12 @@
             <div class="modal-body p-3 position-relative">
                 <div class="carousel-wrapper position-relative">
                     <!-- Slide number indicator -->
-                    <div id="carousel_tour" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <div id="carousel_tour" class="carousel slide _carousel-fade" data-ride="carousel" data-interval="false">
                         <!--Slides-->
 
                         <!--/.Slides-->
                         <div class="carousel-inner position-relative" role="listbox">
                             <div class="carousel-item active">
-                                <div class="carousel-item-inner">
-                                    <div class="row">
-                                        <div class="carousel-item-copy col-4">
-                                            <h5>How to Use...</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor
-                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                quis nostrud
-                                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                                Duis aute irure
-                                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                                nulla pariatur.
-                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                                officia
-                                                deserunt mollit anim id est laborum.</p>
-                                        </div>
-                                        <div class="carousel-item-image col-8">
-                                            <img class="d-block h-100 w-100 content"
-                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
                                 <div class="carousel-item-inner">
                                     <div class="row">
                                         <div class="carousel-item-copy col-4">

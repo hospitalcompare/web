@@ -168,6 +168,10 @@
             left: 0;
             bottom: 1rem;
 
+            .row {
+                @include reset-row-spacing(8px);
+            }
+
             .carousel-indicators {
                 position: static;
 
