@@ -238,7 +238,7 @@ input[type=submit] {
 // Larger input/select
 input.big,
 select.big {
-    font-size: 18px;
+    @include font-size(16);
     font-weight: 500;
     //height: 60px;
     //line-height: 60px;
@@ -495,6 +495,22 @@ path {
     padding: 0 0 0 15px;
     text-align: left;
 
+    &:before {
+        content: '';
+        background-image: url('/images/icons/icon-tick.svg');
+        @include icon-bg-center(100%);
+        position: relative;
+        display: inline-block;
+        top: 2px;
+        margin-right: 6px;
+        //top: $green-tick-size * 0.4;
+        left: 0;
+        width: $green-tick-size;
+        height: $green-tick-size;
+    }
+}
+
+.green-tick-large {
     &:before {
         content: '';
         background-image: url('/images/icons/icon-tick.svg');

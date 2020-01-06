@@ -56,17 +56,17 @@
 
     .postcode-parent {
         .input-wrapper {
-            &:before {
-                content: '';
-                background-image: url('/images/icons/icon-location.svg');
-                @include icon-bg-center(100%, 15px, 25px);
-                @include v-c;
-                left: 20px;
-            }
-
-            input {
-                padding-left: 50px;
-            }
+            //&:before {
+            //    content: '';
+            //    background-image: url('/images/icons/icon-location.svg');
+            //    @include icon-bg-center(100%, 15px, 25px);
+            //    @include v-c;
+            //    left: 20px;
+            //}
+            //
+            //input {
+            //    padding-left: 50px;
+            //}
         }
     }
 
