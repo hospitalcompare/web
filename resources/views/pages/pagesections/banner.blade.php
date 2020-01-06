@@ -2,14 +2,13 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="banner-text col col-12 col-lg-6">
-                <h1>Choose the <span class="col-turq">Right Hospital&nbsp;</span>for your&nbsp;<span class="col-turq">Treatment</span></h1>
-                <h3 class="font-20 d-lg-none">Find which NHS and Private hospitals are available and fully funded.</h3>
-                <p class="col-grey d-none d-lg-block">The quality of care and waiting times in England vary greatly between hospitals. You have the
-                    legal right to
-                    choose where to have your treatment*. It can be at: </p>
+                <h1>Choose the <span class="col-turq">Right Hospital&nbsp;</span>for <span class="col-turq">Your&nbsp;Treatment</span></h1>
+                <h3 class="font-20 d-lg-none">Find the best quality hospitals and shortest waiting times, locally or across England.</h3>
+                <p class="col-grey d-none d-lg-block">Did you know: </p>
                 <ul class="banner-list col-grey  d-none d-lg-block">
-                    <li class="green-tick green-tick-large">An NHS or private hospital, funded by the NHS</li>
-                    <li class="green-tick green-tick-large">A private hospital of your choice, paid for by you or your insurance</li>
+                    <li class="green-tick green-tick-large">Waiting times and quality of care vary greatly across the country</li>
+                    <li class="green-tick green-tick-large">Your legal right to choose where you have your NHS treatment includes both NHS and private hospitals</li>
+                    <li class="green-tick green-tick-large">You can also use Hospital Compare to select a private or NHS hospital, paid for by you or your insurance</li>
                 </ul>
             </div>
             <div class="col col-lg-6 col-12">
