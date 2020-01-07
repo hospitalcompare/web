@@ -67,11 +67,11 @@
 
         <div class="container">
             <p class="mb-4">
-                *your legal right to choose may be restricted in some circumstances.
+            *Your legal right to choose or qualify for NHS treatment may be restricted in some circumstances.
                 For more
                 information see <a
                     class="text-link"
-                    href="/your-rights">Your Rights</a>
+                    href="/your-rights">Your Rights.</a>
             </p>
             <p><time>{{ date('Y') }}</time><a href="/"> Hospital Compare<sup>TM</sup></a>. All rights reserved</p>
           </div>
