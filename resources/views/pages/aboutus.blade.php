@@ -15,10 +15,11 @@
     <section class="about-us-intro">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-md-6">
                     <h1>Feel <span class="col-turq">better faster</span> by<br>knowing your legal<br> right to choose
                     </h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi cupiditate error natus,
+                    <p class="col-grey p-secondary mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Aliquam animi cupiditate error natus,
                         necessitatibus quos ratione reprehenderit voluptatem voluptatibus. Alias exercitationem maiores
                         saepe sed voluptates?</p>
                     <div class="btn-area mb-5">
@@ -30,7 +31,7 @@
                         ])
                         @include('components.basic.button', [
                             'classTitle'        => 'btn btn-link',
-                            'buttonText'        => 'Read our FAQs',
+                            'buttonText'        => 'Read our FAQs →',
                             'hrefValue'         => '/faqs',
                             'svg'               => 'chevron-right'
                         ])
@@ -46,12 +47,13 @@
     <section>
         <div class="container">
             <div class="row mb-5">
-                <div class="col-10 offset-1">
-                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem et facere
+                <div class="col-12 col-lg-8 offset-lg-2">
+                    <h3 class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem et facere
                         ipsum laboriosam magnam
                         maxime nesciunt rerum temporibus vitae voluptate! Accusamus architecto beatae harum, inventore
-                        nemo praesentium quidem ullam? Reiciendis!</p>
-                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum,
+                        nemo praesentium quidem ullam? Reiciendis!</h3>
+                    <p class="col-grey p-secondary text-center">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Ab cum,
                         perferendis? A ad at atque
                         autem blanditiis consectetur dicta dignissimos dolor dolore doloremque est eum facilis fugit
                         inventore, itaque maxime modi mollitia nam nesciunt officiis qui recusandae rem sequi similique
@@ -59,79 +61,92 @@
                 </div>
             </div>
             <div class="row ">
-                <div class="col-4">
-                    <div class="col-inner text-center bg-greylight p-4 SofiaPro-Medium">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias consectetur doloribus ducimus
-                        eligendi eos esse incidunt magni neque placeat?
+                <div class="col-md-4">
+                    <div class="feature-box col-inner text-center bg-greylight p-4 SofiaPro-Medium font-14">
+                        <p class="lh-16 SofiaPro-SemiBold">Informing you of the choices available to you in law for your
+                            hospital treatment</p>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="col-inner text-center bg-greylight p-4 SofiaPro-Medium">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias consectetur doloribus ducimus
-                        eligendi eos esse incidunt magni neque placeat?
+                <div class="col-md-4">
+                    <div class="feature-box col-inner text-center bg-greylight p-4 SofiaPro-Medium font-14">
+                        <p class="lh-16 SofiaPro-SemiBold">Helping you choose the best hospital in England for your
+                            treatment</p>
                     </div>
                 </div>
-                <div class="col-4">
-                    <div class="col-inner text-center bg-greylight p-4 SofiaPro-Medium">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias consectetur doloribus ducimus
-                        eligendi eos esse incidunt magni neque placeat?
+                <div class="col-md-4">
+                    <div class="feature-box col-inner text-center bg-greylight p-4 SofiaPro-Medium font-14">
+                        <p class="lh-16 SofiaPro-SemiBold">Helping you to understand your available choices to have your
+                            hospital treatment performed</p>
                     </div>
                 </div>
+
                 <div class="col-5 offset-5 my-3">
-                    <div class="swirl">
+                    <div class="swirl svg-wrapper animated mb-4" data-animation="draw">
                         @svg('icon-swirl')
                     </div>
                 </div>
+            </div>
+            <div class="row understanding-choices">
                 <div class="col-12">
-                    <h2 class="text-center">Understand your available choices</h2>
+                    <h2 class="text-center mb-5">Understand your available choices</h2>
                 </div>
-                <div class="col-3">
+                <div class="col-md-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
                             @svg('icon-understanding-choices-1')
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
+                        <p class="col-grey p-secondary">Sooner, by comparing waiting times at different hospitals</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-md-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
                             @svg('icon-understanding-choices-2')
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
+                        <p class="col-grey p-secondary">At the best quality hospital, by comparing hospital quality
+                            rankings</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-md-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
                             @svg('icon-understanding-choices-3')
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
+                        <p class="col-grey p-secondary">At a private hospital paid for by the NHS or paid by yourself,
+                            or by your insurer, if that is
+                            your preference</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-md-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
                             @svg('icon-understanding-choices-4')
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, voluptatum!</p>
+                        <p class="col-grey p-secondary">To bring you self-pay offers from time to time, provided by
+                            private hospitals, so you can
+                            have your treatment performed quicker and more cost effectively, if you or your insurer wish
+                            to pay</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section>
+    <section class="about-impartial">
         <div class="container">
             <div class="row">
-                <div class="col-6 offset-3">
-                    <div class="image-wrapper mb-4">
-                        <img src="/images/video_placeholder.jpg" alt="People in a meetin talking">
+                <div class="col-12 col-lg-6 offset-lg-3">
+                    <div class="image-wrapper mb-5">
+                        <img class="about-img" src="images/video_placeholder.jpg" alt="People in a meetin talking">
+                        <img class="about-dots" src="images/about-dots.svg" alt="People in a meetin talking">
+                        <img class="about-circle" src="images/about-circle.svg" alt="People in a meetin talking">
                     </div>
                     <h2>Impartial Advice: NHS vs Private</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusamus ad autem beatae
+                    <p class="col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A,
+                        accusamus ad autem beatae
                         dignissimos dolor eveniet explicabo impedit labore nulla, praesentium ut veniam voluptatem.
                         Consequuntur explicabo inventore minima odio provident?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusamus ad autem beatae
+                    <p class="col-grey p-secondary mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A,
+                        accusamus ad autem beatae
                         dignissimos dolor eveniet explicabo impedit labore nulla, praesentium ut veniam voluptatem.
                         Consequuntur explicabo inventore minima odio provident?</p>
                     @include('components.basic.button', [
@@ -234,47 +249,45 @@
         <div class="container">
             <div class="row">
                 <div class="col col-12">
-                    <h2 class="SofiaPro-SemiBold font-28 text-center">Our Background</h2>
+                    <h2 class="SofiaPro-SemiBold font-28 text-center mb-5">Our Background</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-10 offset-1">
+                <div class="col-12 col-lg-8 offset-lg-2">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-md-6 mb-4">
                             <div class="icon-wrapper mb-3">
                                 <img src="{{asset('/images/icons/icon-our-background-1.svg')}}" alt="Comparison icon">
                             </div>
-                            <p class="mb-3 SofiaPro-SemiBold">Comparison Website</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque delectus dicta nemo odio
-                                optio quaerat quos similique temporibus unde voluptas. Dignissimos, ducimus nam neque
-                                nihil omnis perferendis quibusdam soluta velit!</p>
+                            <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>
+                            <p class="col-grey p-secondary">Hospital Compare is the unique healthcare comparison website
+                                that empowers you to know rights and make the best choices for your treatment.</p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6 mb-4">
                             <div class="icon-wrapper mb-3">
                                 <img src="{{asset('/images/icons/icon-our-background-2.svg')}}" alt="Clock icon">
                             </div>
-                            <p class="mb-3 SofiaPro-SemiBold">Comparison Website</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque delectus dicta nemo odio
-                                optio quaerat quos similique temporibus unde voluptas. Dignissimos, ducimus nam neque
-                                nihil omnis perferendis quibusdam soluta velit!</p>
+                            <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>
+                            <p class="col-grey p-secondary">It’s a fact that waiting times and quality of care in
+                                hospitals across the country can vary greatly, with millions of people patiently waiting
+                                for treatment (some already longer than the NHS’ 18 week target).</p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6 mb-4">
                             <div class="icon-wrapper mb-3">
                                 <img src="{{asset('/images/icons/icon-our-background-3.svg')}}" alt="Gavel icon">
                             </div>
-                            <p class="mb-3 SofiaPro-SemiBold">Comparison Website</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque delectus dicta nemo odio
-                                optio quaerat quos similique temporibus unde voluptas. Dignissimos, ducimus nam neque
-                                nihil omnis perferendis quibusdam soluta velit!</p>
+                            <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>
+                            <p class="col-grey p-secondary">Many people across England aren’t aware of their legal
+                                rights when it comes to their healthcare… legal rights that could in fact help them or
+                                their loved feel better faster.</p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6 mb-4">
                             <div class="icon-wrapper mb-3">
                                 <img src="{{asset('/images/icons/icon-our-background-4.svg')}}" alt="Calendar icon">
                             </div>
-                            <p class="mb-3 SofiaPro-SemiBold">Comparison Website</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque delectus dicta nemo odio
-                                optio quaerat quos similique temporibus unde voluptas. Dignissimos, ducimus nam neque
-                                nihil omnis perferendis quibusdam soluta velit!</p>
+                            <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>
+                            <p class="col-grey p-secondary">By knowing and acting upon their legal rights, many patients
+                                could slash their waiting times and be treated quicker.</p>
                         </div>
                     </div>
                 </div>

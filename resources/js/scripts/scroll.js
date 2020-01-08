@@ -39,7 +39,9 @@ var sticknav = function () {
         lazyloaders.each(function (i) {
             var top_of_object = $(this).offset().top;
             if (bottom_of_window > (top_of_object + revealpoint)) {
-                $(this).addClass($(this).data('animation'));
+                $(this)
+                    .addClass($(this)
+                    .data('animation'));
                 // } else {
                 //     $(this).removeClass($(this).data('animation'));
             }

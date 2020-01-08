@@ -53,6 +53,10 @@ body {
     fill: $turq;
 }
 
+.fill-white {
+    fill: #fff;
+}
+
 .fill-turq path {
     fill: $turq;
 }
@@ -561,7 +565,6 @@ path {
 .signature {
     font-family: "Brown Pen", cursive;
     @include font-size(28);
-    font-weight: bold;
 }
 
 .border {

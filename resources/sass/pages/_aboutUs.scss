@@ -1,8 +1,59 @@
+.about-us-page {
+    .signature {
+        @include font-size(3rem);
+    }
+
+    .feature-box {
+        padding: 4rem 2rem !important;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+            height: auto !important;
+        }
+    }
+
+    .understanding-choices {
+        .icon-wrapper {
+            width: 70px;
+            margin: 0 auto;
+        }
+    }
+
+    .about-dots {
+        position: absolute;
+        top: -30px;
+        right: -2px;
+        width: 36px !important;
+    }
+
+    .about-circle {
+        position: absolute;
+        top: -42px;
+        right: -50px;
+        width: 320px !important;
+        z-index: -1;
+    }
+
+    .about-impartial {
+        background-image: url(../images/about-corner.svg);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        border-bottom: 1px solid #ededed;
+        background-size: 20%;
+        padding: 0 0 75px !important;
+    }
+}
+
 .about-us-intro {
-    background-image: url('/images/about-hero.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
+    @include media-breakpoint-up(md) {
+        background-image: url('/images/layer_16.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right 75px;
+    }
     border-bottom: $greyBorder;
 }
 
