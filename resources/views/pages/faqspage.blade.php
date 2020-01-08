@@ -13,8 +13,8 @@
 @section('content')
     <section class="banner">
         <div class="container container-980 text-center position-relative">
-            <h1 class="mb-0">How can we <span class="col-turq">help</span>?</h1>
-            <h2 class="page-subtitle">Type a keyword into the search bar below and scroll down for all questions</h2>
+            <h1 class="mb-3">How can we <span class="col-turq">help</span>?</h1>
+            <h2 class="page-subtitle col-grey">Type a keyword into the search bar below and scroll down for all questions</h2>
             <div class="input-wrapper position-relative">
                 @svg('search-icon')
                 @include('components.basic.input', [
@@ -29,7 +29,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-greylight pt-5">
+    <section class="bg-greylight pt-5 section-space">
         <div class="container">
             <div class="accordion" id="faqs_accordion">
                 @if(!empty($data['faqs']))

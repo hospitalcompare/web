@@ -78,8 +78,29 @@
         @extend .border-bottom;
         @extend .mb-2;
         @extend .bg-white;
-        @include media-breakpoint-up(lg) {
-            padding: 2rem;
+        -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+
+        h2 button {
+            @include font-size(1.1rem);
+            color: $textDarkGrey;
+            //margin-bottom: 5px !important;
+            text-decoration: none !important;
+            padding: 2rem 6rem 2rem 2rem;
+
+            &:hover {
+                color: $turq !important;
+            }
+        }
+
+        .card-body {
+            padding: 0rem 2rem 2rem;
+            p {
+                @include font-size(1rem);
+                line-height: 1.6;
+                color: $textGrey !important;
+            }
         }
     }
 

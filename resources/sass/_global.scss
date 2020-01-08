@@ -681,7 +681,8 @@ h2 {
 }
 
 .page-subtitle {
-    @include font-size(28);
+    @include font-size(1.2rem);
+    line-height: 1.6;
     //@include font-style('SofiaPro-SemiBold', 28px, false, false, 35px, -1.45px);
 }
 
@@ -802,4 +803,8 @@ h6 {
         height: 80px;
         margin: 0 -1rem;
     }
+}
+
+.section-space {
+    padding: 75px 0 !important;
 }
