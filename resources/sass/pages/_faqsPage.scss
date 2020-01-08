@@ -7,7 +7,9 @@
     .input-wrapper {
         svg {
             @include v-c;
-            left: 35px;
+            left: 23px;
+            top: 48%;
+            width: 20px;
 
             path {
                 fill: $turq;
@@ -18,12 +20,12 @@
     input#faq_search_input {
         border: 2px solid $turq !important;
         border-radius: 5px !important;
-        padding: 12px 45px 12px 80px;
-        @include font-size(25);
+        padding: 22px 45px 22px 60px;
+        @include font-size(18);
 
         @include placeholder {
             //@include font-style(false, false, #000, false, false, -1.6px);
-            @include font-size(25);
+            @include font-size(18);
         }
     }
 
