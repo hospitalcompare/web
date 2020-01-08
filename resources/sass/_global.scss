@@ -568,11 +568,11 @@ path {
     &-right {
         &.border-green {
             border-right: 0 !important;
-            border-bottom: 2px solid $turq !important;
+            border-bottom: 2px solid $turq;
 
             @include media-breakpoint-up(md) {
                 border-right: 2px solid $turq !important;
-                border-bottom: none;
+                border-bottom: 0;
             }
         }
     }
