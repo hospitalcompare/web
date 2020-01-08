@@ -74,7 +74,10 @@
 
     &.btn-squared {
         border-radius: $border-radius;
-        padding: 25px 56px;
+        padding: 15px 26px;
+        @include media-breakpoint-up(md) {
+            padding: 25px 56px;
+        }
 
         &_slim {
             padding: 14px 26px;
@@ -479,6 +482,16 @@
     &:focus {
         color: $turq;
         text-decoration: none;
+    }
+}
+
+.btn-turq-link {
+    color: $turq;
+
+    &:hover,
+    &:focus {
+        color: $blue;
+        text-decoration: underline;
     }
 }
 

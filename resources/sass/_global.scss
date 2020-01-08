@@ -567,7 +567,12 @@ path {
 .border {
     &-right {
         &.border-green {
-            border-right: 2px solid $turq !important;
+            border-bottom: 2px solid $turq !important;
+
+            @include media-breakpoint-up(md) {
+                border-right: 2px solid $turq !important;
+                border-bottom: none;
+            }
         }
     }
 }

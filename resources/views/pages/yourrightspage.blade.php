@@ -27,12 +27,12 @@
                     <div class="p-30 bg-grey row">
                         <div class="card shadow mb-30 border-0 col-12">
                             <div class="row">
-                                <div class="col-12 col-md-4 col-lg-2">
-                                    <div class="card-icon-wrapper px-5 h-100 d-flex align-items-center">
+                                <div class="col-4 col-lg-2">
+                                    <div class="card-icon-wrapper px-md-5 h-100 d-flex align-items-center">
                                         @svg('icon-our-background-1', 'w-100')
                                     </div>
                                 </div>
-                                <div class="card-body col-12 col-md-8 col-lg-10">
+                                <div class="card-body col-8 col-lg-10">
                                     <p class="font-18 SofiaPro-Medium">Choice</p>
                                     <p>Putting Patients and the Public first and increasing the
                                         involvement of Patients in decisions affecting them and, importantly giving patients Choice
@@ -42,12 +42,12 @@
                         </div>
                         <div class="card shadow border-0 col-12">
                             <div class="row">
-                                <div class="col-12 col-md-4 col-lg-2">
-                                    <div class="card-icon-wrapper px-5 h-100 d-flex align-items-center">
+                                <div class="col-4 col-lg-2">
+                                    <div class="card-icon-wrapper px-md-5 h-100 d-flex align-items-center">
                                         @svg('icon-our-background-2', 'w-100')
                                     </div>
                                 </div>
-                                <div class="card-body col-12 col-md-8 col-lg-10">
+                                <div class="card-body col-8 col-lg-10">
                                     <p class="font-18 SofiaPro-Medium">NHS Tariff</p>
                                     <p>Introducing a national standard price for health care
                                         procedures known as the “NHS Tariff”.This was aimed at creating a level playing field for
@@ -103,7 +103,7 @@
     <section class="your-rights-what">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 offset-2 text-center mb-4">
+                <div class="col-lg-8 offset-lg-2 text-center mb-4">
                     <h2 class="font-28 SofiaPro-SemiBold">What this means for you as a Patient?</h2>
                     <p class="col-grey p-secondary">You have legal rights to choice of healthcare services delivered in the public or private sector
                         paid for by the NHS and you must be given these choices by law.
@@ -119,12 +119,12 @@
                     <div class="bg-white p-30 shadow">
                         <p class="font-24 SofiaPro-SemiBold text-center">You can:</p>
                         <ul class="row mb-0">
-                            <li class="col-6 border-right border-green">
+                            <li class="col-12 col-md-6 border-right border-green">
                                 <p class="green-tick tick-with-title">Choose a GP practice</p>
                                 <p>Choose which GP practice you register with.</p>
                             </li>
-                            <li class="col-6">
-                                <p class="green-tick tick-with-title">Ask a doctor or nurse</p>
+                            <li class="col-12 col-md-6">
+                                <p class="green-tick tick-with-title mt-3 mt-md-0">Ask a doctor or nurse</p>
                                 <p> Ask to see a particular doctor or nurse at the GP practice. Your practice must make every
                                     effort to meet your preferences to see the doctor or nurse you have asked for, although
                                     there are some occasions when this might not be possible.</p>
@@ -155,13 +155,13 @@
     @include('pages.pagesections.testimonials')
     <section class="bg-greylight">
         <div class="container">
-            <h2 class="font-28 SofiaPro-SemiBold text-center">Choosing your Hospital and Consultant</h2>
+            <h2 class="font-28 SofiaPro-Medium text-center">Choosing your Hospital and Consultant</h2>
             <div class="bg-white p-30 shadow mb-5">
-                <p class="font-24 SofiaPro-SemiBold text-center">You can:</p>
-                <ul class="row">
+                <p class="font-24 SofiaPro-Medium text-center">You can:</p>
+                <ul class="row mb-0">
                     <li class="col-6 border-right border-green">
                         <p class="green-tick tick-with-title">Choose the organisation</p>
-                        <p> Choose the organisation you need to be referred to as an NHS outpatient to see a consultant
+                        <p class="p-secondary col-grey"> Choose the organisation you need to be referred to as an NHS outpatient to see a consultant
                             or specialist (an outpatient appointment means you will not be admitted to a ward). You may
                             choose whenever you are referred for the first time for an appointment for a physical or
                             mental health condition. This could be an NHS hospital or a private sector hospital that has
@@ -169,8 +169,8 @@
                             hospitals. There are exceptions.</p>
                     </li>
                     <li class="col-6">
-                        <p class="green-tick tick-with-title">Choose which clinical team</p>
-                        <p>Choose which clinical team will be in charge of your NHS treatment within your chosen
+                        <p class="green-tick tick-with-title mt-3 mt-md-0">Choose which clinical team</p>
+                        <p class="p-secondary col-grey">Choose which clinical team will be in charge of your NHS treatment within your chosen
                             organisation. For a physical health condition, you will be seen by the consultant or by a
                             clinician who works in the consultant’s team. For a mental health condition, you will be
                             seen by the consultant or named healthcare professional who leads the mental health team or
@@ -180,10 +180,10 @@
             </div>
             <div class="row">
                 <div class="col-8 offset-2">
-                    <p class="SofiaPro-SemiBold">Essentially, you should always have a conversation with the healthcare professional who is
+                    <p class="SofiaPro-Medium font-24">Essentially, you should always have a conversation with the healthcare professional who is
                         referring you to discuss the choices available for you in your circumstances.
                     </p>
-                    <p>Hospital Compare exists to help you and healthcare professionals who are advising you to show you
+                    <p class="col-grey p-secondary">Hospital Compare exists to help you and healthcare professionals who are advising you to show you
                         in a clear and transparent way what your hospital choice options might be, and to compare these
                         choices with other hospitals offering similar services in your local area or further afield, in
                         England, if you are prepared to travel. This is relevant to you whether you are choosing a
@@ -191,7 +191,7 @@
                         the NHS Tariff) or if you are choosing a private hospital paid for by your healthcare insurer or
                         if you are paying for the procedure yourself.
                     </p>
-                    <p>Remember, choosing to have your procedure performed at a private hospital paid for by the NHS, is
+                    <p class="col-grey p-secondary">Remember, choosing to have your procedure performed at a private hospital paid for by the NHS, is
                         at no extra cost to the taxpayer.
                     </p>
                 </div>
@@ -201,19 +201,19 @@
     <section class="">
         <div class="container">
             <div class="row">
-                <div class="col col-md-8 offset-2 text-center">
-                    <p>If you want to find out more about your choices or the restrictions on your choices visit:
-                    </p>
+                <div class="col col-lg-6 offset-lg-3 text-center">
+                    <h3 class="SofiaPro-SemiBold mb-5">If you want to find out more about your choices or the restrictions on your choices visit:
+                    </h3>
                     <p>
-                        <a class="btn-link" target="_blank"
+                        <a class="btn-link btn-turq-link" target="_blank"
                            href="https://www.gov.uk/government/publications/the-nhs-choice-framework/the-nhs-choice-framework-what-choices-are-available-to-me-in-the-nhs"
                         >The NHS Choice Framework</a>
                     </p>
                     <p>
-                        <a class="btn-link" target="_blank" href="https://www.england.nhs.uk/?s=patient+choice">NHS England’s website</a>
+                        <a class="btn-link btn-turq-link" target="_blank" href="https://www.england.nhs.uk/?s=patient+choice">NHS England’s website</a>
                     </p>
                     <p>
-                        <a class="btn-link" target="_blank"
+                        <a class="btn-link btn-turq-link" target="_blank"
                            href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england">NHS Constitution</a>
                     </p>
                 </div>
