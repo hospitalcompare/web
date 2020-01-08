@@ -567,6 +567,7 @@ path {
 .border {
     &-right {
         &.border-green {
+            border-right: 0 !important;
             border-bottom: 2px solid $turq !important;
 
             @include media-breakpoint-up(md) {

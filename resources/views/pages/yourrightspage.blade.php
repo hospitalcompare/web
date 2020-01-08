@@ -159,7 +159,7 @@
             <div class="bg-white p-30 shadow mb-5">
                 <p class="font-24 SofiaPro-Medium text-center">You can:</p>
                 <ul class="row mb-0">
-                    <li class="col-6 border-right border-green">
+                    <li class="col-md-6 border-right border-green">
                         <p class="green-tick tick-with-title">Choose the organisation</p>
                         <p class="p-secondary col-grey"> Choose the organisation you need to be referred to as an NHS outpatient to see a consultant
                             or specialist (an outpatient appointment means you will not be admitted to a ward). You may
@@ -168,7 +168,7 @@
                             contracted to provide these services at the NHS Tariff, which in practice is most private
                             hospitals. There are exceptions.</p>
                     </li>
-                    <li class="col-6">
+                    <li class="col-md-6">
                         <p class="green-tick tick-with-title mt-3 mt-md-0">Choose which clinical team</p>
                         <p class="p-secondary col-grey">Choose which clinical team will be in charge of your NHS treatment within your chosen
                             organisation. For a physical health condition, you will be seen by the consultant or by a
@@ -179,7 +179,7 @@
                 </ul>
             </div>
             <div class="row">
-                <div class="col-8 offset-2">
+                <div class="col-12 col-lg-6 offset-lg-3">
                     <p class="SofiaPro-Medium font-24">Essentially, you should always have a conversation with the healthcare professional who is
                         referring you to discuss the choices available for you in your circumstances.
                     </p>
