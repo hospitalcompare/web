@@ -197,7 +197,7 @@ class ApiController {
                 }
 
                 $hospital = $hospital->toArray();
-                $hospital['image'] = \File::exists("images/hospitals/{$hospital['location_id']}_thumb.jpg") ? "images/hospitals/{$hospital['location_id']}_thumb.jpg" : "images/hospitals/no_image.png";
+                $hospital['image'] = \File::exists("images/hospitals/{$hospital['location_id']}_thumb.jpg") ? "images/hospitals/{$hospital['location_id']}_thumb.jpg" : "images/alder-1.jpg";
                 $data[] = $hospital;
             }
 
