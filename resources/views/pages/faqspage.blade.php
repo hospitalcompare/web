@@ -16,15 +16,15 @@
             <h1 class="mb-3">How can we <span class="col-turq">help</span>?</h1>
             <h2 class="page-subtitle col-grey">Type a keyword into the search bar below and scroll down for all questions</h2>
             <div class="input-wrapper position-relative">
-                @svg('search-icon')
+                @svg('icon-search')
                 @include('components.basic.input', [
-                    'type'        => 'search',
-                    'results'     => '5',
-                    'id'          => 'faq_search_input',
-                    'inputClassName'   => 'w-100',
-                    'placeholder' => 'Search',
-                    'value'       => '',
-                    'name'        => 'search'
+                    'type'              => 'search',
+                    'results'           => '5',
+                    'id'                => 'faq_search_input',
+                    'inputClassName'    => 'w-100',
+                    'placeholder'       => 'Search',
+                    'value'             => '',
+                    'name'              => 'search'
                 ])
             </div>
         </div>
