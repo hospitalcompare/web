@@ -4,9 +4,10 @@
         <div id="menu_toggle" class="d-lg-none mr-auto"><img width="20px" height="20px"
                                                      src="{{URL::asset('/images/icons/icon-menu.svg')}}"
                                                      alt="Menu icon"></div>
-        <div class="branding">
-            @include('components.logo', ['titleParent' => 'header-logo-parent', 'logoImg' => 'header-logo-image', 'logoTitle' => 'headerLogoTitle'])
-        </div>
+        @include('components.logo', [
+            'titleParent'   => 'header-logo-parent',
+            'logoImg'       => 'header-logo-image',
+            'logoTitle'     => 'headerLogoTitle'])
         <nav id="main_nav" class="main-nav" role="navigation">
             <ul class="main-menu">
                 <li>

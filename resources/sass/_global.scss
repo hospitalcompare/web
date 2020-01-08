@@ -461,14 +461,6 @@ path {
 }
 
 
-//=========================HEALTH CHOICE SECTION===========================
-.your-rights-page {
-    section:not(:first-child) {
-        padding: 40px 0;
-    }
-}
-
-
 //=========================END HEALTH CHOICE SECTION====================
 
 .stretched-link {
@@ -523,6 +515,28 @@ path {
     }
 }
 
+.tick-with-title {
+    padding-left: 0 !important;
+    @include font-size(16);
+    color: #000;
+    @extend .SofiaPro-Medium;
+
+    &:before {
+        content: "";
+        background-image: url(../images/icons/icon-tick.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: relative;
+        display: inline-block;
+        top: 4px;
+        margin-right: 14px;
+        left: 0;
+        width: 22px;
+        height: 22px;
+    }
+}
+
 .pink-tick {
     position: relative;
     padding: 0 0 0 25px;
@@ -574,6 +588,10 @@ path {
 
 .mb-40 {
     margin-bottom: 40px !important;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
 }
 
 .mb-60 {
@@ -687,7 +705,7 @@ h6 {
 }
 
 .p-secondary {
-    @include font-size(1.1rem);
+    @include font-size(1rem);
     line-height: 1.6;
     //@extend .SofiaPro-Medium;
 }

@@ -7,21 +7,35 @@
 }
 
 //HEADER SECTION
-.branding {
-    display: flex;
-    justify-content: space-between;
-}
-
 .header-logo-parent {
-    display: flex;
-    align-items: center;
+    //display: flex;
+    //align-items: center;
 
     a {
-        display: flex;
+        //display: flex;
+        .logo-mobile {
+            height: 40px;
+            width: 100%;
+        }
+
+        .logo-desktop {
+            width: auto;
+            height: 35px;
+
+            path {
+                fill: #fff;
+            }
+        }
 
         &:hover {
             text-decoration: none;
         }
+    }
+}
+
+.header-logo-image {
+    @include media-breakpoint-down(md) {
+        max-width: 245px;
     }
 }
 
