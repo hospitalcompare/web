@@ -45,23 +45,35 @@
         background-size: 20%;
         padding: 0 0 75px !important;
     }
+
+    // Swirl animation
+    .svg-wrapper {
+        svg .swirl-path {
+            fill: none;
+            stroke: $turq;
+            stroke-width: 1px;
+            stroke-dasharray: 624;
+            stroke-dashoffset: 624;
+        }
+
+        &.draw {
+            svg {
+                .swirl-path {
+                    animation: drawswirl 3s linear;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
 }
 
 .about-us-intro {
+    border-bottom: $greyBorder;
     @include media-breakpoint-up(md) {
         background-image: url('/images/layer_16.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: right 75px;
-    }
-    border-bottom: $greyBorder;
-}
-
-.swirl {
-    svg {
-        path {
-            fill: $turq;
-        }
     }
 }
 

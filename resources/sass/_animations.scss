@@ -11,13 +11,19 @@
     }
 }
 
-@keyframes drawsvg {
+@keyframes drawheart {
     from {
         stroke-dashoffset: 10000;
 
     }
     to {
         stroke-dashoffset: 1000;
+    }
+}
+
+@keyframes drawswirl {
+    to {
+        stroke-dashoffset: 0;
     }
 }
 
