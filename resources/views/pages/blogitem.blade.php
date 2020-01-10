@@ -92,15 +92,19 @@
                 </div>
                 <div class="col-12 col-lg-4 blog-aside">
                     @if(!empty($data['latestBlogs']))
-                        @foreach($data['latestBlogs'] as $latestBlog)
-                            <div class="latest-blog mb-4">
-                                <div class="latest-blog-image overflow-hidden">
-                                    <img src="../{{$latestBlog['image']}}" alt="" class="content">
+                        @foreach($data['latestBlogs']->take(1) as $latestBlog)
+                            <div class="latest-blog d-flex mb-4">
+                                <div class="latest-blog-image-wrapper w-25">
+                                    <div class="latest-blog-image rounded overflow-hidden">
+                                        <img src="../{{$latestBlog['image']}}" alt="" class="content">
+                                    </div>
                                 </div>
-                                <div class="latest-blog-content p-3">
-                                    <div class="latest-blog-title mb-3">{{$latestBlog['title']}}</div>
-                                    <div class="latest-blog-description">{!! substr($latestBlog['description'], 0, 100) !!}</div>
-                                    <a class="btn-plain position-static stretched-link" href="/blog/{{ $latestBlog['id'] }}">Continue reading</a>
+                                <div class="latest-blog-content px-3 pb-3 w-75">
+                                    <div class="latest-blog-title mb-3 font-18">{{$latestBlog['title']}}</div>
+                                    <div class="latest-blog-description">
+                                        {!! substr($latestBlog['description'], 0, 100) !!}
+                                    </div>
+                                    <a class="btn-plain position-static stretched-link col-brand-1" href="/blog/{{ $latestBlog['id'] }}">Continue reading →</a>
                                 </div>
                             </div>
                         @endforeach

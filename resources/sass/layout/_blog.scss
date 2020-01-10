@@ -114,6 +114,12 @@
         padding-top: 25px;
     }
 
+    .blog-main {
+        @include media-breakpoint-down(md) {
+            padding-bottom: 75px;
+        }
+    }
+
     .jumbotron {
         @include aspect-ratio(1206, 728);
         @extend .mb-5;
@@ -163,7 +169,6 @@
         }
     }
 
-
     .sharing-icons {
         li {
             margin-right: 12px;
@@ -198,7 +203,11 @@
     }
 
     .latest-blog-image {
-        @include aspect-ratio(924, 460);
+        @include aspect-ratio(170, 113);
+    }
+
+    .latest-blog-description {
+        @extend .font-16;
     }
 }
 

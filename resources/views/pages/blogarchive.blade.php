@@ -14,8 +14,8 @@
     <section class="banner">
         <div class="container">
             <h1>Latest <span class="col-brand-1">healthcare</span> news</h1>
-            <h3>Informative, impartial and helpful information <br>
-                surrounding the healthcare industry.</h3>
+            <h2 class="font-18 col-grey">Informative, impartial and helpful information <br>
+                surrounding the healthcare industry.</h2>
         </div>
     </section>
     <section class="blog-filters border-bottom py-0 d-none d-md-block">

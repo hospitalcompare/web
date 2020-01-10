@@ -7,7 +7,7 @@
 {{--                    <div class="overlay"></div>--}}
                     <div class="blog-item-category position-absolute rounded-circle p-2" style="background-color:{{$blog->category->colour}}">
 {{--                        {!! file_get_contents(asset($blog->category->icon)) !!}--}}
-                        @svg($blog->category->icon)
+                        @svg($blog->category->icon, 'fill-white')
                     </div>
                 </div>
                 <div class="blog-item-content p-30">
