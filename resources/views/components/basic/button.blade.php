@@ -5,6 +5,7 @@ target="{{ !empty($target) && $target == 'blank' ? '_blank' : '' }}"
 data-target="{!! $dataTarget ?? '' !!}"
 href="{{ empty($hrefValue) ? 'javascript:void(0);' : $hrefValue }}"
 role="button"
+data-id="{{ empty($dataId) ? '' : $dataId }}"
 @if(!empty(!empty($disabled) && ($disabled)))
     disabled
 @endif

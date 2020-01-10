@@ -88,7 +88,7 @@
             </div>
         </div>
     </section>
-    @include('pages.pagesections.testimonials')
+{{--    @include('pages.pagesections.testimonials')--}}
     @if(!empty($data['faqs']))
         <section class="faqs-section bg-grey">
             <div class="container">

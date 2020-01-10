@@ -18,12 +18,13 @@
                     <p class="sort-item-location">{{$location}}</p>
                     @include('components.basic.button', [
                         'classTitle'        => 'btn btn-icon btn-more-info position-absolute font-12',
-                        'buttonText'        => '<span>More info</span>',
+                        'buttonText'        => '<span>Map</span>',
                         'htmlButton'        => true,
                         'icon'              => '',
                         'id'                => 'more_info_' . $id,
                         'svg'               => 'plus-solid',
-                        'dataTarget'        => '#corporate_content_hospital_' . $id
+                        'dataTarget'        => '#corporate_content_hospital_' . $id,
+                        'dataId'           => $id
                      ])
                 </div>
             </div>
