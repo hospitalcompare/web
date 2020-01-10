@@ -51,28 +51,29 @@ class Utils
             'name'      => 'Care Quality Rating'
         ],[
             'id'        => '11',
-            'name'      => 'Friends & Family Rating',
+            'name'      => 'F&F Rating',
             'class'     => 'd-none'
         ],[
             'id'        => '12',
-            'name'      => 'Friends & Family Rating'
-        ],[
-            'id'        => '13',
-            'name'      => 'NHS Funded Work',
-            'class'     => 'd-none'
-        ],[
-            'id'        => '14',
-            'name'      => 'NHS Funded Work',
-            'class'     => 'd-none'
-        ],[
-            'id'        => '15',
-            'name'      => 'Private Self Pay',
-            'class'     => 'd-none'
-        ],[
-            'id'        => '16',
-            'name'      => 'Private Self Pay',
-            'class'     => 'd-none'
-        ]
+            'name'      => 'F&F Rating'
+        ],
+//        [
+//            'id'        => '13',
+//            'name'      => 'NHS Funded Work',
+//            'class'     => 'd-none'
+//        ],[
+//            'id'        => '14',
+//            'name'      => 'NHS Funded Work',
+//            'class'     => 'd-none'
+//        ],[
+//            'id'        => '15',
+//            'name'      => 'Private Self Pay',
+//            'class'     => 'd-none'
+//        ],[
+//            'id'        => '16',
+//            'name'      => 'Private Self Pay',
+//            'class'     => 'd-none'
+//        ]
     ];
 
     //Filter Waiting Times

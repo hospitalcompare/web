@@ -4,11 +4,11 @@
             <div class="sort-bar">
                 <div class="show-section section-1 SofiaPro-Medium font-16">
                     <span class="SofiaPro-SemiBold">Showing {{$data['hospitals']->total()}} hospital(s)</span><br> Ordered
-                    by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'] : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating & Distance' : 'Care Quality Rating & Waiting Time') }}
+                    by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'].((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? ' & Distance' : ((Request::input('sort_by') == 10 || Request::input('sort_by') == 9) ? ' then Waiting Time' : ' then Care Quality')) : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating then Distance' : 'Care Quality Rating then Waiting Time') }}
                 </div>
                 <div class="section-2 d-none d-lg-block">
                     <ul class="result-item-menu">
-                        <li>
+                        <li class="sort-item sort-care-quality-rating {{empty(Request::input('sort_by')) ? 'desc' : Request::input('sort_by') == 10 ? 'desc':'asc' }} {{Request::input('sort_by') == 10 || Request::input('sort_by') == 9 || empty(Request::input('sort_by'))? 'highlight' : ''}}">
                             <p tabindex="0"
                                 @include('components.basic.popover', [
                                 'placement' => 'top',
@@ -21,9 +21,9 @@
                                                     The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
                                                 </p>'])>Care Quality<br>Rating</p>
                             <span title="Sort by this column"
-                                  class="sort-arrow sort-care-quality-rating {{Request::input('sort_by') == 10 ? 'desc':'asc' }}"></span>
+                                  class="sort-arrow sort-care-quality-rating {{empty(Request::input('sort_by')) ? 'desc' : Request::input('sort_by') == 10 ? 'desc':'asc' }}"></span>
                         </li>
-                        <li>
+                        <li class="sort-item sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }} {{Request::input('sort_by') == 3 || Request::input('sort_by') == 4 ? 'highlight' : ''}}">
                             <p tabindex="0"
                                 @include('components.basic.popover', [
                                 'placement' => 'top',
@@ -38,7 +38,7 @@
                             <span title="Sort by this column"
                                   class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}"></span>
                         </li>
-                        <li>
+                        <li class="sort-item sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }} {{Request::input('sort_by') == 5 || Request::input('sort_by') == 6 ? 'highlight' : ''}}">
                             <p tabindex="0"
                                 @include('components.basic.popover', [
                                 'placement' => 'top',
@@ -53,7 +53,7 @@
                             <span title="Sort by this column"
                                   class="sort-arrow sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }}"></span>
                         </li>
-                        <li>
+                        <li class="sort-item sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }} {{Request::input('sort_by') == 7 || Request::input('sort_by') == 8 ? 'highlight' : ''}}">
                             <p tabindex="0"
                                 @include('components.basic.popover', [
                                 'placement' => 'top',
@@ -68,7 +68,7 @@
                             <span title="Sort by this column"
                                   class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }}"></span>
                         </li>
-                        <li>
+                        <li class="sort-item sort-ff-rating {{Request::input('sort_by') == 12 ? 'desc':'asc' }} {{Request::input('sort_by') == 11 || Request::input('sort_by') == 12 ? 'highlight' : ''}}">
                             <p tabindex="0"
                                 @include('components.basic.popover', [
                                 'placement' => 'top',
@@ -95,8 +95,8 @@
                                                 <p>
                                                     This hospital provides treatments funded by the NHS. Remember you can have an NHS treatment at most private hospitals.
                                                 </p>'])>NHS<br>Funded Work</p>
-                            <span title="Sort by this column"
-                                  class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 14 ? 'desc':'asc' }}"></span>
+{{--                            <span title="Sort by this column"--}}
+{{--                                  class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 14 ? 'desc':'asc' }}"></span>--}}
                         </li>
                         <li>
                             <p tabindex="0"
@@ -110,8 +110,8 @@
                                                 <p>
                                                     Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
                                                 </p>'])>Private<br>Self Pay</p>
-                            <span title="Sort by this column"
-                                  class="sort-arrow sort-self-pay {{Request::input('sort_by') == 16 ? 'desc':'asc' }}"></span>
+{{--                            <span title="Sort by this column"--}}
+{{--                                  class="sort-arrow sort-self-pay {{Request::input('sort_by') == 16 ? 'desc':'asc' }}"></span>--}}
                         </li>
                     </ul>
                 </div>
