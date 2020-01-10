@@ -121,12 +121,20 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-        svg {
-            @include v-c;
-            left: 10px;
-            width: 10px;
-            height: 10px;
+
+        .blog-item-category {
+            padding: 12px 16px 15px 38px;
+            top: 20px;
+            left: 20px;
+
+            svg {
+                @include v-c;
+                left: 17px;
+                width: 10px;
+                height: 10px;
+            }
         }
+
 
         .btn-blog-back {
             position: absolute;
@@ -149,9 +157,12 @@
     .blog-content {
         p {
             @include font-size(20);
-            @extend .SofiaPro-SemiBold;
+            //@extend .SofiaPro-SemiBold;
+            @extend .p-secondary;
+            @extend .col-grey;
         }
     }
+
 
     .sharing-icons {
         li {
@@ -163,7 +174,7 @@
                 width: 25px;
 
                 path {
-                    fill: $textGrey;
+                    fill: #000;
                     transition: $transition;
                 }
             }

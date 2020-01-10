@@ -14,10 +14,10 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-8">
+                <div class="col-12 col-lg-8 blog-main">
                     <div class="jumbotron rounded mb-0 p-0 position-relative overflow-hidden d-flex"
                          style="background-image: url('../{{$data['blog']['image']}}')">
-                        <span class="rounded-pill d-inline-block m-3 p-2 pl-4 position-absolute col-white"
+                        <span class="blog-item-category rounded-pill d-inline-block position-absolute col-white"
                               style="background-color: {{ $data['blog']['category']['colour'] }}">
 {{--                            {!! file_get_contents(asset($data['blog']['category']['icon'])) !!}--}}
                             @svg($data['blog']['category']['icon'])
@@ -32,23 +32,23 @@
 
 {{--                        ])--}}
                     </div>
-                    <div class="blog-item-details d-flex justify-content-start align-items-center mb-3">
+                    <div class="blog-item-details d-flex justify-content-start align-items-center mb-2">
                         <div class="mr-2">
-                            <img src="{{ asset('/images/icons/clock-regular.svg') }}" alt="Clock icon">
+                            <img src="{{ asset('/images/icons/icon-clock.svg') }}" alt="Clock icon">
                         </div>
                         <span class="time-to-read mr-3">{{$data['blog']['time_to_read']}}min</span>
                         <div class="mr-2">
-                            <img src="{{ asset('/images/icons/clock-regular.svg') }}" alt="Calendar icon">
+                            <img src="{{ asset('/images/icons/icon-calendar.svg') }}" alt="Calendar icon">
                         </div>
-                        <span class="date SofiaPro-Bold">{{ date('d.m.Y', strtotime($data['blog']['created_at'])) }}</span>
+                        <span class="date">{{ date('d.m.Y', strtotime($data['blog']['created_at'])) }}</span>
                     </div>
-                    <div class="blog-title font-36 SofiaPro-Bold my-3">{!! $data['blog']['title'] !!}</div>
+                    <div class="blog-title font-36 mb-5">{!! $data['blog']['title'] !!}</div>
                     <div class="font-24 SofiaPro-SemiBold mt-3 mb-4"></div>
                     <div class="blog-content mb-4">
                         {!! $data['blog']['description'] !!}
                     </div>
-                    <div class="sharing-is-caring">
-                        <div class="font-24 SofiaPro-SemiBold mb-4">Share this article</div>
+                    <div class="sharing-is-caring p-y-75">
+                        <div class="font-18 mb-4">Share this article</div>
                         <ul class="sharing-icons d-block">
                             <li class="d-inline-block"><a
                                     href="https://www.facebook.com/sharer/sharer.php?u={{ url()->full() }}"
@@ -85,12 +85,12 @@
                             </div>
                         </div>
                         <div class="">
-                            <p class="author-name">{{$data['blog']['author']['name']}}</p>
-                            <p class="author-description">{{$data['blog']['author']['description']}}</p>
+                            <p class="author-name font-18">{{$data['blog']['author']['name']}}</p>
+                            <p class="author-description col-grey lh-16">{{$data['blog']['author']['description']}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-4 blog-aside">
                     @if(!empty($data['latestBlogs']))
                         @foreach($data['latestBlogs'] as $latestBlog)
                             <div class="latest-blog mb-4">
