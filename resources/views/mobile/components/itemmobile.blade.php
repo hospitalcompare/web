@@ -228,10 +228,11 @@
                 <div class="button-wrapper col-6">
                     @include('components.basic.button', [
                        'classTitle'        => 'btn btn-squared btn-squared_slim btn-turq _btn-cc-close btn-more-info w-100 text-center font-12',
-                       'buttonText'        => 'More info',
+                       'buttonText'        => 'Map',
                        'htmlButton'        => true,
                        'icon'              => '',
                        'id'                => 'more_info_' . $id,
+                       'dataId'            => $id,
                        'dataTarget'        => '#corporate_content_hospital_' . $id
                     ])
                 </div>

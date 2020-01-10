@@ -348,11 +348,15 @@
                 left: 0;
                 bottom: 10px;
                 display: inline-block;
-                @include icon-bg-center(15%);
+                //@include icon-bg-center(15%);
                 width: 100%;
                 height: 20px;
-                background-image: url('../images/icons/chevron-down.svg');
-                cursor: pointer;
+                //background-image: url('../images/icons/chevron-down.svg');
+                //cursor: pointer;
+
+                svg {
+                    width: 15px;
+                }
             }
 
             span.sort-arrow.asc {
@@ -364,7 +368,11 @@
             }
 
             &.highlight {
-                color: $turq;
+                color: $brand-1;
+
+                svg path {
+                    fill: $brand-1;
+                }
             }
 
             p {
