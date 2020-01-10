@@ -18,7 +18,7 @@
                 surrounding the healthcare industry.</h3>
         </div>
     </section>
-    <section class="blog-filters border-bottom py-0">
+    <section class="blog-filters border-bottom py-0 d-none d-md-block">
         <div class="container">
             <div class="row py-4">
                 <div class="col ">
@@ -43,9 +43,8 @@
             <div class="blog-content row">
                 @include('components.blogloop', [
                     'blogs' => $data['blogs'],
-{{--                            'buttonClass'       => 'btn btn-block btn-read-more text-center',--}}
                     'buttonClass'       => 'text-left',
-                    'buttonTitle'       => 'Continue reading >'
+                    'buttonTitle'       => 'Continue reading →'
                     ])
             </div>
             <div class="pagination-wrap">

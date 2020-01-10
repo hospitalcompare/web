@@ -14,7 +14,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-8">
+                <div class="col-12 col-lg-8">
                     <div class="jumbotron rounded mb-0 p-0 position-relative overflow-hidden d-flex"
                          style="background-image: url('../{{$data['blog']['image']}}')">
                         <span class="rounded-pill d-inline-block m-3 p-2 pl-4 position-absolute col-white"
@@ -90,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-lg-4">
                     @if(!empty($data['latestBlogs']))
                         @foreach($data['latestBlogs'] as $latestBlog)
                             <div class="latest-blog mb-4">
