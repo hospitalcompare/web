@@ -50,15 +50,20 @@ body {
 
 // SVG colours
 .fill-turq path {
-    fill: $turq;
+    fill: $brand-1;
+}
+
+.fill-white,
+.fill-white path {
+    fill: #fff;
 }
 
 .fill-turq path {
-    fill: $turq;
+    fill: $brand-1;
 }
 
 .stroke-turq path {
-    stroke: $turq;
+    stroke: $brand-1;
 }
 
 //
@@ -185,7 +190,7 @@ ul.blue-dot {
             left: 0;
             width: 11px;
             height: 11px;
-            background-color: $turq;
+            background-color: $brand-1;
             border-radius: 50%;
         }
     }
@@ -199,7 +204,7 @@ ul.blue-dot {
             &:before {
                 width: 5px;
                 height: 5px;
-                background-color: $turq;
+                background-color: $brand-1;
             }
         }
     }
@@ -255,7 +260,7 @@ select.big {
 }
 
 .bg-turq {
-    background-color: $turq;
+    background-color: $brand-1;
 }
 
 .bg-blue {
@@ -333,11 +338,11 @@ select.big {
 }
 
 .bg-not-yet-rated {
-    background-color: $turq;
+    background-color: $brand-1;
 }
 
-.col-turq {
-    color: $turq;
+.col-brand-1 {
+    color: $brand-1;
 }
 
 .col-blue {
@@ -396,7 +401,7 @@ select.big {
     //text-decoration: underline !important;
 
     &:hover {
-        color: $turq;
+        color: $brand-1;
     }
 }
 
@@ -461,14 +466,6 @@ path {
 }
 
 
-//=========================HEALTH CHOICE SECTION===========================
-.your-rights-page {
-    section:not(:first-child) {
-        padding: 40px 0;
-    }
-}
-
-
 //=========================END HEALTH CHOICE SECTION====================
 
 .stretched-link {
@@ -523,6 +520,28 @@ path {
     }
 }
 
+.tick-with-title {
+    padding-left: 0 !important;
+    @include font-size(16);
+    color: #000;
+    @extend .SofiaPro-Medium;
+
+    &:before {
+        content: "";
+        background-image: url(../images/icons/icon-tick.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: relative;
+        display: inline-block;
+        top: 4px;
+        margin-right: 14px;
+        left: 0;
+        width: 22px;
+        height: 22px;
+    }
+}
+
 .pink-tick {
     position: relative;
     padding: 0 0 0 25px;
@@ -547,13 +566,18 @@ path {
 .signature {
     font-family: "Brown Pen", cursive;
     @include font-size(28);
-    font-weight: bold;
 }
 
 .border {
     &-right {
         &.border-green {
-            border-right: 2px solid $turq !important;
+            border-right: 0 !important;
+            border-bottom: 2px solid $brand-1;
+
+            @include media-breakpoint-up(md) {
+                border-right: 2px solid $brand-1 !important;
+                border-bottom: 0;
+            }
         }
     }
 }
@@ -574,6 +598,10 @@ path {
 
 .mb-40 {
     margin-bottom: 40px !important;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
 }
 
 .mb-60 {
@@ -619,7 +647,7 @@ ol.alpha {
             position: absolute;
             top: 0;
             left: 0;
-            color: $turq;
+            color: $brand-1;
             @extend .font-semibold;
         }
     }
@@ -666,7 +694,7 @@ h3 {
 
 h4 {
     font-size: 24px;
-    color: $turq;
+    color: $brand-1;
     margin: 0 0 24px 0;
 }
 
@@ -688,7 +716,7 @@ h6 {
 }
 
 .p-secondary {
-    @include font-size(1.1rem);
+    @include font-size(1rem);
     line-height: 1.6;
     //@extend .SofiaPro-Medium;
 }

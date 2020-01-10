@@ -53,7 +53,7 @@
     </section>
     <section class="how-section__extra bg-greylight">
         <div class="container">
-            <div class="row">
+            <div class="row flex-lg-row-reverse">
                 <div class="col col-12 col-md-6 mb-25">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/video_placeholder.jpg') }}"
@@ -85,7 +85,7 @@
     </section>
     <section class="how-section__extra">
         <div class="container">
-            <div class="row flex-lg-row-reverse">
+            <div class="row ">
                 <div class="col col-12 col-lg-6 mb-25">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/video_placeholder.jpg') }}"
@@ -117,7 +117,7 @@
     </section>
     <section class="how-section__extra bg-greylight">
         <div class="container">
-            <div class="row">
+            <div class="row flex-lg-row-reverse">
                 <div class="col col-12 col-lg-6 mb-25">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/video_placeholder.jpg') }}"
@@ -146,7 +146,7 @@
                                 'svg'                   => 'chevron-down',
                                 'selectParentClass'       => 'd-lg-flex align-items-center mb-4',
                                 'selectClass'           => 'select-picker',
-                                'labelClass'            => 'col-turq font-20 SofiaPro-Medium mr-3 mb-lg-0 w-100 w-lg-50',
+                                'labelClass'            => 'col-brand-1 font-20 SofiaPro-Medium mr-3 mb-lg-0 w-100 w-lg-50',
                                 'showLabel'             => true,
                                 'name'                  => 'policy_id',
                                 'selectId'              => 'how_to_use_policies',
@@ -163,7 +163,7 @@
     </section>
     <section class="how-section__extra">
         <div class="container">
-            <div class="row flex-lg-row-reverse">
+            <div class="row">
                 <div class="col col-12 col-lg-6 mb-25">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/video_placeholder.jpg') }}"

@@ -19,7 +19,7 @@
                     {{$title}}
                 </p>
                 @if(!empty($locationSpecialism))
-                    <p class="sort-item-specialism col-turq mb-1">
+                    <p class="sort-item-specialism col-brand-1 mb-1">
                         <strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
                 @endif
                 <p class="sort-item-location">{{$location}} {{-- trim($town, ', ') --}}</p>
@@ -228,10 +228,11 @@
                 <div class="button-wrapper col-6">
                     @include('components.basic.button', [
                        'classTitle'        => 'btn btn-squared btn-squared_slim btn-turq _btn-cc-close btn-more-info w-100 text-center font-12',
-                       'buttonText'        => 'More info',
+                       'buttonText'        => 'Map',
                        'htmlButton'        => true,
                        'icon'              => '',
                        'id'                => 'more_info_' . $id,
+                       'dataId'            => $id,
                        'dataTarget'        => '#corporate_content_hospital_' . $id
                     ])
                 </div>

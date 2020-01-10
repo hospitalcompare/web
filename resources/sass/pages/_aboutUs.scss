@@ -1,16 +1,79 @@
-.about-us-intro {
-    background-image: url('/images/about-hero.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-    border-bottom: $greyBorder;
+.about-us-page {
+    .signature {
+        @include font-size(3rem);
+    }
+
+    .feature-box {
+        padding: 4rem 2rem !important;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 20px;
+            height: auto !important;
+        }
+    }
+
+    .understanding-choices {
+        .icon-wrapper {
+            width: 70px;
+            margin: 0 auto;
+        }
+    }
+
+    .about-dots {
+        position: absolute;
+        top: -30px;
+        right: -2px;
+        width: 36px !important;
+    }
+
+    .about-circle {
+        position: absolute;
+        top: -42px;
+        right: -50px;
+        width: 320px !important;
+        z-index: -1;
+    }
+
+    .about-impartial {
+        background-image: url(../images/about-corner.svg);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        border-bottom: 1px solid #ededed;
+        background-size: 20%;
+        padding: 0 0 75px !important;
+    }
+
+    // Swirl animation
+    .svg-wrapper {
+        svg .swirl-path {
+            fill: none;
+            stroke: $brand-1;
+            stroke-width: 1px;
+            stroke-dasharray: 624;
+            stroke-dashoffset: 624;
+        }
+
+        &.draw {
+            svg {
+                .swirl-path {
+                    animation: drawswirl 3s linear;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
 }
 
-.swirl {
-    svg {
-        path {
-            fill: $turq;
-        }
+.about-us-intro {
+    border-bottom: $greyBorder;
+    @include media-breakpoint-up(md) {
+        background-image: url('/images/layer_16.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right 75px;
     }
 }
 
@@ -44,8 +107,8 @@
 
                 svg {
                     path {
-                        stroke: $turq;
-                        fill: $turq;
+                        stroke: $brand-1;
+                        fill: $brand-1;
                     }
                 }
 

@@ -21,7 +21,7 @@
                                                     The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
                                                 </p>'])>Care Quality<br>Rating</p>
                             <span title="Sort by this column"
-                                  class="sort-arrow sort-care-quality-rating {{empty(Request::input('sort_by')) ? 'desc' : Request::input('sort_by') == 10 ? 'desc':'asc' }}"></span>
+                                  class="sort-arrow sort-care-quality-rating {{empty(Request::input('sort_by')) ? 'desc' : Request::input('sort_by') == 10 ? 'desc':'asc' }}">@svg('chevron-down')</span>
                         </li>
                         <li class="sort-item sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }} {{Request::input('sort_by') == 3 || Request::input('sort_by') == 4 ? 'highlight' : ''}}">
                             <p tabindex="0"
@@ -36,7 +36,7 @@
                                                     Our waiting time data is based on NHS data, specifically the number of weeks that 92 out or 100 people wait for their treatment to start.
                                                 </p>'])>Waiting time <br>(NHS Funded)</p>
                             <span title="Sort by this column"
-                                  class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}"></span>
+                                  class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}">@svg('chevron-down')</span>
                         </li>
                         <li class="sort-item sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }} {{Request::input('sort_by') == 5 || Request::input('sort_by') == 6 ? 'highlight' : ''}}">
                             <p tabindex="0"
@@ -51,7 +51,7 @@
                                                     Five star rating system based on feedback provided by users of the NHS, five stars being the best. Information is not available on some hospitals.
                                                 </p>'])>NHS User<br> Rating&nbsp;<br></p>
                             <span title="Sort by this column"
-                                  class="sort-arrow sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }}"></span>
+                                  class="sort-arrow sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }}">@svg('chevron-down')</span>
                         </li>
                         <li class="sort-item sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }} {{Request::input('sort_by') == 7 || Request::input('sort_by') == 8 ? 'highlight' : ''}}">
                             <p tabindex="0"
@@ -66,7 +66,7 @@
                                                     The percentage of operations cancelled during the last reporting period. Data only available for NHS hospitals at this time.
                                                 </p>'])>% Operations<br>Cancelled</p>
                             <span title="Sort by this column"
-                                  class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }}"></span>
+                                  class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }}">@svg('chevron-down')</span>
                         </li>
                         <li class="sort-item sort-ff-rating {{Request::input('sort_by') == 12 ? 'desc':'asc' }} {{Request::input('sort_by') == 11 || Request::input('sort_by') == 12 ? 'highlight' : ''}}">
                             <p tabindex="0"
@@ -81,7 +81,7 @@
                                                     The percentage of people who would recommend this hospital to family and friends.
                                                 </p>'])>Friends &<br>Family Rating</p>
                             <span title="Sort by this column"
-                                  class="sort-arrow sort-ff-rating {{Request::input('sort_by') == 12 ? 'desc':'asc' }}"></span>
+                                  class="sort-arrow sort-ff-rating {{Request::input('sort_by') == 12 ? 'desc':'asc' }}">@svg('chevron-down')</span>
                         </li>
                         <li>
                             <p tabindex="0"

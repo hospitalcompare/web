@@ -45,19 +45,20 @@
                     'hospitalType'      => $hospitalType,
                     'hospitalTitle'     => $headerText['open']['title'],
                     'modalTarget'       => '#hc_modal_enquire_private',
-                    'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto',
+                    'classTitle'        => 'btn btn-icon btn-enquire btn-blue enquiry font-12 pr-2',
                     'target'            => 'blank',
-                    'buttonText'            => 'Enquire now',
-                    'hospitalIds'       => $hospitalId
+                    'buttonText'        => 'Make an enquiry',
+                    'hospitalIds'       => $hospitalId,
+                    'svg'               => 'circle-check'
                     ])
                 @includeWhen($hospitalType == 'nhs-hospital' ,'components.basic.modalbutton', [
                     'hospitalType'      => $hospitalType,
                     'hospitalTitle'     => $headerText['open']['title'],
                     'hrefValue'         => $hospitalUrl,
                     'modalTarget'       => '#hc_modal_enquire_nhs',
-                    'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto',
+                    'classTitle'        => 'btn btn-icon btn-enquire btn-blue enquiry font-12 pr-2',
                     'target'            => 'blank',
-                    'buttonText'            => 'Enquire now',
+                    'buttonText'        => 'Make an enquiry',
                     'hospitalIds'       => $hospitalId
                     ])
             </div>

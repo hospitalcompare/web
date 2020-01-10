@@ -32,7 +32,7 @@
 
     //colours
     &.btn-turq {
-        background-color: $turq;
+        background-color: $brand-1;
 
         &:hover {
             background-color: $blue;
@@ -44,7 +44,7 @@
         background-size: 200%;
 
         &:hover {
-            background-color: $turq;
+            background-color: $brand-1;
         }
     }
 
@@ -74,7 +74,10 @@
 
     &.btn-squared {
         border-radius: $border-radius;
-        padding: 25px 56px;
+        padding: 15px 26px;
+        @include media-breakpoint-up(md) {
+            padding: 25px 56px;
+        }
 
         &_slim {
             padding: 14px 26px;
@@ -93,8 +96,8 @@
     }
 
     &.btn-compare {
-        box-shadow: inset 0px 0px 0px 2px $turq;
-        color: $turq;
+        box-shadow: inset 0px 0px 0px 2px $brand-1;
+        color: $brand-1;
         padding: 8px 15px 8px 40px;
 
         svg, i {
@@ -106,21 +109,21 @@
             height: 16px;
 
             path {
-                stroke: $turq;
+                stroke: $brand-1;
                 stroke-width: 50px;
                 fill: #fff;
             }
         }
 
         &:hover {
-            background-color: $turq;
+            background-color: $brand-1;
             color: #fff;
 
             svg, i {
 
                 path {
                     stroke: #fff;
-                    fill: $turq;
+                    fill: $brand-1;
                 }
             }
         }
@@ -218,7 +221,7 @@
         @include font-size(14);
         padding: 0 25px 0 8px;
         border-radius: $border-radius $border-radius 0 0;
-        background-color: $turq;
+        background-color: $brand-1;
 
         svg {
             @include v-c;
@@ -458,7 +461,7 @@
     min-width: 182px;
     border-radius: $border-radius $border-radius 0 0;
     @include font-size(1.1rem);
-    @include gradient-animation($body-color, $body-color, $turq, $turq, 0.3s);
+    @include gradient-animation($body-color, $body-color, $brand-1, $brand-1, 0.3s);
     padding: 19px 50px 19px 20px;
 
     svg {
@@ -477,8 +480,18 @@
 
     &:hover,
     &:focus {
-        color: $turq;
+        color: $brand-1;
         text-decoration: none;
+    }
+}
+
+.btn-turq-link {
+    color: $brand-1;
+
+    &:hover,
+    &:focus {
+        color: $blue;
+        text-decoration: underline;
     }
 }
 
@@ -496,7 +509,7 @@
 
     @include hover {
         opacity: 1 !important;
-        background-color: $turq !important;
+        background-color: $brand-1 !important;
     }
 
     svg {
@@ -532,7 +545,7 @@
 
     @include hover {
         opacity: 1 !important;
-        background-color: $turq !important;
+        background-color: $brand-1 !important;
     }
 
     span {

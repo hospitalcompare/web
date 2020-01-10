@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
     <head>
-        @if(env('APP_ENV') == 'live')
+        @if(env('APP_ENV') == 'dev')
             <!-- Google Tag Manager -->
             <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -42,7 +42,7 @@
 
     </head>
     <body class="@yield('body-class')">
-        @if(env('APP_ENV') == 'live')
+        @if(env('APP_ENV') == 'dev')
             <!-- Google Tag Manager (noscript) -->
             <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJZJN5W"
                               height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

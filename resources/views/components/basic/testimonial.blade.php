@@ -1,5 +1,5 @@
 <div class="{{ empty($single) ? !empty($active) ? 'col-12 col-md-4 carousel-item active' : 'col-12 col-md-4 carousel-item' : '' }}">
-    <div class="col-inner p-30 {{ empty($single) ? 'text-center' : '' }}">
+    <div class="col-inner {{ empty($single) ? 'text-center p-30 ' : '' }}">
         <p class="font-20">
             "Use Hospital Compare to make the very best choice for your treatment"
         </p>

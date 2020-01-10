@@ -13,17 +13,18 @@
                         {{$title}}
                     </p>
                     @if(!empty($locationSpecialism))
-                        <p class="sort-item-specialism col-turq mb-1"><strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
+                        <p class="sort-item-specialism col-brand-1 mb-1"><strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
                     @endif
                     <p class="sort-item-location">{{$location}}</p>
                     @include('components.basic.button', [
                         'classTitle'        => 'btn btn-icon btn-more-info position-absolute font-12',
-                        'buttonText'        => '<span>More info</span>',
+                        'buttonText'        => '<span>Map</span>',
                         'htmlButton'        => true,
                         'icon'              => '',
                         'id'                => 'more_info_' . $id,
                         'svg'               => 'plus-solid',
-                        'dataTarget'        => '#corporate_content_hospital_' . $id
+                        'dataTarget'        => '#corporate_content_hospital_' . $id,
+                        'dataId'           => $id
                      ])
                 </div>
             </div>

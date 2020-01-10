@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
     <g>
         <g>
-            <path class="carousel-arrow-bg" fill="#00cecd" d="M0 12C0 5.373 5.373 0 12 0s12 5.373 12 12-5.373 12-12 12S0 18.627 0 12z"/>
+            <path class="carousel-arrow-bg" fill="#037098" d="M0 12C0 5.373 5.373 0 12 0s12 5.373 12 12-5.373 12-12 12S0 18.627 0 12z"/>
         </g>
         <g>
             <path class="carousel-arrow-chevron" fill="#fff"

@@ -13,12 +13,12 @@
 @section('content')
     <section class="banner">
         <div class="container">
-            <h1>Latest <span class="col-turq">healthcare</span> news</h1>
-            <h3>Informative, impartial and helpful information <br>
-                surrounding the healthcare industry.</h3>
+            <h1>Latest <span class="col-brand-1">healthcare</span> news</h1>
+            <h2 class="font-18 col-grey">Informative, impartial and helpful information <br>
+                surrounding the healthcare industry.</h2>
         </div>
     </section>
-    <section class="blog-filters border-bottom py-0">
+    <section class="blog-filters border-bottom py-0 d-none d-md-block">
         <div class="container">
             <div class="row py-4">
                 <div class="col ">
@@ -43,9 +43,8 @@
             <div class="blog-content row">
                 @include('components.blogloop', [
                     'blogs' => $data['blogs'],
-{{--                            'buttonClass'       => 'btn btn-block btn-read-more text-center',--}}
                     'buttonClass'       => 'text-left',
-                    'buttonTitle'       => 'Continue reading >'
+                    'buttonTitle'       => 'Continue reading →'
                     ])
             </div>
             <div class="pagination-wrap">

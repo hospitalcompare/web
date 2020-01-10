@@ -1,19 +1,28 @@
+//=========================HEALTH CHOICE SECTION===========================
+//.your-rights-page {
+//    section:not(:first-child) {
+//        padding: 40px 0;
+//    }
+//}
+
+
 .your-rights-intro {
     border-bottom: $greyBorder;
 }
 
 .your-rights-act {
-    background-image: url('/images/Layer_16.png');
-    background-size: 50%;
+    @include media-breakpoint-up(md) {
+        background-image: url('/images/Layer_16.png');
+    }
+    background-size: 40%;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: right 75px;
     border-bottom: $greyBorder;
 }
 
 .your-rights-what {
-    background-image: url('/images/placeholder.jpg');
+    background-image: url('/images/banner-flipped.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-
-    @include mask(#fff, 0.8)
+    @include mask($brand-1, 0.06)
 }

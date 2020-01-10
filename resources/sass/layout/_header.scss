@@ -1,5 +1,5 @@
 .header-wrapper {
-    background: $turq;
+    background: $brand-1;
     text-align: center;
     @include media-breakpoint-down(md) {
         padding: 10px 0;
@@ -7,21 +7,35 @@
 }
 
 //HEADER SECTION
-.branding {
-    display: flex;
-    justify-content: space-between;
-}
-
 .header-logo-parent {
-    display: flex;
-    align-items: center;
+    //display: flex;
+    //align-items: center;
 
     a {
-        display: flex;
+        //display: flex;
+        .logo-mobile {
+            height: 40px;
+            width: 100%;
+        }
+
+        .logo-desktop {
+            width: auto;
+            height: 35px;
+
+            path {
+                fill: #fff;
+            }
+        }
 
         &:hover {
             text-decoration: none;
         }
+    }
+}
+
+.header-logo-image {
+    @include media-breakpoint-down(md) {
+        max-width: 245px;
     }
 }
 
@@ -87,7 +101,7 @@
                 transition: $transition;
 
                 &.active {
-                    background-color: darken($turq, 5%);
+                    background-color: darken($brand-1, 5%);
                     color: #fff;
 
                     @include media-breakpoint-down(md) {
@@ -110,7 +124,7 @@
                 }
 
                 a {
-                    background-color: darken($turq, 5%);
+                    background-color: darken($brand-1, 5%);
                     text-decoration: none;
                     color: #fff;
                 }
@@ -138,7 +152,7 @@
 
 .submenu {
     position: absolute;
-    background: $turq;
+    background: $brand-1;
     width: 200px;
     //display:none;
     opacity: 0;

@@ -1,3 +1,27 @@
+// Init the google maps
+// Open a modal with gmap loaded
+var map = null;
+var myMarker;
+var myLatlng;
+
+function initializeGMap(lat, lng, target) {
+    myLatlng = new google.maps.LatLng(lat, lng);
+
+    var myOptions = {
+        zoom: 14,
+        zoomControl: true,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    map = new google.maps.Map(document.querySelector(target), myOptions);
+
+    myMarker = new google.maps.Marker({
+        position: myLatlng
+    });
+    myMarker.setMap(map);
+}
+
 //Add a delay of 10 ms because rendering is not instant for the new dropdown ( and it's acting weird, sometimes it works and sometimes it doesn't without the delay)
 setTimeout(function () {
     //Change the background color of the selectbox when an option with a value different than 0 is selected
@@ -198,7 +222,8 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
             .removeClass('open');
         // Only change text for 'More info' button
         if($isToggleButton)
-            $(this).find('span, div').text('More info');
+            $(this).find('span, div').text('Map');
+            // $(this).find('span, div').text('More info');
         // Scroll back to the result item
         var $scrollBack = $(this).parents('.result-item').offset().top;
         $('html, body').animate({
@@ -215,11 +240,18 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
             scrollTop: ($(this).parents('.result-item').offset().top) - scrollOffset
             // scrollTop: ($target.offset().top) - scrollOffset
         }, 800);
+        // Init the map
+        var $id = $(this).data('id');
+        var targetMap = '#gmap_' + $id;
+        var $latitude = $(targetMap).data('latitude');
+        var $longitude = $(targetMap).data('longitude');
+        initializeGMap($latitude, $longitude, targetMap);
         //Change the `More info` to `Close info`
         $(this).addClass('open');
         // Only change text for 'More info' button
         if($isToggleButton)
-            $(this).find('span, div').text('Close info');
+            // $(this).find('span, div').text('Close info');
+            $(this).find('span, div').text('Hide map');
     }
 });
 

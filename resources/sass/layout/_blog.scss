@@ -56,15 +56,22 @@
                 }
 
                 .blog-item-category {
-                    width: 30px;
-                    height: 30px;
-                    top: 30px;
-                    right: 30px;
+                    width: 50px;
+                    height: 50px;
+                    top: 15px;
+                    right: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg {
+                        height: 18px;
+                        width: 18px;
+                    }
                 }
             }
 
             .blog-item-content {
-                padding: 20px;
                 .title {
                     @include font-size(20);
                     line-height: 24px;
@@ -107,6 +114,12 @@
         padding-top: 25px;
     }
 
+    .blog-main {
+        @include media-breakpoint-down(md) {
+            padding-bottom: 75px;
+        }
+    }
+
     .jumbotron {
         @include aspect-ratio(1206, 728);
         @extend .mb-5;
@@ -114,12 +127,20 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-        svg {
-            @include v-c;
-            left: 10px;
-            width: 10px;
-            height: 10px;
+
+        .blog-item-category {
+            padding: 12px 16px 15px 38px;
+            top: 20px;
+            left: 20px;
+
+            svg {
+                @include v-c;
+                left: 17px;
+                width: 10px;
+                height: 10px;
+            }
         }
+
 
         .btn-blog-back {
             position: absolute;
@@ -142,7 +163,9 @@
     .blog-content {
         p {
             @include font-size(20);
-            @extend .SofiaPro-SemiBold;
+            //@extend .SofiaPro-SemiBold;
+            @extend .p-secondary;
+            @extend .col-grey;
         }
     }
 
@@ -156,14 +179,14 @@
                 width: 25px;
 
                 path {
-                    fill: $textGrey;
+                    fill: #000;
                     transition: $transition;
                 }
             }
 
             &:hover {
                 svg path {
-                    fill: $turq;
+                    fill: $brand-1;
                 }
             }
         }
@@ -180,7 +203,11 @@
     }
 
     .latest-blog-image {
-        @include aspect-ratio(924, 460);
+        @include aspect-ratio(170, 113);
+    }
+
+    .latest-blog-description {
+        @extend .font-16;
     }
 }
 
