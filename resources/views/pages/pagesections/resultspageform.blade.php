@@ -95,8 +95,8 @@
                                                 <p>
                                                     This hospital provides treatments funded by the NHS. Remember you can have an NHS treatment at most private hospitals.
                                                 </p>'])>NHS<br>Funded Work</p>
-                            <span title="Sort by this column"
-                                  class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 14 ? 'desc':'asc' }}"></span>
+{{--                            <span title="Sort by this column"--}}
+{{--                                  class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 14 ? 'desc':'asc' }}"></span>--}}
                         </li>
                         <li>
                             <p tabindex="0"
@@ -110,8 +110,8 @@
                                                 <p>
                                                     Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
                                                 </p>'])>Private<br>Self Pay</p>
-                            <span title="Sort by this column"
-                                  class="sort-arrow sort-self-pay {{Request::input('sort_by') == 16 ? 'desc':'asc' }}"></span>
+{{--                            <span title="Sort by this column"--}}
+{{--                                  class="sort-arrow sort-self-pay {{Request::input('sort_by') == 16 ? 'desc':'asc' }}"></span>--}}
                         </li>
                     </ul>
                 </div>
