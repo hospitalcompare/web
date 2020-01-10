@@ -36,10 +36,10 @@
                             'svg'               => 'chevron-right'
                         ])
                     </div>
-                    @include('components.basic.testimonial', [
-                        'single'    => true,
-                        'stars'     => 4.5
-                    ])
+{{--                    @include('components.basic.testimonial', [--}}
+{{--                        'single'    => true,--}}
+{{--                        'stars'     => 4.5--}}
+{{--                    ])--}}
                 </div>
             </div>
         </div>

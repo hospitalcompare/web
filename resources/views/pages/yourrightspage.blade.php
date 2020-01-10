@@ -152,7 +152,7 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </section>--}}
-    @include('pages.pagesections.testimonials')
+{{--    @include('pages.pagesections.testimonials')--}}
     <section class="bg-greylight">
         <div class="container">
             <h2 class="font-28 SofiaPro-Medium text-center">Choosing your Hospital and Consultant</h2>
