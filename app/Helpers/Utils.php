@@ -51,11 +51,11 @@ class Utils
             'name'      => 'Care Quality Rating'
         ],[
             'id'        => '11',
-            'name'      => 'Friends & Family Rating',
+            'name'      => 'F&F Rating',
             'class'     => 'd-none'
         ],[
             'id'        => '12',
-            'name'      => 'Friends & Family Rating'
+            'name'      => 'F&F Rating'
         ],
 //        [
 //            'id'        => '13',
