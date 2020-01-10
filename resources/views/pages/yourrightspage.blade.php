@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col-12">
                     {{--                    <h1>Patient Choice</h1>--}}
-                    <h1 class="font-36 SofiaPro-SemiBold mb-3 text-center">Your <span class="col-turq">Rights</span></h1>
+                    <h1 class="font-36 SofiaPro-SemiBold mb-3 text-center">Your <span class="col-brand-1">Rights</span></h1>
                     <p class="text-center font-26 SofiaPro-Medium mb-5 col-grey">
                         The Health and Social Care Act 2013 (the “<span>Act</span>”) introduced a number of
                         significant changes to the way health care services are managed and delivered in England and
@@ -221,7 +221,7 @@
     </section>
     {{--    <section>--}}
     {{--        <div class="">--}}
-    {{--            <p class="font-24 SofiaPro-SemiBold col-turq">You can:</p>--}}
+    {{--            <p class="font-24 SofiaPro-SemiBold col-brand-1">You can:</p>--}}
     {{--            <ul class="blue-dot">--}}
     {{--                <li>Choose the organisation you need to be referred to as an NHS outpatient to see a consultant--}}
     {{--                    or specialist (an outpatient appointment means you will not be admitted to a ward). You may--}}

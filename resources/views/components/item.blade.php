@@ -13,7 +13,7 @@
                         {{$title}}
                     </p>
                     @if(!empty($locationSpecialism))
-                        <p class="sort-item-specialism col-turq mb-1"><strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
+                        <p class="sort-item-specialism col-brand-1 mb-1"><strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
                     @endif
                     <p class="sort-item-location">{{$location}}</p>
                     @include('components.basic.button', [

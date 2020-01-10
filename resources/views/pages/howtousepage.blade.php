@@ -146,7 +146,7 @@
                                 'svg'                   => 'chevron-down',
                                 'selectParentClass'       => 'd-lg-flex align-items-center mb-4',
                                 'selectClass'           => 'select-picker',
-                                'labelClass'            => 'col-turq font-20 SofiaPro-Medium mr-3 mb-lg-0 w-100 w-lg-50',
+                                'labelClass'            => 'col-brand-1 font-20 SofiaPro-Medium mr-3 mb-lg-0 w-100 w-lg-50',
                                 'showLabel'             => true,
                                 'name'                  => 'policy_id',
                                 'selectId'              => 'how_to_use_policies',

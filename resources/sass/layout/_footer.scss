@@ -17,7 +17,7 @@ footer {
         transition: $transition;
         &:hover {
             text-decoration: none;
-            color: $turq;
+            color: $brand-1;
         }
     }
 }
@@ -91,12 +91,12 @@ footer {
                     left: 20px;
 
                     &:hover {
-                        color: $turq;
+                        color: $brand-1;
 
                         svg {
                             path {
-                                stroke: $turq;
-                                fill: $turq;
+                                stroke: $brand-1;
+                                fill: $brand-1;
                             }
                         }
                     }

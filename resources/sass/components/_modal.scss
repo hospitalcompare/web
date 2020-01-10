@@ -177,7 +177,7 @@
 
                 li {
                     background: transparent;
-                    box-shadow: inset 0px 0px 0px 2px $turq;
+                    box-shadow: inset 0px 0px 0px 2px $brand-1;
                     width: 15px;
                     height: 15px;
                     border-radius: 50%;
@@ -186,7 +186,7 @@
                     flex: 0 0 15px;
 
                     &.active {
-                        background: $turq;
+                        background: $brand-1;
                         box-shadow: none;
                     }
                 }

@@ -13,7 +13,7 @@
 @section('content')
     <section class="banner">
         <div class="container">
-            <h1>Latest <span class="col-turq">healthcare</span> news</h1>
+            <h1>Latest <span class="col-brand-1">healthcare</span> news</h1>
             <h3>Informative, impartial and helpful information <br>
                 surrounding the healthcare industry.</h3>
         </div>

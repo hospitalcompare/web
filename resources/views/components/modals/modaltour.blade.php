@@ -9,7 +9,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header d-flex justify-content-between border-bottom">
-                <div id="slide_number" class="col-turq"><span class="d-inline-block">1</span>&nbsp;of 9</div>
+                <div id="slide_number" class="col-brand-1"><span class="d-inline-block">1</span>&nbsp;of 9</div>
                 <span>Help Guide Steps</span>
                 <button type="button" class="btn-plain" data-dismiss="modal" aria-label="Close">
                     @svg('times-black')

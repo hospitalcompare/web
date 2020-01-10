@@ -16,7 +16,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1>Feel <span class="col-turq">better faster</span> by<br>knowing your legal<br> right to choose
+                    <h1>Feel <span class="col-brand-1">better faster</span> by<br>knowing your legal<br> right to choose
                     </h1>
                     <p class="col-grey p-secondary mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Aliquam animi cupiditate error natus,
@@ -163,7 +163,7 @@
     {{--            <div class="row">--}}
     {{--                <div class="col col-12 hc-content">--}}
     {{--                    <h1 class="SofiaPro-SemiBold mb-3">About Hospital Compare</h1>--}}
-    {{--                    <h2 class="SofiaPro-SemiBold col-turq font-28">Feel better faster by knowing your legal right to--}}
+    {{--                    <h2 class="SofiaPro-SemiBold col-brand-1 font-28">Feel better faster by knowing your legal right to--}}
     {{--                        choose.</h2>--}}
     {{--                </div>--}}
     {{--                <div class="col col-7">--}}

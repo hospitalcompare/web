@@ -50,7 +50,7 @@
     .svg-wrapper {
         svg .swirl-path {
             fill: none;
-            stroke: $turq;
+            stroke: $brand-1;
             stroke-width: 1px;
             stroke-dasharray: 624;
             stroke-dashoffset: 624;
@@ -107,8 +107,8 @@
 
                 svg {
                     path {
-                        stroke: $turq;
-                        fill: $turq;
+                        stroke: $brand-1;
+                        fill: $brand-1;
                     }
                 }
 

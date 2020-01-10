@@ -21,19 +21,24 @@ $border-radius: 3px;
 
 // Colors
 $enable-gradients: true;
-$indigo: #6574cd;
 $purple: #9561e2;
-$turq: #00cecd;
+
 $violet: #8e00fe;
 
 $blue: #1b71f3;
 $hanblue: #5e15d1;
 $privateBlue: #033860;
-$green: #00e09d;
 $pink: #ed0373;
 $white: #ffffff;
 $goldStar: #FAC917;
-$doctorGreen: #80efce;
+
+// 2020 new brand colours. Old turquoise = #00cecd
+$brand-1: #037098;
+$brand-2: #037098;
+$brand-3: #037098;
+$brand-4: #037098;
+$brand-5: #037098;
+$brand-6: #037098;
 
 //Main Template colours
 $footerBackgroundColour: #363636;
@@ -113,7 +118,7 @@ $input-border-color: #ededed;
 $input-border-width: 2px;
 $input-height: initial;
 $input-focus-box-shadow: none;
-$input-focus-border-color: $turq !important;
+$input-focus-border-color: $brand-1 !important;
 $form-group-margin-bottom: 0.25rem;
 
 // Select picker
@@ -151,7 +156,7 @@ $nav-link-padding-y: 0.25rem;
 $nav-link-padding-x: 0;
 $nav-tabs-border-width: 0;
 $nav-tabs-border-radius: 0;
-$nav-tabs-link-hover-border-color: $turq;
+$nav-tabs-link-hover-border-color: $brand-1;
 
 // Misc
 $hospital-image-width: 150px;

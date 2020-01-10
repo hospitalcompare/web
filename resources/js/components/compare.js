@@ -200,7 +200,7 @@ window.addHospitalToCompare = function(element) {
                      </button>
                      <div class="btn-area d-flex align-items-center">
                         ${btnContent}
-                        <span class="remove-hospital col-turq ml-2 font-12" id="remove_id_${element.id}" data-hospital-type="${slugify(hospitalType)}-hospital">Remove</span>
+                        <span class="remove-hospital col-brand-1 ml-2 font-12" id="remove_id_${element.id}" data-hospital-type="${slugify(hospitalType)}-hospital">Remove</span>
                      </div>
                 </div>
                 <div id="collapse${element.id}" class="collapse" aria-labelledby="heading${element.id}" data-parent="#compare_hospitals_grid">
