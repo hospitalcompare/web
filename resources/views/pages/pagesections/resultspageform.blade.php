@@ -129,7 +129,7 @@
                     ])
 
                     @include('components.basic.button', [
-                        'buttonText'        => 'Filter Results',
+                        'buttonText'        => 'Show Filters',
                         'classTitle'        => 'btn btn-brand-1 btn-icon btn-arrow-down font-16 pl-3',
                         'id'                => 'show_filters',
                         'icon'              => '',

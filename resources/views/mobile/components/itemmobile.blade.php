@@ -263,7 +263,7 @@
                             'hrefValue'         => $url,
                             'hospitalTitle'     => $title,
                             'hospitalUrl'       => $d['url'],
-                            'classTitle'        => 'btn btn-blue btn-enquire btn-squared btn-squared_slim enquiry btn-enquiry font-12 w-100 text-center d-flex justify-content-center flex-row-reverse px-3',
+                            'classTitle'        => 'btn btn-blue btn-enquire btn-squared btn-squared_slim enquiry btn-enquiry font-14 w-100 text-center d-flex justify-content-center flex-row-reverse p-3',
                             'buttonText'        => $btnText,
                             'modalTarget'       => '#hc_modal_enquire_nhs',
                             'id'                => 'enquire_nhs'.$id,

@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-6">
                     @include('components.basic.button', [
-                        'buttonText'        => 'Filter Results',
+                        'buttonText'        => 'Show Filters',
                         'classTitle'        => 'btn btn-brand-1 btn-squared btn-squared_slim btn-arrow-down font-14 d-flex flex-row-reverse justify-content-around',
                         'id'                => 'show_filters',
                         'svg'               => 'icon-filter',
