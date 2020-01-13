@@ -205,15 +205,15 @@
                     <h3 class="SofiaPro-SemiBold mb-5">If you want to find out more about your choices or the restrictions on your choices visit:
                     </h3>
                     <p>
-                        <a class="btn-link btn-turq-link" target="_blank"
+                        <a class="btn-link btn-brand-1-link" target="_blank"
                            href="https://www.gov.uk/government/publications/the-nhs-choice-framework/the-nhs-choice-framework-what-choices-are-available-to-me-in-the-nhs"
                         >The NHS Choice Framework</a>
                     </p>
                     <p>
-                        <a class="btn-link btn-turq-link" target="_blank" href="https://www.england.nhs.uk/?s=patient+choice">NHS England’s website</a>
+                        <a class="btn-link btn-brand-1-link" target="_blank" href="https://www.england.nhs.uk/?s=patient+choice">NHS England’s website</a>
                     </p>
                     <p>
-                        <a class="btn-link btn-turq-link" target="_blank"
+                        <a class="btn-link btn-brand-1-link" target="_blank"
                            href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england">NHS Constitution</a>
                     </p>
                 </div>

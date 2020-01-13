@@ -446,7 +446,7 @@ select.big {
     .cc-btn {
         @extend .btn;
         //@extend .btn-m;
-        @extend .btn-turq;
+        @extend .btn-brand-1;
         @extend .btn-squared;
         @include font-size(1.1rem, true);
         text-align: center !important;

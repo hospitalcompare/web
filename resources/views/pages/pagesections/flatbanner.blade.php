@@ -33,7 +33,7 @@
                             {{--                                    'html'           => 'true',--}}
                             {{--                                    'trigger'        => 'hover',--}}
                             {{--                                    'content'        => '<p>Select your treatment<br>if known to refine results</p>--}}
-                            {{--                                                 --}}{{--<p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}{{--'])--}}
+                            {{--                                                 --}}{{--<p><a  class="btn btn-close btn-close__small btn-brand-1 btn-icon" >Close</a></p>--}}{{--'])--}}
                             {{--                                >@svg('question')</a>--}}
                         </div>
                         <div class="form-child postcode-parent position-relative">
@@ -90,12 +90,12 @@
                                              <p>
                                                  Select how far you would be willing to travel for your treatment.
                                              </p>
-{{--                                                 <p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}
+{{--                                                 <p><a  class="btn btn-close btn-close__small btn-brand-1 btn-icon" >Close</a></p>--}}
                                              '])
                             >@svg('question')</a>
                         </div>
                         @include('components.basic.button', [
-                            'classTitle'    => 'btn btn-squared btn-turq font-18 text-center',
+                            'classTitle'    => 'btn btn-squared btn-brand-1 font-18 text-center',
                             'buttonText'    => 'Find Hospitals',
                             'htmlButton'    => true,
                             'id'            => 'submit_search',

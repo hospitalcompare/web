@@ -973,7 +973,7 @@
                 <h3>Enquiry button</h3>
                 @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-enquire enquiry', 'buttonText' => 'Make an enquiry'])
                 <h3>Close button</h3>
-                @include('components.basic.button', ['classTitle' => 'btn btn-close__small btn-turq btn-icon', 'buttonText' => 'Close'])
+                @include('components.basic.button', ['classTitle' => 'btn btn-close__small btn-brand-1 btn-icon', 'buttonText' => 'Close'])
                 <h3>Let's go button</h3>
                 @include('components.basic.button', ['classTitle' => 'btn btn-go btn-icon', 'buttonText' => 'Close'])
                 <hr>
@@ -1154,7 +1154,7 @@
                             procedure at. Enter your provider and policy name to find the best hospital for you.
                         </p>
                         <p>
-                            <a class="btn btn-close__small btn-turq btn-icon" href="/">Close</a>
+                            <a class="btn btn-close__small btn-brand-1 btn-icon" href="/">Close</a>
                         </p>
                     </div>
                     <div class="arrow arrow-large" style="left: 64px;"></div>

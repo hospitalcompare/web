@@ -54,7 +54,7 @@
 {{--        <div class="btn-area text-center">--}}
 {{--            @include('components.basic.button', [--}}
 {{--                'hrefValue'     => '/your-rights',--}}
-{{--                'classTitle'    => 'btn btn-squared btn-turq font-18',--}}
+{{--                'classTitle'    => 'btn btn-squared btn-brand-1 font-18',--}}
 {{--                'buttonText'        => 'Your Rights'--}}
 
 {{--            ])--}}

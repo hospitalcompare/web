@@ -1,5 +1,5 @@
 <div class="result-item result-item-mobile col-12 col-md-6 mb-3" id="result-item_{{ $id }}">
-    <div class="result-item-inner position-relative shadow p-3 pt-5 h-100 d-flex flex-column">
+    <div class="result-item-inner overflow-hidden position-relative shadow p-3 pt-5 h-100 d-flex flex-column rounded">
         <div class="item-tags position-absolute d-flex">
             <div
                 class="{{$NHSClass}} hospital-type pp-2 {{ $NHSClass == 'private-hospital' ? 'bg-violet' : 'bg-blue' }} position-relative d-inline-block">
@@ -7,7 +7,7 @@
             </div>
         </div>
         @include('components.basic.button', [
-            'classTitle'        => 'btn btn-compare compare font-12 shadow-none position-absolute mt-2 mr-2',
+            'classTitle'        => 'btn btn-compare btn-compare-mobile compare font-12 shadow-none position-absolute mt-2 mr-3',
             'htmlButton'        => true,
             'buttonText'        => 'Add to compare',
             'hospitalType'      => $NHSClass,
@@ -15,14 +15,16 @@
             'id'                => $id])
         <div class="result-item-mobile-section-1 w-100 mb-3">
             <div class="hospital-details w-100 position-relative">
-                <p class="sort-item-title SofiaPro-SemiBold" id="item_name_{{$id}}">
+                <p class="sort-item-title SofiaPro-Medium text-center" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
                 @if(!empty($locationSpecialism))
-                    <p class="sort-item-specialism col-brand-1 mb-1">
-                        <strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
+                    <p class="sort-item-specialism font-12 mb-1 text-center col-grey">
+                        Specialism:&nbsp;<span>{{ $locationSpecialism }}</span></p>
                 @endif
-                <p class="sort-item-location">{{$location}} {{-- trim($town, ', ') --}}</p>
+                @if(!empty($d['radius']))
+                    <p class="sort-item-location text-center col-grey font-12"><span>@svg('icon-map', 'map-icon')</span>{{$location}} {{-- trim($town, ', ') --}}</p>
+                @endif
                 <!-- Corporate content area -->
                 @include('mobile.components.corporatecontentmobile', [
                     'procedures'        => $procedures,
@@ -173,7 +175,7 @@
                 </p>
             </div>
             {{-- NHS user rating --}}
-            <div class="result-item-section-2__child mb-2">
+            <div class="result-item-section-2__child mb-3">
                 <p>NHS User Rating</p>
                 <p class="d-flex SofiaPro-Medium"
                     @include('components.basic.popover', [
@@ -193,41 +195,43 @@
                 </p>
             </div>
             {{-- Click for self pay --}}
-            <div class="result-item-section-2__child justify-content-between align-items-center">
+            @if(!empty($privateSelfPay) || !empty($specialOffers))
+                <div class="result-item-section-2__child justify-content-between align-items-center mb-3">
                 @if(!empty($privateSelfPay))
                     @if($NHSClass == 'private-hospital')
-                        @include('components.basic.modalbutton', [
-                                'hrefValue'         => $url,
-                                'hospitalTitle'     => $title,
-                                'modalTarget'       => '#hc_modal_mobile_enquire_private',
-                                'classTitle'        => 'btn btn-link enquire-prices mr-auto p-0 w-50',
-                                'target'            => 'blank',
-                                'modalText'         => 'This is the text about prices',
-                                'hospitalIds'       => $id,
-                                'buttonText'        => 'Click for self pay prices'])
-                        {{--                    @else--}}
-                        {{--                        <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>--}}
+                        <div class="button-wrapper w-50 text-left">
+                            @include('components.basic.modalbutton', [
+                                    'hrefValue'         => $url,
+                                    'hospitalTitle'     => $title,
+                                    'modalTarget'       => '#hc_modal_mobile_enquire_private',
+                                    'classTitle'        => 'btn btn-link enquire-prices mr-auto p-0 ',
+                                    'target'            => 'blank',
+                                    'modalText'         => 'This is the text about prices',
+                                    'hospitalIds'       => $id,
+                                    'buttonText'        => 'Click for self pay prices'])
+                        </div>
                     @endif
-                    {{--                @else--}}
-                    {{--                    <p><img src='images/icons/dash-black.svg' alt='Dash icon'></p>--}}
                 @endif
                 @if(!empty($specialOffers))
-                    @include('components.basic.modalbutton', [
-                        'classTitle'        => 'toggle-special-offer btn btn-icon btn-link btn-special-offer btn-special-offer_mobile pl-5 col-pink rounded-0 w-50',
-                        'htmlButton'        => true,
-                        'modalTarget'       => '#hc_modal_mobile_special_offer_' . $id,
-                        'id'                => 'special_' . $id,
-                        'buttonText'        => 'Special Offers',
-                        'svg'               => 'special-pink'])
+                    <div class="button-wrapper w-50">
+                        @include('components.basic.modalbutton', [
+                            'classTitle'        => 'toggle-special-offer btn btn-icon btn-link btn-special-offer btn-special-offer_mobile col-pink rounded-0 d-flex align-items-center justify-content-end flex-row-reverse py-0 pr-0 ml-auto',
+                            'htmlButton'        => true,
+                            'modalTarget'       => '#hc_modal_mobile_special_offer_' . $id,
+                            'id'                => 'special_' . $id,
+                            'buttonText'        => 'Special Offers',
+                            'svg'               => 'special-pink'])
+                    </div>
                 @endif
             </div>
+            @endif
         </div>
         <div class="result-item-mobile-section-3 w-100 mt-auto">
             <div class="row">
                 <!-- More info button -->
                 <div class="button-wrapper col-6">
                     @include('components.basic.button', [
-                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-turq _btn-cc-close btn-more-info w-100 text-center font-12',
+                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-1 _btn-cc-close btn-more-info w-100 text-center font-12 p-3',
                        'buttonText'        => 'Map',
                        'htmlButton'        => true,
                        'icon'              => '',
@@ -244,7 +248,7 @@
                             'hrefValue'         => $url,
                             'hospitalTitle'     => $title,
                             'modalTarget'       => '#hc_modal_mobile_enquire_private',
-                            'classTitle'        => 'btn btn-squared btn-enquire btn-squared_slim btn-blue text-center enquiry btn-enquiry font-12 w-100 text-center d-flex justify-content-center align-items-center flex-row-reverse px-3',
+                            'classTitle'        => 'btn btn-squared btn-enquire btn-squared_slim btn-blue text-center enquiry btn-enquiry font-12 w-100 text-center d-flex justify-content-center align-items-center flex-row-reverse p-3',
                             'target'            => 'blank',
                             'buttonText'        => $btnText,
                             'id'                => 'enquire_private_'.$id,

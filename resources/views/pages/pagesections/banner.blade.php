@@ -104,7 +104,7 @@
                             >@svg('question')</a>
                         </div>
                         @include('components.basic.button', [
-                            'classTitle'    => 'btn btn-squared btn-block text-center btn-turq py-3 mb-3 font-18',
+                            'classTitle'    => 'btn btn-squared btn-block text-center btn-brand-1 py-3 mb-3 font-18',
                             'buttonText'    => 'Find Hospitals',
                             'htmlButton'    => true,
                             'id'            => 'submit_search',
