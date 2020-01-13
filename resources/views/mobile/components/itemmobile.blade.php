@@ -231,7 +231,7 @@
                 <!-- More info button -->
                 <div class="button-wrapper col-6">
                     @include('components.basic.button', [
-                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-1 _btn-cc-close btn-more-info w-100 text-center font-12 p-3',
+                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-1 _btn-cc-close btn-more-info w-100 text-center font-14 p-3',
                        'buttonText'        => 'Map',
                        'htmlButton'        => true,
                        'icon'              => '',
@@ -248,7 +248,7 @@
                             'hrefValue'         => $url,
                             'hospitalTitle'     => $title,
                             'modalTarget'       => '#hc_modal_mobile_enquire_private',
-                            'classTitle'        => 'btn btn-squared btn-enquire btn-squared_slim btn-blue text-center enquiry btn-enquiry font-12 w-100 text-center d-flex justify-content-center align-items-center flex-row-reverse p-3',
+                            'classTitle'        => 'btn btn-squared btn-enquire btn-squared_slim btn-blue text-center enquiry btn-enquiry font-14 w-100 text-center d-flex justify-content-center align-items-center flex-row-reverse p-3',
                             'target'            => 'blank',
                             'buttonText'        => $btnText,
                             'id'                => 'enquire_private_'.$id,
