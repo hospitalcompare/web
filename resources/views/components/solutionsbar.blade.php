@@ -65,7 +65,7 @@
                             <div class="form-wrapper pt-3 grey-border-top">
                                 @include('components.basic.modalbutton', [
                                     'htmlButton'        => true,
-                                    'buttonText'        => 'Make an enquiry<br>to all your chosen<br>hospitals',
+                                    'buttonText'        => 'Email private hospitals',
                                     'classTitle'        => 'btn btn-squared btn-blue btn-enquire-all font-14',
                                     'id'                => 'multiple_enquiries_button',
                                     'svg'               => 'circle-check',
@@ -215,7 +215,7 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
+                                                        You are protected from abuse and avoidable harm.
                                                     </span>'])>@svg('question')</span>
                             </span>
                         </div>
@@ -229,7 +229,7 @@
                                 'html'      => 'true',
                                 'size'      => 'comparison',
                                 'content'   => '<span>
-                                                    Info here
+                                                    Your care, treatment and support achieves good outcomes, helps you to maintain quality of life and is based on the best available evidence.
                                                 </span>'])>@svg('question')</span>
                             </span>
                         </div>
@@ -243,7 +243,7 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
+                                                         Staff involve and treat you with compassion, kindness, dignity and respect.
                                                     </span>'])>@svg('question')</span>
                             </span>
                         </div>
@@ -257,7 +257,7 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
+                                                        Services are organised so that they meet your needs.
                                                     </span>'])>@svg('question')</span>
                             </span>
                         </div>
@@ -271,7 +271,7 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
+                                                        The leadership, management and governance of the organisation make sure it\'s providing high-quality care that\'s based around your individual needs, that it encourages learning and innovation, and that it promotes an open and fair culture
                                                     </span>'])>@svg('question')</span>
                             </span>
                         </div>
@@ -286,12 +286,12 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
+                                                        All items and areas commonly found in healthcare premises.
                                                     </span>'])>@svg('question')</span>
                             </span>
                         </div>
                         <div class="cell">
-                            <span class="position-relative">Food & Hygiene&nbsp;&nbsp;
+                            <span class="position-relative">Food & Hydration&nbsp;&nbsp;
                                 <span tabindex="0"
                                       class="help-link"
                                     @include('components.basic.popover', [
@@ -300,7 +300,7 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
+                                                        Questions relating to catering; choice, 24hr availability, mealtimes, access to menus.
                                                     </span>'])>@svg('question')</span>
                             </span>
                         </div>
@@ -314,7 +314,21 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
+                                                        Questions relating to patient bed and changing privacy, waiting areas and access to recreational space.
+                                                    </span>'])>@svg('question')</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">Condition, Appearance & Maintenance&nbsp;&nbsp;
+                                <span tabindex="0"
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'placement' => 'top',
+                                    'trigger'   => 'hover',
+                                    'html'      => 'true',
+                                    'size'      => 'comparison',
+                                    'content'   => '<span>
+                                                        Considers appearance of general environment including décor, condition of fixtures and fittings, tidiness, signage, lighting.
                                                     </span>'])>@svg('question')</span>
                             </span>
                         </div>
@@ -328,7 +342,7 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
+                                                        Considers flooring, décor and signage and aspects such as availability of handrails and appropriate seating.
                                                     </span>'])>@svg('question')</span>
                             </span>
                         </div>
@@ -342,7 +356,7 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
+                                                        Considers access issues, including wheelchair, mobility (e.g. handrails), signage, hearing loops and catering
                                                     </span>'])>@svg('question')</span>
                             </span>
                         </div>

@@ -586,8 +586,11 @@
     }
 
     #show_filters {
+        padding: 15px 15px !important;
+
         svg {
-            @include v-c;
+            //@include v-c;
+            position: static !important;
             width: 20px;
             height: 20px;
             left: 16px;
@@ -731,6 +734,13 @@
         .dropdown-menu {
             min-width: initial !important;
             width: 100% !important;
+        }
+    }
+
+    .sort-item-location {
+        .map-icon {
+            width: 9px;
+            height: auto;
         }
     }
 }

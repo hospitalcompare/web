@@ -13,7 +13,7 @@
 @section('body-class', 'results-page results-page-mobile')
 
 @section('content')
-{{--    {{dd($data['special_offers'])}}--}}
+{{--    {{dd($data['hospitals'])}}--}}
     @include('mobile.pages.pagesections.resultspageformmobile')
 
     <div class="results pt-3">

@@ -9,10 +9,11 @@
                 </div>
                 <div class="col-6">
                     @include('components.basic.button', [
-                        'buttonText'        => 'Filter Results',
-                        'classTitle'        => 'btn btn-turq btn-squared btn-squared_slim btn-arrow-down font-12 pl-5 btn-block',
+                        'buttonText'        => 'Show Filters',
+                        'classTitle'        => 'btn btn-brand-1 btn-squared btn-squared_slim btn-arrow-down font-14 d-flex flex-row-reverse justify-content-around',
                         'id'                => 'show_filters',
-                        'svg'               => 'icon-filter'
+                        'svg'               => 'icon-filter',
+                        'svgClass'          => 'd-inline position-static'
                     ])
                 </div>
                 <div class="col-6">
@@ -20,7 +21,7 @@
                         'showLabel'             => false,
                         'options'               => $data['sortBy'],
                         'svg'                   => 'icon-order-by',
-                        'selectClass'           => 'select-sort-by SofiaPro-Medium font-12 bg-grey h-100',
+                        'selectClass'           => 'select-sort-by SofiaPro-Medium font-14 bg-grey h-100 border-0',
                         'selectWrapperClass'    => 'h-100',
                         'selectParentClass'     => 'align-items-center h-100',
                         'placeholder'           => 'Sort by:',
@@ -228,7 +229,7 @@
                         </div>
                         <div class="col-6 button-wrapper">
                             @include('components.basic.submit', [
-                                'classTitle'    => 'btn-submit-results text-center btn btn-turq btn-squared btn-squared_slim d-block font-14 w-100',
+                                'classTitle'    => 'btn-submit-results text-center btn btn-brand-1 btn-squared btn-squared_slim d-block font-14 w-100',
                                 'buttonText'    => 'Update Results'])
                         </div>
                     </div>

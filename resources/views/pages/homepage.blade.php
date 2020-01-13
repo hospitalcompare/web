@@ -20,35 +20,23 @@
             'sectionTitle' => 'How does it work?',
             'howsections' => [
             [
-                'iconImg'       => 'how-does-it-work-step-1',
-                'step'          => 'One',
-                'title'         => 'Your rights to choose:',
-                'color'         => 'turq',
-                'description'   => '
-                            <ul class="">
-                                <li><span class="green-tick text-center">if NHS funded treatment</span></li>
-                                <li><span class="green-tick text-center">if self-pay</span></li>
-                                <li><span class="green-tick text-center">if covered by a health insurance policy</span></li>
-                            </ul>'
-            ],
-            [
                 'iconImg'       => 'how-does-it-work-step-2',
-                'step'          => 'Two',
+                'step'          => 'One',
                 'title'         => 'Search & compare:',
                 'color'         => 'violet',
-                'description'   => '<p>Use this site to search and compare both NHS and private (self-pay) hospitals across England. You can also search and compare by your health insurance policy.</p>'],
+                'description'   => '<p>Search from over 800 hospitals in England and find the right hospital for your treatment.</p>'],
             [
                 'iconImg'       => 'how-does-it-work-step-3',
-                'step'          => 'Three',
+                'step'          => 'Two',
                 'title'         => 'Make enquiry:',
                 'color'         => 'pink',
-                'description'   => '<p>Contact your chosen hospital(s) and ask any questions before deciding the one that’s right for you.</p>'],
+                'description'   => '<p>Use Hospital Compare to make an enquiry at one or more hospitals.</p>'],
             [
                 'iconImg'       => 'how-does-it-work-step-4',
-                'step'          => 'Four',
+                'step'          => 'Three',
                 'title'         => 'Request a referral:',
                 'color'         => 'blue',
-                'description'   => '<p>Request a referral from your GP if you selected an NHS hospital, or wait for your chosen private hospital to contact you about your appointment.</p>'
+                'description'   => '<p>Inform your GP of your chosen hospital and request an appointment.</p>'
             ]
         ]
     ])
@@ -119,7 +107,7 @@
                         <div class="btn-area text-center text-lg-left">
                             @include('components.basic.button', [
                                 'buttonText'    => 'View all FAQs',
-                                'classTitle'    => 'btn btn-turq btn-squared mt-4 font-18',
+                                'classTitle'    => 'btn btn-brand-1 btn-squared mt-4 font-18',
                                 'hrefValue'     => '/faqs'
                             ])
                         </div>

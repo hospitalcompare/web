@@ -18,7 +18,7 @@
                                                     Care Quality Rating
                                                 </p>
                                                 <p>
-                                                    The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
+                                                    The Care Quality Commission is the independent regulator of health and social care in England. They rate hospitals as Outstanding, Good, Requires Improvement or Inadequate.
                                                 </p>'])>Care Quality<br>Rating</p>
                             <span title="Sort by this column"
                                   class="sort-arrow sort-care-quality-rating {{empty(Request::input('sort_by')) ? 'desc' : Request::input('sort_by') == 10 ? 'desc':'asc' }}">@svg('chevron-down')</span>
@@ -33,7 +33,7 @@
                                                     Waiting Time (NHS Funded)
                                                 </p>
                                                 <p>
-                                                    Our waiting time data is based on NHS data, specifically the number of weeks that 92 out or 100 people wait for their treatment to start.
+                                                    Our waiting time data is based on NHS data, specifically the number of weeks that 92 out of 100 people wait for their treatment to start.
                                                 </p>'])>Waiting time <br>(NHS Funded)</p>
                             <span title="Sort by this column"
                                   class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}">@svg('chevron-down')</span>
@@ -48,7 +48,7 @@
                                                     NHS User Rating
                                                 </p>
                                                 <p>
-                                                    Five star rating system based on feedback provided by users of the NHS, five stars being the best. Information is not available on some hospitals.
+                                                    Star rating system based on feedback provided by NHS patients, five stars being the best.
                                                 </p>'])>NHS User<br> Rating&nbsp;<br></p>
                             <span title="Sort by this column"
                                   class="sort-arrow sort-user-rating {{Request::input('sort_by') == 6 ? 'desc':'asc' }}">@svg('chevron-down')</span>
@@ -63,7 +63,7 @@
                                                     % of Operations Cancelled
                                                 </p>
                                                 <p>
-                                                    The percentage of operations cancelled during the last reporting period. Data only available for NHS hospitals at this time.
+                                                    The percentage of operations cancelled during the latest reporting period. Data typically only available for NHS hospitals at this time.
                                                 </p>'])>% Operations<br>Cancelled</p>
                             <span title="Sort by this column"
                                   class="sort-arrow sort-op-cancelled {{Request::input('sort_by') == 8 ? 'desc':'asc' }}">@svg('chevron-down')</span>
@@ -78,7 +78,7 @@
                                                     Friends & Family Rating
                                                 </p>
                                                 <p>
-                                                    The percentage of people who would recommend this hospital to family and friends.
+                                                    The percentage of people who would recommend this hospital to their friends and family.
                                                 </p>'])>Friends &<br>Family Rating</p>
                             <span title="Sort by this column"
                                   class="sort-arrow sort-ff-rating {{Request::input('sort_by') == 12 ? 'desc':'asc' }}">@svg('chevron-down')</span>
@@ -93,7 +93,7 @@
                                                     NHS Funded Work
                                                 </p>
                                                 <p>
-                                                    This hospital provides treatments funded by the NHS. Remember you can have an NHS treatment at most private hospitals.
+                                                    A tick signifies the hospital provides NHS funded treatments.
                                                 </p>'])>NHS<br>Funded Work</p>
 {{--                            <span title="Sort by this column"--}}
 {{--                                  class="sort-arrow sort-nhs-funded {{Request::input('sort_by') == 14 ? 'desc':'asc' }}"></span>--}}
@@ -129,8 +129,8 @@
                     ])
 
                     @include('components.basic.button', [
-                        'buttonText'        => 'Filter Results',
-                        'classTitle'        => 'btn btn-turq btn-icon btn-arrow-down font-16 pl-3',
+                        'buttonText'        => 'Show Filters',
+                        'classTitle'        => 'btn btn-brand-1 btn-icon btn-arrow-down font-16 pl-3',
                         'id'                => 'show_filters',
                         'icon'              => '',
                         'svg'               => 'chevron-down-white'
@@ -228,15 +228,9 @@
                         'size'           => 'max-width',
                         'trigger'           => 'hover',
                         'content'           => '
-{{--                        <p class="SofiaPro-Medium mb-0">--}}
-{{--                                         Waiting Time--}}
-{{--                                     </p>--}}
                                      <p>
                                          Select the waiting time most suitable for your needs.
                                      </p>
-{{--                                     <p>--}}
-{{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
-{{--                                     </p>--}}
                                      '])
                     >@svg('question')</a>
                 </div>
@@ -260,27 +254,21 @@
                         'size'           => 'max-width',
                         'trigger'        => 'hover',
                         'content'        => '
-{{--                        <p class="SofiaPro-Medium mb-0">--}}
-{{--                                         NHS User Rating--}}
-{{--                                     </p>--}}
                                      <p>
                                          Five star rating system based on feedback provided by users of the NHS (five stars being the best). Information is not available on some hospitals.
                                      </p>
-{{--                                     <p>--}}
-{{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
-{{--                                     </p>--}}
                                      '])
                     >@svg('question')</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
-                        'showLabel' => true,
-                        'options' => $data['filters']['qualityRatings'],
-                        'svg' => 'chevron-down',
-                        'selectClass' => 'select-picker highlight-search-dropdown _results-page-select _highlight',
-                        'placeholder'=>'Care Quality Rating',
-                        'name'=>'quality_rating',
-                        'labelClass' => 'font-14 SofiaPro-Medium'])
+                        'showLabel'         =>  true,
+                        'options'           =>  $data['filters']['qualityRatings'],
+                        'svg'               =>  'chevron-down',
+                        'selectClass'       =>  'select-picker highlight-search-dropdown _results-page-select _highlight',
+                        'placeholder'       =>  'Care Quality Rating',
+                        'name'              =>  'quality_rating',
+                        'labelClass'        =>  'font-14 SofiaPro-Medium'])
                     <a tabindex="0" data-offset="0 5px"
                        class="help-link"
                         @include('components.basic.popover', [
@@ -290,15 +278,9 @@
                         'size'           => 'max-width',
                         'trigger'        => 'hover',
                         'content'        => '
-{{--                        <p class="SofiaPro-Medium mb-0">--}}
-{{--                                         Care Quality Rating--}}
-{{--                                     </p>--}}
                                      <p>
                                          The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
                                      </p>
-{{--                                     <p>--}}
-{{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
-{{--                                     </p>--}}
                                      '])
                     >@svg('question')</a>
                 </div>
@@ -321,15 +303,9 @@
                         'size'           => 'max-width',
                         'trigger'        => 'hover',
                         'content'        => '
-{{--                        <p class="SofiaPro-Medium mb-0">--}}
-{{--                                         NHS or Private Hospitals--}}
-{{--                                     </p>--}}
                                      <p>
                                          Select which hospital type best suits your needs. Remember you can choose to have an NHS treatment at most private hospitals in England and Wales.
                                      </p>
-{{--                                     <p>--}}
-{{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
-{{--                                     </p>--}}
                                      '])
                     >@svg('question')</a>
                 </div>
@@ -357,15 +333,9 @@
                         'size'           => 'max-width',
                         'trigger'        => 'hover',
                         'content'        => '
-{{--                        <p class="SofiaPro-Medium mb-0">--}}
-{{--                                         Insurance policy--}}
-{{--                                     </p>--}}
                                      <p>
                                          Select your insurance provider and policy type.
                                      </p>
-{{--                                     <p>--}}
-{{--                                         <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
-{{--                                     </p>--}}
                                      '])
                     >@svg('question')</a>
                 </div>

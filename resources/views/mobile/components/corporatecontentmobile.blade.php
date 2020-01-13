@@ -429,7 +429,7 @@
                     <div class="row">
                         <div class="corporate-content-details d-flex col-12 mb-3">
                             <div class="address">
-                                {!! $town !!},&nbsp;{{ $postcode }}
+                                {!! !empty($d['address']['city']) ? $d['address']['city'] : $d['address']['county'] !!},&nbsp;{{ $postcode }}
                             </div>
                         </div>
                         <div class="col-12">
@@ -474,7 +474,7 @@
                                 {{--                                                     Select how far you would be willing to travel for your treatment.--}}
                                 {{--                                                 </p>--}}
                                 {{--                                                 <p>--}}
-                                {{--                                                     <a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a>--}}
+                                {{--                                                     <a  class="btn btn-close btn-close__small btn-brand-1 btn-icon" >Close</a>--}}
                                 {{--                                                 </p>'])--}}
                                 {{--                                >' . file_get_contents(asset('/images/icons/question.svg')) . '</a>--}}
                             </div>

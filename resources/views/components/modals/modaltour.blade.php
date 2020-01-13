@@ -257,7 +257,7 @@
                                         </a>
                                     </div>
                                     <div class="col-6">
-                                        <a class="carousel-control-next carousel-control btn btn-squared btn-squared_slim btn-turq col-white btn-tour-control next"
+                                        <a class="carousel-control-next carousel-control btn btn-squared btn-squared_slim btn-brand-1 col-white btn-tour-control next"
                                            href="#carousel_tour" role="button"
                                            data-slide="next">Next
                                         </a>

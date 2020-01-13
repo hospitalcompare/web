@@ -17,11 +17,10 @@
                 @include('components.basic.popover', [
                 'dismissible'   => true,
                 'placement'      => 'top',
-{{--                                    'size'           => 'large',--}}
                 'html'           => 'true',
                 'trigger'        => 'hover',
                 'content'        => '<p>Select your treatment<br>if known to refine results</p>
-                             {{--<p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}'])
+                             {{--<p><a  class="btn btn-close btn-close__small btn-brand-1 btn-icon" >Close</a></p>--}}'])
             >@svg('question')</a>
         </div>
         <div class="form-child postcode-parent">
@@ -75,12 +74,11 @@
                              <p>
                                  Select how far you would be willing to travel for your treatment.
                              </p>
-{{--                                                 <p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}
                              '])
             >@svg('question')</a>
         </div>
         @include('components.basic.submit', [
-            'classTitle'    => 'btn btn-turq py-3 mb-3',
+            'classTitle'    => 'btn btn-brand-1 py-3 mb-3',
             'buttonText'        => 'Find Hospitals'])
         <div class='browse-button'>
             <a class="SofiaPro-Medium" href="{{url('/results-page')}}">Browse all hospitals</a>

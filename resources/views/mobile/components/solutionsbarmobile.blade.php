@@ -29,7 +29,7 @@
                             <div class="form-wrapper pt-3">
                                 @include('components.basic.modalbutton', [
                                     'htmlButton'        => true,
-                                    'buttonText'        => 'Make an enquiry to all your chosen hospitals',
+                                    'buttonText'        => 'Email private hospitals',
                                     'classTitle'        => 'btn btn-squared btn-blue btn-enquire-all font-12 w-100',
                                     'id'                => 'multiple_enquiries_button',
                                     'svg'               => 'circle-check',

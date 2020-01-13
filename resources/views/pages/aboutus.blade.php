@@ -24,7 +24,7 @@
                         saepe sed voluptates?</p>
                     <div class="btn-area mb-5">
                         @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-squared btn-turq',
+                            'classTitle'        => 'btn btn-squared btn-brand-1',
                             'buttonText'        => 'Find the right hospital',
                             'hrefValue'         => '/results-page',
                             ''
@@ -151,7 +151,7 @@
                         Consequuntur explicabo inventore minima odio provident?</p>
                     @include('components.basic.button', [
                         'buttonText'    => 'Find the right hospital',
-                        'classTitle'    => 'btn btn-turq btn-squared',
+                        'classTitle'    => 'btn btn-brand-1 btn-squared',
                         'hrefValue'     => '/results-page'
                     ])
                 </div>
@@ -294,5 +294,5 @@
             </div>
         </div>
     </section>
-    @include('pages.pagesections.social')
+{{--    @include('pages.pagesections.social')--}}
 @endsection
