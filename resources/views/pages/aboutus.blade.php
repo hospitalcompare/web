@@ -294,5 +294,5 @@
             </div>
         </div>
     </section>
-    @include('pages.pagesections.social')
+{{--    @include('pages.pagesections.social')--}}
 @endsection

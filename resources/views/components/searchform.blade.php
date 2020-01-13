@@ -17,7 +17,6 @@
                 @include('components.basic.popover', [
                 'dismissible'   => true,
                 'placement'      => 'top',
-{{--                                    'size'           => 'large',--}}
                 'html'           => 'true',
                 'trigger'        => 'hover',
                 'content'        => '<p>Select your treatment<br>if known to refine results</p>
@@ -75,7 +74,6 @@
                              <p>
                                  Select how far you would be willing to travel for your treatment.
                              </p>
-{{--                                                 <p><a  class="btn btn-close btn-close__small btn-turq btn-icon" >Close</a></p>--}}
                              '])
             >@svg('question')</a>
         </div>

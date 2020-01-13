@@ -15,41 +15,30 @@
     <section class="how-section__parent">
         @include('components.howsection', [
             'hideButton'    => false,
-            'sectionTitle' => 'How to use Hospital Compare',
+            'sectionTitle' => 'How does it work?',
             'howsections' => [
             [
-                'iconImg'       => 'how-does-it-work-step-1',
-                'step'          => 'One',
-                'title'         => 'Your rights to choose:',
-                'color'         => 'turq',
-                'description'   => '
-                            <ul class="">
-                                <li class="green-tick text-center">if NHS funded treatment</li>
-                                <li class="green-tick text-center">if self-pay</li>
-                                <li class="green-tick text-center">if covered by a health insurance policy</li>
-                            </ul>'
-            ],
-            [
                 'iconImg'       => 'how-does-it-work-step-2',
-                'step'          => 'Two',
+                'step'          => 'One',
                 'title'         => 'Search & compare:',
                 'color'         => 'violet',
-                'description'   => '<p>Use this site to search and compare both NHS and private (self-pay) hospitals across England. You can also search and compare by your health insurance policy.</p>'],
+                'description'   => '<p>Search from over 800 hospitals in England and find the right hospital for your treatment.</p>'],
             [
                 'iconImg'       => 'how-does-it-work-step-3',
-                'step'          => 'Three',
+                'step'          => 'Two',
                 'title'         => 'Make enquiry:',
                 'color'         => 'pink',
-                'description'   => '<p>Contact your chosen hospital(s) and ask any questions before deciding the one that’s right for you.</p>'],
+                'description'   => '<p>Use Hospital Compare to make an enquiry at one or more hospitals.</p>'],
             [
                 'iconImg'       => 'how-does-it-work-step-4',
-                'step'          => 'Four',
+                'step'          => 'Three',
                 'title'         => 'Request a referral:',
                 'color'         => 'blue',
-                'description'   => '<p>Request a referral from your GP if you selected an NHS hospital, or wait for your chosen private hospital to contact you about your appointment.</p>'
+                'description'   => '<p>Inform your GP of your chosen hospital and request an appointment.</p>'
             ]
         ]
     ])
+
     </section>
     <section class="how-section__extra bg-greylight">
         <div class="container">
@@ -63,11 +52,13 @@
                 <div class="col col-12 col-md-6">
                     <div>
                         <h2 class="SofiaPro-Medium mb-4">NHS funded in a private hospital</h2>
-                        <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
+                        <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
+                            eveniet ipsa laboriosam
                             distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
                             voluptates? Ea, odio!
                         </p>
-                        <p class="mb-4 col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
+                        <p class="mb-4 col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                            cumque nesciunt, officia repellat
                             repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
                             deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
                             quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
@@ -95,11 +86,13 @@
                 <div class="col col-12 col-lg-6">
                     <div>
                         <h2 class="mb-4">Standard procedure at an NHS Hospital</h2>
-                        <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
+                        <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
+                            eveniet ipsa laboriosam
                             necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
                             voluptates? Ea, odio!
                         </p>
-                        <p class="mb-4 col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
+                        <p class="mb-4 col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                            cumque nesciunt, officia repellat
                             repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
                             deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
                             quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
@@ -127,11 +120,13 @@
                 <div class="col col-12 col-lg-6">
                     <div>
                         <h2 class="mb-4">Private healthcare insurance</h2>
-                        <p class="mb-4 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
+                        <p class="mb-4 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
+                            eveniet ipsa laboriosam
                             distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
                             voluptates? Ea, odio!
                         </p>
-                        <p class="mb-4 col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
+                        <p class="mb-4 col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                            cumque nesciunt, officia repellat
                             repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
                             deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
                             quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
@@ -173,12 +168,14 @@
                 <div class="col col-12 col-lg-6">
                     <div>
                         <h2 class="mb-4">Self-pay at a private hospital</h2>
-                        <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque eveniet ipsa laboriosam
+                        <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
+                            eveniet ipsa laboriosam
                             voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
                             distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
                             voluptates? Ea, odio!
                         </p>
-                        <p class="mb-4 col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cumque nesciunt, officia repellat
+                        <p class="mb-4 col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                            cumque nesciunt, officia repellat
                             repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
                             deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
                             quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa

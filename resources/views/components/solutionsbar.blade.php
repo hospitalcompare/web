@@ -65,7 +65,7 @@
                             <div class="form-wrapper pt-3 grey-border-top">
                                 @include('components.basic.modalbutton', [
                                     'htmlButton'        => true,
-                                    'buttonText'        => 'Make an enquiry<br>to all your chosen<br>hospitals',
+                                    'buttonText'        => 'Email private hospitals',
                                     'classTitle'        => 'btn btn-squared btn-blue btn-enquire-all font-14',
                                     'id'                => 'multiple_enquiries_button',
                                     'svg'               => 'circle-check',
