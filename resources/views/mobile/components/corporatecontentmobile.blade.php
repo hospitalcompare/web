@@ -429,7 +429,7 @@
                     <div class="row">
                         <div class="corporate-content-details d-flex col-12 mb-3">
                             <div class="address">
-                                {!! $town !!},&nbsp;{{ $postcode }}
+                                {!! !empty($d['address']['city']) ? $d['address']['city'] : $d['address']['county'] !!},&nbsp;{{ $postcode }}
                             </div>
                         </div>
                         <div class="col-12">
