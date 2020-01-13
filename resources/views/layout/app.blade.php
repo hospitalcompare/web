@@ -79,7 +79,8 @@
                         }
                     },
                     "theme": "hc-cookie",
-                    "position": "bottom-right",
+                    // "position": "bottom-right",
+                    "position": "bottom",
                     "content": {
                         "message": "We use cookies to provide a better service. By closing this window or continuing to use our website you agree with our use of cookies. <br><br>Find out how to manage cookies and view our policy",
                         "dismiss": "Close",
