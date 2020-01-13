@@ -66,6 +66,7 @@
                 async defer></script>
         <script>
             window.addEventListener("load", function(){
+                // https://www.osano.com/cookieconsent/download/
                 window.cookieconsent.initialise({
                     "palette": {
                         "popup": {
@@ -73,14 +74,17 @@
                             "text": "#fff"
                         },
                         "button": {
-                            "background": "#00cecd",
+                            "background": "#037098",
                             "text": "#ffffff",
                         }
                     },
                     "theme": "hc-cookie",
                     "position": "bottom-right",
                     "content": {
-                        "href": "/cookie-policy/"
+                        "message": "We use cookies to provide a better service. By closing this window or continuing to use our website you agree with our use of cookies. <br><br>Find out how to manage cookies and view our policy",
+                        "dismiss": "Close",
+                        "link": "here",
+                        "href": "/cookie-policy"
                     }
                 })});
         </script>
