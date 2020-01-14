@@ -2,6 +2,10 @@ window.$body = $('body');
 window.isDesktop = $body.hasClass('results-page-desktop');
 window.isMobile = $body.hasClass('results-page-mobile');
 
+// Set attribute on document for user agent
+var doc = document.documentElement;
+doc.setAttribute('data-useragent', navigator.userAgent);
+
 // Reveal the main menu on mobile
 $('#menu_toggle').on('click', function(){
    $body.toggleClass('menu-open');

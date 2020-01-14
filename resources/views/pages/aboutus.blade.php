@@ -15,7 +15,7 @@
     <section class="about-us-intro">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <h1>Feel <span class="col-brand-1">better faster</span> by<br>knowing your legal<br> right to choose
                     </h1>
                     <p class="col-grey p-secondary mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
