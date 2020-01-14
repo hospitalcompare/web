@@ -33,7 +33,7 @@
                                                     Waiting Time (NHS Funded)
                                                 </p>
                                                 <p>
-                                                    Our waiting time data is based on NHS data, specifically the number of weeks that 92 out of 100 people wait for their treatment to start.
+                                                    Our waiting time data is based on NHS data, specifically the number of weeks that 92 out of 100 people wait for their treatment to start - this is the NHS standard..
                                                 </p>'])>Waiting time <br>(NHS Funded)</p>
                             <span title="Sort by this column"
                                   class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}">@svg('chevron-down')</span>

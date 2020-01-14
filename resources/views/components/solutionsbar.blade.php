@@ -271,7 +271,7 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        The leadership, management and governance of the organisation make sure it\'s providing high-quality care that\'s based around your individual needs, that it encourages learning and innovation, and that it promotes an open and fair culture
+                                                        The leadership,management & governance of the organisation make sure; it\'s providing high-quality care based around your needs, encourages learning and innovation, and promotes an open and fair culture.
                                                     </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
@@ -286,7 +286,7 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        All items and areas commonly found in healthcare premises.
+                                                        Rates the cleanliness of all items and areas commonly found in healthcare premises.
                                                     </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
@@ -300,7 +300,7 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Questions relating to catering; choice, 24hr availability, mealtimes, access to menus.
+                                                        Rates the location’s catering; choice, 24hr availability, mealtimes & access to menus.
                                                     </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
@@ -328,7 +328,7 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Considers appearance of general environment including décor, condition of fixtures and fittings, tidiness, signage, lighting.
+                                                        Considers appearance of general environment including; décor, condition of fixtures & fittings, tidiness, signage, lighting.
                                                     </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
@@ -356,7 +356,7 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Considers access issues, including wheelchair, mobility (e.g. handrails), signage, hearing loops and catering
+                                                        Considers access issues, including; wheelchair, mobility (e.g. handrails), signage, hearing loops and catering.
                                                     </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
