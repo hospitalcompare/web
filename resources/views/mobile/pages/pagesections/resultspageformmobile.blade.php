@@ -62,7 +62,7 @@
                     {{--                                         Please enter your postcode<br>for a refined search.--}}
                     {{--                                     </p>--}}
                     {{--                                     '])--}}
-                    {{--                    >@svg('question')</a>--}}
+                    {{--                    >@svg('icon-more-info')</a>--}}
                 </div>
                 <!-- Accordion for filters -->
             {{--                @include('mobile.components.filteraccordion')--}}

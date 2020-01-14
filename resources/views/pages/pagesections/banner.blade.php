@@ -43,7 +43,7 @@
                                 'html'           => 'true',
                                 'trigger'        => 'hover',
                                 'content'        => '<p>Select your treatment<br>if known to refine results</p>'])
-                            >@svg('question')</a>
+                            >@svg('icon-more-info')</a>
                         </div>
                         <div class="form-child postcode-parent position-relative">
                             {{--                                Add this hidden input to remove the autocomplete functionality--}}
@@ -70,7 +70,7 @@
                                                      Please enter your postcode<br>for a refined search.
                                                  </p>
                                                  '])
-                                >@svg('question')</a>
+                                >@svg('icon-more-info')</a>
                             </div>
                             <div class="postcode-results-container">
                                 <div class="ajax-box"></div>
@@ -101,7 +101,7 @@
                                                  Select how far you would be willing to travel for your treatment.
                                              </p>
                                              '])
-                            >@svg('question')</a>
+                            >@svg('icon-more-info')</a>
                         </div>
                         @include('components.basic.button', [
                             'classTitle'    => 'btn btn-squared btn-block text-center btn-brand-1 py-3 mb-3 font-18',

@@ -101,7 +101,7 @@
                 transition: $transition;
 
                 &.active {
-                    background-color: darken($brand-1, 5%);
+                    background-color: $header-link-hover-colour;
                     color: #fff;
 
                     @include media-breakpoint-down(md) {
@@ -124,9 +124,10 @@
                 }
 
                 a {
-                    background-color: darken($brand-1, 5%);
+                    background-color: $header-link-hover-colour;
                     text-decoration: none;
                     color: #fff;
+                    padding-left: 1rem;
                 }
             }
         }

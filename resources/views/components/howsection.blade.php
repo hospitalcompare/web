@@ -37,7 +37,7 @@
                                 'content'   => 'This is the content',
                                 'trigger'   => 'hover'
                             ])>More info <span
-                                    class="help-link help-link__inline help-link__inline-red">@svg('question')</span>
+                                    class="help-link help-link__inline help-link__inline-red">@svg('icon-more-info')</span>
                             </p>
                         </div>
                     </div>

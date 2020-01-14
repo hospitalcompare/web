@@ -167,7 +167,7 @@
                         'trigger'        => 'hover',
                         'content'        => '
                         '])
-                    >@svg('question')</a>
+                    >@svg('icon-more-info')</a>
                 </div>
                 <div class="postcode-radius-child postcode col-12 col-md-3 d-flex align-items-center">
                     @include('components.basic.input', [
@@ -191,7 +191,7 @@
                                          Please enter your postcode<br>for a refined search.
                                      </p>
                                      '])
-                    >@svg('question')</a>
+                    >@svg('icon-more-info')</a>
                 </div>
                 <div class="postcode-radius-child radius col-12 col-md-6">
                     <div class="col-inner pr-4 d-flex flex-column flex-wrap flex-lg-row align-items-center h-100 position-relative">
@@ -232,7 +232,7 @@
                                          Select the waiting time most suitable for your needs.
                                      </p>
                                      '])
-                    >@svg('question')</a>
+                    >@svg('icon-more-info')</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'svg' => 'chevron-down', 'placeholder' => 'NHS choices user rating', 'labelClass' => 'labelClass'])--}}
@@ -258,7 +258,7 @@
                                          Five star rating system based on feedback provided by users of the NHS (five stars being the best). Information is not available on some hospitals.
                                      </p>
                                      '])
-                    >@svg('question')</a>
+                    >@svg('icon-more-info')</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
@@ -282,7 +282,7 @@
                                          The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
                                      </p>
                                      '])
-                    >@svg('question')</a>
+                    >@svg('icon-more-info')</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
@@ -307,7 +307,7 @@
                                          Select which hospital type best suits your needs. Remember you can choose to have an NHS treatment at most private hospitals in England and Wales.
                                      </p>
                                      '])
-                    >@svg('question')</a>
+                    >@svg('icon-more-info')</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
@@ -337,7 +337,7 @@
                                          Select your insurance provider and policy type.
                                      </p>
                                      '])
-                    >@svg('question')</a>
+                    >@svg('icon-more-info')</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2 d-flex align-items-end">
                     @include('components.basic.submit', ['classTitle' => 'btn btn-blue d-block btn-submit-results font-16 py-2 px-3', 'buttonText' => 'Update Results'])

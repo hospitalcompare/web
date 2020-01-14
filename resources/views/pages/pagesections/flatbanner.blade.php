@@ -34,7 +34,7 @@
                             {{--                                    'trigger'        => 'hover',--}}
                             {{--                                    'content'        => '<p>Select your treatment<br>if known to refine results</p>--}}
                             {{--                                                 --}}{{--<p><a  class="btn btn-close btn-close__small btn-brand-1 btn-icon" >Close</a></p>--}}{{--'])--}}
-                            {{--                                >@svg('question')</a>--}}
+                            {{--                                >@svg('icon-more-info')</a>--}}
                         </div>
                         <div class="form-child postcode-parent position-relative">
                             {{--                                Add this hidden input to remove the autocomplete functionality--}}
@@ -64,7 +64,7 @@
                             {{--                                                         Please enter your postcode<br>for a refined search.--}}
                             {{--                                                     </p>--}}
                             {{--                                                     '])--}}
-                            {{--                                    >@svg('question')</a>--}}
+                            {{--                                    >@svg('icon-more-info')</a>--}}
                         </div>
                         <div class="form-child radius-parent full-left row-layout position-relative" data-reveal-direction="right" >
                             @include('components.basic.select', [
@@ -92,7 +92,7 @@
                                              </p>
 {{--                                                 <p><a  class="btn btn-close btn-close__small btn-brand-1 btn-icon" >Close</a></p>--}}
                                              '])
-                            >@svg('question')</a>
+                            >@svg('icon-more-info')</a>
                         </div>
                         @include('components.basic.button', [
                             'classTitle'    => 'btn btn-squared btn-brand-1 font-18 text-center',
