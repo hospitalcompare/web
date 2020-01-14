@@ -82,7 +82,7 @@
 
                 <div class="col-5 offset-5 my-3">
                     <div class="swirl svg-wrapper animated mb-4" data-animation="draw">
-                        @svg('icon-swirl')
+                        @svg('about-us-line')
                     </div>
                 </div>
             </div>
