@@ -130,7 +130,7 @@
 
                     @include('components.basic.button', [
                         'buttonText'        => 'Show Filters',
-                        'classTitle'        => 'btn btn-brand-primary-1 btn-icon btn-arrow-down font-16 pl-3',
+                        'classTitle'        => 'btn btn-grey btn-icon btn-arrow-down font-16 pl-3 w-100',
                         'id'                => 'show_filters',
                         'icon'              => '',
                         'svg'               => 'chevron-down-white'
@@ -339,11 +339,18 @@
                                      '])
                     >@svg('icon-more-info')</a>
                 </div>
-                <div class="filter-section-child col-6 col-md-4 col-lg-2 d-flex align-items-end">
-                    @include('components.basic.submit', ['classTitle' => 'btn btn-blue d-block btn-submit-results font-16 py-2 px-3', 'buttonText' => 'Update Results'])
+                <div class="filter-section-child col-6 col-md-4 col-lg-2 d-flex flex-column align-items-end">
+                    @include('components.basic.button', [
+                        'id'            =>  'clear_filters',
+                        'classTitle'    =>  'col-grey pb-2 border-0',
+                        'buttonText'    =>  'Clear filters'
+                        ])
+                    @include('components.basic.submit', [
+                        'classTitle' => 'btn btn-blue d-block btn-submit-results font-16 py-2 px-3 w-100 text-center',
+                        'buttonText' => 'Update Results'
+                        ])
                 </div>
             </div>
         </div>
     </div>
-
 </form>

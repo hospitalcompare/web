@@ -127,7 +127,9 @@
                     background-color: $header-link-hover-colour;
                     text-decoration: none;
                     color: #fff;
-                    padding-left: 1rem;
+                    @include media-breakpoint-down(md) {
+                        padding-left: 1rem;
+                    }
                 }
             }
         }

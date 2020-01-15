@@ -4,6 +4,20 @@
     .results {
         min-height: calc(60vh - 220px);
     }
+
+
+    &.filters-open {
+        #show_filters {
+            background-color: #ececec;
+            color: $body-color;
+
+            svg {
+                path {
+                    fill: $body-color;
+                }
+            }
+        }
+    }
 }
 
 .results-page:not(.results-page-mobile) {
@@ -265,7 +279,7 @@
     }
 
     .result-item {
-        @include media-breakpoint-up(xl){
+        @include media-breakpoint-up(xl) {
             margin-top: 7px;
         }
     }
@@ -550,7 +564,6 @@
 }
 
 
-
 /********* Desktop results layout *************************************************************************************/
 /********* Desktop results layout *************************************************************************************/
 .results-page-desktop {
@@ -596,6 +609,7 @@
             left: 16px;
         }
     }
+
 
     .postcode {
         input {

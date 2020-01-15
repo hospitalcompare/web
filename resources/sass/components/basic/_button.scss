@@ -72,6 +72,14 @@
         }
     }
 
+    &.btn-grey {
+        background-color: $brand-primary-7;
+
+        &:hover {
+            background-color: $brand-secondary-3;
+        }
+    }
+
     &.btn-squared {
         border-radius: $border-radius;
         padding: 15px 26px;

@@ -13,9 +13,14 @@
 @section('content')
 
         <section>
-            @include('components.modals.modaltour',
-                ['displayBlock' => 'true'])
+            @include('pages.pagesections.resultspageform', [
+            'displayBlock' => true])
         </section>
+
+{{--        <section>--}}
+{{--            @include('components.modals.modaltour',--}}
+{{--                ['displayBlock' => 'true'])--}}
+{{--        </section>--}}
 {{--    <section>--}}
 {{--        @include('mobile.components.corporatecontentmobile', [--}}
 {{--                'procedures'    => $data['filters']['procedures'],--}}
@@ -41,10 +46,7 @@
 {{--                'radius'        => 50--}}
 {{--            ])--}}
 {{--    </div>--}}
-{{--    <section>--}}
-{{--        @include('pages.pagesections.resultspageform', [--}}
-{{--        'displayBlock' => true])--}}
-{{--    </section>--}}
+
     <section>
         <h3>Waiting times popover</h3>
         <div class="popover popover-regular fade bs-popover-top show" role="tooltip"

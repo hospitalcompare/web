@@ -175,9 +175,11 @@ $(document).on("click", ".results-page .change-url", function (event) {
 var $resultspageform = $('#resultspage_form');
 var $filters = $('#resultspage_form .filter-parent');
 var $showFilters = $('#show_filters');
+var $showFiltersDiv = $('#show_filters div');
 $showFilters.on('click', function () {
     if( $body.hasClass('results-page-desktop') ){
         $filters.slideToggle();
+        $body.hasClass('filters-open') ? $showFiltersDiv.text('Show Filters') : $showFiltersDiv.text('Hide Filters');
     }
     $body.toggleClass('filters-open');
     $(this).toggleClass('open');
@@ -275,4 +277,8 @@ $('#carousel_tour').on('slid.bs.carousel', function (event) {
 
 // popupDoctor($doctor.data('message'), $doctor.data('doctor-delay'));
 
-
+// reset filters
+$('#clear_filters').on('click', function(e){
+    if(window.location.href !== '/results-page' )
+        window.location.href = '/results-page';
+});
