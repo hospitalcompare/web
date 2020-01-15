@@ -294,6 +294,10 @@ $('#clear_filters').on('click', function(e){
     // $('#resultspage_waitingtime_dropdown option[value=0]').attr('selected', 'selected');
     // $('#resultspage_waitingtime_dropdown').selectpicker('refresh');
 
-    $('.select-picker option[value=0]').attr('selected', 'selected');
-    $('.select-picker').selectpicker('refresh');
+    $('#resultspage_form .select-picker option[value=0]').attr('selected', 'selected');
+    $('#resultspage_form .select-picker').selectpicker('refresh');
+
+    // Reset range to default
+
+    // submit form
 });
