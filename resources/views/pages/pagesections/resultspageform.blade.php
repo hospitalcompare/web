@@ -215,7 +215,8 @@
                         'showLabel'             => true,
                         'options'               => $data['filters']['waitingTimes'],
                         'svg'                   => 'chevron-down',
-                        'selectClass'           => 'select-picker highlight-search-dropdown _results-page-select _highlight',
+                        'selectClass'           => 'select-picker highlight-search-dropdown',
+                        'selectId'              => 'resultspage_waitingtime_dropdown',
                         'placeholder'           =>'Waiting time',
                         'name'                  =>'waiting_time',
                         'labelClass'            => 'font-14 SofiaPro-Medium'])

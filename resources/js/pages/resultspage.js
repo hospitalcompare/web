@@ -285,6 +285,15 @@ $('#carousel_tour').on('slid.bs.carousel', function (event) {
 
 // reset filters
 $('#clear_filters').on('click', function(e){
-    if(window.location.href !== '/results-page' )
-        window.location.href = '/results-page';
+    $('#input_postcode').val('');
+    // treatment
+    // $('#resultspage_treatment_dropdown option[value=0]').attr('selected', 'selected');
+    // $('#resultspage_treatment_dropdown').selectpicker('refresh');
+
+    // Waiting time
+    // $('#resultspage_waitingtime_dropdown option[value=0]').attr('selected', 'selected');
+    // $('#resultspage_waitingtime_dropdown').selectpicker('refresh');
+
+    $('.select-picker option[value=0]').attr('selected', 'selected');
+    $('.select-picker').selectpicker('refresh');
 });
