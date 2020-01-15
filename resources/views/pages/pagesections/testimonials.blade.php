@@ -19,7 +19,7 @@
             <div class="col-12 mt-5">
                 <div class="btn-area text-center">
                     @include('components.basic.button', [
-                        'classTitle'        => 'btn btn-squared font-18 btn-brand-1',
+                        'classTitle'        => 'btn btn-squared font-18 btn-brand-primary-1',
                         'buttonText'        => 'Find the right hospital',
                         'hrefValue'         => '/results-page'
                     ])

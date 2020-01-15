@@ -171,16 +171,34 @@ $(document).on("click", ".results-page .change-url", function (event) {
 //     })
 // }
 
+function toggleShowFiltersText() {
+    $body.hasClass('filters-open') ? $showFiltersDiv.text('Show Filters') : $showFiltersDiv.text('Hide Filters');
+}
 // Toggle filter section
-$showFilters = $('#show_filters');
+var $resultspageform = $('#resultspage_form');
+var $filters = $('#resultspage_form .filter-parent');
+var $showFilters = $('#show_filters');
+var $showFiltersDiv = $('#show_filters div');
 $showFilters.on('click', function () {
-    if( $('body').hasClass('results-page-desktop') ){
-        $('#resultspage_form .filter-parent').slideToggle();
+    if( $body.hasClass('results-page-desktop') ){
+        $filters.slideToggle();
+        // Change the text of show filters button
+        toggleShowFiltersText();
     }
-    $('body').toggleClass('filters-open');
+    $body.toggleClass('filters-open');
     $(this).toggleClass('open');
     // // Refresh the range slider as it is initially hidden
     $("#radiusProx").slider('relayout');
+});
+
+// Close filters when clicking outside
+$(document).on('click', function (e) {
+    if ($resultspageform.has(e.target).length === 0 && $body.hasClass('filters-open')) {
+        $filters.slideUp();
+        $body.removeClass('filters-open');
+        // Change the text of show filters button
+        $showFiltersDiv.text('Show filters')
+    }
 });
 
 $hideFilters = $('#close_mobile_filters');
@@ -265,4 +283,8 @@ $('#carousel_tour').on('slid.bs.carousel', function (event) {
 
 // popupDoctor($doctor.data('message'), $doctor.data('doctor-delay'));
 
-
+// reset filters
+$('#clear_filters').on('click', function(e){
+    if(window.location.href !== '/results-page' )
+        window.location.href = '/results-page';
+});

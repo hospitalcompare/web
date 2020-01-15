@@ -5,11 +5,11 @@
 
 .mobile-pagination-wrap {
     background-color: $white;
-    box-shadow: inset 0 0 0 2px $brand-1;
+    box-shadow: inset 0 0 0 2px $brand-primary-1;
     border: none;
-    //border: 2px solid $brand-1;
+    //border: 2px solid $brand-primary-1;
     text-align: center;
-    color: $brand-1;
+    color: $brand-primary-1;
     @include font-size(16);
     border-radius: $border-radius;
     @include transition(0.3s);
@@ -78,11 +78,11 @@
             //line-height: $pagination-link-height;
             line-height: 33px;
             background-color: $white;
-            box-shadow: inset 0 0 0 2px $brand-1;
+            box-shadow: inset 0 0 0 2px $brand-primary-1;
             border: none;
-            //border: 2px solid $brand-1;
+            //border: 2px solid $brand-primary-1;
             text-align: center;
-            color: $brand-1;
+            color: $brand-primary-1;
             @include font-size(16);
             border-radius: $border-radius;
             @include transition(0.3s);
@@ -91,7 +91,7 @@
 
         &.active {
             .page-link {
-                background-color: $brand-1;
+                background-color: $brand-primary-1;
                 color: $white;
                 cursor: default;
                 box-shadow: none;
@@ -99,7 +99,7 @@
         }
 
         &:not(.disabled):hover .page-link {
-            background-color: $brand-1;
+            background-color: $brand-primary-1;
             color: $white;
         }
 
@@ -111,7 +111,7 @@
         height: 36px;
         text-align: center;
         line-height: 32px;
-        color: $brand-1;
+        color: $brand-primary-1;
         font-size: 28px;
     }
 }

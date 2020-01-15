@@ -72,7 +72,7 @@
                     class="text-link"
                     href="/your-rights">Your Rights.</a>
             </p>
-            <p><time>{{ date('Y') }}</time><a href="/"> Hospital Compare<sup>TM</sup></a>. All rights reserved</p>
+            <p><time>{{ date('Y') }}</time><a href="/"> Hospital Compare<sup>TM</sup></a>. All rights reserved.</p>
           </div>
     </div>
 </footer>

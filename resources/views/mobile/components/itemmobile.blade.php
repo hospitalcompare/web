@@ -203,7 +203,7 @@
                             @include('components.basic.modalbutton', [
                                     'hrefValue'         => $url,
                                     'hospitalTitle'     => $title,
-                                    'modalTarget'       => '#hc_modal_mobile_enquire_private',
+                                    'modalTarget'       => '#hc_modal_enquire_private',
                                     'classTitle'        => 'btn btn-link enquire-prices mr-auto p-0 ',
                                     'target'            => 'blank',
                                     'modalText'         => 'This is the text about prices',
@@ -231,7 +231,7 @@
                 <!-- More info button -->
                 <div class="button-wrapper col-6">
                     @include('components.basic.button', [
-                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-1 _btn-cc-close btn-more-info w-100 text-center font-14 p-3',
+                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-primary-1 _btn-cc-close btn-more-info w-100 text-center font-14 p-3',
                        'buttonText'        => 'Map',
                        'htmlButton'        => true,
                        'icon'              => '',
@@ -247,8 +247,8 @@
                             'hospitalType'      => $NHSClass,
                             'hrefValue'         => $url,
                             'hospitalTitle'     => $title,
-                            'modalTarget'       => '#hc_modal_mobile_enquire_private',
-                            'classTitle'        => 'btn btn-squared btn-enquire btn-squared_slim btn-blue text-center enquiry btn-enquiry font-14 w-100 text-center d-flex justify-content-center align-items-center flex-row-reverse p-3',
+                            'modalTarget'       => '#hc_modal_enquire_private',
+                            'classTitle'        => 'btn btn-squared btn-enquire_mobile btn-icon btn-squared_slim text-center enquiry  font-14 w-100 text-center d-flex justify-content-center align-items-center flex-row-reverse p-3',
                             'target'            => 'blank',
                             'buttonText'        => $btnText,
                             'id'                => 'enquire_private_'.$id,
@@ -263,7 +263,7 @@
                             'hrefValue'         => $url,
                             'hospitalTitle'     => $title,
                             'hospitalUrl'       => $d['url'],
-                            'classTitle'        => 'btn btn-blue btn-enquire btn-squared btn-squared_slim enquiry btn-enquiry font-14 w-100 text-center d-flex justify-content-center flex-row-reverse p-3',
+                            'classTitle'        => 'btn btn-enquire_mobile btn-icon btn-squared btn-squared_slim enquiry  font-14 w-100 text-center d-flex justify-content-center flex-row-reverse p-3',
                             'buttonText'        => $btnText,
                             'modalTarget'       => '#hc_modal_enquire_nhs',
                             'id'                => 'enquire_nhs'.$id,

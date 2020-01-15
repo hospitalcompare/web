@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col col-12">
                 <div class="banner-form-wrapper banner-flatform-wrapper rounded mx-auto flat-form" style="">
-                    <p class="SofiaPro-Medium d-lg-block">Choose the <span class="col-brand-1">best hospital&nbsp;</span>for your&nbsp;<span class="col-brand-1">treatment</p>
+                    <p class="SofiaPro-Medium d-lg-block">Choose the <span class="col-brand-primary-1">best hospital&nbsp;</span>for your&nbsp;<span class="col-brand-primary-1">treatment</p>
                     <form
                         id="search_form"
                         class="form-element d-lg-flex align-items-end search-form-row"
@@ -33,8 +33,8 @@
                             {{--                                    'html'           => 'true',--}}
                             {{--                                    'trigger'        => 'hover',--}}
                             {{--                                    'content'        => '<p>Select your treatment<br>if known to refine results</p>--}}
-                            {{--                                                 --}}{{--<p><a  class="btn btn-close btn-close__small btn-brand-1 btn-icon" >Close</a></p>--}}{{--'])--}}
-                            {{--                                >@svg('question')</a>--}}
+                            {{--                                                 --}}{{--<p><a  class="btn btn-close btn-close__small btn-brand-primary-1 btn-icon" >Close</a></p>--}}{{--'])--}}
+                            {{--                                >@svg('icon-more-info')</a>--}}
                         </div>
                         <div class="form-child postcode-parent position-relative">
                             {{--                                Add this hidden input to remove the autocomplete functionality--}}
@@ -64,7 +64,7 @@
                             {{--                                                         Please enter your postcode<br>for a refined search.--}}
                             {{--                                                     </p>--}}
                             {{--                                                     '])--}}
-                            {{--                                    >@svg('question')</a>--}}
+                            {{--                                    >@svg('icon-more-info')</a>--}}
                         </div>
                         <div class="form-child radius-parent full-left row-layout position-relative" data-reveal-direction="right" >
                             @include('components.basic.select', [
@@ -90,12 +90,12 @@
                                              <p>
                                                  Select how far you would be willing to travel for your treatment.
                                              </p>
-{{--                                                 <p><a  class="btn btn-close btn-close__small btn-brand-1 btn-icon" >Close</a></p>--}}
+{{--                                                 <p><a  class="btn btn-close btn-close__small btn-brand-primary-1 btn-icon" >Close</a></p>--}}
                                              '])
-                            >@svg('question')</a>
+                            >@svg('icon-more-info')</a>
                         </div>
                         @include('components.basic.button', [
-                            'classTitle'    => 'btn btn-squared btn-brand-1 font-18 text-center',
+                            'classTitle'    => 'btn btn-squared btn-brand-primary-1 font-18 text-center',
                             'buttonText'    => 'Find Hospitals',
                             'htmlButton'    => true,
                             'id'            => 'submit_search',

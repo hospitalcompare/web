@@ -31,8 +31,8 @@
     }
 
     //colours
-    &.btn-brand-1 {
-        background-color: $brand-1;
+    &.btn-brand-primary-1 {
+        background-color: $brand-primary-1;
 
         &:hover {
             background-color: $blue;
@@ -44,7 +44,7 @@
         background-size: 200%;
 
         &:hover {
-            background-color: $brand-1;
+            background-color: $brand-primary-1;
         }
     }
 
@@ -72,6 +72,14 @@
         }
     }
 
+    &.btn-grey {
+        background-color: $brand-primary-7;
+
+        &:hover {
+            background-color: $brand-secondary-3;
+        }
+    }
+
     &.btn-squared {
         border-radius: $border-radius;
         padding: 15px 26px;
@@ -96,8 +104,8 @@
     }
 
     &.btn-compare {
-        box-shadow: inset 0px 0px 0px 2px $brand-1;
-        color: $brand-1;
+        box-shadow: inset 0px 0px 0px 2px $brand-primary-1;
+        color: $brand-primary-1;
         padding: 8px 15px 8px 40px;
 
         svg, i {
@@ -109,21 +117,21 @@
             height: 16px;
 
             path {
-                stroke: $brand-1;
+                stroke: $brand-primary-1;
                 stroke-width: 50px;
                 fill: #fff;
             }
         }
 
         &:hover {
-            background-color: $brand-1;
+            background-color: $brand-primary-1;
             color: #fff;
 
             svg, i {
 
                 path {
                     stroke: #fff;
-                    fill: $brand-1;
+                    fill: $brand-primary-1;
                 }
             }
         }
@@ -232,7 +240,7 @@
         @include font-size(14);
         padding: 0 25px 0 8px;
         border-radius: $border-radius $border-radius 0 0;
-        background-color: $brand-1;
+        background-color: $brand-primary-1;
 
         svg {
             @include v-c;
@@ -294,100 +302,6 @@
         }
     }
 
-    &.btn-enquire,
-    &.btn-enquire-private-hospital {
-        //border-radius: $border-radius;
-        color: $white !important;
-        @include font-size(14);
-        position: relative;
-        padding: 8px 5px 8px 40px;
-        display: inline-block;
-        text-align: left;
-
-        svg {
-            @include v-c;
-            left: 8px;
-            width: 20px;
-            height: 20px;
-        }
-    }
-
-    &.btn-enquire-private-hospital {
-        @include font-size(16);
-        border-radius: $border-radius;
-        text-align: center;
-        padding: 15px 25px 15px 45px;
-
-        svg {
-            @include v-c;
-            left: 8px;
-            width: 30px;
-            height: 25px;
-        }
-    }
-
-    &.btn-enquire-pink {
-        border-radius: 20px;
-        background: $white;
-        color: $pink;
-        @include font-size(12);
-        position: relative;
-        padding: 10px 10px 10px 35px;
-        display: inline-block;
-        text-align: left;
-        width: 131px;
-
-        &:before {
-            content: '';
-            background-image: url('../images/icons/circle-check-pink.svg');
-            @include icon-bg-center(100%);
-            @include v-c;
-            left: 10px;
-            width: 20px;
-            height: 20px;
-        }
-
-        &:hover {
-            color: $white;
-            background-color: $pink;
-            text-decoration: none;
-
-            &:before {
-                background-image: url('../images/icons/circle-check.svg');
-
-            }
-        }
-    }
-
-    // Button inside special offer tabs in solutions bar
-    &.btn-enquire-now {
-        color: $pink;
-        background-color: $white;
-        padding: 7px 30px 7px 17px;
-        @include font-size(14);
-
-        &:after {
-            background-image: url('../images/icons/up-arrow-pink.svg');
-            @include icon-bg-center(30%);
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            width: 30px;
-            //height: 30px;
-            line-height: 30px;
-            transform: rotate(90deg);
-        }
-
-        &:hover {
-            color: $white;
-            background-color: $pink;
-
-            &:after {
-                background-image: url('../images/icons/up-arrow.svg');
-            }
-        }
-    }
 
     &.btn-special-offer {
         padding: 8px 15px 8px 40px;
@@ -468,7 +382,7 @@
     min-width: 182px;
     border-radius: $border-radius $border-radius 0 0;
     @include font-size(1.1rem);
-    @include gradient-animation($body-color, $body-color, $brand-1, $brand-1, 0.3s);
+    @include gradient-animation($body-color, $body-color, $brand-primary-1, $brand-primary-1, 0.3s);
     padding: 19px 50px 19px 20px;
 
     svg {
@@ -487,13 +401,13 @@
 
     &:hover,
     &:focus {
-        color: $brand-1;
+        color: $brand-primary-1;
         text-decoration: none;
     }
 }
 
-.btn-brand-1-link {
-    color: $brand-1;
+.btn-brand-primary-1-link {
+    color: $brand-primary-1;
 
     &:hover,
     &:focus {
@@ -516,7 +430,7 @@
 
     @include hover {
         opacity: 1 !important;
-        background-color: $brand-1 !important;
+        background-color: $brand-primary-1 !important;
     }
 
     svg {
@@ -552,7 +466,7 @@
 
     @include hover {
         opacity: 1 !important;
-        background-color: $brand-1 !important;
+        background-color: $brand-primary-1 !important;
     }
 
     span {
@@ -598,3 +512,89 @@
     }
 }
 
+.btn-enquire {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-enquire_mobile {
+    background-color: $brand-secondary-3;
+
+    svg {
+        @extend .position-static;
+        width: 20px;
+        height: 20px;
+
+        @extend .mr-3;
+    }
+}
+
+.btn-enquire,
+.btn-enquire-private-hospital {
+    //border-radius: $border-radius;
+    color: $white !important;
+    @include font-size(14);
+    position: relative;
+    padding: 8px 5px 8px 40px;
+    display: inline-block;
+    text-align: left;
+    background-color: $brand-secondary-3;
+
+    &:hover {
+        background-color: $brand-primary-7;
+    }
+
+    svg {
+        @include v-c;
+        left: 8px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.btn-enquire-private-hospital {
+    @include font-size(16);
+    border-radius: $border-radius;
+    text-align: center;
+    padding: 15px 25px 15px 45px;
+
+    svg {
+        @include v-c;
+        left: 8px;
+        width: 30px;
+        height: 25px;
+    }
+}
+
+.btn-enquire-pink {
+    border-radius: 20px;
+    background: $white;
+    color: $pink;
+    @include font-size(12);
+    position: relative;
+    padding: 10px 10px 10px 35px;
+    display: inline-block;
+    text-align: left;
+    width: 131px;
+
+    &:before {
+        content: '';
+        background-image: url('../images/icons/circle-check-pink.svg');
+        @include icon-bg-center(100%);
+        @include v-c;
+        left: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover {
+        color: $white;
+        background-color: $pink;
+        text-decoration: none;
+
+        &:before {
+            background-image: url('../images/icons/circle-check.svg');
+
+        }
+    }
+}

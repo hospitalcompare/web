@@ -10,7 +10,7 @@
                 <div class="col-6">
                     @include('components.basic.button', [
                         'buttonText'        => 'Show Filters',
-                        'classTitle'        => 'btn btn-brand-1 btn-squared btn-squared_slim btn-arrow-down font-14 d-flex flex-row-reverse justify-content-around',
+                        'classTitle'        => 'btn btn-brand-primary-1 btn-squared btn-squared_slim btn-arrow-down font-14 d-flex flex-row-reverse justify-content-around',
                         'id'                => 'show_filters',
                         'svg'               => 'icon-filter',
                         'svgClass'          => 'd-inline position-static'
@@ -62,7 +62,7 @@
                     {{--                                         Please enter your postcode<br>for a refined search.--}}
                     {{--                                     </p>--}}
                     {{--                                     '])--}}
-                    {{--                    >@svg('question')</a>--}}
+                    {{--                    >@svg('icon-more-info')</a>--}}
                 </div>
                 <!-- Accordion for filters -->
             {{--                @include('mobile.components.filteraccordion')--}}
@@ -229,7 +229,7 @@
                         </div>
                         <div class="col-6 button-wrapper">
                             @include('components.basic.submit', [
-                                'classTitle'    => 'btn-submit-results text-center btn btn-brand-1 btn-squared btn-squared_slim d-block font-14 w-100',
+                                'classTitle'    => 'btn-submit-results text-center btn btn-brand-primary-1 btn-squared btn-squared_slim d-block font-14 w-100',
                                 'buttonText'    => 'Update Results'])
                         </div>
                     </div>

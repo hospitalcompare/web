@@ -15,8 +15,8 @@
     <section class="about-us-intro">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h1>Feel <span class="col-brand-1">better faster</span> by<br>knowing your legal<br> right to choose
+                <div class="col-lg-6">
+                    <h1>Feel <span class="col-brand-primary-1">better faster</span> by<br>knowing your legal<br> right to choose
                     </h1>
                     <p class="col-grey p-secondary mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Aliquam animi cupiditate error natus,
@@ -24,7 +24,7 @@
                         saepe sed voluptates?</p>
                     <div class="btn-area mb-5">
                         @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-squared btn-brand-1',
+                            'classTitle'        => 'btn btn-squared btn-brand-primary-1',
                             'buttonText'        => 'Find the right hospital',
                             'hrefValue'         => '/results-page',
                             ''
@@ -82,7 +82,7 @@
 
                 <div class="col-5 offset-5 my-3">
                     <div class="swirl svg-wrapper animated mb-4" data-animation="draw">
-                        @svg('icon-swirl')
+                        @svg('about-us-line')
                     </div>
                 </div>
             </div>
@@ -151,7 +151,7 @@
                         Consequuntur explicabo inventore minima odio provident?</p>
                     @include('components.basic.button', [
                         'buttonText'    => 'Find the right hospital',
-                        'classTitle'    => 'btn btn-brand-1 btn-squared',
+                        'classTitle'    => 'btn btn-brand-primary-1 btn-squared',
                         'hrefValue'     => '/results-page'
                     ])
                 </div>
@@ -163,7 +163,7 @@
     {{--            <div class="row">--}}
     {{--                <div class="col col-12 hc-content">--}}
     {{--                    <h1 class="SofiaPro-SemiBold mb-3">About Hospital Compare</h1>--}}
-    {{--                    <h2 class="SofiaPro-SemiBold col-brand-1 font-28">Feel better faster by knowing your legal right to--}}
+    {{--                    <h2 class="SofiaPro-SemiBold col-brand-primary-1 font-28">Feel better faster by knowing your legal right to--}}
     {{--                        choose.</h2>--}}
     {{--                </div>--}}
     {{--                <div class="col col-7">--}}
