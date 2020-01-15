@@ -294,105 +294,6 @@
         }
     }
 
-    &.btn-enquire,
-    &.btn-enquire-private-hospital {
-        //border-radius: $border-radius;
-        color: $white !important;
-        @include font-size(14);
-        position: relative;
-        padding: 8px 5px 8px 40px;
-        display: inline-block;
-        text-align: left;
-        background-color: $brand-secondary-3;
-
-        &:hover {
-            background-color: $brand-primary-7;
-        }
-
-        svg {
-            @include v-c;
-            left: 8px;
-            width: 20px;
-            height: 20px;
-        }
-    }
-
-    &.btn-enquire-private-hospital {
-        @include font-size(16);
-        border-radius: $border-radius;
-        text-align: center;
-        padding: 15px 25px 15px 45px;
-
-        svg {
-            @include v-c;
-            left: 8px;
-            width: 30px;
-            height: 25px;
-        }
-    }
-
-    &.btn-enquire-pink {
-        border-radius: 20px;
-        background: $white;
-        color: $pink;
-        @include font-size(12);
-        position: relative;
-        padding: 10px 10px 10px 35px;
-        display: inline-block;
-        text-align: left;
-        width: 131px;
-
-        &:before {
-            content: '';
-            background-image: url('../images/icons/circle-check-pink.svg');
-            @include icon-bg-center(100%);
-            @include v-c;
-            left: 10px;
-            width: 20px;
-            height: 20px;
-        }
-
-        &:hover {
-            color: $white;
-            background-color: $pink;
-            text-decoration: none;
-
-            &:before {
-                background-image: url('../images/icons/circle-check.svg');
-
-            }
-        }
-    }
-
-    // Button inside special offer tabs in solutions bar
-    &.btn-enquire-now {
-        color: $pink;
-        background-color: $white;
-        padding: 7px 30px 7px 17px;
-        @include font-size(14);
-
-        &:after {
-            background-image: url('../images/icons/up-arrow-pink.svg');
-            @include icon-bg-center(30%);
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            width: 30px;
-            //height: 30px;
-            line-height: 30px;
-            transform: rotate(90deg);
-        }
-
-        &:hover {
-            color: $white;
-            background-color: $pink;
-
-            &:after {
-                background-image: url('../images/icons/up-arrow.svg');
-            }
-        }
-    }
 
     &.btn-special-offer {
         padding: 8px 15px 8px 40px;
@@ -603,3 +504,89 @@
     }
 }
 
+.btn-enquire {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-enquire_mobile {
+    background-color: $brand-secondary-3;
+
+    svg {
+        @extend .position-static;
+        width: 20px;
+        height: 20px;
+
+        @extend .mr-3;
+    }
+}
+
+.btn-enquire,
+.btn-enquire-private-hospital {
+    //border-radius: $border-radius;
+    color: $white !important;
+    @include font-size(14);
+    position: relative;
+    padding: 8px 5px 8px 40px;
+    display: inline-block;
+    text-align: left;
+    background-color: $brand-secondary-3;
+
+    &:hover {
+        background-color: $brand-primary-7;
+    }
+
+    svg {
+        @include v-c;
+        left: 8px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.btn-enquire-private-hospital {
+    @include font-size(16);
+    border-radius: $border-radius;
+    text-align: center;
+    padding: 15px 25px 15px 45px;
+
+    svg {
+        @include v-c;
+        left: 8px;
+        width: 30px;
+        height: 25px;
+    }
+}
+
+.btn-enquire-pink {
+    border-radius: 20px;
+    background: $white;
+    color: $pink;
+    @include font-size(12);
+    position: relative;
+    padding: 10px 10px 10px 35px;
+    display: inline-block;
+    text-align: left;
+    width: 131px;
+
+    &:before {
+        content: '';
+        background-image: url('../images/icons/circle-check-pink.svg');
+        @include icon-bg-center(100%);
+        @include v-c;
+        left: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover {
+        color: $white;
+        background-color: $pink;
+        text-decoration: none;
+
+        &:before {
+            background-image: url('../images/icons/circle-check.svg');
+
+        }
+    }
+}
