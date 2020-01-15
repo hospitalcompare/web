@@ -65,7 +65,7 @@
                             labore non pariatur tempore.</p>
                         <div class="btn-area">
                             @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-1 font-18',
+                            'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-primary-1 font-18',
                             'buttonText'        => 'View NHS funded private hospitals',
                             'hrefValue'         => '/results-page/?hospital_type=1'])
                         </div>
@@ -99,7 +99,7 @@
                             labore non pariatur tempore.</p>
                         <div class="btn-area">
                             @include('components.basic.button', [
-                            'classTitle'       => 'btn btn-brand-1 btn-squared btn-squared_slim font-18',
+                            'classTitle'       => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',
                             'hrefValue'        => '/results-page?hospital_type=2',
                             'buttonText'       => 'View all NHS hospitals'])
                         </div>
@@ -141,13 +141,13 @@
                                 'svg'                   => 'chevron-down',
                                 'selectParentClass'       => 'd-lg-flex align-items-center mb-4',
                                 'selectClass'           => 'select-picker',
-                                'labelClass'            => 'col-brand-1 font-20 SofiaPro-Medium mr-3 mb-lg-0 w-100 w-lg-50',
+                                'labelClass'            => 'col-brand-primary-1 font-20 SofiaPro-Medium mr-3 mb-lg-0 w-100 w-lg-50',
                                 'showLabel'             => true,
                                 'name'                  => 'policy_id',
                                 'selectId'              => 'how_to_use_policies',
                                 'placeholder'           => 'Select your insurance provider:&nbsp;'])
                             @include('components.basic.button', [
-                                'classTitle'            => 'btn btn-brand-1 btn-squared btn-squared_slim font-18',
+                                'classTitle'            => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',
                                 'buttonText'            => 'View all private hospitals covered on your policy',
                                 'htmlButton'            => true])
                         </form>
@@ -182,7 +182,7 @@
                             labore non pariatur tempore.</p>
                         <div class="btn-area">
                             @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-brand-1 btn-squared btn-squared_slim font-18',
+                            'classTitle'        => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',
                             'buttonText'        => 'Self-pay at a private hospital',
                             'hrefValue'         => '/results-page?hospital_type=1'])
                         </div>

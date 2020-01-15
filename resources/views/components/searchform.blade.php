@@ -20,8 +20,8 @@
                 'html'           => 'true',
                 'trigger'        => 'hover',
                 'content'        => '<p>Select your treatment<br>if known to refine results</p>
-                             {{--<p><a  class="btn btn-close btn-close__small btn-brand-1 btn-icon" >Close</a></p>--}}'])
-            >@svg('question')</a>
+                             {{--<p><a  class="btn btn-close btn-close__small btn-brand-primary-1 btn-icon" >Close</a></p>--}}'])
+            >@svg('icon-more-info')</a>
         </div>
         <div class="form-child postcode-parent">
             <div class="input-wrapper position-relative">
@@ -43,7 +43,7 @@
                                      Please enter your postcode<br>for a refined search.
                                  </p>
                                  '])
-                >@svg('question')</a>
+                >@svg('icon-more-info')</a>
             </div>
             <div class="postcode-results-container">
                 <div class="ajax-box"></div>
@@ -75,10 +75,10 @@
                                  Select how far you would be willing to travel for your treatment.
                              </p>
                              '])
-            >@svg('question')</a>
+            >@svg('icon-more-info')</a>
         </div>
         @include('components.basic.submit', [
-            'classTitle'    => 'btn btn-brand-1 py-3 mb-3',
+            'classTitle'    => 'btn btn-brand-primary-1 py-3 mb-3',
             'buttonText'        => 'Find Hospitals'])
         <div class='browse-button'>
             <a class="SofiaPro-Medium" href="{{url('/results-page')}}">Browse all hospitals</a>

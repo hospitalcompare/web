@@ -4,6 +4,20 @@
     .results {
         min-height: calc(60vh - 220px);
     }
+
+
+    &.filters-open {
+        #show_filters {
+            background-color: #ececec;
+            color: $body-color;
+
+            svg {
+                path {
+                    fill: $body-color;
+                }
+            }
+        }
+    }
 }
 
 .results-page:not(.results-page-mobile) {
@@ -265,7 +279,7 @@
     }
 
     .result-item {
-        @include media-breakpoint-up(xl){
+        @include media-breakpoint-up(xl) {
             margin-top: 7px;
         }
     }
@@ -368,10 +382,10 @@
             }
 
             &.highlight {
-                color: $brand-1;
+                color: $brand-primary-1;
 
                 svg path {
-                    fill: $brand-1;
+                    fill: $brand-primary-1;
                 }
             }
 
@@ -440,7 +454,7 @@
 
         &:hover,
         &:active {
-            color: $brand-1;
+            color: $brand-primary-1;
             text-decoration: none;
         }
     }
@@ -550,7 +564,6 @@
 }
 
 
-
 /********* Desktop results layout *************************************************************************************/
 /********* Desktop results layout *************************************************************************************/
 .results-page-desktop {
@@ -597,6 +610,7 @@
         }
     }
 
+
     .postcode {
         input {
             padding-top: 2rem !important;
@@ -605,13 +619,14 @@
 
     .filter-parent {
         padding-top: 1rem;
+        padding-bottom: 1rem;
         transform: translate3d(-100%, 0, 0);
         overflow: scroll;
         position: fixed;
-        top: 54px;
+        top: $mobile-header-height;
         left: 0;
         width: 100%;
-        height: calc(100vh - 54px);
+        height: calc(100vh - $mobile-header-height);
         background-color: #fff;
         z-index: 2000;
         transition: $transition;

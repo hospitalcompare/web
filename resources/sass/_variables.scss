@@ -27,24 +27,23 @@ $violet: #8e00fe;
 
 $blue: #1b71f3;
 $hanblue: #5e15d1;
-$privateBlue: #033860;
+$privateBlue: #18435a;
+$nhsBlue: #0d69f2;
 $pink: #ed0373;
 $white: #ffffff;
 $goldStar: #FAC917;
 
 // 2020 new brand colours. Old turquoise = #00cecd
-$brand-1: #037098;
-$brand-2: #037098;
-$brand-3: #037098;
-$brand-4: #037098;
-$brand-5: #037098;
-$brand-6: #037098;
+$brand-primary-1: #037098;
+$brand-primary-7: #0d69f2;
+$brand-secondary-3: #5e15d1;
 
 //Main Template colours
 $footerBackgroundColour: #363636;
 $caretBlack: #040202;
 $bannerMaskGreen: #037098;
 $corporateContentGreen: #026867;
+$header-link-hover-colour: darken($brand-primary-1, 10%);
 
 $textGrey: #757575;
 $textDarkGrey: #1d1d1d;
@@ -118,7 +117,7 @@ $input-border-color: #ededed;
 $input-border-width: 2px;
 $input-height: initial;
 $input-focus-box-shadow: none;
-$input-focus-border-color: $brand-1 !important;
+$input-focus-border-color: $brand-primary-1 !important;
 $form-group-margin-bottom: 0.25rem;
 
 // Select picker
@@ -156,7 +155,7 @@ $nav-link-padding-y: 0.25rem;
 $nav-link-padding-x: 0;
 $nav-tabs-border-width: 0;
 $nav-tabs-border-radius: 0;
-$nav-tabs-link-hover-border-color: $brand-1;
+$nav-tabs-link-hover-border-color: $brand-primary-1;
 
 // Misc
 $hospital-image-width: 150px;
@@ -190,4 +189,4 @@ $card-spacer-y:                     2rem;
 $card-spacer-x:                     1.25rem !default;
 
 // Header
-$mobile-header-height: 54px;
+$mobile-header-height: 60px;

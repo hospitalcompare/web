@@ -96,7 +96,7 @@
     padding-top: 4px;
     display: inline-block;
     text-align: center;
-    color: $brand-1;
+    color: $brand-primary-1;
     @extend .SofiaPro-Medium;
     @include font-size(14);
 
@@ -251,7 +251,7 @@
     //background-image: linear-gradient(to bottom, #8ac1ef 0%, #82b3de 100%);
     //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8ac1ef', endColorstr='#ff82b3de', GradientType=0);
     //background-repeat: repeat-x;
-    background-color: $brand-1;
+    background-color: $brand-primary-1;
 }
 .slider-track-low,
 .slider-track-high {
@@ -339,7 +339,7 @@
     //background-image: linear-gradient(to bottom, #8ac1ef 0%, #82b3de 100%);
     //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8ac1ef', endColorstr='#ff82b3de', GradientType=0);
     //background-repeat: repeat-x;
-    background-color: $brand-1;
+    background-color: $brand-primary-1;
     opacity: 1;
 }
 

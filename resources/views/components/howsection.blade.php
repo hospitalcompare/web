@@ -37,7 +37,7 @@
                                 'content'   => 'This is the content',
                                 'trigger'   => 'hover'
                             ])>More info <span
-                                    class="help-link help-link__inline help-link__inline-red">@svg('question')</span>
+                                    class="help-link help-link__inline help-link__inline-red">@svg('icon-more-info')</span>
                             </p>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
 {{--        <div class="btn-area text-center">--}}
 {{--            @include('components.basic.button', [--}}
 {{--                'hrefValue'     => '/your-rights',--}}
-{{--                'classTitle'    => 'btn btn-squared btn-brand-1 font-18',--}}
+{{--                'classTitle'    => 'btn btn-squared btn-brand-primary-1 font-18',--}}
 {{--                'buttonText'        => 'Your Rights'--}}
 
 {{--            ])--}}

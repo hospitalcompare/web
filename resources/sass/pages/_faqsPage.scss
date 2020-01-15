@@ -12,13 +12,13 @@
             width: 20px;
 
             path {
-                fill: $brand-1;
+                fill: $brand-primary-1;
             }
         }
     }
 
     input#faq_search_input {
-        border: 2px solid $brand-1 !important;
+        border: 2px solid $brand-primary-1 !important;
         border-radius: 5px !important;
         padding: 22px 45px 22px 60px;
         @include font-size(18);

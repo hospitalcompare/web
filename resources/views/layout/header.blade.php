@@ -39,20 +39,20 @@
                         @svg('chevron-right-grey', 'd-lg-none')
                     </a>
                 </li>
-                {{--                    <li><a {{ Request::is( 'guides') ? 'class=active' : '' }} href="/guides">Guides</a></li>--}}
-{{--                @if(env('APP_ENV') === 'local')--}}
-{{--                    <li>--}}
-{{--                        <a {{ Request::is( 'results-page') ? 'class=active' : '' }} href="/results-page">Results--}}
-{{--                            page--}}
-{{--                            @svg('chevron-right-grey', 'd-lg-none')--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                    <li>--}}
-{{--                        <a {{ Request::is( 'test-page') ? 'class=active' : '' }} href="/test-page">Test page--}}
-{{--                            @svg('chevron-right-grey', 'd-lg-none')--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                @endif--}}
+                <li><a {{ Request::is( 'guides') ? 'class=active' : '' }} href="/guides">Guides</a></li>
+                @if(env('APP_ENV') === 'local')
+                    <li>
+                        <a {{ Request::is( 'results-page') ? 'class=active' : '' }} href="/results-page">Results
+                            page
+                            @svg('chevron-right-grey', 'd-lg-none')
+                        </a>
+                    </li>
+                    <li>
+                        <a {{ Request::is( 'test-page') ? 'class=active' : '' }} href="/test-page">Test page
+                            @svg('chevron-right-grey', 'd-lg-none')
+                        </a>
+                    </li>
+                @endif
             </ul>
         </nav>
         @include('components.basic.modalbutton', [

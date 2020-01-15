@@ -107,7 +107,7 @@
                         <div class="btn-area text-center text-lg-left">
                             @include('components.basic.button', [
                                 'buttonText'    => 'View all FAQs',
-                                'classTitle'    => 'btn btn-brand-1 btn-squared mt-4 font-18',
+                                'classTitle'    => 'btn btn-brand-primary-1 btn-squared mt-4 font-18',
                                 'hrefValue'     => '/faqs'
                             ])
                         </div>

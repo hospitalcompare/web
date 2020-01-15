@@ -24,10 +24,10 @@
             <meta name="robots" content="noindex,nofollow">
         @endif
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/icons/apple-touch-icon.png') }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/icons/favicon-32x32.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/icons/favicon-16x16.png') }}">
-        <link rel="manifest" href="{{ asset('images/icons/site.webmanifest') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/icons/favicon/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/icons/favicon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/icons/favicon/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('images/icons/favicon/site.webmanifest') }}">
         <script type="text/javascript">
             //uncomment and change this to false if you're having trouble with WOFFs
             //var woffEnabled = true;
@@ -79,8 +79,9 @@
                         }
                     },
                     "theme": "hc-cookie",
-                    // "position": "bottom-right",
-                    "position": "bottom",
+                    "position": "bottom-right",
+                    // "position": "top",
+                    // "static": true,
                     "content": {
                         "message": "We use cookies to provide a better service. By closing this window or continuing to use our website you agree with our use of cookies. <br><br>Find out how to manage cookies and view our policy",
                         "dismiss": "Close",

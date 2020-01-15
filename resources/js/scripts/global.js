@@ -2,6 +2,10 @@ window.$body = $('body');
 window.isDesktop = $body.hasClass('results-page-desktop');
 window.isMobile = $body.hasClass('results-page-mobile');
 
+// Set attribute on document for user agent
+var doc = document.documentElement;
+doc.setAttribute('data-useragent', navigator.userAgent);
+
 // Reveal the main menu on mobile
 $('#menu_toggle').on('click', function(){
    $body.toggleClass('menu-open');
@@ -193,7 +197,7 @@ window.toggleContent = function (speed = 400, parent = 'body') {
 //                         </div>
 //                     </div>`,
 //         content: `<p class="bold mb-0">${message}</p>
-// <!--                     <p class="mt-3"><a class="btn btn-close btn-close__small btn-brand-1 btn-icon">Close</a></p>-->
+// <!--                     <p class="mt-3"><a class="btn btn-close btn-close__small btn-brand-primary-1 btn-icon">Close</a></p>-->
 // `,
 //         html: true,
 //         trigger: 'focus',
