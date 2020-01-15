@@ -97,11 +97,18 @@ body {
 
 // Body class when filters are open
 .filters-open {
-    overflow: hidden;
+    &:before {
+        opacity: 0.5 !important;
+        z-index: 10;
+    }
 
     .section-2 {
         opacity: 0;
         pointer-events: none;
+    }
+
+    .compare-hospitals-bar {
+        z-index: 5;
     }
 }
 

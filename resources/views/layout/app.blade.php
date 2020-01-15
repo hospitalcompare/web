@@ -74,7 +74,7 @@
                             "text": "#fff"
                         },
                         "button": {
-                            "background": "#037098",h
+                            "background": "#037098",
                             "text": "#ffffff",
                         }
                     },

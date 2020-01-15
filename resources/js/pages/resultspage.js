@@ -172,15 +172,25 @@ $(document).on("click", ".results-page .change-url", function (event) {
 // }
 
 // Toggle filter section
-$showFilters = $('#show_filters');
+var $resultspageform = $('#resultspage_form');
+var $filters = $('#resultspage_form .filter-parent');
+var $showFilters = $('#show_filters');
 $showFilters.on('click', function () {
-    if( $('body').hasClass('results-page-desktop') ){
-        $('#resultspage_form .filter-parent').slideToggle();
+    if( $body.hasClass('results-page-desktop') ){
+        $filters.slideToggle();
     }
-    $('body').toggleClass('filters-open');
+    $body.toggleClass('filters-open');
     $(this).toggleClass('open');
     // // Refresh the range slider as it is initially hidden
     $("#radiusProx").slider('relayout');
+});
+
+// Close filters when clicking outside
+$(document).on('click', function (e) {
+    if ($resultspageform.has(e.target).length === 0 && $body.hasClass('filters-open')) {
+        $filters.slideUp();
+        $body.removeClass('filters-open');
+    }
 });
 
 $hideFilters = $('#close_mobile_filters');
