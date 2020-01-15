@@ -71,7 +71,7 @@
                            placeholder="Postcode*" value="{{ !empty($postcode) ? $postcode : '' }}" />
                 </div>
             </div>
-            <p class="your-details ">Your Treatment</p>
+            <p class="your-details mt-3">Your Treatment</p>
             <div class="form-group row align-items-end">
                 <div class="col col-12">
                     @include('components.basic.select', [
@@ -107,7 +107,7 @@
 {{--                            'required'              => true])--}}
 
 {{--                </div>--}}
-                <div class="col col-12" id="col_additional_information">
+                <div class="col col-12 mb-2" id="col_additional_information">
                     <textarea
                         class="form-control"
                         name="additional_information"
