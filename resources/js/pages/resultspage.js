@@ -171,6 +171,9 @@ $(document).on("click", ".results-page .change-url", function (event) {
 //     })
 // }
 
+function toggleShowFiltersText() {
+    $body.hasClass('filters-open') ? $showFiltersDiv.text('Show Filters') : $showFiltersDiv.text('Hide Filters');
+}
 // Toggle filter section
 var $resultspageform = $('#resultspage_form');
 var $filters = $('#resultspage_form .filter-parent');
@@ -179,7 +182,8 @@ var $showFiltersDiv = $('#show_filters div');
 $showFilters.on('click', function () {
     if( $body.hasClass('results-page-desktop') ){
         $filters.slideToggle();
-        $body.hasClass('filters-open') ? $showFiltersDiv.text('Show Filters') : $showFiltersDiv.text('Hide Filters');
+        // Change the text of show filters button
+        toggleShowFiltersText();
     }
     $body.toggleClass('filters-open');
     $(this).toggleClass('open');
@@ -192,6 +196,8 @@ $(document).on('click', function (e) {
     if ($resultspageform.has(e.target).length === 0 && $body.hasClass('filters-open')) {
         $filters.slideUp();
         $body.removeClass('filters-open');
+        // Change the text of show filters button
+        $showFiltersDiv.text('Show filters')
     }
 });
 
