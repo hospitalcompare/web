@@ -96,8 +96,8 @@
                    ])
             @endforeach
             @if($data['hospitals']->total() < 10)
-                <div class="container">
-                    <h1>Try tweaking the filters for more results</h1>
+                <div class="container mt-4">
+                    <img class="w-100" src="{{ asset('/images/tweakfilters.jpg') }}" alt="Image showing how to get more results">
                 </div>
             @endif
         @endif
