@@ -334,7 +334,7 @@
                         </div>
                         <div class="cell">
                             <span class="position-relative">Dementia Domain&nbsp;&nbsp;
-                                <span tabindex="0"
+                                <span tabindex="0"h
                                       class="help-link"
                                     @include('components.basic.popover', [
                                     'placement' => 'top',
