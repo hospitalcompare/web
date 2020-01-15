@@ -50,7 +50,7 @@ body {
 
 // SVG colours
 .fill-turq path {
-    fill: $brand-1;
+    fill: $brand-primary-1;
 }
 
 .fill-white,
@@ -59,11 +59,11 @@ body {
 }
 
 .fill-turq path {
-    fill: $brand-1;
+    fill: $brand-primary-1;
 }
 
 .stroke-turq path {
-    stroke: $brand-1;
+    stroke: $brand-primary-1;
 }
 
 //
@@ -190,7 +190,7 @@ ul.blue-dot {
             left: 0;
             width: 11px;
             height: 11px;
-            background-color: $brand-1;
+            background-color: $brand-primary-1;
             border-radius: 50%;
         }
     }
@@ -204,7 +204,7 @@ ul.blue-dot {
             &:before {
                 width: 5px;
                 height: 5px;
-                background-color: $brand-1;
+                background-color: $brand-primary-1;
             }
         }
     }
@@ -260,7 +260,7 @@ select.big {
 }
 
 .bg-turq {
-    background-color: $brand-1;
+    background-color: $brand-primary-1;
 }
 
 .bg-blue {
@@ -338,11 +338,20 @@ select.big {
 }
 
 .bg-not-yet-rated {
-    background-color: $brand-1;
+    background-color: $brand-primary-1;
 }
 
-.col-brand-1 {
-    color: $brand-1;
+.bg-private {
+    background-color: $privateBlue;
+}
+
+.bg-nhs {
+    background-color: $nhsBlue;
+}
+
+// Font colours
+.col-brand-primary-1 {
+    color: $brand-primary-1;
 }
 
 .col-blue {
@@ -401,7 +410,7 @@ select.big {
     //text-decoration: underline !important;
 
     &:hover {
-        color: $brand-1;
+        color: $brand-primary-1;
     }
 }
 
@@ -446,7 +455,7 @@ select.big {
     .cc-btn {
         @extend .btn;
         //@extend .btn-m;
-        @extend .btn-brand-1;
+        @extend .btn-brand-primary-1;
         @extend .btn-squared;
         @include font-size(1.1rem, true);
         text-align: center !important;
@@ -572,10 +581,10 @@ path {
     &-right {
         &.border-green {
             border-right: 0 !important;
-            border-bottom: 2px solid $brand-1;
+            border-bottom: 2px solid $brand-primary-1;
 
             @include media-breakpoint-up(md) {
-                border-right: 2px solid $brand-1 !important;
+                border-right: 2px solid $brand-primary-1 !important;
                 border-bottom: 0;
             }
         }
@@ -647,7 +656,7 @@ ol.alpha {
             position: absolute;
             top: 0;
             left: 0;
-            color: $brand-1;
+            color: $brand-primary-1;
             @extend .font-semibold;
         }
     }
@@ -694,7 +703,7 @@ h3 {
 
 h4 {
     font-size: 24px;
-    color: $brand-1;
+    color: $brand-primary-1;
     margin: 0 0 24px 0;
 }
 

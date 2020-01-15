@@ -368,10 +368,10 @@
             }
 
             &.highlight {
-                color: $brand-1;
+                color: $brand-primary-1;
 
                 svg path {
-                    fill: $brand-1;
+                    fill: $brand-primary-1;
                 }
             }
 
@@ -440,7 +440,7 @@
 
         &:hover,
         &:active {
-            color: $brand-1;
+            color: $brand-primary-1;
             text-decoration: none;
         }
     }

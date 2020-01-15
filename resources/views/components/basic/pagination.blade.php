@@ -3,11 +3,11 @@
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
             <li class="disabled mr-3 pagination-previous" aria-disabled="true" aria-label="@lang('pagination.previous')">
-                <span class="font-24 col-brand-1 SofiaPro-Medium disabled" aria-hidden="true">Previous</span>
+                <span class="font-24 col-brand-primary-1 SofiaPro-Medium disabled" aria-hidden="true">Previous</span>
             </li>
         @else
             <li class="mr-3 pagination-previous">
-                <a class="font-24 col-brand-1 SofiaPro-Medium " href="{{ $paginator->previousPageUrl() }}" rel="prev" aria-label="@lang('pagination.previous')">Previous</a>
+                <a class="font-24 col-brand-primary-1 SofiaPro-Medium " href="{{ $paginator->previousPageUrl() }}" rel="prev" aria-label="@lang('pagination.previous')">Previous</a>
             </li>
         @endif
 
@@ -33,11 +33,11 @@
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
             <li class="ml-3 pagination-previous">
-                <a class="font-24 col-brand-1 SofiaPro-Medium" href="{{ $paginator->nextPageUrl() }}" rel="next" aria-label="@lang('pagination.next')">Next</a>
+                <a class="font-24 col-brand-primary-1 SofiaPro-Medium" href="{{ $paginator->nextPageUrl() }}" rel="next" aria-label="@lang('pagination.next')">Next</a>
             </li>
         @else
             <li class="ml-3 disabled pagination-next" aria-disabled="true" aria-label="@lang('pagination.next')">
-                <span class="font-24 col-brand-1 SofiaPro-Medium disabled" aria-hidden="true">Next</span>
+                <span class="font-24 col-brand-primary-1 SofiaPro-Medium disabled" aria-hidden="true">Next</span>
             </li>
         @endif
     </ul>

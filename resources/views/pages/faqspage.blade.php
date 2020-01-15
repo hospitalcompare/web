@@ -13,7 +13,7 @@
 @section('content')
     <section class="banner">
         <div class="container container-980 text-center position-relative">
-            <h1 class="mb-3">How can we <span class="col-brand-1">help</span>?</h1>
+            <h1 class="mb-3">How can we <span class="col-brand-primary-1">help</span>?</h1>
             <h2 class="page-subtitle col-grey">Want to find out more about Hospital Compare or your rights? Our FAQs may be able to help! Search for specific keywords or browse a full list of questions below.</h2>
             <div class="input-wrapper position-relative">
                 @svg('icon-search')

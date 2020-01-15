@@ -231,7 +231,7 @@
                 <!-- More info button -->
                 <div class="button-wrapper col-6">
                     @include('components.basic.button', [
-                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-1 _btn-cc-close btn-more-info w-100 text-center font-14 p-3',
+                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-primary-1 _btn-cc-close btn-more-info w-100 text-center font-14 p-3',
                        'buttonText'        => 'Map',
                        'htmlButton'        => true,
                        'icon'              => '',

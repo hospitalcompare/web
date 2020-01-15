@@ -5,7 +5,7 @@
 }
 
 .corporate-content {
-    //box-shadow: inset 0px -20px 0px 0px $brand-1;
+    //box-shadow: inset 0px -20px 0px 0px $brand-primary-1;
 
     .corporate-content-inner {
         background-color: #fff;
@@ -43,7 +43,7 @@
                 background-color: transparent;
 
                 &.active {
-                    border-bottom: 2px solid $brand-1;
+                    border-bottom: 2px solid $brand-primary-1;
                     background-color: transparent;
                 }
             }
@@ -203,7 +203,7 @@
             fill: #fff;
         }
         .carousel-arrow-chevron {
-            fill: $brand-1;
+            fill: $brand-primary-1;
         }
     }
 }

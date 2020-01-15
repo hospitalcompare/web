@@ -9,7 +9,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header d-flex justify-content-between border-bottom">
-                <div id="slide_number" class="col-brand-1 font-20"><span class="d-inline-block">1</span>&nbsp;of 9</div>
+                <div id="slide_number" class="col-brand-primary-1 font-20"><span class="d-inline-block">1</span>&nbsp;of 9</div>
                 <span class="col-grey font-16">Help Guide Steps</span>
                 <button type="button" class="btn-plain" data-dismiss="modal" aria-label="Close">
                     @svg('times-black')
@@ -219,7 +219,7 @@
                                         </a>
                                     </div>
                                     <div class="col-6">
-                                        <a class="carousel-control-next carousel-control btn btn-squared btn-squared_slim btn-brand-1 col-white btn-tour-control next"
+                                        <a class="carousel-control-next carousel-control btn btn-squared btn-squared_slim btn-brand-primary-1 col-white btn-tour-control next"
                                            href="#carousel_tour" role="button"
                                            data-slide="next">Next
                                         </a>

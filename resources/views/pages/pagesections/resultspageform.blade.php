@@ -130,7 +130,7 @@
 
                     @include('components.basic.button', [
                         'buttonText'        => 'Show Filters',
-                        'classTitle'        => 'btn btn-brand-1 btn-icon btn-arrow-down font-16 pl-3',
+                        'classTitle'        => 'btn btn-brand-primary-1 btn-icon btn-arrow-down font-16 pl-3',
                         'id'                => 'show_filters',
                         'icon'              => '',
                         'svg'               => 'chevron-down-white'

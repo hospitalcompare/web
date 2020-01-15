@@ -20,7 +20,7 @@
             </ul>
         </div>
         <p>Media/Press: <a href="mailto:press@hospitalcompare.com">press@hospitalcompare.com</a></p>
-        <p>If you have any questions, <a href="mailto:hello@hospitalcompare.co.uk" class="col-brand-1">get in touch with us</a>. Also have a look at
-            <a class="col-brand-1" href="/faqs">our FAQs</a></p>
+        <p>If you have any questions, <a href="mailto:hello@hospitalcompare.co.uk" class="col-brand-primary-1">get in touch with us</a>. Also have a look at
+            <a class="col-brand-primary-1" href="/faqs">our FAQs</a></p>
     </div>
 </section>

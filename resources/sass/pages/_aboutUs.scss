@@ -50,7 +50,7 @@
     .svg-wrapper {
         svg path {
             fill: none;
-            stroke: $brand-1;
+            stroke: $brand-primary-1;
             stroke-width: 1px;
             stroke-dasharray: 624;
             stroke-dashoffset: 624;
@@ -107,8 +107,8 @@
 
                 svg {
                     path {
-                        stroke: $brand-1;
-                        fill: $brand-1;
+                        stroke: $brand-primary-1;
+                        fill: $brand-primary-1;
                     }
                 }
 

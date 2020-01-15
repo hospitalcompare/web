@@ -5,7 +5,7 @@
                 <div class="hospital-image">
                     <img class="content h-100" width="134" height="123" alt="Image of {{ $title }}" src="{{ $itemImg }}">
                     <div
-                        class="{{$NHSClass}} py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-violet' : 'bg-blue' }}">
+                        class="{{$NHSClass}} py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
                         <p class="m-0">{{$fundedText}}</p></div>
                 </div>
                 <div class="hospital-details w-100 position-relative">
@@ -13,7 +13,7 @@
                         {{$title}}
                     </p>
                     @if(!empty($locationSpecialism))
-                        <p class="sort-item-specialism col-brand-1 mb-1"><strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
+                        <p class="sort-item-specialism col-brand-primary-1 mb-1"><strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
                     @endif
                     <p class="sort-item-location">{{$location}}</p>
                     @include('components.basic.button', [
@@ -218,7 +218,7 @@
                         'hrefValue'         => $url,
                         'hospitalTitle'     => $title,
                         'modalTarget'       => '#hc_modal_enquire_private',
-                        'classTitle'        => 'btn btn-icon btn-enquire btn-blue enquiry mr-2 btn-block font-12',
+                        'classTitle'        => 'btn btn-icon btn-enquire enquiry mr-2 btn-block font-12',
                         'target'            => 'blank',
                         'buttonText'        => $btnText,
                         'id'                => 'enquire_private_'.$id,
@@ -231,7 +231,7 @@
                         'hrefValue'         => $url,
                         'hospitalTitle'     => $title,
                         'hospitalUrl'       => $d['url'],
-                        'classTitle'        => 'btn btn-icon btn-blue btn-enquire enquiry mr-2 btn-block font-12',
+                        'classTitle'        => 'btn btn-icon btn-enquire enquiry mr-2 btn-block font-12',
                         'buttonText'        => $btnText,
                         'modalTarget'       => '#hc_modal_enquire_nhs',
                         'id'                => 'enquire_nhs'.$id,

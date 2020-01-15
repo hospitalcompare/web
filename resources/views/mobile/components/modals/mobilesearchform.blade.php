@@ -1,8 +1,8 @@
 <div class="mobile-search-form">
     <div class="align-items-center">
         <div class="text">
-            <h3 class="font-28 SofiaPro-Medium">Choose the <span class="col-brand-1">Right Hospital&nbsp;</span>for your&nbsp;<span
-                    class="col-brand-1">Treatment</span></h3>
+            <h3 class="font-28 SofiaPro-Medium">Choose the <span class="col-brand-primary-1">Right Hospital&nbsp;</span>for your&nbsp;<span
+                    class="col-brand-primary-1">Treatment</span></h3>
             <p class="font-20 d-lg-none">Find which NHS and Private hospitals are available and fully funded.</p>
         </div>
         <div class="">
@@ -98,7 +98,7 @@
                         {{--                            >@svg('icon-more-info')</a>--}}
                     </div>
                     @include('components.basic.button', [
-                        'classTitle'    => 'btn btn-squared btn-block text-center btn-brand-1 py-3 mb-3 font-18',
+                        'classTitle'    => 'btn btn-squared btn-block text-center btn-brand-primary-1 py-3 mb-3 font-18',
                         'buttonText'    => 'Find Hospitals',
                         'htmlButton'    => true,
                         'id'            => 'submit_search',

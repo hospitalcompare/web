@@ -31,8 +31,8 @@
     }
 
     //colours
-    &.btn-brand-1 {
-        background-color: $brand-1;
+    &.btn-brand-primary-1 {
+        background-color: $brand-primary-1;
 
         &:hover {
             background-color: $blue;
@@ -44,7 +44,7 @@
         background-size: 200%;
 
         &:hover {
-            background-color: $brand-1;
+            background-color: $brand-primary-1;
         }
     }
 
@@ -96,8 +96,8 @@
     }
 
     &.btn-compare {
-        box-shadow: inset 0px 0px 0px 2px $brand-1;
-        color: $brand-1;
+        box-shadow: inset 0px 0px 0px 2px $brand-primary-1;
+        color: $brand-primary-1;
         padding: 8px 15px 8px 40px;
 
         svg, i {
@@ -109,21 +109,21 @@
             height: 16px;
 
             path {
-                stroke: $brand-1;
+                stroke: $brand-primary-1;
                 stroke-width: 50px;
                 fill: #fff;
             }
         }
 
         &:hover {
-            background-color: $brand-1;
+            background-color: $brand-primary-1;
             color: #fff;
 
             svg, i {
 
                 path {
                     stroke: #fff;
-                    fill: $brand-1;
+                    fill: $brand-primary-1;
                 }
             }
         }
@@ -232,7 +232,7 @@
         @include font-size(14);
         padding: 0 25px 0 8px;
         border-radius: $border-radius $border-radius 0 0;
-        background-color: $brand-1;
+        background-color: $brand-primary-1;
 
         svg {
             @include v-c;
@@ -303,6 +303,11 @@
         padding: 8px 5px 8px 40px;
         display: inline-block;
         text-align: left;
+        background-color: $brand-secondary-3;
+
+        &:hover {
+            background-color: $brand-primary-7;
+        }
 
         svg {
             @include v-c;
@@ -468,7 +473,7 @@
     min-width: 182px;
     border-radius: $border-radius $border-radius 0 0;
     @include font-size(1.1rem);
-    @include gradient-animation($body-color, $body-color, $brand-1, $brand-1, 0.3s);
+    @include gradient-animation($body-color, $body-color, $brand-primary-1, $brand-primary-1, 0.3s);
     padding: 19px 50px 19px 20px;
 
     svg {
@@ -487,13 +492,13 @@
 
     &:hover,
     &:focus {
-        color: $brand-1;
+        color: $brand-primary-1;
         text-decoration: none;
     }
 }
 
-.btn-brand-1-link {
-    color: $brand-1;
+.btn-brand-primary-1-link {
+    color: $brand-primary-1;
 
     &:hover,
     &:focus {
@@ -516,7 +521,7 @@
 
     @include hover {
         opacity: 1 !important;
-        background-color: $brand-1 !important;
+        background-color: $brand-primary-1 !important;
     }
 
     svg {
@@ -552,7 +557,7 @@
 
     @include hover {
         opacity: 1 !important;
-        background-color: $brand-1 !important;
+        background-color: $brand-primary-1 !important;
     }
 
     span {
