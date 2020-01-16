@@ -48,19 +48,10 @@
                 <div class="row">
                     <div class="why-use-text col col-12 col-md-6">
                         <h2 class="section-title">Why use Hospital Compare?</h2>
-                        <p class="p-intro">Hospital Compare helps you make the best possible choice when it comes to
-                            choosing a suitable
-                            hospital for your treatment.</p>
-                        <p class="col-grey">Many people in the UK are not aware that they could have the option of an
-                            NHS funded
-                            operation
-                            in a private hospital. We are here to help you understand your rights and make the right
-                            choice.</p>
-                        <p class="col-grey">Whether you are searching for the best NHS hospital or the best private
-                            hospital, Hospital
-                            Compare is the best place that provides an accurate, up-to-date and unbiased assessment of
-                            all
-                            hospitals in the UK.</p>
+                        <p class="p-intro">Hospital Compare helps you make the right choice when looking for the best hospital for your treatment.
+                        </p>
+                        <p class="col-grey">Many people in England aren’t aware they have a choice as to where to have their NHS-funded treatment. This choice includes both NHS and private hospitals. We’re here to help you understand your rights and make the best decision.</p>
+                        <p class="col-grey">Whether you’re searching for the shortest waiting times or a hospital with the highest quality ratings, Hospital Compare provides free, unbiased, accurate and up-to-date information on over 800 NHS and private hospitals across England.</p>
                     </div>
                     <div class="why-use-video col col-12 col-md-6">
                         <div class="video-wrapper">
