@@ -144,28 +144,28 @@
             <div class="postcode-radius row">
                 <div class="postcode-radius-child col-12 col-md-3 d-flex align-items-center">
                     @include('components.basic.select', [
-                        'selectParentClass'       => 'w-100',
-                        'showLabel'             => false,
-                        'selectPicker'          => 'true',
-                        'group'                 => true,
-                        'groupName'             => 'procedures',
-                        'options'               => $data['filters']['procedures'],
-                        'suboptionClass'        => 'subprocedures',
-                        'selectId'              => 'resultspage_treatment_dropdown',
-                        'svg'                   => 'chevron-down',
-                        'selectClass'           => 'select-picker highlight-search-dropdown',
-                        'name'                  =>'procedure_id'
+                        'selectParentClass'     =>  'w-100',
+                        'showLabel'             =>  false,
+                        'selectPicker'          =>  'true',
+                        'group'                 =>  true,
+                        'groupName'             =>  'procedures',
+                        'options'               =>  $data['filters']['procedures'],
+                        'suboptionClass'        =>  'subprocedures',
+                        'selectId'              =>  'resultspage_treatment_dropdown',
+                        'svg'                   =>  'chevron-down',
+                        'selectClass'           =>  'select-picker highlight-search-dropdown',
+                        'name'                  =>  'procedure_id'
                     ])
                     <a tabindex="0" data-offset="0 5px"
                        class="help-link"
                        style="right: 53px"
                         @include('components.basic.popover', [
-                        'dismissible'   => true,
-                        'placement'      => 'top',
-                        'size'           => 'max-width',
-                        'html'           => 'true',
-                        'trigger'        => 'hover',
-                        'content'        => '
+                        'dismissible'       => true,
+                        'placement'         => 'top',
+                        'size'              => 'max-width',
+                        'html'              => 'true',
+                        'trigger'           => 'hover',
+                        'content'           => '
                         '])
                     >@svg('icon-more-info')</a>
                 </div>
@@ -211,7 +211,7 @@
             <div class="select-proximity filter-section row">
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
-                        'selectParentClass'       => 'w-100',
+                        'selectParentClass'     => 'w-100',
                         'showLabel'             => true,
                         'options'               => $data['filters']['waitingTimes'],
                         'svg'                   => 'chevron-down',
@@ -226,7 +226,7 @@
                         'dismissible'       => true,
                         'placement'         => 'top',
                         'html'              => 'true',
-                        'size'           => 'max-width',
+                        'size'              => 'max-width',
                         'trigger'           => 'hover',
                         'content'           => '
                                      <p>
