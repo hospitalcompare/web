@@ -162,10 +162,7 @@ $showFilters.on('click', function () {
 
 // Close filters when clicking outside
 $(document).on('click', function (e) {
-    // e.stopPropagation();
-    console.log('Event target: ', e.target.className);
-    console.log('Click inside form?: ', $resultspageform.has(e.target).length);
-    console.log('Click inside dropdown?: ', e.target.classList.contains('text') );
+    // Is the click outside the results form, or inside one of the select picker dropdowns
     if ($resultspageform.has(e.target).length === 0 && !e.target.classList.contains('text') && $body.hasClass('filters-open')) {
         $filters.slideUp();
         $body.removeClass('filters-open');
