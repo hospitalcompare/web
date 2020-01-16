@@ -33,7 +33,7 @@
                                                     Waiting Time (NHS Funded)
                                                 </p>
                                                 <p>
-                                                    Our waiting time data is based on NHS data, specifically the number of weeks that 92 out of 100 people wait for their treatment to start - this is the NHS standard..
+                                                    Our waiting time data is based on NHS data, specifically the number of weeks that 92 out of 100 people wait for their treatment to start - this is the NHS standard.
                                                 </p>'])>Waiting time <br>(NHS Funded)</p>
                             <span title="Sort by this column"
                                   class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}">@svg('chevron-down')</span>
@@ -236,7 +236,6 @@
                     >@svg('icon-more-info')</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
-                    {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'svg' => 'chevron-down', 'placeholder' => 'NHS choices user rating', 'labelClass' => 'labelClass'])--}}
                     @include('components.basic.select', [
                         'selectParentClass' => 'w-100',
                         'showLabel' => true,

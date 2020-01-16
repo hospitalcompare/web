@@ -285,7 +285,7 @@ $('#carousel_tour').on('slid.bs.carousel', function (event) {
 
 // reset filters
 $('#clear_filters').on('click', function(e){
-    $('#input_postcode').val('');
+    console.log('cleared filters');
     // treatment
     // $('#resultspage_treatment_dropdown option[value=0]').attr('selected', 'selected');
     // $('#resultspage_treatment_dropdown').selectpicker('refresh');
@@ -294,10 +294,22 @@ $('#clear_filters').on('click', function(e){
     // $('#resultspage_waitingtime_dropdown option[value=0]').attr('selected', 'selected');
     // $('#resultspage_waitingtime_dropdown').selectpicker('refresh');
 
+    // Clear postcode
+    $('#input_postcode').val('');
+
+    // Reset selectpickers
+    $("#resultspage_form .select-picker option[selected]").removeAttr("selected");
     $('#resultspage_form .select-picker option[value=0]').attr('selected', 'selected');
+
+
     $('#resultspage_form .select-picker').selectpicker('refresh');
 
     // Reset range to default
+    $('#resultspage_form #radiusProx')
+        .data('slider-value', '4')
+        .val('4');
+
+    $('#resultspage_form #radiusProx').slider('refresh');
 
     // submit form
 });
