@@ -33,7 +33,7 @@
                                                     Waiting Time (NHS Funded)
                                                 </p>
                                                 <p>
-                                                    Our waiting time data is based on NHS data, specifically the number of weeks that 92 out of 100 people wait for their treatment to start - this is the NHS standard..
+                                                    Our waiting time data is based on NHS data, specifically the number of weeks that 92 out of 100 people wait for their treatment to start - this is the NHS standard.
                                                 </p>'])>Waiting time <br>(NHS Funded)</p>
                             <span title="Sort by this column"
                                   class="sort-arrow sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }}">@svg('chevron-down')</span>
@@ -144,28 +144,28 @@
             <div class="postcode-radius row">
                 <div class="postcode-radius-child col-12 col-md-3 d-flex align-items-center">
                     @include('components.basic.select', [
-                        'selectParentClass'       => 'w-100',
-                        'showLabel'             => false,
-                        'selectPicker'          => 'true',
-                        'group'                 => true,
-                        'groupName'             => 'procedures',
-                        'options'               => $data['filters']['procedures'],
-                        'suboptionClass'        => 'subprocedures',
-                        'selectId'              => 'resultspage_treatment_dropdown',
-                        'svg'                   => 'chevron-down',
-                        'selectClass'           => 'select-picker highlight-search-dropdown',
-                        'name'                  =>'procedure_id'
+                        'selectParentClass'     =>  'w-100',
+                        'showLabel'             =>  false,
+                        'selectPicker'          =>  'true',
+                        'group'                 =>  true,
+                        'groupName'             =>  'procedures',
+                        'options'               =>  $data['filters']['procedures'],
+                        'suboptionClass'        =>  'subprocedures',
+                        'selectId'              =>  'resultspage_treatment_dropdown',
+                        'svg'                   =>  'chevron-down',
+                        'selectClass'           =>  'select-picker highlight-search-dropdown',
+                        'name'                  =>  'procedure_id'
                     ])
                     <a tabindex="0" data-offset="0 5px"
                        class="help-link"
                        style="right: 53px"
                         @include('components.basic.popover', [
-                        'dismissible'   => true,
-                        'placement'      => 'top',
-                        'size'           => 'max-width',
-                        'html'           => 'true',
-                        'trigger'        => 'hover',
-                        'content'        => '
+                        'dismissible'       => true,
+                        'placement'         => 'top',
+                        'size'              => 'max-width',
+                        'html'              => 'true',
+                        'trigger'           => 'hover',
+                        'content'           => '
                         '])
                     >@svg('icon-more-info')</a>
                 </div>
@@ -211,11 +211,12 @@
             <div class="select-proximity filter-section row">
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
                     @include('components.basic.select', [
-                        'selectParentClass'       => 'w-100',
+                        'selectParentClass'     => 'w-100',
                         'showLabel'             => true,
                         'options'               => $data['filters']['waitingTimes'],
                         'svg'                   => 'chevron-down',
-                        'selectClass'           => 'select-picker highlight-search-dropdown _results-page-select _highlight',
+                        'selectClass'           => 'select-picker highlight-search-dropdown',
+                        'selectId'              => 'resultspage_waitingtime_dropdown',
                         'placeholder'           =>'Waiting time',
                         'name'                  =>'waiting_time',
                         'labelClass'            => 'font-14 SofiaPro-Medium'])
@@ -225,7 +226,7 @@
                         'dismissible'       => true,
                         'placement'         => 'top',
                         'html'              => 'true',
-                        'size'           => 'max-width',
+                        'size'              => 'max-width',
                         'trigger'           => 'hover',
                         'content'           => '
                                      <p>
@@ -235,7 +236,6 @@
                     >@svg('icon-more-info')</a>
                 </div>
                 <div class="filter-section-child col-6 col-md-4 col-lg-2">
-                    {{--                            @include('components.basic.select', ['options' => [['id'=>1, 'name'=>'Choose your treatment'], ['id'=>2, 'name'=>'Choose your treatment']], 'selectClass' => 'results-page-select', 'svg' => 'chevron-down', 'placeholder' => 'NHS choices user rating', 'labelClass' => 'labelClass'])--}}
                     @include('components.basic.select', [
                         'selectParentClass' => 'w-100',
                         'showLabel' => true,
