@@ -23,7 +23,7 @@
                     @foreach($data['hospitals'] as $d)
                         @include('mobile.components.itemmobile', [
                             'id'                    => $d['id'],
-                            'itemImg'               => 'images/alder-1.jpg',
+                            'itemImg'               => 'images/hospitals/hospital-placeholder.svg',
                             'title'                 => !empty($d['display_name'])? $d['display_name'] : $d['name'],
                             'location'              => (!empty($d['radius'])) ? number_format($d['radius'], 1 ) . ' miles from postcode' : '',
                             'town'                  => (!empty($d['address']['city']) ? ', ' . $d['address']['city'] : ''),

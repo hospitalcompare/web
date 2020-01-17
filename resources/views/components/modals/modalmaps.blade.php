@@ -9,7 +9,7 @@
             </div>
             <div id="details" class="d-flex" style="padding-top: 25px">
                 <div class="img-wrap mr-4">
-                    <img class="image" width="173" height="158" src="images/alder-1.jpg">
+                    <img class="image" width="173" height="158" src="images/hospitals/hospital-placeholder.svg">
                 </div>
                 <div class="address">
                     <p>No data for this hospital address</p>
