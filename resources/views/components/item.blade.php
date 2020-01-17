@@ -2,8 +2,8 @@
     <div class="container">
         <div class="result-item-inner">
             <div class="result-item-section-1">
-                <div class="hospital-image">
-                    <img class="content h-100" width="134" height="123" alt="Image of {{ $title }}" src="{{ $itemImg }}">
+                <div class="hospital-image" style="background-image: url('{{$itemImg}}');">
+{{--                    <img class="content h-100" width="134" height="123" alt="Image of {{ $title }}" src="{{ $itemImg }}">--}}
                     <div
                         class="{{$NHSClass}} py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
                         <p class="m-0">{{$fundedText}}</p></div>
@@ -107,27 +107,27 @@
                                             <div class="d-table-cell SofiaPro-Medium">Ranking</div>
                                         </div>
                                         <div class="d-table-row">
-                                            <div class="d-table-cell">Current Waiting Time</div>
+                                            <div class="d-table-cell text-left">Current Waiting Time</div>
                                             <div class="d-table-cell">'.$waitTime.'</div>
                                             <div class="d-table-cell">'.$waitingTimeRanking.'</div>
                                         </div>
                                         <div class="d-table-row">
-                                            <div class="d-table-cell SofiaPro-SemiBold">Waiting Times for Treated Patients</div>
+                                            <div class="d-table-cell SofiaPro-SemiBold text-left">Waiting Times for Treated Patients</div>
                                             <div class="d-table-cell"></div>
                                             <div class="d-table-cell"></div>
                                         </div>
                                         <div class="d-table-row">
-                                            <div class="d-table-cell">Outpatients Treated</div>
+                                            <div class="d-table-cell text-left">Outpatients Treated</div>
                                             <div class="d-table-cell">'.$outpatient.'</div>
                                             <div class="d-table-cell">'.$outpatientRank.'</div>
                                         </div>
                                         <div class="d-table-row">
-                                            <div class="d-table-cell">Inpatients Treated</div>
+                                            <div class="d-table-cell text-left">Inpatients Treated</div>
                                             <div class="d-table-cell">'.$inpatient.'</div>
                                             <div class="d-table-cell">'.$inpatientRank.'</div>
                                         </div>
                                         <div class="d-table-row">
-                                            <div class="d-table-cell">Diagnostics - % waiting 6+ weeks</div>
+                                            <div class="d-table-cell text-left">Diagnostics - % waiting 6+ weeks</div>
                                             <div class="d-table-cell">'.$diagnostic.'</div>
                                             <div class="d-table-cell">'.$diagnosticRank.'</div>
                                         </div>
