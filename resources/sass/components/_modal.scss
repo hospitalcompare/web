@@ -152,7 +152,8 @@
 
         .carousel-inner {
             .image-wrapper {
-                @include aspect-ratio(925, 660)
+                @include aspect-ratio(1172, 894);
+                background-size: cover;
                 //left: 0;
                 //bottom: 0;
                 //width: 99px;

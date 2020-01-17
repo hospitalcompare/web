@@ -359,7 +359,7 @@
     svg {
         width: 15px;
         height: 15px;
-        position: static !important;
+        //position: static !important;
         margin: 0 8px;
     }
 }
@@ -368,7 +368,7 @@
 .btn-back-to-top {
     color: $white;
     min-width: 182px;
-    border-radius: $border-radius $border-radius 0 0;
+    border-radius: $btn-border-radius $btn-border-radius 0 0;
     @include font-size(1.1rem);
     @include gradient-animation($body-color, $body-color, $brand-primary-1, $brand-primary-1, 0.3s);
     padding: 19px 50px 19px 20px;
