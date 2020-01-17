@@ -8,7 +8,7 @@
     }
 
     .modal-content {
-        border-radius: $border-radius;
+        border-radius: $btn-border-radius;
     }
 
     &.modal-enquire {
@@ -139,7 +139,7 @@
         }
 
         .modal-content {
-            border-radius: 0;
+            border-radius: $btn-border-radius;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.38);
         }
 
@@ -152,15 +152,17 @@
 
         .carousel-inner {
             .image-wrapper {
-                left: 0;
-                bottom: 0;
-                width: 99px;
-                height: 105px;
-                z-index: 5;
-
-                img {
-                    width: 100%;
-                }
+                @include aspect-ratio(1172, 894);
+                background-size: cover;
+                //left: 0;
+                //bottom: 0;
+                //width: 99px;
+                //height: 105px;
+                //z-index: 5;
+                //
+                //img {
+                //    width: 100%;
+                //}
             }
         }
 
@@ -194,7 +196,7 @@
         }
 
         .carousel-item-copy {
-            padding-bottom: 100px;
+            //padding-bottom: 100px;
             @include font-size(12);
         }
     }

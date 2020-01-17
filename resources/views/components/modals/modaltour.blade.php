@@ -44,8 +44,11 @@
                                                 your search results.</p>
                                         </div>
                                         <div class="carousel-item-image col-8">
-                                            <img class="d-block h-100 w-100 content"
-                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                            <div class="image-wrapper" style="background-image: url('/images/help/help-1.jpg')">
+{{--                                                <img class="d-block h-100 w-100 content"--}}
+
+{{--                                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">--}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -68,8 +71,11 @@
                                                 shortest waiting time.</p>
                                         </div>
                                         <div class="carousel-item-image col-8">
-                                            <img class="d-block h-100 w-100 content"
-                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                            <div class="image-wrapper" style="background-image: url('/images/help/help-2.jpg')">
+                                                {{--                                                <img class="d-block h-100 w-100 content"--}}
+
+                                                {{--                                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">--}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -87,8 +93,11 @@
                                             </p>
                                         </div>
                                         <div class="carousel-item-image col-8">
-                                            <img class="d-block h-100 w-100 content"
-                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                            <div class="image-wrapper" style="background-image: url('/images/help/help-3.jpg')">
+                                                {{--                                                <img class="d-block h-100 w-100 content"--}}
+
+                                                {{--                                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">--}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -107,8 +116,11 @@
                                             </p>
                                         </div>
                                         <div class="carousel-item-image col-8">
-                                            <img class="d-block h-100 w-100 content"
-                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                            <div class="image-wrapper" style="background-image: url('/images/help/help-4.jpg')">
+                                                {{--                                                <img class="d-block h-100 w-100 content"--}}
+
+                                                {{--                                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">--}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -126,8 +138,11 @@
                                             </p>
                                         </div>
                                         <div class="carousel-item-image col-8">
-                                            <img class="d-block h-100 w-100 content"
-                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                            <div class="image-wrapper" style="background-image: url('/images/help/help-5.jpg')">
+                                                {{--                                                <img class="d-block h-100 w-100 content"--}}
+
+                                                {{--                                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">--}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -145,8 +160,11 @@
                                                 complete a short form which will be sent to them once finalised.</p>
                                         </div>
                                         <div class="carousel-item-image col-8">
-                                            <img class="d-block h-100 w-100 content"
-                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                            <div class="image-wrapper" style="background-image: url('/images/help/help-6.jpg')">
+                                                {{--                                                <img class="d-block h-100 w-100 content"--}}
+
+                                                {{--                                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">--}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -161,8 +179,11 @@
                                                 button in the main website menu at the top of your screen.</p>
                                         </div>
                                         <div class="carousel-item-image col-8">
-                                            <img class="d-block h-100 w-100 content"
-                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                            <div class="image-wrapper" style="background-image: url('/images/help/help-7.jpg')">
+                                                {{--                                                <img class="d-block h-100 w-100 content"--}}
+
+                                                {{--                                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">--}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -179,8 +200,11 @@
                                                 access.</p>
                                         </div>
                                         <div class="carousel-item-image col-8">
-                                            <img class="d-block h-100 w-100 content"
-                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                            <div class="image-wrapper" style="background-image: url('/images/help/help-8.jpg')">
+                                                {{--                                                <img class="d-block h-100 w-100 content"--}}
+
+                                                {{--                                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">--}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -196,8 +220,11 @@
                                             </p>
                                         </div>
                                         <div class="carousel-item-image col-8">
-                                            <img class="d-block h-100 w-100 content"
-                                                 src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">
+                                            <div class="image-wrapper" style="background-image: url('/images/help/help-9.jpg')">
+                                                {{--                                                <img class="d-block h-100 w-100 content"--}}
+
+                                                {{--                                                     src="{{ asset('/images/tour-screenshot-1.jpg') }}" alt="First slide">--}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

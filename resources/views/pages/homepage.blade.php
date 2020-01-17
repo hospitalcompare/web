@@ -20,19 +20,19 @@
             'sectionTitle' => 'How does it work?',
             'howsections' => [
             [
-                'iconImg'       => 'how-does-it-work-step-2',
+                'iconImg'       => 'search-and-compare',
                 'step'          => 'One',
                 'title'         => 'Search & compare:',
                 'color'         => 'violet',
                 'description'   => '<p>Search from over 800 hospitals in England and find the right hospital for your treatment.</p>'],
             [
-                'iconImg'       => 'how-does-it-work-step-3',
+                'iconImg'       => 'make-enquiry',
                 'step'          => 'Two',
                 'title'         => 'Make enquiry:',
                 'color'         => 'pink',
                 'description'   => '<p>Use Hospital Compare to make an enquiry at one or more hospitals.</p>'],
             [
-                'iconImg'       => 'how-does-it-work-step-4',
+                'iconImg'       => 'request-a-referral',
                 'step'          => 'Three',
                 'title'         => 'Request a referral:',
                 'color'         => 'blue',

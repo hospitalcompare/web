@@ -15,17 +15,17 @@
                     @svg('chevron-right-grey', 'd-lg-none')
                 </li>
                 <li>
-                    <a {{ Request::is( 'how-to-use') ? 'class=active' : '' }} href="/how-to-use">How To Use
-                        @svg('chevron-right-grey', 'd-lg-none')
-                    </a>
-                </li>
-                <li>
                     <a {{ Request::is( 'about-us') ? 'class=active' : '' }} href="/about-us">About Us
                         @svg('chevron-right-grey', 'd-lg-none')
                     </a>
                 </li>
                 <li>
                     <a {{ Request::is( 'your-rights') ? 'class=active' : '' }} href="/your-rights">Your Rights
+                        @svg('chevron-right-grey', 'd-lg-none')
+                    </a>
+                </li>
+                <li>
+                    <a {{ Request::is( 'how-to-use') ? 'class=active' : '' }} href="/how-to-use">How To Use
                         @svg('chevron-right-grey', 'd-lg-none')
                     </a>
                 </li>

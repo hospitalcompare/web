@@ -12,15 +12,15 @@
 
 @section('content')
 
-        <section>
-            @include('pages.pagesections.resultspageform', [
-            'displayBlock' => true])
-        </section>
-
 {{--        <section>--}}
-{{--            @include('components.modals.modaltour',--}}
-{{--                ['displayBlock' => 'true'])--}}
+{{--            @include('pages.pagesections.resultspageform', [--}}
+{{--            'displayBlock' => true])--}}
 {{--        </section>--}}
+
+        <section>
+            @include('components.modals.modaltour',
+                ['displayBlock' => 'true'])
+        </section>
 {{--    <section>--}}
 {{--        @include('mobile.components.corporatecontentmobile', [--}}
 {{--                'procedures'    => $data['filters']['procedures'],--}}

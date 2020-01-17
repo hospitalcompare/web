@@ -296,6 +296,7 @@
         .hospital-image {
             width: $hospital-image-width;
             @include aspect-ratio(134px, 123px);
+            background-size: cover;
         }
 
         @include media-breakpoint-up(lg) {
