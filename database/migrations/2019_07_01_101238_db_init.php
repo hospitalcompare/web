@@ -75,6 +75,7 @@ class DbInit extends Migration
                 $table->string('display_name')->nullable();
                 $table->string('tel_number')->nullable();
                 $table->string('url')->nullable();
+                $table->string('email')->nullable();
 //                $table->string('report_url')->nullable();
                 $table->string('status')->default("active");
                 $table->timestamps();
