@@ -343,6 +343,16 @@ class ApiController {
             $enquiry[$hospitalId]->reason                    = $reason;
             $enquiry[$hospitalId]->additional_information    = $additionalInformation;
             $enquiry[$hospitalId]->save();
+
+            //Get the hospital and send the email if it has an email address
+            $hospital = Hospital::where('id', $hospitalId)->first();
+            if(!empty($hospital) && !empty($hospital->email)) {
+                try {
+                    Email::send($hospital->email, "{$title} {$lastName} Enquired with Hospital Compare", "{$title} {$lastName} Enquired with Hospital Compare", 'datamanager@hospitalcompare.co.uk');
+                } catch(\Exception $e){
+                    \Log::info('Something went wrong sending an email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
+                }
+            }
         }
 
         //Send the email //TODO: Activate it once the tests are working
