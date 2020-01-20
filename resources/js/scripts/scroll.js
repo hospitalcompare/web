@@ -1,10 +1,4 @@
 //BACK TO TOP
-// $('#back-to-top').on('click',function(){
-//     console.log($('body').offset().top)
-//     $('html, body').animate({
-//         scrollTop: ($('body').offset().top)
-//     }, 800);
-// });
 
 //Smooth scroll for in page links
 $('a[href^="#"]')
