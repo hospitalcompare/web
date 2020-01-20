@@ -48,9 +48,8 @@
                               height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- End Google Tag Manager (noscript) -->
         @endif
-        <div class="header-wrapper">
-            @include('layout.header')
-        </div>
+        @include('layout.header')
+
 
         @include('components.basic.alert')
         <main class="" id="app">

@@ -92,7 +92,7 @@
                 </div>
                 <div class="col-12 col-lg-4 blog-aside">
                     @if(!empty($data['latestBlogs']))
-                        @foreach($data['latestBlogs']->take(1) as $latestBlog)
+                        @foreach($data['latestBlogs']->take(3) as $latestBlog)
                             <div class="latest-blog d-flex mb-4">
                                 <div class="latest-blog-image-wrapper w-25">
                                     <div class="latest-blog-image rounded overflow-hidden">

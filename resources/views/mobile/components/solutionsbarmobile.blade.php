@@ -38,7 +38,7 @@
                                     'disabled'          => true,
                                     'hospitalTitle'     => 'your selected hospitals',
                                     'hospitalIds'       => '',
-                                    'htmlButton'        => true
+                                    'htmlButton'        => true,
                                 ])
                             </div>
                         </div>

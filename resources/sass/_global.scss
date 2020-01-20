@@ -90,7 +90,7 @@ body {
         .main-menu {
             overflow-y: scroll;
             overflow-x: hidden;
-            height: calc(100vh - $mobile-header-height);
+            height: calc(100vh - #{$mobile-header-height});
         }
     }
 }
@@ -503,6 +503,11 @@ path {
     @extend .p-2;
 }
 
+// Ticks/dashes in the results ratings
+.dash-or-tick {
+    width: 26px;
+}
+
 .green-tick {
     position: relative;
     padding: 0 0 0 15px;
@@ -824,4 +829,18 @@ h6 {
 
 .section-space {
     padding: 75px 0 !important;
+}
+
+// Carousel indicators
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+
+    &:not(.active) {
+        background-color: grey;
+    }
+}
+.carousel-indicators {
+    //bottom: -50px;
 }

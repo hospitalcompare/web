@@ -25,6 +25,8 @@ $privateModal.on('show.bs.modal', function (event) {
     modal.find("input[name='hospital_id']").val(hospitalId);
     modal.find('.modal-enquire-private-image').attr("src", picture);
 
+    // Add class to body
+    $body.addClass('enquiry-form-open');
 });
 
 var $info = $('#col_additional_information');

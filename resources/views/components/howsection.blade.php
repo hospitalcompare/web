@@ -5,7 +5,7 @@
         @endif
         <p class="col-grey lh-16 font-18">You have the legal right to have your free NHS treatment at an NHS or private hospital of your choice. Use Hospital Compare to make this choice, or to select the best hospital paid for by you or your insurance. </p>
     </div>
-    <div id="how_carousel" class="carousel container carousel-mobile" data-ride="carousel" data-interval="3000">
+    <div id="how_carousel" class="carousel container carousel-mobile" data-ride="carousel" data-interval="false">
         <div class="row carousel-inner w-auto">
             @if(!empty($howsections))
                 @foreach($howsections as $howsection)
@@ -42,6 +42,11 @@
                         </div>
                     </div>
                 @endforeach
+                    <ol class="carousel-indicators">
+                        <li data-target="#how_carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#how_carousel" data-slide-to="1"></li>
+                        <li data-target="#how_carousel" data-slide-to="2"></li>
+                    </ol>
             @endif
         </div> <!-- inner -->
         <a class="left carousel-control" href="#how_carousel" role="button" data-slide="prev"><span

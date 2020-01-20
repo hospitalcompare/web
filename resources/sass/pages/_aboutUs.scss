@@ -22,6 +22,10 @@
         }
     }
 
+    .about-img {
+        margin-right: 50px;
+    }
+
     .about-dots {
         position: absolute;
         top: -30px;
@@ -47,7 +51,7 @@
     }
 
     // Swirl animation
-    .svg-wrapper {
+    .swirl.svg-wrapper {
         svg path {
             fill: none;
             stroke: $brand-primary-1;
