@@ -137,8 +137,8 @@
                 <div class="col-12 col-lg-6 offset-lg-3">
                     <div class="image-wrapper mb-5">
                         <img class="about-img" src="images/video_placeholder.jpg" alt="People in a meetin talking">
-                        <img class="about-dots" src="images/about-dots.svg" alt="People in a meetin talking">
-                        <img class="about-circle" src="images/about-circle.svg" alt="People in a meetin talking">
+                        <img class="about-dots d-none d-lg-block" src="images/about-dots.svg" alt="People in a meetin talking">
+                        <img class="about-circle d-none d-lg-block" src="images/about-circle.svg" alt="People in a meetin talking">
                     </div>
                     <h2>Impartial Advice: NHS vs Private</h2>
                     <p class="col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A,

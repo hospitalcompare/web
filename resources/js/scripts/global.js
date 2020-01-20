@@ -101,7 +101,7 @@ window.getHtmlStars = function (rating) {
         return "No data";
 
     if (rating == 0) {
-        return "<img src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
+        return "<img class='dash-or-tick' src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
     }
 
     rating = parseFloat(rating);
@@ -155,10 +155,10 @@ window.getHtmlDashTickValue = function (value, text = "") {
     value = parseFloat(value);
 
     if (value === 0) {
-        html += "<img src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
+        html += "<img class='dash-or-tick' width=\"26\" src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
 
     } else if (value === 1) {
-        html += "<img src=\"images/icons/tick-green.svg\" alt=\"Tick icon\">";
+        html += "<img class='dash-or-tick' width=\"26\" src=\"images/icons/tick-green.svg\" alt=\"Tick icon\">";
     } else {
         return value + text;
     }

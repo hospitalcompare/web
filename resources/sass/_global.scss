@@ -503,6 +503,11 @@ path {
     @extend .p-2;
 }
 
+// Ticks/dashes in the results ratings
+.dash-or-tick {
+    width: 26px;
+}
+
 .green-tick {
     position: relative;
     padding: 0 0 0 15px;
