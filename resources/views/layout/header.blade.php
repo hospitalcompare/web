@@ -39,7 +39,6 @@
                         @svg('chevron-right-grey', 'd-lg-none')
                     </a>
                 </li>
-                <li><a {{ Request::is( 'guides') ? 'class=active' : '' }} href="/guides">Guides</a></li>
                 @if(env('APP_ENV') === 'local')
                     <li>
                         <a {{ Request::is( 'results-page') ? 'class=active' : '' }} href="/results-page">Results
