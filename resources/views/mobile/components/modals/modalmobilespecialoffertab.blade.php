@@ -47,6 +47,7 @@
                                     'classTitle'        => 'btn-nested-enquire btn btn-squared btn-enquire btn-squared_slim btn-blue text-center enquiry btn-enquiry font-12 w-100 d-flex justify-content-center align-items-center flex-row-reverse px-3',
                                     'svg'               => 'circle-check',
                                     'target'            => 'blank',
+                                    'dismiss'           => true,
                                     'buttonText'        => 'Make enquiry',
                                     'hospitalIds'       => $specialOffer['id'],
                                     'id'                => 'enquire_' . $specialOffer['id']])
