@@ -123,15 +123,17 @@
             }
         }
 
-        &:hover {
-            background-color: $brand-primary-1;
-            color: #fff;
+        @include media-breakpoint-up(lg){
+            &:hover {
+                background-color: $brand-primary-1;
+                color: #fff;
 
-            svg, i {
+                svg, i {
 
-                path {
-                    stroke: #fff;
-                    fill: $brand-primary-1;
+                    path {
+                        stroke: #fff;
+                        fill: $brand-primary-1;
+                    }
                 }
             }
         }
