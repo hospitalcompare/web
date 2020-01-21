@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    @include mask($bannerMaskGreen, 0.06);
+    @include mask($brand-primary-1, 0.06);
 }
 
 .banner {
@@ -13,7 +13,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        @include mask($bannerMaskGreen, 0.06);
+        @include mask($brand-primary-1, 0.06);
     }
 
     position: relative;
@@ -28,6 +28,14 @@
             @media (min-width: 992px) {
                 @include reset-row-spacing(60px);
             }
+        }
+    }
+}
+
+.blog-page {
+    .banner {
+        @include media-breakpoint-up(lg) {
+            background-image: url(/images/hero-sample-1.jpg);
         }
     }
 }
