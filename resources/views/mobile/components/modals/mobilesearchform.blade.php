@@ -72,15 +72,14 @@
                     <div class="form-child radius-parent full-left column-layout position-relative"
                          data-reveal-direction="down">
                         @include('components.basic.select', [
-                            'showLabel'             => true,
-                            'selectClass'           => 'distance-dropdown',
-                            'options'               => \App\Helpers\Utils::radius,
-                            'selectParentClass'       => 'd-md-flex select_half-width w-100',
-                            'placeholder'           => 'How far would you travel?',
-                            'placeholderOption'     => 'Select Distance',
-                            'selectedPlaceholder'   => true,
-                            'labelClass'            => 'font-18 pr-4',
-                            'name'                  =>'radius'])
+                                'selectClass'           =>  'distance-dropdown big select-picker',
+                                'selectWrapperClass'    =>  'w-100',
+                                'selectParentClass'     =>  'd-md-flex w-100',
+                                'options'               =>  \App\Helpers\Utils::radius,
+                                'placeholderOption'     =>  'Select Distance',
+                                'selectedPlaceholder'   =>  true,
+                                'name'                  =>  'radius',
+                                'svg'                   =>  'chevron-down'])
                         {{--                            <a tabindex="0" data-offset="0 5px"--}}
                         {{--                               class="help-link"--}}
                         {{--                                @include('components.basic.popover', [--}}
