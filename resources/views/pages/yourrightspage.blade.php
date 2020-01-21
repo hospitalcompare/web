@@ -29,7 +29,7 @@
                             <div class="row">
                                 <div class="col-4 col-lg-2">
                                     <div class="card-icon-wrapper px-md-5 h-100 d-flex align-items-center">
-                                        @svg('icon-our-background-1', 'w-100')
+                                        <img class="w-100" src="/images/icons/faq-make-choice.svg" alt="Icon representing choice">
                                     </div>
                                 </div>
                                 <div class="card-body col-8 col-lg-10">
@@ -45,6 +45,7 @@
                                 <div class="col-4 col-lg-2">
                                     <div class="card-icon-wrapper px-md-5 h-100 d-flex align-items-center">
                                         @svg('icon-our-background-2', 'w-100')
+                                        <img class="w-100" src="/images/icons/nhs-tariff.svg" alt="Icon representing weighing scales">
                                     </div>
                                 </div>
                                 <div class="card-body col-8 col-lg-10">
