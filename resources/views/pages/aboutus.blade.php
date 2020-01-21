@@ -93,7 +93,7 @@
                 <div class="col-md-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            @svg('icon-understanding-choices-1')
+                            <img src="/images/icons/waiting-times.svg" alt="Clock icon">
                         </div>
                         <p class="col-grey p-secondary">Sooner, by comparing waiting times at different hospitals</p>
                     </div>
@@ -101,7 +101,7 @@
                 <div class="col-md-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            @svg('icon-understanding-choices-2')
+                            <img src="/images/icons/quality.svg" alt="Stars icon">
                         </div>
                         <p class="col-grey p-secondary">At the best quality hospital, by comparing hospital quality
                             rankings</p>
@@ -110,7 +110,8 @@
                 <div class="col-md-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            @svg('icon-understanding-choices-3')
+{{--                            @svg('icon-understanding-choices-3')--}}
+                            <img src="/images/icons/paid-for.svg" alt="Medical cross icon">
                         </div>
                         <p class="col-grey p-secondary">At a private hospital paid for by the NHS or paid by yourself,
                             or by your insurer, if that is
@@ -120,7 +121,7 @@
                 <div class="col-md-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            @svg('icon-understanding-choices-4')
+                            <img src="/images/icons/self-pay.svg" alt="Icon of price tag">
                         </div>
                         <p class="col-grey p-secondary">To bring you self-pay offers from time to time, provided by
                             private hospitals, so you can
