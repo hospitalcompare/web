@@ -42,7 +42,7 @@
                         </div>
                     </div>
                 @endforeach
-                    <ol class="carousel-indicators">
+                    <ol class="carousel-indicators d-md-none">
                         <li data-target="#how_carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#how_carousel" data-slide-to="1"></li>
                         <li data-target="#how_carousel" data-slide-to="2"></li>
