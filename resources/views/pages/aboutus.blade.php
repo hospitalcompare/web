@@ -258,7 +258,7 @@
                     <div class="row">
                         <div class="col-md-6 mb-4">
                             <div class="icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/icon-our-background-1.svg')}}" alt="Comparison icon">
+                                <img src="{{asset('/images/icons/comparison-website.svg')}}" alt="Comparison icon">
                             </div>
                             <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>
                             <p class="col-grey p-secondary">Hospital Compare is the unique healthcare comparison website
@@ -266,27 +266,27 @@
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/icon-our-background-2.svg')}}" alt="Clock icon">
+                                <img src="{{asset('/images/icons/waiting-times.svg')}}" alt="Clock icon">
                             </div>
-                            <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>
+                            <p class="mb-3 SofiaPro-SemiBold font-16">Waiting Times</p>
                             <p class="col-grey p-secondary">It’s a fact that waiting times and quality of care in
                                 hospitals across the country can vary greatly, with millions of people patiently waiting
                                 for treatment (some already longer than the NHS’ 18 week target).</p>
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/icon-our-background-3.svg')}}" alt="Gavel icon">
+                                <img src="{{asset('/images/icons/legal-rights.svg')}}" alt="Gavel icon">
                             </div>
-                            <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>
+                            <p class="mb-3 SofiaPro-SemiBold font-16">Legal Rights</p>
                             <p class="col-grey p-secondary">Many people across England aren’t aware of their legal
                                 rights when it comes to their healthcare… legal rights that could in fact help them or
                                 their loved feel better faster.</p>
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/icon-our-background-4.svg')}}" alt="Calendar icon">
+                                <img src="{{asset('/images/icons/faster-treatment-times.svg')}}" alt="Calendar icon">
                             </div>
-                            <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>
+                            <p class="mb-3 SofiaPro-SemiBold font-16">Faster Treatment Times</p>
                             <p class="col-grey p-secondary">By knowing and acting upon their legal rights, many patients
                                 could slash their waiting times and be treated quicker.</p>
                         </div>
