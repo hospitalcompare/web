@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col-12">
                     {{--                    <h1>Patient Choice</h1>--}}
-                    <h1 class="font-36 SofiaPro-SemiBold mb-3 text-center">Your <span class="col-brand-primary-1">Rights</span></h1>
+                    <h1 class="font-36  mb-3 text-center">Your <span class="col-brand-primary-1">Rights</span></h1>
                     <p class="text-center font-26 SofiaPro-Medium mb-5 col-grey">
                         The Health and Social Care Act 2013 (the “<span>Act</span>”) introduced a number of
                         significant changes to the way health care services are managed and delivered in England and
@@ -67,7 +67,7 @@
         <div class="container">
             <div class="row mb-4">
                 <div class="col-12 col-md-6">
-                    <h2 class="font-28 SofiaPro-SemiBold">The Act</h2>
+                    <h2 class="font-28 ">The Act</h2>
                     <p class="col-grey p-secondary">The Act also introduced a number of other important policies and created bodies and structures to
                         authorise monitor and regulate all primary care providers (<span>GPs</span>) and Secondary
                         care provider
@@ -105,7 +105,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 text-center mb-4">
-                    <h2 class="font-28 SofiaPro-SemiBold">What this means for you as a Patient?</h2>
+                    <h2 class="font-28 ">What this means for you as a Patient?</h2>
                     <p class="col-grey p-secondary">You have legal rights to choice of healthcare services delivered in the public or private sector
                         paid for by the NHS and you must be given these choices by law.
                     </p>
@@ -116,7 +116,7 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <h2 class="font-28 SofiaPro-SemiBold text-center">Choosing your GP</h2>
+                    <h2 class="font-28  text-center">Choosing your GP</h2>
                     <div class="bg-white p-30 shadow">
                         <p class="font-24 SofiaPro-SemiBold text-center">You can:</p>
                         <ul class="row mb-0">
@@ -203,7 +203,7 @@
         <div class="container">
             <div class="row">
                 <div class="col col-lg-6 offset-lg-3 text-center">
-                    <h3 class="SofiaPro-SemiBold mb-5">If you want to find out more about your choices or the restrictions on your choices visit:
+                    <h3 class=" mb-5">If you want to find out more about your choices or the restrictions on your choices visit:
                     </h3>
                     <p>
                         <a class="btn-link btn-brand-primary-1-link" target="_blank"

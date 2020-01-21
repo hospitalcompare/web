@@ -163,8 +163,8 @@
     {{--        <div class="container">--}}
     {{--            <div class="row">--}}
     {{--                <div class="col col-12 hc-content">--}}
-    {{--                    <h1 class="SofiaPro-SemiBold mb-3">About Hospital Compare</h1>--}}
-    {{--                    <h2 class="SofiaPro-SemiBold col-brand-primary-1 font-28">Feel better faster by knowing your legal right to--}}
+    {{--                    <h1 class=" mb-3">About Hospital Compare</h1>--}}
+    {{--                    <h2 class=" col-brand-primary-1 font-28">Feel better faster by knowing your legal right to--}}
     {{--                        choose.</h2>--}}
     {{--                </div>--}}
     {{--                <div class="col col-7">--}}
@@ -250,7 +250,7 @@
         <div class="container">
             <div class="row">
                 <div class="col col-12">
-                    <h2 class="SofiaPro-SemiBold font-28 text-center mb-5">Our Background</h2>
+                    <h2 class="font-28 text-center mb-5">Our Background</h2>
                 </div>
             </div>
             <div class="row">

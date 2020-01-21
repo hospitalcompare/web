@@ -48,6 +48,10 @@ body {
     }
 }
 
+a:hover {
+    color: $blue;
+}
+
 // SVG colours
 .fill-turq path {
     fill: $brand-primary-1;
@@ -461,7 +465,9 @@ select.big {
 
     .cc-btn {
         @extend .btn;
-        //@extend .btn-m;
+        //@extend .btn-
+        border-radius: 3px;
+        padding: 22px 36px !important;
         @extend .btn-brand-primary-1;
         @extend .btn-squared;
         @include font-size(1.1rem, true);
