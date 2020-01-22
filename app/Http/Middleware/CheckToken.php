@@ -23,7 +23,6 @@ class CheckToken
 
         //if we have the Bearer {token}, strip it and use the token to authenticate
         $token = str_replace('Bearer ','', $_SERVER['HTTP_AUTHORIZATION']);
-        dd($token);
         //Throw error if we don't have a token
         if(empty($token))
             Errors::generateError(["auth" => 'Supplied token is not valid'], 403, 'Auth failed');
