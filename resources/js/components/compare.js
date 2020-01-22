@@ -58,7 +58,7 @@ var emptyColMobile = '<div class="card w-100 rounded-0 border-top-0 border-left-
 var emptyCol = ($("body").hasClass("results-page-mobile")) ? emptyColMobile : emptyColDesktop;
 
 if (typeof Cookies.get("compareHospitalsData") === 'undefined') {
-    Cookies.set("compareHospitalsData", '', {expires: 10000});
+    Cookies.set("compareHospitalsData", '', {expires: 365});
 }
 
 var compareCount = getCompareCount();
@@ -309,7 +309,7 @@ function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) 
     $countSpan.text(compareCount);
 
     // Set the data cookie
-    Cookies.set("compareHospitalsData", data, {expires: 10000});
+    Cookies.set("compareHospitalsData", data, {expires: 365});
 
 }
 
@@ -388,7 +388,7 @@ $(document).on("click", ".compare", function () {
     }
 
     // Set compareHospitalsData
-    Cookies.set("compareHospitalsData", data, {expires: 10000});
+    Cookies.set("compareHospitalsData", data, {expires: 365});
 });
 
 //Set the OnClick event for the Remove Hospital on the Comparison table
