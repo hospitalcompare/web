@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-8 blog-main">
-                    <div class="jumbotron rounded mb-0 p-0 position-relative overflow-hidden d-flex"
+                    <div class="jumbotron rounded p-0 position-relative overflow-hidden d-flex"
                          style="background-image: url('../{{$data['blog']['image']}}')">
                         <span class="blog-item-category rounded-pill d-inline-block position-absolute col-white"
                               style="background-color: {{ $data['blog']['category']['colour'] }}">
@@ -86,21 +86,21 @@
                         </div>
                         <div class="">
                             <p class="author-name font-18">{{$data['blog']['author']['name']}}</p>
-                            <p class="author-description col-grey lh-16">{{$data['blog']['author']['description']}}</p>
+                            <p class="author-description col-grey lh-16 mb-0">{{$data['blog']['author']['description']}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 blog-aside">
                     @if(!empty($data['latestBlogs']))
                         @foreach($data['latestBlogs']->take(3) as $latestBlog)
-                            <div class="latest-blog d-flex mb-4">
+                            <div class="latest-blog d-flex mb-4 position-relative">
                                 <div class="latest-blog-image-wrapper w-25">
                                     <div class="latest-blog-image rounded overflow-hidden">
                                         <img src="../{{$latestBlog['image']}}" alt="" class="content">
                                     </div>
                                 </div>
                                 <div class="latest-blog-content px-3 pb-3 w-75">
-                                    <div class="latest-blog-title mb-3 font-18">{{$latestBlog['title']}}</div>
+                                    <div class="latest-blog-title lh-16 mb-15">{{$latestBlog['title']}}</div>
                                     <div class="latest-blog-description">
                                         {!! substr($latestBlog['description'], 0, 100) !!}
                                     </div>
