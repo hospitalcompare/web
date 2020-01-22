@@ -1,6 +1,6 @@
 @if(!empty($blogs))
     @foreach($blogs as $blog)
-        <div class="col-12 col-md-6 col-lg-4 position-relative">
+        <div class="col col-12 col-md-6 col-lg-4 position-relative">
             <div class="blog-wrap shadow">
                 <div class="image-wrapper blog-item-image position-relative">
                     <img class="content" alt="Image related to {{ $blog['title'] }}" src="{{ asset($blog['image']) }}">
@@ -22,7 +22,8 @@
                         <span class="date">{{ date('d.m.Y', strtotime($blog['created_at'])) }}</span>
                     </div>
                     <p class="title font-18 $ mb-4">{{$blog['title']}}</p>
-                    <div class="description mb-4 font-16 lh-14">{!! substr(strip_tags($blog['description']), 0, 150) . '...'  !!}
+                    <div class="description mb-4 font-16 lh-14">
+                        {!! substr(strip_tags($blog['description']), 0, 150) . '...'  !!}
                     </div>
                     <a class="{{ $buttonClass }} position-static stretched-link col-brand-primary-1" href="/blog/{{ $blog['id'] }}">{{$buttonTitle}}</a>
                 </div>

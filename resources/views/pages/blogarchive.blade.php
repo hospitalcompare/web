@@ -13,8 +13,8 @@
 @section('content')
     <section class="banner">
         <div class="container">
-            <h1>Latest <span class="col-brand-primary-1">healthcare</span> news</h1>
-            <h2 class="font-18 col-grey">Informative, impartial and helpful information <br>
+            <h1 class="mb-3">Latest <span class="col-brand-primary-1">healthcare</span> news</h1>
+            <h2 class="page-subtitle col-grey mb-0">Informative, impartial and helpful information <br>
                 surrounding the healthcare industry.</h2>
         </div>
     </section>
@@ -42,7 +42,7 @@
         <div class="container">
             <div class="blog-content row">
                 @include('components.blogloop', [
-                    'blogs' => $data['blogs'],
+                    'blogs'             => $data['blogs'],
                     'buttonClass'       => 'text-left',
                     'buttonTitle'       => 'Continue reading →'
                     ])

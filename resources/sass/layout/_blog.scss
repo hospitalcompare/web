@@ -1,8 +1,16 @@
 // ========================BLOGS SECTION================================
 .blog-page {
+    .banner {
+        min-height: 338px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .filters {
         .text {
             margin: auto 0;
+            @include font-size(1.2rem);
         }
     }
 }
@@ -34,12 +42,19 @@
     .blog-content {
         @include reset-row-spacing(10px);
 
+        .col:nth-child(n+4) {
+            .blog-wrap {
+                box-shadow: none !important;
+                //box-shadow: 0 0 10px 0 red;
+            }
+        }
 
         .blog-wrap {
             text-decoration: none !important;
             margin-bottom: 40px;
             @extend .rounded;
             overflow: hidden;
+            transition: $transition;
 
             a {
                 text-decoration: none !important;
@@ -99,6 +114,8 @@
             }
 
             &:hover {
+                background-color: #f9f9f9 !important;
+
                 .blog-item-image {
                     img {
                         transform: scale3d(1.1, 1.1, 1.1) translate3d(-50%, -50%, 0) !important;
