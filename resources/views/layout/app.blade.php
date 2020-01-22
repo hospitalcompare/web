@@ -20,9 +20,9 @@
         <meta name="viewport" content="@yield('mobile')">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- Block indexing bots apart from live site -->
-{{--        @if(env('APP_ENV') !== 'live')--}}
+        @if(env('APP_ENV') !== 'live')
             <meta name="robots" content="noindex,nofollow">
-{{--        @endif--}}
+        @endif
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/icons/favicon/apple-touch-icon.png') }}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/icons/favicon/favicon-32x32.png') }}">
