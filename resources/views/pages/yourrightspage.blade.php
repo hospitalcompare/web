@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col-12">
                     {{--                    <h1>Patient Choice</h1>--}}
-                    <h1 class="font-36 SofiaPro-SemiBold mb-3 text-center">Your <span class="col-brand-1">Rights</span></h1>
+                    <h1 class="font-36  mb-3 text-center">Your <span class="col-brand-primary-1">Rights</span></h1>
                     <p class="text-center font-26 SofiaPro-Medium mb-5 col-grey">
                         The Health and Social Care Act 2013 (the “<span>Act</span>”) introduced a number of
                         significant changes to the way health care services are managed and delivered in England and
@@ -29,7 +29,7 @@
                             <div class="row">
                                 <div class="col-4 col-lg-2">
                                     <div class="card-icon-wrapper px-md-5 h-100 d-flex align-items-center">
-                                        @svg('icon-our-background-1', 'w-100')
+                                        <img class="w-100" src="/images/icons/faq-make-choice.svg" alt="Icon representing choice">
                                     </div>
                                 </div>
                                 <div class="card-body col-8 col-lg-10">
@@ -45,6 +45,7 @@
                                 <div class="col-4 col-lg-2">
                                     <div class="card-icon-wrapper px-md-5 h-100 d-flex align-items-center">
                                         @svg('icon-our-background-2', 'w-100')
+                                        <img class="w-100" src="/images/icons/nhs-tariff.svg" alt="Icon representing weighing scales">
                                     </div>
                                 </div>
                                 <div class="card-body col-8 col-lg-10">
@@ -66,7 +67,7 @@
         <div class="container">
             <div class="row mb-4">
                 <div class="col-12 col-md-6">
-                    <h2 class="font-28 SofiaPro-SemiBold">The Act</h2>
+                    <h2 class="font-28 ">The Act</h2>
                     <p class="col-grey p-secondary">The Act also introduced a number of other important policies and created bodies and structures to
                         authorise monitor and regulate all primary care providers (<span>GPs</span>) and Secondary
                         care provider
@@ -104,7 +105,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 text-center mb-4">
-                    <h2 class="font-28 SofiaPro-SemiBold">What this means for you as a Patient?</h2>
+                    <h2 class="font-28 ">What this means for you as a Patient?</h2>
                     <p class="col-grey p-secondary">You have legal rights to choice of healthcare services delivered in the public or private sector
                         paid for by the NHS and you must be given these choices by law.
                     </p>
@@ -115,7 +116,7 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <h2 class="font-28 SofiaPro-SemiBold text-center">Choosing your GP</h2>
+                    <h2 class="font-28  text-center">Choosing your GP</h2>
                     <div class="bg-white p-30 shadow">
                         <p class="font-24 SofiaPro-SemiBold text-center">You can:</p>
                         <ul class="row mb-0">
@@ -202,73 +203,22 @@
         <div class="container">
             <div class="row">
                 <div class="col col-lg-6 offset-lg-3 text-center">
-                    <h3 class="SofiaPro-SemiBold mb-5">If you want to find out more about your choices or the restrictions on your choices visit:
+                    <h3 class=" mb-5">If you want to find out more about your choices or the restrictions on your choices visit:
                     </h3>
                     <p>
-                        <a class="btn-link btn-turq-link" target="_blank"
+                        <a class="btn-link btn-brand-primary-1-link" target="_blank"
                            href="https://www.gov.uk/government/publications/the-nhs-choice-framework/the-nhs-choice-framework-what-choices-are-available-to-me-in-the-nhs"
                         >The NHS Choice Framework</a>
                     </p>
                     <p>
-                        <a class="btn-link btn-turq-link" target="_blank" href="https://www.england.nhs.uk/?s=patient+choice">NHS England’s website</a>
+                        <a class="btn-link btn-brand-primary-1-link" target="_blank" href="https://www.england.nhs.uk/?s=patient+choice">NHS England’s website</a>
                     </p>
                     <p>
-                        <a class="btn-link btn-turq-link" target="_blank"
+                        <a class="btn-link btn-brand-primary-1-link" target="_blank"
                            href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england">NHS Constitution</a>
                     </p>
                 </div>
             </div>
     </section>
-    {{--    <section>--}}
-    {{--        <div class="">--}}
-    {{--            <p class="font-24 SofiaPro-SemiBold col-brand-1">You can:</p>--}}
-    {{--            <ul class="blue-dot">--}}
-    {{--                <li>Choose the organisation you need to be referred to as an NHS outpatient to see a consultant--}}
-    {{--                    or specialist (an outpatient appointment means you will not be admitted to a ward). You may--}}
-    {{--                    choose whenever you are referred for the first time for an appointment for a physical or--}}
-    {{--                    mental health condition. This could be an NHS hospital or a private sector hospital that has--}}
-    {{--                    contracted to provide these services at the NHS Tariff, which in practice is most private--}}
-    {{--                    hospitals. There are exceptions.--}}
-    {{--                </li>--}}
-    {{--                <li>Choose which clinical team will be in charge of your NHS treatment within your chosen--}}
-    {{--                    organisation. For a physical health condition, you will be seen by the consultant or by a--}}
-    {{--                    clinician who works in the consultant’s team. For a mental health condition, you will be--}}
-    {{--                    seen by the consultant or named healthcare professional who leads the mental health team or--}}
-    {{--                    by another health care professional in the team.--}}
-    {{--                </li>--}}
-    {{--            </ul>--}}
-    {{--            <p>Essentially, you should always have a conversation with the healthcare professional who is--}}
-    {{--                referring you to discuss the choices available for you in your circumstances.--}}
-    {{--            </p>--}}
-    {{--            <p>Hospital Compare exists to help you and healthcare professionals who are advising you to show you--}}
-    {{--                in a clear and transparent way what your hospital choice options might be, and to compare these--}}
-    {{--                choices with other hospitals offering similar services in your local area or further afield, in--}}
-    {{--                England, if you are prepared to travel. This is relevant to you whether you are choosing a--}}
-    {{--                procedure to be performed at an NHS hospital or private sector hospital paid for by the NHS (at--}}
-    {{--                the NHS Tariff) or if you are choosing a private hospital paid for by your healthcare insurer or--}}
-    {{--                if you are paying for the procedure yourself.--}}
-    {{--            </p>--}}
-    {{--            <p>Remember, choosing to have your procedure performed at a private hospital paid for by the NHS, is--}}
-    {{--                at no extra cost to the taxpayer.--}}
-    {{--            </p>--}}
-    {{--            <p>If you want to find out more about your choices or the restrictions on your choices visit:--}}
-    {{--            </p>--}}
-    {{--            <h3>The NHS Choice Framework</h3>--}}
-    {{--            <p>--}}
-    {{--                <a class="btn-link" target="_blank"--}}
-    {{--                   href="https://www.gov.uk/government/publications/the-nhs-choice-framework/the-nhs-choice-framework-what-choices-are-available-to-me-in-the-nhs"--}}
-    {{--                >https://www.gov.uk/government/publications/the-nhs-choice-framework/the-nhs-choice-framework-what-choices-are-available-to-me-in-the-nhs</a>--}}
-    {{--            </p>--}}
-    {{--            <h3>NHS England’s website</h3>--}}
-    {{--            <p>--}}
-    {{--                <a class="btn-link" target="_blank" href="https://www.england.nhs.uk/?s=patient+choice">https://www.england.nhs.uk/?s=patient+choice</a>--}}
-    {{--            </p>--}}
-    {{--            <h3>NHS Constitution</h3>--}}
-    {{--            <p>--}}
-    {{--                <a class="btn-link" target="_blank"--}}
-    {{--                   href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england">https://www.gov.uk/government/publications/the-nhs-constitution-for-england/the-nhs-constitution-for-england</a>--}}
-    {{--            </p>--}}
-    {{--        </div>--}}
-    {{--    </section>--}}
-    @include('pages.pagesections.social')
+{{--    @include('pages.pagesections.social')--}}
 @endsection

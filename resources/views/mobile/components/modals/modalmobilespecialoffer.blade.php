@@ -8,7 +8,7 @@
             </div>
             <div class="img-wrap w-100">
                 <img class="w-100"
-                     src="images/alder-1.jpg"
+                     src="images/hospitals/hospital-placeholder.svg"
                      alt="Image of {{ $title }}">
             </div>
             <div class="modal-body p-3">
@@ -41,7 +41,7 @@
                                     'hospitalType'      => $NHSClass,
                                     'hrefValue'         => $url,
                                     'hospitalTitle'     => $title,
-                                    'modalTarget'       => '#hc_modal_mobile_enquire_private',
+                                    'modalTarget'       => '#hc_modal_enquire_private',
                                     'classTitle'        => 'btn-nested-enquire btn btn-squared btn-enquire btn-squared_slim btn-blue text-center enquiry btn-enquiry font-12 w-100 d-flex justify-content-center align-items-center flex-row-reverse px-3',
                                     'svg'               => 'circle-check',
                                     'target'            => 'blank',

@@ -21,10 +21,10 @@
                         </div>
                         <span class="date">{{ date('d.m.Y', strtotime($blog['created_at'])) }}</span>
                     </div>
-                    <p class="title font-18 SofiaPro-SemiBold mb-4">{{$blog['title']}}</p>
+                    <p class="title font-18 $ mb-4">{{$blog['title']}}</p>
                     <div class="description mb-4 font-16 lh-14">{!! substr(strip_tags($blog['description']), 0, 150) . '...'  !!}
                     </div>
-                    <a class="{{ $buttonClass }} position-static stretched-link col-brand-1" href="/blog/{{ $blog['id'] }}">{{$buttonTitle}}</a>
+                    <a class="{{ $buttonClass }} position-static stretched-link col-brand-primary-1" href="/blog/{{ $blog['id'] }}">{{$buttonTitle}}</a>
                 </div>
             </div>
         </div>

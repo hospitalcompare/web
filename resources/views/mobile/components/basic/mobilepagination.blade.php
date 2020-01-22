@@ -3,9 +3,9 @@
         {{-- Previous Page Link --}}
         <div class="p-2 ml-3">
             @if ($paginator->onFirstPage())
-                <span class="font-24 col-brand-1 SofiaPro-Medium disabled" aria-hidden="true">@svg('icon-chevron-left', 'pagination-arrow')</span>
+                <span class="font-24 col-brand-primary-1 SofiaPro-Medium disabled" aria-hidden="true">@svg('icon-chevron-left', 'pagination-arrow')</span>
             @else
-                <a class="font-24 col-brand-1 SofiaPro-Medium " href="{{ $paginator->previousPageUrl() }}" rel="prev" aria-label="@lang('pagination.previous')">@svg('icon-chevron-left', 'pagination-arrow')</a>
+                <a class="font-24 col-brand-primary-1 SofiaPro-Medium " href="{{ $paginator->previousPageUrl() }}" rel="prev" aria-label="@lang('pagination.previous')">@svg('icon-chevron-left', 'pagination-arrow')</a>
             @endif
         </div>
 
@@ -26,9 +26,9 @@
         {{-- Next Page Link --}}
         <div class="p-2 mr-3">
             @if ($paginator->hasMorePages())
-                <a class="font-24 col-brand-1 SofiaPro-Medium" href="{{ $paginator->nextPageUrl() }}" rel="next" aria-label="@lang('pagination.next')">@svg('icon-chevron-right', 'pagination-arrow')</a>
+                <a class="font-24 col-brand-primary-1 SofiaPro-Medium" href="{{ $paginator->nextPageUrl() }}" rel="next" aria-label="@lang('pagination.next')">@svg('icon-chevron-right', 'pagination-arrow')</a>
             @else
-                <span class="font-24 col-brand-1 SofiaPro-Medium disabled" aria-hidden="true">@svg('icon-chevron-right', 'pagination-arrow')</span>
+                <span class="font-24 col-brand-primary-1 SofiaPro-Medium disabled" aria-hidden="true">@svg('icon-chevron-right', 'pagination-arrow')</span>
             @endif
         </div>
     </div>

@@ -10,7 +10,7 @@
             <div class="img-wrap">
                 <img width="71"
                      height="65"
-                     src="images/alder-1.jpg"
+                     src="images/hospitals/hospital-placeholder.svg"
                      alt="Image of {{ $title }}">
             </div>
         </div>

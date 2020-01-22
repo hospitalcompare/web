@@ -33,7 +33,7 @@ input:not([type="range"]):not([type="submit"]):not([type="checkbox"]),
 select:not([class^="ui-datepicker"]),
 textarea {
     border: 2px solid $border-color; /*Removes border*/
-    border-radius: $border-radius;
+    border-radius: $btn-border-radius;
     appearance: none;
     //color: $textGrey;
     background-color: $white;
@@ -43,11 +43,6 @@ textarea {
 
 select::-ms-expand {
     display: none;
-}
-
-.select-wrapper {
-    //padding-left: 0;
-    //overflow: hidden;
 }
 
 // Homepage banner form
@@ -69,58 +64,62 @@ select::-ms-expand {
 
 // Half width selects on homepage
 
-.select_half-width {
-    justify-content: space-between;
-    align-items: center;
-
-    label,
-    .select-wrapper {
-        @include media-breakpoint-up(md) {
-            width: 100%;
-        }
-    }
-
-    label {
-        text-align: left;
-        color: $textGrey;
-        @extend .font-semibold;
-        line-height: 19px;
-    }
-
-    select {
-        height: 45px;
-        width: 100%;
-        padding: 0 100px 0 16px;
-        @include font-size(18);
-        @extend .SofiaPro-Medium;
-    }
-
-    .select-wrapper {
-        &:after {
-            content: '';
-            background-image: url('../images/icons/chevron-down.svg');
-            @include icon-bg-center(50%);
-            @include v-c;
-            position: absolute;
-            //top: 0;
-            //bottom: 0;
-            right: 0;
-            width: 45px;
-            height: 45px;
-            line-height: 45px;
-            border-radius: 0 $border-radius $border-radius 0;
-            border: 2px solid $border-color;
-            background-color: $border-color;
-            pointer-events: none;
-        }
-    }
-
-    + .help-link {
-        transform: none;
-        top: initial !important;
-        bottom: 8px;
-    }
-}
+//.select_half-width {
+//    justify-content: space-between;
+//    align-items: center;
+//    text-align: left;
+//    color: #757575;
+//    line-height: 19px;
+//    margin-bottom: 0 !important;;
+//
+//    label,
+//    .select-wrapper {
+//        @include media-breakpoint-up(md) {
+//            width: 100%;
+//        }
+//    }
+//
+//    label {
+//        text-align: left;
+//        color: $textGrey;
+//        @extend .font-semibold;
+//        line-height: 19px;
+//    }
+//
+//    select {
+//        height: 45px;
+//        width: 100%;
+//        padding: 0 100px 0 16px;
+//        @include font-size(18);
+//        @extend .SofiaPro-Medium;
+//    }
+//
+//    .select-wrapper {
+//        &:after {
+//            content: '';
+//            background-image: url('../images/icons/chevron-down.svg');
+//            @include icon-bg-center(50%);
+//            @include v-c;
+//            position: absolute;
+//            //top: 0;
+//            //bottom: 0;
+//            right: 0;
+//            width: 45px;
+//            height: 45px;
+//            line-height: 45px;
+//            border-radius: 0 $border-radius $border-radius 0;
+//            border: 2px solid $border-color;
+//            background-color: $border-color;
+//            pointer-events: none;
+//        }
+//    }
+//
+//    + .help-link {
+//        transform: none;
+//        top: initial !important;
+//        bottom: 8px;
+//    }
+//}
 
 
 // Submit private enquiry form
@@ -131,7 +130,7 @@ select::-ms-expand {
     textarea {
         //height: 35px;
         //line-height: 44px;
-        border-radius: $border-radius;
+        border-radius: $btn-border-radius;
         background-color: #ffffff;
     }
 
@@ -219,7 +218,7 @@ select::-ms-expand {
 
 textarea {
     width: 100%;
-    border-radius: $border-radius;
+    border-radius: $btn-border-radius;
     background-color: #ffffff;
     padding: 1rem;
     padding-top: 7px;

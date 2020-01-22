@@ -2,6 +2,10 @@ window.$body = $('body');
 window.isDesktop = $body.hasClass('results-page-desktop');
 window.isMobile = $body.hasClass('results-page-mobile');
 
+// Set attribute on document for user agent
+var doc = document.documentElement;
+doc.setAttribute('data-useragent', navigator.userAgent);
+
 // Reveal the main menu on mobile
 $('#menu_toggle').on('click', function(){
    $body.toggleClass('menu-open');
@@ -38,7 +42,7 @@ $pickers.on('hide.bs.select', function (e, clickedIndex, isSelected, previousVal
 
 var $howToUseSelectPlaceholder = 'Select';
 // Change text on the dropdowns in how to use page
-$('.flat-form .dropdown-toggle .filter-option-inner-inner').text('Choose treatment');
+$('.flat-form .treatment-parent .dropdown-toggle .filter-option-inner-inner').text('Choose treatment');
 $('#how_to_use_filter_policies .dropdown-toggle .filter-option-inner-inner').text($howToUseSelectPlaceholder);
 
 $('#how_to_use_policies').on('shown.bs.select', function(){
@@ -97,7 +101,7 @@ window.getHtmlStars = function (rating) {
         return "No data";
 
     if (rating == 0) {
-        return "<img src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
+        return "<img class='dash-or-tick' src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
     }
 
     rating = parseFloat(rating);
@@ -151,10 +155,10 @@ window.getHtmlDashTickValue = function (value, text = "") {
     value = parseFloat(value);
 
     if (value === 0) {
-        html += "<img src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
+        html += "<img class='dash-or-tick' width=\"26\" src=\"images/icons/dash-black.svg\" alt=\"Dash icon\">";
 
     } else if (value === 1) {
-        html += "<img src=\"images/icons/tick-green.svg\" alt=\"Tick icon\">";
+        html += "<img class='dash-or-tick' width=\"26\" src=\"images/icons/tick-green.svg\" alt=\"Tick icon\">";
     } else {
         return value + text;
     }
@@ -193,7 +197,7 @@ window.toggleContent = function (speed = 400, parent = 'body') {
 //                         </div>
 //                     </div>`,
 //         content: `<p class="bold mb-0">${message}</p>
-// <!--                     <p class="mt-3"><a class="btn btn-close btn-close__small btn-turq btn-icon">Close</a></p>-->
+// <!--                     <p class="mt-3"><a class="btn btn-close btn-close__small btn-brand-primary-1 btn-icon">Close</a></p>-->
 // `,
 //         html: true,
 //         trigger: 'focus',

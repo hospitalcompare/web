@@ -46,7 +46,7 @@
     <div class="compare-hospitals-content">
         <div class="container">
             <div class="row">
-                <div class="col col-2" id="no_items_added">
+                <div class="col col-3" id="no_items_added">
                     <div class="col-inner pr-3">
                         <div class="col-header_small">
                             <p class="font-16 SofiaPro-SemiBold pb-4 grey-border-bottom">You haven’t added any
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="compare_hospitals_headings" class="col col-2 d-none">
+                <div id="compare_hospitals_headings" class="col col-3 d-none">
                     <div class="col-inner h-100">
                         <div class="col-header pr-3">
                             <p class="SofiaPro-SemiBold mb-1">You are comparing:</p>
@@ -65,7 +65,7 @@
                             <div class="form-wrapper pt-3 grey-border-top">
                                 @include('components.basic.modalbutton', [
                                     'htmlButton'        => true,
-                                    'buttonText'        => 'Make an enquiry<br>to all your chosen<br>hospitals',
+                                    'buttonText'        => 'Email private hospitals',
                                     'classTitle'        => 'btn btn-squared btn-blue btn-enquire-all font-14',
                                     'id'                => 'multiple_enquiries_button',
                                     'svg'               => 'circle-check',
@@ -93,7 +93,7 @@
                                                      NHS or Private Hospital
                                                  </span>
                                                  '])
-                                >@svg('question')</span>
+                                >@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -110,7 +110,7 @@
                                                     <span>
                                                         Our waiting time data is based on NHS data, specifically the number of weeks that 92 out or 100 people wait for their treatment to start.
                                                     </span>'])
-                                >@svg('question')</span>
+                                >@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -128,7 +128,7 @@
                                                      The average waiting time for procedures at this hospital
                                                  </span>
                                                  '])
-                                >@svg('question')</span>
+                                >@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -145,7 +145,7 @@
                                                  <span>
                                                     The percentage of operations cancelled during the last reporting period. Data only available for NHS hospitals at this time.
                                                  </span>'])
-                                >@svg('question')</span>
+                                >@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -159,7 +159,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         The Quality Care Commission evaluates all hospitals and rates them as Outstanding, Good, Requires Improvement or Inadequate. Some hospitals have not been reviewed yet.
-                                                    </span>'])>@svg('question')</span>
+                                                    </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -173,7 +173,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         The percentage of people who would recommend this hospital to family and friends.
-                                                    </span>'])>@svg('question')</span>
+                                                    </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -187,7 +187,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         This hospital provides treatments funded by the NHS. Remember you can have an NHS treatment at most private hospitals.
-                                                    </span>'])>@svg('question')</span>
+                                                    </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -201,7 +201,7 @@
                                     'size'      => 'comparison',
                                     'content'   => '<span>
                                                         Indicates whether a hospital location provides Private, Self Pay services. In many instances, your local NHS hospital will also offer private treatment.
-                                                    </span>'])>@svg('question')</span>
+                                                    </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell column-break SofiaPro-SemiBold">Care Quality Rating</div>
@@ -215,8 +215,8 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
-                                                    </span>'])>@svg('question')</span>
+                                                        You are protected from abuse and avoidable harm.
+                                                    </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -229,8 +229,8 @@
                                 'html'      => 'true',
                                 'size'      => 'comparison',
                                 'content'   => '<span>
-                                                    Info here
-                                                </span>'])>@svg('question')</span>
+                                                    Your care, treatment and support achieves good outcomes, helps you to maintain quality of life and is based on the best available evidence.
+                                                </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -243,8 +243,8 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
-                                                    </span>'])>@svg('question')</span>
+                                                         Staff involve and treat you with compassion, kindness, dignity and respect.
+                                                    </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -257,8 +257,8 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
-                                                    </span>'])>@svg('question')</span>
+                                                        Services are organised so that they meet your needs.
+                                                    </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -271,8 +271,8 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
-                                                    </span>'])>@svg('question')</span>
+                                                        The leadership,management & governance of the organisation make sure; it\'s providing high-quality care based around your needs, encourages learning and innovation, and promotes an open and fair culture.
+                                                    </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell column-break SofiaPro-SemiBold">NHS User Rating</div>
@@ -286,12 +286,12 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
-                                                    </span>'])>@svg('question')</span>
+                                                        Rates the cleanliness of all items and areas commonly found in healthcare premises.
+                                                    </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell">
-                            <span class="position-relative">Food & Hygiene&nbsp;&nbsp;
+                            <span class="position-relative">Food & Hydration&nbsp;&nbsp;
                                 <span tabindex="0"
                                       class="help-link"
                                     @include('components.basic.popover', [
@@ -300,8 +300,8 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
-                                                    </span>'])>@svg('question')</span>
+                                                        Rates the location’s catering; choice, 24hr availability, mealtimes & access to menus.
+                                                    </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -314,12 +314,12 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
-                                                    </span>'])>@svg('question')</span>
+                                                        Questions relating to patient bed and changing privacy, waiting areas and access to recreational space.
+                                                    </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell">
-                            <span class="position-relative">Dementia Domain&nbsp;&nbsp;
+                            <span class="position-relative">Condition, Appearance & Maintenance&nbsp;&nbsp;
                                 <span tabindex="0"
                                       class="help-link"
                                     @include('components.basic.popover', [
@@ -328,8 +328,22 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
-                                                    </span>'])>@svg('question')</span>
+                                                        Considers appearance of general environment including; décor, condition of fixtures & fittings, tidiness, signage, lighting.
+                                                    </span>'])>@svg('icon-more-info')</span>
+                            </span>
+                        </div>
+                        <div class="cell">
+                            <span class="position-relative">Dementia Domain&nbsp;&nbsp;
+                                <span tabindex="0"h
+                                      class="help-link"
+                                    @include('components.basic.popover', [
+                                    'placement' => 'top',
+                                    'trigger'   => 'hover',
+                                    'html'      => 'true',
+                                    'size'      => 'comparison',
+                                    'content'   => '<span>
+                                                        Considers flooring, décor and signage and aspects such as availability of handrails and appropriate seating.
+                                                    </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
                         <div class="cell">
@@ -342,13 +356,13 @@
                                     'html'      => 'true',
                                     'size'      => 'comparison',
                                     'content'   => '<span>
-                                                        Info here
-                                                    </span>'])>@svg('question')</span>
+                                                        Considers access issues, including; wheelchair, mobility (e.g. handrails), signage, hearing loops and catering.
+                                                    </span>'])>@svg('icon-more-info')</span>
                             </span>
                         </div>
                     </div>
                 </div>
-                <div class="col col-10 mt-0 border-right-0">
+                <div class="col col-9 mt-0 border-right-0">
                     <div class="row" id="compare_hospitals_grid">
                         <!-- Items added here -->
                     </div>

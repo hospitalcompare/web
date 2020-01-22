@@ -12,6 +12,11 @@
 
 @section('content')
 
+{{--        <section>--}}
+{{--            @include('pages.pagesections.resultspageform', [--}}
+{{--            'displayBlock' => true])--}}
+{{--        </section>--}}
+
         <section>
             @include('components.modals.modaltour',
                 ['displayBlock' => 'true'])
@@ -41,10 +46,7 @@
 {{--                'radius'        => 50--}}
 {{--            ])--}}
 {{--    </div>--}}
-{{--    <section>--}}
-{{--        @include('pages.pagesections.resultspageform', [--}}
-{{--        'displayBlock' => true])--}}
-{{--    </section>--}}
+
     <section>
         <h3>Waiting times popover</h3>
         <div class="popover popover-regular fade bs-popover-top show" role="tooltip"
@@ -973,7 +975,7 @@
                 <h3>Enquiry button</h3>
                 @include('components.basic.button', ['classTitle' => 'btn btn-icon btn-enquire enquiry', 'buttonText' => 'Make an enquiry'])
                 <h3>Close button</h3>
-                @include('components.basic.button', ['classTitle' => 'btn btn-close__small btn-turq btn-icon', 'buttonText' => 'Close'])
+                @include('components.basic.button', ['classTitle' => 'btn btn-close__small btn-brand-primary-1 btn-icon', 'buttonText' => 'Close'])
                 <h3>Let's go button</h3>
                 @include('components.basic.button', ['classTitle' => 'btn btn-go btn-icon', 'buttonText' => 'Close'])
                 <hr>
@@ -1064,7 +1066,7 @@
                                     <p>
                                         Many private healthcare policies allow you to choose which hospital to have your elective
                                         procedure at. Enter your provider and policy name to find the best hospital for you.
-                                    </p>'])>@svg('question')</a>
+                                    </p>'])>@svg('icon-more-info')</a>
                 <a href="#" class="btn btn-blue"
                    data-toggle="popover"
                    data-content="Hello, this is a popover"
@@ -1154,7 +1156,7 @@
                             procedure at. Enter your provider and policy name to find the best hospital for you.
                         </p>
                         <p>
-                            <a class="btn btn-close__small btn-turq btn-icon" href="/">Close</a>
+                            <a class="btn btn-close__small btn-brand-primary-1 btn-icon" href="/">Close</a>
                         </p>
                     </div>
                     <div class="arrow arrow-large" style="left: 64px;"></div>

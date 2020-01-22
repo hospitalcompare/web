@@ -13,15 +13,18 @@
     cursor: pointer;
     @include flex-center;
 
+    svg {
+        width: 15px;
+        height: 15px;
+    }
+
     &__inline {
         position: static !important;
         display: inline-flex;
 
         &-red {
-            background-color: $helplinkRed;
-
-            svg path {
-                fill: #fff;
+            svg circle {
+                fill: $helplinkRed;
             }
         }
     }

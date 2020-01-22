@@ -26,7 +26,7 @@
                         </span>
 {{--                        @include('components.basic.button', [--}}
 {{--                            'hrefValue'     => '/',--}}
-{{--                            'classTitle'    => 'btn btn-turq btn-blog-back',--}}
+{{--                            'classTitle'    => 'btn btn-brand-primary-1 btn-blog-back',--}}
 {{--                            'buttonText'    => $data['blog']['category']['name'],--}}
 {{--                            'svg'           => substr($data['blog']['category']['icon'], 3, 0) //Remove the .svg extension--}}
 
@@ -92,7 +92,7 @@
                 </div>
                 <div class="col-12 col-lg-4 blog-aside">
                     @if(!empty($data['latestBlogs']))
-                        @foreach($data['latestBlogs']->take(1) as $latestBlog)
+                        @foreach($data['latestBlogs']->take(3) as $latestBlog)
                             <div class="latest-blog d-flex mb-4">
                                 <div class="latest-blog-image-wrapper w-25">
                                     <div class="latest-blog-image rounded overflow-hidden">
@@ -104,7 +104,7 @@
                                     <div class="latest-blog-description">
                                         {!! substr($latestBlog['description'], 0, 100) !!}
                                     </div>
-                                    <a class="btn-plain position-static stretched-link col-brand-1" href="/blog/{{ $latestBlog['id'] }}">Continue reading →</a>
+                                    <a class="btn-plain position-static stretched-link col-brand-primary-1" href="/blog/{{ $latestBlog['id'] }}">Continue reading →</a>
                                 </div>
                             </div>
                         @endforeach

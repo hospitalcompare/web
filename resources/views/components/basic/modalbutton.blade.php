@@ -15,6 +15,9 @@
    @if(!empty($hospitalType) && $hospitalType == 'nhs-hospital')
         data-hospital-url="{{ $hrefValue }}"
    @endif
+    @if(!empty($dismiss) && ($dismiss))
+        data-dismiss="modal"
+   @endif
    @if($modalTarget == '#hc_modal_enquire_private' || '#hc_modal_mobile_tooltip')
         data-modal-text="{{ $modalText ?? 'This is the default text for an enquiry to a private hospital' }}"
    @endif

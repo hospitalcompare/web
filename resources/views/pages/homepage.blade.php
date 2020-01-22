@@ -20,35 +20,23 @@
             'sectionTitle' => 'How does it work?',
             'howsections' => [
             [
-                'iconImg'       => 'how-does-it-work-step-1',
+                'iconImg'       => 'search-and-compare',
                 'step'          => 'One',
-                'title'         => 'Your rights to choose:',
-                'color'         => 'turq',
-                'description'   => '
-                            <ul class="">
-                                <li><span class="green-tick text-center">if NHS funded treatment</span></li>
-                                <li><span class="green-tick text-center">if self-pay</span></li>
-                                <li><span class="green-tick text-center">if covered by a health insurance policy</span></li>
-                            </ul>'
-            ],
-            [
-                'iconImg'       => 'how-does-it-work-step-2',
-                'step'          => 'Two',
                 'title'         => 'Search & compare:',
                 'color'         => 'violet',
-                'description'   => '<p>Use this site to search and compare both NHS and private (self-pay) hospitals across England. You can also search and compare by your health insurance policy.</p>'],
+                'description'   => '<p>Search from over 800 hospitals in England and find the right hospital for your treatment.</p>'],
             [
-                'iconImg'       => 'how-does-it-work-step-3',
-                'step'          => 'Three',
+                'iconImg'       => 'make-enquiry',
+                'step'          => 'Two',
                 'title'         => 'Make enquiry:',
                 'color'         => 'pink',
-                'description'   => '<p>Contact your chosen hospital(s) and ask any questions before deciding the one that’s right for you.</p>'],
+                'description'   => '<p>Use Hospital Compare to make an enquiry at one or more hospitals.</p>'],
             [
-                'iconImg'       => 'how-does-it-work-step-4',
-                'step'          => 'Four',
+                'iconImg'       => 'request-a-referral',
+                'step'          => 'Three',
                 'title'         => 'Request a referral:',
                 'color'         => 'blue',
-                'description'   => '<p>Request a referral from your GP if you selected an NHS hospital, or wait for your chosen private hospital to contact you about your appointment.</p>'
+                'description'   => '<p>Inform your GP of your chosen hospital and request an appointment.</p>'
             ]
         ]
     ])
@@ -60,19 +48,10 @@
                 <div class="row">
                     <div class="why-use-text col col-12 col-md-6">
                         <h2 class="section-title">Why use Hospital Compare?</h2>
-                        <p class="p-intro">Hospital Compare helps you make the best possible choice when it comes to
-                            choosing a suitable
-                            hospital for your treatment.</p>
-                        <p class="col-grey">Many people in the UK are not aware that they could have the option of an
-                            NHS funded
-                            operation
-                            in a private hospital. We are here to help you understand your rights and make the right
-                            choice.</p>
-                        <p class="col-grey">Whether you are searching for the best NHS hospital or the best private
-                            hospital, Hospital
-                            Compare is the best place that provides an accurate, up-to-date and unbiased assessment of
-                            all
-                            hospitals in the UK.</p>
+                        <p class="p-intro">Hospital Compare helps you make the right choice when looking for the best hospital for your treatment.
+                        </p>
+                        <p class="col-grey">Many people in England aren’t aware they have a choice as to where to have their NHS-funded treatment. This choice includes both NHS and private hospitals. We’re here to help you understand your rights and make the best decision.</p>
+                        <p class="col-grey">Whether you’re searching for the shortest waiting times or a hospital with the highest quality ratings, Hospital Compare provides free, unbiased, accurate and up-to-date information on over 800 NHS and private hospitals across England.</p>
                     </div>
                     <div class="why-use-video col col-12 col-md-6">
                         <div class="video-wrapper">
@@ -119,7 +98,7 @@
                         <div class="btn-area text-center text-lg-left">
                             @include('components.basic.button', [
                                 'buttonText'    => 'View all FAQs',
-                                'classTitle'    => 'btn btn-turq btn-squared mt-4 font-18',
+                                'classTitle'    => 'btn btn-brand-primary-1 btn-squared mt-4 font-18',
                                 'hrefValue'     => '/faqs'
                             ])
                         </div>

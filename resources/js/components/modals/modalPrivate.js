@@ -25,19 +25,30 @@ $privateModal.on('show.bs.modal', function (event) {
     modal.find("input[name='hospital_id']").val(hospitalId);
     modal.find('.modal-enquire-private-image').attr("src", picture);
 
+    // Add class to body
+    $body.addClass('enquiry-form-open');
 });
 
 var $info = $('#col_additional_information');
 // Clear form checkboxes inputs when closing modal
 $privateModal.on('hide.bs.modal', function (event) {
+    // empty checkbox
     $(this)
         .find('input[type=checkbox]')
         .prop('checked', false);
+
+    // Clear text inputs
+    $(this)
+        .find('input[type=text]')
+        .val('');
 
     // Close the info box and empty contents
     $info
         .find('textarea')
         .val('');
+
+    var validator = $( "#hc_modal_enquire_private" ).validate();
+    validator.resetForm();
 });
 
 // Toggle the additional info box when clicking on the 'other' checkbox

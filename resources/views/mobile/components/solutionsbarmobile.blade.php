@@ -1,7 +1,7 @@
 <div class="compare-hospitals-bar compare-hospitals-bar_mobile {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
     <div class="compare-hospitals-header d-flex justify-content-between">
         <div class="container-fluid px-0 position-relative d-flex justify-content-between align-items-end h-100">
-            <div id="compare_button_title" class="compare-button-title d-flex align-items-center h-100 w-50 pl-3">
+            <div id="compare_button_title" class="compare-button-title d-flex align-items-center justify-content-center h-100 w-50 pl-3">
                 @svg('compare-heart', 'compare-heart')
                 <p class="font-12">Compare&nbsp;(<span id="compare_number">0</span>)<span
                         class="compare-arrow ml-3"></span>
@@ -29,7 +29,7 @@
                             <div class="form-wrapper pt-3">
                                 @include('components.basic.modalbutton', [
                                     'htmlButton'        => true,
-                                    'buttonText'        => 'Make an enquiry to all your chosen hospitals',
+                                    'buttonText'        => 'Email private hospitals',
                                     'classTitle'        => 'btn btn-squared btn-blue btn-enquire-all font-12 w-100',
                                     'id'                => 'multiple_enquiries_button',
                                     'svg'               => 'circle-check',
@@ -38,7 +38,7 @@
                                     'disabled'          => true,
                                     'hospitalTitle'     => 'your selected hospitals',
                                     'hospitalIds'       => '',
-                                    'htmlButton'        => true
+                                    'htmlButton'        => true,
                                 ])
                             </div>
                         </div>

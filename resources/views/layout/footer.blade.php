@@ -34,7 +34,6 @@
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="social text-left text-lg-right">
-                        <p class="SofiaPro-Light helping-you">Helping you to make the best healthcare choices</p>
                         <ul class="social-list d-flex justify-content-lg-end">
                             <li class="facebook-social">
                                 <a href="https://www.facebook.com/hospitalcompare" target="_blank">@svg('facebook')
@@ -73,7 +72,7 @@
                     class="text-link"
                     href="/your-rights">Your Rights.</a>
             </p>
-            <p><time>{{ date('Y') }}</time><a href="/"> Hospital Compare<sup>TM</sup></a>. All rights reserved</p>
+            <p><time>{{ date('Y') }}</time><a href="/"> Hospital Compare<sup>TM</sup></a>. All rights reserved.</p>
           </div>
     </div>
 </footer>

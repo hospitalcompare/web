@@ -139,48 +139,36 @@ function updateQueryStringParam(key, value) {
 $(document).on("click", ".results-page .change-url", function (event) {
     window.location.href = updateQueryStringParam('hospital_type', 1);
 });
-// Validate the search form on the results page
-// var $form = $('#resultspage_form');
-//
-// if($form.length > 0) {
-//     $form.validate({
-//         rules: {
-//             postcode: {
-//                 // required: true,
-//                 // postcodeUK: true
-//                 // maxlength: 7
-//             }
-//         },
-//         errorPlacement: function(error, element) {
-//             var customError = $([
-//                 '<span class="invalid-feedback" style="display: block">',
-//                 '  <span class="mb-0" style="display: block">',
-//                 '  </span>',
-//                 '</span>'
-//             ].join(""));
-//
-//             // Add `form-error-message` class to the error element
-//             error.addClass("form-error-message");
-//
-//             // Insert it inside the span that has `mb-0` class
-//             error.appendTo(customError.find("span.mb-0"));
-//
-//             // Insert your custom error
-//             customError.insertBefore( element );
-//         },
-//     })
-// }
 
+function toggleShowFiltersText() {
+    $body.hasClass('filters-open') ? $showFiltersDiv.text('Show Filters') : $showFiltersDiv.text('Hide Filters');
+}
 // Toggle filter section
-$showFilters = $('#show_filters');
+var $resultspageform = $('#resultspage_form');
+var $filters = $('#resultspage_form .filter-parent');
+var $showFilters = $('#show_filters');
+var $showFiltersDiv = $('#show_filters div');
 $showFilters.on('click', function () {
-    if( $('body').hasClass('results-page-desktop') ){
-        $('#resultspage_form .filter-parent').slideToggle();
+    if( $body.hasClass('results-page-desktop') ){
+        $filters.slideToggle();
+        // Change the text of show filters button
+        toggleShowFiltersText();
     }
-    $('body').toggleClass('filters-open');
+    $body.toggleClass('filters-open');
     $(this).toggleClass('open');
     // // Refresh the range slider as it is initially hidden
     $("#radiusProx").slider('relayout');
+});
+
+// Close filters when clicking outside
+$(document).on('click', function (e) {
+    // Is the click outside the results form, or inside one of the select picker dropdowns
+    if ($resultspageform.has(e.target).length === 0 && !e.target.classList.contains('text') && $body.hasClass('filters-open')) {
+        $filters.slideUp();
+        $body.removeClass('filters-open');
+        // Change the text of show filters button
+        $showFiltersDiv.text('Show filters')
+    }
 });
 
 $hideFilters = $('#close_mobile_filters');
@@ -255,14 +243,23 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
     }
 });
 
-// Dr S tour carousel modal schtooooff
-$('#carousel_tour').on('slid.bs.carousel', function (event) {
-    // do something…
-    var nextSlideNo = event.to;
-    nextSlideNo += 1;
-    $('#slide_number span').text(nextSlideNo);
-});
-
 // popupDoctor($doctor.data('message'), $doctor.data('doctor-delay'));
 
+// Reset filters
+$('#clear_filters').on('click', function(e){
+    // Clear postcode
+    $('#input_postcode').val('');
 
+    // Reset selectpickers
+    $("#resultspage_form .select-picker option[selected]").removeAttr("selected");
+    $('#resultspage_form .select-picker option[value=0]').attr('selected', 'selected');
+    $('#resultspage_form .select-picker').selectpicker('refresh');
+
+    // Reset range to default
+    $('#resultspage_form #radiusProx').slider('setValue', 4 );
+
+    // Submit form with 0.5 sec delay
+    setTimeout(function () {
+        $resultspageform.submit();
+    }, 500);
+});

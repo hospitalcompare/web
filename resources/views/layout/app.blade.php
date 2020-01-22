@@ -24,10 +24,10 @@
             <meta name="robots" content="noindex,nofollow">
 {{--        @endif--}}
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/icons/apple-touch-icon.png') }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/icons/favicon-32x32.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/icons/favicon-16x16.png') }}">
-        <link rel="manifest" href="{{ asset('images/icons/site.webmanifest') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/icons/favicon/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/icons/favicon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/icons/favicon/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('images/icons/favicon/site.webmanifest') }}">
         <script type="text/javascript">
             //uncomment and change this to false if you're having trouble with WOFFs
             //var woffEnabled = true;
@@ -48,9 +48,8 @@
                               height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- End Google Tag Manager (noscript) -->
         @endif
-        <div class="header-wrapper">
-            @include('layout.header')
-        </div>
+        @include('layout.header')
+
 
         @include('components.basic.alert')
         <main class="" id="app">
@@ -66,6 +65,7 @@
                 async defer></script>
         <script>
             window.addEventListener("load", function(){
+                // https://www.osano.com/cookieconsent/download/
                 window.cookieconsent.initialise({
                     "palette": {
                         "popup": {
@@ -73,14 +73,19 @@
                             "text": "#fff"
                         },
                         "button": {
-                            "background": "#00cecd",
+                            "background": "#037098",
                             "text": "#ffffff",
                         }
                     },
                     "theme": "hc-cookie",
-                    "position": "bottom-right",
+                    // "position": "bottom-right",
+                    "position": "top",
+                    "static": true,
                     "content": {
-                        "href": "/cookie-policy/"
+                        "message": "We use cookies to provide a better service. By closing this window or continuing to use our website you agree with our use of cookies. <br><br>Find out how to manage cookies and view our policy",
+                        "dismiss": "Close",
+                        "link": "here",
+                        "href": "/cookie-policy"
                     }
                 })});
         </script>

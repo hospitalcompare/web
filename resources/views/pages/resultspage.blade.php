@@ -51,7 +51,7 @@
             @foreach($data['hospitals'] as $d)
                 @include('components.item', [
                     'id'                    => $d['id'],
-                    'itemImg'               => \File::exists("images/hospitals/{$d['location_id']}_thumb.jpg") ? "images/hospitals/{$d['location_id']}_thumb.jpg" : "images/alder-1.jpg",
+                    'itemImg'               => \File::exists("images/hospitals/{$d['location_id']}_thumb.jpg") ? "images/hospitals/{$d['location_id']}_thumb.jpg" : "images/hospitals/hospital-placeholder.svg",
                     'title'                 => !empty($d['display_name'])? $d['display_name'] : $d['name'],
                     'location'              => (!empty($d['radius'])) ? number_format($d['radius'], 1 ) . ' miles from postcode' : '',
                     'town'                  => (!empty($d['address']['city']) ? ', ' . $d['address']['city'] : ''),
@@ -96,8 +96,8 @@
                    ])
             @endforeach
             @if($data['hospitals']->total() < 10)
-                <div class="container">
-                    <h1>Try tweaking the filters for more results</h1>
+                <div class="container mt-4">
+                    <img class="w-100" src="{{ asset('/images/tweakfilters.jpg') }}" alt="Image showing how to get more results">
                 </div>
             @endif
         @endif

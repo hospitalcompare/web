@@ -1,18 +1,25 @@
+
 var isCarouselPaused = false;
 
 $( window ).on( 'load resize', function() {
-    if ( document.documentElement.clientWidth <= 767 ) {
-        $('.carousel-mobile').carousel({
-            touch: true
-        });
-        // if ( !isCarouselPaused ) {
-        //     isCarouselPaused = true;
-        // }
+    if ( document.documentElement.clientWidth >= 992 ) {
+        if ( !isCarouselPaused ) {
+            $( '.carousel-mobile' ).carousel('pause');
+            isCarouselPaused = true;
+        }
     } else {
-        $('.carousel-mobile').carousel('pause');
-        // if ( isCarouselPaused ) {
-        //
-        //     isCarouselPaused = false;
-        // }
-    }
+        if ( isCarouselPaused ) {
+            $( '.carousel-mobile' ).carousel('cycle');
+            isCarouselPaused = false;
+        }
+    };
+});
+
+
+// Dr S tour carousel modal schtooooff
+$('#carousel_tour').on('slid.bs.carousel', function (event) {
+    // do something…
+    var nextSlideNo = event.to;
+    nextSlideNo += 1;
+    $('#slide_number span').text(nextSlideNo);
 });

@@ -1,6 +1,6 @@
 {{--Template for BS modal overlays --}}
 
-<div style="" class="modal modal-mobile-enquire-form fade show" id="hc_modal_mobile_enquire_private" tabindex="-1" role="dialog"
+<div style="" class="modal modal-mobile-enquire-form fade show" id="hc_modal_enquire_private" tabindex="-1" role="dialog"
      aria-labelledby="" aria-modal="true" aria-hidden="true">
     <div class="modal-dialog m-3 mx-md-auto" role="document">
         <div class="modal-content">

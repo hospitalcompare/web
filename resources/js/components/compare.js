@@ -1,13 +1,13 @@
 //Check if we don't have the cookie and set it to 0
-var compareBar = $('.compare-hospitals-bar');
-var compareContent = $('.compare-hospitals-content');
-var countSpan = $('#compare_number');
-var heartIcon = $('#compare_heart');
+var $compareBar = $('.compare-hospitals-bar');
+var $compareContent = $('.compare-hospitals-content');
+var $countSpan = $('#compare_number');
+var $heartIcon = $('#compare_heart');
 var $svgMapIcon =
     `<svg class="map-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.37 49.61">
         <g id="Layer_1" data-name="Layer 1">
-            <path fill="#00cfcc" d="M26.38 34.66c4.77-8.54 7-14.25 7-18A16.69 16.69 0 000 16.68c0 3.73 2.22 9.44 7 18 2.9 5.2 5.81 9.72 6.63 11l2.37 3.6a.82.82 0 001.33 0l2.36-3.58c.37-.54 3.52-5.36 6.69-11.04zm-9.7 12.75L15 44.83s-3.28-5-6.61-10.93C3.86 25.82 1.58 20 1.58 16.68a15.11 15.11 0 0130.21 0c0 3.35-2.28 9.14-6.79 17.22-2.93 5.24-5.78 9.66-6.59 10.89z"/>
-            <path fill="#00cfcc" d="M16.68 12.56a4 4 0 104 4 4 4 0 00-4-4z"/>
+            <path fill="#037098" d="M26.38 34.66c4.77-8.54 7-14.25 7-18A16.69 16.69 0 000 16.68c0 3.73 2.22 9.44 7 18 2.9 5.2 5.81 9.72 6.63 11l2.37 3.6a.82.82 0 001.33 0l2.36-3.58c.37-.54 3.52-5.36 6.69-11.04zm-9.7 12.75L15 44.83s-3.28-5-6.61-10.93C3.86 25.82 1.58 20 1.58 16.68a15.11 15.11 0 0130.21 0c0 3.35-2.28 9.14-6.79 17.22-2.93 5.24-5.78 9.66-6.59 10.89z"/>
+            <path fill="#037098" d="M16.68 12.56a4 4 0 104 4 4 4 0 00-4-4z"/>
         </g>
     </svg>`;
 // Where we hold the counts of hospital types
@@ -81,12 +81,12 @@ if (compareCount > 0 && window.location.href.indexOf("results-page") > '-1') {
     // Appending the extra empty columns
     var remainingColCount = 5 - compareCount;
     target.append(repeatStringNumTimes(emptyCol, remainingColCount));
-    countSpan.text(compareCount);
-    heartIcon.addClass('has-count');
+    $countSpan.text(compareCount);
+    $heartIcon.addClass('has-count');
     //Add the `active` class that will change the color to pink
-    heartIcon.addClass('active');
+    $heartIcon.addClass('active');
 } else {
-    heartIcon.removeClass('active');
+    $heartIcon.removeClass('active');
     target.append(repeatStringNumTimes(emptyCol, 5))
 }
 
@@ -143,7 +143,7 @@ window.addHospitalToCompare = function(element) {
             data-hospital-title="${element.display_name}"
             data-hospital-id="${element.id}"
             data-image="${element.image}"
-            data-target="${ hospitalType == 'Private' ? '#hc_modal_mobile_enquire_private' : '#hc_modal_enquire_nhs'}">Make an enquiry
+            data-target="${ hospitalType == 'Private' ? '#hc_modal_enquire_private' : '#hc_modal_enquire_nhs'}">Make an enquiry
         ${$svg}
         </a>`;
 
@@ -183,6 +183,7 @@ window.addHospitalToCompare = function(element) {
                     '<div class="cell">' + (element.place_rating !== null && element.place_rating.cleanliness !== null ? getHtmlDashTickValue(element.place_rating.cleanliness, "%") : 'No data') + '</div>' +
                     '<div class="cell">' + (element.place_rating !== null && element.place_rating.food_hydration !== null ? getHtmlDashTickValue(element.place_rating.food_hydration, "%") : 'No data') + '</div>' +
                     '<div class="cell">' + (element.place_rating !== null && element.place_rating.privacy_dignity_wellbeing !== null ? getHtmlDashTickValue(element.place_rating.privacy_dignity_wellbeing, "%") : 'No data') + '</div>' +
+                    '<div class="cell">' + (element.place_rating !== null && element.place_rating.condition_appearance_maintenance !== null ? getHtmlDashTickValue(element.place_rating.condition_appearance_maintenance, "%") : 'No data') + '</div>' +
                     '<div class="cell">' + (element.place_rating !== null && element.place_rating.dementia !== null ? getHtmlDashTickValue(element.place_rating.dementia, "%") : 'No data') + '</div>' +
                     '<div class="cell">' + (element.place_rating !== null && element.place_rating.disability !== null ? getHtmlDashTickValue(element.place_rating.disability, "%") : 'No data') + '</div>' +
                 '</div>' +
@@ -200,7 +201,7 @@ window.addHospitalToCompare = function(element) {
                      </button>
                      <div class="btn-area d-flex align-items-center">
                         ${btnContent}
-                        <span class="remove-hospital col-brand-1 ml-2 font-12" id="remove_id_${element.id}" data-hospital-type="${slugify(hospitalType)}-hospital">Remove</span>
+                        <span class="remove-hospital col-brand-primary-1 ml-2 font-12" id="remove_id_${element.id}" data-hospital-type="${slugify(hospitalType)}-hospital">Remove</span>
                      </div>
                 </div>
                 <div id="collapse${element.id}" class="collapse" aria-labelledby="heading${element.id}" data-parent="#compare_hospitals_grid">
@@ -296,16 +297,16 @@ function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) 
         $('#compare_hospitals_headings').addClass('d-none');
         $('#no_items_added').removeClass('d-none');
         // Hide the comparison area
-        compareContent.slideUp();
+        $compareContent.slideUp();
         $body.removeClass('shortlist-open');
-        compareContent.removeClass('revealed');
+        $compareContent.removeClass('revealed');
     }
 
     // Check to see if we need to re-enable the buttons
     enableButtons();
 
-    // var countSpan = $('#compare_number');
-    countSpan.text(compareCount);
+    // var $countSpan = $('#compare_number');
+    $countSpan.text(compareCount);
 
     // Set the data cookie
     Cookies.set("compareHospitalsData", data, {expires: 10000});
@@ -359,7 +360,7 @@ $(document).on("click", ".compare", function () {
 
             // Update compare count
             compareCount = parseInt(compareCount) + 1;
-            countSpan.text(compareCount);
+            $countSpan.text(compareCount);
         }
     }
 
@@ -375,15 +376,15 @@ $(document).on("click", ".compare", function () {
     }
 
     // Pulsate the heart every time there is an action
-    heartIcon.removeClass('has-count');
+    $heartIcon.removeClass('has-count');
     setTimeout(function () {
-        heartIcon.addClass('has-count');
+        $heartIcon.addClass('has-count');
     }, 100);
 
     if (compareCount > 0) {
-        heartIcon.addClass('active');
+        $heartIcon.addClass('active');
     } else {
-        heartIcon.removeClass('active');
+        $heartIcon.removeClass('active');
     }
 
     // Set compareHospitalsData
@@ -398,7 +399,7 @@ $(document).on("click", ".remove-hospital", function (e) {
     var data = Cookies.get("compareHospitalsData");
     var compareCount = getCompareCount();
     if (compareCount === 1) {
-        heartIcon.removeClass('active');
+        $heartIcon.removeClass('active');
     }
     elementId = elementId.replace('remove_id_', '');
     removeHospitalFromCompare(elementId, data, compareCount, hospitalTypeClicked);
@@ -409,16 +410,16 @@ $(document).on("click", "#compare_button_title", function (e) {
     // Close all open modals
     $('.modal').modal('hide');
     var compareCount = getCompareCount();
-    var openTabs = $('.special-offer-tab.open');
+    var $openTabs = $('.special-offer-tab.open');
     // var solutionsBar = $('.compare-hospitals-bar');
     if (compareCount > -1) {
         // solutionsBar.toggleClass('open');
-        compareContent.slideToggle();
+        $compareContent.slideToggle();
         $body.toggleClass('shortlist-open');
         // $('.compare-arrow').toggleClass('rotated');
-        compareContent.toggleClass('revealed');
+        $compareContent.toggleClass('revealed');
         // Close the special offer tabs if any are open
-        openTabs
+        $openTabs
             .removeClass('open')
             .find('.special-offer-body')
             .slideUp();
@@ -433,11 +434,11 @@ $(document).on("click", "#compare_button_title", function (e) {
 
 // Hide shortlist bar if clicking outside it, but only if it is already open
 $(document).on('click', function (e) {
-    if (compareBar.has(e.target).length === 0 && compareContent.hasClass('revealed')) {
-        compareContent.slideUp();
+    if ($compareBar.has(e.target).length === 0 && $compareContent.hasClass('revealed')) {
+        $compareContent.slideUp();
         $body.removeClass('shortlist-open');
         // $('.compare-arrow').removeClass('rotated');
-        compareContent.removeClass('revealed');
+        $compareContent.removeClass('revealed');
     }
 });
 

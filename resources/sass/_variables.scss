@@ -27,28 +27,28 @@ $violet: #8e00fe;
 
 $blue: #1b71f3;
 $hanblue: #5e15d1;
-$privateBlue: #033860;
+$privateBlue: #18435a;
+$nhsBlue: #0d69f2;
 $pink: #ed0373;
 $white: #ffffff;
 $goldStar: #FAC917;
 
 // 2020 new brand colours. Old turquoise = #00cecd
-$brand-1: #037098;
-$brand-2: #037098;
-$brand-3: #037098;
-$brand-4: #037098;
-$brand-5: #037098;
-$brand-6: #037098;
+$brand-primary-1: #037098;
+$brand-primary-7: #0d69f2;
+$brand-secondary-3: #5e15d1;
 
 //Main Template colours
 $footerBackgroundColour: #363636;
 $caretBlack: #040202;
-$bannerMaskGreen: #00cfcc;
+$bannerMaskGreen: #037098;
 $corporateContentGreen: #026867;
+$header-link-hover-colour: darken($brand-primary-1, 10%);
 
 $textGrey: #757575;
 $textDarkGrey: #1d1d1d;
 $bgGrey: #ECECEC;
+$bgLightGrey: #F7F7F7;
 
 // Snap design variables
 //Full width background grey: #ECECEC
@@ -78,7 +78,7 @@ $body-bg: #fff;
 $body-color: #1b1b1b;
 
 // ************** BS overrides ****************** //
-$btn-border-radius: 100px;
+$btn-border-radius: 5px;
 $btn-transition: $transition;
 $btn-border-width: 0;
 //$btn-focus-box-shadow: none;
@@ -118,7 +118,7 @@ $input-border-color: #ededed;
 $input-border-width: 2px;
 $input-height: initial;
 $input-focus-box-shadow: none;
-$input-focus-border-color: $brand-1 !important;
+$input-focus-border-color: $brand-primary-1 !important;
 $form-group-margin-bottom: 0.25rem;
 
 // Select picker
@@ -156,7 +156,7 @@ $nav-link-padding-y: 0.25rem;
 $nav-link-padding-x: 0;
 $nav-tabs-border-width: 0;
 $nav-tabs-border-radius: 0;
-$nav-tabs-link-hover-border-color: $brand-1;
+$nav-tabs-link-hover-border-color: $brand-primary-1;
 
 // Misc
 $hospital-image-width: 150px;
@@ -169,6 +169,9 @@ $carousel-control-icon-width: 40px;
 $carousel-control-icon-height: 40px;
 $carousel-control-opacity: 1;
 $carousel-control-width: auto;
+$carousel-control-opacity: 1;
+$carousel-control-hover-opacity: 1;
+$carousel-indicator-active-bg: $brand-primary-1;
 
 // Pagination
 $pagination-link-height: 35px;
@@ -190,4 +193,4 @@ $card-spacer-y:                     2rem;
 $card-spacer-x:                     1.25rem !default;
 
 // Header
-$mobile-header-height: 54px;
+$mobile-header-height: 60px;
