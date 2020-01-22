@@ -88,7 +88,9 @@
         </div><!-- container -->
         @if($data['hospitals']->total() < 10)
             <div class="container">
-                <h1>Try tweaking the filters for more results</h1>
+                {{--                    <img class="w-100" src="{{ asset('/images/tweakfilters.jpg') }}" alt="Image showing how to get more results">--}}
+                <h2 class="col-brand-primary-1 w-50 text-center mx-auto SofiaPro-Bold h-100 mb-5 pb-5">If you wish to receive more results then<br>
+                    use the filters to broaden your search criteria</h2>
             </div>
         @endif
 
