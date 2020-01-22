@@ -29,21 +29,19 @@
                                 'group'                 => true,
                                 'groupName'             => 'procedures',
                                 'suboptionClass'        => 'subprocedures',
-                                'svg'                   => 'chevron-down-aqua',
+                                'svg'                   => 'chevron-down',
                                 'name'                  => 'procedure_id',
                                 'selectId'              => 'choose_procedure',
-                                'showLabel'             => true,
-                                'labelClass'            => 'd-none'
                             ])
-                            <a tabindex="0"
-                               class="help-link"
-                                @include('components.basic.popover', [
-                                'dismissible'   => true,
-                                'placement'      => 'top',
-                                'html'           => 'true',
-                                'trigger'        => 'hover',
-                                'content'        => '<p>Select your treatment<br>if known to refine results</p>'])
-                            >@svg('icon-more-info')</a>
+{{--                            <a tabindex="0"--}}
+{{--                               class="help-link"--}}
+{{--                                @include('components.basic.popover', [--}}
+{{--                                'dismissible'   => true,--}}
+{{--                                'placement'      => 'top',--}}
+{{--                                'html'           => 'true',--}}
+{{--                                'trigger'        => 'hover',--}}
+{{--                                'content'        => '<p>Select your treatment<br>if known to refine results</p>'])--}}
+{{--                            >@svg('icon-more-info')</a>--}}
                         </div>
                         <div class="form-child postcode-parent position-relative">
                             {{--                                Add this hidden input to remove the autocomplete functionality--}}
@@ -59,18 +57,18 @@
                                     'validation'        => 'maxlength=8 autocomplete="off"',
                                     'id'                => 'input_postcode'
                                 ])
-                                <a tabindex="0" data-offset="0 5px"
-                                   class="help-link"
-                                    @include('components.basic.popover', [
-                                    'dismissible'   => true,
-                                    'placement'      => 'top',
-                                    'html'           => 'true',
-                                    'trigger'        => 'hover',
-                                    'content'        => '<p>
-                                                     Please enter your postcode<br>for a refined search.
-                                                 </p>
-                                                 '])
-                                >@svg('icon-more-info')</a>
+{{--                                <a tabindex="0" data-offset="0 5px"--}}
+{{--                                   class="help-link"--}}
+{{--                                    @include('components.basic.popover', [--}}
+{{--                                    'dismissible'   => true,--}}
+{{--                                    'placement'      => 'top',--}}
+{{--                                    'html'           => 'true',--}}
+{{--                                    'trigger'        => 'hover',--}}
+{{--                                    'content'        => '<p>--}}
+{{--                                                     Please enter your postcode<br>for a refined search.--}}
+{{--                                                 </p>--}}
+{{--                                                 '])--}}
+{{--                                >@svg('icon-more-info')</a>--}}
                             </div>
                             <div class="postcode-results-container">
                                 <div class="ajax-box"></div>
@@ -78,34 +76,33 @@
                         </div>
                         <div class="form-child radius-parent full-left column-layout position-relative" data-reveal-direction="down" >
                             @include('components.basic.select', [
-                                'showLabel'             => true,
-                                'selectClass'           => 'distance-dropdown',
-                                'options'               => \App\Helpers\Utils::radius,
-                                'selectParentClass'       => 'd-md-flex select_half-width w-100',
-                                'placeholder'           => 'How far would you travel?',
-                                'placeholderOption'     => 'Select Distance',
-                                'selectedPlaceholder'   => true,
-                                'labelClass'            => 'font-18 pr-4',
-                                'name'                  =>'radius'])
-                            <a tabindex="0" data-offset="0 5px"
-                               class="help-link"
-                                @include('components.basic.popover', [
-                                'dismissible'   => true,
-                                'placement'      => 'top',
-                                'html'           => 'true',
-                                'trigger'        => 'hover',
-                                'content'        => '<p class="bold mb-0">
-                                                 Distance
-                                             </p>
-                                             <p>
-                                                 Select how far you would be willing to travel for your treatment.
-                                             </p>
-                                             '])
-                            >@svg('icon-more-info')</a>
+                                'selectClass'           =>  'distance-dropdown big select-picker',
+                                'selectWrapperClass'    =>  'w-100',
+                                'selectParentClass'     =>  'd-md-flex w-100',
+                                'options'               =>  \App\Helpers\Utils::radius,
+                                'placeholderOption'     =>  'Select Distance',
+                                'selectedPlaceholder'   =>  true,
+                                'name'                  =>  'radius',
+                                'svg'                   =>  'chevron-down'])
+{{--                            <a tabindex="0" data-offset="0 5px"--}}
+{{--                               class="help-link"--}}
+{{--                                @include('components.basic.popover', [--}}
+{{--                                'dismissible'   => true,--}}
+{{--                                'placement'      => 'top',--}}
+{{--                                'html'           => 'true',--}}
+{{--                                'trigger'        => 'hover',--}}
+{{--                                'content'        => '<p class="bold mb-0">--}}
+{{--                                                 Distance--}}
+{{--                                             </p>--}}
+{{--                                             <p>--}}
+{{--                                                 Select how far you would be willing to travel for your treatment.--}}
+{{--                                             </p>--}}
+{{--                                             '])--}}
+{{--                            >@svg('icon-more-info')</a>--}}
                         </div>
                         @include('components.basic.button', [
                             'classTitle'    => 'btn btn-squared btn-block text-center btn-brand-primary-1 py-3 mb-3 font-18',
-                            'buttonText'    => 'Find Hospitals',
+                            'buttonText'    => 'Search Now',
                             'htmlButton'    => true,
                             'id'            => 'submit_search',
                         ])

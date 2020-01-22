@@ -24,6 +24,12 @@
             @include reset-row-spacing(8px);
         }
     }
+
+    @include media-breakpoint-down(md) {
+        .carousel-item:not(.active) {
+            display: none;
+        }
+    }
 }
 
 .how-section__child {

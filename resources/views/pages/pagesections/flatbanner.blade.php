@@ -68,31 +68,31 @@
                         </div>
                         <div class="form-child radius-parent full-left row-layout position-relative" data-reveal-direction="right" >
                             @include('components.basic.select', [
-                                'showLabel'             => true,
-                                'selectClass'           => 'distance-dropdown w-100',
-                                'options'               => \App\Helpers\Utils::radius,
-                                'selectParentClass'       => 'd-flex flex-lg-column select_half-width w-100',
+                                'selectClass'           =>  'distance-dropdown big select-picker',
+                                'selectWrapperClass'    =>  'w-100',
+                                'selectParentClass'     =>  'd-md-flex w-100',
+                                'options'               =>  \App\Helpers\Utils::radius,
                                 'placeholder'           => 'How far would you travel?',
                                 'placeholderOption'     => 'Select Distance',
-                                'selectedPlaceholder'   => true,
-                                'labelClass'            => 'font-18 pr-4',
-                                'name'                  =>'radius'])
-                            <a tabindex="0" data-offset="0 5px"
-                               class="help-link"
-                                @include('components.basic.popover', [
-                                'dismissible'   => true,
-                                'placement'      => 'top',
-                                'html'           => 'true',
-                                'trigger'        => 'hover',
-                                'content'        => '<p class="bold mb-0">
-                                                 Distance
-                                             </p>
-                                             <p>
-                                                 Select how far you would be willing to travel for your treatment.
-                                             </p>
+                                'selectedPlaceholder'   =>  true,
+                                'name'                  =>  'radius',
+                                'svg'                   =>  'chevron-down'])
+{{--                            <a tabindex="0" data-offset="0 5px"--}}
+{{--                               class="help-link"--}}
+{{--                                @include('components.basic.popover', [--}}
+{{--                                'dismissible'   => true,--}}
+{{--                                'placement'      => 'top',--}}
+{{--                                'html'           => 'true',--}}
+{{--                                'trigger'        => 'hover',--}}
+{{--                                'content'        => '<p class="bold mb-0">--}}
+{{--                                                 Distance--}}
+{{--                                             </p>--}}
+{{--                                             <p>--}}
+{{--                                                 Select how far you would be willing to travel for your treatment.--}}
+{{--                                             </p>--}}
 {{--                                                 <p><a  class="btn btn-close btn-close__small btn-brand-primary-1 btn-icon" >Close</a></p>--}}
-                                             '])
-                            >@svg('icon-more-info')</a>
+{{--                                             '])--}}
+{{--                            >@svg('icon-more-info')</a>--}}
                         </div>
                         @include('components.basic.button', [
                             'classTitle'    => 'btn btn-squared btn-brand-primary-1 font-18 text-center',

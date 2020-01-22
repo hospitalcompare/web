@@ -93,7 +93,7 @@
                 <div class="col-md-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            @svg('icon-understanding-choices-1')
+                            <img src="/images/icons/waiting-times.svg" alt="Clock icon">
                         </div>
                         <p class="col-grey p-secondary">Sooner, by comparing waiting times at different hospitals</p>
                     </div>
@@ -101,7 +101,7 @@
                 <div class="col-md-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            @svg('icon-understanding-choices-2')
+                            <img src="/images/icons/quality.svg" alt="Stars icon">
                         </div>
                         <p class="col-grey p-secondary">At the best quality hospital, by comparing hospital quality
                             rankings</p>
@@ -110,7 +110,8 @@
                 <div class="col-md-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            @svg('icon-understanding-choices-3')
+{{--                            @svg('icon-understanding-choices-3')--}}
+                            <img src="/images/icons/paid-for.svg" alt="Medical cross icon">
                         </div>
                         <p class="col-grey p-secondary">At a private hospital paid for by the NHS or paid by yourself,
                             or by your insurer, if that is
@@ -120,7 +121,7 @@
                 <div class="col-md-3">
                     <div class="col-inner text-center">
                         <div class="icon-wrapper mb-3">
-                            @svg('icon-understanding-choices-4')
+                            <img src="/images/icons/self-pay.svg" alt="Icon of price tag">
                         </div>
                         <p class="col-grey p-secondary">To bring you self-pay offers from time to time, provided by
                             private hospitals, so you can
@@ -162,8 +163,8 @@
     {{--        <div class="container">--}}
     {{--            <div class="row">--}}
     {{--                <div class="col col-12 hc-content">--}}
-    {{--                    <h1 class="SofiaPro-SemiBold mb-3">About Hospital Compare</h1>--}}
-    {{--                    <h2 class="SofiaPro-SemiBold col-brand-primary-1 font-28">Feel better faster by knowing your legal right to--}}
+    {{--                    <h1 class=" mb-3">About Hospital Compare</h1>--}}
+    {{--                    <h2 class=" col-brand-primary-1 font-28">Feel better faster by knowing your legal right to--}}
     {{--                        choose.</h2>--}}
     {{--                </div>--}}
     {{--                <div class="col col-7">--}}
@@ -249,7 +250,7 @@
         <div class="container">
             <div class="row">
                 <div class="col col-12">
-                    <h2 class="SofiaPro-SemiBold font-28 text-center mb-5">Our Background</h2>
+                    <h2 class="font-28 text-center mb-5">Our Background</h2>
                 </div>
             </div>
             <div class="row">
@@ -257,7 +258,7 @@
                     <div class="row">
                         <div class="col-md-6 mb-4">
                             <div class="icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/icon-our-background-1.svg')}}" alt="Comparison icon">
+                                <img src="{{asset('/images/icons/comparison-website.svg')}}" alt="Comparison icon">
                             </div>
                             <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>
                             <p class="col-grey p-secondary">Hospital Compare is the unique healthcare comparison website
@@ -265,27 +266,27 @@
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/icon-our-background-2.svg')}}" alt="Clock icon">
+                                <img src="{{asset('/images/icons/waiting-times.svg')}}" alt="Clock icon">
                             </div>
-                            <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>
+                            <p class="mb-3 SofiaPro-SemiBold font-16">Waiting Times</p>
                             <p class="col-grey p-secondary">It’s a fact that waiting times and quality of care in
                                 hospitals across the country can vary greatly, with millions of people patiently waiting
                                 for treatment (some already longer than the NHS’ 18 week target).</p>
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/icon-our-background-3.svg')}}" alt="Gavel icon">
+                                <img src="{{asset('/images/icons/legal-rights.svg')}}" alt="Gavel icon">
                             </div>
-                            <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>
+                            <p class="mb-3 SofiaPro-SemiBold font-16">Legal Rights</p>
                             <p class="col-grey p-secondary">Many people across England aren’t aware of their legal
                                 rights when it comes to their healthcare… legal rights that could in fact help them or
                                 their loved feel better faster.</p>
                         </div>
                         <div class="col-md-6 mb-4">
                             <div class="icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/icon-our-background-4.svg')}}" alt="Calendar icon">
+                                <img src="{{asset('/images/icons/faster-treatment-times.svg')}}" alt="Calendar icon">
                             </div>
-                            <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>
+                            <p class="mb-3 SofiaPro-SemiBold font-16">Faster Treatment Times</p>
                             <p class="col-grey p-secondary">By knowing and acting upon their legal rights, many patients
                                 could slash their waiting times and be treated quicker.</p>
                         </div>

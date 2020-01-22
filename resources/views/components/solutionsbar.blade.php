@@ -46,7 +46,7 @@
     <div class="compare-hospitals-content">
         <div class="container">
             <div class="row">
-                <div class="col col-2" id="no_items_added">
+                <div class="col col-3" id="no_items_added">
                     <div class="col-inner pr-3">
                         <div class="col-header_small">
                             <p class="font-16 SofiaPro-SemiBold pb-4 grey-border-bottom">You haven’t added any
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="compare_hospitals_headings" class="col col-2 d-none">
+                <div id="compare_hospitals_headings" class="col col-3 d-none">
                     <div class="col-inner h-100">
                         <div class="col-header pr-3">
                             <p class="SofiaPro-SemiBold mb-1">You are comparing:</p>
@@ -362,7 +362,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col col-10 mt-0 border-right-0">
+                <div class="col col-9 mt-0 border-right-0">
                     <div class="row" id="compare_hospitals_grid">
                         <!-- Items added here -->
                     </div>

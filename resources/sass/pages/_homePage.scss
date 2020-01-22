@@ -11,7 +11,7 @@
 
     //=======================WHY CHOOSE SECTION=======================
     .why-use-parent {
-        background: $bgGrey;
+        background: $bgLightGrey;
 
         .why-use { // container
             p {
@@ -56,19 +56,19 @@
 
             &:nth-child(1) {
                 &:before {
-                    background-image: url('/images/icons/faq-data.svg');
+                    background-image: url('/images/icons/faq-1.svg');
                 }
             }
 
             &:nth-child(2) {
                 &:before {
-                    background-image: url('/images/icons/faq-terminology.svg');
+                    background-image: url('/images/icons/faq-2.svg');
                 }
             }
 
             &:nth-child(3) {
                 &:before {
-                    background-image: url('/images/icons/faq-data.svg');
+                    background-image: url('/images/icons/faq-3.svg');
                 }
             }
 

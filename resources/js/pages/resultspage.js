@@ -243,14 +243,6 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
     }
 });
 
-// Dr S tour carousel modal schtooooff
-$('#carousel_tour').on('slid.bs.carousel', function (event) {
-    // do something…
-    var nextSlideNo = event.to;
-    nextSlideNo += 1;
-    $('#slide_number span').text(nextSlideNo);
-});
-
 // popupDoctor($doctor.data('message'), $doctor.data('doctor-delay'));
 
 // Reset filters
