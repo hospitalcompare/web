@@ -1,12 +1,9 @@
-<div class="modal-inner">
+<div class="modal-inner pb-5 px-5">
     <p class="text-center font-24 SofiaPro-Medium  private-modal-enquiry-title">Enquire now for <span class="hospital-title">this hospital</span></p>
     <p class=" text-center private-modal-enquiry-description">
         Complete this form and we'll pass your enquiry onto this hospital immediately.<br>You can normally expect a response within three to four days.
     </p>
     <div class="form-wrap d-flex flex-wrap">
-        <div class="img-wrap">
-            <img class="modal-enquire-private-image" width="173" height="158" src="./images/alder-1.jpg">
-        </div>
         <form id="enquiry_form">
             {{--            <input type="hidden" name="specialty_id" value="3">--}}
             <input type="hidden" name="hospital_id" value="1">
