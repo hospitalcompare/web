@@ -12,11 +12,11 @@
 */
 Route::get('/','WebController@homepage');
 
-if(env('APP_ENV') == 'live') {
-    Route::get('{anyExceptRoot}', function() {
-        return redirect('/');
-    })->where('anyExceptRoot', '[^/]*');
-}
+//if(env('APP_ENV') == 'live') {
+//    Route::get('{anyExceptRoot}', function() {
+//        return redirect('/');
+//    })->where('anyExceptRoot', '[^/]*');
+//}
 
 Route::get('/blogs','WebController@blogs');
 

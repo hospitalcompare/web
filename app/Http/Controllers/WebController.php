@@ -34,8 +34,8 @@ class WebController extends BaseController
         $this->returnedData['data']['procedures']   = $procedures;
 
         //For Live environment just show the work in progress page
-        if(env('APP_ENV') == 'live')
-            return view('pages.workInProgress', $this->returnedData);
+//        if(env('APP_ENV') == 'live')
+//            return view('pages.workInProgress', $this->returnedData);
         return view('pages.homepage', $this->returnedData);
     }
 
@@ -110,8 +110,8 @@ class WebController extends BaseController
         $this->returnedData['hc_errors']                                = $errors;
 
         //For Live environment just show the work in progress page
-        if(env('APP_ENV') == 'live')
-            return view('pages.workInProgress', $this->returnedData);
+//        if(env('APP_ENV') == 'live')
+//            return view('pages.workInProgress', $this->returnedData);
 
         //If we want to set the headers only for mobile ( dev only )
 //        Agent::setUserAgent('Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148');
