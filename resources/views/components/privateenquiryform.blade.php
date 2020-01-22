@@ -23,11 +23,11 @@
                             ['id'=>'Prof.', 'name'=>'Prof.'],
                             ['id'=>'Rev.', 'name'=>'Rev.']
                         ],
-                        'svg'           => 'chevron-down',
-                        'selectClass' => 'form-control',
-                        'placeholder' => 'Title*',
-                        'name'=>'title',
-                        'labelClass' => 'labelClass'])
+                        'svg'           =>  'chevron-down',
+                        'selectClass'   =>  'form-control',
+                        'placeholder'   =>  'Title*',
+                        'name'          =>  'title',
+                        'labelClass'    =>  'labelClass'])
                 </div>
                 <div class="col col-6">
                     {{-- First name --}}
