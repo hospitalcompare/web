@@ -29,6 +29,7 @@ class CheckToken
             Errors::generateError(["auth" => 'Supplied token is not valid'], 403, 'Auth failed');
 
         //Check if the Token supplied is the same as the secret Token
+        dd($token);
         if($token === 'mBu7IB6nuxh8RVzJ61f4') {
             //Return the response
             $response = $next($request);
