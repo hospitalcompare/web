@@ -30,6 +30,12 @@
             display: none;
         }
     }
+
+    .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: visible !important;
+    }
 }
 
 .how-section__child {
@@ -41,6 +47,7 @@
         //box-shadow: $box-shadow;
         padding: 30px;
         height: 380px;
+        border-radius:  $border-radius;
     }
 
     .icon {
@@ -48,6 +55,10 @@
         height: 60px;
         @include icon-bg-center(100%);
         background-size: contain;
+    }
+
+    .icon-step {
+        padding-top: 0.35rem !important;
     }
 
     .icon-title {

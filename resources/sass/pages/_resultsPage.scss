@@ -629,7 +629,7 @@
         top: $mobile-header-height;
         left: 0;
         width: 100%;
-        height: calc(100vh - $mobile-header-height);
+        height: calc(100vh - #{$mobile-header-height});
         background-color: #fff;
         z-index: 2000;
         transition: $transition;
