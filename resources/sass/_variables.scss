@@ -19,6 +19,32 @@ $letter-spacing: 0em;
 // Borders
 $border-radius: 3px;
 
+
+
+// 2020 new brand colours. Old turquoise = #00cecd
+// Primary colours
+$brand-primary-1: #037098; // trunkie
+$brand-primary-2: #3e92cc; // sky blue
+$brand-primary-3: #00707c; // greeny blue
+$brand-primary-4: #18435a; // navy ish blue
+$brand-primary-5: #037098; // lilac
+$brand-primary-6: #de026d; // hot pink
+$brand-primary-7: #0d69f2; // original blue
+
+// Secondary colours
+$brand-secondary-1: #00cfcc; // cyan
+$brand-secondary-2: #073766; // navyish blue
+$brand-secondary-3: #5e15d1; // purple
+$brand-secondary-4: #368632; // green
+$brand-secondary-5: #efa00b; // amber
+$brand-secondary-6: #d93912; // burnt orange
+$brand-secondary-7: #b50000; // red
+
+// Tertiary (greys)
+$brand-tertiary-1: #1b1b1b;
+$brand-tertiary-2: #757575;
+$brand-tertiary-3: #ececec;
+
 // Colors
 $enable-gradients: true;
 $purple: #9561e2;
@@ -27,46 +53,28 @@ $violet: #8e00fe;
 
 $blue: #1b71f3;
 $hanblue: #5e15d1;
-$privateBlue: #18435a;
-$nhsBlue: #0d69f2;
-$pink: #ed0373;
+$privateBlue: $brand-primary-4;
+$nhsBlue: $brand-primary-7;
+$pink: $brand-primary-6;
 $white: #ffffff;
 $goldStar: #FAC917;
-
-// 2020 new brand colours. Old turquoise = #00cecd
-$brand-primary-1: #037098;
-$brand-primary-7: #0d69f2;
-$brand-secondary-3: #5e15d1;
 
 //Main Template colours
 $footerBackgroundColour: #363636;
 $caretBlack: #040202;
-$bannerMaskGreen: #037098;
-$corporateContentGreen: #026867;
 $header-link-hover-colour: darken($brand-primary-1, 10%);
 
-$textGrey: #757575;
+$textGrey: $brand-tertiary-2;
 $textDarkGrey: #1d1d1d;
-$bgGrey: #ECECEC;
+$bgGrey: $brand-tertiary-3;
 $bgLightGrey: #F7F7F7;
-
-// Snap design variables
-//Full width background grey: #ECECEC
-//Grey text: #757575
-//Fields outline colour: #EDEDED
-//Field Placeholder Text Grey text: #757575
-//Full width lines on pages: #EDEDED
-//Table border colour: #EDEDED
-//Listing card vertical line split (before buttons): #D7D7D7 (this could be updated to #EDEDED)
-//Pagination (Previous): #C0C0C0
-//Pagination (Next): #595959
 $helplinkRed: #de026d;
 // End of snap design variables
 
 // CQC RAG rating colours
-$cqcGreen: #458f00;
-$cqcAmber: #FF9900;
-$cqcRed: #BF1000;
+$cqcGreen: $brand-secondary-4;
+$cqcAmber: $brand-secondary-5;
+$cqcRed: $brand-secondary-7;
 
 // Borders
 $borderGrey: #ededed;

@@ -13,45 +13,13 @@
 @section('body-class', 'results-page results-page-desktop')
 
 @section('content')
-{{--    @if(!empty($data['special_offers']))--}}
-{{--        {{ dd($data['special_offers']) }}--}}
-{{--        @endif--}}
     @include('pages.pagesections.resultspageform', ['displayBlock' => false])
-{{--    <div id="result_item_parent" class="result-item-parent d-none d-lg-flex">--}}
-{{--        <div class="result-item-header container">--}}
-{{--            <div class="result-item-header-section-1"></div>--}}
-
-{{--            <div class="result-item-header-section-3 p-0">--}}
-{{--                <ul class="result-item-menu p-0 h-100">--}}
-{{--                    <li class="align-items-end justify-content-end">--}}
-{{--                        <p class="text-center m-0 d-flex flex-column align-items-end">--}}
-{{--                            <span class="d-inline-block mb-1">Compare</span>--}}
-{{--                            <svg id="" xmlns="http://www.w3.org/2000/svg" width="30" height="30">--}}
-{{--                                <g data-name="Group 263">--}}
-{{--                                    <g data-name="Group 133">--}}
-{{--                                        <g data-name="Rounded Rectangle 1 copy 8" fill="rgba(27,112,243,0)" stroke="#fff" stroke-linejoin="round" stroke-width="2">--}}
-{{--                                            <rect width="30" height="30" rx="15" stroke="none"></rect>--}}
-{{--                                            <rect id="outer-circle" x="1" y="1" width="28" height="28" rx="14" fill="none"></rect>--}}
-{{--                                        </g>--}}
-{{--                                    </g>--}}
-{{--                                    <g data-name="Group 132">--}}
-{{--                                        <path id="wishlist" data-name="Path 80" d="M19.049 8.388a4.056 4.056 0 0 0-3.335 1.827 6.3 6.3 0 0 0-.448.713 6.039 6.039 0 0 0-.433-.71 3.972 3.972 0 0 0-3.319-1.83 4.321 4.321 0 0 0-4.2 4.56c0 2.814 2.266 4.74 5.7 7.667a263.55 263.55 0 0 1 1.933 1.662.463.463 0 0 0 .305.111.469.469 0 0 0 .308-.115c.722-.632 1.4-1.2 2.051-1.762 3.2-2.708 5.64-4.719 5.64-7.567a4.321 4.321 0 0 0-4.202-4.556zm-2.042 11.421c-.563.479-1.142.971-1.756 1.5-.57-.495-1.111-.956-1.634-1.4-3.29-2.805-5.375-4.579-5.375-6.961a3.4 3.4 0 0 1 3.272-3.632 3.049 3.049 0 0 1 2.539 1.422 5.465 5.465 0 0 1 .75 1.51.466.466 0 0 0 .9.006c.011-.028.887-2.938 3.346-2.938a3.4 3.4 0 0 1 3.275 3.632c0 2.354-2.12 4.146-5.317 6.861z" fill="#fff"></path>--}}
-{{--                                    </g>--}}
-{{--                                </g>--}}
-{{--                            </svg>--}}
-{{--                        </p>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-
     <div class="results">
         @if(!empty($data['hospitals']))
             @foreach($data['hospitals'] as $d)
                 @include('components.item', [
                     'id'                    => $d['id'],
-                    'itemImg'               => \File::exists("images/hospitals/{$d['location_id']}_thumb.jpg") ? "images/hospitals/{$d['location_id']}_thumb.jpg" : "images/hospitals/hospital-placeholder.svg",
+                    'itemImg'               => \File::exists("images/hospitals/{$d['location_id']}_thumb.jpg") ? "images/hospitals/{$d['location_id']}_thumb.jpg" : "images/hospitals/hospital-placeholder.jpg",
                     'title'                 => !empty($d['display_name'])? $d['display_name'] : $d['name'],
                     'location'              => (!empty($d['radius'])) ? number_format($d['radius'], 1 ) . ' miles from postcode' : '',
                     'town'                  => (!empty($d['address']['city']) ? ', ' . $d['address']['city'] : ''),
@@ -96,8 +64,10 @@
                    ])
             @endforeach
             @if($data['hospitals']->total() < 10)
-                <div class="container mt-4">
-                    <img class="w-100" src="{{ asset('/images/tweakfilters.jpg') }}" alt="Image showing how to get more results">
+                <div class="container my-5 py-5">
+{{--                    <img class="w-100" src="{{ asset('/images/tweakfilters.jpg') }}" alt="Image showing how to get more results">--}}
+                    <h2 class="col-brand-primary-1 w-50 text-center mx-auto SofiaPro-Bold h-100 py-5 my-5">If you wish to receive more results then<br>
+                        use the filters to broaden your search criteria</h2>
                 </div>
             @endif
         @endif

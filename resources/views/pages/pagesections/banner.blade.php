@@ -101,7 +101,7 @@
 {{--                            >@svg('icon-more-info')</a>--}}
                         </div>
                         @include('components.basic.button', [
-                            'classTitle'    => 'btn btn-squared btn-block text-center btn-brand-primary-1 py-3 mb-3 font-18',
+                            'classTitle'    => 'btn btn-squared btn-block text-center btn-brand-primary-1 mb-3 font-18',
                             'buttonText'    => 'Search Now',
                             'htmlButton'    => true,
                             'id'            => 'submit_search',

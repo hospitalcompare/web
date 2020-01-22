@@ -1,12 +1,9 @@
-<div class="modal-inner">
+<div class="modal-inner pb-5 px-5">
     <p class="text-center font-24 SofiaPro-Medium  private-modal-enquiry-title">Enquire now for <span class="hospital-title">this hospital</span></p>
     <p class=" text-center private-modal-enquiry-description">
         Complete this form and we'll pass your enquiry onto this hospital immediately.<br>You can normally expect a response within three to four days.
     </p>
     <div class="form-wrap d-flex flex-wrap">
-        <div class="img-wrap">
-            <img class="modal-enquire-private-image" width="173" height="158" src="./images/alder-1.jpg">
-        </div>
         <form id="enquiry_form">
             {{--            <input type="hidden" name="specialty_id" value="3">--}}
             <input type="hidden" name="hospital_id" value="1">
@@ -23,11 +20,11 @@
                             ['id'=>'Prof.', 'name'=>'Prof.'],
                             ['id'=>'Rev.', 'name'=>'Rev.']
                         ],
-                        'svg'           => 'chevron-down',
-                        'selectClass' => 'form-control',
-                        'placeholder' => 'Title*',
-                        'name'=>'title',
-                        'labelClass' => 'labelClass'])
+                        'svg'           =>  'chevron-down',
+                        'selectClass'   =>  'form-control',
+                        'placeholder'   =>  'Title*',
+                        'name'          =>  'title',
+                        'labelClass'    =>  'labelClass'])
                 </div>
                 <div class="col col-6">
                     {{-- First name --}}
@@ -120,7 +117,7 @@
                 <div class="col col-12 checkbox mb-2">
                     <input required name="gdpr" type="checkbox"
                            id="gdpr" {{ !empty($gdpr) && ($gdpr) ? 'checked' : '' }} />
-                    <label class="small-print" for="gdpr">Please accept the Terms & Conditions before submitting the
+                    <label class="small-print" for="gdpr">Please accept the&nbsp;<a href="/terms-and-conditions">Terms & Conditions</a>&nbsp;before submitting the
                         form.</label>
                 </div>
                 <div class="col col-12 btn-area text-right">

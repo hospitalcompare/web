@@ -18,7 +18,7 @@
                 <div class="col-lg-6">
                     <h1>Feel <span class="col-brand-primary-1">better faster</span> by<br>knowing your legal<br> right to choose
                     </h1>
-                    <p class="col-grey p-secondary mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <p class="col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Aliquam animi cupiditate error natus,
                         necessitatibus quos ratione reprehenderit voluptatem voluptatibus. Alias exercitationem maiores
                         saepe sed voluptates?</p>
