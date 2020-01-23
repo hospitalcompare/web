@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="card-body py-0 col-8 col-lg-10">
                                     <p class="font-18 SofiaPro-Medium">Choice</p>
-                                    <p class="mb-0">Putting Patients and the Public first and increasing the
+                                    <p class="mb-0 col-grey p-secondary">Putting Patients and the Public first and increasing the
                                         involvement of Patients in decisions affecting them and, importantly giving patients Choice
                                         of healthcare provider for their treatment, whether public sector of private sector.</p>
                                 </div>
@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="card-body py-0 col-8 col-lg-10">
                                     <p class="font-18 SofiaPro-Medium">NHS Tariff</p>
-                                    <p class="mb-0">Introducing a national standard price for health care
+                                    <p class="mb-0 col-grey p-secondary">Introducing a national standard price for health care
                                         procedures known as the “NHS Tariff”.This was aimed at creating a level playing field for
                                         all providers of NHS services regardless of their status as a public or private sector
                                         organisation.</p>
