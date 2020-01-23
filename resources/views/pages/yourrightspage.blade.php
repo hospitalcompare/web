@@ -28,7 +28,7 @@
                         <div class="card shadow mb-30 border-0 col-12 p-30">
                             <div class="row">
                                 <div class="col-4 col-lg-2">
-                                    <div class="card-icon-wrapper px-md-5 h-100 d-flex align-items-center">
+                                    <div class="card-icon-wrapper px-3 px-xl-5 h-100 d-flex align-items-center">
                                         <img class="w-100" src="/images/icons/faq-make-choice.svg" alt="Icon representing choice">
                                     </div>
                                 </div>
@@ -43,8 +43,7 @@
                         <div class="card shadow border-0 col-12 p-30">
                             <div class="row">
                                 <div class="col-4 col-lg-2">
-                                    <div class="card-icon-wrapper px-md-5 h-100 d-flex align-items-center">
-                                        @svg('icon-our-background-2', 'w-100')
+                                    <div class="card-icon-wrapper px-3 px-xl-5 h-100 d-flex align-items-center">
                                         <img class="w-100" src="/images/icons/nhs-tariff.svg" alt="Icon representing weighing scales">
                                     </div>
                                 </div>
