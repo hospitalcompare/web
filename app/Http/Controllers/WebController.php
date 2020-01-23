@@ -199,16 +199,25 @@ class WebController extends BaseController
 
     // Cookie policy
     public function cookiePage() {
+        //For Live environment just show the work in progress page
+        if(env('APP_ENV') == 'live')
+            return view('pages.workInProgress', $this->returnedData);
         return view('pages.cookiepage');
     }
 
     // Privacy policy
     public function privacyPage() {
+        //For Live environment just show the work in progress page
+        if(env('APP_ENV') == 'live')
+            return view('pages.workInProgress', $this->returnedData);
         return view('pages.privacypage');
     }
 
     // Terms and Conditions
     public function termsAndConditionsPage() {
+        //For Live environment just show the work in progress page
+        if(env('APP_ENV') == 'live')
+            return view('pages.workInProgress', $this->returnedData);
         return view('pages.termsandconditionspage');
     }
 
@@ -219,6 +228,9 @@ class WebController extends BaseController
 
         $this->returnedData['success']              = true;
         $this->returnedData['data']['procedures']   = $procedures;
+        //For Live environment just show the work in progress page
+        if(env('APP_ENV') == 'live')
+            return view('pages.workInProgress', $this->returnedData);
         return view('pages.yourrightspage', $this->returnedData);
     }
 
@@ -233,6 +245,9 @@ class WebController extends BaseController
         $this->returnedData['success']              = true;
         $this->returnedData['data']['procedures']   = $procedures;
 
+        //For Live environment just show the work in progress page
+        if(env('APP_ENV') == 'live')
+            return view('pages.workInProgress', $this->returnedData);
         return view('pages.howtousepage', $this->returnedData);
     }
 
@@ -250,6 +265,9 @@ class WebController extends BaseController
 
     public function download($file_name) {
         $file_path = public_path('downloads/'.$file_name);
+        //For Live environment just show the work in progress page
+        if(env('APP_ENV') == 'live')
+            return view('pages.workInProgress', $this->returnedData);
         return response()->download($file_path);
     }
 
@@ -260,6 +278,10 @@ class WebController extends BaseController
 
         $this->returnedData['success']              = true;
         $this->returnedData['data']['procedures']   = $procedures;
+
+        //For Live environment just show the work in progress page
+        if(env('APP_ENV') == 'live')
+            return view('pages.workInProgress', $this->returnedData);
 
         return view('pages.aboutus', $this->returnedData);
     }
@@ -278,6 +300,9 @@ class WebController extends BaseController
         $this->returnedData['data']['categories']   = $categories;
         $this->returnedData['data']['blogs']        = $blogs;
 
+        //For Live environment just show the work in progress page
+        if(env('APP_ENV') == 'live')
+            return view('pages.workInProgress', $this->returnedData);
         return view('pages.blogarchive', $this->returnedData);
     }
 
@@ -296,6 +321,9 @@ class WebController extends BaseController
         $this->returnedData['data']['categories']   = $categories;
         $this->returnedData['data']['categoryId']   = $categoryId;
 
+        //For Live environment just show the work in progress page
+        if(env('APP_ENV') == 'live')
+            return view('pages.workInProgress', $this->returnedData);
         return view('pages.blogarchive', $this->returnedData);
     }
 
@@ -312,6 +340,9 @@ class WebController extends BaseController
         $this->returnedData['data']['blog'] = $blog;
         $this->returnedData['data']['latestBlogs'] = $latestBlogs;
 
+        //For Live environment just show the work in progress page
+        if(env('APP_ENV') == 'live')
+            return view('pages.workInProgress', $this->returnedData);
         return view('pages.blogitem', $this->returnedData);
     }
 }
