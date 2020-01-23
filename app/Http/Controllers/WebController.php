@@ -34,6 +34,7 @@ class WebController extends BaseController
         $this->returnedData['data']['procedures']   = $procedures;
 
         //For Live environment just show the work in progress page
+        dd(env('APP_ENV'));
         if(env('APP_ENV') == 'live')
             return view('pages.workInProgress', $this->returnedData);
         return view('pages.homepage', $this->returnedData);
