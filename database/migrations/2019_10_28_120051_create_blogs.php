@@ -67,19 +67,19 @@ class CreateBlogs extends Migration
         $preCategories = [
             [
                 'name'      => 'Category One',
-                'colour'    => '#0000FF'
+                'colour'    => '#0D69F2'
             ],[
                 'name'      => 'Category Two',
-                'colour'    => '#8A2BE2'
+                'colour'    => '#8E00FE'
             ],[
                 'name'      => 'Category Three',
-                'colour'    => '#4B0082'
+                'colour'    => '#5E15D1'
             ],[
                 'name'      => 'Category Four',
-                'colour'    => '#C71585'
+                'colour'    => '#DE026D'
             ],[
                 'name'      => 'Category Five',
-                'colour'    => '#C71585'
+                'colour'    => '#F6AB3F'
             ]
         ];
 

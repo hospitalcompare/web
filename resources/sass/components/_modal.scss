@@ -60,7 +60,7 @@
 
         .modal-inner {
             //padding: 16px 55px 25px 55px;
-            @extend .p-3;
+            //@extend .p-3;
         }
 
         .modal-dialog {
@@ -78,17 +78,6 @@
         .form-wrap {
             > * {
                 width: 100%;
-            }
-
-            @include media-breakpoint-up(lg) {
-                .img-wrap {
-                    width: 28%;
-                    padding-right: 25px;
-                }
-
-                form {
-                    width: 72%;
-                }
             }
         }
     }

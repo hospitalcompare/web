@@ -50,7 +50,7 @@
                 </div>
                 <div class="col col-12 col-md-6">
                     <div>
-                        <h2 class="SofiaPro-Medium mb-4">NHS funded in a private hospital</h2>
+                        <h2 class=" mb-4">NHS funded in a private hospital</h2>
                         <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
                             eveniet ipsa laboriosam
                             distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
@@ -140,7 +140,7 @@
                                 'svg'                   => 'chevron-down',
                                 'selectParentClass'       => 'd-lg-flex align-items-center mb-4',
                                 'selectClass'           => 'select-picker',
-                                'labelClass'            => 'col-brand-primary-1 font-20 SofiaPro-Regular mr-3 mb-lg-0 w-100 w-lg-50',
+                                'labelClass'            => 'col-brand-primary-1 font-18 SofiaPro-Regular mr-3 mb-lg-0 w-100 w-lg-50',
                                 'showLabel'             => true,
                                 'name'                  => 'policy_id',
                                 'selectId'              => 'how_to_use_policies',

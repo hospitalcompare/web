@@ -1,16 +1,16 @@
 <div class="how-section">
     <div class="container">
         @if(!empty($sectionTitle))
-            <h2 class="section-title text-center mb-40">{{ $sectionTitle }}</h2>
+            <h2 class="section-title text-center">{{ $sectionTitle }}</h2>
         @endif
-        <p class="col-grey lh-16 font-18">You have the legal right to have your free NHS treatment at an NHS or private hospital of your choice. Use Hospital Compare to make this choice, or to select the best hospital paid for by you or your insurance. </p>
+        <p class="col-grey lh-16 font-18 text-center mb-25">You have the legal right to have your free NHS treatment at an NHS or private hospital of your choice. Use Hospital Compare to make this choice, or to select the best hospital paid for by you or your insurance. </p>
     </div>
     <div id="how_carousel" class="carousel container carousel-mobile" data-ride="carousel">
         <div class="row carousel-inner w-auto">
             @if(!empty($howsections))
                 @foreach($howsections as $howsection)
                     <div
-                        class="how-section__child col-lg-4 mb-5 carousel-item pt-1 {{ $loop->index == 0 ? 'active' : '' }}">
+                        class="how-section__child col-lg-4 mb-30 carousel-item pt-1 {{ $loop->index == 0 ? 'active' : '' }}">
                         <div class="col-inner shadow h-100 d-flex flex-column">
                             <div class="icon"
                                  style="background-image: url('images/icons/{{ $howsection['iconImg'] }}.svg')">
@@ -31,7 +31,7 @@
                                     {!! $howsection['description'] !!}
                                 </div>
                             @endif
-                            <p class="mt-auto mb-0"
+                            <p class="mt-auto mb-0 d-flex justify-content-center"
                                 @include('components.basic.popover', [
                                 'html'      => true,
                                 'content'   => 'This is the content',

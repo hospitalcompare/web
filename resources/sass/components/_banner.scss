@@ -62,29 +62,13 @@
     position: relative;
     z-index: 5;
 
-    .postcode-parent {
-        .input-wrapper {
-            //&:before {
-            //    content: '';
-            //    background-image: url('/images/icons/icon-location.svg');
-            //    @include icon-bg-center(100%, 15px, 25px);
-            //    @include v-c;
-            //    left: 20px;
-            //}
-            //
-            //input {
-            //    padding-left: 50px;
-            //}
-        }
-    }
-
     .form-child {
         margin-top: 10px;
     }
 
     p {
         @include font-size(25);
-        margin: 0 auto 25px;
+        margin: 0 auto 10px;
     }
 
     .postcode-item {
@@ -126,16 +110,23 @@
     }
 
     .banner-list {
+        margin-bottom: 0;
+
         li {
             list-style: none;
             position: relative;
             padding-left: 50px;
             margin-bottom: 20px;
             line-height: 24px;
+            @include font-size(1rem);
 
             &:before {
                 width: 26px;
                 height: 26px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
             }
         }
     }
@@ -272,26 +263,6 @@
     .search-form-row {
         .form-child {
             margin-bottom: 0;
-        }
-
-        .select_half-width {
-            @include media-breakpoint-down(md) {
-                > * {
-                    width: 50%;
-                    flex-basis: 50%;
-                }
-            }
-
-            label {
-                @include font-size(14, true);
-                @include media-breakpoint-up(lg) {
-                    padding-right: 0 !important;
-                    width: 100%;
-                    position: absolute;
-                    top: -20px;
-                    left: 0;
-                }
-            }
         }
     }
 }
