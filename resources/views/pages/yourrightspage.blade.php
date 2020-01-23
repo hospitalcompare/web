@@ -28,13 +28,13 @@
                         <div class="card shadow mb-30 border-0 col-12 p-30">
                             <div class="row">
                                 <div class="col-4 col-lg-2">
-                                    <div class="card-icon-wrapper px-md-5 h-100 d-flex align-items-center">
+                                    <div class="card-icon-wrapper px-3 px-xl-5 h-100 d-flex align-items-center">
                                         <img class="w-100" src="/images/icons/faq-make-choice.svg" alt="Icon representing choice">
                                     </div>
                                 </div>
                                 <div class="card-body py-0 col-8 col-lg-10">
                                     <p class="font-18 SofiaPro-Medium">Choice</p>
-                                    <p class="mb-0">Putting Patients and the Public first and increasing the
+                                    <p class="mb-0 col-grey p-secondary">Putting Patients and the Public first and increasing the
                                         involvement of Patients in decisions affecting them and, importantly giving patients Choice
                                         of healthcare provider for their treatment, whether public sector of private sector.</p>
                                 </div>
@@ -43,14 +43,13 @@
                         <div class="card shadow border-0 col-12 p-30">
                             <div class="row">
                                 <div class="col-4 col-lg-2">
-                                    <div class="card-icon-wrapper px-md-5 h-100 d-flex align-items-center">
-                                        @svg('icon-our-background-2', 'w-100')
+                                    <div class="card-icon-wrapper px-3 px-xl-5 h-100 d-flex align-items-center">
                                         <img class="w-100" src="/images/icons/nhs-tariff.svg" alt="Icon representing weighing scales">
                                     </div>
                                 </div>
                                 <div class="card-body py-0 col-8 col-lg-10">
                                     <p class="font-18 SofiaPro-Medium">NHS Tariff</p>
-                                    <p class="mb-0">Introducing a national standard price for health care
+                                    <p class="mb-0 col-grey p-secondary">Introducing a national standard price for health care
                                         procedures known as the “NHS Tariff”.This was aimed at creating a level playing field for
                                         all providers of NHS services regardless of their status as a public or private sector
                                         organisation.</p>
