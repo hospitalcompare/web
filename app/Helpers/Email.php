@@ -100,7 +100,7 @@ class Email
             'tags'      => $this->tags
         ];
 
-        Mail::send(['html' => 'layout.email.html'], $data, function($message) {
+        Mail::send(['html' => 'components.emails.emailuser'], $data, function($message) {
             $message->subject($this->subject);
             $message->to($this->to);
             $message->from($this->from);
@@ -113,7 +113,7 @@ class Email
             }
 
         });
-        
+
     }
 
     /**
@@ -131,7 +131,7 @@ class Email
             'text'      => $this->textBody
         ];
 
-        Mail::send(['text' => 'layout.email.text'], $data, function($message){
+        Mail::send(['text' => 'components.emails.emailuser'], $data, function($message){
             $message->subject($this->subject);
             $message->to($this->to);
             $message->from($this->from);

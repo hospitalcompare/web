@@ -12,6 +12,9 @@
 
 @section('content')
     <section>
+        @include('components.emails.emailuser')
+    </section>
+    <section>
         @include('components.modals.modalenquireprivate', ['procedures'    => $data['filters']['procedures'],])
     </section>
 {{--        <section>--}}
