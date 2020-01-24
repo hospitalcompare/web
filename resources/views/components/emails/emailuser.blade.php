@@ -16,7 +16,10 @@
         </tr>
         <tr>
             <td width="200"></td>
-            <td width="200"><img width="200" src="/images/icons/logo-email.svg" alt="Hospital compare logo"></td>
+            <td width="200">
+                <a href="https://hospitalcompare.co.uk"><img width="200" src="https://hospitalcompare.co.uk/images/icons/logo-email.svg"
+                                                     alt="Hospital compare logo"></a>
+            </td>
             <td width="200"></td>
         </tr>
         <tr>
@@ -35,7 +38,7 @@
             <td height="25"></td>
         </tr>
         <tr>
-            <td colspan="3"><img width="600" src="/images/placeholder.jpg"
+            <td colspan="3"><img width="600" src="https://hospitalcompare.co.uk/images/hc-email-banner.jpg"
                                  alt="Man on sofa browsing hospital compare website"></td>
         </tr>
         <tr>
@@ -179,7 +182,7 @@
         </tr>
         <tr>
             <td width="100"></td>
-            <td width="400" style="text-align: center"><img width="200" src="/images/icons/logo-email.svg"
+            <td width="400" style="text-align: center"><img width="200" src="https://hospitalcompare.co.uk/images/icons/logo-email.svg"
                                                             alt="Hospital compare logo"></td>
             <td width="100"></td>
         </tr>
@@ -190,10 +193,10 @@
             <td width="100"></td>
             <td width="400" style="text-align: center">
                 <a style="display: inline-block; width: 20px;" href="https://www.facebook.com/hospitalcompare">
-                    <img width="20" height="20" src="/images/icons/facebook.svg" alt="Facebook logo">
+                    <img width="20" height="20" src="https://hospitalcompare.co.uk/images/icons/facebook-trunkie.svg" alt="Facebook logo">
                 </a>
                 <a style="display: inline-block; width: 20px;" href="https://www.twitter.com/HospCompare">
-                    <img width="20" height="20" src="/images/icons/twitter.svg" alt="Twitter logo">
+                    <img width="20" height="20" src="https://hospitalcompare.co.uk/images/icons/twitter-trunkie.svg" alt="Twitter logo">
                 </a>
             </td>
             <td width="100"></td>
