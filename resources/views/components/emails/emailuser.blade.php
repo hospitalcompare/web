@@ -17,7 +17,7 @@
         <tr>
             <td width="200"></td>
             <td width="200">
-                <a href="https://hospitalcompare.co.uk"><img width="200" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.svg"
+                <a href="https://www.hospitalcompare.co.uk"><img width="200" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.svg"
                                                      alt="Hospital compare logo"></a>
             </td>
             <td width="200"></td>
@@ -193,10 +193,10 @@
             <td width="100"></td>
             <td width="400" style="text-align: center">
                 <a style="display: inline-block; width: 20px;" href="https://www.facebook.com/hospitalcompare">
-                    <img width="20" height="20" src="https://hospitalcompare.co.uk/images/icons/facebook-trunkie.svg" alt="Facebook logo">
+                    <img width="20" height="20" src="https://www.hospitalcompare.co.uk/images/icons/facebook-trunkie.svg" alt="Facebook logo">
                 </a>
                 <a style="display: inline-block; width: 20px;" href="https://www.twitter.com/HospCompare">
-                    <img width="20" height="20" src="https://hospitalcompare.co.uk/images/icons/twitter-trunkie.svg" alt="Twitter logo">
+                    <img width="20" height="20" src="https://www.hospitalcompare.co.uk/images/icons/twitter-trunkie.svg" alt="Twitter logo">
                 </a>
             </td>
             <td width="100"></td>
