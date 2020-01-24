@@ -1,1 +1,1 @@
-<p>{!! nl2br($html) !!}</p>
+{!! nl2br($html) !!}

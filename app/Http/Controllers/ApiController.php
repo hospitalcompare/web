@@ -348,7 +348,8 @@ class ApiController {
             $hospital = Hospital::where('id', $hospitalId)->first();
             if(!empty($hospital) && !empty($hospital->email)) {
                 try {
-                    Email::send($hospital->email, "{$title} {$lastName} Enquired with Hospital Compare", "{$title} {$lastName} Enquired with Hospital Compare", 'datamanager@hospitalcompare.co.uk');
+                    $bodyProvider = Email::getProviderBody();
+                    Email::send($bodyProvider,  $hospital->email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
                 } catch(\Exception $e){
                     \Log::info('Something went wrong sending an email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
                 }
@@ -357,8 +358,9 @@ class ApiController {
 
         //Send the email //TODO: Activate it once the tests are working
         if(!empty($enquiry)) {
+            $bodyUser = Email::getUserBody();
             try {
-                Email::send($email, 'Thank you for Enquiring with Hospital Compare', 'Thank you for your Enquiry! You will be contacted shortly', 'datamanager@hospitalcompare.co.uk');
+                Email::send($bodyUser, $email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
             } catch(\Exception $e){
                 \Log::info('Something went wrong sending an email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
             }

@@ -16,30 +16,467 @@ class Email
     private $to;
     private $from;
     private $subject;
-    private $textBody;
-    private $htmlBody;
+    private $body;
 
-    public function __construct($to = null, $subject = null, $textBody = null, $from = null, $htmlBody = null, $tags = null)
+    public function __construct($body, $to = null, $subject = null, $from = null, $tags = null)
     {
         $this->to = $to;
         //if from address is empty, use the config from address
         $this->from = $from == null ? config('mail.from.address') : $from;
         $this->subject = $subject;
-        $this->textBody = $textBody;
-        $this->htmlBody = $htmlBody;
+        $this->body = $body;
         $this->tags = $tags;
 
         // validate the email
         $this->validateEmail();
 
         // if htmlBody is not empty
-        if($htmlBody != null){
-            // sendHTMLEmail
-            $this->sendHtmlEmail();
-        }else{
-            //if it is empty, send text email
-            $this->sendTextEmail();
-        }
+        $this->sendHtmlEmail();
+
+    }
+
+    /**
+     * Returns the string for the User Email
+     * @return string
+     */
+    public static function getUserBody() {
+        //The original HTML before the Minify. Please use http://minifycode.com/html-minifier/
+//        return '<style>
+//                table {
+//                    font-family: arial;
+//                    background-color: #fff;
+//                }
+//
+//                td {
+//                    vertical-align: top;
+//                }
+//            </style>
+//
+//            <center class="bg-grey">
+//                <table width="600" style="">
+//                    <tr>
+//                        <td height="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="200"></td>
+//                        <td width="200">
+//                            <a href="https://www.hospitalcompare.co.uk"><img width="200" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.svg" alt="Hospital compare logo"></a>
+//                        </td>
+//                        <td width="200"></td>
+//                    </tr>
+//                    <tr>
+//                        <td height="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="200"></td>
+//                        <td width="200">
+//                            <p style="text-align: center; font-size: 26px; color: #037098">Thank You, John.</p>
+//                            <p style="text-align: center; color: #037098">We have recieved your enquiry for</p>
+//                            <p style="text-align: center; font-weight: bold; color: #037098">Hospital name here</p>
+//                        </td>
+//                        <td width="200"></td>
+//                    </tr>
+//                    <tr>
+//                        <td height="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td colspan="3"><img width="600" src="https://www.hospitalcompare.co.uk/images/hc-email-banner.jpg" alt="Man on sofa browsing hospital compare website"></td>
+//                    </tr>
+//                    <tr>
+//                        <td height="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td></td>
+//                    </tr>
+//                </table>
+//                <table width="600">
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td>
+//                            <p style="font-size: 20px; font-weight: 600">Next steps</p>
+//                            <p style="color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolorum eligendi magni odit quo. Dicta dignissimos dolorum eos facilis id mollitia sit. Aaperiam beatae consequatur consequuntur, cupiditate doloribus ducimus eius eos est, eveniet facere fuga itaque laborum nemo obcaecati officiis pariatur provident quis rem repellendus rerum veniam voluptate voluptatem.</p>
+//                        </td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td colspan="3" height="50"></td>
+//                    </tr>
+//                </table>
+//                <table width="600" style="border-bottom: 1px solid #e6e6e6">
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td colspan="2">
+//                            <p style="font-size: 20px; font-weight: 600">Your email</p>
+//                            <p style="color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolorum eligendi magni odit quo. Dicta dignissimos dolorum eos facilis id mollitia sit. A aperiam beatae consequatur consequuntur, cupiditate doloribus ducimus eius eos est, eveniet facere fuga itaque laborum nemo obcaecati officiis pariatur provident quis rem repellendus rerum veniam voluptate voluptatem.</p>
+//                        </td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td width="150">Title</td>
+//                        <td width="400">Mr</td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25" height="15"></td>
+//                        <td width="150"></td>
+//                        <td width="400"></td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td width="150">First name</td>
+//                        <td width="400">William</td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25" height="15"></td>
+//                        <td width="150"></td>
+//                        <td width="400"></td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td>Last Name</td>
+//                        <td>Wallace</td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25" height="15"></td>
+//                        <td width="150"></td>
+//                        <td width="400"></td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td>Phone Number</td>
+//                        <td>04564 654656</td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25" height="15"></td>
+//                        <td width="150"></td>
+//                        <td width="400"></td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td>Email Address</td>
+//                        <td>william.wallace@freedom</td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25" height="15"></td>
+//                        <td width="150"></td>
+//                        <td width="400"></td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td>Postcode</td>
+//                        <td>SC1 OCH</td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25" height="15"></td>
+//                        <td width="150"></td>
+//                        <td width="400"></td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td>Treatment</td>
+//                        <td>Anus</td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25" height="15"></td>
+//                        <td width="150"></td>
+//                        <td width="400"></td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td>Additional<br>Comments</td>
+//                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, eius illo minima necessitatibus pariatur quidem quo voluptatem. Blanditiis consequatur dolore eligendi eveniet fuga harum perferendis quasi, quibusdam quos recusandae, repellat?
+//                        </td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td colspan="3" height="25"></td>
+//                    </tr>
+//                </table>
+//                <!-- Footer -->
+//                <table width="600" style="">
+//                    <tr>
+//                        <td height="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="100"></td>
+//                        <td width="400" style="text-align: center"><img width="200" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.svg" alt="Hospital compare logo"></td>
+//                        <td width="100"></td>
+//                    </tr>
+//                    <tr>
+//                        <td height="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="100"></td>
+//                        <td width="400" style="text-align: center">
+//                            <a style="display: inline-block; width: 20px;" href="https://www.facebook.com/hospitalcompare">
+//                                <img width="20" height="20" src="https://www.hospitalcompare.co.uk/images/icons/facebook-trunkie.svg" alt="Facebook logo">
+//                            </a>
+//                            <a style="display: inline-block; width: 20px;" href="https://www.twitter.com/HospCompare">
+//                                <img width="20" height="20" src="https://www.hospitalcompare.co.uk/images/icons/twitter-trunkie.svg" alt="Twitter logo">
+//                            </a>
+//                        </td>
+//                        <td width="100"></td>
+//                    </tr>
+//                    <tr>
+//                        <td height="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="100"></td>
+//                        <td width="400">
+//                            <p style="text-align: center; color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+//                                Beatae consequuntur cumque delectus eos, et exercitationem fuga itaque nemo numquam provident quasi
+//                                qui reiciendis repellendus sequi soluta ut vero vitae voluptatum?</p>
+//                        </td>
+//                        <td width="100"></td>
+//                    </tr>
+//                    <tr>
+//                        <td height="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td></td>
+//                    </tr>
+//                </table>
+//            </center>';
+        return '<style>table{font-family:arial;background-color:#fff}td{vertical-align:top}</style><center class="bg-grey"><table width="600" style=""><tr><td height="25"></td></tr><tr><td width="200"></td><td width="200"> <a href="https://www.hospitalcompare.co.uk"><img width="200" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.svg" alt="Hospital compare logo"></a></td><td width="200"></td></tr><tr><td height="25"></td></tr><tr><td width="200"></td><td width="200"><p style="text-align: center; font-size: 26px; color: #037098">Thank You, John.</p><p style="text-align: center; color: #037098">We have recieved your enquiry for</p><p style="text-align: center; font-weight: bold; color: #037098">Hospital name here</p></td><td width="200"></td></tr><tr><td height="25"></td></tr><tr><td colspan="3"><img width="600" src="https://www.hospitalcompare.co.uk/images/hc-email-banner.jpg" alt="Man on sofa browsing hospital compare website"></td></tr><tr><td height="25"></td></tr><tr><td></td></tr></table><table width="600"><tr><td width="25"></td><td><p style="font-size: 20px; font-weight: 600">Next steps</p><p style="color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolorum eligendi magni odit quo. Dicta dignissimos dolorum eos facilis id mollitia sit. Aaperiam beatae consequatur consequuntur, cupiditate doloribus ducimus eius eos est, eveniet facere fuga itaque laborum nemo obcaecati officiis pariatur provident quis rem repellendus rerum veniam voluptate voluptatem.</p></td><td width="25"></td></tr><tr><td colspan="3" height="50"></td></tr></table><table width="600" style="border-bottom: 1px solid #e6e6e6"><tr><td width="25"></td><td colspan="2"><p style="font-size: 20px; font-weight: 600">Your email</p><p style="color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolorum eligendi magni odit quo. Dicta dignissimos dolorum eos facilis id mollitia sit. A aperiam beatae consequatur consequuntur, cupiditate doloribus ducimus eius eos est, eveniet facere fuga itaque laborum nemo obcaecati officiis pariatur provident quis rem repellendus rerum veniam voluptate voluptatem.</p></td><td width="25"></td></tr><tr><td width="25"></td><td width="150">Title</td><td width="400">Mr</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td width="150">First name</td><td width="400">William</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Last Name</td><td>Wallace</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Phone Number</td><td>04564 654656</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Email Address</td><td>william.wallace@freedom</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Postcode</td><td>SC1 OCH</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Treatment</td><td>Anus</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Additional<br>Comments</td><td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, eius illo minima necessitatibus pariatur quidem quo voluptatem. Blanditiis consequatur dolore eligendi eveniet fuga harum perferendis quasi, quibusdam quos recusandae, repellat?</td><td width="25"></td></tr><tr><td colspan="3" height="25"></td></tr></table><table width="600" style=""><tr><td height="25"></td></tr><tr><td width="100"></td><td width="400" style="text-align: center"><img width="200" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.svg" alt="Hospital compare logo"></td><td width="100"></td></tr><tr><td height="25"></td></tr><tr><td width="100"></td><td width="400" style="text-align: center"> <a style="display: inline-block; width: 20px;" href="https://www.facebook.com/hospitalcompare"> <img width="20" height="20" src="https://www.hospitalcompare.co.uk/images/icons/facebook-trunkie.svg" alt="Facebook logo"> </a> <a style="display: inline-block; width: 20px;" href="https://www.twitter.com/HospCompare"> <img width="20" height="20" src="https://www.hospitalcompare.co.uk/images/icons/twitter-trunkie.svg" alt="Twitter logo"> </a></td><td width="100"></td></tr><tr><td height="25"></td></tr><tr><td width="100"></td><td width="400"><p style="text-align: center; color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur cumque delectus eos, et exercitationem fuga itaque nemo numquam provident quasi qui reiciendis repellendus sequi soluta ut vero vitae voluptatum?</p></td><td width="100"></td></tr><tr><td height="25"></td></tr><tr><td></td></tr></table></center>';
+    }
+
+    /**
+     * Returns the string for the Provider Email
+     * @return string
+     */
+    public static function getProviderBody() {
+        return '<style>
+            table {
+                font-family: arial;
+                background-color: #fff;
+            }
+
+            td {
+                vertical-align: top;
+            }
+        </style>
+
+        <center class="bg-grey">
+            <table width="600" style="">
+                <tr>
+                    <td height="25"></td>
+                </tr>
+                <tr>
+                    <td width="200"></td>
+                    <td width="200"><img width="200" src="/images/icons/logo-email.svg" alt="Hospital compare logo"></td>
+                    <td width="200"></td>
+                </tr>
+                <tr>
+                    <td height="25"></td>
+                </tr>
+                <tr>
+                    <td width="200"></td>
+                    <td width="200">
+                        <p style="text-align: center; font-size: 26px; color: #037098">Thank You, John.</p>
+                        <p style="text-align: center; color: #037098">We have recieved your enquiry for</p>
+                        <p style="text-align: center; font-weight: bold; color: #037098">Hospital name here</p>
+                    </td>
+                    <td width="200"></td>
+                </tr>
+                <tr>
+                    <td height="25"></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><img width="600" src="/images/placeholder.jpg" alt="Man on sofa browsing hospital compare website"></td>
+                </tr>
+                <tr>
+                    <td height="25"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+            <table width="600">
+                <tr>
+                    <td width="25"></td>
+                    <td>
+                        <p style="font-size: 20px; font-weight: 600">Next steps</p>
+                        <p style="color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Cupiditate dolorum eligendi magni odit quo. Dicta dignissimos dolorum eos facilis id mollitia sit. A
+                            aperiam beatae consequatur consequuntur, cupiditate doloribus ducimus eius eos est, eveniet facere
+                            fuga itaque laborum nemo obcaecati officiis pariatur provident quis rem repellendus rerum veniam
+                            voluptate voluptatem.</p>
+                    </td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" height="50"></td>
+                </tr>
+            </table>
+            <table width="600" style="border-bottom: 1px solid #e6e6e6">
+                <tr>
+                    <td width="25"></td>
+                    <td colspan="2">
+                        <p style="font-size: 20px; font-weight: 600">Your email</p>
+                        <p style="color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Cupiditate dolorum eligendi magni odit quo. Dicta dignissimos dolorum eos facilis id mollitia sit. A
+                            aperiam beatae consequatur consequuntur, cupiditate doloribus ducimus eius eos est, eveniet facere
+                            fuga itaque laborum nemo obcaecati officiis pariatur provident quis rem repellendus rerum veniam
+                            voluptate voluptatem.</p>
+                    </td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td width="25"></td>
+                    <td width="150">Title</td>
+                    <td width="400">Mr</td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td width="25" height="15"></td>
+                    <td width="150"></td>
+                    <td width="400"></td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td width="25"></td>
+                    <td width="150">First name</td>
+                    <td width="400">William</td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td width="25" height="15"></td>
+                    <td width="150"></td>
+                    <td width="400"></td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td width="25"></td>
+                    <td>Last Name</td>
+                    <td>Wallace</td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td width="25" height="15"></td>
+                    <td width="150"></td>
+                    <td width="400"></td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td width="25"></td>
+                    <td>Phone Number</td>
+                    <td>04564 654656</td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td width="25" height="15"></td>
+                    <td width="150"></td>
+                    <td width="400"></td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td width="25"></td>
+                    <td>Email Address</td>
+                    <td>william.wallace@freedom</td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td width="25" height="15"></td>
+                    <td width="150"></td>
+                    <td width="400"></td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td width="25"></td>
+                    <td>Postcode</td>
+                    <td>SC1 OCH</td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td width="25" height="15"></td>
+                    <td width="150"></td>
+                    <td width="400"></td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td width="25"></td>
+                    <td>Treatment</td>
+                    <td>Anus</td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td width="25" height="15"></td>
+                    <td width="150"></td>
+                    <td width="400"></td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td width="25"></td>
+                    <td>Additional<br>Comments</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, eius illo minima necessitatibus
+                        pariatur quidem quo voluptatem. Blanditiis consequatur dolore eligendi eveniet fuga harum perferendis
+                        quasi, quibusdam quos recusandae, repellat?
+                    </td>
+                    <td width="25"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" height="25"></td>
+                </tr>
+            </table>
+            <!-- Footer -->
+            <table width="600" style="">
+                <tr>
+                    <td height="25"></td>
+                </tr>
+                <tr>
+                    <td width="100"></td>
+                    <td width="400" style="text-align: center"><img width="200" src="/images/icons/logo-email.svg" alt="Hospital compare logo"></td>
+                    <td width="100"></td>
+                </tr>
+                <tr>
+                    <td height="25"></td>
+                </tr>
+                <tr>
+                    <td width="100"></td>
+                    <td width="400" style="text-align: center">
+                        <a style="display: inline-block; width: 20px;" href="https://www.facebook.com/hospitalcompare">
+                            <img width="20" height="20" src="/images/icons/facebook.svg" alt="Facebook logo">
+                        </a>
+                        <a style="display: inline-block; width: 20px;" href="https://www.twitter.com/HospCompare">
+                            <img width="20" height="20" src="/images/icons/twitter.svg" alt="Twitter logo">
+                        </a>
+                    </td>
+                    <td width="100"></td>
+                </tr>
+                <tr>
+                    <td height="25"></td>
+                </tr>
+                <tr>
+                    <td width="100"></td>
+                    <td width="400">
+                        <p style="text-align: center; color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Beatae consequuntur cumque delectus eos, et exercitationem fuga itaque nemo numquam provident quasi
+                            qui reiciendis repellendus sequi soluta ut vero vitae voluptatum?</p>
+                    </td>
+                    <td width="100"></td>
+                </tr>
+                <tr>
+                    <td height="25"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </center>';
     }
 
     /**
@@ -68,17 +505,16 @@ class Email
      * Send email function
      *
      *
+     * @param string $body
      * @param null $to
      * @param null $subject
-     * @param null $textBody
      * @param null $from
-     * @param null $htmlBody
      * @param null $tags
      * @return bool
      */
-    public static function send($to = null, $subject = null,  $textBody = null, $from = null, $htmlBody = null, $tags = null)
+    public static function send($body, $to = null, $subject = null, $from = null, $tags = null)
     {
-        $email = new self($to, $subject, $textBody, $from, $htmlBody, $tags);
+        $email = new self($body, $to, $subject, $from, $tags);
         return $email->error;
 
     }
@@ -95,12 +531,11 @@ class Email
             'to'        => $this->to,
             'from'      => $this->from,
             'subject'   => $this->subject,
-            'text'      => $this->textBody,
-            'html'      => $this->htmlBody,
+            'html'      => $this->body,
             'tags'      => $this->tags
         ];
 
-        Mail::send(['html' => 'components.emails.emailuser'], $data, function($message) {
+        Mail::send(['html' => 'layout.email.html'], $data, function($message) {
             $message->subject($this->subject);
             $message->to($this->to);
             $message->from($this->from);
@@ -128,10 +563,10 @@ class Email
             'to'        => $this->to,
             'from'      => $this->from,
             'subject'   => $this->subject,
-            'text'      => $this->textBody
+            'text'      => $this->body
         ];
 
-        Mail::send(['text' => 'components.emails.emailuser'], $data, function($message){
+        Mail::send(['text' => 'layout.email.text'], $data, function($message){
             $message->subject($this->subject);
             $message->to($this->to);
             $message->from($this->from);
