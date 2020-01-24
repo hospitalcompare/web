@@ -357,7 +357,7 @@ class ApiController {
 
         //Send the email //TODO: Activate it once the tests are working
         if(!empty($enquiry)) {
-            $html = '<style>
+            $htmlUser = '<style>
                 table {
                     font-family: arial;
                     background-color: #fff;
@@ -569,7 +569,7 @@ class ApiController {
             </center>
 ';
             try {
-                Email::send($email, 'Thank you for Enquiring with Hospital Compare', null, 'datamanager@hospitalcompare.co.uk', $html);
+                Email::send($email, 'Thank you for Enquiring with Hospital Compare', null, 'datamanager@hospitalcompare.co.uk', $htmlUser);
             } catch(\Exception $e){
                 \Log::info('Something went wrong sending an email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
             }
