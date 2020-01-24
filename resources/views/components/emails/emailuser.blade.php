@@ -17,7 +17,7 @@
         <tr>
             <td width="200"></td>
             <td width="200">
-                <a href="https://hospitalcompare.co.uk"><img width="200" src="https://hospitalcompare.co.uk/images/icons/logo-email.svg"
+                <a href="https://hospitalcompare.co.uk"><img width="200" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.svg"
                                                      alt="Hospital compare logo"></a>
             </td>
             <td width="200"></td>
@@ -38,7 +38,7 @@
             <td height="25"></td>
         </tr>
         <tr>
-            <td colspan="3"><img width="600" src="https://hospitalcompare.co.uk/images/hc-email-banner.jpg"
+            <td colspan="3"><img width="600" src="https://www.hospitalcompare.co.uk/images/hc-email-banner.jpg"
                                  alt="Man on sofa browsing hospital compare website"></td>
         </tr>
         <tr>
@@ -182,7 +182,7 @@
         </tr>
         <tr>
             <td width="100"></td>
-            <td width="400" style="text-align: center"><img width="200" src="https://hospitalcompare.co.uk/images/icons/logo-email.svg"
+            <td width="400" style="text-align: center"><img width="200" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.svg"
                                                             alt="Hospital compare logo"></td>
             <td width="100"></td>
         </tr>
