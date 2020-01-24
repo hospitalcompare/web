@@ -93,7 +93,6 @@
 {{--    @endif--}}
     <div class="p-5 w-100 text-center">
         <img class="w-100 mb-3" src="{{ asset('/images/logo-desktop.svg') }}" style="max-width: 500px">
-        <h1 class="text-white">Site under construction</h1>
     </div>
 </div>
 </body>
