@@ -15,7 +15,16 @@
         @include('components.emails.emailuser')
     </section>
     <section>
-        @include('components.modals.modalenquireprivate', ['procedures'    => $data['filters']['procedures'],])
+        @include('components.modals.modalenquireprivate', [
+            'procedures'    => $data['filters']['procedures'],
+            'title'         => 'Mr',
+            'firstName'     => 'Tom',
+            'lastName'      => 'Eagle',
+            'dob'           => '13/08/1979',
+            'email'         => 'tomeagle79@gmail.com',
+            'postcode'      => 'WA6 8JY',
+            'phone'         => '07941939374'
+        ])
     </section>
 {{--        <section>--}}
 {{--            @include('pages.pagesections.resultspageform', [--}}

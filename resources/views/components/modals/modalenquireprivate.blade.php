@@ -17,7 +17,7 @@
                 'lastName'      => $lastName ?? '',
                 'dob'           => $dob ?? '',
                 'email'         => $email ?? '',
-                'postCode'      => $postCode ?? '',
+                'postcode'      => $postcode ?? '',
                 'phone'         => $phone ?? ''])
         </div>
     </div>
