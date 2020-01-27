@@ -1,17 +1,13 @@
 // LS - Snap design CSS overrides​
 
-@media only screen and (min-width: 1px) and (max-width: 1200px) {
-    .para-block {
-        display: inline;
-    }
-}
 
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
 
     /* Nav Bar */
 
-    .results-page .result-item-menu li p, .test-page .result-item-menu li p {
+    .results-page .result-item-menu li p,
+    .test-page .result-item-menu li p {
         font-size: 0.8rem;
     }
 
@@ -22,16 +18,19 @@
         max-width: 100%;
     }
 
-    .results-page .sort-bar .section-1, .test-page .sort-bar .section-1 {
+    .results-page .sort-bar .section-1,
+    .test-page .sort-bar .section-1 {
         width: 22%;
         font-size: 0.875rem !important;
     }
 
-    .results-page .sort-bar .section-2, .test-page .sort-bar .section-2 {
+    .results-page .sort-bar .section-2,
+    .test-page .sort-bar .section-2 {
         width: 60%;
     }
 
-    .results-page .sort-bar .section-3, .test-page .sort-bar .section-3 {
+    .results-page .sort-bar .section-3,
+    .test-page .sort-bar .section-3 {
         width: 18%;
     }
 
@@ -51,20 +50,24 @@
         margin-top: 6px;
     }
 
-    .results-page .result-item-inner .result-item-section-1, .test-page .result-item-inner .result-item-section-1 {
+    .results-page .result-item-inner .result-item-section-1,
+    .test-page .result-item-inner .result-item-section-1 {
         width: 22%;
         position: relative;
     }
 
-    .results-page .result-item-inner .result-item-section-1 .hospital-details, .test-page .result-item-inner .result-item-section-1 .hospital-details {
+    .results-page .result-item-inner .result-item-section-1 .hospital-details,
+    .test-page .result-item-inner .result-item-section-1 .hospital-details {
         padding: 38px 8px 38px 8px;
     }
 
-    .results-page .result-item-inner .result-item-section-2, .test-page .result-item-inner .result-item-section-2 {
+    .results-page .result-item-inner .result-item-section-2,
+    .test-page .result-item-inner .result-item-section-2 {
         width: 60%;
     }
 
-    .results-page .result-item-inner .result-item-section-3, .test-page .result-item-inner .result-item-section-3 {
+    .results-page .result-item-inner .result-item-section-3,
+    .test-page .result-item-inner .result-item-section-3 {
         width: 18%;
     }
 
@@ -76,14 +79,18 @@
         width: auto !important;
     }
 
-    .results-page .nhs-hospital, .results-page .private-hospital, .test-page .nhs-hospital, .test-page .private-hospital {
+    .results-page .nhs-hospital,
+    .results-page .private-hospital,
+    .test-page .nhs-hospital,
+    .test-page .private-hospital {
         position: relative;
         width: auto;
         border-top-left-radius: 0;
         padding: 0 !important;
     }
 
-    .results-page .result-item .hospital-image .nhs-hospital p {
+    .results-page .result-item .hospital-image .nhs-hospital p,
+    .results-page .result-item .hospital-image .private-hospital p {
         height: 26px;
         line-height: 26px;
         font-size: 0.65rem !important;
@@ -91,14 +98,16 @@
         padding: 0 0.5rem;
     }
 
-    .results-page .result-item-inner .hospital-image:before, .test-page .result-item-inner .hospital-image:before {
+    .results-page .result-item-inner .hospital-image:before,
+    .test-page .result-item-inner .hospital-image:before {
         display: block;
         content: "";
         width: 100%;
         padding-top: 0;
     }
 
-    .results-page .result-item .hospital-image .nhs-hospital p:after {
+    .results-page .result-item .hospital-image .nhs-hospital p:after,
+    .results-page .result-item .hospital-image .private-hospital p:after {
         content: "";
         position: absolute;
         z-index: 5;
@@ -111,20 +120,21 @@
     .results-page .result-item .hospital-image .nhs-hospital p:after {
         border-bottom: solid 13px transparent;
         border-right: solid 13px transparent;
-        border-left: solid 13px #0d69f2;
-        border-top: solid 13px #0d69f2;
+        border-left: solid 13px $nhsBlue;
+        border-top: solid 13px $nhsBlue;
         content: ''
     }
 
     .results-page .private-hospital p:after {
         border-bottom: solid 13px transparent;
         border-right: solid 13px transparent;
-        border-left: solid 13px #8e00fe;
-        border-top: solid 13px #8e00fe;
+        border-left: solid 13px $privateBlue;
+        border-top: solid 13px $privateBlue;
         content: ''
     }
 
-    .results-page .sort-item-title, .test-page .sort-item-title {
+    .results-page .sort-item-title,
+    .test-page .sort-item-title {
         font-size: 15px;
     }
 
@@ -151,7 +161,8 @@
         font-size: 0.875rem !important;
     }
 
-    .results-page .select-parent label, .test-page .select-parent label {
+    .results-page .select-parent label,
+    .test-page .select-parent label {
         line-height: 18px;
         margin-bottom: 6px;
         padding-right: 17px;
@@ -159,7 +170,7 @@
     }
 
     .results-page .help-link {
-        top: 0px;
+        top: 0;
         right: 14px;
     }
 
