@@ -85,7 +85,7 @@
                                  </div>
                              </div>'])>
                         <p class="stat-label d-block w-100 d-lg-none">Care Quality Rating</p>
-                        {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
+                        <p class="col-{{ str_slug($qualityRating) }}">{!! !empty($qualityRating) ? $qualityRating : "No data" !!}</p>
                     </div>
                 </div>
                 {{-- Waiting time --}}

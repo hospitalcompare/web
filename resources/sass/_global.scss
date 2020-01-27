@@ -409,6 +409,23 @@ select.big {
     color: $caretBlack;
 }
 
+.col-outstanding {
+    //background: $goldStar;
+    color: $cqcGreen;
+}
+
+.col-good {
+    color: $cqcGreen;
+}
+
+.col-requires-improvement {
+    color: $cqcAmber;
+}
+
+.col-inadequate {
+    color: $cqcRed;
+}
+
 // In text links
 
 .text-link {
