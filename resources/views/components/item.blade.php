@@ -138,7 +138,7 @@
                                 </div>'
                             ])>
                         <p class="stat-label d-block w-100 d-lg-none">Waiting Time</p>
-                        {!! !empty($waitTime) ? $waitTime.'<br>Weeks' : "No data" !!}
+                        <p>{!! !empty($waitTime) ? $waitTime.'<span class="d-inline d-lg-none">&nbsp;</span><br class="d-none d-lg-inline">Weeks' : "No data" !!}</p>
                     </div>
                 </div>
                 {{-- End waiting time --}}

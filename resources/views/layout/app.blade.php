@@ -17,8 +17,8 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name='description' content='@yield('description')'>
         <meta name='keywords' content='@yield('keywords')'>
-{{--        <meta name="viewport" content="@yield('mobile')">--}}
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="@yield('mobile')">
+{{--        <meta name="viewport" content="width=device-width">--}}
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- Block indexing bots apart from live site -->
         @if(env('APP_ENV') !== 'live')
