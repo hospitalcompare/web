@@ -480,6 +480,27 @@ select.big {
     @extend .SofiaPro-Regular;
     @extend .p-3;
 
+    @media screen and (max-width: 576px) {
+
+        /* Cookies */
+        .cc-banner {
+            display: inline-block !important;
+        }
+
+        .cc-message {
+            margin-right: 0;
+        }
+
+        .cc-btn {
+            padding: 13px 36px !important;
+            @include font-size(1rem, true);
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        /* END Cookies */
+    }
+
     .cc-window.cc-banner {
         padding: 1em 1.8em;
         width: 100%;
@@ -886,6 +907,7 @@ h6 {
         background-color: grey;
     }
 }
+
 .carousel-indicators {
     position: absolute;
     right: 0;

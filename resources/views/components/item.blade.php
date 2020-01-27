@@ -1,4 +1,4 @@
-<div class="result-item" id="result-item_{{ $id }}">
+<div class="result-item mb-3 mb-lg-0" id="result-item_{{ $id }}">
     <div class="container">
         <div class="result-item-inner">
             <div class="result-item-section-1">
