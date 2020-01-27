@@ -222,14 +222,13 @@
             <div class="result-item-section-3">
                 <div class="btn-area">
                     @include('components.basic.button', [
-                       'classTitle'        => 'btn btn-icon btn-more-info position-absolute font-12 d-lg-none',
+                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-primary-1 btn-more-info h-100 w-100 text-center font-14 p-3 position-relative d-lg-none',
                        'buttonText'        => '<span>Map</span>',
                        'htmlButton'        => true,
                        'icon'              => '',
                        'id'                => 'more_info_' . $id,
-                       'svg'               => 'plus-solid',
                        'dataTarget'        => '#corporate_content_hospital_' . $id,
-                       'dataId'           => $id
+                       'dataId'            => $id
                     ])
                     @if($NHSClass == 'private-hospital')
                         @include('components.basic.modalbutton', [
@@ -243,7 +242,8 @@
                         'id'                => 'enquire_private_'.$id,
                         'hospitalIds'       => $id,
                         'image'             => $itemImg,
-                        'svg'               => 'circle-check'])
+                        'svg'               => 'circle-check',
+                        'svgClass'          => 'd-none d-lg-block'])
                     @elseif($NHSClass == 'nhs-hospital')
                         @include('components.basic.modalbutton', [
                         'hospitalType'      => $NHSClass,
