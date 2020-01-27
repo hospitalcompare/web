@@ -480,6 +480,12 @@ select.big {
     @extend .SofiaPro-Regular;
     @extend .p-3;
 
+    .cc-window.cc-banner {
+        padding: 1em 1.8em;
+        width: 100%;
+        flex-direction: row;
+    }
+
     .cc-link {
         color: $brand-primary-1 !important;
     }
