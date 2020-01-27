@@ -83,9 +83,9 @@
                     "position": "top",
                     "static": true,
                     "content": {
-                        "message": "We use cookies to provide a better service. By closing this window or continuing to use our website you agree with our use of cookies. <br><br>Find out how to manage cookies and view our policy",
+                        "message": "We use cookies to provide a better service. By closing this window or continuing to use our website you agree with our use of cookies. <br>Find out how to manage cookies and view our policy",
                         "dismiss": "Close",
-                        "link": "here",
+                        "link": "here.",
                         "href": "/cookie-policy"
                     }
                 })});

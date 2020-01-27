@@ -461,20 +461,27 @@ select.big {
 // Cookie popup styling
 .cc-theme-hc-cookie {
     @extend .SofiaPro-Regular;
-    @extend .rounded;
+    @extend .p-3;
+
+    .cc-link {
+        color: $brand-primary-1 !important;
+    }
 
     .cc-btn {
         @extend .btn;
         //@extend .btn-
         border-radius: 3px;
-        padding: 22px 36px !important;
+        //padding: 22px 36px !important;
         @extend .btn-brand-primary-1;
         @extend .btn-squared;
-        @include font-size(1.1rem, true);
+        @extend .btn-squared_slim;
+        @extend .px-5;
+        @include font-size(14px, true);
         text-align: center !important;
         display: inline-block;
         flex: initial !important;
         cursor: pointer;
+        line-height: 1.2;
 
         &:hover {
             background-color: $blue !important;
