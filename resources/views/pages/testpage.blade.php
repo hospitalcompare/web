@@ -12,6 +12,10 @@
 
 @section('content')
     <section>
+        @include('pages.pagesections.resultspageform', [
+        'displayBlock' => true])
+    </section>
+    <section>
         @include('components.emails.emailuser')
     </section>
     <section>
@@ -26,38 +30,35 @@
             'phone'         => '07941939374'
         ])
     </section>
-{{--        <section>--}}
-{{--            @include('pages.pagesections.resultspageform', [--}}
-{{--            'displayBlock' => true])--}}
-{{--        </section>--}}
 
-{{--        <section>--}}
-{{--            @include('components.modals.modaltour',--}}
-{{--                ['displayBlock' => 'true'])--}}
-{{--        </section>--}}
-{{--    <section>--}}
-{{--        @include('mobile.components.corporatecontentmobile', [--}}
-{{--                'procedures'    => $data['filters']['procedures'],--}}
-{{--                'hospitalTitle' => 'Dr Nick\'s dodgy ops',--}}
-{{--                'id'            => 1,--}}
-{{--                'latitude'      => '52.3',--}}
-{{--                'longitude'     => '2.3',--}}
-{{--                'address'       => '<strong>Hospital name</strong><br>Hospital address<br>Hospital Town<br>Hospital County<br>Hospital Postcode'--}}
-{{--            ])--}}
-{{--    </section>--}}
 
-{{--    <div>--}}
-{{--        @include('mobile.components.modals.modalmobilespecialoffer',--}}
-{{--            [--}}
-{{--                'id'            => 200,--}}
-{{--                'title'         => 'Hospital Name',--}}
-{{--                'NHSClass'      => 'private-hospital',--}}
-{{--                'url'           => '/',--}}
-{{--                'location'      => '91.5 miles away',--}}
-{{--                'fundedText'    => 'Private',--}}
-{{--                'radius'        => 50--}}
-{{--            ])--}}
-{{--    </div>--}}
+    {{--        <section>--}}
+    {{--            @include('components.modals.modaltour',--}}
+    {{--                ['displayBlock' => 'true'])--}}
+    {{--        </section>--}}
+    {{--    <section>--}}
+    {{--        @include('mobile.components.corporatecontentmobile', [--}}
+    {{--                'procedures'    => $data['filters']['procedures'],--}}
+    {{--                'hospitalTitle' => 'Dr Nick\'s dodgy ops',--}}
+    {{--                'id'            => 1,--}}
+    {{--                'latitude'      => '52.3',--}}
+    {{--                'longitude'     => '2.3',--}}
+    {{--                'address'       => '<strong>Hospital name</strong><br>Hospital address<br>Hospital Town<br>Hospital County<br>Hospital Postcode'--}}
+    {{--            ])--}}
+    {{--    </section>--}}
+
+    {{--    <div>--}}
+    {{--        @include('mobile.components.modals.modalmobilespecialoffer',--}}
+    {{--            [--}}
+    {{--                'id'            => 200,--}}
+    {{--                'title'         => 'Hospital Name',--}}
+    {{--                'NHSClass'      => 'private-hospital',--}}
+    {{--                'url'           => '/',--}}
+    {{--                'location'      => '91.5 miles away',--}}
+    {{--                'fundedText'    => 'Private',--}}
+    {{--                'radius'        => 50--}}
+    {{--            ])--}}
+    {{--    </div>--}}
 
     <section>
         <h3>Waiting times popover</h3>
@@ -97,7 +98,8 @@
                         <div class="d-table-cell">X of Y</div>
                     </div>
                     <div class="d-table-row">
-                        <small>NB - Diagnostics is a % of current waiting list waiting 6+ weeks (national target is 1%)</small>
+                        <small>NB - Diagnostics is a % of current waiting list waiting 6+ weeks (national target is
+                            1%)</small>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,16 @@
 // LS - Snap design CSS overrides​
 
 
+//Remove 'i' - info button from fields 'Choose your treatment' and 'enter your postcode'
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .postcode-radius-child.procedures,
+    .postcode-radius-child.postcode {
+        .help-link {
+            display: none
+        }
+    }
+}
+
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
 
@@ -149,13 +159,6 @@
     }
 
     /* End Results Card */
-
-
-    /* Filter Drop Down */
-
-    /*
-        Remove 'i' - info button from fields 'Choose your treatment' and 'enter your postcode'
-    */
 
     .btn-submit-results {
         font-size: 0.875rem !important;

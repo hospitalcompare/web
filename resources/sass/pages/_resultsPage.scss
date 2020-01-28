@@ -20,11 +20,24 @@
     }
 }
 
-.results-page:not(.results-page-mobile) {
-    .filter-section {
-        .filter-section-child {
-            &:not(:last-child) {
-                border-right: 2px solid $border-color;
+@include media-breakpoint-down(lg){
+    .results-page-desktop,
+    .test-page {
+        .filter-section {
+            @include reset-row-spacing(7.5px);
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .results-page-desktop,
+    .test-page {
+        .filter-section {
+            .filter-section-child {
+                &:not(:last-child) {
+                    border-right: 2px solid $border-color;
+
+                }
             }
         }
     }
