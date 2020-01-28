@@ -134,7 +134,7 @@ window.addHospitalToCompare = function(element) {
         nhsFundedWork = 1;
     }
 
-    var btnClass = (isDesktop) ? 'btn btn-icon btn-blue  btn-enquire enquiry btn-block font-12' : 'btn btn-icon btn-blue btn-enquire enquiry btn-squared btn-squared_slim font-12';
+    var btnClass = (isDesktop) ? 'btn btn-icon btn-blue  btn-enquire enquiry btn-block font-12' : 'btn btn-icon btn-blue btn-enquire enquiry btn-squared btn-squared_slim font-12 pl-5';
     var btnContent =
         `<a id="${element.id}"
             class="${btnClass}"
@@ -194,7 +194,7 @@ window.addHospitalToCompare = function(element) {
         var newRow =
             `<div id="compare_hospital_id_${element.id}" class="card w-100 p-0 border-top-0 border-left-0 border-right-0 border-bottom rounded-0 shadow-none">
                 <div class="card-header p-0 pb-2 bg-white" id="heading${element.id}">
-                     <button class="btn btn-link collapsed text-decoration-none p-0" data-toggle="collapse" data-target="#collapse${element.id}" aria-expanded="true" aria-controls="collapse${element.id}">
+                     <button class="btn btn-link collapsed text-decoration-none p-0 rounded-0" data-toggle="collapse" data-target="#collapse${element.id}" aria-expanded="true" aria-controls="collapse${element.id}">
                          <p class="font-18 SofiaPro-SemiBold mb-2">${textTruncate(element.display_name, 30, '...')}</p>
                          <p class="col-grey mb-2">${$svgMapIcon}${element.address.city} | ${hospitalType}</p>
                          <p class="mb-2">${latestRating}&nbsp;|&nbsp;${getHtmlDashTickValue(waitingTime, " Weeks Average Waiting")}</p>

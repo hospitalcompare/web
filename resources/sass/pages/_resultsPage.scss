@@ -294,10 +294,12 @@
         border-bottom: $greyBorder;
 
         .hospital-image {
-            width: $hospital-image-width;
-            @include aspect-ratio(134px, 123px);
-            background-size: cover;
-            background-position: center bottom;
+            @media (min-width: 1068px){
+                width: $hospital-image-width;
+                @include aspect-ratio(134px, 123px);
+                background-size: cover;
+                background-position: center bottom;
+            }
         }
 
         @include media-breakpoint-up(lg) {
@@ -570,6 +572,345 @@
 /********* Desktop results layout *************************************************************************************/
 /********* Desktop results layout *************************************************************************************/
 .results-page-desktop {
+    //@include media-breakpoint-down(lg) {
+    //    /* Results Card */
+    //    /*.results-page .results {*/
+    //    /*    margin-top: 1rem !important;*/
+    //    /*}*/
+    //
+    //    /*.result-item {*/
+    //    /*    margin-bottom: 1rem !important;*/
+    //    /*    position: relative;*/
+    //    /*}*/
+    //
+    //    .result-item .result-item-inner {
+    //        padding: 1rem !important;
+    //        padding-top: 3rem !important;
+    //        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1) !important;
+    //        border-radius: 5px;
+    //        background-color: #fff;
+    //        border-bottom: 1px solid #ededed;
+    //        position: relative;
+    //    }
+    //
+    //    .hospital-image {
+    //        background-image: none !important;
+    //        position: absolute;
+    //        top: 0;
+    //        left: 0;
+    //        width: auto !important;
+    //    }
+    //
+    //    .nhs-hospital,
+    //    .private-hospital {
+    //        position: relative;
+    //        width: auto;
+    //        border-top-left-radius: 5px;
+    //        padding: 0 !important;
+    //    }
+    //
+    //    .result-item .hospital-image .nhs-hospital p {
+    //        height: 30px;
+    //        line-height: 30px;
+    //        font-size: 0.75rem !important;
+    //        text-transform: uppercase;
+    //        padding: 0 0.5rem;
+    //    }
+    //
+    //    .result-item .hospital-image .nhs-hospital p:after {
+    //        content: "";
+    //        position: absolute;
+    //        z-index: 5;
+    //        left: 100%;
+    //        top: 0;
+    //        width: 30px;
+    //        height: 30px;
+    //    }
+    //
+    //    .result-item .hospital-image .nhs-hospital p:after {
+    //        border-bottom: solid 15px transparent;
+    //        border-right: solid 15px transparent;
+    //        border-left: solid 15px #0d69f2;
+    //        border-top: solid 15px #0d69f2;
+    //        content: ''
+    //    }
+    //
+    //    .private-hospital p:after {
+    //        border-bottom: solid 15px transparent;
+    //        border-right: solid 15px transparent;
+    //        border-left: solid 15px #8e00fe;
+    //        border-top: solid 15px #8e00fe;
+    //        content: '';
+    //    }
+    //
+    //    .btn-icon.btn-more-info {
+    //        display: none;
+    //    }
+    //
+    //    .result-item-inner .hospital-image:before {
+    //        display: block;
+    //        content: "";
+    //        width: 100%;
+    //        padding-top: 0;
+    //    }
+    //
+    //    .sort-item-title, .test-page .sort-item-title {
+    //        font-size: 16px;
+    //        line-height: 19.2px;
+    //        margin-bottom: 4px;
+    //        text-align: center;
+    //    }
+    //
+    //    .sort-item-specialism {
+    //        text-align: center;
+    //    }
+    //
+    //    .result-item-section-1 {
+    //        margin-bottom: 1rem !important;
+    //    }
+    //
+    //    .result-item-section-2 {
+    //        margin-bottom: 1rem !important;
+    //    }
+    //
+    //    .result-item-section-2__child {
+    //        position: relative;
+    //    }
+    //
+    //    .result-item-section-2__child .d-flex.flex-column {
+    //        position: relative;
+    //        justify-content: space-between !important;
+    //        align-items: flex-end !important;
+    //    }
+    //
+    //    .result-item-section-2__child .d-flex.flex-column {
+    //        text-align: right;
+    //        width: 100%;
+    //        color: #757575 !important;
+    //        @include font-size(0.75rem, true);
+    //        font-weight: normal !important;
+    //    }
+    //
+    //    .stat-label {
+    //        text-align: left;
+    //        position: absolute;
+    //        left: 0;
+    //        font-size: 0.75rem !important;
+    //        color: #1b1b1b;
+    //    }
+    //
+    //    .result-item-section-3 .btn-area {
+    //        display: flex;
+    //    }
+    //
+    //    .result-item-section-3 .btn-area .btn-compare {
+    //        position: absolute;
+    //        top: 0;
+    //        right: 0;
+    //        padding: 0 0 0 20px !important;
+    //        width: auto !important;
+    //        box-shadow: none !important;
+    //        margin-top: 0.5rem !important;
+    //        margin-right: 1rem !important;
+    //    }
+    //
+    //    .result-item-section-2__child .d-flex.flex-column p img {
+    //        max-width: 16px;
+    //    }
+    //
+    //    .result-item .btn-enquire {
+    //        border-radius: 3px;
+    //        padding: 15px 15px;
+    //        font-size: 0.875rem !important;
+    //        text-align: center;
+    //        margin-right: 0 !important;
+    //    }
+    //
+    //    .result-item .btn-enquire {
+    //        flex-direction: row-reverse !important;
+    //        display: flex !important;
+    //    }
+    //
+    //    .btn-enquire svg, .btn-enquire-private-hospital svg {
+    //        position: static;
+    //        top: 0;
+    //        transform: translateY(0);
+    //        left: 0px;
+    //        width: 20px;
+    //        height: 20px;
+    //        margin: 0 8px !important;
+    //    }
+    //
+    //    .result-item .btn-compare svg {
+    //        content: "";
+    //        position: absolute;
+    //        top: calc(50% + 1px);
+    //        transform: translateY(-50%);
+    //        left: 0;
+    //        width: 15px;
+    //        height: 13px;
+    //    }
+    //
+    //    /* END Results Card */
+    //}
+    //
+    //@include media-breakpoint-between(lg, xl) {
+    //
+    //    /* Nav Bar */
+    //    .result-item-menu li p {
+    //        font-size: 0.8rem;
+    //    }
+    //
+    //    .container-lg,
+    //    .container-md,
+    //    .container-sm,
+    //    .container {
+    //        max-width: 100%;
+    //    }
+    //
+    //    .sort-bar .section-1 {
+    //        width: 22%;
+    //        font-size: 0.875rem !important;
+    //    }
+    //
+    //    .sort-bar .section-2, .test-page .sort-bar .section-2 {
+    //        width: 60%;
+    //    }
+    //
+    //    .sort-bar .section-3, .test-page .sort-bar .section-3 {
+    //        width: 18%;
+    //    }
+    //
+    //    .btn-icon.btn-arrow-down svg {
+    //        position: absolute;
+    //        top: 50%;
+    //        -webkit-transform: translateY(-50%);
+    //        -ms-transform: translateY(-50%);
+    //        transform: translateY(-50%);
+    //        right: 20px;
+    //        -webkit-transition: 0.3s all ease;
+    //        transition: 0.3s all ease;
+    //        width: 12px !important;
+    //    }
+    //
+    //    /* End Nav Bar */
+    //    /* Results Card */
+    //    .result-item, .test-page .result-item {
+    //        margin-top: 6px;
+    //    }
+    //
+    //    .result-item-inner .result-item-section-1, .test-page .result-item-inner .result-item-section-1 {
+    //        width: 22%;
+    //        position: relative;
+    //    }
+    //
+    //    .result-item-inner .result-item-section-1 .hospital-details, .test-page .result-item-inner .result-item-section-1 .hospital-details {
+    //        padding: 38px 8px 38px 8px;
+    //    }
+    //
+    //    .result-item-inner .result-item-section-2, .test-page .result-item-inner .result-item-section-2 {
+    //        width: 60%;
+    //    }
+    //
+    //    .result-item-inner .result-item-section-3, .test-page .result-item-inner .result-item-section-3 {
+    //        width: 18%;
+    //    }
+    //
+    //    .result-item-inner .hospital-image {
+    //        background-image: none !important;
+    //        position: absolute;
+    //        top: 0;
+    //        left: 0;
+    //        width: auto !important;
+    //    }
+    //
+    //    .nhs-hospital, .private-hospital, .test-page .nhs-hospital, .test-page .private-hospital {
+    //        position: relative;
+    //        width: auto;
+    //        border-top-left-radius: 0;
+    //        padding: 0 !important;
+    //    }
+    //
+    //    .result-item .hospital-image .nhs-hospital p {
+    //        height: 26px;
+    //        line-height: 26px;
+    //        font-size: 0.65rem !important;
+    //        text-transform: uppercase;
+    //        padding: 0 0.5rem;
+    //    }
+    //
+    //    .result-item-inner .hospital-image:before {
+    //        display: block;
+    //        content: "";
+    //        width: 100%;
+    //        padding-top: 0;
+    //    }
+    //
+    //    .result-item .hospital-image .nhs-hospital p:after {
+    //        content: "";
+    //        position: absolute;
+    //        z-index: 5;
+    //        left: 100%;
+    //        top: 0;
+    //        width: 25px;
+    //        height: 25px;
+    //    }
+    //
+    //    .result-item .hospital-image .nhs-hospital p:after {
+    //        border-bottom: solid 13px transparent;
+    //        border-right: solid 13px transparent;
+    //        border-left: solid 13px #0d69f2;
+    //        border-top: solid 13px #0d69f2;
+    //        content: ''
+    //    }
+    //
+    //    .private-hospital p:after {
+    //        border-bottom: solid 13px transparent;
+    //        border-right: solid 13px transparent;
+    //        border-left: solid 13px #8e00fe;
+    //        border-top: solid 13px #8e00fe;
+    //        content: ''
+    //    }
+    //
+    //    .sort-item-title, .test-page .sort-item-title {
+    //        font-size: 15px;
+    //    }
+    //
+    //    .result-item-section-2__child, .test-page .result-item-section-2__child {
+    //        font-size: 15px;
+    //    }
+    //
+    //    #show_filters {
+    //        width: 90% !important;
+    //        padding-top: 12px !important;
+    //        padding-bottom: 12px !important;
+    //    }
+    //
+    //    /* End Results Card */
+    //    /* Filter Drop Down */
+    //    /*
+    //        Remove 'i' - info button from fields 'Choose your treatment' and 'enter your postcode'
+    //    */
+    //    .btn-submit-results {
+    //        font-size: 0.875rem !important;
+    //    }
+    //
+    //    .select-parent label, .test-page .select-parent label {
+    //        line-height: 18px;
+    //        margin-bottom: 6px;
+    //        padding-right: 17px;
+    //        min-height: 38px;
+    //    }
+    //
+    //    .help-link {
+    //        top: 0px;
+    //        right: 14px;
+    //    }
+    //
+    //    /* END Filter Drop Down */
+    //
+    //}
+
     .filter-parent {
         display: none;
     }

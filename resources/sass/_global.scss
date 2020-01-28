@@ -409,6 +409,23 @@ select.big {
     color: $caretBlack;
 }
 
+.col-outstanding {
+    //background: $goldStar;
+    color: $cqcGreen;
+}
+
+.col-good {
+    color: $cqcGreen;
+}
+
+.col-requires-improvement {
+    color: $cqcAmber;
+}
+
+.col-inadequate {
+    color: $cqcRed;
+}
+
 // In text links
 
 .text-link {
@@ -461,20 +478,54 @@ select.big {
 // Cookie popup styling
 .cc-theme-hc-cookie {
     @extend .SofiaPro-Regular;
-    @extend .rounded;
+    @extend .p-3;
+
+    @media screen and (max-width: 576px) {
+
+        /* Cookies */
+        .cc-banner {
+            display: inline-block !important;
+        }
+
+        .cc-message {
+            margin-right: 0;
+        }
+
+        .cc-btn {
+            padding: 13px 36px !important;
+            @include font-size(1rem, true);
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        /* END Cookies */
+    }
+
+    .cc-window.cc-banner {
+        padding: 1em 1.8em;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .cc-link {
+        color: $brand-primary-1 !important;
+    }
 
     .cc-btn {
         @extend .btn;
         //@extend .btn-
         border-radius: 3px;
-        padding: 22px 36px !important;
+        //padding: 22px 36px !important;
         @extend .btn-brand-primary-1;
         @extend .btn-squared;
-        @include font-size(1.1rem, true);
+        @extend .btn-squared_slim;
+        @extend .px-5;
+        @include font-size(14px, true);
         text-align: center !important;
         display: inline-block;
         flex: initial !important;
         cursor: pointer;
+        line-height: 1.2;
 
         &:hover {
             background-color: $blue !important;
@@ -856,6 +907,7 @@ h6 {
         background-color: grey;
     }
 }
+
 .carousel-indicators {
     position: absolute;
     right: 0;

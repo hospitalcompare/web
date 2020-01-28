@@ -1,4 +1,4 @@
-<div class="result-item" id="result-item_{{ $id }}">
+<div class="result-item mb-3 mb-lg-0" id="result-item_{{ $id }}">
     <div class="container">
         <div class="result-item-inner">
             <div class="result-item-section-1">
@@ -85,7 +85,7 @@
                                  </div>
                              </div>'])>
                         <p class="stat-label d-block w-100 d-lg-none">Care Quality Rating</p>
-                        {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
+                        <p class="col-{{ str_slug($qualityRating) }}">{!! !empty($qualityRating) ? $qualityRating : "No data" !!}</p>
                     </div>
                 </div>
                 {{-- Waiting time --}}
@@ -138,7 +138,7 @@
                                 </div>'
                             ])>
                         <p class="stat-label d-block w-100 d-lg-none">Waiting Time</p>
-                        {!! !empty($waitTime) ? $waitTime.'<br>Weeks' : "No data" !!}
+                        <p>{!! !empty($waitTime) ? $waitTime.'<span class="d-inline d-lg-none">&nbsp;</span><br class="d-none d-lg-inline">Weeks' : "No data" !!}</p>
                     </div>
                 </div>
                 {{-- End waiting time --}}
@@ -221,6 +221,15 @@
             </div>
             <div class="result-item-section-3">
                 <div class="btn-area">
+                    @include('components.basic.button', [
+                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-primary-1 btn-more-info h-100 w-100 text-center font-14 p-3 position-relative d-lg-none',
+                       'buttonText'        => '<span>Map</span>',
+                       'htmlButton'        => true,
+                       'icon'              => '',
+                       'id'                => 'more_info_' . $id,
+                       'dataTarget'        => '#corporate_content_hospital_' . $id,
+                       'dataId'            => $id
+                    ])
                     @if($NHSClass == 'private-hospital')
                         @include('components.basic.modalbutton', [
                         'hospitalType'      => $NHSClass,
@@ -233,7 +242,8 @@
                         'id'                => 'enquire_private_'.$id,
                         'hospitalIds'       => $id,
                         'image'             => $itemImg,
-                        'svg'               => 'circle-check'])
+                        'svg'               => 'circle-check',
+                        'svgClass'          => 'd-none d-lg-block'])
                     @elseif($NHSClass == 'nhs-hospital')
                         @include('components.basic.modalbutton', [
                         'hospitalType'      => $NHSClass,
