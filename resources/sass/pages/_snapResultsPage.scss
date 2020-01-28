@@ -6,7 +6,7 @@
 
     /* Nav Bar */
 
-    .results-page .result-item-menu li p,
+    .results-page-desktop .result-item-menu li p,
     .test-page .result-item-menu li p {
         font-size: 0.8rem;
     }
@@ -18,18 +18,18 @@
         max-width: 100%;
     }
 
-    .results-page .sort-bar .section-1,
+    .results-page-desktop .sort-bar .section-1,
     .test-page .sort-bar .section-1 {
         width: 22%;
         font-size: 0.875rem !important;
     }
 
-    .results-page .sort-bar .section-2,
+    .results-page-desktop .sort-bar .section-2,
     .test-page .sort-bar .section-2 {
         width: 60%;
     }
 
-    .results-page .sort-bar .section-3,
+    .results-page-desktop .sort-bar .section-3,
     .test-page .sort-bar .section-3 {
         width: 18%;
     }
@@ -46,32 +46,32 @@
     /* End Nav Bar */
 
     /* Results Card */
-    .results-page .result-item, .test-page .result-item {
+    .results-page-desktop .result-item, .test-page .result-item {
         margin-top: 6px;
     }
 
-    .results-page .result-item-inner .result-item-section-1,
+    .results-page-desktop .result-item-inner .result-item-section-1,
     .test-page .result-item-inner .result-item-section-1 {
         width: 22%;
         position: relative;
     }
 
-    .results-page .result-item-inner .result-item-section-1 .hospital-details,
+    .results-page-desktop .result-item-inner .result-item-section-1 .hospital-details,
     .test-page .result-item-inner .result-item-section-1 .hospital-details {
         padding: 38px 8px 38px 8px;
     }
 
-    .results-page .result-item-inner .result-item-section-2,
+    .results-page-desktop .result-item-inner .result-item-section-2,
     .test-page .result-item-inner .result-item-section-2 {
         width: 60%;
     }
 
-    .results-page .result-item-inner .result-item-section-3,
+    .results-page-desktop .result-item-inner .result-item-section-3,
     .test-page .result-item-inner .result-item-section-3 {
         width: 18%;
     }
 
-    .results-page .result-item-inner .hospital-image {
+    .results-page-desktop .result-item-inner .hospital-image {
         background-image: none !important;
         position: absolute;
         top: 0;
@@ -79,8 +79,8 @@
         width: auto !important;
     }
 
-    .results-page .nhs-hospital,
-    .results-page .private-hospital,
+    .results-page-desktop .nhs-hospital,
+    .results-page-desktop .private-hospital,
     .test-page .nhs-hospital,
     .test-page .private-hospital {
         position: relative;
@@ -89,8 +89,8 @@
         padding: 0 !important;
     }
 
-    .results-page .result-item .hospital-image .nhs-hospital p,
-    .results-page .result-item .hospital-image .private-hospital p {
+    .results-page-desktop .result-item .hospital-image .nhs-hospital p,
+    .results-page-desktop .result-item .hospital-image .private-hospital p {
         height: 26px;
         line-height: 26px;
         font-size: 0.65rem !important;
@@ -98,7 +98,7 @@
         padding: 0 0.5rem;
     }
 
-    .results-page .result-item-inner .hospital-image:before,
+    .results-page-desktop .result-item-inner .hospital-image:before,
     .test-page .result-item-inner .hospital-image:before {
         display: block;
         content: "";
@@ -106,8 +106,8 @@
         padding-top: 0;
     }
 
-    .results-page .result-item .hospital-image .nhs-hospital p:after,
-    .results-page .result-item .hospital-image .private-hospital p:after {
+    .results-page-desktop .result-item .hospital-image .nhs-hospital p:after,
+    .results-page-desktop .result-item .hospital-image .private-hospital p:after {
         content: "";
         position: absolute;
         z-index: 5;
@@ -117,7 +117,7 @@
         height: 25px;
     }
 
-    .results-page .result-item .hospital-image .nhs-hospital p:after {
+    .results-page-desktop .result-item .hospital-image .nhs-hospital p:after {
         border-bottom: solid 13px transparent;
         border-right: solid 13px transparent;
         border-left: solid 13px $nhsBlue;
@@ -125,7 +125,7 @@
         content: ''
     }
 
-    .results-page .private-hospital p:after {
+    .results-page-desktop .private-hospital p:after {
         border-bottom: solid 13px transparent;
         border-right: solid 13px transparent;
         border-left: solid 13px $privateBlue;
@@ -133,16 +133,16 @@
         content: ''
     }
 
-    .results-page .sort-item-title,
+    .results-page-desktop .sort-item-title,
     .test-page .sort-item-title {
         font-size: 15px;
     }
 
-    .results-page .result-item-section-2__child, .test-page .result-item-section-2__child {
+    .results-page-desktop .result-item-section-2__child, .test-page .result-item-section-2__child {
         font-size: 15px;
     }
 
-    .results-page #show_filters {
+    .results-page-desktop #show_filters {
         width: 90% !important;
         padding-top: 12px !important;
         padding-bottom: 12px !important;
@@ -161,7 +161,7 @@
         font-size: 0.875rem !important;
     }
 
-    .results-page .select-parent label,
+    .results-page-desktop .select-parent label,
     .test-page .select-parent label {
         line-height: 18px;
         margin-bottom: 6px;
@@ -169,7 +169,7 @@
         min-height: 38px;
     }
 
-    .results-page .help-link {
+    .results-page-desktop .help-link {
         top: 0;
         right: 14px;
     }
@@ -182,7 +182,7 @@
 @media screen and (max-width: 991px) {
     /* Results Card */
 
-    .results-page .results {
+    .results-page-desktop .results {
         margin-top: 1rem !important;
     }
 
@@ -201,7 +201,7 @@
         position: relative;
     }
 
-    .results-page .result-item-inner .hospital-image {
+    .results-page-desktop .result-item-inner .hospital-image {
         background-image: none !important;
         position: absolute;
         top: 0;
@@ -209,15 +209,15 @@
         width: auto !important;
     }
 
-    .results-page .nhs-hospital, .results-page .private-hospital, .test-page .nhs-hospital, .test-page .private-hospital {
+    .results-page-desktop .nhs-hospital, .results-page-desktop .private-hospital, .test-page .nhs-hospital, .test-page .private-hospital {
         position: relative;
         width: auto;
         border-top-left-radius: 5px;
         padding: 0 !important;
     }
 
-    .results-page .result-item .hospital-image .private-hospital p,
-    .results-page .result-item .hospital-image .nhs-hospital p {
+    .results-page-desktop .result-item .hospital-image .private-hospital p,
+    .results-page-desktop .result-item .hospital-image .nhs-hospital p {
         height: 30px;
         line-height: 30px;
         font-size: 0.75rem !important;
@@ -225,8 +225,8 @@
         padding: 0 0.5rem;
     }
 
-    .results-page .result-item .hospital-image .private-hospital p:after,
-    .results-page .result-item .hospital-image .nhs-hospital p:after {
+    .results-page-desktop .result-item .hospital-image .private-hospital p:after,
+    .results-page-desktop .result-item .hospital-image .nhs-hospital p:after {
         content: "";
         position: absolute;
         z-index: 5;
@@ -236,7 +236,7 @@
         height: 30px;
     }
 
-    .results-page .result-item .hospital-image .nhs-hospital p:after {
+    .results-page-desktop .result-item .hospital-image .nhs-hospital p:after {
         border-bottom: solid 15px transparent;
         border-right: solid 15px transparent;
         border-left: solid 15px #0d69f2;
@@ -244,7 +244,7 @@
         content: ''
     }
 
-    .results-page .private-hospital p:after {
+    .results-page-desktop .private-hospital p:after {
         border-bottom: solid 15px transparent;
         border-right: solid 15px transparent;
         border-left: solid 15px $privateBlue;
@@ -252,25 +252,25 @@
         content: ''
     }
 
-    .results-page .btn-icon.btn-more-info {
+    .results-page-desktop .btn-icon.btn-more-info {
         display: none;
     }
 
-    .results-page .result-item-inner .hospital-image:before, .test-page .result-item-inner .hospital-image:before {
+    .results-page-desktop .result-item-inner .hospital-image:before, .test-page .result-item-inner .hospital-image:before {
         display: block;
         content: "";
         width: 100%;
         padding-top: 0;
     }
 
-    .results-page .sort-item-title, .test-page .sort-item-title {
+    .results-page-desktop .sort-item-title, .test-page .sort-item-title {
         font-size: 16px;
         line-height: 19.2px;
         margin-bottom: 4px;
         text-align: center;
     }
 
-    .results-page .sort-item-specialism {
+    .results-page-desktop .sort-item-specialism {
         text-align: center;
     }
 
@@ -292,7 +292,7 @@
         align-items: flex-end !important;
     }
 
-    .results-page .result-item-section-2__child .d-flex.flex-column {
+    .results-page-desktop .result-item-section-2__child .d-flex.flex-column {
         text-align: right;
         width: 100%;
         color: #757575 !important;
