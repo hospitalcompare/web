@@ -171,7 +171,7 @@
                          role="tabpanel"
                          aria-labelledby="map-tab">
                         <div class="row">
-                            <div class="corporate-content-details d-flex col col-2">
+                            <div class="corporate-content-details d-flex col col-12 col-md-2 mb-3">
 {{--                                <div class="img-wrap mr-4">--}}
 {{--                                    <img class="image" width="173" height="158"--}}
 {{--                                         src="images/alder-1.jpg"--}}
@@ -181,7 +181,7 @@
                                     {!! $address !!}
                                 </div>
                             </div>
-                            <div class="col-10">
+                            <div class="col col-12 col-md-10">
                                 <div
                                     id="gmap_{{ $id }}"
                                     class="map-container"
