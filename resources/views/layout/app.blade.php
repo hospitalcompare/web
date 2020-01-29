@@ -24,6 +24,8 @@
         @if(env('APP_ENV') !== 'live')
             <meta name="robots" content="noindex,nofollow">
         @endif
+
+{{--        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">--}}
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/icons/favicon/apple-touch-icon.png') }}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/icons/favicon/favicon-32x32.png') }}">
