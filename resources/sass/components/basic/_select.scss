@@ -78,3 +78,9 @@
 span.text {
     white-space: initial;
 }
+
+.bs-searchbox {
+    input {
+        @extend .py-2;
+    }
+}
