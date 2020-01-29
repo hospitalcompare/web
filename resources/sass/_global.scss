@@ -105,6 +105,12 @@ a:hover {
 
 // Body class when filters are open
 .filters-open {
+    overflow: hidden;
+
+    //.filter-parent {
+    //    display: block !important;
+    //}
+
     &:before {
         opacity: 0.5 !important;
         z-index: 10;
