@@ -21,7 +21,7 @@
                         'showLabel'             => false,
                         'options'               => $data['sortBy'],
                         'svg'                   => 'icon-order-by',
-                        'selectClass'           => 'select-sort-by select-picker SofiaPro-Medium font-14 h-100 border-0',
+                        'selectClass'           => 'select-sort-by select-picker SofiaPro-Medium font-14 h-100 border-0 rounded pt-0',
                         'selectWrapperClass'    => 'h-100',
                         'selectParentClass'     => 'align-items-center h-100',
                         'placeholder'           => 'Sort by:',

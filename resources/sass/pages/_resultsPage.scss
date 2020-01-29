@@ -97,6 +97,13 @@
             & + svg {
                 @include v-c;
             }
+
+            .dropdown-toggle {
+                height: 100%;
+                border: none !important;
+                @extend .bg-grey;
+                @extend .pl-2;
+            }
         }
     }
 
@@ -754,14 +761,16 @@
             }
         }
 
-        .dropdown-toggle {
-            border-radius: 0 !important;
-            border-top: none;
-            border-right: none;
-            border-left: none;
-            @extend .pl-0;
-            @extend .pt-0;
-            @extend .pb-2;
+        .filter-parent {
+            .dropdown-toggle {
+                border-radius: 0 !important;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                @extend .pl-0;
+                @extend .pt-0;
+                @extend .pb-2;
+            }
         }
 
         .dropdown-menu {
