@@ -1,14 +1,18 @@
 <div class="result-item mb-3 mb-lg-0" id="result-item_{{ $id }}">
     <div class="container">
-        <div class="result-item-inner">
+        <div class="result-item-inner position-relative">
+            <div class="{{$NHSClass}} d-lg-none py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
+                <p class="m-0">{{$fundedText}}</p>
+            </div>
             <div class="result-item-section-1">
-                <div class="hospital-image" style="background-image: url('{{$itemImg}}');">
-                    {{--                    <img class="content h-100" width="134" height="123" alt="Image of {{ $title }}" src="{{ $itemImg }}">--}}
-                    <div
-                        class="{{$NHSClass}} py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
-                        <p class="m-0">{{$fundedText}}</p></div>
-                </div>
-                <div class="hospital-details w-100 position-relative">
+{{--                <div class="hospital-image" style="background-image: url('{{$itemImg}}');">--}}
+{{--                    --}}{{--                    <img class="content h-100" width="134" height="123" alt="Image of {{ $title }}" src="{{ $itemImg }}">--}}
+{{--                    <div--}}
+{{--                        class="{{$NHSClass}} py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">--}}
+{{--                        <p class="m-0">{{$fundedText}}</p></div>--}}
+{{--                </div>--}}
+                <div class="hospital-details d-flex align-content-between flex-column w-100 position-relative">
+
                     <p class="sort-item-title SofiaPro-SemiBold" id="item_name_{{$id}}">
                         {{$title}}
                     </p>
@@ -17,16 +21,22 @@
                             <strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
                     @endif
                     <p class="sort-item-location">{{$location}}</p>
-                    @include('components.basic.button', [
-                        'classTitle'        => 'btn btn-icon btn-more-info position-absolute font-12',
-                        'buttonText'        => '<span>Map</span>',
-                        'htmlButton'        => true,
-                        'icon'              => '',
-                        'id'                => 'more_info_' . $id,
-                        'svg'               => 'plus-solid',
-                        'dataTarget'        => '#corporate_content_hospital_' . $id,
-                        'dataId'           => $id
-                     ])
+
+                    <div class="btn-area mt-auto">
+                        <div class="d-none d-lg-inline-block rounded-pill py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
+                            <p class="m-0 col-white">{{$fundedText}}</p>
+                        </div>
+                        @include('components.basic.button', [
+                            'classTitle'        => 'btn btn-icon btn-more-info font-12',
+                            'buttonText'        => '<span>Map</span>',
+                            'htmlButton'        => true,
+                            'icon'              => '',
+                            'id'                => 'more_info_' . $id,
+                            'svg'               => 'plus-solid',
+                            'dataTarget'        => '#corporate_content_hospital_' . $id,
+                            'dataId'           => $id
+                         ])
+                    </div>
                 </div>
             </div>
             <div class="result-item-section-2">

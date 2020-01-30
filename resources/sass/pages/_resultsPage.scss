@@ -487,23 +487,30 @@
     .nhs-hospital,
     .private-hospital {
         position: absolute;
-        bottom: 0;
+        top: 0;
         left: 0;
         width: 100%;
-    }
-
-    .nhs-hospital,
-    .private-hospital {
         text-align: center;
 
         p {
+            width: 100%;
             position: relative;
             color: #ffffff;
-            //transform: rotate(135deg);
-            //left: 20px;
-            //top: -12px;
-            @include font-size(14);
-            line-height: 1;
+            height: 30px;
+            line-height: 30px;
+            font-size: 0.75rem !important;
+            text-transform: uppercase;
+            padding: 0 0.5rem;
+
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: 5;
+                left: 100%;
+                top: 0;
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 }
