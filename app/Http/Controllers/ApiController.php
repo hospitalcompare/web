@@ -346,6 +346,8 @@ class ApiController {
 
             //Get the hospital and send the email if it has an email address
             $hospital = Hospital::where('id', $hospitalId)->first();
+            $specialty = Specialty::where('id', $specialtyId)->first();
+
             if(!empty($hospital) && !empty($hospital->email)) {
                 try {
                     $bodyProvider = Email::getProviderBody();
@@ -358,7 +360,7 @@ class ApiController {
 
         //Send the email //TODO: Activate it once the tests are working
         if(!empty($enquiry)) {
-            $bodyUser = Email::getUserBody();
+            $bodyUser = Email::getUserBody($hospital->name, $specialty->name, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $reason, $additionalInformation);
             try {
                 Email::send($bodyUser, $email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
             } catch(\Exception $e){
