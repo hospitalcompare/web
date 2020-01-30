@@ -142,7 +142,7 @@
     <div class="filter-parent {{ !empty($displayBlock) && ($displayBlock) || !empty($hc_errors) ? 'd-block' : '' }}">
         <div class="filter container">
             <div class="postcode-radius row">
-                <div class="postcode-radius-child col-12 col-md-3 d-flex align-items-center">
+                <div class="postcode-radius-child procedures col-12 col-md-3 d-flex align-items-center">
                     @include('components.basic.select', [
                         'selectParentClass'     =>  'w-100',
                         'showLabel'             =>  false,
@@ -198,9 +198,9 @@
                         @include('components.basic.range', [
                             'id'            => 'radiusProx',
                             'label'         => 'Within radius of:',
+                            'labelClass'    => 'SofiaPro-SemiBold mb-3 mb-md-0',
                             'placeholder'   => '',
                             'classTitle'    => '',
-                            'labelClass'    => 'SofiaPro-SemiBold',
                             'value'         => !empty(Request::input('radius')) ? Request::input('radius') : 4,
                             'name'          => 'radius',
                             'step'          => 1])

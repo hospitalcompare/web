@@ -154,7 +154,7 @@ select::-ms-expand {
 
 .dropdown-toggle {
     cursor: auto !important;
-    @extend .form-control;
+    //@extend .form-control;
 }
 
 .checkbox {

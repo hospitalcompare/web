@@ -1,0 +1,390 @@
+// LS - Snap design CSS overrides​
+
+
+//Remove 'i' - info button from fields 'Choose your treatment' and 'enter your postcode'
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .postcode-radius-child.procedures,
+    .postcode-radius-child.postcode {
+        .help-link {
+            display: none
+        }
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+    /* Nav Bar */
+
+    .results-page-desktop .result-item-menu li p,
+    .test-page .result-item-menu li p {
+        font-size: 0.8rem;
+    }
+
+    .results-page-desktop .container-lg,
+    .results-page-desktop .container-md,
+    .results-page-desktop .container-sm,
+    .results-page-desktop .container {
+        max-width: 100%;
+    }
+
+    .results-page-desktop .sort-bar .section-1,
+    .test-page .sort-bar .section-1 {
+        width: 22%;
+        font-size: 0.875rem !important;
+    }
+
+    .results-page-desktop .sort-bar .section-2,
+    .test-page .sort-bar .section-2 {
+        width: 60%;
+    }
+
+    .results-page-desktop .sort-bar .section-3,
+    .test-page .sort-bar .section-3 {
+        width: 18%;
+    }
+
+    .btn-icon.btn-arrow-down svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        transition: 0.3s all ease;
+        width: 12px !important;
+    }
+
+    /* End Nav Bar */
+
+    /* Results Card */
+    .results-page-desktop .result-item, .test-page .result-item {
+        margin-top: 6px;
+    }
+
+    .results-page-desktop .result-item-inner .result-item-section-1,
+    .test-page .result-item-inner .result-item-section-1 {
+        width: 22%;
+        position: relative;
+    }
+
+    .results-page-desktop .result-item-inner .result-item-section-1 .hospital-details,
+    .test-page .result-item-inner .result-item-section-1 .hospital-details {
+        padding: 38px 8px 38px 8px;
+    }
+
+    .results-page-desktop .result-item-inner .result-item-section-2,
+    .test-page .result-item-inner .result-item-section-2 {
+        width: 60%;
+    }
+
+    .results-page-desktop .result-item-inner .result-item-section-3,
+    .test-page .result-item-inner .result-item-section-3 {
+        width: 18%;
+    }
+
+    .results-page-desktop .result-item-inner .hospital-image {
+        background-image: none !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto !important;
+    }
+
+    .results-page-desktop .nhs-hospital,
+    .results-page-desktop .private-hospital,
+    .test-page .nhs-hospital,
+    .test-page .private-hospital {
+        position: relative;
+        width: auto;
+        border-top-left-radius: 0;
+        padding: 0 !important;
+    }
+
+    .results-page-desktop .result-item .hospital-image .nhs-hospital p,
+    .results-page-desktop .result-item .hospital-image .private-hospital p {
+        height: 26px;
+        line-height: 26px;
+        font-size: 0.65rem !important;
+        text-transform: uppercase;
+        padding: 0 0.5rem;
+    }
+
+    .results-page-desktop .result-item-inner .hospital-image:before,
+    .test-page .result-item-inner .hospital-image:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .results-page-desktop .result-item .hospital-image .nhs-hospital p:after,
+    .results-page-desktop .result-item .hospital-image .private-hospital p:after {
+        content: "";
+        position: absolute;
+        z-index: 5;
+        left: 100%;
+        top: 0;
+        width: 25px;
+        height: 25px;
+    }
+
+    .results-page-desktop .result-item .hospital-image .nhs-hospital p:after {
+        border-bottom: solid 13px transparent;
+        border-right: solid 13px transparent;
+        border-left: solid 13px $nhsBlue;
+        border-top: solid 13px $nhsBlue;
+        content: ''
+    }
+
+    .results-page-desktop .private-hospital p:after {
+        border-bottom: solid 13px transparent;
+        border-right: solid 13px transparent;
+        border-left: solid 13px $privateBlue;
+        border-top: solid 13px $privateBlue;
+        content: ''
+    }
+
+    .results-page-desktop .sort-item-title,
+    .test-page .sort-item-title {
+        font-size: 15px;
+    }
+
+    .results-page-desktop .result-item-section-2__child, .test-page .result-item-section-2__child {
+        font-size: 15px;
+    }
+
+    .results-page-desktop #show_filters {
+        width: 90% !important;
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+    }
+
+    /* End Results Card */
+
+    .btn-submit-results {
+        font-size: 0.875rem !important;
+    }
+
+    .results-page-desktop .select-parent label,
+    .test-page .select-parent label {
+        line-height: 18px;
+        margin-bottom: 6px;
+        padding-right: 17px;
+        min-height: 38px;
+    }
+
+    .results-page-desktop .help-link {
+        top: 0;
+        right: 14px;
+    }
+
+    /* END Filter Drop Down */
+
+}
+
+
+@media screen and (max-width: 991px) {
+    /* Results Card */
+
+    .results-page-desktop .results {
+        margin-top: 1rem !important;
+    }
+
+    .result-item {
+        margin-bottom: 1rem !important;
+        position: relative;
+    }
+
+    .result-item .result-item-inner {
+        padding: 1rem !important;
+        padding-top: 3rem !important;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1) !important;
+        border-radius: 5px;
+        background-color: #fff;
+        border-bottom: 1px solid #ededed;
+        position: relative;
+    }
+
+    .results-page-desktop .result-item-inner .hospital-image {
+        background-image: none !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto !important;
+    }
+
+    .results-page-desktop .nhs-hospital, .results-page-desktop .private-hospital, .test-page .nhs-hospital, .test-page .private-hospital {
+        position: relative;
+        width: auto;
+        border-top-left-radius: 5px;
+        padding: 0 !important;
+    }
+
+    .results-page-desktop .result-item .hospital-image .private-hospital p,
+    .results-page-desktop .result-item .hospital-image .nhs-hospital p {
+        height: 30px;
+        line-height: 30px;
+        font-size: 0.75rem !important;
+        text-transform: uppercase;
+        padding: 0 0.5rem;
+    }
+
+    .results-page-desktop .result-item .hospital-image .private-hospital p:after,
+    .results-page-desktop .result-item .hospital-image .nhs-hospital p:after {
+        content: "";
+        position: absolute;
+        z-index: 5;
+        left: 100%;
+        top: 0;
+        width: 30px;
+        height: 30px;
+    }
+
+    .results-page-desktop .result-item .hospital-image .nhs-hospital p:after {
+        border-bottom: solid 15px transparent;
+        border-right: solid 15px transparent;
+        border-left: solid 15px #0d69f2;
+        border-top: solid 15px #0d69f2;
+        content: ''
+    }
+
+    .results-page-desktop .private-hospital p:after {
+        border-bottom: solid 15px transparent;
+        border-right: solid 15px transparent;
+        border-left: solid 15px $privateBlue;
+        border-top: solid 15px $privateBlue;
+        content: ''
+    }
+
+    .results-page-desktop .btn-icon.btn-more-info {
+        display: none;
+    }
+
+    .results-page-desktop .result-item-inner .hospital-image:before, .test-page .result-item-inner .hospital-image:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .results-page-desktop .sort-item-title, .test-page .sort-item-title {
+        font-size: 16px;
+        line-height: 19.2px;
+        margin-bottom: 4px;
+        text-align: center;
+    }
+
+    .results-page-desktop .sort-item-specialism {
+        text-align: center;
+    }
+
+    .result-item-section-1 {
+        margin-bottom: 1rem !important;
+    }
+
+    .result-item-section-2 {
+        margin-bottom: 1rem !important;
+    }
+
+    .result-item-section-2__child {
+        position: relative;
+    }
+
+    .result-item-section-2__child .d-flex.flex-column {
+        position: relative;
+        justify-content: space-between !important;
+        align-items: flex-end !important;
+    }
+
+    .results-page-desktop .result-item-section-2__child .d-flex.flex-column {
+        text-align: right;
+        width: 100%;
+        color: #757575 !important;
+        font-size: 0.75rem !important;
+        font-weight: normal !important;
+    }
+
+    .stat-label {
+        text-align: left;
+        position: absolute;
+        left: 0;
+        font-size: 0.75rem !important;
+        color: #1b1b1b;
+    }
+
+    .result-item-section-3 .btn-area {
+        display: flex;
+    }
+
+    .result-item-section-3 .btn-area .btn-compare {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 0 0 30px !important;
+        width: auto !important;
+        box-shadow: none !important;
+        margin-top: 0.5rem !important;
+        margin-right: 1rem !important;
+    }
+
+    .result-item-section-2__child .d-flex.flex-column p img {
+        max-width: 16px;
+    }
+
+    .result-item .btn-enquire {
+        border-radius: 3px;
+        padding: 15px 15px;
+        font-size: 0.875rem !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+
+    .result-item .btn-enquire {
+        flex-direction: row-reverse !important;
+        display: flex !important;
+    }
+
+    .btn-enquire svg, .btn-enquire-private-hospital svg {
+        position: static;
+        top: 0;
+        transform: translateY(0);
+        left: 0px;
+        width: 20px;
+        height: 20px;
+        margin: 0 8px !important;
+    }
+
+    .result-item .btn-compare svg {
+        content: "";
+        position: absolute;
+        top: calc(50% + 1px);
+        transform: translateY(-50%);
+        left: 0px;
+        width: 15px;
+        height: 13px;
+    }
+
+    /* END Results Card */
+}
+
+
+@media screen and (max-width: 576px) {
+
+    /* Cookies */
+
+    .cc-window.cc-banner {
+        display: inline-block !important;
+    }
+
+    .cc-banner .cc-message {
+        margin-right: 0;
+    }
+
+    .cc-theme-hc-cookie .cc-btn {
+        padding: 13px 36px !important;
+        font-size: 1rem !important;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* END Cookies */
+}

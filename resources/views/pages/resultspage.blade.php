@@ -14,7 +14,7 @@
 
 @section('content')
     @include('pages.pagesections.resultspageform', ['displayBlock' => false])
-    <div class="results">
+    <div class="results mt-3 mt-lg-0">
         @if(!empty($data['hospitals']))
             @foreach($data['hospitals'] as $d)
                 @include('components.item', [

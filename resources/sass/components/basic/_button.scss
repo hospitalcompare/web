@@ -24,9 +24,12 @@
 
     span,
     div {
+        line-height: 1.5;
+        vertical-align: center;
+        display: block;
         @include media-breakpoint-down(lg) {
             //display: inline-block;
-            padding-top: 1px;
+            //padding-top: 1px;
         }
     }
 

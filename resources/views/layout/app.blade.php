@@ -17,13 +17,15 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name='description' content='@yield('description')'>
         <meta name='keywords' content='@yield('keywords')'>
-{{--        <meta name="viewport" content="@yield('mobile')">--}}
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="@yield('mobile')">
+{{--        <meta name="viewport" content="width=device-width">--}}
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- Block indexing bots apart from live site -->
         @if(env('APP_ENV') !== 'live')
             <meta name="robots" content="noindex,nofollow">
         @endif
+
+{{--        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">--}}
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/icons/favicon/apple-touch-icon.png') }}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/icons/favicon/favicon-32x32.png') }}">
@@ -83,9 +85,9 @@
                     "position": "top",
                     "static": true,
                     "content": {
-                        "message": "We use cookies to provide a better service. By closing this window or continuing to use our website you agree with our use of cookies. <br><br>Find out how to manage cookies and view our policy",
+                        "message": "We use cookies to provide a better service. By closing this window or continuing to use our website you agree with our use of cookies. <span class=\"para-block d-inline d-lg-block\">Find out how to manage cookies and view our policy </span>",
                         "dismiss": "Close",
-                        "link": "here",
+                        "link": "here.",
                         "href": "/cookie-policy"
                     }
                 })});

@@ -35,9 +35,7 @@
         // Button added by BS select
         .dropdown-toggle {
             padding: 16px 60px 16px 16px;
-            //padding: 16px 60px 16px 50px;
             width: 100%;
-            //border-radius: 10px;
             color: $textGrey;
             @include font-size(16);
             @extend .SofiaPro-Medium;
@@ -73,5 +71,16 @@
                 background-color: $white !important;
             }
         }
+    }
+}
+
+// The li within the BS select dropdowns - stop the text overflowing the container
+span.text {
+    white-space: initial;
+}
+
+.bs-searchbox {
+    input {
+        @extend .py-2;
     }
 }
