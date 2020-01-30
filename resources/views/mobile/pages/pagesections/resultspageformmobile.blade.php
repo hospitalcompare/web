@@ -21,7 +21,7 @@
                         'showLabel'             => false,
                         'options'               => $data['sortBy'],
                         'svg'                   => 'icon-order-by',
-                        'selectClass'           => 'select-sort-by SofiaPro-Medium font-14 bg-grey h-100 border-0',
+                        'selectClass'           => 'select-sort-by select-picker SofiaPro-Medium font-14 h-100 border-0 rounded pt-0',
                         'selectWrapperClass'    => 'h-100',
                         'selectParentClass'     => 'align-items-center h-100',
                         'placeholder'           => 'Sort by:',
@@ -223,13 +223,13 @@
                     <div class="row">
                         <div class="col-6 button-wrapper">
                             @include('components.basic.button', [
-                                'classTitle'    => 'text-center btn btn-black btn-squared btn-squared_slim d-block font-14',
+                                'classTitle'    => 'text-center btn btn-black btn-squared btn-squared_slim d-block font-14 h-100',
                                 'buttonText'    => 'Close',
                                 'id'            => 'close_mobile_filters'])
                         </div>
                         <div class="col-6 button-wrapper">
                             @include('components.basic.submit', [
-                                'classTitle'    => 'btn-submit-results text-center btn btn-brand-primary-1 btn-squared btn-squared_slim d-block font-14 w-100',
+                                'classTitle'    => 'btn-submit-results text-center btn btn-brand-primary-1 btn-squared btn-squared_slim d-block font-14 w-100 h-100',
                                 'buttonText'    => 'Update Results'])
                         </div>
                     </div>
