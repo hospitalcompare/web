@@ -103,7 +103,7 @@
     @include('components.modals.modaltour')
 {{--    @include('components.doctor')--}}
     @include('components.basic.modalbutton', [
-        'classTitle'    => 'btn btn-hanblue position-fixed d-none d-lg-inline-block',
+        'classTitle'    => 'btn btn-brand-secondary-3 position-fixed d-none d-lg-inline-block',
         'buttonText'    => 'Help?',
         'modalTarget'   => '#hc_modal_tour',
         'style'         => 'z-index: 1040; bottom: 100px; left: 100px'])

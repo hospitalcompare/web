@@ -296,10 +296,6 @@ select.big {
     background-color: $purple;
 }
 
-.bg-hanblue {
-    background-color: $hanblue;
-}
-
 .bg-green {
     background-color: $green;
 }
@@ -370,6 +366,10 @@ select.big {
     background-color: $nhsBlue;
 }
 
+.bg-brand-primary-1 {
+    background-color: $brand-primary-1;
+}
+
 // Font colours
 .col-brand-primary-1 {
     color: $brand-primary-1;
@@ -381,10 +381,6 @@ select.big {
 
 .col-violet {
     color: $violet;
-}
-
-.col-hanblue {
-    color: $hanblue;
 }
 
 .col-green {

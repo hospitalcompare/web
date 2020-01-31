@@ -42,6 +42,22 @@
         }
     }
 
+    &.btn-brand-primary-4 {
+        background-color: $brand-primary-4;
+
+        &:hover {
+            background-color: $blue;
+        }
+    }
+
+    &.btn-brand-secondary-3 {
+        background-color: $brand-secondary-3;
+
+        &:hover {
+            background-color: $blue;
+        }
+    }
+
     &.btn-blue {
         background-color: $blue;
         background-size: 200%;
@@ -53,14 +69,6 @@
 
     &.btn-violet {
         background-color: $violet;
-
-        &:hover {
-            background-color: $purple;
-        }
-    }
-
-    &.btn-hanblue {
-        background-color: $hanblue;
 
         &:hover {
             background-color: $purple;
@@ -532,7 +540,7 @@
     padding: 8px 5px 8px 40px;
     display: inline-block;
     text-align: left;
-    background-color: $brand-secondary-3;
+    //background-color: $brand-secondary-3;
 
     &:hover {
         background-color: $brand-primary-7;

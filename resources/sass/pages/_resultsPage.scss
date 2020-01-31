@@ -353,7 +353,10 @@
             }
 
             .result-item-section-3 {
-                //flex: 1 0 14%;
+                > * + * {
+                    margin-top: 5px;
+                }
+
                 width: 14%;
                 padding: 10px;
                 @include pseudo-border($borderGrey);

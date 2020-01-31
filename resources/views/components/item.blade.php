@@ -242,51 +242,87 @@
                     ])
                     @if($NHSClass == 'private-hospital')
                         @include('components.basic.modalbutton', [
-                        'hospitalType'      => $NHSClass,
-                        'hrefValue'         => $url,
-                        'hospitalTitle'     => $title,
-                        'modalTarget'       => '#hc_modal_enquire_private',
-                        'classTitle'        => 'btn btn-icon btn-enquire enquiry mr-2 btn-block font-12',
-                        'target'            => 'blank',
-                        'buttonText'        => $btnText,
-                        'id'                => 'enquire_private_'.$id,
-                        'hospitalIds'       => $id,
-                        'image'             => $itemImg,
-                        'svg'               => 'circle-check',
-                        'svgClass'          => 'd-none d-lg-block'])
+                            'hospitalType'      => $NHSClass,
+                            'hrefValue'         => $url,
+                            'hospitalTitle'     => $title,
+                            'modalTarget'       => '#hc_modal_enquire_private',
+                            'classTitle'        => 'btn btn-icon btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
+                            'target'            => 'blank',
+                            'buttonText'        => $btnText,
+                            'id'                => 'enquire_private_'.$id,
+                            'hospitalIds'       => $id,
+                            'image'             => $itemImg,
+                            'svg'               => 'circle-check',
+                            'svgClass'          => 'd-none d-lg-block'])
                     @elseif($NHSClass == 'nhs-hospital')
                         @include('components.basic.modalbutton', [
-                        'hospitalType'      => $NHSClass,
-                        'hrefValue'         => $url,
-                        'hospitalTitle'     => $title,
-                        'hospitalUrl'       => $d['url'],
-                        'classTitle'        => 'btn btn-icon btn-enquire enquiry mr-2 btn-block font-12',
-                        'buttonText'        => $btnText,
-                        'modalTarget'       => '#hc_modal_enquire_nhs',
-                        'id'                => 'enquire_nhs'.$id,
-                        'hospitalIds'       => $id,
-                        'image'             => $itemImg,
-                        'svg'               => 'circle-check'])
+                            'hospitalType'      => $NHSClass,
+                            'hrefValue'         => $url,
+                            'hospitalTitle'     => $title,
+                            'hospitalUrl'       => $d['url'],
+                            'classTitle'        => 'btn btn-icon btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
+                            'buttonText'        => $btnText,
+                            'modalTarget'       => '#hc_modal_enquire_nhs',
+                            'id'                => 'enquire_nhs'.$id,
+                            'hospitalIds'       => $id,
+                            'image'             => $itemImg,
+                            'svg'               => 'circle-check'])
                     @endif
-                    @if(!empty($specialOffers))
-                        <div class="position-relative btn-block">
-                            @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
-                                'class' => 'default'])
-                            @include('components.basic.button', [
-                                'classTitle'        => 'toggle-special-offer btn btn-block btn-icon btn-pink btn-special-offer btn-plus font-12',
-                                'htmlButton'        => true,
-                                'id'                => 'special_' . $id,
-                                'buttonText'        => 'Special Offers',
-                                'svg'               => 'special'])
+                    <div class="btn-area row mt-lg-2">
+                        {{--                        Web button --}}
+                        <div class="btn-wrapper col-6">
+                            @include('components.basic.modalbutton', [
+                                'hospitalType'      => $NHSClass,
+                                'hrefValue'         => $url,
+                                'hospitalTitle'     => $title,
+                                'hospitalUrl'       => $d['url'],
+                                'classTitle'        => 'btn btn-icon btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
+                                'buttonText'        => 'Web',
+                                'modalTarget'       => '#hc_modal_enquire_nhs',
+                                'id'                => 'enquire_nhs'.$id,
+                                'hospitalIds'       => $id,
+                                'image'             => $itemImg,
+                                'svg'               => 'circle-check'])
+                        </div>
+                        {{--                        Call button --}}
+                        <div class="btn-wrapper col-6">
+                            @include('components.basic.modalbutton', [
+                                'hospitalType'      => $NHSClass,
+                                'hrefValue'         => $url,
+                                'hospitalTitle'     => $title,
+                                'hospitalUrl'       => $d['url'],
+                                'classTitle'        => 'btn btn-icon btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left',
+                                'buttonText'        => 'Call',
+                                'modalTarget'       => '#hc_modal_enquire_nhs',
+                                'id'                => 'enquire_nhs'.$id,
+                                'hospitalIds'       => $id,
+                                'image'             => $itemImg,
+                                'svg'               => 'circle-check'])
+                        </div>
+                    </div>
+                @if(!empty($specialOffers))
+                        <div class="btn-wrapper mt-lg-2">
+                            <div class="position-relative btn-block">
+                                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
+                                    'class' => 'default'])
+                                @include('components.basic.button', [
+                                    'classTitle'        => 'toggle-special-offer btn btn-block btn-icon btn-pink btn-special-offer btn-plus font-12',
+                                    'htmlButton'        => true,
+                                    'id'                => 'special_' . $id,
+                                    'buttonText'        => 'Special Offers',
+                                    'svg'               => 'special'])
+                            </div>
                         </div>
                     @endif
-                    @include('components.basic.button', [
-                        'classTitle'        => 'btn btn-compare compare btn-block font-12',
-                        'htmlButton'        => true,
-                        'buttonText'        => 'Add to compare',
-                        'hospitalType'      => $NHSClass,
-                        'svg'               => 'heart-solid',
-                        'id'                => $id])
+                    <div class="btn-wrapper mt-lg-2">
+                        @include('components.basic.button', [
+                            'classTitle'        => 'btn btn-compare compare btn-block font-12',
+                            'htmlButton'        => true,
+                            'buttonText'        => 'Add to compare',
+                            'hospitalType'      => $NHSClass,
+                            'svg'               => 'heart-solid',
+                            'id'                => $id])
+                    </div>
                 </div>
             </div>
         </div>
