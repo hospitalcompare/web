@@ -12,7 +12,10 @@
         data-longitude="{{ $longitude ?? '' }}"
         data-latitude="{{ $latitude ?? '' }}"
    @endif
-   @if(!empty($hospitalType) && $hospitalType == 'nhs-hospital')
+   @if(!empty($telNumbers))
+        data-hospital-tel="{{ $telNumbers }}"
+   @endif
+@if(!empty($hrefValue))
         data-hospital-url="{{ $hrefValue }}"
    @endif
     @if(!empty($dismiss) && ($dismiss))

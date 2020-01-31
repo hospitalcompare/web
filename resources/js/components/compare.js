@@ -143,7 +143,7 @@ window.addHospitalToCompare = function(element) {
             data-hospital-title="${element.display_name}"
             data-hospital-id="${element.id}"
             data-image="${element.image}"
-            data-target="${ hospitalType == 'Private' ? '#hc_modal_enquire_private' : '#hc_modal_enquire_nhs'}">Make an enquiry
+            data-target="${ hospitalType == 'Private' ? '#hc_modal_enquire_private' : '#hc_modal_enquire_general'}">Make an enquiry
         ${$svg}
         </a>`;
 

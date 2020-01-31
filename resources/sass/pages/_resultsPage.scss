@@ -353,9 +353,7 @@
             }
 
             .result-item-section-3 {
-                > * + * {
-                    margin-top: 5px;
-                }
+
 
                 width: 14%;
                 padding: 10px;
@@ -434,6 +432,14 @@
     .result-item-section-3 {
         justify-content: center;
         flex-direction: column;
+
+        .btn-area-cta {
+            @include reset-row-spacing(8px);
+        }
+
+        .btn-web-call {
+            @include reset-row-spacing(1px);
+        }
     }
 
     .result-item-section-2__child {
@@ -492,7 +498,6 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
         text-align: center;
 
         p {
