@@ -282,7 +282,7 @@
                                 'id'                => 'enquire_nhs'.$id,
                                 'hospitalIds'       => $id,
                                 'image'             => $itemImg,
-                                'svg'               => 'circle-check'])
+                                'svg'               => 'icon-web'])
                         </div>
                         {{--                        Call button --}}
                         <div class="btn-wrapper col-6">
@@ -297,7 +297,7 @@
                                 'id'                => 'enquire_nhs'.$id,
                                 'hospitalIds'       => $id,
                                 'image'             => $itemImg,
-                                'svg'               => 'circle-check'])
+                                'svg'               => 'icon-phone'])
                         </div>
                     </div>
                 @if(!empty($specialOffers))
