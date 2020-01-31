@@ -5,8 +5,8 @@
      aria-labelledby="" aria-modal="true" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content position-relative">
-            <div class="private-hospital py-1 px-2 bg-private">
-                <p class="m-0">Private Hospital</p>
+            <div id="hospital_type"  class="py-1 px-2">
+                <p class="m-0"></p>
             </div>
             <div class="modal-body">
                 <div class="modal-header d-flex justify-content-between">

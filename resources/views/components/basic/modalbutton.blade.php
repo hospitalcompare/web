@@ -5,6 +5,9 @@
    class="{{$classTitle}} "
    role="button"
    data-toggle="modal"
+@if(!empty($hospitalType))
+    data-hospital-type="{{ $hospitalType }}"
+@endif
    @if($modalTarget == '#hc_modal_video')
         data-video-url="{{ $videoUrl }}"
    @endif

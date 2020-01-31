@@ -1,6 +1,14 @@
 <div class="result-item mb-3 mb-lg-0" id="result-item_{{ $id }}">
     <div class="container">
         <div class="result-item-inner position-relative">
+            @include('components.basic.button', [
+                            'classTitle'        => 'btn btn-compare position-absolute compare font-12 d-inline-block d-lg-none mt-3 mr-3',
+                            'style'             => 'top: 0; right: 0',
+                            'htmlButton'        => true,
+                            'buttonText'        => 'Add to compare',
+                            'hospitalType'      => $NHSClass,
+                            'svg'               => 'heart-solid',
+                            'id'                => $id])
             <div
                 class="{{$NHSClass}} d-lg-none py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
                 <p class="m-0">{{$fundedText}}</p>
@@ -215,6 +223,7 @@
                                 @include('components.basic.modalbutton', [
                                         'hrefValue'         => $url,
                                         'telNumbers'        => $tel,
+                                        'hospitalType'      => $fundedText,
                                         'hospitalTitle'     => $title,
                                         'modalTarget'       => '#hc_modal_enquire_private',
                                         'classTitle'        => 'text-link enquire-prices',
@@ -314,7 +323,7 @@
                         </div>
                     </div>
                     @if(!empty($specialOffers))
-                        <div class="col-12 mt-lg-2">
+                        <div class="col-12 mt-lg-2 d-none d-lg-block">
                             <div class="position-relative btn-block">
                                 @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
                                     'class' => 'default'])
