@@ -92,8 +92,7 @@
                     }
                 })});
         </script>
-
-
+        @include('components.modals.modaltour')
     </body>
 
 </html>

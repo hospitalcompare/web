@@ -98,12 +98,7 @@
     @include('components.modals.modalenquireprivate', [
         'procedures' => $data['filters']['procedures']])
     {{--  Maps modal  --}}
-    @include('components.modals.modaltour')
-    @include('components.basic.modalbutton', [
-        'classTitle'    => 'btn btn-brand-secondary-3 position-fixed d-none d-lg-inline-block',
-        'buttonText'    => 'Help?',
-        'modalTarget'   => '#hc_modal_tour',
-        'style'         => 'z-index: 1040; bottom: 100px; left: 100px'])
+
 
 
 @endsection

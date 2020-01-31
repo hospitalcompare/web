@@ -40,6 +40,15 @@
                             @svg('chevron-right-grey', 'd-lg-none')
                         </a>
                     </li>
+                    <li class="d-none d-lg-inline-block">
+                        <a href="#">
+                            @include('components.basic.modalbutton', [
+                                'classTitle'    => '',
+                                'buttonText'    => 'Help',
+                                'modalTarget'   => '#hc_modal_tour'
+                            ])
+                        </a>
+                    </li>
                     @if(env('APP_ENV') === 'local')
                         <li>
                             <a {{ Request::is( 'results-page') ? 'class=active' : '' }} href="/results-page">Results
