@@ -143,7 +143,7 @@ window.addHospitalToCompare = function(element) {
             data-hospital-title="${element.display_name}"
             data-hospital-id="${element.id}"
             data-image="${element.image}"
-            data-target="${ hospitalType == 'Private' ? '#hc_modal_enquire_private' : '#hc_modal_enquire_nhs'}">Make an enquiry
+            data-target="${ hospitalType == 'Private' ? '#hc_modal_enquire_private' : '#hc_modal_enquire_general'}">Make an enquiry
         ${$svg}
         </a>`;
 
@@ -159,7 +159,8 @@ window.addHospitalToCompare = function(element) {
             '<div class="col text-center" id="compare_hospital_id_' + element.id + '">' +
                 '<div class="col-inner">' +
                     '<div class="col-header d-flex flex-column justify-content-between align-items-center px-4 pb-3">' +
-                        '<div class="image-wrapper" style="background: url(' + element.image + ') no-repeat scroll center center / cover">' +
+                        // '<div class="image-wrapper" style="background: url(' + element.image + ') no-repeat scroll center center / cover" >' +
+                        '<div class="image-wrapper">' +
                             '<div class="remove-hospital" id="remove_id_' + element.id + '" data-hospital-type="' + slugify(hospitalType) + '-hospital"></div>' +
                             '</div>' +
                         '<div class="w-100 details font-16 SofiaPro-SemiBold">' + textTruncate(element.display_name, 30, '...') + '</div>' +

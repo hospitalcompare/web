@@ -27,16 +27,9 @@
 
         .col-inner {
             &__left {
-                padding: 30px;
             }
 
             &__right {
-                padding: 60px 30px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                //border-radius: 0 0 16px 0;
             }
         }
     }
@@ -111,9 +104,8 @@
         }
     }
 
-    &#hc_modal_enquire_nhs {
+    &#hc_modal_enquire_general {
         .btn-enquire {
-            padding: 0 15px 0 40px;
             line-height: 40px;
             max-width: inherit;
         }

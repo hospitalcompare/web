@@ -48,6 +48,7 @@
                     'NHSClass'              => $d['hospitalType']['name'] == 'NHS' ? 'nhs-hospital' : 'private-hospital',
                     'fundedText'            => ($d['hospitalType']['name'] == 'NHS') ? 'NHS Hospital': 'Private Hospital',
                     'url'                   => $d['url'],
+                    'tel'                   => $d['tel_number'],
                     'safe'                  => $d['rating']['safe'],
                     'safeIcon'              => \App\Helpers\Utils::getDiscOrStar($d['rating']['safe']),
                     'effective'             => $d['rating']['effective'],
@@ -93,20 +94,11 @@
     @include('components.solutionsbar', [
         'specialOffers' => $data['special_offers']
         ])
-    @include('components.modals.modalenquirenhs')
-{{--    @include('components.modals.modalspecial')--}}
+    @include('components.modals.modalenquiregeneral')
     @include('components.modals.modalenquireprivate', [
         'procedures' => $data['filters']['procedures']])
     {{--  Maps modal  --}}
-{{--    @include('components.modals.modalmaps')--}}
-{{--    @include('components.modals.modalvideo')--}}
-    @include('components.modals.modaltour')
-{{--    @include('components.doctor')--}}
-    @include('components.basic.modalbutton', [
-        'classTitle'    => 'btn btn-hanblue position-fixed',
-        'buttonText'    => 'Help?',
-        'modalTarget'   => '#hc_modal_tour',
-        'style'         => 'z-index: 1040; bottom: 100px; left: 100px'])
+
 
 
 @endsection

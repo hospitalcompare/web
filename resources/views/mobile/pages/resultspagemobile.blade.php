@@ -102,22 +102,12 @@
     @include('mobile.components.solutionsbarmobile', [
       'specialOffers' => $data['special_offers']
       ])
-    @include('components.modals.modalenquirenhs')
-    {{--    @include('components.modals.modalspecial')--}}
+    @include('components.modals.modalenquiregeneral')
     @include('mobile.components.modals.modalenquireprivatemobile', [
         'procedures' => $data['filters']['procedures']])
-    {{--  Maps modal  --}}
-    {{--    @include('components.modals.modalmaps')--}}
-    {{--    @include('components.modals.modalvideo')--}}
     @include('components.modals.modaltour')
     @include('mobile.components.modals.modalmobiletooltip')
     @includeWhen(!empty($data['special_offers']), 'mobile.components.modals.modalmobilespecialoffertab', [
         'specialOffer'      => $data['special_offers']['pink']
     ])
-    {{--    @include('components.doctor')--}}
-{{--    @include('components.basic.modalbutton', [--}}
-{{--        'classTitle'    => 'btn btn-hanblue position-fixed',--}}
-{{--        'buttonText'    => 'Help?',--}}
-{{--        'modalTarget'   => '#hc_modal_tour',--}}
-{{--        'style'         => 'z-index: 1040; bottom: 100px; left: 100px'])--}}
 @endsection

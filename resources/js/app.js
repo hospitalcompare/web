@@ -33,7 +33,7 @@ import './components/basic/tooltip';                        // Trigger bootstrap
 import './components/basic/carousel';                       // Init mobile carousels
 
 // Modals
-import './components/modals/modalNhs';                       // Trigger bootstrap modal
+import './components/modals/modalGeneral';                   // Trigger bootstrap modal
 import './components/modals/modalPrivate';                   // Trigger bootstrap modal
 import './components/modals/modalMobileTooltips';            // Trigger bootstrap modal
 import './components/modals/modalMobileSearchForm';          // Trigger bootstrap modal
