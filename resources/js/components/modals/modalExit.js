@@ -39,5 +39,5 @@ function hideGeneralModal(event) {
 modal.on('show.bs.modal', showGeneralModal);
 modal.on('hide.bs.modal', hideGeneralModal);
 
-// $('.test-page #hc_modal_enquire_general').modal('show');
+$('.test-page #hc_modal_exit_survey').modal('show');
 

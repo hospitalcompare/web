@@ -60,6 +60,7 @@
         </main>
 
         @include('mobile.components.modals.modalmobilesearchform')
+        @include('components.modals.modalexitsurvey')
         @include('layout.footer', ['page_footer' => ''])
         {{-- Stickybits is the script for handling position sticky cross browser --}}
         <script type="text/javascript" src="{{ asset('js/stickybits.js') }}"></script>

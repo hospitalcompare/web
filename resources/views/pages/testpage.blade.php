@@ -12,17 +12,20 @@
 
 @section('content')
     <section>
-        @include('components.modals.modalenquiregeneral', [
-            'procedures'    => $data['filters']['procedures'],
-            'title'         => 'Mr',
-            'firstName'     => 'Tom',
-            'lastName'      => 'Eagle',
-            'dob'           => '13/08/1979',
-            'email'         => 'tomeagle79@gmail.com',
-            'postcode'      => 'WA6 8JY',
-            'phone'         => '07941939374'
-        ])
+        @include('components.modals.modalexitsurvey')
     </section>
+{{--    <section>--}}
+{{--        @include('components.modals.modalenquiregeneral', [--}}
+{{--            'procedures'    => $data['filters']['procedures'],--}}
+{{--            'title'         => 'Mr',--}}
+{{--            'firstName'     => 'Tom',--}}
+{{--            'lastName'      => 'Eagle',--}}
+{{--            'dob'           => '13/08/1979',--}}
+{{--            'email'         => 'tomeagle79@gmail.com',--}}
+{{--            'postcode'      => 'WA6 8JY',--}}
+{{--            'phone'         => '07941939374'--}}
+{{--        ])--}}
+{{--    </section>--}}
     <section>
         @include('pages.pagesections.resultspageform', [
         'displayBlock' => true])
@@ -270,7 +273,7 @@
     {{--                                        <input class="d-none" type="text" name="additional_information"--}}
     {{--                                               value="Some info">--}}
     {{--                                        <button id="multiple_enquiries_button" style=""--}}
-    {{--                                                class="btn btn-squared btn-blue btn-enquiry font-14" target=""--}}
+    {{--                                                class="btn btn-squared btn-blue font-14" target=""--}}
     {{--                                                data-target="" href="javascript:void(0);" role="button">--}}
     {{--                                            Make an enquiry to all your chosen hospitals--}}
 
