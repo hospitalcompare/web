@@ -33,7 +33,7 @@
                 <div class="row">
                     <div class="col-6">
                         <button type="button" class="btn btn-squared btn-squared_slim w-100 btn-black text-center"
-                                data-dismiss="modal">Close
+                                data-dismiss="modal"><span>Close</span>
                         </button>
                     </div>
                     <div class="col-6">
@@ -45,7 +45,7 @@
                                     'classTitle'        => 'btn-nested-enquire btn btn-squared btn-enquire btn-squared_slim btn-blue text-center enquiry btn-enquiry font-12 w-100 d-flex justify-content-center align-items-center flex-row-reverse px-3',
                                     'svg'               => 'circle-check',
                                     'target'            => 'blank',
-                                    'buttonText'        => 'Make enquiry',
+                                    'buttonText'        => 'Enquiry',
                                     'hospitalIds'       => $id,
                                     'id'                => 'enquire_' . $id])
                     </div>
