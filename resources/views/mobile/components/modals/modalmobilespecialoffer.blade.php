@@ -6,11 +6,11 @@
                 <p class="mb-2 SofiaPro-SemiBold font-16">{{ $title }}</p>
                 <p class="col-grey mb-1">{{ $fundedText }} {{ !empty($d['radius']) ? '-' : '' }} {{ $location }}</p>
             </div>
-            <div class="img-wrap w-100">
-                <img class="w-100"
-                     src="images/hospitals/hospital-placeholder.jpg"
-                     alt="Image of {{ $title }}">
-            </div>
+{{--            <div class="img-wrap w-100">--}}
+{{--                <img class="w-100"--}}
+{{--                     src="images/hospitals/hospital-placeholder.jpg"--}}
+{{--                     alt="Image of {{ $title }}">--}}
+{{--            </div>--}}
             <div class="modal-body p-3">
                 <div class="special-offers_mobile">
                     <div class="">
