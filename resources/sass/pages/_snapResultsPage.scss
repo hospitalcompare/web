@@ -129,19 +129,19 @@
         height: 25px;
     }
 
-    .results-page-desktop .result-item .hospital-image .nhs-hospital p:after {
-        border-bottom: solid 13px transparent;
-        border-right: solid 13px transparent;
-        border-left: solid 13px $nhsBlue;
-        border-top: solid 13px $nhsBlue;
+    .results-page-desktop .nhs-hospital p:after {
+        border-bottom: solid 15px transparent;
+        border-right: solid 15px transparent;
+        border-left: solid 15px $nhsBlue;
+        border-top: solid 15px $nhsBlue;
         content: ''
     }
 
     .results-page-desktop .private-hospital p:after {
-        border-bottom: solid 13px transparent;
-        border-right: solid 13px transparent;
-        border-left: solid 13px $privateBlue;
-        border-top: solid 13px $privateBlue;
+        border-bottom: solid 15px transparent;
+        border-right: solid 15px transparent;
+        border-left: solid 15px $privateBlue;
+        border-top: solid 15px $privateBlue;
         content: ''
     }
 

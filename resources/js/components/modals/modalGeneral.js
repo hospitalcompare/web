@@ -2,8 +2,11 @@
 
 var modal = $('#hc_modal_enquire_general');
 function showGeneralModal(event) {
+    // Clear existing classes from the 'hospital type' tab
+    modal.find('#hospital_type').removeClass('private-hospital nhs-hospital bg-nhs bg-private');
+    // Clear text from 'hospital type' tab
+    modal.find('#hospital_type p').text('');
 
-// Bootstrap modal
     var button                  = $(event.relatedTarget);           // Button that triggered the modal
     var title                   = button.data('hospital-title');    // Extract info from data-* attributes
     var url                     = button.data('hospital-url');      // Extract info from data-* attributes
@@ -22,22 +25,11 @@ function showGeneralModal(event) {
 
     modal.find('#hospital_type').addClass(hospitalTypeClass);
     modal.find('#hospital_type p').text(hospitalTypeText);
-
-
-
     modal.find('.modal-enquire-nhs-image').attr("src", picture);
     // console.log('NHS form')
-}
-
-function hideGeneralModal(event) {
-    // Clear text and classes
-    modal.find('#hospital_type p').text('');
-    modal.find('#hospital_type').removeClass('private-hospital nhs-hospital');
 }
 
 // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
 modal.on('show.bs.modal', showGeneralModal);
 modal.on('hide.bs.modal', hideGeneralModal);
-
-// $('.test-page #hc_modal_enquire_general').modal('show');
 
