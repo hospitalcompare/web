@@ -14,7 +14,7 @@
             'svg'               => 'heart-solid',
             'id'                => $id])
         <div class="result-item-mobile-section-1 w-100 mb-3">
-            <div class="hospital-details w-100 position-relative">
+            <div class="hospital-details w-100 position-relative text-center">
                 <p class="sort-item-title SofiaPro-Medium text-center" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
@@ -23,8 +23,18 @@
                         Specialism:&nbsp;<span>{{ $locationSpecialism }}</span></p>
                 @endif
                 @if(!empty($d['radius']))
-                    <p class="sort-item-location text-center col-grey font-12"><span>@svg('icon-map', 'map-icon')</span>{{$location}} {{-- trim($town, ', ') --}}</p>
+                    <p class="sort-item-location text-center col-grey font-12 d-inline-block mb-0 mr-3"><span>@svg('icon-map', 'map-icon')</span>{{$location}} {{-- trim($town, ', ') --}}</p>
                 @endif
+                <!-- More info button -->
+                @include('components.basic.button', [
+                   'classTitle'        => 'btn btn-more-info text-center font-12 p-0 shadow-none',
+                   'buttonText'        => 'Map +',
+                   'htmlButton'        => true,
+                   'icon'              => '',
+                   'id'                => 'more_info_' . $id,
+                   'dataId'            => $id,
+                   'dataTarget'        => '#corporate_content_hospital_' . $id
+                ])
                 <!-- Corporate content area -->
                 @include('mobile.components.corporatecontentmobile', [
                     'procedures'        => $procedures,
@@ -228,27 +238,17 @@
         </div>
         <div class="result-item-mobile-section-3 w-100 mt-auto">
             <div class="row">
-                <!-- More info button -->
-                <div class="button-wrapper col-6">
-                    @include('components.basic.button', [
-                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-primary-1 _btn-cc-close btn-more-info w-100 text-center font-14 p-3',
-                       'buttonText'        => 'Map',
-                       'htmlButton'        => true,
-                       'icon'              => '',
-                       'id'                => 'more_info_' . $id,
-                       'dataId'            => $id,
-                       'dataTarget'        => '#corporate_content_hospital_' . $id
-                    ])
-                </div>
+
                 <!-- Enquiry buttons -->
                 @if($NHSClass == 'private-hospital')
                     <div class="button-wrapper col-6">
                         @include('components.basic.modalbutton', [
+                            'htmlButton'        => 'true',
                             'hospitalType'      => $NHSClass,
                             'hrefValue'         => $url,
                             'hospitalTitle'     => $title,
                             'modalTarget'       => '#hc_modal_enquire_private',
-                            'classTitle'        => 'btn btn-squared btn-enquire_mobile btn-icon btn-squared_slim text-center enquiry  font-14 w-100 text-center d-flex justify-content-center align-items-center flex-row-reverse py-3',
+                            'classTitle'        => 'btn btn-icon btn-squared btn-enquire_mobile btn-icon btn-squared_slim text-center enquiry  font-14 w-100 text-center d-flex justify-content-center align-items-center flex-row-reverse py-3',
                             'target'            => 'blank',
                             'buttonText'        => $btnText,
                             'id'                => 'enquire_private_'.$id,

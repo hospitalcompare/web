@@ -187,6 +187,7 @@
     svg {
         content: '';
         position: absolute;
+        //@include v-c;
         @include icon-bg-center;
     }
 
@@ -237,22 +238,6 @@
         }
     }
 
-    &.btn-more-info {
-        @include font-size(14);
-        padding: 0 25px 0 8px;
-        border-radius: $border-radius $border-radius 0 0;
-        background-color: $brand-primary-1;
-
-        svg {
-            @include v-c;
-            right: 8px;
-            width: 0.8rem;
-        }
-
-        &:hover {
-            opacity: 0.6;
-        }
-    }
 
     &.btn-close__small {
         color: $white;
@@ -367,6 +352,16 @@
 
     // Button on the floating green bar
 }
+
+.btn-more-info {
+    color: $brand-primary-1;
+
+    &:hover {
+        color: $brand-primary-1;
+        opacity: 0.6;
+    }
+}
+
 
 .btn-enquiry {
     svg {
@@ -521,11 +516,13 @@
 
 .btn-enquire_mobile {
     background-color: $brand-secondary-3;
+    display: flex;
+    align-items: center;
 
     svg {
         @extend .position-static;
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
 
         @extend .mr-3;
     }

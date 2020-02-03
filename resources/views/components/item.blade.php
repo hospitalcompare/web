@@ -37,8 +37,8 @@
                             <p class="m-0 col-white">{{$fundedText}}</p>
                         </div>
                         @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-icon btn-more-info font-12',
-                            'buttonText'        => '<span>Map</span>',
+                            'classTitle'        => 'btn btn-icon btn-more-info font-12 p-0 shadow-none',
+                            'buttonText'        => '<span>Map +</span>',
                             'htmlButton'        => true,
                             'icon'              => '',
                             'id'                => 'more_info_' . $id,

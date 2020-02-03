@@ -12,7 +12,7 @@ function showGeneralModal(event) {
     var hospitalTypeClass       = button.data('hospital-type') === 'nhs-hospital' ? 'bg-nhs nhs-hospital' : 'bg-private private-hospital' ;     // Extract info from data-* attributes
     var picture                 = button.data('image');             // Extract info from data-* attributes
 
-    modal.find('.modal-title').html(title);
+    modal.find('#hospital_title').html(title);
     modal.find('.btn-enquire').attr("href", 'http://' + url);
 
     if(typeof tel !== "undefined")

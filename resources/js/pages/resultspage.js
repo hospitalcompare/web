@@ -210,7 +210,7 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
             .removeClass('open');
         // Only change text for 'More info' button
         if($isToggleButton)
-            $(this).find('span, div').text('Map');
+            $(this).find('span, div').text('Map +');
             // $(this).find('span, div').text('More info');
         // Scroll back to the result item
         var $scrollBack = $(this).parents('.result-item').offset().top;
@@ -239,7 +239,7 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
         // Only change text for 'More info' button
         if($isToggleButton)
             // $(this).find('span, div').text('Close info');
-            $(this).find('span, div').text('Hide map');
+            $(this).find('span, div').text('Hide map -');
     }
 });
 
