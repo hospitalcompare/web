@@ -353,7 +353,8 @@
             }
 
             .result-item-section-3 {
-                //flex: 1 0 14%;
+
+
                 width: 14%;
                 padding: 10px;
                 @include pseudo-border($borderGrey);
@@ -431,6 +432,14 @@
     .result-item-section-3 {
         justify-content: center;
         flex-direction: column;
+
+        .btn-area-cta {
+            @include reset-row-spacing(8px);
+        }
+
+        .btn-web-call {
+            @include reset-row-spacing(1px);
+        }
     }
 
     .result-item-section-2__child {
@@ -487,45 +496,51 @@
     .nhs-hospital,
     .private-hospital {
         position: absolute;
-        bottom: 0;
+        top: 0;
         left: 0;
-        width: 100%;
-    }
-
-    .nhs-hospital,
-    .private-hospital {
         text-align: center;
 
         p {
+            width: 100%;
             position: relative;
             color: #ffffff;
-            //transform: rotate(135deg);
-            //left: 20px;
-            //top: -12px;
-            @include font-size(14);
-            line-height: 1;
+            height: 30px;
+            line-height: 30px;
+            font-size: 0.75rem !important;
+            text-transform: uppercase;
+            padding: 0 0.5rem;
+
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: 5;
+                left: 100%;
+                top: 0;
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 }
 
-.btn-more-info {
-
-    transition: 0.3s all ease;
-
-    svg {
-        transition: 0.1s all ease;
-    }
-
-    &.open {
-        color: $white;
-        background-color: #000 !important;
-
-        i, svg {
-            transform: translateY(-50%) rotate3d(0, 0, 1, 45deg) !important;
-
-        }
-    }
-}
+//.btn-more-info {
+//
+//    transition: 0.3s all ease;
+//
+//    svg {
+//        transition: 0.1s all ease;
+//    }
+//
+//    &.open {
+//        color: $white;
+//        background-color: #000 !important;
+//
+//        i, svg {
+//            transform: translateY(-50%) rotate3d(0, 0, 1, 45deg) !important;
+//
+//        }
+//    }
+//}
 
 // Compare buttons when compareCount = 5
 .compare {
@@ -596,12 +611,12 @@
         display: none;
     }
 
-    .btn-more-info {
-        width: 92px;
-        height: 23px;
-        line-height: 23px;
-        border-radius: 3px 3px 0 0;
-    }
+    //.btn-more-info {
+    //    width: 92px;
+    //    height: 23px;
+    //    line-height: 23px;
+    //    border-radius: 3px 3px 0 0;
+    //}
 }
 
 /********* Mobile results layout *************************************************************************************/
@@ -661,13 +676,6 @@
         * {
             @extend .font-12;
         }
-    }
-
-    // Make the dropdown expand rather than overlay
-    .dropdown-menu {
-        //position: static !important;
-        //float: none;
-        //transform: none !important;
     }
 
     // Body class when filters are open
@@ -783,6 +791,12 @@
         .map-icon {
             width: 9px;
             height: auto;
+        }
+    }
+
+    .result-item-mobile-section-3 {
+        .btn-web-call {
+            @include reset-row-spacing(2px);
         }
     }
 }

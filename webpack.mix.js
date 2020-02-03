@@ -12,7 +12,7 @@ const webpack = require('webpack');
  | file for the application as well as bundling up all the JS files.
  |
  */
-const devTool = (mix.inProduction()) ? "" : "source-map";
+const devTool = (mix.inProduction()) ? "none" : "source-map";
 
 mix.webpackConfig({
     devtool: devTool,
@@ -75,7 +75,8 @@ mix.options({
         ],
         processCssUrls: false
     })
-    .sourceMaps(false, 'inline-source-map')
+    // .sourceMaps(false, 'source-map')
+    .sourceMaps()
     .sass('resources/sass/app.scss', 'public/css')
     .js(['resources/js/app.js'], 'public/js')
     .version();

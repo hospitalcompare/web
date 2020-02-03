@@ -5,6 +5,9 @@
    class="{{$classTitle}} "
    role="button"
    data-toggle="modal"
+@if(!empty($hospitalType))
+    data-hospital-type="{{ $hospitalType }}"
+@endif
    @if($modalTarget == '#hc_modal_video')
         data-video-url="{{ $videoUrl }}"
    @endif
@@ -12,7 +15,10 @@
         data-longitude="{{ $longitude ?? '' }}"
         data-latitude="{{ $latitude ?? '' }}"
    @endif
-   @if(!empty($hospitalType) && $hospitalType == 'nhs-hospital')
+   @if(!empty($telNumbers))
+        data-hospital-tel="{{ $telNumbers }}"
+   @endif
+@if(!empty($hrefValue))
         data-hospital-url="{{ $hrefValue }}"
    @endif
     @if(!empty($dismiss) && ($dismiss))

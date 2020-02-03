@@ -24,17 +24,6 @@
                                 'showLabel'             => true,
                                 'labelClass'            => 'd-none'
                             ])
-                            {{--                                <a tabindex="0" data-offset="0 5px"--}}
-                            {{--                                   class="help-link"--}}
-                            {{--                                    @include('components.basic.popover', [--}}
-                            {{--                                    'dismissible'   => true,--}}
-                            {{--                                    'placement'      => 'top',--}}
-                            {{--                                    'size'           => 'large',--}}
-                            {{--                                    'html'           => 'true',--}}
-                            {{--                                    'trigger'        => 'hover',--}}
-                            {{--                                    'content'        => '<p>Select your treatment<br>if known to refine results</p>--}}
-                            {{--                                                 --}}{{--<p><a  class="btn btn-close btn-close__small btn-brand-primary-1 btn-icon" >Close</a></p>--}}{{--'])--}}
-                            {{--                                >@svg('icon-more-info')</a>--}}
                         </div>
                         <div class="form-child postcode-parent position-relative">
                             {{--                                Add this hidden input to remove the autocomplete functionality--}}
@@ -53,18 +42,6 @@
                             <div class="postcode-results-container">
                                 <div class="ajax-box"></div>
                             </div>
-                            {{--                                    <a tabindex="0" data-offset="0 5px"--}}
-                            {{--                                       class="help-link"--}}
-                            {{--                                        @include('components.basic.popover', [--}}
-                            {{--                                        'dismissible'   => true,--}}
-                            {{--                                        'placement'      => 'top',--}}
-                            {{--                                        'html'           => 'true',--}}
-                            {{--                                        'trigger'        => 'hover',--}}
-                            {{--                                        'content'        => '<p>--}}
-                            {{--                                                         Please enter your postcode<br>for a refined search.--}}
-                            {{--                                                     </p>--}}
-                            {{--                                                     '])--}}
-                            {{--                                    >@svg('icon-more-info')</a>--}}
                         </div>
                         <div class="form-child radius-parent full-left row-layout position-relative" data-reveal-direction="right" >
                             @include('components.basic.select', [
@@ -77,29 +54,13 @@
                                 'selectedPlaceholder'   =>  true,
                                 'name'                  =>  'radius',
                                 'svg'                   =>  'chevron-down'])
-{{--                            <a tabindex="0" data-offset="0 5px"--}}
-{{--                               class="help-link"--}}
-{{--                                @include('components.basic.popover', [--}}
-{{--                                'dismissible'   => true,--}}
-{{--                                'placement'      => 'top',--}}
-{{--                                'html'           => 'true',--}}
-{{--                                'trigger'        => 'hover',--}}
-{{--                                'content'        => '<p class="bold mb-0">--}}
-{{--                                                 Distance--}}
-{{--                                             </p>--}}
-{{--                                             <p>--}}
-{{--                                                 Select how far you would be willing to travel for your treatment.--}}
-{{--                                             </p>--}}
-{{--                                                 <p><a  class="btn btn-close btn-close__small btn-brand-primary-1 btn-icon" >Close</a></p>--}}
-{{--                                             '])--}}
-{{--                            >@svg('icon-more-info')</a>--}}
                         </div>
                         @include('components.basic.button', [
-                            'classTitle'    => 'btn btn-squared btn-brand-primary-1 font-18 text-center',
+                            'classTitle'    => 'btn btn-squared btn-brand-primary-1 font-18 text-center d-flex align-items-center justify-content-center p-0',
                             'buttonText'    => 'Find Hospitals',
                             'htmlButton'    => true,
                             'id'            => 'submit_search',
-                            'style'         => 'padding: 16px 45px; border: 2px solid transparent',
+                            'style'         => 'height: 55px; line-height: 55px; border: 2px solid transparent',
                         ])
                         <div class='browse-button w-100 d-none'>
                             <a class="col-grey" href="{{url('/results-page')}}">Browse all hospitals</a>

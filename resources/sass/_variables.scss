@@ -51,12 +51,9 @@ $purple: #9561e2;
 
 $violet: #8e00fe;
 
-$blue: #1b71f3;
-$hanblue: #5e15d1;
 $privateBlue: $brand-primary-4;
 $nhsBlue: $brand-primary-7;
 $pink: $brand-primary-6;
-$white: #ffffff;
 $goldStar: #FAC917;
 
 //Main Template colours
@@ -89,7 +86,7 @@ $body-color: #1b1b1b;
 $btn-border-radius: 5px;
 $btn-transition: $transition;
 $btn-border-width: 0;
-//$btn-focus-box-shadow: none;
+$btn-block-spacing-y: 0;
 
 // Popovers
 //$popover-border-width: 0;

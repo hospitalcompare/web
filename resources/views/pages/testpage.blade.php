@@ -12,6 +12,21 @@
 
 @section('content')
     <section>
+        @include('components.modals.modalexitsurvey')
+    </section>
+{{--    <section>--}}
+{{--        @include('components.modals.modalenquiregeneral', [--}}
+{{--            'procedures'    => $data['filters']['procedures'],--}}
+{{--            'title'         => 'Mr',--}}
+{{--            'firstName'     => 'Tom',--}}
+{{--            'lastName'      => 'Eagle',--}}
+{{--            'dob'           => '13/08/1979',--}}
+{{--            'email'         => 'tomeagle79@gmail.com',--}}
+{{--            'postcode'      => 'WA6 8JY',--}}
+{{--            'phone'         => '07941939374'--}}
+{{--        ])--}}
+{{--    </section>--}}
+    <section>
         @include('pages.pagesections.resultspageform', [
         'displayBlock' => true])
     </section>
@@ -258,7 +273,7 @@
     {{--                                        <input class="d-none" type="text" name="additional_information"--}}
     {{--                                               value="Some info">--}}
     {{--                                        <button id="multiple_enquiries_button" style=""--}}
-    {{--                                                class="btn btn-squared btn-blue btn-enquiry font-14" target=""--}}
+    {{--                                                class="btn btn-squared btn-blue font-14" target=""--}}
     {{--                                                data-target="" href="javascript:void(0);" role="button">--}}
     {{--                                            Make an enquiry to all your chosen hospitals--}}
 
@@ -617,7 +632,7 @@
     {{--                                                        role="button" data-toggle="modal"--}}
     {{--                                                        data-hospital-url="www.ntw.nhs.uk"--}}
     {{--                                                        data-hospital-title="Walkergate Park "--}}
-    {{--                                                        data-target="#hc_modal_enquire_nhs">Make an enquiry--}}
+    {{--                                                        data-target="#hc_modal_enquire_general">Make an enquiry--}}
     {{--                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"--}}
     {{--                                                             viewBox="0 0 20 20">--}}
     {{--                                                            <g>--}}
