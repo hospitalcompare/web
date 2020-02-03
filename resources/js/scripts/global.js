@@ -371,14 +371,14 @@ $feedbackForm.on('submit', function () {
 });
 
 // Popup the form if not already dismissed
-$(document).mouseleave(function () {
+$(document).mouseleave(function(e) {
     // if (event.clientY <= 0 || event.clientX <= 0 || (event.clientX >= window.innerWidth || event.clientY >= window.innerHeight)) {
-    if (event.clientY <= 0 && !Cookies.get('showFeedbackForm')) {
+    if (e.clientY <= 0 && !Cookies.get('showFeedbackForm')) {
         $feedbackModal.modal('show')
     }
 });
 
 function setFeedbackToFalse() {
-    Cookies.set('showFeedbackForm', 'false');
+    Cookies.set('showFeedbackForm', false, {expires: 21});
 }
 
