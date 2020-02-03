@@ -7,8 +7,8 @@ var doc = document.documentElement;
 doc.setAttribute('data-useragent', navigator.userAgent);
 
 // Reveal the main menu on mobile
-$('#menu_toggle').on('click', function(){
-   $body.toggleClass('menu-open');
+$('#menu_toggle').on('click', function () {
+    $body.toggleClass('menu-open');
 });
 
 //Set the first option of the Procedures dropdown to 'Not Known'
@@ -45,13 +45,13 @@ var $howToUseSelectPlaceholder = 'Select';
 $('.flat-form .treatment-parent .dropdown-toggle .filter-option-inner-inner').text('Choose treatment');
 $('#how_to_use_filter_policies .dropdown-toggle .filter-option-inner-inner').text($howToUseSelectPlaceholder);
 
-$('#how_to_use_policies').on('shown.bs.select', function(){
+$('#how_to_use_policies').on('shown.bs.select', function () {
     // console.log($howToUseSelectPlaceholder);
     $('.dropdown-menu li:first-child a').text($howToUseSelectPlaceholder);
 });
 
 // Repeat string x times
-window.repeatStringNumTimes = function(string, times) {
+window.repeatStringNumTimes = function (string, times) {
     var repeatedString = "";
     while (times > 0) {
         repeatedString += string;
@@ -61,7 +61,7 @@ window.repeatStringNumTimes = function(string, times) {
 };
 
 // Remove trailing comma from comparison ids
-window.removeTrailingComma = function(string){
+window.removeTrailingComma = function (string) {
     if (string.charAt(string.length - 1) === ',') {
         return string.replace(/,\s*$/, "");
     }
@@ -217,7 +217,7 @@ window.toggleContent = function (speed = 400, parent = 'body') {
 
 // Slugify a string
 
-window.slugify = function(string) {
+window.slugify = function (string) {
     const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
     const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
     const p = new RegExp(a.split('').join('|'), 'g')
@@ -233,13 +233,13 @@ window.slugify = function(string) {
 };
 
 // Compare functions
-window.getHospitalsByIds = function(hospitalIds) {
+window.getHospitalsByIds = function (hospitalIds) {
     var procedureId = getUrlParameter('procedure_id');
-    if(typeof procedureId == "undefined")
+    if (typeof procedureId == "undefined")
         procedureId = 0;
 
     $.ajax({
-        url: 'api/getHospitalsByIds/' + hospitalIds +'/' + procedureId,
+        url: 'api/getHospitalsByIds/' + hospitalIds + '/' + procedureId,
         type: 'GET',
         headers: {
             'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
@@ -274,7 +274,7 @@ window.getHospitalsByIds = function(hospitalIds) {
 };
 
 // Truncate sentence
-window.textTruncate = function(str, length, ending) {
+window.textTruncate = function (str, length, ending) {
     if (length == null) {
         length = 100;
     }
@@ -306,15 +306,15 @@ window.getUrlParameter = function getUrlParameter(sParam) {
 
 
 // Get compare count from compare hospitals data
-window.getCompareCount = function(){
-    if(Cookies.get("compareHospitalsData") != ""){
+window.getCompareCount = function () {
+    if (Cookies.get("compareHospitalsData") != "") {
         return parseInt(removeTrailingComma(Cookies.get('compareHospitalsData')).split(',').length);
     }
     return 0;
 };
 
 // Remove trailing comma from comparison ids
-window.removeTrailingComma = function(string){
+window.removeTrailingComma = function (string) {
     if (string.charAt(string.length - 1) === ',') {
         return string.replace(/,\s*$/, "");
     }
@@ -348,8 +348,8 @@ window.enableButtons = function () {
 // Close menu if clicking outside it, but only if it is already open
 var $mainNav = $('#main_nav');
 $(document).on('click', function (e) {
-    if($body.hasClass('menu-open')) {
-        if ( $mainNav.has(e.target).length === 0 && $('#menu_toggle').has(e.target).length === 0 ) {
+    if ($body.hasClass('menu-open')) {
+        if ($mainNav.has(e.target).length === 0 && $('#menu_toggle').has(e.target).length === 0) {
             $body.removeClass('menu-open');
         }
     }
@@ -365,19 +365,20 @@ $feedbackModal.on('hide.bs.modal', function (e) {
     setFeedbackToFalse();
 });
 
-$feedbackForm.on('submit', function(){
+$feedbackForm.on('submit', function () {
     setFeedbackToFalse();
     showAlert('Thank you for giving us your feedback!');
 });
 
 // Popup the form if not already dismissed
-$(document).mouseleave(function(){
-    if(!showFeedbackForm) {
+$(document).mouseleave(function () {
+    // if (event.clientY <= 0 || event.clientX <= 0 || (event.clientX >= window.innerWidth || event.clientY >= window.innerHeight)) {
+    if (event.clientY <= 0 && !Cookies.get('showFeedbackForm')) {
         $feedbackModal.modal('show')
     }
 });
 
-function setFeedbackToFalse(){
+function setFeedbackToFalse() {
     Cookies.set('showFeedbackForm', 'false');
 }
 
