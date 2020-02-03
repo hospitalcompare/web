@@ -678,13 +678,6 @@
         }
     }
 
-    // Make the dropdown expand rather than overlay
-    .dropdown-menu {
-        //position: static !important;
-        //float: none;
-        //transform: none !important;
-    }
-
     // Body class when filters are open
     &.filters-open {
         .filter-parent {
@@ -798,6 +791,12 @@
         .map-icon {
             width: 9px;
             height: auto;
+        }
+    }
+
+    .result-item-mobile-section-3 {
+        .btn-web-call {
+            @include reset-row-spacing(2px);
         }
     }
 }
