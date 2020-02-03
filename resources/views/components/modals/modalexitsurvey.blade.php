@@ -1,6 +1,6 @@
 {{--Template for exit survey when l;eaving site --}}
 
-<div class="_modal _fade" id="hc_modal_exit_survey" tabindex="-1" role="dialog"
+<div class="modal fade" id="hc_modal_exit_survey" tabindex="-1" role="dialog"
      aria-labelledby="" aria-modal="true" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content position-relative">

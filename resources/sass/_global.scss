@@ -960,6 +960,8 @@ h6 {
 }
 
 /***** CSS Magic to Highlight Stars on Hover *****/
+/***** https://codepen.io/jamesbarnett/pen/vlpkh *****/
+
 
 .rating > input:checked ~ label, /* show gold star when clicked */
 .rating:not(:checked) > label:hover, /* hover current star */
