@@ -12,22 +12,22 @@
                     <div
                         class="how-section__child col-lg-4 mb-30 carousel-item pt-1 {{ $loop->index == 0 ? 'active' : '' }}">
                         <div class="col-inner shadow h-100 d-flex flex-column">
-                            <div class="icon"
+                            <div class="how-icon"
                                  style="background-image: url('images/icons/{{ $howsection['iconImg'] }}.svg')">
                             </div>
                             @if(!empty($howsection['step']))
                                 <div
-                                    class="icon-step text-uppercase text-white rounded-pill d-inline-block mx-auto py-1 px-3 mb-3 {{ !empty($howsection['color']) ? 'bg-' . $howsection['color'] : '' }}">
+                                    class="how-icon-step text-uppercase text-white rounded-pill d-inline-block mx-auto py-1 px-3 mb-3 {{ !empty($howsection['color']) ? 'bg-' . $howsection['color'] : '' }}">
                                     STEP {{ $howsection['step'] }}
                                 </div>
                             @endif
                             @if(!empty($howsection['title']))
-                                <div class="icon-title col-{{ $howsection['color'] }}">
+                                <div class="how-icon-title col-{{ $howsection['color'] }}">
                                     {{ $howsection['title'] }}
                                 </div>
                             @endif
                             @if(!empty($howsection['description']))
-                                <div class="icon-description">
+                                <div class="how-icon-description">
                                     {!! $howsection['description'] !!}
                                 </div>
                             @endif

@@ -92,7 +92,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="col-inner text-center">
-                        <div class="icon-wrapper mb-3">
+                        <div class="hc-icon-wrapper mb-3">
                             <img src="/images/icons/waiting-times.svg" alt="Clock icon">
                         </div>
                         <p class="col-grey p-secondary">Sooner, by comparing waiting times at different hospitals</p>
@@ -100,7 +100,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="col-inner text-center">
-                        <div class="icon-wrapper mb-3">
+                        <div class="hc-icon-wrapper mb-3">
                             <img src="/images/icons/quality.svg" alt="Stars icon">
                         </div>
                         <p class="col-grey p-secondary">At the best quality hospital, by comparing hospital quality
@@ -109,7 +109,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="col-inner text-center">
-                        <div class="icon-wrapper mb-3">
+                        <div class="hc-icon-wrapper mb-3">
 {{--                            @svg('icon-understanding-choices-3')--}}
                             <img src="/images/icons/paid-for.svg" alt="Medical cross icon">
                         </div>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="col-inner text-center">
-                        <div class="icon-wrapper mb-3">
+                        <div class="hc-icon-wrapper mb-3">
                             <img src="/images/icons/self-pay.svg" alt="Icon of price tag">
                         </div>
                         <p class="col-grey p-secondary">To bring you self-pay offers from time to time, provided by
@@ -257,7 +257,7 @@
                 <div class="col-12 col-lg-8 offset-lg-2">
                     <div class="row">
                         <div class="col-md-6 mb-4">
-                            <div class="icon-wrapper mb-3">
+                            <div class="hc-icon-wrapper mb-3">
                                 <img src="{{asset('/images/icons/comparison-website.svg')}}" alt="Comparison icon">
                             </div>
                             <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>
@@ -265,7 +265,7 @@
                                 that empowers you to know rights and make the best choices for your treatment.</p>
                         </div>
                         <div class="col-md-6 mb-4">
-                            <div class="icon-wrapper mb-3">
+                            <div class="hc-icon-wrapper mb-3">
                                 <img src="{{asset('/images/icons/waiting-times.svg')}}" alt="Clock icon">
                             </div>
                             <p class="mb-3 SofiaPro-SemiBold font-16">Waiting Times</p>
@@ -274,7 +274,7 @@
                                 for treatment (some already longer than the NHS’ 18 week target).</p>
                         </div>
                         <div class="col-md-6 mb-4">
-                            <div class="icon-wrapper mb-3">
+                            <div class="hc-icon-wrapper mb-3">
                                 <img src="{{asset('/images/icons/legal-rights.svg')}}" alt="Gavel icon">
                             </div>
                             <p class="mb-3 SofiaPro-SemiBold font-16">Legal Rights</p>
@@ -283,7 +283,7 @@
                                 their loved feel better faster.</p>
                         </div>
                         <div class="col-md-6 mb-4">
-                            <div class="icon-wrapper mb-3">
+                            <div class="hc-icon-wrapper mb-3">
                                 <img src="{{asset('/images/icons/faster-treatment-times.svg')}}" alt="Calendar icon">
                             </div>
                             <p class="mb-3 SofiaPro-SemiBold font-16">Faster Treatment Times</p>

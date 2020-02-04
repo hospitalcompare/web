@@ -12,20 +12,40 @@
             <div class="modal-body p-30">
                 <div
                     class="col-inner h-100 col-inner__left text-center d-flex flex-column justify-content-center align-items-center">
-                    <h3 class="modal-title mb-3">How would you rate your experience?</h3>
+                    <h3 class="modal-title mb-3">Thanks for visiting Hospital Compare.</h3>
+                    <p class="col-grey p-secondary">Before leaving can you spare a moment to tell us what you thought?</p>
                     <form class="w-100" action="" id="form_exit_survey">
                         <div class="form-group mb-4 d-flex justify-content-center">
                             <fieldset class="rating">
-                                <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="5 stars"></label>
-                                <input type="radio" id="star4half" name="rating" value="4.5" /><label class="half" for="star4half" title="4.5 stars"></label>
-                                <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="4 stars"></label>
-                                <input type="radio" id="star3half" name="rating" value="3.5" /><label class="half" for="star3half" title="3.5 stars"></label>
-                                <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="3 stars"></label>
-                                <input type="radio" id="star2half" name="rating" value="2.5" /><label class="half" for="star2half" title="2.5 stars"></label>
-                                <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="2 stars"></label>
-                                <input type="radio" id="star1half" name="rating" value="1.5" /><label class="half" for="star1half" title="1.5 stars"></label>
-                                <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="1 star"></label>
-                                <input type="radio" id="starhalf" name="rating" value="0.5" /><label class="half" for="starhalf" title="0.5 stars"></label>
+                                <input type="radio" id="star5" name="rating" value="5" />
+                                <label class = "full" for="star5" title="5 stars"></label>
+
+                                <input type="radio" id="star4half" name="rating" value="4.5" />
+                                <label class="half" for="star4half" title="4.5 stars"></label>
+
+                                <input type="radio" id="star4" name="rating" value="4" />
+                                <label class = "full" for="star4" title="4 stars"></label>
+
+                                <input type="radio" id="star3half" name="rating" value="3.5" />
+                                <label class="half" for="star3half" title="3.5 stars"></label>
+
+                                <input type="radio" id="star3" name="rating" value="3" />
+                                <label class = "full" for="star3" title="3 stars"></label>
+
+                                <input type="radio" id="star2half" name="rating" value="2.5" />
+                                <label class="half" for="star2half" title="2.5 stars"></label>
+
+                                <input type="radio" id="star2" name="rating" value="2" />
+                                <label class = "full" for="star2" title="2 stars"></label>
+
+                                <input type="radio" id="star1half" name="rating" value="1.5" />
+                                <label class="half" for="star1half" title="1.5 stars"></label>
+
+                                <input type="radio" id="star1" name="rating" value="1" />
+                                <label class = "full" for="star1" title="1 star"></label>
+
+                                <input type="radio" id="starhalf" name="rating" value="0.5" />
+                                <label class="half" for="starhalf" title="0.5 stars"></label>
                             </fieldset>
                         </div>
                         <div class="form-group mb-4">
