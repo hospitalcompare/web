@@ -35,6 +35,7 @@
                         </div>
                         <div class="form-group">
                             @include('components.basic.button', [
+                                'id'                => 'submit_survey',
                                 'buttonText'        => 'Submit',
                                 'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-secondary-3 px-5',
                                 'htmlButton'        => 'true'
