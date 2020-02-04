@@ -349,12 +349,15 @@ class ApiController {
             $hospital = Hospital::where('id', $hospitalId)->first();
             $specialty = Specialty::where('id', $specialtyId)->first();
 
-            if(!empty($hospital) && !empty($hospital->email)) {
-                try {
-                    $bodyProvider = Email::getProviderBody();
-                    Email::send($bodyProvider,  $hospital->email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
-                } catch(\Exception $e){
-                    \Log::info('Something went wrong sending an email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
+            //TODO: This is for the `live` environment ONLY
+            if(env('APP_ENV') == 'live') {
+                if(!empty($hospital) && !empty($hospital->email)) {
+                    try {
+                        $bodyProvider = Email::getProviderBody();
+                        Email::send($bodyProvider,  $hospital->email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
+                    } catch(\Exception $e){
+                        \Log::info('Something went wrong sending an email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
+                    }
                 }
             }
         }
