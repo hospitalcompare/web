@@ -22,6 +22,7 @@ Route::middleware('checkToken')->group(function () {
     Route::post('/createEnquiriesFile', 'ApiController@createEnquiriesFile');
     Route::get('/getHospitalsByIds/{hospitalIds}/{procedureId}', 'ApiController@getHospitalsByIds');
     Route::get('/createHospitalImagesThumbs', 'ApiController@createHospitalImagesThumbs');
+    Route::post('/survey', 'ApiController@createSurvey');
 
     //TEST ROUTES
     Route::get('/testGet', 'ApiController@testGet');

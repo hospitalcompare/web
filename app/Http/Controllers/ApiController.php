@@ -14,6 +14,7 @@ use App\Models\Hospital;
 use App\Models\HospitalWaitingTime;
 use App\Models\Procedure;
 use App\Models\Specialty;
+use App\Models\Survey;
 use App\Models\Trust;
 use App\Services\Location;
 use Request;
@@ -433,6 +434,25 @@ class ApiController {
         }
 
         $this->returnedData['success'] = true;
+        return $this->returnedData;
+    }
+
+    public function createSurvey() {
+        //Get the request and load it as variables
+        $request    = \Request::all();
+        $rating     = Validate::escapeString($request['rating']);
+        $feedback   = !empty($request['feedback']) ? Validate::escapeString($request['feedback']) : null;
+        $this->returnedData['success'] = false;
+        $this->returnedData['data'] = [];
+
+        $survey = new Survey();
+        $survey->rating = $rating;
+        $survey->feedback = $feedback;
+        $survey->save();
+
+        $this->returnedData['success'] = true;
+        $this->returnedData['data'] = $survey;
+
         return $this->returnedData;
     }
 }
