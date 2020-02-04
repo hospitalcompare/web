@@ -274,7 +274,7 @@
                     </div>
                 @endif
                 <div class="col-6">
-                    <div class="btn-area btn-web-call row mt-lg-2">
+                    <div class="btn-area btn-web-call row">
 
                         {{--                        Web button --}}
                         <div class="btn-wrapper col-6">
