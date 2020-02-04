@@ -73,12 +73,11 @@ class DbInit extends Migration
                 $table->string('ods_code')->nullable();
                 $table->string('name');
                 $table->string('display_name')->nullable();
-                $table->string('tel_number')->nullable();
                 $table->string('url')->nullable();
                 $table->string('email')->nullable();
-                $table->string('phone_number1')->nullable();
-                $table->string('phone_number2')->nullable();
-                $table->string('phone_number3')->nullable();
+                $table->string('phone_number')->nullable();
+                $table->string('phone_number_2')->nullable();
+                $table->string('phone_number_3')->nullable();
                 $table->boolean('private_self_pay')->default(0);
 //                $table->string('report_url')->nullable();
                 $table->string('status')->default("active");

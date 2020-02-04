@@ -222,7 +222,8 @@
                             @if($NHSClass == 'private-hospital')
                                 @include('components.basic.modalbutton', [
                                         'hrefValue'         => $url,
-                                        'telNumbers'        => $tel,
+                                        'telNumber'         => $tel,
+                                        'telNumber2'        => $tel2,
                                         'hospitalType'      => $fundedText,
                                         'hospitalTitle'     => $title,
                                         'modalTarget'       => '#hc_modal_enquire_private',
@@ -257,7 +258,8 @@
                             @include('components.basic.modalbutton', [
                                 'hospitalType'      => $NHSClass,
                                 'hrefValue'         => $url,
-                                'telNumbers'        => $tel,
+                                'telNumber'         => $tel,
+                                'telNumber2'        => $tel2,
                                 'hospitalTitle'     => $title,
                                 'modalTarget'       => '#hc_modal_enquire_private',
                                 'classTitle'        => 'btn btn-icon btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
@@ -274,7 +276,8 @@
                             @include('components.basic.modalbutton', [
                                 'hospitalType'      => $NHSClass,
                                 'hrefValue'         => $url,
-                                'telNumbers'        => $tel,
+                                'telNumber'         => $tel,
+                                'telNumber2'        => $tel2,
                                 'hospitalTitle'     => $title,
                                 'hospitalUrl'       => $d['url'],
                                 'classTitle'        => 'btn btn-icon btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
@@ -293,7 +296,8 @@
                                 @include('components.basic.modalbutton', [
                                     'hospitalType'      => $NHSClass,
                                     'hrefValue'         => $url,
-                                    'telNumbers'        => $tel,
+                                    'telNumber'         => $tel,
+                                    'telNumber2'        => $tel2,
                                     'hospitalTitle'     => $title,
                                     'hospitalUrl'       => $d['url'],
                                     'classTitle'        => 'btn btn-icon btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
@@ -309,7 +313,8 @@
                                 @include('components.basic.modalbutton', [
                                     'hospitalType'      => $NHSClass,
                                     'hrefValue'         => $url,
-                                    'telNumbers'        => $tel,
+                                    'telNumber'         => $tel,
+                                    'telNumber2'        => $tel2,
                                     'hospitalTitle'     => $title,
                                     'hospitalUrl'       => $d['url'],
                                     'classTitle'        => 'btn btn-icon btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left',

@@ -38,7 +38,7 @@
                                     <p>General</p>
                                     <p class="col-brand-primary-1 font-20" id="hospital_telephone"></p>
                                     <p>Private</p>
-                                    <p class="col-brand-primary-1 font-20">0800 345 6789</p>
+                                    <p class="col-brand-primary-1 font-20" id="hospital_telephone_2"></p>
                                 </div>
                                 <div class="btn-area">
                                     @include('components.basic.button', [
