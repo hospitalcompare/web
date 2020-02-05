@@ -14,7 +14,7 @@
                     class="col-inner h-100 col-inner__left text-center d-flex flex-column justify-content-center align-items-center">
                     <h3 class="modal-title mb-3">Thanks for visiting Hospital Compare.</h3>
                     <p class="col-grey p-secondary">Before leaving can you spare a moment to tell us what you thought?</p>
-                    <form class="w-100" action="" id="form_exit_survey">
+                    <form class="w-100" id="form_exit_survey">
                         <div class="form-group mb-4 d-flex justify-content-center">
                             <fieldset class="rating">
                                 <input type="radio" id="star5" name="rating" value="5" />

@@ -11,40 +11,93 @@
 @section('body-class', 'test-page')
 
 @section('content')
-    <section>
-        @include('components.modals.modalexitsurvey')
-    </section>
-{{--    <section>--}}
-{{--        @include('components.modals.modalenquiregeneral', [--}}
-{{--            'procedures'    => $data['filters']['procedures'],--}}
-{{--            'title'         => 'Mr',--}}
-{{--            'firstName'     => 'Tom',--}}
-{{--            'lastName'      => 'Eagle',--}}
-{{--            'dob'           => '13/08/1979',--}}
-{{--            'email'         => 'tomeagle79@gmail.com',--}}
-{{--            'postcode'      => 'WA6 8JY',--}}
-{{--            'phone'         => '07941939374'--}}
-{{--        ])--}}
+{{--    <section class="bg-brand-primary-1">--}}
+{{--        <div class="container">--}}
+{{--            <form class="w-100" id="form_exit_survey">--}}
+
+{{--                <div class="form-group mb-4 d-flex justify-content-center">--}}
+{{--                    <fieldset class="rating">--}}
+{{--                        <input type="radio" id="star5" name="rating" value="5">--}}
+{{--                        <label class="full" for="star5" title="5 stars"></label>--}}
+
+{{--                        <input type="radio" id="star4half" name="rating" value="4.5">--}}
+{{--                        <label class="half" for="star4half" title="4.5 stars"></label>--}}
+
+{{--                        <input type="radio" id="star4" name="rating" value="4">--}}
+{{--                        <label class="full" for="star4" title="4 stars"></label>--}}
+
+{{--                        <input type="radio" id="star3half" name="rating" value="3.5">--}}
+{{--                        <label class="half" for="star3half" title="3.5 stars"></label>--}}
+
+{{--                        <input type="radio" id="star3" name="rating" value="3">--}}
+{{--                        <label class="full" for="star3" title="3 stars"></label>--}}
+
+{{--                        <input type="radio" id="star2half" name="rating" value="2.5">--}}
+{{--                        <label class="half" for="star2half" title="2.5 stars"></label>--}}
+
+{{--                        <input type="radio" id="star2" name="rating" value="2">--}}
+{{--                        <label class="full" for="star2" title="2 stars"></label>--}}
+
+{{--                        <input type="radio" id="star1half" name="rating" value="1.5">--}}
+{{--                        <label class="half" for="star1half" title="1.5 stars"></label>--}}
+
+{{--                        <input type="radio" id="star1" name="rating" value="1">--}}
+{{--                        <label class="full" for="star1" title="1 star"></label>--}}
+
+{{--                        <input type="radio" id="starhalf" name="rating" value="0.5">--}}
+{{--                        <label class="half" for="starhalf" title="0.5 stars"></label>--}}
+{{--                    </fieldset>--}}
+{{--                </div>--}}
+{{--                <div class="form-group mb-4">--}}
+{{--                    <div id="col_additional_information">--}}
+{{--                    <textarea class="form-control p-3" name="feedback" placeholder="Any further feedback?"--}}
+{{--                              id="further_feedback" rows="5"></textarea>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="form-group">--}}
+{{--                    <button id="submit_survey" style=""--}}
+{{--                            class="btn btn-squared btn-squared_slim btn-brand-secondary-3 px-5"--}}
+{{--                            target="" data-target="" href="javascript:void(0);" role="button" data-id="">--}}
+{{--                        <div>Submit</div>--}}
+{{--                    </button>--}}
+{{--                </div>--}}
+{{--            </form>--}}
+{{--        </div>--}}
 {{--    </section>--}}
-    <section>
-        @include('pages.pagesections.resultspageform', [
-        'displayBlock' => true])
-    </section>
-    <section>
-        @include('components.emails.emailuser')
-    </section>
-    <section>
-        @include('components.modals.modalenquireprivate', [
-            'procedures'    => $data['filters']['procedures'],
-            'title'         => 'Mr',
-            'firstName'     => 'Tom',
-            'lastName'      => 'Eagle',
-            'dob'           => '13/08/1979',
-            'email'         => 'tomeagle79@gmail.com',
-            'postcode'      => 'WA6 8JY',
-            'phone'         => '07941939374'
-        ])
-    </section>
+    {{--    <section>--}}
+    {{--        @include('components.modals.modalexitsurvey')--}}
+    {{--    </section>--}}
+    {{--    <section>--}}
+    {{--        @include('components.modals.modalenquiregeneral', [--}}
+    {{--            'procedures'    => $data['filters']['procedures'],--}}
+    {{--            'title'         => 'Mr',--}}
+    {{--            'firstName'     => 'Tom',--}}
+    {{--            'lastName'      => 'Eagle',--}}
+    {{--            'dob'           => '13/08/1979',--}}
+    {{--            'email'         => 'tomeagle79@gmail.com',--}}
+    {{--            'postcode'      => 'WA6 8JY',--}}
+    {{--            'phone'         => '07941939374'--}}
+    {{--        ])--}}
+    {{--    </section>--}}
+    {{--    <section>--}}
+    {{--        @include('pages.pagesections.resultspageform', [--}}
+    {{--        'displayBlock' => true])--}}
+    {{--    </section>--}}
+    {{--    <section>--}}
+    {{--        @include('components.emails.emailuser')--}}
+    {{--    </section>--}}
+    {{--    <section>--}}
+    {{--        @include('components.modals.modalenquireprivate', [--}}
+    {{--            'procedures'    => $data['filters']['procedures'],--}}
+    {{--            'title'         => 'Mr',--}}
+    {{--            'firstName'     => 'Tom',--}}
+    {{--            'lastName'      => 'Eagle',--}}
+    {{--            'dob'           => '13/08/1979',--}}
+    {{--            'email'         => 'tomeagle79@gmail.com',--}}
+    {{--            'postcode'      => 'WA6 8JY',--}}
+    {{--            'phone'         => '07941939374'--}}
+    {{--        ])--}}
+    {{--    </section>--}}
 
 
     {{--        <section>--}}
