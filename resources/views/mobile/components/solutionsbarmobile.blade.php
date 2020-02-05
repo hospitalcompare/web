@@ -26,7 +26,7 @@
                             <p class="SofiaPro-SemiBold mb-1 d-none">You are comparing:</p>
                             <p class="mb-3 d-none"><span id="nhs-hospital-count">0</span>&nbsp;NHS hospital(s) &<br><span
                                     id="private-hospital-count">0</span>&nbsp;Private hospital(s)</p>
-                            <div class="form-wrapper pt-3">
+                            <div class="form-wrapper pt-3 d-none">
                                 @include('components.basic.modalbutton', [
                                     'htmlButton'        => true,
                                     'buttonText'        => 'Email private hospitals',
