@@ -102,7 +102,7 @@
     @include('mobile.components.solutionsbarmobile', [
       'specialOffers' => $data['special_offers']
       ])
-    @include('components.modals.modalenquiregeneral')
+    @include('components.modals.modalcontactsgeneral')
     @include('mobile.components.modals.modalenquireprivatemobile', [
         'procedures' => $data['filters']['procedures']])
     @include('components.modals.modaltour')

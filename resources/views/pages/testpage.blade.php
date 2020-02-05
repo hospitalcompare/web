@@ -685,7 +685,7 @@
     {{--                                                        role="button" data-toggle="modal"--}}
     {{--                                                        data-hospital-url="www.ntw.nhs.uk"--}}
     {{--                                                        data-hospital-title="Walkergate Park "--}}
-    {{--                                                        data-target="#hc_modal_enquire_general">Make an enquiry--}}
+    {{--                                                        data-target="#hc_modal_contacts_general">Make an enquiry--}}
     {{--                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"--}}
     {{--                                                             viewBox="0 0 20 20">--}}
     {{--                                                            <g>--}}

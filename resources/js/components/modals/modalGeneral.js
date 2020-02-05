@@ -1,6 +1,7 @@
 // General modal - with web links and phone numbers
 
-var modal = $('#hc_modal_enquire_general');
+var modal = $('#hc_modal_contacts_general, #hc_modal_contacts_private');
+
 function showGeneralModal(event) {
     // Clear existing classes from the 'hospital type' tab
     modal.find('#hospital_type').removeClass('private-hospital nhs-hospital bg-nhs bg-private');
@@ -15,6 +16,20 @@ function showGeneralModal(event) {
     var hospitalTypeText        = button.data('hospital-type') === 'nhs-hospital' ? 'nhs hospital' : 'private hospital';     // Extract info from data-* attributes
     var hospitalTypeClass       = button.data('hospital-type') === 'nhs-hospital' ? 'bg-nhs nhs-hospital' : 'bg-private private-hospital' ;     // Extract info from data-* attributes
     var picture                 = button.data('image');             // Extract info from data-* attributes
+
+    // Add hospital URL to enquiry button
+    // Add hospital title to enquiry button
+
+    // Show the button to enquire to an NHS hospital about PRIVATE treament
+    console.log(button.data('hospital-type'));
+
+    // Add hospital URL to enquiry button
+    // Add hospital title to enquiry button
+    if( button.data('hospital-type') == 'nhs-hospital' )
+        modal.find('#private_enquiry_to_nhs_hospital')
+            .removeClass('d-none')
+            .data('hospital-title', title);
+
 
     modal.find('#hospital_title').html(title);
     modal.find('.btn-enquire').attr("href", 'http://' + url);
