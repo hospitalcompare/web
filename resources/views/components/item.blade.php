@@ -318,7 +318,8 @@
                                 'id'                => 'enquire_nhs'.$id,
                                 'hospitalIds'       => $id,
                                 'image'             => $itemImg,
-                                'svg'               => 'circle-check'])
+                                'svg'               => 'circle-check',
+                                'svgClass'          => 'd-none d-lg-block'])
                         </div>
                         <div class="col-6 col-lg-12 mt-lg-2">
                             <div class="row btn-web-call ">

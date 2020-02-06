@@ -493,34 +493,6 @@
         }
     }
 
-    .nhs-hospital,
-    .private-hospital {
-        position: absolute;
-        top: 0;
-        left: 0;
-        text-align: center;
-
-        p {
-            width: 100%;
-            position: relative;
-            color: #ffffff;
-            height: 30px;
-            line-height: 30px;
-            font-size: 0.75rem !important;
-            text-transform: uppercase;
-            padding: 0 0.5rem;
-
-            &:after {
-                content: "";
-                position: absolute;
-                z-index: 5;
-                left: 100%;
-                top: 0;
-                width: 30px;
-                height: 30px;
-            }
-        }
-    }
 }
 
 //.btn-more-info {
@@ -700,41 +672,6 @@
             right: 0;
         }
 
-        .hospital-type {
-            top: 0;
-            left: 0;
-            bottom: auto;
-            width: auto;
-
-            p {
-                height: 30px;
-                line-height: 30px;
-            }
-
-            &:after {
-                content: '';
-                position: absolute;
-                z-index: 5;
-                left: 100%;
-                top: 0;
-                width: 30px;
-                height: 30px;
-            }
-
-            &.nhs-hospital:after {
-                border-bottom: solid 15px transparent;
-                border-right: solid 15px transparent;
-                border-left: solid 15px $blue;
-                border-top: solid 15px $blue;
-            }
-
-            &.private-hospital:after {
-                border-bottom: solid 15px transparent;
-                border-right: solid 15px transparent;
-                border-left: solid 15px $violet;
-                border-top: solid 15px $violet;
-            }
-        }
 
         .result-item-section-2__child {
             justify-content: space-between;

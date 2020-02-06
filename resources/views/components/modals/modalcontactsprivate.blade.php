@@ -4,7 +4,7 @@
      aria-labelledby="" aria-modal="true" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content position-relative">
-            <div id="hospital_type" class="py-1 px-2">
+            <div id="hospital_type" class="hospital-type">
                 <p class="m-0"></p>
             </div>
             <div class="modal-body">

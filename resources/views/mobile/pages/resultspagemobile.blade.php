@@ -13,7 +13,7 @@
 @section('body-class', 'results-page results-page-mobile')
 
 @section('content')
-{{--    {{dd($data['hospitals'])}}--}}
+    {{--    {{dd($data['hospitals'])}}--}}
     @include('mobile.pages.pagesections.resultspageformmobile')
 
     <div class="results pt-3">
@@ -52,6 +52,9 @@
                             'NHSClass'              => $d['hospitalType']['name'] == 'NHS' ? 'nhs-hospital' : 'private-hospital',
                             'fundedText'            => ($d['hospitalType']['name'] == 'NHS') ? 'NHS': 'Private',
                             'url'                   => $d['url'],
+                            'tel'                   => $d['phone_number'],
+                            'tel2'                  => $d['phone_number_2'],
+                            'email'                 => $d['email'],
                             'safe'                  => $d['rating']['safe'],
                             'safeIcon'              => \App\Helpers\Utils::getDiscOrStar($d['rating']['safe']),
                             'effective'             => $d['rating']['effective'],
@@ -89,7 +92,8 @@
         @if($data['hospitals']->total() < 10)
             <div class="container">
                 {{--                    <img class="w-100" src="{{ asset('/images/tweakfilters.jpg') }}" alt="Image showing how to get more results">--}}
-                <h2 class="col-brand-primary-1 w-50 text-center mx-auto SofiaPro-Bold h-100 mb-5 pb-5">If you wish to receive more results then<br>
+                <h2 class="col-brand-primary-1 w-50 text-center mx-auto SofiaPro-Bold h-100 mb-5 pb-5">If you wish to
+                    receive more results then<br>
                     use the filters to broaden your search criteria</h2>
             </div>
         @endif
@@ -103,6 +107,7 @@
       'specialOffers' => $data['special_offers']
       ])
     @include('components.modals.modalcontactsgeneral')
+    @include('components.modals.modalcontactsprivate')
     @include('mobile.components.modals.modalenquireprivatemobile', [
         'procedures' => $data['filters']['procedures']])
     @include('components.modals.modaltour')
