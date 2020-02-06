@@ -286,17 +286,16 @@ class ApiController {
         }
 
         //Check if the Hospital is Private
-        if(!empty($hospitalIds) && is_array($hospitalIds)) {
-            foreach($hospitalIds as $key => $hospitalId) {
-                if(!empty($hospitalId)) {
-                    $hospital = Hospital::where('id', $hospitalId)->with('hospitalType')->first();
+//        if(!empty($hospitalIds) && is_array($hospitalIds)) {
+//            foreach($hospitalIds as $key => $hospitalId) {
+//                if(!empty($hospitalId)) {
+//                    $hospital = Hospital::where('id', $hospitalId)->with('hospitalType')->first();
 //                    if(empty($hospital) || $hospital->hospitalType->name == 'NHS') {
-                    if(empty($hospital)) {
-                        unset($hospitalIds[$key]);
-                    }
-                }
-            }
-        }
+//                        unset($hospitalIds[$key]);
+//                    }
+//                }
+//            }
+//        }
 
         //Validate date of birth (OLD)
 //        if(!Validate::isValidDate($dob)) {
@@ -332,23 +331,27 @@ class ApiController {
 
         //We can create the actual Enquiry(s) if it reaches here
         $enquiry = [];
-        foreach($hospitalIds as $hospitalId) {
-            $enquiry[$hospitalId] = new Enquiry();
-            $enquiry[$hospitalId]->specialty_id              = $specialtyId;
-            $enquiry[$hospitalId]->hospital_id               = $hospitalId;
-            $enquiry[$hospitalId]->title                     = $title;
-            $enquiry[$hospitalId]->first_name                = $firstName;
-            $enquiry[$hospitalId]->last_name                 = $lastName;
-            $enquiry[$hospitalId]->email                     = $email;
-            $enquiry[$hospitalId]->phone_number              = $phoneNumber;
-            $enquiry[$hospitalId]->postcode                  = $postcode;
-            $enquiry[$hospitalId]->reason                    = $reason;
-            $enquiry[$hospitalId]->additional_information    = $additionalInformation;
-            $enquiry[$hospitalId]->save();
+        foreach($hospitalIds as $i => $hospitalId) {
+            $enquiry[$i] = new Enquiry();
+            $enquiry[$i]->specialty_id              = $specialtyId;
+            $enquiry[$i]->hospital_id               = $hospitalId;
+            $enquiry[$i]->title                     = $title;
+            $enquiry[$i]->first_name                = $firstName;
+            $enquiry[$i]->last_name                 = $lastName;
+            $enquiry[$i]->email                     = $email;
+            $enquiry[$i]->phone_number              = $phoneNumber;
+            $enquiry[$i]->postcode                  = $postcode;
+            $enquiry[$i]->reason                    = $reason;
+            $enquiry[$i]->additional_information    = $additionalInformation;
+            $enquiry[$i]->save();
 
             //Get the hospital and send the email if it has an email address
             $hospital = Hospital::where('id', $hospitalId)->first();
             $specialty = Specialty::where('id', $specialtyId)->first();
+            $specialtyName = '';
+            //Set the Specialty Name if we have it
+            if(!empty($specialty))
+                $specialtyName = $specialty->name;
 
             //TODO: This is for the `live` environment ONLY
             if(env('APP_ENV') == 'live') {
@@ -361,15 +364,15 @@ class ApiController {
                     }
                 }
             }
-        }
 
-        //Send the email //TODO: Activate it once the tests are working
-        if(!empty($enquiry)) {
-            $bodyUser = Email::getUserBody($hospital->name, $specialty->name, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $reason, $additionalInformation);
-            try {
-                Email::send($bodyUser, $email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
-            } catch(\Exception $e){
-                \Log::info('Something went wrong sending an email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
+            //Send the email //TODO: Activate it once the tests are working
+            if(!empty($enquiry)) {
+                $bodyUser = Email::getUserBody($hospital->name, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $reason, $additionalInformation);
+                try {
+                    Email::send($bodyUser, $email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
+                } catch(\Exception $e){
+                    \Log::info('Something went wrong sending an email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
+                }
             }
         }
 
