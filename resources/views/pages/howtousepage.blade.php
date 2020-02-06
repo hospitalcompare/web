@@ -2,7 +2,7 @@
 
 @section('title', 'How To Use')
 
-@section('description', 'this is the meta description')
+@section('description', 'Discover the three simple steps to having your treatment faster or at better quality hospital locally, regionally or nationally across England.')
 
 @section('keywords', 'this is the meta keywords')
 

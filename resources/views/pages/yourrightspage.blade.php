@@ -2,7 +2,7 @@
 
 @section('title', 'Your rights')
 
-@section('description', 'this is the meta description')
+@section('description', 'In England you have a legal right to make choices about your healthcare that could mean you or loved ones are seen faster by healthcare professionals.')
 
 @section('keywords', 'this is the meta keywords')
 

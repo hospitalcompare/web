@@ -2,7 +2,7 @@
 
 @section('title', 'About Us')
 
-@section('description', 'this is the meta description')
+@section('description', 'Discover Hospital Compare; a unique comparison website dedicated to helping you find the right hospital for your treatment by exercising your legal rights.')
 
 @section('keywords', 'this is the meta keywords')
 

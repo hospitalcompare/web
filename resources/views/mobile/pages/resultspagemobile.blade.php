@@ -4,7 +4,7 @@
 
 @section('title', 'Results Page')
 
-@section('description', 'this is the meta description')
+@section('description', 'Based on your choices, filter from 750 NHS and private hospitals across England to find the one that’s right for you.')
 
 @section('keywords', 'this is the meta keywords')
 

@@ -2,7 +2,7 @@
 
 @section('title', 'Cookie Policy')
 
-@section('description', 'this is the meta description')
+@section('description', 'Our website uses cookies to distinguish you from other users of Hospital Compare, to provide you with a good experience as you browse the site.')
 
 @section('keywords', 'this is the meta keywords')
 
