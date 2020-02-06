@@ -290,7 +290,8 @@ class ApiController {
             foreach($hospitalIds as $key => $hospitalId) {
                 if(!empty($hospitalId)) {
                     $hospital = Hospital::where('id', $hospitalId)->with('hospitalType')->first();
-                    if(empty($hospital) || $hospital->hospitalType->name == 'NHS') {
+//                    if(empty($hospital) || $hospital->hospitalType->name == 'NHS') {
+                    if(empty($hospital)) {
                         unset($hospitalIds[$key]);
                     }
                 }
