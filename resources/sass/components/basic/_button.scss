@@ -507,6 +507,7 @@
 .btn-enquire_mobile {
     background-color: $brand-secondary-3;
     display: flex;
+    justify-content: center;
     align-items: center;
 
     svg {
@@ -515,6 +516,7 @@
         height: 20px;
 
         @extend .mr-1;
+
     }
 }
 

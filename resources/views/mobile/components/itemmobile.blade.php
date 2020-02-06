@@ -249,13 +249,12 @@
                             'hrefValue'         => $url,
                             'hospitalTitle'     => $title,
                             'modalTarget'       => '#hc_modal_enquire_private',
-                            'classTitle'        => 'btn btn-icon btn-squared btn-squared_slim btn-enquire_mobile btn-icon text-center enquiry font-12 w-100 text-center d-flex justify-content-center align-items-center flex-row-reverse px-0',
+                            'classTitle'        => 'btn btn-icon btn-squared btn-squared_slim btn-enquire_mobile enquiry font-12 w-100 text-center d-flex justify-content-center align-items-center flex-row-reverse px-0',
                             'target'            => 'blank',
                             'buttonText'        => $btnText,
                             'id'                => 'enquire_private_'.$id,
                             'hospitalIds'       => $id,
-                            'svg'               => 'circle-check',
-                            'svgClass'          => 'position-static'
+                            'svg'               => 'circle-check'
                         ])
                     </div>
                     <div class="col-6">
@@ -267,9 +266,10 @@
                                     'target'            => 'blank',
                                     'hrefValue'         => 'https://' . $url,
                                     'hospitalUrl'       => $d['url'],
-                                    'classTitle'        => 'btn btn-enquire btn-squared btn-squared_slim btn-brand-primary-4 enquiry btn-block font-12',
+                                    'classTitle'        => 'btn btn-squared btn-squared_slim btn-enquire_mobile btn-brand-primary-4 font-12 w-100 d-flex justify-content-center align-items-center flex-row-reverse px-0',
                                     'buttonText'        => 'Web',
-                                    'svg'               => 'icon-web'])
+                                    'svg'               => 'icon-web',
+                                    'svgClass'          => 'position-static'])
                             </div>
                             {{-- Call button - show right hand side only --}}
                             <div class="btn-wrapper col-6">
@@ -280,13 +280,14 @@
                                     'telNumber2'        => $tel2,
                                     'hospitalTitle'     => $title,
                                     'hospitalUrl'       => $d['url'],
-                                    'classTitle'        => 'btn btn-enquire btn-squared btn-squared_slim btn-brand-primary-4 enquiry btn-block font-12',
+                                    'classTitle'        => 'btn btn-squared btn-squared_slim btn-enquire_mobile btn-brand-primary-4 font-12 w-100 d-flex justify-content-center align-items-center flex-row-reverse px-0',
                                     'buttonText'        => 'Call',
                                     'modalTarget'       => '#hc_modal_contacts_private',
                                     'id'                => 'enquire_nhs'.$id,
                                     'hospitalIds'       => $id,
                                     'image'             => $itemImg,
-                                    'svg'               => 'icon-phone'])
+                                    'svg'               => 'icon-phone',
+                                    'svgClass'          => 'position-static'])
                             </div>
                         </div>
                     </div>
@@ -305,8 +306,8 @@
                             'svg'               => 'circle-check'
                             ])
                     </div>
-                    <div class="col-6 col-lg-12 mt-lg-2">
-                        <div class="row btn-web-call ">
+                    <div class="col-6 mt-xl-2">
+                        <div class="row btn-web-call">
                             {{--                        Web button --}}
                             {{-- Web button - link to website, open in new tab --}}
                             <div class="btn-wrapper col-6 ">
@@ -315,7 +316,7 @@
                                     'target'            => 'blank',
                                     'hrefValue'         => 'https://' . $url,
                                     'hospitalUrl'       => $d['url'],
-                                    'classTitle'        => 'btn btn-enquire btn-squared btn-squared_slim btn-brand-primary-4 enquiry btn-block font-12',
+                                    'classTitle'        => 'btn btn-squared btn-squared_slim btn-enquire_mobile btn-brand-primary-4 font-12 w-100 d-flex justify-content-center align-items-center flex-row-reverse px-0',
                                     'buttonText'        => 'Web',
                                     'svg'               => 'icon-web'])
                             </div>
@@ -329,7 +330,7 @@
                                     'hasEmail'          => !empty($email) ? true : false,
                                     'hospitalTitle'     => $title,
                                     'hospitalUrl'       => $d['url'],
-                                    'classTitle'        => 'btn btn-enquire btn-squared btn-squared_slim btn-brand-primary-4 enquiry btn-block font-12',
+                                    'classTitle'        => 'btn btn-squared btn-squared_slim btn-enquire_mobile btn-brand-primary-4 font-12 w-100 d-flex justify-content-center align-items-center flex-row-reverse px-0',
                                     'buttonText'        => 'Call',
                                     'modalTarget'       => '#hc_modal_contacts_general',
                                     'id'                => 'enquire_nhs'.$id,
