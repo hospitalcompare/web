@@ -4,7 +4,7 @@
 
 @section('title', 'Results Page')
 
-@section('description', 'this is the meta description')
+@section('description', 'Based on your choices, filter from 750 NHS and private hospitals across England to find the one that’s right for you.')
 
 @section('keywords', 'this is the meta keywords')
 
@@ -50,6 +50,7 @@
                     'url'                   => $d['url'],
                     'tel'                   => $d['phone_number'],
                     'tel2'                  => $d['phone_number_2'],
+                    'email'                 => $d['email'],
                     'safe'                  => $d['rating']['safe'],
                     'safeIcon'              => \App\Helpers\Utils::getDiscOrStar($d['rating']['safe']),
                     'effective'             => $d['rating']['effective'],
@@ -95,11 +96,9 @@
     @include('components.solutionsbar', [
         'specialOffers' => $data['special_offers']
         ])
-    @include('components.modals.modalenquiregeneral')
+    @include('components.modals.modalcontactsgeneral')
+    @include('components.modals.modalcontactsprivate')
     @include('components.modals.modalenquireprivate', [
         'procedures' => $data['filters']['procedures']])
-    {{--  Maps modal  --}}
-
-
 
 @endsection

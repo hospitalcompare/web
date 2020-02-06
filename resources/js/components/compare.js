@@ -34,11 +34,10 @@ var target = $('#compare_hospitals_grid');
 // The content for any empty column in the comparison
 var emptyColDesktop = '<div class="col col-empty h-100">\n' +
     '                    <div class="col-inner">\n' +
-
     '                        <div class="col-header border-bottom-0">\n' +
-    '                            <p class="text-center">Selected Hospital<br>\n' +
+    '                            <p class="text-center px-2">Selected Hospital<br>\n' +
     '                                will appear here.</p>\n' +
-    '                            <p class="text-center"> Add more hospitals to your\n' +
+    '                            <p class="text-center px-2"> Add more hospitals to your\n' +
     '                                Shortlist by clicking the&nbsp;<img width="14" height="12" src="/images/icons/heart.svg" alt="Heart icon">\n' +
     '                            </p>\n' +
     '                        </div>\n' +
@@ -47,7 +46,7 @@ var emptyColDesktop = '<div class="col col-empty h-100">\n' +
 
 var emptyColMobile = '<div class="card w-100 rounded-0 border-top-0 border-left-0 border-right-0 border-bottom">\n' +
     '                        <div class="border-bottom">\n' +
-    '                            <p class="">Selected Hospital<br>\n' +
+    '                            <p class="">Selected adfasdf Hospital<br>\n' +
     '                                will appear here.</p>\n' +
     '                            <p class=""> Add more hospitals to your\n' +
     '                                Shortlist by clicking the&nbsp;<img width="14" height="12" src="/images/icons/heart.svg" alt="Heart icon">\n' +
@@ -143,7 +142,7 @@ window.addHospitalToCompare = function(element) {
             data-hospital-title="${element.display_name}"
             data-hospital-id="${element.id}"
             data-image="${element.image}"
-            data-target="${ hospitalType == 'Private' ? '#hc_modal_enquire_private' : '#hc_modal_enquire_general'}">Make an enquiry
+            data-target="${ hospitalType == 'Private' ? '#hc_modal_enquire_private' : '#hc_modal_contacts_general'}">Make an enquiry
         ${$svg}
         </a>`;
 

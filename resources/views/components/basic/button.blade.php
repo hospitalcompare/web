@@ -13,7 +13,9 @@ data-id="{{ empty($dataId) ? '' : $dataId }}"
     data-hospital-type="{{ $hospitalType }}"
 @endif>
 <div>{!! $buttonText !!}</div>
-@if(!empty($svg))
-    @svg($svg, 'svg-icon')
+@if(!empty($svg) && empty($svgClass))
+    @svg($svg)
+@elseif(!empty($svg) && !empty($svgClass))
+    @svg($svg, $svgClass)
 @endif
 </{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'a' }}>

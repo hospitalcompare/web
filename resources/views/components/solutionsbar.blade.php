@@ -62,10 +62,10 @@
                         <div class="col-header pr-3">
                             <p class="SofiaPro-SemiBold mb-1">You are comparing:</p>
                             <p class="mb-3"><span id="nhs-hospital-count">0</span>&nbsp;NHS hospital(s) &<br><span id="private-hospital-count">0</span>&nbsp;Private hospital(s)</p>
-                            <div class="form-wrapper pt-3 grey-border-top">
+                            <div class="form-wrapper pt-3 grey-border-top d-none">
                                 @include('components.basic.modalbutton', [
                                     'htmlButton'        => true,
-                                    'buttonText'        => 'Email private hospitals',
+                                    'buttonText'        => 'Enquire to all private hospitals',
                                     'classTitle'        => 'btn btn-squared btn-blue btn-enquire-all font-14',
                                     'id'                => 'multiple_enquiries_button',
                                     'svg'               => 'circle-check',

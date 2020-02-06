@@ -2,7 +2,7 @@
 
 @section('title', 'Homepage')
 
-@section('description', 'this is the meta description')
+@section('description', 'Search Hospital Compare and find the shortest waiting times and highest quality hospitals in England for your treatment now.')
 
 @section('keywords', 'this is the meta keywords')
 

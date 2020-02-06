@@ -22,6 +22,7 @@ import './scripts/postcode' ;                               // Postcode input
 import './scripts/gmapInit';                                // Gmaps modal
 import './scripts/sticky';                                  // Make the search header sticky on scroll
 import './scripts/bootstrapSlider';                         // Init the bs slider plugin
+import './scripts/survey';                                  // Handle the exit survey form
 // window.Vue = require('vue');                             // Vue.js
 
 

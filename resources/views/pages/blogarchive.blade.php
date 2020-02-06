@@ -2,7 +2,7 @@
 
 @section('title', 'Blog')
 
-@section('description', 'this is the meta description')
+@section('description', 'Discover all the latest information about Hospital Compare, as well as our views and comment on healthcare issues.')
 
 @section('keywords', 'this is the meta keywords')
 

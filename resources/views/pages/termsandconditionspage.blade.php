@@ -2,7 +2,7 @@
 
 @section('title', 'Terms and Conditions')
 
-@section('description', 'this is the meta description')
+@section('description', 'Learn about the terms and conditions that apply to Hospital Compare website users.')
 
 @section('keywords', 'this is the meta keywords')
 

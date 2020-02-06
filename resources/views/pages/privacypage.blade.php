@@ -2,7 +2,8 @@
 
 @section('title', 'Privacy Policy')
 
-@section('description', 'this is the meta description')
+@section('description', '
+Hospital Compare is committed to your privacy. Please read our privacy policy for a clear explanation of how we collect, use, disclose, transfer and store your information.')
 
 @section('keywords', 'this is the meta keywords')
 

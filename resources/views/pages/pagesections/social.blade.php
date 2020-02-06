@@ -12,11 +12,11 @@
                         <span class="sr-only">Twitter link</span>
                     </a>
                 </li>
-                <li class="instagram-social">
-                    <a href="https://www.instagram.com/hospitalcompare/" target="_blank">@svg('instagram')
-                        <span class="sr-only">Instagram link</span>
-                    </a>
-                </li>
+{{--                <li class="instagram-social">--}}
+{{--                    <a href="https://www.instagram.com/hospitalcompare/" target="_blank">@svg('instagram')--}}
+{{--                        <span class="sr-only">Instagram link</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
             </ul>
         </div>
         <p>Media/Press: <a href="mailto:press@hospitalcompare.com">press@hospitalcompare.com</a></p>
