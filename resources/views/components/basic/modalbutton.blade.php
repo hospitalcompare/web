@@ -21,6 +21,9 @@ data-toggle="modal"
 @if(!empty($telNumber2))
     data-hospital-tel-2="{{ $telNumber2 }}"
 @endif
+@if(!empty($hasEmail))
+    data-has-email="{{ $hasEmail }}"
+@endif
 @if(!empty($hrefValue))
     data-hospital-url="{{ $hrefValue }}"
 @endif

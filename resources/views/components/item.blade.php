@@ -341,6 +341,7 @@
                                         'hrefValue'         => $url,
                                         'telNumber'         => $tel,
                                         'telNumber2'        => $tel2,
+                                        'hasEmail'          => !empty($email) ? true : false,
                                         'hospitalTitle'     => $title,
                                         'hospitalUrl'       => $d['url'],
                                         'classTitle'        => 'btn btn-icon btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left',
