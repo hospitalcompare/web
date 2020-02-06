@@ -46,7 +46,7 @@ var emptyColDesktop = '<div class="col col-empty h-100">\n' +
 
 var emptyColMobile = '<div class="card w-100 rounded-0 border-top-0 border-left-0 border-right-0 border-bottom">\n' +
     '                        <div class="border-bottom">\n' +
-    '                            <p class="">Selected adfasdf Hospital<br>\n' +
+    '                            <p class="">Selected Hospital<br>\n' +
     '                                will appear here.</p>\n' +
     '                            <p class=""> Add more hospitals to your\n' +
     '                                Shortlist by clicking the&nbsp;<img width="14" height="12" src="/images/icons/heart.svg" alt="Heart icon">\n' +
