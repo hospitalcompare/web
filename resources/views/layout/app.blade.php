@@ -28,13 +28,25 @@
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/icons/favicon/favicon-32x32.png') }}">
         <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/icons/favicon/favicon-16x16.png') }}">
         <link rel="manifest" href="{{ asset('images/icons/favicon/site.webmanifest') }}">
-        <script type="text/javascript">
-            //uncomment and change this to false if you're having trouble with WOFFs
-            //var woffEnabled = true;
-            //to place your webfonts in a custom directory
-            //uncomment this and set it to where your webfonts are.
-            //var customPath = "/themes/fonts";
-        </script>
+
+        <meta property="og:site_name" content="Hospital Compare" />
+        <meta property="og:title" content="@yield('title')" />
+        <meta property="og:description" content="@yield('description')" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{ url()->full() }}" />
+        @hasSection('featuredImage')
+        <meta property="og:image" content="@yield('featuredImage')" />
+        @else
+        <meta property="og:image" content="{{ asset('/images/placeholder.jpg') }}" />
+        @endif
+
+{{--        <script type="text/javascript">--}}
+{{--            //uncomment and change this to false if you're having trouble with WOFFs--}}
+{{--            //var woffEnabled = true;--}}
+{{--            //to place your webfonts in a custom directory--}}
+{{--            //uncomment this and set it to where your webfonts are.--}}
+{{--            //var customPath = "/themes/fonts";--}}
+{{--        </script>--}}
         <script type="text/javascript" src="{{ asset('fonts/MyFontsWebfontsKit.js') }}"></script>
 
         @if(env('APP_ENV') === 'dev')

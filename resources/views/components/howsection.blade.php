@@ -31,15 +31,23 @@
                                     {!! $howsection['description'] !!}
                                 </div>
                             @endif
-                            <p class="mt-auto mb-0 d-flex justify-content-center"
-                                @include('components.basic.popover', [
-                                'html'      => true,
-                                'content'   => 'This is the content',
-                                'trigger'   => 'hover'
-                            ])>More info <span
-                                    class="help-link help-link__inline help-link__inline-red">@svg('icon-more-info')</span>
-                            </p>
+{{--                            <p class="mt-auto mb-0 d-flex justify-content-center"--}}
+{{--                                @include('components.basic.popover', [--}}
+{{--                                'html'      => true,--}}
+{{--                                'content'   => 'This is the content',--}}
+{{--                                'trigger'   => 'hover'--}}
+{{--                            ])>More info <span--}}
+{{--                                    class="help-link help-link__inline help-link__inline-red">@svg('icon-more-info')</span>--}}
+{{--                            </p>--}}
                         </div>
+                        <p class="mt-3 mb-0">For more information click&nbsp;
+                            @include('components.basic.button', [
+                                    'buttonText'        =>  'here',
+                                    'classTitle'        =>  'p-0 d-inline',
+                                    'hrefValue'         =>  '/how-to-use'
+                                ])
+
+                        </p>
                     </div>
                 @endforeach
                     <ol class="carousel-indicators d-lg-none">
