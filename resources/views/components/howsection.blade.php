@@ -40,14 +40,9 @@
 {{--                                    class="help-link help-link__inline help-link__inline-red">@svg('icon-more-info')</span>--}}
 {{--                            </p>--}}
                         </div>
-                        <p class="mt-3 mb-0">For more information click&nbsp;
-                            @include('components.basic.button', [
-                                    'buttonText'        =>  'here',
-                                    'classTitle'        =>  'p-0 d-inline',
-                                    'hrefValue'         =>  '/how-to-use'
-                                ])
-
-                        </p>
+                        @unless(!empty($hideLinks))
+                            <p class="mt-3 mb-0 w-100">For more information click <a class="btn-link" href="/how-to-use">here</a></p>
+                        @endunless
                     </div>
                 @endforeach
                     <ol class="carousel-indicators d-lg-none">

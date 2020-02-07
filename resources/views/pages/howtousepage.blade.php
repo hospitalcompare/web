@@ -14,9 +14,10 @@
     @include('pages.pagesections.flatbanner')
     <section class="how-section__parent">
         @include('components.howsection', [
-            'hideButton'    => false,
-            'sectionTitle' => 'How to Use Hospital Compare',
-            'howsections' => [
+            'hideButton'        => false,
+            'sectionTitle'      => 'How to Use Hospital Compare',
+            'hideLinks'         => true,
+            'howsections'       => [
             [
                 'iconImg'       => 'search-and-compare',
                 'step'          => 'One',
