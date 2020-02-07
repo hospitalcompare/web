@@ -11,7 +11,7 @@ function showGeneralModal(event) {
     var url = button.data('hospital-url');              // Extract info from data-* attributes
     var tel = button.data('hospital-tel');              // Extract info from data-* attributes
     var tel2 = button.data('hospital-tel-2');           // Extract info from data-* attributes
-    var hospitalTypeText = button.data('hospital-type') === 'nhs-hospital' ? 'nhs hospital' : 'private hospital';     // Extract info from data-* attributes
+    var hospitalTypeText = button.data('hospital-type') === 'nhs-hospital' ? 'nhs' : 'private';     // Extract info from data-* attributes
     var hospitalTypeClass = button.data('hospital-type') === 'nhs-hospital' ? 'bg-nhs nhs-hospital' : 'bg-private private-hospital';     // Extract info from data-* attributes
     var picture = button.data('image');                 // Extract info from data-* attributes
 
