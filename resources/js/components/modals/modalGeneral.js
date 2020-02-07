@@ -3,11 +3,6 @@
 var modal = $('#hc_modal_contacts_general, #hc_modal_contacts_private');
 
 function showGeneralModal(event) {
-    // Clear existing classes from the 'hospital type' tab
-    modal.find('#hospital_type').removeClass('private-hospital nhs-hospital bg-nhs bg-private');
-    // Clear text from 'hospital type' tab
-    modal.find('#hospital_type p').text('');
-
     var privateEnquiryButton = modal.find('#private_enquiry_to_nhs_hospital');
 
     var button = $(event.relatedTarget);                // Button that triggered the modal
@@ -20,10 +15,20 @@ function showGeneralModal(event) {
     var hospitalTypeClass = button.data('hospital-type') === 'nhs-hospital' ? 'bg-nhs nhs-hospital' : 'bg-private private-hospital';     // Extract info from data-* attributes
     var picture = button.data('image');                 // Extract info from data-* attributes
 
+    // Hide the private enquiry button again
+    privateEnquiryButton
+        .addClass('d-none')
+    // Clear existing classes from the 'hospital type' tab
+    modal.find('#hospital_type').removeClass('private-hospital nhs-hospital bg-nhs bg-private');
+    // Clear text from 'hospital type' tab
+    modal.find('#hospital_type p').text('');
+
+
+
     // Add hospital title to enquiry button
 
     // If it's an nhs hospital AND has an email
-    if (button.data('hospital-type') === 'nhs-hospital' && button.data('has-email'))
+    if (button.data('hospital-type') === 'nhs-hospital' && button.data('has-email') === 1)
         // Set data attr for hospital title
         privateEnquiryButton
             .removeClass('d-none')
