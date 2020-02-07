@@ -10,6 +10,8 @@
 
 @section('body-class', 'blog-page hc-content')
 
+{{--{{ dd($data['blogs']) }}--}}
+
 @section('content')
     <section class="banner">
         <div class="container">

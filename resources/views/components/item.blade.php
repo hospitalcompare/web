@@ -244,15 +244,6 @@
             </div>
             <div class="result-item-section-3">
                 <div class="row btn-area-cta">
-                    {{--                    @include('components.basic.button', [--}}
-                    {{--                       'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-primary-1 btn-more-info h-100 w-100 text-center font-14 p-3 position-relative d-lg-none',--}}
-                    {{--                       'buttonText'        => '<span>Map</span>',--}}
-                    {{--                       'htmlButton'        => true,--}}
-                    {{--                       'icon'              => '',--}}
-                    {{--                       'id'                => 'more_info_' . $id,--}}
-                    {{--                       'dataTarget'        => '#corporate_content_hospital_' . $id,--}}
-                    {{--                       'dataId'            => $id--}}
-                    {{--                    ])--}}
                     @if($NHSClass == 'private-hospital')
                         <div class="col-6 col-lg-12">
                             @include('components.basic.modalbutton', [
@@ -310,6 +301,7 @@
                                 'hrefValue'         => $url,
                                 'telNumber'         => $tel,
                                 'telNumber2'        => $tel2,
+                                'hasEmail'          => !empty($email) ? true : false,
                                 'hospitalTitle'     => $title,
                                 'hospitalUrl'       => $d['url'],
                                 'classTitle'        => 'btn btn-icon btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',

@@ -2,9 +2,11 @@
 
 @section('title', $data['blog']['title'])
 
-@section('description', 'this is the meta description')
+@section('description', substr(strip_tags($data['blog']['description']), 1 , 160))
 
 @section('keywords', 'this is the meta keywords')
+
+@section('featuredImage', '/' . $data['blog']['image'])
 
 @section('mobile', 'width=device-width, initial-scale=1')
 
@@ -19,18 +21,9 @@
                          style="background-image: url('../{{$data['blog']['image']}}')">
                         <span class="blog-item-category rounded-pill d-inline-block position-absolute col-white"
                               style="background-color: {{ $data['blog']['category']['colour'] }}">
-{{--                            {!! file_get_contents(asset($data['blog']['category']['icon'])) !!}--}}
                             @svg($data['blog']['category']['icon'])
-{{--                            <span class="position-absolute blog-item-category-icon-wrap d-inline-block"></span>--}}
                             {{ $data['blog']['category']['name'] }}
                         </span>
-{{--                        @include('components.basic.button', [--}}
-{{--                            'hrefValue'     => '/',--}}
-{{--                            'classTitle'    => 'btn btn-brand-primary-1 btn-blog-back',--}}
-{{--                            'buttonText'    => $data['blog']['category']['name'],--}}
-{{--                            'svg'           => substr($data['blog']['category']['icon'], 3, 0) //Remove the .svg extension--}}
-
-{{--                        ])--}}
                     </div>
                     <div class="blog-item-details d-flex justify-content-start align-items-center mb-2">
                         <div class="mr-2">

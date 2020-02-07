@@ -298,6 +298,7 @@
                             'hrefValue'         => $url,
                             'hospitalTitle'     => $title,
                             'hospitalUrl'       => $d['url'],
+                            'hasEmail'          => !empty($email) ? true : false,
                             'classTitle'        => 'btn btn-enquire_mobile btn-squared btn-squared_slim enquiry font-12 w-100 text-center d-flex justify-content-center flex-row-reverse',
                             'buttonText'        => $btnText,
                             'modalTarget'       => '#hc_modal_contacts_general',

@@ -16,9 +16,7 @@
         <meta charset='utf-8'>
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name='description' content='@yield('description')'>
-        <meta name='keywords' content='@yield('keywords')'>
         <meta name="viewport" content="@yield('mobile')">
-{{--        <meta name="viewport" content="width=device-width">--}}
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- Block indexing bots apart from live site -->
         @if(env('APP_ENV') !== 'live')
@@ -30,13 +28,25 @@
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/icons/favicon/favicon-32x32.png') }}">
         <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/icons/favicon/favicon-16x16.png') }}">
         <link rel="manifest" href="{{ asset('images/icons/favicon/site.webmanifest') }}">
-        <script type="text/javascript">
-            //uncomment and change this to false if you're having trouble with WOFFs
-            //var woffEnabled = true;
-            //to place your webfonts in a custom directory
-            //uncomment this and set it to where your webfonts are.
-            //var customPath = "/themes/fonts";
-        </script>
+
+        <meta property="og:site_name" content="Hospital Compare" />
+        <meta property="og:title" content="@yield('title')" />
+        <meta property="og:description" content="@yield('description')" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{ url()->full() }}" />
+        @hasSection('featuredImage')
+        <meta property="og:image" content="@yield('featuredImage')" />
+        @else
+        <meta property="og:image" content="{{ asset('/images/placeholder.jpg') }}" />
+        @endif
+
+{{--        <script type="text/javascript">--}}
+{{--            //uncomment and change this to false if you're having trouble with WOFFs--}}
+{{--            //var woffEnabled = true;--}}
+{{--            //to place your webfonts in a custom directory--}}
+{{--            //uncomment this and set it to where your webfonts are.--}}
+{{--            //var customPath = "/themes/fonts";--}}
+{{--        </script>--}}
         <script type="text/javascript" src="{{ asset('fonts/MyFontsWebfontsKit.js') }}"></script>
 
         @if(env('APP_ENV') === 'dev')
@@ -64,6 +74,22 @@
                 })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
             </script>
             @endif
+
+        <!-- Facebook Pixel Code -->
+        <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window, document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '210446956660642');
+            fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=210446956660642&ev=PageView&noscript=1"/></noscript>
+        <!-- End Facebook Pixel Code -->
 
         @yield('scripts')
 
