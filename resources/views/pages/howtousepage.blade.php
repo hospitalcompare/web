@@ -15,26 +15,26 @@
     <section class="how-section__parent">
         @include('components.howsection', [
             'hideButton'    => false,
-            'sectionTitle' => 'How does it work?',
+            'sectionTitle' => 'How to Use Hospital Compare',
             'howsections' => [
             [
                 'iconImg'       => 'search-and-compare',
                 'step'          => 'One',
                 'title'         => 'Search & compare:',
                 'color'         => 'violet',
-                'description'   => '<p>Search from over 800 hospitals in England and find the right hospital for your treatment.</p>'],
+                'description'   => '<p>Search from over 750 hospitals in England and find the right hospital for your treatment.</p>'],
             [
                 'iconImg'       => 'make-enquiry',
                 'step'          => 'Two',
                 'title'         => 'Make enquiry:',
                 'color'         => 'pink',
-                'description'   => '<p>Use Hospital Compare to make an enquiry at one or more hospitals.</p>'],
+                'description'   => '<p>Use Hospital Compare to make an enquiry at one or more hospitals, without obligation.</p>'],
             [
                 'iconImg'       => 'request-a-referral',
                 'step'          => 'Three',
                 'title'         => 'Request a referral:',
                 'color'         => 'blue',
-                'description'   => '<p>Inform your GP of your chosen hospital and request an appointment.</p>'
+                'description'   => '<p>For self-pay or insurance, book your appointment directly. For NHS treatment, make enquiries then inform your GP of your choice to book an appointment (you will need a GP referral).</p>'
             ]
         ]
     ])
