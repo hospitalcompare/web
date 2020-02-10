@@ -486,6 +486,10 @@ select.big {
 
 
 // Cookie popup styling
+.cc-grower {
+    max-height: 100% !important;
+}
+
 .cc-theme-hc-cookie {
     @extend .SofiaPro-Regular;
     @extend .p-3;
@@ -510,6 +514,7 @@ select.big {
 
         /* END Cookies */
     }
+
 
     .cc-window.cc-banner {
         padding: 1em 1.8em;

@@ -136,7 +136,7 @@
                     "position": "top",
                     "static": true,
                     "content": {
-                        "message": "We use cookies to provide a better service. By closing this window or continuing to use our website you agree with our use of cookies. <span class=\"para-block d-inline d-lg-block\">Find out how to manage cookies and view our policy </span>",
+                        "message": "We use cookies to provide a better service. By closing this window or continuing to use our website you agree with our use of cookies. <span class=\"para-block d-inline d-xl-block\">Find out how to manage cookies and view our policy </span>",
                         "dismiss": "Close",
                         "link": "here.",
                         "href": "/cookie-policy"
