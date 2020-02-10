@@ -14,7 +14,7 @@
     @include('pages.pagesections.flatbanner')
     <section class="about-us-intro">
         <div class="container">
-            <div class="row">
+            <div class="row position-relative">
                 <div class="col-lg-6">
                     <h1>Feel <span class="col-brand-primary-1">better faster</span> by<br>knowing your legal<br> right to choose
                     </h1>
@@ -40,6 +40,13 @@
 {{--                        'single'    => true,--}}
 {{--                        'stars'     => 4.5--}}
 {{--                    ])--}}
+                </div>
+                <div class="col-lg-6 about-hero-cont">
+                    <div class="about-img-top"></div>
+                    <div class="about-img-bottom"></div>
+                    <img class="about-pattern-top-left" src="images/icons/about-top-left.svg" alt="dots">
+                    <img class="about-pattern-right" src="images/icons/about-right.svg" alt="dots">
+                    <img class="about-pattern-bottom" src="images/icons/about-bottom.svg" alt="dots">
                 </div>
             </div>
         </div>
