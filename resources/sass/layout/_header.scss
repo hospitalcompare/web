@@ -72,7 +72,7 @@
                     right: 1rem;
                 }
 
-                a {
+                a, > span {
                     color: $body-color;
                     padding: 1rem 0;
                 }
@@ -93,7 +93,7 @@
             display: inline-block;
 
 
-            > a {
+            > a, > span {
                 height: 100%;
                 display: flex;
                 align-items: center;
@@ -123,7 +123,7 @@
                     }
                 }
 
-                a {
+                a, > span {
                     background-color: $header-link-hover-colour;
                     text-decoration: none;
                     color: #fff;
@@ -140,7 +140,7 @@
                     margin-right: -15px;
                 }
 
-                a {
+                a, > span {
                     @include font-size(1.3rem);
                     padding: 30px 15px;
                     line-height: 1;

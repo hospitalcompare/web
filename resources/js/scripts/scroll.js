@@ -7,7 +7,7 @@ $('a[href^="#"]')
     .on('click', function (e) {
         e.preventDefault();
         var hash = this.hash;
-        scrolling = true;
+        // scrolling = true;
         $('html, body').animate({
             scrollTop: ($(hash).offset().top)
         }, 800);
