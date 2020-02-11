@@ -307,7 +307,7 @@
                                 'hospitalUrl'       => $d['url'],
                                 'classTitle'        => 'btn btn-icon btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
                                 'buttonText'        => $btnText,
-                                'modalTarget'       => '#hc_modal_contacts_general',
+                                'modalTarget'       => '#hc_modal_contacts_general_' . $id,
                                 'id'                => 'enquire_nhs'.$id,
                                 'hospitalIds'       => $id,
                                 'image'             => $itemImg,

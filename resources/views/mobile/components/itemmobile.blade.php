@@ -282,7 +282,7 @@
                                     'hospitalUrl'       => $d['url'],
                                     'classTitle'        => 'btn btn-squared btn-squared_slim btn-enquire_mobile btn-brand-primary-4 font-12 w-100 d-flex justify-content-center align-items-center flex-row-reverse px-0',
                                     'buttonText'        => 'Call',
-                                    'modalTarget'       => '#hc_modal_contacts_private',
+                                    'modalTarget'       => '#hc_modal_contacts_private_' . $id,
                                     'id'                => 'enquire_nhs'.$id,
                                     'hospitalIds'       => $id,
                                     'image'             => $itemImg,
@@ -301,7 +301,7 @@
                             'hasEmail'          => !empty($email) ? true : false,
                             'classTitle'        => 'btn btn-enquire_mobile btn-squared btn-squared_slim enquiry font-12 w-100 text-center d-flex justify-content-center flex-row-reverse',
                             'buttonText'        => $btnText,
-                            'modalTarget'       => '#hc_modal_contacts_general',
+                            'modalTarget'       => '#hc_modal_contacts_general_' . $id,
                             'id'                => 'enquire_nhs'.$id,
                             'hospitalIds'       => $id,
                             'svg'               => 'circle-check'
@@ -333,7 +333,7 @@
                                     'hospitalUrl'       => $d['url'],
                                     'classTitle'        => 'btn btn-squared btn-squared_slim btn-enquire_mobile btn-brand-primary-4 font-12 w-100 d-flex justify-content-center align-items-center flex-row-reverse px-0',
                                     'buttonText'        => 'Call',
-                                    'modalTarget'       => '#hc_modal_contacts_general',
+                                    'modalTarget'       => '#hc_modal_contacts_general_' . $id,
                                     'id'                => 'enquire_nhs'.$id,
                                     'hospitalIds'       => $id,
                                     'image'             => $itemImg,
@@ -347,6 +347,8 @@
         </div>
     </div>
     {{-- Modal for special offer --}}
+    @include('components.modals.modalcontactsprivate')
+    @include('components.modals.modalcontactsgeneral')
     @if(!empty($specialOffers))
         @includeWhen(!empty($specialOffers), 'mobile.components.modals.modalmobilespecialoffer', [
             'class' => 'default'])
