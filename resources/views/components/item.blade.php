@@ -219,23 +219,24 @@
                     <div class="d-flex flex-column justify-content-center">
                         <p class="stat-label d-block d-md-none">NHS Funded Work</p>
                         @if(!empty($privateSelfPay))
-                            @if($NHSClass == 'private-hospital')
-                                @include('components.basic.modalbutton', [
-                                        'hrefValue'         => $url,
-                                        'telNumber'         => $tel,
-                                        'telNumber2'        => $tel2,
-                                        'hospitalType'      => $fundedText,
-                                        'hospitalTitle'     => $title,
-                                        'modalTarget'       => '#hc_modal_enquire_private',
-                                        'classTitle'        => 'text-link enquire-prices',
-                                        'target'            => 'blank',
-                                        'modalText'         => 'This is the text about prices',
-                                        'hospitalIds'       => $id,
-                                        'image'             => $itemImg,
-                                        'buttonText'        => 'Click for<br>prices'])
-                            @else
-                                <p><img class="dash-or-tick" src='images/icons/dash-black.svg' alt='Dash icon'></p>
-                            @endif
+{{--                            @if($NHSClass == 'private-hospital')--}}
+{{--                                @include('components.basic.modalbutton', [--}}
+{{--                                        'hrefValue'         => $url,--}}
+{{--                                        'telNumber'         => $tel,--}}
+{{--                                        'telNumber2'        => $tel2,--}}
+{{--                                        'hospitalType'      => $fundedText,--}}
+{{--                                        'hospitalTitle'     => $title,--}}
+{{--                                        'modalTarget'       => '#hc_modal_enquire_private',--}}
+{{--                                        'classTitle'        => 'text-link enquire-prices',--}}
+{{--                                        'target'            => 'blank',--}}
+{{--                                        'modalText'         => 'This is the text about prices',--}}
+{{--                                        'hospitalIds'       => $id,--}}
+{{--                                        'image'             => $itemImg,--}}
+{{--                                        'buttonText'        => 'Click for<br>prices'])--}}
+{{--                            @else--}}
+{{--                                <p><img class="dash-or-tick" src='images/icons/dash-black.svg' alt='Dash icon'></p>--}}
+{{--                            @endif--}}
+                            <p><img class="dash-or-tick" src='images/icons/tick-green.svg' alt='Tick icon'></p>
                         @else
                             <p><img class="dash-or-tick" src='images/icons/dash-black.svg' alt='Dash icon'></p>
                         @endif
