@@ -42,7 +42,7 @@
                     'qualityRating'         => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : 0,
                     'FFRating'              => !empty($d['rating']['friends_family_rating']) ? number_format((float)$d['rating']['friends_family_rating'], 1).'%' : 0,
                     'NHSFunded'             => ($d['hospitalType']['name'] === 'NHS' || ($d['hospitalType']['name'] === 'Independent' && !empty($d['waitingTime'][0]['perc_waiting_weeks']))) ? 1 : 0,
-                    'privateSelfPay'        => $d['hospitalType']['name'] === 'Independent' ? 1 : 0,
+                    'privateSelfPay'        => $d['private_self_pay'],
                     'specialOffers'         => $d['special_offers'],
                     'btnText'               => 'Make an enquiry',
                     'NHSClass'              => $d['hospitalType']['name'] == 'NHS' ? 'nhs-hospital' : 'private-hospital',
