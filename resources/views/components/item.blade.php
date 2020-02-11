@@ -340,7 +340,7 @@
                                         'hospitalUrl'       => $d['url'],
                                         'classTitle'        => 'btn btn-icon btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left',
                                         'buttonText'        => 'Call',
-                                        'modalTarget'       => '#hc_modal_contacts_general',
+                                        'modalTarget'       => '#hc_modal_contacts_general_' . $id,
                                         'id'                => 'enquire_nhs'.$id,
                                         'hospitalIds'       => $id,
                                         'image'             => $itemImg,
@@ -384,4 +384,5 @@
         'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,
         'hospitalTitle'     => $title
     ])
+    @include('components.modals.modalcontactsgeneral')
 </div>

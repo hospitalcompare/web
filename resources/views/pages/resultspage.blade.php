@@ -48,6 +48,7 @@
                     'NHSClass'              => $d['hospitalType']['name'] == 'NHS' ? 'nhs-hospital' : 'private-hospital',
                     'fundedText'            => ($d['hospitalType']['name'] == 'NHS') ? 'NHS Hospital': 'Private Hospital',
                     'url'                   => $d['url'],
+                    'url2'                  => $d['nhs_private_url'],
                     'tel'                   => $d['phone_number'],
                     'tel2'                  => $d['phone_number_2'],
                     'email'                 => $d['email'],
@@ -96,7 +97,6 @@
     @include('components.solutionsbar', [
         'specialOffers' => $data['special_offers']
         ])
-    @include('components.modals.modalcontactsgeneral')
     @include('components.modals.modalcontactsprivate')
     @include('components.modals.modalenquireprivate', [
         'procedures' => $data['filters']['procedures']])
