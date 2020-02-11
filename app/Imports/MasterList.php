@@ -104,6 +104,8 @@ class MasterList extends DefaultImport {
                         'phone_number'          => $item['Location Telephone Number'],
                         'phone_number_2'        => $item['Addition Telephone Number'],
                         'phone_number_3'        => $item['Additional Telephone Number 2'],
+                        'nhs_private_url'       => $item['NHS Private Website'],
+                        'private_self_pay'      => $item['Private Flag'],
 //                        'phone_number_3'        => $item['Location Web Address'],
 //                        'report_url'        => $item['CQC Report URL']
                     ]);

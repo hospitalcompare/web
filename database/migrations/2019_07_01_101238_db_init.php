@@ -74,6 +74,7 @@ class DbInit extends Migration
                 $table->string('name');
                 $table->string('display_name')->nullable();
                 $table->string('url')->nullable();
+                $table->string('nhs_private_url')->nullable();
                 $table->string('email')->nullable();
                 $table->string('phone_number')->nullable();
                 $table->string('phone_number_2')->nullable();
