@@ -287,7 +287,7 @@
                                         'hospitalUrl'       => $d['url'],
                                         'classTitle'        => 'btn btn-icon btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left',
                                         'buttonText'        => 'Call',
-                                        'modalTarget'       => '#hc_modal_contacts_private',
+                                        'modalTarget'       => '#hc_modal_contacts_private_' . $id,
                                         'id'                => 'enquire_nhs'.$id,
                                         'hospitalIds'       => $id,
                                         'image'             => $itemImg,
@@ -385,4 +385,5 @@
         'hospitalTitle'     => $title
     ])
     @include('components.modals.modalcontactsgeneral')
+    @include('components.modals.modalcontactsprivate')
 </div>

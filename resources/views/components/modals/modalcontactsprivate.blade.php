@@ -1,6 +1,6 @@
 {{--Template for BS modal overlays --}}
 
-<div class="modal modal-enquire fade" id="hc_modal_contacts_private" tabindex="-1" role="dialog"
+<div class="modal modal-enquire fade" id="hc_modal_contacts_private_{{ $id }}" tabindex="-1" role="dialog"
      aria-labelledby="" aria-modal="true" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content position-relative">
@@ -18,17 +18,18 @@
                         <div class="col-12">
                             <div
                                 class="col-inner p-30 d-flex flex-column justify-content-center col-inner__right h-100 text-center border rounded">
-                                <h3 class="modal-title mb-3">Thanks for Your Interest in <span id="hospital_title"></span>
+                                <h3 class="modal-title mb-3">Thanks for Your Interest in <span id="hospital_title">{{ $title }}</span>
                                 </h3>
                                 <div class="mb-5">
-                                    <p>Main switchboard</p>
-                                    <p class="col-brand-primary-1 font-20" id="hospital_telephone"></p>
-                                    <p>Private</p>
-                                    <p class="col-brand-primary-1 font-20" id="hospital_telephone_2"></p>
+                                    <p class="mb-1">Main switchboard</p>
+                                    <p class="col-brand-primary-1 font-20" id="hospital_telephone">{{ $tel }}</p>
+                                    <p class="mb-1">Private</p>
+                                    <p class="col-brand-primary-1 font-20" id="hospital_telephone_2">{{ !empty($tel2) ? $tel2 : 'No number available' }}</p>
                                 </div>
                                 <div class="btn-area">
                                     @include('components.basic.button', [
                                         'target'            => 'blank',
+                                        'hrefValue'         => 'https://' . $url,
                                         'buttonText'        => 'Or visit hospital website',
                                         'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-primary-4 btn-enquire w-100 text-center'])
                                 </div>

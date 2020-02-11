@@ -97,7 +97,7 @@
     @include('components.solutionsbar', [
         'specialOffers' => $data['special_offers']
         ])
-    @include('components.modals.modalcontactsprivate')
+
     @include('components.modals.modalenquireprivate', [
         'procedures' => $data['filters']['procedures']])
 
