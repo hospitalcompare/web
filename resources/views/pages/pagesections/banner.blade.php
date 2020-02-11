@@ -108,7 +108,7 @@
                         ])
                         <div class='browse-button text-left text-lg-center'>
                             @include('components.basic.button', [
-                                'classTitle'    => 'col-grey pl-0 btn-plain btn-icon-arrow position-relative',
+                                'classTitle'    => 'col-grey pl-0 btn-plain btn-icon-arrow w-100 d-flex align-items-center justify-content-lg-center',
                                 'buttonText'    => 'Browse all hospitals',
                                 'htmlButton'    => true,
                                 'svg'           => 'icon-arrow',
