@@ -45,22 +45,23 @@
                                         'buttonText'        => 'Visit website'])
 
                                     <p class="mb-1">Private</p>
+{{--                                    Private phone number--}}
                                     <p class="col-brand-primary-1 font-20 mb-1" id="hospital_telephone_2">{{ !empty($tel2) ? $tel2 : 'No number available' }}</p>
-                                    @include('components.basic.button', [
+{{--                                    Private web address --}}
+                                    @includeWhen(!empty($url2), 'components.basic.button', [
                                         'hospitalType'      => 'nhs-hospital',
                                         'target'            => 'blank',
                                         'hrefValue'         => $url2,
-                                        'hospitalUrl'       => '',
                                         'classTitle'        => 'p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block',
                                         'buttonText'        => 'Visit website'])
                                 </div>
 {{--                               Trigger enquiry form for PRIVATE treatment at NHS hospital --}}
-                                @includeIf(!empty($url2), 'components.basic.modalbutton', [
-                                    'id'                => 'private_enquiry_to_nhs_hospital',
+                                @includeWhen(!empty($email), 'components.basic.modalbutton', [
+                                    'id'                => $id,
                                     'hospitalType'      => 'nhs-hospital',
                                     'hospitalIds'       => '',
                                     'hrefValue'         => $url2,
-                                    'hospitalTitle'     => '',
+                                    'hospitalTitle'     => $title,
                                     'modalTarget'       => '#hc_modal_enquire_private',
                                     'classTitle'        => 'btn btn-squared btn-squared_slim btn-enquire btn-brand-secondary-3 enquiry font-12 text-center',
                                     'buttonText'        => 'Make a private treatment enquiry',
