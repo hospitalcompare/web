@@ -211,7 +211,7 @@
                     <div class="d-flex flex-column justify-content-center">
                         <p class="stat-label d-block w-100 d-lg-none">Friends & Family Rating</p>
                         <p>
-                            {!! ($NHSClass == 'nhs-hospital') || ($NHSClass == 'private-hospital') && !empty($d['waitingTime'][0]['perc_waiting_weeks']) ? "<img src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
+                            {!! $NHSClass == 'nhs-hospital' || ($NHSClass == 'private-hospital' && !empty($d['waitingTime'][0]['perc_waiting_weeks'])) ? "<img class='dash-or-tick' src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img class='dash-or-tick' src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                         </p>
                     </div>
                 </div>
