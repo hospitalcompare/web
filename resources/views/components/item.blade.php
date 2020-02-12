@@ -209,15 +209,16 @@
                 {{-- NHS funded work  --}}
                 <div class="result-item-section-2__child">
                     <div class="d-flex flex-column justify-content-center">
-                        <p class="stat-label d-block w-100 d-lg-none">Friends & Family Rating</p>
+                        <p class="stat-label d-block w-100 d-lg-none">NHS Funded Work</p>
                         <p>
                             {!! $NHSClass == 'nhs-hospital' || ($NHSClass == 'private-hospital' && !empty($d['waitingTime'][0]['perc_waiting_weeks'])) ? "<img class='dash-or-tick' src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img class='dash-or-tick' src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                         </p>
                     </div>
                 </div>
+                {{-- Private self pay  --}}
                 <div class="result-item-section-2__child">
                     <div class="d-flex flex-column justify-content-center">
-                        <p class="stat-label d-block d-md-none">NHS Funded Work</p>
+                        <p class="stat-label d-block d-lg-none">Private Self Pay</p>
                         @if(!empty($privateSelfPay))
 {{--                            @if($NHSClass == 'private-hospital')--}}
 {{--                                @include('components.basic.modalbutton', [--}}
