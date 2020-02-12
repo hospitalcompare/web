@@ -51,58 +51,60 @@
             {{-- CQC rating  --}}
             <div class="result-item-section-2__child">
                 <p>Care Quality Rating</p>
-                <p class="d-flex SofiaPro-Medium" @includeWhen(empty($qualityRating), 'components.basic.popover', [
-                        'placement' => 'bottom',
-                        'trigger' => 'click',
-                        'html' => 'true',
-                        'content' => 'Currently no data available for this hospital'])
-                    @includeWhen(!empty($qualityRating), 'components.basic.popover', [
-                         'placement'     => 'bottom',
-                         'size'          => 'cqc',
-                         'trigger'       => 'click',
-                         'html'          => 'true',
-                         'content'       => '<div class="container-fluid">
-                             <div class="row">
-                                 <div class="cqc-left col-4 d-flex flex-column justify-content-center align-items-start bg-' . str_slug($qualityRating). ' text-white border">
-                                     <p class="mb-0 text-white">Overall</p>
-                                     <p class="mb-0 text-white text-left"><strong>' . $qualityRating . '</strong></p>
-                                 </div>
-                                 <div class="cqc-right col-8 pr-0">
-                                     <div class="cqc-table">
-                                         <div class="cqc-row d-flex justify-content-between">
-                                             <div class="cqc-category">Safe</div>
-                                             <div class="cqc-rating ml-auto"><strong>' . $safe . '</strong>'
-                                                . $safeIcon .
-                                             '</div>
-                                         </div>
-                                         <div class="cqc-row d-flex justify-content-between">
-                                             <div class="cqc-category">Effective</div>
-                                             <div class="cqc-rating ml-auto"><strong>' . $effective . '</strong>'
-                                                . $effectiveIcon .
-                                             '</div>
-                                         </div>
-                                         <div class="cqc-row d-flex justify-content-between">
-                                             <div class="cqc-category">Caring</div>
-                                             <div class="cqc-rating ml-auto"><strong>' . $caring . '</strong>'
-                                                . $caringIcon .
-                                             '</div>
-                                         </div>
-                                         <div class="cqc-row d-flex justify-content-between">
-                                             <div class="cqc-category">Responsive</div>
-                                             <div class="cqc-rating ml-auto"><strong>' . $responsive . '</strong>'
-                                                . $responsiveIcon .
-                                             '</div>
-                                         </div>
-                                         <div class="cqc-row d-flex justify-content-between">
-                                             <div class="cqc-category">Well Led</div>
-                                             <div class="cqc-rating ml-auto"><strong>' . $well_led . '</strong>'
-                                                . $wellLedIcon .
-                                             '</div>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>'])>
+                <p class="d-flex SofiaPro-Medium"
+{{--                    @includeWhen(empty($qualityRating), 'components.basic.popover', [--}}
+{{--                        'placement' => 'bottom',--}}
+{{--                        'trigger' => 'click',--}}
+{{--                        'html' => 'true',--}}
+{{--                        'content' => 'Currently no data available for this hospital'])--}}
+{{--                    @includeWhen(!empty($qualityRating), 'components.basic.popover', [--}}
+{{--                         'placement'     => 'bottom',--}}
+{{--                         'size'          => 'cqc',--}}
+{{--                         'trigger'       => 'click',--}}
+{{--                         'html'          => 'true',--}}
+{{--                         'content'       => '<div class="container-fluid">--}}
+{{--                             <div class="row">--}}
+{{--                                 <div class="cqc-left col-4 d-flex flex-column justify-content-center align-items-start bg-' . str_slug($qualityRating). ' text-white border">--}}
+{{--                                     <p class="mb-0 text-white">Overall</p>--}}
+{{--                                     <p class="mb-0 text-white text-left"><strong>' . $qualityRating . '</strong></p>--}}
+{{--                                 </div>--}}
+{{--                                 <div class="cqc-right col-8 pr-0">--}}
+{{--                                     <div class="cqc-table">--}}
+{{--                                         <div class="cqc-row d-flex justify-content-between">--}}
+{{--                                             <div class="cqc-category">Safe</div>--}}
+{{--                                             <div class="cqc-rating ml-auto"><strong>' . $safe . '</strong>'--}}
+{{--                                                . $safeIcon .--}}
+{{--                                             '</div>--}}
+{{--                                         </div>--}}
+{{--                                         <div class="cqc-row d-flex justify-content-between">--}}
+{{--                                             <div class="cqc-category">Effective</div>--}}
+{{--                                             <div class="cqc-rating ml-auto"><strong>' . $effective . '</strong>'--}}
+{{--                                                . $effectiveIcon .--}}
+{{--                                             '</div>--}}
+{{--                                         </div>--}}
+{{--                                         <div class="cqc-row d-flex justify-content-between">--}}
+{{--                                             <div class="cqc-category">Caring</div>--}}
+{{--                                             <div class="cqc-rating ml-auto"><strong>' . $caring . '</strong>'--}}
+{{--                                                . $caringIcon .--}}
+{{--                                             '</div>--}}
+{{--                                         </div>--}}
+{{--                                         <div class="cqc-row d-flex justify-content-between">--}}
+{{--                                             <div class="cqc-category">Responsive</div>--}}
+{{--                                             <div class="cqc-rating ml-auto"><strong>' . $responsive . '</strong>'--}}
+{{--                                                . $responsiveIcon .--}}
+{{--                                             '</div>--}}
+{{--                                         </div>--}}
+{{--                                         <div class="cqc-row d-flex justify-content-between">--}}
+{{--                                             <div class="cqc-category">Well Led</div>--}}
+{{--                                             <div class="cqc-rating ml-auto"><strong>' . $well_led . '</strong>'--}}
+{{--                                                . $wellLedIcon .--}}
+{{--                                             '</div>--}}
+{{--                                         </div>--}}
+{{--                                     </div>--}}
+{{--                                 </div>--}}
+{{--                             </div>--}}
+{{--                         </div>'])--}}
+                >
                     {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
                 </p>
             </div>
@@ -110,52 +112,53 @@
             <div class="result-item-section-2__child">
                 <p>Waiting Time NHS (Funded)</p>
                 <p class=" d-flex  SofiaPro-Medium"
-                    @includeWhen(empty($waitTime), 'components.basic.popover', [
-                        'placement' => 'bottom',
-                        'trigger' => 'click',
-                        'html' => 'true',
-                        'content' => 'Currently no data available for this hospital'])
-                    @includeWhen(!empty($waitTime), 'components.basic.popover', [
-                        'placement'         => 'bottom',
-                        'trigger'           => 'click',
-                        'html'              => 'true',
-                        'content'           =>
-                            '<div>
-                                <div class="d-table w-100">
-                                    <div class="d-table-row">
-                                        <div class="d-table-cell"></div>
-                                        <div class="d-table-cell SofiaPro-Medium">Weeks</div>
-                                        <div class="d-table-cell SofiaPro-Medium">Ranking</div>
-                                    </div>
-                                    <div class="d-table-row">
-                                        <div class="d-table-cell">Current Waiting Time</div>
-                                        <div class="d-table-cell">'.$waitTime.'</div>
-                                        <div class="d-table-cell">'.$waitingTimeRanking.'</div>
-                                    </div>
-                                    <div class="d-table-row">
-                                        <div class="d-table-cell SofiaPro-SemiBold">Waiting Times for Treated Patients</div>
-                                        <div class="d-table-cell"></div>
-                                        <div class="d-table-cell"></div>
-                                    </div>
-                                    <div class="d-table-row">
-                                        <div class="d-table-cell">Outpatients Treated</div>
-                                        <div class="d-table-cell">'.$outpatient.'</div>
-                                        <div class="d-table-cell">'.$outpatientRank.'</div>
-                                    </div>
-                                    <div class="d-table-row">
-                                        <div class="d-table-cell">Inpatients Treated</div>
-                                        <div class="d-table-cell">'.$inpatient.'</div>
-                                        <div class="d-table-cell">'.$inpatientRank.'</div>
-                                    </div>
-                                    <div class="d-table-row">
-                                        <div class="d-table-cell">Diagnostics - % waiting 6+ weeks</div>
-                                        <div class="d-table-cell">'.$diagnostic.'</div>
-                                        <div class="d-table-cell">'.$diagnosticRank.'</div>
-                                    </div>
-                                </div>
-                                <small>NB - Diagnostics is a % of current waiting list waiting 6+ weeks (national target is 1%)</small>
-                            </div>'
-                        ])>
+{{--                    @includeWhen(empty($waitTime), 'components.basic.popover', [--}}
+{{--                        'placement' => 'bottom',--}}
+{{--                        'trigger' => 'click',--}}
+{{--                        'html' => 'true',--}}
+{{--                        'content' => 'Currently no data available for this hospital'])--}}
+{{--                    @includeWhen(!empty($waitTime), 'components.basic.popover', [--}}
+{{--                        'placement'         => 'bottom',--}}
+{{--                        'trigger'           => 'click',--}}
+{{--                        'html'              => 'true',--}}
+{{--                        'content'           =>--}}
+{{--                            '<div>--}}
+{{--                                <div class="d-table w-100">--}}
+{{--                                    <div class="d-table-row">--}}
+{{--                                        <div class="d-table-cell"></div>--}}
+{{--                                        <div class="d-table-cell SofiaPro-Medium">Weeks</div>--}}
+{{--                                        <div class="d-table-cell SofiaPro-Medium">Ranking</div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="d-table-row">--}}
+{{--                                        <div class="d-table-cell">Current Waiting Time</div>--}}
+{{--                                        <div class="d-table-cell">'.$waitTime.'</div>--}}
+{{--                                        <div class="d-table-cell">'.$waitingTimeRanking.'</div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="d-table-row">--}}
+{{--                                        <div class="d-table-cell SofiaPro-SemiBold">Waiting Times for Treated Patients</div>--}}
+{{--                                        <div class="d-table-cell"></div>--}}
+{{--                                        <div class="d-table-cell"></div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="d-table-row">--}}
+{{--                                        <div class="d-table-cell">Outpatients Treated</div>--}}
+{{--                                        <div class="d-table-cell">'.$outpatient.'</div>--}}
+{{--                                        <div class="d-table-cell">'.$outpatientRank.'</div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="d-table-row">--}}
+{{--                                        <div class="d-table-cell">Inpatients Treated</div>--}}
+{{--                                        <div class="d-table-cell">'.$inpatient.'</div>--}}
+{{--                                        <div class="d-table-cell">'.$inpatientRank.'</div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="d-table-row">--}}
+{{--                                        <div class="d-table-cell">Diagnostics - % waiting 6+ weeks</div>--}}
+{{--                                        <div class="d-table-cell">'.$diagnostic.'</div>--}}
+{{--                                        <div class="d-table-cell">'.$diagnosticRank.'</div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <small>NB - Diagnostics is a % of current waiting list waiting 6+ weeks (national target is 1%)</small>--}}
+{{--                            </div>'--}}
+{{--                        ])--}}
+                >
                     {!! !empty($waitTime) ? $waitTime.'&nbsp;Weeks' : "No data" !!}
                 </p>
             </div>
@@ -166,10 +169,11 @@
             <div class="result-item-section-2__child">
                 <p>% Operations Cancelled</p>
                 <p class=" d-flex  SofiaPro-Medium"
-                    @include('components.basic.popover', [
-                    'trigger' => 'click',
-                    'html'    => 'true',
-                    'content' => !empty($opCancelled) ? 'National average<br> is 3.35%' : 'Currently no data available<br>for this hospital'])>
+{{--                    @include('components.basic.popover', [--}}
+{{--                    'trigger' => 'click',--}}
+{{--                    'html'    => 'true',--}}
+{{--                    'content' => !empty($opCancelled) ? 'National average<br> is 3.35%' : 'Currently no data available<br>for this hospital'])--}}
+                >
                     {!! !empty($opCancelled) ? $opCancelled : "No data" !!}
                 </p>
             </div>
