@@ -48,12 +48,63 @@
     }
 
     .about-impartial {
-        background-image: url(../images/about-corner.svg);
+        background-image: url(/images/icons/about-corner.svg);
         background-repeat: no-repeat;
         background-position: left bottom;
         border-bottom: 1px solid #ededed;
         background-size: 20%;
         padding: 0 0 75px !important;
+    }
+
+
+
+
+    @media screen and (max-width:1200px) {
+        .about-hero-cont {
+            position: absolute;
+            transform: translate(20%, 0);
+            width: 60% !important;
+            max-width: 60% !important;
+            bottom: -50px;
+            top: -40px;
+            right: 0px;
+            flex: 0 0 60%;
+        }
+    }
+
+    @media screen and (max-width:991px) {
+        .about-hero-cont {
+            position: relative;
+            top: 0;
+            right: 0;
+            width: 100% !important;
+            max-width: 100% !important;
+            transform: translate(0%);
+            bottom: 0;
+            height: 450px;
+            flex: 0 0 100%;
+        }
+    }
+
+    @media screen and (max-width:576px) {
+        .about-hero-cont {
+            position: relative;
+            top: 0;
+            right: 0;
+            transform: translate(0%);
+            bottom: 0;
+            height: 450px;
+        }
+
+        .about-img-top {
+            height: 250px;
+            width: 240px;
+        }
+
+        .about-img-bottom {
+            height: 230px;
+            width: 270px;
+        }
     }
 
     // Swirl animation
@@ -77,14 +128,65 @@
     }
 }
 
+
+.about-hero-cont {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    transform: translate(0%);
+    bottom: -45px;
+}
+
+
+.about-img-top {
+    position: absolute;
+    z-index: 999;
+    background: url("/images/about-hero-top.jpg");
+    background-size: cover;
+    height: 350px;
+    width: 330px;
+    border-radius: 5px;
+    right: 75px;
+}
+
+.about-img-bottom {
+    position: absolute;
+    z-index: 998;
+    background: url("/images/about-hero-bottom.jpg");
+    background-size: cover;
+    height: 260px;
+    width: 300px;
+    border-radius: 5px;
+    bottom:30px;
+    left: 40px;
+}
+
+.about-pattern-top-left {
+    position: absolute;
+    z-index: 997;
+    top: -20px;
+    left:70px;
+    width: 140px;
+}
+
+.about-pattern-right {
+    position: absolute;
+    z-index: 996;
+    right: 0;
+    top: 60px;
+    width: 115px;
+}
+
+.about-pattern-bottom {
+    position: absolute;
+    z-index: 995;
+    bottom: 0;
+    height: 85px;
+}
+
 .about-us-intro {
     border-bottom: $greyBorder;
-    @include media-breakpoint-up(lg) {
-        background-image: url('/images/layer_16.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right 75px;
-    }
+
 }
 
 .our-background {

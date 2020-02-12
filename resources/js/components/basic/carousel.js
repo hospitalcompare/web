@@ -12,13 +12,12 @@ $( window ).on( 'load resize', function() {
             $( '.carousel-mobile' ).carousel('cycle');
             isCarouselPaused = false;
         }
-    };
+    }
 });
 
 
 // Dr S tour carousel modal schtooooff
-$('#carousel_tour').on('slid.bs.carousel', function (event) {
-    // do something…
+$(document).on('slid.bs.carousel', '#carousel_tour', function (event) {
     var nextSlideNo = event.to;
     nextSlideNo += 1;
     $('#slide_number span').text(nextSlideNo);

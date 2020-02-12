@@ -209,15 +209,16 @@
                 {{-- NHS funded work  --}}
                 <div class="result-item-section-2__child">
                     <div class="d-flex flex-column justify-content-center">
-                        <p class="stat-label d-block w-100 d-lg-none">Friends & Family Rating</p>
+                        <p class="stat-label d-block w-100 d-lg-none">NHS Funded Work</p>
                         <p>
                             {!! $NHSClass == 'nhs-hospital' || ($NHSClass == 'private-hospital' && !empty($d['waitingTime'][0]['perc_waiting_weeks'])) ? "<img class='dash-or-tick' src='images/icons/tick-green.svg' alt='Tick icon'>" : "<img class='dash-or-tick' src='images/icons/dash-black.svg' alt='Dash icon'>" !!}
                         </p>
                     </div>
                 </div>
+                {{-- Private self pay  --}}
                 <div class="result-item-section-2__child">
                     <div class="d-flex flex-column justify-content-center">
-                        <p class="stat-label d-block d-md-none">NHS Funded Work</p>
+                        <p class="stat-label d-block d-lg-none">Private Self Pay</p>
                         @if(!empty($privateSelfPay))
 {{--                            @if($NHSClass == 'private-hospital')--}}
 {{--                                @include('components.basic.modalbutton', [--}}
@@ -287,7 +288,7 @@
                                         'hospitalUrl'       => $d['url'],
                                         'classTitle'        => 'btn btn-icon btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left',
                                         'buttonText'        => 'Call',
-                                        'modalTarget'       => '#hc_modal_contacts_private',
+                                        'modalTarget'       => '#hc_modal_contacts_private_' . $id,
                                         'id'                => 'enquire_nhs'.$id,
                                         'hospitalIds'       => $id,
                                         'image'             => $itemImg,
@@ -307,7 +308,7 @@
                                 'hospitalUrl'       => $d['url'],
                                 'classTitle'        => 'btn btn-icon btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
                                 'buttonText'        => $btnText,
-                                'modalTarget'       => '#hc_modal_contacts_general',
+                                'modalTarget'       => '#hc_modal_contacts_general_' . $id,
                                 'id'                => 'enquire_nhs'.$id,
                                 'hospitalIds'       => $id,
                                 'image'             => $itemImg,
@@ -340,7 +341,7 @@
                                         'hospitalUrl'       => $d['url'],
                                         'classTitle'        => 'btn btn-icon btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left',
                                         'buttonText'        => 'Call',
-                                        'modalTarget'       => '#hc_modal_contacts_general',
+                                        'modalTarget'       => '#hc_modal_contacts_general_' . $id,
                                         'id'                => 'enquire_nhs'.$id,
                                         'hospitalIds'       => $id,
                                         'image'             => $itemImg,
@@ -384,4 +385,6 @@
         'address'           => '<strong>' . $title . '</strong>' . '<br>' . $location . '<br>' . trim($town, ', ') . '<br>' . $county . '<br>' . $postcode,
         'hospitalTitle'     => $title
     ])
+    @include('components.modals.modalcontactsgeneral')
+    @include('components.modals.modalcontactsprivate')
 </div>

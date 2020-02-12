@@ -39,10 +39,10 @@
 {{--                            ])>More info <span--}}
 {{--                                    class="help-link help-link__inline help-link__inline-red">@svg('icon-more-info')</span>--}}
 {{--                            </p>--}}
+                            @unless(!empty($hideLinks))
+                                <p class="mt-auto mb-0 w-100">For more information click <a class="btn-link" href="/how-to-use">here</a></p>
+                            @endunless
                         </div>
-                        @unless(!empty($hideLinks))
-                            <p class="mt-3 mb-0 w-100">For more information click <a class="btn-link" href="/how-to-use">here</a></p>
-                        @endunless
                     </div>
                 @endforeach
                     <ol class="carousel-indicators d-lg-none">

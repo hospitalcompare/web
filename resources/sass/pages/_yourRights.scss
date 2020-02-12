@@ -10,20 +10,230 @@
     border-bottom: $greyBorder;
 }
 
-.your-rights-act {
-    @include media-breakpoint-up(md) {
-        background-image: url('/images/Layer_16.png');
-    }
-    background-size: 40%;
-    background-repeat: no-repeat;
-    background-position: right 75px;
-    border-bottom: $greyBorder;
-}
-
 .your-rights-what {
     //background-image: url('/images/banner-flipped.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     //@include mask($brand-primary-1, 0.06)
     @include mask($bgLightGrey, 1)
+}
+
+
+.your-rights-hero-cont {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    transform: translate(0%);
+    bottom: -45px;
+}
+
+
+.your-rights-img-top {
+    position: absolute;
+    z-index: 999;
+    background: url(/images/about-hero-top.jpg);
+    background-size: cover;
+    height: 470px;
+    width: 410px;
+    border-radius: 5px;
+    right: -230px;
+    top: 58px;
+}
+
+.your-rights-img-bottom {
+    position: absolute;
+    z-index: 998;
+    background: url(/images/about-hero-bottom.jpg);
+    background-size: cover;
+    height: 380px;
+    width: 380px;
+    border-radius: 5px;
+    bottom: 55px;
+    left: 180px;
+}
+
+.your-rights-img-back {
+    position: absolute;
+    z-index: 997;
+    background: url(/images/about-hero-back.jpg);
+    background-size: cover;
+    height: 260px;
+    width: 260px;
+    border-radius: 5px;
+    top: 170px;
+    left: 250px;
+}
+
+.your-rights-pattern-top-left {
+    position: absolute;
+    z-index: 997;
+    top: 140px;
+    left: 170px;
+    width: 140px;
+}
+
+.your-rights-pattern-right {
+    position: absolute;
+    z-index: 996;
+    left: 510px;
+    width: 115px;
+    bottom: -10px;
+}
+
+.your-rights-pattern-bottom {
+    position: absolute;
+    z-index: 995;
+    bottom: 0;
+    height: 85px;
+    left: 140px;
+}
+
+@media screen and (max-width:1200px) {
+    .your-rights-hero-cont {
+        position: absolute;
+        transform: translate(20%, 0);
+        width: 60% !important;
+        max-width: 60% !important;
+        bottom: -50px;
+        top: -40px;
+        right: 0px;
+        flex: 0 0 60%;
+    }
+
+    .your-rights-img-top {
+        position: absolute;
+        z-index: 999;
+        background: url(/images/about-hero-top.jpg);
+        background-size: cover;
+        height: 370px;
+        width: 370px;
+        border-radius: 5px;
+        right: -30px;
+        top: 58px;
+    }
+
+    .your-rights-img-bottom {
+        position: absolute;
+        z-index: 998;
+        background: url(/images/about-hero-bottom.jpg);
+        background-size: cover;
+        height: 330px;
+        width: 350px;
+        border-radius: 5px;
+        bottom: 285px;
+        left: 70px;
+    }
+
+    .your-rights-img-back {
+        position: absolute;
+        z-index: 997;
+        background: url(/images/about-hero-back.jpg);
+        background-size: cover;
+        height: 200px;
+        width: 200px;
+        border-radius: 5px;
+        top: 190px;
+        left: 140px;
+    }
+
+    .your-rights-pattern-top-left {
+        position: absolute;
+        z-index: 997;
+        top: 30px;
+        left: 50px;
+        width: 140px;
+    }
+
+    .your-rights-pattern-right {
+        position: absolute;
+        z-index: 996;
+        left: 400px;
+        width: 115px;
+        bottom: 180px;
+    }
+
+    .your-rights-pattern-bottom {
+        position: absolute;
+        z-index: 995;
+        bottom: 250px;
+        height: 85px;
+        left: 10px;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .your-rights-hero-cont {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100% !important;
+        max-width: 100% !important;
+        transform: translate(0%);
+        bottom: 0;
+        height: 450px;
+        flex: 0 0 100%;
+    }
+
+    .your-rights-img-top {
+        position: absolute;
+        z-index: 999;
+        background: url(/images/about-hero-top.jpg);
+        background-size: cover;
+        height: 370px;
+        width: 370px;
+        border-radius: 5px;
+        right: -30px;
+        top: 58px;
+    }
+
+    .your-rights-img-bottom {
+        position: absolute;
+        z-index: 998;
+        background: url(/images/about-hero-bottom.jpg);
+        background-size: cover;
+        height: 290px;
+        width: 300px;
+        border-radius: 5px;
+        bottom: 0;
+        left: 40px;
+    }
+
+    .your-rights-img-back {
+        display: none;
+    }
+
+    .your-rights-pattern-right {
+        position: absolute;
+        z-index: 996;
+        left: auto;
+        width: 115px;
+        bottom: 180px;
+        right: -90px;
+        top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .your-rights-hero-cont {
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: translate(0%);
+        bottom: 0;
+        height: 450px;
+    }
+
+    .your-rights-img-top {
+        position: absolute;
+        z-index: 999;
+        background: url(/images/about-hero-top.jpg);
+        background-size: cover;
+        height: 270px;
+        width: 270px;
+        border-radius: 5px;
+        right: 30px;
+        top: 58px;
+    }
 }

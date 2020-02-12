@@ -41,13 +41,11 @@
                         </a>
                     </li>
                     <li class="d-none d-lg-inline-block">
-                        <a href="#">
-                            @include('components.basic.modalbutton', [
-                                'classTitle'    => '',
-                                'buttonText'    => 'Help',
-                                'modalTarget'   => '#hc_modal_tour'
-                            ])
-                        </a>
+                        @include('components.basic.modalbutton', [
+                            'classTitle'    =>  '',
+                            'buttonText'    =>  'Help',
+                            'modalTarget'   =>  '#hc_modal_tour'
+                        ])
                     </li>
                     @if(env('APP_ENV') === 'local')
                         <li>

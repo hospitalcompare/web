@@ -250,13 +250,13 @@
         position: relative;
     }
 
-    .result-item-section-2__child .d-flex.flex-column {
+    .result-item-section-2__child > * {
         position: relative;
         justify-content: space-between !important;
         align-items: flex-end !important;
     }
 
-    .results-page-desktop .result-item-section-2__child .d-flex.flex-column {
+    .results-page-desktop .result-item-section-2__child > * {
         text-align: right;
         width: 100%;
         color: #757575 !important;

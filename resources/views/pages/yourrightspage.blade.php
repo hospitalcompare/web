@@ -63,7 +63,7 @@
     </section>
     <section class="your-rights-act">
         <div class="container">
-            <div class="row mb-4">
+            <div class="row mb-4 position-relative">
                 <div class="col-12 col-md-6">
                     <h2 class="font-28 ">The Act</h2>
                     <p class="col-grey p-secondary">The Act also introduced a number of other important policies and created bodies and structures to
@@ -95,6 +95,14 @@
                     </p>
                     <p class="col-grey p-secondary mb-0">These rights are reflected in the NHS Constitution.
                     </p>
+                </div>
+                <div class="col-12 col-md-6 your-rights-hero-cont">
+                    <div class="your-rights-img-top"></div>
+                    <div class="your-rights-img-bottom"></div>
+                    <div class="your-rights-img-back"></div>
+                    <img class="your-rights-pattern-top-left" src="images/icons/about-top-left.svg" alt="dots">
+                    <img class="your-rights-pattern-right" src="images/icons/about-right.svg" alt="dots">
+                    <img class="your-rights-pattern-bottom" src="images/icons/about-bottom.svg" alt="dots">
                 </div>
             </div>
         </div>
