@@ -4,8 +4,8 @@
      aria-labelledby="" aria-modal="true" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content position-relative">
-            <div id="hospital_type" class="hospital-type">
-                <p class="m-0"></p>
+            <div id="hospital_type" class="hospital-type {{ $NHSClass === 'private-hospital' ? 'private-hospital bg-private' : 'nhs-hospital bg-nhs' }}">
+                <p class="m-0">{{ $NHSClass === 'private-hospital' ? 'Private' : 'NHS' }}</p>
             </div>
             <div class="modal-body">
                 <div class="modal-header d-flex justify-content-between">
