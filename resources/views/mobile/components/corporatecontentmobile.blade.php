@@ -256,7 +256,7 @@
                                 <div class="card">
                                     <div class="card-header" id="headingSix_{{ $id }}">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button"
+                                            <button class="btn btn-link no-arrow" type="button"
                                                     data-toggle="collapse"
                                                     data-target="#collapseSix_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseSix_{{ $id }}">
@@ -267,16 +267,45 @@
                                             </button>
                                         </h2>
                                     </div>
-                                    <div id="collapseSix_{{ $id }}" class="collapse" aria-labelledby="headingSix_{{ $id }}"
-                                         data-parent="#hospital_stats">
-                                        <div class="card-body">
-                                            @if(!empty($FFRating))
-                                                <p>National average is 98.855%</p>
-                                            @else
-                                                <p>No data for this hospital</p>
-                                            @endif
-                                        </div>
+{{--                                    <div id="collapseSix_{{ $id }}" class="collapse" aria-labelledby="headingSix_{{ $id }}"--}}
+{{--                                         data-parent="#hospital_stats">--}}
+{{--                                        <div class="card-body">--}}
+{{--                                            @if(!empty($FFRating))--}}
+{{--                                                <p>National average is 98.855%</p>--}}
+{{--                                            @else--}}
+{{--                                                <p>No data for this hospital</p>--}}
+{{--                                            @endif--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingSeven_{{ $id }}">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link no-arrow" type="button"
+                                                    data-toggle="collapse"
+                                                    data-target="#collapseSeven_{{ $id }}" aria-expanded="false"
+                                                    aria-controls="collapseSeven_{{ $id }}">
+                                                <p class="rating-name">Private Self Pay</p>
+                                                <p class="rating-value">
+                                                    @if(!empty($privateSelfPay))
+                                                        <img class="dash-or-tick" src='images/icons/tick-green.svg' alt='Tick icon'>
+                                                    @else
+                                                        <img class="dash-or-tick" src='images/icons/dash-black.svg' alt='Dash icon'>
+                                                    @endif
+                                                </p>
+                                            </button>
+                                        </h2>
                                     </div>
+{{--                                    <div id="collapseSeven_{{ $id }}" class="collapse" aria-labelledby="headingSeven_{{ $id }}"--}}
+{{--                                         data-parent="#hospital_stats">--}}
+{{--                                        <div class="card-body">--}}
+{{--                                            @if(!empty($FFRating))--}}
+{{--                                                <p>National average is 98.855%</p>--}}
+{{--                                            @else--}}
+{{--                                                <p>No data for this hospital</p>--}}
+{{--                                            @endif--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
                                 </div>
                             </div>
                         </div>

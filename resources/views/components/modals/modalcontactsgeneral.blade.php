@@ -39,7 +39,7 @@
                                     @include('components.basic.button', [
                                         'hospitalType'      => 'nhs-hospital',
                                         'target'            => 'blank',
-                                        'hrefValue'         => 'https://' . $url,
+                                        'hrefValue'         => $url,
                                         'hospitalUrl'       => '',
                                         'classTitle'        => 'p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block',
                                         'buttonText'        => 'Visit website'])
@@ -51,7 +51,7 @@
                                     @includeWhen(!empty($url2), 'components.basic.button', [
                                         'hospitalType'      => 'nhs-hospital',
                                         'target'            => 'blank',
-                                        'hrefValue'         => 'https://' . $url2,
+                                        'hrefValue'         => $url2,
                                         'classTitle'        => 'p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block',
                                         'buttonText'        => 'Visit website'])
                                 </div>
@@ -60,7 +60,7 @@
                                     'id'                => $id,
                                     'hospitalType'      => 'nhs-hospital',
                                     'hospitalIds'       => $id,
-                                    'hrefValue'         => 'https://' . $url2,
+                                    'hrefValue'         => $url2,
                                     'hospitalTitle'     => $title,
                                     'modalTarget'       => '#hc_modal_enquire_private',
                                     'classTitle'        => 'btn btn-squared btn-squared_slim btn-enquire btn-brand-secondary-3 enquiry font-12 text-center mt-5',

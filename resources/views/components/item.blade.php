@@ -271,7 +271,7 @@
                                     @include('components.basic.button', [
                                         'hospitalType'      => $NHSClass,
                                         'target'            => 'blank',
-                                        'hrefValue'         => 'https://' . $url,
+                                        'hrefValue'         => $url,
                                         'hospitalUrl'       => $d['url'],
                                         'classTitle'        => 'btn btn-icon btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
                                         'buttonText'        => 'Web',
@@ -323,7 +323,7 @@
                                     @include('components.basic.button', [
                                         'hospitalType'      => $NHSClass,
                                         'target'            => 'blank',
-                                        'hrefValue'         => 'https://' . $url,
+                                        'hrefValue'         => $url,
                                         'hospitalUrl'       => $d['url'],
                                         'classTitle'        => 'btn btn-icon btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
                                         'buttonText'        => 'Web',
