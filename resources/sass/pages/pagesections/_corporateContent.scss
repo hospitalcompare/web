@@ -214,3 +214,15 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+// Class added to result item when CC area open
+.result-item-mobile-section-2 {
+    transition: $transition;
+}
+
+.corporate-content-open {
+    .result-item-mobile-section-2 {
+        max-height: 0;
+        overflow: hidden;
+    }
+}
