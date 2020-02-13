@@ -22,7 +22,7 @@
                                 </h3>
                                 <div class="mb-5">
                                     <p class="mb-1">Main switchboard</p>
-                                    <p class="col-brand-primary-1 font-20" id="hospital_telephone">{{ $tel }}</p>
+                                    <p class="col-brand-primary-1 font-20" id="hospital_telephone">{{ !empty($tel) ? $tel : 'No number available' }}</p>
                                     <p class="mb-1">Private</p>
                                     <p class="col-brand-primary-1 font-20" id="hospital_telephone_2">{{ !empty($tel2) ? $tel2 : 'No number available' }}</p>
                                 </div>
