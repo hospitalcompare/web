@@ -29,7 +29,7 @@
             <!-- More info button -->
                 @include('components.basic.button', [
                    'classTitle'        => 'btn btn-more-info text-center font-12 p-0 shadow-none',
-                   'buttonText'        => 'Map +',
+                   'buttonText'        => 'More info +',
                    'htmlButton'        => true,
                    'icon'              => '',
                    'id'                => 'more_info_' . $id,
