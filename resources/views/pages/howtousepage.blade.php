@@ -33,7 +33,7 @@
             [
                 'iconImg'       => 'request-a-referral',
                 'step'          => 'Three',
-                'title'         => 'Request a referral:',
+                'title'         => 'Book Appointment:',
                 'color'         => 'blue',
                 'description'   => '<p>For self-pay or insurance, book your appointment directly. For NHS treatment, make enquiries then inform your GP of your choice to book an appointment (you will need a GP referral).</p>'
             ]
