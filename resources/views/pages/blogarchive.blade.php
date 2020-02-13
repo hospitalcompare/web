@@ -25,12 +25,14 @@
             <div class="row py-4">
                 <div class="col ">
                     <div class="filters row">
-                        <div class="text text-left col-2">Filter articles</div>
-                        <div class="categories col-10">
+                        <div class="text text-left col-12 col-lg-2 my-4 my-lg-auto">Filter articles</div>
+                        <div class="categories col-12 col-lg-10">
                             @if(!empty($data['categories']))
-                                <div class="row justify-content-end">
+                                <div class="row justify-content-lg-end row-categories">
                                     @foreach($data['categories'] as $cat)
-                                        <a href="/blogs/category/{{$cat->id}}" class="btn btn-category category rounded text-center col-2 ml-2" style="background-color: {{ (empty($data['categoryId']) ? $cat->colour : (($data['categoryId'] == $cat->id) ? $cat->colour : 'grey'))}}">{{$cat->name}}</a>
+                                        <div class="col-2">
+                                            <a href="/blogs/category/{{$cat->id}}" class="btn btn-category category rounded text-center w-100" style="background-color: {{ (empty($data['categoryId']) ? $cat->colour : (($data['categoryId'] == $cat->id) ? $cat->colour : 'grey'))}}">{{$cat->name}}</a>
+                                        </div>
                                     @endforeach
                                 </div>
                             @endif
