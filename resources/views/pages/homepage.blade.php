@@ -55,7 +55,7 @@
                     </div>
                     <div class="why-use-video col col-12 col-md-6">
                         <div class="video-wrapper">
-                            <video muted class="content" poster="{{ url('images/video_placeholder.jpg') }}">
+                            <video muted class="content" poster="{{ url('images/home-1.jpg') }}">
                                 <source src="{{ asset('video/For_Wes.mp4') }}" type="video/mp4">
                                 <source src="movie.ogg" type="video/ogg">
                                 Your browser does not support the video tag.

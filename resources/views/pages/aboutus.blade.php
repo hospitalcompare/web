@@ -144,7 +144,7 @@
             <div class="row">
                 <div class="col-12 col-lg-6 offset-lg-3">
                     <div class="image-wrapper mb-5">
-                        <img class="about-img" src="images/video_placeholder.jpg" alt="People in a meetin talking">
+                        <img class="about-img" src="images/about-3.jpg" alt="People in a meetin talking">
                         <img class="about-dots d-none d-lg-block" src="images/about-dots.svg" alt="People in a meetin talking">
                         <img class="about-circle d-none d-lg-block" src="images/about-circle.svg" alt="People in a meetin talking">
                     </div>
