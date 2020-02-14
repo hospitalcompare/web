@@ -51,6 +51,7 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
                          data-parent="#privacy_accordion">
                         <div class="card-body">
+                            <h2>Purpose of this privacy policy</h2>
                             <p>This privacy policy aims to give you information on how Hospital Compare collects
                                 and processes your personal data through your use of this website, including any
                                 data you may provide through this website when you complete an enquiry form to
@@ -138,7 +139,14 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                     them as a consequence of using our website or completing an enquiry form on
                                     our website. This is because while our services to you as a consumer are
                                     free we receive a fee from service providers, such as a private hospital, to
-                                    whom we introduce you. Please note, however we do not collect any Financial
+                                    whom we introduced you. We do not collect this data from you ourselves as the use of
+                                    our site and services to consumers is free and therefore we do not need to, but we
+                                    may be notified of this data from service providers, such as a private hospital, if
+                                    you have purchased services from them as a consequence of using our website or
+                                    completing an enquiry form on our website. This is because while our services to you
+                                    as a consumer are free we receive a fee from service providers, such as a private
+                                    hospital, to whom we introduce you and we and they need to verify and audit
+                                    introductions made. Please note, however we do not ourselves collect any Financial
                                     Data about you such as bank account details and payment card details and we
                                     do not receive this data about you from any service providers to whom we
                                     introduce you through our website. For more information on how we are
@@ -148,19 +156,22 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                         Conditions</a>
                                 </li>
                                 <li><strong>Technical Data</strong> includes internet protocol (IP) address,
-                                    your login data, browser type and version, time zone setting and location,
+                                    your login data (if you log in), browser type and version, time zone setting and
+                                    location,
                                     browser plug-in types and versions, operating system and platform, and other
                                     technology on the devices you use to access this website.
                                 </li>
-                                <li><strong>Profile Data</strong> includes your username and password (if any),
-                                    enquires made by you from our website, your interests, preferences, feedback
+                                <li><strong>Profile Data</strong> includes your username and password (if relevant),
+                                    enquires made by you from our website (including any health data you disclose), your
+                                    interests, preferences, feedback
                                     and survey responses.
                                 </li>
                                 <li><strong>Usage Data</strong> includes information about how you use our
                                     website, products and services.
                                 </li>
                                 <li><strong>Marketing and Communications Data</strong> includes your preferences
-                                    in receiving marketing from us and our third parties and your communication
+                                    in receiving marketing from us and our Third Parties (see Glossary below) and your
+                                    communication
                                     preferences.
                                 </li>
                             </ul>
@@ -173,25 +184,41 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 your personal data so that it can directly or indirectly identify you, we treat
                                 the combined data as personal data which will be used in accordance with this
                                 privacy policy.</p>
-                            <p>We do not collect any information about criminal convictions or offences. Nor do
-                                we collect <strong>Special Categories of Personal Data</strong> about you (this
-                                includes details about your race or ethnicity, religious or philosophical
-                                beliefs, sex life, sexual orientation, political opinions, trade union
-                                membership, information about your health, and genetic and biometric data),
-                                except we do collect data about which procedures you have searched or enquired
-                                about on our website. For example, by your completing enquiry forms on our
-                                website. This may not be a special category of personal data as we cannot
-                                validate that the information is about your personal health. For example, you
-                                might be searching for research purposes and the procedures might relate to a
-                                condition or interest of someone else.</p>
-                            <h2>If you fail to provide personal data
-                            </h2>
-                            <p>Where we need to collect personal data by law, or under the terms of a contract
-                                we have with you, and you fail to provide that data when requested, we may not
-                                be able to perform the contract we have or are trying to enter into with you
-                                (for example, to provide you with services or referrals). In this case, we may
-                                have to cancel an enquiry you make or service you require from us, but we will
-                                notify you if this is the case at the time.</p>
+                            <p>Except for the health data we collect as mentioned below, we do not collect any Special
+                                Categories of Personal Data about you (this includes details about your race or
+                                ethnicity, religious or philosophical beliefs, sex life, sexual orientation, political
+                                opinions, trade union membership, and information about your health, and genetic and
+                                biometric data). Nor do we collect data about criminal convictions and offences.</p>
+                            <p>Clearly, we do collect and process any health information you have disclosed by
+                                completing enquiry forms on our website so we can forward it for you. This information
+                                will be passed to the hospital or service provider you have chosen to contact. This data
+                                will then also be subject to the privacy policies of that hospital or service provider.
+                                Please ask the hospital or service provider concerned if you wish to find out more
+                                information about their privacy policies and how they manage your personal data.
+                            </p>
+                            <p>We are not responsible for a hospitals or other service providers actions or privacy
+                                statements.</p>
+                            <p>We also collect data about which procedures you have searched or enquired about to help
+                                us improve our website and the services we provide. </p>
+                            {{--                            <p>We do not collect any information about criminal convictions or offences. Nor do--}}
+                            {{--                                we collect <strong>Special Categories of Personal Data</strong> about you (this--}}
+                            {{--                                includes details about your race or ethnicity, religious or philosophical--}}
+                            {{--                                beliefs, sex life, sexual orientation, political opinions, trade union--}}
+                            {{--                                membership, information about your health, and genetic and biometric data),--}}
+                            {{--                                except we do collect data about which procedures you have searched or enquired--}}
+                            {{--                                about on our website. For example, by your completing enquiry forms on our--}}
+                            {{--                                website. This may not be a special category of personal data as we cannot--}}
+                            {{--                                validate that the information is about your personal health. For example, you--}}
+                            {{--                                might be searching for research purposes and the procedures might relate to a--}}
+                            {{--                                condition or interest of someone else.</p>--}}
+                            {{--                            <h2>If you fail to provide personal data--}}
+                            {{--                            </h2>--}}
+                            {{--                            <p>Where we need to collect personal data by law, or under the terms of a contract--}}
+                            {{--                                we have with you, and you fail to provide that data when requested, we may not--}}
+                            {{--                                be able to perform the contract we have or are trying to enter into with you--}}
+                            {{--                                (for example, to provide you with services or referrals). In this case, we may--}}
+                            {{--                                have to cancel an enquiry you make or service you require from us, but we will--}}
+                            {{--                                notify you if this is the case at the time.</p>--}}
                         </div>
                     </div>
                 </div>
