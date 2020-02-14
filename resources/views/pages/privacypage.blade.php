@@ -345,7 +345,9 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                     <tbody>
                                     <tr>
                                         <td>
-                                            To register you as a new user or our website and services
+                                            To register you as a new user or our website and services (if registration
+                                            required)
+
                                         </td>
                                         <td>
                                             <ol class="alpha">
@@ -358,13 +360,14 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>To process and deliver your enquiry about a service offered by
-                                            others, such as private hospitals
+                                        <td>To process and deliver your enquiry about a service offered by others, such
+                                            as private hospitals, and recording that enquiry
                                         </td>
                                         <td>
                                             <ol class="alpha">
                                                 <li>Identity</li>
                                                 <li>Contact</li>
+                                                <li>Profile</li>
                                                 <li>Transaction</li>
                                                 <li>Marketing and Communications</li>
                                             </ol>
@@ -375,6 +378,12 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                                 <li>Necessary for our legitimate interests (to keep our records
                                                     and transaction records updated and to study and record how
                                                     customers use our services)
+                                                </li>
+                                                <li>Consent, you consent to our making an enquiry for you and
+                                                    keeping a record of that enquiry by clicking the “Make Enquiry” form
+                                                    on our website, in order for us to pass on your enquiry to your
+                                                    chosen hospital or service provider and to keep track of your
+                                                    enquiry
                                                 </li>
                                             </ol>
                                         </td>
@@ -392,6 +401,7 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                             <ol class="alpha">
                                                 <li>Identity</li>
                                                 <li>Contact</li>
+                                                <li>Transaction</li>
                                                 <li>Profile</li>
                                                 <li>Usage</li>
                                                 <li>Marketing and Communications</li>
@@ -405,6 +415,9 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                                 <li>Necessary for our legitimate interests (to keep our records
                                                     updated and to study and record how customers use our
                                                     services so we can improve them and grow our business)
+                                                </li>
+                                                <li>Consent, to the extent required to process health data you pass to
+                                                    us to process
                                                 </li>
                                             </ol>
                                         </td>
@@ -489,12 +502,21 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                             <ol class="alpha">
                                                 <li>Technical</li>
                                                 <li>Usage</li>
+                                                <li>Profile</li>
                                             </ol>
                                         </td>
                                         <td>
-                                            Necessary for our legitimate interests (to define types of users of
-                                            our services, to keep our website updated and relevant, to develop
-                                            our business and to inform our marketing strategy)
+                                            <ol class="alpha">
+                                                <li>
+                                                    Necessary for our legitimate interests (to define types of users of
+                                                    our services, to keep our website updated and relevant, to develop
+                                                    our business and to inform our marketing strategy)
+                                                </li>
+                                                <li>Necessary for our legitimate interests (to define types of users of
+                                                    our services, to keep our website updated and relevant, to develop
+                                                    our business and to inform our marketing strategy)</li>
+                                            </ol>
+
                                         </td>
                                     </tr>
                                     <tr>
@@ -596,7 +618,8 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 <li>Internal Third Parties as set out in the <a href="/glossary"
                                                                                 class="btn-link">glossary</a>.
                                 </li>
-                                <li>External Third Parties, including specifically any or all of the private
+                                <li>External Third Parties as set out in the <a href="/glossary"
+                                                                                class="btn-link">glossary</a>, including specifically any or all of the private
                                     hospitals or other service providers mentioned on our website to whom you
                                     make an enquiry by completing an enquiry from or clicking a link to connect
                                     with them, as set out in the <a href="/glossary"
