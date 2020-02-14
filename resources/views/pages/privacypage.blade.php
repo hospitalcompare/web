@@ -657,9 +657,10 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
                          data-parent="#privacy_accordion">
                         <div class="card-body">
-                            <p>We share your personal data within Digital Ocean who carry our webhosting
-                                services for us. This will involve transferring your data outside the European
-                                Economic Area <strong>(EEA)</strong>.
+                            <p>We share your personal data with companies who carry our webhosting services for us. For
+                                example, Digital Ocean of…… insert address and link to their privacy policy] This will
+                                involve transferring your data outside the European Economic Area
+                                <strong>(EEA)</strong>.
                             </p>
                             <p>Whenever we transfer your personal data out of the EEA, we ensure a similar
                                 degree of protection is afforded to it by ensuring at least one of the following
