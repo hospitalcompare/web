@@ -311,7 +311,7 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 <li>Where we need to comply with a legal obligation.
                                 </li>
                             </ul>
-                            <p>Click <a href="/glossary" class="btn-link">here</a> to find out more about the
+                            <p>Click <a href="#glossary" class="btn-link">here</a> to find out more about the
                                 types of lawful basis that we will rely on to process your personal data.
                             </p>
                             <p>Generally, we do not rely on consent as a legal basis for processing your
@@ -616,10 +616,10 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 above.
                             </p>
                             <ul class="blue-dot">
-                                <li>Internal Third Parties as set out in the <a href="/glossary"
+                                <li>Internal Third Parties as set out in the <a href="#glossary"
                                                                                 class="btn-link">glossary</a>.
                                 </li>
-                                <li>External Third Parties as set out in the <a href="/glossary"
+                                <li>External Third Parties as set out in the <a href="#glossary"
                                                                                 class="btn-link">glossary</a>, including
                                     specifically any or all of the hospitals or other service providers mentioned on our
                                     website to whom you
@@ -658,7 +658,10 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                          data-parent="#privacy_accordion">
                         <div class="card-body">
                             <p>We share your personal data with companies who carry our webhosting services for us. For
-                                example, Digital Ocean of…… insert address and link to their privacy policy] This will
+                                example, <a target="_blank" class="btn-link"
+                                            href="https://www.digitalocean.com/legal/privacy-policy/">DigitalOcean</a>.
+                                This
+                                will
                                 involve transferring your data outside the European Economic Area
                                 <strong>(EEA)</strong>.
                             </p>
@@ -773,8 +776,8 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                             <p>Under certain circumstances, you have rights under data protection laws in
                                 relation to your personal data. As follows:
                             </p>
+                            <p><strong>Your Legal Rights -</strong> You have the right to:</p>
                             <ul class="no-bull">
-                                <li><strong>Your Legal Rights -</strong> You have the right to:</li>
                                 <li><strong>Request access</strong> to your personal data (commonly known as a
                                     "data
                                     subject access request"). This enables you to receive a copy of the personal
@@ -796,10 +799,18 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                     applicable,
                                     at the time of your request.
                                 </li>
+                                <li><strong>Object to processing</strong> of your personal data where we are relying on a legitimate
+                                    interest (or those of a third party) and there is something about your particular
+                                    situation which makes you want to object to processing on this ground as you feel it
+                                    impacts on your fundamental rights and freedoms. You also have the right to object
+                                    where we are processing your personal data for direct marketing purposes. In some
+                                    cases, we may demonstrate that we have compelling legitimate grounds to process your
+                                    information which override your rights and freedoms.
+                                </li>
                                 <li>
-                                    <strong>Request restriction</strong> of processing of your personal data.
+                                    <p><strong>Request restriction</strong> of processing of your personal data.
                                     This enables you to ask us to suspend the processing of your personal data
-                                    in the following scenarios:
+                                        in the following scenarios:</p>
                                     <ul class="blue-dot">
                                         <li>If you want us to establish the data's accuracy.
                                         </li>
@@ -857,7 +868,7 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="glossary">
                     <div class="card-header" id="headingTen">
                         <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse"

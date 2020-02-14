@@ -18,6 +18,13 @@ body {
     }
 }
 
+// ul wihtout bullets
+.no-bull {
+    li {
+        @extend .mb-4;
+    }
+}
+
 .menu-open,
 .shortlist-open {
     &.results-page {
