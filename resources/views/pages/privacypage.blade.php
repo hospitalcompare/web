@@ -514,7 +514,8 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                                 </li>
                                                 <li>Necessary for our legitimate interests (to define types of users of
                                                     our services, to keep our website updated and relevant, to develop
-                                                    our business and to inform our marketing strategy)</li>
+                                                    our business and to inform our marketing strategy)
+                                                </li>
                                             </ol>
 
                                         </td>
@@ -619,11 +620,11 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                                                                 class="btn-link">glossary</a>.
                                 </li>
                                 <li>External Third Parties as set out in the <a href="/glossary"
-                                                                                class="btn-link">glossary</a>, including specifically any or all of the private
-                                    hospitals or other service providers mentioned on our website to whom you
-                                    make an enquiry by completing an enquiry from or clicking a link to connect
-                                    with them, as set out in the <a href="/glossary"
-                                                                    class="btn-link">glossary</a>
+                                                                                class="btn-link">glossary</a>, including
+                                    specifically any or all of the hospitals or other service providers mentioned on our
+                                    website to whom you
+                                    make an enquiry by completing an enquiry form and clicking “Make an Enquiry” on that
+                                    form or a link to connect with them.
                                 </li>
                                 <li>Third parties to whom we may choose to sell, transfer or merge parts of our
                                     business or our assets. Alternatively, we may seek to acquire other
