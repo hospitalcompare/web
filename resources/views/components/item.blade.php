@@ -26,7 +26,7 @@
                         {{$title}}
                     </p>
                     @if(!empty($locationSpecialism))
-                        <p class="sort-item-specialism col-brand-primary-1 mb-1">
+                        <p class="sort-item-specialism col-grey mb-1">
                             <strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
                     @endif
                     <p class="sort-item-location">{{$location}}</p>
@@ -44,7 +44,7 @@
                             'id'                => 'more_info_' . $id,
                             'svg'               => 'plus-solid',
                             'dataTarget'        => '#corporate_content_hospital_' . $id,
-                            'dataId'           => $id
+                            'dataId'            => $id
                          ])
                     </div>
                 </div>

@@ -57,51 +57,54 @@
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
-                            <tr>
-                                <th scope="col">Cookie</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Purpose</th>
-                                <th scope="col">More Information</th>
-                            </tr>
+                                <tr>
+                                    <th scope="col">Cookie</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Purpose</th>
+                                    <th scope="col">More Information</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <th scope="row">XSRF-TOKEN</th>
-                                <td>XSRF-TOKEN</td>
-                                <td>String that is automatically generated and is attached to a form when it is
-                                    created.
-                                </td>
-                                <td>Used for security reasons to protect your security while navigating our site.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">showFeedbackForm</th>
-                                <td>showFeedbackForm</td>
-                                <td>Empty, or set to false.</td>
-                                <td>To record if you have completed a feed back form.
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">compareHospitalsData</th>
-                                <td>compareHospitalsData</td>
-                                <td>String that contains the unique identifiers needed for the user when comparing
-                                    hospitals.
-                                </td>
-                                <td>Used for the comparison functionality so you can compare hospitals on our site</td>
-                            </tr>
-
-
-                            <tr>
-                                <th scope="row">hospital_compare_session</th>
-                                <td>hospital_compare_session</td>
-                                <td>String that uniquely identifies the session of the user.</td>
-                                <td>Used for security reasons to protect your security while navigating our site.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">cookieconsent_status</th>
-                                <td>cookieconsent_status</td>
-                                <td>To record the user’s approval of our cookie policy.</td>
-                                <td>Used to enable you to accept our cookie policy</td>
-                            </tr>
+                                <tr>
+                                    <th scope="row">XSRF-TOKEN</th>
+                                    <td>XSRF-TOKEN</td>
+                                    <td>String that is automatically generated and is attached to a form when it is
+                                        created.
+                                    </td>
+                                    <td>Used for security reasons to protect your security while navigating our site.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">showFeedbackForm</th>
+                                    <td>showFeedbackForm</td>
+                                    <td>To record if you have completed the feedback form.</td>
+                                    <td>Used to show or hide the feedback form.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">compareHospitalsData</th>
+                                    <td>compareHospitalsData</td>
+                                    <td>String that contains the unique identifiers needed for the user when comparing
+                                        hospitals.
+                                    </td>
+                                    <td>Used for the comparison functionality so you can compare hospitals on our site.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">hospital_compare_session</th>
+                                    <td>hospital_compare_session</td>
+                                    <td>String that uniquely identifies the session of the user.</td>
+                                    <td>Used for security reasons to protect your security while navigating our site.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">cookieconsent_status</th>
+                                    <td>cookieconsent_status</td>
+                                    <td>To record the user’s approval of our cookie policy.</td>
+                                    <td>Used to enable you to accept our cookie policy.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">fr</th>
+                                    <td>fr</td>
+                                    <td>Tracking user experience</td>
+                                    <td>Used to give us a better understanding of user experiences for further improvements of the website</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
