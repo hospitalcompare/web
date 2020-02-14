@@ -1,8 +1,10 @@
-<{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'span' }} id="{{ empty($id) ? '' : $id }}"
+<{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'span' }}"
 {{ !empty($disabled) && ($disabled) ? 'disabled' : ''}}
-id="{{ empty($id) ? '' : $id }}"
+@if(!empty($id))
+    id="{{ $id }}"
+@endif
 style="display: inline-block; {{ empty($style) ? '' : $style }}"
-class="{{$classTitle}} "
+class="{{ $classTitle }}"
 role="button"
 data-toggle="modal"
 data-target="{{ $modalTarget }}"
@@ -33,9 +35,6 @@ data-target="{{ $modalTarget }}"
 @endif
 @if($modalTarget == '#hc_modal_enquire_private' || $modalTarget == '#hc_modal_contacts_general')
     data-hospital-id="{{ $hospitalIds }}"
-@endif
-@if(!empty($hospitalTitle))
-    data-hospital-title="{{ $hospitalTitle }}"
 @endif
 @if(!empty($hospitalTitle))
     data-hospital-title="{{ $hospitalTitle }}"
