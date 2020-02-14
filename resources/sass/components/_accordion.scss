@@ -96,7 +96,7 @@
 
         .card-body {
             padding: 0rem 2rem 2rem;
-            p {
+            p, li {
                 @include font-size(1rem);
                 line-height: 1.6;
                 color: $textGrey !important;

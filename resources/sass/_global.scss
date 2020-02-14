@@ -18,6 +18,13 @@ body {
     }
 }
 
+// ul wihtout bullets
+.no-bull {
+    li {
+        @extend .mb-4;
+    }
+}
+
 .menu-open,
 .shortlist-open {
     &.results-page {
@@ -207,6 +214,7 @@ ul.blue-dot {
         position: relative;
         padding: 0 0 0 30px;
         text-align: left;
+        @extend .p-secondary;
 
         &:before {
             content: '';
@@ -1075,3 +1083,7 @@ h6 {
     border-top: solid 15px $privateBlue;
     content: ''
 }
+
+//.collapse {
+//    display: block !important;
+//}
