@@ -74,11 +74,11 @@
                     <div class="author d-flex bg-greylight p-30">
                         <div class="">
                             <div class="image-wrapper mr-4">
-                                <img class="w-100 content" src="../{{$data['blog']['author']['image']}}" alt="Image of {{ $data['blog']['author'] }}" >
+                                <img class="w-100 content" src="../{{$data['blog']['author']['image']}}" alt="Image of {{ $data['blog']['author']['name'] }}" >
                             </div>
                         </div>
                         <div class="">
-                            <p class="author-name font-18">{{$data['blog']['author']['name']}}</p>
+                            <p class="author-name font-18">{{ $data['blog']['author']['name']}}</p>
                             <p class="author-description col-grey lh-16 mb-0">{{$data['blog']['author']['description']}}</p>
                         </div>
                     </div>
