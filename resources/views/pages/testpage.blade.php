@@ -1223,7 +1223,7 @@
                                                 <h3 class="modal-title mb-3">Hospital Name</h3>
                                                 <div class="d-flex mb-3">
                                                     <div class="image-wrapper mr-3">
-                                                        <img class="mr-3" src="images/alder-1.jpg">
+                                                        <img class="mr-3" src="images/alder-1.jpg" alt="Hospital placeholder image">
                                                     </div>
                                                     <div class="modal-copy">
                                                         <p>This NHS hospital does not respond to direct enquiries

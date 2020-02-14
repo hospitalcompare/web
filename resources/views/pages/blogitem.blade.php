@@ -12,6 +12,8 @@
 
 @section('body-class', 'blog-item-page')
 
+{{--{{ dd($data['blog']['author']['image']) }}--}}
+
 @section('content')
     <section>
         <div class="container">
@@ -89,7 +91,7 @@
                             <div class="latest-blog d-flex mb-4 position-relative">
                                 <div class="latest-blog-image-wrapper w-25">
                                     <div class="latest-blog-image rounded overflow-hidden">
-                                        <img src="../{{$latestBlog['image']}}" alt="" class="content">
+                                        <img src="../{{$latestBlog['image']}}" alt="Image from {{ $latestBlog['title'] }} blog post" class="content">
                                     </div>
                                 </div>
                                 <div class="latest-blog-content px-3 pb-3 w-75">
