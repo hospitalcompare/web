@@ -29,7 +29,7 @@
             <!-- More info button -->
                 @include('components.basic.button', [
                    'classTitle'        => 'btn btn-more-info text-center font-12 p-0 shadow-none',
-                   'buttonText'        => 'Map +',
+                   'buttonText'        => 'More info +',
                    'htmlButton'        => true,
                    'icon'              => '',
                    'id'                => 'more_info_' . $id,
@@ -143,7 +143,7 @@
                                 @include('components.basic.button', [
                                     'hospitalType'      => $NHSClass,
                                     'target'            => 'blank',
-                                    'hrefValue'         => 'https://' . $url,
+                                    'hrefValue'         => $url,
                                     'hospitalUrl'       => $d['url'],
                                     'classTitle'        => 'btn btn-squared btn-squared_slim btn-enquire_mobile btn-brand-primary-4 font-12 w-100 d-flex justify-content-center align-items-center flex-row-reverse px-0',
                                     'buttonText'        => 'Web',
@@ -194,7 +194,7 @@
                                 @include('components.basic.button', [
                                     'hospitalType'      => $NHSClass,
                                     'target'            => 'blank',
-                                    'hrefValue'         => 'https://' . $url,
+                                    'hrefValue'         => $url,
                                     'hospitalUrl'       => $d['url'],
                                     'classTitle'        => 'btn btn-squared btn-squared_slim btn-enquire_mobile btn-brand-primary-4 font-12 w-100 d-flex justify-content-center align-items-center flex-row-reverse px-0',
                                     'buttonText'        => 'Web',

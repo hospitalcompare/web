@@ -31,7 +31,7 @@
 .your-rights-img-top {
     position: absolute;
     z-index: 999;
-    background: url(/images/about-hero-top.jpg);
+    background: url(/images/your-rights-2.jpg);
     background-size: cover;
     height: 470px;
     width: 410px;
@@ -43,7 +43,7 @@
 .your-rights-img-bottom {
     position: absolute;
     z-index: 998;
-    background: url(/images/about-hero-bottom.jpg);
+    background: url(/images/your-rights-1.jpg);
     background-size: cover;
     height: 380px;
     width: 380px;
@@ -55,8 +55,9 @@
 .your-rights-img-back {
     position: absolute;
     z-index: 997;
-    background: url(/images/about-hero-back.jpg);
+    background: url(/images/your-rights-3.jpg);
     background-size: cover;
+    background-position: right;
     height: 260px;
     width: 260px;
     border-radius: 5px;

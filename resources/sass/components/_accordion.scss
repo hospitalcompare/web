@@ -37,14 +37,14 @@
                 padding: 2rem;
             }
 
-            &:after {
+            &:not(.no-arrow):after {
                 content: " ";
                 @include v-c;
                 background-image: url('/images/icons/icon-chevron-grey.svg');
                 background-repeat: no-repeat;
                 background-size: 100%;
                 transition: $transition;
-                transform: translate3d(0, -50%, 0) ;
+                transform: translate3d(0, -50%, 0);
                 right: 0;
                 width: 20px;
                 height: 10px;

@@ -33,7 +33,7 @@
             [
                 'iconImg'       => 'request-a-referral',
                 'step'          => 'Three',
-                'title'         => 'Request a referral:',
+                'title'         => 'Book Appointment:',
                 'color'         => 'blue',
                 'description'   => '<p>For self-pay or insurance, book your appointment directly. For NHS treatment, make enquiries then inform your GP of your choice to book an appointment (you will need a GP referral).</p>'
             ]
@@ -45,7 +45,7 @@
             <div class="row flex-lg-row-reverse">
                 <div class="col col-12 col-md-6 mb-25">
                     <div class="image-wrapper">
-                        <img src="{{ asset('/images/video_placeholder.jpg') }}"
+                        <img src="{{ asset('/images/how-to-use-1.jpg') }}"
                              alt="People around a desk chatting with laptops">
                     </div>
                 </div>
@@ -79,7 +79,7 @@
             <div class="row ">
                 <div class="col col-12 col-lg-6 mb-25">
                     <div class="image-wrapper">
-                        <img src="{{ asset('/images/video_placeholder.jpg') }}"
+                        <img src="{{ asset('/images/how-to-use-2.jpg') }}"
                              alt="People around a desk chatting with laptops">
                     </div>
                 </div>
@@ -113,7 +113,7 @@
             <div class="row flex-lg-row-reverse">
                 <div class="col col-12 col-lg-6 mb-25">
                     <div class="image-wrapper">
-                        <img src="{{ asset('/images/video_placeholder.jpg') }}"
+                        <img src="{{ asset('/images/how-to-use-3.jpg') }}"
                              alt="People around a desk chatting with laptops">
                     </div>
                 </div>

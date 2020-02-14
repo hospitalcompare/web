@@ -61,10 +61,10 @@
             </div>
         </div>
     </section>
-    <section class="your-rights-act">
+    <section class="your-rights-act overflow-hidden">
         <div class="container">
             <div class="row mb-4 position-relative">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-lg-6">
                     <h2 class="font-28 ">The Act</h2>
                     <p class="col-grey p-secondary">The Act also introduced a number of other important policies and created bodies and structures to
                         authorise monitor and regulate all primary care providers (<span>GPs</span>) and Secondary
@@ -96,7 +96,7 @@
                     <p class="col-grey p-secondary mb-0">These rights are reflected in the NHS Constitution.
                     </p>
                 </div>
-                <div class="col-12 col-md-6 your-rights-hero-cont">
+                <div class="col-12 col-lg-6 your-rights-hero-cont">
                     <div class="your-rights-img-top"></div>
                     <div class="your-rights-img-bottom"></div>
                     <div class="your-rights-img-back"></div>
