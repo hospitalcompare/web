@@ -243,8 +243,8 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                     website or by corresponding with us by post, phone, email or otherwise. This
                                     includes personal data you provide when you:
                                     <ul class="blue-dot">
-                                        <li>complete an enquiry form on our website to be referred to a private
-                                            hospital or broker or other service;
+                                        <li>complete an enquiry form on our website to be referred to a hospital or
+                                            other service provider;
                                         </li>
                                         <li>enter a promotion or survey; or</li>
                                         <li>give us feedback or contact us.</li>
@@ -259,7 +259,7 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                     <a class="btn-link" href="/cookie-policy">cookie policy</a> for further
                                     details.
                                 </li>
-                                <li><strong>Third parties or publicly available sources</strong> We will receive
+                                <li><strong>Third Parties or publicly available sources</strong> We will receive
                                     personal data about you from various third parties and public sources as set
                                     out below:
                                     <ul class="blue-dot">
