@@ -18,13 +18,13 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
             <div class="row">
                 <div class="col ">
                     <h1>Privacy Policy</h1>
-                    <p>Welcome to Hospital Compare Limited’s privacy policy</p>
-                    <p>Hospital Compare Limited (<strong>“Hospital Compare”</strong>) respects your privacy and is
+                    <p class="p-secondary">Welcome to Hospital Compare Limited’s privacy policy</p>
+                    <p class="p-secondary">Hospital Compare Limited (<strong>“Hospital Compare”</strong>) respects your privacy and is
                         committed to
                         protecting your personal data. This privacy policy will inform you as to how we look after your
                         personal data when you visit our website (regardless of where you visit it from) and tell you
                         about your privacy rights and how the law protects you. </p>
-                    <p>This privacy policy is provided in a layered format so you can click through to the specific
+                    <p class="p-secondary mb-0">This privacy policy is provided in a layered format so you can click through to the specific
                         areas set out below. Alternatively, you can download a pdf version of the policy <a
                             class="btn-link"
                             target="_blank"

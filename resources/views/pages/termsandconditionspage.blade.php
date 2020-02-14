@@ -17,9 +17,9 @@
             <div class="row">
                 <div class="col hc-content">
                     <h1>Terms of Use</h1>
-                    <p>Please read these terms and conditions carefully before using this site</p>
+                    <p class="p-secondary">Please read these terms and conditions carefully before using this site</p>
                     <h3>What's in these terms?</h3>
-                    <p>These terms tell you the rules for using our website www.hospitalcompare.co.uk <strong>(our
+                    <p class="p-secondary">These terms tell you the rules for using our website www.hospitalcompare.co.uk <strong>(our
                             site)</strong>.</p>
                 </div>
             </div>
