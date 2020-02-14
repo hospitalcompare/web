@@ -99,6 +99,12 @@
                                     <td>To record the user’s approval of our cookie policy.</td>
                                     <td>Used to enable you to accept our cookie policy.</td>
                                 </tr>
+                                <tr>
+                                    <th scope="row">fr</th>
+                                    <td>fr</td>
+                                    <td>Tracking user experience</td>
+                                    <td>Used to give us a better understanding of user experiences for further improvements of the website</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
