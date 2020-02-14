@@ -133,7 +133,8 @@ window.addHospitalToCompare = function(element) {
         nhsFundedWork = 1;
     }
 
-    var btnClass = (isDesktop) ? 'btn btn-icon btn-blue  btn-enquire enquiry btn-block font-12' : 'btn btn-icon btn-blue btn-enquire enquiry btn-squared btn-squared_slim font-12 pl-5';
+    var btnClass = (isDesktop) ? 'btn btn-icon btn-blue btn-enquire enquiry btn-block font-12' : 'btn btn-icon btn-blue btn-enquire enquiry btn-squared btn-squared_slim font-12 pl-5';
+    var targetModal = hospitalType == 'Private' ? '#hc_modal_enquire_private' : '#hc_modal_contacts_general_' + element.id;
     var btnContent =
         `<a id="${element.id}"
             class="${btnClass}"
@@ -142,9 +143,7 @@ window.addHospitalToCompare = function(element) {
             data-hospital-title="${element.display_name}"
             data-hospital-id="${element.id}"
             data-image="${element.image}"
-            data-target="${ hospitalType == 'Private' ? '#hc_modal_enquire_private' : '#hc_modal_contacts_general'}">Make an enquiry
-        ${$svg}
-        </a>`;
+            data-target="${targetModal}">Make an enquiry${$svg}</a>`;
 
     if (hospitalType == 'Private') {
         privateHospitalCount += 1;
