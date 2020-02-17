@@ -1084,6 +1084,7 @@ h6 {
     content: ''
 }
 
-.collapse {
-    display: block !important;
-}
+// Force accordions open for content editing purposes
+//.collapse {
+//    display: block !important;
+//}
