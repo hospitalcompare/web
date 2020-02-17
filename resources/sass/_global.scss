@@ -585,7 +585,11 @@ path {
 
 // Ticks/dashes in the results ratings
 .dash-or-tick {
-    width: 26px;
+    width: 16px;
+
+    @include media-breakpoint-up(md) {
+        width: 26px;
+    }
 }
 
 .green-tick {

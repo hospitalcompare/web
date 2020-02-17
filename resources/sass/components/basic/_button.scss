@@ -34,6 +34,7 @@
     }
 
     //colours
+    // primary
     &.btn-brand-primary-1 {
         background-color: $brand-primary-1;
 
@@ -50,6 +51,15 @@
         }
     }
 
+    &.btn-brand-primary-7 {
+        background-color: $brand-primary-7;
+
+        &:hover {
+            background-color: $blue;
+        }
+    }
+
+    // secondary
     &.btn-brand-secondary-3 {
         background-color: $brand-secondary-3;
 
@@ -513,7 +523,10 @@
         height: 20px;
 
         @extend .mr-1;
+    }
 
+    @include hover-focus(){
+        background-color: $brand-primary-7;
     }
 }
 
