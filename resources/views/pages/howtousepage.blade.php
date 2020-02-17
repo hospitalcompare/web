@@ -51,7 +51,7 @@
                 </div>
                 <div class="col col-12 col-md-6">
                     <div>
-                        <h2 class=" mb-4">NHS funded in a private hospital</h2>
+                        <h2 class="section-title">NHS funded in a private hospital</h2>
                         <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
                             eveniet ipsa laboriosam
                             distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
@@ -85,7 +85,7 @@
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div>
-                        <h2 class="mb-4">Standard procedure at an NHS Hospital</h2>
+                        <h2 class="section-title">Standard procedure at an NHS Hospital</h2>
                         <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
                             eveniet ipsa laboriosam
                             necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
@@ -119,7 +119,7 @@
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div>
-                        <h2 class="mb-4">Private healthcare insurance</h2>
+                        <h2 class="section-title">Private healthcare insurance</h2>
                         <p class="mb-4 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
                             eveniet ipsa laboriosam
                             distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
@@ -167,7 +167,7 @@
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div>
-                        <h2 class="mb-4">Self-pay at a private hospital</h2>
+                        <h2 class="section-title">Self-pay at a private hospital</h2>
                         <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
                             eveniet ipsa laboriosam
                             voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
