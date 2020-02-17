@@ -58,7 +58,7 @@
                                 <div class="carousel-item-inner">
                                     <div class="row">
                                         <div class="carousel-item-copy col-4">
-                                            <h5 class="font-18 SofiaPro-Medium">How to Use the
+                                            <h5 class="font-28 SofiaPro-Medium">How to Use the
                                                 Sort Function
                                                 Rating Arrows</h5>
                                             <p class="col-grey p-secondary">You can sort your data by
@@ -85,7 +85,7 @@
                                 <div class="carousel-item-inner">
                                     <div class="row">
                                         <div class="carousel-item-copy col-4">
-                                            <h5 class="font-18 SofiaPro-Medium">How to Use Tooltips to Get More Information</h5>
+                                            <h5 class="font-28 SofiaPro-Medium">How to Use Tooltips to Get More Information</h5>
                                             <p class="col-grey p-secondary">Throughout Hospital Compare, you can get more information about specific
                                                 subjects from our tailored tooltips. The tooltips provide more detail
                                                 and context on information within your search results. You can access
@@ -107,7 +107,7 @@
                                 <div class="carousel-item-inner">
                                     <div class="row">
                                         <div class="carousel-item-copy col-4">
-                                            <h5 class="font-18 SofiaPro-Medium">How to Compare Results and Add to a Shortlist</h5>
+                                            <h5 class="font-28 SofiaPro-Medium">How to Compare Results and Add to a Shortlist</h5>
                                             <p class="col-grey p-secondary">After generating your search results, you can compare specific hospitals
                                                 (up to five) by clicking the ‘Add to Compare’ buttons at the end of each
                                                 result row. Once you’ve selected the hospitals you’re interested in,
@@ -130,7 +130,7 @@
                                 <div class="carousel-item-inner">
                                     <div class="row">
                                         <div class="carousel-item-copy col-4">
-                                            <h5 class="font-18 SofiaPro-Medium">What is the Solutions Bar?</h5>
+                                            <h5 class="font-28 SofiaPro-Medium">What is the Solutions Bar?</h5>
                                             <p class="col-grey p-secondary">You’ll find the solutions bar located below your search results. Based on
                                                 the criteria you searched for, the blue box highlights an outstanding
                                                 hospital with the lowest waiting time, whilst the pink box highlights
@@ -152,7 +152,7 @@
                                 <div class="carousel-item-inner">
                                     <div class="row">
                                         <div class="carousel-item-copy col-4">
-                                            <h5 class="font-18 SofiaPro-Medium">How to Make an Enquiry
+                                            <h5 class="font-28 SofiaPro-Medium">How to Make an Enquiry
                                             </h5>
                                             <p class="col-grey p-secondary">After generating and comparing your search results, you can make
                                                 enquiries to private hospitals by clicking the blue ‘Make an Enquiry’
@@ -174,7 +174,7 @@
                                 <div class="carousel-item-inner">
                                     <div class="row">
                                         <div class="carousel-item-copy col-4">
-                                            <h5 class="font-18 SofiaPro-Medium">Learn More About Your Rights</h5>
+                                            <h5 class="font-28 SofiaPro-Medium">Learn More About Your Rights</h5>
                                             <p class="col-grey p-secondary">You can learn more about your legal rights by clicking the ‘Your Rights’
                                                 button in the main website menu at the top of your screen.</p>
                                         </div>
@@ -193,7 +193,7 @@
                                 <div class="carousel-item-inner">
                                     <div class="row">
                                         <div class="carousel-item-copy col-4">
-                                            <h5 class="font-18 SofiaPro-Medium">Learn More Through Our Blog</h5>
+                                            <h5 class="font-28 SofiaPro-Medium">Learn More Through Our Blog</h5>
                                             <p class="col-grey p-secondary">From articles focusing on your rights to current events, waiting times to
                                                 quality, our regularly-updated blog plays host to a range of unique and
                                                 informative articles. Click the ‘Blog’ button in the main menu to
@@ -214,7 +214,7 @@
                                 <div class="carousel-item-inner">
                                     <div class="row">
                                         <div class="carousel-item-copy col-4">
-                                            <h5 class="font-18 SofiaPro-Medium">Got a Specific Question?</h5>
+                                            <h5 class="font-28 SofiaPro-Medium">Got a Specific Question?</h5>
                                             <p class="col-grey p-secondary">Our FAQ is the perfect place to start when you have a burning question. You’ll find answers to many queries covering everything from your rights, to choosing a consultant, booking an appointment at a hospital to the sources of our data.
                                                 If you can’t find an answer to your question, you can email us directly by clicking here.
                                             </p>
