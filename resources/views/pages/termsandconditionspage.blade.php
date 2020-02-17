@@ -79,7 +79,7 @@
                             about hospitals and other services close to you. If you make an enquiry to a
                             relevant hospital, they will need some personal information about you. The
                             information you set out on an enquiry form on our site is stored by us and is
-                            keep private in accordance with our <a href="/privacy-policy"
+                            kept private in accordance with our <a href="/privacy-policy"
                                                                    class="btn-link">Privacy Policy</a>. If you
                             provide hospitals or other service providers we connect you with with personal
                             information that information will be governed by their privacy policies, which
@@ -222,7 +222,7 @@ understand the terms that apply at that time. These terms were most recently upd
                         <p>We will only use your personal information only as set out in our <a href="/privacy-policy">Privacy Policy.</a></p>'
                 ],
                 [
-                    'title' => 'Enquiry Forms and Uploading Ccontent to our site',
+                    'title' => 'Enquiry Forms and Uploading Content to our Site',
                     'content' => '
                         <p>We are not responsible for any content that you upload to our site including any inaccurate information contained in an Enquiry Form you complete on our site.  This is your responsibility and you must seek to correct any information presented to Hospitals or other service providers through or as a result of using our site. Failure to do so may affect your eligibility for treatment and may result in delays affecting your treatment, or could result in you  receiving wrong advice or wrong treatment.</p>
                         <p>When you complete an Enquiry From on our site and acknowledge your agreement to these Terms of Use, by ticking the box on an Enquiry Form, you are agreeing that we may process your enquiry in accordance with these Terms of Use, that we may store your enquiry in accordance with these terms and our Privacy Policy and in return we will pass on your completed Enquiry Form by email to the service providers you have chosen upon our site, if those service providers will accept enquiries from us your behalf.</p>
