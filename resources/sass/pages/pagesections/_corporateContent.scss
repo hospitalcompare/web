@@ -54,6 +54,14 @@
 
     .tab-content {
         @include reset-row-spacing(12px);
+
+        .address {
+            color: $brand-tertiary-2;
+
+            strong {
+                color: $brand-tertiary-1;
+            }
+        }
     }
 
     // Carousel styles
