@@ -254,7 +254,7 @@ window.getHospitalsByIds = function (hospitalIds) {
                 // console.log('Data:', data.data[0]);
 
                 $.each(data.data, function (key, element) { //$.parseJSON() method is needed unless chrome is throwing error.
-                    // console.log(key, element);
+                    // console.log(key, element.email !== "");
                     //Toggle the full heart or empty heart  class of the button
                     $('button#' + element.id + '.compare').addClass('selected');
                     addHospitalToCompare(element);
