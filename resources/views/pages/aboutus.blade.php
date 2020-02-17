@@ -12,11 +12,11 @@
 
 @section('content')
     @include('pages.pagesections.flatbanner')
-    <section class="about-us-intro">
+    <section class="about-us-intro overflow-hidden">
         <div class="container">
             <div class="row position-relative">
                 <div class="col-lg-6">
-                    <h1>Feel <span class="col-brand-primary-1">better faster</span> by<br>knowing your legal<br> right to choose
+                    <h1>Feel <span class="col-brand-primary-1">better faster</span> by knowing your legal right to choose
                     </h1>
                     <p class="col-grey p-secondary mb-35">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Aliquam animi cupiditate error natus,

@@ -93,13 +93,6 @@
 
 
 .banner-text {
-    //color: $white;
-    @include media-breakpoint-up(lg) {
-        //padding-top: 70px;
-    }
-    position: relative;
-    z-index: 5;
-
     p {
         line-height: 1.6;
     }
@@ -110,12 +103,13 @@
     }
 
     .banner-list {
-        margin-bottom: 0;
+        margin: 0 auto;
+        width: 90%;
 
         li {
             list-style: none;
             position: relative;
-            padding-left: 50px;
+            padding-left: 30px;
             margin-bottom: 20px;
             line-height: 24px;
             @include font-size(1rem);

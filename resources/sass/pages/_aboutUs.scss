@@ -28,9 +28,9 @@
         }
     }
 
-    .about-img {
-        margin-right: 50px;
-    }
+    //.about-img {
+    //    margin-right: 50px;
+    //}
 
     .about-dots {
         position: absolute;
@@ -99,6 +99,7 @@
         .about-img-top {
             height: 250px;
             width: 240px;
+            right: -85px !important;
         }
 
         .about-img-bottom {
