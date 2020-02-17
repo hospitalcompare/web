@@ -111,6 +111,10 @@
 
     .rating-value {
         @extend .mb-1;
+
+        img {
+            width: 16px;
+        }
     }
 
     .tab-pane,
