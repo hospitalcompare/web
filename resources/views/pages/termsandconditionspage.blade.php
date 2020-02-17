@@ -184,16 +184,18 @@ understand the terms that apply at that time. These terms were most recently upd
                 [
                     'title' => 'Third party generated content is not approved by us',
                     'content' => '
-                        <p>This website includes information and materials provided by hospitals or other service providers or other users of the site including information on services and performance and quality. We always try to make it clear where this information is provided by others rather than us. We do not verify, validate or approve information provided by hospitals or other service providers or users. The views expressed by hospitals or other service providers or users on our site do not represent our views or values.</p>
+                        <p>This website includes information and materials provided by hospitals or other service providers or other users of the site including information on services and performance and quality, for instance by the Care Quality Commision (CQC). We always try to make it clear where this information is provided by others rather than us. We do not verify, validate or approve information provided by hospitals or the CQC or other service providers or users. The views expressed by hospitals or the CQC or other service providers or users on our site do not represent our views or values.</p>
                         <p>If you wish to complain about information and materials on our site please contact us on <a class="btn-link" href="mailto:hello@hospitalcompare.co.uk">hello@hospitalcompare.co.uk</a></p>'
                 ],
                 [
                     'title' => 'Our responsibility for loss or damage suffered by you',
-                    'content' => '<ul class="blue-dot">
+                    'content' => '
+                                <p>The material on this website is provided “as is”, without any conditions, warranties or other terms of any kind. Accordingly, to the maximum extent permitted by law,  Hospital Compare provides this site on the basis that we exclude all representations, warranties, conditions and other terms (including, without limitation, any conditions implied by law). Hospital Compare has used all reasonable care and skill in compiling the content of this site but makes no warranty as to the accuracy of any information within it and cannot accept liability for any errors or omissions.  Specifically please note:</p>
+                                <ul class="blue-dot">
                                     <li>We do not exclude or limit in any way our liability to you where it would be unlawful to do so. This includes
                                         liability for death or personal injury caused by our negligence or the negligence of our employees, agents or
                                         subcontractors and for fraud or fraudulent misrepresentation. With these exceptions and save as mentioned below
-                                        our liability for the information contained on our site is limited to £100.
+                                        our liability, and the liability of our officers, employees, agents and subcontractors for the information contained on our site and the service we provide is limited to £100.
                                     </li>
                                     <li>Different limitations and exclusions of liability will apply to liability arising as a result of the supply of
                                         any services or products to you, by hospitals or third parties linked to our site. Such terms will be set out in
@@ -201,22 +203,18 @@ understand the terms that apply at that time. These terms were most recently upd
                                         with.
                                     </li>
                                     <li>Please note that we only provide our site for domestic and private use. You agree not to use our site for any
-                                        commercial or business purposes, and we have no liability to you for any loss of profit, loss of business,
+                                        commercial or business purposes, and we and our officers, employees, agents and subcontractors have no liability to you for any loss of profit, loss of business,
                                         business interruption, or loss of business opportunity.
                                     </li>
                                     <li>If defective digital content that we have supplied, damages a device or digital content belonging to you and
                                         this is caused by our failure to use reasonable care and skill, we will consider either repairing the damage to
                                         your device or paying you compensation. However, we will not be liable for damage that you could have avoided by
-                                        following our advice to apply an update offered to you free of charge or for damage that was caused by you
+                                        following our advice, for example to apply an update offered to you free of charge or for damage that was caused by you
                                         failing to correctly follow installation instructions or to have in place the minimum system requirements
-                                        advised by us. We will not be liable for any indirect damage or consequential loss to the extent the law shall
+                                        advised by us. We and our officers, employees, agents and subcontractors  will not be liable for any indirect damage or consequential loss to the extent the law shall
                                         allow.
                                     </li>
                                 </ul>'
-                ],
-                [
-                    'title' => 'Exclusion of liability for digital content',
-                    'content' => 'No content here'
                 ],
                 [
                     'title' => 'How we may use your personal information',
@@ -224,19 +222,25 @@ understand the terms that apply at that time. These terms were most recently upd
                         <p>We will only use your personal information only as set out in our <a href="/privacy-policy">Privacy Policy.</a></p>'
                 ],
                 [
-                    'title' => 'Uploading content to our site',
-                    'content' => 'No content here'
+                    'title' => 'Enquiry Forms and Uploading Ccontent to our site',
+                    'content' => '
+                        <p>We are not responsible for any content that you upload to our site including any inaccurate information contained in an Enquiry Form you complete on our site.  This is your responsibility and you must seek to correct any information presented to Hospitals or other service providers through or as a result of using our site. Failure to do so may affect your eligibility for treatment and may result in delays affecting your treatment, or could result in you  receiving wrong advice or wrong treatment.</p>
+                        <p>When you complete an Enquiry From on our site and acknowledge your agreement to these Terms of Use, by ticking the box on an Enquiry Form, you are agreeing that we may process your enquiry in accordance with these Terms of Use, that we may store your enquiry in accordance with these terms and our Privacy Policy and in return we will pass on your completed Enquiry Form by email to the service providers you have chosen upon our site, if those service providers will accept enquiries from us your behalf.</p>
+                        <p>Once you have completed our Enquiry Form and acknowledged your agreement to these Terms of Use, we will email the relevant hospital with your enquiry, if they accept contact in this way, and will email you at the email address you provide on the Enquiry Form to tell you we have done so. Generally the hospital concerned, if they accept enquiries in this way, will make contact with you within 3 or 4 working days.  If they have not done so please contact that hospital directly to follow up your enquiry at the contact details we have provided to you or by visiting their website and/or calling them. We do not provide a follow up service to check on the status of your enquiry and data protection laws may mean the hospital concerned will not enter dialogue with us about your enquiry in any event.  Any enquiry made through our site will also be governed by the terms and conditions and privacy policy of the hospital you wish to contact. Please familiarize yourself with their terms, which can be found on their website or by contacting them directly.</p>
+                        <p><strong>Please note, once we have made contact with the hospital concerned as described in these Terms of Use our service to you is at an end.</strong></p>
+                        <p>Our purpose is to provide you with the very best publicly available information, clearly and openly so you can make informed “choices” to meet your needs in choosing a hospital in England.   We do not provide a follow up service or concierge service to arrange or change appointments with hospitals. This service will be provided by the hospital concerned, subject to their terms and conditions.   As such we do not accept any further responsibility for your enquiry with your chosen hospital once we have transmitted your Enquiry Form to your chosen hospital, if they will accept enquiries in this way. Further enquiries must be made by you to your chosen hospital directly.</p>
+                    '
                 ],
                 [
-                    'title' => 'Rights you are giving us to use material you upload',
-                    'content' => 'No content here'
+                    'title' => 'Security of the Internet',
+                    'content' => '<p>While we take all appropriate and reasonable steps to protect the  confidentiality, integrity and availability of your systems and services the Enquiry Forms you complete, which are stored on our servers or on our service providers servers and transmitted by email to hospitals on your behalf, are not currently encrypted. Information on the internet is not completely secure. On occasion such information can be intercepted and as such we cannot guarantee the security of data that you choose to send us or enter on Enquiry Forms. We do not represent or warrant that the Enquiry Form you complete is secure or that data you provide will be protected against loss, misuse, attacks, or alteration by third parties. Providing such data is entirely at your own risk. Please see our Privacy Policy for more information about how we take all reasonable steps to safeguard your information.</p>'
                 ],
                 [
                     'title' => 'We are not responsible for viruses and you must not introduce them',
                     'content' => '
                         <p>We do not guarantee that our site will be secure or free from bugs or viruses though we use professional diligence to avoid such things.</p>
                         <p>You are responsible for configuring your information technology, computer programmes and platform to access our site. You should use your own virus protection software.</p>
-                        <p>You must not misuse our site by knowingly introducing viruses, trojans, worms, logic bombs or other material that is malicious or technologically harmful. You must not attempt to gain unauthorised access to our site, the server on which our site is stored or any server, computer or database connected to our site. You must not attack our site via a denial-of-service attack or a distributed denial-of service attack. By breaching this provision, you would commit a criminal offence under the Computer Misuse Act 1990. We will report any such breach to the relevant law enforcement authorities and we will co-operate with those authorities by disclosing your identity to them. In the event of such a breach, your right to use our site will cease immediately.</p>'
+                        <p>You must not misuse our site by knowingly introducing viruses, trojans, worms, logic bombs or other material that is malicious or technologically harmful. You must not attempt to gain unauthorised access to our site, the server on which our site is stored or any server, computer or database connected to our site. You must not attack our site via a denial-of-service attack or a distributed denial-of service attack. By breaching this provision, you would commit a criminal offence under the Computer Misuse Act 1990. We will report any such breach to the relevant law enforcement authorities and we will cooperate with those authorities by disclosing your identity to them. In the event of such a breach, your right to use our site will cease immediately.</p>'
                 ],
                 [
                     'title' => 'Rules about linking to our site',
