@@ -51,7 +51,7 @@
                         <p class="p-intro">Hospital Compare helps you make the right choice when looking for the best hospital for your treatment.
                         </p>
                         <p class="col-grey">Many people in England aren’t aware they have a choice as to where to have their NHS-funded treatment. This choice includes both NHS and private hospitals. We’re here to help you understand your rights and make the best decision.</p>
-                        <p class="col-grey">Whether you’re searching for the shortest waiting times or a hospital with the highest quality ratings, Hospital Compare provides free, unbiased, accurate and up-to-date information on over 800 NHS and private hospitals across England.</p>
+                        <p class="col-grey">Whether you’re searching for the shortest waiting times or a hospital with the highest quality ratings, Hospital Compare provides free, unbiased, accurate and up-to-date information on over 750 NHS and private hospitals across England.</p>
                     </div>
                     <div class="why-use-video col col-12 col-md-6">
                         <div class="video-wrapper">
