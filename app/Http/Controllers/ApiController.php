@@ -366,13 +366,22 @@ class ApiController {
             }
 
             //Send the email //TODO: Activate it once the tests are working
-            if(!empty($enquiry)) {
+            if(!empty($enquiry[$i])) {
                 $bodyUser = Email::getUserBody($hospital->name, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $reason, $additionalInformation);
+                $ATBody = Email::getTrunckyBody($hospital->name, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $additionalInformation);
+                //Send the Email to User
                 try {
                     Email::send($bodyUser, $email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
                 } catch(\Exception $e){
-                    \Log::info('Something went wrong sending an email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
+                    \Log::info('Something went wrong sending the User email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry[$i]).'. Error:'.$e->getMessage());
                 }
+                //Send the Data to AT
+                try {
+                    Email::send($ATBody, 'sechcemailbccabshatdsdnlntets@hospitalcompare.onmicrosoft.com', 'Enquire ID: '.$enquiry[$i]->id, 'datamanager@hospitalcompare.co.uk');
+                } catch(\Exception $e){
+                    \Log::info('Something went wrong sending the email to AT. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry[$i]).'. Error:'.$e->getMessage());
+                }
+
             }
         }
 

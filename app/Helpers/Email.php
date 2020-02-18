@@ -270,6 +270,31 @@ class Email
     }
 
     /**
+     * Returns the string for the AT's Email used for Power BI
+     *
+     * @param $hospitalName
+     * @param $specialtyName
+     * @param $title
+     * @param $firstName
+     * @param $lastName
+     * @param $email
+     * @param $phoneNumber
+     * @param $postcode
+     * @param string $additionalInformation
+     * @return string
+     */
+    public static function getTrunckyBody($hospitalName, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $additionalInformation = '') {
+        return 'Hospital: '.$hospitalName.
+            '<br>Specialty:'.$specialtyName.
+            '<br>Title: '.$title.
+            '<br>First Name: '.$firstName.
+            '<br>Last Name:'.$lastName.
+            '<br>Email: '.$email.
+            '<br>Phone Number: '.$phoneNumber.
+            '<br>Postcode: '.$postcode.
+            '<br>Additional Information: '.$additionalInformation;
+    }
+    /**
      * Returns the string for the Provider Email
      * @return string
      */
