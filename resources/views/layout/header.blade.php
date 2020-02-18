@@ -41,11 +41,9 @@
                         </a>
                     </li>
                     <li class="d-none d-lg-inline-block">
-                        @include('components.basic.modalbutton', [
-                            'classTitle'    =>  '',
-                            'buttonText'    =>  'Help',
-                            'modalTarget'   =>  '#hc_modal_tour'
-                        ])
+                        <a data-toggle="modal" data-target="#hc_modal_tour">
+                            Help
+                        </a>
                     </li>
                     @if(env('APP_ENV') === 'local')
                         <li>

@@ -34,6 +34,7 @@
     }
 
     //colours
+    // primary
     &.btn-brand-primary-1 {
         background-color: $brand-primary-1;
 
@@ -50,6 +51,15 @@
         }
     }
 
+    &.btn-brand-primary-7 {
+        background-color: $brand-primary-7;
+
+        &:hover {
+            background-color: $blue;
+        }
+    }
+
+    // secondary
     &.btn-brand-secondary-3 {
         background-color: $brand-secondary-3;
 
@@ -87,7 +97,7 @@
         background-color: $brand-primary-7;
 
         &:hover {
-            background-color: $brand-secondary-3;
+            background-color: $brand-primary-1;
         }
     }
 
@@ -95,7 +105,7 @@
         border-radius: $btn-border-radius;
         padding: 15px 26px;
         @include media-breakpoint-up(md) {
-            padding: 25px 56px;
+            padding: 20px 45px;
         }
 
         &_slim {
@@ -136,7 +146,7 @@
 
         @include media-breakpoint-up(lg){
             &:hover {
-                background-color: $brand-primary-1;
+                background-color: $brand-primary-7;
                 color: #fff;
 
                 svg, i {
@@ -357,8 +367,8 @@
     color: $brand-primary-1;
 
     &:hover {
-        color: $brand-primary-1;
-        opacity: 0.6;
+        color: $brand-primary-7;
+        opacity: 1;
     }
 }
 
@@ -513,7 +523,10 @@
         height: 20px;
 
         @extend .mr-1;
+    }
 
+    @include hover-focus(){
+        background-color: $brand-primary-7;
     }
 }
 

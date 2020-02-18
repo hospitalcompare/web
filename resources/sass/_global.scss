@@ -542,7 +542,7 @@ select.big {
         @extend .btn-brand-primary-1;
         @extend .btn-squared;
         @extend .btn-squared_slim;
-        @extend .px-5;
+        //@extend .px-5;
         @include font-size(14px, true);
         text-align: center !important;
         display: inline-block;
@@ -585,7 +585,11 @@ path {
 
 // Ticks/dashes in the results ratings
 .dash-or-tick {
-    width: 26px;
+    width: 16px;
+
+    @include media-breakpoint-up(md) {
+        width: 26px;
+    }
 }
 
 .green-tick {
@@ -709,6 +713,10 @@ path {
     margin-bottom: 30px !important;
 }
 
+.mb-35 {
+    margin-bottom: 30px !important;
+}
+
 .mb-60 {
     margin-bottom: 60px !important;
 }
@@ -782,7 +790,7 @@ h2 {
 
 .section-title {
     @include font-size(1.8rem);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-weight: 500;
 }
 
@@ -1084,6 +1092,7 @@ h6 {
     content: ''
 }
 
+// Force accordions open for content editing purposes
 //.collapse {
 //    display: block !important;
 //}

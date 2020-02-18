@@ -47,7 +47,7 @@
                         <div class="col-12">
                             <div class="hc-accordion p-0" id="hospital_stats">
                                 @if(!empty($qualityRating))
-                                    <div class="card">
+                                    <div class="card rounded-0">
                                         <div class="card-header" id="headingOne_{{ $id }}">
                                             <h2 class="mb-0">
                                                 <button class=" btn btn-link collapsed" type="button"
@@ -64,11 +64,12 @@
                                             <div class="card-body">
                                                 <div class="container-fluid p-0">
                                                     <div class="row">
-                                                        <div
-                                                            class="col-12 p-2 cqc-left d-flex flex-column justify-content-center align-items-start bg-{{ str_slug($qualityRating) }} text-white rounded">
-                                                            <p class="mb-0 text-white">Overall</p>
-                                                            <p class="mb-0 text-white text-left">
+                                                        <div class="col-12 cqc-left">
+                                                            <div class="col-inner p-2  d-flex flex-column justify-content-center align-items-start bg-{{ str_slug($qualityRating) }} text-white rounded">
+                                                                <p class="mb-0 text-white">Overall</p>
+                                                                <p class="mb-0 text-white text-left">
                                                                 <strong>{{ $qualityRating }}</strong></p>
+                                                            </div>
                                                         </div>
                                                         <div class="col-12 cqc-right">
                                                             <div class="cqc-table">
@@ -116,7 +117,7 @@
                                     </div>
                                 @endif
                                 @if(!empty($waitTime))
-                                    <div class="card">
+                                    <div class="card rounded-0">
                                         <div class="card-header" id="headingTwo_{{ $id }}">
                                             <h2 class="mb-0">
                                                 <button class="btn btn-link collapsed" type="button"
@@ -133,7 +134,7 @@
                                              data-parent="#hospital_stats">
                                             <div class="card-body">
                                                 <div>
-                                                    <div class="d-table w-100">
+                                                    <div class="d-table w-100 text-left">
                                                         <div class="d-table-row">
                                                             <div class="d-table-cell"></div>
                                                             <div class="d-table-cell SofiaPro-Medium">Weeks</div>
@@ -168,14 +169,14 @@
                                                             <div class="d-table-cell">{{$diagnosticRank}}</div>
                                                         </div>
                                                     </div>
-                                                    <small>NB - Diagnostics is a % of current waiting list waiting 6+
+                                                    <small class="text-left">NB - Diagnostics is a % of current waiting list waiting 6+
                                                         weeks (national target is 1%)</small>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 @endif
-                                <div class="card">
+                                <div class="card rounded-0">
                                     <div class="card-header" id="headingThree_{{ $id }}">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link collapsed" type="button"
@@ -207,7 +208,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="card rounded-0">
                                     <div class="card-header" id="headingFour_{{ $id }}">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link collapsed" type="button"
@@ -230,7 +231,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="card rounded-0">
                                     <div class="card-header" id="headingFive_{{ $id }}">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link collapsed" type="button"
@@ -253,7 +254,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="card rounded-0">
                                     <div class="card-header" id="headingSix_{{ $id }}">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link no-arrow" type="button"
@@ -278,7 +279,7 @@
 {{--                                        </div>--}}
 {{--                                    </div>--}}
                                 </div>
-                                <div class="card">
+                                <div class="card rounded-0">
                                     <div class="card-header" id="headingSeven_{{ $id }}">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link no-arrow" type="button"

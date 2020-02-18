@@ -51,14 +51,14 @@
             {{-- CQC rating  --}}
             <div class="result-item-section-2__child">
                 <p>Care Quality Rating</p>
-                <p class="d-flex SofiaPro-Medium">
+                <p class="d-flex col-{{ str_slug($qualityRating) }}">
                     {!! !empty($qualityRating) ? $qualityRating : "No data" !!}
                 </p>
             </div>
             {{-- Waiting time --}}
             <div class="result-item-section-2__child">
                 <p>Waiting Time NHS (Funded)</p>
-                <p class=" d-flex  SofiaPro-Medium">
+                <p class="d-flex col-greylight">
                     {!! !empty($waitTime) ? $waitTime.'&nbsp;Weeks' : "No data" !!}
                 </p>
             </div>
@@ -66,7 +66,7 @@
             {{-- NHS user rating --}}
             <div class="result-item-section-2__child">
                 <p>NHS User Rating</p>
-                <p class="d-flex SofiaPro-Medium">
+                <p class="d-flex col-greylight">
                     {!! html_entity_decode($stars) !!}
                 </p>
             </div>
@@ -74,14 +74,14 @@
             {{-- % operations cancelled --}}
             <div class="result-item-section-2__child">
                 <p>% Operations Cancelled</p>
-                <p class=" d-flex  SofiaPro-Medium">
+                <p class="d-flex col-greylight">
                     {!! !empty($opCancelled) ? $opCancelled : "No data" !!}
                 </p>
             </div>
             {{-- Friends and family --}}
             <div class="result-item-section-2__child">
                 <p>Friends & Family Rating</p>
-                <p class="m-0  d-flex  SofiaPro-Medium">
+                <p class="m-0 d-flex col-greylight">
                     {!! !empty($FFRating) ? $FFRating : "No data" !!}
                 </p>
             </div>

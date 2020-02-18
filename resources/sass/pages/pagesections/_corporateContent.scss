@@ -9,7 +9,7 @@
 
     .corporate-content-inner {
         background-color: #fff;
-        padding: 1rem;
+        padding: 1rem 0;
 
         @include media-breakpoint-up(lg) {
             padding: 30px;
@@ -54,6 +54,14 @@
 
     .tab-content {
         @include reset-row-spacing(12px);
+
+        .address {
+            color: $brand-tertiary-2;
+
+            strong {
+                color: $brand-tertiary-1;
+            }
+        }
     }
 
     // Carousel styles
@@ -103,6 +111,10 @@
 
     .rating-value {
         @extend .mb-1;
+
+        img {
+            width: 16px;
+        }
     }
 
     .tab-pane,

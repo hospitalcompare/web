@@ -1,7 +1,11 @@
 <div class="how-section">
     <div class="container">
         @if(!empty($sectionTitle))
-            <h2 class="section-title text-center">{{ $sectionTitle }}</h2>
+            @if(empty($section))
+                <h1 class="section-title text-center">{{ $sectionTitle }}</h1>
+            @else
+                <h2 class="section-title text-center">{{ $sectionTitle }}</h2>
+            @endif
         @endif
         <p class="col-grey lh-16 font-18 text-center mb-25">You have the legal right to have your free NHS treatment at an NHS or private hospital of your choice. Use Hospital Compare to make this choice, or to select the best hospital paid for by you or your insurance. </p>
     </div>

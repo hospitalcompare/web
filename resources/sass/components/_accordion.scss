@@ -2,7 +2,7 @@
     width: 100%;
 
     .card {
-        border-radius: $border-radius !important;
+        border-radius: $border-radius;
         @extend .w-100;
         //@extend .shadow;
         @extend .border-top-0;
@@ -22,7 +22,7 @@
         position: relative;
         background-color: #fff;
         @extend .border-0;
-        border-radius: $border-radius !important;
+        //border-radius: $border-radius !important;
 
         button {
             @extend .pt-0;
