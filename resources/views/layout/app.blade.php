@@ -2,7 +2,7 @@
 <html lang='en'>
     <head>
         @if(env('APP_ENV') == 'dev')
-            Test
+            <title>Hospital Compare TEST</title>
             <!-- Google Tag Manager -->
             <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -51,30 +51,30 @@
         <script type="text/javascript" src="{{ asset('fonts/MyFontsWebfontsKit.js') }}"></script>
 
         @if(env('APP_ENV') === 'dev')
-        <!-- Hotjar Tracking Code for http://hcstaging.co.uk/ -->
-        <script>
-            (function(h,o,t,j,a,r){
-                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                h._hjSettings={hjid:1675978,hjsv:6};
-                a=o.getElementsByTagName('head')[0];
-                r=o.createElement('script');r.async=1;
-                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-        </script>
-        @elseif(env('APP_ENV') === 'live')
-        <!-- Hotjar Tracking Code for https://www.hospitalcompare.co.uk/ -->
+            <!-- Hotjar Tracking Code for http://hcstaging.co.uk/ -->
             <script>
                 (function(h,o,t,j,a,r){
                     h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                    h._hjSettings={hjid:1676001,hjsv:6};
+                    h._hjSettings={hjid:1675978,hjsv:6};
                     a=o.getElementsByTagName('head')[0];
                     r=o.createElement('script');r.async=1;
                     r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
                     a.appendChild(r);
                 })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
             </script>
-            @endif
+        @elseif(env('APP_ENV') === 'live')
+            <!-- Hotjar Tracking Code for https://www.hospitalcompare.co.uk/ -->
+                <script>
+                    (function(h,o,t,j,a,r){
+                        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                        h._hjSettings={hjid:1676001,hjsv:6};
+                        a=o.getElementsByTagName('head')[0];
+                        r=o.createElement('script');r.async=1;
+                        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                        a.appendChild(r);
+                    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+                </script>
+        @endif
 
         <!-- Facebook Pixel Code -->
         <script>
