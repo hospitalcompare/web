@@ -540,9 +540,6 @@ select.big {
 
     .cc-btn {
         @extend .btn;
-        //@extend .btn-
-        border-radius: 3px;
-        //padding: 22px 36px !important;
         @extend .btn-brand-primary-1;
         @extend .btn-squared;
         @extend .btn-squared_slim;

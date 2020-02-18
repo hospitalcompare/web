@@ -2,8 +2,8 @@
     <div class="container">
         <div class="result-item-inner position-relative">
             @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-compare position-absolute compare font-12 d-inline-block d-lg-none mt-3 mr-3',
-                            'style'             => 'top: 0; right: 0',
+                            'classTitle'        => 'btn btn-compare position-absolute compare font-12 d-inline-block d-lg-none mt-3 mr-3 shadow-none',
+                            'style'             => 'top: 0; right: 0; padding: 0 0 0 30px !important ',
                             'htmlButton'        => true,
                             'buttonText'        => 'Add to compare',
                             'hospitalType'      => $NHSClass,
@@ -37,7 +37,7 @@
                             <p class="m-0 col-white">{{$fundedText}}</p>
                         </div>
                         @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-icon btn-more-info font-12 p-0 shadow-none',
+                            'classTitle'        => 'btn  btn-more-info font-12 p-0 shadow-none',
                             'buttonText'        => '<span>Map +</span>',
                             'htmlButton'        => true,
                             'icon'              => '',
@@ -255,14 +255,14 @@
                                 'telNumber2'        => $tel2,
                                 'hospitalTitle'     => $title,
                                 'modalTarget'       => '#hc_modal_enquire_private',
-                                'classTitle'        => 'btn btn-icon btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
+                                'classTitle'        => 'btn  btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
                                 'target'            => 'blank',
                                 'buttonText'        => $btnText,
                                 'id'                => 'enquire_private_'.$id,
                                 'hospitalIds'       => $id,
                                 'image'             => $itemImg,
                                 'svg'               => 'circle-check',
-                                'svgClass'          => 'd-none d-lg-block'])
+                                'svgClass'          => ''])
                         </div>
                         <div class="col-6 col-lg-12">
                             <div class="row btn-web-call mt-lg-2">
@@ -272,7 +272,7 @@
                                         'hospitalType'      => $NHSClass,
                                         'target'            => 'blank',
                                         'hrefValue'         => $url,
-                                        'classTitle'        => 'btn btn-icon btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
+                                        'classTitle'        => 'btn  btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
                                         'buttonText'        => 'Web',
                                         'svg'               => 'icon-web'])
                                 </div>
@@ -284,7 +284,7 @@
                                         'telNumber'         => $tel,
                                         'telNumber2'        => $tel2,
                                         'hospitalTitle'     => $title,
-                                        'classTitle'        => 'btn btn-icon btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left',
+                                        'classTitle'        => 'btn  btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left',
                                         'buttonText'        => 'Call',
                                         'modalTarget'       => '#hc_modal_contacts_private_' . $id,
                                         'id'                => 'enquire_nhs'.$id,
@@ -303,14 +303,14 @@
                                 'telNumber2'        => $tel2,
                                 'hasEmail'          => !empty($email) ? true : false,
                                 'hospitalTitle'     => $title,
-                                'classTitle'        => 'btn btn-icon btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
+                                'classTitle'        => 'btn  btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
                                 'buttonText'        => $btnText,
                                 'modalTarget'       => '#hc_modal_contacts_general_' . $id,
                                 'id'                => 'enquire_nhs'.$id,
                                 'hospitalIds'       => $id,
                                 'image'             => $itemImg,
                                 'svg'               => 'circle-check',
-                                'svgClass'          => 'd-none d-lg-block'])
+                                'svgClass'          => ''])
                         </div>
                         <div class="col-6 col-lg-12 mt-lg-2">
                             <div class="row btn-web-call ">
@@ -321,7 +321,7 @@
                                         'hospitalType'      => $NHSClass,
                                         'target'            => 'blank',
                                         'hrefValue'         => $url,
-                                        'classTitle'        => 'btn btn-icon btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
+                                        'classTitle'        => 'btn  btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
                                         'buttonText'        => 'Web',
                                         'svg'               => 'icon-web'])
                                 </div>
@@ -334,7 +334,7 @@
                                         'telNumber2'        => $tel2,
                                         'hasEmail'          => !empty($email) ? true : false,
                                         'hospitalTitle'     => $title,
-                                        'classTitle'        => 'btn btn-icon btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left',
+                                        'classTitle'        => 'btn  btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left',
                                         'buttonText'        => 'Call',
                                         'modalTarget'       => '#hc_modal_contacts_general_' . $id,
                                         'id'                => 'enquire_nhs'.$id,
@@ -351,7 +351,7 @@
                                 @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
                                     'class' => 'default'])
                                 @include('components.basic.button', [
-                                    'classTitle'        => 'toggle-special-offer btn btn-block btn-icon btn-pink btn-special-offer btn-plus font-12',
+                                    'classTitle'        => 'toggle-special-offer btn btn-block  btn-pink btn-special-offer btn-plus font-12',
                                     'htmlButton'        => true,
                                     'id'                => 'special_' . $id,
                                     'buttonText'        => 'Special Offers',

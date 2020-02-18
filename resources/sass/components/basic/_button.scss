@@ -506,11 +506,6 @@
     }
 }
 
-.btn-enquire {
-    display: flex;
-    justify-content: center;
-}
-
 .btn-enquire_mobile {
     background-color: $brand-secondary-3;
     display: flex;
@@ -547,6 +542,20 @@
         left: 8px;
         width: 20px;
         height: 20px;
+    }
+
+    @include media-breakpoint-down(md){
+        justify-content: center;
+        //align-items: center;
+
+        svg {
+            position: static !important;
+            transform: none !important;
+            width: 20px;
+            height: 20px;
+            margin-right: 0.25rem;
+            margin-left: 0;
+        }
     }
 }
 
