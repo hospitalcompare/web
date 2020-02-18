@@ -94,7 +94,7 @@
                         rows="5"
                     ></textarea>
                 </div>
-                <div class="col-12 checkbox mb-2">
+                <div class="col-12 checkbox mb-3">
                     <input required name="gdpr" type="checkbox"
                            id="gdpr" {{ !empty($gdpr) && ($gdpr) ? 'checked' : '' }} />
                     <label class="small-print" for="gdpr">Please accept the&nbsp;<a href="/terms-and-conditions">Terms & Conditions</a>&nbsp;before submitting the
@@ -104,7 +104,7 @@
                     @include('components.basic.button', [
                         'buttonText'        => 'Make an enquiry',
                         'id'                => 'btn_submit',
-                        'classTitle'        => 'btn btn-icon btn-blue btn-enquire-private-hospital',
+                        'classTitle'        => 'btn btn-icon btn-brand-secondary-3 btn-squared btn-enquire-private-hospital',
                         'svg'               => 'circle-check'])
                 </div>
             </div>

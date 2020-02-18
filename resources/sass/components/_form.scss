@@ -123,6 +123,9 @@ select::-ms-expand {
 
 
 // Submit private enquiry form
+.dropdown-toggle {
+    @extend .form-control;
+}
 
 #enquiry_form {
     input:not([type="submit"]),
@@ -130,6 +133,7 @@ select::-ms-expand {
     textarea {
         //height: 35px;
         //line-height: 44px;
+        border: 2px solid #dee2e6;
         border-radius: $btn-border-radius;
         background-color: #ffffff;
     }
@@ -167,6 +171,9 @@ select::-ms-expand {
 
                 &:before {
                     content: '';
+                    position: absolute;
+                    left: 2px;
+                    top: 0;
                     background-image: url('../images/icons/icon-tick.svg');
                     @include icon-bg-center(70%);
                 }
@@ -175,18 +182,23 @@ select::-ms-expand {
     }
 
     > label:last-child {
-        display: flex;
-        align-items: center;
+        //display: flex;
+        //align-items: center;
+        position: relative;
         cursor: pointer;
         margin-bottom: 0;
 
         &.small-print {
             @include font-size(14);
             line-height: 1.2;
+            padding-left: 30px;
         }
 
         &:before {
             content: "";
+            position: absolute;
+            left: 2px;
+            top: 0;
             background-color: transparent;
             display: inline-block;
             width: 20px;
