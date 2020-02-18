@@ -2,7 +2,6 @@
 <html lang='en'>
     <head>
         @if(env('APP_ENV') == 'dev')
-            <title>Hospital Compare TEST</title>
             <!-- Google Tag Manager -->
             <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -11,7 +10,6 @@
                 })(window,document,'script','dataLayer','GTM-MJZJN5W');</script>
             <!-- End Google Tag Manager -->
         @endif
-
 
         <title>Hospital Compare - @yield('title')</title>
         <meta charset='utf-8'>
