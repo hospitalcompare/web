@@ -22,6 +22,8 @@
                     <p class="p-secondary">These terms tell you the rules for using our website
                         www.hospitalcompare.co.uk <strong>(our
                             site)</strong>.</p>
+                    <h3>Attribution Notices</h3>
+                    <p>Information displayed on the Hospital Compare Limited website contains information from NHS Digital, NHS and the CQC, licensed in each case under the current version of the Open Government Licence. http://www.nationalarchives.gov.uk/doc/open-government-licence .</p>
                 </div>
             </div>
         </div>

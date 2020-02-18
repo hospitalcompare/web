@@ -506,11 +506,6 @@
     }
 }
 
-.btn-enquire {
-    display: flex;
-    justify-content: center;
-}
-
 .btn-enquire_mobile {
     background-color: $brand-secondary-3;
     display: flex;
@@ -530,16 +525,13 @@
     }
 }
 
-.btn-enquire,
-.btn-enquire-private-hospital {
-    //border-radius: $border-radius;
+.btn-enquire {
     color: $white !important;
     @include font-size(14);
     position: relative;
     padding: 8px 5px 8px 40px;
     display: inline-block;
     text-align: left;
-    //background-color: $brand-secondary-3;
 
     &:hover {
         background-color: $brand-primary-7;
@@ -550,6 +542,21 @@
         left: 8px;
         width: 20px;
         height: 20px;
+    }
+
+    @include media-breakpoint-down(md){
+        justify-content: center;
+        //align-items: center;
+
+        svg {
+            position: static !important;
+            transform: none !important;
+            width: 20px;
+            height: 20px;
+            flex: 0 0 20px;
+            margin-right: 0.25rem;
+            margin-left: 0;
+        }
     }
 }
 

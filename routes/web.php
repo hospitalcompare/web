@@ -36,6 +36,8 @@ Route::get('/faqs','WebController@faqsPage');
 
 Route::get('/terms-and-conditions','WebController@termsAndConditionsPage');
 
+Route::get('/attributions','WebController@attributionsPage');
+
 Route::get('/your-rights','WebController@yourRightsPage');
 
 Route::get('/how-to-use','WebController@howToUsePage');

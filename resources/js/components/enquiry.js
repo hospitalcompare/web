@@ -28,6 +28,11 @@
 //     $(this).valid();  // triggers the validation test
 // });
 
+// Matches UK postcode. Does not match to UK Channel Islands that have their own postcodes (non standard UK)
+$.validator.addMethod( "postcodeUK", function( value, element ) {
+    return this.optional( element ) || /^((([A-PR-UWYZ][0-9])|([A-PR-UWYZ][0-9][0-9])|([A-PR-UWYZ][A-HK-Y][0-9])|([A-PR-UWYZ][A-HK-Y][0-9][0-9])|([A-PR-UWYZ][0-9][A-HJKSTUW])|([A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY]))\s?([0-9][ABD-HJLNP-UW-Z]{2})|(GIR)\s?(0AA))$/i.test( value );
+}, "Please specify a valid UK postcode" );
+
 // Add a custom validation to the jquery validate object - validate phone number field as UK format
 $.validator.addMethod('phoneUK', function (phone_number, element) {
         return this.optional(element) || phone_number.length > 9 &&
@@ -88,8 +93,8 @@ if ($form.length > 0) {
                 phoneUK: true
             },
             postcode: {
-                // required: true,
-                // postcodeUK: true
+                required: true,
+                postcodeUK: true
             },
             procedure_id: "required",
             gdpr: "required"

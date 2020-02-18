@@ -26,9 +26,9 @@
                     <nav>
                         <ul class="footer-upper__secondary-menu mb-0">
                             <li class="d-inline-block"><a href="/terms-and-conditions">Terms of Use</a></li>
-                            {{--                    <li><a href="/accessibility">Accessibility</a></li>--}}
                             <li class="d-inline-block"><a href="/privacy-policy">Privacy Policy</a></li>
                             <li class="d-inline-block"><a href="/cookie-policy">Cookie Policy</a></li>
+                            <li class="d-inline-block"><a href="/attributions">Attributions</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -45,11 +45,11 @@
                                     <span class="sr-only">Twitter link</span>
                                 </a>
                             </li>
-{{--                            <li class="instagram-social">--}}
-{{--                                <a href="https://www.instagram.com/hospitalcompare/" target="_blank">@svg('instagram')--}}
-{{--                                    <span class="sr-only">Instagram link</span>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
+                            <li class="instagram-social">
+                                <a href="https://www.instagram.com/hospitalcompare/" target="_blank">@svg('instagram')
+                                    <span class="sr-only">Instagram link</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

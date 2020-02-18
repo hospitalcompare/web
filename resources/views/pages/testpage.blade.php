@@ -11,6 +11,23 @@
 @section('body-class', 'test-page')
 
 @section('content')
+
+
+    <section class="pt-3">
+        <div class="container">
+            <h3>Enquiry Form</h3>
+            @include('components.modals.modalenquireprivate', [
+                       'procedures'    => $data['filters']['procedures'],
+                       'title'         => 'Mr',
+                       'firstName'     => 'Test',
+                       'dob'           => '1980/04/12',
+                       'lastName'      => 'Testing',
+                       'email'         => 'test@test.com',
+                       'phone'         => '07941939374',
+                       'postcode'      => 'ch423re',
+                       'gdpr'          => true])
+        </div>
+    </section>
     <section>
         <div class="modal-body p-3 position-relative">
             <div class="carousel-wrapper position-relative">
@@ -1105,22 +1122,6 @@
         </div>
     </section>
 
-
-    <section class="pt-3">
-        <div class="container">
-            <h3>Enquiry Form</h3>
-            @include('components.modals.modalenquireprivate', [
-                       'procedures'    => $data['filters']['procedures'],
-                       'title'         => 'Mr',
-                       'firstName'     => 'Test',
-                       'dob'           => '1980/04/12',
-                       'lastName'      => 'Testing',
-                       'email'         => 'test@test.com',
-                       'phone'         => '07941939374',
-                       'postcode'      => 'ch423re',
-                       'gdpr'          => true])
-        </div>
-    </section>
     {{--     {{ dd($doctor) }}--}}
     {{--    <section>--}}
     {{--        <div class="container my-4">--}}
