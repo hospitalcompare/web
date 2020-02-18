@@ -41,7 +41,7 @@
                         </a>
                     </li>
                     <li class="d-none d-lg-inline-block">
-                        <a data-toggle="modal" data-target="#hc_modal_tour">
+                        <a class="cursor-pointer" data-toggle="modal" data-target="#hc_modal_tour">
                             Help
                         </a>
                     </li>
