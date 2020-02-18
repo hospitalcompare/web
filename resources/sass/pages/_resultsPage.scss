@@ -5,6 +5,12 @@
         min-height: calc(60vh - 220px);
     }
 
+    #show_filters {
+        @include media-breakpoint-down(md){
+            border-radius: 3px;
+            margin-top: 0.5rem;
+        }
+    }
 
     &.filters-open {
         #show_filters {
@@ -201,7 +207,13 @@
         background-color: #fff;
     }
 
+
     .sort-bar {
+        @include media-breakpoint-down(md){
+            display: block;
+            padding: 1rem 0;
+        }
+
         @include media-breakpoint-up(lg) {
             //height: 60px;
             .section-1 {
