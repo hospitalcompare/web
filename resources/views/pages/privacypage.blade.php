@@ -152,7 +152,7 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                     introduce you through our website. For more information on how we are
                                     remunerated for our service by service providers and other businesses or
                                     advertisers, please read our <a class="btn-link"
-                                                                    href="/terms-and-conditions">Terms and
+                                                                    href="/terms-of-use">Terms and
                                         Conditions</a>
                                 </li>
                                 <li><strong>Technical Data</strong> includes internet protocol (IP) address,

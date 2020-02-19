@@ -97,7 +97,7 @@
                 <div class="col-12 checkbox mb-3">
                     <input required name="gdpr" type="checkbox"
                            id="gdpr" {{ !empty($gdpr) && ($gdpr) ? 'checked' : '' }} />
-                    <label class="small-print" for="gdpr">Please accept the&nbsp;<a href="/terms-and-conditions">Terms & Conditions</a>&nbsp;before submitting the
+                    <label class="small-print" for="gdpr">Please accept the&nbsp;<a href="/terms-of-use">Terms of Use</a>&nbsp;before submitting the
                         form.</label>
                 </div>
                 <div class="col-12 btn-area text-right">

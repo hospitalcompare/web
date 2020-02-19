@@ -105,7 +105,7 @@ if ($form.length > 0) {
             phone_number: "Please enter your contact number",
             postcode: "Please enter a valid UK postcode",
             procedure_id: "Please select the procedure required",
-            gdpr: "Please confirm you agree to our terms and conditions"
+            gdpr: "Please confirm you agree to our terms of use"
         },
         errorPlacement: function (error, element) {
             //console.dir(error, element);

@@ -261,6 +261,7 @@ window.addHospitalToCompare = function (element) {
         // Add new item
         target.prepend(newColumn);
         // Add corresponding enquiry modal to body
+        // Add corresponding enquiry modal to body
         if(element.hospital_type.name === 'NHS')
             $body.append(nhsModalContent);
     } else if (isMobile) {
