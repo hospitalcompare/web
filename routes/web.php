@@ -34,7 +34,7 @@ Route::get('/privacy-policy','WebController@privacyPage');
 
 Route::get('/faqs','WebController@faqsPage');
 
-Route::get('/terms-and-conditions','WebController@termsAndConditionsPage');
+Route::get('/terms-of-use','WebController@termsAndConditionsPage');
 
 Route::get('/attributions','WebController@attributionsPage');
 

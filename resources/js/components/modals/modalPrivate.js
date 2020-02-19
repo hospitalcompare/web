@@ -68,3 +68,8 @@ $('#hc_modal_mobile_enquire_private').on('show.bs.modal', function (event) {
         .modal('hide');
 });
 
+// Remove the body class
+$('#hc_modal_mobile_enquire_private, #hc_modal_enquire_private').on('hide.bs.modal', function (event) {
+    $body.removeClass('enquiry-form-open');
+});
+

@@ -10,15 +10,6 @@
     border-bottom: $greyBorder;
 }
 
-.your-rights-what {
-    //background-image: url('/images/banner-flipped.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    //@include mask($brand-primary-1, 0.06)
-    @include mask($bgLightGrey, 1)
-}
-
-
 .your-rights-hero-cont {
     position: absolute;
     top: -45px;
@@ -28,38 +19,36 @@
 }
 
 
-@include media-breakpoint-down(md) {
-    .your-rights-img-top {
-        position: absolute;
-        z-index: 999;
-        background: url(/images/about-hero-top.jpg);
-        background-size: cover;
-        height: 240px;
-        width: 240px;
-        border-radius: 5px;
-        right: 30px;
-        top: 58px;
-    }
+.your-rights-img-top {
+    position: absolute;
+    z-index: 999;
+    background: url(../images/your-rights-img-top.jpg);
+    background-size: cover;
+    background-position: right 0 !important;
+    height: 470px;
+    width: 410px;
+    border-radius: 5px;
+    right: -230px;
+    top: 58px;
+}
 
-    .your-rights-img-bottom {
-        position: absolute;
-        z-index: 998;
-        background: url(/images/about-hero-bottom.jpg);
-        background-size: cover;
-        height: 230px;
-        width: 240px;
-        border-radius: 5px;
-        bottom: 0;
-        left: 40px;
-    }
+.your-rights-img-bottom {
+    position: absolute;
+    z-index: 998;
+    background: url(../images/your-rights-img-bottom.jpg);
+    background-size: cover;
+    height: 380px;
+    width: 380px;
+    border-radius: 5px;
+    bottom: 55px;
+    left: 180px;
 }
 
 .your-rights-img-back {
     position: absolute;
     z-index: 997;
-    background: url(/images/your-rights-3.jpg);
+    background: url(../images/your-rights-img-back.jpg);
     background-size: cover;
-    background-position: right;
     height: 260px;
     width: 260px;
     border-radius: 5px;
@@ -106,7 +95,7 @@
     .your-rights-img-top {
         position: absolute;
         z-index: 999;
-        background: url(/images/about-hero-top.jpg);
+        background: url(../images/your-rights-img-top.jpg);
         background-size: cover;
         height: 370px;
         width: 370px;
@@ -118,7 +107,7 @@
     .your-rights-img-bottom {
         position: absolute;
         z-index: 998;
-        background: url(/images/about-hero-bottom.jpg);
+        background: url(../images/your-rights-img-bottom.jpg);
         background-size: cover;
         height: 330px;
         width: 350px;
@@ -130,7 +119,7 @@
     .your-rights-img-back {
         position: absolute;
         z-index: 997;
-        background: url(/images/about-hero-back.jpg);
+        background: url(../images/your-rights-img-back.jpg);
         background-size: cover;
         height: 200px;
         width: 200px;
@@ -164,8 +153,7 @@
     }
 }
 
-
-@media screen and (max-width: 991px) {
+@media screen and (max-width:991px) {
     .your-rights-hero-cont {
         position: relative;
         top: 0;
@@ -181,7 +169,7 @@
     .your-rights-img-top {
         position: absolute;
         z-index: 999;
-        background: url(/images/about-hero-top.jpg);
+        background: url(../images/your-rights-img-top.jpg);
         background-size: cover;
         height: 370px;
         width: 370px;
@@ -193,7 +181,7 @@
     .your-rights-img-bottom {
         position: absolute;
         z-index: 998;
-        background: url(/images/about-hero-bottom.jpg);
+        background: url(../images/your-rights-img-bottom.jpg);
         background-size: cover;
         height: 290px;
         width: 300px;
@@ -218,7 +206,7 @@
 
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width:576px) {
     .your-rights-hero-cont {
         position: relative;
         top: 0;
@@ -231,7 +219,7 @@
     .your-rights-img-top {
         position: absolute;
         z-index: 999;
-        background: url(/images/about-hero-top.jpg);
+        background: url(../images/your-rights-img-top.jpg);
         background-size: cover;
         height: 270px;
         width: 270px;
@@ -240,3 +228,5 @@
         top: 58px;
     }
 }
+
+

@@ -1,8 +1,8 @@
 @extends('layout.app')
 
-@section('title', 'Terms and Conditions')
+@section('title', 'terms of use')
 
-@section('description', 'Learn about the terms and conditions that apply to Hospital Compare website users.')
+@section('description', 'Learn about the terms of use that apply to Hospital Compare website users.')
 
 @section('keywords', 'this is the meta keywords')
 
@@ -17,13 +17,11 @@
             <div class="row">
                 <div class="col hc-content">
                     <h1>Terms of Use</h1>
-                    <p class="p-secondary">Please read these terms and conditions carefully before using this site</p>
+                    <p class="p-secondary">Please read these terms of use carefully before using this site</p>
                     <h3>What's in these terms?</h3>
                     <p class="p-secondary">These terms tell you the rules for using our website
                         www.hospitalcompare.co.uk <strong>(our
                             site)</strong>.</p>
-                    <h3>Attribution Notices</h3>
-                    <p>Information displayed on the Hospital Compare Limited website contains information from NHS Digital, NHS and the CQC, licensed in each case under the current version of the Open Government Licence. http://www.nationalarchives.gov.uk/doc/open-government-licence .</p>
                 </div>
             </div>
         </div>
@@ -104,14 +102,14 @@
                                     These terms of use refer to the following additional terms, which also apply to your use of our site and services:
                             </p>
                             <ul class="blue-dot">
-                                <li>Our <a href="/privacy-policy" class="btn-link">Privacy Policy</a>. This sets out information confirming how we respect your                                                     privacy. If you complete an enquiry form on our site to make an enquiry to a hospital or other service provider that hospital or service provider will have terms and conditions relating to your enquiry and privacy which you should consider.
+                                <li>Our <a href="/privacy-policy" class="btn-link">Privacy Policy</a>. This sets out information confirming how we respect your                                                     privacy. If you complete an enquiry form on our site to make an enquiry to a hospital or other service provider that hospital or service provider will have terms of use relating to your enquiry and privacy which you should consider.
                                 </li>
                                 <li>Our <a href="/cookie-policy" class="btn-link">Cookie Policy</a>, which sets out information about the cookies and similar technologies on our site.
                                 </li>
-                                <li>If you purchase services or products from any site that is linked to our site that will have the terms and conditions of that will apply to that purchase. We are not responsible for the terms you agree with hospitals or other service providers.
+                                <li>If you purchase services or products from any site that is linked to our site that will have the terms of use of that will apply to that purchase. We are not responsible for the terms you agree with hospitals or other service providers.
                                 </li>
                             </ul>
-                            <p>You are also responsible for ensuring that all persons who access our site through your internet connection or device are aware of these terms of use and other applicable terms and conditions, and that they comply with them.
+                            <p>You are also responsible for ensuring that all persons who access our site through your internet connection or device are aware of these terms of use and other applicable terms of use, and that they comply with them.
 </p>'
                 ],
                 [
@@ -124,7 +122,7 @@ understand the terms that apply at that time. These terms were most recently upd
                 [
                     'title' => 'We may make changes to our site',
                     'content' => '
-                        <p>We may update and change our site and policies from time to time for business and operational reasons or to improve our services to you so please re-check our terms and conditions, including our privacy policy and cookie policy periodically to check for updates.</p>'
+                        <p>We may update and change our site and policies from time to time for business and operational reasons or to improve our services to you so please re-check our terms of use, including our privacy policy and cookie policy periodically to check for updates.</p>'
                 ],
                 [
                     'title' => 'We may suspend or withdraw our site',
@@ -201,7 +199,7 @@ understand the terms that apply at that time. These terms were most recently upd
                                     </li>
                                     <li>Different limitations and exclusions of liability will apply to liability arising as a result of the supply of
                                         any services or products to you, by hospitals or third parties linked to our site. Such terms will be set out in
-                                        the terms and conditions of supply of those hospitals and third parties, which you should familiarise yourself
+                                        the terms of use of supply of those hospitals and third parties, which you should familiarise yourself
                                         with.
                                     </li>
                                     <li>Please note that we only provide our site for domestic and private use. You agree not to use our site for any
@@ -228,9 +226,9 @@ understand the terms that apply at that time. These terms were most recently upd
                     'content' => '
                         <p>We are not responsible for any content that you upload to our site including any inaccurate information contained in an Enquiry Form you complete on our site.  This is your responsibility and you must seek to correct any information presented to Hospitals or other service providers through or as a result of using our site. Failure to do so may affect your eligibility for treatment and may result in delays affecting your treatment, or could result in you  receiving wrong advice or wrong treatment.</p>
                         <p>When you complete an Enquiry From on our site and acknowledge your agreement to these Terms of Use, by ticking the box on an Enquiry Form, you are agreeing that we may process your enquiry in accordance with these Terms of Use, that we may store your enquiry in accordance with these terms and our Privacy Policy and in return we will pass on your completed Enquiry Form by email to the service providers you have chosen upon our site, if those service providers will accept enquiries from us your behalf.</p>
-                        <p>Once you have completed our Enquiry Form and acknowledged your agreement to these Terms of Use, we will email the relevant hospital with your enquiry, if they accept contact in this way, and will email you at the email address you provide on the Enquiry Form to tell you we have done so. Generally the hospital concerned, if they accept enquiries in this way, will make contact with you within 3 or 4 working days.  If they have not done so please contact that hospital directly to follow up your enquiry at the contact details we have provided to you or by visiting their website and/or calling them. We do not provide a follow up service to check on the status of your enquiry and data protection laws may mean the hospital concerned will not enter dialogue with us about your enquiry in any event.  Any enquiry made through our site will also be governed by the terms and conditions and privacy policy of the hospital you wish to contact. Please familiarize yourself with their terms, which can be found on their website or by contacting them directly.</p>
+                        <p>Once you have completed our Enquiry Form and acknowledged your agreement to these Terms of Use, we will email the relevant hospital with your enquiry, if they accept contact in this way, and will email you at the email address you provide on the Enquiry Form to tell you we have done so. Generally the hospital concerned, if they accept enquiries in this way, will make contact with you within 3 or 4 working days.  If they have not done so please contact that hospital directly to follow up your enquiry at the contact details we have provided to you or by visiting their website and/or calling them. We do not provide a follow up service to check on the status of your enquiry and data protection laws may mean the hospital concerned will not enter dialogue with us about your enquiry in any event.  Any enquiry made through our site will also be governed by the terms of use and privacy policy of the hospital you wish to contact. Please familiarize yourself with their terms, which can be found on their website or by contacting them directly.</p>
                         <p><strong>Please note, once we have made contact with the hospital concerned as described in these Terms of Use our service to you is at an end.</strong></p>
-                        <p>Our purpose is to provide you with the very best publicly available information, clearly and openly so you can make informed “choices” to meet your needs in choosing a hospital in England.   We do not provide a follow up service or concierge service to arrange or change appointments with hospitals. This service will be provided by the hospital concerned, subject to their terms and conditions.   As such we do not accept any further responsibility for your enquiry with your chosen hospital once we have transmitted your Enquiry Form to your chosen hospital, if they will accept enquiries in this way. Further enquiries must be made by you to your chosen hospital directly.</p>
+                        <p>Our purpose is to provide you with the very best publicly available information, clearly and openly so you can make informed “choices” to meet your needs in choosing a hospital in England.   We do not provide a follow up service or concierge service to arrange or change appointments with hospitals. This service will be provided by the hospital concerned, subject to their terms of use.   As such we do not accept any further responsibility for your enquiry with your chosen hospital once we have transmitted your Enquiry Form to your chosen hospital, if they will accept enquiries in this way. Further enquiries must be made by you to your chosen hospital directly.</p>
                     '
                 ],
                 [
