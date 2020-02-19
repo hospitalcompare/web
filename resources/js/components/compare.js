@@ -157,7 +157,7 @@ window.addHospitalToCompare = function (element) {
     // Button content if NHS hospital has a private website url
     var urlTwoButton = ( element.nhs_private_url != "" && typeof element.nhs_private_url != "undefined" ) ? `<a id="${element.id}" class="p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block" target="blank" href="${element.nhs_private_url}" role="button" data-hospital-type="nhs-hospital"><span>Visit website</span></a>` : '';
     // Button to trigger contact form for the private wing of NHS hospital
-    var nhsPrivateContactBtn = ( element.email != "" && typeof element.email != "undefined" ) ? `<button class="btn btn-squared btn-squared_slim btn-enquire btn-brand-secondary-3 enquiry font-12 text-center mt-5" id="${element.id}" data-hospital-ids="${element.id}" data-dismiss="modal" data-hospital-type="nhs-hospital" data-toggle="modal" data-target="#hc_modal_enquire_private" data-hospital-title="${element.display_name}">Make a private treatment enquiry${circleCheck}</button>` : '';
+    var nhsPrivateContactBtn = ( element.email != "" && typeof element.email != "undefined" ) ? `<button class="btn btn-squared btn-squared_slim btn-enquire btn-brand-secondary-3 enquiry font-12 text-center mt-5" id="${element.id}" data-hospital-id="${element.id}" data-dismiss="modal" data-hospital-type="nhs-hospital" data-toggle="modal" data-target="#hc_modal_enquire_private" data-hospital-title="${element.display_name}">Make a private treatment enquiry${circleCheck}</button>` : '';
 
     var nhsModalContent =
         `<div class="modal modal-enquire fade" id="hc_modal_contacts_general_shortlist_${element.id}" tabindex="-1" role="dialog"
@@ -261,7 +261,8 @@ window.addHospitalToCompare = function (element) {
         // Add new item
         target.prepend(newColumn);
         // Add corresponding enquiry modal to body
-        $body.append(nhsModalContent);
+        if(element.hospital_type.name === 'NHS')
+            $body.append(nhsModalContent);
     } else if (isMobile) {
         var newRow =
             `<div id="compare_hospital_id_${element.id}" class="card w-100 p-0 border-top-0 border-left-0 border-right-0 border-bottom rounded-0 shadow-none">
