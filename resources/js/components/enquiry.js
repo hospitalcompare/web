@@ -75,10 +75,6 @@ if ($form.length > 0) {
                 required: true,
                 alpha: true
             },
-            // dob: { // The entered date
-            //     required: true,
-            //     dateFormat: true,
-            // },
             email: {
                 required: true,
                 email: true
@@ -104,13 +100,12 @@ if ($form.length > 0) {
             title: "Please select your title",
             firstName: "Please enter your first name",
             lastName: "Please enter your surname",
-            // dob: "Please enter your date of birth",
             email: "Please enter a valid email address",
             confirm_email: "The passwords entered do not match",
             phone_number: "Please enter your contact number",
             postcode: "Please enter a valid UK postcode",
             procedure_id: "Please select the procedure required",
-            gdpr: "Please confirm you consent to our terms and conditions"
+            gdpr: "Please confirm you agree to our terms and conditions"
         },
         errorPlacement: function (error, element) {
             //console.dir(error, element);

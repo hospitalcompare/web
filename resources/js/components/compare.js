@@ -106,6 +106,9 @@ window.addHospitalToCompare = function(element) {
     var userRating = 0;
     var latestRating = 'No Data';
     var friendsAndFamilyRating = null;
+    var hasNhsEmail = typeof element.email != "undefined" && element.email !== ""; // Email must be not empty string AND not undefined AND be NHS;
+
+    console.log(element.hospital_type.name);
 
     if (element.rating !== null && typeof element.rating.friends_family_rating !== "undefined" && element.rating.friends_family_rating !== null) {
         friendsAndFamilyRating = element.rating.friends_family_rating;
