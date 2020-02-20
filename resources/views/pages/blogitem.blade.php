@@ -2,7 +2,7 @@
 
 @section('title', $data['blog']['title'])
 
-@section('description', $data['blog']['metatags'] ?? '')
+@section('description', !empty($data['blog']['metatags']) ? substr(strip_tags($data['blog']['metatags']), 1 , 160) : '')
 
 @section('keywords', 'this is the meta keywords')
 
