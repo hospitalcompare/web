@@ -12,262 +12,264 @@
 
 @section('content')
 
+        <section>
+            @include('components.emails.emailuser')
+        </section>
+{{--    <section class="pt-3">--}}
+{{--        <div class="container">--}}
+{{--            <h3>Enquiry Form</h3>--}}
+{{--            @include('components.modals.modalenquireprivate', [--}}
+{{--                       'procedures'    => $data['filters']['procedures'],--}}
+{{--                       'title'         => 'Mr',--}}
+{{--                       'firstName'     => 'Test',--}}
+{{--                       'dob'           => '1980/04/12',--}}
+{{--                       'lastName'      => 'Testing',--}}
+{{--                       'email'         => 'test@test.com',--}}
+{{--                       'phone'         => '07941939374',--}}
+{{--                       'postcode'      => 'ch423re',--}}
+{{--                       'gdpr'          => true])--}}
+{{--        </div>--}}
+{{--    </section>--}}
+{{--    <section>--}}
+{{--        <div class="modal-body p-3 position-relative">--}}
+{{--            <div class="carousel-wrapper position-relative">--}}
+{{--                <!-- Slide number indicator -->--}}
+{{--                <div id="carousel_tour" class="carousel slide _carousel-fade pointer-event" data-ride="carousel" data-interval="false">--}}
+{{--                    <!--Slides-->--}}
 
-    <section class="pt-3">
-        <div class="container">
-            <h3>Enquiry Form</h3>
-            @include('components.modals.modalenquireprivate', [
-                       'procedures'    => $data['filters']['procedures'],
-                       'title'         => 'Mr',
-                       'firstName'     => 'Test',
-                       'dob'           => '1980/04/12',
-                       'lastName'      => 'Testing',
-                       'email'         => 'test@test.com',
-                       'phone'         => '07941939374',
-                       'postcode'      => 'ch423re',
-                       'gdpr'          => true])
-        </div>
-    </section>
-    <section>
-        <div class="modal-body p-3 position-relative">
-            <div class="carousel-wrapper position-relative">
-                <!-- Slide number indicator -->
-                <div id="carousel_tour" class="carousel slide _carousel-fade pointer-event" data-ride="carousel" data-interval="false">
-                    <!--Slides-->
+{{--                    <!--/.Slides-->--}}
+{{--                    <div class="carousel-inner position-relative" role="listbox">--}}
 
-                    <!--/.Slides-->
-                    <div class="carousel-inner position-relative" role="listbox">
-
-                        <div class="carousel-item">
-                            <div class="carousel-item-inner">
-                                <div class="row">
-                                    <div class="carousel-item-copy col-4">
-                                        <h5 class="font-28 SofiaPro-Medium">How to Use the
-                                            Filters</h5>
-                                        <p class="col-grey p-secondary">Following your initial search, tap
-                                            the cyan ‘Filter Results’ button
-                                            near the top of your screen to
-                                            reveal further options to hone
-                                            your results by categories like
-                                            waiting times. Once you’ve
-                                            made your changes, click the
-                                            blue ‘Update Results’ button and
-                                            your choices will be reflected in
-                                            your search results.</p>
-                                    </div>
-                                    <div class="carousel-item-image col-8">
-                                        <div class="image-wrapper" style="background-image: url('/images/help/help-1.jpg')">
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="carousel-item-inner">
-                                <div class="row">
-                                    <div class="carousel-item-copy col-4">
-                                        <h5 class="font-18 SofiaPro-Medium">How to Use the
-                                            Sort Function
-                                            Rating Arrows</h5>
-                                        <p class="col-grey p-secondary">You can sort your data by
-                                            clicking the downward-facing
-                                            arrows in the white bar above
-                                            your search results. This means
-                                            you can sort your data by
-                                            specific columns, for example
-                                            prioritising your results by
-                                            shortest waiting time.</p>
-                                    </div>
-                                    <div class="carousel-item-image col-8">
-                                        <div class="image-wrapper" style="background-image: url('/images/help/help-2.jpg')">
+{{--                        <div class="carousel-item">--}}
+{{--                            <div class="carousel-item-inner">--}}
+{{--                                <div class="row">--}}
+{{--                                    <div class="carousel-item-copy col-4">--}}
+{{--                                        <h5 class="font-28 SofiaPro-Medium">How to Use the--}}
+{{--                                            Filters</h5>--}}
+{{--                                        <p class="col-grey p-secondary">Following your initial search, tap--}}
+{{--                                            the cyan ‘Filter Results’ button--}}
+{{--                                            near the top of your screen to--}}
+{{--                                            reveal further options to hone--}}
+{{--                                            your results by categories like--}}
+{{--                                            waiting times. Once you’ve--}}
+{{--                                            made your changes, click the--}}
+{{--                                            blue ‘Update Results’ button and--}}
+{{--                                            your choices will be reflected in--}}
+{{--                                            your search results.</p>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="carousel-item-image col-8">--}}
+{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-1.jpg')">--}}
 
 
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-                        <div class="carousel-item">
-                            <div class="carousel-item-inner">
-                                <div class="row">
-                                    <div class="carousel-item-copy col-4">
-                                        <h5 class="font-18 SofiaPro-Medium">How to Use Tooltips to Get More Information</h5>
-                                        <p class="col-grey p-secondary">Throughout Hospital Compare, you can get more information about specific
-                                            subjects from our tailored tooltips. The tooltips provide more detail
-                                            and context on information within your search results. You can access
-                                            them by hovering over headings and information with your mouse cursor.
-                                        </p>
-                                    </div>
-                                    <div class="carousel-item-image col-8">
-                                        <div class="image-wrapper" style="background-image: url('/images/help/help-3.jpg')">
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item active">
-                            <div class="carousel-item-inner">
-                                <div class="row">
-                                    <div class="carousel-item-copy col-4">
-                                        <h5 class="font-18 SofiaPro-Medium">How to Compare Results and Add to a Shortlist</h5>
-                                        <p class="col-grey p-secondary">After generating your search results, you can compare specific hospitals
-                                            (up to five) by clicking the ‘Add to Compare’ buttons at the end of each
-                                            result row. Once you’ve selected the hospitals you’re interested in,
-                                            click the cyan ‘Compare’ button in the bottom right to view your choices
-                                            in detail.
-                                        </p>
-                                    </div>
-                                    <div class="carousel-item-image col-8">
-                                        <div class="image-wrapper" style="background-image: url('/images/help/help-4.jpg')">
+{{--                        <div class="carousel-item">--}}
+{{--                            <div class="carousel-item-inner">--}}
+{{--                                <div class="row">--}}
+{{--                                    <div class="carousel-item-copy col-4">--}}
+{{--                                        <h5 class="font-18 SofiaPro-Medium">How to Use the--}}
+{{--                                            Sort Function--}}
+{{--                                            Rating Arrows</h5>--}}
+{{--                                        <p class="col-grey p-secondary">You can sort your data by--}}
+{{--                                            clicking the downward-facing--}}
+{{--                                            arrows in the white bar above--}}
+{{--                                            your search results. This means--}}
+{{--                                            you can sort your data by--}}
+{{--                                            specific columns, for example--}}
+{{--                                            prioritising your results by--}}
+{{--                                            shortest waiting time.</p>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="carousel-item-image col-8">--}}
+{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-2.jpg')">--}}
 
 
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-                        <div class="carousel-item">
-                            <div class="carousel-item-inner">
-                                <div class="row">
-                                    <div class="carousel-item-copy col-4">
-                                        <h5 class="font-18 SofiaPro-Medium">What is the Solutions Bar?</h5>
-                                        <p class="col-grey p-secondary">You’ll find the solutions bar located below your search results. Based on
-                                            the criteria you searched for, the blue box highlights an outstanding
-                                            hospital with the lowest waiting time, whilst the pink box highlights
-                                            special offers you may be interested in.
-                                        </p>
-                                    </div>
-                                    <div class="carousel-item-image col-8">
-                                        <div class="image-wrapper" style="background-image: url('/images/help/help-5.jpg')">
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="carousel-item-inner">
-                                <div class="row">
-                                    <div class="carousel-item-copy col-4">
-                                        <h5 class="font-18 SofiaPro-Medium">How to Make an Enquiry
-                                        </h5>
-                                        <p class="col-grey p-secondary">After generating and comparing your search results, you can make
-                                            enquiries to private hospitals by clicking the blue ‘Make an Enquiry’
-                                            button at the end of each result line. You will then be asked to
-                                            complete a short form which will be sent to them once finalised.</p>
-                                    </div>
-                                    <div class="carousel-item-image col-8">
-                                        <div class="image-wrapper" style="background-image: url('/images/help/help-6.jpg')">
+{{--                        <div class="carousel-item">--}}
+{{--                            <div class="carousel-item-inner">--}}
+{{--                                <div class="row">--}}
+{{--                                    <div class="carousel-item-copy col-4">--}}
+{{--                                        <h5 class="font-18 SofiaPro-Medium">How to Use Tooltips to Get More Information</h5>--}}
+{{--                                        <p class="col-grey p-secondary">Throughout Hospital Compare, you can get more information about specific--}}
+{{--                                            subjects from our tailored tooltips. The tooltips provide more detail--}}
+{{--                                            and context on information within your search results. You can access--}}
+{{--                                            them by hovering over headings and information with your mouse cursor.--}}
+{{--                                        </p>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="carousel-item-image col-8">--}}
+{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-3.jpg')">--}}
 
 
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-                        <div class="carousel-item">
-                            <div class="carousel-item-inner">
-                                <div class="row">
-                                    <div class="carousel-item-copy col-4">
-                                        <h5 class="font-18 SofiaPro-Medium">Learn More About Your Rights</h5>
-                                        <p class="col-grey p-secondary">You can learn more about your legal rights by clicking the ‘Your Rights’
-                                            button in the main website menu at the top of your screen.</p>
-                                    </div>
-                                    <div class="carousel-item-image col-8">
-                                        <div class="image-wrapper" style="background-image: url('/images/help/help-7.jpg')">
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="carousel-item-inner">
-                                <div class="row">
-                                    <div class="carousel-item-copy col-4">
-                                        <h5 class="font-18 SofiaPro-Medium">Learn More Through Our Blog</h5>
-                                        <p class="col-grey p-secondary">From articles focusing on your rights to current events, waiting times to
-                                            quality, our regularly-updated blog plays host to a range of unique and
-                                            informative articles. Click the ‘Blog’ button in the main menu to
-                                            access.</p>
-                                    </div>
-                                    <div class="carousel-item-image col-8">
-                                        <div class="image-wrapper" style="background-image: url('/images/help/help-8.jpg')">
+{{--                        <div class="carousel-item active">--}}
+{{--                            <div class="carousel-item-inner">--}}
+{{--                                <div class="row">--}}
+{{--                                    <div class="carousel-item-copy col-4">--}}
+{{--                                        <h5 class="font-18 SofiaPro-Medium">How to Compare Results and Add to a Shortlist</h5>--}}
+{{--                                        <p class="col-grey p-secondary">After generating your search results, you can compare specific hospitals--}}
+{{--                                            (up to five) by clicking the ‘Add to Compare’ buttons at the end of each--}}
+{{--                                            result row. Once you’ve selected the hospitals you’re interested in,--}}
+{{--                                            click the cyan ‘Compare’ button in the bottom right to view your choices--}}
+{{--                                            in detail.--}}
+{{--                                        </p>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="carousel-item-image col-8">--}}
+{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-4.jpg')">--}}
 
 
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-                        <div class="carousel-item">
-                            <div class="carousel-item-inner">
-                                <div class="row">
-                                    <div class="carousel-item-copy col-4">
-                                        <h5 class="font-18 SofiaPro-Medium">Got a Specific Question?</h5>
-                                        <p class="col-grey p-secondary">Our FAQ is the perfect place to start when you have a burning question. You’ll find answers to many queries covering everything from your rights, to choosing a consultant, booking an appointment at a hospital to the sources of our data.
-                                            If you can’t find an answer to your question, you can email us directly by clicking here.
-                                        </p>
-                                    </div>
-                                    <div class="carousel-item-image col-8">
-                                        <div class="image-wrapper" style="background-image: url('/images/help/help-9.jpg')">
+{{--                        <div class="carousel-item">--}}
+{{--                            <div class="carousel-item-inner">--}}
+{{--                                <div class="row">--}}
+{{--                                    <div class="carousel-item-copy col-4">--}}
+{{--                                        <h5 class="font-18 SofiaPro-Medium">What is the Solutions Bar?</h5>--}}
+{{--                                        <p class="col-grey p-secondary">You’ll find the solutions bar located below your search results. Based on--}}
+{{--                                            the criteria you searched for, the blue box highlights an outstanding--}}
+{{--                                            hospital with the lowest waiting time, whilst the pink box highlights--}}
+{{--                                            special offers you may be interested in.--}}
+{{--                                        </p>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="carousel-item-image col-8">--}}
+{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-5.jpg')">--}}
 
 
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/.Controls-->
-            <div class="carousel-controls position-absolute w-100">
-                <div class="container-fluid">
-                    <div class="row w-100">
-                        <div class="col-4">
-                            <div class="row">
-                                <div class="col-6">
-                                    <a class="carousel-control-prev carousel-control btn btn-squared btn-squared_slim btn-black btn-tour-control prev" href="#carousel_tour" role="button" data-slide="prev">
-                                        Previous
-                                    </a>
-                                </div>
-                                <div class="col-6">
-                                    <a class="carousel-control-next carousel-control btn btn-squared btn-squared_slim btn-brand-primary-1 col-white btn-tour-control next" href="#carousel_tour" role="button" data-slide="next">Next
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Controls-->
-        </div>
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
-    </section>
+{{--                        <div class="carousel-item">--}}
+{{--                            <div class="carousel-item-inner">--}}
+{{--                                <div class="row">--}}
+{{--                                    <div class="carousel-item-copy col-4">--}}
+{{--                                        <h5 class="font-18 SofiaPro-Medium">How to Make an Enquiry--}}
+{{--                                        </h5>--}}
+{{--                                        <p class="col-grey p-secondary">After generating and comparing your search results, you can make--}}
+{{--                                            enquiries to private hospitals by clicking the blue ‘Make an Enquiry’--}}
+{{--                                            button at the end of each result line. You will then be asked to--}}
+{{--                                            complete a short form which will be sent to them once finalised.</p>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="carousel-item-image col-8">--}}
+{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-6.jpg')">--}}
+
+
+
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+
+{{--                        <div class="carousel-item">--}}
+{{--                            <div class="carousel-item-inner">--}}
+{{--                                <div class="row">--}}
+{{--                                    <div class="carousel-item-copy col-4">--}}
+{{--                                        <h5 class="font-18 SofiaPro-Medium">Learn More About Your Rights</h5>--}}
+{{--                                        <p class="col-grey p-secondary">You can learn more about your legal rights by clicking the ‘Your Rights’--}}
+{{--                                            button in the main website menu at the top of your screen.</p>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="carousel-item-image col-8">--}}
+{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-7.jpg')">--}}
+
+
+
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+
+{{--                        <div class="carousel-item">--}}
+{{--                            <div class="carousel-item-inner">--}}
+{{--                                <div class="row">--}}
+{{--                                    <div class="carousel-item-copy col-4">--}}
+{{--                                        <h5 class="font-18 SofiaPro-Medium">Learn More Through Our Blog</h5>--}}
+{{--                                        <p class="col-grey p-secondary">From articles focusing on your rights to current events, waiting times to--}}
+{{--                                            quality, our regularly-updated blog plays host to a range of unique and--}}
+{{--                                            informative articles. Click the ‘Blog’ button in the main menu to--}}
+{{--                                            access.</p>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="carousel-item-image col-8">--}}
+{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-8.jpg')">--}}
+
+
+
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+
+{{--                        <div class="carousel-item">--}}
+{{--                            <div class="carousel-item-inner">--}}
+{{--                                <div class="row">--}}
+{{--                                    <div class="carousel-item-copy col-4">--}}
+{{--                                        <h5 class="font-18 SofiaPro-Medium">Got a Specific Question?</h5>--}}
+{{--                                        <p class="col-grey p-secondary">Our FAQ is the perfect place to start when you have a burning question. You’ll find answers to many queries covering everything from your rights, to choosing a consultant, booking an appointment at a hospital to the sources of our data.--}}
+{{--                                            If you can’t find an answer to your question, you can email us directly by clicking here.--}}
+{{--                                        </p>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="carousel-item-image col-8">--}}
+{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-9.jpg')">--}}
+
+
+
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <!--/.Controls-->--}}
+{{--            <div class="carousel-controls position-absolute w-100">--}}
+{{--                <div class="container-fluid">--}}
+{{--                    <div class="row w-100">--}}
+{{--                        <div class="col-4">--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-6">--}}
+{{--                                    <a class="carousel-control-prev carousel-control btn btn-squared btn-squared_slim btn-black btn-tour-control prev" href="#carousel_tour" role="button" data-slide="prev">--}}
+{{--                                        Previous--}}
+{{--                                    </a>--}}
+{{--                                </div>--}}
+{{--                                <div class="col-6">--}}
+{{--                                    <a class="carousel-control-next carousel-control btn btn-squared btn-squared_slim btn-brand-primary-1 col-white btn-tour-control next" href="#carousel_tour" role="button" data-slide="next">Next--}}
+{{--                                    </a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <!--Controls-->--}}
+{{--        </div>--}}
+
+{{--    </section>--}}
 {{--    <section class="bg-brand-primary-1">--}}
 {{--        <div class="container">--}}
 {{--            <form class="w-100" id="form_exit_survey">--}}
@@ -340,9 +342,7 @@
     {{--        @include('pages.pagesections.resultspageform', [--}}
     {{--        'displayBlock' => true])--}}
     {{--    </section>--}}
-    {{--    <section>--}}
-    {{--        @include('components.emails.emailuser')--}}
-    {{--    </section>--}}
+
     {{--    <section>--}}
     {{--        @include('components.modals.modalenquireprivate', [--}}
     {{--            'procedures'    => $data['filters']['procedures'],--}}

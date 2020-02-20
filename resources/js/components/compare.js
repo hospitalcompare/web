@@ -95,7 +95,6 @@ if (compareCount > 0 && window.location.href.indexOf("results-page") > '-1') {
  * @param element
  */
 window.addHospitalToCompare = function (element) {
-    // console.table(element);
     compareHospitalIds = Cookies.get('compareHospitalsData');
     // Content for modal trigger button
     var circleCheck = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g><g><g><path fill="#fff" d="M10.002 18.849c-4.878 0-8.846-3.968-8.846-8.847 0-4.878 3.968-8.846 8.846-8.846 4.879 0 8.847 3.968 8.847 8.846 0 4.879-3.968 8.847-8.847 8.847zm0-18.849C4.488 0 0 4.488 0 10.002c0 5.515 4.488 10.003 10.002 10.003 5.515 0 10.003-4.488 10.003-10.003C20.005 4.488 15.517 0 10.002 0z"></path></g><g><path fill="#fff" d="M14.47 5.848l-5.665 6.375-3.34-2.67a.578.578 0 0 0-.811.088c-.2.25-.158.615.091.815l3.769 3.015a.57.57 0 0 0 .361.125c.167 0 .325-.07.433-.196l6.03-6.783a.579.579 0 0 0 .146-.42.588.588 0 0 0-.191-.4.592.592 0 0 0-.824.05z"></path></g></g></g></svg>';
@@ -155,16 +154,16 @@ window.addHospitalToCompare = function (element) {
             data-image="${element.image}"
             data-target="${targetModal}">Make an enquiry${circleCheck}</a>`;
     // Button content if NHS hospital has a private website url
-    var urlTwoButton = ( element.nhs_private_url != "" && typeof element.nhs_private_url != "undefined" ) ? `<a id="${element.id}" class="p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block" target="blank" href="${element.nhs_private_url}" role="button" data-hospital-type="nhs-hospital"><span>Visit website</span></a>` : '';
+    var urlTwoButton = (element.nhs_private_url != "" && typeof element.nhs_private_url != "undefined") ? `<a id="${element.id}" class="p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block" target="blank" href="${element.nhs_private_url}" role="button" data-hospital-type="nhs-hospital"><span>Visit website</span></a>` : '';
     // Button to trigger contact form for the private wing of NHS hospital
-    var nhsPrivateContactBtn = ( element.email != "" && typeof element.email != "undefined" ) ? `<button class="btn btn-squared btn-squared_slim btn-enquire btn-brand-secondary-3 enquiry font-12 text-center mt-5" id="${element.id}" data-hospital-id="${element.id}" data-dismiss="modal" data-hospital-type="nhs-hospital" data-toggle="modal" data-target="#hc_modal_enquire_private" data-hospital-title="${element.display_name}">Make a private treatment enquiry${circleCheck}</button>` : '';
+    var nhsPrivateContactBtn = (element.email != "" && typeof element.email != "undefined") ? `<button class="btn btn-squared btn-squared_slim btn-enquire btn-brand-secondary-3 enquiry font-12 text-center mt-5" id="${element.id}" data-hospital-id="${element.id}" data-dismiss="modal" data-hospital-type="nhs-hospital" data-toggle="modal" data-target="#hc_modal_enquire_private" data-hospital-title="${element.display_name}">Make a private treatment enquiry${circleCheck}</button>` : '';
 
     var nhsModalContent =
         `<div class="modal modal-enquire fade" id="hc_modal_contacts_general_shortlist_${element.id}" tabindex="-1" role="dialog"
      aria-labelledby="" aria-modal="true" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content position-relative">
-                    <div id="hospital_type" class="hospital-type ${ hospitalType === 'Private' ? 'private-hospital bg-private' : 'nhs-hospital bg-nhs' }">
+                    <div id="hospital_type" class="hospital-type ${hospitalType === 'Private' ? 'private-hospital bg-private' : 'nhs-hospital bg-nhs'}">
                         <p class="m-0">${hospitalType}</p>
                     </div>
                     <div class="modal-body">
@@ -201,7 +200,7 @@ window.addHospitalToCompare = function (element) {
                                                 </a>
                                             <p class="mb-1">Private</p>
                                             <!--   Private phone number -->
-                                            <p class="col-brand-primary-1 font-20 mb-1" id="hospital_telephone_2">${ element.phone_number_2 != "" && typeof element.phone_number_2 != 'undefined' ? element.phone_number_2 : 'No number available' }</p>
+                                            <p class="col-brand-primary-1 font-20 mb-1" id="hospital_telephone_2">${element.phone_number_2 != "" && typeof element.phone_number_2 != 'undefined' ? element.phone_number_2 : 'No number available'}</p>
         <!--                                Private web address - only show if nhs_private_url not empty -->
                                             ${urlTwoButton}
                                         </div>
@@ -262,7 +261,7 @@ window.addHospitalToCompare = function (element) {
         target.prepend(newColumn);
         // Add corresponding enquiry modal to body
         // Add corresponding enquiry modal to body
-        if(element.hospital_type.name === 'NHS')
+        if (element.hospital_type.name === 'NHS')
             $body.append(nhsModalContent);
     } else if (isMobile) {
         var newRow =
@@ -342,6 +341,13 @@ window.addHospitalToCompare = function (element) {
 };
 
 function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) {
+    var $modalToRemove = $(`#hc_modal_contacts_general_shortlist_${elementId}`);
+    if ($modalToRemove.length) {
+        // When removing a hospital from compare, Remove the associated contacts modal from the body - for hospitals in the shortlist
+        $modalToRemove.remove();
+    }
+
+    // Remove the item from the shortlist
     $('#compare_hospital_id_' + elementId).remove();
     target.append(emptyCol);
     $('button#' + elementId + '.compare').removeClass('selected');

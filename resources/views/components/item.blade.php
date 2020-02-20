@@ -345,20 +345,21 @@
                             </div>
                         </div>
                     @endif
-                    @if(!empty($specialOffers))
-                        <div class="col-12 mt-lg-2 d-none d-lg-block">
-                            <div class="position-relative btn-block">
-                                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
-                                    'class' => 'default'])
-                                @include('components.basic.button', [
-                                    'classTitle'        => 'toggle-special-offer btn btn-enquire btn-block btn-pink btn-special-offer font-12',
-                                    'htmlButton'        => true,
-                                    'id'                => 'special_' . $id,
-                                    'buttonText'        => 'Special Offers',
-                                    'svg'               => 'special'])
-                            </div>
-                        </div>
-                    @endif
+{{--                        TODO: add special offer back in when we have them--}}
+{{--                    @if(!empty($specialOffers))--}} 
+{{--                        <div class="col-12 mt-lg-2 d-none d-lg-block">--}}
+{{--                            <div class="position-relative btn-block">--}}
+{{--                                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [--}}
+{{--                                    'class' => 'default'])--}}
+{{--                                @include('components.basic.button', [--}}
+{{--                                    'classTitle'        => 'toggle-special-offer btn btn-enquire btn-block btn-pink btn-special-offer font-12',--}}
+{{--                                    'htmlButton'        => true,--}}
+{{--                                    'id'                => 'special_' . $id,--}}
+{{--                                    'buttonText'        => 'Special Offers',--}}
+{{--                                    'svg'               => 'special'])--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    @endif--}}
                     <div class="col-12 mt-lg-2">
                         @include('components.basic.button', [
                             'classTitle'        => 'btn btn-compare compare btn-block font-12 d-none d-lg-block',
