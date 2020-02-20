@@ -133,7 +133,7 @@ window.getHtmlStars = function (rating) {
     //Check if we need to add empty stars as image
     if (emptyStars != null && emptyStars > 0) {
         for (var i = 0; i < emptyStars; i++) {
-            html += "<img class='star-icon' src='../images/icons/star-outline.svg' alt='Empty Star'>"; //TODO: Add the image for the empty stars
+            html += "<img class='star-icon' src='../images/icons/star-outline.svg' alt='Empty Star'>";
         }
     }
 
