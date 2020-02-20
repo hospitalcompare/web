@@ -103,16 +103,19 @@
     </div><!-- results -->
 
 
-
+{{--    Solutions bar --}}
     @include('mobile.components.solutionsbarmobile', [
       'specialOffers' => $data['special_offers']
       ])
+
+{{--  Modal for special offers  --}}
+    @includeWhen(!empty($data['special_offers']), 'mobile.components.modals.modalmobilespecialoffertab', [
+      'specialOffer'      => $data['special_offers']['pink']
+  ])
 
     @include('mobile.components.modals.modalenquireprivatemobile', [
         'procedures' => $data['filters']['procedures']])
     @include('components.modals.modaltour')
     @include('mobile.components.modals.modalmobiletooltip')
-    @includeWhen(!empty($data['special_offers']), 'mobile.components.modals.modalmobilespecialoffertab', [
-        'specialOffer'      => $data['special_offers']['pink']
-    ])
+
 @endsection

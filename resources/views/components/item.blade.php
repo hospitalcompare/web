@@ -345,7 +345,8 @@
                             </div>
                         </div>
                     @endif
-{{--                    @if(!empty($specialOffers))--}} TODO: add special offer back in when we have them
+{{--                        TODO: add special offer back in when we have them--}}
+{{--                    @if(!empty($specialOffers))--}} 
 {{--                        <div class="col-12 mt-lg-2 d-none d-lg-block">--}}
 {{--                            <div class="position-relative btn-block">--}}
 {{--                                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [--}}
