@@ -368,7 +368,7 @@ class ApiController {
             //Send the email //TODO: Activate it once the tests are working
             if(!empty($enquiry[$i])) {
                 $bodyUser = Email::getUserBody($hospital->name, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $reason, $additionalInformation);
-                $ATBody = Email::getTrunckyBody($hospital->name, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $additionalInformation);
+                $ATBody = Email::getTrunckyBody($hospital->name, $hospital->location_id, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $additionalInformation);
                 //Send the Email to User
                 try {
                     Email::send($bodyUser, $email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');

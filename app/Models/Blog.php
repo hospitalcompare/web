@@ -16,7 +16,7 @@ class Blog extends Model
      * @var array
      */
     protected $fillable = [
-        'blog_category_id', 'blog_author_id', 'title', 'description', 'time_to_read', 'image', 'status'
+        'blog_category_id', 'blog_author_id', 'title', 'description', 'time_to_read', 'image', 'metatags', 'status'
     ];
 
     /**
@@ -30,6 +30,7 @@ class Blog extends Model
         'title'             => 'string',
         'description'       => 'string',
         'image'             => 'string',
+        'metatags'          => 'string',
         'status'            => 'string'
     ];
 

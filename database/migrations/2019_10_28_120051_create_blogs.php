@@ -48,6 +48,7 @@ class CreateBlogs extends Migration
                 $table->longText('description');
                 $table->integer('time_to_read');
                 $table->string('image');
+                $table->string('metatags')->nullable();
                 $table->string('status')->default("active");
                 $table->timestamps();
 
@@ -57,7 +58,7 @@ class CreateBlogs extends Migration
         }
         //TODO: Remove these Example Authors
         $preAuthor = [
-            'name'          => 'Lucian Niculescu',
+            'name'          => 'Test Testerson',
             'description'   => 'Gingerbread tiramisu cake cake halvah. Bonbon soufflé toffee gummies biscuit. Macaroon
                                 chocolate cake toffee lemon drops sesame snaps lollipop. Marshmallow ice cream candy canes
                                 pudding jujubes danish. Marzipan tar',
