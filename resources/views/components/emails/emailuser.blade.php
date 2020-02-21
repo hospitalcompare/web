@@ -47,8 +47,8 @@
         <tr>
             <td width="25"></td>
             <td width="550">
-                <p style="font-size: 26px; color: #037098">Thank You, John.</p>
-                <p style="color: #037098">We’ve passed your enquiry to [INSERT HOSPITAL NAME]. A
+                <p style="font-size: 26px; color: #037098">Thank You, '.$firstName.'.</p>
+                <p style="color: #037098">We’ve passed your enquiry to '.$hospitalName.'. A
                     member of their team should be in touch via your contact
                     details below.</p>
             <td width="25"></td>
@@ -83,7 +83,7 @@
         <tr>
             <td width="25"></td>
             <td width="150">Title</td>
-            <td width="400">Mr</td>
+            <td width="400">'.$title.'</td>
             <td width="25"></td>
         </tr>
         <tr>
@@ -95,7 +95,7 @@
         <tr>
             <td width="25"></td>
             <td width="150">First name</td>
-            <td width="400">William</td>
+            <td width="400">'.$firstName.'</td>
             <td width="25"></td>
         </tr>
         <tr>
@@ -107,7 +107,7 @@
         <tr>
             <td width="25"></td>
             <td>Last Name</td>
-            <td>Wallace</td>
+            <td>'.$lastName.'</td>
             <td width="25"></td>
         </tr>
         <tr>
@@ -119,7 +119,7 @@
         <tr>
             <td width="25"></td>
             <td>Phone Number</td>
-            <td>04564 654656</td>
+            <td>'.$phoneNumber.'</td>
             <td width="25"></td>
         </tr>
         <tr>
@@ -131,7 +131,7 @@
         <tr>
             <td width="25"></td>
             <td>Email Address</td>
-            <td>william.wallace@freedom</td>
+            <td>'.$email.'</td>
             <td width="25"></td>
         </tr>
         <tr>
@@ -143,7 +143,7 @@
         <tr>
             <td width="25"></td>
             <td>Postcode</td>
-            <td>SC1 OCH</td>
+            <td>'.$postcode.'</td>
             <td width="25"></td>
         </tr>
         <tr>
@@ -154,8 +154,8 @@
         </tr>
         <tr>
             <td width="25"></td>
-            <td>Treatment</td>
-            <td>Anus</td>
+            <td>Specialty</td>
+            <td>'.$specialtyName.'</td>
             <td width="25"></td>
         </tr>
         <tr>
@@ -167,10 +167,7 @@
         <tr>
             <td width="25"></td>
             <td>Additional<br>Comments</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, eius illo minima necessitatibus
-                pariatur quidem quo voluptatem. Blanditiis consequatur dolore eligendi eveniet fuga harum perferendis
-                quasi, quibusdam quos recusandae, repellat?
-            </td>
+            <td>'.$additionalInformation.'</td>
             <td width="25"></td>
         </tr>
         <tr>
@@ -219,7 +216,7 @@
                 <p style="text-align: center; color: #757575">
                     Please do not reply to this email address which has been auto generated. If this email has been
                     received by you in error please delete without copying and advise Hospital Compare at <a style="text-decoration: underline"
-                        href="mailto:hello@hospitalcompare.co.uk">hello@hospitalcompare.co.uk</a>
+                                                                                                             href="mailto:hello@hospitalcompare.co.uk">hello@hospitalcompare.co.uk</a>
                 </p>
                 <p style="text-align: center; color: #757575">
                     Hospital Compare is the trading name of Hospital Compare Limited a limited liability company registered

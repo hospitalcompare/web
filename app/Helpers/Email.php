@@ -52,39 +52,346 @@ class Email
      */
     public static function getUserBody($hospitalName, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $reason, $additionalInformation = '') {
 //        The original HTML before the Minify. Please use http://minifycode.com/html-minifier/
+//        return '
+//            <style>
+//                table {
+//                    font-family: arial;
+//                    background-color: #fff
+//                }
+//
+//                td {
+//                    vertical-align: top;
+//                }
+//
+//                center {
+//                    background-color: #F7F7F7;
+//                }
+//            </style>
+//            <center>
+//                <table width="600" style="width: 600px; background-color: transparent">
+//                    <tr>
+//                        <td height="25" colspan="3">
+//                        </td>
+//                    </tr>
+//                    <tr>
+//                        <td height="25" colspan="3" style="font-size: 12px; text-align: center; line-height: 25px">This is an
+//                            automated email, please do not respond directly to this email address.
+//                        </td>
+//                    </tr>
+//                    <tr>
+//                        <td height="25" colspan="3">
+//                        </td>
+//                    </tr>
+//                </table>
+//                <table width="600" style="width: 600px;">
+//                    <tr>
+//                        <td height="25" colspan="3"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td width="550">
+//                            <a href="https://www.hospitalcompare.co.uk">
+//                                <img width="300"
+//                                     src="https://www.hospitalcompare.co.uk/images/icons/logo-email.png"
+//                                     alt="Hospital compare logo"></a></td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td height="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td width="550">
+//                            <p style="font-size: 26px; color: #037098">Thank You, '.$firstName.'.</p>
+//                            <p style="color: #037098">We’ve passed your enquiry to '.$hospitalName.'. A
+//                                member of their team should be in touch via your contact
+//                                details below.</p>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td height="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td colspan="3"><img width="600" src="https://www.hospitalcompare.co.uk/images/hc-email-banner.jpg"
+//                                             alt="Man on sofa browsing hospital compare website"></td>
+//                    </tr>
+//                    {{--        <tr>--}}
+//                    {{--            <td height="25"></td>--}}
+//                    {{--        </tr>--}}
+//                    <tr>
+//                        <td></td>
+//                    </tr>
+//                </table>
+//                <table width="600">
+//                    <tr>
+//                        <td colspan="3" height="50"></td>
+//                    </tr>
+//                </table>
+//                <table width="600" style="border-bottom: 1px solid #e6e6e6">
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td colspan="2">
+//                            <p style="font-size: 20px; font-weight: 600">Your enquiry</p>
+//                        </td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td width="150">Title</td>
+//                        <td width="400">'.$title.'</td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25" height="15"></td>
+//                        <td width="150"></td>
+//                        <td width="400"></td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td width="150">First name</td>
+//                        <td width="400">'.$firstName.'</td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25" height="15"></td>
+//                        <td width="150"></td>
+//                        <td width="400"></td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td>Last Name</td>
+//                        <td>'.$lastName.'</td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25" height="15"></td>
+//                        <td width="150"></td>
+//                        <td width="400"></td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td>Phone Number</td>
+//                        <td>'.$phoneNumber.'</td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25" height="15"></td>
+//                        <td width="150"></td>
+//                        <td width="400"></td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td>Email Address</td>
+//                        <td>'.$email.'</td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25" height="15"></td>
+//                        <td width="150"></td>
+//                        <td width="400"></td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td>Postcode</td>
+//                        <td>'.$postcode.'</td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25" height="15"></td>
+//                        <td width="150"></td>
+//                        <td width="400"></td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td>Specialty</td>
+//                        <td>'.$specialtyName.'</td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25" height="15"></td>
+//                        <td width="150"></td>
+//                        <td width="400"></td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td>Additional<br>Comments</td>
+//                        <td>'.$additionalInformation.'</td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td colspan="3" height="25"></td>
+//                    </tr>
+//                </table>
+//                <table width="600" style="">
+//                    <tr>
+//                        <td height="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td width="550" style="text-align: center">
+//                            <img width="320" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.png" alt="Hospital compare logo">
+//                        </td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td height="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td width="550" style="text-align: center">
+//                            <a style="display: inline-block; width: 20px;" href="https://www.facebook.com/hospitalcompare">
+//                                <img height="20" src="https://www.hospitalcompare.co.uk/images/icons/facebook-trunkie.png" alt="Facebook logo">
+//                            </a>
+//                            <a style="display: inline-block; width: 20px;" href="https://www.twitter.com/HospCompare">
+//                                <img height="20" src="https://www.hospitalcompare.co.uk/images/icons/twitter-trunkie.png" alt="Twitter logo">
+//                            </a>
+//                            <a href="https://www.instagram.com/hospitalcompare/" target="_blank">
+//                                <img width="20" height="20" src="https://www.hospitalcompare.co.uk/images/icons/instagram-trunkie.png" alt="Instagram logo">
+//                            </a>
+//                        </td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td height="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td width="25"></td>
+//                        <td width="550">
+//                            <p style="text-align: center; color: #757575">
+//                                This email has been sent to you by Hospital Compare in response to your request to make an enquiry at
+//                                a Hospital of your choice. Its content contains confidential information.
+//                            </p>
+//                            <p style="text-align: center; color: #757575">
+//                                Please do not reply to this email address which has been auto generated. If this email has been
+//                                received by you in error please delete without copying and advise Hospital Compare at <a style="text-decoration: underline"
+//                                    href="mailto:hello@hospitalcompare.co.uk">hello@hospitalcompare.co.uk</a>
+//                            </p>
+//                            <p style="text-align: center; color: #757575">
+//                                Hospital Compare is the trading name of Hospital Compare Limited a limited liability company registered
+//                                in England and Wales under number 11514491 with registered office at The Plaza, Old Hall Street,
+//                                Liverpool, England, L3 9QJ.
+//                            </p>
+//                            <p style="text-align: center; color: #757575">
+//                                Hospital Compare is a website platform. For more information visit <a style="text-decoration: underline" href="https://www.hospitalcompare.co.uk">www.hospitalcompare.co.uk</a>
+//                            </p>
+//                        </td>
+//                        <td width="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td height="25"></td>
+//                    </tr>
+//                    <tr>
+//                        <td></td>
+//                    </tr>
+//                </table>
+//            </center>
+//        ';
+        return '<style>table{font-family:arial;background-color:#fff}td{vertical-align:top}center{background-color:#F7F7F7}</style><center><table width="600" style="width: 600px; background-color: transparent"><tr><td height="25" colspan="3"></td></tr><tr><td height="25" colspan="3" style="font-size: 12px; text-align: center; line-height: 25px">This is an automated email, please do not respond directly to this email address.</td></tr><tr><td height="25" colspan="3"></td></tr></table><table width="600" style="width: 600px;"><tr><td height="25" colspan="3"></td></tr><tr><td width="25"></td><td width="550"> <a href="https://www.hospitalcompare.co.uk"> <img width="300" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.png" alt="Hospital compare logo"></a></td><td width="25"></td></tr><tr><td height="25"></td></tr><tr><td width="25"></td><td width="550"><p style="font-size: 26px; color: #037098">Thank You, '.$firstName.'.</p><p style="color: #037098">We’ve passed your enquiry to '.$hospitalName.'. A member of their team should be in touch via your contact details below.</p><td width="25"></td></tr><tr><td height="25"></td></tr><tr><td colspan="3"><img width="600" src="https://www.hospitalcompare.co.uk/images/hc-email-banner.jpg" alt="Man on sofa browsing hospital compare website"></td></tr> {{--<tr>--}} {{--<td height="25"></td>--}} {{--</tr>--}}<tr><td></td></tr></table><table width="600"><tr><td colspan="3" height="50"></td></tr></table><table width="600" style="border-bottom: 1px solid #e6e6e6"><tr><td width="25"></td><td colspan="2"><p style="font-size: 20px; font-weight: 600">Your enquiry</p></td><td width="25"></td></tr><tr><td width="25"></td><td width="150">Title</td><td width="400">'.$title.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td width="150">First name</td><td width="400">'.$firstName.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Last Name</td><td>'.$lastName.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Phone Number</td><td>'.$phoneNumber.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Email Address</td><td>'.$email.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Postcode</td><td>'.$postcode.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Specialty</td><td>'.$specialtyName.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Additional<br>Comments</td><td>'.$additionalInformation.'</td><td width="25"></td></tr><tr><td colspan="3" height="25"></td></tr></table><table width="600" style=""><tr><td height="25"></td></tr><tr><td width="25"></td><td width="550" style="text-align: center"> <img width="320" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.png" alt="Hospital compare logo"></td><td width="25"></td></tr><tr><td height="25"></td></tr><tr><td width="25"></td><td width="550" style="text-align: center"> <a style="display: inline-block; width: 20px;" href="https://www.facebook.com/hospitalcompare"> <img height="20" src="https://www.hospitalcompare.co.uk/images/icons/facebook-trunkie.png" alt="Facebook logo"> </a> <a style="display: inline-block; width: 20px;" href="https://www.twitter.com/HospCompare"> <img height="20" src="https://www.hospitalcompare.co.uk/images/icons/twitter-trunkie.png" alt="Twitter logo"> </a> <a href="https://www.instagram.com/hospitalcompare/" target="_blank"> <img width="20" height="20" src="https://www.hospitalcompare.co.uk/images/icons/instagram-trunkie.png" alt="Instagram logo"> </a></td><td width="25"></td></tr><tr><td height="25"></td></tr><tr><td width="25"></td><td width="550"><p style="text-align: center; color: #757575"> This email has been sent to you by Hospital Compare in response to your request to make an enquiry at a Hospital of your choice. Its content contains confidential information.</p><p style="text-align: center; color: #757575"> Please do not reply to this email address which has been auto generated. If this email has been received by you in error please delete without copying and advise Hospital Compare at <a style="text-decoration: underline" href="mailto:hello@hospitalcompare.co.uk">hello@hospitalcompare.co.uk</a></p><p style="text-align: center; color: #757575"> Hospital Compare is the trading name of Hospital Compare Limited a limited liability company registered in England and Wales under number 11514491 with registered office at The Plaza, Old Hall Street, Liverpool, England, L3 9QJ.</p><p style="text-align: center; color: #757575"> Hospital Compare is a website platform. For more information visit <a style="text-decoration: underline" href="https://www.hospitalcompare.co.uk">www.hospitalcompare.co.uk</a></p></td><td width="25"></td></tr><tr><td height="25"></td></tr><tr><td></td></tr></table></center> ';
+    }
+
+    /**
+     * Returns the string for the AT's Email used for Power BI
+     *
+     * @param $hospitalName
+     * @param $hospitalLocationId
+     * @param $specialtyName
+     * @param $title
+     * @param $firstName
+     * @param $lastName
+     * @param $email
+     * @param $phoneNumber
+     * @param $postcode
+     * @param string $additionalInformation
+     * @return string
+     */
+    public static function getTrunkieBody($hospitalName, $hospitalLocationId, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $additionalInformation = '') {
+        return 'Hospital: '.$hospitalName.
+            '<br>Location ID:'.$hospitalLocationId.
+            '<br>Specialty:'.$specialtyName.
+            '<br>Title: '.$title.
+            '<br>First Name: '.$firstName.
+            '<br>Last Name:'.$lastName.
+            '<br>Email: '.$email.
+            '<br>Phone Number: '.$phoneNumber.
+            '<br>Postcode: '.$postcode.
+            '<br>Additional Information: '.$additionalInformation;
+    }
+    /**
+     * Returns the string for the Provider Email
+     *
+     * @param $specialtyName
+     * @param $title
+     * @param $firstName
+     * @param $lastName
+     * @param $email
+     * @param $phoneNumber
+     * @param $postcode
+     * @param string $additionalInformation
+     * @return string
+     */
+    public static function getProviderBody($specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $additionalInformation = '') {
 //        return '<style>
 //            table {
 //                font-family: arial;
-//                background-color: #fff;
+//                background-color: #fff
 //            }
 //
 //            td {
 //                vertical-align: top;
 //            }
+//
+//            center {
+//                background-color: #F7F7F7;
+//            }
 //        </style>
-//        <center class="bg-grey">
+//
+//        <center>
+//            <table width="600" style="width: 600px; background-color: transparent">
+//                <tr>
+//                    <td height="25" colspan="3">
+//                    </td>
+//                </tr>
+//                <tr>
+//                    <td height="25" colspan="3" style="font-size: 12px; text-align: center; line-height: 25px">This is an
+//                        automated email, please do not respond directly to this email address.
+//                    </td>
+//                </tr>
+//                <tr>
+//                    <td height="25" colspan="3">
+//                    </td>
+//                </tr>
+//            </table>
 //            <table width="600" style="width: 600px;">
 //                <tr>
-//                    <td height="25"></td>
+//                    <td height="25" colspan="3"></td>
 //                </tr>
 //                <tr>
-//                    <td width="200"></td>
-//                    <td width="200">
+//                    <td width="25"></td>
+//                    <td width="550">
 //                        <a href="https://www.hospitalcompare.co.uk">
-//                            <img width="200"
+//                            <img width="300"
 //                                 src="https://www.hospitalcompare.co.uk/images/icons/logo-email.png"
 //                                 alt="Hospital compare logo"></a></td>
-//                    <td width="200"></td>
+//                    <td width="25"></td>
 //                </tr>
 //                <tr>
 //                    <td height="25"></td>
 //                </tr>
 //                <tr>
-//                    <td width="200"></td>
-//                    <td width="200"><p style="text-align: center; font-size: 26px; color: #037098">Thank You, '.$firstName.'.</p>
-//                        <p style="text-align: center; color: #037098">We have recieved your enquiry for</p>
-//                        <p style="text-align: center; font-weight: bold; color: #037098">'.$hospitalName.'</p></td>
-//                    <td width="200"></td>
+//                    <td width="25"></td>
+//                    <td width="550">
+//                        <p style="font-size: 26px; color: #037098">You have received an enquiry regarding
+//                            treatment at your hospital.</p>
+//                        <p style="color: #037098">Please would you respond to '.$firstName.' using the contact
+//                            details provided below within 3 working days.</p>
+//                    <td width="25"></td>
 //                </tr>
 //                <tr>
 //                    <td height="25"></td>
@@ -93,24 +400,14 @@ class Email
 //                    <td colspan="3"><img width="600" src="https://www.hospitalcompare.co.uk/images/hc-email-banner.jpg"
 //                                         alt="Man on sofa browsing hospital compare website"></td>
 //                </tr>
-//                <tr>
-//                    <td height="25"></td>
-//                </tr>
+//                {{--        <tr>--}}
+//                {{--            <td height="25"></td>--}}
+//                {{--        </tr>--}}
 //                <tr>
 //                    <td></td>
 //                </tr>
 //            </table>
 //            <table width="600">
-//                <tr>
-//                    <td width="25"></td>
-//                    <td><p style="font-size: 20px; font-weight: 600">Next steps</p>
-//                        <p style="color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolorum
-//                            eligendi magni odit quo. Dicta dignissimos dolorum eos facilis id mollitia sit. Aaperiam beatae
-//                            consequatur consequuntur, cupiditate doloribus ducimus eius eos est, eveniet facere fuga itaque
-//                            laborum nemo obcaecati officiis pariatur provident quis rem repellendus rerum veniam voluptate
-//                            voluptatem.</p></td>
-//                    <td width="25"></td>
-//                </tr>
 //                <tr>
 //                    <td colspan="3" height="50"></td>
 //                </tr>
@@ -118,12 +415,9 @@ class Email
 //            <table width="600" style="border-bottom: 1px solid #e6e6e6">
 //                <tr>
 //                    <td width="25"></td>
-//                    <td colspan="2"><p style="font-size: 20px; font-weight: 600">Your email</p>
-//                        <p style="color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolorum
-//                            eligendi magni odit quo. Dicta dignissimos dolorum eos facilis id mollitia sit. A aperiam beatae
-//                            consequatur consequuntur, cupiditate doloribus ducimus eius eos est, eveniet facere fuga itaque
-//                            laborum nemo obcaecati officiis pariatur provident quis rem repellendus rerum veniam voluptate
-//                            voluptatem.</p></td>
+//                    <td colspan="2">
+//                        <p style="font-size: 20px; font-weight: 600">Contact details</p>
+//                    </td>
 //                    <td width="25"></td>
 //                </tr>
 //                <tr>
@@ -200,7 +494,7 @@ class Email
 //                </tr>
 //                <tr>
 //                    <td width="25"></td>
-//                    <td>Treatment</td>
+//                    <td>Specialty</td>
 //                    <td>'.$specialtyName.'</td>
 //                    <td width="25"></td>
 //                </tr>
@@ -213,8 +507,7 @@ class Email
 //                <tr>
 //                    <td width="25"></td>
 //                    <td>Additional<br>Comments</td>
-//                    <td>'.$additionalInformation.'
-//                    </td>
+//                    <td>'.$additionalInformation.'</td>
 //                    <td width="25"></td>
 //                </tr>
 //                <tr>
@@ -226,37 +519,64 @@ class Email
 //                    <td height="25"></td>
 //                </tr>
 //                <tr>
-//                    <td width="100"></td>
-//                    <td width="400" style="text-align: center"><img width="200"
-//                                                                    src="https://www.hospitalcompare.co.uk/images/icons/logo-email.png"
-//                                                                    alt="Hospital compare logo"></td>
-//                    <td width="100"></td>
+//                    <td width="25"></td>
+//                    <td width="550" style="text-align: center">
+//                        <img width="320" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.png"
+//                             alt="Hospital compare logo">
+//                    </td>
+//                    <td width="25"></td>
 //                </tr>
 //                <tr>
 //                    <td height="25"></td>
 //                </tr>
 //                <tr>
-//                    <td width="100"></td>
-//                    <td width="400" style="text-align: center"><a style="display: inline-block; width: 20px;"
-//                                                                  href="https://www.facebook.com/hospitalcompare"> <img
-//                                width="20" height="20" src="https://www.hospitalcompare.co.uk/images/icons/facebook-trunkie.png"
-//                                alt="Facebook logo"> </a> <a style="display: inline-block; width: 20px;"
-//                                                             href="https://www.twitter.com/HospCompare"> <img width="20"
-//                                                                                                              height="20"
-//                                                                                                              src="https://www.hospitalcompare.co.uk/images/icons/twitter-trunkie.png"
-//                                                                                                              alt="Twitter logo">
-//                        </a></td>
-//                    <td width="100"></td>
+//                    <td width="25"></td>
+//                    <td width="550" style="text-align: center">
+//                        <a style="display: inline-block; width: 20px;" href="https://www.facebook.com/hospitalcompare">
+//                            <img height="20" src="https://www.hospitalcompare.co.uk/images/icons/facebook-trunkie.png"
+//                                 alt="Facebook logo">
+//                        </a>
+//                        <a style="display: inline-block; width: 20px;" href="https://www.twitter.com/HospCompare">
+//                            <img height="20" src="https://www.hospitalcompare.co.uk/images/icons/twitter-trunkie.png"
+//                                 alt="Twitter logo">
+//                        </a>
+//                        <a href="https://www.instagram.com/hospitalcompare/" target="_blank">
+//                            <img width="20" height="20"
+//                                 src="https://www.hospitalcompare.co.uk/images/icons/instagram-trunkie.png"
+//                                 alt="Instagram logo">
+//                        </a>
+//                    </td>
+//                    <td width="25"></td>
 //                </tr>
 //                <tr>
 //                    <td height="25"></td>
 //                </tr>
 //                <tr>
-//                    <td width="100"></td>
-//                    <td width="400"><p style="text-align: center; color: #757575">Lorem ipsum dolor sit amet, consectetur
-//                            adipisicing elit. Beatae consequuntur cumque delectus eos, et exercitationem fuga itaque nemo
-//                            numquam provident quasi qui reiciendis repellendus sequi soluta ut vero vitae voluptatum?</p></td>
-//                    <td width="100"></td>
+//                    <td width="25"></td>
+//                    <td width="550">
+//                        <p style="font-size: 12px; text-align: center; color: #757575">
+//                            This email has been sent to you by Hospital Compare in response to your request to make an enquiry
+//                            at a Hospital of your choice. Its content contains confidential information.
+//                        </p>
+//                        <p style="font-size: 12px; text-align: center; color: #757575">
+//                            Please do not reply to this email address which has been auto generated. If this email has been
+//                            received by you in error please delete without copying and advise Hospital
+//                            Compare at <a
+//                                style="text-decoration: underline"
+//                                href="mailto:hello@hospitalcompare.co.uk">hello@hospitalcompare.co.uk</a>
+//                        </p>
+//                        <p style="font-size: 12px; text-align: center; color: #757575">
+//                            Hospital Compare is the trading name of Hospital Compare Limited a limited liability company
+//                            registered
+//                            in England and Wales under number 11514491 with registered office at The Plaza, Old Hall Street,
+//                            Liverpool, England, L3 9QJ.
+//                        </p>
+//                        <p style="text-align: center; color: #757575">
+//                            Hospital Compare is a website platform. For more information visit <a
+//                                style="text-decoration: underline" href="https://www.hospitalcompare.co.uk">www.hospitalcompare.co.uk</a>
+//                        </p>
+//                    </td>
+//                    <td width="25"></td>
 //                </tr>
 //                <tr>
 //                    <td height="25"></td>
@@ -265,260 +585,10 @@ class Email
 //                    <td></td>
 //                </tr>
 //            </table>
-//        </center>';
-        return '<style>table{font-family:arial;background-color:#fff}td{vertical-align:top}</style><center class="bg-grey"><table width="600" style="width: 600px;"><tr><td height="25"></td></tr><tr><td width="200"></td><td width="200"> <a href="https://www.hospitalcompare.co.uk"> <img width="200" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.png" alt="Hospital compare logo"></a></td><td width="200"></td></tr><tr><td height="25"></td></tr><tr><td width="200"></td><td width="200"><p style="text-align: center; font-size: 26px; color: #037098">Thank You, '.$firstName.'.</p><p style="text-align: center; color: #037098">We have recieved your enquiry for</p><p style="text-align: center; font-weight: bold; color: #037098">'.$hospitalName.'</p></td><td width="200"></td></tr><tr><td height="25"></td></tr><tr><td colspan="3"><img width="600" src="https://www.hospitalcompare.co.uk/images/hc-email-banner.jpg" alt="Man on sofa browsing hospital compare website"></td></tr><tr><td height="25"></td></tr><tr><td></td></tr></table><table width="600"><tr><td width="25"></td><td><p style="font-size: 20px; font-weight: 600">Next steps</p><p style="color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolorum eligendi magni odit quo. Dicta dignissimos dolorum eos facilis id mollitia sit. Aaperiam beatae consequatur consequuntur, cupiditate doloribus ducimus eius eos est, eveniet facere fuga itaque laborum nemo obcaecati officiis pariatur provident quis rem repellendus rerum veniam voluptate voluptatem.</p></td><td width="25"></td></tr><tr><td colspan="3" height="50"></td></tr></table><table width="600" style="border-bottom: 1px solid #e6e6e6"><tr><td width="25"></td><td colspan="2"><p style="font-size: 20px; font-weight: 600">Your email</p><p style="color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolorum eligendi magni odit quo. Dicta dignissimos dolorum eos facilis id mollitia sit. A aperiam beatae consequatur consequuntur, cupiditate doloribus ducimus eius eos est, eveniet facere fuga itaque laborum nemo obcaecati officiis pariatur provident quis rem repellendus rerum veniam voluptate voluptatem.</p></td><td width="25"></td></tr><tr><td width="25"></td><td width="150">Title</td><td width="400">'.$title.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td width="150">First name</td><td width="400">'.$firstName.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Last Name</td><td>'.$lastName.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Phone Number</td><td>'.$phoneNumber.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Email Address</td><td>'.$email.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Postcode</td><td>'.$postcode.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Treatment</td><td>'.$specialtyName.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Additional<br>Comments</td><td>'.$additionalInformation.'</td><td width="25"></td></tr><tr><td colspan="3" height="25"></td></tr></table><table width="600" style=""><tr><td height="25"></td></tr><tr><td width="100"></td><td width="400" style="text-align: center"><img width="200" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.png" alt="Hospital compare logo"></td><td width="100"></td></tr><tr><td height="25"></td></tr><tr><td width="100"></td><td width="400" style="text-align: center"><a style="display: inline-block; width: 20px;" href="https://www.facebook.com/hospitalcompare"> <img width="20" height="20" src="https://www.hospitalcompare.co.uk/images/icons/facebook-trunkie.png" alt="Facebook logo"> </a> <a style="display: inline-block; width: 20px;" href="https://www.twitter.com/HospCompare"> <img width="20" height="20" src="https://www.hospitalcompare.co.uk/images/icons/twitter-trunkie.png" alt="Twitter logo"> </a></td><td width="100"></td></tr><tr><td height="25"></td></tr><tr><td width="100"></td><td width="400"><p style="text-align: center; color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consequuntur cumque delectus eos, et exercitationem fuga itaque nemo numquam provident quasi qui reiciendis repellendus sequi soluta ut vero vitae voluptatum?</p></td><td width="100"></td></tr><tr><td height="25"></td></tr><tr><td></td></tr></table></center>';
-    }
+//        </center>
+//';
 
-    /**
-     * Returns the string for the AT's Email used for Power BI
-     *
-     * @param $hospitalName
-     * @param $hospitalLocationId
-     * @param $specialtyName
-     * @param $title
-     * @param $firstName
-     * @param $lastName
-     * @param $email
-     * @param $phoneNumber
-     * @param $postcode
-     * @param string $additionalInformation
-     * @return string
-     */
-    public static function getTrunckyBody($hospitalName, $hospitalLocationId, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $additionalInformation = '') {
-        return 'Hospital: '.$hospitalName.
-            '<br>Location ID:'.$hospitalLocationId.
-            '<br>Specialty:'.$specialtyName.
-            '<br>Title: '.$title.
-            '<br>First Name: '.$firstName.
-            '<br>Last Name:'.$lastName.
-            '<br>Email: '.$email.
-            '<br>Phone Number: '.$phoneNumber.
-            '<br>Postcode: '.$postcode.
-            '<br>Additional Information: '.$additionalInformation;
-    }
-    /**
-     * Returns the string for the Provider Email
-     * @return string
-     */
-    public static function getProviderBody() {
-        return '<style>
-            table {
-                font-family: arial;
-                background-color: #fff;
-            }
-
-            td {
-                vertical-align: top;
-            }
-        </style>
-
-        <center class="bg-grey">
-            <table width="600" style="">
-                <tr>
-                    <td height="25"></td>
-                </tr>
-                <tr>
-                    <td width="200"></td>
-                    <td width="200"><img width="200" src="/images/icons/logo-email.png" alt="Hospital compare logo"></td>
-                    <td width="200"></td>
-                </tr>
-                <tr>
-                    <td height="25"></td>
-                </tr>
-                <tr>
-                    <td width="200"></td>
-                    <td width="200">
-                        <p style="text-align: center; font-size: 26px; color: #037098">Thank You, John.</p>
-                        <p style="text-align: center; color: #037098">We have recieved your enquiry for</p>
-                        <p style="text-align: center; font-weight: bold; color: #037098">Hospital name here</p>
-                    </td>
-                    <td width="200"></td>
-                </tr>
-                <tr>
-                    <td height="25"></td>
-                </tr>
-                <tr>
-                    <td colspan="3"><img width="600" src="/images/placeholder.jpg" alt="Man on sofa browsing hospital compare website"></td>
-                </tr>
-                <tr>
-                    <td height="25"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-            </table>
-            <table width="600">
-                <tr>
-                    <td width="25"></td>
-                    <td>
-                        <p style="font-size: 20px; font-weight: 600">Next steps</p>
-                        <p style="color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Cupiditate dolorum eligendi magni odit quo. Dicta dignissimos dolorum eos facilis id mollitia sit. A
-                            aperiam beatae consequatur consequuntur, cupiditate doloribus ducimus eius eos est, eveniet facere
-                            fuga itaque laborum nemo obcaecati officiis pariatur provident quis rem repellendus rerum veniam
-                            voluptate voluptatem.</p>
-                    </td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td colspan="3" height="50"></td>
-                </tr>
-            </table>
-            <table width="600" style="border-bottom: 1px solid #e6e6e6">
-                <tr>
-                    <td width="25"></td>
-                    <td colspan="2">
-                        <p style="font-size: 20px; font-weight: 600">Your email</p>
-                        <p style="color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Cupiditate dolorum eligendi magni odit quo. Dicta dignissimos dolorum eos facilis id mollitia sit. A
-                            aperiam beatae consequatur consequuntur, cupiditate doloribus ducimus eius eos est, eveniet facere
-                            fuga itaque laborum nemo obcaecati officiis pariatur provident quis rem repellendus rerum veniam
-                            voluptate voluptatem.</p>
-                    </td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td width="25"></td>
-                    <td width="150">Title</td>
-                    <td width="400">Mr</td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td width="25" height="15"></td>
-                    <td width="150"></td>
-                    <td width="400"></td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td width="25"></td>
-                    <td width="150">First name</td>
-                    <td width="400">William</td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td width="25" height="15"></td>
-                    <td width="150"></td>
-                    <td width="400"></td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td width="25"></td>
-                    <td>Last Name</td>
-                    <td>Wallace</td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td width="25" height="15"></td>
-                    <td width="150"></td>
-                    <td width="400"></td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td width="25"></td>
-                    <td>Phone Number</td>
-                    <td>04564 654656</td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td width="25" height="15"></td>
-                    <td width="150"></td>
-                    <td width="400"></td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td width="25"></td>
-                    <td>Email Address</td>
-                    <td>william.wallace@freedom</td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td width="25" height="15"></td>
-                    <td width="150"></td>
-                    <td width="400"></td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td width="25"></td>
-                    <td>Postcode</td>
-                    <td>SC1 OCH</td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td width="25" height="15"></td>
-                    <td width="150"></td>
-                    <td width="400"></td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td width="25"></td>
-                    <td>Treatment</td>
-                    <td>Anus</td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td width="25" height="15"></td>
-                    <td width="150"></td>
-                    <td width="400"></td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td width="25"></td>
-                    <td>Additional<br>Comments</td>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, eius illo minima necessitatibus
-                        pariatur quidem quo voluptatem. Blanditiis consequatur dolore eligendi eveniet fuga harum perferendis
-                        quasi, quibusdam quos recusandae, repellat?
-                    </td>
-                    <td width="25"></td>
-                </tr>
-                <tr>
-                    <td colspan="3" height="25"></td>
-                </tr>
-            </table>
-            <!-- Footer -->
-            <table width="600" style="">
-                <tr>
-                    <td height="25"></td>
-                </tr>
-                <tr>
-                    <td width="100"></td>
-                    <td width="400" style="text-align: center"><img width="200" src="/images/icons/logo-email.png" alt="Hospital compare logo"></td>
-                    <td width="100"></td>
-                </tr>
-                <tr>
-                    <td height="25"></td>
-                </tr>
-                <tr>
-                    <td width="100"></td>
-                    <td width="400" style="text-align: center">
-                        <a style="display: inline-block; width: 20px;" href="https://www.facebook.com/hospitalcompare">
-                            <img width="20" height="20" src="/images/icons/facebook.png" alt="Facebook logo">
-                        </a>
-                        <a style="display: inline-block; width: 20px;" href="https://www.twitter.com/HospCompare">
-                            <img width="20" height="20" src="/images/icons/twitter.png" alt="Twitter logo">
-                        </a>
-                    </td>
-                    <td width="100"></td>
-                </tr>
-                <tr>
-                    <td height="25"></td>
-                </tr>
-                <tr>
-                    <td width="100"></td>
-                    <td width="400">
-                        <p style="text-align: center; color: #757575">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Beatae consequuntur cumque delectus eos, et exercitationem fuga itaque nemo numquam provident quasi
-                            qui reiciendis repellendus sequi soluta ut vero vitae voluptatum?</p>
-                    </td>
-                    <td width="100"></td>
-                </tr>
-                <tr>
-                    <td height="25"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-            </table>
-        </center>';
+        return '<style>table{font-family:arial;background-color:#fff}td{vertical-align:top}center{background-color:#F7F7F7}</style><center><table width="600" style="width: 600px; background-color: transparent"><tr><td height="25" colspan="3"></td></tr><tr><td height="25" colspan="3" style="font-size: 12px; text-align: center; line-height: 25px">This is an automated email, please do not respond directly to this email address.</td></tr><tr><td height="25" colspan="3"></td></tr></table><table width="600" style="width: 600px;"><tr><td height="25" colspan="3"></td></tr><tr><td width="25"></td><td width="550"> <a href="https://www.hospitalcompare.co.uk"> <img width="300" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.png" alt="Hospital compare logo"></a></td><td width="25"></td></tr><tr><td height="25"></td></tr><tr><td width="25"></td><td width="550"><p style="font-size: 26px; color: #037098">You have received an enquiry regarding treatment at your hospital.</p><p style="color: #037098">Please would you respond to '.$firstName.' using the contact details provided below within 3 working days.</p><td width="25"></td></tr><tr><td height="25"></td></tr><tr><td colspan="3"><img width="600" src="https://www.hospitalcompare.co.uk/images/hc-email-banner.jpg" alt="Man on sofa browsing hospital compare website"></td></tr> {{--<tr>--}} {{--<td height="25"></td>--}} {{--</tr>--}}<tr><td></td></tr></table><table width="600"><tr><td colspan="3" height="50"></td></tr></table><table width="600" style="border-bottom: 1px solid #e6e6e6"><tr><td width="25"></td><td colspan="2"><p style="font-size: 20px; font-weight: 600">Contact details</p></td><td width="25"></td></tr><tr><td width="25"></td><td width="150">Title</td><td width="400">'.$title.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td width="150">First name</td><td width="400">'.$firstName.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Last Name</td><td>'.$lastName.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Phone Number</td><td>'.$phoneNumber.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Email Address</td><td>'.$email.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Postcode</td><td>'.$postcode.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Specialty</td><td>'.$specialtyName.'</td><td width="25"></td></tr><tr><td width="25" height="15"></td><td width="150"></td><td width="400"></td><td width="25"></td></tr><tr><td width="25"></td><td>Additional<br>Comments</td><td>'.$additionalInformation.'</td><td width="25"></td></tr><tr><td colspan="3" height="25"></td></tr></table><table width="600" style=""><tr><td height="25"></td></tr><tr><td width="25"></td><td width="550" style="text-align: center"> <img width="320" src="https://www.hospitalcompare.co.uk/images/icons/logo-email.png" alt="Hospital compare logo"></td><td width="25"></td></tr><tr><td height="25"></td></tr><tr><td width="25"></td><td width="550" style="text-align: center"> <a style="display: inline-block; width: 20px;" href="https://www.facebook.com/hospitalcompare"> <img height="20" src="https://www.hospitalcompare.co.uk/images/icons/facebook-trunkie.png" alt="Facebook logo"> </a> <a style="display: inline-block; width: 20px;" href="https://www.twitter.com/HospCompare"> <img height="20" src="https://www.hospitalcompare.co.uk/images/icons/twitter-trunkie.png" alt="Twitter logo"> </a> <a href="https://www.instagram.com/hospitalcompare/" target="_blank"> <img width="20" height="20" src="https://www.hospitalcompare.co.uk/images/icons/instagram-trunkie.png" alt="Instagram logo"> </a></td><td width="25"></td></tr><tr><td height="25"></td></tr><tr><td width="25"></td><td width="550"><p style="font-size: 12px; text-align: center; color: #757575"> This email has been sent to you by Hospital Compare in response to your request to make an enquiry at a Hospital of your choice. Its content contains confidential information.</p><p style="font-size: 12px; text-align: center; color: #757575"> Please do not reply to this email address which has been auto generated. If this email has been received by you in error please delete without copying and advise Hospital Compare at <a style="text-decoration: underline" href="mailto:hello@hospitalcompare.co.uk">hello@hospitalcompare.co.uk</a></p><p style="font-size: 12px; text-align: center; color: #757575"> Hospital Compare is the trading name of Hospital Compare Limited a limited liability company registered in England and Wales under number 11514491 with registered office at The Plaza, Old Hall Street, Liverpool, England, L3 9QJ.</p><p style="text-align: center; color: #757575"> Hospital Compare is a website platform. For more information visit <a style="text-decoration: underline" href="https://www.hospitalcompare.co.uk">www.hospitalcompare.co.uk</a></p></td><td width="25"></td></tr><tr><td height="25"></td></tr><tr><td></td></tr></table></center> ';
     }
 
     /**

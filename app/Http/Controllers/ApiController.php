@@ -357,10 +357,10 @@ class ApiController {
             if(env('APP_ENV') == 'live') {
                 if(!empty($hospital) && !empty($hospital->email)) {
                     try {
-                        $bodyProvider = Email::getProviderBody();
+                        $bodyProvider = Email::getProviderBody($specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $additionalInformation);
                         Email::send($bodyProvider,  $hospital->email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
                     } catch(\Exception $e){
-                        \Log::info('Something went wrong sending an email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
+                        \Log::info('Something went wrong sending the Provider email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
                     }
                 }
             }
@@ -368,7 +368,7 @@ class ApiController {
             //Send the email //TODO: Activate it once the tests are working
             if(!empty($enquiry[$i])) {
                 $bodyUser = Email::getUserBody($hospital->name, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $reason, $additionalInformation);
-                $ATBody = Email::getTrunckyBody($hospital->name, $hospital->location_id, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $additionalInformation);
+                $ATBody = Email::getTrunkieBody($hospital->name, $hospital->location_id, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $additionalInformation);
                 //Send the Email to User
                 try {
                     Email::send($bodyUser, $email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');

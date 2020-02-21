@@ -50,7 +50,7 @@
             <td width="550">
                 <p style="font-size: 26px; color: #037098">You have received an enquiry regarding
                     treatment at your hospital.</p>
-                <p style="color: #037098">Please would you respond to [INSERT NAME HERE] using the contact
+                <p style="color: #037098">Please would you respond to '.$firstName.' using the contact
                     details provided below within 3 working days.</p>
             <td width="25"></td>
         </tr>
@@ -84,7 +84,7 @@
         <tr>
             <td width="25"></td>
             <td width="150">Title</td>
-            <td width="400">Mr</td>
+            <td width="400">'.$title.'</td>
             <td width="25"></td>
         </tr>
         <tr>
@@ -96,7 +96,7 @@
         <tr>
             <td width="25"></td>
             <td width="150">First name</td>
-            <td width="400">William</td>
+            <td width="400">'.$firstName.'</td>
             <td width="25"></td>
         </tr>
         <tr>
@@ -108,7 +108,7 @@
         <tr>
             <td width="25"></td>
             <td>Last Name</td>
-            <td>Wallace</td>
+            <td>'.$lastName.'</td>
             <td width="25"></td>
         </tr>
         <tr>
@@ -120,7 +120,7 @@
         <tr>
             <td width="25"></td>
             <td>Phone Number</td>
-            <td>04564 654656</td>
+            <td>'.$phoneNumber.'</td>
             <td width="25"></td>
         </tr>
         <tr>
@@ -132,7 +132,7 @@
         <tr>
             <td width="25"></td>
             <td>Email Address</td>
-            <td>william.wallace@freedom</td>
+            <td>'.$email.'</td>
             <td width="25"></td>
         </tr>
         <tr>
@@ -144,7 +144,7 @@
         <tr>
             <td width="25"></td>
             <td>Postcode</td>
-            <td>SC1 OCH</td>
+            <td>'.$postcode.'</td>
             <td width="25"></td>
         </tr>
         <tr>
@@ -155,8 +155,8 @@
         </tr>
         <tr>
             <td width="25"></td>
-            <td>Treatment</td>
-            <td>Anus</td>
+            <td>Specialty</td>
+            <td>'.$specialtyName.'</td>
             <td width="25"></td>
         </tr>
         <tr>
@@ -168,10 +168,7 @@
         <tr>
             <td width="25"></td>
             <td>Additional<br>Comments</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, eius illo minima necessitatibus
-                pariatur quidem quo voluptatem. Blanditiis consequatur dolore eligendi eveniet fuga harum perferendis
-                quasi, quibusdam quos recusandae, repellat?
-            </td>
+            <td>'.$additionalInformation.'</td>
             <td width="25"></td>
         </tr>
         <tr>
