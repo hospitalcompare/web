@@ -13,6 +13,9 @@
 @section('content')
 
         <section>
+            @include('components.emails.emailprovider')
+        </section>
+        <section>
             @include('components.emails.emailuser')
         </section>
 {{--    <section class="pt-3">--}}
