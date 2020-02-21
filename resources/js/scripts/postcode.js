@@ -32,9 +32,8 @@ function ajaxCall(input, resultsContainer, ajaxBox) {
                 });
                 resultsContainer.slideDown();
             } else {
-                showAlert('Invalid Postcode! Please try again.', false);
-                input.val("");
-                resultsContainer.slideUp();
+                ajaxBox.append(`<p class='postcode-error-message'>No matches found for ${postcode}</p>`);
+                resultsContainer.slideDown();
             }
         },
         error: function (data) {
@@ -57,7 +56,7 @@ function handlePostcode() {
     // Do the ajax request with a delay
     $($postcode_input).on('keyup', function() {
         clearTimeout(timer);
-
+        console.log('lenght', $(this).val().length );
         if($(this).val()) {
             // Third argument passes the input to the function
             timer = setTimeout(ajaxCall, interval, $(this), $resultsContainer, $ajaxBox);
