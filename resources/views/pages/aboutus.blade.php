@@ -241,49 +241,62 @@
         <div class="container">
             <div class="row">
                 <div class="col col-12">
-                    <h2 class="font-28 text-center mb-5">Our Background</h2>
+                    <h2 class="font-28 text-center">Our Background</h2>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col-12 col-lg-8 offset-lg-2">
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="hc-icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/comparison-website.svg')}}" alt="Comparison icon">
-                            </div>
-                            <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>
-                            <p class="col-grey p-secondary">Hospital Compare is the unique healthcare comparison website
-                                that empowers you to know rights and make the best choices for your treatment.</p>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="hc-icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/waiting-times.svg')}}" alt="Clock icon">
-                            </div>
-                            <p class="mb-3 SofiaPro-SemiBold font-16">Waiting Times</p>
-                            <p class="col-grey p-secondary">It’s a fact that waiting times and quality of care in
-                                hospitals across the country can vary greatly, with millions of people patiently waiting
-                                for treatment (some already longer than the NHS’ 18 week target).</p>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="hc-icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/legal-rights.svg')}}" alt="Gavel icon">
-                            </div>
-                            <p class="mb-3 SofiaPro-SemiBold font-16">Legal Rights</p>
-                            <p class="col-grey p-secondary">Many people across England aren’t aware of their legal
-                                rights when it comes to their healthcare… legal rights that could in fact help them or
-                                their loved feel better faster.</p>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="hc-icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/faster-treatment-times.svg')}}" alt="Calendar icon">
-                            </div>
-                            <p class="mb-3 SofiaPro-SemiBold font-16">Faster Treatment Times</p>
-                            <p class="col-grey p-secondary">By knowing and acting upon their legal rights, many patients
-                                could slash their waiting times and be treated quicker.</p>
-                        </div>
-                    </div>
+                    <h3 class="text-center">The team at Hospital Compare are passionate supporters of the NHS and the UK healthcare
+                        system and believe  the NHS is amongst the very best healthcare providers in the world.
+                    </h3>
+                    <p class="col-grey p-secondary text-center">Launched in 2020, Hospital Compare is the first consumer-focused hospital
+                        comparison website of its kind covering nhs funded treatment, self-pay and insurance treatment, helping users make
+                        the best choice of hospital for their treatment. The team have a wealth of collective experience in the healthcare sector.
+                    </p>
+                    <p class="col-grey p-secondary text-center">To use Hospital Compare, enter your postcode at the top of this page and click ‘Find Hospitals’.</p>
+                    <p class="col-grey p-secondary text-center">If you have any questions, you can email us by clicking <a href="mailto:hello@hospitalcompare.co.uk">here</a>.</p>
                 </div>
             </div>
+{{--            <div class="row">--}}
+{{--                <div class="col-12 col-lg-8 offset-lg-2">--}}
+{{--                    <div class="row">--}}
+{{--                        <div class="col-md-6 mb-4">--}}
+{{--                            <div class="hc-icon-wrapper mb-3">--}}
+{{--                                <img src="{{asset('/images/icons/comparison-website.svg')}}" alt="Comparison icon">--}}
+{{--                            </div>--}}
+{{--                            <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>--}}
+{{--                            <p class="col-grey p-secondary">Hospital Compare is the unique healthcare comparison website--}}
+{{--                                that empowers you to know rights and make the best choices for your treatment.</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-md-6 mb-4">--}}
+{{--                            <div class="hc-icon-wrapper mb-3">--}}
+{{--                                <img src="{{asset('/images/icons/waiting-times.svg')}}" alt="Clock icon">--}}
+{{--                            </div>--}}
+{{--                            <p class="mb-3 SofiaPro-SemiBold font-16">Waiting Times</p>--}}
+{{--                            <p class="col-grey p-secondary">It’s a fact that waiting times and quality of care in--}}
+{{--                                hospitals across the country can vary greatly, with millions of people patiently waiting--}}
+{{--                                for treatment (some already longer than the NHS’ 18 week target).</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-md-6 mb-4">--}}
+{{--                            <div class="hc-icon-wrapper mb-3">--}}
+{{--                                <img src="{{asset('/images/icons/legal-rights.svg')}}" alt="Gavel icon">--}}
+{{--                            </div>--}}
+{{--                            <p class="mb-3 SofiaPro-SemiBold font-16">Legal Rights</p>--}}
+{{--                            <p class="col-grey p-secondary">Many people across England aren’t aware of their legal--}}
+{{--                                rights when it comes to their healthcare… legal rights that could in fact help them or--}}
+{{--                                their loved feel better faster.</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-md-6 mb-4">--}}
+{{--                            <div class="hc-icon-wrapper mb-3">--}}
+{{--                                <img src="{{asset('/images/icons/faster-treatment-times.svg')}}" alt="Calendar icon">--}}
+{{--                            </div>--}}
+{{--                            <p class="mb-3 SofiaPro-SemiBold font-16">Faster Treatment Times</p>--}}
+{{--                            <p class="col-grey p-secondary">By knowing and acting upon their legal rights, many patients--}}
+{{--                                could slash their waiting times and be treated quicker.</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </section>
 {{--    @include('pages.pagesections.social')--}}
