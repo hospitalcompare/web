@@ -354,16 +354,17 @@ class ApiController {
                 $specialtyName = $specialty->name;
 
             //TODO: This is for the `live` environment ONLY
-            if(env('APP_ENV') == 'live') {
-                if(!empty($hospital) && !empty($hospital->email)) {
+//            if(env('APP_ENV') == 'live') {
+//                if(!empty($hospital) && !empty($hospital->email)) {
                     try {
                         $bodyProvider = Email::getProviderBody($specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $additionalInformation);
-                        Email::send($bodyProvider,  $hospital->email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
+//                        Email::send($bodyProvider,  $hospital->email, 'Enquiry regarding treatment at your hospital', 'datamanager@hospitalcompare.co.uk');
+                        Email::send($bodyProvider,  'lucian@hospitalcompare.co.uk', 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
                     } catch(\Exception $e){
                         \Log::info('Something went wrong sending the Provider email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
                     }
-                }
-            }
+//                }
+//            }
 
             //Send the email //TODO: Activate it once the tests are working
             if(!empty($enquiry[$i])) {
