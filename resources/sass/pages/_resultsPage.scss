@@ -5,6 +5,12 @@
         min-height: calc(60vh - 220px);
     }
 
+    #show_filters {
+        @include media-breakpoint-down(md){
+            border-radius: 3px;
+            margin-top: 0.5rem;
+        }
+    }
 
     &.filters-open {
         #show_filters {
@@ -201,7 +207,13 @@
         background-color: #fff;
     }
 
+
     .sort-bar {
+        @include media-breakpoint-down(md){
+            display: block;
+            padding: 1rem 0;
+        }
+
         @include media-breakpoint-up(lg) {
             //height: 60px;
             .section-1 {
@@ -353,7 +365,8 @@
             }
 
             .result-item-section-3 {
-                //flex: 1 0 14%;
+
+
                 width: 14%;
                 padding: 10px;
                 @include pseudo-border($borderGrey);
@@ -431,6 +444,14 @@
     .result-item-section-3 {
         justify-content: center;
         flex-direction: column;
+
+        .btn-area-cta {
+            @include reset-row-spacing(8px);
+        }
+
+        .btn-web-call {
+            @include reset-row-spacing(1px);
+        }
     }
 
     .result-item-section-2__child {
@@ -453,7 +474,6 @@
         }
 
         p {
-            @include font-size(16px);
             margin-bottom: 0;
         }
     }
@@ -466,11 +486,15 @@
     }
 
     .sort-item-location {
-        color: #040202;
+        color: $brand-tertiary-2;
         font-size: 14px;
         font-weight: 400;
         line-height: 1.3;
         margin-bottom: 2px;
+
+        @include media-breakpoint-down(md){
+            text-align: center;
+        }
     }
 
     .find-link {
@@ -484,48 +508,26 @@
         }
     }
 
-    .nhs-hospital,
-    .private-hospital {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-    }
-
-    .nhs-hospital,
-    .private-hospital {
-        text-align: center;
-
-        p {
-            position: relative;
-            color: #ffffff;
-            //transform: rotate(135deg);
-            //left: 20px;
-            //top: -12px;
-            @include font-size(14);
-            line-height: 1;
-        }
-    }
 }
 
-.btn-more-info {
-
-    transition: 0.3s all ease;
-
-    svg {
-        transition: 0.1s all ease;
-    }
-
-    &.open {
-        color: $white;
-        background-color: #000 !important;
-
-        i, svg {
-            transform: translateY(-50%) rotate3d(0, 0, 1, 45deg) !important;
-
-        }
-    }
-}
+//.btn-more-info {
+//
+//    transition: 0.3s all ease;
+//
+//    svg {
+//        transition: 0.1s all ease;
+//    }
+//
+//    &.open {
+//        color: $white;
+//        background-color: #000 !important;
+//
+//        i, svg {
+//            transform: translateY(-50%) rotate3d(0, 0, 1, 45deg) !important;
+//
+//        }
+//    }
+//}
 
 // Compare buttons when compareCount = 5
 .compare {
@@ -596,193 +598,10 @@
         display: none;
     }
 
-    .btn-more-info {
-        width: 92px;
-        height: 23px;
-        line-height: 23px;
-        border-radius: 3px 3px 0 0;
-    }
-}
-
-/********* Mobile results layout *************************************************************************************/
-/********* Mobile results layout *************************************************************************************/
-.results-page-mobile {
-    // CLear the solutions bar
-
-    &:not(.shortlist-open) {
-        .modal-backdrop {
-            top: auto;
-            bottom: 50px;
-            height: calc(100vh - 50px);
-        }
-    }
-
-    background-color: $bgGrey;
-
-    .row {
-        @include reset-row-spacing(0.5rem);
-    }
-
-    #show_filters {
-        padding: 15px 15px !important;
-
-        svg {
-            //@include v-c;
-            position: static !important;
-            width: 20px;
-            height: 20px;
-            left: 16px;
-        }
-    }
-
-
-    .postcode {
-        input {
-            padding-top: 2rem !important;
-        }
-    }
-
-    .filter-parent {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        transform: translate3d(-100%, 0, 0);
-        overflow: scroll;
-        position: fixed;
-        top: $mobile-header-height;
-        left: 0;
-        width: 100%;
-        height: calc(100vh - #{$mobile-header-height});
-        background-color: #fff;
-        z-index: 2000;
-        transition: $transition;
-    }
-
-    .result-item-mobile-section-2 {
-        * {
-            @extend .font-12;
-        }
-    }
-
-    // Make the dropdown expand rather than overlay
-    .dropdown-menu {
-        //position: static !important;
-        //float: none;
-        //transform: none !important;
-    }
-
-    // Body class when filters are open
-    &.filters-open {
-        .filter-parent {
-            transform: translate3d(0, 0, 0);
-        }
-
-        .compare-hospitals-bar {
-            max-height: 0;
-        }
-    }
-
-    .result-item-mobile {
-        .item-tags {
-            top: 0;
-            left: 0;
-        }
-
-        .compare {
-            top: 0;
-            right: 0;
-        }
-
-        .hospital-type {
-            top: 0;
-            left: 0;
-            bottom: auto;
-            width: auto;
-
-            p {
-                height: 30px;
-                line-height: 30px;
-            }
-
-            &:after {
-                content: '';
-                position: absolute;
-                z-index: 5;
-                left: 100%;
-                top: 0;
-                width: 30px;
-                height: 30px;
-            }
-
-            &.nhs-hospital:after {
-                border-bottom: solid 15px transparent;
-                border-right: solid 15px transparent;
-                border-left: solid 15px $blue;
-                border-top: solid 15px $blue;
-            }
-
-            &.private-hospital:after {
-                border-bottom: solid 15px transparent;
-                border-right: solid 15px transparent;
-                border-left: solid 15px $violet;
-                border-top: solid 15px $violet;
-            }
-        }
-
-        .result-item-section-2__child {
-            justify-content: space-between;
-        }
-    }
-
-    .special-offer-header {
-        height: 50px !important;
-    }
-
-    // Filter form styles
-    #resultspage_form {
-        .filter-mobile {
-            @extend .mb-2;
-        }
-
-        label {
-            @extend .SofiaPro-SemiBold;
-            @extend .font-18;
-        }
-
-        .filter-mobile {
-            svg {
-                right: 0;
-            }
-
-            label {
-                svg {
-                    @extend .help-link;
-                    @extend .help-link__inline;
-                }
-            }
-        }
-
-        .filter-parent {
-            .dropdown-toggle {
-                border-radius: 0 !important;
-                border-top: none;
-                border-right: none;
-                border-left: none;
-                @extend .pl-0;
-                @extend .pt-0;
-                @extend .pb-2;
-            }
-        }
-
-        .dropdown-menu {
-            min-width: initial !important;
-            max-width: 100% !important;
-        }
-    }
-
-    .sort-item-location {
-        .map-icon {
-            width: 9px;
-            height: auto;
-        }
-    }
+    //.btn-more-info {
+    //    width: 92px;
+    //    height: 23px;
+    //    line-height: 23px;
+    //    border-radius: 3px 3px 0 0;
+    //}
 }

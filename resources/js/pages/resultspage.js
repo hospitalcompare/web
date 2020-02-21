@@ -204,13 +204,14 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
     $(this)
         .parents('.result-item')
         .toggleClass('corporate-content-open');
+
     if ($target.is(':visible')) {
         $target
             .slideUp()
             .removeClass('open');
         // Only change text for 'More info' button
         if($isToggleButton)
-            $(this).find('span, div').text('Map');
+            isDesktop ? $(this).find('span, div').text('Map +') : $(this).find('span, div').text('More info +');
             // $(this).find('span, div').text('More info');
         // Scroll back to the result item
         var $scrollBack = $(this).parents('.result-item').offset().top;
@@ -222,24 +223,29 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
     } else {
         $target
             .slideDown()
+            // Permanently add class gmap-initialized
             .addClass('open');
         // Scroll to the corporate content area (compensate for the height of sticky header bar)
         $('html, body').animate({
             scrollTop: ($(this).parents('.result-item').offset().top) - scrollOffset
             // scrollTop: ($target.offset().top) - scrollOffset
         }, 800);
-        // Init the map
-        var $id = $(this).data('id');
-        var targetMap = '#gmap_' + $id;
-        var $latitude = $(targetMap).data('latitude');
-        var $longitude = $(targetMap).data('longitude');
-        initializeGMap($latitude, $longitude, targetMap);
+        // Init the map - only once. Ie only if the CC area hasn't already been opened
+        if(!$target.hasClass('gmap-initialised')) {
+            var $id = $(this).data('id');
+            var targetMap = '#gmap_' + $id;
+            var $latitude = $(targetMap).data('latitude');
+            var $longitude = $(targetMap).data('longitude');
+            initializeGMap($latitude, $longitude, targetMap);
+        }
+        // Permanently add class gmap-initialized
+        $target.addClass('gmap-initialised');
         //Change the `More info` to `Close info`
         $(this).addClass('open');
         // Only change text for 'More info' button
         if($isToggleButton)
             // $(this).find('span, div').text('Close info');
-            $(this).find('span, div').text('Hide map');
+            isDesktop ? $(this).find('span, div').text('Hide map -') : $(this).find('span, div').text('Hide info -');
     }
 });
 

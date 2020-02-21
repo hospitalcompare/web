@@ -28,6 +28,11 @@
 //     $(this).valid();  // triggers the validation test
 // });
 
+// Matches UK postcode. Does not match to UK Channel Islands that have their own postcodes (non standard UK)
+$.validator.addMethod( "postcodeUK", function( value, element ) {
+    return this.optional( element ) || /^((([A-PR-UWYZ][0-9])|([A-PR-UWYZ][0-9][0-9])|([A-PR-UWYZ][A-HK-Y][0-9])|([A-PR-UWYZ][A-HK-Y][0-9][0-9])|([A-PR-UWYZ][0-9][A-HJKSTUW])|([A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY]))\s?([0-9][ABD-HJLNP-UW-Z]{2})|(GIR)\s?(0AA))$/i.test( value );
+}, "Please specify a valid UK postcode" );
+
 // Add a custom validation to the jquery validate object - validate phone number field as UK format
 $.validator.addMethod('phoneUK', function (phone_number, element) {
         return this.optional(element) || phone_number.length > 9 &&
@@ -70,10 +75,6 @@ if ($form.length > 0) {
                 required: true,
                 alpha: true
             },
-            // dob: { // The entered date
-            //     required: true,
-            //     dateFormat: true,
-            // },
             email: {
                 required: true,
                 email: true
@@ -88,8 +89,8 @@ if ($form.length > 0) {
                 phoneUK: true
             },
             postcode: {
-                // required: true,
-                // postcodeUK: true
+                required: true,
+                postcodeUK: true
             },
             procedure_id: "required",
             gdpr: "required"
@@ -99,13 +100,12 @@ if ($form.length > 0) {
             title: "Please select your title",
             firstName: "Please enter your first name",
             lastName: "Please enter your surname",
-            // dob: "Please enter your date of birth",
             email: "Please enter a valid email address",
             confirm_email: "The passwords entered do not match",
             phone_number: "Please enter your contact number",
             postcode: "Please enter a valid UK postcode",
             procedure_id: "Please select the procedure required",
-            gdpr: "Please confirm you consent to our terms and conditions"
+            gdpr: "Please confirm you agree to our terms of use"
         },
         errorPlacement: function (error, element) {
             //console.dir(error, element);
@@ -148,7 +148,7 @@ if ($form.length > 0) {
                 success: function (data) {
                     // alert('Thanks, your enquiry has been submitted');
                     $('#hc_modal_enquire_private').modal('hide');
-                    showAlert('Thank you ' + data.data.first_name + ', your enquiry has been successfully sent!', true, true);
+                    showAlert('Thank you ' + data.data[0].first_name + ', your enquiry has been successfully sent!', true, true);
                 },
                 error: function (e) {
                     var errorMsg = JSON.parse(e.responseText).errors.error;

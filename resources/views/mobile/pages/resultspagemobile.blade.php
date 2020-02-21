@@ -4,7 +4,7 @@
 
 @section('title', 'Results Page')
 
-@section('description', 'this is the meta description')
+@section('description', 'Based on your choices, filter from 750 NHS and private hospitals across England to find the one that’s right for you.')
 
 @section('keywords', 'this is the meta keywords')
 
@@ -13,7 +13,7 @@
 @section('body-class', 'results-page results-page-mobile')
 
 @section('content')
-{{--    {{dd($data['hospitals'])}}--}}
+    {{--    {{dd($data['hospitals'])}}--}}
     @include('mobile.pages.pagesections.resultspageformmobile')
 
     <div class="results pt-3">
@@ -46,12 +46,16 @@
                             'qualityRating'         => !empty($d['rating']['latest_rating']) ? $d['rating']['latest_rating'] : 0,
                             'FFRating'              => !empty($d['rating']['friends_family_rating']) ? number_format((float)$d['rating']['friends_family_rating'], 1).'%' : 0,
                             'NHSFunded'             => ($d['hospitalType']['name'] === 'NHS' || ($d['hospitalType']['name'] === 'Independent' && !empty($d['waitingTime'][0]['perc_waiting_weeks']))) ? 1 : 0,
-                            'privateSelfPay'        => $d['hospitalType']['name'] === 'Independent' ? 1 : 0,
+                            'privateSelfPay'        => $d['private_self_pay'],
                             'specialOffers'         => $d['special_offers'],
                             'btnText'               => 'Enquiry',
                             'NHSClass'              => $d['hospitalType']['name'] == 'NHS' ? 'nhs-hospital' : 'private-hospital',
                             'fundedText'            => ($d['hospitalType']['name'] == 'NHS') ? 'NHS': 'Private',
                             'url'                   => $d['url'],
+                            'url2'                  => $d['url2'],
+                            'tel'                   => $d['phone_number'],
+                            'tel2'                  => $d['phone_number_2'],
+                            'email'                 => $d['email'],
                             'safe'                  => $d['rating']['safe'],
                             'safeIcon'              => \App\Helpers\Utils::getDiscOrStar($d['rating']['safe']),
                             'effective'             => $d['rating']['effective'],
@@ -89,7 +93,8 @@
         @if($data['hospitals']->total() < 10)
             <div class="container">
                 {{--                    <img class="w-100" src="{{ asset('/images/tweakfilters.jpg') }}" alt="Image showing how to get more results">--}}
-                <h2 class="col-brand-primary-1 w-50 text-center mx-auto SofiaPro-Bold h-100 mb-5 pb-5">If you wish to receive more results then<br>
+                <h2 class="col-brand-primary-1 w-50 text-center mx-auto SofiaPro-Bold h-100 mb-5 pb-5">If you wish to
+                    receive more results then<br>
                     use the filters to broaden your search criteria</h2>
             </div>
         @endif
@@ -98,26 +103,19 @@
     </div><!-- results -->
 
 
-
+{{--    Solutions bar --}}
     @include('mobile.components.solutionsbarmobile', [
       'specialOffers' => $data['special_offers']
       ])
-    @include('components.modals.modalenquirenhs')
-    {{--    @include('components.modals.modalspecial')--}}
+
+{{--  Modal for special offers  --}}
+    @includeWhen(!empty($data['special_offers']), 'mobile.components.modals.modalmobilespecialoffertab', [
+      'specialOffer'      => $data['special_offers']['pink']
+  ])
+
     @include('mobile.components.modals.modalenquireprivatemobile', [
         'procedures' => $data['filters']['procedures']])
-    {{--  Maps modal  --}}
-    {{--    @include('components.modals.modalmaps')--}}
-    {{--    @include('components.modals.modalvideo')--}}
     @include('components.modals.modaltour')
     @include('mobile.components.modals.modalmobiletooltip')
-    @includeWhen(!empty($data['special_offers']), 'mobile.components.modals.modalmobilespecialoffertab', [
-        'specialOffer'      => $data['special_offers']['pink']
-    ])
-    {{--    @include('components.doctor')--}}
-{{--    @include('components.basic.modalbutton', [--}}
-{{--        'classTitle'    => 'btn btn-hanblue position-fixed',--}}
-{{--        'buttonText'    => 'Help?',--}}
-{{--        'modalTarget'   => '#hc_modal_tour',--}}
-{{--        'style'         => 'z-index: 1040; bottom: 100px; left: 100px'])--}}
+
 @endsection

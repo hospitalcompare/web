@@ -18,6 +18,17 @@ body {
     }
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// ul wihtout bullets
+.no-bull {
+    li {
+        @extend .mb-4;
+    }
+}
+
 .menu-open,
 .shortlist-open {
     &.results-page {
@@ -52,6 +63,10 @@ body {
     }
 }
 
+.enquiry-form-open {
+    overflow: hidden;
+}
+
 a:hover {
     color: $blue;
 }
@@ -68,6 +83,10 @@ a:hover {
 
 .fill-turq path {
     fill: $brand-primary-1;
+}
+
+.fill-black path {
+    fill: $brand-tertiary-1;
 }
 
 .stroke-turq path {
@@ -203,6 +222,7 @@ ul.blue-dot {
         position: relative;
         padding: 0 0 0 30px;
         text-align: left;
+        @extend .p-secondary;
 
         &:before {
             content: '';
@@ -296,10 +316,6 @@ select.big {
     background-color: $purple;
 }
 
-.bg-hanblue {
-    background-color: $hanblue;
-}
-
 .bg-green {
     background-color: $green;
 }
@@ -370,6 +386,10 @@ select.big {
     background-color: $nhsBlue;
 }
 
+.bg-brand-primary-1 {
+    background-color: $brand-primary-1;
+}
+
 // Font colours
 .col-brand-primary-1 {
     color: $brand-primary-1;
@@ -381,10 +401,6 @@ select.big {
 
 .col-violet {
     color: $violet;
-}
-
-.col-hanblue {
-    color: $hanblue;
 }
 
 .col-green {
@@ -486,6 +502,10 @@ select.big {
 
 
 // Cookie popup styling
+//.cc-grower {
+//    max-height: 100% !important;
+//}
+
 .cc-theme-hc-cookie {
     @extend .SofiaPro-Regular;
     @extend .p-3;
@@ -511,6 +531,7 @@ select.big {
         /* END Cookies */
     }
 
+
     .cc-window.cc-banner {
         padding: 1em 1.8em;
         width: 100%;
@@ -523,13 +544,10 @@ select.big {
 
     .cc-btn {
         @extend .btn;
-        //@extend .btn-
-        border-radius: 3px;
-        //padding: 22px 36px !important;
         @extend .btn-brand-primary-1;
         @extend .btn-squared;
         @extend .btn-squared_slim;
-        @extend .px-5;
+        //@extend .px-5;
         @include font-size(14px, true);
         text-align: center !important;
         display: inline-block;
@@ -572,7 +590,11 @@ path {
 
 // Ticks/dashes in the results ratings
 .dash-or-tick {
-    width: 26px;
+    width: 16px;
+
+    @include media-breakpoint-up(md) {
+        width: 26px;
+    }
 }
 
 .green-tick {
@@ -696,6 +718,10 @@ path {
     margin-bottom: 30px !important;
 }
 
+.mb-35 {
+    margin-bottom: 30px !important;
+}
+
 .mb-60 {
     margin-bottom: 60px !important;
 }
@@ -769,7 +795,7 @@ h2 {
 
 .section-title {
     @include font-size(1.8rem);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-weight: 500;
 }
 
@@ -931,3 +957,147 @@ h6 {
     list-style: none;
     z-index: 99;
 }
+
+
+
+//fieldset, label { margin: 0; padding: 0; }
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+    border: none;
+    float: left;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+    margin: 2px;
+    font-size: 2.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.rating > .half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.rating > label {
+    color: $bgGrey;
+    float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+/***** https://codepen.io/jamesbarnett/pen/vlpkh *****/
+
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: $brand-secondary-5;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: $brand-secondary-5;  }
+
+
+// Hospital type tag
+.hospital-type {
+    top: 0;
+    left: 0;
+    bottom: auto;
+    width: auto;
+
+    p {
+        height: 30px;
+        line-height: 30px;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: 5;
+        left: 100%;
+        top: 0;
+        width: 30px;
+        height: 30px;
+    }
+
+    &.nhs-hospital:after {
+        border-bottom: solid 15px transparent;
+        border-right: solid 15px transparent;
+        border-left: solid 15px $nhsBlue;
+        border-top: solid 15px $nhsBlue;
+    }
+
+    &.private-hospital:after {
+        border-bottom: solid 15px transparent;
+        border-right: solid 15px transparent;
+        border-left: solid 15px $privateBlue;
+        border-top: solid 15px $privateBlue;
+    }
+}
+
+
+.nhs-hospital,
+.private-hospital {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+
+    p {
+        width: 100%;
+        position: relative;
+        color: #ffffff;
+        height: 30px;
+        line-height: 30px;
+        font-size: 0.75rem !important;
+        text-transform: uppercase;
+        padding: 0 0.5rem;
+
+        &:after {
+            content: "";
+            position: absolute;
+            z-index: 5;
+            left: 100%;
+            top: 0;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.results-page-desktop .nhs-hospital,
+.results-page-desktop .private-hospital,
+.test-page .nhs-hospital,
+.test-page .private-hospital {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    border-top-left-radius: 5px;
+    padding: 0 !important;
+}
+
+.results-page-desktop .nhs-hospital p:after {
+    border-bottom: solid 15px transparent;
+    border-right: solid 15px transparent;
+    border-left: solid 15px $nhsBlue;
+    border-top: solid 15px $nhsBlue;
+    content: ''
+}
+
+.results-page-desktop .private-hospital p:after {
+    border-bottom: solid 15px transparent;
+    border-right: solid 15px transparent;
+    border-left: solid 15px $privateBlue;
+    border-top: solid 15px $privateBlue;
+    content: ''
+}
+
+// Force accordions open for content editing purposes
+//.collapse {
+//    display: block !important;
+//}

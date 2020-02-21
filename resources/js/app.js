@@ -19,9 +19,10 @@ import 'bootstrap-slider';                                  // Bootstrap range s
 import './scripts/global';                                  // Global Script used for multiple pages
 import './scripts/scroll';                                  // Smooth scroll
 import './scripts/postcode' ;                               // Postcode input
-import './scripts/gmapInit';                                // Gmaps modal
+// import './scripts/gmapInit';                                // Gmaps modal
 import './scripts/sticky';                                  // Make the search header sticky on scroll
 import './scripts/bootstrapSlider';                         // Init the bs slider plugin
+import './scripts/survey';                                  // Handle the exit survey form
 // window.Vue = require('vue');                             // Vue.js
 
 
@@ -33,7 +34,7 @@ import './components/basic/tooltip';                        // Trigger bootstrap
 import './components/basic/carousel';                       // Init mobile carousels
 
 // Modals
-import './components/modals/modalNhs';                       // Trigger bootstrap modal
+import './components/modals/modalGeneral';                   // Trigger bootstrap modal
 import './components/modals/modalPrivate';                   // Trigger bootstrap modal
 import './components/modals/modalMobileTooltips';            // Trigger bootstrap modal
 import './components/modals/modalMobileSearchForm';          // Trigger bootstrap modal

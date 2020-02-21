@@ -2,7 +2,7 @@
 
 @section('title', 'About Us')
 
-@section('description', 'this is the meta description')
+@section('description', 'Discover Hospital Compare; a unique comparison website dedicated to helping you find the right hospital for your treatment by exercising your legal rights.')
 
 @section('keywords', 'this is the meta keywords')
 
@@ -12,19 +12,18 @@
 
 @section('content')
     @include('pages.pagesections.flatbanner')
-    <section class="about-us-intro">
+    <section class="about-us-intro overflow-hidden">
         <div class="container">
-            <div class="row">
+            <div class="row position-relative">
                 <div class="col-lg-6">
-                    <h1>Feel <span class="col-brand-primary-1">better faster</span> by<br>knowing your legal<br> right to choose
+                    <h1>Feel <span class="col-brand-primary-1">Better</span> Knowing Your Legal Right to Choose
                     </h1>
-                    <p class="col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Aliquam animi cupiditate error natus,
-                        necessitatibus quos ratione reprehenderit voluptatem voluptatibus. Alias exercitationem maiores
-                        saepe sed voluptates?</p>
+                    <p class="col-grey p-secondary mb-35">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Hospital Compare is a unique comparison website that empowers you to make the best choice of hospital for your treatment by exercising your legal rights.
+                    </p>
                     <div class="btn-area mb-5">
                         @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-squared btn-brand-primary-1',
+                            'classTitle'        => 'btn btn-squared btn-brand-primary-1 font-18',
                             'buttonText'        => 'Find the right hospital',
                             'hrefValue'         => '/results-page',
                             ''
@@ -41,6 +40,13 @@
 {{--                        'stars'     => 4.5--}}
 {{--                    ])--}}
                 </div>
+                <div class="col-lg-6 about-hero-cont">
+                    <div class="about-img-top"></div>
+                    <div class="about-img-bottom"></div>
+                    <img class="about-pattern-top-left" src="images/icons/about-top-left.svg" alt="dots">
+                    <img class="about-pattern-right" src="images/icons/about-right.svg" alt="dots">
+                    <img class="about-pattern-bottom" src="images/icons/about-bottom.svg" alt="dots">
+                </div>
             </div>
         </div>
     </section>
@@ -48,35 +54,28 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12 col-lg-8 offset-lg-2">
-                    <h3 class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem et facere
-                        ipsum laboriosam magnam
-                        maxime nesciunt rerum temporibus vitae voluptate! Accusamus architecto beatae harum, inventore
-                        nemo praesentium quidem ullam? Reiciendis!</h3>
-                    <p class="col-grey p-secondary text-center">Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Ab cum,
-                        perferendis? A ad at atque
-                        autem blanditiis consectetur dicta dignissimos dolor dolore doloremque est eum facilis fugit
-                        inventore, itaque maxime modi mollitia nam nesciunt officiis qui recusandae rem sequi similique
-                        sit tempore ut. Deserunt illum pariatur praesentium, reprehenderit saepe veniam.</p>
+                    <h3 class="text-center">We know many people  aren’t aware of  their legal rights when it comes to their healthcare…
+                        legal rights that could help them or a loved one receive treatment faster or be treated at a higher quality hospital.</h3>
+                    <p class="col-grey p-secondary text-center">It’s a fact that waiting times and quality of care across  hospitals in England
+                        vary greatly, with millions of people patiently waiting for treatment to start (as at December 2019 more than 600,000 people had been waiting longer than the NHS’ 18 week target).<br>
+                        By knowing and acting upon their legal rights, many patients could shorten their waiting times and be treated quicker.
+                    </p>
                 </div>
             </div>
             <div class="row ">
                 <div class="col-md-4">
                     <div class="feature-box col-inner text-center bg-greylight p-4 SofiaPro-Medium font-14">
-                        <p class="lh-16 SofiaPro-SemiBold">Informing you of the choices available to you in law for your
-                            hospital treatment</p>
+                        <p class="lh-16 SofiaPro-SemiBold">You have the legal right to choose where you have your NHS treatment*</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-box col-inner text-center bg-greylight p-4 SofiaPro-Medium font-14">
-                        <p class="lh-16 SofiaPro-SemiBold">Helping you choose the best hospital in England for your
-                            treatment</p>
+                        <p class="lh-16 SofiaPro-SemiBold"> If you’ve already waited 18 weeks for that treatment, you have the legal right to select a different hospital*</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-box col-inner text-center bg-greylight p-4 SofiaPro-Medium font-14">
-                        <p class="lh-16 SofiaPro-SemiBold">Helping you to understand your available choices to have your
-                            hospital treatment performed</p>
+                        <p class="lh-16 SofiaPro-SemiBold">You may choose to have your NHS-funded treatment at a private hospital*</p>
                     </div>
                 </div>
 
@@ -92,41 +91,35 @@
                 </div>
                 <div class="col-md-3">
                     <div class="col-inner text-center">
-                        <div class="icon-wrapper mb-3">
+                        <div class="hc-icon-wrapper mb-3">
                             <img src="/images/icons/waiting-times.svg" alt="Clock icon">
                         </div>
-                        <p class="col-grey p-secondary">Sooner, by comparing waiting times at different hospitals</p>
+                        <p class="col-grey p-secondary">Seek treatment sooner, by comparing waiting times at different hospitals</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="col-inner text-center">
-                        <div class="icon-wrapper mb-3">
+                        <div class="hc-icon-wrapper mb-3">
                             <img src="/images/icons/quality.svg" alt="Stars icon">
                         </div>
-                        <p class="col-grey p-secondary">At the best quality hospital, by comparing hospital quality
-                            rankings</p>
+                        <p class="col-grey p-secondary">Select the best quality hospital, by comparing hospital quality rankings</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="col-inner text-center">
-                        <div class="icon-wrapper mb-3">
+                        <div class="hc-icon-wrapper mb-3">
 {{--                            @svg('icon-understanding-choices-3')--}}
                             <img src="/images/icons/paid-for.svg" alt="Medical cross icon">
                         </div>
-                        <p class="col-grey p-secondary">At a private hospital paid for by the NHS or paid by yourself,
-                            or by your insurer, if that is
-                            your preference</p>
+                        <p class="col-grey p-secondary">Choose a private hospital paid for by the NHS or paid by yourself, or by your insurer, if that is your preference</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="col-inner text-center">
-                        <div class="icon-wrapper mb-3">
+                        <div class="hc-icon-wrapper mb-3">
                             <img src="/images/icons/self-pay.svg" alt="Icon of price tag">
                         </div>
-                        <p class="col-grey p-secondary">To bring you self-pay offers from time to time, provided by
-                            private hospitals, so you can
-                            have your treatment performed quicker and more cost effectively, if you or your insurer wish
-                            to pay</p>
+                        <p class="col-grey p-secondary">Access self-pay offers from time to time, provided by certain hospitals, to receive your treatment more quickly and more cost effectively, if you or your insurer wish to pay</p>
                     </div>
                 </div>
             </div>
@@ -137,19 +130,17 @@
             <div class="row">
                 <div class="col-12 col-lg-6 offset-lg-3">
                     <div class="image-wrapper mb-5">
-                        <img class="about-img" src="images/video_placeholder.jpg" alt="People in a meetin talking">
+                        <img class="about-img" src="images/about-3.jpg" alt="People in a meetin talking">
                         <img class="about-dots d-none d-lg-block" src="images/about-dots.svg" alt="People in a meetin talking">
                         <img class="about-circle d-none d-lg-block" src="images/about-circle.svg" alt="People in a meetin talking">
                     </div>
-                    <h2>Impartial Advice: NHS vs Private</h2>
-                    <p class="col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A,
-                        accusamus ad autem beatae
-                        dignissimos dolor eveniet explicabo impedit labore nulla, praesentium ut veniam voluptatem.
-                        Consequuntur explicabo inventore minima odio provident?</p>
-                    <p class="col-grey p-secondary mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A,
-                        accusamus ad autem beatae
-                        dignissimos dolor eveniet explicabo impedit labore nulla, praesentium ut veniam voluptatem.
-                        Consequuntur explicabo inventore minima odio provident?</p>
+                    <h2>Impartiality: NHS vs Private</h2>
+                    <p class="col-grey p-secondary">By using our unique, impartial system, you can search and compare healthcare providers across
+                        the country completely free of charge, and make enquiries with a number of hospitals, before selecting the one that’s best suited to your needs.</p>
+                    <p class="col-grey p-secondary">If your treatment is covered by NHS funding, select a hospital, make an enquiry through our site and then communicate
+                        your decision to your GP. If you’re paying for your treatment privately then your enquiry will be the start of the process to arrange an initial appointment.</p>
+                    <p class="col-grey p-secondary mb-5"> If you’re searching for treatment covered by your health insurance provider, then your enquiry will be the start of the
+                        process to arrange an initial appointment.</p>
                     @include('components.basic.button', [
                         'buttonText'    => 'Find the right hospital',
                         'classTitle'    => 'btn btn-brand-primary-1 btn-squared',
@@ -250,49 +241,62 @@
         <div class="container">
             <div class="row">
                 <div class="col col-12">
-                    <h2 class="font-28 text-center mb-5">Our Background</h2>
+                    <h2 class="font-28 text-center">Our Background</h2>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col-12 col-lg-8 offset-lg-2">
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/comparison-website.svg')}}" alt="Comparison icon">
-                            </div>
-                            <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>
-                            <p class="col-grey p-secondary">Hospital Compare is the unique healthcare comparison website
-                                that empowers you to know rights and make the best choices for your treatment.</p>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/waiting-times.svg')}}" alt="Clock icon">
-                            </div>
-                            <p class="mb-3 SofiaPro-SemiBold font-16">Waiting Times</p>
-                            <p class="col-grey p-secondary">It’s a fact that waiting times and quality of care in
-                                hospitals across the country can vary greatly, with millions of people patiently waiting
-                                for treatment (some already longer than the NHS’ 18 week target).</p>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/legal-rights.svg')}}" alt="Gavel icon">
-                            </div>
-                            <p class="mb-3 SofiaPro-SemiBold font-16">Legal Rights</p>
-                            <p class="col-grey p-secondary">Many people across England aren’t aware of their legal
-                                rights when it comes to their healthcare… legal rights that could in fact help them or
-                                their loved feel better faster.</p>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="icon-wrapper mb-3">
-                                <img src="{{asset('/images/icons/faster-treatment-times.svg')}}" alt="Calendar icon">
-                            </div>
-                            <p class="mb-3 SofiaPro-SemiBold font-16">Faster Treatment Times</p>
-                            <p class="col-grey p-secondary">By knowing and acting upon their legal rights, many patients
-                                could slash their waiting times and be treated quicker.</p>
-                        </div>
-                    </div>
+                    <h3 class="text-center">The team at Hospital Compare are passionate supporters of the NHS and the UK healthcare
+                        system and believe  the NHS is amongst the very best healthcare providers in the world.
+                    </h3>
+                    <p class="col-grey p-secondary text-center">Launched in 2020, Hospital Compare is the first consumer-focused hospital
+                        comparison website of its kind covering nhs funded treatment, self-pay and insurance treatment, helping users make
+                        the best choice of hospital for their treatment. The team have a wealth of collective experience in the healthcare sector.
+                    </p>
+                    <p class="col-grey p-secondary text-center">To use Hospital Compare, enter your postcode at the top of this page and click ‘Find Hospitals’.</p>
+                    <p class="col-grey p-secondary text-center">If you have any questions, you can email us by clicking <a href="mailto:hello@hospitalcompare.co.uk">here</a>.</p>
                 </div>
             </div>
+{{--            <div class="row">--}}
+{{--                <div class="col-12 col-lg-8 offset-lg-2">--}}
+{{--                    <div class="row">--}}
+{{--                        <div class="col-md-6 mb-4">--}}
+{{--                            <div class="hc-icon-wrapper mb-3">--}}
+{{--                                <img src="{{asset('/images/icons/comparison-website.svg')}}" alt="Comparison icon">--}}
+{{--                            </div>--}}
+{{--                            <p class="mb-3 SofiaPro-SemiBold font-16">Comparison Website</p>--}}
+{{--                            <p class="col-grey p-secondary">Hospital Compare is the unique healthcare comparison website--}}
+{{--                                that empowers you to know rights and make the best choices for your treatment.</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-md-6 mb-4">--}}
+{{--                            <div class="hc-icon-wrapper mb-3">--}}
+{{--                                <img src="{{asset('/images/icons/waiting-times.svg')}}" alt="Clock icon">--}}
+{{--                            </div>--}}
+{{--                            <p class="mb-3 SofiaPro-SemiBold font-16">Waiting Times</p>--}}
+{{--                            <p class="col-grey p-secondary">It’s a fact that waiting times and quality of care in--}}
+{{--                                hospitals across the country can vary greatly, with millions of people patiently waiting--}}
+{{--                                for treatment (some already longer than the NHS’ 18 week target).</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-md-6 mb-4">--}}
+{{--                            <div class="hc-icon-wrapper mb-3">--}}
+{{--                                <img src="{{asset('/images/icons/legal-rights.svg')}}" alt="Gavel icon">--}}
+{{--                            </div>--}}
+{{--                            <p class="mb-3 SofiaPro-SemiBold font-16">Legal Rights</p>--}}
+{{--                            <p class="col-grey p-secondary">Many people across England aren’t aware of their legal--}}
+{{--                                rights when it comes to their healthcare… legal rights that could in fact help them or--}}
+{{--                                their loved feel better faster.</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-md-6 mb-4">--}}
+{{--                            <div class="hc-icon-wrapper mb-3">--}}
+{{--                                <img src="{{asset('/images/icons/faster-treatment-times.svg')}}" alt="Calendar icon">--}}
+{{--                            </div>--}}
+{{--                            <p class="mb-3 SofiaPro-SemiBold font-16">Faster Treatment Times</p>--}}
+{{--                            <p class="col-grey p-secondary">By knowing and acting upon their legal rights, many patients--}}
+{{--                                could slash their waiting times and be treated quicker.</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </section>
 {{--    @include('pages.pagesections.social')--}}

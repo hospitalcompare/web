@@ -156,6 +156,10 @@ class Validate
      * @return mixed
      */
     public static function validateValue($value) {
+        //Validate the 0 values
+        if(isset($value) && $value == 0)
+            return $value;
+
         if($value === 'NULL' || empty($value))
             return '';
 

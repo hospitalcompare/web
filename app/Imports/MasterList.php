@@ -99,8 +99,14 @@ class MasterList extends DefaultImport {
                         'ods_code'              => $item['Location ODS Code'],
                         'name'                  => $item['Location Name'],
                         'display_name'          => $item['Display Name'],
-                        'tel_number'            => $item['Location Telephone Number'],
                         'url'                   => $item['Location Web Address'],
+                        'email'                 => $item['Email'],
+                        'phone_number'          => $item['Location Telephone Number'],
+                        'phone_number_2'        => $item['Addition Telephone Number'],
+                        'phone_number_3'        => $item['Additional Telephone Number 2'],
+                        'nhs_private_url'       => $item['NHS Private Website'],
+                        'private_self_pay'      => $item['Private Flag'],
+//                        'phone_number_3'        => $item['Location Web Address'],
 //                        'report_url'        => $item['CQC Report URL']
                     ]);
 

@@ -6,14 +6,14 @@
         <span class="position-absolute close-offer toggle-special-offer d-inline-flex">
             @svg('times')
         </span>
-        <div class="mr-2">
-            <div class="img-wrap">
-                <img width="71"
-                     height="65"
-                     src="images/hospitals/hospital-placeholder.jpg"
-                     alt="Image of {{ $title }}">
-            </div>
-        </div>
+{{--        <div class="mr-2">--}}
+{{--            <div class="img-wrap">--}}
+{{--                <img width="71"--}}
+{{--                     height="65"--}}
+{{--                     src="images/hospitals/hospital-placeholder.jpg"--}}
+{{--                     alt="Image of {{ $title }}">--}}
+{{--            </div>--}}
+{{--        </div>--}}
         <div class="mr-2" style="max-width: 150px">
             <p class="special-offer-title text-uppercase font-14">Special Offer</p>
             <p class="special-offer-copy font-14">Get your Knee operation done in under 2 weeks on our self-pay

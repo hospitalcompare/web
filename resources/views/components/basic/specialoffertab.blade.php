@@ -55,7 +55,7 @@
                     'hospitalType'      => $hospitalType,
                     'hospitalTitle'     => $headerText['open']['title'],
                     'hrefValue'         => $hospitalUrl,
-                    'modalTarget'       => '#hc_modal_enquire_nhs',
+                    'modalTarget'       => '#hc_modal_contacts_general',
                     'classTitle'        => 'btn btn-icon btn-enquire btn-blue enquiry font-12 pr-2',
                     'target'            => 'blank',
                     'buttonText'        => 'Make an enquiry',

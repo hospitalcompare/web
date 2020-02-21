@@ -16,10 +16,12 @@ class CreateGetDistanceProcedure extends Migration
         DB::unprepared("DROP function IF EXISTS get_distance");
         $procedure = "
             CREATE FUNCTION get_distance(lat float, lng float, pnt_lat float, pnt_lng float)
-            
+
             Returns float
+            READS SQL DATA
+            DETERMINISTIC
+
             BEGIN
-            
             Declare dist float;
             SET dist =
               3959 * acos (
@@ -29,9 +31,9 @@ class CreateGetDistanceProcedure extends Migration
               + sin ( radians(pnt_lat) )
               * sin( radians( lat ) )
             );
-            
+
             RETURN dist;
-            
+
             END
         ";
 

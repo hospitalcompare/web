@@ -22,8 +22,8 @@
 @import '~cookieconsent/build/cookieconsent.min.css';
 
 // Font-awesome
-//@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-
+// Required for exit survey
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
 //MISC
 @import 'animations';
@@ -35,6 +35,7 @@
 //PAGES
 @import 'pages/homePage';
 @import 'pages/resultsPage';
+@import 'pages/resultsPageMobile';
 @import 'pages/snapResultsPage';
 @import 'pages/faqsPage';
 @import 'pages/yourRights';

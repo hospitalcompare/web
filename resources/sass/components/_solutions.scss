@@ -121,7 +121,7 @@
         }
 
         .col-header {
-            height: 230px;
+            height: 170px;
             border-bottom: $greyBorder;
             border-right: $greyBorder;
         }
@@ -147,7 +147,7 @@
                 //overflow: hidden;
                 width: 100%;
                 max-width: 120px;
-                @include aspect-ratio(120, 120, 150%);
+                //@include aspect-ratio(120, 120, 150%);
 
                 .remove-hospital {
                     cursor: pointer;

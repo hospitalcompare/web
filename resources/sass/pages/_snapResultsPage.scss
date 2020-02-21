@@ -65,11 +65,11 @@
         width: 22%;
         position: relative;
     }
-
-    .results-page-desktop .result-item-inner .result-item-section-1 .hospital-details,
-    .test-page .result-item-inner .result-item-section-1 .hospital-details {
-        padding: 38px 8px 38px 8px;
-    }
+    //
+    //.results-page-desktop .result-item-inner .result-item-section-1 .hospital-details,
+    //.test-page .result-item-inner .result-item-section-1 .hospital-details {
+    //    padding: 38px 8px 38px 8px;
+    //}
 
     .results-page-desktop .result-item-inner .result-item-section-2,
     .test-page .result-item-inner .result-item-section-2 {
@@ -93,7 +93,9 @@
     .results-page-desktop .private-hospital,
     .test-page .nhs-hospital,
     .test-page .private-hospital {
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: auto;
         border-top-left-radius: 0;
         padding: 0 !important;
@@ -127,19 +129,19 @@
         height: 25px;
     }
 
-    .results-page-desktop .result-item .hospital-image .nhs-hospital p:after {
-        border-bottom: solid 13px transparent;
-        border-right: solid 13px transparent;
-        border-left: solid 13px $nhsBlue;
-        border-top: solid 13px $nhsBlue;
+    .results-page-desktop .nhs-hospital p:after {
+        border-bottom: solid 15px transparent;
+        border-right: solid 15px transparent;
+        border-left: solid 15px $nhsBlue;
+        border-top: solid 15px $nhsBlue;
         content: ''
     }
 
     .results-page-desktop .private-hospital p:after {
-        border-bottom: solid 13px transparent;
-        border-right: solid 13px transparent;
-        border-left: solid 13px $privateBlue;
-        border-top: solid 13px $privateBlue;
+        border-bottom: solid 15px transparent;
+        border-right: solid 15px transparent;
+        border-left: solid 15px $privateBlue;
+        border-top: solid 15px $privateBlue;
         content: ''
     }
 
@@ -212,48 +214,7 @@
         width: auto !important;
     }
 
-    .results-page-desktop .nhs-hospital, .results-page-desktop .private-hospital, .test-page .nhs-hospital, .test-page .private-hospital {
-        position: relative;
-        width: auto;
-        border-top-left-radius: 5px;
-        padding: 0 !important;
-    }
 
-    .results-page-desktop .result-item .hospital-image .private-hospital p,
-    .results-page-desktop .result-item .hospital-image .nhs-hospital p {
-        height: 30px;
-        line-height: 30px;
-        font-size: 0.75rem !important;
-        text-transform: uppercase;
-        padding: 0 0.5rem;
-    }
-
-    .results-page-desktop .result-item .hospital-image .private-hospital p:after,
-    .results-page-desktop .result-item .hospital-image .nhs-hospital p:after {
-        content: "";
-        position: absolute;
-        z-index: 5;
-        left: 100%;
-        top: 0;
-        width: 30px;
-        height: 30px;
-    }
-
-    .results-page-desktop .result-item .hospital-image .nhs-hospital p:after {
-        border-bottom: solid 15px transparent;
-        border-right: solid 15px transparent;
-        border-left: solid 15px #0d69f2;
-        border-top: solid 15px #0d69f2;
-        content: ''
-    }
-
-    .results-page-desktop .private-hospital p:after {
-        border-bottom: solid 15px transparent;
-        border-right: solid 15px transparent;
-        border-left: solid 15px $privateBlue;
-        border-top: solid 15px $privateBlue;
-        content: ''
-    }
 
     .results-page-desktop .btn-icon.btn-more-info {
         display: none;
@@ -289,13 +250,13 @@
         position: relative;
     }
 
-    .result-item-section-2__child .d-flex.flex-column {
+    .result-item-section-2__child > * {
         position: relative;
         justify-content: space-between !important;
         align-items: flex-end !important;
     }
 
-    .results-page-desktop .result-item-section-2__child .d-flex.flex-column {
+    .results-page-desktop .result-item-section-2__child > * {
         text-align: right;
         width: 100%;
         color: #757575 !important;
@@ -330,7 +291,7 @@
         max-width: 16px;
     }
 
-    .result-item .btn-enquire {
+    .results-page-desktop .result-item .btn-enquire {
         border-radius: 3px;
         padding: 15px 15px;
         font-size: 0.875rem !important;

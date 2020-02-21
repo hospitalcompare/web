@@ -2,7 +2,7 @@
 
 @section('title', 'How To Use')
 
-@section('description', 'this is the meta description')
+@section('description', 'Discover the three simple steps to having your treatment faster or at better quality hospital locally, regionally or nationally across England.')
 
 @section('keywords', 'this is the meta keywords')
 
@@ -14,27 +14,28 @@
     @include('pages.pagesections.flatbanner')
     <section class="how-section__parent">
         @include('components.howsection', [
-            'hideButton'    => false,
-            'sectionTitle' => 'How does it work?',
-            'howsections' => [
+            'hideButton'        => false,
+            'sectionTitle'      => 'How to Use Hospital Compare',
+            'hideLinks'         => true,
+            'howsections'       => [
             [
                 'iconImg'       => 'search-and-compare',
                 'step'          => 'One',
                 'title'         => 'Search & compare:',
                 'color'         => 'violet',
-                'description'   => '<p>Search from over 800 hospitals in England and find the right hospital for your treatment.</p>'],
+                'description'   => '<p>Search from over 750 hospitals in England and find the right hospital for your treatment.</p>'],
             [
                 'iconImg'       => 'make-enquiry',
                 'step'          => 'Two',
                 'title'         => 'Make enquiry:',
                 'color'         => 'pink',
-                'description'   => '<p>Use Hospital Compare to make an enquiry at one or more hospitals.</p>'],
+                'description'   => '<p>Use Hospital Compare to make an enquiry at one or more hospitals, without obligation.</p>'],
             [
                 'iconImg'       => 'request-a-referral',
                 'step'          => 'Three',
-                'title'         => 'Request a referral:',
+                'title'         => 'Book Appointment:',
                 'color'         => 'blue',
-                'description'   => '<p>Inform your GP of your chosen hospital and request an appointment.</p>'
+                'description'   => '<p>For self-pay or insurance, book your appointment directly. For NHS treatment, make enquiries then inform your GP of your choice to book an appointment (you will need a GP referral).</p>'
             ]
         ]
     ])
@@ -44,13 +45,13 @@
             <div class="row flex-lg-row-reverse">
                 <div class="col col-12 col-md-6 mb-25">
                     <div class="image-wrapper">
-                        <img src="{{ asset('/images/video_placeholder.jpg') }}"
+                        <img src="{{ asset('/images/how-to-use-1.jpg') }}"
                              alt="People around a desk chatting with laptops">
                     </div>
                 </div>
                 <div class="col col-12 col-md-6">
                     <div>
-                        <h2 class=" mb-4">NHS funded in a private hospital</h2>
+                        <h2 class="section-title">NHS funded in a private hospital</h2>
                         <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
                             eveniet ipsa laboriosam
                             distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
@@ -78,13 +79,13 @@
             <div class="row ">
                 <div class="col col-12 col-lg-6 mb-25">
                     <div class="image-wrapper">
-                        <img src="{{ asset('/images/video_placeholder.jpg') }}"
+                        <img src="{{ asset('/images/how-to-use-2.jpg') }}"
                              alt="People around a desk chatting with laptops">
                     </div>
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div>
-                        <h2 class="mb-4">Standard procedure at an NHS Hospital</h2>
+                        <h2 class="section-title">Standard procedure at an NHS Hospital</h2>
                         <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
                             eveniet ipsa laboriosam
                             necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
@@ -112,13 +113,13 @@
             <div class="row flex-lg-row-reverse">
                 <div class="col col-12 col-lg-6 mb-25">
                     <div class="image-wrapper">
-                        <img src="{{ asset('/images/video_placeholder.jpg') }}"
+                        <img src="{{ asset('/images/how-to-use-3.jpg') }}"
                              alt="People around a desk chatting with laptops">
                     </div>
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div>
-                        <h2 class="mb-4">Private healthcare insurance</h2>
+                        <h2 class="section-title">Private healthcare insurance</h2>
                         <p class="mb-4 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
                             eveniet ipsa laboriosam
                             distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
@@ -166,7 +167,7 @@
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div>
-                        <h2 class="mb-4">Self-pay at a private hospital</h2>
+                        <h2 class="section-title">Self-pay at a private hospital</h2>
                         <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
                             eveniet ipsa laboriosam
                             voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate

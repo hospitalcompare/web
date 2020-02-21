@@ -14,6 +14,7 @@ use App\Models\Hospital;
 use App\Models\HospitalWaitingTime;
 use App\Models\Procedure;
 use App\Models\Specialty;
+use App\Models\Survey;
 use App\Models\Trust;
 use App\Services\Location;
 use Request;
@@ -285,16 +286,16 @@ class ApiController {
         }
 
         //Check if the Hospital is Private
-        if(!empty($hospitalIds) && is_array($hospitalIds)) {
-            foreach($hospitalIds as $key => $hospitalId) {
-                if(!empty($hospitalId)) {
-                    $hospital = Hospital::where('id', $hospitalId)->with('hospitalType')->first();
-                    if(empty($hospital) || $hospital->hospitalType->name == 'NHS') {
-                        unset($hospitalIds[$key]);
-                    }
-                }
-            }
-        }
+//        if(!empty($hospitalIds) && is_array($hospitalIds)) {
+//            foreach($hospitalIds as $key => $hospitalId) {
+//                if(!empty($hospitalId)) {
+//                    $hospital = Hospital::where('id', $hospitalId)->with('hospitalType')->first();
+//                    if(empty($hospital) || $hospital->hospitalType->name == 'NHS') {
+//                        unset($hospitalIds[$key]);
+//                    }
+//                }
+//            }
+//        }
 
         //Validate date of birth (OLD)
 //        if(!Validate::isValidDate($dob)) {
@@ -330,41 +331,57 @@ class ApiController {
 
         //We can create the actual Enquiry(s) if it reaches here
         $enquiry = [];
-        foreach($hospitalIds as $hospitalId) {
-            $enquiry[$hospitalId] = new Enquiry();
-            $enquiry[$hospitalId]->specialty_id              = $specialtyId;
-            $enquiry[$hospitalId]->hospital_id               = $hospitalId;
-            $enquiry[$hospitalId]->title                     = $title;
-            $enquiry[$hospitalId]->first_name                = $firstName;
-            $enquiry[$hospitalId]->last_name                 = $lastName;
-            $enquiry[$hospitalId]->email                     = $email;
-            $enquiry[$hospitalId]->phone_number              = $phoneNumber;
-            $enquiry[$hospitalId]->postcode                  = $postcode;
-            $enquiry[$hospitalId]->reason                    = $reason;
-            $enquiry[$hospitalId]->additional_information    = $additionalInformation;
-            $enquiry[$hospitalId]->save();
+        foreach($hospitalIds as $i => $hospitalId) {
+            $enquiry[$i] = new Enquiry();
+            $enquiry[$i]->specialty_id              = $specialtyId;
+            $enquiry[$i]->hospital_id               = $hospitalId;
+            $enquiry[$i]->title                     = $title;
+            $enquiry[$i]->first_name                = $firstName;
+            $enquiry[$i]->last_name                 = $lastName;
+            $enquiry[$i]->email                     = $email;
+            $enquiry[$i]->phone_number              = $phoneNumber;
+            $enquiry[$i]->postcode                  = $postcode;
+            $enquiry[$i]->reason                    = $reason;
+            $enquiry[$i]->additional_information    = $additionalInformation;
+            $enquiry[$i]->save();
 
             //Get the hospital and send the email if it has an email address
             $hospital = Hospital::where('id', $hospitalId)->first();
             $specialty = Specialty::where('id', $specialtyId)->first();
+            $specialtyName = '';
+            //Set the Specialty Name if we have it
+            if(!empty($specialty))
+                $specialtyName = $specialty->name;
 
-            if(!empty($hospital) && !empty($hospital->email)) {
-                try {
-                    $bodyProvider = Email::getProviderBody();
-                    Email::send($bodyProvider,  $hospital->email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
-                } catch(\Exception $e){
-                    \Log::info('Something went wrong sending an email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
+            //TODO: This is for the `live` environment ONLY
+            if(env('APP_ENV') == 'live') {
+                if(!empty($hospital) && !empty($hospital->email)) {
+                    try {
+                        $bodyProvider = Email::getProviderBody($specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $additionalInformation);
+                        Email::send($bodyProvider,  $hospital->email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
+                    } catch(\Exception $e){
+                        \Log::info('Something went wrong sending the Provider email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
+                    }
                 }
             }
-        }
 
-        //Send the email //TODO: Activate it once the tests are working
-        if(!empty($enquiry)) {
-            $bodyUser = Email::getUserBody($hospital->name, $specialty->name, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $reason, $additionalInformation);
-            try {
-                Email::send($bodyUser, $email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
-            } catch(\Exception $e){
-                \Log::info('Something went wrong sending an email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
+            //Send the email //TODO: Activate it once the tests are working
+            if(!empty($enquiry[$i])) {
+                $bodyUser = Email::getUserBody($hospital->name, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $reason, $additionalInformation);
+                $ATBody = Email::getTrunkieBody($hospital->name, $hospital->location_id, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $additionalInformation);
+                //Send the Email to User
+                try {
+                    Email::send($bodyUser, $email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
+                } catch(\Exception $e){
+                    \Log::info('Something went wrong sending the User email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry[$i]).'. Error:'.$e->getMessage());
+                }
+                //Send the Data to AT
+                try {
+                    Email::send($ATBody, 'sechcemailbccabshatdsdnlntets@hospitalcompare.onmicrosoft.com', 'Enquire ID: '.$enquiry[$i]->id, 'datamanager@hospitalcompare.co.uk');
+                } catch(\Exception $e){
+                    \Log::info('Something went wrong sending the email to AT. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry[$i]).'. Error:'.$e->getMessage());
+                }
+
             }
         }
 
@@ -433,6 +450,25 @@ class ApiController {
         }
 
         $this->returnedData['success'] = true;
+        return $this->returnedData;
+    }
+
+    public function createSurvey() {
+        //Get the request and load it as variables
+        $request    = \Request::all();
+        $rating     = Validate::escapeString($request['rating']);
+        $feedback   = !empty($request['feedback']) ? Validate::escapeString($request['feedback']) : null;
+        $this->returnedData['success'] = false;
+        $this->returnedData['data'] = [];
+
+        $survey = new Survey();
+        $survey->rating = $rating;
+        $survey->feedback = $feedback;
+        $survey->save();
+
+        $this->returnedData['success'] = true;
+        $this->returnedData['data'] = $survey;
+
         return $this->returnedData;
     }
 }

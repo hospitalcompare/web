@@ -30,6 +30,7 @@ $brand-primary-4: #18435a; // navy ish blue
 $brand-primary-5: #037098; // lilac
 $brand-primary-6: #de026d; // hot pink
 $brand-primary-7: #0d69f2; // original blue
+$blue: $brand-primary-7;   // to override BS default blue
 
 // Secondary colours
 $brand-secondary-1: #00cfcc; // cyan
@@ -51,12 +52,9 @@ $purple: #9561e2;
 
 $violet: #8e00fe;
 
-$blue: #1b71f3;
-$hanblue: #5e15d1;
 $privateBlue: $brand-primary-4;
 $nhsBlue: $brand-primary-7;
 $pink: $brand-primary-6;
-$white: #ffffff;
 $goldStar: #FAC917;
 
 //Main Template colours
@@ -89,7 +87,7 @@ $body-color: #1b1b1b;
 $btn-border-radius: 5px;
 $btn-transition: $transition;
 $btn-border-width: 0;
-//$btn-focus-box-shadow: none;
+$btn-block-spacing-y: 0;
 
 // Popovers
 //$popover-border-width: 0;

@@ -1,11 +1,20 @@
-<{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'a' }} id="{{ empty($id) ? '' : $id }}"
+<{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'a' }}
+@if(!empty($id))
+    id="{{ $id }}"
+@endif
 style="{{ $style ?? '' }}"
 class="{{$classTitle}}"
-target="{{ !empty($target) && $target == 'blank' ? '_blank' : '' }}"
-data-target="{!! $dataTarget ?? '' !!}"
+@if(!empty($target))
+    target="{{ $target }}"
+@endif
+@if(!empty($dataTarget))
+    data-target="{{ $dataTarget }}"
+@endif
 href="{{ empty($hrefValue) ? 'javascript:void(0);' : $hrefValue }}"
 role="button"
-data-id="{{ empty($dataId) ? '' : $dataId }}"
+@if(!empty($dataId))
+    data-id="{{ $dataId }}"
+@endif
 @if(!empty(!empty($disabled) && ($disabled)))
     disabled
 @endif
@@ -13,7 +22,9 @@ data-id="{{ empty($dataId) ? '' : $dataId }}"
     data-hospital-type="{{ $hospitalType }}"
 @endif>
 <div>{!! $buttonText !!}</div>
-@if(!empty($svg))
-    @svg($svg, 'svg-icon')
+@if(!empty($svg) && empty($svgClass))
+    @svg($svg)
+@elseif(!empty($svg) && !empty($svgClass))
+    @svg($svg, $svgClass)
 @endif
 </{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'a' }}>

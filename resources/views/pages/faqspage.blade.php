@@ -2,7 +2,7 @@
 
 @section('title', 'Frequently Asked Questions')
 
-@section('description', 'this is the meta description')
+@section('description', 'Find answers to some of our most frequently asked questions, from topics such as your rights to how to compare hospitals.')
 
 @section('keywords', 'this is the meta keywords')
 

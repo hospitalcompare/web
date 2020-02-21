@@ -2,7 +2,7 @@
 
 @section('title', 'Your rights')
 
-@section('description', 'this is the meta description')
+@section('description', 'In England you have a legal right to make choices about your healthcare that could mean you or loved ones are seen faster by healthcare professionals.')
 
 @section('keywords', 'this is the meta keywords')
 
@@ -16,7 +16,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    {{--                    <h1>Patient Choice</h1>--}}
                     <h1 class="font-36  mb-3 text-center">Your <span class="col-brand-primary-1">Rights</span></h1>
                     <p class="text-center font-26 p-secondary mb-5 col-grey">
                         The Health and Social Care Act 2013 (the “<span>Act</span>”) introduced a number of
@@ -27,12 +26,12 @@
                     <div class="p-30 bg-grey row">
                         <div class="card shadow mb-30 border-0 col-12 p-30">
                             <div class="row">
-                                <div class="col-4 col-lg-2">
-                                    <div class="card-icon-wrapper px-3 px-xl-5 h-100 d-flex align-items-center">
+                                <div class="col-12 col-sm-2 col-lg-2">
+                                    <div class="card-icon-wrapper px-5 px-sm-0 px-xl-5 h-100 d-flex align-items-center">
                                         <img class="w-100" src="/images/icons/faq-make-choice.svg" alt="Icon representing choice">
                                     </div>
                                 </div>
-                                <div class="card-body py-0 col-8 col-lg-10">
+                                <div class="card-body py-0 col-12 col-sm-10 col-lg-10">
                                     <p class="font-18 SofiaPro-Medium">Choice</p>
                                     <p class="mb-0 col-grey p-secondary">Putting Patients and the Public first and increasing the
                                         involvement of Patients in decisions affecting them and, importantly giving patients Choice
@@ -42,12 +41,12 @@
                         </div>
                         <div class="card shadow border-0 col-12 p-30">
                             <div class="row">
-                                <div class="col-4 col-lg-2">
-                                    <div class="card-icon-wrapper px-3 px-xl-5 h-100 d-flex align-items-center">
+                                <div class="col-12 col-sm-2 col-lg-2col-12 col-sm-2 col-lg-2">
+                                    <div class="card-icon-wrapper px-5 px-sm-0 px-xl-5 h-100 d-flex align-items-center">
                                         <img class="w-100" src="/images/icons/nhs-tariff.svg" alt="Icon representing weighing scales">
                                     </div>
                                 </div>
-                                <div class="card-body py-0 col-8 col-lg-10">
+                                <div class="card-body py-0 col-12 col-sm-10 col-lg-10">
                                     <p class="font-18 SofiaPro-Medium">NHS Tariff</p>
                                     <p class="mb-0 col-grey p-secondary">Introducing a national standard price for health care
                                         procedures known as the “NHS Tariff”.This was aimed at creating a level playing field for
@@ -61,10 +60,10 @@
             </div>
         </div>
     </section>
-    <section class="your-rights-act">
+    <section class="your-rights-act overflow-hidden">
         <div class="container">
-            <div class="row mb-4">
-                <div class="col-12 col-md-6">
+            <div class="row mb-4 position-relative">
+                <div class="col-12 col-lg-6">
                     <h2 class="font-28 ">The Act</h2>
                     <p class="col-grey p-secondary">The Act also introduced a number of other important policies and created bodies and structures to
                         authorise monitor and regulate all primary care providers (<span>GPs</span>) and Secondary
@@ -95,6 +94,14 @@
                     </p>
                     <p class="col-grey p-secondary mb-0">These rights are reflected in the NHS Constitution.
                     </p>
+                </div>
+                <div class="col-12 col-lg-6 your-rights-hero-cont">
+                    <div class="your-rights-img-top"></div>
+                    <div class="your-rights-img-bottom"></div>
+                    <div class="your-rights-img-back"></div>
+                    <img class="your-rights-pattern-top-left" src="images/icons/about-top-left.svg" alt="dots">
+                    <img class="your-rights-pattern-right" src="images/icons/about-right.svg" alt="dots">
+                    <img class="your-rights-pattern-bottom" src="images/icons/about-bottom.svg" alt="dots">
                 </div>
             </div>
         </div>

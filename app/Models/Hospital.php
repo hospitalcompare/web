@@ -19,7 +19,7 @@ class Hospital extends Model
      * @var array
      */
     protected $fillable = [
-        'location_id', 'organisation_id','hospital_type_id', 'address_id', 'trust_id', 'location_specialism', 'ods_code', 'name', 'display_name', 'tel_number', 'url', 'email','special_offers', 'status'
+        'location_id', 'organisation_id','hospital_type_id', 'address_id', 'trust_id', 'location_specialism', 'ods_code', 'name', 'display_name', 'url', 'nhs_private_url', 'email', 'private_self_pay', 'phone_number', 'phone_number_2', 'phone_number_3', 'special_offers', 'status'
     ];
 
     /**
@@ -37,9 +37,13 @@ class Hospital extends Model
         'ods_code'              => 'string',
         'name'                  => 'string',
         'display_name'          => 'string',
-        'tel_number'            => 'string',
+        'phone_number'          => 'string',
+        'phone_number_2'        => 'string',
+        'phone_number_3'        => 'string',
         'url'                   => 'string',
+        'nhs_private_url'       => 'string',
         'email'                 => 'string',
+        'private_self_pay'      => 'boolean',
 //        'report_url'        => 'string',
         'special_offers'        => 'boolean',
         'status'                => 'string'
@@ -278,7 +282,7 @@ class Hospital extends Model
 //        $doctorSort = '';
         if(empty($sortBy)) {
             $hospitals = $hospitals->leftJoin('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
-            $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 1 when hospital_ratings.latest_rating = "Good" then 2 when hospital_ratings.latest_rating = "Inadequate" then 3 when hospital_ratings.latest_rating = "Requires improvement" then 4 when hospital_ratings.latest_rating = "Not Yet Rated" then 5 end');
+            $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 1 when hospital_ratings.latest_rating = "Good" then 2 when hospital_ratings.latest_rating = "Requires improvement" then 3 when hospital_ratings.latest_rating = "Inadequate" then 4 when hospital_ratings.latest_rating = "Not Yet Rated" then 5 end');
             if(empty($postcode) || empty($latitude) || empty($longitude)) {
                 $hospitals = $hospitals->leftJoin('hospital_waiting_time', 'hospitals.id', '=', 'hospital_waiting_time.hospital_id');
                 $hospitals = $hospitals->where('hospital_waiting_time.specialty_id', $specialtyId);
@@ -327,9 +331,9 @@ class Hospital extends Model
             //CQC Rating Sorting
             $hospitals = $hospitals->leftJoin('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
             if($sortBy == 9) {
-                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 5 when hospital_ratings.latest_rating = "Good" then 4 when hospital_ratings.latest_rating = "Inadequate" then 3 when hospital_ratings.latest_rating = "Requires improvement" then 2 when hospital_ratings.latest_rating = "Not Yet Rated" then 1 end');
+                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 5 when hospital_ratings.latest_rating = "Good" then 4 when hospital_ratings.latest_rating = "Requires improvement" then 3 when hospital_ratings.latest_rating = "Inadequate" then 2 when hospital_ratings.latest_rating = "Not Yet Rated" then 1 end');
             } else {
-                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 1 when hospital_ratings.latest_rating = "Good" then 2 when hospital_ratings.latest_rating = "Inadequate" then 3 when hospital_ratings.latest_rating = "Requires improvement" then 4 when hospital_ratings.latest_rating = "Not Yet Rated" then 5 end');
+                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 1 when hospital_ratings.latest_rating = "Good" then 2 when hospital_ratings.latest_rating = "Requires improvement" then 3 when hospital_ratings.latest_rating = "Inadequate" then 4 when hospital_ratings.latest_rating = "Not Yet Rated" then 5 end');
             }
             //If we don't have a postcode, use Waiting Time as the second Sorting order
             if(empty($postcode) || empty($latitude) || empty($longitude)) {
@@ -372,7 +376,7 @@ class Hospital extends Model
 
             //Care Quality Rating for some of the Sort by conditions
             if(in_array($sortBy, [3, 4, 5, 6, 7, 8, 11, 12]))
-                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 1 when hospital_ratings.latest_rating = "Good" then 2 when hospital_ratings.latest_rating = "Inadequate" then 3 when hospital_ratings.latest_rating = "Requires improvement" then 4 when hospital_ratings.latest_rating = "Not Yet Rated" then 5 end');
+                $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 1 when hospital_ratings.latest_rating = "Good" then 2 when hospital_ratings.latest_rating = "Requires improvement" then 3 when hospital_ratings.latest_rating = "Inadequate" then 4 when hospital_ratings.latest_rating = "Not Yet Rated" then 5 end');
         }
 
         $hospitals = $hospitals->with(['waitingTime' => function ($query) use($specialtyId) {
@@ -605,7 +609,7 @@ class Hospital extends Model
 
         $specialOffers = $specialOffers->leftJoin('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
         $specialOffers = $specialOffers->whereIn('latest_rating', ['Outstanding', 'Good']);
-        $specialOffers = $specialOffers->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 1 when hospital_ratings.latest_rating = "Good" then 2 when hospital_ratings.latest_rating = "Inadequate" then 3 when hospital_ratings.latest_rating = "Requires improvement" then 4 end');
+        $specialOffers = $specialOffers->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 1 when hospital_ratings.latest_rating = "Good" then 2 when hospital_ratings.latest_rating = "Requires improvement" then 3 when hospital_ratings.latest_rating = "Inadequate" then 4 end');
 
         if(!empty($latitude) && !empty($longitude)) {
             $specialOffers = $specialOffers->orderBy('radius', 'ASC');

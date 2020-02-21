@@ -25,10 +25,10 @@
                     </nav>
                     <nav>
                         <ul class="footer-upper__secondary-menu mb-0">
-                            <li class="d-inline-block"><a href="/terms-and-conditions">T&amp;Cs</a></li>
-                            {{--                    <li><a href="/accessibility">Accessibility</a></li>--}}
+                            <li class="d-inline-block"><a href="/terms-of-use">Terms of Use</a></li>
                             <li class="d-inline-block"><a href="/privacy-policy">Privacy Policy</a></li>
                             <li class="d-inline-block"><a href="/cookie-policy">Cookie Policy</a></li>
+                            <li class="d-inline-block"><a href="/attributions">Attributions</a></li>
                         </ul>
                     </nav>
                 </div>

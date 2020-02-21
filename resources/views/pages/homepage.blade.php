@@ -2,7 +2,7 @@
 
 @section('title', 'Homepage')
 
-@section('description', 'this is the meta description')
+@section('description', 'Search Hospital Compare and find the shortest waiting times and highest quality hospitals in England for your treatment now.')
 
 @section('keywords', 'this is the meta keywords')
 
@@ -16,27 +16,28 @@
 
     <section class="how-section__parent">
         @include('components.howsection', [
-            'hideButton'    => false,
-            'sectionTitle' => 'How does it work?',
-            'howsections' => [
+            'section'           => true,
+            'hideButton'        => false,
+            'sectionTitle'      => 'How to Use Hospital Compare',
+            'howsections'       => [
             [
                 'iconImg'       => 'search-and-compare',
                 'step'          => 'One',
                 'title'         => 'Search & compare:',
                 'color'         => 'violet',
-                'description'   => '<p>Search from over 800 hospitals in England and find the right hospital for your treatment.</p>'],
+                'description'   => '<p>Search from over 750 hospitals in England and find the right hospital for your treatment.</p>'],
             [
                 'iconImg'       => 'make-enquiry',
                 'step'          => 'Two',
                 'title'         => 'Make enquiry:',
                 'color'         => 'pink',
-                'description'   => '<p>Use Hospital Compare to make an enquiry at one or more hospitals.</p>'],
+                'description'   => '<p>Use Hospital Compare to make an enquiry at one or more hospitals, without obligation.</p>'],
             [
                 'iconImg'       => 'request-a-referral',
                 'step'          => 'Three',
-                'title'         => 'Request a referral:',
+                'title'         => 'Book Appointment:',
                 'color'         => 'blue',
-                'description'   => '<p>Inform your GP of your chosen hospital and request an appointment.</p>'
+                'description'   => '<p>For self-pay or insurance, book your appointment directly. For NHS treatment, make enquiries then inform your GP of your choice to book an appointment (you will need a GP referral).</p>'
             ]
         ]
     ])
@@ -51,11 +52,11 @@
                         <p class="p-intro">Hospital Compare helps you make the right choice when looking for the best hospital for your treatment.
                         </p>
                         <p class="col-grey">Many people in England aren’t aware they have a choice as to where to have their NHS-funded treatment. This choice includes both NHS and private hospitals. We’re here to help you understand your rights and make the best decision.</p>
-                        <p class="col-grey">Whether you’re searching for the shortest waiting times or a hospital with the highest quality ratings, Hospital Compare provides free, unbiased, accurate and up-to-date information on over 800 NHS and private hospitals across England.</p>
+                        <p class="col-grey">Whether you’re searching for the shortest waiting times or a hospital with the highest quality ratings, Hospital Compare provides free, unbiased, accurate and up-to-date information on over 750 NHS and private hospitals across England.</p>
                     </div>
                     <div class="why-use-video col col-12 col-md-6">
                         <div class="video-wrapper">
-                            <video muted class="content" poster="{{ url('images/video_placeholder.jpg') }}">
+                            <video muted class="content" poster="{{ url('images/home-1.jpg') }}">
                                 <source src="{{ asset('video/For_Wes.mp4') }}" type="video/mp4">
                                 <source src="movie.ogg" type="video/ogg">
                                 Your browser does not support the video tag.

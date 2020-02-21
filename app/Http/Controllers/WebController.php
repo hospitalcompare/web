@@ -348,4 +348,9 @@ class WebController extends BaseController
             return view('pages.workInProgress', $this->returnedData);
         return view('pages.blogitem', $this->returnedData);
     }
+
+    // Attributions page
+    public function attributionsPage() {
+        return view('pages.attributionspage');
+    }
 }
