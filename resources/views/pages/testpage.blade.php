@@ -11,7 +11,11 @@
 @section('body-class', 'test-page')
 
 @section('content')
-
+        <section>
+            <div class="container">
+                @include('components.introblog')
+            </div>
+        </section>
         <section>
             @include('components.emails.emailprovider')
         </section>

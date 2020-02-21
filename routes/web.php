@@ -18,34 +18,36 @@ if(env('APP_ENV') == 'live') {
     })->where('anyExceptRoot', '[^/]*');
 }
 
+if(env('APP_ENV') != 'live') {
+    Route::get('/test-page','WebController@testPage');
+    Route::get('/ajax-form','WebController@ajaxForm');
+}
+
+Route::get('/results-page','WebController@resultsPage');
+
+Route::get('/about-us','WebController@aboutUs');
+
+Route::get('/your-rights','WebController@yourRightsPage');
+
 Route::get('/blogs','WebController@blogs');
+
+Route::get('/how-to-use','WebController@howToUsePage');
+
+Route::get('/faqs','WebController@faqsPage');
 
 Route::get('/blogs/category/{categoryId}','WebController@blogCategory');
 
 Route::get('/blog/{id}','WebController@blogItem');
 
-Route::get('/results-page','WebController@resultsPage');
-
-Route::get('/test-page','WebController@testPage');
-
-Route::get('/cookie-policy','WebController@cookiePage');
+Route::get('/terms-of-use','WebController@termsAndConditionsPage');
 
 Route::get('/privacy-policy','WebController@privacyPage');
 
-Route::get('/faqs','WebController@faqsPage');
-
-Route::get('/terms-of-use','WebController@termsAndConditionsPage');
+Route::get('/cookie-policy','WebController@cookiePage');
 
 Route::get('/attributions','WebController@attributionsPage');
 
-Route::get('/your-rights','WebController@yourRightsPage');
-
-Route::get('/how-to-use','WebController@howToUsePage');
-
-Route::get('/about-us','WebController@aboutUs');
-
-Route::get('/ajax-form','WebController@ajaxForm');
-
+// Link to download PDFs or other docs
 Route::get('/downloads/{file}','WebController@download');
 
 //Route::get('/{slug}', 'WebController@contentPage'); //This replaces all the individual routes
