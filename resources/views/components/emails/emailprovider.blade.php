@@ -61,9 +61,6 @@
             <td colspan="3"><img width="600" src="https://www.hospitalcompare.co.uk/images/hc-email-banner.jpg"
                                  alt="Man on sofa browsing hospital compare website"></td>
         </tr>
-        {{--        <tr>--}}
-        {{--            <td height="25"></td>--}}
-        {{--        </tr>--}}
         <tr>
             <td></td>
         </tr>
