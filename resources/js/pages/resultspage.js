@@ -143,18 +143,23 @@ $(document).on("click", ".results-page .change-url", function (event) {
 function toggleShowFiltersText() {
     $body.hasClass('filters-open') ? $showFiltersDiv.text('Show Filters') : $showFiltersDiv.text('Hide Filters');
 }
+
 // Toggle filter section
 var $resultspageform = $('#resultspage_form');
 var $filters = $('#resultspage_form .filter-parent');
 var $showFilters = $('#show_filters');
 var $showFiltersDiv = $('#show_filters div');
+
+// Click handler for 'Show filters' button
 $showFilters.on('click', function () {
+    // If on the desktop view
     if( $body.hasClass('results-page-desktop') ){
         $filters.slideToggle();
         // Change the text of show filters button
         toggleShowFiltersText();
     }
     $body.toggleClass('filters-open');
+    // Toggle the open class on the button
     $(this).toggleClass('open');
     // // Refresh the range slider as it is initially hidden
     $("#radiusProx").slider('relayout');
@@ -171,14 +176,11 @@ $(document).on('click', function (e) {
     }
 });
 
+// Hide the filters in the mobile results page view
 $hideFilters = $('#close_mobile_filters');
 $hideFilters.on('click', function(){
    $('body').removeClass('filters-open');
 });
-//
-// $('*').on('focus', function(e){
-//     console.log(e.target);
-// });
 
 // Open the filters form when tabbing off the 'Filter resutls' button
 $showFilters.bind('keydown', function(e) {

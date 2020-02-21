@@ -139,7 +139,7 @@
             </div>
         </div>
     </div>
-    <div class="filter-parent {{ !empty($displayBlock) && ($displayBlock) || !empty($hc_errors) ? 'd-block' : '' }}">
+    <div class="filter-parent {{ !empty($displayBlock) && ($displayBlock) ? 'd-block' : '' }}">
         <div class="filter container">
             <div class="postcode-radius row">
                 <div class="postcode-radius-child procedures col-12 col-md-3 d-flex align-items-center">
@@ -339,7 +339,7 @@
                                      '])
                     >@svg('icon-more-info')</a>
                 </div>
-                <div class="filter-section-child col-6 col-md-4 col-lg-2 d-flex flex-column align-items-end">
+                <div class="filter-section-child col-6 col-md-4 col-lg-2 d-flex flex-column justify-content-end align-items-end">
                     @include('components.basic.button', [
                         'id'            =>  'clear_filters',
                         'classTitle'    =>  'col-grey pb-2 border-0',
