@@ -106,7 +106,7 @@ class CreateBlogs extends Migration
                             <h3>Our analysis</h3>
                             <p>Our analysis shows that there is often significant variation in both waiting times and care quality in England at a
                                 national, regional and county level. Patients in some areas of England are waiting many months longer for their
-                                                                                                                                          hospital treatment that others elsewhere are receiving in weeks. This is relevant because you have the legal right
+                                hospital treatment that others elsewhere are receiving in weeks. This is relevant because you have the legal right
                                 to choose where you are referred for your NHS treatment (there are some exceptions, which are outlined below *).
                                 Many people are not aware of this right.</p>
                             <p>Furthermore, many people are unaware of their right to start consultant-led treatment within 18 weeks of referral, or
