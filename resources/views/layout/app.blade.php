@@ -47,6 +47,14 @@
 {{--            //var customPath = "/themes/fonts";--}}
 {{--        </script>--}}
         <script type="text/javascript" src="{{ asset('fonts/MyFontsWebfontsKit.js') }}"></script>
+        <script type="text/javascript">
+            // var onloadCallback = function() {
+            //     console.log("grecaptcha is ready!");
+            // };
+
+        </script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
         @if(env('APP_ENV') === 'dev')
             <!-- Hotjar Tracking Code for http://hcstaging.co.uk/ -->

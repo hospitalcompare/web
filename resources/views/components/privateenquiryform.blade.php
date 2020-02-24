@@ -6,6 +6,12 @@
         response within three to four days.
     </p>
     <div class="form-wrap d-flex flex-wrap">
+        <script>
+            function recaptchaCallback() {
+                $('#hiddenRecaptcha').valid();
+                console.log('Valid')
+            }
+        </script>
         <form id="enquiry_form" class=" w-100">
             <input type="hidden" name="hospital_id" value="1">
             <span class="hidden-with-pos">
@@ -86,8 +92,9 @@
                         'suboptionClass'        => 'subprocedures',
                         'name'                  =>'procedure_id',
                         'selectPicker'          => 'true',
-                        'labelClass'          => 'labelClass',
-                        'required'              => true])
+                        'labelClass'            => 'labelClass',
+                        'required'              => false
+                        ])
                 </div>
             </div>
             <div class="form-group row align-items-end">
@@ -107,12 +114,26 @@
                             Use</a>&nbsp;before submitting the
                         form.</label>
                 </div>
-                <div class="col-12 btn-area text-right">
-                    @include('components.basic.button', [
-                        'buttonText'        => 'Make an enquiry',
-                        'id'                => 'btn_submit',
-                        'classTitle'        => 'btn btn-icon btn-brand-secondary-3 btn-squared btn-enquire-private-hospital pl-5',
-                        'svg'               => 'circle-check'])
+                <div class="col-12">
+                    <div class="g-recaptcha" data-sitekey="6LdSxNsUAAAAABneqKEBr9c_yD5Org-9MHY3b5Fb" data-callback="recaptchaCallback"></div>
+                    {{--                    <span class="hidden-with-pos">--}}
+                    {{--                        <label for="hiddenRecaptcha">Leave empty</label>--}}
+                    {{--                    </span>--}}
+                    <input
+                        type="hidden"
+                        class="hiddenRecaptcha"
+                        required
+                        name="hiddenRecaptcha"
+                        id="hiddenRecaptcha">
+                </div>
+                <div class="col-12">
+                    <div class="btn-wrapper text-right">
+                        @include('components.basic.button', [
+                            'buttonText'        => 'Make an enquiry',
+                            'id'                => 'btn_submit',
+                            'classTitle'        => 'btn btn-icon btn-brand-secondary-3 btn-squared btn-enquire-private-hospital pl-5',
+                            'svg'               => 'circle-check'])
+                    </div>
                 </div>
             </div>
         </form>

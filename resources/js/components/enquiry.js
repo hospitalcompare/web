@@ -62,12 +62,18 @@ if ($form.length > 0) {
 
     // jquery validate options
     $form.validate({
+        ignore: ".ignore",
         rules: {
             hospital_id: {
                 required: true
             },
             spam_test: {
                 maxlength: 0
+            },
+            hiddenRecaptcha: {
+                required: function () {
+                    return grecaptcha.getResponse() === '';
+                }
             },
             title: "required",
             firstName: {
@@ -108,7 +114,8 @@ if ($form.length > 0) {
             phone_number: "Please enter your contact number",
             postcode: "Please enter a valid UK postcode",
             procedure_id: "Please select the procedure required",
-            gdpr: "Please confirm you agree to our terms of use"
+            gdpr: "Please confirm you agree to our terms of use",
+            hiddenRecaptcha: "Please check the captcha checkbox"
         },
         errorPlacement: function (error, element) {
             //console.dir(error, element);
@@ -121,11 +128,12 @@ if ($form.length > 0) {
 
             // Add `form-error-message` class to the error element
             error.addClass("form-error-message");
-
+            // console.log(element.parent());
             // Insert it inside the span that has `mb-0` class
             error.appendTo(customError.find("span.mb-0"));
 
             // Insert your custom error
+            // element.closest().prepend(customError);
             customError.insertBefore(element).slideDown();
         },
         // Submit handler - what happens when form submitted
@@ -149,14 +157,11 @@ if ($form.length > 0) {
                     'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
                 },
                 success: function (data) {
-                    // alert('Thanks, your enquiry has been submitted');
                     $('#hc_modal_enquire_private').modal('hide');
                     showAlert('Thank you ' + data.data[0].first_name + ', your enquiry has been successfully sent!', true, true);
                 },
                 error: function (e) {
                     var errorMsg = JSON.parse(e.responseText).errors.error;
-                    // console.log(JSON.parse(e.responseText).errors);
-                    // console.log("ERROR : ", errorMsg, "status text: ", e.statusText);
                     showAlert(errorMsg, false, true);
                 }
             });
@@ -176,3 +181,4 @@ $('#btn_submit').on('click', function (e) {
 $("[data-hide]").on("click", function () {
     $(this).closest("." + $(this).attr("data-hide")).slideUp();
 });
+
