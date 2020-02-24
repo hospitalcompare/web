@@ -602,24 +602,22 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 <li>External Third Parties as set out in the <a href="#glossary"
                                                                                 class="btn-link">glossary</a>, including
                                     specifically any or all of the hospitals or other service providers mentioned on our
-                                    website to whom you
-                                    make an enquiry by completing an enquiry form and clicking “Make an Enquiry” on that
-                                    form or a link to connect with them.
+                                    website to whom you make an enquiry by completing an enquiry from and clicking “Make
+                                    an Enquiry” on that form or a link to connect with them.
                                 </li>
-                                <li>Third parties to whom we may choose to sell, transfer or merge parts of our
-                                    business or our assets. Alternatively, we may seek to acquire other
-                                    businesses or merge with them. If a change happens to our business, then the
-                                    new owners may use your personal data in the same way as set out in this
-                                    privacy policy.
+                                <li>Third parties to whom we may choose to sell, transfer or merge parts of our business
+                                    or our assets. Alternatively, we may seek to acquire other businesses or merge with
+                                    them. If a change happens to our business, then the new owners may use your personal
+                                    data in the same way as set out in this privacy policy.
                                 </li>
                             </ul>
-                            <p>We require all third parties with whom we contract to respect the security of
-                                your personal data and to treat it in accordance with the law. If you make an
-                                enquiry or connect with a service provider, such as a private hospital or
-                                broker, through our website, remember we do not control their websites and are
-                                not responsible for their privacy statements. When you leave our website, we
-                                encourage you to read the privacy policy of every website you visit to ensure
-                                you understand how they propose to use your data.
+                            <p>We require all third parties with whom we contract to respect the security of your
+                                personal data and to treat it in accordance with the law. If you make an enquiry or
+                                connect with a service provider, such as a private hospital or broker, through our
+                                website, remember we do not control their websites or actions and are not responsible
+                                for their actions or privacy statements. When you leave our website, we encourage you to
+                                read the privacy policy of every website you visit to ensure you understand how they
+                                propose to use your data
                             </p>
                         </div>
                     </div>
@@ -638,27 +636,24 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                          data-parent="#privacy_accordion">
                         <div class="card-body">
                             <p>We share your personal data with companies who carry our webhosting services for us. For
-                                example, <a target="_blank" class="btn-link"
-                                            href="https://www.digitalocean.com/legal/privacy-policy/">DigitalOcean</a>.
-                                This
-                                will
-                                involve transferring your data outside the European Economic Area
-                                <strong>(EEA)</strong>.
+                                example, Digital Ocean (<a target="_blank" class="btn-link"
+                                                           href="https://www.digitalocean.com">https://www.digitalocean.com</a>).
+                                This will involve transferring your data outside the European Economic Area <strong>(EEA)</strong>.
                             </p>
-                            <p>Whenever we transfer your personal data out of the EEA, we ensure a similar
-                                degree of protection is afforded to it by ensuring at least one of the following
-                                safeguards is implemented:
+                            <p>Whenever we transfer your personal data out of the EEA, we ensure a similar degree of
+                                protection is afforded to it by ensuring at least one of the following safeguards is
+                                implemented:
                             </p>
                             <ul class="blue-dot">
-                                <li>We will only transfer your personal data to countries that have been deemed
-                                    to provide an adequate level of protection for personal data by the European
-                                    Commission. For further details, see European Commission: Adequacy of the
-                                    protection of personal data in non-EU countries.
+                                <li>We will only transfer your personal data to countries that have been deemed to
+                                    provide an adequate level of protection for personal data by the European
+                                    Commission. For further details, see European Commission: Adequacy of the protection
+                                    of personal data in non-EU countries.
                                 </li>
-                                <li>Where we use certain service providers, we may use specific contracts
-                                    approved by the European Commission which give personal data the same
-                                    protection it has in Europe. For further details, see European Commission:
-                                    Model contracts for the transfer of personal data to third countries.
+                                <li>Where we use certain service providers, we may use specific contracts approved by
+                                    the European Commission which give personal data the same protection it has in
+                                    Europe. For further details, see European Commission: Model contracts for the
+                                    transfer of personal data to third countries.
                                 </li>
                                 <li>Where we use providers based in the US, we may transfer data to them if they
                                     are part of the Privacy Shield which requires them to provide similar
@@ -666,6 +661,14 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                     details, see European Commission: EU-US Privacy Shield. Please contact us if
                                     you want further information on the specific mechanism used by us when
                                     transferring your personal data out of the EEA.
+                                </li>
+                                <li>Where we use providers based in the US, we may transfer data to them if they are
+                                    part of the Privacy Shield which requires them to provide similar protection to
+                                    personal data shared between Europe and the US. For further details, see European
+                                    Commission: EU-US Privacy Shield.
+                                </li>
+                                <li>Please contact us if you want further information on the specific mechanism used by
+                                    us when transferring your personal data out of the EEA.
                                 </li>
                             </ul>
                         </div>
