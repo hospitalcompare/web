@@ -298,7 +298,9 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                             </p>
                             <h3>Purposes for which we will use your personal data
                             </h3>
-                            <p>We have set out below, in a table format, a description of all the ways we plan to use your personal data, and which of the legal bases we rely on to do so. We have also identified what our legitimate interests are where appropriate.
+                            <p>We have set out below, in a table format, a description of all the ways we plan to use
+                                your personal data, and which of the legal bases we rely on to do so. We have also
+                                identified what our legitimate interests are where appropriate.
                             </p>
                             <p>Note that we may process your personal data for more than one lawful ground
                                 depending on the specific purpose for which we are using your data. Please
@@ -306,7 +308,10 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 to process your personal data where more than one ground has been set out in the
                                 table below.
                             </p>
-                            <p>Note that we may process your personal data for more than one lawful ground depending on the specific purpose for which we are using your data. Please contact us if you need details about the specific legal ground we are relying on to process your personal data where more than one ground has been set out in the table below.
+                            <p>Note that we may process your personal data for more than one lawful ground depending on
+                                the specific purpose for which we are using your data. Please contact us if you need
+                                details about the specific legal ground we are relying on to process your personal data
+                                where more than one ground has been set out in the table below.
                             </p>
                             <div class="table-responsive">
                                 <table class="table">
@@ -356,11 +361,10 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                                     and transaction records updated and to study and record how
                                                     customers use our services)
                                                 </li>
-                                                <li>Consent, you consent to our making an enquiry for you and
-                                                    keeping a record of that enquiry by clicking the “Make Enquiry” form
-                                                    on our website, in order for us to pass on your enquiry to your
-                                                    chosen hospital or service provider and to keep track of your
-                                                    enquiry
+                                                <li>Consent, you consent to our making an enquiry for you and keeping a
+                                                    record of that enquiry by clicking the “Make Enquiry” form on our
+                                                    website, in order for us to pass on your enquiry to your chosen
+                                                    hospital or service provider and to keep track of your enquiry
                                                 </li>
                                             </ol>
                                         </td>
@@ -489,9 +493,8 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                                     our services, to keep our website updated and relevant, to develop
                                                     our business and to inform our marketing strategy)
                                                 </li>
-                                                <li>Necessary for our legitimate interests (to define types of users of
-                                                    our services, to keep our website updated and relevant, to develop
-                                                    our business and to inform our marketing strategy)
+                                                <li>
+                                                    Consent, to the extent required with regard to health data
                                                 </li>
                                             </ol>
 
@@ -513,8 +516,13 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                             </ol>
                                         </td>
                                         <td>
-                                            Necessary for our legitimate interests (to develop our
-                                            products/services and grow our business)
+                                            <ol class="alpha">
+                                                <li>Necessary for our legitimate interests (to develop our
+                                                    products/services and grow our business)
+                                                </li>
+                                                <li>Consent, to the extent required with regard to health data</li>
+                                            </ol>
+
                                         </td>
                                     </tr>
                                     </tbody>
@@ -525,12 +533,11 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 particularly around marketing and advertising. We have established the following
                                 personal data control mechanisms:
                             </p>
-                            <h3>Promotional offers from us
-                            </h3>
-                            <p>We may use your Identity, Contact, Technical, Usage and Profile Data to form a
-                                view on what we think you may want or need, or what may be of interest to you.
-                                This is how we decide which products, services and offers may be relevant for
-                                you (we call this marketing).
+                            <h3>Promotional offers from us</h3>
+                            <p>We may use your Identity, Contact, Technical, Usage and Profile Data to form a view on
+                                what we think you may want or need, or what may be of interest to you. This is how we
+                                decide which products, services and offers may be relevant for you (we call this
+                                marketing).
                             </p>
                             <p>You will receive marketing communications from us if you have requested
                                 information from us or purchased goods or services from us and you have opted
@@ -541,36 +548,32 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 any third party for marketing purposes.
                             </p>
                             <h3>Opting out</h3>
-                            <p>You can ask us or third parties to stop sending you marketing messages at any
-                                time by following the opt-out links on any marketing message sent to you or by
-                                contacting us at any time.
-                            </p>
-                            <p>Where you opt out of receiving these marketing messages, this will not apply to
-                                personal data provided to us as a result of a product/service purchase, enquiry
+                            <p>You can ask us or third parties to stop sending you marketing messages at any time by
+                                following the opt-out links on any marketing message sent to you or by contacting us at
+                                any time. Where you opt out of receiving these marketing messages, this will not apply
+                                to personal data provided to us as a result of a product/service purchase, enquiries
                                 made to service providers from our website, product/service experience or other
-                                transactions.
-                            </p>
+                                transactions.</p>
                             <h3>Cookies</h3>
-                            <p>You can set your browser to refuse all or some browser cookies, or to alert you
-                                when websites set or access cookies. If you disable or refuse cookies, please
-                                note that some parts of this website may become inaccessible or not function
-                                properly. For more information about the cookies we use, please see our <a
+                            <p>You can set your browser to refuse all or some browser cookies, or to alert you when
+                                websites set or access cookies. If you disable or refuse cookies, please note that some
+                                parts of this website may become inaccessible or not function properly. For more
+                                information about the cookies we use, please see <a
                                     href="/cookie-policy"
                                     class="btn-link">cookie policy</a>.
                             </p>
                             <h3>Change of purpose</h3>
-                            <p>We will only use your personal data for the purposes for which we collected it,
-                                unless we reasonably consider that we need to use it for another reason and that
-                                reason is compatible with the original purpose. If you wish to get an
-                                explanation as to how the processing for the new purpose is compatible with the
-                                original purpose, please contact us.
+                            <p>We will only use your personal data for the purposes for which we collected it, unless we
+                                reasonably consider that we need to use it for another reason and that reason is
+                                compatible with the original purpose. If you wish to get an explanation as to how the
+                                processing for the new purpose is compatible with the original purpose, please contact
+                                us.
                             </p>
                             <p>If we need to use your personal data for an unrelated purpose, we will notify you
                                 and we will explain the legal basis which allows us to do so.
                             </p>
-                            <p>Please note that we may process your personal data without your knowledge or
-                                consent, in compliance with the above rules, where this is required or permitted
-                                by law.
+                            <p>Please note that we may process your personal data without your knowledge or consent, in
+                                compliance with the above rules, where this is required or permitted by law.
                             </p>
                         </div>
                     </div>
