@@ -23,15 +23,29 @@ class WebController extends BaseController
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function homepage() {
+        //Get the request and load it as variables
+        $request        = \Request::all();
+        $dynamicLocation    = !empty($request['loc'])           ? Validate::escapeString($request['loc'])               : '';
+        $dynamicProcedure   = !empty($request['prc'])           ? Validate::escapeString($request['prc'])               : '';
+        $dynamicHospital    = !empty($request['hn'])            ? Validate::escapeString($request['hn'])                : '';
+
+        //Dynamic Keyword Insertion Logic
+        $dynamicKeywordInsertion = ['show' => false];
+        if(!empty($dynamicLocation) && !empty($dynamicProcedure) && !empty($dynamicHospital)) {
+            $dynamicKeywordInsertion['show']        = true;
+            $dynamicKeywordInsertion['location']    = $dynamicLocation;
+            $dynamicKeywordInsertion['procedure']   = $dynamicProcedure;
+            $dynamicKeywordInsertion['hospital']    = $dynamicHospital;
+        }
+
         //Retrieve the list of Procedures sorted by name ASC
         $procedures = Utils::getProceduresForDropdown();
         //Get all the FAQs from DB
         $faqs  = Faq::with('category')->get()->take(3);
-        $this->returnedData['success']      = true;
-        $this->returnedData['data']['faqs'] = $faqs;
-
-        $this->returnedData['success']              = true;
-        $this->returnedData['data']['procedures']   = $procedures;
+        $this->returnedData['success']                          = true;
+        $this->returnedData['data']['faqs']                     = $faqs;
+        $this->returnedData['data']['dynamicKeywordInsertion']  = $dynamicKeywordInsertion;
+        $this->returnedData['data']['procedures']               = $procedures;
 
         //For Live environment just show the work in progress page
         if(env('APP_ENV') == 'live')

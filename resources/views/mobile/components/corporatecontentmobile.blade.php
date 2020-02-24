@@ -224,7 +224,7 @@
                                          data-parent="#hospital_stats">
                                         <div class="card-body">
                                             @if(!empty($opCancelled))
-                                                <p>National average is 3.5%</p>
+                                                <p>National average is 1.41%</p>
                                             @else
                                                 <p>No data for this hospital</p>
                                             @endif
@@ -247,7 +247,7 @@
                                          data-parent="#hospital_stats">
                                         <div class="card-body">
                                             @if(!empty($FFRating))
-                                                <p>National average is 98.855%</p>
+                                                <p>National average is 94.01%</p>
                                             @else
                                                 <p>No data for this hospital</p>
                                             @endif

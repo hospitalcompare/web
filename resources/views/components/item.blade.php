@@ -189,7 +189,7 @@
                         @include('components.basic.popover', [
                         'trigger' => 'hover',
                         'html'    => 'true',
-                        'content' => !empty($opCancelled) ? 'National average<br> is 3.35%' : 'Currently no data available<br>for this hospital'])>
+                        'content' => !empty($opCancelled) ? 'National average<br> is 1.41%' : 'Currently no data available<br>for this hospital'])>
                         <p class="stat-label d-block w-100 d-lg-none">Operations Cancelled</p>
                         {!! !empty($opCancelled) ? $opCancelled : "No data" !!}
                     </div>
@@ -201,7 +201,7 @@
                             'placement' => 'bottom',
                             'trigger' => 'hover',
                             'html' => 'true',
-                            'content' => !empty($FFRating) ? 'National average<br>is 98.85%' : 'Currently no data available<br>for this hospital'])>
+                            'content' => !empty($FFRating) ? 'National average<br>is 94.01%' : 'Currently no data available<br>for this hospital'])>
                         <p class="stat-label d-block w-100 d-lg-none">Friends & Family Rating</p>
                         {!! !empty($FFRating) ? $FFRating : "No data" !!}
                     </div>
@@ -346,7 +346,7 @@
                         </div>
                     @endif
 {{--                        TODO: add special offer back in when we have them--}}
-{{--                    @if(!empty($specialOffers))--}} 
+{{--                    @if(!empty($specialOffers))--}}
 {{--                        <div class="col-12 mt-lg-2 d-none d-lg-block">--}}
 {{--                            <div class="position-relative btn-block">--}}
 {{--                                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [--}}
