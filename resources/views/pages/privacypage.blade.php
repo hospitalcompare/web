@@ -208,13 +208,11 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                          data-parent="#privacy_accordion">
                         <div class="card-body">
-                            <p>We use different methods to collect data from and about you including through:
-                            </p>
+                            <p>We use different methods to collect data from and about you including through:</p>
                             <ul class="blue-dot">
-                                <li><strong>Direct interactions</strong> You may give us your Identity or
-                                    Contact Data by clicking links or filling in enquiry or other forms on our
-                                    website or by corresponding with us by post, phone, email or otherwise. This
-                                    includes personal data you provide when you:
+                                <li><strong>Direct interactions</strong> You may give us your Identity or Contact Data
+                                    by filling in enquiry or other forms on our website or by corresponding with us by
+                                    post, phone, email or otherwise. This includes personal data you provide when you:
                                     <ul class="blue-dot">
                                         <li>complete an enquiry form on our website to be referred to a hospital or
                                             other service provider;
@@ -223,12 +221,11 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                         <li>give us feedback or contact us.</li>
                                     </ul>
                                 </li>
-                                <li><strong>Automated technologies or interactions</strong> As you interact with
-                                    our website, we will automatically collect Technical Data about your
-                                    equipment, browsing actions and patterns. We collect this personal data by
-                                    using cookies and other similar technologies. We may also receive Technical
-                                    Data about you if you visit other websites employing our cookies. Please see
-                                    our
+                                <li><strong>Automated technologies or interactions</strong> As you interact with our
+                                    website, we will automatically collect Technical Data about your equipment, browsing
+                                    actions and patterns. We collect this personal data by using cookies and other
+                                    similar technologies. We may also receive Technical Data about you if you visit
+                                    other websites employing our cookies. Please see our cookie policy
                                     <a class="btn-link" href="/cookie-policy">cookie policy</a> for further
                                     details.
                                 </li>
@@ -250,9 +247,9 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                         </li>
                                     </ul>
                                 </li>
-                                <li>Contact, and Transaction Data from providers of medical, technical, payment
-                                    and delivery services, or other service providers, such as private hospitals
-                                    or brokers listed on our website with whom we connect you.
+                                <li>Contact and Transaction Data from providers of medical, technical, payment and
+                                    delivery services, or other service providers, such as private hospitals or brokers
+                                    listed on our website with whom we connect you.
                                 </li>
                             </ul>
                         </div>
