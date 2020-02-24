@@ -4,7 +4,12 @@
      aria-labelledby="" aria-modal="true" aria-hidden="true">
     <div class="modal-dialog m-3 mx-md-auto" role="document">
         <div class="modal-content">
-            @include('mobile.components.privateenquiryformmobile', [
+            <div class="modal-header d-flex justify-content-between">
+                <button type="button" class="btn-plain ml-auto" data-dismiss="modal" aria-label="Close">
+                    @svg('times-black')
+                </button>
+            </div>
+            @include('components.privateenquiryform', [
                 'procedures'    => $procedures,
                 'title'         => $title ?? '',
                 'firstName'     => $firstName ?? '',

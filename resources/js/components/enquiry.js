@@ -66,6 +66,9 @@ if ($form.length > 0) {
             hospital_id: {
                 required: true
             },
+            spam_test: {
+                maxlength: 0
+            },
             title: "required",
             firstName: {
                 required: true,

@@ -1,11 +1,17 @@
-<div class="modal-inner pb-5 px-5">
-    <p class="text-center font-24 SofiaPro-Medium  private-modal-enquiry-title">Enquire now for <span class="hospital-title">this hospital</span></p>
+<div class="modal-inner pb-5 px-3 px-lg-5">
+    <p class="text-center font-24 SofiaPro-Medium  private-modal-enquiry-title">Enquire now for <span
+            class="hospital-title">this hospital</span></p>
     <p class=" text-center private-modal-enquiry-description">
-        Complete this form and we'll pass your enquiry onto this hospital immediately.<br>You can normally expect a response within three to four days.
+        Complete this form and we'll pass your enquiry onto this hospital immediately.<br>You can normally expect a
+        response within three to four days.
     </p>
     <div class="form-wrap d-flex flex-wrap">
-        <form id="enquiry_form">
+        <form id="enquiry_form" class=" w-100">
             <input type="hidden" name="hospital_id" value="1">
+            <span class="hidden-with-pos">
+                <label for="spam_test">Please leave blank</label>
+                <input type="text" id="spam_test" name="spam_test" value="" placeholder="leave blank">
+            </span>
             <p class="your-details ">Your Details</p>
             <div class="form-group row align-items-end">
                 <div class="col-12 col-md-6 mb-1 mb-md-0">
@@ -28,7 +34,7 @@
                 <div class="col-12 col-md-6">
                     {{-- First name --}}
                     <input required name="first_name" type="text" class="form-control" id="firstName"
-                           placeholder="First Name*" value="{{ !empty($firstName) ? $firstName : '' }}" />
+                           placeholder="First Name*" value="{{ !empty($firstName) ? $firstName : '' }}"/>
                 </div>
 
             </div>
@@ -40,31 +46,31 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <input required name="phone_number" type="text" class="form-control" id="phoneNumber"
-                           placeholder="Phone Number*" value="{{ !empty($phone) ? $phone : '' }}" />
+                           placeholder="Phone Number*" value="{{ !empty($phone) ? $phone : '' }}"/>
                 </div>
                 {{-- DOB - the field to select dob--}}
-{{--                <div class="col-12 col-md-6">--}}
-{{--                    <input readonly="readonly" required name="dob" class="form-control" id="dateOfBirth"--}}
-{{--                           placeholder="DOB* (DD/MM/YYYY)" >--}}
-{{--                    --}}{{-- DOB- hidden field to submit different format for backend validation --}}
-{{--                    <input type="hidden" id="actualDate" name="date_of_birth">--}}
-{{--                </div>--}}
+                {{--                <div class="col-12 col-md-6">--}}
+                {{--                    <input readonly="readonly" required name="dob" class="form-control" id="dateOfBirth"--}}
+                {{--                           placeholder="DOB* (DD/MM/YYYY)" >--}}
+                {{--                    --}}{{-- DOB- hidden field to submit different format for backend validation --}}
+                {{--                    <input type="hidden" id="actualDate" name="date_of_birth">--}}
+                {{--                </div>--}}
             </div> {{-- end row --}}
-                {{-- Email address --}}
+            {{-- Email address --}}
             <div class="form-group row align-items-end">
                 <div class="col-12 col-md-6 mb-1 mb-md-0">
                     <input required name="email" type="email" class="form-control" id="email"
-                           placeholder="Email Address*" value="{{ !empty($email) ? $email : '' }}" />
+                           placeholder="Email Address*" value="{{ !empty($email) ? $email : '' }}"/>
                 </div>
                 <div class="col-12 col-md-6">
                     <input required name="confirm_email" type="email" class="form-control" id="confirmEmail"
-                           placeholder="Confirm Email Address*" value="{{ !empty($email) ? $email : '' }}" />
+                           placeholder="Confirm Email Address*" value="{{ !empty($email) ? $email : '' }}"/>
                 </div>
             </div>
             <div class="form-group row align-items-end">
                 <div class="col-12 col-md-6">
                     <input required name="postcode" type="text" class="form-control" id="postcode"
-                           placeholder="Postcode*" value="{{ !empty($postcode) ? $postcode : '' }}" />
+                           placeholder="Postcode*" value="{{ !empty($postcode) ? $postcode : '' }}"/>
                 </div>
             </div>
             <p class="your-details mt-3">Your Treatment</p>
@@ -97,7 +103,8 @@
                 <div class="col-12 checkbox mb-3">
                     <input required name="gdpr" type="checkbox"
                            id="gdpr" {{ !empty($gdpr) && ($gdpr) ? 'checked' : '' }} />
-                    <label class="small-print" for="gdpr">Please accept the&nbsp;<a href="/terms-of-use">Terms of Use</a>&nbsp;before submitting the
+                    <label class="small-print" for="gdpr">Please accept the&nbsp;<a href="/terms-of-use">Terms of
+                            Use</a>&nbsp;before submitting the
                         form.</label>
                 </div>
                 <div class="col-12 btn-area text-right">
