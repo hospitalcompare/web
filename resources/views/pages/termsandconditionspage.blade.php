@@ -18,10 +18,10 @@
                 <div class="col hc-content">
                     <h1>Terms of Use</h1>
                     <p class="p-secondary">Please read these terms of use carefully before using this site</p>
-                    <h3>What's in these terms?</h3>
-                    <p class="p-secondary">These terms tell you the rules for using our website
-                        www.hospitalcompare.co.uk <strong>(our
-                            site)</strong>.</p>
+                    {{--                    <h3>What's in these terms?</h3>--}}
+                    {{--                    <p class="p-secondary">These terms tell you the rules for using our website--}}
+                    {{--                        www.hospitalcompare.co.uk <strong>(our--}}
+                    {{--                            site)</strong>.</p>--}}
                 </div>
             </div>
         </div>
@@ -37,10 +37,7 @@
                     'title' => 'Who we are and how to contact us',
                     'content' => '
                         <p>
-                            www.hospitalcompare.co.uk is a site operated by Hospital Compare Limited ("We").
-                            We
-                            are registered in England and Wales under company number 11514491 and have our
-                            registered office and trading address at Hospital Compare Limited, The Plaza, Old Hall Street, Liverpool, England, L3 9QJ. Our VAT number is 325696672.
+                            www.hospitalcompare.co.uk is a site operated by Hospital Compare Limited ("We"). We are registered in England and Wales under company number 11514491 and have our registered office and trading address at Hospital Compare Limited,The Plaza, Old Hall Street, Liverpool, England, L3 9QJ. Our VAT number is 325696672.
                         </p>
                         <p>We are a private limited company.
                         </p>
@@ -48,115 +45,65 @@
                         </p>'
                 ],
                 [
-                    'title' => 'What do you do? What don’t you do? Is your service Free? Can I trust you?',
+                    'title' => 'What do you do? What don’t you do? Is your service free? Can I trust you?',
                     'content' => '
-                        <p>We have created Hospital Compare as a free to use comparison website for all
-                            consumers or patients who require hospital treatment and a few other things too.
-                            We provide comparison information to consumers on hospitals, whether the
-                            hospital is an NHS hospital, a private hospital performing NHS funded work or a
-                            private hospital performing paid for private sector work.
+                        <p>We have created Hospital Compare as a free to use comparison website for all consumers or patients who require hospital treatment in England and a few other things too. We provide comparison information to consumers and others on hospitals, whether the hospital is an NHS hospital, a private hospital performing NHS funded work or a private hospital performing paid for private sector work.
                         </p>
-                        <p>Our site is made available free of charge to consumers and patients who use our site. The hospitals or other service providers you contact through us may pay us a fee for putting you in touch with them or if they provide you with a service or product. This is subject to the terms of contracts we may have with them. We make no charge to consumers.
+                        <p>Our site is made available <strong>free of charge</strong> to consumers and patients who use our site. The hospitals or other service providers you contact through us may pay us a fee for putting you in touch with them or if they provide you with a service or product. This is subject to the terms of contracts we may have with them. We make no charge to consumers.</p>
+                        <p>We don’t advise you on health, medical, financial or other matters and we don’t provide you with recommendations, but we do provide you with the very best publicly available information, clearly and openly so you can make informed “choices” to meet your needs in choosing a hospital in England based on the performance data we provide and we connect you with those who can advise you.</p>
+                        <p>All the information we provide is compiled from trusted government and other sources principally from the NHS and from the Care Quality Commission <strong>(CQC)</strong>, the body responsible for oversight of all care provider entities in England,  and from other reliable data sources. The information  is processed and compiled by our experts into readily accessible and clear formats to guide you in an impartial way. We seek to update our information whenever the NHS  and the CQC releases the latest data sets.
                         </p>
-                        <p>We don’t advise you on health, medical, financial or other matters and we don’t
-                            provide you with recommendations, but we do provide you with the very best
-                            publicly available information, clearly, openly and impartially so you can make informed
-                            “choices” to meet your needs in choosing a hospital in England based on the performance
-                            data we provide and we connect you with those who can advise you.
-                        </p>
-                        <p>All the information we provide is compiled from trusted government and other
-                            sources principally from the Care Quality Commission <strong>(CQC)</strong>, the
-                            body responsible
-                            for oversight of all care provider entities in England, and from the NHS itself and from
-                            other reliable data sources. The information is processed and compiled by
-                            our experts into readily accessible and clear formats to guide you in an impartial way. We update
-                            our information as often as the CQC itself.
-                        </p>
-                        <p>Your privacy is of the highest importance to us, we never collect information from
-                            you which exceeds the minimum necessary for us to provide the services we offer
-                            you. Some of the information we collect relates to your location or postcode
-                            which you enter on our site so that you can search for relevant information
-                            about hospitals and other services close to you. If you make an enquiry to a
-                            relevant hospital, they will need some personal information about you. The
-                            information you set out on an enquiry form on our site is stored by us and is
-                            kept private in accordance with our <a href="/privacy-policy"
-                                                                   class="btn-link">Privacy Policy</a>. If you
-                            provide hospitals or other service providers we connect you with with personal
-                            information that information will be governed by their privacy policies, which
-                            you should review to be sure you understand how your information is being protected.
-                        </p>'
+                        <p>Your privacy is of the highest importance to us, we never collect information from you which exceeds the minimum necessary for us to provide the services we offer you. Some of the information we collect relates to your location or postcode which you enter on our site so that you can search for relevant information about hospitals and other services close to you. If you make an enquiry to a relevant hospital, they will need some personal information about you. The information you set out on an enquiry form on our site is stored by us and is kept private in accordance with our <a href="/privacy-policy" class="btn-link">Privacy Policy</a>. If you provide hospitals or other service providers we connect you with with personal information that information will be governed by their privacy policies, which you should review to be sure you understand how your information is being protected.
+</p>'
                 ],
                 [
                     'title' => 'By using our site you accept these terms',
                     'content' => '
-                            <p>By using our site, you confirm that you accept these terms of use and that you agree to comply with them. This constitutes a contract                                           between us.</p>
-                            <p>If you do not agree to these terms, you must not use our site or services.
-                            </p>
-                            <p>We recommend that you print a copy of these terms for future reference.
-                            </p>'
+                            <p>By using our site, you confirm that you accept these terms of use and that you agree to comply with them. This constitutes a contract between us.</p>
+                            <p>If you do not agree to these terms, you must not use our site or services.</p>
+                            <p>We recommend that you print a copy of these terms for future reference.</p>'
                 ],
                 [
                     'title' => 'There are other terms that may apply to you',
                     'content' => '
-                            <p>
-                                    These terms of use refer to the following additional terms, which also apply to your use of our site and services:
-                            </p>
+                            <p>These terms of use refer to the following additional terms, which also apply to your use of our site and services:</p>
                             <ul class="blue-dot">
-                                <li>Our <a href="/privacy-policy" class="btn-link">Privacy Policy</a>. This sets out information confirming how we respect your                                                     privacy. If you complete an enquiry form on our site to make an enquiry to a hospital or other service provider that hospital or service provider will have terms of use relating to your enquiry and privacy which you should consider.
-                                </li>
-                                <li>Our <a href="/cookie-policy" class="btn-link">Cookie Policy</a>, which sets out information about the cookies and similar technologies on our site.
-                                </li>
-                                <li>If you purchase services or products from any site that is linked to our site that will have the terms of use of that will apply to that purchase. We are not responsible for the terms you agree with hospitals or other service providers.
-                                </li>
+                                <li>Our <a href="/privacy-policy" class="btn-link">Privacy Policy</a>. This sets out information confirming how we respect your privacy. If you complete an enquiry form on our site to make an enquiry to a hospital or other service provider that hospital or service provider will have terms and conditions relating to your enquiry and privacy which you should consider.</li>
+                                <li>Our <a href="/cookie-policy" class="btn-link">Cookie Policy</a>, which sets out information about the cookies and similar technologies on our site.</li>
+                                <li>If you purchase services or products from any site that is linked to ours that site will have  terms and conditions  that will apply to that purchase. We are not responsible for the terms you agree with hospitals or other service providers.</li>
                             </ul>
-                            <p>You are also responsible for ensuring that all persons who access our site through your internet connection or device are aware of these terms of use and other applicable terms of use, and that they comply with them.
-</p>'
+                            <p>You are also responsible for ensuring that all persons who access our site through your internet connection or device are aware of these terms of use and other applicable terms and conditions, and that they comply with them.</p>'
                 ],
                 [
                     'title' => 'We may make changes to these terms',
                     'content' => '
-                        <p>We amend these terms from time to time. Every time you wish to use our site, please check these terms to ensure you
-understand the terms that apply at that time. These terms were most recently updated on 17 February 2020. </p>
+                        <p>We amend these terms from time to time. Every time you wish to use our site, please check these terms to ensure you understand the terms that apply at that time. These terms were most recently updated on 17 February 2020.</p>
 '
                 ],
                 [
                     'title' => 'We may make changes to our site',
                     'content' => '
-                        <p>We may update and change our site and policies from time to time for business and operational reasons or to improve our services to you so please re-check our terms of use, including our privacy policy and cookie policy periodically to check for updates.</p>'
+                        <p>We may update and change our site and policies from time to time for business and operational reasons or to improve our services to you so please re-check our terms and conditions, including our privacy policy and cookie policy periodically to check for updates</p>'
                 ],
                 [
                     'title' => 'We may suspend or withdraw our site',
                     'content' => '<p>We do not guarantee that our site, or any content on it, will always be available or be uninterrupted. We may suspend or withdraw or restrict the availability of all or any part of our site for business and operational reasons. We will try to give you reasonable notice of any suspension or withdrawal.</p>'
                 ],
                 [
-                    'title' => 'Our site is only for users in England and Wales',
-                    'content' => '<p>
-                                    Our site is directed to people over 18 years residing in England. We do not represent that content available on or
-                                    through our site is appropriate for use or available in other locations. We will be extending our services throughout the United Kingdom in due course.</p>'
+                    'title' => 'Our site is only for users in England',
+                    'content' => '<p>Our site is directed to people over 18 years residing in England. We do not represent that content available on or through our site is appropriate for use or available in other locations. We will be extending our services throughout the United Kingdom in due course.</p>'
                 ],
                 [
                     'title' => 'How you may use material on our site',
                     'content' => '
-                        <p>We are the owner or the licensee of all intellectual property rights in our site, and in the material published on
-                            it. Those works are protected by copyright laws and treaties around the world. All such rights are reserved.
-                        </p>
-                        <p>You may print off one copy, and may download extracts, of any page(s) from our site for your personal use and you may
-                            draw the attention of others to content posted on our site.
-                        </p>
-                        <p>Certain information our site is provided to us subject to the latest version of the The Open Government Licence (OGL). For more details please see our <a href="/attributions">Attributions Notice.</a></p>
-                        <p>You must not modify the paper or digital copies of any materials you have printed off or downloaded in any way, and
-                            you must not use any logos, illustrations, photographs, video or audio sequences or any graphics separately from any
-                            accompanying text.
-                        </p>
-                        <p>Our status (and that of any identified contributors) as the authors of content on our site must always be
-                            acknowledged.
-                        </p>
-                        <p>You must not use any part of the content on our site for commercial purposes without obtaining a licence to do so
-                            from us or our licensors.
-                        </p>
-                        <p>If you print off, copy or download any part of our site in breach of these terms of use, your right to use our site
-                            will cease immediately and you must, at our option, return or destroy any copies of the materials you have made.
-                        </p>'
+                        <p>We are the owner or the licensee of all intellectual property rights in our site, and in the material published on it. Those works are protected by copyright laws and treaties around the world. All such rights are reserved.</p>
+                        <p>You may print off one copy, and may download extracts, of any page(s) from our site for your personal use and you may draw the attention of others to content posted on our site.</p>
+                        <p>Certain information our site is provided to us subject to the latest version of the The Open Government Licence (OGL). For more details please see our <a class="btn-link" href="/attributions">Attributions Notice</a>.
+You must not modify the paper or digital copies of any materials you have printed off or downloaded in any way, and you must not use any logos,  illustrations, photographs, video or audio sequences or any graphics separately from any accompanying text.
+</p>
+                        <p>Our status (and that of any identified contributors) as the authors of content on our site must always be acknowledged.
+</p>
+                        '
                 ],
                 [
                     'title' => 'We do not provide advice',
