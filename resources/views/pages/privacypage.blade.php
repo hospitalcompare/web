@@ -296,8 +296,8 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                             </p>
                             <p>You have the right to withdraw consent at any time by contacting us.
                             </p>
-                            <h3>Purposes for which we will use your personal data
-                            </h3>
+                            <h2>Purposes for which we will use your personal data
+                            </h2>
                             <p>We have set out below, in a table format, a description of all the ways we plan to use
                                 your personal data, and which of the legal bases we rely on to do so. We have also
                                 identified what our legitimate interests are where appropriate.
@@ -528,12 +528,12 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                     </tbody>
                                 </table>
                             </div>{{-- End of table-responsive --}}
-                            <h3>Marketing</h3>
+                            <h2>Marketing</h2>
                             <p>We strive to provide you with choices regarding certain personal data uses,
                                 particularly around marketing and advertising. We have established the following
                                 personal data control mechanisms:
                             </p>
-                            <h3>Promotional offers from us</h3>
+                            <h2>Promotional offers from us</h2>
                             <p>We may use your Identity, Contact, Technical, Usage and Profile Data to form a view on
                                 what we think you may want or need, or what may be of interest to you. This is how we
                                 decide which products, services and offers may be relevant for you (we call this
@@ -543,18 +543,18 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 information from us or purchased goods or services from us and you have opted
                                 into receiving that marketing.
                             </p>
-                            <h3>Third party marketing</h3>
+                            <h2>Third party marketing</h2>
                             <p>We will get your express opt-in consent before we share your personal data with
                                 any third party for marketing purposes.
                             </p>
-                            <h3>Opting out</h3>
+                            <h2>Opting out</h2>
                             <p>You can ask us or third parties to stop sending you marketing messages at any time by
                                 following the opt-out links on any marketing message sent to you or by contacting us at
                                 any time. Where you opt out of receiving these marketing messages, this will not apply
                                 to personal data provided to us as a result of a product/service purchase, enquiries
                                 made to service providers from our website, product/service experience or other
                                 transactions.</p>
-                            <h3>Cookies</h3>
+                            <h2>Cookies</h2>
                             <p>You can set your browser to refuse all or some browser cookies, or to alert you when
                                 websites set or access cookies. If you disable or refuse cookies, please note that some
                                 parts of this website may become inaccessible or not function properly. For more
@@ -562,7 +562,7 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                     href="/cookie-policy"
                                     class="btn-link">cookie policy</a>.
                             </p>
-                            <h3>Change of purpose</h3>
+                            <h2>Change of purpose</h2>
                             <p>We will only use your personal data for the purposes for which we collected it, unless we
                                 reasonably consider that we need to use it for another reason and that reason is
                                 compatible with the original purpose. If you wish to get an explanation as to how the
@@ -687,16 +687,16 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                     <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
                          data-parent="#privacy_accordion">
                         <div class="card-body">
-                            <p>We have put in place appropriate security measures to prevent your personal data
-                                from being accidentally lost, used or accessed in an unauthorised way, altered
-                                or disclosed. In addition, we limit access to your personal data to those
-                                employees, agents, contractors and other third parties who have a business need
-                                to know. They will only process your personal data on our instructions and they
-                                are subject to a duty of confidentiality.
+                            <p>We have put in place appropriate security measures to prevent your personal data from
+                                being accidentally lost, used or accessed in an unauthorised way, altered or disclosed.
+                                In addition, we limit access to your personal data to those employees, agents,
+                                contractors and other third parties who have a business need to know. They will only
+                                process your personal data on our instructions and they are subject to a duty of
+                                confidentiality.
                             </p>
-                            <p>We have put in place procedures to deal with any suspected personal data breach
-                                and will notify you and any applicable regulator of a breach where we are
-                                legally required to do so.
+                            <p>We have put in place procedures to deal with any suspected personal data breach and will
+                                notify you and any applicable regulator of a breach where we are legally required to do
+                                so.
                             </p>
                         </div>
                     </div>
@@ -714,31 +714,29 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                     <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
                          data-parent="#privacy_accordion">
                         <div class="card-body">
-                            <h3>How long will you use my personal data for?
-                            </h3>
-                            <p>We will only retain your personal data for as long as reasonably necessary to
-                                fulfil the purposes we collected it for, including for the purposes of
-                                satisfying any legal, regulatory, tax, accounting or reporting requirements. We
-                                may retain your personal data for a longer period in the event of a complaint or
-                                if we reasonably believe there is a prospect of litigation in respect to our
-                                relationship with you.</p>
-                            <p>To determine the appropriate retention period for personal data, we consider the
-                                amount, nature and sensitivity of the personal data, the potential risk of harm
-                                from unauthorised use or disclosure of your personal data, the purposes for
-                                which we process your personal data and whether we can achieve those purposes
-                                through other means, and the applicable legal, regulatory, tax, accounting or
-                                other requirements.
+                            <h2>How long will you use my personal data for?
+                            </h2>
+                            <p>We will only retain your personal data for as long as reasonably necessary to fulfil the
+                                purposes we collected it for, including for the purposes of satisfying any legal,
+                                regulatory, tax, accounting or reporting requirements. We may retain your personal data
+                                for a longer period in the event of a complaint or if we reasonably believe there is a
+                                prospect of litigation in respect to our relationship with you.
                             </p>
-                            <p>Details of retention periods for different aspects of your personal data are
-                                available in our retention policy which you can request from us by contacting
-                                us.
+                            <p>To determine the appropriate retention period for personal data, we consider the amount,
+                                nature and sensitivity of the personal data, the potential risk of harm from
+                                unauthorised use or disclosure of your personal data, the purposes for which we process
+                                your personal data and whether we can achieve those purposes through other means, and
+                                the applicable legal, regulatory, tax, accounting or other requirements.
                             </p>
-                            <p>In some circumstances you can ask us to delete your data: see Your legal rights,
-                                below for further information.
+                            <p>Details of retention periods for different aspects of your personal data are available in
+                                our retention policy which you can request from us by contacting us.
                             </p>
-                            <p>In some circumstances we will anonymise your personal data (so that it can no
-                                longer be associated with you) for research or statistical purposes, in which
-                                case we may use this information indefinitely without further notice to you.
+                            <p>In some circumstances you can ask us to delete your data: see [your legal rights] below
+                                for further information.
+                            </p>
+                            <p>In some circumstances we will anonymise your personal data (so that it can no longer be
+                                associated with you) for research, analytical or statistical purposes, in which case we
+                                may use this information indefinitely without further notice to you.
                             </p>
                         </div>
                     </div>
@@ -766,21 +764,19 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                     subject access request"). This enables you to receive a copy of the personal
                                     data we hold about you and to check that we are lawfully processing it.
                                 </li>
-                                <li><strong>Request erasure</strong> of your personal data. This enables you to
-                                    ask
-                                    us to delete or remove personal data where there is no good reason for us
-                                    continuing to process it. You also have the right to ask us to delete or
-                                    remove
-                                    your personal data where you have successfully exercised your right to
-                                    object to
-                                    processing (see below), where we may have processed your information
-                                    unlawfully
-                                    or where we are required to erase your personal data to comply with local
-                                    law.
-                                    Note, however, that we may not always be able to comply with your request of
-                                    erasure for specific legal reasons which will be notified to you, if
-                                    applicable,
-                                    at the time of your request.
+                                <li><strong>Request correction</strong> of the personal data that we hold about you.
+                                    This enables you to have any incomplete or inaccurate data we hold about you
+                                    corrected, though we may need to verify the accuracy of the new data you provide to
+                                    us
+                                </li>
+                                <li><strong>Request erasure</strong> of your personal data. This enables you to ask us
+                                    to delete or remove personal data where there is no good reason for us continuing to
+                                    process it. You also have the right to ask us to delete or remove your personal data
+                                    where you have successfully exercised your right to object to processing (see
+                                    below), where we may have processed your information unlawfully or where we are
+                                    required to erase your personal data to comply with local law. Note, however, that
+                                    we may not always be able to comply with your request of erasure for specific legal
+                                    reasons which will be notified to you, if applicable, at the time of your request.
                                 </li>
                                 <li><strong>Object to processing</strong> of your personal data where we are relying on
                                     a legitimate
@@ -809,42 +805,38 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                         </li>
                                     </ul>
                                 </li>
-                                <li><strong>Request the transfer</strong> of your personal data to you or to a
-                                    third party. We will provide to you, or a third party you have chosen, your
-                                    personal data in a structured, commonly used, machine-readable format. Note
-                                    that this right only applies to automated information which you initially
-                                    provided consent for us to use or where we used the information to perform a
-                                    contract with you.
+                                <li><strong>Request the transfer</strong> of your personal data to you or to a third
+                                    party. We will provide to you, or a third party you have chosen, your personal data
+                                    in a structured, commonly used, machine-readable format. Note that this right only
+                                    applies to automated information which you initially provided consent for us to use
+                                    or where we used the information to perform a contract with you.
                                 </li>
-                                <li><strong>Withdraw consent</strong> at any time where we are relying on
-                                    consent to process your personal data. However, this will not affect the
-                                    lawfulness of any processing carried out before you withdraw your consent.
-                                    If you withdraw your consent, we may not be able to provide certain products
-                                    or services to you. We will advise you if this is the case at the time you
-                                    withdraw your consent.
+                                <li><strong>Withdraw consent</strong> at any time where we are relying on consent to
+                                    process your personal data. However, this will not affect the lawfulness of any
+                                    processing carried out before you withdraw your consent. If you withdraw your
+                                    consent, we may not be able to provide certain products or services to you. We will
+                                    advise you if this is the case at the time you withdraw your consent.
                                 </li>
                             </ul>
                             <p>If you wish to exercise any of the rights set out above, please contact us at <a
                                     href="mailto:datamanager@hospitalcompare.co.uk." class="btn-link">datamanager@hospitalcompare.co.uk.</a>
                             </p>
-                            <h3>No fee usually required
-                            </h3>
-                            <p>You will not have to pay a fee to access your personal data (or to exercise any
+                            <p><strong>No fee usually required</strong>. You will not have to pay a fee to access your
+                                personal data (or to exercise any
                                 of the other rights). However, we may charge a reasonable fee if your request is
                                 clearly unfounded, repetitive or excessive. Alternatively, we could refuse to
                                 comply with your request in these circumstances.
                             </p>
-                            <h3>What we may need from you
-                            </h3>
-                            <p>We may need to request specific information from you to help us confirm your
+                            <p><strong>What we may need from you</strong>. We may need to request specific information
+                                from you to help us confirm your
                                 identity and ensure your right to access your personal data (or to exercise any
                                 of your other rights). This is a security measure to ensure that personal data
                                 is not disclosed to any person who has no right to receive it. We may also
                                 contact you to ask you for further information in relation to your request to
                                 speed up our response.
                             </p>
-                            <h3>Time limit to respond</h3>
-                            <p>We try to respond to all legitimate requests within one month. Occasionally it
+                            <p><strong>Time limit to respond</strong>. We try to respond to all legitimate requests
+                                within one month. Occasionally it
                                 could take us longer than a month if your request is particularly complex or you
                                 have made a number of requests. In this case, we will notify you and keep you
                                 updated.
@@ -865,7 +857,7 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                     <div id="collapseTen" class="collapse" aria-labelledby="headingTen"
                          data-parent="#privacy_accordion">
                         <div class="card-body">
-                            <h3 class="text-uppercase">Lawful basis</h3>
+                            <h2 class="text-uppercase">Lawful basis</h2>
                             <p><strong>Legitimate Interest</strong> means the interest of our business in
                                 conducting and managing our business to enable us to give you the best
                                 service/product and the best and most secure experience. We make sure we
@@ -881,8 +873,8 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 necessary for the performance of a contract to which you are a party or to take
                                 steps at your request before entering into such a contract.
                             </p>
-                            <p><strong>Comply with a legal obligation</strong></p>
-                            <h3 class="text-uppercase">Third parties</h3>
+                            <p><strong>Comply with a legal obligation</strong> means processing your personal data where it is necessary for compliance with a legal obligation that we are subject to.</p>
+                            <h2 class="text-uppercase">Third parties</h2>
                             <h3>Internal third parties</h3>
                             <p>Other companies in the Hospital Compare Group acting as joint controllers or
                                 processors based within or outside the EEA and provide IT and system
