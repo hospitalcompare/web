@@ -263,3 +263,10 @@ textarea {
 .faq-search-input {
 
 }
+
+// Hide the honeypot field
+.hidden-with-pos {
+    position: fixed;
+    top: -500px;
+    left: -500px;
+}

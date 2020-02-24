@@ -355,4 +355,7 @@ $(document).on('click', function (e) {
     }
 });
 
-
+// Recaptcha callback - clear error message when correctly submitted
+window.recaptchaCallback = function() {
+    $('#hiddenRecaptcha').valid();
+};

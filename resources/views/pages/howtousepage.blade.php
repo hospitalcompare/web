@@ -51,18 +51,23 @@
                 </div>
                 <div class="col col-12 col-md-6">
                     <div>
-                        <h2 class="section-title">NHS funded in a private hospital</h2>
-                        <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
-                            eveniet ipsa laboriosam
-                            distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
-                            voluptates? Ea, odio!
+                        <h2 class="section-title">NHS funded treatment</h2>
+                        <p class="p-intro mb-3">Initial Referral</p>
+                        <p class="mb-3 p-secondary col-grey"> Please note that if you wish to be seen at a hospital for
+                            NHS funded
+                            treatment, you need to speak with your GP in order to be referred. You can use Hospital
+                            Compare to identify the most appropriate hospital prior to your GP confirming your referral.
                         </p>
-                        <p class="mb-4 col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                            cumque nesciunt, officia repellat
-                            repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
-                            deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
-                            quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
-                            labore non pariatur tempore.</p>
+                        <p class="p-intro mb-4">The NHS 18 Weeks Referral To Treatment Rule</p>
+                        <p class="mb-3 p-secondary col-grey">You have the right to start your consultant-led treatment
+                            within 18 weeks of referral or
+                            request an offer of alternative providers that can start their treatment sooner. The NHS
+                            must take all reasonable steps to meet patients’ requests. For more information, click
+                            here.</p>
+                        <p class="p-intro mb-3">Already Waiting For More Than 12 Weeks?</p>
+                        <p class="p-secondary mb-4">If you’ve been referred and have already waited 12 weeks (three
+                            months) or longer for your treatment to begin (not your first appointment to be set), we
+                            recommend the following steps:</p>
                         <div class="btn-area">
                             @include('components.basic.button', [
                             'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-primary-1 font-18',
@@ -86,17 +91,30 @@
                 <div class="col col-12 col-lg-6">
                     <div>
                         <h2 class="section-title">Standard procedure at an NHS Hospital</h2>
-                        <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
-                            eveniet ipsa laboriosam
-                            necessitatibus qui ut veniam! Cum, inventore ipsa magnam omnis possimus reprehenderit saepe
-                            voluptates? Ea, odio!
+                        <p class="mb-3 p-intro">If You’ve Waited 12 Weeks or More since being referred:</p>
+                        <p class="mb-4 col-grey p-secondary">Whilst you have no specific rights under the NHS
+                            constitution having waited only 12 weeks for treatment, it may be worth using Hospital
+                            Compare to check how likely it is that the healthcare provider that you have been referred
+                            to will achieve the 18-week referral-to-treatment target.
                         </p>
-                        <p class="mb-4 col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                            cumque nesciunt, officia repellat
-                            repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
-                            deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
-                            quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
-                            labore non pariatur tempore.</p>
+                        <p class="mb-4 col-grey p-secondary">You may also wish to compare other important metrics such
+                            as quality rating in order to consider your alternatives should you ultimately not be
+                            treated within 18 weeks.
+                        </p>
+                        <p class="mb-3 p-intro">If You’ve Waited 18 Weeks or More since being referred:</p>
+                        <p class="mb-4 col-grey p-secondary"> You have the right to choose an alternative healthcare
+                            provider and the NHS should help you do this. Initially you should speak to the hospital
+                            you’ve been referred to, but if they’re unwilling to help, speak with your GP and ask them
+                            to intervene. Ask your GP to transfer your existing referral elsewhere (this can include
+                            private providers, still paid for by the NHS)
+                        </p>
+                        <p class="mb-3 p-intro">If You’ve Waited 26 Weeks or More since being referred:</p>
+                        <p class="mb-4 col-grey p-secondary">The NHS should automatically make alternative arrangements
+                            on your behalf. The 2019/2020 NHS Operating Plan states that every patient waiting 6 months
+                            or longer should be contacted and offered the option of care at an alternative provider, if
+                            they haven’t done this already, use Hospital Compare to review alternative hospitals and
+                            inform your current NHS provider of your preferred choice.
+                        </p>
                         <div class="btn-area">
                             @include('components.basic.button', [
                             'classTitle'       => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',

@@ -17,12 +17,14 @@
             <div class="row">
                 <div class="col hc-content">
                     <h1>Information about our use of cookies</h1>
-                    <p class="p-secondary">Our website uses cookies and other tracking technologies to distinguish you from other users of
+                    <p class="p-secondary">Our website uses cookies and other tracking technologies to distinguish you
+                        from other users of
                         our website. This helps us to
                         provide you with a good experience when you browse our website and also allows us to improve
                         our site by helping us understand how you are using our site. By continuing to browse the site,
                         you are agreeing to our use of cookies.</p>
-                    <p class="p-secondary">A cookie is a small file of letters and numbers that we store on your browser or the hard
+                    <p class="p-secondary">A cookie is a small file of letters and numbers that we store on your browser
+                        or the hard
                         drive of your computer, tablet or mobile phone or other device(“Device”) if you agree. Cookies
                         contain information that is transferred to your
                         Device's hard drive.</p>
@@ -52,59 +54,64 @@
                             protect your data.
                         </li>
                     </ul>
-                    <p class="p-secondary">You can find more information about the individual cookies we use and the purposes for which we
+                    <p class="p-secondary">You can find more information about the individual cookies we use and the
+                        purposes for which we
                         use them in the table below:</p>
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
-                                <tr>
-                                    <th scope="col">Cookie</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Purpose</th>
-                                    <th scope="col">More Information</th>
-                                </tr>
+                            <tr>
+                                <th scope="col">Cookie</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Purpose</th>
+                                <th scope="col">More Information</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">XSRF-TOKEN</th>
-                                    <td>XSRF-TOKEN</td>
-                                    <td>String that is automatically generated and is attached to a form when it is
-                                        created.
-                                    </td>
-                                    <td>Used for security reasons to protect your security while navigating our site.</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">showFeedbackForm</th>
-                                    <td>showFeedbackForm</td>
-                                    <td>To record if you have completed the feedback form.</td>
-                                    <td>Used to show or hide the feedback form.</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">compareHospitalsData</th>
-                                    <td>compareHospitalsData</td>
-                                    <td>String that contains the unique identifiers needed for the user when comparing
-                                        hospitals.
-                                    </td>
-                                    <td>Used for the comparison functionality so you can compare hospitals on our site.</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">hospital_compare_session</th>
-                                    <td>hospital_compare_session</td>
-                                    <td>String that uniquely identifies the session of the user.</td>
-                                    <td>Used for security reasons to protect your security while navigating our site.</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">cookieconsent_status</th>
-                                    <td>cookieconsent_status</td>
-                                    <td>To record the user’s approval of our cookie policy.</td>
-                                    <td>Used to enable you to accept our cookie policy.</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">fr</th>
-                                    <td>fr</td>
-                                    <td>Tracking user experience</td>
-                                    <td>Used to give us a better understanding of user experiences for further improvements of the website</td>
-                                </tr>
+                            <tr>
+                                <th scope="row">XSRF-TOKEN</th>
+                                <td>XSRF-TOKEN</td>
+                                <td>String that is automatically generated and is attached to a form when it is
+                                    created.
+                                </td>
+                                <td>Used for security reasons to protect your security while navigating our site.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">showFeedbackForm</th>
+                                <td>showFeedbackForm</td>
+                                <td>To record if you have completed the feedback form.</td>
+                                <td>Determines whether to show the feedback form based on whether the user has already
+                                    completed or dismissed it.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">compareHospitalsData</th>
+                                <td>compareHospitalsData</td>
+                                <td>String that contains the unique identifiers needed for the user when comparing
+                                    hospitals.
+                                </td>
+                                <td>Used for the comparison functionality so you can compare hospitals on our site.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">hospital_compare_session</th>
+                                <td>hospital_compare_session</td>
+                                <td>String that uniquely identifies the session of the user.</td>
+                                <td>Used for security reasons to protect your security while navigating our site.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">cookieconsent_status</th>
+                                <td>cookieconsent_status</td>
+                                <td>To record the user’s approval of our cookie policy.</td>
+                                <td>Used to enable you to accept our cookie policy.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">fr</th>
+                                <td>fr</td>
+                                <td>Tracking user experience</td>
+                                <td>Used to give us a better understanding of user experiences for further improvements
+                                    of the website
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -114,19 +121,25 @@
                         no control. These cookies are likely to be analytical/performance cookies or targeting
                         cookies. These cookies may provide us with information about your use of our website.
                     </p>
-                    <p class="p-secondary">This website contains links to other websites. This policy only applies to this website so when
+                    <p class="p-secondary">This website contains links to other websites. This policy only applies to
+                        this website so when
                         you visit external websites please read their cookie and privacy policies carefully. Hospital
                         Compare accepts no responsibility for external websites.</p>
-                    <p class="p-secondary">We may offer products or services provided by external companies. These companies may also
+                    <p class="p-secondary">We may offer products or services provided by external companies. These
+                        companies may also
                         allocate cookies or similar items to your Device. These types of cookies and similar tracking
                         technologies and how they operate will be governed by the privacy and cookie policies of those
                         third party companies.</p>
-                    <p class="p-secondary">You can block cookies by activating the setting on your browser that allows you to refuse the
+                    <p class="p-secondary">You can block cookies by activating the setting on your browser that allows
+                        you to refuse the
                         setting of all or some cookies. However, if you use your browser settings to block all cookies
                         (including essential cookies) you may not be able to access all or parts of our site. </p>
                     <p class="p-secondary">Except for essential cookies, all cookies will expire after 1 year.</p>
-                    <p class="p-secondary">For more information on how to control your cookie and browser settings, or on how to delete
-                        cookies from your hard drive please visit <a class="btn-link" target="_blank" href="https://www.aboutcookies.org.uk">www.aboutcookies.org.uk</a></p>
+                    <p class="p-secondary">For more information on how to control your cookie and browser settings, or
+                        on how to delete
+                        cookies from your hard drive please visit <a class="btn-link" target="_blank"
+                                                                     href="https://www.aboutcookies.org.uk">www.aboutcookies.org.uk</a>
+                    </p>
                 </div>
             </div>
         </div>
