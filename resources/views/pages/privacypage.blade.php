@@ -147,7 +147,8 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                     technology on the devices you use to access this website.
                                 </li>
                                 <li><strong>Profile Data</strong> includes your username and password (if relevant),
-                                    enquires made by you from our website (including any health data you disclose), your
+                                    enquiries made by you from our website (including any health data you disclose),
+                                    your
                                     interests, preferences, feedback and survey responses.
                                 </li>
                                 <li><strong>Usage Data</strong> includes information about how you use our website,
@@ -268,8 +269,8 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                          data-parent="#privacy_accordion">
                         <div class="card-body">
-                            <p>We will only use your personal data when the law allows us to. Most commonly, we
-                                will use your personal data in the following circumstances:</p>
+                            <p>We will only use your personal data when the law allows us to. Most commonly, we will use
+                                your personal data in the following circumstances:</p>
                             <ul class="blue-dot">
                                 <li>Where we need to perform a contract we are about to enter into or have
                                     entered into with you.
@@ -284,22 +285,28 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                             <p>Click <a href="#glossary" class="btn-link">here</a> to find out more about the
                                 types of lawful basis that we will rely on to process your personal data.
                             </p>
-                            <p>Generally, we do not rely on consent as a legal basis for processing your
-                                personal data although we will get your consent before sending third party
-                                direct marketing communications to you via email or text message. You have the
-                                right to withdraw consent to such marketing at any time by contacting us.
+                            <p>Generally, we do not rely on consent as a legal basis for processing your personal data,
+                                except for the processing of your health data by passing your completed enquiry form to
+                                hospitals or service providers when you wish to make an enquiry through our website, and
+                                keeping a record of your enquiry.
+
+                            </p>
+                            <p>We will seek and obtain your consent before sending third party direct marketing
+                                communications to you via email or text message.
+                            </p>
+                            <p>You have the right to withdraw consent at any time by contacting us.
                             </p>
                             <h3>Purposes for which we will use your personal data
                             </h3>
-                            <p>We have set out below, in a table format, a description of all the ways we plan
-                                to use your personal data, and which of the legal bases we rely on to do so. We
-                                have also identified what our legitimate interests are where appropriate.
+                            <p>We have set out below, in a table format, a description of all the ways we plan to use your personal data, and which of the legal bases we rely on to do so. We have also identified what our legitimate interests are where appropriate.
                             </p>
                             <p>Note that we may process your personal data for more than one lawful ground
                                 depending on the specific purpose for which we are using your data. Please
                                 contact us if you need details about the specific legal ground we are relying on
                                 to process your personal data where more than one ground has been set out in the
                                 table below.
+                            </p>
+                            <p>Note that we may process your personal data for more than one lawful ground depending on the specific purpose for which we are using your data. Please contact us if you need details about the specific legal ground we are relying on to process your personal data where more than one ground has been set out in the table below.
                             </p>
                             <div class="table-responsive">
                                 <table class="table">
