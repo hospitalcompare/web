@@ -159,39 +159,40 @@ If you print off, copy or download any part of our site in breach of these terms
                 ],
                 [
                     'title' => 'Security of the Internet',
-                    'content' => '<p>While we take all appropriate and reasonable steps to protect the  confidentiality, integrity and availability of your systems and services the Enquiry Forms you complete, which are stored on our servers or on our service providers servers and transmitted by email to hospitals on your behalf, are not currently encrypted. Information on the internet is not completely secure. On occasion such information can be intercepted and as such we cannot guarantee the security of data that you choose to send us or enter on Enquiry Forms. We do not represent or warrant that the Enquiry Form you complete is secure or that data you provide will be protected against loss, misuse, attacks, or alteration by third parties. Providing such data is entirely at your own risk. Please see our Privacy Policy for more information about how we take all reasonable steps to safeguard your information.</p>'
+                    'content' =>
+                        '<p>While we take all appropriate and reasonable steps to protect the  confidentiality, integrity and availability of your systems and services the Enquiry Forms you complete, which are stored on our servers or on our service providers servers and transmitted by email to hospitals on your behalf, are not currently encrypted. Information on the internet is not completely secure. On occasion such information can be intercepted and as such we cannot guarantee the security of data that you choose to send us or enter on Enquiry Forms. We do not represent or warrant that the Enquiry Form you complete is secure or that data you provide will be protected against loss, misuse, attacks, or alteration by third parties. Providing such data is entirely at your own risk. Please see our Privacy Policy for more information about how we take all reasonable steps to safeguard your information.</p>'
                 ],
                 [
                     'title' => 'We are not responsible for viruses and you must not introduce them',
                     'content' => '
                         <p>We do not guarantee that our site will be secure or free from bugs or viruses though we use professional diligence to avoid such things.</p>
-                        <p>You are responsible for configuring your information technology, computer programmes and platform to access our site. You should use your own virus protection software.</p>
+                        <p>You are responsible for configuring your information technology, computer programmes and platform to access our site. You should use your own virus protection software.</p>'
+                ],
+                [
+                    'title' => 'You must not misuse our site',
+                    'content' => '
                         <p>You must not misuse our site by knowingly introducing viruses, trojans, worms, logic bombs or other material that is malicious or technologically harmful. You must not attempt to gain unauthorised access to our site, the server on which our site is stored or any server, computer or database connected to our site. You must not attack our site via a denial-of-service attack or a distributed denial-of service attack. By breaching this provision, you would commit a criminal offence under the Computer Misuse Act 1990. We will report any such breach to the relevant law enforcement authorities and we will cooperate with those authorities by disclosing your identity to them. In the event of such a breach, your right to use our site will cease immediately.</p>'
                 ],
                 [
                     'title' => 'Rules about linking to our site',
                     'content' => '
-                        <p>You may link to our home page, provided you do so in a way that is fair and legal and does not damage our reputation or
-                            take advantage of it.</p>
-                        <p>You must not establish a link in such a way as to suggest any form of association, approval or endorsement on our
-                            part where none exists.</p>
+                        <p>You may link to our home page, provided you do so in a way that is fair and legal and does not damage our reputation or take advantage of it.</p>
+                        <p>You must not establish a link in such a way as to suggest any form of association, approval or endorsement on our part where none exists.</p>
                         <p>You must not establish a link to our site in any website that is not owned by you.</p>
-                        <p>Our site must not be framed on any other site, nor may you create a link to any part of our site other than the home
-                            page.</p>
+                        <p>Our site must not be framed on any other site, nor may you create a link to any part of our site other than the home page.</p>
                         <p>We reserve the right to withdraw linking permission without notice.</p>
                         <p>If you wish to link to or make any use of content on our site other than that set out above, please email <a
                                 class="btn-link" href="mailto:hello@hospitalcompare.co.uk">hello@hospitalcompare.co.uk.</a></p>
 '
                 ],
                 [
-                    'title' => 'Which country\'s laws apply to any disputes?',
+                    'title' => 'Which countries\' laws apply to any disputes?',
                     'content' => '
-                        <p>Please note that these terms of use, their subject matter and their formation, are governed by English law. You and we both agree that the courts of England and Wales will have exclusive jurisdiction.</p>'
+                        <p>Please note that these Terms of Use, their subject matter and their formation, are governed by English law. You and we both agree that the courts of England and Wales will have exclusive jurisdiction.</p>'
                 ],
                 [
                     'title' => 'Our trade marks',
-                    'content' => '<p>The name “Hospital Compare” and our logo on our website are Trademarks of Hospital Compare Limited. You are not permitted to use them without our approval.
-</p>'
+                    'content' => '<p>The name “Hospital Compare” and our logo on our website are Trademarks of Hospital Compare Limited. You are not permitted to use them without our approval.</p>'
                 ]
             ]])
         </div>
