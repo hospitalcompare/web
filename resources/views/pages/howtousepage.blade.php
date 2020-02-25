@@ -43,7 +43,7 @@
     <section class="how-section__extra bg-greylight">
         <div class="container">
             <div class="row flex-lg-row-reverse">
-                <div class="col col-12 col-md-6 mb-25">
+                <div class="col col-12 col-md-6 mb-25 mb-lg-0">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/how-to-use-1.jpg') }}"
                              alt="People around a desk chatting with laptops">
@@ -68,12 +68,12 @@
                         <p class="p-secondary mb-4">If you’ve been referred and have already waited 12 weeks (three
                             months) or longer for your treatment to begin (not your first appointment to be set), we
                             recommend the following steps:</p>
-                        <div class="btn-area">
-                            @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-primary-1 font-18',
-                            'buttonText'        => 'View NHS funded private hospitals',
-                            'hrefValue'         => '/results-page/?hospital_type=1'])
-                        </div>
+{{--                        <div class="btn-area">--}}
+{{--                            @include('components.basic.button', [--}}
+{{--                            'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-primary-1 font-18',--}}
+{{--                            'buttonText'        => 'View NHS funded private hospitals',--}}
+{{--                            'hrefValue'         => '/results-page/?hospital_type=1'])--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
     <section class="how-section__extra">
         <div class="container">
             <div class="row ">
-                <div class="col col-12 col-lg-6 mb-25">
+                <div class="col col-12 col-lg-6 mb-25 mb-lg-0">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/how-to-use-2.jpg') }}"
                              alt="People around a desk chatting with laptops">
@@ -99,12 +99,12 @@
                             as quality rating in order to consider your alternatives should you ultimately not be
                             treated within 18 weeks.
                         </p>
-                        <div class="btn-area">
-                            @include('components.basic.button', [
-                            'classTitle'       => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',
-                            'hrefValue'        => '/results-page?hospital_type=2',
-                            'buttonText'       => 'View all NHS hospitals'])
-                        </div>
+{{--                        <div class="btn-area">--}}
+{{--                            @include('components.basic.button', [--}}
+{{--                            'classTitle'       => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',--}}
+{{--                            'hrefValue'        => '/results-page?hospital_type=2',--}}
+{{--                            'buttonText'       => 'View all NHS hospitals'])--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
@@ -113,7 +113,7 @@
     <section class="how-section__extra bg-greylight">
         <div class="container">
             <div class="row flex-lg-row-reverse">
-                <div class="col col-12 col-lg-6 mb-25">
+                <div class="col col-12 col-lg-6 mb-25 mb-lg-0">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/how-to-use-3.jpg') }}"
                              alt="People around a desk chatting with laptops">
@@ -128,26 +128,26 @@
                             GP to transfer your existing referral elsewhere (this can include private providers, still
                             paid for by the NHS)
                         </p>
-                        <form id="how_to_use_filter_policies" action="/results-page" class="w-100">
-                            @include('components.basic.select', [
-                                'selectPicker'          => 'true',
-                                'options'               => $data['filters']['policies'],
-                                'suboptionClass'        => 'policies',
-                                'group'                 => true,
-                                'groupName'             => 'policies',
-                                'svg'                   => 'chevron-down',
-                                'selectParentClass'       => 'd-lg-flex align-items-center mb-4',
-                                'selectClass'           => 'select-picker',
-                                'labelClass'            => 'col-brand-primary-1 font-18 SofiaPro-Regular mr-3 mb-lg-0 w-100 w-lg-50',
-                                'showLabel'             => true,
-                                'name'                  => 'policy_id',
-                                'selectId'              => 'how_to_use_policies',
-                                'placeholder'           => 'Select your insurance provider:&nbsp;'])
-                            @include('components.basic.button', [
-                                'classTitle'            => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',
-                                'buttonText'            => 'View all private hospitals covered on your policy',
-                                'htmlButton'            => true])
-                        </form>
+{{--                        <form id="how_to_use_filter_policies" action="/results-page" class="w-100">--}}
+{{--                            @include('components.basic.select', [--}}
+{{--                                'selectPicker'          => 'true',--}}
+{{--                                'options'               => $data['filters']['policies'],--}}
+{{--                                'suboptionClass'        => 'policies',--}}
+{{--                                'group'                 => true,--}}
+{{--                                'groupName'             => 'policies',--}}
+{{--                                'svg'                   => 'chevron-down',--}}
+{{--                                'selectParentClass'       => 'd-lg-flex align-items-center mb-4',--}}
+{{--                                'selectClass'           => 'select-picker',--}}
+{{--                                'labelClass'            => 'col-brand-primary-1 font-18 SofiaPro-Regular mr-3 mb-lg-0 w-100 w-lg-50',--}}
+{{--                                'showLabel'             => true,--}}
+{{--                                'name'                  => 'policy_id',--}}
+{{--                                'selectId'              => 'how_to_use_policies',--}}
+{{--                                'placeholder'           => 'Select your insurance provider:&nbsp;'])--}}
+{{--                            @include('components.basic.button', [--}}
+{{--                                'classTitle'            => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',--}}
+{{--                                'buttonText'            => 'View all private hospitals covered on your policy',--}}
+{{--                                'htmlButton'            => true])--}}
+{{--                        </form>--}}
                     </div>
                 </div>
             </div>
@@ -156,7 +156,7 @@
     <section class="how-section__extra">
         <div class="container">
             <div class="row">
-                <div class="col col-12 col-lg-6 mb-25">
+                <div class="col col-12 col-lg-6 mb-25 mb-lg-0">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/video_placeholder.jpg') }}"
                              alt="People around a desk chatting with laptops">
@@ -171,12 +171,12 @@
                             they haven’t done this already, use Hospital Compare to review alternative hospitals and
                             inform your current NHS provider of your preferred choice.
                         </p>
-                        <div class="btn-area">
-                            @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',
-                            'buttonText'        => 'Self-pay at a private hospital',
-                            'hrefValue'         => '/results-page?hospital_type=1'])
-                        </div>
+{{--                        <div class="btn-area">--}}
+{{--                            @include('components.basic.button', [--}}
+{{--                            'classTitle'        => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',--}}
+{{--                            'buttonText'        => 'Self-pay at a private hospital',--}}
+{{--                            'hrefValue'         => '/results-page?hospital_type=1'])--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
