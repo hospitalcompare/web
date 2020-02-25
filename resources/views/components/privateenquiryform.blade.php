@@ -39,44 +39,49 @@
                 </div>
                 <div class="col-12 col-md-6">
                     {{-- First name --}}
-                    <input required name="first_name" type="text" class="form-control" id="firstName"
-                           placeholder="First Name*" value="{{ !empty($firstName) ? $firstName : '' }}"/>
+                    <div class="input-wrapper">
+                        <input required name="first_name" type="text" class="form-control" id="firstName"
+                               placeholder="First Name*" value="{{ !empty($firstName) ? $firstName : '' }}"/>
+                    </div>
                 </div>
 
             </div>
             <div class="form-group row align-items-end">
                 {{-- Last name --}}
                 <div class="col-12 col-md-6 mb-1 mb-md-0">
-                    <input required name="last_name" type="text" class="form-control" id="lastName"
-                           placeholder="Last Name*" value="{{ !empty($lastName) ? $lastName : '' }}">
+                    <div class="input-wrapper">
+                        <input required name="last_name" type="text" class="form-control" id="lastName"
+                               placeholder="Last Name*" value="{{ !empty($lastName) ? $lastName : '' }}">
+                    </div>
                 </div>
                 <div class="col-12 col-md-6">
-                    <input required name="phone_number" type="text" class="form-control" id="phoneNumber"
-                           placeholder="Phone Number*" value="{{ !empty($phone) ? $phone : '' }}"/>
+                    <div class="input-wrapper">
+                        <input required name="phone_number" type="text" class="form-control" id="phoneNumber"
+                               placeholder="Phone Number*" value="{{ !empty($phone) ? $phone : '' }}"/>
+                    </div>
                 </div>
-                {{-- DOB - the field to select dob--}}
-                {{--                <div class="col-12 col-md-6">--}}
-                {{--                    <input readonly="readonly" required name="dob" class="form-control" id="dateOfBirth"--}}
-                {{--                           placeholder="DOB* (DD/MM/YYYY)" >--}}
-                {{--                    --}}{{-- DOB- hidden field to submit different format for backend validation --}}
-                {{--                    <input type="hidden" id="actualDate" name="date_of_birth">--}}
-                {{--                </div>--}}
             </div> {{-- end row --}}
             {{-- Email address --}}
             <div class="form-group row align-items-end">
                 <div class="col-12 col-md-6 mb-1 mb-md-0">
-                    <input required name="email" type="email" class="form-control" id="email"
-                           placeholder="Email Address*" value="{{ !empty($email) ? $email : '' }}"/>
+                    <div class="input-wrapper">
+                        <input required name="email" type="email" class="form-control" id="email"
+                               placeholder="Email Address*" value="{{ !empty($email) ? $email : '' }}"/>
+                    </div>
                 </div>
                 <div class="col-12 col-md-6">
-                    <input required name="confirm_email" type="email" class="form-control" id="confirmEmail"
-                           placeholder="Confirm Email Address*" value="{{ !empty($email) ? $email : '' }}"/>
+                    <div class="input-wrapper">
+                        <input required name="confirm_email" type="email" class="form-control" id="confirmEmail"
+                               placeholder="Confirm Email Address*" value="{{ !empty($email) ? $email : '' }}"/>
+                    </div>
                 </div>
             </div>
             <div class="form-group row align-items-end">
                 <div class="col-12 col-md-6">
-                    <input required name="postcode" type="text" class="form-control" id="postcode"
-                           placeholder="Postcode*" value="{{ !empty($postcode) ? $postcode : '' }}"/>
+                    <div class="input-wrapper">
+                        <input required name="postcode" type="text" class="form-control" id="postcode"
+                               placeholder="Postcode*" value="{{ !empty($postcode) ? $postcode : '' }}"/>
+                    </div>
                 </div>
             </div>
             <p class="your-details mt-3">Your Treatment</p>
@@ -107,24 +112,28 @@
                         rows="5"
                     ></textarea>
                 </div>
-                <div class="col-12 checkbox mb-3">
-                    <input required name="gdpr" type="checkbox"
-                           id="gdpr" {{ !empty($gdpr) && ($gdpr) ? 'checked' : '' }} />
-                    <label class="small-print" for="gdpr">Please accept the&nbsp;<a href="/terms-of-use">Terms of
-                            Use</a>&nbsp;before submitting the
-                        form.</label>
+                <div class="col-12 mb-3">
+                    <div class="input-wrapper checkbox">
+                        <input required name="gdpr" type="checkbox"
+                               id="gdpr" {{ !empty($gdpr) && ($gdpr) ? 'checked' : '' }} />
+                        <label class="small-print" for="gdpr">Please accept the&nbsp;<a href="/terms-of-use">Terms of
+                                Use</a>&nbsp;before submitting the form.</label>
+                    </div>
                 </div>
                 <div class="col-12">
-                    <div class="g-recaptcha" data-sitekey="6LdSxNsUAAAAABneqKEBr9c_yD5Org-9MHY3b5Fb" data-callback="recaptchaCallback"></div>
+                    <div class="g-recaptcha" data-sitekey="6LdSxNsUAAAAABneqKEBr9c_yD5Org-9MHY3b5Fb"
+                         data-callback="recaptchaCallback"></div>
                     {{--                    <span class="hidden-with-pos">--}}
                     {{--                        <label for="hiddenRecaptcha">Leave empty</label>--}}
                     {{--                    </span>--}}
-                    <input
-                        type="hidden"
-                        class="hiddenRecaptcha"
-                        required
-                        name="hiddenRecaptcha"
-                        id="hiddenRecaptcha">
+                    <div class="input-wrapper">
+                        <input
+                            type="hidden"
+                            class="hiddenRecaptcha"
+                            required
+                            name="hiddenRecaptcha"
+                            id="hiddenRecaptcha">
+                    </div>
                 </div>
                 <div class="col-12">
                     <div class="btn-wrapper text-right">
