@@ -359,3 +359,8 @@ $(document).on('click', function (e) {
 window.recaptchaCallback = function() {
     $('#hiddenRecaptcha').valid();
 };
+
+window.handleFormReset = function() {
+    // reset the recaptcha
+    grecaptcha.reset();
+};

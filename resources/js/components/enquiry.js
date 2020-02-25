@@ -159,6 +159,7 @@ if ($form.length > 0) {
                 success: function (data) {
                     $('#hc_modal_enquire_private').modal('hide');
                     showAlert('Thank you ' + data.data[0].first_name + ', your enquiry has been successfully sent!', true, true);
+                    handleFormReset();
                 },
                 error: function (e) {
                     var errorMsg = JSON.parse(e.responseText).errors.error;
