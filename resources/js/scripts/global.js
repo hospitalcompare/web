@@ -289,7 +289,7 @@ window.textTruncate = function (str, length, ending) {
 };
 
 //Check if we have a parameter in the URL
-window.getUrlParameter = function getUrlParameter(sParam) {
+window.getUrlParameter = function(sParam) {
     var sPageURL = window.location.search.substring(1),
         sURLVariables = sPageURL.split('&'),
         sParameterName,

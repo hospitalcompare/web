@@ -17,7 +17,7 @@
                 'lastName'      => $lastName ?? '',
                 'dob'           => $dob ?? '',
                 'email'         => $email ?? '',
-                'postcode'      => $postcode ?? '',
+                'postcode'      => Request::input('postcode') ?? '',
                 'phone'         => $phone ?? ''])
         </div>
     </div>
