@@ -51,7 +51,7 @@
                 </div>
                 <div class="col col-12 col-md-6">
                     <div>
-                        <h2 class="section-title">NHS funded treatment</h2>
+                        <h2 class="section-title">NHS Funded Treatment</h2>
                         <p class="p-intro mb-3">Initial Referral</p>
                         <p class="mb-3 p-secondary col-grey"> Please note that if you wish to be seen at a hospital for
                             NHS funded
@@ -90,7 +90,7 @@
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div>
-                        <h2 class="section-title">If you’ve waited 12 weeks or more since being referred</h2>
+                        <h2 class="section-title">If You’ve Waited 12 Weeks or More Since Being Referred</h2>
                         <p class="mb-3 p-intro">Whilst you have no specific rights under the NHS
                             constitution having waited only 12 weeks for treatment, it may be worth using Hospital
                             Compare to check how likely it is that the healthcare provider that you have been referred
@@ -121,7 +121,7 @@
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div>
-                        <h2 class="section-title">If You’ve Waited 18 Weeks or More since being referred</h2>
+                        <h2 class="section-title">If You’ve Waited 18 Weeks or More Since Being Referred</h2>
                         <p class="mb-4 p-intro">You have the right to choose an alternative healthcare provider and the
                             NHS should help you do this. Initially you should speak to the hospital you’ve been referred
                             to, but if they’re unwilling to help, speak with your GP and ask them to intervene. Ask your
@@ -164,7 +164,7 @@
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div>
-                        <h2 class="section-title">If You’ve Waited 26 Weeks or More since being referred</h2>
+                        <h2 class="section-title">If You’ve Waited 26 Weeks or More Since Being Referred</h2>
                         <p class="mb-3 p-intro"> The NHS should automatically make alternative arrangements on your
                             behalf. The 2019/2020 NHS Operating Plan states that every patient waiting 6 months or
                             longer should be contacted and offered the option of care at an alternative provider, if
