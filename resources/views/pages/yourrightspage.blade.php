@@ -141,23 +141,6 @@
             </div>
         </div>
     </section>
-{{--    <section class="choose-health-parent my-0">--}}
-{{--        <div class="container">--}}
-{{--            <div class="choose-health animated fade-in" data-animation="fade-in">--}}
-{{--                <div class="choose-health-text d-flex flex-column">--}}
-{{--                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet sem ut magna--}}
-{{--                    ornare ullamcorper a sed nisi. Maecenas vitae lectus efficitur, scelerisque justo nec,--}}
-{{--                    hendrerit dui. Pellentesque habitant morbi tristique senectus et netus.”--}}
-{{--                    @include('components.basic.button', [--}}
-{{--                        'buttonText'        => 'Choose your health',--}}
-{{--                        'classTitle'        => 'btn btn-blue btn-icon btn-arrow-right mt-4 mx-auto SofiaPro-Regular',--}}
-{{--                        'svg'               => 'chevron-right',--}}
-{{--                        'hrefValue'         => '/results-page'--}}
-{{--                    ])--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
 {{--    @include('pages.pagesections.testimonials')--}}
     <section class="bg-greylight">
         <div class="container">
