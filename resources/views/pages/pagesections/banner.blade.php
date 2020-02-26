@@ -2,11 +2,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="banner-text col col-12 col-lg-6">
-                @if(!empty($data['dynamicKeywordInsertion']) && $data['dynamicKeywordInsertion']['show'])
-                    <h1>Example using Dynamic location = {{$data['dynamicKeywordInsertion']['location']}} and Procedure = {{$data['dynamicKeywordInsertion']['procedure']}} and Hospital = {{$data['dynamicKeywordInsertion']['hospital']}}</h1>
-                @else
-                    <h1>Choose the <span class="col-brand-primary-1">Right Hospital <br class="d-none d-md-inline-block"></span>for <span class="col-brand-primary-1">Your&nbsp;Treatment</span></h1>
-                @endif
+                <h1>Choose the <span class="col-brand-primary-1">Right Hospital <br class="d-none d-md-inline-block"></span>for <span class="col-brand-primary-1">Your&nbsp;Treatment</span></h1>
                 <h3 class="font-20 d-lg-none">Find the best quality hospitals and shortest waiting times, locally or across England.</h3>
                 <p class="col-grey d-none d-lg-block">Find the best quality hospitals and shortest waiting times, locally or across England.</p>
                 <p class="col-grey d-none d-lg-block">Did you know: </p>
@@ -18,7 +14,7 @@
             </div>
             <div class="col col-lg-6 col-12">
                 <div class="banner-form-wrapper rounded ml-auto">
-                    <p class="SofiaPro-Medium d-none d-lg-block">Find the best hospitals</p>
+                    <p class="SofiaPro-Medium d-none d-lg-block">{{$data['dynamicKeywordText'] ?? 'Find the best hospitals'}}</p>
                     <form
                         id="search_form"
                         class="form-element"
