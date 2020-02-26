@@ -142,7 +142,7 @@ window.addHospitalToCompare = function (element) {
         nhsFundedWork = 1;
     }
 
-    var btnClass = (isDesktop) ? 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-block font-12' : 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-squared btn-squared_slim font-12 pl-5';
+    var btnClass = (isDesktop) ? 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry px-3 font-12' : 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-squared btn-squared_slim font-12 pl-5';
     var targetModal = hospitalType == 'Private' ? '#hc_modal_enquire_private' : '#hc_modal_contacts_general_shortlist_' + element.id;
     var btnContent =
         `<a id="${element.id}"
@@ -152,7 +152,7 @@ window.addHospitalToCompare = function (element) {
             data-hospital-title="${element.display_name}"
             data-hospital-id="${element.id}"
             data-image="${element.image}"
-            data-target="${targetModal}">Make an enquiry${circleCheck}</a>`;
+            data-target="${targetModal}">${circleCheck} Enquire</a>`;
     // Button content if NHS hospital has a private website url
     var urlTwoButton = (element.nhs_private_url != "" && typeof element.nhs_private_url != "undefined") ? `<a id="${element.id}" class="p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block" target="blank" href="${element.nhs_private_url}" role="button" data-hospital-type="nhs-hospital"><span>Visit website</span></a>` : '';
     // Button to trigger contact form for the private wing of NHS hospital
@@ -226,7 +226,7 @@ window.addHospitalToCompare = function (element) {
         var newColumn =
             '<div class="col text-center" id="compare_hospital_id_' + element.id + '">' +
             '<div class="col-inner">' +
-            '<div class="col-header d-flex flex-column justify-content-between align-items-center px-4 pb-3">' +
+            '<div class="col-header d-flex flex-column justify-content-between align-items-center px-2 pb-3">' +
             // '<div class="image-wrapper" style="background: url(' + element.image + ') no-repeat scroll center center / cover" >' +
             '<div class="image-wrapper">' +
             '<div class="remove-hospital" id="remove_id_' + element.id + '" data-hospital-type="' + slugify(hospitalType) + '-hospital"></div>' +
