@@ -85,7 +85,7 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 contact us in the first instance.
                             </p>
                             <h2>Changes to the privacy policy and your duty to inform us of changes</h2>
-                            <p>We keep our privacy policy under regular review. This version was last updated on 12
+                            <p>We keep our privacy policy under regular review. This version was last updated on 25
                                 February 2020. Historic versions can be obtained by contacting us.
                             </p>
                             <p>It is important that the personal data we hold about you is accurate and current. Please
@@ -227,7 +227,7 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                     actions and patterns. We collect this personal data by using cookies and other
                                     similar technologies. We may also receive Technical Data about you if you visit
                                     other websites employing our cookies. Please see our cookie policy
-                                    <a class="btn-link" href="/cookie-policy">cookie policy</a> for further
+                                    <a target="_blank" class="btn-link" href="/cookie-policy">cookie policy</a> for further
                                     details.
                                 </li>
                                 <li><strong>Third Parties or publicly available sources</strong> We will receive

@@ -209,8 +209,7 @@
                                     <p class="font-18 SofiaPro-Medium">Choice</p>
                                     <p class="mb-0 col-grey p-secondary">Putting patients and the public first,
                                         increasing their involvement in decisions aecting them, as well as the choice
-                                        of
-                                        healthcare provider for their NHS treatment (whether public sector of private
+                                        of healthcare provider for their NHS treatment (whether public sector of private
                                         sector).</p>
                                 </div>
                             </div>
