@@ -18,8 +18,7 @@
                 <div class="col-lg-6">
                     <h1>Feel <span class="col-brand-primary-1">Better</span> Knowing Your Legal Right to Choose
                     </h1>
-                    <p class="col-grey p-secondary mb-35">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Hospital Compare is a unique comparison website that empowers you to make the best choice of hospital for your treatment by exercising your legal rights.
+                    <p class="col-grey p-secondary mb-35">Hospital Compare is a unique comparison website that empowers you to make the best choice of hospital for your treatment by exercising your legal rights.
                     </p>
                     <div class="btn-area mb-5">
                         @include('components.basic.button', [
