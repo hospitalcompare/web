@@ -85,7 +85,7 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 contact us in the first instance.
                             </p>
                             <h2>Changes to the privacy policy and your duty to inform us of changes</h2>
-                            <p>We keep our privacy policy under regular review. This version was last updated on 12
+                            <p>We keep our privacy policy under regular review. This version was last updated on 25
                                 February 2020. Historic versions can be obtained by contacting us.
                             </p>
                             <p>It is important that the personal data we hold about you is accurate and current. Please
@@ -227,7 +227,7 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                     actions and patterns. We collect this personal data by using cookies and other
                                     similar technologies. We may also receive Technical Data about you if you visit
                                     other websites employing our cookies. Please see our cookie policy
-                                    <a class="btn-link" href="/cookie-policy">cookie policy</a> for further
+                                    <a target="_blank" class="btn-link" href="/cookie-policy">cookie policy</a> for further
                                     details.
                                 </li>
                                 <li><strong>Third Parties or publicly available sources</strong> We will receive
@@ -307,11 +307,6 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 contact us if you need details about the specific legal ground we are relying on
                                 to process your personal data where more than one ground has been set out in the
                                 table below.
-                            </p>
-                            <p>Note that we may process your personal data for more than one lawful ground depending on
-                                the specific purpose for which we are using your data. Please contact us if you need
-                                details about the specific legal ground we are relying on to process your personal data
-                                where more than one ground has been set out in the table below.
                             </p>
                             <div class="table-responsive">
                                 <table class="table">
@@ -403,29 +398,29 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                             </ol>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            To enable you to partake in a competition or complete a survey
-                                        </td>
-                                        <td>
-                                            <ol class="alpha">
-                                                <li>Identity</li>
-                                                <li>Contact</li>
-                                                <li>Profile</li>
-                                                <li>Usage</li>
-                                                <li>Marketing and Communications</li>
-                                            </ol>
-                                        </td>
-                                        <td>
-                                            <ol class="alpha">
-                                                <li>Performance of a contract with you</li>
-                                                <li>Necessary for our legitimate interests (to study and record
-                                                    how customers use our services, to develop them and grow our
-                                                    business)
-                                                </li>
-                                            </ol>
-                                        </td>
-                                    </tr>
+{{--                                    <tr>--}}
+{{--                                        <td>--}}
+{{--                                            To enable you to partake in a competition or complete a survey--}}
+{{--                                        </td>--}}
+{{--                                        <td>--}}
+{{--                                            <ol class="alpha">--}}
+{{--                                                <li>Identity</li>--}}
+{{--                                                <li>Contact</li>--}}
+{{--                                                <li>Profile</li>--}}
+{{--                                                <li>Usage</li>--}}
+{{--                                                <li>Marketing and Communications</li>--}}
+{{--                                            </ol>--}}
+{{--                                        </td>--}}
+{{--                                        <td>--}}
+{{--                                            <ol class="alpha">--}}
+{{--                                                <li>Performance of a contract with you</li>--}}
+{{--                                                <li>Necessary for our legitimate interests (to study and record--}}
+{{--                                                    how customers use our services, to develop them and grow our--}}
+{{--                                                    business)--}}
+{{--                                                </li>--}}
+{{--                                            </ol>--}}
+{{--                                        </td>--}}
+{{--                                    </tr>--}}
                                     <tr>
                                         <td>
                                             To administer and protect our business and this website (including
@@ -558,7 +553,7 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                             <p>You can set your browser to refuse all or some browser cookies, or to alert you when
                                 websites set or access cookies. If you disable or refuse cookies, please note that some
                                 parts of this website may become inaccessible or not function properly. For more
-                                information about the cookies we use, please see <a
+                                information about the cookies we use, please see our <a target="_blank"
                                     href="/cookie-policy"
                                     class="btn-link">cookie policy</a>.
                             </p>
@@ -655,22 +650,15 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                     Europe. For further details, see European Commission: Model contracts for the
                                     transfer of personal data to third countries.
                                 </li>
-                                <li>Where we use providers based in the US, we may transfer data to them if they
-                                    are part of the Privacy Shield which requires them to provide similar
-                                    protection to personal data shared between Europe and the US. For further
-                                    details, see European Commission: EU-US Privacy Shield. Please contact us if
-                                    you want further information on the specific mechanism used by us when
-                                    transferring your personal data out of the EEA.
-                                </li>
-                                <li>Where we use providers based in the US, we may transfer data to them if they are
-                                    part of the Privacy Shield which requires them to provide similar protection to
-                                    personal data shared between Europe and the US. For further details, see European
-                                    Commission: EU-US Privacy Shield.
-                                </li>
-                                <li>Please contact us if you want further information on the specific mechanism used by
-                                    us when transferring your personal data out of the EEA.
-                                </li>
                             </ul>
+                            <p>Where we use providers based in the US, we may transfer data to them if they are
+                                part of the Privacy Shield which requires them to provide similar protection to
+                                personal data shared between Europe and the US. For further details, see European
+                                Commission: EU-US Privacy Shield.
+                            </p>
+                            <p>Please contact us if you want further information on the specific mechanism used by
+                                us when transferring your personal data out of the EEA.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -731,7 +719,7 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                             <p>Details of retention periods for different aspects of your personal data are available in
                                 our retention policy which you can request from us by contacting us.
                             </p>
-                            <p>In some circumstances you can ask us to delete your data: see [your legal rights] below
+                            <p>In some circumstances you can ask us to delete your data: see Your Legal Rights below
                                 for further information.
                             </p>
                             <p>In some circumstances we will anonymise your personal data (so that it can no longer be

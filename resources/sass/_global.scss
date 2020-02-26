@@ -239,10 +239,12 @@ ul.blue-dot {
     &.blue-dot_small {
 
         li {
-            color: $black;
+            //color: $black;
             margin-bottom: 5px;
+            padding-left: 15px;
 
             &:before {
+                top: 10px;
                 width: 5px;
                 height: 5px;
                 background-color: $brand-primary-1;
@@ -707,7 +709,7 @@ path {
 }
 
 .mb-25 {
-    margin-bottom: 25px !important;
+    margin-bottom: 25px;
 }
 
 .mb-40 {

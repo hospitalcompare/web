@@ -29,9 +29,9 @@
 // });
 
 // Matches UK postcode. Does not match to UK Channel Islands that have their own postcodes (non standard UK)
-$.validator.addMethod( "postcodeUK", function( value, element ) {
-    return this.optional( element ) || /^((([A-PR-UWYZ][0-9])|([A-PR-UWYZ][0-9][0-9])|([A-PR-UWYZ][A-HK-Y][0-9])|([A-PR-UWYZ][A-HK-Y][0-9][0-9])|([A-PR-UWYZ][0-9][A-HJKSTUW])|([A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY]))\s?([0-9][ABD-HJLNP-UW-Z]{2})|(GIR)\s?(0AA))$/i.test( value );
-}, "Please specify a valid UK postcode" );
+$.validator.addMethod("postcodeUK", function (value, element) {
+    return this.optional(element) || /^((([A-PR-UWYZ][0-9])|([A-PR-UWYZ][0-9][0-9])|([A-PR-UWYZ][A-HK-Y][0-9])|([A-PR-UWYZ][A-HK-Y][0-9][0-9])|([A-PR-UWYZ][0-9][A-HJKSTUW])|([A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY]))\s?([0-9][ABD-HJLNP-UW-Z]{2})|(GIR)\s?(0AA))$/i.test(value);
+}, "Please specify a valid UK postcode");
 
 // Add a custom validation to the jquery validate object - validate phone number field as UK format
 $.validator.addMethod('phoneUK', function (phone_number, element) {
@@ -119,22 +119,22 @@ if ($form.length > 0) {
         },
         errorPlacement: function (error, element) {
             //console.dir(error, element);
-            var customError = $([
-                '<span class="invalid-feedback d-block">',
-                '  <span class="mb-0 d-block">',
-                '  </span>',
-                '</span>'
-            ].join(""));
+            var customError =
+                $(`<span class="invalid-feedback d-block">
+                    <span class="mb-0 d-block">
+                    </span>
+                </span>`);
 
             // Add `form-error-message` class to the error element
             error.addClass("form-error-message");
-            // console.log(element.parent());
+
             // Insert it inside the span that has `mb-0` class
             error.appendTo(customError.find("span.mb-0"));
 
+            // Select the parent wrapper - either input-wrapper or select-wrapper
+            var wrapper = element.parents("[class*='wrapper']");
             // Insert your custom error
-            // element.closest().prepend(customError);
-            customError.insertBefore(element).slideDown();
+            customError.insertBefore(wrapper).slideDown();
         },
         // Submit handler - what happens when form submitted
         submitHandler: function () {
@@ -159,6 +159,7 @@ if ($form.length > 0) {
                 success: function (data) {
                     $('#hc_modal_enquire_private').modal('hide');
                     showAlert('Thank you ' + data.data[0].first_name + ', your enquiry has been successfully sent!', true, true);
+                    handleFormReset();
                 },
                 error: function (e) {
                     var errorMsg = JSON.parse(e.responseText).errors.error;

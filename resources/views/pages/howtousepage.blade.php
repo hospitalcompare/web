@@ -43,7 +43,7 @@
     <section class="how-section__extra bg-greylight">
         <div class="container">
             <div class="row flex-lg-row-reverse">
-                <div class="col col-12 col-md-6 mb-25">
+                <div class="col col-12 col-md-6 mb-25 mb-lg-0">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/how-to-use-1.jpg') }}"
                              alt="People around a desk chatting with laptops">
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col col-12 col-md-6">
                     <div>
-                        <h2 class="section-title">NHS funded treatment</h2>
+                        <h2 class="section-title">NHS Funded Treatment</h2>
                         <p class="p-intro mb-3">Initial Referral</p>
                         <p class="mb-3 p-secondary col-grey"> Please note that if you wish to be seen at a hospital for
                             NHS funded
@@ -68,12 +68,12 @@
                         <p class="p-secondary mb-4">If you’ve been referred and have already waited 12 weeks (three
                             months) or longer for your treatment to begin (not your first appointment to be set), we
                             recommend the following steps:</p>
-                        <div class="btn-area">
-                            @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-primary-1 font-18',
-                            'buttonText'        => 'View NHS funded private hospitals',
-                            'hrefValue'         => '/results-page/?hospital_type=1'])
-                        </div>
+{{--                        <div class="btn-area">--}}
+{{--                            @include('components.basic.button', [--}}
+{{--                            'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-primary-1 font-18',--}}
+{{--                            'buttonText'        => 'View NHS funded private hospitals',--}}
+{{--                            'hrefValue'         => '/results-page/?hospital_type=1'])--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
     <section class="how-section__extra">
         <div class="container">
             <div class="row ">
-                <div class="col col-12 col-lg-6 mb-25">
+                <div class="col col-12 col-lg-6 mb-25 mb-lg-0">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/how-to-use-2.jpg') }}"
                              alt="People around a desk chatting with laptops">
@@ -90,37 +90,21 @@
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div>
-                        <h2 class="section-title">Standard procedure at an NHS Hospital</h2>
-                        <p class="mb-3 p-intro">If You’ve Waited 12 Weeks or More since being referred:</p>
-                        <p class="mb-4 col-grey p-secondary">Whilst you have no specific rights under the NHS
+                        <h2 class="section-title">If You’ve Waited 12 Weeks or More Since Being Referred</h2>
+                        <p class="mb-3 p-intro">Whilst you have no specific rights under the NHS
                             constitution having waited only 12 weeks for treatment, it may be worth using Hospital
                             Compare to check how likely it is that the healthcare provider that you have been referred
-                            to will achieve the 18-week referral-to-treatment target.
-                        </p>
+                            to will achieve the 18-week referral-to-treatment target.</p>
                         <p class="mb-4 col-grey p-secondary">You may also wish to compare other important metrics such
                             as quality rating in order to consider your alternatives should you ultimately not be
                             treated within 18 weeks.
                         </p>
-                        <p class="mb-3 p-intro">If You’ve Waited 18 Weeks or More since being referred:</p>
-                        <p class="mb-4 col-grey p-secondary"> You have the right to choose an alternative healthcare
-                            provider and the NHS should help you do this. Initially you should speak to the hospital
-                            you’ve been referred to, but if they’re unwilling to help, speak with your GP and ask them
-                            to intervene. Ask your GP to transfer your existing referral elsewhere (this can include
-                            private providers, still paid for by the NHS)
-                        </p>
-                        <p class="mb-3 p-intro">If You’ve Waited 26 Weeks or More since being referred:</p>
-                        <p class="mb-4 col-grey p-secondary">The NHS should automatically make alternative arrangements
-                            on your behalf. The 2019/2020 NHS Operating Plan states that every patient waiting 6 months
-                            or longer should be contacted and offered the option of care at an alternative provider, if
-                            they haven’t done this already, use Hospital Compare to review alternative hospitals and
-                            inform your current NHS provider of your preferred choice.
-                        </p>
-                        <div class="btn-area">
-                            @include('components.basic.button', [
-                            'classTitle'       => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',
-                            'hrefValue'        => '/results-page?hospital_type=2',
-                            'buttonText'       => 'View all NHS hospitals'])
-                        </div>
+{{--                        <div class="btn-area">--}}
+{{--                            @include('components.basic.button', [--}}
+{{--                            'classTitle'       => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',--}}
+{{--                            'hrefValue'        => '/results-page?hospital_type=2',--}}
+{{--                            'buttonText'       => 'View all NHS hospitals'])--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
@@ -129,7 +113,7 @@
     <section class="how-section__extra bg-greylight">
         <div class="container">
             <div class="row flex-lg-row-reverse">
-                <div class="col col-12 col-lg-6 mb-25">
+                <div class="col col-12 col-lg-6 mb-25 mb-lg-0">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/how-to-use-3.jpg') }}"
                              alt="People around a desk chatting with laptops">
@@ -137,38 +121,33 @@
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div>
-                        <h2 class="section-title">Private healthcare insurance</h2>
-                        <p class="mb-4 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
-                            eveniet ipsa laboriosam
-                            distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
-                            voluptates? Ea, odio!
+                        <h2 class="section-title">If You’ve Waited 18 Weeks or More Since Being Referred</h2>
+                        <p class="mb-4 p-intro">You have the right to choose an alternative healthcare provider and the
+                            NHS should help you do this. Initially you should speak to the hospital you’ve been referred
+                            to, but if they’re unwilling to help, speak with your GP and ask them to intervene. Ask your
+                            GP to transfer your existing referral elsewhere (this can include private providers, still
+                            paid for by the NHS)
                         </p>
-                        <p class="mb-4 col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                            cumque nesciunt, officia repellat
-                            repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
-                            deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
-                            quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
-                            labore non pariatur tempore.</p>
-                        <form id="how_to_use_filter_policies" action="/results-page" class="w-100">
-                            @include('components.basic.select', [
-                                'selectPicker'          => 'true',
-                                'options'               => $data['filters']['policies'],
-                                'suboptionClass'        => 'policies',
-                                'group'                 => true,
-                                'groupName'             => 'policies',
-                                'svg'                   => 'chevron-down',
-                                'selectParentClass'       => 'd-lg-flex align-items-center mb-4',
-                                'selectClass'           => 'select-picker',
-                                'labelClass'            => 'col-brand-primary-1 font-18 SofiaPro-Regular mr-3 mb-lg-0 w-100 w-lg-50',
-                                'showLabel'             => true,
-                                'name'                  => 'policy_id',
-                                'selectId'              => 'how_to_use_policies',
-                                'placeholder'           => 'Select your insurance provider:&nbsp;'])
-                            @include('components.basic.button', [
-                                'classTitle'            => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',
-                                'buttonText'            => 'View all private hospitals covered on your policy',
-                                'htmlButton'            => true])
-                        </form>
+{{--                        <form id="how_to_use_filter_policies" action="/results-page" class="w-100">--}}
+{{--                            @include('components.basic.select', [--}}
+{{--                                'selectPicker'          => 'true',--}}
+{{--                                'options'               => $data['filters']['policies'],--}}
+{{--                                'suboptionClass'        => 'policies',--}}
+{{--                                'group'                 => true,--}}
+{{--                                'groupName'             => 'policies',--}}
+{{--                                'svg'                   => 'chevron-down',--}}
+{{--                                'selectParentClass'       => 'd-lg-flex align-items-center mb-4',--}}
+{{--                                'selectClass'           => 'select-picker',--}}
+{{--                                'labelClass'            => 'col-brand-primary-1 font-18 SofiaPro-Regular mr-3 mb-lg-0 w-100 w-lg-50',--}}
+{{--                                'showLabel'             => true,--}}
+{{--                                'name'                  => 'policy_id',--}}
+{{--                                'selectId'              => 'how_to_use_policies',--}}
+{{--                                'placeholder'           => 'Select your insurance provider:&nbsp;'])--}}
+{{--                            @include('components.basic.button', [--}}
+{{--                                'classTitle'            => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',--}}
+{{--                                'buttonText'            => 'View all private hospitals covered on your policy',--}}
+{{--                                'htmlButton'            => true])--}}
+{{--                        </form>--}}
                     </div>
                 </div>
             </div>
@@ -177,7 +156,7 @@
     <section class="how-section__extra">
         <div class="container">
             <div class="row">
-                <div class="col col-12 col-lg-6 mb-25">
+                <div class="col col-12 col-lg-6 mb-25 mb-lg-0">
                     <div class="image-wrapper">
                         <img src="{{ asset('/images/video_placeholder.jpg') }}"
                              alt="People around a desk chatting with laptops">
@@ -185,29 +164,22 @@
                 </div>
                 <div class="col col-12 col-lg-6">
                     <div>
-                        <h2 class="section-title">Self-pay at a private hospital</h2>
-                        <p class="mb-3 p-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque
-                            eveniet ipsa laboriosam
-                            voluptas voluptatum. Consectetur, eius impedit! Alias aperiam, architecto autem cupiditate
-                            distinctio eius, et, hic minima omnis recusandae reiciendis rem tempore veritatis vitae
-                            voluptates? Ea, odio!
+                        <h2 class="section-title">If You’ve Waited 26 Weeks or More Since Being Referred</h2>
+                        <p class="mb-3 p-intro"> The NHS should automatically make alternative arrangements on your
+                            behalf. The 2019/2020 NHS Operating Plan states that every patient waiting 6 months or
+                            longer should be contacted and offered the option of care at an alternative provider, if
+                            they haven’t done this already, use Hospital Compare to review alternative hospitals and
+                            inform your current NHS provider of your preferred choice.
                         </p>
-                        <p class="mb-4 col-grey p-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                            cumque nesciunt, officia repellat
-                            repellendus tempora veniam voluptatem. Alias architecto assumenda autem blanditiis commodi,
-                            deleniti dolore inventore laudantium, magnam magni neque nostrum perferendis praesentium
-                            quam, quisquam quod reiciendis rem sint suscipit tenetur. A, deleniti excepturi id ipsa
-                            labore non pariatur tempore.</p>
-                        <div class="btn-area">
-                            @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',
-                            'buttonText'        => 'Self-pay at a private hospital',
-                            'hrefValue'         => '/results-page?hospital_type=1'])
-                        </div>
+{{--                        <div class="btn-area">--}}
+{{--                            @include('components.basic.button', [--}}
+{{--                            'classTitle'        => 'btn btn-brand-primary-1 btn-squared btn-squared_slim font-18',--}}
+{{--                            'buttonText'        => 'Self-pay at a private hospital',--}}
+{{--                            'hrefValue'         => '/results-page?hospital_type=1'])--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 @endsection
