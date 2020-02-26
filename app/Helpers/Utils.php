@@ -6,6 +6,9 @@ use App\Models\Enquiry;
 use App\Models\Insurance;
 use App\Models\Procedure;
 use App\Models\Specialty;
+use Spatie\Sitemap\SitemapGenerator;
+
+
 
 class Utils
 {
@@ -181,6 +184,10 @@ class Utils
     //Filter Distance Radius
     const sliderRange = [0, 5, 10, 25, 50, 100, 200, 600];
 
+    public static function generateSitemap() {
+        //Check if the file exists or create it
+        return SitemapGenerator::create('http://hcstaging.co.uk')->writeToFile(resource_path('sitemap.xml'));
+    }
     /**
      * Returns the list of Procedures with the first option as a placeholder
      *

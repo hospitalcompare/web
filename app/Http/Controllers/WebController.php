@@ -30,13 +30,17 @@ class WebController extends BaseController
         $dynamicHospital    = !empty($request['hn'])            ? Validate::escapeString($request['hn'])                : '';
 
         //Dynamic Keyword Insertion Logic
-        $dynamicKeywordInsertion = ['show' => false];
-        if(!empty($dynamicLocation) && !empty($dynamicProcedure) && !empty($dynamicHospital)) {
-            $dynamicKeywordInsertion['show']        = true;
-            $dynamicKeywordInsertion['location']    = $dynamicLocation;
-            $dynamicKeywordInsertion['procedure']   = $dynamicProcedure;
-            $dynamicKeywordInsertion['hospital']    = $dynamicHospital;
-        }
+        $dynamicKeywordInsertion                = [
+            'location'  => $dynamicLocation,
+            'procedure' => $dynamicProcedure,
+            'hospital'  => $dynamicHospital
+        ];
+
+        $dynamicKeywordText = 'Find the best hospitals';
+        if(!empty($dynamicKeywordInsertion['procedure']))
+            $dynamicKeywordText .= ' for '.$dynamicKeywordInsertion['procedure'];
+        if(!empty($dynamicKeywordInsertion['location']))
+            $dynamicKeywordText .= ' in '.$dynamicKeywordInsertion['location'];
 
         //Retrieve the list of Procedures sorted by name ASC
         $procedures = Utils::getProceduresForDropdown();
@@ -44,7 +48,7 @@ class WebController extends BaseController
         $faqs  = Faq::with('category')->get()->take(3);
         $this->returnedData['success']                          = true;
         $this->returnedData['data']['faqs']                     = $faqs;
-        $this->returnedData['data']['dynamicKeywordInsertion']  = $dynamicKeywordInsertion;
+        $this->returnedData['data']['dynamicKeywordText']       = $dynamicKeywordText;
         $this->returnedData['data']['procedures']               = $procedures;
 
         //For Live environment just show the work in progress page

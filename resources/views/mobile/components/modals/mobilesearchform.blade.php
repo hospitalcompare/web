@@ -7,7 +7,7 @@
         </div>
         <div class="">
             <div class="banner-form-wrapper rounded ml-auto">
-                <p class="SofiaPro-Medium d-none d-lg-block">Find the best hospitals</p>
+                <p class="SofiaPro-Medium d-none d-lg-block">{{$data['dynamicKeywordText'] ?? 'Find the best hospitals'}}</p>
                 <form
                     id="search_form"
                     class="form-element"
