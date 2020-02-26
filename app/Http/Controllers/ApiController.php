@@ -27,6 +27,10 @@ class ApiController {
         'data'      => []
     ];
 
+    public function generateSitemap() {
+        return json_encode(Utils::generateSitemap());
+    }
+
     /**
      * Imports one or ALL import files based on a given `name`
      *
