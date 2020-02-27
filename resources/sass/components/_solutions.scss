@@ -145,10 +145,8 @@
             .image-wrapper {
                 position: relative;
                 text-align: center;
-                //overflow: hidden;
                 width: 100%;
                 max-width: 120px;
-                //@include aspect-ratio(120, 120, 150%);
 
                 .remove-hospital {
                     cursor: pointer;

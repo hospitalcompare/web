@@ -12,7 +12,7 @@
 
 @section('content')
     @include('pages.pagesections.flatbanner')
-    <section class="your-rights-intro">
+    <section class="your-rights-intro pb-0">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -70,8 +70,8 @@
                         the NHS and enhanced your rights further.</p>
                 </div>
                 <div class="col-lg-6 your-rights-hero-cont">
-                    <div class="about-img-top"></div>
-                    <div class="about-img-bottom"></div>
+                    <div class="your-rights-img-top"></div>
+                    <div class="your-rights-img-bottom"></div>
                     <img class="your-rights-pattern-top-left" src="images/icons/about-top-left.svg" alt="dots">
                     <img class="your-rights-pattern-right" src="images/icons/about-right.svg" alt="dots">
                     <img class="your-rights-pattern-bottom" src="images/icons/about-bottom.svg" alt="dots">
@@ -283,7 +283,7 @@
                     <p class="col-grey p-secondary">These rights are reflected in the NHS Constitution and the
                         regulations that support it.</p>
                 </div>
-                <div class="col-12 col-lg-6 your-rights-hero-cont">
+                <div class="col-12 col-lg-6 your-rights-img-cont">
                     <div class="your-rights-img-top"></div>
                     <div class="your-rights-img-bottom"></div>
                     <div class="your-rights-img-back"></div>
