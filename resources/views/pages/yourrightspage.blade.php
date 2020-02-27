@@ -210,45 +210,46 @@
                     <p class="text-center font-26 p-secondary mb-5 col-grey">
                         This included:
                     </p>
-                    <div class="p-30 bg-grey row">
-                        <div class="card shadow mb-30 border-0 col-12 p-30">
-                            <div class="row">
-                                <div class="col-12 col-sm-2 col-lg-2">
-                                    <div class="card-icon-wrapper px-5 px-sm-0 px-xl-5 h-100 d-flex align-items-center">
-                                        <img class="w-100" src="/images/icons/faq-make-choice.svg"
-                                             alt="Icon representing choice">
-                                    </div>
-                                </div>
-                                <div class="card-body py-0 col-12 col-sm-10 col-lg-10">
-                                    <p class="font-18 SofiaPro-Medium">Choice</p>
-                                    <p class="mb-0 col-grey p-secondary">Putting patients and the public first,
-                                        increasing their involvement in decisions affecting them, as well as the choice
-                                        of healthcare provider for their NHS treatment (whether public sector of private
-                                        sector).</p>
-                                </div>
+
+                </div>
+            </div>
+            <div class="p-30 bg-grey">
+                <div class="card shadow mb-30 border-0 p-30">
+                    <div class="row">
+                        <div class="col-12 col-sm-2 col-lg-2">
+                            <div class="card-icon-wrapper px-5 px-sm-0 px-xl-5 h-100 d-flex align-items-center">
+                                <img class="w-100" src="/images/icons/faq-make-choice.svg"
+                                     alt="Icon representing choice">
                             </div>
                         </div>
-                        <div class="card shadow border-0 col-12 p-30">
-                            <div class="row">
-                                <div class="col-12 col-sm-2 col-lg-2col-12 col-sm-2 col-lg-2">
-                                    <div class="card-icon-wrapper px-5 px-sm-0 px-xl-5 h-100 d-flex align-items-center">
-                                        <img class="w-100" src="/images/icons/nhs-tariff.svg"
-                                             alt="Icon representing weighing scales">
-                                    </div>
-                                </div>
-                                <div class="card-body py-0 col-12 col-sm-10 col-lg-10">
-                                    <p class="font-18 SofiaPro-Medium">The NHS National Tariff</p>
-                                    <p class="mb-0 col-grey p-secondary">A national standard price for healthcare
-                                        procedures. This aimed to create a level playing field for all providers of NHS
-                                        services, regardless of their status as a public or private sector organisation.
-                                        This means that if you choose to have your NHS
-                                        funded treatment at a private hospital the NHS will pay them the NHS National
-                                        Tariff to perform your treatment. You pay
-                                        nothing. If you choose to pay the private hospital yourself or your treatment is
-                                        funded by your healthcare insurer, you are
-                                        likely to find you will have your treatment performed even quicker.</p>
-                                </div>
+                        <div class="card-body py-0 col-12 col-sm-10 col-lg-10">
+                            <p class="font-18 SofiaPro-Medium">Choice</p>
+                            <p class="mb-0 col-grey p-secondary">Putting patients and the public first,
+                                increasing their involvement in decisions affecting them, as well as the choice
+                                of healthcare provider for their NHS treatment (whether public sector of private
+                                sector).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow border-0 p-30">
+                    <div class="row">
+                        <div class="col-12 col-sm-2 col-lg-2col-12 col-sm-2 col-lg-2">
+                            <div class="card-icon-wrapper px-5 px-sm-0 px-xl-5 h-100 d-flex align-items-center">
+                                <img class="w-100" src="/images/icons/nhs-tariff.svg"
+                                     alt="Icon representing weighing scales">
                             </div>
+                        </div>
+                        <div class="card-body py-0 col-12 col-sm-10 col-lg-10">
+                            <p class="font-18 SofiaPro-Medium">The NHS National Tariff</p>
+                            <p class="mb-0 col-grey p-secondary">A national standard price for healthcare
+                                procedures. This aimed to create a level playing field for all providers of NHS
+                                services, regardless of their status as a public or private sector organisation.
+                                This means that if you choose to have your NHS
+                                funded treatment at a private hospital the NHS will pay them the NHS National
+                                Tariff to perform your treatment. You pay
+                                nothing. If you choose to pay the private hospital yourself or your treatment is
+                                funded by your healthcare insurer, you are
+                                likely to find you will have your treatment performed even quicker.</p>
                         </div>
                     </div>
                 </div>
