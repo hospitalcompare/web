@@ -253,7 +253,7 @@
                         the best choice of hospital for their treatment. The team have a wealth of collective experience in the healthcare sector.
                     </p>
                     <p class="col-grey p-secondary text-center">To use Hospital Compare, enter your postcode at the top of this page and click ‘Find Hospitals’.</p>
-                    <p class="col-grey p-secondary text-center">If you have any questions, you can email us by clicking <a href="mailto:hello@hospitalcompare.co.uk">here</a>.</p>
+                    <p class="col-grey p-secondary text-center">If you have any questions, you can email us by clicking <a class="btn-link" href="mailto:hello@hospitalcompare.co.uk">here</a>.</p>
                 </div>
             </div>
 {{--            <div class="row">--}}

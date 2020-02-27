@@ -304,14 +304,15 @@
         display: flex !important;
     }
 
-    .btn-enquire svg, .btn-enquire-private-hospital svg {
+    .btn-enquire svg,
+    .btn-enquire-private-hospital svg {
         position: static;
         top: 0;
         transform: translateY(0);
         left: 0px;
         width: 20px;
         height: 20px;
-        margin: 0 8px !important;
+        margin-right: 8px !important;
     }
 
     .result-item .btn-compare svg {

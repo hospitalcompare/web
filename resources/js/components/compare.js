@@ -152,7 +152,7 @@ window.addHospitalToCompare = function (element) {
             data-hospital-title="${element.display_name}"
             data-hospital-id="${element.id}"
             data-image="${element.image}"
-            data-target="${targetModal}">Make an enquiry${circleCheck}</a>`;
+            data-target="${targetModal}">${circleCheck}Enquire</a>`;
     // Button content if NHS hospital has a private website url
     var urlTwoButton = (element.nhs_private_url != "" && typeof element.nhs_private_url != "undefined") ? `<a id="${element.id}" class="p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block" target="blank" href="${element.nhs_private_url}" role="button" data-hospital-type="nhs-hospital"><span>Visit website</span></a>` : '';
     // Button to trigger contact form for the private wing of NHS hospital
@@ -231,7 +231,7 @@ window.addHospitalToCompare = function (element) {
             '<div class="image-wrapper">' +
             '<div class="remove-hospital" id="remove_id_' + element.id + '" data-hospital-type="' + slugify(hospitalType) + '-hospital"></div>' +
             '</div>' +
-            '<div class="w-100 details font-16 SofiaPro-SemiBold">' + textTruncate(element.display_name, 30, '...') + '</div>' +
+            '<div class="w-100 details font-16 SofiaPro-SemiBold"><p class="w-100">' + textTruncate(element.display_name, 30, '...') + '</p></div>' +
             btnContent +
             '</div>' +
             '<div class="cell">' + hospitalType + '</div>' +
