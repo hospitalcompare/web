@@ -534,10 +534,16 @@ select.big {
     }
 
 
-    .cc-window.cc-banner {
-        padding: 1em 1.8em;
-        width: 100%;
-        flex-direction: row;
+    .cc-window {
+        &.cc-floating {
+            max-width: initial !important;
+        }
+
+        &.cc-banner {
+            padding: 1em 1.8em;
+            width: 100%;
+            flex-direction: row;
+        }
     }
 
     .cc-link {

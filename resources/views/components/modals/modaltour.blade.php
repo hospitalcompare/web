@@ -8,7 +8,7 @@
      aria-labelledby="" aria-modal="true" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header d-flex justify-content-between border-bottom">
+            <div class="modal-header d-flex justify-content-between align-items-center border-bottom">
                 <div id="slide_number" class="col-brand-primary-1 font-20"><span class="d-inline-block">1</span>&nbsp;of 9</div>
                 <span class="col-grey font-16">Help Guide Steps</span>
                 <button type="button" class="btn-plain" data-dismiss="modal" aria-label="Close">

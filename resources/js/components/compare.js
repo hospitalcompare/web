@@ -142,7 +142,7 @@ window.addHospitalToCompare = function (element) {
         nhsFundedWork = 1;
     }
 
-    var btnClass = (isDesktop) ? 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-block font-12' : 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-squared btn-squared_slim font-12 pl-5';
+    var btnClass = (isDesktop) ? 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-block font-12' : 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-squared btn-squared_slim font-12';
     var targetModal = hospitalType == 'Private' ? '#hc_modal_enquire_private' : '#hc_modal_contacts_general_shortlist_' + element.id;
     var btnContent =
         `<a id="${element.id}"
@@ -259,10 +259,7 @@ window.addHospitalToCompare = function (element) {
             '</div>';
         // Add new item
         target.prepend(newColumn);
-        // Add corresponding enquiry modal to body
-        // Add corresponding enquiry modal to body
-        if (element.hospital_type.name === 'NHS')
-            $body.append(nhsModalContent);
+
     } else if (isMobile) {
         var newRow =
             `<div id="compare_hospital_id_${element.id}" class="card w-100 p-0 border-top-0 border-left-0 border-right-0 border-bottom rounded-0 shadow-none">
@@ -338,6 +335,10 @@ window.addHospitalToCompare = function (element) {
             </div>`;
         target.prepend(newRow);
     }
+    // Add corresponding enquiry modal to body
+    // Add corresponding enquiry modal to body
+    if (element.hospital_type.name === 'NHS')
+        $body.append(nhsModalContent);
 };
 
 function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) {
