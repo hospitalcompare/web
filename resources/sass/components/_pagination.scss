@@ -58,6 +58,14 @@
     }
 
     .page-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $pagination-link-height;
+        height: $pagination-link-height;
+        //line-height: 33px;
+        line-height: $pagination-link-height;
+        margin: 0 3px;
 
         &.disabled {
             .page-link {
@@ -70,17 +78,15 @@
         }
 
         .page-link {
-            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 0;
-            margin: 0 3px;
-            width: $pagination-link-height;
-            height: $pagination-link-height;
-            //line-height: $pagination-link-height;
-            line-height: 33px;
+            width: 100%;
+            height: 100%;
             background-color: $white;
-            box-shadow: inset 0 0 0 2px $brand-primary-1;
-            border: none;
-            //border: 2px solid $brand-primary-1;
+            //box-shadow: inset 0 0 0 2px $brand-primary-1;
+            border: 2px solid $brand-primary-1;
             text-align: center;
             color: $brand-primary-1;
             @include font-size(16);

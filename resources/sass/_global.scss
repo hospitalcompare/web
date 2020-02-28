@@ -295,11 +295,15 @@ select.big {
 
 // Custom container widths
 .container-980 {
-    max-width: 980px;
+    @include media-breakpoint-up(xl){
+        max-width: 980px;
+    }
 }
 
 .container-1028 {
-    max-width: 1028px;
+    @include media-breakpoint-up(xl){
+        max-width: 1028px;
+    }
 }
 
 .bg-turq {
@@ -534,10 +538,16 @@ select.big {
     }
 
 
-    .cc-window.cc-banner {
-        padding: 1em 1.8em;
-        width: 100%;
-        flex-direction: row;
+    .cc-window {
+        &.cc-floating {
+            max-width: initial !important;
+        }
+
+        &.cc-banner {
+            padding: 1em 1.8em;
+            width: 100%;
+            flex-direction: row;
+        }
     }
 
     .cc-link {

@@ -113,7 +113,7 @@
       'specialOffer'      => $data['special_offers']['pink']
   ])
 
-    @include('components.privateenquiryform', [
+    @include('components.modals.modalenquireprivate', [
         'procedures' => $data['filters']['procedures']])
     @include('components.modals.modaltour')
     @include('mobile.components.modals.modalmobiletooltip')
