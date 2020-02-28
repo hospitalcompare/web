@@ -26,11 +26,11 @@ class Utils
             'class'     => 'd-none'
         ],[
             'id'        => '3',
-            'name'      => 'Waiting time'
-        ],[
-            'id'        => '4',
             'name'      => 'Waiting time',
             'class'     => 'd-none'
+        ],[
+            'id'        => '4',
+            'name'      => 'Waiting time'
         ],[
             'id'        => '5',
             'name'      => 'User Rating',
@@ -40,11 +40,11 @@ class Utils
             'name'      => 'User Rating'
         ],[
             'id'        => '7',
-            'name'      => 'Operations Cancelled'
-        ],[
-            'id'        => '8',
             'name'      => 'Operations Cancelled',
             'class'     => 'd-none'
+        ],[
+            'id'        => '8',
+            'name'      => 'Operations Cancelled'
         ],[
             'id'        => '9',
             'name'      => 'Care Quality Rating',
