@@ -591,11 +591,9 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 above.
                             </p>
                             <ul class="blue-dot">
-                                <li>Internal Third Parties as set out in the <a href="#glossary"
-                                                                                class="btn-link">glossary</a>.
+                                <li>Internal Third Parties as set out below in Glossary (paragraph 10).
                                 </li>
-                                <li>External Third Parties as set out in the <a href="#glossary"
-                                                                                class="btn-link">glossary</a>, including
+                                <li>External Third Parties as set out below in Glossary (paragraph 10), including
                                     specifically any or all of the hospitals or other service providers mentioned on our
                                     website to whom you make an enquiry by completing an enquiry from and clicking “Make
                                     an Enquiry” on that form or a link to connect with them.
