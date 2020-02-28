@@ -512,12 +512,12 @@ $(document).on("click", "#compare_button_title", function (e) {
     }
 });
 
-// Hide shortlist bar if clicking outside it, but only if it is already open
+// Hide shortlist bar if clicking outside it, but only if it is already open, and if you are NOT clicking on the modal eg enquiry modal
 $(document).on('click', function (e) {
-    if ($compareBar.has(e.target).length === 0 && $compareContent.hasClass('revealed')) {
+    var isModal = $(e.target).parents('.modal').length || $(e.target).hasClass('modal');
+    if ($compareBar.has(e.target).length === 0 && $compareContent.hasClass('revealed') && !isModal ) {
         $compareContent.slideUp();
         $body.removeClass('shortlist-open');
-        // $('.compare-arrow').removeClass('rotated');
         $compareContent.removeClass('revealed');
     }
 });
