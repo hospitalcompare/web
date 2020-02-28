@@ -142,7 +142,7 @@ window.addHospitalToCompare = function (element) {
         nhsFundedWork = 1;
     }
 
-    var btnClass = (isDesktop) ? 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-block font-12' : 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-squared btn-squared_slim font-12';
+    var btnClass = (isDesktop) ? 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-block font-12' : 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-squared btn-squared_slim font-12 px-5';
     var targetModal = hospitalType == 'Private' ? '#hc_modal_enquire_private' : '#hc_modal_contacts_general_shortlist_' + element.id;
     var btnContent =
         `<a id="${element.id}"
@@ -474,8 +474,9 @@ $(document).on("click", ".compare", function () {
 
 //Set the OnClick event for the Remove Hospital on the Comparison table
 $(document).on("click", ".remove-hospital", function (e) {
-    var hospitalTypeClicked = $(this).data('hospital-type');
+    console.log(e);
     e.stopPropagation();
+    var hospitalTypeClicked = $(this).data('hospital-type');
     var elementId = $(this).attr('id');
     var data = Cookies.get("compareHospitalsData");
     var compareCount = getCompareCount();

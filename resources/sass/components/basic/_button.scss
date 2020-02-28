@@ -144,7 +144,7 @@
             }
         }
 
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(xl){
             &:hover {
                 background-color: $brand-primary-7;
                 color: #fff;
