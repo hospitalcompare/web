@@ -89,50 +89,53 @@
                     <div class="card shadow mb-30 border-0 p-30">
                         <div class="row">
                             <div class="col-12 col-sm-2 col-lg-2">
-                                <div class="card-icon-wrapper px-5 px-sm-0 px-xl-5 h-100 d-flex align-items-center">
-                                    <img class="w-75 mx-auto" src="/images/icons/tick-blue.svg"
+                                <div class="card-icon-wrapper pb-3 pb-sm-0 px-sm-0 px-xl-5 h-100 d-flex align-items-center">
+                                    <img class="w-75 mx-sm-auto blue-tick" src="/images/icons/tick-blue.svg"
                                          alt="Icon representing choice">
                                 </div>
                             </div>
-                            <div class="card-body py-0 col-12 col-sm-10 col-lg-10">
-                                <p class="font-18 SofiaPro-Medium">Choosing a GP</p>
-                                <p class="mb-0 col-grey p-secondary">You can choose which GP practice to register with,
-                                    as
-                                    well as which doctor or nurse you’d like to see. That practice must
-                                    make every effort to allow you to see the person you’ve chosen, however there may be
-                                    occasions where this is not possible.*</p>
+                            <div class="py-0 col-12 col-sm-10 col-lg-10">
+                                <div class="card-body p-0">
+                                    <p class="font-18 SofiaPro-Medium">Choosing a GP</p>
+                                    <p class="mb-0 col-grey p-secondary">You can choose which GP practice to register with,
+                                        as
+                                        well as which doctor or nurse you’d like to see. That practice must
+                                        make every effort to allow you to see the person you’ve chosen, however there may be
+                                        occasions where this is not possible.*</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="card shadow mb-30 border-0 p-30">
-
                         <div class="row">
                             <div class="col-12 col-sm-2 col-lg-2col-12 col-sm-2 col-lg-2">
-                                <div class="card-icon-wrapper px-5 px-sm-0 px-xl-5 h-100 d-flex align-items-center">
-                                    <img class="w-75 mx-auto" src="/images/icons/tick-blue.svg"
+                                <div class="card-icon-wrapper pb-3 pb-sm-0 px-sm-0 px-xl-5 h-100 d-flex align-items-center">
+                                    <img class="w-75 mx-sm-auto blue-tick" src="/images/icons/tick-blue.svg"
                                          alt="Icon representing weighing scales">
                                 </div>
                             </div>
-                            <div class="card-body py-0 col-12 col-sm-10 col-lg-10">
-                                <p class="font-18 SofiaPro-Medium">Choosing a Hospital</p>
-                                <p class="col-grey p-secondary">When an NHS GP initially refers you to see a consultant
-                                    or
-                                    specialist, you can choose which hospital you’d prefer to be
-                                    referred to.</p>
-                                <p class="col-grey p-secondary">You can choose an NHS hospital, or a private hospital
-                                    that
-                                    is contracted to do NHS work. You can make this choice ahead of
-                                    your first appointment, whenever you are referred for a physical or mental health
-                                    condition. *</p>
-                                <p class="mb-0 col-grey p-secondary">Don’t forget, there’s no cost whatsoever to you
-                                    (and no
-                                    extra cost to the taxpayer) if you choose to have your NHS funded
-                                    treatment or procedure at a private, rather than an NHS hospital. If your GP refers
-                                    you
-                                    for NHS treatment then the NHS
-                                    pays for it.</p>
+                            <div class="py-0 col-12 col-sm-10 col-lg-10">
+                                <div class="card-body p-0">
+                                    <p class="font-18 SofiaPro-Medium">Choosing a Hospital</p>
+                                    <p class="col-grey p-secondary">When an NHS GP initially refers you to see a consultant
+                                        or
+                                        specialist, you can choose which hospital you’d prefer to be
+                                        referred to.</p>
+                                    <p class="col-grey p-secondary">You can choose an NHS hospital, or a private hospital
+                                        that
+                                        is contracted to do NHS work. You can make this choice ahead of
+                                        your first appointment, whenever you are referred for a physical or mental health
+                                        condition. *</p>
+                                    <p class="mb-0 col-grey p-secondary">Don’t forget, there’s no cost whatsoever to you
+                                        (and no
+                                        extra cost to the taxpayer) if you choose to have your NHS funded
+                                        treatment or procedure at a private, rather than an NHS hospital. If your GP refers
+                                        you
+                                        for NHS treatment then the NHS
+                                        pays for it.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -141,21 +144,23 @@
                     <div class="card shadow border-0 p-30 mb-40">
                         <div class="row">
                             <div class="col-12 col-sm-2 col-lg-2col-12 col-sm-2 col-lg-2">
-                                <div class="card-icon-wrapper px-5 px-sm-0 px-xl-5 h-100 d-flex align-items-center">
-                                    <img class="w-75 mx-auto" src="/images/icons/tick-blue.svg"
+                                <div class="card-icon-wrapper pb-3 pb-sm-0 px-sm-0 px-xl-5 h-100 d-flex align-items-center">
+                                    <img class="w-75 mx-sm-auto blue-tick" src="/images/icons/tick-blue.svg"
                                          alt="Icon representing weighing scales">
                                 </div>
                             </div>
-                            <div class="card-body py-0 col-12 col-sm-10 col-lg-10">
-                                <p class="font-18 SofiaPro-Medium">Choosing a Consultant</p>
-                                <p class="mb-0 col-grey p-secondary">You can choose which clinical team will be
-                                    responsible
-                                    for your NHS treatment, so always discuss your options with the
-                                    person referring you.</p>
-                                <p class="col-grey p-secondary">For a physical condition you will be seen by a
-                                    consultant, or a clinician from their team. For a mental health condition you
-                                    will be seen by a consultant, a mental health team leader or a member of their
-                                    team.</p>
+                            <div class="py-0 col-12 col-sm-10 col-lg-10">
+                                <div class="card-body p-0">
+                                    <p class="font-18 SofiaPro-Medium">Choosing a Consultant</p>
+                                    <p class="mb-0 col-grey p-secondary">You can choose which clinical team will be
+                                        responsible
+                                        for your NHS treatment, so always discuss your options with the
+                                        person referring you.</p>
+                                    <p class="col-grey p-secondary">For a physical condition you will be seen by a
+                                        consultant, or a clinician from their team. For a mental health condition you
+                                        will be seen by a consultant, a mental health team leader or a member of their
+                                        team.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
