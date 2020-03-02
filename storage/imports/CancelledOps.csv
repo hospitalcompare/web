@@ -1,152 +1,444 @@
-Year,Period,Organisation Code,Organisation Name,Cancelled Elective Operations,Number Not Treated Within 28Days,Admissions,% Cancelled Ops,% Cancelled Ops (n),% Not treated within 28 Days,Trust Code
-2018,Q2,R0A,MANCHESTER UNIVERSITY NHS FOUNDATION TRUST,392,7,26465,1.50%,1.5% (392),1.80%,R0A
-2018,Q2,R1D,SHROPSHIRE COMMUNITY HEALTH NHS TRUST,5,0,197,2.50%,2.5% (5),0.00%,R1D
-2018,Q2,R1F,ISLE OF WIGHT NHS TRUST,75,0,1675,4.50%,4.5% (75),0.00%,R1F
-2018,Q2,R1H,BARTS HEALTH NHS TRUST,466,35,19111,2.40%,2.4% (466),7.50%,R1H
-2018,Q2,R1K,LONDON NORTH WEST UNIVERSITY HEALTHCARE NHS TRUST,242,0,11209,2.20%,2.2% (242),0.00%,R1K
-2018,Q2,RA2,ROYAL SURREY COUNTY HOSPITAL NHS FOUNDATION TRUST,78,12,7503,1%,1% (78),15.40%,RA2
-2018,Q2,RA3,WESTON AREA HEALTH NHS TRUST,25,0,2465,1%,1% (25),0.00%,RA3
-2018,Q2,RA4,YEOVIL DISTRICT HOSPITAL NHS FOUNDATION TRUST,20,0,3279,0.60%,0.6% (20),0.00%,RA4
-2018,Q2,RA7,UNIVERSITY HOSPITALS BRISTOL NHS FOUNDATION TRUST,222,8,12707,1.70%,1.7% (222),3.60%,RA7
-2018,Q2,RA9,TORBAY AND SOUTH DEVON NHS FOUNDATION TRUST,96,8,6025,1.60%,1.6% (96),8.30%,RA9
-2018,Q2,RAE,BRADFORD TEACHING HOSPITALS NHS FOUNDATION TRUST,145,6,10580,1.40%,1.4% (145),4.10%,RAE
-2018,Q2,RAJ,SOUTHEND UNIVERSITY HOSPITAL NHS FOUNDATION TRUST,102,13,7453,1.40%,1.4% (102),12.70%,RAJ
-2018,Q2,RAL,ROYAL FREE LONDON NHS FOUNDATION TRUST,139,14,15569,0.90%,0.9% (139),10.10%,RAL
-2018,Q2,RAN,ROYAL NATIONAL ORTHOPAEDIC HOSPITAL NHS TRUST,44,3,1042,4.20%,4.2% (44),6.80%,RAN
-2018,Q2,RAP,NORTH MIDDLESEX UNIVERSITY HOSPITAL NHS TRUST,69,3,5296,1.30%,1.3% (69),4.30%,RAP
-2018,Q2,RAS,THE HILLINGDON HOSPITALS NHS FOUNDATION TRUST,36,0,5262,0.70%,0.7% (36),0.00%,RAS
-2018,Q2,RAX,KINGSTON HOSPITAL NHS FOUNDATION TRUST,13,0,5483,0.20%,0.2% (13),0.00%,RAX
-2018,Q2,RBA,TAUNTON AND SOMERSET NHS FOUNDATION TRUST,147,18,7223,2%,2% (147),12.20%,RBA
-2018,Q2,RBD,DORSET COUNTY HOSPITAL NHS FOUNDATION TRUST,97,3,5634,1.70%,1.7% (97),3.10%,RBD
-2018,Q2,RBK,WALSALL HEALTHCARE NHS TRUST,29,6,4289,0.70%,0.7% (29),20.70%,RBK
-2018,Q2,RBL,WIRRAL UNIVERSITY TEACHING HOSPITAL NHS FOUNDATION TRUST,17,5,9358,0.20%,0.2% (17),29.40%,RBL
-2018,Q2,RBN,ST HELENS AND KNOWSLEY HOSPITAL SERVICES NHS TRUST,105,1,11261,0.90%,0.9% (105),1%,RBN
-2018,Q2,RBQ,LIVERPOOL HEART AND CHEST HOSPITAL NHS FOUNDATION TRUST,60,1,1470,4.10%,4.1% (60),1.70%,RBQ
-2018,Q2,RBS,ALDER HEY CHILDREN'S NHS FOUNDATION TRUST,67,14,3734,1.80%,1.8% (67),20.90%,RBS
-2018,Q2,RBT,MID CHESHIRE HOSPITALS NHS FOUNDATION TRUST,72,9,7479,1%,1% (72),12.50%,RBT
-2018,Q2,RBV,THE CHRISTIE NHS FOUNDATION TRUST,1,0,2969,0%,0% (1),0.00%,RBV
-2018,Q2,RBZ,NORTHERN DEVON HEALTHCARE NHS TRUST,43,4,4074,1.10%,1.1% (43),9.30%,RBZ
-2018,Q2,RC1,BEDFORD HOSPITAL NHS TRUST,96,6,6116,1.60%,1.6% (96),6.30%,RC1
-2018,Q2,RC9,LUTON AND DUNSTABLE UNIVERSITY HOSPITAL NHS FOUNDATION TRUST,132,0,7547,1.70%,1.7% (132),0.00%,RC9
-2018,Q2,RCB,YORK TEACHING HOSPITAL NHS FOUNDATION TRUST,141,8,9829,1.40%,1.4% (141),5.70%,RCB
-2018,Q2,RCD,HARROGATE AND DISTRICT NHS FOUNDATION TRUST,16,0,5981,0.30%,0.3% (16),0.00%,RCD
-2018,Q2,RCF,AIREDALE NHS FOUNDATION TRUST,24,0,2224,1.10%,1.1% (24),0.00%,RCF
-2018,Q2,RCU,SHEFFIELD CHILDREN'S NHS FOUNDATION TRUST,39,0,2225,1.80%,1.8% (39),0.00%,RCU
-2018,Q2,RCX,"THE QUEEN ELIZABETH HOSPITAL, KING'S LYNN, NHS FOUNDATION TRUST",122,11,5662,2.20%,2.2% (122),9%,RCX
-2018,Q2,RD1,ROYAL UNITED HOSPITALS BATH NHS FOUNDATION TRUST,96,0,5968,1.60%,1.6% (96),0.00%,RD1
-2018,Q2,RD3,POOLE HOSPITAL NHS FOUNDATION TRUST,58,0,3607,1.60%,1.6% (58),0.00%,RD3
-2018,Q2,RD8,MILTON KEYNES UNIVERSITY HOSPITAL NHS FOUNDATION TRUST,60,20,4988,1.20%,1.2% (60),33.30%,RD8
-2018,Q2,RDD,BASILDON AND THURROCK UNIVERSITY HOSPITALS NHS FOUNDATION TRUST,75,2,9078,0.80%,0.8% (75),2.70%,RDD
-2018,Q2,RDE,EAST SUFFOLK AND NORTH ESSEX NHS FOUNDATION TRUST,244,7,15599,1.60%,1.6% (244),2.90%,RDE
-2018,Q2,RDU,FRIMLEY HEALTH NHS FOUNDATION TRUST,212,27,13618,1.60%,1.6% (212),12.70%,RDU
-2018,Q2,RDY,DORSET HEALTHCARE UNIVERSITY NHS FOUNDATION TRUST,3,0,520,0.60%,0.6% (3),0.00%,RDY
-2018,Q2,RDZ,THE ROYAL BOURNEMOUTH AND CHRISTCHURCH HOSPITALS NHS FOUNDATION TRUST,69,2,10022,0.70%,0.7% (69),2.90%,RDZ
-2018,Q2,RE9,SOUTH TYNESIDE NHS FOUNDATION TRUST,6,0,2561,0.20%,0.2% (6),0.00%,RE9
-2018,Q2,REF,ROYAL CORNWALL HOSPITALS NHS TRUST,200,45,11113,1.80%,1.8% (200),22.50%,REF
-2018,Q2,REM,AINTREE UNIVERSITY HOSPITAL NHS FOUNDATION TRUST,53,0,8603,0.60%,0.6% (53),0.00%,REM
-2018,Q2,REP,LIVERPOOL WOMEN'S NHS FOUNDATION TRUST,24,0,2040,1.20%,1.2% (24),0.00%,REP
-2018,Q2,RET,THE WALTON CENTRE NHS FOUNDATION TRUST,50,2,1236,4%,4% (50),4%,RET
-2018,Q2,RF4,"BARKING, HAVERING AND REDBRIDGE UNIVERSITY HOSPITALS NHS TRUST",168,22,10884,1.50%,1.5% (168),13.10%,RF4
-2018,Q2,RFF,BARNSLEY HOSPITAL NHS FOUNDATION TRUST,56,0,5618,1%,1% (56),0.00%,RFF
-2018,Q2,RFR,THE ROTHERHAM NHS FOUNDATION TRUST,66,0,6197,1.10%,1.1% (66),0.00%,RFR
-2018,Q2,RFS,CHESTERFIELD ROYAL HOSPITAL NHS FOUNDATION TRUST,85,4,5720,1.50%,1.5% (85),4.70%,RFS
-2018,Q2,RGM,ROYAL PAPWORTH HOSPITAL NHS FOUNDATION TRUST,92,2,3701,2.50%,2.5% (92),2.20%,RGM
-2018,Q2,RGN,NORTH WEST ANGLIA NHS FOUNDATION TRUST,169,38,11519,1.50%,1.5% (169),22.50%,RGN
-2018,Q2,RGP,JAMES PAGET UNIVERSITY HOSPITALS NHS FOUNDATION TRUST,64,2,6411,1%,1% (64),3.10%,RGP
-2018,Q2,RGR,WEST SUFFOLK NHS FOUNDATION TRUST,113,19,7045,1.60%,1.6% (113),16.80%,RGR
-2018,Q2,RGT,CAMBRIDGE UNIVERSITY HOSPITALS NHS FOUNDATION TRUST,179,14,11635,1.50%,1.5% (179),7.80%,RGT
-2018,Q2,RH8,ROYAL DEVON AND EXETER NHS FOUNDATION TRUST,87,10,10825,0.80%,0.8% (87),11.50%,RH8
-2018,Q2,RHM,UNIVERSITY HOSPITAL SOUTHAMPTON NHS FOUNDATION TRUST,218,28,11461,1.90%,1.9% (218),12.80%,RHM
-2018,Q2,RHQ,SHEFFIELD TEACHING HOSPITALS NHS FOUNDATION TRUST,195,12,24514,0.80%,0.8% (195),6.20%,RHQ
-2018,Q2,RHU,PORTSMOUTH HOSPITALS NHS TRUST,131,6,10271,1.30%,1.3% (131),4.60%,RHU
-2018,Q2,RHW,ROYAL BERKSHIRE NHS FOUNDATION TRUST,48,5,10550,0.50%,0.5% (48),10.40%,RHW
-2018,Q2,RJ1,GUY'S AND ST THOMAS' NHS FOUNDATION TRUST,222,41,21604,1%,1% (222),18.50%,RJ1
-2018,Q2,RJ2,LEWISHAM AND GREENWICH NHS TRUST,65,0,8468,0.80%,0.8% (65),0.00%,RJ2
-2018,Q2,RJ6,CROYDON HEALTH SERVICES NHS TRUST,20,5,6330,0.30%,0.3% (20),25%,RJ6
-2018,Q2,RJ7,ST GEORGE'S UNIVERSITY HOSPITALS NHS FOUNDATION TRUST,153,15,11194,1.40%,1.4% (153),9.80%,RJ7
-2018,Q2,RJC,SOUTH WARWICKSHIRE NHS FOUNDATION TRUST,50,1,5170,1%,1% (50),2%,RJC
-2018,Q2,RJE,UNIVERSITY HOSPITALS OF NORTH MIDLANDS NHS TRUST,461,20,15661,2.90%,2.9% (461),4.30%,RJE
-2018,Q2,RJL,NORTHERN LINCOLNSHIRE AND GOOLE NHS FOUNDATION TRUST,115,6,9157,1.30%,1.3% (115),5.20%,RJL
-2018,Q2,RJN,EAST CHESHIRE NHS TRUST,45,0,3636,1.20%,1.2% (45),0.00%,RJN
-2018,Q2,RJR,COUNTESS OF CHESTER HOSPITAL NHS FOUNDATION TRUST,118,8,4131,2.90%,2.9% (118),6.80%,RJR
-2018,Q2,RJZ,KING'S COLLEGE HOSPITAL NHS FOUNDATION TRUST,143,29,18205,0.80%,0.8% (143),20.30%,RJZ
-2018,Q2,RK5,SHERWOOD FOREST HOSPITALS NHS FOUNDATION TRUST,48,6,7949,0.60%,0.6% (48),12.50%,RK5
-2018,Q2,RK9,UNIVERSITY HOSPITALS PLYMOUTH NHS TRUST,546,91,10331,5.30%,5.3% (546),16.70%,RK9
-2018,Q2,RKB,UNIVERSITY HOSPITALS COVENTRY AND WARWICKSHIRE NHS TRUST,140,22,15384,0.90%,0.9% (140),15.70%,RKB
-2018,Q2,RKE,WHITTINGTON HEALTH NHS TRUST,7,0,3663,0.20%,0.2% (7),0.00%,RKE
-2018,Q2,RL1,THE ROBERT JONES AND AGNES HUNT ORTHOPAEDIC HOSPITAL NHS FOUNDATION TRUST,22,0,1896,1.20%,1.2% (22),0.00%,RL1
-2018,Q2,RL4,THE ROYAL WOLVERHAMPTON NHS TRUST,69,0,8867,0.80%,0.8% (69),0.00%,RL4
-2018,Q2,RLN,CITY HOSPITALS SUNDERLAND NHS FOUNDATION TRUST,92,12,10847,0.80%,0.8% (92),13%,RLN
-2018,Q2,RLQ,WYE VALLEY NHS TRUST,37,13,3940,0.90%,0.9% (37),35.10%,RLQ
-2018,Q2,RLT,GEORGE ELIOT HOSPITAL NHS TRUST,55,5,4402,1.20%,1.2% (55),9.10%,RLT
-2018,Q2,RM1,NORFOLK AND NORWICH UNIVERSITY HOSPITALS NHS FOUNDATION TRUST,257,30,17897,1.40%,1.4% (257),11.70%,RM1
-2018,Q2,RM3,SALFORD ROYAL NHS FOUNDATION TRUST,183,2,9905,1.80%,1.8% (183),1.10%,RM3
-2018,Q2,RMC,BOLTON NHS FOUNDATION TRUST,131,8,6005,2.20%,2.2% (131),6.10%,RMC
-2018,Q2,RMP,TAMESIDE AND GLOSSOP INTEGRATED CARE NHS FOUNDATION TRUST,33,0,4338,0.80%,0.8% (33),0.00%,RMP
-2018,Q2,RN3,GREAT WESTERN HOSPITALS NHS FOUNDATION TRUST,103,11,3825,2.70%,2.7% (103),10.70%,RN3
-2018,Q2,RN5,HAMPSHIRE HOSPITALS NHS FOUNDATION TRUST,79,5,10342,0.80%,0.8% (79),6.30%,RN5
-2018,Q2,RN7,DARTFORD AND GRAVESHAM NHS TRUST,22,0,6473,0.30%,0.3% (22),0.00%,RN7
-2018,Q2,RNA,THE DUDLEY GROUP NHS FOUNDATION TRUST,153,5,10430,1.50%,1.5% (153),3.30%,RNA
-2018,Q2,RNL,NORTH CUMBRIA UNIVERSITY HOSPITALS NHS TRUST,144,20,6380,2.30%,2.3% (144),13.90%,RNL
-2018,Q2,RNQ,KETTERING GENERAL HOSPITAL NHS FOUNDATION TRUST,46,0,7639,0.60%,0.6% (46),0.00%,RNQ
-2018,Q2,RNS,NORTHAMPTON GENERAL HOSPITAL NHS TRUST,128,24,8152,1.60%,1.6% (128),18.80%,RNS
-2018,Q2,RNZ,SALISBURY NHS FOUNDATION TRUST,55,0,6293,0.90%,0.9% (55),0.00%,RNZ
-2018,Q2,RP4,GREAT ORMOND STREET HOSPITAL FOR CHILDREN NHS FOUNDATION TRUST,135,17,3798,3.60%,3.6% (135),12.60%,RP4
-2018,Q2,RP5,DONCASTER AND BASSETLAW TEACHING HOSPITALS NHS FOUNDATION TRUST,210,2,9026,2.30%,2.3% (210),1%,RP5
-2018,Q2,RP6,MOORFIELDS EYE HOSPITAL NHS FOUNDATION TRUST,89,0,9104,1%,1% (89),0.00%,RP6
-2018,Q2,RPA,MEDWAY NHS FOUNDATION TRUST,47,7,5111,0.90%,0.9% (47),14.90%,RPA
-2018,Q2,RPC,QUEEN VICTORIA HOSPITAL NHS FOUNDATION TRUST,19,1,3551,0.50%,0.5% (19),5.30%,RPC
-2018,Q2,RPY,THE ROYAL MARSDEN NHS FOUNDATION TRUST,3,0,1627,0.20%,0.2% (3),0.00%,RPY
-2018,Q2,RQ3,BIRMINGHAM WOMEN'S AND CHILDREN'S NHS FOUNDATION TRUST,90,1,4787,1.90%,1.9% (90),1.10%,RQ3
-2018,Q2,RQ6,ROYAL LIVERPOOL AND BROADGREEN UNIVERSITY HOSPITALS NHS TRUST,126,6,5312,2.40%,2.4% (126),4.80%,RQ6
-2018,Q2,RQ8,MID ESSEX HOSPITAL SERVICES NHS TRUST,210,22,7130,2.90%,2.9% (210),10.50%,RQ8
-2018,Q2,RQM,CHELSEA AND WESTMINSTER HOSPITAL NHS FOUNDATION TRUST,66,9,8502,0.80%,0.8% (66),13.60%,RQM
-2018,Q2,RQW,THE PRINCESS ALEXANDRA HOSPITAL NHS TRUST,45,5,4566,1%,1% (45),11.10%,RQW
-2018,Q2,RQX,HOMERTON UNIVERSITY HOSPITAL NHS FOUNDATION TRUST,23,0,3332,0.70%,0.7% (23),0.00%,RQX
-2018,Q2,RR7,GATESHEAD HEALTH NHS FOUNDATION TRUST,39,1,2667,1.50%,1.5% (39),2.60%,RR7
-2018,Q2,RR8,LEEDS TEACHING HOSPITALS NHS TRUST,496,48,17891,2.80%,2.8% (496),9.70%,RR8
-2018,Q2,RRF,"WRIGHTINGTON, WIGAN AND LEIGH NHS FOUNDATION TRUST",203,5,8494,2.40%,2.4% (203),2.50%,RRF
-2018,Q2,RRJ,THE ROYAL ORTHOPAEDIC HOSPITAL NHS FOUNDATION TRUST,44,1,3401,1.30%,1.3% (44),2.30%,RRJ
-2018,Q2,RRK,UNIVERSITY HOSPITALS BIRMINGHAM NHS FOUNDATION TRUST,723,26,26426,2.70%,2.7% (723),3.60%,RRK
-2018,Q2,RRV,UNIVERSITY COLLEGE LONDON HOSPITALS NHS FOUNDATION TRUST,160,16,12332,1.30%,1.3% (160),10%,RRV
-2018,Q2,RT3,ROYAL BROMPTON & HAREFIELD NHS FOUNDATION TRUST,153,2,3645,4.20%,4.2% (153),1.30%,RT3
-2018,Q2,RTD,THE NEWCASTLE UPON TYNE HOSPITALS NHS FOUNDATION TRUST,143,10,22215,0.60%,0.6% (143),7%,RTD
-2018,Q2,RTF,NORTHUMBRIA HEALTHCARE NHS FOUNDATION TRUST,27,5,8708,0.30%,0.3% (27),18.50%,RTF
-2018,Q2,RTG,UNIVERSITY HOSPITALS OF DERBY AND BURTON NHS FOUNDATION TRUST,131,10,20895,0.60%,0.6% (131),7.60%,RTG
-2018,Q2,RTH,OXFORD UNIVERSITY HOSPITALS NHS FOUNDATION TRUST,155,11,19468,0.80%,0.8% (155),7.10%,RTH
-2018,Q2,RTK,ASHFORD AND ST PETER'S HOSPITALS NHS FOUNDATION TRUST,44,2,8057,0.50%,0.5% (44),4.50%,RTK
-2018,Q2,RTP,SURREY AND SUSSEX HEALTHCARE NHS TRUST,30,2,8121,0.40%,0.4% (30),6.70%,RTP
-2018,Q2,RTR,SOUTH TEES HOSPITALS NHS FOUNDATION TRUST,133,24,8536,1.60%,1.6% (133),18%,RTR
-2018,Q2,RTX,UNIVERSITY HOSPITALS OF MORECAMBE BAY NHS FOUNDATION TRUST,124,2,8534,1.50%,1.5% (124),1.60%,RTX
-2018,Q2,RVJ,NORTH BRISTOL NHS TRUST,175,7,13693,1.30%,1.3% (175),4%,RVJ
-2018,Q2,RVR,EPSOM AND ST HELIER UNIVERSITY HOSPITALS NHS TRUST,181,5,6939,2.60%,2.6% (181),2.80%,RVR
-2018,Q2,RVV,EAST KENT HOSPITALS UNIVERSITY NHS FOUNDATION TRUST,152,1,16856,0.90%,0.9% (152),0.70%,RVV
-2018,Q2,RVW,NORTH TEES AND HARTLEPOOL NHS FOUNDATION TRUST,47,1,4197,1.10%,1.1% (47),2.10%,RVW
-2018,Q2,RVY,SOUTHPORT AND ORMSKIRK HOSPITAL NHS TRUST,18,0,3849,0.50%,0.5% (18),0.00%,RVY
-2018,Q2,RW6,PENNINE ACUTE HOSPITALS NHS TRUST,342,48,15079,2.30%,2.3% (342),14%,RW6
-2018,Q2,RWA,HULL AND EAST YORKSHIRE HOSPITALS NHS TRUST,292,11,13504,2.20%,2.2% (292),3.80%,RWA
-2018,Q2,RWD,UNITED LINCOLNSHIRE HOSPITALS NHS TRUST,638,44,10687,6%,6% (638),6.90%,RWD
-2018,Q2,RWE,UNIVERSITY HOSPITALS OF LEICESTER NHS TRUST,338,74,21693,1.60%,1.6% (338),21.90%,RWE
-2018,Q2,RWF,MAIDSTONE AND TUNBRIDGE WELLS NHS TRUST,90,6,16618,0.50%,0.5% (90),6.70%,RWF
-2018,Q2,RWG,WEST HERTFORDSHIRE HOSPITALS NHS TRUST,114,24,9173,1.20%,1.2% (114),21.10%,RWG
-2018,Q2,RWH,EAST AND NORTH HERTFORDSHIRE NHS TRUST,156,32,4978,3.10%,3.1% (156),20.50%,RWH
-2018,Q2,RWJ,STOCKPORT NHS FOUNDATION TRUST,120,6,6937,1.70%,1.7% (120),5%,RWJ
-2018,Q2,RWP,WORCESTERSHIRE ACUTE HOSPITALS NHS TRUST,176,57,12893,1.40%,1.4% (176),32.40%,RWP
-2018,Q2,RWW,WARRINGTON AND HALTON HOSPITALS NHS FOUNDATION TRUST,45,1,5988,0.80%,0.8% (45),2.20%,RWW
-2018,Q2,RWY,CALDERDALE AND HUDDERSFIELD NHS FOUNDATION TRUST,86,0,9167,0.90%,0.9% (86),0.00%,RWY
-2018,Q2,RX1,NOTTINGHAM UNIVERSITY HOSPITALS NHS TRUST,181,3,22645,0.80%,0.8% (181),1.70%,RX1
-2018,Q2,RXC,EAST SUSSEX HEALTHCARE NHS TRUST,90,1,4147,2.20%,2.2% (90),1.10%,RXC
-2018,Q2,RXF,MID YORKSHIRE HOSPITALS NHS TRUST,80,0,11840,0.70%,0.7% (80),0.00%,RXF
-2018,Q2,RXH,BRIGHTON AND SUSSEX UNIVERSITY HOSPITALS NHS TRUST,169,34,10301,1.60%,1.6% (169),20.10%,RXH
-2018,Q2,RXK,SANDWELL AND WEST BIRMINGHAM HOSPITALS NHS TRUST,71,0,9290,0.80%,0.8% (71),0.00%,RXK
-2018,Q2,RXL,BLACKPOOL TEACHING HOSPITALS NHS FOUNDATION TRUST,40,0,14777,0.30%,0.3% (40),0.00%,RXL
-2018,Q2,RXN,LANCASHIRE TEACHING HOSPITALS NHS FOUNDATION TRUST,315,48,9945,3.20%,3.2% (315),15.20%,RXN
-2018,Q2,RXP,COUNTY DURHAM AND DARLINGTON NHS FOUNDATION TRUST,88,0,6162,1.40%,1.4% (88),0.00%,RXP
-2018,Q2,RXQ,BUCKINGHAMSHIRE HEALTHCARE NHS TRUST,116,0,9301,1.20%,1.2% (116),0.00%,RXQ
-2018,Q2,RXR,EAST LANCASHIRE HOSPITALS NHS TRUST,174,2,12343,1.40%,1.4% (174),1.10%,RXR
-2018,Q2,RXW,SHREWSBURY AND TELFORD HOSPITAL NHS TRUST,186,0,6494,2.90%,2.9% (186),0.00%,RXW
-2018,Q2,RY8,DERBYSHIRE COMMUNITY HEALTH SERVICES NHS FOUNDATION TRUST,9,0,1256,0.70%,0.7% (9),0.00%,RY8
-2018,Q2,RYJ,IMPERIAL COLLEGE HEALTHCARE NHS TRUST,288,45,21272,1.40%,1.4% (288),15.60%,RYJ
-2018,Q2,RYR,WESTERN SUSSEX HOSPITALS NHS FOUNDATION TRUST,75,3,11855,0.60%,0.6% (75),4%,RYR
-2018,Q2,ADP02,KIMS HOSPITAL (NEWNHAM COURT),3,0,1106,0.30%,0.3% (3),0.00%,ADP
-2018,Q2,NTP16,WILL ADAMS NHS TREATMENT CENTRE,13,8,1441,0.90%,0.9% (13),61.50%,NTP
+Year,Period,Organisation Code,Organisation Name,Location ID,Location Name,Location Region,CQC Rating,Cancelled Elective Operations,Number Not Treated Within 28 Days,Admissions,% CanOps Val,% Not Treated 28 Days Val,% Cancelled Ops,% Cancelled Ops (n),% Not treated within 28 Days,Quartile,Trust Code,% National Average
+2019,Q3,R0A,Manchester University NHS Foundation Trust ,R0A02,Manchester Royal Infirmary,North West ,Good,581,22,26853,0.02164,0.03787,2.16%,2.16% (581),3.8%,Worst Quartile,R0A,0.01584
+2019,Q3,R0A,Manchester University NHS Foundation Trust ,R0A03,Royal Manchester Children's Hospital,North West ,Good,581,22,26853,0.02164,0.03787,2.16%,2.16% (581),3.8%,Worst Quartile,R0A,0.01584
+2019,Q3,R0A,Manchester University NHS Foundation Trust ,R0A04,Royal Manchester Eye Hospital,North West ,Good,581,22,26853,0.02164,0.03787,2.16%,2.16% (581),3.8%,Worst Quartile,R0A,0.01584
+2019,Q3,R0A,Manchester University NHS Foundation Trust ,R0A05,Saint Mary's Hospital,North West ,Good,581,22,26853,0.02164,0.03787,2.16%,2.16% (581),3.8%,Worst Quartile,R0A,0.01584
+2019,Q3,R0A,Manchester University NHS Foundation Trust ,R0A06,Dental Hospital Manchester,North West ,Good,581,22,26853,0.02164,0.03787,2.16%,2.16% (581),3.8%,Worst Quartile,R0A,0.01584
+2019,Q3,R0A,Manchester University NHS Foundation Trust ,R0A07,Wythenshawe Hospital,North West ,Good,581,22,26853,0.02164,0.03787,2.16%,2.16% (581),3.8%,Worst Quartile,R0A,0.01584
+2019,Q3,R0A,Manchester University NHS Foundation Trust ,R0A09,Trafford General Hospital,North West ,Good,581,22,26853,0.02164,0.03787,2.16%,2.16% (581),3.8%,Worst Quartile,R0A,0.01584
+2019,Q3,R0A,Manchester University NHS Foundation Trust ,R0A2Q,Altrincham General Hospital,North West ,Good,581,22,26853,0.02164,0.03787,2.16%,2.16% (581),3.8%,Worst Quartile,R0A,0.01584
+2019,Q3,R0B,South Tyneside and Sunderland NHS Foundation Trust ,R0B01,Sunderland Royal Hospital,North East ,Not Yet Rated,209,35,12749,0.01639,0.16746,1.64%,1.64% (209),16.7%,Above Avg,R0B,0.01584
+2019,Q3,R0B,South Tyneside and Sunderland NHS Foundation Trust ,R0B0B,Durham Diagnostics and Treatment Centre,North East ,Not Yet Rated,209,35,12749,0.01639,0.16746,1.64%,1.64% (209),16.7%,Above Avg,R0B,0.01584
+2019,Q3,R0B,South Tyneside and Sunderland NHS Foundation Trust ,R0B0M,Shotley Bridge,North East ,Not Yet Rated,209,35,12749,0.01639,0.16746,1.64%,1.64% (209),16.7%,Above Avg,R0B,0.01584
+2019,Q3,R0B,South Tyneside and Sunderland NHS Foundation Trust ,R0B0Q,South Tyneside General Hospital,North East ,Not Yet Rated,209,35,12749,0.01639,0.16746,1.64%,1.64% (209),16.7%,Above Avg,R0B,0.01584
+2019,Q3,R0B,South Tyneside and Sunderland NHS Foundation Trust ,R0B0X,Sunderland Eye Infirmary,North East ,Not Yet Rated,209,35,12749,0.01639,0.16746,1.64%,1.64% (209),16.7%,Above Avg,R0B,0.01584
+2019,Q3,R0B,South Tyneside and Sunderland NHS Foundation Trust ,R0B1G,University Hospital Durham,North East ,Not Yet Rated,209,35,12749,0.01639,0.16746,1.64%,1.64% (209),16.7%,Above Avg,R0B,0.01584
+2019,Q3,R1F,Isle of Wight NHS Trust ,R1F01,St Mary's Hospital,South East ,Requires improvement,92,16,2531,0.03635,0.17391,3.63%,3.63% (92),17.4%,Worst Quartile,R1F,0.01584
+2019,Q3,R1H,Barts Health NHS Trust ,R1H12,The Royal London Hospital,London ,Requires improvement,554,112,19145,0.02894,0.20217,2.89%,2.89% (554),20.2%,Worst Quartile,R1H,0.01584
+2019,Q3,R1H,Barts Health NHS Trust ,R1HKH,Whipps Cross University Hospital,London ,Requires improvement,554,112,19145,0.02894,0.20217,2.89%,2.89% (554),20.2%,Worst Quartile,R1H,0.01584
+2019,Q3,R1H,Barts Health NHS Trust ,R1HM0,St Bartholomew's Hospital,London ,Requires improvement,554,112,19145,0.02894,0.20217,2.89%,2.89% (554),20.2%,Worst Quartile,R1H,0.01584
+2019,Q3,R1H,Barts Health NHS Trust ,R1HNH,Newham University Hospital,London ,Requires improvement,554,112,19145,0.02894,0.20217,2.89%,2.89% (554),20.2%,Worst Quartile,R1H,0.01584
+2019,Q3,R1K,London North West University Healthcare NHS Trust ,R1K01,Northwick Park Hospital,London ,Requires improvement,223,0,10971,0.02033,0,2.03%,2.03% (223),0.0%,Above Avg,R1K,0.01584
+2019,Q3,R1K,London North West University Healthcare NHS Trust ,R1K02,Central Middlesex Hospital,London ,Requires improvement,223,0,10971,0.02033,0,2.03%,2.03% (223),0.0%,Above Avg,R1K,0.01584
+2019,Q3,R1K,London North West University Healthcare NHS Trust ,R1K03,St Mark's Hospital,London ,Requires improvement,223,0,10971,0.02033,0,2.03%,2.03% (223),0.0%,Above Avg,R1K,0.01584
+2019,Q3,R1K,London North West University Healthcare NHS Trust ,R1K04,Ealing Hospital,London ,Requires improvement,223,0,10971,0.02033,0,2.03%,2.03% (223),0.0%,Above Avg,R1K,0.01584
+2019,Q3,R1K,London North West University Healthcare NHS Trust ,R1K68,Clayponds Hospital,London ,Requires improvement,223,0,10971,0.02033,0,2.03%,2.03% (223),0.0%,Above Avg,R1K,0.01584
+2019,Q3,RA2,Royal Surrey County Hospital NHS Foundation Trust ,RA201,Royal Surrey County Hospital,South East ,Good,128,3,8041,0.01592,0.02344,1.59%,1.59% (128),2.3%,Above Avg,RA2,0.01584
+2019,Q3,RA2,Royal Surrey County Hospital NHS Foundation Trust ,RA219,Haslemere Hospital,South East ,Good,128,3,8041,0.01592,0.02344,1.59%,1.59% (128),2.3%,Above Avg,RA2,0.01584
+2019,Q3,RA2,Royal Surrey County Hospital NHS Foundation Trust ,RA224,Milford Hospital,South East ,Good,128,3,8041,0.01592,0.02344,1.59%,1.59% (128),2.3%,Above Avg,RA2,0.01584
+2019,Q3,RA3,Weston Area Health NHS Trust ,RA301,Weston General Hospital,South West ,Requires improvement,25,3,2653,0.00942,0.12,0.94%,0.94% (25),12%,Best Quartile,RA3,0.01584
+2019,Q3,RA4,Yeovil District Hospital NHS Foundation Trust ,RA430,Yeovil District Hospital,South West ,Requires improvement,34,0,3895,0.00873,0,0.87%,0.87% (34),0.0%,Best Quartile,RA4,0.01584
+2019,Q3,RA7,University Hospitals Bristol NHS Foundation Trust ,RA773,South Bristol NHS Community Hospital,South West ,Outstanding,409,13,12368,0.03307,0.03178,3.31%,3.31% (409),3.2%,Worst Quartile,RA7,0.01584
+2019,Q3,RA7,University Hospitals Bristol NHS Foundation Trust ,RA7C1,Bristol Royal Infirmary,South West ,Outstanding,409,13,12368,0.03307,0.03178,3.31%,3.31% (409),3.2%,Worst Quartile,RA7,0.01584
+2019,Q3,RA7,University Hospitals Bristol NHS Foundation Trust ,RA7CQ,Central Health Clinic,South West ,Outstanding,409,13,12368,0.03307,0.03178,3.31%,3.31% (409),3.2%,Worst Quartile,RA7,0.01584
+2019,Q3,RA9,Torbay and South Devon NHS Foundation Trust ,RA901,Torbay Hospital,South West ,Good,90,19,6415,0.01403,0.21111,1.4%,1.4% (90),21.1%,Below Avg,RA9,0.01584
+2019,Q3,RA9,Torbay and South Devon NHS Foundation Trust ,RA952,Ashburton and Buckfastleigh Hospital,South West ,Good,90,19,6415,0.01403,0.21111,1.4%,1.4% (90),21.1%,Below Avg,RA9,0.01584
+2019,Q3,RA9,Torbay and South Devon NHS Foundation Trust ,RA954,Brixham Hospital,South West ,Good,90,19,6415,0.01403,0.21111,1.4%,1.4% (90),21.1%,Below Avg,RA9,0.01584
+2019,Q3,RA9,Torbay and South Devon NHS Foundation Trust ,RA956,Dawlish Hospital,South West ,Good,90,19,6415,0.01403,0.21111,1.4%,1.4% (90),21.1%,Below Avg,RA9,0.01584
+2019,Q3,RA9,Torbay and South Devon NHS Foundation Trust ,RA957,Newton Abbot Hospital,South West ,Good,90,19,6415,0.01403,0.21111,1.4%,1.4% (90),21.1%,Below Avg,RA9,0.01584
+2019,Q3,RA9,Torbay and South Devon NHS Foundation Trust ,RA959,Teignmouth Hospital,South West ,Good,90,19,6415,0.01403,0.21111,1.4%,1.4% (90),21.1%,Below Avg,RA9,0.01584
+2019,Q3,RA9,Torbay and South Devon NHS Foundation Trust ,RA979,Totnes Hospital,South West ,Good,90,19,6415,0.01403,0.21111,1.4%,1.4% (90),21.1%,Below Avg,RA9,0.01584
+2019,Q3,RAE,Bradford Teaching Hospitals NHS Foundation Trust ,RAE01,Bradford Royal Infirmary,Yorkshire and The Humber ,Requires improvement,180,1,11264,0.01598,0.00556,1.6%,1.6% (180),0.6%,Above Avg,RAE,0.01584
+2019,Q3,RAE,Bradford Teaching Hospitals NHS Foundation Trust ,RAE05,St Luke's Hospital,Yorkshire and The Humber ,Requires improvement,180,1,11264,0.01598,0.00556,1.6%,1.6% (180),0.6%,Above Avg,RAE,0.01584
+2019,Q3,RAJ,Southend University Hospital NHS Foundation Trust ,RAJ01,Southend University Hospital,East of England ,Requires improvement,126,32,7311,0.01723,0.25397,1.72%,1.72% (126),25.4%,Above Avg,RAJ,0.01584
+2019,Q3,RAL,Royal Free London NHS Foundation Trust ,RAL01,The Royal Free Hospital,London ,Requires improvement,161,17,16658,0.00967,0.10559,0.97%,0.97% (161),10.6%,Below Avg,RAL,0.01584
+2019,Q3,RAL,Royal Free London NHS Foundation Trust ,RAL26,Barnet General Hospital,London ,Requires improvement,161,17,16658,0.00967,0.10559,0.97%,0.97% (161),10.6%,Below Avg,RAL,0.01584
+2019,Q3,RAL,Royal Free London NHS Foundation Trust ,RAL80,Hadley Wood Hospital (Private),London ,Requires improvement,161,17,16658,0.00967,0.10559,0.97%,0.97% (161),10.6%,Below Avg,RAL,0.01584
+2019,Q3,RAL,Royal Free London NHS Foundation Trust ,RALC7,Chase Farm Hospital,London ,Requires improvement,161,17,16658,0.00967,0.10559,0.97%,0.97% (161),10.6%,Below Avg,RAL,0.01584
+2019,Q3,RAL,Royal Free London NHS Foundation Trust ,RALRA,Edgware Community Hospital,London ,Requires improvement,161,17,16658,0.00967,0.10559,0.97%,0.97% (161),10.6%,Below Avg,RAL,0.01584
+2019,Q3,RAN,Royal National Orthopaedic Hospital NHS Trust ,RAN01,The Royal National Orthopaedic Hospital (Stanmore),London ,Good,34,3,1171,0.02904,0.08824,2.9%,2.9% (34),8.8%,Worst Quartile,RAN,0.01584
+2019,Q3,RAN,Royal National Orthopaedic Hospital NHS Trust ,RAN02,Royal National Orthopaedic Hospital (Bolsover Street),London ,Good,34,3,1171,0.02904,0.08824,2.9%,2.9% (34),8.8%,Worst Quartile,RAN,0.01584
+2019,Q3,RAP,North Middlesex University Hospital NHS Trust ,RAPNM,North Middlesex University Hospital,London ,Requires improvement,66,19,5708,0.01156,0.28788,1.16%,1.16% (66),28.8%,Below Avg,RAP,0.01584
+2019,Q3,RAP,North Middlesex University Hospital NHS Trust ,RAPST,St Ann's Hospital,London ,Requires improvement,66,19,5708,0.01156,0.28788,1.16%,1.16% (66),28.8%,Below Avg,RAP,0.01584
+2019,Q3,RAS,The Hillingdon Hospitals NHS Foundation Trust ,RAS01,The Hillingdon Hospital,London ,Requires improvement,32,0,5208,0.00614,0,0.61%,0.61% (32),0.0%,Best Quartile,RAS,0.01584
+2019,Q3,RAS,The Hillingdon Hospitals NHS Foundation Trust ,RAS02,Mount Vernon Hospital,London ,Requires improvement,32,0,5208,0.00614,0,0.61%,0.61% (32),0.0%,Best Quartile,RAS,0.01584
+2019,Q3,RAX,Kingston Hospital NHS Foundation Trust ,RAX01,Kingston Hospital,London ,Outstanding,18,2,5258,0.00342,0.11111,0.34%,0.34% (18),11.1%,Best Quartile,RAX,0.01584
+2019,Q3,RBA,Taunton and Somerset NHS Foundation Trust ,RBA11,Musgrove Park Hospital,South West ,Good,150,13,7384,0.02031,0.08667,2.03%,2.03% (150),8.7%,Above Avg,RBA,0.01584
+2019,Q3,RBA,Taunton and Somerset NHS Foundation Trust ,RBAC3,Bridgwater Community Hospital,South West ,Good,150,13,7384,0.02031,0.08667,2.03%,2.03% (150),8.7%,Above Avg,RBA,0.01584
+2019,Q3,RBA,Taunton and Somerset NHS Foundation Trust ,RBAC6,Minehead Hospital,South West ,Good,150,13,7384,0.02031,0.08667,2.03%,2.03% (150),8.7%,Above Avg,RBA,0.01584
+2019,Q3,RBD,Dorset County Hospital NHS Foundation Trust ,RBD01,Dorset County Hospital,South West ,Good,112,14,6167,0.01816,0.125,1.82%,1.82% (112),12.5%,Above Avg,RBD,0.01584
+2019,Q3,RBD,Dorset County Hospital NHS Foundation Trust ,RBD44,Royal Bournemouth Hospital,South West ,Good,112,14,6167,0.01816,0.125,1.82%,1.82% (112),12.5%,Above Avg,RBD,0.01584
+2019,Q3,RBK,Walsall Healthcare NHS Trust ,RBK02,Manor Hospital,West Midlands ,Requires improvement,70,4,4328,0.01617,0.05714,1.62%,1.62% (70),5.7%,Above Avg,RBK,0.01584
+2019,Q3,RBL,Wirral University Teaching Hospital NHS Foundation Trust ,RBL14,Arrowe Park Hospital,North West ,Requires improvement,101,56,8787,0.01149,0.55446,1.15%,1.15% (101),55.4%,Below Avg,RBL,0.01584
+2019,Q3,RBL,Wirral University Teaching Hospital NHS Foundation Trust ,RBL20,Clatterbridge Hospital,North West ,Requires improvement,101,56,8787,0.01149,0.55446,1.15%,1.15% (101),55.4%,Below Avg,RBL,0.01584
+2019,Q3,RBN,St Helens and Knowsley Teaching Hospitals NHS Trust ,RBN01,Whiston Hospital,North West ,Outstanding,86,2,11517,0.00747,0.02326,0.75%,0.75% (86),2.3%,Best Quartile,RBN,0.01584
+2019,Q3,RBN,St Helens and Knowsley Teaching Hospitals NHS Trust ,RBN02,St Helens Hospital,North West ,Outstanding,86,2,11517,0.00747,0.02326,0.75%,0.75% (86),2.3%,Best Quartile,RBN,0.01584
+2019,Q3,RBN,St Helens and Knowsley Teaching Hospitals NHS Trust ,RBN03,Newton Community Hospital,North West ,Outstanding,86,2,11517,0.00747,0.02326,0.75%,0.75% (86),2.3%,Best Quartile,RBN,0.01584
+2019,Q3,RBQ,Liverpool Heart and Chest Hospital NHS Foundation Trust ,RBQHQ,Liverpool Heart and Chest Hospital,North West ,Outstanding,45,0,1949,0.02309,0,2.31%,2.31% (45),0.0%,Worst Quartile,RBQ,0.01584
+2019,Q3,RBS,Alder Hey Children's NHS Foundation Trust ,RBS25,Alder Hey Children's Hospital,North West ,Good,114,9,3471,0.03284,0.07895,3.28%,3.28% (114),7.9%,Worst Quartile,RBS,0.01584
+2019,Q3,RBS,Alder Hey Children's NHS Foundation Trust ,RBSA2,Dewi Jones Unit,North West ,Good,114,9,3471,0.03284,0.07895,3.28%,3.28% (114),7.9%,Worst Quartile,RBS,0.01584
+2019,Q3,RBT,Mid Cheshire Hospitals NHS Foundation Trust ,RBT20,Leighton Hospital,North West ,Good,101,3,7807,0.01294,0.0297,1.29%,1.29% (101),3%,Below Avg,RBT,0.01584
+2019,Q3,RBT,Mid Cheshire Hospitals NHS Foundation Trust ,RBT21,Victoria Infirmary,North West,Good,101,3,7807,0.01294,0.0297,1.29%,1.29% (101),3%,Below Avg,RBT,0.01584
+2019,Q3,RBV,The Christie NHS Foundation Trust ,RBV01,The Christie Hospital,North West ,Outstanding,5,0,3107,0.00161,0,0.16%,0.16% (5),0.0%,Best Quartile,RBV,0.01584
+2019,Q3,RBZ,Northern Devon Healthcare NHS Trust ,RBZ12,North Devon District Hospital,South West ,Requires improvement,36,0,4552,0.00791,0,0.79%,0.79% (36),0.0%,Best Quartile,RBZ,0.01584
+2019,Q3,RBZ,Northern Devon Healthcare NHS Trust ,RBZ79,Exeter Community Hospital (Whipton),South West ,Requires improvement,36,0,4552,0.00791,0,0.79%,0.79% (36),0.0%,Best Quartile,RBZ,0.01584
+2019,Q3,RBZ,Northern Devon Healthcare NHS Trust ,RBZ83,Sidmouth Hospital,South West ,Requires improvement,36,0,4552,0.00791,0,0.79%,0.79% (36),0.0%,Best Quartile,RBZ,0.01584
+2019,Q3,RBZ,Northern Devon Healthcare NHS Trust ,RBZ86,Seaton Hospital,South West ,Requires improvement,36,0,4552,0.00791,0,0.79%,0.79% (36),0.0%,Best Quartile,RBZ,0.01584
+2019,Q3,RBZ,Northern Devon Healthcare NHS Trust ,RBZ87,Okehampton Hospital,South West ,Requires improvement,36,0,4552,0.00791,0,0.79%,0.79% (36),0.0%,Best Quartile,RBZ,0.01584
+2019,Q3,RBZ,Northern Devon Healthcare NHS Trust ,RBZ92,Holsworthy Community Hospital,South West ,Requires improvement,36,0,4552,0.00791,0,0.79%,0.79% (36),0.0%,Best Quartile,RBZ,0.01584
+2019,Q3,RBZ,Northern Devon Healthcare NHS Trust ,RBZ93,Tiverton and District Hospital,South West ,Requires improvement,36,0,4552,0.00791,0,0.79%,0.79% (36),0.0%,Best Quartile,RBZ,0.01584
+2019,Q3,RBZ,Northern Devon Healthcare NHS Trust ,RBZ95,Bideford Community Hospital,South West ,Requires improvement,36,0,4552,0.00791,0,0.79%,0.79% (36),0.0%,Best Quartile,RBZ,0.01584
+2019,Q3,RBZ,Northern Devon Healthcare NHS Trust ,RBZ98,Torrington Community Hospital,South West ,Requires improvement,36,0,4552,0.00791,0,0.79%,0.79% (36),0.0%,Best Quartile,RBZ,0.01584
+2019,Q3,RBZ,Northern Devon Healthcare NHS Trust ,RBZ99,South Molton Community Hospital,South West ,Requires improvement,36,0,4552,0.00791,0,0.79%,0.79% (36),0.0%,Best Quartile,RBZ,0.01584
+2019,Q3,RC1,Bedford Hospital NHS Trust ,RC110,Bedford Hospital,East of England ,Requires improvement,83,11,7614,0.0109,0.13253,1.09%,1.09% (83),13.3%,Below Avg,RC1,0.01584
+2019,Q3,RC9,Luton and Dunstable University Hospital NHS Foundation Trust ,RC971,Luton and Dunstable Hospital,East of England ,Good,140,1,8008,0.01748,0.00714,1.75%,1.75% (140),0.7%,Above Avg,RC9,0.01584
+2019,Q3,RCB,York Teaching Hospital NHS Foundation Trust ,RCB00,The York Hospital,Yorkshire and The Humber ,Requires improvement,229,20,9780,0.02342,0.08734,2.34%,2.34% (229),8.7%,Worst Quartile,RCB,0.01584
+2019,Q3,RCB,York Teaching Hospital NHS Foundation Trust ,RCB07,Selby War Memorial Hospital,Yorkshire and The Humber ,Requires improvement,229,20,9780,0.02342,0.08734,2.34%,2.34% (229),8.7%,Worst Quartile,RCB,0.01584
+2019,Q3,RCB,York Teaching Hospital NHS Foundation Trust ,RCBCA,Scarborough Hospital,Yorkshire and The Humber ,Requires improvement,229,20,9780,0.02342,0.08734,2.34%,2.34% (229),8.7%,Worst Quartile,RCB,0.01584
+2019,Q3,RCB,York Teaching Hospital NHS Foundation Trust ,RCBL8,Malton Community Hospital,Yorkshire and The Humber ,Requires improvement,229,20,9780,0.02342,0.08734,2.34%,2.34% (229),8.7%,Worst Quartile,RCB,0.01584
+2019,Q3,RCB,York Teaching Hospital NHS Foundation Trust ,RCBNH,Bridlington Hospital,Yorkshire and The Humber ,Requires improvement,229,20,9780,0.02342,0.08734,2.34%,2.34% (229),8.7%,Worst Quartile,RCB,0.01584
+2019,Q3,RCD,Harrogate and District NHS Foundation Trust ,RCD01,Harrogate District Hospital,Yorkshire and The Humber ,Good,67,0,6597,0.01016,0,1.02%,1.02% (67),0.0%,Below Avg,RCD,0.01584
+2019,Q3,RCD,Harrogate and District NHS Foundation Trust ,RCD02,Ripon and District Community Hospital,Yorkshire and The Humber ,Good,67,0,6597,0.01016,0,1.02%,1.02% (67),0.0%,Below Avg,RCD,0.01584
+2019,Q3,RCF,Airedale NHS Foundation Trust ,RCF22,Airedale General Hospital,Yorkshire and The Humber ,Requires improvement,87,0,1796,0.04844,0,4.84%,4.84% (87),0.0%,Worst Quartile,RCF,0.01584
+2019,Q3,RCU,Sheffield Children's NHS Foundation Trust ,RCUEF,Sheffield Children's Hospital,Yorkshire and The Humber ,Good,47,6,2284,0.02058,0.12766,2.06%,2.06% (47),12.8%,Above Avg,RCU,0.01584
+2019,Q3,RCX,"The Queen Elizabeth Hospital, King's Lynn, NHS Foundation Trust ",RCX70,The Queen Elizabeth Hospital,East of England ,Inadequate,98,2,5549,0.01766,0.02041,1.77%,1.77% (98),2%,Above Avg,RCX,0.01584
+2019,Q3,RD1,Royal United Hospitals Bath NHS Foundation Trust ,RD102,Chippenham Community Hospital,South West ,Good,104,0,5845,0.01779,0,1.78%,1.78% (104),0.0%,Above Avg,RD1,0.01584
+2019,Q3,RD1,Royal United Hospitals Bath NHS Foundation Trust ,RD115,Royal National Hospital for Rheumatic Diseases,South West ,Good,104,0,5845,0.01779,0,1.78%,1.78% (104),0.0%,Above Avg,RD1,0.01584
+2019,Q3,RD1,Royal United Hospitals Bath NHS Foundation Trust ,RD129,Paulton Memorial Hospital (Maternity),South West ,Good,104,0,5845,0.01779,0,1.78%,1.78% (104),0.0%,Above Avg,RD1,0.01584
+2019,Q3,RD1,Royal United Hospitals Bath NHS Foundation Trust ,RD130,Royal United Hospital Bath,South West ,Good,104,0,5845,0.01779,0,1.78%,1.78% (104),0.0%,Above Avg,RD1,0.01584
+2019,Q3,RD3,Poole Hospital NHS Foundation Trust ,RD300,Poole Hospital,South West ,Good,46,1,3520,0.01307,0.02174,1.31%,1.31% (46),2.2%,Below Avg,RD3,0.01584
+2019,Q3,RD8,Milton Keynes University Hospital NHS Foundation Trust ,RD816,Milton Keynes Hospital,South East ,Good,60,8,5118,0.01172,0.13333,1.17%,1.17% (60),13.3%,Below Avg,RD8,0.01584
+2019,Q3,RDD,Basildon and Thurrock University Hospitals NHS Foundation Trust ,RDDH0,Basildon University Hospital,East of England ,Good,91,3,8342,0.01091,0.03297,1.09%,1.09% (91),3.3%,Below Avg,RDD,0.01584
+2019,Q3,RDD,Basildon and Thurrock University Hospitals NHS Foundation Trust ,RDDH1,Orsett Hospital,East of England ,Good,91,3,8342,0.01091,0.03297,1.09%,1.09% (91),3.3%,Below Avg,RDD,0.01584
+2019,Q3,RDE,East Suffolk and North Essex NHS Foundation Trust ,RDE03,Ipswich Hospital,East of England ,Requires improvement,343,20,16499,0.02079,0.05831,2.08%,2.08% (343),5.8%,Above Avg,RDE,0.01584
+2019,Q3,RDE,East Suffolk and North Essex NHS Foundation Trust ,RDEE4,Colchester General Hospital,East of England ,Requires improvement,343,20,16499,0.02079,0.05831,2.08%,2.08% (343),5.8%,Above Avg,RDE,0.01584
+2019,Q3,RDU,Frimley Health NHS Foundation Trust ,RDU01,Frimley Park Hospital,South East ,Good,196,13,18023,0.01087,0.06633,1.09%,1.09% (196),6.6%,Below Avg,RDU,0.01584
+2019,Q3,RDU,Frimley Health NHS Foundation Trust ,RDU02,Farnham Hospital,South East ,Good,196,13,18023,0.01087,0.06633,1.09%,1.09% (196),6.6%,Below Avg,RDU,0.01584
+2019,Q3,RDU,Frimley Health NHS Foundation Trust ,RDU50,Wexham Park Hospital,South East ,Good,196,13,18023,0.01087,0.06633,1.09%,1.09% (196),6.6%,Below Avg,RDU,0.01584
+2019,Q3,RDU,Frimley Health NHS Foundation Trust ,RDU52,Heatherwood Hospital,South East ,Good,196,13,18023,0.01087,0.06633,1.09%,1.09% (196),6.6%,Below Avg,RDU,0.01584
+2019,Q3,RDU,Frimley Health NHS Foundation Trust ,RDU53,King Edward VII Hospital,South East ,Good,196,13,18023,0.01087,0.06633,1.09%,1.09% (196),6.6%,Below Avg,RDU,0.01584
+2019,Q3,RDY,Dorset Healthcare University NHS Foundation Trust ,RDYEF,Weymouth Community Hospital,South West ,Outstanding,3,0,468,0.00641,0,0.64%,0.64% (3),0.0%,Best Quartile,RDY,0.01584
+2019,Q3,RDY,Dorset Healthcare University NHS Foundation Trust ,RDYEG,Westhaven Hospital,South West ,Outstanding,3,0,468,0.00641,0,0.64%,0.64% (3),0.0%,Best Quartile,RDY,0.01584
+2019,Q3,RDY,Dorset Healthcare University NHS Foundation Trust ,RDYEJ,Bridport Community Hospital,South West ,Outstanding,3,0,468,0.00641,0,0.64%,0.64% (3),0.0%,Best Quartile,RDY,0.01584
+2019,Q3,RDY,Dorset Healthcare University NHS Foundation Trust ,RDYFC,Yeatman Hospital,South West ,Outstanding,3,0,468,0.00641,0,0.64%,0.64% (3),0.0%,Best Quartile,RDY,0.01584
+2019,Q3,RDY,Dorset Healthcare University NHS Foundation Trust ,RDYFE,"Victoria Hospital, Wimborne",South West ,Outstanding,3,0,468,0.00641,0,0.64%,0.64% (3),0.0%,Best Quartile,RDY,0.01584
+2019,Q3,RDY,Dorset Healthcare University NHS Foundation Trust ,RDYFF,Swanage Community Hospital,South West ,Outstanding,3,0,468,0.00641,0,0.64%,0.64% (3),0.0%,Best Quartile,RDY,0.01584
+2019,Q3,RDY,Dorset Healthcare University NHS Foundation Trust ,RDYY1,Portland Hospital,South West ,Outstanding,3,0,468,0.00641,0,0.64%,0.64% (3),0.0%,Best Quartile,RDY,0.01584
+2019,Q3,RDZ,The Royal Bournemouth and Christchurch Hospitals NHS Foundation Trust ,RDZ05,Christchurch Hospital,South West ,Good,84,3,9749,0.00862,0.03571,0.86%,0.86% (84),3.6%,Best Quartile,RDZ,0.01584
+2019,Q3,REF,Royal Cornwall Hospitals NHS Trust ,REF01,West Cornwall Hospital,South West ,Requires improvement,177,23,11968,0.01479,0.12994,1.48%,1.48% (177),13%,Above Avg,REF,0.01584
+2019,Q3,REF,Royal Cornwall Hospitals NHS Trust ,REF02,St Michael's Hospital,South West ,Requires improvement,177,23,11968,0.01479,0.12994,1.48%,1.48% (177),13%,Above Avg,REF,0.01584
+2019,Q3,REF,Royal Cornwall Hospitals NHS Trust ,REF12,Royal Cornwall Hospital,South West ,Requires improvement,177,23,11968,0.01479,0.12994,1.48%,1.48% (177),13%,Above Avg,REF,0.01584
+2019,Q3,REF,Royal Cornwall Hospitals NHS Trust ,REF81,St Austell Hospital - Penrice Birthing Unit,South West ,Requires improvement,177,23,11968,0.01479,0.12994,1.48%,1.48% (177),13%,Above Avg,REF,0.01584
+2019,Q3,REM,Liverpool University Hospitals NHS Foundation Trust ,REM21,University Hospital Aintree,North West ,Good,194,5,14037,0.01382,0.02577,1.38%,1.38% (194),2.6%,Below Avg,REM,0.01584
+2019,Q3,REP,Liverpool Women's NHS Foundation Trust ,REP01,Liverpool Women's Hospital,North West ,Good,21,3,2095,0.01002,0.14286,1%,1% (21),14.3%,Below Avg,REP,0.01584
+2019,Q3,REP,Liverpool Women's NHS Foundation Trust ,REP21,Liverpool Women's at Aintree,North West ,Good,21,3,2095,0.01002,0.14286,1%,1% (21),14.3%,Below Avg,REP,0.01584
+2019,Q3,RET,The Walton Centre NHS Foundation Trust ,RET20,The Walton Centre,North West ,Outstanding,24,5,1164,0.02062,0.20833,2.06%,2.06% (24),20.8%,Above Avg,RET,0.01584
+2019,Q3,RF4,"Barking, Havering and Redbridge University Hospitals NHS Trust ",RF4DG,King George Hospital,London ,Requires improvement,348,26,12000,0.029,0.07471,2.9%,2.9% (348),7.5%,Worst Quartile,RF4,0.01584
+2019,Q3,RF4,"Barking, Havering and Redbridge University Hospitals NHS Trust ",RF4PP,Barking Community Hospital,London ,Requires improvement,348,26,12000,0.029,0.07471,2.9%,2.9% (348),7.5%,Worst Quartile,RF4,0.01584
+2019,Q3,RF4,"Barking, Havering and Redbridge University Hospitals NHS Trust ",RF4QH,Queen's Hospital,London ,Requires improvement,348,26,12000,0.029,0.07471,2.9%,2.9% (348),7.5%,Worst Quartile,RF4,0.01584
+2019,Q3,RFF,Barnsley Hospital NHS Foundation Trust ,RFFAA,Barnsley Hospital,Yorkshire and The Humber ,Good,57,3,6053,0.00942,0.05263,0.94%,0.94% (57),5.3%,Best Quartile,RFF,0.01584
+2019,Q3,RFR,The Rotherham NHS Foundation Trust ,RFRPA,Rotherham General Hospital,Yorkshire and The Humber ,Requires improvement,92,0,6132,0.015,0,1.5%,1.5% (92),0.0%,Above Avg,RFR,0.01584
+2019,Q3,RFS,Chesterfield Royal Hospital NHS Foundation Trust ,RFSDA,Chesterfield Royal Hospital,East Midlands ,Good,92,6,5151,0.01786,0.06522,1.79%,1.79% (92),6.5%,Above Avg,RFS,0.01584
+2019,Q3,RGM,Royal Papworth Hospital NHS Foundation Trust ,RGMX1,Royal Papworth Hospital,East of England ,Outstanding,128,22,3350,0.03821,0.17188,3.82%,3.82% (128),17.2%,Worst Quartile,RGM,0.01584
+2019,Q3,RGN,North West Anglia NHS Foundation Trust ,RGN49,Stamford & Rutland Hospital,East of England ,Requires improvement,227,28,10328,0.02198,0.12335,2.2%,2.2% (227),12.3%,Worst Quartile,RGN,0.01584
+2019,Q3,RGN,North West Anglia NHS Foundation Trust ,RGN80,Peterborough City Hospital,East of England ,Requires improvement,227,28,10328,0.02198,0.12335,2.2%,2.2% (227),12.3%,Worst Quartile,RGN,0.01584
+2019,Q3,RGN,North West Anglia NHS Foundation Trust ,RGN90,Hinchingbrooke Hospital,East of England ,Requires improvement,227,28,10328,0.02198,0.12335,2.2%,2.2% (227),12.3%,Worst Quartile,RGN,0.01584
+2019,Q3,RGP,James Paget University Hospitals NHS Foundation Trust ,RGP75,James Paget Hospital,East of England ,Good,112,0,6270,0.01786,0,1.79%,1.79% (112),0.0%,Above Avg,RGP,0.01584
+2019,Q3,RGR,West Suffolk NHS Foundation Trust ,RGR44,Newmarket Hospital,East of England ,Requires improvement,90,3,7622,0.01181,0.03333,1.18%,1.18% (90),3.3%,Below Avg,RGR,0.01584
+2019,Q3,RGR,West Suffolk NHS Foundation Trust ,RGR50,West Suffolk Hospital,East of England ,Requires improvement,90,3,7622,0.01181,0.03333,1.18%,1.18% (90),3.3%,Below Avg,RGR,0.01584
+2019,Q3,RGT,Cambridge University Hospitals NHS Foundation Trust ,RGT01,Addenbrooke's and The Rosie Hospitals,East of England ,Good,261,16,12088,0.02159,0.0613,2.16%,2.16% (261),6.1%,Worst Quartile,RGT,0.01584
+2019,Q3,RH8,Royal Devon and Exeter NHS Foundation Trust ,RH801,Royal Devon & Exeter Hospital (Wonford),South West ,Good,174,26,10734,0.01621,0.14943,1.62%,1.62% (174),14.9%,Above Avg,RH8,0.01584
+2019,Q3,RH8,Royal Devon and Exeter NHS Foundation Trust ,RH802,Royal Devon & Exeter Hospital (Heavitree),South West ,Good,174,26,10734,0.01621,0.14943,1.62%,1.62% (174),14.9%,Above Avg,RH8,0.01584
+2019,Q3,RH8,Royal Devon and Exeter NHS Foundation Trust ,RH833,Okehampton Community Hospital,South West ,Good,174,26,10734,0.01621,0.14943,1.62%,1.62% (174),14.9%,Above Avg,RH8,0.01584
+2019,Q3,RH8,Royal Devon and Exeter NHS Foundation Trust ,RH834,Ottery St Mary Hospital,South West ,Good,174,26,10734,0.01621,0.14943,1.62%,1.62% (174),14.9%,Above Avg,RH8,0.01584
+2019,Q3,RH8,Royal Devon and Exeter NHS Foundation Trust ,RH836,Crediton Hospital,South West ,Good,174,26,10734,0.01621,0.14943,1.62%,1.62% (174),14.9%,Above Avg,RH8,0.01584
+2019,Q3,RH8,Royal Devon and Exeter NHS Foundation Trust ,RH853,Tiverton District Hospital,South West ,Good,174,26,10734,0.01621,0.14943,1.62%,1.62% (174),14.9%,Above Avg,RH8,0.01584
+2019,Q3,RH8,Royal Devon and Exeter NHS Foundation Trust ,RH854,Honiton Hospital,South West ,Good,174,26,10734,0.01621,0.14943,1.62%,1.62% (174),14.9%,Above Avg,RH8,0.01584
+2019,Q3,RH8,Royal Devon and Exeter NHS Foundation Trust ,RH857,Axminster Hospital,South West ,Good,174,26,10734,0.01621,0.14943,1.62%,1.62% (174),14.9%,Above Avg,RH8,0.01584
+2019,Q3,RH8,Royal Devon and Exeter NHS Foundation Trust ,RH858,Exmouth Hospital,South West ,Good,174,26,10734,0.01621,0.14943,1.62%,1.62% (174),14.9%,Above Avg,RH8,0.01584
+2019,Q3,RH8,Royal Devon and Exeter NHS Foundation Trust ,RH859,Victoria Hospital Sidmouth,South West ,Good,174,26,10734,0.01621,0.14943,1.62%,1.62% (174),14.9%,Above Avg,RH8,0.01584
+2019,Q3,RH8,Royal Devon and Exeter NHS Foundation Trust ,RH868,Mardon Neuro-Rehabilitation Centre,South West ,Good,174,26,10734,0.01621,0.14943,1.62%,1.62% (174),14.9%,Above Avg,RH8,0.01584
+2019,Q3,RH8,Royal Devon and Exeter NHS Foundation Trust ,RH8A4,Seaton Community Hospital,South West ,Good,174,26,10734,0.01621,0.14943,1.62%,1.62% (174),14.9%,Above Avg,RH8,0.01584
+2019,Q3,RH8,Royal Devon and Exeter NHS Foundation Trust ,RH8D6,Exeter Community Hospital,South West ,Good,174,26,10734,0.01621,0.14943,1.62%,1.62% (174),14.9%,Above Avg,RH8,0.01584
+2019,Q3,RHM,University Hospital Southampton NHS Foundation Trust ,RHM01,Southampton General Hospital,South East ,Good,308,61,11466,0.02686,0.19805,2.69%,2.69% (308),19.8%,Worst Quartile,RHM,0.01584
+2019,Q3,RHM,University Hospital Southampton NHS Foundation Trust ,RHM02,Royal South Hants Hospital,South East ,Good,308,61,11466,0.02686,0.19805,2.69%,2.69% (308),19.8%,Worst Quartile,RHM,0.01584
+2019,Q3,RHM,University Hospital Southampton NHS Foundation Trust ,RHM04,Countess Mountbatten House,South East ,Good,308,61,11466,0.02686,0.19805,2.69%,2.69% (308),19.8%,Worst Quartile,RHM,0.01584
+2019,Q3,RHM,University Hospital Southampton NHS Foundation Trust ,RHM12,Princess Ann Hospital,South East ,Good,308,61,11466,0.02686,0.19805,2.69%,2.69% (308),19.8%,Worst Quartile,RHM,0.01584
+2019,Q3,RHQ,Sheffield Teaching Hospitals NHS Foundation Trust ,RHQHH,Royal Hallamshire Hospital,Yorkshire and The Humber ,Good,298,7,27307,0.01091,0.02349,1.09%,1.09% (298),2.3%,Below Avg,RHQ,0.01584
+2019,Q3,RHQ,Sheffield Teaching Hospitals NHS Foundation Trust ,RHQNG,Northern General Hospital,Yorkshire and The Humber ,Good,298,7,27307,0.01091,0.02349,1.09%,1.09% (298),2.3%,Below Avg,RHQ,0.01584
+2019,Q3,RHQ,Sheffield Teaching Hospitals NHS Foundation Trust ,RHQWP,Weston Park Hospital,Yorkshire and The Humber ,Good,298,7,27307,0.01091,0.02349,1.09%,1.09% (298),2.3%,Below Avg,RHQ,0.01584
+2019,Q3,RHQ,Sheffield Teaching Hospitals NHS Foundation Trust ,RHQY3,Sheffield Dialysis Unit,Yorkshire and The Humber ,Good,298,7,27307,0.01091,0.02349,1.09%,1.09% (298),2.3%,Below Avg,RHQ,0.01584
+2019,Q3,RHU,Portsmouth Hospitals NHS Trust ,RHU02,St Mary's Hospital,South East ,Good,142,0,9786,0.01451,0,1.45%,1.45% (142),0.0%,Above Avg,RHU,0.01584
+2019,Q3,RHU,Portsmouth Hospitals NHS Trust ,RHU03,Queen Alexandra Hospital,South East ,Good,142,0,9786,0.01451,0,1.45%,1.45% (142),0.0%,Above Avg,RHU,0.01584
+2019,Q3,RHU,Portsmouth Hospitals NHS Trust ,RHU04,Petersfield Hospital,South East ,Good,142,0,9786,0.01451,0,1.45%,1.45% (142),0.0%,Above Avg,RHU,0.01584
+2019,Q3,RHU,Portsmouth Hospitals NHS Trust ,RHU10,Gosport War Memorial Hospital,South East ,Good,142,0,9786,0.01451,0,1.45%,1.45% (142),0.0%,Above Avg,RHU,0.01584
+2019,Q3,RHW,Royal Berkshire NHS Foundation Trust ,RHW01,Royal Berkshire Hospital,South East ,Good,104,0,11109,0.00936,0,0.94%,0.94% (104),0.0%,Best Quartile,RHW,0.01584
+2019,Q3,RHW,Royal Berkshire NHS Foundation Trust ,RHW03,"Prince Charles Eye Unit, King Edward VII Hospital",South East ,Good,104,0,11109,0.00936,0,0.94%,0.94% (104),0.0%,Best Quartile,RHW,0.01584
+2019,Q3,RHW,Royal Berkshire NHS Foundation Trust ,RHW05,West Berkshire Community Hospital,South East ,Good,104,0,11109,0.00936,0,0.94%,0.94% (104),0.0%,Best Quartile,RHW,0.01584
+2019,Q3,RJ1,Guy's and St Thomas' NHS Foundation Trust ,RJ121,Guy's Hospital,London ,Good,235,47,23132,0.01016,0.2,1.02%,1.02% (235),20%,Below Avg,RJ1,0.01584
+2019,Q3,RJ1,Guy's and St Thomas' NHS Foundation Trust ,RJ122,St Thomas' Hospital,London ,Good,235,47,23132,0.01016,0.2,1.02%,1.02% (235),20%,Below Avg,RJ1,0.01584
+2019,Q3,RJ2,Lewisham and Greenwich NHS Trust ,RJ224,University Hospital Lewisham,London ,Requires improvement,68,0,8511,0.00799,0,0.8%,0.8% (68),0.0%,Best Quartile,RJ2,0.01584
+2019,Q3,RJ2,Lewisham and Greenwich NHS Trust ,RJ230,Queen Mary's Hospital,London ,Requires improvement,68,0,8511,0.00799,0,0.8%,0.8% (68),0.0%,Best Quartile,RJ2,0.01584
+2019,Q3,RJ2,Lewisham and Greenwich NHS Trust ,RJ231,Queen Elizabeth Hospital,London ,Requires improvement,68,0,8511,0.00799,0,0.8%,0.8% (68),0.0%,Best Quartile,RJ2,0.01584
+2019,Q3,RJ6,Croydon Health Services NHS Trust ,RJ611,Croydon University Hospital,London ,Requires improvement,80,20,6975,0.01147,0.25,1.15%,1.15% (80),25%,Below Avg,RJ6,0.01584
+2019,Q3,RJ6,Croydon Health Services NHS Trust ,RJ613,Purley War Memorial Hospital,London ,Requires improvement,80,20,6975,0.01147,0.25,1.15%,1.15% (80),25%,Below Avg,RJ6,0.01584
+2019,Q3,RJ7,St George's University Hospitals NHS Foundation Trust ,RJ701,St George's Hospital (Tooting),London ,Requires improvement,204,13,11575,0.01762,0.06373,1.76%,1.76% (204),6.4%,Above Avg,RJ7,0.01584
+2019,Q3,RJ7,St George's University Hospitals NHS Foundation Trust ,RJ731,Queen Mary's Hospital,London ,Requires improvement,204,13,11575,0.01762,0.06373,1.76%,1.76% (204),6.4%,Above Avg,RJ7,0.01584
+2019,Q3,RJC,South Warwickshire NHS Foundation Trust ,RJC02,Warwick Hospital,West Midlands ,Outstanding,32,0,5601,0.00571,0,0.57%,0.57% (32),0.0%,Best Quartile,RJC,0.01584
+2019,Q3,RJC,South Warwickshire NHS Foundation Trust ,RJC03,Stratford Hospital,West Midlands ,Outstanding,32,0,5601,0.00571,0,0.57%,0.57% (32),0.0%,Best Quartile,RJC,0.01584
+2019,Q3,RJC,South Warwickshire NHS Foundation Trust ,RJC04,Ellen Badger Hospital,West Midlands ,Outstanding,32,0,5601,0.00571,0,0.57%,0.57% (32),0.0%,Best Quartile,RJC,0.01584
+2019,Q3,RJC,South Warwickshire NHS Foundation Trust ,RJC46,Royal Leamington Spa Rehabilitation Hospital,West Midlands ,Outstanding,32,0,5601,0.00571,0,0.57%,0.57% (32),0.0%,Best Quartile,RJC,0.01584
+2019,Q3,RJE,University Hospitals of North Midlands NHS Trust ,RJE01,The Royal Stoke University Hospital,West Midlands ,Requires improvement,499,26,14978,0.03332,0.0521,3.33%,3.33% (499),5.2%,Worst Quartile,RJE,0.01584
+2019,Q3,RJE,University Hospitals of North Midlands NHS Trust ,RJE08,Bradwell Hospital,West Midlands ,Requires improvement,499,26,14978,0.03332,0.0521,3.33%,3.33% (499),5.2%,Worst Quartile,RJE,0.01584
+2019,Q3,RJE,University Hospitals of North Midlands NHS Trust ,RJE09,The County Hospital,West Midlands ,Requires improvement,499,26,14978,0.03332,0.0521,3.33%,3.33% (499),5.2%,Worst Quartile,RJE,0.01584
+2019,Q3,RJE,University Hospitals of North Midlands NHS Trust ,RJE51,Cheadle Hospital,West Midlands ,Requires improvement,499,26,14978,0.03332,0.0521,3.33%,3.33% (499),5.2%,Worst Quartile,RJE,0.01584
+2019,Q3,RJL,Northern Lincolnshire and Goole NHS Foundation Trust ,RJL30,Diana Princess of Wales Hospital,Yorkshire and The Humber ,Requires improvement,211,4,8445,0.02499,0.01896,2.5%,2.5% (211),1.9%,Worst Quartile,RJL,0.01584
+2019,Q3,RJL,Northern Lincolnshire and Goole NHS Foundation Trust ,RJL31,Goole & District Hospital,Yorkshire and The Humber ,Requires improvement,211,4,8445,0.02499,0.01896,2.5%,2.5% (211),1.9%,Worst Quartile,RJL,0.01584
+2019,Q3,RJL,Northern Lincolnshire and Goole NHS Foundation Trust ,RJL32,Scunthorpe General Hospital,Yorkshire and The Humber ,Requires improvement,211,4,8445,0.02499,0.01896,2.5%,2.5% (211),1.9%,Worst Quartile,RJL,0.01584
+2019,Q3,RJN,East Cheshire NHS Trust ,RJN63,Congleton War Memorial Hospital,North West ,Good,56,0,3500,0.016,0,1.6%,1.6% (56),0.0%,Above Avg,RJN,0.01584
+2019,Q3,RJN,East Cheshire NHS Trust ,RJN68,Knutsford and District Community Hospital,North West ,Good,56,0,3500,0.016,0,1.6%,1.6% (56),0.0%,Above Avg,RJN,0.01584
+2019,Q3,RJN,East Cheshire NHS Trust ,RJN71,Macclesfield District General Hospital,North West ,Good,56,0,3500,0.016,0,1.6%,1.6% (56),0.0%,Above Avg,RJN,0.01584
+2019,Q3,RJR,Countess of Chester Hospital NHS Foundation Trust ,RJR05,The Countess of Chester Hospital,North West ,Requires improvement,131,36,3803,0.03445,0.27481,3.44%,3.44% (131),27.5%,Worst Quartile,RJR,0.01584
+2019,Q3,RJZ,King's College Hospital NHS Foundation Trust ,RJZ01,King's College Hospital,London ,Requires improvement,253,56,18655,0.01356,0.22134,1.36%,1.36% (253),22.1%,Below Avg,RJZ,0.01584
+2019,Q3,RJZ,King's College Hospital NHS Foundation Trust ,RJZ30,Princess Royal University Hospital,London ,Requires improvement,253,56,18655,0.01356,0.22134,1.36%,1.36% (253),22.1%,Below Avg,RJZ,0.01584
+2019,Q3,RJZ,King's College Hospital NHS Foundation Trust ,RJZ50,King's @ Woolwich,London ,Requires improvement,253,56,18655,0.01356,0.22134,1.36%,1.36% (253),22.1%,Below Avg,RJZ,0.01584
+2019,Q3,RJZ,King's College Hospital NHS Foundation Trust ,RJZ70,Orpington Hospital,London ,Requires improvement,253,56,18655,0.01356,0.22134,1.36%,1.36% (253),22.1%,Below Avg,RJZ,0.01584
+2019,Q3,RK5,Sherwood Forest Hospitals NHS Foundation Trust ,RK5BC,Kings Mill Hospital,East Midlands ,Good,43,1,8573,0.00502,0.02326,0.5%,0.5% (43),2.3%,Best Quartile,RK5,0.01584
+2019,Q3,RK5,Sherwood Forest Hospitals NHS Foundation Trust ,RK5HP,Newark Hospital,East Midlands ,Good,43,1,8573,0.00502,0.02326,0.5%,0.5% (43),2.3%,Best Quartile,RK5,0.01584
+2019,Q3,RK9,University Hospitals Plymouth NHS Trust ,RK901,Mount Gould Hospital,South West ,Requires improvement,527,93,12264,0.04297,0.17647,4.3%,4.3% (527),17.6%,Worst Quartile,RK9,0.01584
+2019,Q3,RK9,University Hospitals Plymouth NHS Trust ,RK922,Tavistock Hospital,South West ,Requires improvement,527,93,12264,0.04297,0.17647,4.3%,4.3% (527),17.6%,Worst Quartile,RK9,0.01584
+2019,Q3,RK9,University Hospitals Plymouth NHS Trust ,RK935,South Hams Hospital (Kingsbridge Hospital),South West ,Requires improvement,527,93,12264,0.04297,0.17647,4.3%,4.3% (527),17.6%,Worst Quartile,RK9,0.01584
+2019,Q3,RK9,University Hospitals Plymouth NHS Trust ,RK950,Derriford Hospital,South West ,Requires improvement,527,93,12264,0.04297,0.17647,4.3%,4.3% (527),17.6%,Worst Quartile,RK9,0.01584
+2019,Q3,RKB,University Hospitals Coventry and Warwickshire NHS Trust ,RKB01,University Hospital,West Midlands ,Requires improvement,193,17,15016,0.01285,0.08808,1.29%,1.29% (193),8.8%,Below Avg,RKB,0.01584
+2019,Q3,RKB,University Hospitals Coventry and Warwickshire NHS Trust ,RKB03,Hospital of St Cross,West Midlands ,Requires improvement,193,17,15016,0.01285,0.08808,1.29%,1.29% (193),8.8%,Below Avg,RKB,0.01584
+2019,Q3,RKE,Whittington Health NHS Trust ,RKEQ4,The Whittington Hospital,London ,Good,19,0,4071,0.00467,0,0.47%,0.47% (19),0.0%,Best Quartile,RKE,0.01584
+2019,Q3,RL1,The Robert Jones and Agnes Hunt Orthopaedic Hospital NHS Foundation Trust ,RL131,The Robert Jones & Agnes Hunt Hospital,West Midlands ,Good,50,0,1928,0.02593,0,2.59%,2.59% (50),0.0%,Worst Quartile,RL1,0.01584
+2019,Q3,RL4,The Royal Wolverhampton NHS Trust ,RL402,The Phoenix Walk in Centre,West Midlands ,Good,105,0,10319,0.01018,0,1.02%,1.02% (105),0.0%,Below Avg,RL4,0.01584
+2019,Q3,RL4,The Royal Wolverhampton NHS Trust ,RL403,New Cross Hospital,West Midlands ,Good,105,0,10319,0.01018,0,1.02%,1.02% (105),0.0%,Below Avg,RL4,0.01584
+2019,Q3,RL4,The Royal Wolverhampton NHS Trust ,RL4TC,Cannock Chase Hospital,West Midlands ,Good,105,0,10319,0.01018,0,1.02%,1.02% (105),0.0%,Below Avg,RL4,0.01584
+2019,Q3,RLQ,Wye Valley NHS Trust ,RLQ01,Hereford Hospital,West Midlands ,Requires improvement,243,23,4294,0.05659,0.09465,5.66%,5.66% (243),9.5%,Worst Quartile,RLQ,0.01584
+2019,Q3,RLQ,Wye Valley NHS Trust ,RLQ03,Bromyard Community Hospital,West Midlands ,Requires improvement,243,23,4294,0.05659,0.09465,5.66%,5.66% (243),9.5%,Worst Quartile,RLQ,0.01584
+2019,Q3,RLQ,Wye Valley NHS Trust ,RLQ06,Leominster Community Hospital,West Midlands ,Requires improvement,243,23,4294,0.05659,0.09465,5.66%,5.66% (243),9.5%,Worst Quartile,RLQ,0.01584
+2019,Q3,RLQ,Wye Valley NHS Trust ,RLQ08,Ross Community Hospital,West Midlands ,Requires improvement,243,23,4294,0.05659,0.09465,5.66%,5.66% (243),9.5%,Worst Quartile,RLQ,0.01584
+2019,Q3,RLT,George Eliot Hospital NHS Trust ,RLT01,George Eliot NHS Hospital,West Midlands ,Requires improvement,104,25,4515,0.02303,0.24038,2.3%,2.3% (104),24%,Worst Quartile,RLT,0.01584
+2019,Q3,RM1,Norfolk and Norwich University Hospitals NHS Foundation Trust ,RM102,Norfolk and Norwich University Hospital,East of England ,Requires improvement,470,114,17854,0.02632,0.24255,2.63%,2.63% (470),24.3%,Worst Quartile,RM1,0.01584
+2019,Q3,RM1,Norfolk and Norwich University Hospitals NHS Foundation Trust ,RM131,Cromer Hospital,East of England ,Requires improvement,470,114,17854,0.02632,0.24255,2.63%,2.63% (470),24.3%,Worst Quartile,RM1,0.01584
+2019,Q3,RM3,Salford Royal NHS Foundation Trust ,RM301,Salford Royal Hospital,North West ,Outstanding,195,12,9464,0.0206,0.06154,2.06%,2.06% (195),6.2%,Above Avg,RM3,0.01584
+2019,Q3,RM3,Salford Royal NHS Foundation Trust ,RM362,Wigan Renal Satellite Unit,North West ,Outstanding,195,12,9464,0.0206,0.06154,2.06%,2.06% (195),6.2%,Above Avg,RM3,0.01584
+2019,Q3,RM3,Salford Royal NHS Foundation Trust ,RM3X1,The Maples,North West ,Outstanding,195,12,9464,0.0206,0.06154,2.06%,2.06% (195),6.2%,Above Avg,RM3,0.01584
+2019,Q3,RM3,Salford Royal NHS Foundation Trust ,RM3X2,Bolton Renal Satellite Unit,North West ,Outstanding,195,12,9464,0.0206,0.06154,2.06%,2.06% (195),6.2%,Above Avg,RM3,0.01584
+2019,Q3,RM3,Salford Royal NHS Foundation Trust ,RM3X7,Heartly Green,North West ,Outstanding,195,12,9464,0.0206,0.06154,2.06%,2.06% (195),6.2%,Above Avg,RM3,0.01584
+2019,Q3,RMC,Bolton NHS Foundation Trust ,RMC01,Royal Bolton Hospital,North West ,Good,189,44,5789,0.03265,0.2328,3.26%,3.26% (189),23.3%,Worst Quartile,RMC,0.01584
+2019,Q3,RMC,Bolton NHS Foundation Trust ,RMC98,Bolton One,North West ,Good,189,44,5789,0.03265,0.2328,3.26%,3.26% (189),23.3%,Worst Quartile,RMC,0.01584
+2019,Q3,RMP,Tameside and Glossop Integrated Care NHS Foundation Trust ,RMP01,Tameside General Hospital,North West ,Good,88,0,4314,0.0204,0,2.04%,2.04% (88),0.0%,Above Avg,RMP,0.01584
+2019,Q3,RN3,Great Western Hospitals NHS Foundation Trust ,RN325,Great Western Hospital,South West ,Requires improvement,113,1,3467,0.03259,0.00885,3.26%,3.26% (113),0.9%,Worst Quartile,RN3,0.01584
+2019,Q3,RN5,Hampshire Hospitals NHS Foundation Trust ,RN506,Basingstoke and North Hampshire Hospital,South East ,Requires improvement,87,12,10043,0.00866,0.13793,0.87%,0.87% (87),13.8%,Best Quartile,RN5,0.01584
+2019,Q3,RN5,Hampshire Hospitals NHS Foundation Trust ,RN541,Royal Hampshire County Hospital,South East ,Requires improvement,87,12,10043,0.00866,0.13793,0.87%,0.87% (87),13.8%,Best Quartile,RN5,0.01584
+2019,Q3,RN5,Hampshire Hospitals NHS Foundation Trust ,RN542,Andover War Memorial Hospital,South East ,Requires improvement,87,12,10043,0.00866,0.13793,0.87%,0.87% (87),13.8%,Best Quartile,RN5,0.01584
+2019,Q3,RN7,Dartford and Gravesham NHS Trust ,RN707,Darent Valley Hospital,South East ,Good,93,3,6697,0.01389,0.03226,1.39%,1.39% (93),3.2%,Below Avg,RN7,0.01584
+2019,Q3,RN7,Dartford and Gravesham NHS Trust ,RN7EC,Elm Court Ward,South East ,Good,93,3,6697,0.01389,0.03226,1.39%,1.39% (93),3.2%,Below Avg,RN7,0.01584
+2019,Q3,RN7,Dartford and Gravesham NHS Trust ,RN7ED,Erith & District Hospital,South East ,Good,93,3,6697,0.01389,0.03226,1.39%,1.39% (93),3.2%,Below Avg,RN7,0.01584
+2019,Q3,RNA,The Dudley Group NHS Foundation Trust ,RNA01,Russells Hall Hospital,West Midlands ,Requires improvement,133,0,10101,0.01317,0,1.32%,1.32% (133),0.0%,Below Avg,RNA,0.01584
+2019,Q3,RNA,The Dudley Group NHS Foundation Trust ,RNA04,Corbett Hospital,West Midlands ,Requires improvement,133,0,10101,0.01317,0,1.32%,1.32% (133),0.0%,Below Avg,RNA,0.01584
+2019,Q3,RNN,North Cumbria Integrated Care NHS Foundation Trust ,RNN42,Workington Community Hospital,North West ,Requires improvement,221,50,7856,0.02813,0.22624,2.81%,2.81% (221),22.6%,Worst Quartile,RNN,0.01584
+2019,Q3,RNN,North Cumbria Integrated Care NHS Foundation Trust ,RNNBF,Brampton War Memorial Hospital,North West ,Requires improvement,221,50,7856,0.02813,0.22624,2.81%,2.81% (221),22.6%,Worst Quartile,RNN,0.01584
+2019,Q3,RNN,North Cumbria Integrated Care NHS Foundation Trust ,RNNCA,Victoria Cottage Hospital,North West ,Requires improvement,221,50,7856,0.02813,0.22624,2.81%,2.81% (221),22.6%,Worst Quartile,RNN,0.01584
+2019,Q3,RNN,North Cumbria Integrated Care NHS Foundation Trust ,RNNCB,Cockermouth Hospital,North West ,Requires improvement,221,50,7856,0.02813,0.22624,2.81%,2.81% (221),22.6%,Worst Quartile,RNN,0.01584
+2019,Q3,RNN,North Cumbria Integrated Care NHS Foundation Trust ,RNNCJ,Mary Hewetson Cottage Hospital,North West ,Requires improvement,221,50,7856,0.02813,0.22624,2.81%,2.81% (221),22.6%,Worst Quartile,RNN,0.01584
+2019,Q3,RNN,North Cumbria Integrated Care NHS Foundation Trust ,RNNCL,The Copeland Unit,North West ,Requires improvement,221,50,7856,0.02813,0.22624,2.81%,2.81% (221),22.6%,Worst Quartile,RNN,0.01584
+2019,Q3,RNN,North Cumbria Integrated Care NHS Foundation Trust ,RNNRJ,Ruth Lancaster James Community Hospital,North West ,Requires improvement,221,50,7856,0.02813,0.22624,2.81%,2.81% (221),22.6%,Worst Quartile,RNN,0.01584
+2019,Q3,RNN,North Cumbria Integrated Care NHS Foundation Trust ,RNNWT,Wigton Community Hospital,North West ,Requires improvement,221,50,7856,0.02813,0.22624,2.81%,2.81% (221),22.6%,Worst Quartile,RNN,0.01584
+2019,Q3,RNN,North Cumbria Integrated Care NHS Foundation Trust ,RNNX1,Cumberland Infirmary,North West ,Requires improvement,221,50,7856,0.02813,0.22624,2.81%,2.81% (221),22.6%,Worst Quartile,RNN,0.01584
+2019,Q3,RNQ,Kettering General Hospital NHS Foundation Trust ,RNQ51,Kettering General Hospital,East Midlands ,Requires improvement,51,0,8984,0.00568,0,0.57%,0.57% (51),0.0%,Best Quartile,RNQ,0.01584
+2019,Q3,RNS,Northampton General Hospital NHS Trust ,RNS01,Northampton General Hospital,East Midlands ,Requires improvement,137,9,8716,0.01572,0.06569,1.57%,1.57% (137),6.6%,Above Avg,RNS,0.01584
+2019,Q3,RNZ,Salisbury NHS Foundation Trust ,RNZ02,Salisbury District Hospital,South West ,Good,85,0,6935,0.01226,0,1.23%,1.23% (85),0.0%,Below Avg,RNZ,0.01584
+2019,Q3,RP4,Great Ormond Street Hospital for Children NHS Foundation Trust ,RP401,Great Ormond Street Hospital,London ,Good,104,9,2353,0.0442,0.08654,4.42%,4.42% (104),8.7%,Worst Quartile,RP4,0.01584
+2019,Q3,RP5,Doncaster and Bassetlaw Teaching Hospitals NHS Foundation Trust ,RP5BA,Bassetlaw District General Hospital,Yorkshire and The Humber ,Requires improvement,218,1,9111,0.02393,0.00459,2.39%,2.39% (218),0.5%,Worst Quartile,RP5,0.01584
+2019,Q3,RP5,Doncaster and Bassetlaw Teaching Hospitals NHS Foundation Trust ,RP5DR,Doncaster Royal Infirmary,Yorkshire and The Humber ,Requires improvement,218,1,9111,0.02393,0.00459,2.39%,2.39% (218),0.5%,Worst Quartile,RP5,0.01584
+2019,Q3,RP5,Doncaster and Bassetlaw Teaching Hospitals NHS Foundation Trust ,RP5MM,"Montagu Hospital, Mexborough",Yorkshire and The Humber ,Requires improvement,218,1,9111,0.02393,0.00459,2.39%,2.39% (218),0.5%,Worst Quartile,RP5,0.01584
+2019,Q3,RP5,Doncaster and Bassetlaw Teaching Hospitals NHS Foundation Trust ,RP5RE,Retford Hospital,Yorkshire and The Humber ,Requires improvement,218,1,9111,0.02393,0.00459,2.39%,2.39% (218),0.5%,Worst Quartile,RP5,0.01584
+2019,Q3,RP6,Moorfields Eye Hospital NHS Foundation Trust ,RP601,Moorfields Eye Hospital,London ,Good,68,6,9000,0.00756,0.08824,0.76%,0.76% (68),8.8%,Best Quartile,RP6,0.01584
+2019,Q3,RP6,Moorfields Eye Hospital NHS Foundation Trust ,RP603,Moorfields at St Ann's,London ,Good,68,6,9000,0.00756,0.08824,0.76%,0.76% (68),8.8%,Best Quartile,RP6,0.01584
+2019,Q3,RP6,Moorfields Eye Hospital NHS Foundation Trust ,RP604,Moorfields at St George's,London ,Good,68,6,9000,0.00756,0.08824,0.76%,0.76% (68),8.8%,Best Quartile,RP6,0.01584
+2019,Q3,RP6,Moorfields Eye Hospital NHS Foundation Trust ,RP605,Moorfields at Potters Bar,London ,Good,68,6,9000,0.00756,0.08824,0.76%,0.76% (68),8.8%,Best Quartile,RP6,0.01584
+2019,Q3,RP6,Moorfields Eye Hospital NHS Foundation Trust ,RP606,Moorfields at Northwick Park,London ,Good,68,6,9000,0.00756,0.08824,0.76%,0.76% (68),8.8%,Best Quartile,RP6,0.01584
+2019,Q3,RP6,Moorfields Eye Hospital NHS Foundation Trust ,RP607,Moorfields at Mile End,London ,Good,68,6,9000,0.00756,0.08824,0.76%,0.76% (68),8.8%,Best Quartile,RP6,0.01584
+2019,Q3,RP6,Moorfields Eye Hospital NHS Foundation Trust ,RP608,Moorfields at Croydon University Hospital,London ,Good,68,6,9000,0.00756,0.08824,0.76%,0.76% (68),8.8%,Best Quartile,RP6,0.01584
+2019,Q3,RP6,Moorfields Eye Hospital NHS Foundation Trust ,RP610,Moorfields at Ealing,London ,Good,68,6,9000,0.00756,0.08824,0.76%,0.76% (68),8.8%,Best Quartile,RP6,0.01584
+2019,Q3,RP6,Moorfields Eye Hospital NHS Foundation Trust ,RP616,Moorfields at Bedford,London ,Good,68,6,9000,0.00756,0.08824,0.76%,0.76% (68),8.8%,Best Quartile,RP6,0.01584
+2019,Q3,RP6,Moorfields Eye Hospital NHS Foundation Trust ,RP627,Moorfields at Darent Valley,London ,Good,68,6,9000,0.00756,0.08824,0.76%,0.76% (68),8.8%,Best Quartile,RP6,0.01584
+2019,Q3,RP6,Moorfields Eye Hospital NHS Foundation Trust ,RP633,Moorfields @ Barts,London ,Good,68,6,9000,0.00756,0.08824,0.76%,0.76% (68),8.8%,Best Quartile,RP6,0.01584
+2019,Q3,RPA,Medway NHS Foundation Trust ,RPA02,Medway Maritime Hospital,South East ,Requires improvement,92,3,5634,0.01633,0.03261,1.63%,1.63% (92),3.3%,Above Avg,RPA,0.01584
+2019,Q3,RPC,Queen Victoria Hospital NHS Foundation Trust ,RPC04,The Queen Victoria Hospital (East Grinstead),South East ,Good,39,2,3731,0.01045,0.05128,1.05%,1.05% (39),5.1%,Below Avg,RPC,0.01584
+2019,Q3,RPY,The Royal Marsden NHS Foundation Trust ,RPY01,The Royal Marsden - London,London ,Outstanding,9,0,1807,0.00498,0,0.5%,0.5% (9),0.0%,Best Quartile,RPY,0.01584
+2019,Q3,RPY,The Royal Marsden NHS Foundation Trust ,RPY02,The Royal Marsden - Sutton,London ,Outstanding,9,0,1807,0.00498,0,0.5%,0.5% (9),0.0%,Best Quartile,RPY,0.01584
+2019,Q3,RQ3,Birmingham Women's and Children's NHS Foundation Trust ,RQ301,Birmingham Children's Hospital,West Midlands ,Good,95,3,4389,0.02165,0.03158,2.16%,2.16% (95),3.2%,Worst Quartile,RQ3,0.01584
+2019,Q3,RQ3,Birmingham Women's and Children's NHS Foundation Trust ,RQ370,Birmingham Women's Hospital,West Midlands ,Good,95,3,4389,0.02165,0.03158,2.16%,2.16% (95),3.2%,Worst Quartile,RQ3,0.01584
+2019,Q3,RQ8,Mid Essex Hospital Services NHS Trust ,RQ8L0,Broomfield Hospital,East of England ,Requires improvement,192,26,7242,0.02651,0.13542,2.65%,2.65% (192),13.5%,Worst Quartile,RQ8,0.01584
+2019,Q3,RQ8,Mid Essex Hospital Services NHS Trust ,RQ8LJ,St Peter's Hospital,East of England ,Requires improvement,192,26,7242,0.02651,0.13542,2.65%,2.65% (192),13.5%,Worst Quartile,RQ8,0.01584
+2019,Q3,RQ8,Mid Essex Hospital Services NHS Trust ,RQ8RR,Braintree Community Hospital,East of England ,Requires improvement,192,26,7242,0.02651,0.13542,2.65%,2.65% (192),13.5%,Worst Quartile,RQ8,0.01584
+2019,Q3,RQM,Chelsea and Westminster Hospital NHS Foundation Trust ,RQM01,Chelsea and Westminster Hospital,London ,Good,86,19,9991,0.00861,0.22093,0.86%,0.86% (86),22.1%,Best Quartile,RQM,0.01584
+2019,Q3,RQM,Chelsea and Westminster Hospital NHS Foundation Trust ,RQM91,West Middlesex Hospital,London ,Good,86,19,9991,0.00861,0.22093,0.86%,0.86% (86),22.1%,Best Quartile,RQM,0.01584
+2019,Q3,RQW,The Princess Alexandra Hospital NHS Trust ,RQWG0,The Princess Alexandra Hospital,East of England ,Requires improvement,44,2,4781,0.0092,0.04545,0.92%,0.92% (44),4.5%,Best Quartile,RQW,0.01584
+2019,Q3,RQX,Homerton University Hospital NHS Foundation Trust ,RQXM1,Homerton University Hospital,London ,Good,36,0,3052,0.0118,0,1.18%,1.18% (36),0.0%,Below Avg,RQX,0.01584
+2019,Q3,RR7,Gateshead Health NHS Foundation Trust ,RR7EN,Queen Elizabeth Hospital,North East ,Good,58,5,2676,0.02167,0.08621,2.17%,2.17% (58),8.6%,Worst Quartile,RR7,0.01584
+2019,Q3,RR8,Leeds Teaching Hospitals NHS Trust ,RR801,Leeds General Infirmary,Yorkshire and The Humber ,Good,499,41,17435,0.02862,0.08216,2.86%,2.86% (499),8.2%,Worst Quartile,RR8,0.01584
+2019,Q3,RR8,Leeds Teaching Hospitals NHS Trust ,RR802,Leeds Dental Institute,Yorkshire and The Humber ,Good,499,41,17435,0.02862,0.08216,2.86%,2.86% (499),8.2%,Worst Quartile,RR8,0.01584
+2019,Q3,RR8,Leeds Teaching Hospitals NHS Trust ,RR807,Wharfedale Hospital,Yorkshire and The Humber ,Good,499,41,17435,0.02862,0.08216,2.86%,2.86% (499),8.2%,Worst Quartile,RR8,0.01584
+2019,Q3,RR8,Leeds Teaching Hospitals NHS Trust ,RR813,St James's University Hospital,Yorkshire and The Humber ,Good,499,41,17435,0.02862,0.08216,2.86%,2.86% (499),8.2%,Worst Quartile,RR8,0.01584
+2019,Q3,RR8,Leeds Teaching Hospitals NHS Trust ,RR814,Seacroft Hospital,Yorkshire and The Humber ,Good,499,41,17435,0.02862,0.08216,2.86%,2.86% (499),8.2%,Worst Quartile,RR8,0.01584
+2019,Q3,RR8,Leeds Teaching Hospitals NHS Trust ,RR819,Chapel Allerton Hospital,Yorkshire and The Humber ,Good,499,41,17435,0.02862,0.08216,2.86%,2.86% (499),8.2%,Worst Quartile,RR8,0.01584
+2019,Q3,RRF,"Wrightington, Wigan and Leigh NHS Foundation Trust ",RRF01,Leigh Infirmary,North West ,Good,263,9,8481,0.03101,0.03422,3.1%,3.1% (263),3.4%,Worst Quartile,RRF,0.01584
+2019,Q3,RRF,"Wrightington, Wigan and Leigh NHS Foundation Trust ",RRF02,Royal Albert Edward Infirmary,North West ,Good,263,9,8481,0.03101,0.03422,3.1%,3.1% (263),3.4%,Worst Quartile,RRF,0.01584
+2019,Q3,RRF,"Wrightington, Wigan and Leigh NHS Foundation Trust ",RRF53,Wrightington Hospital,North West ,Good,263,9,8481,0.03101,0.03422,3.1%,3.1% (263),3.4%,Worst Quartile,RRF,0.01584
+2019,Q3,RRF,"Wrightington, Wigan and Leigh NHS Foundation Trust ",RRF54,Thomas Linacre Centre,North West ,Good,263,9,8481,0.03101,0.03422,3.1%,3.1% (263),3.4%,Worst Quartile,RRF,0.01584
+2019,Q3,RRF,"Wrightington, Wigan and Leigh NHS Foundation Trust ",RRF70,Wigan Health Centre,North West ,Good,263,9,8481,0.03101,0.03422,3.1%,3.1% (263),3.4%,Worst Quartile,RRF,0.01584
+2019,Q3,RRJ,The Royal Orthopaedic Hospital NHS Foundation Trust ,RRJ05,The Royal Orthopaedic Hospital,West Midlands ,Good,42,0,3487,0.01204,0,1.2%,1.2% (42),0.0%,Below Avg,RRJ,0.01584
+2019,Q3,RRK,University Hospitals Birmingham NHS Foundation Trust ,RRK15,Queen Elizabeth Hospital Birmingham,West Midlands ,Good,1012,29,26960,0.03754,0.02866,3.75%,3.75% (1012),2.9%,Worst Quartile,RRK,0.01584
+2019,Q3,RRK,University Hospitals Birmingham NHS Foundation Trust ,RRKX2,Solihull Hospital,West Midlands ,Good,1012,29,26960,0.03754,0.02866,3.75%,3.75% (1012),2.9%,Worst Quartile,RRK,0.01584
+2019,Q3,RRK,University Hospitals Birmingham NHS Foundation Trust ,RRKX3,Good Hope Hospital,West Midlands ,Good,1012,29,26960,0.03754,0.02866,3.75%,3.75% (1012),2.9%,Worst Quartile,RRK,0.01584
+2019,Q3,RRV,University College London Hospitals NHS Foundation Trust ,RRV03,University College Hospital & Elizabeth Garrett Anderson Wing,London ,Good,262,51,18158,0.01443,0.19466,1.44%,1.44% (262),19.5%,Below Avg,RRV,0.01584
+2019,Q3,RRV,University College London Hospitals NHS Foundation Trust ,RRV60,The Royal London Hospital for Integrated Medicine,London ,Good,262,51,18158,0.01443,0.19466,1.44%,1.44% (262),19.5%,Below Avg,RRV,0.01584
+2019,Q3,RRV,University College London Hospitals NHS Foundation Trust ,RRVNC,Sir William Gowers Centre,London ,Good,262,51,18158,0.01443,0.19466,1.44%,1.44% (262),19.5%,Below Avg,RRV,0.01584
+2019,Q3,RRV,University College London Hospitals NHS Foundation Trust ,RRVNQ,The National Hospital for Neurology and Neurosurgery,London ,Good,262,51,18158,0.01443,0.19466,1.44%,1.44% (262),19.5%,Below Avg,RRV,0.01584
+2019,Q3,RRV,University College London Hospitals NHS Foundation Trust ,RRVRN,Royal National Throat Nose & Ear Hospital,London ,Good,262,51,18158,0.01443,0.19466,1.44%,1.44% (262),19.5%,Below Avg,RRV,0.01584
+2019,Q3,RT3,Royal Brompton & Harefield NHS Foundation Trust ,RT301,Harefield Hospital,London ,Good,168,0,1707,0.09842,0,9.84%,9.84% (168),0.0%,Worst Quartile,RT3,0.01584
+2019,Q3,RT3,Royal Brompton & Harefield NHS Foundation Trust ,RT302,Royal Brompton Hospital,London ,Good,168,0,1707,0.09842,0,9.84%,9.84% (168),0.0%,Worst Quartile,RT3,0.01584
+2019,Q3,RTD,The Newcastle upon Tyne Hospitals NHS Foundation Trust ,RTD01,Freeman Hospital,North East ,Outstanding,143,6,23166,0.00617,0.04196,0.62%,0.62% (143),4.2%,Best Quartile,RTD,0.01584
+2019,Q3,RTD,The Newcastle upon Tyne Hospitals NHS Foundation Trust ,RTD02,Royal Victoria Infirmary,North East ,Outstanding,143,6,23166,0.00617,0.04196,0.62%,0.62% (143),4.2%,Best Quartile,RTD,0.01584
+2019,Q3,RTE,Gloucestershire Hospitals NHS Foundation Trust ,RTE01,Cheltenham General Hospital,South West ,Good,121,23,12919,0.00937,0.19008,0.94%,0.94% (121),19%,Best Quartile,RTE,0.01584
+2019,Q3,RTE,Gloucestershire Hospitals NHS Foundation Trust ,RTE03,Gloucestershire Royal Hospital,South West ,Good,121,23,12919,0.00937,0.19008,0.94%,0.94% (121),19%,Best Quartile,RTE,0.01584
+2019,Q3,RTE,Gloucestershire Hospitals NHS Foundation Trust ,RTE23,Cirencester Hospital,South West ,Good,121,23,12919,0.00937,0.19008,0.94%,0.94% (121),19%,Best Quartile,RTE,0.01584
+2019,Q3,RTE,Gloucestershire Hospitals NHS Foundation Trust ,RTE27,Stroud Maternity Hospital,South West ,Good,121,23,12919,0.00937,0.19008,0.94%,0.94% (121),19%,Best Quartile,RTE,0.01584
+2019,Q3,RTF,Northumbria Healthcare NHS Foundation Trust ,RTF86,Northumbria Specialist Emergency Care Hospital,North East ,Outstanding,58,3,8426,0.00688,0.05172,0.69%,0.69% (58),5.2%,Best Quartile,RTF,0.01584
+2019,Q3,RTF,Northumbria Healthcare NHS Foundation Trust ,RTFDH,Berwick Infirmary,North East ,Outstanding,58,3,8426,0.00688,0.05172,0.69%,0.69% (58),5.2%,Best Quartile,RTF,0.01584
+2019,Q3,RTF,Northumbria Healthcare NHS Foundation Trust ,RTFDJ,Alnwick Infirmary,North East ,Outstanding,58,3,8426,0.00688,0.05172,0.69%,0.69% (58),5.2%,Best Quartile,RTF,0.01584
+2019,Q3,RTF,Northumbria Healthcare NHS Foundation Trust ,RTFDR,Hexham General Hospital,North East ,Outstanding,58,3,8426,0.00688,0.05172,0.69%,0.69% (58),5.2%,Best Quartile,RTF,0.01584
+2019,Q3,RTF,Northumbria Healthcare NHS Foundation Trust ,RTFDU,Haltwhistle War Memorial Hospital,North East ,Outstanding,58,3,8426,0.00688,0.05172,0.69%,0.69% (58),5.2%,Best Quartile,RTF,0.01584
+2019,Q3,RTF,Northumbria Healthcare NHS Foundation Trust ,RTFDX,Blyth Community Hospital,North East ,Outstanding,58,3,8426,0.00688,0.05172,0.69%,0.69% (58),5.2%,Best Quartile,RTF,0.01584
+2019,Q3,RTF,Northumbria Healthcare NHS Foundation Trust ,RTFED,Wansbeck General Hospital,North East ,Outstanding,58,3,8426,0.00688,0.05172,0.69%,0.69% (58),5.2%,Best Quartile,RTF,0.01584
+2019,Q3,RTF,Northumbria Healthcare NHS Foundation Trust ,RTFEF,Rothbury Community Hospital,North East ,Outstanding,58,3,8426,0.00688,0.05172,0.69%,0.69% (58),5.2%,Best Quartile,RTF,0.01584
+2019,Q3,RTF,Northumbria Healthcare NHS Foundation Trust ,RTFFS,North Tyneside General Hospital,North East ,Outstanding,58,3,8426,0.00688,0.05172,0.69%,0.69% (58),5.2%,Best Quartile,RTF,0.01584
+2019,Q3,RTG,University Hospitals of Derby and Burton NHS Foundation Trust ,RTG50,Sir Robert Peel Community Hospital,East Midlands ,Good,212,13,22280,0.00952,0.06132,0.95%,0.95% (212),6.1%,Below Avg,RTG,0.01584
+2019,Q3,RTG,University Hospitals of Derby and Burton NHS Foundation Trust ,RTG54,Samuel Johnson Community Hospital,East Midlands ,Good,212,13,22280,0.00952,0.06132,0.95%,0.95% (212),6.1%,Below Avg,RTG,0.01584
+2019,Q3,RTG,University Hospitals of Derby and Burton NHS Foundation Trust ,RTGFG,Royal Derby Hospital,East Midlands ,Good,212,13,22280,0.00952,0.06132,0.95%,0.95% (212),6.1%,Below Avg,RTG,0.01584
+2019,Q3,RTG,University Hospitals of Derby and Burton NHS Foundation Trust ,RTGX1,Queens Hospital,East Midlands,Good,212,13,22280,0.00952,0.06132,0.95%,0.95% (212),6.1%,Below Avg,RTG,0.01584
+2019,Q3,RTH,Oxford University Hospitals NHS Foundation Trust ,RTH02,Churchill Hospital,South East ,Requires improvement,142,23,20877,0.0068,0.16197,0.68%,0.68% (142),16.2%,Best Quartile,RTH,0.01584
+2019,Q3,RTH,Oxford University Hospitals NHS Foundation Trust ,RTH05,Horton General Hospital,South East ,Requires improvement,142,23,20877,0.0068,0.16197,0.68%,0.68% (142),16.2%,Best Quartile,RTH,0.01584
+2019,Q3,RTH,Oxford University Hospitals NHS Foundation Trust ,RTH08,John Radcliffe Hospital,South East ,Requires improvement,142,23,20877,0.0068,0.16197,0.68%,0.68% (142),16.2%,Best Quartile,RTH,0.01584
+2019,Q3,RTH,Oxford University Hospitals NHS Foundation Trust ,RTH16,Wallingford Hospital Maternity Unit,South East ,Requires improvement,142,23,20877,0.0068,0.16197,0.68%,0.68% (142),16.2%,Best Quartile,RTH,0.01584
+2019,Q3,RTH,Oxford University Hospitals NHS Foundation Trust ,RTH19,Chipping Norton Hospital Unit,South East ,Requires improvement,142,23,20877,0.0068,0.16197,0.68%,0.68% (142),16.2%,Best Quartile,RTH,0.01584
+2019,Q3,RTK,Ashford and St Peter's Hospitals NHS Foundation Trust ,RTK01,St Peter's Hospital,South East ,Good,108,7,8505,0.0127,0.06481,1.27%,1.27% (108),6.5%,Below Avg,RTK,0.01584
+2019,Q3,RTK,Ashford and St Peter's Hospitals NHS Foundation Trust ,RTK02,Ashford Hospital,South East ,Good,108,7,8505,0.0127,0.06481,1.27%,1.27% (108),6.5%,Below Avg,RTK,0.01584
+2019,Q3,RTP,Surrey and Sussex Healthcare NHS Trust ,RTP02,Crawley Hospital,South East ,Outstanding,258,25,8607,0.02998,0.0969,3%,3% (258),9.7%,Worst Quartile,RTP,0.01584
+2019,Q3,RTP,Surrey and Sussex Healthcare NHS Trust ,RTP04,East Surrey Hospital,South East ,Outstanding,258,25,8607,0.02998,0.0969,3%,3% (258),9.7%,Worst Quartile,RTP,0.01584
+2019,Q3,RTR,South Tees Hospitals NHS Foundation Trust ,RTR03,East Cleveland Primary Care Hospital,North East ,Requires improvement,105,39,9314,0.01127,0.37143,1.13%,1.13% (105),37.1%,Below Avg,RTR,0.01584
+2019,Q3,RTR,South Tees Hospitals NHS Foundation Trust ,RTR07,Friary Hospital,North East ,Requires improvement,105,39,9314,0.01127,0.37143,1.13%,1.13% (105),37.1%,Below Avg,RTR,0.01584
+2019,Q3,RTR,South Tees Hospitals NHS Foundation Trust ,RTR18,Redcar Primary Care Hospital,North East ,Requires improvement,105,39,9314,0.01127,0.37143,1.13%,1.13% (105),37.1%,Below Avg,RTR,0.01584
+2019,Q3,RTR,South Tees Hospitals NHS Foundation Trust ,RTR45,Friarage Hospital,North East ,Requires improvement,105,39,9314,0.01127,0.37143,1.13%,1.13% (105),37.1%,Below Avg,RTR,0.01584
+2019,Q3,RTR,South Tees Hospitals NHS Foundation Trust ,RTRAQ,Guisborough Primary Care Hospital,North East ,Requires improvement,105,39,9314,0.01127,0.37143,1.13%,1.13% (105),37.1%,Below Avg,RTR,0.01584
+2019,Q3,RTR,South Tees Hospitals NHS Foundation Trust ,RTRAT,The James Cook University Hospital,North East ,Requires improvement,105,39,9314,0.01127,0.37143,1.13%,1.13% (105),37.1%,Below Avg,RTR,0.01584
+2019,Q3,RTX,University Hospitals of Morecambe Bay NHS Foundation Trust ,RTX02,Royal Lancaster Infirmary,North West ,Requires improvement,82,2,8866,0.00925,0.02439,0.92%,0.92% (82),2.4%,Best Quartile,RTX,0.01584
+2019,Q3,RTX,University Hospitals of Morecambe Bay NHS Foundation Trust ,RTXBU,Furness General Hospital,North West ,Requires improvement,82,2,8866,0.00925,0.02439,0.92%,0.92% (82),2.4%,Best Quartile,RTX,0.01584
+2019,Q3,RTX,University Hospitals of Morecambe Bay NHS Foundation Trust ,RTXBW,Westmorland General Hospital,North West ,Requires improvement,82,2,8866,0.00925,0.02439,0.92%,0.92% (82),2.4%,Best Quartile,RTX,0.01584
+2019,Q3,RVJ,North Bristol NHS Trust ,RVJ01,Southmead Hospital,South West ,Good,204,1,14263,0.0143,0.0049,1.43%,1.43% (204),0.5%,Below Avg,RVJ,0.01584
+2019,Q3,RVJ,North Bristol NHS Trust ,RVJ20,Frenchay Hospital,South West ,Good,204,1,14263,0.0143,0.0049,1.43%,1.43% (204),0.5%,Below Avg,RVJ,0.01584
+2019,Q3,RVJ,North Bristol NHS Trust ,RVJ21,Cossham Hospital,South West ,Good,204,1,14263,0.0143,0.0049,1.43%,1.43% (204),0.5%,Below Avg,RVJ,0.01584
+2019,Q3,RVR,Epsom and St Helier University Hospitals NHS Trust ,RVR05,St Helier Hospital and Queen Mary's Hospital for Children,London ,Good,147,0,7295,0.02015,0,2.02%,2.02% (147),0.0%,Above Avg,RVR,0.01584
+2019,Q3,RVR,Epsom and St Helier University Hospitals NHS Trust ,RVR06,Sutton Hospital,London ,Good,147,0,7295,0.02015,0,2.02%,2.02% (147),0.0%,Above Avg,RVR,0.01584
+2019,Q3,RVR,Epsom and St Helier University Hospitals NHS Trust ,RVR50,Epsom General Hospital,London ,Good,147,0,7295,0.02015,0,2.02%,2.02% (147),0.0%,Above Avg,RVR,0.01584
+2019,Q3,RVR,Epsom and St Helier University Hospitals NHS Trust ,RVR90,Leatherhead,London ,Good,147,0,7295,0.02015,0,2.02%,2.02% (147),0.0%,Above Avg,RVR,0.01584
+2019,Q3,RVV,East Kent Hospitals University NHS Foundation Trust ,RVV01,William Harvey Hospital,South East ,Requires improvement,131,8,16152,0.00811,0.06107,0.81%,0.81% (131),6.1%,Best Quartile,RVV,0.01584
+2019,Q3,RVV,East Kent Hospitals University NHS Foundation Trust ,RVV02,Buckland Hospital,South East ,Requires improvement,131,8,16152,0.00811,0.06107,0.81%,0.81% (131),6.1%,Best Quartile,RVV,0.01584
+2019,Q3,RVV,East Kent Hospitals University NHS Foundation Trust ,RVV03,Royal Victoria Hospital,South East ,Requires improvement,131,8,16152,0.00811,0.06107,0.81%,0.81% (131),6.1%,Best Quartile,RVV,0.01584
+2019,Q3,RVV,East Kent Hospitals University NHS Foundation Trust ,RVV09,Queen Elizabeth The Queen Mother Hospital,South East ,Requires improvement,131,8,16152,0.00811,0.06107,0.81%,0.81% (131),6.1%,Best Quartile,RVV,0.01584
+2019,Q3,RVV,East Kent Hospitals University NHS Foundation Trust ,RVVKC,Kent & Canterbury Hospital,South East ,Requires improvement,131,8,16152,0.00811,0.06107,0.81%,0.81% (131),6.1%,Best Quartile,RVV,0.01584
+2019,Q3,RVW,North Tees and Hartlepool NHS Foundation Trust ,RVWAA,University Hospital of Hartlepool,North East ,Good,48,1,4421,0.01086,0.02083,1.09%,1.09% (48),2.1%,Below Avg,RVW,0.01584
+2019,Q3,RVW,North Tees and Hartlepool NHS Foundation Trust ,RVWAE,University Hospital of North Tees,North East ,Good,48,1,4421,0.01086,0.02083,1.09%,1.09% (48),2.1%,Below Avg,RVW,0.01584
+2019,Q3,RVY,Southport and Ormskirk Hospital NHS Trust ,RVY01,Southport & Formby District General Hospital,North West ,Requires improvement,22,0,3511,0.00627,0,0.63%,0.63% (22),0.0%,Best Quartile,RVY,0.01584
+2019,Q3,RVY,Southport and Ormskirk Hospital NHS Trust ,RVY38,Ormskirk District General Hospital,North West ,Requires improvement,22,0,3511,0.00627,0,0.63%,0.63% (22),0.0%,Best Quartile,RVY,0.01584
+2019,Q3,RW6,Pennine Acute Hospitals NHS Trust ,RW601,Fairfield General Hospital,North West ,Requires improvement,418,32,15339,0.02725,0.07656,2.73%,2.73% (418),7.7%,Worst Quartile,RW6,0.01584
+2019,Q3,RW6,Pennine Acute Hospitals NHS Trust ,RW602,North Manchester General Hospital,North West ,Requires improvement,418,32,15339,0.02725,0.07656,2.73%,2.73% (418),7.7%,Worst Quartile,RW6,0.01584
+2019,Q3,RW6,Pennine Acute Hospitals NHS Trust ,RW603,The Royal Oldham Hospital,North West ,Requires improvement,418,32,15339,0.02725,0.07656,2.73%,2.73% (418),7.7%,Worst Quartile,RW6,0.01584
+2019,Q3,RW6,Pennine Acute Hospitals NHS Trust ,RW604,Rochdale Infirmary,North West ,Requires improvement,418,32,15339,0.02725,0.07656,2.73%,2.73% (418),7.7%,Worst Quartile,RW6,0.01584
+2019,Q3,RWA,Hull University Teaching Hospitals NHS Trust ,RWA01,Hull Royal Infirmary,Yorkshire and The Humber ,Requires improvement,259,4,14001,0.0185,0.01544,1.85%,1.85% (259),1.5%,Above Avg,RWA,0.01584
+2019,Q3,RWA,Hull University Teaching Hospitals NHS Trust ,RWA16,Castle Hill Hospital,Yorkshire and The Humber ,Requires improvement,259,4,14001,0.0185,0.01544,1.85%,1.85% (259),1.5%,Above Avg,RWA,0.01584
+2019,Q3,RWA,Hull University Teaching Hospitals NHS Trust ,RWA18,East Riding Community Hospital,Yorkshire and The Humber ,Requires improvement,259,4,14001,0.0185,0.01544,1.85%,1.85% (259),1.5%,Above Avg,RWA,0.01584
+2019,Q3,RWA,Hull University Teaching Hospitals NHS Trust ,RWA24,Hornsea Cottage Hospital,Yorkshire and The Humber ,Requires improvement,259,4,14001,0.0185,0.01544,1.85%,1.85% (259),1.5%,Above Avg,RWA,0.01584
+2019,Q3,RWD,United Lincolnshire Hospitals NHS Trust ,RWDAA,County Hospital Louth,East Midlands ,Requires improvement,414,27,11619,0.03563,0.06522,3.56%,3.56% (414),6.5%,Worst Quartile,RWD,0.01584
+2019,Q3,RWD,United Lincolnshire Hospitals NHS Trust ,RWDAS,John Coupland Hospital,East Midlands ,Requires improvement,414,27,11619,0.03563,0.06522,3.56%,3.56% (414),6.5%,Worst Quartile,RWD,0.01584
+2019,Q3,RWD,United Lincolnshire Hospitals NHS Trust ,RWDDA,Lincoln County Hospital,East Midlands ,Requires improvement,414,27,11619,0.03563,0.06522,3.56%,3.56% (414),6.5%,Worst Quartile,RWD,0.01584
+2019,Q3,RWD,United Lincolnshire Hospitals NHS Trust ,RWDLA,Pilgrim Hospital,East Midlands ,Requires improvement,414,27,11619,0.03563,0.06522,3.56%,3.56% (414),6.5%,Worst Quartile,RWD,0.01584
+2019,Q3,RWD,United Lincolnshire Hospitals NHS Trust ,RWDLB,Skegness & District Hospital,East Midlands ,Requires improvement,414,27,11619,0.03563,0.06522,3.56%,3.56% (414),6.5%,Worst Quartile,RWD,0.01584
+2019,Q3,RWD,United Lincolnshire Hospitals NHS Trust ,RWDLD,Johnson Community Hospital,East Midlands ,Requires improvement,414,27,11619,0.03563,0.06522,3.56%,3.56% (414),6.5%,Worst Quartile,RWD,0.01584
+2019,Q3,RWD,United Lincolnshire Hospitals NHS Trust ,RWDLP,Grantham and District Hospital,East Midlands ,Requires improvement,414,27,11619,0.03563,0.06522,3.56%,3.56% (414),6.5%,Worst Quartile,RWD,0.01584
+2019,Q3,RWE,University Hospitals of Leicester NHS Trust ,RWE10,St Mary's Birth Centre,East Midlands ,Requires improvement,543,111,21364,0.02542,0.20442,2.54%,2.54% (543),20.4%,Worst Quartile,RWE,0.01584
+2019,Q3,RWE,University Hospitals of Leicester NHS Trust ,RWEAA,Leicester Royal Infirmary,East Midlands ,Requires improvement,543,111,21364,0.02542,0.20442,2.54%,2.54% (543),20.4%,Worst Quartile,RWE,0.01584
+2019,Q3,RWE,University Hospitals of Leicester NHS Trust ,RWEAE,Glenfield Hospital,East Midlands ,Requires improvement,543,111,21364,0.02542,0.20442,2.54%,2.54% (543),20.4%,Worst Quartile,RWE,0.01584
+2019,Q3,RWE,University Hospitals of Leicester NHS Trust ,RWEAK,Leicester General Hospital,East Midlands ,Requires improvement,543,111,21364,0.02542,0.20442,2.54%,2.54% (543),20.4%,Worst Quartile,RWE,0.01584
+2019,Q3,RWE,University Hospitals of Leicester NHS Trust ,RWELS,St Lukes Hospital,East Midlands ,Requires improvement,543,111,21364,0.02542,0.20442,2.54%,2.54% (543),20.4%,Worst Quartile,RWE,0.01584
+2019,Q3,RWF,Maidstone and Tunbridge Wells NHS Trust ,RWF03,Maidstone Hospital,South East ,Requires improvement,74,9,17331,0.00427,0.12162,0.43%,0.43% (74),12.2%,Best Quartile,RWF,0.01584
+2019,Q3,RWF,Maidstone and Tunbridge Wells NHS Trust ,RWFTW,The Tunbridge Wells Hospital at Pembury,South East ,Requires improvement,74,9,17331,0.00427,0.12162,0.43%,0.43% (74),12.2%,Best Quartile,RWF,0.01584
+2019,Q3,RWG,West Hertfordshire Hospitals NHS Trust ,RWG02,Watford General Hospital,East of England ,Requires improvement,127,16,9584,0.01325,0.12598,1.33%,1.33% (127),12.6%,Below Avg,RWG,0.01584
+2019,Q3,RWG,West Hertfordshire Hospitals NHS Trust ,RWG03,St Albans City Hospital,East of England ,Requires improvement,127,16,9584,0.01325,0.12598,1.33%,1.33% (127),12.6%,Below Avg,RWG,0.01584
+2019,Q3,RWG,West Hertfordshire Hospitals NHS Trust ,RWG08,Hemel Hempstead General Hospital,East of England ,Requires improvement,127,16,9584,0.01325,0.12598,1.33%,1.33% (127),12.6%,Below Avg,RWG,0.01584
+2019,Q3,RWH,East and North Hertfordshire NHS Trust ,RWH01,Lister Hospital,East of England ,Requires improvement,100,11,5303,0.01886,0.11,1.89%,1.89% (100),11%,Above Avg,RWH,0.01584
+2019,Q3,RWH,East and North Hertfordshire NHS Trust ,RWH04,Mount Vernon Cancer Centre,East of England ,Requires improvement,100,11,5303,0.01886,0.11,1.89%,1.89% (100),11%,Above Avg,RWH,0.01584
+2019,Q3,RWH,East and North Hertfordshire NHS Trust ,RWH20,Queen Elizabeth II Hospital,East of England ,Requires improvement,100,11,5303,0.01886,0.11,1.89%,1.89% (100),11%,Above Avg,RWH,0.01584
+2019,Q3,RWH,East and North Hertfordshire NHS Trust ,RWH23,Hertford County Hospital,East of England ,Requires improvement,100,11,5303,0.01886,0.11,1.89%,1.89% (100),11%,Above Avg,RWH,0.01584
+2019,Q3,RWJ,Stockport NHS Foundation Trust ,RWJ03,Devonshire Centre for Neuro-Rehabilitation,North West ,Requires improvement,174,5,7279,0.0239,0.02874,2.39%,2.39% (174),2.9%,Worst Quartile,RWJ,0.01584
+2019,Q3,RWJ,Stockport NHS Foundation Trust ,RWJ09,Stepping Hill Hospital,North West ,Requires improvement,174,5,7279,0.0239,0.02874,2.39%,2.39% (174),2.9%,Worst Quartile,RWJ,0.01584
+2019,Q3,RWP,Worcestershire Acute Hospitals NHS Trust ,RWP01,Alexandra Hospital,West Midlands ,Requires improvement,189,19,13642,0.01385,0.10053,1.39%,1.39% (189),10.1%,Below Avg,RWP,0.01584
+2019,Q3,RWP,Worcestershire Acute Hospitals NHS Trust ,RWP31,Kidderminster Hospital and Treatment Centre,West Midlands ,Requires improvement,189,19,13642,0.01385,0.10053,1.39%,1.39% (189),10.1%,Below Avg,RWP,0.01584
+2019,Q3,RWP,Worcestershire Acute Hospitals NHS Trust ,RWP50,Worcestershire Royal Hospital,West Midlands ,Requires improvement,189,19,13642,0.01385,0.10053,1.39%,1.39% (189),10.1%,Below Avg,RWP,0.01584
+2019,Q3,RWW,Warrington and Halton Teaching Hospitals NHS Foundation Trust ,RWWHG,Halton General Hospital,North West ,Good,29,0,6166,0.0047,0,0.47%,0.47% (29),0.0%,Best Quartile,RWW,0.01584
+2019,Q3,RWW,Warrington and Halton Teaching Hospitals NHS Foundation Trust ,RWWWH,Warrington Hospital,North West ,Good,29,0,6166,0.0047,0,0.47%,0.47% (29),0.0%,Best Quartile,RWW,0.01584
+2019,Q3,RWY,Calderdale and Huddersfield NHS Foundation Trust ,RWY01,Huddersfield Royal Infirmary,Yorkshire and The Humber ,Good,156,0,9047,0.01724,0,1.72%,1.72% (156),0.0%,Above Avg,RWY,0.01584
+2019,Q3,RWY,Calderdale and Huddersfield NHS Foundation Trust ,RWY02,Calderdale Royal Hospital,Yorkshire and The Humber ,Good,156,0,9047,0.01724,0,1.72%,1.72% (156),0.0%,Above Avg,RWY,0.01584
+2019,Q3,RX1,Nottingham University Hospitals NHS Trust ,RHARA,Nottingham University Hospital,East Midlands ,Good,284,27,23500,0.01209,0.09507,1.21%,1.21% (284),9.5%,Below Avg,RX1,0.01584
+2019,Q3,RX1,Nottingham University Hospitals NHS Trust ,RX1CC,Nottingham City Hospital,East Midlands ,Good,284,27,23500,0.01209,0.09507,1.21%,1.21% (284),9.5%,Below Avg,RX1,0.01584
+2019,Q3,RX1,Nottingham University Hospitals NHS Trust ,RX1NL,Ropewalk House,East Midlands ,Good,284,27,23500,0.01209,0.09507,1.21%,1.21% (284),9.5%,Below Avg,RX1,0.01584
+2019,Q3,RX1,Nottingham University Hospitals NHS Trust ,RX1RA,Queen's Medical Centre,East Midlands ,Good,284,27,23500,0.01209,0.09507,1.21%,1.21% (284),9.5%,Below Avg,RX1,0.01584
+2019,Q3,RXC,East Sussex Healthcare NHS Trust ,RXC01,Conquest Hospital,South East ,Requires improvement,76,1,4182,0.01817,0.01316,1.82%,1.82% (76),1.3%,Above Avg,RXC,0.01584
+2019,Q3,RXC,East Sussex Healthcare NHS Trust ,RXC02,Eastbourne District General Hospital,South East ,Requires improvement,76,1,4182,0.01817,0.01316,1.82%,1.82% (76),1.3%,Above Avg,RXC,0.01584
+2019,Q3,RXC,East Sussex Healthcare NHS Trust ,RXC03,Bexhill Hospital,South East ,Requires improvement,76,1,4182,0.01817,0.01316,1.82%,1.82% (76),1.3%,Above Avg,RXC,0.01584
+2019,Q3,RXC,East Sussex Healthcare NHS Trust ,RXC18,Uckfield Community Hospital,South East ,Requires improvement,76,1,4182,0.01817,0.01316,1.82%,1.82% (76),1.3%,Above Avg,RXC,0.01584
+2019,Q3,RXF,Mid Yorkshire Hospitals NHS Trust ,RXF03,Pontefract Hospital,Yorkshire and The Humber ,Requires improvement,108,0,12564,0.0086,0,0.86%,0.86% (108),0.0%,Best Quartile,RXF,0.01584
+2019,Q3,RXF,Mid Yorkshire Hospitals NHS Trust ,RXF05,Pinderfields Hospital,Yorkshire and The Humber ,Requires improvement,108,0,12564,0.0086,0,0.86%,0.86% (108),0.0%,Best Quartile,RXF,0.01584
+2019,Q3,RXF,Mid Yorkshire Hospitals NHS Trust ,RXF10,Dewsbury and District Hospital,Yorkshire and The Humber ,Requires improvement,108,0,12564,0.0086,0,0.86%,0.86% (108),0.0%,Best Quartile,RXF,0.01584
+2019,Q3,RXH,Brighton and Sussex University Hospitals NHS Trust ,RXH01,Royal Sussex County Hospital,South East ,Good,411,60,13835,0.02971,0.14599,2.97%,2.97% (411),14.6%,Worst Quartile,RXH,0.01584
+2019,Q3,RXH,Brighton and Sussex University Hospitals NHS Trust ,RXH05,Brighton General Hospital,South East ,Good,411,60,13835,0.02971,0.14599,2.97%,2.97% (411),14.6%,Worst Quartile,RXH,0.01584
+2019,Q3,RXH,Brighton and Sussex University Hospitals NHS Trust ,RXH06,Royal Alexandra Children's Hospital,South East ,Good,411,60,13835,0.02971,0.14599,2.97%,2.97% (411),14.6%,Worst Quartile,RXH,0.01584
+2019,Q3,RXH,Brighton and Sussex University Hospitals NHS Trust ,RXH09,Princess Royal Hospital,South East ,Good,411,60,13835,0.02971,0.14599,2.97%,2.97% (411),14.6%,Worst Quartile,RXH,0.01584
+2019,Q3,RXH,Brighton and Sussex University Hospitals NHS Trust ,RXH17,Hove Polyclinic,South East ,Good,411,60,13835,0.02971,0.14599,2.97%,2.97% (411),14.6%,Worst Quartile,RXH,0.01584
+2019,Q3,RXH,Brighton and Sussex University Hospitals NHS Trust ,RXH42,Worthing Hospital Dixon Ward,South East ,Good,411,60,13835,0.02971,0.14599,2.97%,2.97% (411),14.6%,Worst Quartile,RXH,0.01584
+2019,Q3,RXK,Sandwell and West Birmingham Hospitals NHS Trust ,RXK01,Sandwell General Hospital,West Midlands ,Requires improvement,187,0,9910,0.01887,0,1.89%,1.89% (187),0.0%,Above Avg,RXK,0.01584
+2019,Q3,RXK,Sandwell and West Birmingham Hospitals NHS Trust ,RXK02,City Hospital,West Midlands ,Requires improvement,187,0,9910,0.01887,0,1.89%,1.89% (187),0.0%,Above Avg,RXK,0.01584
+2019,Q3,RXK,Sandwell and West Birmingham Hospitals NHS Trust ,RXK10,Rowley Regis Hospital,West Midlands ,Requires improvement,187,0,9910,0.01887,0,1.89%,1.89% (187),0.0%,Above Avg,RXK,0.01584
+2019,Q3,RXL,Blackpool Teaching Hospitals NHS Foundation Trust ,RXL01,Blackpool Victoria Hospital,North West ,Requires improvement,234,10,15538,0.01506,0.04274,1.51%,1.51% (234),4.3%,Above Avg,RXL,0.01584
+2019,Q3,RXL,Blackpool Teaching Hospitals NHS Foundation Trust ,RXL04,Fleetwood Hospital,North West ,Requires improvement,234,10,15538,0.01506,0.04274,1.51%,1.51% (234),4.3%,Above Avg,RXL,0.01584
+2019,Q3,RXL,Blackpool Teaching Hospitals NHS Foundation Trust ,RXL06,Clifton Hospital,North West ,Requires improvement,234,10,15538,0.01506,0.04274,1.51%,1.51% (234),4.3%,Above Avg,RXL,0.01584
+2019,Q3,RXN,Lancashire Teaching Hospitals NHS Foundation Trust ,RXN01,Chorley and South Ribble Hospital,North West ,Requires improvement,420,86,11237,0.03738,0.20476,3.74%,3.74% (420),20.5%,Worst Quartile,RXN,0.01584
+2019,Q3,RXN,Lancashire Teaching Hospitals NHS Foundation Trust ,RXN02,Royal Preston Hospital,North West ,Requires improvement,420,86,11237,0.03738,0.20476,3.74%,3.74% (420),20.5%,Worst Quartile,RXN,0.01584
+2019,Q3,RXP,County Durham and Darlington NHS Foundation Trust ,RXP09,Peterlee Community Hospital,North East ,Good,96,2,6074,0.01581,0.02083,1.58%,1.58% (96),2.1%,Above Avg,RXP,0.01584
+2019,Q3,RXP,County Durham and Darlington NHS Foundation Trust ,RXP35,Richardson Community Hospital,North East ,Good,96,2,6074,0.01581,0.02083,1.58%,1.58% (96),2.1%,Above Avg,RXP,0.01584
+2019,Q3,RXP,County Durham and Darlington NHS Foundation Trust ,RXP69,Weardale Community Hospital,North East ,Good,96,2,6074,0.01581,0.02083,1.58%,1.58% (96),2.1%,Above Avg,RXP,0.01584
+2019,Q3,RXP,County Durham and Darlington NHS Foundation Trust ,RXPBA,Bishop Auckland Hospital,North East ,Good,96,2,6074,0.01581,0.02083,1.58%,1.58% (96),2.1%,Above Avg,RXP,0.01584
+2019,Q3,RXP,County Durham and Darlington NHS Foundation Trust ,RXPCC,Chester LE Street Community Hospital,North East ,Good,96,2,6074,0.01581,0.02083,1.58%,1.58% (96),2.1%,Above Avg,RXP,0.01584
+2019,Q3,RXP,County Durham and Darlington NHS Foundation Trust ,RXPCL,Sedgefield Community Hospital,North East ,Good,96,2,6074,0.01581,0.02083,1.58%,1.58% (96),2.1%,Above Avg,RXP,0.01584
+2019,Q3,RXP,County Durham and Darlington NHS Foundation Trust ,RXPCP,University Hospital North Durham,North East ,Good,96,2,6074,0.01581,0.02083,1.58%,1.58% (96),2.1%,Above Avg,RXP,0.01584
+2019,Q3,RXP,County Durham and Darlington NHS Foundation Trust ,RXPDA,Darlington Memorial Hospital,North East ,Good,96,2,6074,0.01581,0.02083,1.58%,1.58% (96),2.1%,Above Avg,RXP,0.01584
+2019,Q3,RXQ,Buckinghamshire Healthcare NHS Trust ,RXQ02,Stoke Mandeville Hospital,South East ,Good,132,0,8887,0.01485,0,1.49%,1.49% (132),0.0%,Above Avg,RXQ,0.01584
+2019,Q3,RXQ,Buckinghamshire Healthcare NHS Trust ,RXQ50,Wycombe Hospital,South East ,Good,132,0,8887,0.01485,0,1.49%,1.49% (132),0.0%,Above Avg,RXQ,0.01584
+2019,Q3,RXQ,Buckinghamshire Healthcare NHS Trust ,RXQ51,Amersham Hospital,South East ,Good,132,0,8887,0.01485,0,1.49%,1.49% (132),0.0%,Above Avg,RXQ,0.01584
+2019,Q3,RXR,East Lancashire Hospitals NHS Trust ,RXR10,Burnley General Hospital,North West ,Good,245,7,14098,0.01738,0.02857,1.74%,1.74% (245),2.9%,Above Avg,RXR,0.01584
+2019,Q3,RXR,East Lancashire Hospitals NHS Trust ,RXR20,Royal Blackburn Hospital,North West ,Good,245,7,14098,0.01738,0.02857,1.74%,1.74% (245),2.9%,Above Avg,RXR,0.01584
+2019,Q3,RXR,East Lancashire Hospitals NHS Trust ,RXR50,Pendle Community Hospital,North West ,Good,245,7,14098,0.01738,0.02857,1.74%,1.74% (245),2.9%,Above Avg,RXR,0.01584
+2019,Q3,RXR,East Lancashire Hospitals NHS Trust ,RXR60,Accrington Victoria Hospital,North West ,Good,245,7,14098,0.01738,0.02857,1.74%,1.74% (245),2.9%,Above Avg,RXR,0.01584
+2019,Q3,RXR,East Lancashire Hospitals NHS Trust ,RXR70,Clitheroe Community Hospital,North West ,Good,245,7,14098,0.01738,0.02857,1.74%,1.74% (245),2.9%,Above Avg,RXR,0.01584
+2019,Q3,RXR,East Lancashire Hospitals NHS Trust ,RXR78,Blackburn Birthing Centre,North West ,Good,245,7,14098,0.01738,0.02857,1.74%,1.74% (245),2.9%,Above Avg,RXR,0.01584
+2019,Q3,RXW,Shrewsbury and Telford Hospital NHS Trust ,RXWAS,Royal Shrewsbury Hospital,West Midlands ,Inadequate,200,2,6304,0.03173,0.01,3.17%,3.17% (200),1%,Worst Quartile,RXW,0.01584
+2019,Q3,RXW,Shrewsbury and Telford Hospital NHS Trust ,RXWAT,The Princess Royal Hospital,West Midlands ,Inadequate,200,2,6304,0.03173,0.01,3.17%,3.17% (200),1%,Worst Quartile,RXW,0.01584
+2019,Q3,RXW,Shrewsbury and Telford Hospital NHS Trust ,RXWMB,Bridgnorth Community Hospital,West Midlands ,Inadequate,200,2,6304,0.03173,0.01,3.17%,3.17% (200),1%,Worst Quartile,RXW,0.01584
+2019,Q3,RXW,Shrewsbury and Telford Hospital NHS Trust ,RXWMJ,Oswestry Maternity Unit,West Midlands ,Inadequate,200,2,6304,0.03173,0.01,3.17%,3.17% (200),1%,Worst Quartile,RXW,0.01584
+2019,Q3,RYJ,Imperial College Healthcare NHS Trust ,RYJ01,St Mary's Hospital,London ,Requires improvement,242,25,18660,0.01297,0.10331,1.3%,1.3% (242),10.3%,Below Avg,RYJ,0.01584
+2019,Q3,RYJ,Imperial College Healthcare NHS Trust ,RYJ02,Charing Cross Hospital,London ,Requires improvement,242,25,18660,0.01297,0.10331,1.3%,1.3% (242),10.3%,Below Avg,RYJ,0.01584
+2019,Q3,RYJ,Imperial College Healthcare NHS Trust ,RYJ03,Hammersmith Hospitals,London ,Requires improvement,242,25,18660,0.01297,0.10331,1.3%,1.3% (242),10.3%,Below Avg,RYJ,0.01584
+2019,Q3,RYJ,Imperial College Healthcare NHS Trust ,RYJ04,Queen Charlottes and Chelsea Hospital,London ,Requires improvement,242,25,18660,0.01297,0.10331,1.3%,1.3% (242),10.3%,Below Avg,RYJ,0.01584
+2019,Q3,RYJ,Imperial College Healthcare NHS Trust ,RYJ07,Western Eye Hospital,London ,Requires improvement,242,25,18660,0.01297,0.10331,1.3%,1.3% (242),10.3%,Below Avg,RYJ,0.01584
+2019,Q3,RYR,Western Sussex Hospitals NHS Foundation Trust ,RYR14,Southlands Hospital,South East ,Outstanding,93,1,13343,0.00697,0.01075,0.7%,0.7% (93),1.1%,Best Quartile,RYR,0.01584
+2019,Q3,RYR,Western Sussex Hospitals NHS Foundation Trust ,RYR16,St Richard's Hospital,South East ,Outstanding,93,1,13343,0.00697,0.01075,0.7%,0.7% (93),1.1%,Best Quartile,RYR,0.01584
+2019,Q3,RYR,Western Sussex Hospitals NHS Foundation Trust ,RYR18,Worthing Hospital,South East ,Outstanding,93,1,13343,0.00697,0.01075,0.7%,0.7% (93),1.1%,Best Quartile,RYR,0.01584
+2019,Q3,ADP02,KIMS Hospital (Newnham Court) ,1-1285831303,KIMS Hospital,South East,Good,11,0,1225,0.00898,0,0.9%,0.9% (11),0.0%,Best Quartile,ADP,0.01584
+2019,Q3,NCR,Isight ,1-155228160,Isight Limited,North West,Not Yet Rated,3,0,557,0.00539,0,0.54%,0.54% (3),0.0%,Best Quartile,NCR,0.01584
+2019,Q3,NTP16,Will Adams NHS Treatment Centre ,1-349744874,Will Adams NHS Treatment Centre,South East,Good,18,9,1529,0.01177,0.5,1.18%,1.18% (18),50%,Below Avg,NTP,0.01584

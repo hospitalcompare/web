@@ -189,7 +189,7 @@
                         @include('components.basic.popover', [
                         'trigger' => 'hover',
                         'html'    => 'true',
-                        'content' => !empty($opCancelled) ? 'National average<br> is 1.41%' : 'Currently no data available<br>for this hospital'])>
+                        'content' => !empty($opCancelled) ? 'National average<br> is 1.58%' : 'Currently no data available<br>for this hospital'])>
                         <p class="stat-label d-block w-100 d-lg-none">Operations Cancelled</p>
                         {!! !empty($opCancelled) ? $opCancelled : "No data" !!}
                     </div>
