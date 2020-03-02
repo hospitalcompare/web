@@ -2,6 +2,11 @@
 .how-section__parent {
     padding: 75px 0;
 
+    .how-icon-step {
+        height: 25px;
+        line-height: 25px;
+    }
+
     .how-icon-title {
         //@include font-style('SofiaPro-Medium', 22px, false, #000, 26px, -0.9px);
         @include font-size(22);
@@ -55,10 +60,6 @@
         height: 60px;
         @include icon-bg-center(100%);
         background-size: contain;
-    }
-
-    .how-icon-step {
-        padding-top: 0.35rem !important;
     }
 
     .how-icon-title {
