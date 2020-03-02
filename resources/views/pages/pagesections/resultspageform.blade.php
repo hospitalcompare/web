@@ -165,8 +165,7 @@
                         'size'              => 'max-width',
                         'html'              => 'true',
                         'trigger'           => 'hover',
-                        'content'           => '
-                        '])
+                        'content'           => '<p>If you know what treatment you need, select the treatment from our list or select generic body areas if you\'re not sure</p>'])
                     >@svg('icon-more-info')</a>
                 </div>
                 <div class="postcode-radius-child postcode col-12 col-md-3 d-flex align-items-center">

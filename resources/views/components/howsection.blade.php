@@ -20,9 +20,11 @@
                                  style="background-image: url('images/icons/{{ $howsection['iconImg'] }}.svg')">
                             </div>
                             @if(!empty($howsection['step']))
-                                <div
-                                    class="how-icon-step text-uppercase text-white rounded-pill d-inline-block mx-auto py-1 px-3 mb-3 {{ !empty($howsection['color']) ? 'bg-' . $howsection['color'] : '' }}">
-                                    STEP {{ $howsection['step'] }}
+                                <div class="wrapper">
+                                    <div
+                                        class="how-icon-step text-uppercase text-white rounded-pill d-inline-block mx-auto px-3 mb-3 {{ !empty($howsection['color']) ? 'bg-' . $howsection['color'] : '' }}">
+                                        STEP {{ $howsection['step'] }}
+                                    </div>
                                 </div>
                             @endif
                             @if(!empty($howsection['title']))

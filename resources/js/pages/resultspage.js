@@ -168,7 +168,7 @@ $showFilters.on('click', function () {
 // Close filters when clicking outside
 $(document).on('click', function (e) {
     // Is the click outside the results form, or inside one of the select picker dropdowns
-    if ($resultspageform.has(e.target).length === 0 && !e.target.classList.contains('text') && $body.hasClass('filters-open')) {
+    if ($body.hasClass('results-page-desktop') && $resultspageform.has(e.target).length === 0 && !e.target.classList.contains('text') && $body.hasClass('filters-open')) {
         $filters.slideUp();
         $body.removeClass('filters-open');
         // Change the text of show filters button

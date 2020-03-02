@@ -52,7 +52,7 @@
             <div class="result-item-section-2">
                 {{-- CQC rating  --}}
                 <div class="result-item-section-2__child">
-                    <div class="h-50 d-flex flex-column justify-content-center SofiaPro-Medium" @includeWhen(empty($qualityRating), 'components.basic.popover', [
+                    <div class="h-50 w-100 d-flex flex-column justify-content-center SofiaPro-Medium" @includeWhen(empty($qualityRating), 'components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
@@ -105,7 +105,7 @@
                                  </div>
                              </div>'])>
                         <p class="stat-label d-block w-100 d-lg-none">Care Quality Rating</p>
-                        <p class="col-{{ str_slug($qualityRating) }}">{!! !empty($qualityRating) ? $qualityRating : "No data" !!}</p>
+                        <p class="text-center w-100 col-{{ str_slug($qualityRating) }}">{!! !empty($qualityRating) ? $qualityRating : "No data" !!}</p>
                     </div>
                 </div>
                 {{-- Waiting time --}}

@@ -20,6 +20,9 @@
                     id="{{ $selectId }}"
                 @endif
                 data-live-search="{{ !empty($selectPicker) ? $selectPicker : ''}}"
+                @if(!empty($selectPickerContainer))
+                data-container="{{ $selectPickerContainer }}"
+                @endif
                 name="{{$name}}"
             {{ !empty($required) && ($required) ? 'required' : '' }}>
             @if(!empty($placeholderOption))

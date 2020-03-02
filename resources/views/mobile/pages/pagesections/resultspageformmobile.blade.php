@@ -10,7 +10,7 @@
                 <div class="col-6">
                     @include('components.basic.button', [
                         'buttonText'        => 'Show Filters',
-                        'classTitle'        => 'btn btn-brand-primary-1 btn-squared btn-squared_slim btn-arrow-down font-14 d-flex flex-row-reverse justify-content-around',
+                        'classTitle'        => 'btn btn-brand-primary-1 btn-squared btn-squared_slim btn-arrow-down font-14 d-flex flex-row-reverse justify-content-around align-items-center',
                         'id'                => 'show_filters',
                         'svg'               => 'icon-filter',
                         'svgClass'          => 'd-inline position-static'
@@ -178,16 +178,16 @@
                 <!-- Hospital type -->
                 <div class="filter-mobile col-12">
                     @include('components.basic.select', [
-                        'selectParentClass' => 'w-100',
-                        'showLabel'         => true,
-                        'placeholder'       => 'Hospital Type',
-                        'options'           => $data['filters']['hospitalTypes'],
-                        'svg'               => 'icon-chevron-down',
-                        'selectClass'       => 'select-picker',
-                        'placeholder'       => 'Hospital Type',
-                        'name'              => 'hospital_type',
-                        'showTooltip'       => true,
-                        'modalText'         =>
+                        'selectParentClass'     => 'w-100',
+                        'showLabel'             => true,
+                        'placeholder'           => 'Hospital Type',
+                        'options'               => $data['filters']['hospitalTypes'],
+                        'svg'                   => 'icon-chevron-down',
+                        'selectClass'           => 'select-picker highlight-search-dropdown ',
+                        'placeholder'           => 'Hospital Type',
+                        'name'                  => 'hospital_type',
+                        'showTooltip'           => true,
+                        'modalText'             =>
                             '<p class="SofiaPro-SemiBold mb-3 font-18">
                                  NHS or Private Hospitals
                             </p>
@@ -210,8 +210,9 @@
                         'selectClass'           => 'select-picker',
                         'placeholder'           => 'Insurance',
                         'name'                  => 'policy_id',
-                        'showTooltip'       => true,
-                        'modalText'         =>
+                        'showTooltip'           => true,
+                        'selectPickerContainer' => '.filter-parent',
+                        'modalText'             =>
                             '<p class="SofiaPro-SemiBold mb-3 font-18">
                                  Insurance policy
                             </p>
