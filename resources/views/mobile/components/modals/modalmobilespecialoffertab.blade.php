@@ -25,7 +25,7 @@
                             <ul class="mr-0 mb-3 font-16 SofiaPro-Medium">
                                 <li class="pink-tick">{{ number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1).' Weeks ' }}</li>
                                 <li class="pink-tick">{{ $specialOffer['rating']['latest_rating'] . ' CQC Rating' }}</li>
-                                <li class="pink-tick">{{ (!empty($specialOffer['rating']['avg_user_rating'])) ? $specialOffer['rating']['avg_user_rating'] . ' star NHS Choices user rating' : null }}</li>
+                                {{ (!empty($specialOffer['rating']['avg_user_rating'])) ? '<li class="pink-tick">'.$specialOffer['rating']['avg_user_rating'] . ' star NHS Choices user rating</li>' : null }}
                             </ul>
                         </div>
                     </div>
