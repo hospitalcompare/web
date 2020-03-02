@@ -323,10 +323,11 @@ class WebController extends BaseController
     public function blogItem($id) {
 
         $blog = Blog::where('id', $id)->with('author', 'category')->first();
-        $latestBlogs = Blog::orderBy('created_at', 'DESC')->with('author', 'category')->limit(4)->get();
         //If we don't have the Blog, redirect to Blogs ( for the moment )
         if(empty($blog))
             return \Redirect::to('/blogs');
+        //Get the latest blogs created excluding the one that the user is reading
+        $latestBlogs = Blog::where('id', '!=', $blog->id)->orderBy('created_at', 'DESC')->with('author', 'category')->limit(3)->get()->toArray();
 
         $this->returnedData['success']      = true;
         $this->returnedData['data']['blog'] = $blog;
