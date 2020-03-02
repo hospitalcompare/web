@@ -162,7 +162,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container" id="exceptions">
             <div class="row">
                 <div class="col-12 col-lg-6 offset-lg-3">
                     <p class="SofiaPro-Medium font-24 text-center">Exceptions</p>

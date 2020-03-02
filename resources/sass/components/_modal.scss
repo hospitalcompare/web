@@ -94,15 +94,15 @@
     }
 
     // Mobile tooltips
-    //&.modal-mobile-tooltip {
-    //    top: $mobile-header-height;
-    //    height: calc(100vh - #{$mobile-header-height});
-    //
-    //    .modal-dialog {
-    //        height: calc(100vh - 1rem - #{$mobile-header-height});
-    //
-    //    }
-    //}
+    &.modal-mobile-tooltip {
+        //top: $mobile-header-height;
+        //height: calc(100vh - #{$mobile-header-height});
+
+        .modal-dialog {
+            height: calc(100vh - 1rem - #{$mobile-header-height});
+
+        }
+    }
 
     //&#hc_modal_contacts_general {
     //    .btn-enquire {
