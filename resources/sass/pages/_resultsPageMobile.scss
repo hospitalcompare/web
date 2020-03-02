@@ -19,7 +19,9 @@
     }
 
     #show_filters {
-        padding: 15px 15px !important;
+        padding: 0 15px !important;
+        height: 50px;
+        line-height: 50px;
 
         svg {
             //@include v-c;
@@ -133,6 +135,21 @@
         .dropdown-menu {
             min-width: initial !important;
             max-width: 100% !important;
+        }
+    }
+
+    .select-sort-by {
+        & + svg {
+            @include v-c;
+        }
+
+        .dropdown-toggle {
+            border: none !important;
+            @extend .bg-grey;
+            @extend .pl-2;
+            @extend .py-0;
+            height: 50px;
+            line-height: 50px;
         }
     }
 
