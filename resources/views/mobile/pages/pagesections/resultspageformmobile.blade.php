@@ -183,7 +183,7 @@
                         'placeholder'           => 'Hospital Type',
                         'options'               => $data['filters']['hospitalTypes'],
                         'svg'                   => 'icon-chevron-down',
-                        'selectClass'           => 'select-picker highlight-search-dropdown ',
+                        'selectClass'           => 'select-picker',
                         'placeholder'           => 'Hospital Type',
                         'name'                  => 'hospital_type',
                         'showTooltip'           => true,
