@@ -31,12 +31,14 @@ class WebController extends BaseController
 
         //Dynamic Keyword Insertion Logic
         $dynamicKeywordInsertion                = [
-            'location'  => $dynamicLocation,
-            'procedure' => $dynamicProcedure,
-            'hospital'  => $dynamicHospital
+            'location'      => $dynamicLocation,
+            'procedure'     => $dynamicProcedure,
+            'hospitalName'  => $dynamicHospital
         ];
 
         $dynamicKeywordText = 'Find the best hospitals';
+        if(!empty($dynamicKeywordInsertion['hospitalName']))
+            $dynamicKeywordText = 'Compare '.$dynamicKeywordInsertion['hospitalName'].' with others';
         if(!empty($dynamicKeywordInsertion['procedure']))
             $dynamicKeywordText .= ' for '.$dynamicKeywordInsertion['procedure'];
         if(!empty($dynamicKeywordInsertion['location']))

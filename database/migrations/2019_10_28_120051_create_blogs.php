@@ -119,7 +119,8 @@ class CreateBlogs extends Migration
                                 suitable hospital choices and compare the latest reported waiting times, hospital quality rating, cancelled
                                 operations and user ratings. You can search by a radius of five miles right up to nationwide.</p>
                             <p>We also intend for the site to be available to patients in Wales, Scotland and Northern Ireland during 2020.</p>',
-                'image'         => 'images/Layer_16.png',
+                'image'         => 'images/blogs/Blog_Article_1.jpg',
+                'time_to_read'  => 3,
                 'metatags'      => 'welcome, hospital compare, blog'
             ]
         ];
@@ -143,7 +144,7 @@ class CreateBlogs extends Migration
             $blog->title = $preBlog['title'];
             $blog->description = $preBlog['description'];
             $blog->image  = $preBlog['image'];
-            $blog->time_to_read = 4;
+            $blog->time_to_read = $preBlog['time_to_read'];
             $blog->blog_category_id = 1;
             $blog->blog_author_id = 1;
             $blog->metatags = $preBlog['metatags'];

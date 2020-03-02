@@ -282,8 +282,8 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 <li>Where we need to comply with a legal obligation.
                                 </li>
                             </ul>
-                            <p>Click <a href="#glossary" class="btn-link">here</a> to find out more about the
-                                types of lawful basis that we will rely on to process your personal data.
+                            <p>To find out more about the types of lawful basis that we will rely on to process your personal data,
+                                see Lawful Bases below in Glossary (paragraph 10).
                             </p>
                             <p>Generally, we do not rely on consent as a legal basis for processing your personal data,
                                 except for the processing of your health data by passing your completed enquiry form to
@@ -591,11 +591,9 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                                 above.
                             </p>
                             <ul class="blue-dot">
-                                <li>Internal Third Parties as set out in the <a href="#glossary"
-                                                                                class="btn-link">glossary</a>.
+                                <li>Internal Third Parties as set out below in Glossary (paragraph 10).
                                 </li>
-                                <li>External Third Parties as set out in the <a href="#glossary"
-                                                                                class="btn-link">glossary</a>, including
+                                <li>External Third Parties as set out below in Glossary (paragraph 10), including
                                     specifically any or all of the hospitals or other service providers mentioned on our
                                     website to whom you make an enquiry by completing an enquiry from and clicking “Make
                                     an Enquiry” on that form or a link to connect with them.
@@ -630,9 +628,10 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
                          data-parent="#privacy_accordion">
                         <div class="card-body">
-                            <p>We share your personal data with companies who carry our webhosting services for us. For
+                            <p>We share your personal data with companies who carry our webhosting and email services for us. For
                                 example, Digital Ocean (<a target="_blank" class="btn-link"
-                                                           href="https://www.digitalocean.com">https://www.digitalocean.com</a>).
+                                                           href="https://www.digitalocean.com">https://www.digitalocean.com</a>)
+                                and Google (<a target="_blank" class="btn-link" href="https://gsuite.google.com/">https://gsuite.google.com</a>).
                                 This will involve transferring your data outside the European Economic Area <strong>(EEA)</strong>.
                             </p>
                             <p>Whenever we transfer your personal data out of the EEA, we ensure a similar degree of

@@ -110,7 +110,7 @@ class SearchFaqs extends Migration
                         Social Care Act 2013 gives you the legal right to choose.<br>
                         There are some exceptions*, but most private hospitals across the UK
                         have a contract with the NHS to perform treatments on their behalf.<br>
-                        *(click <a href="/privacy-policy" class="btn-link">here</a> for exception)
+                        *(click <a href="/your-rights#exceptions" class="btn-link">here</a> for exception)
                     </p>',
             '<p>
                         Yes.

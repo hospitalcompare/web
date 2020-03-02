@@ -190,8 +190,12 @@
                         Analytics, facebook, Hotjar, or advertising networks, may also use cookies or
                         similar tracking technologies, over which we have no control. These cookies are likely to be
                         analytical/performance cookies or targeting
-                        cookies. These cookies provided by them as utilised by us (as indicated in the table above) may
-                        provide us with information about your use of and activity on our website.
+                        cookies. These cookies provided by them may provide us with information about your use of and activity on our website.
+                    </p>
+                    <p class="p-secondary">
+                        Bear in mind there are some other cookies out there from other third parties. These third-party cookies
+                        might track how you use different websites, including ours. But we don’t control them and they may
+                        have been added by your visiting other websites. See above for information about how to block cookies.
                     </p>
                     <p class="p-secondary">This website contains links to other websites. This policy only applies to
                         this website so when
@@ -202,12 +206,8 @@
                         allocate cookies or similar items to your Device. These types of cookies and similar tracking
                         technologies and how they operate will be governed by the privacy and cookie policies of those
                         third party companies.</p>
-                    <p class="p-secondary">You can block cookies by activating the setting on your browser that allows
-                        you to refuse the
-                        setting of all or some cookies. However, if you use your browser settings to block all cookies
-                        (including essential cookies) you may not be able to access all or parts of our site. </p>
-                    <p class="p-secondary">Except for session cookies which expire when you close your browser, and showFeedbackForm which expires after 21 days, all
-                        cookies will expire after 1 year.</p>
+                    <p class="p-secondary">Except for session cookies which expire when you close your browser, all other
+                        cookies created by us or our suppliers will expire within 1 year.</p>
                     <p class="p-secondary">For more information on how to control your cookie and browser settings, or
                         on how to delete
                         cookies from your hard drive please visit <a class="btn-link" target="_blank"

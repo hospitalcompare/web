@@ -15,7 +15,7 @@
                         <div class="mr-1">
                             <img src="{{ asset('/images/icons/icon-clock.svg') }}" alt="Clock icon">
                         </div>
-                        <span class="time-to-read mr-3">{{$blog->time_to_read}}min</span>
+                        <span class="time-to-read mr-3">{{$blog->time_to_read}} min</span>
                         <div class="mr-1">
                             <img src="{{ asset('/images/icons/icon-calendar.svg') }}" alt="Clock icon">
                         </div>
