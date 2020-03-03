@@ -43,7 +43,7 @@
                                     <div class="card rounded-0">
                                         <div class="card-header" id="headingOne_{{ $id }}">
                                             <h2 class="mb-0">
-                                                <button class=" btn btn-link collapsed" type="button"
+                                                <button class=" btn btn-link collapsed rounded-0" type="button"
                                                         data-toggle="collapse" data-target="#collapseOne_{{ $id }}"
                                                         aria-expanded="true" aria-controls="collapseOne_{{ $id }}">
                                                     <p class="rating-name">Care Quality Rating</p>
@@ -113,7 +113,7 @@
                                     <div class="card rounded-0">
                                         <div class="card-header" id="headingTwo_{{ $id }}">
                                             <h2 class="mb-0">
-                                                <button class="btn btn-link collapsed" type="button"
+                                                <button class="btn btn-link collapsed rounded-0" type="button"
                                                         data-toggle="collapse"
                                                         data-target="#collapseTwo_{{ $id }}" aria-expanded="false"
                                                         aria-controls="collapseTwo_{{ $id }}">
@@ -172,7 +172,7 @@
                                 <div class="card rounded-0">
                                     <div class="card-header" id="headingThree_{{ $id }}">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button"
+                                            <button class="btn btn-link collapsed rounded-0" type="button"
                                                     data-toggle="collapse"
                                                     data-target="#collapseThree_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseThree_{{ $id }}">
@@ -204,7 +204,7 @@
                                 <div class="card rounded-0">
                                     <div class="card-header" id="headingFour_{{ $id }}">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button"
+                                            <button class="btn btn-link collapsed rounded-0" type="button"
                                                     data-toggle="collapse"
                                                     data-target="#collapseFour_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseFour_{{ $id }}">
@@ -227,7 +227,7 @@
                                 <div class="card rounded-0">
                                     <div class="card-header" id="headingFive_{{ $id }}">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button"
+                                            <button class="btn btn-link collapsed rounded-0" type="button"
                                                     data-toggle="collapse"
                                                     data-target="#collapseFive_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseFive_{{ $id }}">
@@ -250,7 +250,7 @@
                                 <div class="card rounded-0">
                                     <div class="card-header" id="headingSix_{{ $id }}">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link no-arrow" type="button"
+                                            <button class="btn btn-link no-arrow rounded-0" type="button"
                                                     data-toggle="collapse"
                                                     data-target="#collapseSix_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseSix_{{ $id }}">
@@ -275,7 +275,7 @@
                                 <div class="card rounded-0">
                                     <div class="card-header" id="headingSeven_{{ $id }}">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link no-arrow" type="button"
+                                            <button class="btn btn-link no-arrow rounded-0" type="button"
                                                     data-toggle="collapse"
                                                     data-target="#collapseSeven_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseSeven_{{ $id }}">
