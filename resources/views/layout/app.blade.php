@@ -139,7 +139,6 @@
                         }
                     },
                     "theme": "hc-cookie",
-                    // "position": "bottom-right",
                     "position": "top",
                     "static": true,
                     "content": {
@@ -150,6 +149,11 @@
                     }
                 })});
         </script>
+        <style>
+            .cc-window.cc-floating {
+                max-width: 4000px !important;
+            }
+        </style>
         @include('components.modals.modaltour')
     </body>
 

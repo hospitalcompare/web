@@ -181,15 +181,15 @@
                        class="help-link"
                        style="right: 53px"
                         @include('components.basic.popover', [
-                        'dismissible'   => true,
-                        'placement'      => 'top',
-                        'html'           => 'true',
-                        'size'           => 'max-width',
-                        'trigger'        => 'hover',
-                        'content'        => '<p>
-                                         Please enter your postcode<br>for a refined search.
-                                     </p>
-                                     '])
+                        'dismissible'       => true,
+                        'placement'         => 'top',
+                        'html'              => 'true',
+                        'size'              => 'max-width',
+                        'trigger'           => 'hover',
+                        'content'           => '<p>
+                                             Please enter your postcode<br>for a refined search.
+                                         </p>
+                                         '])
                     >@svg('icon-more-info')</a>
                 </div>
                 <div class="postcode-radius-child radius col-12 col-md-6">

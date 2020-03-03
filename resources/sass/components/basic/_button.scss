@@ -364,12 +364,10 @@
 }
 
 .btn-more-info {
-    color: $brand-primary-1;
-
-    &:hover {
-        color: $brand-primary-7;
-        opacity: 1;
-    }
+    color: $brand-primary-1 !important;
+    //&:hover {
+    //    color: $brand-primary-7;
+    //}
 }
 
 // Back to top button
