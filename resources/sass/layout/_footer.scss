@@ -111,10 +111,13 @@ footer {
 
     .svg-wrapper {
         margin: 0 -20px;
+        @include aspect-ratio(2000, 300);
 
         svg {
             stroke-dasharray: 10000;
             stroke-dashoffset: 10000;
+            position: absolute;
+            top: 0;
         }
 
         &.draw {
@@ -129,3 +132,16 @@ footer {
     }
 }
 
+// Target IE 10+ only
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    .footer-lower .svg-wrapper {
+        background-image: url('/images/icons/footer-heart.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        svg {
+            display: none;
+        }
+    }
+}

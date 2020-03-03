@@ -61,7 +61,7 @@
 
     <div class="footer-lower">
         <div class="svg-wrapper animated mb-4" data-animation="draw">
-            @svg('heart-line')
+            @svg('footer-heart')
         </div>
 
         <div class="container">

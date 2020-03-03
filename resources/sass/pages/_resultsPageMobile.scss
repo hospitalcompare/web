@@ -45,13 +45,18 @@
         transform: translate3d(-100%, 0, 0);
         overflow: scroll;
         position: fixed;
+        height: calc(100vh - #{$mobile-header-height});
         top: $mobile-header-height;
         left: 0;
         width: 100%;
-        height: calc(100vh - #{$mobile-header-height});
         background-color: #fff;
         z-index: 2000;
         transition: $transition;
+
+        @include media-breakpoint-up(sm) {
+            top: 80px;
+            height: calc(100vh - 80px);
+        }
 
         .dropdown-toggle {
             background-color: transparent;

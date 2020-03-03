@@ -538,17 +538,7 @@ select.big {
     }
 
 
-    .cc-window {
-        &.cc-floating {
-            max-width: initial !important;
-        }
 
-        &.cc-banner {
-            padding: 1em 1.8em;
-            width: 100%;
-            flex-direction: row;
-        }
-    }
 
     .cc-link {
         color: $brand-primary-1 !important;
@@ -572,6 +562,15 @@ select.big {
         }
     }
 }
+
+.cc-window {
+    &.cc-banner {
+        padding: 1em 1.8em;
+        width: 100%;
+        flex-direction: row;
+    }
+}
+
 
 // Transition for SVG paths
 path {
@@ -936,7 +935,7 @@ h6 {
 
 .modal-mobile-search {
     .svg-wrapper {
-        background-image: url('/images/icons/heart-line-turq.svg');
+        background-image: url('/images/icons/footer-heart-turq.svg');
         background-repeat: no-repeat;
         background-size: auto 100%;
         background-position: 89% top;
@@ -1097,21 +1096,21 @@ h6 {
     padding: 0 !important;
 }
 
-.results-page-desktop .nhs-hospital p:after {
-    border-bottom: solid 15px transparent;
-    border-right: solid 15px transparent;
-    border-left: solid 15px $nhsBlue;
-    border-top: solid 15px $nhsBlue;
-    content: ''
-}
-
-.results-page-desktop .private-hospital p:after {
-    border-bottom: solid 15px transparent;
-    border-right: solid 15px transparent;
-    border-left: solid 15px $privateBlue;
-    border-top: solid 15px $privateBlue;
-    content: ''
-}
+//.results-page-desktop .nhs-hospital p:after {
+//    border-bottom: solid 15px transparent;
+//    border-right: solid 15px transparent;
+//    border-left: solid 15px $nhsBlue;
+//    border-top: solid 15px $nhsBlue;
+//    content: ''
+//}
+//
+//.results-page-desktop .private-hospital p:after {
+//    border-bottom: solid 15px transparent;
+//    border-right: solid 15px transparent;
+//    border-left: solid 15px $privateBlue;
+//    border-top: solid 15px $privateBlue;
+//    content: ''
+//}
 
 // Force accordions open for content editing purposes
 //.collapse {

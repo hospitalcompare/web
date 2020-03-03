@@ -10,7 +10,9 @@ class="{{$classTitle}}"
 @if(!empty($dataTarget))
     data-target="{{ $dataTarget }}"
 @endif
+@if(empty($htmlButton))
 href="{{ empty($hrefValue) ? 'javascript:void(0);' : $hrefValue }}"
+@endif
 role="button"
 @if(!empty($dataId))
     data-id="{{ $dataId }}"
