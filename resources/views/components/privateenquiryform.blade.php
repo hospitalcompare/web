@@ -32,7 +32,7 @@
                             ['id'=>'Rev.', 'name'=>'Rev.']
                         ],
                         'svg'           =>  'chevron-down',
-                        'selectClass'   =>  'form-control',
+                        'selectClass'   =>  'form-control select-picker',
                         'placeholder'   =>  'Title*',
                         'name'          =>  'title',
                         'labelClass'    =>  'labelClass'])
@@ -135,7 +135,7 @@
                             id="hiddenRecaptcha">
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 mt-3">
                     <div class="btn-wrapper text-right">
                         @include('components.basic.button', [
                             'buttonText'        => 'Make an enquiry',

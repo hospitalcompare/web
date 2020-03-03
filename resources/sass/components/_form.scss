@@ -145,14 +145,19 @@ select::-ms-expand {
     // bootstrap select button
     .dropdown-toggle,
     input:not([type="submit"]),
-    select,
-    textarea {
-        padding: 13px 40px 13px 13px;
+    select {
+        padding: 0 40px 0 13px;
+        height: 45px;
+        line-height: 45px;
         @include font-size(14);
 
         @include placeholder() {
             color: $body-color;
         }
+    }
+
+    textarea {
+        padding: 13px;
     }
 }
 
