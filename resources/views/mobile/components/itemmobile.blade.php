@@ -184,7 +184,7 @@
                             'svg'               => 'circle-check'
                             ])
                     </div>
-                    <div class="col-6 mt-xl-2">
+                    <div class="col-6">
                         <div class="row btn-web-call">
                             {{--                        Web button --}}
                             {{-- Web button - link to website, open in new tab --}}
