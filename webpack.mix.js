@@ -12,10 +12,10 @@ const webpack = require('webpack');
  | file for the application as well as bundling up all the JS files.
  |
  */
-const devTool = (mix.inProduction()) ? "none" : "source-map";
+// const devTool = (mix.inProduction()) ? "none" : "source-map";
 
 mix.webpackConfig({
-    devtool: devTool,
+    devtool: 'source-map',
     plugins: [
         new webpack.ProvidePlugin({
             $: "jquery",
@@ -78,8 +78,8 @@ mix.options({
     // .sourceMaps(false, 'source-map')
     .sourceMaps()
     .sass('resources/sass/app.scss', 'public/css')
-    .js(['resources/js/app.js'], 'public/js')
-    .version();
+    .js(['resources/js/app.js'], 'public/js');
+    // .version();
 
 // Reload browser when something changes
 mix.browserSync({

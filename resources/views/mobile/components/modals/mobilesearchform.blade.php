@@ -108,5 +108,5 @@
     </div>
 </div>
 <div class="svg-wrapper">
-{{--    @svg('heart-line', 'stroke-turq')--}}
+{{--    @svg('footer-heart', 'stroke-turq')--}}
 </div>
