@@ -198,7 +198,7 @@ $showFilters.bind('keydown', function(e) {
 // });
 
 // Toggle the corporate content area
-$('.btn-more-info, .btn-cc-close').on('click', function () {
+$('.btn-more-info').on('click', function () {
     var $target = $($(this).data('target'));
     var $isToggleButton = $(this).hasClass('btn-more-info');
     // The offset
@@ -221,7 +221,6 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
             scrollTop: $scrollBack - scrollOffset
         }, 800);
         //Change the `Close info` to `More info`
-        $(this).removeClass('open');
     } else {
         $target
             .slideDown()
@@ -242,8 +241,6 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
         }
         // Permanently add class gmap-initialized
         $target.addClass('gmap-initialised');
-        //Change the `More info` to `Close info`
-        $(this).addClass('open');
         // Only change text for 'More info' button
         if($isToggleButton)
             // $(this).find('span, div').text('Close info');

@@ -31,18 +31,16 @@
                     @endif
                     <p class="sort-item-location">{{$location}}</p>
 
-                    <div class="btn-area mt-auto">
+                    <div class="btn-area mt-auto d-flex align-items-center">
                         <div
                             class="d-none d-lg-inline-block rounded-pill py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
                             <p class="m-0 col-white">{{$fundedText}}</p>
                         </div>
                         @include('components.basic.button', [
-                            'classTitle'        => 'btn  btn-more-info font-12 p-0 shadow-none',
-                            'buttonText'        => '<span>Map +</span>',
+                            'classTitle'        => 'btn btn-more-info font-12 p-0 shadow-none w-50',
+                            'buttonText'        => 'Map +',
                             'htmlButton'        => true,
-                            'icon'              => '',
                             'id'                => 'more_info_' . $id,
-                            'svg'               => 'plus-solid',
                             'dataTarget'        => '#corporate_content_hospital_' . $id,
                             'dataId'            => $id
                          ])
