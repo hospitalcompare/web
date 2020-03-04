@@ -18,7 +18,7 @@
         <meta name="viewport" content="@yield('mobile')">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- Block indexing bots from staging site -->
-        @if(env('APP_ENV') == 'staging')
+        @if(env('APP_ENV') == 'dev')
             <meta name="robots" content="noindex,nofollow">
         @endif
 
