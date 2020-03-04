@@ -7,7 +7,7 @@ Hospital Compare is committed to your privacy. Please read our privacy policy fo
 
 @section('keywords', 'this is the meta keywords')
 
-@section('mobile', 'width=device-width, initial-scale=1')
+@section('mobile', 'width=device-width, initial-scale=1, user-scalable=no')
 
 @section('body-class', 'privacy-page hc-content')
 

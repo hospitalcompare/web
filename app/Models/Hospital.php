@@ -371,11 +371,11 @@ class Hospital extends Model
 //                $doctorSort = 'Care Quality Rating & Distance';
         } else {
             //Add the Join with the hospital_rating for the ones that needs it
-            if(in_array($sortBy, [3, 4, 7, 8]))
+            if(in_array($sortBy, [1, 2, 3, 4, 7, 8]))
                 $hospitals = $hospitals->leftJoin('hospital_ratings', 'hospitals.id', '=', 'hospital_ratings.hospital_id');
 
             //Care Quality Rating for some of the Sort by conditions
-            if(in_array($sortBy, [3, 4, 5, 6, 7, 8, 11, 12]))
+            if(in_array($sortBy, [1, 2, 3, 4, 5, 6, 7, 8, 11, 12]))
                 $hospitals = $hospitals->orderByRaw('ISNULL(hospital_ratings.latest_rating), case when hospital_ratings.latest_rating = "Outstanding" then 1 when hospital_ratings.latest_rating = "Good" then 2 when hospital_ratings.latest_rating = "Requires improvement" then 3 when hospital_ratings.latest_rating = "Inadequate" then 4 when hospital_ratings.latest_rating = "Not Yet Rated" then 5 end');
         }
 
