@@ -110,10 +110,10 @@ if ($form.length > 0) {
             firstName: "Please enter your first name",
             lastName: "Please enter your surname",
             email: "Please enter a valid email address",
-            confirm_email: "The passwords entered do not match",
+            confirm_email: "The emails entered do not match",
             phone_number: "Please enter your contact number",
             postcode: "Please enter a valid UK postcode",
-            procedure_id: "Please select the procedure required",
+            procedure_id: "Please select the treatment required",
             gdpr: "Please confirm you agree to our terms of use",
             hiddenRecaptcha: "Please check the captcha checkbox"
         },
