@@ -445,7 +445,8 @@
         @include flex-center;
         font-size: 16px;
         font-weight: 400;
-        line-height: 20px;
+        //line-height: 20px;
+        min-height: 20px;
         text-align: center;
 
         > span {
