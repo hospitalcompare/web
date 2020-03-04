@@ -1,2 +1,3 @@
-User-agent: *
-# Disallow: /
+Sitemap: http://www.hospitalcompare.co.uk/sitemap.xml
+User-agent:*
+Disallow
