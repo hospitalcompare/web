@@ -10,7 +10,7 @@
                             'svg'               => 'heart-solid',
                             'id'                => $id])
             <div
-                class="{{$NHSClass}} d-lg-none py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
+                class="hospital-type {{$NHSClass}} d-lg-none py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
                 <p class="m-0">{{$fundedText}}</p>
             </div>
             <div class="result-item-section-1">
@@ -31,7 +31,7 @@
                     @endif
                     <p class="sort-item-location">{{$location}}</p>
 
-                    <div class="btn-area mt-auto d-flex align-items-center">
+                    <div class="btn-area mt-auto d-flex align-items-center justify-content-center justify-content-lg-start">
                         <div
                             class="d-none d-lg-inline-block rounded-pill py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
                             <p class="m-0 col-white">{{$fundedText}}</p>
@@ -103,7 +103,7 @@
                                  </div>
                              </div>'])>
                         <p class="stat-label d-block w-100 d-lg-none">Care Quality Rating</p>
-                        <p class="text-center w-100 col-{{ str_slug($qualityRating) }}">{!! !empty($qualityRating) ? $qualityRating : "No data" !!}</p>
+                        <p class="text-center col-{{ str_slug($qualityRating) }}">{!! !empty($qualityRating) ? $qualityRating : "No data" !!}</p>
                     </div>
                 </div>
                 {{-- Waiting time --}}
