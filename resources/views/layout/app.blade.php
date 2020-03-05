@@ -149,21 +149,21 @@
 {{-- Stickybits is the script for handling position sticky cross browser --}}
 <script type="text/javascript" src="{{ asset('js/stickybits.js') }}"></script>
 <script src="{{ mix('js/app.js') }}"></script>
-@if(env('APP_ENV') == 'live')
-    <script>
-        // Stop F12
-        document.addEventListener('keydown', function (e) {
-            if (e.which === 123) {
-                e.preventDefault()
-            }
-        });
+{{--@if(env('APP_ENV') == 'live')--}}
+{{--    <script>--}}
+{{--        // Stop F12--}}
+{{--        document.addEventListener('keydown', function (e) {--}}
+{{--            if (e.which === 123) {--}}
+{{--                e.preventDefault()--}}
+{{--            }--}}
+{{--        });--}}
 
-        // Stop right click
-        document.oncontextmenu = function (e) {
-            e.preventDefault();
-        };
-    </script>
-@endif
+{{--        // Stop right click--}}
+{{--        document.oncontextmenu = function (e) {--}}
+{{--            e.preventDefault();--}}
+{{--        };--}}
+{{--    </script>--}}
+{{--@endif--}}
 <script src="https://maps.googleapis.com/maps/api/js?key={{ config('services.googleApiKey') }}"
         async defer></script>
 <script>
