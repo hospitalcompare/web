@@ -7,6 +7,7 @@ use App\Helpers\Errors;
 use App\Helpers\Utils;
 use App\Services\Location;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class Hospital extends Model
 {
@@ -383,9 +384,22 @@ class Hospital extends Model
             $query->bySpecialty($specialtyId);
         }]);
 
-        $preHospitals =  $hospitals->get()->toArray();
-        $hospitals = $hospitals->paginate(10)->onEachSide(1);
+//        $preHospitals =  $hospitals->get()->toArray();
+        $hospitals = $hospitals->limit(50)->get();
+        $preHospitals =  $hospitals->toArray();
+        //Slice the collection to get the items to display in current page
+        if(empty($page))
+            $page = 1;
 
+        $page -= 1;
+
+        $perPage = 10;
+        $currentPageSearchResults = $hospitals->slice($page * $perPage, $perPage)->all();
+        $hospitals = new LengthAwarePaginator($currentPageSearchResults, $hospitals->count(), $perPage);
+        $hospitals->setPath(env('APP_URL').'/results-page');
+
+        //Reset the page ( for doctor )
+        $page += 1;
         //Build the Rankings for the Waiting Times tooltip
         $outpatientRankings = $inpatientRankings = $waitingTimeRankings = $diagnosticRankings = [];
         if(!empty($preHospitals)) {
@@ -394,28 +408,28 @@ class Hospital extends Model
                 if(!empty($preHospital['waiting_time'][0]['outpatient_perc_95'])) {
                     $outpatientRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => $preHospital['waiting_time'][0]['outpatient_perc_95']];
                 } else {
-                    $outpatientRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => 100];
+                    $outpatientRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => 50];
                 }
 
                 //Check if we have Inpatient
                 if(!empty($preHospital['waiting_time'][0]['inpatient_perc_95'])) {
                     $inpatientRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => $preHospital['waiting_time'][0]['inpatient_perc_95']];
                 } else {
-                    $inpatientRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => 100];
+                    $inpatientRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => 50];
                 }
 
                 //Check if we have Waiting Time
                 if(!empty($preHospital['waiting_time'][0]['perc_waiting_weeks'])) {
                     $waitingTimeRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => $preHospital['waiting_time'][0]['perc_waiting_weeks']];
                 } else {
-                    $waitingTimeRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => 100];
+                    $waitingTimeRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => 50];
                 }
 
                 //Check if we have Diagnostics
                 if(!empty($preHospital['waiting_time'][0]['diagnostics_perc_6'])) {
                     $diagnosticRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => $preHospital['waiting_time'][0]['diagnostics_perc_6']];
                 } else {
-                    $diagnosticRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => 100];
+                    $diagnosticRankings[$preHospital['id']] = ['hospital_id' => $preHospital['id'], 'ranking' => 50];
                 }
             }
         }
