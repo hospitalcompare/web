@@ -31,7 +31,7 @@
                     'hospitalTitle'     => $title,
                     'modalTarget'       => '#hc_modal_enquire_private',
                     'classTitle'        => 'btn btn-enquire-pink btn-icon',
-                    'target'            => 'blank',
+                    'target'            => '_blank',
                     'buttonText'        => 'Make an enquiry',
                     'hospitalIds'       => $id,
                     'id'                => 'enquire_'.$id])

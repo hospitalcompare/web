@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="btn-area">
                                     @include('components.basic.button', [
-                                        'target'            => 'blank',
+                                        'target'            => '_blank',
                                         'hrefValue'         => $url,
                                         'buttonText'        => 'Or visit hospital website',
                                         'classTitle'        => 'btn btn-squared btn-squared_slim btn-brand-primary-4 btn-enquire w-100 text-center'])

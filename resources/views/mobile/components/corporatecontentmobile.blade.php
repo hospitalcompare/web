@@ -662,7 +662,7 @@
                                            'hospitalTitle'     => $title,
                                            'modalTarget'       => '#hc_modal_enquire_private',
                                            'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto ml-auto',
-                                           'target'            => 'blank',
+                                           'target'            => '_blank',
                                            'buttonText'        => 'Enquire now',
                                            'hospitalIds'       => $id,
                                            'id'                => 'enquire_special_'.$id])
