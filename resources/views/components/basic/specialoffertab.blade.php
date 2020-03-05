@@ -46,7 +46,7 @@
                     'hospitalTitle'     => $headerText['open']['title'],
                     'modalTarget'       => '#hc_modal_enquire_private',
                     'classTitle'        => 'btn btn-icon btn-enquire btn-brand-secondary-3 enquiry font-12 pr-2',
-                    'target'            => 'blank',
+                    'target'            => '_blank',
                     'buttonText'        => 'Make an enquiry',
                     'hospitalIds'       => $hospitalId,
                     'svg'               => 'circle-check'
@@ -57,7 +57,7 @@
                     'hrefValue'         => $hospitalUrl,
                     'modalTarget'       => '#hc_modal_contacts_general',
                     'classTitle'        => 'btn btn-icon btn-enquire btn-brand-secondary-3 enquiry font-12 pr-2',
-                    'target'            => 'blank',
+                    'target'            => '_blank',
                     'buttonText'        => 'Make an enquiry',
                     'hospitalIds'       => $hospitalId
                     ])

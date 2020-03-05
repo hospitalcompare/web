@@ -38,7 +38,7 @@
                                     <p class="col-brand-primary-1 font-20 mb-1" id="hospital_telephone">{{ $tel }}</p>
                                     @include('components.basic.button', [
                                         'hospitalType'      => 'nhs-hospital',
-                                        'target'            => 'blank',
+                                        'target'            => '_blank',
                                         'hrefValue'         => $url,
                                         'hospitalUrl'       => '',
                                         'classTitle'        => 'p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block',
@@ -50,7 +50,7 @@
 {{--                                    Private web address --}}
                                     @includeWhen(!empty($url2), 'components.basic.button', [
                                         'hospitalType'      => 'nhs-hospital',
-                                        'target'            => 'blank',
+                                        'target'            => '_blank',
                                         'hrefValue'         => $url2,
                                         'classTitle'        => 'p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block',
                                         'buttonText'        => 'Visit website'])

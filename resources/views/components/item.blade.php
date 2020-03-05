@@ -254,7 +254,7 @@
                                 'hospitalTitle'     => $title,
                                 'modalTarget'       => '#hc_modal_enquire_private',
                                 'classTitle'        => 'btn  btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
-                                'target'            => 'blank',
+                                'target'            => '_blank',
                                 'buttonText'        => $btnText,
                                 'id'                => 'enquire_private_'.$id,
                                 'hospitalIds'       => $id,
@@ -268,7 +268,7 @@
                                 <div class="btn-wrapper col-6 ">
                                     @include('components.basic.button', [
                                         'hospitalType'      => $NHSClass,
-                                        'target'            => 'blank',
+                                        'target'            => '_blank',
                                         'hrefValue'         => $url,
                                         'classTitle'        => 'btn  btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
                                         'buttonText'        => 'Web',
@@ -317,7 +317,7 @@
                                 <div class="btn-wrapper col-6 ">
                                     @include('components.basic.button', [
                                         'hospitalType'      => $NHSClass,
-                                        'target'            => 'blank',
+                                        'target'            => '_blank',
                                         'hrefValue'         => $url,
                                         'classTitle'        => 'btn  btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
                                         'buttonText'        => 'Web',
