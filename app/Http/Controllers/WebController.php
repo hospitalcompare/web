@@ -340,4 +340,9 @@ class WebController extends BaseController
     public function attributionsPage() {
         return view('pages.attributionspage');
     }
+
+    // React sandbox
+    public function reactTestPage() {
+        return view('pages.reacttestpage');
+    }
 }

@@ -23,7 +23,7 @@ mix.webpackConfig({
             Cookies: "js-cookie",
             Popper: "popper"
         })
-    ],
+    ]
 });
 
 //Copy all the images that are used on the Web Application to the right folder ( public/images )
@@ -31,6 +31,7 @@ mix.copyDirectory('resources/images', 'public/images');
 mix.copyDirectory('resources/video', 'public/video');
 mix.copyDirectory('resources/fonts', 'public/fonts');
 mix.copyDirectory('resources/downloads', 'public/downloads');
+mix.copyDirectory('resources/js/react-components', 'public/js/react-components');
 mix.copy('node_modules/stickybits/dist/stickybits.min.js', 'public/js/stickybits.js');
 
 console.log('Production mode', mix.inProduction());
@@ -49,7 +50,7 @@ if (mix.inProduction()) { // Don't add sourcemaps
             processCssUrls: false
         })
         .sass('resources/sass/app.scss', 'public/css')
-        .js(['resources/js/app.js'], 'public/js');
+        .react(['resources/js/app.js'], 'public/js');
 } else { // If in dev mode, add sourcemaps
     mix.options({
         autoprefixer: false,
@@ -65,8 +66,8 @@ if (mix.inProduction()) { // Don't add sourcemaps
         // .sourceMaps(false, 'source-map')
         .sourceMaps()
         .sass('resources/sass/app.scss', 'public/css')
-        .js(['resources/js/app.js'], 'public/js');
-    // .version();
+        .react(['resources/js/app.js'], 'public/js')
+        .version();
 }
 
 

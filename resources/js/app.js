@@ -26,7 +26,6 @@ import './scripts/survey';                                  // Handle the exit s
 // window.Vue = require('vue');                             // Vue.js
 
 
-
 // Components > Basic
 import './components/basic/specialoffer';                   // Toggling special offer slide out
 import './components/basic/popover';                        // Trigger bootstrap tooltip
@@ -72,4 +71,19 @@ import './components/compare';
 // const app = new Vue({
 //     el: '#app',
 // });
+//
+import React, {Component} from 'react'
+import ReactDOM from 'react-dom'
+// // import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import FaqHome from './react-components/FaqHome'
 
+const App = () => {
+    return (
+        <div>
+            <FaqHome/>
+        </div>
+    );
+};
+
+const reactContainer = document.getElementById('react-container');
+ReactDOM.render(<App/>, reactContainer);
