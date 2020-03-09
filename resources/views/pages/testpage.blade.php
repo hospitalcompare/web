@@ -11,6 +11,19 @@
 @section('body-class', 'test-page')
 
 @section('content')
+        <section>
+            <div class="container">
+                <h2>Enquiry button</h2>
+                <div class="btn-area">
+                    @include('components.basic.button', [
+                        'classTitle'        =>  'btn btn-brand-secondary-3 enquiry font-12 p-2 btn-enquire text-center',
+                        'buttonText'        =>  'Enquire',
+                        'svg'               =>  'circle-check',
+                        'style'             =>  'min-width: 100px'
+                    ])
+                </div>
+            </div>
+        </section>
         <section class="_bg-brand-primary-1">
             <div class="container">
                 <form class="w-100" id="form_exit_survey">
