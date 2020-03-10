@@ -65,11 +65,6 @@
         width: 22%;
         position: relative;
     }
-    //
-    //.results-page-desktop .result-item-inner .result-item-section-1 .hospital-details,
-    //.test-page .result-item-inner .result-item-section-1 .hospital-details {
-    //    padding: 38px 8px 38px 8px;
-    //}
 
     .results-page-desktop .result-item-inner .result-item-section-2,
     .test-page .result-item-inner .result-item-section-2 {
@@ -129,21 +124,21 @@
         height: 25px;
     }
 
-    .results-page-desktop .nhs-hospital p:after {
-        border-bottom: solid 15px transparent;
-        border-right: solid 15px transparent;
-        border-left: solid 15px $nhsBlue;
-        border-top: solid 15px $nhsBlue;
-        content: ''
-    }
-
-    .results-page-desktop .private-hospital p:after {
-        border-bottom: solid 15px transparent;
-        border-right: solid 15px transparent;
-        border-left: solid 15px $privateBlue;
-        border-top: solid 15px $privateBlue;
-        content: ''
-    }
+    //.results-page-desktop .nhs-hospital p:after {
+    //    border-bottom: solid 15px transparent;
+    //    border-right: solid 15px transparent;
+    //    border-left: solid 15px $nhsBlue;
+    //    border-top: solid 15px $nhsBlue;
+    //    content: ''
+    //}
+    //
+    //.results-page-desktop .private-hospital p:after {
+    //    border-bottom: solid 15px transparent;
+    //    border-right: solid 15px transparent;
+    //    border-left: solid 15px $privateBlue;
+    //    border-top: solid 15px $privateBlue;
+    //    content: ''
+    //}
 
     .results-page-desktop .sort-item-title,
     .test-page .sort-item-title {

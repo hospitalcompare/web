@@ -38,24 +38,8 @@
         @else
         <meta property="og:image" content="{{ asset('/images/placeholder.jpg') }}" />
         @endif
-
-{{--        <script type="text/javascript">--}}
-{{--            //uncomment and change this to false if you're having trouble with WOFFs--}}
-{{--            //var woffEnabled = true;--}}
-{{--            //to place your webfonts in a custom directory--}}
-{{--            //uncomment this and set it to where your webfonts are.--}}
-{{--            //var customPath = "/themes/fonts";--}}
-{{--        </script>--}}
         <script type="text/javascript" src="{{ asset('fonts/MyFontsWebfontsKit.js') }}"></script>
-        <script type="text/javascript">
-            // var onloadCallback = function() {
-            //     console.log("grecaptcha is ready!");
-            // };
-
-        </script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-
         @if(env('APP_ENV') === 'dev')
             <!-- Hotjar Tracking Code for http://hcstaging.co.uk/ -->
             <script>

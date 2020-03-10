@@ -142,7 +142,7 @@ window.addHospitalToCompare = function (element) {
         nhsFundedWork = 1;
     }
 
-    var btnClass = (isDesktop) ? 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-block font-12' : 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-squared btn-squared_slim font-12 px-5';
+    var btnClass = (isDesktop) ? 'btn btn-brand-secondary-3 enquiry font-12 p-2 btn-enquire text-center w-100' : 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-squared btn-squared_slim font-12 px-5';
     var targetModal = hospitalType == 'Private' ? '#hc_modal_enquire_private' : '#hc_modal_contacts_general_shortlist_' + element.id;
     var btnContent =
         `<a id="${element.id}"
@@ -154,7 +154,7 @@ window.addHospitalToCompare = function (element) {
             data-image="${element.image}"
             data-target="${targetModal}">${circleCheck}Enquire</a>`;
     // Button content if NHS hospital has a private website url
-    var urlTwoButton = (element.nhs_private_url != "" && typeof element.nhs_private_url != "undefined") ? `<a id="${element.id}" class="p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block" target="blank" href="${element.nhs_private_url}" role="button" data-hospital-type="nhs-hospital"><span>Visit website</span></a>` : '';
+    var urlTwoButton = (element.nhs_private_url != "" && typeof element.nhs_private_url != "undefined") ? `<a id="${element.id}" class="p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block" target="_blank" href="${element.nhs_private_url}" role="button" data-hospital-type="nhs-hospital"><span>Visit website</span></a>` : '';
     // Button to trigger contact form for the private wing of NHS hospital
     var nhsPrivateContactBtn = (element.email != "" && typeof element.email != "undefined") ? `<button class="btn btn-squared btn-squared_slim btn-enquire btn-brand-secondary-3 enquiry font-12 text-center mt-5" id="${element.id}" data-hospital-id="${element.id}" data-dismiss="modal" data-hospital-type="nhs-hospital" data-toggle="modal" data-target="#hc_modal_enquire_private" data-hospital-title="${element.display_name}">Make a private treatment enquiry${circleCheck}</button>` : '';
 
@@ -177,9 +177,9 @@ window.addHospitalToCompare = function (element) {
                                 <div class="col-12 col-md-6">
                                     <div
                                         class="col-inner h-100 col-inner__left text-center d-flex flex-column justify-content-center align-items-center">
-                                        <h3 class="modal-title mb-3">Thanks for Your Interest in <span id="hospital_title">${element.display_name}</span>
+                                        <h3 class="modal-title mb-3 w-100">Thanks for Your Interest in <span id="hospital_title">${element.display_name}</span>
                                             </h3>
-                                        <div class="d-flex mb-3">
+                                        <div class="d-flex mb-3 w-100">
                                             <div class="modal-copy">
                                                 <p class="col-grey p-secondary mb-0">Without a GP referral, this NHS hospital won't respond to direct enquiries regarding
                                                     treatments. Please call or check their website to find out more about their services
@@ -195,7 +195,7 @@ window.addHospitalToCompare = function (element) {
                                         <div class="">
                                             <p class="mb-1">Main switchboard</p>
                                             <p class="col-brand-primary-1 font-20 mb-1" id="hospital_telephone">${element.phone_number}</p>
-                                                <a id="${element.id}" class="p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block" target="blank" href="${element.url}" role="button" data-hospital-type="${element.hospital_type.name === 'Independent' ? 'private-hospital' : 'nhs-hospital'}">
+                                                <a id="${element.id}" class="p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block" target="_blank" href="${element.url}" role="button" data-hospital-type="${element.hospital_type.name === 'Independent' ? 'private-hospital' : 'nhs-hospital'}">
                                                     <span>Visit website</span>
                                                 </a>
                                             <p class="mb-1">Private</p>
