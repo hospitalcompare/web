@@ -36,7 +36,9 @@ class FaqHome extends Component {
         return (
             <div className="container">
                 <SearchFaq setFaqs={this.setFaqs}/>
-                <ListFaqs faqs={this.state.faqs}/>
+                <div className="accordion" id="faqs_accordion">
+                    <ListFaqs faqs={this.state.faqs}/>
+                </div>
             </div>
         );
     }
