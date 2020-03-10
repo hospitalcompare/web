@@ -2,9 +2,17 @@ import React, {Component} from 'react';
 import axios from "axios";
 
 class SearchFaq extends Component {
+    constructor(props) {
+        super(props);
+        this.timer;
+        this.interval = 5000;
+    }
+
+// Do the ajax request with a delay
 
     onChange = (e) => {
-        this.props.setFaqs(e.target.value);
+        clearTimeout(this.timer);
+        this.timer = setTimeout(this.props.setFaqs(e.target.value), this.interval, e.target);
     };
 
     render() {
@@ -16,7 +24,7 @@ class SearchFaq extends Component {
                                className="w-100 form-control"
                                type="search"
                                placeholder="Search"
-                               onChange={this.onChange} />
+                               onInput={this.onChange} />
                     </div>
                 </form>
             </div>

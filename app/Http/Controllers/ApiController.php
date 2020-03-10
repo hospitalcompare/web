@@ -406,6 +406,17 @@ class ApiController {
         return $this->returnedData;
     }
 
+    // Return all faqs
+    public function faqs() {
+        //Search FAQs by question and answer
+        $faqs = Faq::all();
+
+        $this->returnedData['success']      = true;
+        $this->returnedData['data']['faqs'] = $faqs;
+
+        return $this->returnedData;
+    }
+
     public function testGet() {
 
         $this->returnedData['success'] = true;
