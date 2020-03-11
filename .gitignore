@@ -20,3 +20,4 @@ yarn.lock
 /public/downloads/
 /public/mix-manifest.json
 /public/enquiries/
+/public/robots.txt
