@@ -475,4 +475,13 @@ class ApiController {
 
         return $this->returnedData;
     }
+
+    public function exampleAPI() {
+        //Get the request and load it as variables
+        $request    = \Request::all();
+        $this->returnedData['success'] = true;
+        $this->returnedData['data'] = $request;
+
+        return $this->returnedData;
+    }
 }
