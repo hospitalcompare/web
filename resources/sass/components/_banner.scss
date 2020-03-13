@@ -71,12 +71,15 @@
         margin: 0 auto 20px;
     }
 
-    .postcode-item {
+    .postcode-item,
+    .postcode-error-message {
         @include font-size(14);
         margin: 0;
         text-align: left;
         padding: 9px;
+    }
 
+    .postcode-item {
         &:hover {
             background-color: $textGrey;
             color: $white;

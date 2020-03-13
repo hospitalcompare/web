@@ -95,8 +95,8 @@
 
     // Mobile tooltips
     &.modal-mobile-tooltip {
-        top: $mobile-header-height;
-        height: calc(100vh - #{$mobile-header-height});
+        //top: $mobile-header-height;
+        //height: calc(100vh - #{$mobile-header-height});
 
         .modal-dialog {
             height: calc(100vh - 1rem - #{$mobile-header-height});

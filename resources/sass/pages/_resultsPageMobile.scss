@@ -19,7 +19,9 @@
     }
 
     #show_filters {
-        padding: 15px 15px !important;
+        padding: 0 15px !important;
+        height: 50px;
+        line-height: 50px;
 
         svg {
             //@include v-c;
@@ -43,13 +45,18 @@
         transform: translate3d(-100%, 0, 0);
         overflow: scroll;
         position: fixed;
+        height: calc(100vh - #{$mobile-header-height});
         top: $mobile-header-height;
         left: 0;
         width: 100%;
-        height: calc(100vh - #{$mobile-header-height});
         background-color: #fff;
         z-index: 2000;
         transition: $transition;
+
+        @include media-breakpoint-up(sm) {
+            top: 80px;
+            height: calc(100vh - 80px);
+        }
 
         .dropdown-toggle {
             background-color: transparent;
@@ -133,6 +140,21 @@
         .dropdown-menu {
             min-width: initial !important;
             max-width: 100% !important;
+        }
+    }
+
+    .select-sort-by {
+        & + svg {
+            @include v-c;
+        }
+
+        .dropdown-toggle {
+            border: none !important;
+            @extend .bg-grey;
+            @extend .pl-2;
+            @extend .py-0;
+            height: 50px;
+            line-height: 50px;
         }
     }
 

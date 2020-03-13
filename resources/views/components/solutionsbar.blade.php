@@ -4,7 +4,7 @@
 
             {{--            @include('components.doctor', ['delay' => 0])--}}
             @if(!empty($data['special_offers']))
-                <ul class="solutions-menu align-items-end d-none d-md-flex mb-0 ml-auto mr-3">
+                <ul class="solutions-menu align-items-end d-none d-lg-flex mb-0 ml-auto mr-3">
                     @foreach($specialOffers as $key => $specialOffer )
                         <li class="d-block h-100 {{ $loop->index != 0 ? 'ml-4' : '' }}">
                             @include('components.basic.specialoffertab', [
@@ -35,7 +35,7 @@
                     @endforeach
                 </ul>
             @endif
-            <div id="compare_button_title" class="compare-button-title d-flex align-items-center h-100">
+            <div id="compare_button_title" class="compare-button-title d-flex align-items-center h-100 ml-auto">
                 @svg('compare-heart', 'compare-heart')
                 <p class="font-26">Compare&nbsp;(<span id="compare_number">0</span>)<span
                         class="compare-arrow ml-3"></span>
@@ -45,7 +45,7 @@
     </div>
     <div class="compare-hospitals-content">
         <div class="container">
-            <div class="row">
+            <div class="row flex-nowrap">
                 <div class="col col-3" id="no_items_added">
                     <div class="col-inner pr-3">
                         <div class="col-header_small">
@@ -363,7 +363,7 @@
                     </div>
                 </div>
                 <div class="col col-9 mt-0 border-right-0">
-                    <div class="row" id="compare_hospitals_grid">
+                    <div class="row flex-nowrap" id="compare_hospitals_grid">
                         <!-- Items added here -->
                     </div>
                 </div>

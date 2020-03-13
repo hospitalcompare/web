@@ -3,7 +3,7 @@
         <div class="container">
             <div class="sort-bar">
                 <div class="show-section section-1 SofiaPro-Medium font-16">
-                    <span class="SofiaPro-SemiBold">Showing {{$data['hospitals']->total()}} hospital(s)</span><br> Ordered
+                    <span class="SofiaPro-SemiBold">Showing {{(!empty($data['hospitals']) && !is_array($data['hospitals']) && $data['hospitals']->total() == 50)? 'a maximum of 50':$data['hospitals']->total()}} hospital(s)</span><br> Ordered
                     by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'].((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? ' & Distance' : ((Request::input('sort_by') == 10 || Request::input('sort_by') == 9) ? ' then Waiting Time' : ' then Care Quality')) : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating then Distance' : 'Care Quality Rating then Waiting Time') }}
                 </div>
                 <div class="section-2 d-none d-lg-block">
@@ -139,7 +139,7 @@
             </div>
         </div>
     </div>
-    <div class="filter-parent {{ !empty($displayBlock) && ($displayBlock) || !empty($hc_errors) ? 'd-block' : '' }}">
+    <div class="filter-parent {{ !empty($displayBlock) && ($displayBlock) ? 'd-block' : '' }}">
         <div class="filter container">
             <div class="postcode-radius row">
                 <div class="postcode-radius-child procedures col-12 col-md-3 d-flex align-items-center">
@@ -165,8 +165,7 @@
                         'size'              => 'max-width',
                         'html'              => 'true',
                         'trigger'           => 'hover',
-                        'content'           => '
-                        '])
+                        'content'           => '<p>If you know what treatment you need, select the treatment from our list or select generic body areas if you\'re not sure</p>'])
                     >@svg('icon-more-info')</a>
                 </div>
                 <div class="postcode-radius-child postcode col-12 col-md-3 d-flex align-items-center">
@@ -182,15 +181,15 @@
                        class="help-link"
                        style="right: 53px"
                         @include('components.basic.popover', [
-                        'dismissible'   => true,
-                        'placement'      => 'top',
-                        'html'           => 'true',
-                        'size'           => 'max-width',
-                        'trigger'        => 'hover',
-                        'content'        => '<p>
-                                         Please enter your postcode<br>for a refined search.
-                                     </p>
-                                     '])
+                        'dismissible'       => true,
+                        'placement'         => 'top',
+                        'html'              => 'true',
+                        'size'              => 'max-width',
+                        'trigger'           => 'hover',
+                        'content'           => '<p>
+                                             Please enter your postcode<br>for a refined search.
+                                         </p>
+                                         '])
                     >@svg('icon-more-info')</a>
                 </div>
                 <div class="postcode-radius-child radius col-12 col-md-6">
@@ -339,7 +338,7 @@
                                      '])
                     >@svg('icon-more-info')</a>
                 </div>
-                <div class="filter-section-child col-6 col-md-4 col-lg-2 d-flex flex-column align-items-end">
+                <div class="filter-section-child col-6 col-md-4 col-lg-2 d-flex flex-column justify-content-end align-items-end">
                     @include('components.basic.button', [
                         'id'            =>  'clear_filters',
                         'classTitle'    =>  'col-grey pb-2 border-0',

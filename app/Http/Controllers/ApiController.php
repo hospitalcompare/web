@@ -27,6 +27,10 @@ class ApiController {
         'data'      => []
     ];
 
+    public function generateSitemap() {
+        return json_encode(Utils::generateSitemap());
+    }
+
     /**
      * Imports one or ALL import files based on a given `name`
      *
@@ -358,7 +362,7 @@ class ApiController {
                 if(!empty($hospital) && !empty($hospital->email)) {
                     try {
                         $bodyProvider = Email::getProviderBody($specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $additionalInformation);
-                        Email::send($bodyProvider,  $hospital->email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
+                        Email::send($bodyProvider,  $hospital->email, 'Enquiry regarding treatment at your hospital', 'datamanager@hospitalcompare.co.uk');
                     } catch(\Exception $e){
                         \Log::info('Something went wrong sending the Provider email. Please check the enquiries: '.\GuzzleHttp\json_encode($enquiry).'. Error:'.$e->getMessage());
                     }
@@ -468,6 +472,15 @@ class ApiController {
 
         $this->returnedData['success'] = true;
         $this->returnedData['data'] = $survey;
+
+        return $this->returnedData;
+    }
+
+    public function exampleAPI() {
+        //Get the request and load it as variables
+        $request    = \Request::all();
+        $this->returnedData['success'] = true;
+        $this->returnedData['data'] = $request;
 
         return $this->returnedData;
     }

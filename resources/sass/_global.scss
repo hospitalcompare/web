@@ -239,10 +239,12 @@ ul.blue-dot {
     &.blue-dot_small {
 
         li {
-            color: $black;
+            //color: $black;
             margin-bottom: 5px;
+            padding-left: 15px;
 
             &:before {
+                top: 10px;
                 width: 5px;
                 height: 5px;
                 background-color: $brand-primary-1;
@@ -293,11 +295,15 @@ select.big {
 
 // Custom container widths
 .container-980 {
-    max-width: 980px;
+    @include media-breakpoint-up(xl){
+        max-width: 980px;
+    }
 }
 
 .container-1028 {
-    max-width: 1028px;
+    @include media-breakpoint-up(xl){
+        max-width: 1028px;
+    }
 }
 
 .bg-turq {
@@ -532,11 +538,7 @@ select.big {
     }
 
 
-    .cc-window.cc-banner {
-        padding: 1em 1.8em;
-        width: 100%;
-        flex-direction: row;
-    }
+
 
     .cc-link {
         color: $brand-primary-1 !important;
@@ -560,6 +562,15 @@ select.big {
         }
     }
 }
+
+.cc-window {
+    &.cc-banner {
+        padding: 1em 1.8em;
+        width: 100%;
+        flex-direction: row;
+    }
+}
+
 
 // Transition for SVG paths
 path {
@@ -672,6 +683,10 @@ path {
     }
 }
 
+.blue-tick {
+    max-width: 60px;
+}
+
 // Signature font
 .signature {
     font-family: "Brown Pen", cursive;
@@ -707,7 +722,7 @@ path {
 }
 
 .mb-25 {
-    margin-bottom: 25px !important;
+    margin-bottom: 25px;
 }
 
 .mb-40 {
@@ -905,12 +920,12 @@ h6 {
     animation-iteration-count: 2;
 }
 
-#search_form {
-    .dropdown-menu {
-        width: 100%;
-        transform: none;
-    }
-}
+//#search_form {
+//    .dropdown-menu {
+//        width: 100%;
+//        transform: none;
+//    }
+//}
 
 .home-page {
     #submit_search {
@@ -920,7 +935,7 @@ h6 {
 
 .modal-mobile-search {
     .svg-wrapper {
-        background-image: url('/images/icons/heart-line-turq.svg');
+        background-image: url('/images/icons/footer-heart-turq.svg');
         background-repeat: no-repeat;
         background-size: auto 100%;
         background-position: 89% top;
@@ -1081,21 +1096,21 @@ h6 {
     padding: 0 !important;
 }
 
-.results-page-desktop .nhs-hospital p:after {
-    border-bottom: solid 15px transparent;
-    border-right: solid 15px transparent;
-    border-left: solid 15px $nhsBlue;
-    border-top: solid 15px $nhsBlue;
-    content: ''
-}
-
-.results-page-desktop .private-hospital p:after {
-    border-bottom: solid 15px transparent;
-    border-right: solid 15px transparent;
-    border-left: solid 15px $privateBlue;
-    border-top: solid 15px $privateBlue;
-    content: ''
-}
+//.results-page-desktop .nhs-hospital p:after {
+//    border-bottom: solid 15px transparent;
+//    border-right: solid 15px transparent;
+//    border-left: solid 15px $nhsBlue;
+//    border-top: solid 15px $nhsBlue;
+//    content: ''
+//}
+//
+//.results-page-desktop .private-hospital p:after {
+//    border-bottom: solid 15px transparent;
+//    border-right: solid 15px transparent;
+//    border-left: solid 15px $privateBlue;
+//    border-top: solid 15px $privateBlue;
+//    content: ''
+//}
 
 // Force accordions open for content editing purposes
 //.collapse {

@@ -3,14 +3,14 @@
         <div class="container">
             <div class="row pb-3">
                 <div class="col-12 py-3">
-                    <span class="SofiaPro-SemiBold">Showing {{$data['hospitals']->total()}} hospital(s)</span><br>
+                    <span class="SofiaPro-SemiBold">Showing {{(!empty($data['hospitals']) && !is_array($data['hospitals']) && $data['hospitals']->total() == 50)? 'a maximum of 50':$data['hospitals']->total()}} hospital(s)</span><br>
                     Ordered
                     by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'].((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? ' & Distance' : ((Request::input('sort_by') == 10 || Request::input('sort_by') == 9) ? ' then Waiting Time' : ' then Care Quality')) : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating then Distance' : 'Care Quality Rating then Waiting Time') }}
                 </div>
                 <div class="col-6">
                     @include('components.basic.button', [
                         'buttonText'        => 'Show Filters',
-                        'classTitle'        => 'btn btn-brand-primary-1 btn-squared btn-squared_slim btn-arrow-down font-14 d-flex flex-row-reverse justify-content-around',
+                        'classTitle'        => 'btn btn-brand-primary-1 btn-squared btn-squared_slim btn-arrow-down font-14 d-flex flex-row-reverse justify-content-around align-items-center',
                         'id'                => 'show_filters',
                         'svg'               => 'icon-filter',
                         'svgClass'          => 'd-inline position-static'
@@ -80,7 +80,7 @@
                         'suboptionClass'        => 'subprocedures',
                         'selectId'              => 'resultspage_treatment_dropdown',
                         'svg'                   => 'icon-chevron-down',
-                        'selectClass'           => 'select-picker highlight-search-dropdown',
+                        'selectClass'           => 'select-picker',
                         'name'                  => 'procedure_id',
                         'showTooltip'           => true,
                         'modalText'             =>
@@ -123,7 +123,7 @@
                         'placeholder'           => 'Waiting time',
                         'options'               => $data['filters']['waitingTimes'],
                         'svg'                   => 'icon-chevron-down',
-                        'selectClass'           => 'select-picker highlight-search-dropdown ',
+                        'selectClass'           => 'select-picker',
                         'placeholder'           =>'Waiting time',
                         'name'                  =>'waiting_time',
                         'labelClass'            => '',
@@ -144,7 +144,7 @@
                         'placeholder'           => 'NHS User Rating',
                         'options'               => $data['filters']['userRatings'],
                         'svg'                   => 'icon-chevron-down',
-                        'selectClass'           => 'select-picker highlight-search-dropdown',
+                        'selectClass'           => 'select-picker',
                         'placeholder'           => 'NHS User Rating',
                         'name'                  => 'user_rating',
                         'showTooltip'           => true,
@@ -163,7 +163,7 @@
                         'placeholder'       => 'Care Quality Rating',
                         'options'           => $data['filters']['qualityRatings'],
                         'svg'               => 'icon-chevron-down',
-                        'selectClass'       => 'select-picker highlight-search-dropdown',
+                        'selectClass'       => 'select-picker',
                         'placeholder'       => 'Care Quality Rating',
                         'name'              => 'quality_rating',
                         'showTooltip'       => true,
@@ -178,16 +178,16 @@
                 <!-- Hospital type -->
                 <div class="filter-mobile col-12">
                     @include('components.basic.select', [
-                        'selectParentClass' => 'w-100',
-                        'showLabel'         => true,
-                        'placeholder'       => 'Hospital Type',
-                        'options'           => $data['filters']['hospitalTypes'],
-                        'svg'               => 'icon-chevron-down',
-                        'selectClass'       => 'select-picker highlight-search-dropdown ',
-                        'placeholder'       => 'Hospital Type',
-                        'name'              => 'hospital_type',
-                        'showTooltip'       => true,
-                        'modalText'         =>
+                        'selectParentClass'     => 'w-100',
+                        'showLabel'             => true,
+                        'placeholder'           => 'Hospital Type',
+                        'options'               => $data['filters']['hospitalTypes'],
+                        'svg'                   => 'icon-chevron-down',
+                        'selectClass'           => 'select-picker',
+                        'placeholder'           => 'Hospital Type',
+                        'name'                  => 'hospital_type',
+                        'showTooltip'           => true,
+                        'modalText'             =>
                             '<p class="SofiaPro-SemiBold mb-3 font-18">
                                  NHS or Private Hospitals
                             </p>
@@ -207,11 +207,12 @@
                         'group'                 => true,
                         'groupName'             => 'policies',
                         'svg'                   => 'icon-chevron-down',
-                        'selectClass'           => 'highlight-search-dropdown select-picker',
+                        'selectClass'           => 'select-picker',
                         'placeholder'           => 'Insurance',
                         'name'                  => 'policy_id',
-                        'showTooltip'       => true,
-                        'modalText'         =>
+                        'showTooltip'           => true,
+                        'selectPickerContainer' => '.filter-parent',
+                        'modalText'             =>
                             '<p class="SofiaPro-SemiBold mb-3 font-18">
                                  Insurance policy
                             </p>

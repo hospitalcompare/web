@@ -6,7 +6,7 @@
 
 @section('keywords', 'this is the meta keywords')
 
-@section('mobile', 'width=device-width, initial-scale=1')
+@section('mobile', 'width=device-width, initial-scale=1, user-scalable=no')
 
 @section('body-class', 'about-us-page hc-content')
 
@@ -18,8 +18,7 @@
                 <div class="col-lg-6">
                     <h1>Feel <span class="col-brand-primary-1">Better</span> Knowing Your Legal Right to Choose
                     </h1>
-                    <p class="col-grey p-secondary mb-35">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Hospital Compare is a unique comparison website that empowers you to make the best choice of hospital for your treatment by exercising your legal rights.
+                    <p class="col-grey p-secondary mb-35">Hospital Compare is a unique comparison website that empowers you to make the best choice of hospital for your treatment by exercising your legal rights.
                     </p>
                     <div class="btn-area mb-5">
                         @include('components.basic.button', [
@@ -254,7 +253,7 @@
                         the best choice of hospital for their treatment. The team have a wealth of collective experience in the healthcare sector.
                     </p>
                     <p class="col-grey p-secondary text-center">To use Hospital Compare, enter your postcode at the top of this page and click ‘Find Hospitals’.</p>
-                    <p class="col-grey p-secondary text-center">If you have any questions, you can email us by clicking <a href="mailto:hello@hospitalcompare.co.uk">here</a>.</p>
+                    <p class="col-grey p-secondary text-center">If you have any questions, you can email us by clicking <a class="btn-link" href="mailto:hello@hospitalcompare.co.uk">here</a>.</p>
                 </div>
             </div>
 {{--            <div class="row">--}}

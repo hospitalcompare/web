@@ -130,7 +130,7 @@
                             'hospitalTitle'     => $title,
                             'modalTarget'       => '#hc_modal_enquire_private',
                             'classTitle'        => 'btn btn-icon btn-squared btn-squared_slim btn-enquire_mobile enquiry font-12 w-100 text-center d-flex justify-content-center align-items-center flex-row-reverse px-0',
-                            'target'            => 'blank',
+                            'target'            => '_blank',
                             'buttonText'        => $btnText,
                             'id'                => 'enquire_private_'.$id,
                             'hospitalIds'       => $id,
@@ -143,7 +143,7 @@
                             <div class="btn-wrapper col-6 ">
                                 @include('components.basic.button', [
                                     'hospitalType'      => $NHSClass,
-                                    'target'            => 'blank',
+                                    'target'            => '_blank',
                                     'hrefValue'         => $url,
                                     'classTitle'        => 'btn btn-squared btn-squared_slim btn-enquire_mobile btn-brand-primary-4 font-12 w-100 d-flex justify-content-center align-items-center flex-row-reverse px-0',
                                     'buttonText'        => 'Web',
@@ -184,14 +184,14 @@
                             'svg'               => 'circle-check'
                             ])
                     </div>
-                    <div class="col-6 mt-xl-2">
+                    <div class="col-6">
                         <div class="row btn-web-call">
                             {{--                        Web button --}}
                             {{-- Web button - link to website, open in new tab --}}
                             <div class="btn-wrapper col-6 ">
                                 @include('components.basic.button', [
                                     'hospitalType'      => $NHSClass,
-                                    'target'            => 'blank',
+                                    'target'            => '_blank',
                                     'hrefValue'         => $url,
                                     'classTitle'        => 'btn btn-squared btn-squared_slim btn-enquire_mobile btn-brand-primary-4 font-12 w-100 d-flex justify-content-center align-items-center flex-row-reverse px-0',
                                     'buttonText'        => 'Web',

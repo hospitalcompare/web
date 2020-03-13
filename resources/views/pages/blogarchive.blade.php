@@ -6,7 +6,7 @@
 
 @section('keywords', 'this is the meta keywords')
 
-@section('mobile', 'width=device-width, initial-scale=1')
+@section('mobile', 'width=device-width, initial-scale=1, user-scalable=no')
 
 @section('body-class', 'blog-page hc-content')
 
@@ -20,28 +20,28 @@
                 surrounding the healthcare industry.</h2>
         </div>
     </section>
-    <section class="blog-filters border-bottom py-0 d-none d-md-block">
-        <div class="container">
-            <div class="row py-4">
-                <div class="col ">
-                    <div class="filters row">
-                        <div class="text text-left col-12 col-lg-2 my-4 my-lg-auto">Filter articles</div>
-                        <div class="categories col-12 col-lg-10">
-                            @if(!empty($data['categories']))
-                                <div class="row justify-content-lg-end row-categories">
-                                    @foreach($data['categories'] as $cat)
-                                        <div class="col-2">
-                                            <a href="/blogs/category/{{$cat->id}}" class="btn btn-category category rounded text-center w-100" style="background-color: {{ (empty($data['categoryId']) ? $cat->colour : (($data['categoryId'] == $cat->id) ? $cat->colour : 'grey'))}}">{{$cat->name}}</a>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            @endif
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="blog-filters border-bottom py-0 d-none d-md-block">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row py-4">--}}
+{{--                <div class="col ">--}}
+{{--                    <div class="filters row">--}}
+{{--                        <div class="text text-left col-12 col-lg-2 my-4 my-lg-auto">Filter articles</div>--}}
+{{--                        <div class="categories col-12 col-lg-10">--}}
+{{--                            @if(!empty($data['categories']))--}}
+{{--                                <div class="row justify-content-lg-end row-categories">--}}
+{{--                                    @foreach($data['categories'] as $cat)--}}
+{{--                                        <div class="col-2">--}}
+{{--                                            <a href="/blogs/category/{{$cat->id}}" class="btn btn-category category rounded text-center w-100" style="background-color: {{ (empty($data['categoryId']) ? $cat->colour : (($data['categoryId'] == $cat->id) ? $cat->colour : 'grey'))}}">{{$cat->name}}</a>--}}
+{{--                                        </div>--}}
+{{--                                    @endforeach--}}
+{{--                                </div>--}}
+{{--                            @endif--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <section class="blog-list pt-4">
         <div class="container">
             <div class="blog-content row">

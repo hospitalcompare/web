@@ -6,7 +6,7 @@
 
 @section('keywords', 'this is the meta keywords')
 
-@section('mobile', 'width=device-width, initial-scale=1')
+@section('mobile', 'width=device-width, initial-scale=1, user-scalable=no')
 
 @section('body-class', 'home-page')
 
@@ -55,14 +55,15 @@
                         <p class="col-grey">Whether you’re searching for the shortest waiting times or a hospital with the highest quality ratings, Hospital Compare provides free, unbiased, accurate and up-to-date information on over 750 NHS and private hospitals across England.</p>
                     </div>
                     <div class="why-use-video col col-12 col-md-6">
-                        <div class="video-wrapper">
-                            <video muted class="content" poster="{{ url('images/home-1.jpg') }}">
-                                <source src="{{ asset('video/For_Wes.mp4') }}" type="video/mp4">
-                                <source src="movie.ogg" type="video/ogg">
-                                Your browser does not support the video tag.
-                            </video>
+                        <img class="w-100" src="{{ url('/images/home-1.jpg') }}" alt="Doctor and patient in consultation">
+{{--                        <div class="video-wrapper">--}}
+{{--                            <video muted class="content" poster="{{ url('images/home-1.jpg') }}">--}}
+{{--                                <source src="{{ asset('video/For_Wes.mp4') }}" type="video/mp4">--}}
+{{--                                <source src="movie.ogg" type="video/ogg">--}}
+{{--                                Your browser does not support the video tag.--}}
+{{--                            </video>--}}
                             {{--                            <div class="player-button toggle"></div>--}}
-                        </div>
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>

@@ -29,9 +29,9 @@
 // });
 
 // Matches UK postcode. Does not match to UK Channel Islands that have their own postcodes (non standard UK)
-$.validator.addMethod( "postcodeUK", function( value, element ) {
-    return this.optional( element ) || /^((([A-PR-UWYZ][0-9])|([A-PR-UWYZ][0-9][0-9])|([A-PR-UWYZ][A-HK-Y][0-9])|([A-PR-UWYZ][A-HK-Y][0-9][0-9])|([A-PR-UWYZ][0-9][A-HJKSTUW])|([A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY]))\s?([0-9][ABD-HJLNP-UW-Z]{2})|(GIR)\s?(0AA))$/i.test( value );
-}, "Please specify a valid UK postcode" );
+$.validator.addMethod("postcodeUK", function (value, element) {
+    return this.optional(element) || /^((([A-PR-UWYZ][0-9])|([A-PR-UWYZ][0-9][0-9])|([A-PR-UWYZ][A-HK-Y][0-9])|([A-PR-UWYZ][A-HK-Y][0-9][0-9])|([A-PR-UWYZ][0-9][A-HJKSTUW])|([A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY]))\s?([0-9][ABD-HJLNP-UW-Z]{2})|(GIR)\s?(0AA))$/i.test(value);
+}, "Please specify a valid UK postcode");
 
 // Add a custom validation to the jquery validate object - validate phone number field as UK format
 $.validator.addMethod('phoneUK', function (phone_number, element) {
@@ -62,9 +62,18 @@ if ($form.length > 0) {
 
     // jquery validate options
     $form.validate({
+        ignore: ".ignore",
         rules: {
             hospital_id: {
                 required: true
+            },
+            spam_test: {
+                maxlength: 0
+            },
+            hiddenRecaptcha: {
+                required: function () {
+                    return grecaptcha.getResponse() === '';
+                }
             },
             title: "required",
             firstName: {
@@ -101,20 +110,20 @@ if ($form.length > 0) {
             firstName: "Please enter your first name",
             lastName: "Please enter your surname",
             email: "Please enter a valid email address",
-            confirm_email: "The passwords entered do not match",
+            confirm_email: "The emails entered do not match",
             phone_number: "Please enter your contact number",
             postcode: "Please enter a valid UK postcode",
-            procedure_id: "Please select the procedure required",
-            gdpr: "Please confirm you agree to our terms of use"
+            procedure_id: "Please select the treatment required",
+            gdpr: "Please confirm you agree to our terms of use",
+            hiddenRecaptcha: "Please check the captcha checkbox"
         },
         errorPlacement: function (error, element) {
             //console.dir(error, element);
-            var customError = $([
-                '<span class="invalid-feedback d-block">',
-                '  <span class="mb-0 d-block">',
-                '  </span>',
-                '</span>'
-            ].join(""));
+            var customError =
+                $(`<span class="invalid-feedback d-block">
+                    <span class="mb-0 d-block">
+                    </span>
+                </span>`);
 
             // Add `form-error-message` class to the error element
             error.addClass("form-error-message");
@@ -122,8 +131,10 @@ if ($form.length > 0) {
             // Insert it inside the span that has `mb-0` class
             error.appendTo(customError.find("span.mb-0"));
 
+            // Select the parent wrapper - either input-wrapper or select-wrapper
+            var wrapper = element.parents("[class*='wrapper']");
             // Insert your custom error
-            customError.insertBefore(element).slideDown();
+            customError.insertBefore(wrapper).slideDown();
         },
         // Submit handler - what happens when form submitted
         submitHandler: function () {
@@ -146,14 +157,12 @@ if ($form.length > 0) {
                     'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
                 },
                 success: function (data) {
-                    // alert('Thanks, your enquiry has been submitted');
                     $('#hc_modal_enquire_private').modal('hide');
                     showAlert('Thank you ' + data.data[0].first_name + ', your enquiry has been successfully sent!', true, true);
+                    handleFormReset();
                 },
                 error: function (e) {
                     var errorMsg = JSON.parse(e.responseText).errors.error;
-                    // console.log(JSON.parse(e.responseText).errors);
-                    // console.log("ERROR : ", errorMsg, "status text: ", e.statusText);
                     showAlert(errorMsg, false, true);
                 }
             });
@@ -173,3 +182,4 @@ $('#btn_submit').on('click', function (e) {
 $("[data-hide]").on("click", function () {
     $(this).closest("." + $(this).attr("data-hide")).slideUp();
 });
+

@@ -3,13 +3,6 @@
     <div class="corporate-content-inner d-flex">
         <div class="corporate-content-section-1"></div>
         <div class="corporate-content-section-2 position-relative w-100">
-{{--        @include('components.basic.button', [--}}
-{{--            'buttonText'        => 'Close Info',--}}
-{{--            'classTitle'        => 'btn btn-cc-close btn-squared btn-squared_slim',--}}
-{{--            'svg'               => 'times',--}}
-{{--            'dataTarget'        => '#corporate_content_hospital_' . $id,--}}
-{{--            'style'             => 'right: 0; top: 9px',--}}
-{{--            'id'                => 'close_cc_' . $id])--}}
         <!-- Nav tabs -->
             <ul class="nav nav-tabs" id="nav-tabs_{{ $id }}" role="tablist">
                 <li class="nav-item">
@@ -50,7 +43,7 @@
                                     <div class="card rounded-0">
                                         <div class="card-header" id="headingOne_{{ $id }}">
                                             <h2 class="mb-0">
-                                                <button class=" btn btn-link collapsed" type="button"
+                                                <button class=" btn btn-link collapsed rounded-0" type="button"
                                                         data-toggle="collapse" data-target="#collapseOne_{{ $id }}"
                                                         aria-expanded="true" aria-controls="collapseOne_{{ $id }}">
                                                     <p class="rating-name">Care Quality Rating</p>
@@ -120,7 +113,7 @@
                                     <div class="card rounded-0">
                                         <div class="card-header" id="headingTwo_{{ $id }}">
                                             <h2 class="mb-0">
-                                                <button class="btn btn-link collapsed" type="button"
+                                                <button class="btn btn-link collapsed rounded-0" type="button"
                                                         data-toggle="collapse"
                                                         data-target="#collapseTwo_{{ $id }}" aria-expanded="false"
                                                         aria-controls="collapseTwo_{{ $id }}">
@@ -179,7 +172,7 @@
                                 <div class="card rounded-0">
                                     <div class="card-header" id="headingThree_{{ $id }}">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button"
+                                            <button class="btn btn-link collapsed rounded-0" type="button"
                                                     data-toggle="collapse"
                                                     data-target="#collapseThree_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseThree_{{ $id }}">
@@ -211,7 +204,7 @@
                                 <div class="card rounded-0">
                                     <div class="card-header" id="headingFour_{{ $id }}">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button"
+                                            <button class="btn btn-link collapsed rounded-0" type="button"
                                                     data-toggle="collapse"
                                                     data-target="#collapseFour_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseFour_{{ $id }}">
@@ -224,7 +217,7 @@
                                          data-parent="#hospital_stats">
                                         <div class="card-body">
                                             @if(!empty($opCancelled))
-                                                <p>National average is 3.5%</p>
+                                                <p>National average is 1.58%</p>
                                             @else
                                                 <p>No data for this hospital</p>
                                             @endif
@@ -234,7 +227,7 @@
                                 <div class="card rounded-0">
                                     <div class="card-header" id="headingFive_{{ $id }}">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link collapsed" type="button"
+                                            <button class="btn btn-link collapsed rounded-0" type="button"
                                                     data-toggle="collapse"
                                                     data-target="#collapseFive_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseFive_{{ $id }}">
@@ -247,7 +240,7 @@
                                          data-parent="#hospital_stats">
                                         <div class="card-body">
                                             @if(!empty($FFRating))
-                                                <p>National average is 98.855%</p>
+                                                <p>National average is 94.01%</p>
                                             @else
                                                 <p>No data for this hospital</p>
                                             @endif
@@ -257,7 +250,7 @@
                                 <div class="card rounded-0">
                                     <div class="card-header" id="headingSix_{{ $id }}">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link no-arrow" type="button"
+                                            <button class="btn btn-link no-arrow rounded-0" type="button"
                                                     data-toggle="collapse"
                                                     data-target="#collapseSix_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseSix_{{ $id }}">
@@ -282,7 +275,7 @@
                                 <div class="card rounded-0">
                                     <div class="card-header" id="headingSeven_{{ $id }}">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link no-arrow" type="button"
+                                            <button class="btn btn-link no-arrow rounded-0" type="button"
                                                     data-toggle="collapse"
                                                     data-target="#collapseSeven_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseSeven_{{ $id }}">
@@ -669,7 +662,7 @@
                                            'hospitalTitle'     => $title,
                                            'modalTarget'       => '#hc_modal_enquire_private',
                                            'classTitle'        => 'btn btn-icon btn-enquire-now enquiry mt-auto ml-auto',
-                                           'target'            => 'blank',
+                                           'target'            => '_blank',
                                            'buttonText'        => 'Enquire now',
                                            'hospitalIds'       => $id,
                                            'id'                => 'enquire_special_'.$id])

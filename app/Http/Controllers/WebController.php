@@ -23,15 +23,35 @@ class WebController extends BaseController
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function homepage() {
+        //Get the request and load it as variables
+        $request        = \Request::all();
+        $dynamicLocation    = !empty($request['loc'])           ? Validate::escapeString($request['loc'])               : '';
+        $dynamicProcedure   = !empty($request['prc'])           ? Validate::escapeString($request['prc'])               : '';
+        $dynamicHospital    = !empty($request['hn'])            ? Validate::escapeString($request['hn'])                : '';
+
+        //Dynamic Keyword Insertion Logic
+        $dynamicKeywordInsertion                = [
+            'location'      => $dynamicLocation,
+            'procedure'     => $dynamicProcedure,
+            'hospitalName'  => $dynamicHospital
+        ];
+
+        $dynamicKeywordText = 'Find the best hospitals';
+        if(!empty($dynamicKeywordInsertion['hospitalName']))
+            $dynamicKeywordText = 'Compare '.$dynamicKeywordInsertion['hospitalName'].' with others';
+        if(!empty($dynamicKeywordInsertion['procedure']))
+            $dynamicKeywordText .= ' for '.$dynamicKeywordInsertion['procedure'];
+        if(!empty($dynamicKeywordInsertion['location']))
+            $dynamicKeywordText .= ' in '.$dynamicKeywordInsertion['location'];
+
         //Retrieve the list of Procedures sorted by name ASC
         $procedures = Utils::getProceduresForDropdown();
         //Get all the FAQs from DB
         $faqs  = Faq::with('category')->get()->take(3);
-        $this->returnedData['success']      = true;
-        $this->returnedData['data']['faqs'] = $faqs;
-
-        $this->returnedData['success']              = true;
-        $this->returnedData['data']['procedures']   = $procedures;
+        $this->returnedData['success']                          = true;
+        $this->returnedData['data']['faqs']                     = $faqs;
+        $this->returnedData['data']['dynamicKeywordText']       = $dynamicKeywordText;
+        $this->returnedData['data']['procedures']               = $procedures;
 
         //For Live environment just show the work in progress page
         if(env('APP_ENV') == 'live')
@@ -334,10 +354,11 @@ class WebController extends BaseController
     public function blogItem($id) {
 
         $blog = Blog::where('id', $id)->with('author', 'category')->first();
-        $latestBlogs = Blog::orderBy('created_at', 'DESC')->with('author', 'category')->limit(4)->get();
         //If we don't have the Blog, redirect to Blogs ( for the moment )
         if(empty($blog))
             return \Redirect::to('/blogs');
+        //Get the latest blogs created excluding the one that the user is reading
+        $latestBlogs = Blog::where('id', '!=', $blog->id)->orderBy('created_at', 'DESC')->with('author', 'category')->limit(3)->get()->toArray();
 
         $this->returnedData['success']      = true;
         $this->returnedData['data']['blog'] = $blog;

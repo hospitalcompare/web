@@ -143,18 +143,23 @@ $(document).on("click", ".results-page .change-url", function (event) {
 function toggleShowFiltersText() {
     $body.hasClass('filters-open') ? $showFiltersDiv.text('Show Filters') : $showFiltersDiv.text('Hide Filters');
 }
+
 // Toggle filter section
 var $resultspageform = $('#resultspage_form');
 var $filters = $('#resultspage_form .filter-parent');
 var $showFilters = $('#show_filters');
 var $showFiltersDiv = $('#show_filters div');
+
+// Click handler for 'Show filters' button
 $showFilters.on('click', function () {
+    // If on the desktop view
     if( $body.hasClass('results-page-desktop') ){
         $filters.slideToggle();
         // Change the text of show filters button
         toggleShowFiltersText();
     }
     $body.toggleClass('filters-open');
+    // Toggle the open class on the button
     $(this).toggleClass('open');
     // // Refresh the range slider as it is initially hidden
     $("#radiusProx").slider('relayout');
@@ -163,7 +168,7 @@ $showFilters.on('click', function () {
 // Close filters when clicking outside
 $(document).on('click', function (e) {
     // Is the click outside the results form, or inside one of the select picker dropdowns
-    if ($resultspageform.has(e.target).length === 0 && !e.target.classList.contains('text') && $body.hasClass('filters-open')) {
+    if ($body.hasClass('results-page-desktop') && $resultspageform.has(e.target).length === 0 && !$(e.target).parents('.dropdown-menu').length && $body.hasClass('filters-open')) {
         $filters.slideUp();
         $body.removeClass('filters-open');
         // Change the text of show filters button
@@ -171,14 +176,11 @@ $(document).on('click', function (e) {
     }
 });
 
+// Hide the filters in the mobile results page view
 $hideFilters = $('#close_mobile_filters');
 $hideFilters.on('click', function(){
    $('body').removeClass('filters-open');
 });
-//
-// $('*').on('focus', function(e){
-//     console.log(e.target);
-// });
 
 // Open the filters form when tabbing off the 'Filter resutls' button
 $showFilters.bind('keydown', function(e) {
@@ -196,7 +198,7 @@ $showFilters.bind('keydown', function(e) {
 // });
 
 // Toggle the corporate content area
-$('.btn-more-info, .btn-cc-close').on('click', function () {
+$('.btn-more-info').on('click', function () {
     var $target = $($(this).data('target'));
     var $isToggleButton = $(this).hasClass('btn-more-info');
     // The offset
@@ -219,7 +221,6 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
             scrollTop: $scrollBack - scrollOffset
         }, 800);
         //Change the `Close info` to `More info`
-        $(this).removeClass('open');
     } else {
         $target
             .slideDown()
@@ -240,8 +241,6 @@ $('.btn-more-info, .btn-cc-close').on('click', function () {
         }
         // Permanently add class gmap-initialized
         $target.addClass('gmap-initialised');
-        //Change the `More info` to `Close info`
-        $(this).addClass('open');
         // Only change text for 'More info' button
         if($isToggleButton)
             // $(this).find('span, div').text('Close info');

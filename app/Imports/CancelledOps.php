@@ -21,7 +21,7 @@ class CancelledOps extends DefaultImport {
 
                 $hospitals = [];
                 //First we check if we can find the Hospital based on the given code
-                $hospitals[] = Hospital::where('location_id', $item['Organisation Code'])->orWhere('organisation_id', $item['Organisation Code'])->first();
+                $hospitals[] = Hospital::where('location_id', $item['Location ID'])->orWhere('organisation_id', $item['Location ID'])->first();
                 //If we still don't have the hospital, try to get all the hospitals within the Trust
                 if(empty($hospitals[0])) {
                     $trust = Trust::where('trust_id', $item['Organisation Code'])->orWhere('provider_id', $item['Organisation Code'])->first();
@@ -40,7 +40,7 @@ class CancelledOps extends DefaultImport {
                             'hospital_id'                   => $hospital->id
                         ], [
                             'total_cancelled_ops'           => $item['Cancelled Elective Operations'] ?? 0,
-                            'total_treated_last_month'      => empty($item['Number Not Treated Within 28Days']) ? 0 : $item['Number Not Treated Within 28Days'],
+                            'total_treated_last_month'      => empty($item['Number Not Treated Within 28 Days']) ? 0 : $item['Number Not Treated Within 28 Days'],
                             'admissions'                    => $item['Admissions'] ?? 0,
                             'perc_cancelled_ops'            => rtrim($item['% Cancelled Ops'], '%') ?? 0,
                             'perc_not_treated_last_month'   => rtrim($item['% Not treated within 28 Days'], '%') ?? 0

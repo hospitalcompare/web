@@ -17,8 +17,8 @@
         <meta name='description' content='@yield('description')'>
         <meta name="viewport" content="@yield('mobile')">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- Block indexing bots apart from live site -->
-        @if(env('APP_ENV') !== 'live')
+        <!-- Block indexing bots from staging site -->
+        @if(env('APP_ENV') == 'dev')
             <meta name="robots" content="noindex,nofollow">
         @endif
 
@@ -38,16 +38,8 @@
         @else
         <meta property="og:image" content="{{ asset('/images/placeholder.jpg') }}" />
         @endif
-
-{{--        <script type="text/javascript">--}}
-{{--            //uncomment and change this to false if you're having trouble with WOFFs--}}
-{{--            //var woffEnabled = true;--}}
-{{--            //to place your webfonts in a custom directory--}}
-{{--            //uncomment this and set it to where your webfonts are.--}}
-{{--            //var customPath = "/themes/fonts";--}}
-{{--        </script>--}}
         <script type="text/javascript" src="{{ asset('fonts/MyFontsWebfontsKit.js') }}"></script>
-
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         @if(env('APP_ENV') === 'dev')
             <!-- Hotjar Tracking Code for http://hcstaging.co.uk/ -->
             <script>
@@ -131,7 +123,6 @@
                         }
                     },
                     "theme": "hc-cookie",
-                    // "position": "bottom-right",
                     "position": "top",
                     "static": true,
                     "content": {
@@ -142,6 +133,11 @@
                     }
                 })});
         </script>
+        <style>
+            .cc-window.cc-floating {
+                max-width: 4000px !important;
+            }
+        </style>
         @include('components.modals.modaltour')
     </body>
 

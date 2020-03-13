@@ -8,7 +8,7 @@
 
 @section('keywords', 'this is the meta keywords')
 
-@section('mobile', 'width=device-width, initial-scale=1')
+@section('mobile', 'width=device-width, initial-scale=1, user-scalable=no')
 
 @section('body-class', 'results-page results-page-desktop')
 

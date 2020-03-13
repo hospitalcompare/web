@@ -102,7 +102,7 @@ class MasterList extends DefaultImport {
                         'url'                   => $item['Location Web Address'],
                         'email'                 => $item['Email'],
                         'phone_number'          => $item['Location Telephone Number'],
-                        'phone_number_2'        => $item['Addition Telephone Number'],
+                        'phone_number_2'        => $item['Additional Telephone Number'],
                         'phone_number_3'        => $item['Additional Telephone Number 2'],
                         'nhs_private_url'       => $item['NHS Private Website'],
                         'private_self_pay'      => $item['Private Flag'],

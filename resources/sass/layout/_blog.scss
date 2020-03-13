@@ -1,9 +1,11 @@
 // ========================BLOGS SECTION================================
 .blog-page {
     .banner {
-        min-height: 338px;
+        @include media-breakpoint-up(xl){
+            padding: 100px 0;
+        }
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
     }
 

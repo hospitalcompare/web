@@ -289,7 +289,7 @@ window.textTruncate = function (str, length, ending) {
 };
 
 //Check if we have a parameter in the URL
-window.getUrlParameter = function getUrlParameter(sParam) {
+window.getUrlParameter = function(sParam) {
     var sPageURL = window.location.search.substring(1),
         sURLVariables = sPageURL.split('&'),
         sParameterName,
@@ -355,4 +355,12 @@ $(document).on('click', function (e) {
     }
 });
 
+// Recaptcha callback - clear error message when correctly submitted
+window.recaptchaCallback = function() {
+    $('#hiddenRecaptcha').valid();
+};
 
+window.handleFormReset = function() {
+    // reset the recaptcha
+    grecaptcha.reset();
+};

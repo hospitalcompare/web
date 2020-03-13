@@ -10,7 +10,7 @@
                             'svg'               => 'heart-solid',
                             'id'                => $id])
             <div
-                class="{{$NHSClass}} d-lg-none py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
+                class="hospital-type {{$NHSClass}} d-lg-none py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
                 <p class="m-0">{{$fundedText}}</p>
             </div>
             <div class="result-item-section-1">
@@ -31,18 +31,16 @@
                     @endif
                     <p class="sort-item-location">{{$location}}</p>
 
-                    <div class="btn-area mt-auto">
+                    <div class="btn-area mt-auto d-flex align-items-center justify-content-center justify-content-lg-start">
                         <div
                             class="d-none d-lg-inline-block rounded-pill py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
                             <p class="m-0 col-white">{{$fundedText}}</p>
                         </div>
                         @include('components.basic.button', [
-                            'classTitle'        => 'btn  btn-more-info font-12 p-0 shadow-none',
-                            'buttonText'        => '<span>Map +</span>',
+                            'classTitle'        => 'btn btn-more-info font-12 p-0 shadow-none',
+                            'buttonText'        => 'Map +',
                             'htmlButton'        => true,
-                            'icon'              => '',
                             'id'                => 'more_info_' . $id,
-                            'svg'               => 'plus-solid',
                             'dataTarget'        => '#corporate_content_hospital_' . $id,
                             'dataId'            => $id
                          ])
@@ -52,7 +50,7 @@
             <div class="result-item-section-2">
                 {{-- CQC rating  --}}
                 <div class="result-item-section-2__child">
-                    <div class="h-50 d-flex flex-column justify-content-center SofiaPro-Medium" @includeWhen(empty($qualityRating), 'components.basic.popover', [
+                    <div class="h-50 w-100 d-flex flex-column justify-content-center SofiaPro-Medium" @includeWhen(empty($qualityRating), 'components.basic.popover', [
                         'placement' => 'bottom',
                         'trigger' => 'hover',
                         'html' => 'true',
@@ -105,7 +103,7 @@
                                  </div>
                              </div>'])>
                         <p class="stat-label d-block w-100 d-lg-none">Care Quality Rating</p>
-                        <p class="col-{{ str_slug($qualityRating) }}">{!! !empty($qualityRating) ? $qualityRating : "No data" !!}</p>
+                        <p class="text-center col-{{ str_slug($qualityRating) }}">{!! !empty($qualityRating) ? $qualityRating : "No data" !!}</p>
                     </div>
                 </div>
                 {{-- Waiting time --}}
@@ -189,7 +187,7 @@
                         @include('components.basic.popover', [
                         'trigger' => 'hover',
                         'html'    => 'true',
-                        'content' => !empty($opCancelled) ? 'National average<br> is 3.35%' : 'Currently no data available<br>for this hospital'])>
+                        'content' => !empty($opCancelled) ? 'National average<br> is 1.58%' : 'Currently no data available<br>for this hospital'])>
                         <p class="stat-label d-block w-100 d-lg-none">Operations Cancelled</p>
                         {!! !empty($opCancelled) ? $opCancelled : "No data" !!}
                     </div>
@@ -201,7 +199,7 @@
                             'placement' => 'bottom',
                             'trigger' => 'hover',
                             'html' => 'true',
-                            'content' => !empty($FFRating) ? 'National average<br>is 98.85%' : 'Currently no data available<br>for this hospital'])>
+                            'content' => !empty($FFRating) ? 'National average<br>is 94.01%' : 'Currently no data available<br>for this hospital'])>
                         <p class="stat-label d-block w-100 d-lg-none">Friends & Family Rating</p>
                         {!! !empty($FFRating) ? $FFRating : "No data" !!}
                     </div>
@@ -256,7 +254,7 @@
                                 'hospitalTitle'     => $title,
                                 'modalTarget'       => '#hc_modal_enquire_private',
                                 'classTitle'        => 'btn  btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
-                                'target'            => 'blank',
+                                'target'            => '_blank',
                                 'buttonText'        => $btnText,
                                 'id'                => 'enquire_private_'.$id,
                                 'hospitalIds'       => $id,
@@ -270,7 +268,7 @@
                                 <div class="btn-wrapper col-6 ">
                                     @include('components.basic.button', [
                                         'hospitalType'      => $NHSClass,
-                                        'target'            => 'blank',
+                                        'target'            => '_blank',
                                         'hrefValue'         => $url,
                                         'classTitle'        => 'btn  btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
                                         'buttonText'        => 'Web',
@@ -319,7 +317,7 @@
                                 <div class="btn-wrapper col-6 ">
                                     @include('components.basic.button', [
                                         'hospitalType'      => $NHSClass,
-                                        'target'            => 'blank',
+                                        'target'            => '_blank',
                                         'hrefValue'         => $url,
                                         'classTitle'        => 'btn  btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
                                         'buttonText'        => 'Web',
@@ -346,7 +344,7 @@
                         </div>
                     @endif
 {{--                        TODO: add special offer back in when we have them--}}
-{{--                    @if(!empty($specialOffers))--}} 
+{{--                    @if(!empty($specialOffers))--}}
 {{--                        <div class="col-12 mt-lg-2 d-none d-lg-block">--}}
 {{--                            <div class="position-relative btn-block">--}}
 {{--                                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [--}}

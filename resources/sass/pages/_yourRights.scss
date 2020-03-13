@@ -5,12 +5,13 @@
 //    }
 //}
 
+//
+//.your-rights-intro {
+//    border-bottom: $greyBorder;
+//}
 
-.your-rights-intro {
-    border-bottom: $greyBorder;
-}
-
-.your-rights-hero-cont {
+.your-rights-hero-cont,
+.your-rights-img-cont {
     position: absolute;
     top: -45px;
     right: 0;
@@ -22,9 +23,9 @@
 .your-rights-img-top {
     position: absolute;
     z-index: 999;
-    background: url(../images/your-rights-img-top.jpg);
+    background: url(../images/your-rights-hero-1.jpg);
     background-size: cover;
-    background-position: right 0 !important;
+    background-position: center center;
     height: 470px;
     width: 410px;
     border-radius: 5px;
@@ -35,12 +36,13 @@
 .your-rights-img-bottom {
     position: absolute;
     z-index: 998;
-    background: url(../images/your-rights-img-bottom.jpg);
+    background: url(../images/your-rights-hero-2.jpg);
     background-size: cover;
+    background-position: center center;
     height: 380px;
     width: 380px;
     border-radius: 5px;
-    bottom: 55px;
+    bottom: 155px;
     left: 180px;
 }
 
@@ -69,19 +71,21 @@
     z-index: 996;
     left: 510px;
     width: 115px;
-    bottom: -10px;
+    bottom: 40px;
 }
 
 .your-rights-pattern-bottom {
     position: absolute;
     z-index: 995;
-    bottom: 0;
+    bottom: 100px;
     height: 85px;
     left: 140px;
 }
 
-@media screen and (max-width:1200px) {
-    .your-rights-hero-cont {
+
+@media screen and (max-width: 1200px) {
+    .your-rights-hero-cont,
+    .your-rights-img-cont {
         position: absolute;
         transform: translate(20%, 0);
         width: 60% !important;
@@ -93,10 +97,6 @@
     }
 
     .your-rights-img-top {
-        position: absolute;
-        z-index: 999;
-        background: url(../images/your-rights-img-top.jpg);
-        background-size: cover;
         height: 370px;
         width: 370px;
         border-radius: 5px;
@@ -105,22 +105,14 @@
     }
 
     .your-rights-img-bottom {
-        position: absolute;
-        z-index: 998;
-        background: url(../images/your-rights-img-bottom.jpg);
-        background-size: cover;
         height: 330px;
         width: 350px;
         border-radius: 5px;
-        bottom: 285px;
+        bottom: 345px;
         left: 70px;
     }
 
     .your-rights-img-back {
-        position: absolute;
-        z-index: 997;
-        background: url(../images/your-rights-img-back.jpg);
-        background-size: cover;
         height: 200px;
         width: 200px;
         border-radius: 5px;
@@ -141,20 +133,20 @@
         z-index: 996;
         left: 400px;
         width: 115px;
-        bottom: 180px;
+        bottom: 270px;
     }
 
     .your-rights-pattern-bottom {
         position: absolute;
         z-index: 995;
-        bottom: 250px;
+        bottom: 290px;
         height: 85px;
         left: 10px;
     }
 }
 
-@media screen and (max-width:991px) {
-    .your-rights-hero-cont {
+@media screen and (max-width: 991px) {
+    .your-rights-hero-cont, .your-rights-img-cont {
         position: relative;
         top: 0;
         right: 0;
@@ -167,10 +159,6 @@
     }
 
     .your-rights-img-top {
-        position: absolute;
-        z-index: 999;
-        background: url(../images/your-rights-img-top.jpg);
-        background-size: cover;
         height: 370px;
         width: 370px;
         border-radius: 5px;
@@ -179,10 +167,6 @@
     }
 
     .your-rights-img-bottom {
-        position: absolute;
-        z-index: 998;
-        background: url(../images/your-rights-img-bottom.jpg);
-        background-size: cover;
         height: 290px;
         width: 300px;
         border-radius: 5px;
@@ -206,8 +190,9 @@
 
 }
 
-@media screen and (max-width:576px) {
-    .your-rights-hero-cont {
+@media screen and (max-width: 576px) {
+    .your-rights-hero-cont,
+    .your-rights-img-cont {
         position: relative;
         top: 0;
         right: 0;
@@ -217,10 +202,6 @@
     }
 
     .your-rights-img-top {
-        position: absolute;
-        z-index: 999;
-        background: url(../images/your-rights-img-top.jpg);
-        background-size: cover;
         height: 270px;
         width: 270px;
         border-radius: 5px;
@@ -229,4 +210,21 @@
     }
 }
 
+// Images at the bottom of the page
+.your-rights-img-cont {
+    .your-rights-img-top {
+        background: url(../images/your-rights-img-top.jpg);
+        background-position: right;
+        background-size: cover;
+    }
 
+    .your-rights-img-bottom {
+        background: url(../images/your-rights-img-bottom.jpg);
+        background-size: cover;
+    }
+
+    .your-rights-img-back {
+        background: url(../images/your-rights-img-back.jpg);
+        background-size: cover;
+    }
+}

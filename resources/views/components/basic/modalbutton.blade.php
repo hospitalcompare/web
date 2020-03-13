@@ -1,4 +1,4 @@
-<{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'span' }}"
+<{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'span' }}
 {{ !empty($disabled) && ($disabled) ? 'disabled' : ''}}
 @if(!empty($id))
     id="{{ $id }}"
@@ -8,6 +8,9 @@ class="{{ $classTitle }}"
 role="button"
 data-toggle="modal"
 data-target="{{ $modalTarget }}"
+@if(!empty($modalText))
+    data-modal-text="{{ $modalText }}"
+@endif
 @if(!empty($hospitalType))
     data-hospital-type="{{ $hospitalType }}"
 @endif

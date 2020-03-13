@@ -18,10 +18,10 @@
                         <div class="col-12 col-md-6">
                             <div
                                 class="col-inner h-100 col-inner__left text-center d-flex flex-column justify-content-center align-items-center">
-                                <h3 class="modal-title mb-3">Thanks for Your Interest in <span id="hospital_title">{{ $title }}</span>
+                                <h3 class="modal-title mb-3 w-100">Thanks for Your Interest in <span id="hospital_title">{{ $title }}</span>
                                     </h3>
-                                <div class="d-flex mb-3">
-                                    <div class="modal-copy">
+                                <div class="d-flex mb-3 w-100">
+                                    <div class="modal-copy ">
                                         <p class="col-grey p-secondary mb-0">Without a GP referral, this NHS hospital won't respond to direct enquiries regarding
                                             treatments. Please call or check their website to find out more about their services
                                             using the following contact details:</p>
@@ -38,7 +38,7 @@
                                     <p class="col-brand-primary-1 font-20 mb-1" id="hospital_telephone">{{ $tel }}</p>
                                     @include('components.basic.button', [
                                         'hospitalType'      => 'nhs-hospital',
-                                        'target'            => 'blank',
+                                        'target'            => '_blank',
                                         'hrefValue'         => $url,
                                         'hospitalUrl'       => '',
                                         'classTitle'        => 'p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block',
@@ -50,7 +50,7 @@
 {{--                                    Private web address --}}
                                     @includeWhen(!empty($url2), 'components.basic.button', [
                                         'hospitalType'      => 'nhs-hospital',
-                                        'target'            => 'blank',
+                                        'target'            => '_blank',
                                         'hrefValue'         => $url2,
                                         'classTitle'        => 'p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block',
                                         'buttonText'        => 'Visit website'])

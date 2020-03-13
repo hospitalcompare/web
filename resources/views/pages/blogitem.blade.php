@@ -8,7 +8,7 @@
 
 @section('featuredImage', '/' . $data['blog']['image'])
 
-@section('mobile', 'width=device-width, initial-scale=1')
+@section('mobile', 'width=device-width, initial-scale=1, user-scalable=no')
 
 @section('body-class', 'blog-item-page')
 
@@ -18,7 +18,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-8 blog-main">
+                <div class="col-12 {{!empty($data['latestBlogs']) ? 'col-lg-8' : 'col-lg-12'}} blog-main">
                     <div class="jumbotron rounded p-0 position-relative overflow-hidden d-flex"
                          style="background-image: url('../{{$data['blog']['image']}}')">
                         <span class="blog-item-category rounded-pill d-inline-block position-absolute col-white"
@@ -85,9 +85,9 @@
 {{--                        </div>--}}
 {{--                    </div>--}}
                 </div>
-                <div class="col-12 col-lg-4 blog-aside">
-                    @if(!empty($data['latestBlogs']))
-                        @foreach($data['latestBlogs']->take(3) as $latestBlog)
+                @if(!empty($data['latestBlogs']))
+                    <div class="col-12 col-lg-4 blog-aside">
+                        @foreach($data['latestBlogs'] as $latestBlog)
                             <div class="latest-blog d-flex mb-4 position-relative">
                                 <div class="latest-blog-image-wrapper w-25">
                                     <div class="latest-blog-image rounded overflow-hidden">
@@ -103,8 +103,8 @@
                                 </div>
                             </div>
                         @endforeach
-                    @endif
-                </div>
+                    </div>
+                @endif
             </div>
         </div>
     </section>

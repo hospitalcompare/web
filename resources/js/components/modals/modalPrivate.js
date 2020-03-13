@@ -3,6 +3,8 @@ var $privateModal = $('#hc_modal_enquire_private');
 // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
 // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
 // Private enquiry form - show title of hospital clicked
+
+
 $privateModal.on('show.bs.modal', function (event) {
 
     var $button = $(event.relatedTarget);// Button that triggered the modal
@@ -71,5 +73,6 @@ $('#hc_modal_mobile_enquire_private').on('show.bs.modal', function (event) {
 // Remove the body class
 $('#hc_modal_mobile_enquire_private, #hc_modal_enquire_private').on('hide.bs.modal', function (event) {
     $body.removeClass('enquiry-form-open');
+    handleFormReset();
 });
 
