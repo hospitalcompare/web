@@ -27,10 +27,6 @@
         line-height: 1.5;
         vertical-align: center;
         display: block;
-        @include media-breakpoint-down(lg) {
-            //display: inline-block;
-            //padding-top: 1px;
-        }
     }
 
     //colours
@@ -146,7 +142,7 @@
 
         @include media-breakpoint-up(xl){
             &:hover {
-                background-color: $brand-primary-7;
+                background-color: $trunkie;
                 color: #fff;
 
                 svg, i {
