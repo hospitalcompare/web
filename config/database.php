@@ -91,6 +91,19 @@ return [
             'prefix_indexes' => true,
         ],
 
+        'azure' => [
+            'driver' => 'sqlsrv',
+            'url' => 'hcdw.database.windows.net',
+            'host' => 'hcdw.database.windows.net',
+            'port' => 1433,
+            'database' => 'secure',
+            'username' => 'andrew',
+            'password' => 'Tr3atW3ll19',
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+        ],
+
     ],
 
     /*
