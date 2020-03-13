@@ -488,9 +488,20 @@ class ApiController {
 
     public function testAT() {
 
-//        echo phpinfo();
-//        return 0;
-        $enquiries = AzureEnquiry::all();
+        $insert = [[
+            'Hospital'                  => 'Hosp',
+            'Specialty'                 => 'Spec',
+            'Title'                     => 'Mr',
+            'First Name'                => 'Lucian',
+            'Last Name'                 => 'Niculescu',
+            'Email'                     => 'lucian@hospitalcompare.co.uk',
+            'Phone Number'              => '07443696699',
+            'Postcode'                  => 'L10DF',
+            'Additional Information'    => 'Test'
+
+        ]];
+
+        $enquiries = AzureEnquiry::insert($insert);
         $this->returnedData['success'] = true;
         $this->returnedData['data'] = $enquiries;
 
