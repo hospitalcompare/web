@@ -6,7 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class AzureEnquiry extends Model {
-    public $table = 'Enquiries';
+    public $table = 'secure.enquiries';
     public $timestamps = true;
     public $connection = 'azure';
 

@@ -8,6 +8,7 @@ use App\Helpers\Email;
 use App\Helpers\Errors;
 use App\Helpers\Utils;
 use App\Helpers\Validate;
+use App\Models\AzureEnquiry;
 use App\Models\Enquiry;
 use App\Models\Faq;
 use App\Models\Hospital;
@@ -481,6 +482,17 @@ class ApiController {
         $request    = \Request::all();
         $this->returnedData['success'] = true;
         $this->returnedData['data'] = $request;
+
+        return $this->returnedData;
+    }
+
+    public function testAT() {
+
+//        echo phpinfo();
+//        return 0;
+        $enquiries = AzureEnquiry::all();
+        $this->returnedData['success'] = true;
+        $this->returnedData['data'] = $enquiries;
 
         return $this->returnedData;
     }

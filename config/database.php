@@ -93,10 +93,10 @@ return [
 
         'azure' => [
             'driver' => 'sqlsrv',
-            'url' => 'hcdw.database.windows.net',
+//            'url' => 'hcdw.database.windows.net',
             'host' => 'hcdw.database.windows.net',
             'port' => 1433,
-            'database' => 'secure',
+            'database' => 'Enquiries',
             'username' => 'andrew',
             'password' => 'Tr3atW3ll19',
             'charset' => 'utf8',
