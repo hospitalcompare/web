@@ -122,7 +122,7 @@
     </div>
 </section>
 @if(empty($hideText))
-    <section class="mobile-choice d-lg-none text-center p-y-75">
+    <section class="mobile-choice d-lg-none text-center py-75">
         <div class="container">
             <div class="row">
                 <div class="banner-text col col-12 col-lg-6">

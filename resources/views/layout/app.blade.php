@@ -93,9 +93,9 @@
             <!-- End Google Tag Manager (noscript) -->
         @endif
         @include('layout.header')
-
-
+        @include('components.basic.covidAlert')
         @include('components.basic.alert')
+
         <main class="" id="app">
             @yield('content')
         </main>
