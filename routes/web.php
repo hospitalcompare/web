@@ -47,6 +47,8 @@ Route::get('/cookie-policy','WebController@cookiePage');
 
 Route::get('/attributions','WebController@attributionsPage');
 
+Route::get('/covid','WebController@covidPage');
+
 // Link to download PDFs or other docs
 Route::get('/downloads/{file}','WebController@download');
 

@@ -1,7 +1,7 @@
 {{--        Error messages for forms --}}
 
 <div id="hc_covid_alert"
-     class="px-0 py-25 alert collapse _alert-dismissible fade mb-0 alert-hc-danger show"
+     class="px-0 py-25 alert collapse fade mb-0 alert-hc-danger show"
      role="alert">
     <div class="container">
         <div class="wrapper d-flex justify-content-between align-items-center">
