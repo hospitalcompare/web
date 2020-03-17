@@ -42,7 +42,7 @@
                     <div class="blog-content mb-4">
                         {!! $data['blog']['description'] !!}
                     </div>
-                    <div class="sharing-is-caring p-y-75">
+                    <div class="sharing-is-caring py-75">
                         <div class="font-18 mb-4">Share this article</div>
                         <ul class="sharing-icons d-block">
                             <li class="d-inline-block"><a

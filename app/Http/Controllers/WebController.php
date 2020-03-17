@@ -284,6 +284,11 @@ class WebController extends BaseController
         return view('pages.aboutus', $this->returnedData);
     }
 
+    // COVID information page
+    public function covidPage() {
+        return view('pages.covid', $this->returnedData);
+    }
+
     // Blogs page
     public function blogs() {
         //Retrieve the Blog Categories
