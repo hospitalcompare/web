@@ -2,13 +2,11 @@
 
 @section('title', 'Attributions')
 
-@section('description', 'Learn about the attributions that apply to Hospital Compare website users.')
-
-@section('keywords', 'this is the meta keywords')
+@section('description', 'Learn about Hospital Compare\'s latest position regarding COVID-19.')
 
 @section('mobile', 'width=device-width, initial-scale=1, user-scalable=no')
 
-@section('body-class', 'attributions-page')
+@section('body-class', 'covid-page')
 
 @section('content')
 
