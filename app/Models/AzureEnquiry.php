@@ -16,15 +16,16 @@ class AzureEnquiry extends Model {
      * @var array
      */
     protected $fillable = [
+        'Location_ID',
         'Hospital',
         'Specialty',
         'Title',
-        'First Name',
-        'Last Name',
+        'First_Name',
+        'Last_Name',
         'Email',
-        'Phone Number',
+        'Phone_Number',
         'Postcode',
-        'Additional Information',
+        'Additional_Information',
         'datestamp'
     ];
 
@@ -34,6 +35,7 @@ class AzureEnquiry extends Model {
      * @var array
      */
     protected $casts = [
+        'Location_ID'               => 'string',
         'Hospital'                  => 'string',
         'Specialty'                 => 'string',
         'Title'                     => 'string',
@@ -46,42 +48,4 @@ class AzureEnquiry extends Model {
         'datestamp'                 => 'string'
 
     ];
-
-//    /**
-//     * hospital() belongs to Hospital
-//     * @return mixed
-//     */
-//    public function hospital() {
-//        return $this->belongsTo( '\App\Models\Hospital', 'hospital_id');
-//    }
-//
-//    /**
-//     * Used to build Queries
-//     *
-//     * @param $query
-//     * @param $hospital
-//     * @return mixed
-//     */
-//    public function scopeByHospital($query, $hospital){
-//        return $query->where('hospital_id', $hospital);
-//    }
-//
-//    /**
-//     * specialty() belongs to Hospital
-//     * @return mixed
-//     */
-//    public function specialty() {
-//        return $this->belongsTo( '\App\Models\Specialty', 'specialty_id');
-//    }
-//
-//    /**
-//     * Used to build Queries
-//     *
-//     * @param $query
-//     * @param $hospital
-//     * @return mixed
-//     */
-//    public function scopeBySpecialty($query, $hospital){
-//        return $query->where('specialty_id', $hospital);
-//    }
 }

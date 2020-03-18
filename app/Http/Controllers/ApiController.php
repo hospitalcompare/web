@@ -3,7 +3,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Helpers\ApiCRUD;
 use App\Helpers\Email;
 use App\Helpers\Errors;
 use App\Helpers\Utils;
@@ -27,6 +27,41 @@ class ApiController {
         'success'   => false,
         'data'      => []
     ];
+
+    public function checkModel() {
+        $req = Request::all();
+        $model = new ApiCRUD($req['model']);
+        return json_encode($model->checkProperty());
+    }
+
+    public function createModel() {
+        $req = Request::all();
+        $model = new ApiCRUD($req['model']);
+        unset($req['model']);
+        return json_encode($model->createByBulk($req));
+    }
+
+    public function updateModel() {
+        $req = Request::all();
+        $response = [
+            'message'   => 'Missing model or id',
+            'success'   => false
+        ];
+        //Check if we have the model and the id or throw error
+        if(empty($req['model']) || empty($req['id']))
+            Errors::generateError($response, 500, 'Invalid parameters');
+
+        $modelId = $req['id'];
+        $modelName = $req['model'];
+        unset($req['model'], $req['id']);
+        $model = new ApiCRUD($modelName);
+        $response['success'] = $model->updateByBulk($modelId, $req);
+        if($response['success'])
+            $response['message'] = 'Model successfully updated';
+        else
+            $response['message'] = 'Update has failed on the model';
+        return json_encode($response);
+    }
 
     public function generateSitemap() {
         return json_encode(Utils::generateSitemap());
@@ -374,6 +409,30 @@ class ApiController {
             if(!empty($enquiry[$i])) {
                 $bodyUser = Email::getUserBody($hospital->name, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $reason, $additionalInformation);
                 $ATBody = Email::getTrunkieBody($hospital->name, $hospital->location_id, $specialtyName, $title, $firstName, $lastName, $email, $phoneNumber, $postcode, $additionalInformation);
+                //Check the environment to trigger it only on `live`
+                if(env('APP_ENV') == 'live') {
+                    //Try to write into Azure DB
+                    try {
+                        AzureEnquiry::insert([[
+                            'Location_ID'               => $hospital->location_id,
+                            'Hospital'                  => $hospital->name,
+                            'Specialty'                 => $specialtyName,
+                            'Title'                     => $title,
+                            'First_Name'                => $firstName,
+                            'Last_Name'                 => $lastName,
+                            'Email'                     => $email,
+                            'Phone_Number'              => $phoneNumber,
+                            'Postcode'                  => $postcode,
+                            'Additional_Information'    => $additionalInformation ?? '',
+                            'datestamp'                 => date('Y-m-d H:i:s').'.'.date('w')
+
+                        ]]);
+                    } catch(\Exception $e) {
+                        //Log the details of the error
+                        \Log::info('Something went wrong writing the Enquiry on the Azure DB. Enquiry: '.\GuzzleHttp\json_encode($enquiry[$i]).'. Error:'.$e->getMessage());
+                    }
+                }
+
                 //Send the Email to User
                 try {
                     Email::send($bodyUser, $email, 'Thank you for Enquiring with Hospital Compare', 'datamanager@hospitalcompare.co.uk');
@@ -482,28 +541,6 @@ class ApiController {
         $request    = \Request::all();
         $this->returnedData['success'] = true;
         $this->returnedData['data'] = $request;
-
-        return $this->returnedData;
-    }
-
-    public function testAT() {
-
-        $insert = [[
-            'Hospital'                  => 'Hosp',
-            'Specialty'                 => 'Spec',
-            'Title'                     => 'Mr',
-            'First Name'                => 'Lucian',
-            'Last Name'                 => 'Niculescu',
-            'Email'                     => 'lucian@hospitalcompare.co.uk',
-            'Phone Number'              => '07443696699',
-            'Postcode'                  => 'L10DF',
-            'Additional Information'    => 'Test'
-
-        ]];
-
-        $enquiries = AzureEnquiry::insert($insert);
-        $this->returnedData['success'] = true;
-        $this->returnedData['data'] = $enquiries;
 
         return $this->returnedData;
     }
