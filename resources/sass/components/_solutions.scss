@@ -262,25 +262,16 @@
 
             .offer-text {
                 .offer-title {
-                    @include font-size(18);
-                }
-
-                .offer-subtitle {
-                    @include font-size(14);
-                }
-            }
-
-            .open-text,
-            .closed-text {
-                .offer-text {
                     @include font-size(17);
                     line-height: 23px;
+
+                    @include media-breakpoint-up(xl) {
+                        @include font-size(19);
+                        line-height: 24px;
+                    }
                 }
             }
 
-            .open-text {
-                display: none;
-            }
         }
 
         // Spin arrow when open

@@ -3,10 +3,7 @@
 <div class="special-offer-tab rounded {{ $bgColor }}__offer {{ $bgColor ?? '' }}">
     <div class="special-offer-header d-flex align-items-center">
         <div class="offer-text">
-            <div class="closed-text">
-                <p class="offer-title mb-0 col-white">{{ $headerText['closed']['title'] }}</p>
-                {{--                <p class="offer-subtitle mb-0">{{ $headerText['closed']['subtitle'] }}</p>--}}
-            </div>
+            <p class="offer-title mb-0 col-white">{{ $headerText['closed']['title'] }}</p>
         </div>
 
     </div>
