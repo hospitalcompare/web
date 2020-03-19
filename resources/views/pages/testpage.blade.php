@@ -1194,12 +1194,6 @@
     {{--        </div>--}}
     {{--    </section>--}}
     <section>
-        <div class="container" style="height: 300px">
-            @include('components.basic.closebutton',
-                ['position'  => 'static'])
-        </div>
-    </section>
-    <section>
         <h3>Large popover - left</h3>
         <div class="my-5 popover popover-large fade bs-popover-left show" role="tooltip" id="popover438743"
              x-placement="bottom"

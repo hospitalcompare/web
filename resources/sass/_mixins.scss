@@ -294,12 +294,12 @@
 
 // Custom BS grid gutters
 @mixin reset-row-spacing($colPadding: 20px) {
-    margin-left: -$colPadding;
-    margin-right: -$colPadding;
+    margin-left: -$colPadding !important;
+    margin-right: -$colPadding !important;
 
     > * {
-        padding-left: $colPadding;
-        padding-right: $colPadding;
+        padding-left: $colPadding !important;
+        padding-right: $colPadding !important;
     }
 }
 

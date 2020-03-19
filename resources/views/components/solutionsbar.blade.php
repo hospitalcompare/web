@@ -3,7 +3,6 @@
         <div class="position-relative d-flex justify-content-between align-items-end h-100">
 {{--            Synergy bar - lowest waiting time/nearest outstanding hospital plus insurance offers--}}
             @include('components.synergy')
-
         </div>
     </div>
     <div class="compare-hospitals-content">

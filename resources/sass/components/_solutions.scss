@@ -9,12 +9,11 @@
 
     .compare-hospitals-header {
         position: relative;
-        //height: 50px;
+        overflow-x: scroll;
 
         // Solutions menu
         ul {
             list-style: none;
-
             @include reset-row-spacing(7.5px);
 
             li {
@@ -242,42 +241,26 @@
 
     .special-offer-tab {
         overflow: hidden;
-        color: $white;
-        width: 340px;
+        width: 250px;
+        @include media-breakpoint-up(xl){
+            width: 365px;
+        }
         background-size: 200%;
         background-position: left;
         min-height: 0;
         transition: min-height ease 0.4s, background-position ease 0.3s;
 
-        //&.nhs-hospital__offer,
-        //&.purple__offer {
-        //    background-image: linear-gradient(264deg, #1b71f3 0%, #8f00ff 0%, #a346ec 52%, #b687db 100%);
-        //}
-        //
-        //&.blue__offer {
-        //    background-image: linear-gradient(87deg, #0563aa 0%, #033860 100%);
-        //}
-
         &.private-hospital__offer,
         &.pink__offer {
             background-color: $brand-primary-6;
-            //background-image: linear-gradient(266deg, #ed0373 0%, #fd409d 100%);
         }
-
-        //border-radius: 10px 10px 0 0;
-        @include font-size(18);
-        font-weight: 500;
 
         .special-offer-header {
             position: relative;
-            padding: 0 15px;
-            height: 65px;
+            padding: 13px;
+            //height: 65px;
 
             .offer-text {
-                //margin-left: 10px;
-                line-height: 1;
-                max-width: 270px;
-
                 .offer-title {
                     @include font-size(18);
                 }
@@ -287,81 +270,59 @@
                 }
             }
 
-            .open-text {
-                .hospital-name {
-                    @include font-size(18);
-                    min-height: 45px;
+            .open-text,
+            .closed-text {
+                .offer-text {
+                    @include font-size(17);
+                    line-height: 23px;
                 }
+            }
 
+            .open-text {
                 display: none;
             }
-
-            .image-wrapper {
-                width: 48px;
-                height: 44px;
-                @include aspect-ratio(48px, 44px);
-
-                .label {
-                    //display: none;
-                    width: 10px;
-                    height: 10px;
-                    border-width: 10px;
-                }
-            }
-
-            > svg,
-            > span {
-                position: absolute;
-                @include v-c;
-                right: 20px;
-                //top: 17px;
-                width: 20px;
-                height: 20px;
-                transition: $transition;
-            }
-
         }
 
         // Spin arrow when open
         &.open {
-            background-position: right;
-
-            .special-offer-header {
-                padding-top: 16px;
-                padding-bottom: 16px;
-                height: initial;
-
-            }
-
             .special-offer-footer {
                 svg {
                     transform: rotate3d(0, 0, 1, 180deg);
                 }
             }
-
-            .closed-text {
-                display: none;
-            }
-
-            .open-text {
-                display: block;
-            }
         }
     }
 
     .special-offer-body {
-        cursor: pointer;
         padding: 0 13px 13px;
         display: none;
-        height: 200px;
 
-        .offer-price {
-            min-height: 30px;
+        .inner-body {
+            //height: 145px;
+
+            .hospital-title {
+                @include font-size(14);
+                line-height: 18px;
+
+                @include media-breakpoint-up(xl) {
+                    @include font-size(16);
+                    line-height: 19px;
+                }
+            }
         }
     }
 
     .special-offer-footer {
         background-color: $brand-secondary-3;
+        cursor: pointer;
+        height: 30px;
+        padding: 0 13px;
+
+        svg {
+            transition: $transition;
+            width: 15px;
+            height: 9px;
+        }
     }
 }
 

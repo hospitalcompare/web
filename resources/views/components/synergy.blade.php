@@ -6,11 +6,11 @@
                     'bgColor' => 'pink',
                     'headerText' => [
                         'open' => [
-                            'title' => $specialOffer['name'],
+                            'title' => 'Your Nearest Outstanding NHS Hospital',
                             'subtitle' => !empty($specialOffer['radius']) ? round($specialOffer['radius'], 1) . ' miles away' : ''
                         ],
                         'closed' => [
-                            'title' => 'NHS funded treatment',
+                            'title' => 'Your Nearest Outstanding NHS Hospital',
                             'subtitle' => ((empty($data['outstanding']) ?
                                 'at '.$specialOffer['rating']['latest_rating'].' hospital ' :
                                  'in '.number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1).' Weeks '). (!empty($specialOffer['radius']) ? round($specialOffer['radius'], 1) . ' miles away' : ''))

@@ -15,7 +15,7 @@
     background-color: $bgGrey;
 
     .row {
-        @include reset-row-spacing(0.5rem);
+        //@include reset-row-spacing(0.5rem);
     }
 
     #show_filters {
@@ -95,10 +95,6 @@
         .result-item-section-2__child {
             justify-content: space-between;
         }
-    }
-
-    .special-offer-header {
-        height: 50px !important;
     }
 
     // Filter form styles

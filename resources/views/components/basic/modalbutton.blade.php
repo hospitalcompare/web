@@ -3,7 +3,7 @@
 @if(!empty($id))
     id="{{ $id }}"
 @endif
-style="display: inline-block; {{ empty($style) ? '' : $style }}"
+style="{{ empty($style) ? '' : $style }}"
 class="{{ $classTitle }}"
 role="button"
 data-toggle="modal"

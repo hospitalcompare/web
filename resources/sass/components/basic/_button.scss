@@ -436,46 +436,6 @@
     }
 }
 
-.btn-modal-close {
-    padding: 6px 24px 6px 8px;
-    display: inline-block;
-    border: none;
-    border-radius: 31px;
-    background-color: #000000 !important;
-    z-index: 5;
-    opacity: 1;
-    top: 5px;
-    right: 5px;
-    transition: $transition;
-    @include font-size(14);
-
-    @include media-breakpoint-up(lg) {
-        top: 0;
-        right: 0;
-        transform: translate(50%, -50%);
-    }
-
-    @include hover {
-        opacity: 1 !important;
-        background-color: $brand-primary-1 !important;
-    }
-
-    span {
-        background-color: inherit;
-    }
-
-    svg {
-        @include v-c;
-        right: 8px;
-        width: 7px;
-        height: 7px;
-
-        path {
-            fill: #fff;
-        }
-    }
-}
-
 // Reset styles from standard button
 .btn-plain {
     appearance: none;
@@ -537,7 +497,9 @@
         width: 20px;
         height: 20px;
     }
+}
 
+.btn-enquire-static-svg {
     @include media-breakpoint-down(md){
         justify-content: center;
         //align-items: center;
@@ -599,4 +561,10 @@
 
         }
     }
+}
+
+
+// SIde by side web and call buttons
+.btn-web-call {
+    @include reset-row-spacing(1px);
 }

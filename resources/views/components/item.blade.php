@@ -253,7 +253,7 @@
                                 'telNumber2'        => $tel2,
                                 'hospitalTitle'     => $title,
                                 'modalTarget'       => '#hc_modal_enquire_private',
-                                'classTitle'        => 'btn  btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
+                                'classTitle'        => 'btn btn-enquire btn-enquire-static-svg btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
                                 'target'            => '_blank',
                                 'buttonText'        => $btnText,
                                 'id'                => 'enquire_private_'.$id,
@@ -270,7 +270,7 @@
                                         'hospitalType'      => $NHSClass,
                                         'target'            => '_blank',
                                         'hrefValue'         => $url,
-                                        'classTitle'        => 'btn  btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
+                                        'classTitle'        => 'btn btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
                                         'buttonText'        => 'Web',
                                         'svg'               => 'icon-web'])
                                 </div>
