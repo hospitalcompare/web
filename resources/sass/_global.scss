@@ -4,18 +4,18 @@
 
 body {
     // Mask when shortlist is open
-    &:before {
-        pointer-events: none;
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: $modal-backdrop-bg;
-        opacity: 0;
-        transition: $transition;
-    }
+    //&:before {
+    //    pointer-events: none;
+    //    content: '';
+    //    position: fixed;
+    //    top: 0;
+    //    left: 0;
+    //    width: 100vw;
+    //    height: 100vh;
+    //    background-color: $modal-backdrop-bg;
+    //    opacity: 0;
+    //    transition: $transition;
+    //}
 }
 
 .cursor-pointer {
@@ -29,6 +29,20 @@ body {
     }
 }
 
+// Semi-opaque backdrop for custom modals/slide-outs etc
+.hc-backdrop {
+    pointer-events: none;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $modal-backdrop-bg;
+    opacity: 0;
+    transition: $transition;
+}
+
 .menu-open,
 .shortlist-open {
     &.results-page {
@@ -40,7 +54,7 @@ body {
         }
 
         // Fade in the mask when shortlist is open
-        &:before {
+        .hc-backdrop {
             opacity: $modal-backdrop-opacity;
             pointer-events: initial;
         }
@@ -49,7 +63,7 @@ body {
 
 .menu-open {
     // Fade in the mask when shortlist is open
-    &:before {
+    .hc-backdrop {
         z-index: 1045;
     }
 }
@@ -57,7 +71,7 @@ body {
 .shortlist-open {
     &.results-page {
         // Fade in the mask when shortlist is open
-        &:before {
+        .hc-backdrop {
             z-index: 1035;
         }
     }

@@ -514,10 +514,14 @@ $(document).on("click", "#compare_button_title", function (e) {
     }
 });
 
-// Hide shortlist bar if clicking outside it, but only if it is already open, and if you are NOT clicking on the modal eg enquiry modal
+// Hide shortlist bar if clicking outside it, but only if it is already open, and if you are NOT clicking on the modal eg enquiry modal, or NOT clicking on the compare_button_title element
 $(document).on('click', function (e) {
+    // Are you clicking on a modal?
     var isModal = $(e.target).parents('.modal').length || $(e.target).hasClass('modal');
-    if ($compareBar.has(e.target).length === 0 && $compareContent.hasClass('revealed') && !isModal ) {
+    // Are you clicking on the compare button?
+    var isCompareButton = $(e.target).parents('#compare_button_title').length || $(e.target).hasClass('.compare-button-title');
+    console.log(isCompareButton, e.target);
+    if ($body.hasClass('shortlist-open') && $compareBar.has(e.target).length === 0 && $compareContent.hasClass('revealed') && !isModal && !isCompareButton ) {
         $compareContent.slideUp();
         $body.removeClass('shortlist-open');
         $compareContent.removeClass('revealed');

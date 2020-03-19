@@ -34,10 +34,10 @@
                 </div>
 {{--             Compare button --}}
                 <div class="col-4">
-                    <div id="compare_button_title" class="compare-button-title d-flex align-items-center justify-content-center h-100 w-50 pl-3">
+                    <div id="compare_button_title" class="bg-grey compare-button-title d-flex align-items-center justify-content-center h-100 w-100">
                         @svg('compare-heart', 'compare-heart')
-                        <p class="font-12">Compare&nbsp;(<span id="compare_number">0</span>)<span
-                                class="compare-arrow ml-3"></span>
+                        <p class="font-12 mb-0">Compare&nbsp;
+{{--                            (<span id="compare_number">0</span>)--}}
                         </p>
                     </div>
                 </div>

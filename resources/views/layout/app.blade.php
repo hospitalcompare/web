@@ -139,6 +139,7 @@
             }
         </style>
         @include('components.modals.modaltour')
+    <div class="hc-backdrop"></div>
     </body>
 
 </html>
