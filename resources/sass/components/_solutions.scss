@@ -3,20 +3,19 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: $brand-primary-1;
+    background-color: #fff;
     z-index: 1040;
-    max-height: calc(100vh - 140px);
+    //max-height: calc(100vh - 140px);
 
     .compare-hospitals-header {
         position: relative;
-        //width: 100%;
-        //margin: 0 auto;
-        //padding: 0 20px;
-        height: 50px;
+        //height: 50px;
 
         // Solutions menu
         ul {
             list-style: none;
+
+            @include reset-row-spacing(7.5px);
 
             li {
                 position: relative;
@@ -242,6 +241,7 @@
     }
 
     .special-offer-tab {
+        overflow: hidden;
         color: $white;
         width: 340px;
         background-size: 200%;
@@ -249,29 +249,29 @@
         min-height: 0;
         transition: min-height ease 0.4s, background-position ease 0.3s;
 
-        &.nhs-hospital__offer,
-        &.purple__offer {
-            background-image: linear-gradient(264deg, #1b71f3 0%, #8f00ff 0%, #a346ec 52%, #b687db 100%);
-        }
-
-        &.blue__offer {
-            background-image: linear-gradient(87deg, #0563aa 0%, #033860 100%);
-        }
+        //&.nhs-hospital__offer,
+        //&.purple__offer {
+        //    background-image: linear-gradient(264deg, #1b71f3 0%, #8f00ff 0%, #a346ec 52%, #b687db 100%);
+        //}
+        //
+        //&.blue__offer {
+        //    background-image: linear-gradient(87deg, #0563aa 0%, #033860 100%);
+        //}
 
         &.private-hospital__offer,
         &.pink__offer {
-            background-image: linear-gradient(266deg, #ed0373 0%, #fd409d 100%);
+            background-color: $brand-primary-6;
+            //background-image: linear-gradient(266deg, #ed0373 0%, #fd409d 100%);
         }
 
-        border-radius: 10px 10px 0 0;
+        //border-radius: 10px 10px 0 0;
         @include font-size(18);
         font-weight: 500;
 
         .special-offer-header {
             position: relative;
-            padding: 0 20px;
+            padding: 0 15px;
             height: 65px;
-            cursor: pointer;
 
             .offer-text {
                 //margin-left: 10px;
@@ -331,6 +331,9 @@
                 padding-bottom: 16px;
                 height: initial;
 
+            }
+
+            .special-offer-footer {
                 svg {
                     transform: rotate3d(0, 0, 1, 180deg);
                 }
@@ -347,13 +350,18 @@
     }
 
     .special-offer-body {
-        padding: 0 25px 25px 20px;
+        cursor: pointer;
+        padding: 0 13px 13px;
         display: none;
         height: 200px;
 
         .offer-price {
             min-height: 30px;
         }
+    }
+
+    .special-offer-footer {
+        background-color: $brand-secondary-3;
     }
 }
 

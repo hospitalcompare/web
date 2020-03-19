@@ -1,13 +1,7 @@
 {{--Special offers tabs in solutions bar --}}
 
-<div class="special-offer-tab {{ $bgColor }}__offer {{ $bgColor ?? '' }}">
+<div class="special-offer-tab rounded {{ $bgColor }}__offer {{ $bgColor ?? '' }}">
     <div class="special-offer-header d-flex align-items-center">
-{{--        <div class="image-wrapper">--}}
-{{--            <img class="content" width="55" height="50" alt="Image of The Christie Main Site" src="{{ asset('../images/alder-1.jpg') }}">--}}
-{{--            <div class="{{ $hospitalType == "private" ? 'private-hospital' : 'nhs-hospital' }} label">--}}
-{{--                                <p>NHS Hospital</p>--}}
-{{--            </div>--}}
-{{--        </div>--}}
         <div class="offer-text">
             <div class="closed-text">
                 <p class="offer-title mb-0">{{ $headerText['closed']['title'] }}</p>
@@ -18,27 +12,25 @@
                 <p class="distance mb-0">{{ $headerText['open']['subtitle'] }}</p>
             </div>
         </div>
-        <span class="toggle-special-offer d-inline-flex align-items-center">
-            @svg('chevron-up')
-        </span>
+
     </div>
     <div class="special-offer-body">
-        <div class="inner-body d-flex flex-column justify-content-between h-100">
-            <div>
-                <ul class="bullets">
-                    @foreach($bulletPoints as $bulletPoint)
-                        @if(!empty($bulletPoint))
-                            <li>{{ $bulletPoint }}</li>
-                        @endif
-                    @endforeach
-                </ul>
-            </div>
+        <div class="inner-body rounded bg-white d-flex flex-column justify-content-center align-items-center h-100">
+{{--            <div>--}}
+{{--                <ul class="bullets">--}}
+{{--                    @foreach($bulletPoints as $bulletPoint)--}}
+{{--                        @if(!empty($bulletPoint))--}}
+{{--                            <li>{{ $bulletPoint }}</li>--}}
+{{--                        @endif--}}
+{{--                    @endforeach--}}
+{{--                </ul>--}}
+{{--            </div>--}}
 
-            @if(!empty($offerPrice))
-                <div class="offer-price mb-4">
-                    Total cost <strong>£{{ $offerPrice }}</strong>
-                </div>
-            @endif
+{{--            @if(!empty($offerPrice))--}}
+{{--                <div class="offer-price mb-4">--}}
+{{--                    Total cost <strong>£{{ $offerPrice }}</strong>--}}
+{{--                </div>--}}
+{{--            @endif--}}
             <div class="btn-area text-right">
                 @includeWhen($hospitalType == 'private-hospital' ,'components.basic.modalbutton', [
                     'id'                => '1',
@@ -63,5 +55,11 @@
                     ])
             </div>
         </div>
+    </div>
+    <div class="special-offer-footer bg-brand-primary-1 p-13">
+        <span class="toggle-special-offer d-flex align-items-center justify-content-between">
+            <span>Find out more</span>
+            @svg('chevron-up')
+        </span>
     </div>
 </div>

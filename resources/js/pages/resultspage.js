@@ -48,7 +48,7 @@ $(document).on("click touchend", ".sort-bar .sort-item", function () {
 });
 
 //Toggling the Special Offers tabs
-$('.special-offer-tab .special-offer-header').on('click', function (e) {
+$('.special-offer-tab .special-offer-footer').on('click', function (e) {
     $(this).parents('.special-offer-tab')
         .toggleClass('open')
         .find('.special-offer-body').slideToggle();

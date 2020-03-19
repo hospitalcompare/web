@@ -1,9 +1,9 @@
 @if(!empty($data['special_offers']))
-    <ul class="solutions-menu align-items-end d-lg-flex mb-0 ml-auto mr-3">
+    <ul class="solutions-menu mb-0 row flex-nowrap align-items-end">
         @foreach($specialOffers as $key => $specialOffer )
-            <li class="d-block h-100 {{ $loop->index != 0 ? 'ml-4' : '' }}">
+            <li class="col">
                 @include('components.basic.specialoffertab', [
-                    'bgColor' => $loop->index == 0 ? 'blue' : 'pink',
+                    'bgColor' => 'pink',
                     'headerText' => [
                         'open' => [
                             'title' => $specialOffer['name'],
