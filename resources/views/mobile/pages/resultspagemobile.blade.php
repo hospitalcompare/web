@@ -109,9 +109,9 @@
       ])
 
 {{--  Modal for special offers  --}}
-    @includeWhen(!empty($data['special_offers']), 'mobile.components.modals.modalmobilespecialoffertab', [
-      'specialOffer'      => $data['special_offers']['pink']
-  ])
+{{--    @includeWhen(!empty($data['special_offers']), 'mobile.components.modals.modalmobilespecialoffertab', [--}}
+{{--      'specialOffer'      => $data['special_offers']['pink']--}}
+{{--  ])--}}
 
     @include('components.modals.modalenquireprivate', [
         'procedures' => $data['filters']['procedures']])

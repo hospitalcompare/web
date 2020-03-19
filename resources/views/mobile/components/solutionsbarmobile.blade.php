@@ -1,20 +1,15 @@
 <div class="compare-hospitals-bar compare-hospitals-bar_mobile {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
     <div class="compare-hospitals-header d-flex justify-content-between">
         <div class="container-fluid px-0 position-relative d-flex justify-content-between align-items-end h-100">
-            <div id="compare_button_title" class="compare-button-title d-flex align-items-center justify-content-center h-100 w-50 pl-3">
-                @svg('compare-heart', 'compare-heart')
-                <p class="font-12">Compare&nbsp;(<span id="compare_number">0</span>)<span
-                        class="compare-arrow ml-3"></span>
-                </p>
-            </div>
-            @includeWhen(!empty($data['special_offers']), 'components.basic.modalbutton', [
-                'id'                => 'hc_modal_mobile_special_offer_tab_trigger',
-                'modalTarget'       => '#hc_modal_mobile_special_offer_tab',
-                'classTitle'        => 'bg-pink col-white w-50 h-100 d-flex justify-content-center align-items-center',
-                'svg'               => 'chevron-up',
-                'svgClass'          => 'ml-3',
-                'buttonText'        => 'Special Offer'
-            ])
+
+{{--            @includeWhen(!empty($data['special_offers']), 'components.basic.modalbutton', [--}}
+{{--                'id'                => 'hc_modal_mobile_special_offer_tab_trigger',--}}
+{{--                'modalTarget'       => '#hc_modal_mobile_special_offer_tab',--}}
+{{--                'classTitle'        => 'bg-pink col-white w-50 h-100 d-flex justify-content-center align-items-center',--}}
+{{--                'svg'               => 'chevron-up',--}}
+{{--                'svgClass'          => 'ml-3',--}}
+{{--                'buttonText'        => 'Special Offer'--}}
+{{--            ])--}}
         </div>
     </div>
     <div class="compare-hospitals-content">

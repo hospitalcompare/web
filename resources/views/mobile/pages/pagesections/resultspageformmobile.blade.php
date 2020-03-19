@@ -7,16 +7,8 @@
                     Ordered
                     by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'].((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? ' & Distance' : ((Request::input('sort_by') == 10 || Request::input('sort_by') == 9) ? ' then Waiting Time' : ' then Care Quality')) : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating then Distance' : 'Care Quality Rating then Waiting Time') }}
                 </div>
-                <div class="col-6">
-                    @include('components.basic.button', [
-                        'buttonText'        => 'Show Filters',
-                        'classTitle'        => 'btn btn-brand-primary-1 btn-squared btn-squared_slim btn-arrow-down font-14 d-flex flex-row-reverse justify-content-around align-items-center',
-                        'id'                => 'show_filters',
-                        'svg'               => 'icon-filter',
-                        'svgClass'          => 'd-inline position-static'
-                    ])
-                </div>
-                <div class="col-6">
+{{--                Sort button--}}
+                <div class="col-4">
                     @include('components.basic.select', [
                         'showLabel'             => false,
                         'options'               => $data['sortBy'],
@@ -29,6 +21,25 @@
                         'selectId'              => 'sort_by_select',
                         'labelClass'            => 'mb-0 SofiaPro-Medium sort-by-label'
                     ])
+                </div>
+{{--                Filter button--}}
+                <div class="col-4">
+                    @include('components.basic.button', [
+                        'buttonText'        => 'Filter',
+                        'classTitle'        => 'btn btn-brand-primary-1 btn-squared btn-squared_slim btn-arrow-down font-14 d-flex flex-row-reverse justify-content-around align-items-center',
+                        'id'                => 'show_filters',
+                        'svg'               => 'icon-filter',
+                        'svgClass'          => 'd-inline position-static'
+                    ])
+                </div>
+{{--             Compare button --}}
+                <div class="col-4">
+                    <div id="compare_button_title" class="compare-button-title d-flex align-items-center justify-content-center h-100 w-50 pl-3">
+                        @svg('compare-heart', 'compare-heart')
+                        <p class="font-12">Compare&nbsp;(<span id="compare_number">0</span>)<span
+                                class="compare-arrow ml-3"></span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
