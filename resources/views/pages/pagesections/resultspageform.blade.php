@@ -115,7 +115,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="sort-section section-3 d-flex flex-wrap justify-content-end align-items-center">
+                <div class="sort-section section-3 d-flex justify-content-end align-items-center">
                     @include('components.basic.select', [
                         'showLabel'             => false,
                         'options'               => $data['sortBy'],
@@ -129,12 +129,19 @@
                     ])
 
                     @include('components.basic.button', [
-                        'buttonText'        => 'Show Filters',
-                        'classTitle'        => 'btn btn-grey btn-icon btn-arrow-down font-16 pl-3 w-100',
+                        'buttonText'        => 'Filters',
+                        'classTitle'        => 'btn btn-grey btn-icon btn-arrow-down font-16 pl-3',
                         'id'                => 'show_filters',
                         'icon'              => '',
                         'svg'               => 'chevron-down-white'
                     ])
+{{--                   Button to trigger shortlist --}}
+                    <div id="compare_button_title" class="compare-button-title d-flex align-items-center h-100 ml-auto">
+                        @svg('compare-heart', 'compare-heart')
+                        <p class="font-26">Compare&nbsp;(<span id="compare_number">0</span>)<span
+                                class="compare-arrow ml-3"></span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
