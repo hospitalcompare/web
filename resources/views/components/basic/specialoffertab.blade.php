@@ -7,7 +7,7 @@
         </div>
 
     </div>
-    <div class="special-offer-body d-block d-xl-block">
+    <div class="special-offer-body d-xl-block">
         <div class="inner-body p-13 rounded bg-white d-flex flex-column justify-content-center align-items-center h-100">
             <div
                 class="d-inline-block rounded-pill py-1 px-2 mb-3 {{ $hospitalType == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">

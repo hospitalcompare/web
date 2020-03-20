@@ -105,8 +105,8 @@
 
 {{--    Solutions bar --}}
     @include('mobile.components.solutionsbarmobile', [
-      'specialOffers' => $data['special_offers']
-      ])
+        'specialOffers' => $data['special_offers']
+    ])
 
 {{--  Modal for special offers  --}}
 {{--    @includeWhen(!empty($data['special_offers']), 'mobile.components.modals.modalmobilespecialoffertab', [--}}
@@ -142,7 +142,8 @@
             ])
         @endforeach
     @endif
-    {{--    Modal compare online--}}
-    @include('components.modals.modalcompareonline')
-    @include('components.modals.modalcomparebrokers')
+    {{--    Modals for fund treatment/health insurance/travel insurance online --}}
+    @include('components.modals.modalcomparehealthinsurance')
+    @include('components.modals.modalfundyourtreatment')
+    @include('components.modals.modalcomparetravelinsurance')
 @endsection

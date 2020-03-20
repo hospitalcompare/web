@@ -1,5 +1,5 @@
-@if(!empty($data['special_offers']))
-    <ul class="solutions-menu mb-0 row flex-nowrap align-items-end">
+<ul class="solutions-menu mb-0 row flex-nowrap align-items-end">
+    @if(!empty($data['special_offers']))
         @foreach($specialOffers as $key => $specialOffer )
             <li class="col">
                 @include('components.basic.specialoffertab', [
@@ -32,12 +32,9 @@
                 ])
             </li>
         @endforeach
-    </ul>
-@endif
+    @endif
 
-
-{{-- Insurance tabs --}}
-<ul class="solutions-menu mb-0 row flex-nowrap align-items-end">
+    {{--  Fund treatment/health insurance/travel insurance  --}}
     <li class="col">
         <div class="special-offer-tab rounded insurance__offer">
             <div class="special-offer-header d-flex align-items-center">
@@ -46,15 +43,14 @@
                         for Pre-Existing Conditions</p>
                 </div>
             </div>
-            <div class="special-offer-body d-block d-xl-block">
+            <div class="special-offer-body d-xl-block">
                 <div
                     class="inner-body p-13 rounded bg-white d-flex flex-column justify-content-center align-items-center h-100">
                     <div class="btn-area d-flex flex-column mx-auto">
                         <div class="btn-wrapper mb-2">
-                            @include('components.basic.modalbutton', [
+                            @include('components.basic.button', [
                                 'classTitle'        =>  'btn btn-enquire btn-brand-secondary-3 w-100',
                                 'buttonText'        =>  'Compare online',
-                                'modalTarget'       =>  '#hc_modal_compare_online',
                                 'svg'               =>  'icon-white-chevron',
                                 'htmlButton'        =>  true
                             ])
@@ -63,7 +59,7 @@
                             @include('components.basic.modalbutton', [
                                 'classTitle'        =>  'btn btn-outline w-100',
                                 'buttonText'        =>  'Compare brokers',
-                                'modalTarget'       =>  '#hc_modal_compare_brokers',
+                                'modalTarget'       =>  '#hc_modal_compare_health_insurance',
                                 'svg'               =>  'icon-purple-chevron',
                                 'htmlButton'        =>  true
                             ])
@@ -88,6 +84,7 @@
             </div>
         </div>
     </li>
+    {{--   Self pay for pre-existing --}}
     <li class="col">
         <div class="special-offer-tab rounded insurance__offer">
             <div class="special-offer-header d-flex align-items-center">
@@ -95,7 +92,7 @@
                     <p class="offer-title mb-0 col-white">Fund Your Treatment and Get Seen Faster</p>
                 </div>
             </div>
-            <div class="special-offer-body d-block d-xl-block">
+            <div class="special-offer-body d-xl-block">
                 <div
                     class="inner-body p-13 rounded bg-white d-flex flex-column justify-content-center align-items-center h-100">
                     <div class="btn-area d-flex flex-column mx-auto">
@@ -103,7 +100,7 @@
                             @include('components.basic.modalbutton', [
                                 'classTitle'        =>  'btn btn-outline w-100',
                                 'buttonText'        =>  'Compare brokers',
-                                'modalTarget'       =>  '#hc_modal_compare_brokers',
+                                'modalTarget'       =>  '#hc_modal_fund_treatment',
                                 'svg'               =>  'icon-purple-chevron',
                                 'htmlButton'        =>  true
                             ])
@@ -128,6 +125,7 @@
             </div>
         </div>
     </li>
+    {{--   Travel insurance for pre-existing --}}
     <li class="col">
         <div class="special-offer-tab rounded insurance__offer">
             <div class="special-offer-header d-flex align-items-center">
@@ -136,15 +134,14 @@
                         for Pre-Existing Conditions</p>
                 </div>
             </div>
-            <div class="special-offer-body d-block d-xl-block">
+            <div class="special-offer-body d-xl-block">
                 <div
                     class="inner-body p-13 rounded bg-white d-flex flex-column justify-content-center align-items-center h-100">
                     <div class="btn-area d-flex flex-column mx-auto">
                         <div class="btn-wrapper mb-2">
-                            @include('components.basic.modalbutton', [
+                            @include('components.basic.button', [
                                 'classTitle'        =>  'btn btn-enquire btn-brand-secondary-3 w-100',
                                 'buttonText'        =>  'Compare online',
-                                'modalTarget'       =>  '#hc_modal_compare_online',
                                 'svg'               =>  'icon-white-chevron',
                                 'htmlButton'        =>  true
                             ])
@@ -153,7 +150,7 @@
                             @include('components.basic.modalbutton', [
                                 'classTitle'        =>  'btn btn-outline w-100',
                                 'buttonText'        =>  'Compare brokers',
-                                'modalTarget'       =>  '#hc_modal_compare_brokers',
+                                'modalTarget'       =>  '#hc_modal_compare_travel_insurance',
                                 'svg'               =>  'icon-purple-chevron',
                                 'htmlButton'        =>  true
                             ])
@@ -178,4 +175,11 @@
             </div>
         </div>
     </li>
+</ul>
+
+
+{{-- Insurance tabs --}}
+<ul class="solutions-menu mb-0 row flex-nowrap align-items-end">
+    {{--    Health insurance for pre-existing --}}
+
 </ul>

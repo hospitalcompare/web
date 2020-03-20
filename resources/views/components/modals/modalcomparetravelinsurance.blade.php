@@ -3,7 +3,7 @@
 
 <div class="modal modal-tour fade {{ !empty($displayBlock) ? 'd-block show' : '' }}"
      style="{{ !empty($displayBlock) ? 'opacity: 1' : '' }}"
-     id="hc_modal_compare_online"
+     id="hc_modal_compare_travel_insurance"
      tabindex="-1"
      role="dialog"
      aria-labelledby="" aria-modal="true" aria-hidden="true">
@@ -15,12 +15,11 @@
                 </button>
             </div>
             <div class="modal-body p-3 position-relative">
-                <p class="col-grey font-16">Fund Your Treatment and Get Seen Faster</p>
-                <p>There are a number of private treatment funding options, from loans designed specifically for medical
-                    treatment, standard unsecured loans, as well as
-                    options created by the providers below. Hospital Compare has carefully identified the following
-                    providers (based on their high customer ratings) as some
-                    options you may wish to consider. <a class="btn-link" href="/blog/1">Read our guide to treatment funding.</a></p>
+                <p class="col-grey font-16">Compare Travel Insurance
+                    for Pre-Existing Conditions</p>
+                <p>Get fast, aordable cover with travel insurance that covers pre-existing conditions, giving you peace of mind to enjoy your holiday or trip.
+                    <a class="btn-link" href="/blog/1">Read our guide to
+                        treatment funding.</a></p>
                 <p>Contact a provider</p>
                 <div class="table-responsive">
                     <table class="table">

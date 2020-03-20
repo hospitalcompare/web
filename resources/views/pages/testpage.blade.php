@@ -12,7 +12,7 @@
 
 @section('content')
     <section>
-        @include('components.modals.modalcompareonline', ['displayBlock'  => true])
+        @include('components.modals.modalcomparehealthinsurance', ['displayBlock'  => true])
     </section>
     <section>
         <div class="container">
