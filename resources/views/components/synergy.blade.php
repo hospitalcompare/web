@@ -63,7 +63,97 @@
                             @include('components.basic.modalbutton', [
                                 'classTitle'        =>  'btn btn-outline w-100',
                                 'buttonText'        =>  'Compare brokers',
+                                'modalTarget'       =>  '#hc_modal_compare_brokers',
+                                'svg'               =>  'icon-purple-chevron',
+                                'htmlButton'        =>  true
+                            ])
+                        </div>
+                        <div class="btn-wrapper">
+                            @include('components.basic.button', [
+                                'classTitle'        =>  'btn btn-enquire btn-blue w-100',
+                                'buttonText'        =>  'Read our guide',
+                                'svg'               =>  'icon-white-chevron',
+                                'hrefValue'         =>  '/blog/1'
+                            ])
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="special-offer-footer bg-navy d-flex d-xl-none">
+                <span class="toggle-special-offer d-flex align-items-center justify-content-between w-100">
+                    <span class="font-14 lh-18px col-white closed-text">Find out more</span>
+                    <span class="font-14 lh-18px col-white open-text">Close</span>
+                    @svg('chevron-up')
+                </span>
+            </div>
+        </div>
+    </li>
+    <li class="col">
+        <div class="special-offer-tab rounded insurance__offer">
+            <div class="special-offer-header d-flex align-items-center">
+                <div class="offer-text">
+                    <p class="offer-title mb-0 col-white">Fund Your Treatment and Get Seen Faster</p>
+                </div>
+            </div>
+            <div class="special-offer-body d-block d-xl-block">
+                <div
+                    class="inner-body p-13 rounded bg-white d-flex flex-column justify-content-center align-items-center h-100">
+                    <div class="btn-area d-flex flex-column mx-auto">
+                        <div class="btn-wrapper mb-2">
+                            @include('components.basic.modalbutton', [
+                                'classTitle'        =>  'btn btn-outline w-100',
+                                'buttonText'        =>  'Compare brokers',
+                                'modalTarget'       =>  '#hc_modal_compare_brokers',
+                                'svg'               =>  'icon-purple-chevron',
+                                'htmlButton'        =>  true
+                            ])
+                        </div>
+                        <div class="btn-wrapper">
+                            @include('components.basic.button', [
+                                'classTitle'        =>  'btn btn-enquire btn-blue w-100',
+                                'buttonText'        =>  'Read our guide',
+                                'svg'               =>  'icon-white-chevron',
+                                'hrefValue'         =>  '/blog/1'
+                            ])
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="special-offer-footer bg-navy d-flex d-xl-none">
+                <span class="toggle-special-offer d-flex align-items-center justify-content-between w-100">
+                    <span class="font-14 lh-18px col-white closed-text">Find out more</span>
+                    <span class="font-14 lh-18px col-white open-text">Close</span>
+                    @svg('chevron-up')
+                </span>
+            </div>
+        </div>
+    </li>
+    <li class="col">
+        <div class="special-offer-tab rounded insurance__offer">
+            <div class="special-offer-header d-flex align-items-center">
+                <div class="offer-text">
+                    <p class="offer-title mb-0 col-white">Compare Travel Insurance
+                        for Pre-Existing Conditions</p>
+                </div>
+            </div>
+            <div class="special-offer-body d-block d-xl-block">
+                <div
+                    class="inner-body p-13 rounded bg-white d-flex flex-column justify-content-center align-items-center h-100">
+                    <div class="btn-area d-flex flex-column mx-auto">
+                        <div class="btn-wrapper mb-2">
+                            @include('components.basic.modalbutton', [
+                                'classTitle'        =>  'btn btn-enquire btn-brand-secondary-3 w-100',
+                                'buttonText'        =>  'Compare online',
                                 'modalTarget'       =>  '#hc_modal_compare_online',
+                                'svg'               =>  'icon-white-chevron',
+                                'htmlButton'        =>  true
+                            ])
+                        </div>
+                        <div class="btn-wrapper mb-2">
+                            @include('components.basic.modalbutton', [
+                                'classTitle'        =>  'btn btn-outline w-100',
+                                'buttonText'        =>  'Compare brokers',
+                                'modalTarget'       =>  '#hc_modal_compare_brokers',
                                 'svg'               =>  'icon-purple-chevron',
                                 'htmlButton'        =>  true
                             ])

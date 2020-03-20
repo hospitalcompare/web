@@ -130,4 +130,5 @@
     @endif
 {{--    Modal compare online--}}
     @include('components.modals.modalcompareonline')
+    @include('components.modals.modalcomparebrokers')
 @endsection

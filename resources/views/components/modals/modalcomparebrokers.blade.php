@@ -3,7 +3,7 @@
 
 <div class="modal modal-tour fade {{ !empty($displayBlock) ? 'd-block show' : '' }}"
      style="{{ !empty($displayBlock) ? 'opacity: 1' : '' }}"
-     id="hc_modal_compare_online"
+     id="hc_modal_compare_brokers"
      tabindex="-1"
      role="dialog"
      aria-labelledby="" aria-modal="true" aria-hidden="true">

@@ -302,7 +302,10 @@
         display: none;
 
         .inner-body {
-            //height: 145px;
+            min-height: 190px;
+            @include media-breakpoint-up(xl) {
+                min-height: 155px;
+            }
 
             .hospital-title {
                 @include font-size(14);
@@ -364,5 +367,16 @@
                 }
             }
         }
+    }
+}
+
+// Logos in insurance comparison tables
+.logo-insurance {
+    width: 80px;
+}
+
+.modal {
+    .table td {
+        vertical-align: middle;
     }
 }

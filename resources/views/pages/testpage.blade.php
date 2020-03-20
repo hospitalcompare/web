@@ -12,7 +12,7 @@
 
 @section('content')
     <section>
-{{--        @include('components.synergy')--}}
+        @include('components.modals.modalcompareonline', ['displayBlock'  => true])
     </section>
     <section>
         <div class="container">
