@@ -253,7 +253,11 @@
 
         &.private-hospital__offer,
         &.pink__offer {
-            background-color: $brand-primary-6;
+            background-image: linear-gradient(266deg,#ed0373,#fd409d);
+        }
+
+        &.insurance__offer {
+            background-image: linear-gradient(87deg,#0563aa,#033860);
         }
 
         .special-offer-header {
@@ -313,7 +317,7 @@
     }
 
     .special-offer-footer {
-        background-color: $brand-secondary-3;
+
         cursor: pointer;
         height: 30px;
         padding: 0 13px;

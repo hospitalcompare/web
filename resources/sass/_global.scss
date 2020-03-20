@@ -309,13 +309,13 @@ select.big {
 
 // Custom container widths
 .container-980 {
-    @include media-breakpoint-up(xl){
+    @include media-breakpoint-up(xl) {
         max-width: 980px;
     }
 }
 
 .container-1028 {
-    @include media-breakpoint-up(xl){
+    @include media-breakpoint-up(xl) {
         max-width: 1028px;
     }
 }
@@ -324,8 +324,16 @@ select.big {
     background-color: $brand-primary-1;
 }
 
+.bg-navy {
+    background-color: $brand-primary-4;
+}
+
 .bg-blue {
     background-color: $blue;
+}
+
+.bg-trunkie {
+    background-color: $trunkie;
 }
 
 .bg-violet {
@@ -333,7 +341,7 @@ select.big {
 }
 
 .bg-purple {
-    background-color: $purple;
+    background-color: $brand-secondary-3;
 }
 
 .bg-green {
@@ -555,8 +563,6 @@ select.big {
 
         /* END Cookies */
     }
-
-
 
 
     .cc-link {
@@ -1015,7 +1021,6 @@ h6 {
 }
 
 
-
 //fieldset, label { margin: 0; padding: 0; }
 
 /****** Style Star Rating Widget *****/
@@ -1025,7 +1030,10 @@ h6 {
     float: left;
 }
 
-.rating > input { display: none; }
+.rating > input {
+    display: none;
+}
+
 .rating > label:before {
     margin: 2px;
     font-size: 2.25em;
@@ -1050,12 +1058,18 @@ h6 {
 
 .rating > input:checked ~ label, /* show gold star when clicked */
 .rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: $brand-secondary-5;  } /* hover previous stars in list */
+.rating:not(:checked) > label:hover ~ label {
+    color: $brand-secondary-5;
+}
+
+/* hover previous stars in list */
 
 .rating > input:checked + label:hover, /* hover current star when changing rating */
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: $brand-secondary-5;  }
+.rating > input:checked ~ label:hover ~ label {
+    color: $brand-secondary-5;
+}
 
 
 // Hospital type tag
@@ -1136,7 +1150,6 @@ h6 {
     border-top-left-radius: 5px;
     padding: 0 !important;
 }
-
 
 // Force accordions open for content editing purposes
 //.collapse {

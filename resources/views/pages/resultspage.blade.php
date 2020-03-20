@@ -128,5 +128,6 @@
             ])
         @endforeach
     @endif
-
+{{--    Modal compare online--}}
+    @include('components.modals.modalcompareonline')
 @endsection
