@@ -4,13 +4,13 @@
 .results-page-mobile {
     // CLear the solutions bar
 
-    &:not(.shortlist-open) {
-        .modal-backdrop {
-            top: auto;
-            bottom: 50px;
-            height: calc(100vh - 50px);
-        }
-    }
+    //&:not(.shortlist-open) {
+    //    .modal-backdrop {
+    //        top: auto;
+    //        bottom: 50px;
+    //        height: calc(100vh - 50px);
+    //    }
+    //}
 
     background-color: $bgGrey;
 
