@@ -6,7 +6,6 @@ $('.toggle-special-offer').on('click', function (e) {
     // var $leftWidth = $parentRow.find('.hospital-details').outerWidth();
     // var $rightWidth = $parentRow.find('.result-item-section-2').outerWidth();
     // var $totalWidth = $leftWidth + $rightWidth;
-    // console.log($totalWidth);
     $parentRow
         .find('.special-offers-slide')
         // .css('width', $totalWidth)

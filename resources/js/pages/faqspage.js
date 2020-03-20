@@ -34,7 +34,6 @@ function ajaxCall(input) {
                 var ajaxBox = $(".faqs-page #faqs_accordion");
                 ajaxBox.empty(); // remove old content
                 //Check if we have at least one result in our data
-                // console.log(data.data.faqs);
                 if (!$.isEmptyObject(data.data.faqs)) {
                     $.each(data.data.faqs, function (key, obj) { //$.parseJSON() method is needed unless chrome is throwing error.
                         // var regex = new RegExp(search, 'gi');

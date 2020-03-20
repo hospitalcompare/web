@@ -12,7 +12,7 @@
 
 @section('body-class', 'results-page results-page-desktop')
 
-{{ dd($data['special_offers']) }}
+{{--{{ dd($data['special_offers']) }}--}}
 
 @section('content')
     @include('pages.pagesections.resultspageform', ['displayBlock' => false])

@@ -474,7 +474,6 @@ $(document).on("click", ".compare", function () {
 
 //Set the OnClick event for the Remove Hospital on the Comparison table
 $(document).on("click", ".remove-hospital", function (e) {
-    console.log(e);
     e.stopPropagation();
     var hospitalTypeClicked = $(this).data('hospital-type');
     var elementId = $(this).attr('id');
@@ -520,7 +519,6 @@ $(document).on("click", "#compare_button_title", function (e) {
 //     var isModal = $(e.target).parents('.modal').length || $(e.target).hasClass('modal');
 //     // Are you clicking on the compare button?
 //     var isCompareButton = $(e.target).parents('#compare_button_title').length || $(e.target).hasClass('.compare-button-title');
-//     console.log(isCompareButton, e.target);
 //     if ($body.hasClass('shortlist-open') && $compareBar.has(e.target).length === 0 && $compareContent.hasClass('revealed') && !isModal && !isCompareButton ) {
 //         $compareContent.slideUp();
 //         $body.removeClass('shortlist-open');
@@ -530,7 +528,6 @@ $(document).on("click", "#compare_button_title", function (e) {
 
 $(document).on('click', function (e) {
     var isBackdrop = $(e.target).parents('.hc-backdrop').length || $(e.target).hasClass('hc-backdrop');
-    console.log(isBackdrop, e.target);
     if (isBackdrop) {
         $compareContent.slideUp();
         $body.removeClass('shortlist-open');

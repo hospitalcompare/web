@@ -21,10 +21,13 @@
                         $specialOffer['rating']['latest_rating'] . ' CQC Rating',
                         (!empty($specialOffer['rating']['avg_user_rating'])) ? $specialOffer['rating']['avg_user_rating'] . ' star NHS Choices user rating' : null
                     ],
-                    'offerPrice'    => null,
-                    'hospitalType'  => $specialOffer['hospital_type']['name'] == 'Independent' ? 'private-hospital' : 'nhs-hospital',
-                    'hospitalUrl'   => $specialOffer['url'],
-                    'hospitalId'    => $specialOffer['id']
+                    'offerPrice'        => null,
+                    'hospitalType'      => $specialOffer['hospital_type']['name'] == 'Independent' ? 'private-hospital' : 'nhs-hospital',
+                    'title'             => $specialOffer['name'],
+                    'url'               => $specialOffer['url'],
+                    'id'                => $specialOffer['id'],
+                    'tel'               => $specialOffer['phone_number'],
+                    'tel2'              => $specialOffer['phone_number_2'],
                 ])
             </li>
         @endforeach
