@@ -357,10 +357,11 @@ $(document).on('click', function (e) {
 //     $('#hiddenRecaptcha').valid();
 // };
 //
-// window.handleFormReset = function() {
-//     // reset the recaptcha
-//     grecaptcha.reset();
-// };
+window.handleFormReset = function() {
+    // reset the recaptcha
+    // grecaptcha.reset();
+    console.log('reset the form');
+};
 
 // Handle the covid alert message
 // Set the cookie to stop further popups

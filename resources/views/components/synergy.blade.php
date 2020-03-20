@@ -25,6 +25,7 @@
                     'hospitalType'      => $specialOffer['hospital_type']['name'] == 'Independent' ? 'private-hospital' : 'nhs-hospital',
                     'title'             => $specialOffer['name'],
                     'url'               => $specialOffer['url'],
+                    'url2'              => $specialOffer['nhs_private_url'],
                     'id'                => $specialOffer['id'],
                     'tel'               => $specialOffer['phone_number'],
                     'tel2'              => $specialOffer['phone_number_2'],

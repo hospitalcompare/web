@@ -8,8 +8,9 @@
     //max-height: calc(100vh - 140px);
 
     .compare-hospitals-header {
-        position: relative;
-        overflow-x: scroll;
+        overflow-x: auto;
+        max-height: 100vh;
+        transition: $transition;
 
         // Solutions menu
         ul {

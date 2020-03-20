@@ -123,7 +123,4 @@
         </span>
     </div>
 </div>
-{{-- Modal for 'Call' button --}}
-{{--@include('components.modals.modalcontactsgeneral')--}}
-@include('components.modals.modalcontactsprivate', [
-    'NHSClass'      =>  $hospitalType])
+

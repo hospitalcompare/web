@@ -103,4 +103,21 @@
     @include('components.modals.modalenquireprivate', [
         'procedures' => $data['filters']['procedures']])
 
+    {{-- Modal for 'Call' button - include only if there are special offers --}}
+    @if(!empty($data['special_offers']))
+        @foreach($data['special_offers'] as $key => $specialOffer )
+            @include('components.modals.modalcontactsprivate', [
+                'NHSClass'      =>  $specialOffer['hospital_type']['name'] == 'Independent' ? 'private-hospital' : 'nhs-hospital',
+                'id'            =>  $specialOffer['id'],
+                'title'         =>  $specialOffer['name'],
+                'url'           =>  $specialOffer['url'],
+                'tel'           =>  $specialOffer['phone_number'],
+                'tel2'          =>  $specialOffer['phone_number_2'],
+
+            ])
+{{--            @include('components.modals.modalcontactsgeneral', [--}}
+{{--                'NHSClass'      =>  $hospitalType])--}}
+        @endforeach
+    @endif
+
 @endsection

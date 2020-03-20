@@ -166,10 +166,10 @@ a:hover {
     }
 
     // Hide the special offer tabs
-    .solutions-menu,
+    .compare-hospitals-header,
     #hc_modal_mobile_special_offer_tab_trigger {
-        opacity: 0;
-        visibility: hidden;
+        max-height: 0 !important;
+        padding: 0 !important;
     }
 
     .compare-arrow {
