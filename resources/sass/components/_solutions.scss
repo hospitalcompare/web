@@ -281,6 +281,14 @@
                     transform: rotate3d(0, 0, 1, 180deg);
                 }
             }
+
+            .open-text {
+                display: inline;
+            }
+
+            .closed-text {
+                display: none;
+            }
         }
     }
 
@@ -313,6 +321,10 @@
             transition: $transition;
             width: 15px;
             height: 9px;
+        }
+
+        .open-text {
+            display: none;
         }
     }
 }

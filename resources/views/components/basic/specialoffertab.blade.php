@@ -98,7 +98,8 @@
     </div>
     <div class="special-offer-footer bg-brand-primary-1 d-flex d-xl-none">
         <span class="toggle-special-offer d-flex align-items-center justify-content-between w-100">
-            <span class="font-14 lh-18px col-white">Find out more</span>
+            <span class="font-14 lh-18px col-white closed-text">Find out more</span>
+            <span class="font-14 lh-18px col-white open-text">Close</span>
             @svg('chevron-up')
         </span>
     </div>
