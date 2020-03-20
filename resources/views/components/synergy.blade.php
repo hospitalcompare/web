@@ -35,6 +35,8 @@
     </ul>
 @endif
 
+
+{{-- Insurance tabs --}}
 <ul class="solutions-menu mb-0 row flex-nowrap align-items-end">
     <li class="col">
         <div class="special-offer-tab rounded insurance__offer">
@@ -45,13 +47,35 @@
                 </div>
             </div>
             <div class="special-offer-body d-block d-xl-block">
-                <div class="inner-body p-13 rounded bg-white d-flex flex-column justify-content-center align-items-center h-100">
-                    <div class="btn-area container-fluid">
-                        @include('components.basic.modalbutton', [
-                            'classTitle'        =>  'btn-outline',
-                            'buttonText'        =>  'Compare online',
-                            'modalTarget'       =>  '#hc_modal_compare_online'
-                        ])
+                <div
+                    class="inner-body p-13 rounded bg-white d-flex flex-column justify-content-center align-items-center h-100">
+                    <div class="btn-area d-flex flex-column mx-auto">
+                        <div class="btn-wrapper mb-2">
+                            @include('components.basic.modalbutton', [
+                                'classTitle'        =>  'btn btn-enquire btn-brand-secondary-3 w-100',
+                                'buttonText'        =>  'Compare online',
+                                'modalTarget'       =>  '#hc_modal_compare_online',
+                                'svg'               =>  'icon-white-chevron',
+                                'htmlButton'        =>  true
+                            ])
+                        </div>
+                        <div class="btn-wrapper mb-2">
+                            @include('components.basic.modalbutton', [
+                                'classTitle'        =>  'btn btn-outline w-100',
+                                'buttonText'        =>  'Compare brokers',
+                                'modalTarget'       =>  '#hc_modal_compare_online',
+                                'svg'               =>  'icon-purple-chevron',
+                                'htmlButton'        =>  true
+                            ])
+                        </div>
+                        <div class="btn-wrapper">
+                            @include('components.basic.button', [
+                                'classTitle'        =>  'btn btn-enquire btn-blue w-100',
+                                'buttonText'        =>  'Read our guide',
+                                'svg'               =>  'icon-white-chevron',
+                                'hrefValue'         =>  '/blog/1'
+                            ])
+                        </div>
                     </div>
                 </div>
             </div>

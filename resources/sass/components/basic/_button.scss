@@ -65,11 +65,10 @@
     }
 
     &.btn-blue {
-        background-color: $blue;
-        background-size: 200%;
+        background-color: $brand-primary-1;
 
         &:hover {
-            background-color: $brand-primary-1;
+            background-color: $brand-secondary-3;
         }
     }
 
@@ -117,6 +116,34 @@
             position: absolute;
             top: 15px;
             left: 15px;
+        }
+    }
+
+    &.btn-outline {
+        box-shadow: inset 0px 0px 0px 2px $brand-secondary-3;
+        color: $brand-secondary-3;
+        padding: 8px 14px 8px 40px;
+
+        svg {
+            content: '';
+            position: absolute;
+            @include v-c;
+            left: 8px;
+            width: 20px;
+            height: 20px;
+        }
+
+        &:hover {
+            background-color: $brand-secondary-3;
+            color: #fff;
+
+            svg, i {
+
+                path {
+                    stroke: #fff;
+                    fill: #fff;
+                }
+            }
         }
     }
 
