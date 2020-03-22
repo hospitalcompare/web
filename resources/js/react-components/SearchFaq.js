@@ -10,10 +10,6 @@ class SearchFaq extends Component {
 
 // Do the ajax request with a delay
 
-    onChange = (e) => {
-        clearTimeout(this.timer);
-        this.timer = setTimeout(this.props.setFaqs(e.target.value), this.interval, e.target);
-    };
 
     render() {
         return (
@@ -24,7 +20,7 @@ class SearchFaq extends Component {
                                className="w-100 form-control"
                                type="search"
                                placeholder="Search"
-                               onInput={this.onChange} />
+                               onChange={(e) => {this.props.handleChange(e)}} />
                     </div>
                 </form>
             </div>

@@ -5,7 +5,8 @@ import axios from "axios";
 
 class FaqHome extends Component {
     state = {
-        faqs: []
+        faqs: [],
+        searchTerm: ''
     };
 
     // Load in all FAQs on page load
@@ -20,7 +21,7 @@ class FaqHome extends Component {
                 Authorization: 'Bearer mBu7IB6nuxh8RVzJ61f4'
             }
         };
-        axios.post('api/faqs', bodyparams, config)
+        axios.post(apiUrl, bodyparams, config)
             .then((res) => {
                 const faqs = res.data.data.faqs;
                 this.setState({
@@ -67,10 +68,17 @@ class FaqHome extends Component {
             })
     };
 
+    handleChange = (e) => {
+        console.log(e.target.value);
+        // clearTimeout(this.timer);
+        // this.timer = setTimeout(this.setFaqs(e.target.value), this.interval, e.target);
+    };
+
     render() {
         return (
             <div className="container">
-                <SearchFaq setFaqs={this.setFaqs}/>
+                <SearchFaq handleChange={this.handleChange}
+                           setFaqs={this.setFaqs}/>
                 <div className="accordion" id="faqs_accordion">
                     <ListFaqs faqs={this.state.faqs}/>
                 </div>
