@@ -14,7 +14,7 @@
                 <p class="m-0 col-white font-13">{{ $hospitalType == 'private-hospital' ? 'Private Hospital' : 'NHS Hospital' }}</p>
             </div>
             <p class="text-center">{{ $specialOffer['name'] }}</p>
-            <div class="btn-area">
+            <div class="btn-area w-100">
                 <div class="row btn-web-call">
                     @if($hospitalType == 'private-hospital')
                         <div class="col-12 col-xl-6">

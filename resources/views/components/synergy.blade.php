@@ -1,8 +1,8 @@
-<div class="synergy-bar container-fluid py-3 d-flex">
-    <ul class="mb-0 row flex-nowrap align-items-end">
+<div class="synergy-bar">
+    <div class="synergy-tab-list mb-0 row flex-nowrap align-items-end">
         @if(!empty($data['special_offers']))
             @foreach($specialOffers as $key => $specialOffer )
-                <li class="col">
+                <div class="col">
                     @include('components.basic.specialoffertab', [
                         'bgColor' => 'pink',
                         'headerText' => [
@@ -31,12 +31,12 @@
                         'tel'               => $specialOffer['phone_number'],
                         'tel2'              => $specialOffer['phone_number_2'],
                     ])
-                </li>
+                </div>
             @endforeach
         @endif
 
         {{--  Fund treatment/health insurance/travel insurance  --}}
-        <li class="col">
+        <div class="col">
             <div class="special-offer-tab rounded insurance__offer">
                 <div class="special-offer-header d-flex align-items-center">
                     <div class="offer-text">
@@ -84,9 +84,9 @@
                 </span>
                 </div>
             </div>
-        </li>
+        </div>
         {{--   Self pay for pre-existing --}}
-        <li class="col">
+        <div class="col">
             <div class="special-offer-tab rounded insurance__offer">
                 <div class="special-offer-header d-flex align-items-center">
                     <div class="offer-text">
@@ -125,9 +125,9 @@
                 </span>
                 </div>
             </div>
-        </li>
+        </div>
         {{--   Travel insurance for pre-existing --}}
-        <li class="col">
+        <div class="col">
             <div class="special-offer-tab rounded insurance__offer">
                 <div class="special-offer-header d-flex align-items-center">
                     <div class="offer-text">
@@ -175,10 +175,8 @@
                 </span>
                 </div>
             </div>
-        </li>
-    </ul>
-{{--    <div class="synergy-bar-inner d-flex">--}}
-{{--    </div>--}}
+        </div>
+    </div>
 </div>
 
 

@@ -338,7 +338,7 @@ window.addHospitalToCompare = function (element) {
     // Add corresponding enquiry modal to body
     // Add corresponding enquiry modal to body
     if (element.hospital_type.name === 'NHS')
-        $body.append(nhsModalContent);
+        $body.find('#modal-container').append(nhsModalContent);
 };
 
 function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) {

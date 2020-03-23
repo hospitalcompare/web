@@ -1,40 +1,56 @@
 // Header bar now taken out of soultions bar
+.results-page {
+    overflow-x: hidden;
+}
+
 .synergy-bar {
+    padding: 15px;
     position: fixed;
+    z-index: 5;
     bottom: 0;
     left: 0;
-    z-index: 5;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-    height: 135px;
-    @include media-breakpoint-up(xl) {
-        height: 275px;
-    }
+    right: 0;
 
+    //overflow-x: scroll;
+
+    &:before {
+        content: '';
+        position: fixed;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 135px;
+        @include media-breakpoint-up(xl) {
+            height: 275px;
+        }
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    }
 
     // Solutions menu
-    ul {
-        list-style: none;
+    .synergy-tab-list {
+        @media (max-width: 1600px) {
+            position: absolute;
+            bottom: 0;
+        }
+        @media (max-width: 1600px) {
+            width: 100%;
+        }
+        overflow-x: auto;
+        overflow-y: hidden;
         @include reset-row-spacing(7.5px);
 
-        li {
-            position: relative;
-        }
-    }
-
-    // Special offers tabs
-    .solutions-menu {
-        pointer-events: none;
-        transition: $transition;
-
-        > li {
-            pointer-events: initial;
+        > div {
+            display: inline-block;
+            @media (min-width: 1600px) {
+                flex: 1;
+            }
         }
     }
 
     .special-offer-tab {
-        //overflow: hidden;
         width: 250px;
         @include media-breakpoint-up(md) {
             width: 365px;
@@ -42,9 +58,6 @@
         @media (min-width: 1600px) {
             width: auto;
         }
-        //@include media-breakpoint-up(xl) {
-        //    //max-width: 365px;
-        //}
         background-size: 200%;
         background-position: left;
         min-height: 0;
@@ -75,7 +88,6 @@
                     }
                 }
             }
-
         }
 
         // Spin arrow when open
@@ -134,11 +146,6 @@
             display: none;
         }
     }
-
-    //.synergy-bar-inner {
-
-    //
-    //}
 
     .compare-button-title {
         //background-color: #535353;
