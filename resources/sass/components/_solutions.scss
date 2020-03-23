@@ -5,33 +5,41 @@
     width: 100%;
     background-color: #fff;
     z-index: 1040;
-    //max-height: calc(100vh - 140px);
 
     .compare-hospitals-header {
         overflow-x: auto;
         max-height: 100vh;
         transition: $transition;
 
-        // Solutions menu
-        ul {
-            list-style: none;
-            @include reset-row-spacing(7.5px);
+        .compare-hospitals-header-inner {
+            height: 100px;
+            @include media-breakpoint-up(xl) {
+                height: 240px;
+            }
 
-            li {
-                position: relative;
+            // Solutions menu
+            ul {
+                position: absolute;
+                bottom: 15px;
+                list-style: none;
+                @include reset-row-spacing(7.5px);
 
-                > a {
-                    display: inline-block;
-                    color: $white;
-                    padding: 0 12px;
-                    height: 50px;
-                    line-height: 50px;
-                    font-size: 18px;
-                    font-weight: 400;
+                li {
+                    position: relative;
 
-                    &:hover {
-                        background-color: darken($brand-primary-1, 5%);
-                        text-decoration: none;
+                    > a {
+                        display: inline-block;
+                        color: $white;
+                        padding: 0 12px;
+                        height: 50px;
+                        line-height: 50px;
+                        font-size: 18px;
+                        font-weight: 400;
+
+                        &:hover {
+                            background-color: darken($brand-primary-1, 5%);
+                            text-decoration: none;
+                        }
                     }
                 }
             }
