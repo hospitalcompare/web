@@ -51,6 +51,7 @@
     }
 
     .special-offer-tab {
+        overflow: hidden; // to keep corners rounded
         width: 250px;
         @include media-breakpoint-up(md) {
             width: 365px;
