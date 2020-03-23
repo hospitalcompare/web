@@ -176,10 +176,3 @@
         </div>
     </li>
 </ul>
-
-
-{{-- Insurance tabs --}}
-<ul class="solutions-menu mb-0 row flex-nowrap align-items-end">
-    {{--    Health insurance for pre-existing --}}
-
-</ul>

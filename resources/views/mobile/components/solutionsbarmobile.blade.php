@@ -1,6 +1,6 @@
 <div class="compare-hospitals-bar compare-hospitals-bar_mobile {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
-    <div class="compare-hospitals-header d-flex justify-content-between">
-        <div class="container-fluid px-0 position-relative d-flex justify-content-between align-items-end h-100">
+    <div class="compare-hospitals-header py-3 d-flex justify-content-between">
+        <div class="compare-hospitals-header-inner container-fluid position-relative d-flex justify-content-between align-items-end">
             @include('components.synergy')
 {{--            @includeWhen(!empty($data['special_offers']), 'components.basic.modalbutton', [--}}
 {{--                'id'                => 'hc_modal_mobile_special_offer_tab_trigger',--}}

@@ -10,6 +10,7 @@
         overflow-x: auto;
         max-height: 100vh;
         transition: $transition;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 
         .compare-hospitals-header-inner {
             height: 100px;
@@ -20,7 +21,7 @@
             // Solutions menu
             ul {
                 position: absolute;
-                bottom: 15px;
+                bottom: 0;
                 list-style: none;
                 @include reset-row-spacing(7.5px);
 
