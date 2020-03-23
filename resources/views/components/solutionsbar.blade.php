@@ -1,9 +1,5 @@
-<div class="container-fluid py-3 compare-hospitals-header">
-    <div class="compare-hospitals-header-inner position-relative">
-        {{--            Synergy bar - lowest waiting time/nearest outstanding hospital plus insurance offers--}}
-        @include('components.synergy')
-    </div>
-</div>
+{{--            Synergy bar - lowest waiting time/nearest outstanding hospital plus insurance offers--}}
+@include('components.synergy')
 
 <div class="compare-hospitals-bar compare-hospitals-bar_desktop {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
 

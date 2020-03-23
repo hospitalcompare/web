@@ -1,7 +1,7 @@
 {{--Special offers tabs in solutions bar --}}
 
 <div class="special-offer-tab rounded {{ $bgColor }}__offer {{ $bgColor ?? '' }}">
-    <div class="special-offer-header d-flex align-items-center">
+    <div class="special-offer-header d-flex align-items-start">
         <div class="offer-text">
             <p class="offer-title mb-0 col-white">{{ $headerText['closed']['title'] }}</p>
         </div>
@@ -14,7 +14,7 @@
                 <p class="m-0 col-white font-13">{{ $hospitalType == 'private-hospital' ? 'Private Hospital' : 'NHS Hospital' }}</p>
             </div>
             <p class="text-center">{{ $specialOffer['name'] }}</p>
-            <div class="btn-area container-fluid">
+            <div class="btn-area">
                 <div class="row btn-web-call">
                     @if($hospitalType == 'private-hospital')
                         <div class="col-12 col-xl-6">

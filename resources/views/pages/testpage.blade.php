@@ -456,7 +456,7 @@
     </section>
     {{--    <section>--}}
     {{--        <div class="compare-hospitals-bar ">--}}
-    {{--            <div class="compare-hospitals-header d-flex justify-content-between">--}}
+    {{--            <div class="synergy-bar d-flex justify-content-between">--}}
     {{--                <div class="container position-relative d-flex justify-content-between align-items-end h-100">--}}
 
 
