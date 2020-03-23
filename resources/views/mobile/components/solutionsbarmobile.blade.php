@@ -1,17 +1,20 @@
-<div class="compare-hospitals-bar compare-hospitals-bar_mobile {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
-    <div class="compare-hospitals-header py-3 d-flex justify-content-between">
-        <div class="compare-hospitals-header-inner container-fluid position-relative d-flex justify-content-between align-items-end">
-            @include('components.synergy')
-{{--            @includeWhen(!empty($data['special_offers']), 'components.basic.modalbutton', [--}}
-{{--                'id'                => 'hc_modal_mobile_special_offer_tab_trigger',--}}
-{{--                'modalTarget'       => '#hc_modal_mobile_special_offer_tab',--}}
-{{--                'classTitle'        => 'bg-pink col-white w-50 h-100 d-flex justify-content-center align-items-center',--}}
-{{--                'svg'               => 'chevron-up',--}}
-{{--                'svgClass'          => 'ml-3',--}}
-{{--                'buttonText'        => 'Special Offer'--}}
-{{--            ])--}}
-        </div>
+<div class="compare-hospitals-header py-3 d-flex justify-content-between">
+    <div class="compare-hospitals-header-inner container-fluid position-relative d-flex justify-content-between align-items-end">
+        @include('components.synergy')
+        {{--            @includeWhen(!empty($data['special_offers']), 'components.basic.modalbutton', [--}}
+        {{--                'id'                => 'hc_modal_mobile_special_offer_tab_trigger',--}}
+        {{--                'modalTarget'       => '#hc_modal_mobile_special_offer_tab',--}}
+        {{--                'classTitle'        => 'bg-pink col-white w-50 h-100 d-flex justify-content-center align-items-center',--}}
+        {{--                'svg'               => 'chevron-up',--}}
+        {{--                'svgClass'          => 'ml-3',--}}
+        {{--                'buttonText'        => 'Special Offer'--}}
+        {{--            ])--}}
     </div>
+</div>
+
+
+<div class="compare-hospitals-bar compare-hospitals-bar_mobile {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
+
     <div class="compare-hospitals-content">
         <div class="container">
             <div class="row">
