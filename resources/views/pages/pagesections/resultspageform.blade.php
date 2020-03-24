@@ -115,7 +115,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="sort-section section-3 d-flex justify-content-end align-items-center">
+                <div class="sort-section section-3 d-flex justify-content-end align-items-center mt-2 mt-lg-0">
                     @include('components.basic.select', [
                         'showLabel'             => false,
                         'options'               => $data['sortBy'],
@@ -130,7 +130,7 @@
 
                     @include('components.basic.button', [
                         'buttonText'        => 'Filters',
-                        'classTitle'        => 'btn btn-grey btn-icon btn-arrow-down font-14 py-2 pl-3 mr-lg-3',
+                        'classTitle'        => 'btn btn-grey btn-icon btn-arrow-down font-14 py-2 pl-3 mr-3 w-100',
                         'id'                => 'show_filters',
                         'icon'              => '',
                         'svg'               => 'chevron-down-white'
