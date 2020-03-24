@@ -20,15 +20,19 @@
 
     #show_filters {
         padding: 0 15px !important;
-        height: 50px;
-        line-height: 50px;
+        height: $mobileSortbarButtonHeight;
+        line-height: $mobileSortbarButtonHeight;
 
         svg {
             //@include v-c;
             position: static !important;
-            width: 20px;
-            height: 20px;
+            width: 10px;
+            height: 10px;
             left: 16px;
+
+            path {
+                fill: $brand-tertiary-2;
+            }
         }
     }
 
@@ -145,12 +149,12 @@
         }
 
         .dropdown-toggle {
+            @include font-size(12);
             border: none !important;
-            @extend .bg-grey;
             @extend .pl-2;
             @extend .py-0;
-            height: 50px;
-            line-height: 50px;
+            height: $mobileSortbarButtonHeight;
+            line-height: $mobileSortbarButtonHeight;
         }
     }
 

@@ -44,7 +44,7 @@ $brand-secondary-7: #b50000; // red
 
 // Tertiary (greys)
 $brand-tertiary-1: #1b1b1b;
-$brand-tertiary-2: #757575;
+$brand-tertiary-2: #757575; // col-grey text
 $brand-tertiary-3: #ececec;
 
 // Colors
@@ -201,3 +201,6 @@ $card-spacer-x:                     1.25rem !default;
 
 // Header
 $mobile-header-height: 60px;
+
+// Mobile sort/filter bar buttons
+$mobileSortbarButtonHeight: 40px;
