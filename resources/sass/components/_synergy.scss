@@ -215,28 +215,11 @@
             animation-fill-mode: forwards;
             animation-iteration-count: 2;
         }
-
-        //#outer-circle {
-        //    transform-origin: 50% 50%;
-        //    animation: heartBeat .5s ease-in-out 0.1s;
-        //    animation-fill-mode: forwards;
-        //    animation-iteration-count: 2;
-        //}
-        //
-        //// The inner heart
-        //#wishlist {
-        //    transform-origin: 50% 50%;
-        //    animation: heartBeat .5s ease-in-out;
-        //    animation-fill-mode: forwards;
-        //    animation-iteration-count: 2;
-        //}
     }
 
     // fill the heart if there are items added
     &.active {
         #wishlist { // The inner heart path
-            //fill: $pink;
-            //stroke: $pink;
             fill: $trunkie;
             stroke: $trunkie;
         }

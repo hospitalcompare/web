@@ -61,24 +61,7 @@
                         'name'                  => 'postcode',
                         'id'                    => 'input_postcode',
                       ])
-                    {{--                    <a tabindex="0" data-offset="0 5px"--}}
-                    {{--                       class="help-link"--}}
-                    {{--                       style="right: 53px"--}}
-                    {{--                        @include('components.basic.popover', [--}}
-                    {{--                        'dismissible'   => true,--}}
-                    {{--                        'placement'      => 'top',--}}
-                    {{--                        'html'           => 'true',--}}
-                    {{--                        'size'           => 'max-width',--}}
-                    {{--                        'trigger'        => 'hover',--}}
-                    {{--                        'content'        => '<p>--}}
-                    {{--                                         Please enter your postcode<br>for a refined search.--}}
-                    {{--                                     </p>--}}
-                    {{--                                     '])--}}
-                    {{--                    >@svg('icon-more-info')</a>--}}
                 </div>
-                <!-- Accordion for filters -->
-            {{--                @include('mobile.components.filteraccordion')--}}
-            <!-- End of accordion for filters -->
                 <!-- Procedures -->
                 <div class="filter-mobile col-12 d-flex align-items-center">
                     @include('components.basic.select', [
