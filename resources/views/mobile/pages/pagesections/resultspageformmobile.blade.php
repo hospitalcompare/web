@@ -8,28 +8,28 @@
                     by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'].((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? ' & Distance' : ((Request::input('sort_by') == 10 || Request::input('sort_by') == 9) ? ' then Waiting Time' : ' then Care Quality')) : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating then Distance' : 'Care Quality Rating then Waiting Time') }}
                 </div>
 {{--                Sort button--}}
-                <div class="col-4 px-0">
+                <div class="col-4 px-0 results-sort-filter-compare">
                     @include('components.basic.select', [
-                        'showLabel'             => false,
-                        'options'               => $data['sortBy'],
-                        'svg'                   => 'icon-order-by',
-                        'selectClass'           => 'select-sort-by select-picker font-12 h-100 border-right pt-0 col-grey',
-                        'selectWrapperClass'    => 'h-100',
-                        'selectParentClass'     => 'align-items-center h-100',
-                        'placeholder'           => 'Sort by:',
-                        'name'                  => 'sort_by',
-                        'selectId'              => 'sort_by_select',
-                        'labelClass'            => 'mb-0 SofiaPro-Medium sort-by-label'
+                        'showLabel'             =>  false,
+                        'options'               =>  $data['sortBy'],
+                        'svg'                   =>  'icon-order-by',
+                        'selectClass'           =>  'select-sort-by select-picker font-12 h-100 border-right pt-0 col-grey rounded-0',
+                        'selectWrapperClass'    =>  'h-100',
+                        'selectParentClass'     =>  'align-items-center h-100',
+                        'placeholder'           =>  'Sort by:',
+                        'name'                  =>  'sort_by',
+                        'selectId'              =>  'sort_by_select',
+                        'labelClass'            =>  'mb-0 SofiaPro-Medium sort-by-label'
                     ])
                 </div>
 {{--                Filter button--}}
                 <div class="col-4 px-0">
                     @include('components.basic.button', [
-                        'buttonText'        => 'Filter',
-                        'classTitle'        => 'btn btn-squared col-grey font-12 d-flex flex-row-reverse justify-content-around align-items-center border-right',
-                        'id'                => 'show_filters',
-                        'svg'               => 'icon-filter',
-                        'svgClass'          => 'd-inline position-static'
+                        'buttonText'        =>  'Filter',
+                        'classTitle'        =>  'btn btn-squared col-grey font-12 d-flex flex-row-reverse justify-content-around align-items-center border-right rounded-0',
+                        'id'                =>  'show_filters',
+                        'svg'               =>  'icon-filter',
+                        'svgClass'          =>  'd-inline position-static'
                     ])
                 </div>
 {{--             Compare button --}}

@@ -145,16 +145,24 @@
 
     .select-sort-by {
         & + svg {
-            @include v-c;
+            right: auto;
+            left: 14px;
         }
 
         .dropdown-toggle {
             @include font-size(12);
             border: none !important;
-            @extend .pl-2;
+            @extend .pl-5;
             @extend .py-0;
             height: $mobileSortbarButtonHeight;
             line-height: $mobileSortbarButtonHeight;
+
+            //Make the test inside the button wrap
+            .filter-option-inner-inner {
+                overflow: visible;
+                white-space: initial;
+                line-height: 1.2;
+            }
         }
     }
 

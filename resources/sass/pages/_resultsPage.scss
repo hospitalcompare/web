@@ -95,13 +95,6 @@
 
     }
 
-    .results-page-select,
-    .dropdown-toggle {
-        padding: 8px 40px 8px 13px;
-        background-color: $white;
-        color: $textGrey;
-        @include font-size(14);
-    }
 
     .filter-parent {
         width: 100%;
@@ -556,6 +549,16 @@
 /********* Desktop results layout *************************************************************************************/
 /********* Desktop results layout *************************************************************************************/
 .results-page-desktop {
+    #resultspage_form {
+        .results-page-select,
+        .dropdown-toggle {
+            padding: 8px 40px 8px 13px;
+            background-color: $white;
+            color: $textGrey;
+            @include font-size(14);
+        }
+    }
+
     .filter-parent {
         display: none;
     }
