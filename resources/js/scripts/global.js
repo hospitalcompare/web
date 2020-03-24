@@ -46,7 +46,6 @@ $('.flat-form .treatment-parent .dropdown-toggle .filter-option-inner-inner').te
 $('#how_to_use_filter_policies .dropdown-toggle .filter-option-inner-inner').text($howToUseSelectPlaceholder);
 
 $('#how_to_use_policies').on('shown.bs.select', function () {
-    // console.log($howToUseSelectPlaceholder);
     $('.dropdown-menu li:first-child a').text($howToUseSelectPlaceholder);
 });
 
@@ -167,7 +166,6 @@ window.getHtmlDashTickValue = function (value, text = "") {
 
 window.toggleContent = function (speed = 400, parent = 'body') {
     var $target = $($(this).data('target'));
-    // console.log($target);
     $(this).toggleClass('target-open');
     if ($target.is(':visible')) {
         $(parent).addClass($(this).data('target') + '_open');
@@ -248,7 +246,6 @@ window.getHospitalsByIds = function (hospitalIds) {
         contentType: "application/json; charset=utf-8",
         data: {},
         success: function (data) {
-            // console.log(data.data);
             //Check if we have at least one result in our data
             if (!$.isEmptyObject(data.data)) {
                 // console.log('Data:', data.data[0]);
@@ -360,10 +357,11 @@ $(document).on('click', function (e) {
 //     $('#hiddenRecaptcha').valid();
 // };
 //
-// window.handleFormReset = function() {
-//     // reset the recaptcha
-//     grecaptcha.reset();
-// };
+window.handleFormReset = function() {
+    // reset the recaptcha
+    // grecaptcha.reset();
+    console.log('reset the form');
+};
 
 // Handle the covid alert message
 // Set the cookie to stop further popups
@@ -386,7 +384,6 @@ function showSpecialAlert() {
 // When closing the message, set the cookie to show that it has been dismissed
 $specialAlert.on('close.bs.alert', function () {
     // Set the cookie to false
-    console.log('Closed covid');
     setShowAlertToFalse();
 });
 
@@ -396,11 +393,7 @@ $('#special_alert_link').on('click', function () {
 
 // Show the covid alert message if the cookie is not set
 $(document).ready(function () {
-    console.log('Show alert?: ', typeof Cookies.get("showSpecialAlert"), Cookies.get("showSpecialAlert"));
     if (Cookies.get("showSpecialAlert") != 'false') {
-        console.log('This is the covid info')
         showSpecialAlert();
-    } else {
-        console.log('not showing covid info')
     }
 });

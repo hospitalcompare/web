@@ -285,7 +285,7 @@
                         designated regions (authorised by NHS England). CCGs
                         are obliged to consider patient choice and use providers
                         best suited to offer value for money, quality and
-                        eciency of healthcare services, whether sourced from
+                        effciency of healthcare services, whether sourced from
                         the public or private sector using the NHS Tariff. This is
                         designed to create a level playing field for NHS Hospitals
                         and private Hospitals performing NHS work at the NHS

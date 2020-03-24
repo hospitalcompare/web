@@ -18,7 +18,6 @@ $privateModal.on('show.bs.modal', function (event) {
 
     var hospitalTitle   = $button.data('hospital-title');// Extract info from data-* attributes
     var modal           = $(this);
-    // console.log(hospitalTitle);
     // var hospitalId      = $button.attr('id').replace('enquire_', '');
     var hospitalId      = $button.data('hospital-id');
     var picture         = $button.data('image');
@@ -65,7 +64,6 @@ $('#other').on('click', function(){
 // Mobile event handling of the private enquiry form
 $('#hc_modal_mobile_enquire_private').on('show.bs.modal', function (event) {
     // Close other modals that are open
-    // console.log($(this));
     $('.modal')
         .modal('hide');
 });

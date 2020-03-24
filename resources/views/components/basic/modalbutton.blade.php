@@ -1,9 +1,14 @@
-<{{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'span' }}
+
+@if(!empty($htmlButton) && ($htmlButton))
+    <button
+@else
+    <span
+@endif
 {{ !empty($disabled) && ($disabled) ? 'disabled' : ''}}
 @if(!empty($id))
     id="{{ $id }}"
 @endif
-style="display: inline-block; {{ empty($style) ? '' : $style }}"
+style="{{ empty($style) ? '' : $style }}"
 class="{{ $classTitle }}"
 role="button"
 data-toggle="modal"
@@ -44,12 +49,16 @@ data-target="{{ $modalTarget }}"
 @endif
 @if(!empty($address))
     data-address="{{ $address }}"
+@endif>
+    <span>{!! $buttonText !!}</span>
+    @if(!empty($svg) && empty($svgClass))
+        @svg($svg)
+    @elseif(!empty($svg) && !empty($svgClass))
+        @svg($svg, $svgClass)
+    @endif
+
+@if(!empty($htmlButton) && ($htmlButton))
+    </button>
+        @else
+    </span>
 @endif
->
-<span>{!! $buttonText !!}</span>
-@if(!empty($svg) && empty($svgClass))
-    @svg($svg)
-@elseif(!empty($svg) && !empty($svgClass))
-    @svg($svg, $svgClass)
-@endif
-</ {{ !empty($htmlButton) && ($htmlButton) ? 'button' : 'span' }} >

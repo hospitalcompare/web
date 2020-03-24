@@ -2,33 +2,27 @@
 /********* Mobile results layout *************************************************************************************/
 /********* Mobile results layout *************************************************************************************/
 .results-page-mobile {
-    // CLear the solutions bar
-
-    &:not(.shortlist-open) {
-        .modal-backdrop {
-            top: auto;
-            bottom: 50px;
-            height: calc(100vh - 50px);
-        }
-    }
-
     background-color: $bgGrey;
 
     .row {
-        @include reset-row-spacing(0.5rem);
+        //@include reset-row-spacing(0.5rem);
     }
 
     #show_filters {
         padding: 0 15px !important;
-        height: 50px;
-        line-height: 50px;
+        height: $mobileSortbarButtonHeight;
+        line-height: $mobileSortbarButtonHeight;
 
         svg {
             //@include v-c;
             position: static !important;
-            width: 20px;
-            height: 20px;
+            width: 10px;
+            height: 10px;
             left: 16px;
+
+            path {
+                fill: $brand-tertiary-2;
+            }
         }
     }
 
@@ -97,10 +91,6 @@
         }
     }
 
-    .special-offer-header {
-        height: 50px !important;
-    }
-
     // Filter form styles
     #resultspage_form {
         .filter-mobile {
@@ -145,16 +135,24 @@
 
     .select-sort-by {
         & + svg {
-            @include v-c;
+            right: auto;
+            left: 14px;
         }
 
         .dropdown-toggle {
+            @include font-size(12);
             border: none !important;
-            @extend .bg-grey;
-            @extend .pl-2;
+            @extend .pl-5;
             @extend .py-0;
-            height: 50px;
-            line-height: 50px;
+            height: $mobileSortbarButtonHeight;
+            line-height: $mobileSortbarButtonHeight;
+
+            //Make the test inside the button wrap
+            .filter-option-inner-inner {
+                overflow: visible;
+                white-space: initial;
+                line-height: 1.2;
+            }
         }
     }
 
@@ -166,8 +164,13 @@
     }
 
     .result-item-mobile-section-3 {
-        .btn-web-call {
-            @include reset-row-spacing(2px);
+        > .row {
+            @include reset-row-spacing(7.5px);
         }
+    }
+
+    // Center of heart in compare heart
+    #wishlist {
+        fill: transparent !important;
     }
 }

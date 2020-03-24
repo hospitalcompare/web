@@ -9,7 +9,6 @@
         <script>
             function recaptchaCallback() {
                 $('#hiddenRecaptcha').valid();
-                console.log('Valid')
             }
         </script>
         <form id="enquiry_form" class=" w-100">

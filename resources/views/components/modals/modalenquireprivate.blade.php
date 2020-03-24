@@ -9,7 +9,6 @@
                     @svg('times-black')
                 </button>
             </div>
-            {{--            @include('components.basic.closebutton')--}}
             @include('components.privateenquiryform', [
                 'procedures'    => $procedures,
                 'title'         => $title ?? '',

@@ -95,13 +95,6 @@
 
     }
 
-    .results-page-select,
-    .dropdown-toggle {
-        padding: 8px 40px 8px 13px;
-        background-color: $white;
-        color: $textGrey;
-        @include font-size(14);
-    }
 
     .filter-parent {
         width: 100%;
@@ -172,7 +165,7 @@
 
             #input_postcode,
             .dropdown-toggle {
-                padding: 13px 40px 13px 13px;
+                padding: 13px 40px 13px 13px !important;
             }
 
             .bootstrap-select + .black-chevron {
@@ -432,9 +425,6 @@
             @include reset-row-spacing(8px);
         }
 
-        .btn-web-call {
-            @include reset-row-spacing(1px);
-        }
     }
 
     .result-item-section-2__child {
@@ -493,25 +483,6 @@
     }
 
 }
-
-//.btn-more-info {
-//
-//    transition: 0.3s all ease;
-//
-//    svg {
-//        transition: 0.1s all ease;
-//    }
-//
-//    &.open {
-//        color: $white;
-//        background-color: #000 !important;
-//
-//        i, svg {
-//            transform: translateY(-50%) rotate3d(0, 0, 1, 45deg) !important;
-//
-//        }
-//    }
-//}
 
 // Compare buttons when compareCount = 5
 .compare {
@@ -578,6 +549,16 @@
 /********* Desktop results layout *************************************************************************************/
 /********* Desktop results layout *************************************************************************************/
 .results-page-desktop {
+    #resultspage_form {
+        .results-page-select,
+        .dropdown-toggle {
+            padding: 8px 40px 8px 13px;
+            background-color: $white;
+            color: $textGrey;
+            @include font-size(14);
+        }
+    }
+
     .filter-parent {
         display: none;
     }
@@ -585,7 +566,6 @@
     #show_filters {
         @include media-breakpoint-down(md){
             border-radius: 3px;
-            margin-top: 0.5rem;
         }
     }
 

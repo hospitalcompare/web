@@ -1,7 +1,6 @@
 // Init the select pickers in the popup search form
 function initSelectPickers() {
     var modal = $(this);
-    // console.log(modal);
     modal.find('.select-picker').selectpicker();
 }
 
