@@ -396,6 +396,11 @@ select.big {
     background-color: $brand-primary-1;
 }
 
+// Custom alert colours
+.alert-hc-danger {
+    background-color: #b50000;
+}
+
 // Font colours
 .col-brand-primary-1 {
     color: $brand-primary-1;
@@ -426,7 +431,7 @@ select.big {
 }
 
 .col-white {
-    color: $white;
+    color: $white !important;
 }
 
 .col-greylight {
@@ -712,7 +717,17 @@ path {
     padding: 30px;
 }
 
-.p-y-75 {
+.py-25 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.py-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.py-75 {
     padding-top: 75px;
     padding-bottom: 75px;
 }

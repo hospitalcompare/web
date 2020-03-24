@@ -289,7 +289,7 @@ window.textTruncate = function (str, length, ending) {
 };
 
 //Check if we have a parameter in the URL
-window.getUrlParameter = function(sParam) {
+window.getUrlParameter = function (sParam) {
     var sPageURL = window.location.search.substring(1),
         sURLVariables = sPageURL.split('&'),
         sParameterName,
@@ -356,11 +356,51 @@ $(document).on('click', function (e) {
 });
 
 // Recaptcha callback - clear error message when correctly submitted
-window.recaptchaCallback = function() {
-    $('#hiddenRecaptcha').valid();
-};
+// window.recaptchaCallback = function() {
+//     $('#hiddenRecaptcha').valid();
+// };
+//
+// window.handleFormReset = function() {
+//     // reset the recaptcha
+//     grecaptcha.reset();
+// };
 
-window.handleFormReset = function() {
-    // reset the recaptcha
-    grecaptcha.reset();
-};
+// Handle the covid alert message
+// Set the cookie to stop further popups
+var $specialAlert = $('#hc_special_alert');
+
+function setShowAlertToFalse() {
+    Cookies.set('showSpecialAlert', false, {expires: 1});
+}
+
+function showSpecialAlert() {
+    $specialAlert
+        // .find('.alert-text')
+        // .html(message)
+        // .parents('.alert')
+        // .removeClass('alert-success alert-danger')
+        .addClass('show')
+        .slideDown();
+}
+
+// When closing the message, set the cookie to show that it has been dismissed
+$specialAlert.on('close.bs.alert', function () {
+    // Set the cookie to false
+    console.log('Closed covid');
+    setShowAlertToFalse();
+});
+
+$('#special_alert_link').on('click', function () {
+    setShowAlertToFalse();
+});
+
+// Show the covid alert message if the cookie is not set
+$(document).ready(function () {
+    console.log('Show alert?: ', typeof Cookies.get("showSpecialAlert"), Cookies.get("showSpecialAlert"));
+    if (Cookies.get("showSpecialAlert") != 'false') {
+        console.log('This is the covid info')
+        showSpecialAlert();
+    } else {
+        console.log('not showing covid info')
+    }
+});
