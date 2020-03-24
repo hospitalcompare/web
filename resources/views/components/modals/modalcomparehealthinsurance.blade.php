@@ -17,8 +17,8 @@
             <div class="modal-body p-3 position-relative">
                 <p class="col-grey font-16">Compare Health Insurance
                     for Pre-Existing Conditions</p>
-                <p>Get fast access to the treatment you need with an aordable health insurance policy that covers pre-existing conditions, allowing you to continue doing the
-                    things you love. Most standard insurance policies won’t cover you for pre-existing conditions, but some brokers do oer coverage. Hospital Compare has
+                <p>Get fast access to the treatment you need with an affordable health insurance policy that covers pre-existing conditions, allowing you to continue doing the
+                    things you love. Most standard insurance policies won’t cover you for pre-existing conditions, but some brokers do offer coverage. Hospital Compare has
                     selected the available brokers and listed them below. <a class="btn-link" href="/blog/1">Read our guide to pre-existing conditions.</a></p>
                 <p>Contact a provider</p>
                 <div class="table-responsive">

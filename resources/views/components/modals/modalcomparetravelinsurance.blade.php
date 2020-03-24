@@ -17,7 +17,7 @@
             <div class="modal-body p-3 position-relative">
                 <p class="col-grey font-16">Compare Travel Insurance
                     for Pre-Existing Conditions</p>
-                <p>Get fast, aordable cover with travel insurance that covers pre-existing conditions, giving you peace of mind to enjoy your holiday or trip.
+                <p>Get fast, affordable cover with travel insurance that covers pre-existing conditions, giving you peace of mind to enjoy your holiday or trip.
                     <a class="btn-link" href="/blog/1">Read our guide to
                         treatment funding.</a></p>
                 <p>Contact a provider</p>
