@@ -239,9 +239,10 @@
     &.btn-arrow-down {
         padding-right: 50px;
 
-        i, svg {
+        svg {
             @include v-c;
-            right: 20px;
+            right: 14px;
+            width: 12px;
             transition: $transition;
         }
 

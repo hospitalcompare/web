@@ -35,10 +35,10 @@
 {{--             Compare button --}}
                 <div class="col-4 px-0">
                     <div id="compare_button_title" class="compare-button-title d-flex align-items-center justify-content-center h-100 w-100">
-                        @svg('compare-heart', 'compare-heart')
-                        <p class="font-12 mb-0">Compare&nbsp;
-{{--                            (<span id="compare_number">0</span>)--}}
-                        </p>
+                        <div class="svg-wrapper">
+                            @svg('compare-heart', 'compare-heart')
+                        </div>
+                        <p class="font-12 mb-0">Compare</p>
                     </div>
                 </div>
             </div>

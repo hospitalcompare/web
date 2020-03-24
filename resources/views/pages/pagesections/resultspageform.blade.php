@@ -130,17 +130,17 @@
 
                     @include('components.basic.button', [
                         'buttonText'        => 'Filters',
-                        'classTitle'        => 'btn btn-grey btn-icon btn-arrow-down font-16 pl-3',
+                        'classTitle'        => 'btn btn-grey btn-icon btn-arrow-down font-14 py-2 pl-3 mr-lg-3',
                         'id'                => 'show_filters',
                         'icon'              => '',
                         'svg'               => 'chevron-down-white'
                     ])
 {{--                   Button to trigger shortlist --}}
                     <div id="compare_button_title" class="compare-button-title d-flex align-items-center h-100 ml-auto">
-                        @svg('compare-heart', 'compare-heart')
-                        <p class="font-26">Compare&nbsp;(<span id="compare_number">0</span>)<span
-                                class="compare-arrow ml-3"></span>
-                        </p>
+                        <div class="svg-wrapper">
+                            @svg('compare-heart', 'compare-heart')
+                            <span id="compare_number" class="col-white">0</span>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -174,6 +174,11 @@
     //background-color: #535353;
     cursor: pointer;
 
+    .svg-wrapper {
+        position: relative;
+
+    }
+
     svg { // #compare_heart
         width: 18px;
         height: 18px;
@@ -187,41 +192,72 @@
             //stroke-width: 1px;
         }
 
-        &.has-count {
-            transform-origin: 50% 50%;
+    }
 
-            #outer-circle {
-                transform-origin: 50% 50%;
-                animation: heartBeat .5s ease-in-out 0.1s;
-                animation-fill-mode: forwards;
-                animation-iteration-count: 2;
-            }
-
-            // The inner heart
-            #wishlist {
-                transform-origin: 50% 50%;
-                animation: heartBeat .5s ease-in-out;
-                animation-fill-mode: forwards;
-                animation-iteration-count: 2;
-            }
-        }
-
-        &.active {
-            #wishlist { // The inner heart path
-                fill: $pink;
-                stroke: $pink;
-            }
-        }
+    #compare_number {
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
     p {
         margin: 0;
         line-height: 1;
     }
+
+    // apply animation
+    &.has-count {
+        #compare_number {
+            transform-origin: 50% 50%;
+            animation: heartBeat .5s ease-in-out 0.1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 2;
+        }
+
+        //#outer-circle {
+        //    transform-origin: 50% 50%;
+        //    animation: heartBeat .5s ease-in-out 0.1s;
+        //    animation-fill-mode: forwards;
+        //    animation-iteration-count: 2;
+        //}
+        //
+        //// The inner heart
+        //#wishlist {
+        //    transform-origin: 50% 50%;
+        //    animation: heartBeat .5s ease-in-out;
+        //    animation-fill-mode: forwards;
+        //    animation-iteration-count: 2;
+        //}
+    }
+
+    // fill the heart if there are items added
+    &.active {
+        #wishlist { // The inner heart path
+            //fill: $pink;
+            //stroke: $pink;
+            fill: $trunkie;
+            stroke: $trunkie;
+        }
+    }
+}
+
+.results-page-desktop {
+    .compare-button-title {
+
+
+        svg { // #compare_heart
+            width: 40px;
+            height: 40px;
+        }
+    }
 }
 
 #compare_number {
     display: inline-block;
-    min-width: 10px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    @extend .rounded-circle;
     text-align: center;
+    background: $helplinkRed;
 }
