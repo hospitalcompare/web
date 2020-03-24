@@ -164,8 +164,8 @@
     }
 
     .result-item-mobile-section-3 {
-        .btn-web-call {
-            @include reset-row-spacing(2px);
+        > .row {
+            @include reset-row-spacing(7.5px);
         }
     }
 
