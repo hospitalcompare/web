@@ -246,6 +246,10 @@
             height: 10px;
             background: $helplinkRed;
         }
+
+        #compare_number {
+            display: inline-block;
+        }
     }
 }
 
@@ -260,7 +264,7 @@
 
 // Desktop compare count indicator
 #compare_number {
-    display: inline-block;
+    display: none;
     width: 15px;
     height: 15px;
     line-height: 15px;
