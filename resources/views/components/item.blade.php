@@ -301,7 +301,7 @@
                                 'telNumber2'        =>  $tel2,
                                 'hasEmail'          =>  !empty($email) ? true : false,
                                 'hospitalTitle'     =>  $title,
-                                'classTitle'        =>  'btn btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
+                                'classTitle'        =>  'btn btn-enquire btn-enquire-static-svg btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
                                 'buttonText'        =>  $btnText,
                                 'modalTarget'       =>  '#hc_modal_contacts_general_' . $id,
                                 'id'                =>  'enquire_nhs'.$id,
