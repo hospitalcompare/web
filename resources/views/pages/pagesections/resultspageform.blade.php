@@ -8,7 +8,7 @@
                 </div>
                 <div class="section-2 d-none d-lg-block">
                     <ul class="result-item-menu">
-                        <li class="sort-item sort-care-quality-rating {{empty(Request::input('sort_by')) ? 'desc' : Request::input('sort_by') == 10 ? 'desc':'asc' }} {{Request::input('sort_by') == 10 || Request::input('sort_by') == 9 || empty(Request::input('sort_by'))? 'highlight' : ''}}">
+                        <li class="sort-item sort-care-quality-rating {{empty(Request::input('sort_by')) ? 'desc' : (Request::input('sort_by') == 10 ? 'desc':'asc') }} {{Request::input('sort_by') == 10 || Request::input('sort_by') == 9 || empty(Request::input('sort_by'))? 'highlight' : ''}}">
                             <p tabindex="0"
                                 @include('components.basic.popover', [
                                 'placement' => 'top',
@@ -21,7 +21,7 @@
                                                     The Care Quality Commission is the independent regulator of health and social care in England. They rate hospitals as Outstanding, Good, Requires Improvement or Inadequate.
                                                 </p>'])>Care Quality<br>Rating</p>
                             <span title="Sort by this column"
-                                  class="sort-arrow sort-care-quality-rating {{empty(Request::input('sort_by')) ? 'desc' : Request::input('sort_by') == 10 ? 'desc':'asc' }}">@svg('chevron-down')</span>
+                                  class="sort-arrow sort-care-quality-rating {{empty(Request::input('sort_by')) ? 'desc' : (Request::input('sort_by') == 10 ? 'desc':'asc') }}">@svg('chevron-down')</span>
                         </li>
                         <li class="sort-item sort-waiting-time {{Request::input('sort_by') == 4 ? 'desc':'asc' }} {{Request::input('sort_by') == 3 || Request::input('sort_by') == 4 ? 'highlight' : ''}}">
                             <p tabindex="0"

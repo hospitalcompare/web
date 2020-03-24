@@ -185,17 +185,17 @@
                                          data-parent="#hospital_stats">
                                         <div class="card-body">
                                             <ul class="nhs-user-ratings mb-0">
-                                                <li>Cleanliness:&nbsp;<span><strong>{{number_format((float)$d['placeRating']['cleanliness'], 1)}}%</span></strong>
+                                                <li>Cleanliness:&nbsp;<span><strong>{{!empty($d['placeRating']['cleanliness']) ? number_format((float)$d['placeRating']['cleanliness'], 1) : ''}}%</span></strong>
                                                 </li>
-                                                <li>Food & Hydration:&nbsp;<span><strong>{{number_format((float)$d['placeRating']['food_hydration'], 1)}}%</span></strong>
+                                                <li>Food & Hydration:&nbsp;<span><strong>{{!empty($d['placeRating']['food_hydration']) ? number_format((float)$d['placeRating']['food_hydration'], 1) : ''}}%</span></strong>
                                                 </li>
-                                                <li>Privacy, Dignity & Wellbeing:&nbsp;<span><strong>{{number_format((float)$d['placeRating']['privacy_dignity_wellbeing'], 1)}}%</span></strong>
+                                                <li>Privacy, Dignity & Wellbeing:&nbsp;<span><strong>{{!empty($d['placeRating']['privacy_dignity_wellbeing']) ? number_format((float)$d['placeRating']['privacy_dignity_wellbeing'], 1) : ''}}%</span></strong>
                                                 </li>
-                                                <li>Condition, Appearance & Maintainance:&nbsp;<span><strong>{{number_format((float)$d['placeRating']['condition_appearance_maintenance'], 1)}}%</span></strong>
+                                                <li>Condition, Appearance & Maintainance:&nbsp;<span><strong>{{!empty($d['placeRating']['condition_appearance_maintenance']) ? number_format((float)$d['placeRating']['condition_appearance_maintenance'], 1) : ''}}%</span></strong>
                                                 </li>
-                                                <li>Dementia Domain:&nbsp;<span><strong>{{number_format((float)$d['placeRating']['dementia'], 1)}}%</span></strong>
+                                                <li>Dementia Domain:&nbsp;<span><strong>{{!empty($d['placeRating']['dementia']) ? number_format((float)$d['placeRating']['dementia'], 1) : ''}}%</span></strong>
                                                 </li>
-                                                <li>Disability Domain:&nbsp;<span><strong>{{number_format((float)$d['placeRating']['disability'], 1)}}%</span></strong>
+                                                <li>Disability Domain:&nbsp;<span><strong>{{!empty($d['placeRating']['disability']) ? number_format((float)$d['placeRating']['disability'], 1) : ''}}%</span></strong>
                                                 </li>
                                             </ul>
                                         </div>
