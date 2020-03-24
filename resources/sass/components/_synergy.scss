@@ -218,3 +218,10 @@
         transition: $transition;
     }
 }
+
+// Compensate for lack of scrollbar on mobile view
+.results-page-mobile {
+    .synergy-tab-list {
+        bottom: 15px;
+    }
+}
