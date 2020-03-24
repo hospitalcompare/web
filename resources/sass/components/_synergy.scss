@@ -171,12 +171,19 @@
 
 
 .compare-button-title {
-    //background-color: #535353;
     cursor: pointer;
 
     .svg-wrapper {
         position: relative;
 
+        #count_badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            transition: $transition;
+        }
     }
 
     svg { // #compare_heart
@@ -186,12 +193,6 @@
         margin-right: 5px;
         transition: $transition;
         transform-origin: 50% 50%;
-
-        #wishlist {
-            //stroke: #757575;
-            //stroke-width: 1px;
-        }
-
     }
 
     #compare_number {
@@ -207,7 +208,8 @@
 
     // apply animation
     &.has-count {
-        #compare_number {
+        #compare_number,
+        #count_badge {
             transform-origin: 50% 50%;
             animation: heartBeat .5s ease-in-out 0.1s;
             animation-fill-mode: forwards;
@@ -238,13 +240,17 @@
             fill: $trunkie;
             stroke: $trunkie;
         }
+
+        #count_badge {
+            width: 10px;
+            height: 10px;
+            background: $helplinkRed;
+        }
     }
 }
 
 .results-page-desktop {
     .compare-button-title {
-
-
         svg { // #compare_heart
             width: 40px;
             height: 40px;
@@ -252,6 +258,7 @@
     }
 }
 
+// Desktop compare count indicator
 #compare_number {
     display: inline-block;
     width: 15px;

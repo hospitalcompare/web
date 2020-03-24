@@ -2,16 +2,6 @@
 /********* Mobile results layout *************************************************************************************/
 /********* Mobile results layout *************************************************************************************/
 .results-page-mobile {
-    // CLear the solutions bar
-
-    //&:not(.shortlist-open) {
-    //    .modal-backdrop {
-    //        top: auto;
-    //        bottom: 50px;
-    //        height: calc(100vh - 50px);
-    //    }
-    //}
-
     background-color: $bgGrey;
 
     .row {
@@ -177,5 +167,10 @@
         .btn-web-call {
             @include reset-row-spacing(2px);
         }
+    }
+
+    // Center of heart in compare heart
+    #wishlist {
+        fill: transparent !important;
     }
 }
