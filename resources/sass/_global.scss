@@ -1155,3 +1155,18 @@ h6 {
 //.collapse {
 //    display: block !important;
 //}
+
+// Border radius zero at xl breakpoint
+.rounded-xl-right-0 {
+    @include media-breakpoint-up(xl) {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+}
+
+.rounded-xl-left-0 {
+    @include media-breakpoint-up(xl) {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+}

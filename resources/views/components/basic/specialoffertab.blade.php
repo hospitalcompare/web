@@ -25,7 +25,7 @@
                                 'telNumber2'        =>  $tel2,
                                 'hospitalTitle'     =>  $title,
                                 'modalTarget'       =>  '#hc_modal_enquire_private',
-                                'classTitle'        =>  'btn btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
+                                'classTitle'        =>  'btn btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12 rounded-xl-right-0',
                                 'target'            =>  '_blank',
                                 'buttonText'        =>  'Make enquiry',
                                 'id'                =>  'enquire_private_'.$id,
@@ -41,7 +41,7 @@
                                         'hospitalType'      =>  $hospitalType,
                                         'target'            =>  '_blank',
                                         'hrefValue'         =>  $url,
-                                        'classTitle'        =>  'btn btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
+                                        'classTitle'        =>  'btn btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right rounded-xl-left-0',
                                         'buttonText'        =>  'Web',
                                         'svg'               =>  'icon-web'])
                                 </div>
@@ -71,8 +71,8 @@
                                 'telNumber2'        =>  $tel2,
                                 'hasEmail'          =>  !empty($email) ? true : false,
                                 'hospitalTitle'     =>  $title,
-                                'classTitle'        =>  'btn btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12',
-                                'buttonText'        =>  $btnText,
+                                'classTitle'        =>  'btn btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12 rounded-xl-right-0',
+                                'buttonText'        =>  'Make enquiry',
                                 'modalTarget'       =>  '#hc_modal_contacts_general_' . $id,
                                 'id'                =>  'enquire_nhs'.$id,
                                 'hospitalIds'       =>  $id,
@@ -88,7 +88,7 @@
                                         'hospitalType'      => $hospitalType,
                                         'target'            => '_blank',
                                         'hrefValue'         => $url,
-                                        'classTitle'        => 'btn  btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right',
+                                        'classTitle'        => 'btn btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right rounded-xl-left-0',
                                         'buttonText'        => 'Web',
                                         'svg'               => 'icon-web'])
                                 </div>
