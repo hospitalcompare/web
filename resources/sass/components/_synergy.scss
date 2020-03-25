@@ -207,12 +207,18 @@
     }
 
     // apply animation
-    &.has-count {
-
+    &.pulse-animation {
+        #compare_number,
+        #count_badge {
+            transform-origin: 50% 50%;
+            animation: heartBeat .5s ease-in-out 0.1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 2;
+        }
     }
 
-    // class added if there are items in the shorlist
-    &.active {
+    // fill the heart if there are items added
+    &.shortlist-has-items {
         #wishlist { // The inner heart path
             fill: $trunkie;
             stroke: $trunkie;
@@ -226,15 +232,6 @@
 
         #compare_number {
             display: inline-block;
-        }
-
-        // fill the heart if there are items added
-        #compare_number,
-        #count_badge {
-            transform-origin: 50% 50%;
-            animation: heartBeat .5s ease-in-out 0.1s;
-            animation-fill-mode: forwards;
-            animation-iteration-count: 2;
         }
     }
 }

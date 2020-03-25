@@ -82,10 +82,11 @@ if (compareCount > 0 && window.location.href.indexOf("results-page") > '-1') {
     var remainingColCount = 5 - compareCount;
     target.append(repeatStringNumTimes(emptyCol, remainingColCount));
     $countSpan.text(compareCount);
-    //Add the `active` class that will change the heart to blue
-    $compareButtonTitle.addClass('active');
+    $compareButtonTitle.addClass('pulse-animation');
+    //Add the `active` class that will change the color to pink
+    $compareButtonTitle.addClass('shortlist-has-items');
 } else {
-    $compareButtonTitle.removeClass('active');
+    $compareButtonTitle.removeClass('shortlist-has-items');
     target.append(repeatStringNumTimes(emptyCol, 5))
 }
 
@@ -456,10 +457,16 @@ $(document).on("click", ".compare", function () {
         compareCount = parseInt(compareCount) - 1;
     }
 
+    // Pulsate the heart every time there is an action
+    $compareButtonTitle.removeClass('pulse-animation');
+    setTimeout(function () {
+        $compareButtonTitle.addClass('pulse-animation');
+    }, 100);
+
     if (compareCount > 0) {
-        $compareButtonTitle.addClass('active');
+        $compareButtonTitle.addClass('shortlist-has-items');
     } else {
-        $compareButtonTitle.removeClass('active');
+        $compareButtonTitle.removeClass('shortlist-has-items');
     }
 
     // Set compareHospitalsData
@@ -474,7 +481,7 @@ $(document).on("click", ".remove-hospital", function (e) {
     var data = Cookies.get("compareHospitalsData");
     var compareCount = getCompareCount();
     if (compareCount === 1) {
-        $compareButtonTitle.removeClass('active');
+        $compareButtonTitle.removeClass('shortlist-has-items');
     }
     elementId = elementId.replace('remove_id_', '');
     removeHospitalFromCompare(elementId, data, compareCount, hospitalTypeClicked);
