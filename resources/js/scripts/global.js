@@ -357,10 +357,43 @@ $(document).on('click', function (e) {
 //     $('#hiddenRecaptcha').valid();
 // };
 //
+
+// Reset elements of enquiry form
 window.handleFormReset = function() {
+
+    var $form = $('#enquiry_form');
+    // Reset select pickers
+
+    // Clear text inputs
+    // $textInputs = $form.find('input[type=text');
+    // $textInputs.val('');
+
+    // Clear email imputs
+    // $emailInputs = $form.find('input[type=email');
+    // $emailInputs.val('');
+
+    // Clear text area
+    // $textAreas = $form.find('textarea');
+    // $textAreas.val('');
+
+    // Uncheck checkbox
+    // $checkBoxes = $form.find('input[type=checkbox]');
+    // $checkBoxes.prop('checked', false);
+
+    // Reset selectpickers
+    // $selectPickers = $form.find('.select-picker');
+    // // $selectPickers.val('default').selectpicker("refresh");
+    // $selectPickers.each(function(index, element){
+    //     // $(this).find("option[selected]").removeAttr("selected");
+    //     //
+    //     // $(this).find("option[value=0]").attr('selected', 'selected');
+    //
+    //     $(this).val('0').selectpicker("refresh");
+    //     // $(this).selectpicker('refresh');
+    // });
+
     // reset the recaptcha
-    // grecaptcha.reset();
-    console.log('reset the form');
+    grecaptcha.reset();
 };
 
 // Handle the covid alert message

@@ -122,9 +122,9 @@
                 <div class="col-12">
                     <div class="g-recaptcha" data-sitekey="6LdSxNsUAAAAABneqKEBr9c_yD5Org-9MHY3b5Fb"
                          data-callback="recaptchaCallback"></div>
-                    {{--                    <span class="hidden-with-pos">--}}
-                    {{--                        <label for="hiddenRecaptcha">Leave empty</label>--}}
-                    {{--                    </span>--}}
+                                        <span class="hidden-with-pos">
+                                            <label for="hiddenRecaptcha">Leave empty</label>
+                                        </span>
                     <div class="input-wrapper">
                         <input
                             type="hidden"
