@@ -1,7 +1,7 @@
 //Check if we don't have the cookie and set it to 0
 var $compareBar = $('.compare-hospitals-bar');
 var $compareContent = $('.compare-hospitals-content');
-var $compareButtonTitle = $('#compare_button_title');
+var $compareButtonTitle = $('#open_shortlist');
 var $countSpan = $('#compare_number');
 var $heartIcon = $('#compare_heart');
 var $svgMapIcon =
@@ -488,45 +488,15 @@ $(document).on("click", ".remove-hospital", function (e) {
 });
 
 //Set the Onclick event for the Comparison Header - toggle open and closed
-$(document).on("click", '#compare_button_title', function (e) {
+$(document).on("click", '#open_shortlist', function (e) {
     // Close all open modals
     $('.modal').modal('hide');
-    var compareCount = getCompareCount();
-    var $openTabs = $('.ad-block.open');
-    // var solutionsBar = $('.compare-hospitals-bar');
-    if (compareCount > -1) {
-        // solutionsBar.toggleClass('open');
-        $compareContent.slideToggle();
-        $body.toggleClass('shortlist-open');
-        // $('.compare-arrow').toggleClass('rotated');
-        $compareContent.toggleClass('revealed');
-        // Close the special offer tabs if any are open
-        $openTabs
-            .removeClass('open')
-            .find('.ad-block-body')
-            .slideUp();
-        var $isSticky = $('#resultspage_form').hasClass('js-is-sticky');
-        if ($isSticky) {
-            stickybits('#resultspage_form').cleanup();
-            return;
-        }
-        stickybits('#resultspage_form', {useStickyClasses: true});
-    }
+    $compareContent.slideToggle();
+    $body.toggleClass('shortlist-open');
+    $compareContent.toggleClass('revealed');
 });
 
-// Hide shortlist bar if clicking outside it, but only if it is already open, and if you are NOT clicking on the modal eg enquiry modal, or NOT clicking on the compare_button_title element
-// $(document).on('click', function (e) {
-//     // Are you clicking on a modal?
-//     var isModal = $(e.target).parents('.modal').length || $(e.target).hasClass('modal');
-//     // Are you clicking on the compare button?
-//     var isCompareButton = $(e.target).parents('#compare_button_title').length || $(e.target).hasClass('.compare-button-title');
-//     if ($body.hasClass('shortlist-open') && $compareBar.has(e.target).length === 0 && $compareContent.hasClass('revealed') && !isModal && !isCompareButton ) {
-//         $compareContent.slideUp();
-//         $body.removeClass('shortlist-open');
-//         $compareContent.removeClass('revealed');
-//     }
-// });
-
+// Click outside shortlist to close it
 $(document).on('click', function (e) {
     var isBackdrop = $(e.target).parents('.hc-backdrop').length || $(e.target).hasClass('hc-backdrop');
     if (isBackdrop) {
