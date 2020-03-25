@@ -1,8 +1,4 @@
-{{--            Synergy bar - lowest waiting time/nearest outstanding hospital plus insurance offers--}}
-@include('components.synergy')
-
 <div class="compare-hospitals-bar compare-hospitals-bar_desktop {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
-
     <div class="compare-hospitals-content">
         <div class="container">
             <div class="row flex-nowrap">

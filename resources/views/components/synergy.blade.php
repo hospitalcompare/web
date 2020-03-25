@@ -1,6 +1,6 @@
 <div class="synergy-bar">
     <div class="synergy-tab-list mb-0 row flex-nowrap align-items-end">
-        @if(!empty($data['special_offers']))
+        @if(!empty($specialOffers))
             @foreach($specialOffers as $key => $specialOffer )
                 <div class="col">
                     @include('components.basic.specialoffertab', [

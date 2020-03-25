@@ -94,9 +94,10 @@
         @endif
     </div>
 
-    @include('components.solutionsbar', [
+    @include('components.synergy', [
         'specialOffers' => $data['special_offers']
         ])
+    @include('components.shortlist')
 @endsection
 
 @section('modals')
