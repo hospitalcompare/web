@@ -49,24 +49,25 @@
                                     <p class="col-brand-primary-1 font-20 mb-1" id="hospital_telephone_2">{{ !empty($tel2) ? $tel2 : 'No number available' }}</p>
 {{--                                    Private web address --}}
                                     @includeWhen(!empty($url2), 'components.basic.button', [
-                                        'hospitalType'      => 'nhs-hospital',
-                                        'target'            => '_blank',
-                                        'hrefValue'         => $url2,
-                                        'classTitle'        => 'p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block',
-                                        'buttonText'        => 'Visit website'])
+                                        'hospitalType'      =>  'nhs-hospital',
+                                        'target'            =>  '_blank',
+                                        'hrefValue'         =>  $url2,
+                                        'classTitle'        =>  'p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block',
+                                        'buttonText'        =>  'Visit website'])
                                 </div>
 {{--                               Trigger enquiry form for PRIVATE treatment at NHS hospital --}}
                                 @includeWhen(!empty($email), 'components.basic.modalbutton', [
-                                    'id'                => $id,
-                                    'hospitalType'      => 'nhs-hospital',
-                                    'hospitalIds'       => $id,
-                                    'hrefValue'         => $url2,
-                                    'hospitalTitle'     => $title,
-                                    'modalTarget'       => '#hc_modal_enquire_private',
-                                    'classTitle'        => 'btn btn-squared btn-squared_slim btn-enquire btn-brand-secondary-3 enquiry font-12 text-center mt-5',
-                                    'buttonText'        => 'Make a private treatment enquiry',
-                                    'svg'               => 'circle-check',
-                                    'svgClass'          => 'mr-2'])
+                                    'id'                =>  $id,
+                                    'hospitalType'      =>  'nhs-hospital',
+                                    'hospitalIds'       =>  $id,
+                                    'hrefValue'         =>  $url2,
+                                    'hospitalTitle'     =>  $title,
+                                    'modalTarget'       =>  '#hc_modal_enquire_private',
+                                    'classTitle'        =>  'btn btn-squared btn-squared_slim btn-enquire btn-brand-secondary-3 enquiry font-12 text-center mt-5',
+                                    'buttonText'        =>  'Make a private treatment enquiry',
+                                    'svg'               =>  'circle-check',
+                                    'svgClass'          =>  'mr-2',
+                                    'dismissModal'      =>  true])
                             </div>
                         </div>
                     </div>

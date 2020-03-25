@@ -48,10 +48,10 @@ body {
     &.results-page {
         overflow: hidden; // Stop body scrolling
 
-        #resultspage_form {
-            z-index: initial;
-            //position: static !important;
-        }
+        //#resultspage_form {
+        //    z-index: initial;
+        //    //position: static !important;
+        //}
 
         // Fade in the mask when shortlist is open
         .hc-backdrop {

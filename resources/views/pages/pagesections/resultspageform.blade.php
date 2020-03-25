@@ -136,7 +136,7 @@
                         'svg'               => 'chevron-down-white'
                     ])
 {{--                   Button to trigger shortlist --}}
-                    <div id="compare_button_title" class="compare-button-title d-flex align-items-center h-100 ml-auto">
+                    <div id="open_shortlist" class="compare-button-title d-flex align-items-center h-100 ml-auto">
                         <div class="svg-wrapper">
                             @svg('compare-heart', 'compare-heart')
                             <span id="compare_number" class="col-white">0</span>

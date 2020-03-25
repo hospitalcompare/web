@@ -104,9 +104,10 @@
 
 
 {{--    Solutions bar --}}
-    @include('mobile.components.solutionsbarmobile', [
+    @include('components.synergy', [
         'specialOffers' => $data['special_offers']
-    ])
+        ])
+    @include('mobile.components.shortlistmobile')
 
 
 @endsection

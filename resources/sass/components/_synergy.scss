@@ -22,7 +22,7 @@
         right: 0;
         width: 100%;
         height: 135px;
-        @include media-breakpoint-up(xl) {
+        @include media-breakpoint-up(xxl) {
             height: 275px;
         }
         background-color: #fff;
@@ -30,7 +30,7 @@
     }
 
     // Solutions menu
-    .synergy-tab-list {
+    .synergy-ad-list {
         @media (max-width: 1600px) {
             position: absolute;
             bottom: 0;
@@ -50,7 +50,7 @@
         }
     }
 
-    .special-offer-tab {
+    .ad-block {
         overflow: hidden; // to keep corners rounded
         width: 250px;
         @include media-breakpoint-up(md) {
@@ -69,11 +69,11 @@
             background-image: linear-gradient(266deg, #ed0373, #fd409d);
         }
 
-        &.insurance__offer {
+        &.ad-block-insurance {
             background-image: linear-gradient(87deg, #0563aa, #033860);
         }
 
-        .special-offer-header {
+        .ad-block-header {
             position: relative;
             padding: 13px;
             height: 72px;
@@ -93,7 +93,7 @@
 
         // Spin arrow when open
         &.open {
-            .special-offer-footer {
+            .ad-block-footer {
                 svg {
                     transform: rotate3d(0, 0, 1, 180deg);
                 }
@@ -109,7 +109,7 @@
         }
     }
 
-    .special-offer-body {
+    .ad-block-body {
         padding: 0 13px 13px;
         display: none;
 
@@ -131,7 +131,7 @@
         }
     }
 
-    .special-offer-footer {
+    .ad-block-footer {
 
         cursor: pointer;
         height: 30px;
@@ -164,7 +164,7 @@
 
 // Compensate for lack of scrollbar on mobile view
 .results-page-mobile {
-    .synergy-tab-list {
+    .synergy-ad-list {
         bottom: 15px;
     }
 }
@@ -207,7 +207,7 @@
     }
 
     // apply animation
-    &.has-count {
+    &.pulse-animation {
         #compare_number,
         #count_badge {
             transform-origin: 50% 50%;
@@ -218,7 +218,7 @@
     }
 
     // fill the heart if there are items added
-    &.active {
+    &.shortlist-has-items {
         #wishlist { // The inner heart path
             fill: $trunkie;
             stroke: $trunkie;

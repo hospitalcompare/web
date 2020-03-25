@@ -34,7 +34,7 @@
                 </div>
 {{--             Compare button --}}
                 <div class="col-4 px-0">
-                    <div id="compare_button_title" class="compare-button-title d-flex align-items-center justify-content-center h-100 w-100">
+                    <div id="open_shortlist" class="compare-button-title d-flex align-items-center justify-content-center h-100 w-100">
                         <div class="svg-wrapper">
                             @svg('compare-heart', 'compare-heart')
                             <span id="count_badge" class="rounded-circle"></span>
