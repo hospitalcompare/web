@@ -492,7 +492,7 @@ $(document).on("click", '#compare_button_title', function (e) {
     // Close all open modals
     $('.modal').modal('hide');
     var compareCount = getCompareCount();
-    var $openTabs = $('.special-offer-tab.open');
+    var $openTabs = $('.ad-block.open');
     // var solutionsBar = $('.compare-hospitals-bar');
     if (compareCount > -1) {
         // solutionsBar.toggleClass('open');
@@ -503,7 +503,7 @@ $(document).on("click", '#compare_button_title', function (e) {
         // Close the special offer tabs if any are open
         $openTabs
             .removeClass('open')
-            .find('.special-offer-body')
+            .find('.ad-block-body')
             .slideUp();
         var $isSticky = $('#resultspage_form').hasClass('js-is-sticky');
         if ($isSticky) {

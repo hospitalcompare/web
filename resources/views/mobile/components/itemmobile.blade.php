@@ -107,7 +107,7 @@
 {{--                <div class="result-item-section-2__child d-flex justify-content-end mb-3">--}}
 {{--                    <div class="button-wrapper">--}}
 {{--                        @include('components.basic.modalbutton', [--}}
-{{--                            'classTitle'        => 'toggle-special-offer btn btn-icon btn-link btn-special-offer btn-special-offer_mobile col-pink rounded-0 d-flex align-items-center justify-content-end flex-row-reverse py-0 pr-0 ml-auto',--}}
+{{--                            'classTitle'        => 'toggle-ad btn btn-icon btn-link btn-special-offer btn-special-offer_mobile col-pink rounded-0 d-flex align-items-center justify-content-end flex-row-reverse py-0 pr-0 ml-auto',--}}
 {{--                            'htmlButton'        => true,--}}
 {{--                            'modalTarget'       => '#hc_modal_mobile_special_offer_' . $id,--}}
 {{--                            'id'                => 'special_' . $id,--}}

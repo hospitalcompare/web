@@ -48,10 +48,10 @@ $(document).on("click touchend", ".sort-bar .sort-item", function () {
 });
 
 //Toggling the Special Offers tabs
-$('.special-offer-tab .special-offer-footer').on('click', function (e) {
-    $(this).parents('.special-offer-tab')
+$('.ad-block .ad-block-footer').on('click', function (e) {
+    $(this).parents('.ad-block')
         .toggleClass('open')
-        .find('.special-offer-body').slideToggle();
+        .find('.ad-block-body').slideToggle();
 });
 
 /**

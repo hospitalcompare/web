@@ -350,7 +350,7 @@
 {{--                                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [--}}
 {{--                                    'class' => 'default'])--}}
 {{--                                @include('components.basic.button', [--}}
-{{--                                    'classTitle'        => 'toggle-special-offer btn btn-enquire btn-block btn-pink btn-special-offer font-12',--}}
+{{--                                    'classTitle'        => 'toggle-ad btn btn-enquire btn-block btn-pink btn-special-offer font-12',--}}
 {{--                                    'htmlButton'        => true,--}}
 {{--                                    'id'                => 'special_' . $id,--}}
 {{--                                    'buttonText'        => 'Special Offers',--}}

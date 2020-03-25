@@ -462,8 +462,8 @@
 
     {{--                    <ul class="solutions-menu align-items-end d-none d-md-flex mb-0 ml-auto mr-3">--}}
     {{--                        <li class="d-block h-100 ">--}}
-    {{--                            <div class="special-offer-tab blue__offer blue">--}}
-    {{--                                <div class="special-offer-header d-flex align-items-center">--}}
+    {{--                            <div class="ad-block blue__offer blue">--}}
+    {{--                                <div class="ad-block-header d-flex align-items-center">--}}
 
 
     {{--                                    <div class="offer-text">--}}
@@ -476,12 +476,12 @@
     {{--                                            <p class="distance mb-0"></p>--}}
     {{--                                        </div>--}}
     {{--                                    </div>--}}
-    {{--                                    <span class="toggle-special-offer">--}}
+    {{--                                    <span class="toggle-ad">--}}
     {{--            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12"><g><g><path fill="#fff"--}}
     {{--                                                                                                           d="M9.72 3.84l7.277 7.276c.2.2.467.31.752.31s.552-.11.752-.31l.638-.638c.2-.2.31-.467.31-.752s-.11-.552-.31-.752L10.475.31c-.2-.2-.469-.31-.754-.31-.286 0-.554.11-.755.31L.31 8.966c-.2.2-.311.467-.311.752s.11.552.31.752l.638.638c.415.414 1.09.414 1.505 0z"></path></g></g></svg>--}}
     {{--        </span>--}}
     {{--                                </div>--}}
-    {{--                                <div class="special-offer-body">--}}
+    {{--                                <div class="ad-block-body">--}}
     {{--                                    <div class="inner-body d-flex flex-column justify-content-between h-100">--}}
     {{--                                        <div>--}}
     {{--                                            <ul class="bullets">--}}
@@ -505,8 +505,8 @@
     {{--                            </div>--}}
     {{--                        </li>--}}
     {{--                        <li class="d-block h-100 ml-4">--}}
-    {{--                            <div class="special-offer-tab pink__offer pink">--}}
-    {{--                                <div class="special-offer-header d-flex align-items-center">--}}
+    {{--                            <div class="ad-block pink__offer pink">--}}
+    {{--                                <div class="ad-block-header d-flex align-items-center">--}}
 
 
     {{--                                    <div class="offer-text">--}}
@@ -519,12 +519,12 @@
     {{--                                            <p class="distance mb-0"></p>--}}
     {{--                                        </div>--}}
     {{--                                    </div>--}}
-    {{--                                    <span class="toggle-special-offer">--}}
+    {{--                                    <span class="toggle-ad">--}}
     {{--            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12"><g><g><path fill="#fff"--}}
     {{--                                                                                                           d="M9.72 3.84l7.277 7.276c.2.2.467.31.752.31s.552-.11.752-.31l.638-.638c.2-.2.31-.467.31-.752s-.11-.552-.31-.752L10.475.31c-.2-.2-.469-.31-.754-.31-.286 0-.554.11-.755.31L.31 8.966c-.2.2-.311.467-.311.752s.11.552.31.752l.638.638c.415.414 1.09.414 1.505 0z"></path></g></g></svg>--}}
     {{--        </span>--}}
     {{--                                </div>--}}
-    {{--                                <div class="special-offer-body">--}}
+    {{--                                <div class="ad-block-body">--}}
     {{--                                    <div class="inner-body d-flex flex-column justify-content-between h-100">--}}
     {{--                                        <div>--}}
     {{--                                            <ul class="bullets">--}}
