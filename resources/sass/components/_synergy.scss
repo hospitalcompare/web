@@ -22,7 +22,7 @@
         right: 0;
         width: 100%;
         height: 135px;
-        @include media-breakpoint-up(xl) {
+        @include media-breakpoint-up(xxl) {
             height: 275px;
         }
         background-color: #fff;
