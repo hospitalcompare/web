@@ -82,8 +82,7 @@ if (compareCount > 0 && window.location.href.indexOf("results-page") > '-1') {
     var remainingColCount = 5 - compareCount;
     target.append(repeatStringNumTimes(emptyCol, remainingColCount));
     $countSpan.text(compareCount);
-    $compareButtonTitle.addClass('has-count');
-    //Add the `active` class that will change the color to pink
+    //Add the `active` class that will change the heart to blue
     $compareButtonTitle.addClass('active');
 } else {
     $compareButtonTitle.removeClass('active');
@@ -456,12 +455,6 @@ $(document).on("click", ".compare", function () {
         data = dataArr.join(',');
         compareCount = parseInt(compareCount) - 1;
     }
-
-    // Pulsate the heart every time there is an action
-    $compareButtonTitle.removeClass('has-count');
-    setTimeout(function () {
-        $compareButtonTitle.addClass('has-count');
-    }, 100);
 
     if (compareCount > 0) {
         $compareButtonTitle.addClass('active');
