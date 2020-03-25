@@ -41,14 +41,6 @@ class BasicCRUD
     public function insertGetLastObject()
     {
         $model = new $this->modelName;
-        //Limit the response ONLY for the user Authenticated (on `Live`)
-        if(env('APP_ENV', 'local') === 'live') {
-            if(array_key_exists ('user_id', $this->requestData)) {
-                $token = str_replace('Bearer ','', $_SERVER['HTTP_AUTHORIZATION']);
-                $user = Cache::get($token);
-                $this->requestData['user_id'] = $user['user']->id;
-            }
-        }
         $this->modelObject = $model::create($this->requestData);
         return $this->modelObject;
     }

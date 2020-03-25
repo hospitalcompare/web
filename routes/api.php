@@ -26,6 +26,8 @@ Route::middleware('checkToken')->group(function () {
     Route::get('/generateSitemap', 'ApiController@generateSitemap');
     Route::post('/exampleAPI', 'ApiController@exampleAPI');
     Route::get('/testAT', 'ApiController@testAT');
+    Route::post('/createModel', 'ApiController@createModel');
+    Route::post('/updateModel', 'ApiController@updateModel');
 
     //TEST ROUTES
     Route::get('/testGet', 'ApiController@testGet');

@@ -31,36 +31,36 @@ class ApiController {
     public function checkModel() {
         $req = Request::all();
         $model = new ApiCRUD($req['model']);
-        return json_encode($model->checkProperty());
+        return $model->checkProperty();
     }
 
     public function createModel() {
         $req = Request::all();
         $model = new ApiCRUD($req['model']);
         unset($req['model']);
-        return json_encode($model->createByBulk($req));
+        return $model->createByBulk($req);
     }
 
     public function updateModel() {
         $req = Request::all();
         $response = [
-            'message'   => 'Missing model or id',
+            'message'   => 'Missing model or location_id',
             'success'   => false
         ];
         //Check if we have the model and the id or throw error
-        if(empty($req['model']) || empty($req['id']))
+        if(empty($req['model']) || empty($req['location_id']))
             Errors::generateError($response, 500, 'Invalid parameters');
 
-        $modelId = $req['id'];
+        $locationId = $req['location_id'];
         $modelName = $req['model'];
         unset($req['model'], $req['id']);
         $model = new ApiCRUD($modelName);
-        $response['success'] = $model->updateByBulk($modelId, $req);
+        $response['success'] = $model->updateByBulk($locationId, $req);
         if($response['success'])
             $response['message'] = 'Model successfully updated';
         else
             $response['message'] = 'Update has failed on the model';
-        return json_encode($response);
+        return $response;
     }
 
     public function generateSitemap() {

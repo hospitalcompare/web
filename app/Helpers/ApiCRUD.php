@@ -5,6 +5,7 @@ namespace App\Helpers;
 use App\Helpers\Errors;
 use App\Helpers\Rules;
 use App\Helpers\BasicCRUD;
+use App\Models\Hospital;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
 
@@ -21,8 +22,8 @@ class ApiCRUD extends BasicCRUD
             'name'          => Rules::REQUIRED
         ];
 
-    public $token  = '';
     public $modelAttribute = '';
+    protected $locationId;
 
     /**
      * Constructing the Model and the request data
@@ -35,10 +36,7 @@ class ApiCRUD extends BasicCRUD
         if(!empty($this->requestData)) {
             foreach($this->requestData as $key => $value) {
                 //unset the token and the model so we can build the where and values
-                if($key == 'token') {
-                    $this->token = $value;
-                    unset($this->requestData[$key]);
-                } elseif($key == 'model')
+                if($key == 'model' || $key == 'location_id')
                     unset($this->requestData[$key]);
 
             }
@@ -58,7 +56,7 @@ class ApiCRUD extends BasicCRUD
      * @param bool $hard
      * @return \Illuminate\Http\RedirectResponse|int
      */
-    public function delete($id, $hard=true) {
+    public function delete($id, $hard=false) {
         return parent::delete($id, $hard);
     }
 
@@ -113,9 +111,11 @@ class ApiCRUD extends BasicCRUD
      * @param $bulkValues
      * @return array
      */
-    public function updateByBulk($id, $bulkValues) {
-        $record = $this->modelName::where('id',$id)->first();
-        if(!empty($record)) {
+    public function updateByBulk($locationId, $bulkValues) {
+        $hospital = Hospital::where('location_id', $locationId)->first();
+
+        if(!empty($hospital)) {
+            $record = $this->modelName::where('hospital_id', $hospital->id)->first();
             //Set the new rules
             $this->setRules($bulkValues);
             $validator = \Validator::make($bulkValues, $this->rules);
@@ -143,30 +143,5 @@ class ApiCRUD extends BasicCRUD
 
     public function update($id) {
 
-    }
-
-    /**
-     * Creates an attribute with the given attribute name and value
-     * Status is always active
-     *
-     * @param $model
-     * @param $attributeName
-     * @param $attributeValue
-     * @return mixed model object that has been inserted
-     */
-    public function createAttribute($model, $attributeName, $attributeValue) {
-        if($this->modelName::$hasAttributes && (!empty($attributeName) || !empty($attributeValue))) {
-            //Delete the old attribute if exists
-            $model->attributes()->where('name', $attributeName)->delete();
-            //Create a new attribute with the given attribute name and value
-            return $model->attributes()->create([
-                'external_id'   => $model->id,
-                'name'   	    => $attributeName,
-                'type'   	    => 'sms',
-                'value'  	    => $attributeValue,
-                'status' 	    => 'active'
-            ]);
-        }
-        return [];
     }
 }
