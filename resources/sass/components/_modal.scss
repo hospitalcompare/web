@@ -2,11 +2,6 @@
 .modal {
     overflow: scroll;
 
-    .modal-dialog {
-        //margin-left: auto !important;
-        //margin-right: auto !important;
-    }
-
     .modal-content {
         border-radius: $btn-border-radius;
     }
@@ -15,10 +10,6 @@
         .modal-copy {
             @include font-size(16);
         }
-        //
-        //.modal-content {
-        //    overflow: hidden;
-        //}
 
         .modal-dialog {
             //width: 100%;
@@ -181,8 +172,6 @@
     //opacity: 1 !important;
 
     .modal-dialog {
-        margin: 1rem;
-
         height: calc(100vh - 2rem);
     }
 
