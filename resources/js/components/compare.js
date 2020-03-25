@@ -1,6 +1,7 @@
 //Check if we don't have the cookie and set it to 0
 var $compareBar = $('.compare-hospitals-bar');
 var $compareContent = $('.compare-hospitals-content');
+var $compareButtonTitle = $('#compare_button_title');
 var $countSpan = $('#compare_number');
 var $heartIcon = $('#compare_heart');
 var $svgMapIcon =
@@ -81,11 +82,11 @@ if (compareCount > 0 && window.location.href.indexOf("results-page") > '-1') {
     var remainingColCount = 5 - compareCount;
     target.append(repeatStringNumTimes(emptyCol, remainingColCount));
     $countSpan.text(compareCount);
-    $heartIcon.addClass('has-count');
+    $compareButtonTitle.addClass('has-count');
     //Add the `active` class that will change the color to pink
-    $heartIcon.addClass('active');
+    $compareButtonTitle.addClass('active');
 } else {
-    $heartIcon.removeClass('active');
+    $compareButtonTitle.removeClass('active');
     target.append(repeatStringNumTimes(emptyCol, 5))
 }
 
@@ -338,7 +339,7 @@ window.addHospitalToCompare = function (element) {
     // Add corresponding enquiry modal to body
     // Add corresponding enquiry modal to body
     if (element.hospital_type.name === 'NHS')
-        $body.append(nhsModalContent);
+        $body.find('#modal-container').append(nhsModalContent);
 };
 
 function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) {
@@ -457,15 +458,15 @@ $(document).on("click", ".compare", function () {
     }
 
     // Pulsate the heart every time there is an action
-    $heartIcon.removeClass('has-count');
+    $compareButtonTitle.removeClass('has-count');
     setTimeout(function () {
-        $heartIcon.addClass('has-count');
+        $compareButtonTitle.addClass('has-count');
     }, 100);
 
     if (compareCount > 0) {
-        $heartIcon.addClass('active');
+        $compareButtonTitle.addClass('active');
     } else {
-        $heartIcon.removeClass('active');
+        $compareButtonTitle.removeClass('active');
     }
 
     // Set compareHospitalsData
@@ -474,21 +475,20 @@ $(document).on("click", ".compare", function () {
 
 //Set the OnClick event for the Remove Hospital on the Comparison table
 $(document).on("click", ".remove-hospital", function (e) {
-    console.log(e);
     e.stopPropagation();
     var hospitalTypeClicked = $(this).data('hospital-type');
     var elementId = $(this).attr('id');
     var data = Cookies.get("compareHospitalsData");
     var compareCount = getCompareCount();
     if (compareCount === 1) {
-        $heartIcon.removeClass('active');
+        $compareButtonTitle.removeClass('active');
     }
     elementId = elementId.replace('remove_id_', '');
     removeHospitalFromCompare(elementId, data, compareCount, hospitalTypeClicked);
 });
 
 //Set the Onclick event for the Comparison Header - toggle open and closed
-$(document).on("click", "#compare_button_title", function (e) {
+$(document).on("click", '#compare_button_title', function (e) {
     // Close all open modals
     $('.modal').modal('hide');
     var compareCount = getCompareCount();
@@ -514,10 +514,22 @@ $(document).on("click", "#compare_button_title", function (e) {
     }
 });
 
-// Hide shortlist bar if clicking outside it, but only if it is already open, and if you are NOT clicking on the modal eg enquiry modal
+// Hide shortlist bar if clicking outside it, but only if it is already open, and if you are NOT clicking on the modal eg enquiry modal, or NOT clicking on the compare_button_title element
+// $(document).on('click', function (e) {
+//     // Are you clicking on a modal?
+//     var isModal = $(e.target).parents('.modal').length || $(e.target).hasClass('modal');
+//     // Are you clicking on the compare button?
+//     var isCompareButton = $(e.target).parents('#compare_button_title').length || $(e.target).hasClass('.compare-button-title');
+//     if ($body.hasClass('shortlist-open') && $compareBar.has(e.target).length === 0 && $compareContent.hasClass('revealed') && !isModal && !isCompareButton ) {
+//         $compareContent.slideUp();
+//         $body.removeClass('shortlist-open');
+//         $compareContent.removeClass('revealed');
+//     }
+// });
+
 $(document).on('click', function (e) {
-    var isModal = $(e.target).parents('.modal').length || $(e.target).hasClass('modal');
-    if ($compareBar.has(e.target).length === 0 && $compareContent.hasClass('revealed') && !isModal ) {
+    var isBackdrop = $(e.target).parents('.hc-backdrop').length || $(e.target).hasClass('hc-backdrop');
+    if (isBackdrop) {
         $compareContent.slideUp();
         $body.removeClass('shortlist-open');
         $compareContent.removeClass('revealed');

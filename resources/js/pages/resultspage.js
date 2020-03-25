@@ -48,7 +48,7 @@ $(document).on("click touchend", ".sort-bar .sort-item", function () {
 });
 
 //Toggling the Special Offers tabs
-$('.special-offer-tab .special-offer-header').on('click', function (e) {
+$('.special-offer-tab .special-offer-footer').on('click', function (e) {
     $(this).parents('.special-offer-tab')
         .toggleClass('open')
         .find('.special-offer-body').slideToggle();
@@ -140,9 +140,9 @@ $(document).on("click", ".results-page .change-url", function (event) {
     window.location.href = updateQueryStringParam('hospital_type', 1);
 });
 
-function toggleShowFiltersText() {
-    $body.hasClass('filters-open') ? $showFiltersDiv.text('Show Filters') : $showFiltersDiv.text('Hide Filters');
-}
+// function toggleShowFiltersText() {
+//     $body.hasClass('filters-open') ? $showFiltersDiv.text('Show Filters') : $showFiltersDiv.text('Hide Filters');
+// }
 
 // Toggle filter section
 var $resultspageform = $('#resultspage_form');
@@ -156,7 +156,7 @@ $showFilters.on('click', function () {
     if( $body.hasClass('results-page-desktop') ){
         $filters.slideToggle();
         // Change the text of show filters button
-        toggleShowFiltersText();
+        // toggleShowFiltersText();
     }
     $body.toggleClass('filters-open');
     // Toggle the open class on the button
@@ -172,7 +172,7 @@ $(document).on('click', function (e) {
         $filters.slideUp();
         $body.removeClass('filters-open');
         // Change the text of show filters button
-        $showFiltersDiv.text('Show filters')
+        // $showFiltersDiv.text('Show filters')
     }
 });
 

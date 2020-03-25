@@ -1,67 +1,126 @@
 {{--Special offers tabs in solutions bar --}}
 
-<div class="special-offer-tab {{ $bgColor }}__offer {{ $bgColor ?? '' }}">
-    <div class="special-offer-header d-flex align-items-center">
-{{--        <div class="image-wrapper">--}}
-{{--            <img class="content" width="55" height="50" alt="Image of The Christie Main Site" src="{{ asset('../images/alder-1.jpg') }}">--}}
-{{--            <div class="{{ $hospitalType == "private" ? 'private-hospital' : 'nhs-hospital' }} label">--}}
-{{--                                <p>NHS Hospital</p>--}}
-{{--            </div>--}}
-{{--        </div>--}}
+<div class="special-offer-tab rounded {{ $bgColor }}__offer {{ $bgColor ?? '' }}">
+    <div class="special-offer-header d-flex align-items-start">
         <div class="offer-text">
-            <div class="closed-text">
-                <p class="offer-title mb-0">{{ $headerText['closed']['title'] }}</p>
-                <p class="offer-subtitle mb-0">{{ $headerText['closed']['subtitle'] }}</p>
+            <p class="offer-title mb-0 col-white">{{ $headerText['closed']['title'] }}</p>
+        </div>
+
+    </div>
+    <div class="special-offer-body d-xl-block">
+        <div class="inner-body p-13 rounded bg-white d-flex flex-column justify-content-center align-items-center h-100">
+            <div
+                class="d-inline-block rounded-pill py-1 px-2 mb-3 {{ $hospitalType == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
+                <p class="m-0 col-white font-13">{{ $hospitalType == 'private-hospital' ? 'Private Hospital' : 'NHS Hospital' }}</p>
             </div>
-            <div class="open-text">
-                <p class="hospital-name mb-0">{{ $headerText['open']['title'] }}</p>
-                <p class="distance mb-0">{{ $headerText['open']['subtitle'] }}</p>
+            <p class="text-center">{{ $specialOffer['name'] }}</p>
+            <div class="btn-area w-100">
+                <div class="row btn-web-call">
+                    @if($hospitalType == 'private-hospital')
+                        <div class="col-12 col-xl-6">
+                            @include('components.basic.modalbutton', [
+                                'hospitalType'      =>  $hospitalType,
+                                'hrefValue'         =>  $url,
+                                'telNumber'         =>  $tel,
+                                'telNumber2'        =>  $tel2,
+                                'hospitalTitle'     =>  $title,
+                                'modalTarget'       =>  '#hc_modal_enquire_private',
+                                'classTitle'        =>  'btn btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12 rounded-xl-right-0',
+                                'target'            =>  '_blank',
+                                'buttonText'        =>  'Make enquiry',
+                                'id'                =>  'enquire_private_'.$id,
+                                'hospitalIds'       =>  $id,
+                                'svg'               =>  'circle-check',
+                                'svgClass'          =>  ''])
+                        </div>
+                        <div class="col-12 col-xl-6">
+                            <div class="row btn-web-call mt-1 mt-xl-0">
+                                {{-- Web button - link to website, open in new tab --}}
+                                <div class="btn-wrapper col-6">
+                                    @include('components.basic.button', [
+                                        'hospitalType'      =>  $hospitalType,
+                                        'target'            =>  '_blank',
+                                        'hrefValue'         =>  $url,
+                                        'classTitle'        =>  'btn btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right rounded-xl-left-0',
+                                        'buttonText'        =>  'Web',
+                                        'svg'               =>  'icon-web'])
+                                </div>
+                                {{-- Call button - show right hand side only --}}
+                                <div class="btn-wrapper col-6">
+                                    @include('components.basic.modalbutton', [
+                                        'hospitalType'      =>  $hospitalType,
+                                        'hrefValue'         =>  $url,
+                                        'telNumber'         =>  $tel,
+                                        'telNumber2'        =>  $tel2,
+                                        'hospitalTitle'     =>  $title,
+                                        'classTitle'        =>  'btn btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left',
+                                        'buttonText'        =>  'Call',
+                                        'modalTarget'       =>  '#hc_modal_contacts_private_' . $id,
+                                        'id'                =>  'enquire_nhs'.$id,
+                                        'hospitalIds'       =>  $id,
+                                        'svg'               =>  'icon-phone'])
+                                </div>
+                            </div>
+                        </div>
+                    @elseif($hospitalType == 'nhs-hospital')
+                        <div class="col-12 col-xl-6">
+                            @include('components.basic.modalbutton', [
+                                'hospitalType'      =>  $hospitalType,
+                                'hrefValue'         =>  $url,
+                                'telNumber'         =>  $tel,
+                                'telNumber2'        =>  $tel2,
+                                'hasEmail'          =>  !empty($email) ? true : false,
+                                'hospitalTitle'     =>  $title,
+                                'classTitle'        =>  'btn btn-enquire btn-brand-secondary-3 enquiry mr-2 btn-block font-12 rounded-xl-right-0',
+                                'buttonText'        =>  'Make enquiry',
+                                'modalTarget'       =>  '#hc_modal_contacts_general_' . $id,
+                                'id'                =>  'enquire_nhs'.$id,
+                                'hospitalIds'       =>  $id,
+                                'svg'               =>  'circle-check',
+                                'svgClass'          =>  ''])
+                        </div>
+                        <div class="col-12 col-xl-6 mt-2 mt-xl-0">
+                            <div class="row btn-web-call ">
+                                {{--                        Web button --}}
+                                {{-- Web button - link to website, open in new tab --}}
+                                <div class="btn-wrapper col-6">
+                                    @include('components.basic.button', [
+                                        'hospitalType'      => $hospitalType,
+                                        'target'            => '_blank',
+                                        'hrefValue'         => $url,
+                                        'classTitle'        => 'btn btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right rounded-xl-left-0',
+                                        'buttonText'        => 'Web',
+                                        'svg'               => 'icon-web'])
+                                </div>
+                                {{--                        Call button --}}
+                                <div class="btn-wrapper col-6">
+                                    @include('components.basic.modalbutton', [
+                                        'hospitalType'      => $hospitalType,
+                                        'hrefValue'         => $url,
+                                        'telNumber'         => $tel,
+                                        'telNumber2'        => $tel2,
+                                        'hasEmail'          => !empty($email) ? true : false,
+                                        'hospitalTitle'     => $title,
+                                        'classTitle'        => 'btn  btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left',
+                                        'buttonText'        => 'Call',
+                                        'modalTarget'       => '#hc_modal_contacts_general_' . $id,
+                                        'id'                => 'enquire_nhs'.$id,
+                                        'hospitalIds'       => $id,
+                                        'svg'               => 'icon-phone'])
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                </div>
             </div>
         </div>
-        <span class="toggle-special-offer d-inline-flex align-items-center">
+    </div>
+    <div class="special-offer-footer bg-purple d-flex d-xl-none">
+        <span class="toggle-special-offer d-flex align-items-center justify-content-between w-100">
+            <span class="font-14 lh-18px col-white closed-text">Find out more</span>
+            <span class="font-14 lh-18px col-white open-text">Close</span>
             @svg('chevron-up')
         </span>
     </div>
-    <div class="special-offer-body">
-        <div class="inner-body d-flex flex-column justify-content-between h-100">
-            <div>
-                <ul class="bullets">
-                    @foreach($bulletPoints as $bulletPoint)
-                        @if(!empty($bulletPoint))
-                            <li>{{ $bulletPoint }}</li>
-                        @endif
-                    @endforeach
-                </ul>
-            </div>
-
-            @if(!empty($offerPrice))
-                <div class="offer-price mb-4">
-                    Total cost <strong>£{{ $offerPrice }}</strong>
-                </div>
-            @endif
-            <div class="btn-area text-right">
-                @includeWhen($hospitalType == 'private-hospital' ,'components.basic.modalbutton', [
-                    'id'                => '1',
-                    'hospitalType'      => $hospitalType,
-                    'hospitalTitle'     => $headerText['open']['title'],
-                    'modalTarget'       => '#hc_modal_enquire_private',
-                    'classTitle'        => 'btn btn-icon btn-enquire btn-brand-secondary-3 enquiry font-12 pr-2',
-                    'target'            => '_blank',
-                    'buttonText'        => 'Make an enquiry',
-                    'hospitalIds'       => $hospitalId,
-                    'svg'               => 'circle-check'
-                    ])
-                @includeWhen($hospitalType == 'nhs-hospital' ,'components.basic.modalbutton', [
-                    'hospitalType'      => $hospitalType,
-                    'hospitalTitle'     => $headerText['open']['title'],
-                    'hrefValue'         => $hospitalUrl,
-                    'modalTarget'       => '#hc_modal_contacts_general',
-                    'classTitle'        => 'btn btn-icon btn-enquire btn-brand-secondary-3 enquiry font-12 pr-2',
-                    'target'            => '_blank',
-                    'buttonText'        => 'Make an enquiry',
-                    'hospitalIds'       => $hospitalId
-                    ])
-            </div>
-        </div>
-    </div>
 </div>
+

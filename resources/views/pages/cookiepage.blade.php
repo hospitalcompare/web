@@ -90,6 +90,14 @@
                                 </td>
                             </tr>
                             <tr>
+                                <th scope="row">showSpecialAlert</th>
+                                <td>showSpecialAlert</td>
+                                <td>To record if you have dismissed the special alert.</td>
+                                <td>Determines whether to show the special alert based on whether the user has already
+                                    dismissed it.
+                                </td>
+                            </tr>
+                            <tr>
                                 <th scope="row">compareHospitalsData</th>
                                 <td>compareHospitalsData</td>
                                 <td>String that contains the unique identifiers needed for the user when comparing

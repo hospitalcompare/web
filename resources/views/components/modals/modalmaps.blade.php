@@ -4,7 +4,6 @@
      aria-labelledby="" aria-modal="true" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            @include('components.basic.closebutton')
             <div id="map">
             </div>
             <div id="details" class="d-flex" style="padding-top: 25px">

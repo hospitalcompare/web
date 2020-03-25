@@ -1,0 +1,257 @@
+// Header bar now taken out of soultions bar
+.results-page {
+    overflow-x: hidden;
+}
+
+.synergy-bar {
+    padding: 15px;
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    //overflow-x: scroll;
+
+    &:before {
+        content: '';
+        position: fixed;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 135px;
+        @include media-breakpoint-up(xl) {
+            height: 275px;
+        }
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    }
+
+    // Solutions menu
+    .synergy-tab-list {
+        @media (max-width: 1600px) {
+            position: absolute;
+            bottom: 0;
+        }
+        @media (max-width: 1600px) {
+            width: 100%;
+        }
+        overflow-x: auto;
+        overflow-y: hidden;
+        @include reset-row-spacing(7.5px);
+
+        > div {
+            display: inline-block;
+            @media (min-width: 1600px) {
+                flex: 1;
+            }
+        }
+    }
+
+    .special-offer-tab {
+        overflow: hidden; // to keep corners rounded
+        width: 250px;
+        @include media-breakpoint-up(md) {
+            width: 365px;
+        }
+        @media (min-width: 1600px) {
+            width: auto;
+        }
+        background-size: 200%;
+        background-position: left;
+        min-height: 0;
+        transition: min-height ease 0.4s, background-position ease 0.3s;
+
+        &.private-hospital__offer,
+        &.pink__offer {
+            background-image: linear-gradient(266deg, #ed0373, #fd409d);
+        }
+
+        &.insurance__offer {
+            background-image: linear-gradient(87deg, #0563aa, #033860);
+        }
+
+        .special-offer-header {
+            position: relative;
+            padding: 13px;
+            height: 72px;
+
+            .offer-text {
+                .offer-title {
+                    @include font-size(17);
+                    line-height: 23px;
+
+                    @include media-breakpoint-up(xl) {
+                        @include font-size(19);
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+
+        // Spin arrow when open
+        &.open {
+            .special-offer-footer {
+                svg {
+                    transform: rotate3d(0, 0, 1, 180deg);
+                }
+            }
+
+            .open-text {
+                display: inline;
+            }
+
+            .closed-text {
+                display: none;
+            }
+        }
+    }
+
+    .special-offer-body {
+        padding: 0 13px 13px;
+        display: none;
+
+        .inner-body {
+            min-height: 190px;
+            @include media-breakpoint-up(xl) {
+                min-height: 155px;
+            }
+
+            .hospital-title {
+                @include font-size(14);
+                line-height: 18px;
+
+                @include media-breakpoint-up(xl) {
+                    @include font-size(16);
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+
+    .special-offer-footer {
+
+        cursor: pointer;
+        height: 30px;
+        padding: 0 13px;
+
+        svg {
+            transition: $transition;
+            width: 15px;
+            height: 9px;
+        }
+
+        .open-text {
+            display: none;
+        }
+    }
+
+
+    .compare-arrow {
+        display: inline-block;
+        width: 18px;
+        height: 10px;
+        //background-color: $footerBackgroundColour;
+        background-image: url('../images/up-arrow.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: $transition;
+    }
+}
+
+// Compensate for lack of scrollbar on mobile view
+.results-page-mobile {
+    .synergy-tab-list {
+        bottom: 15px;
+    }
+}
+
+
+.compare-button-title {
+    cursor: pointer;
+
+    .svg-wrapper {
+        position: relative;
+
+        #count_badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            transition: $transition;
+        }
+    }
+
+    svg { // #compare_heart
+        width: 18px;
+        height: 18px;
+        overflow: visible;
+        margin-right: 5px;
+        transition: $transition;
+        transform-origin: 50% 50%;
+    }
+
+    #compare_number {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    p {
+        margin: 0;
+        line-height: 1;
+    }
+
+    // apply animation
+    &.has-count {
+        #compare_number,
+        #count_badge {
+            transform-origin: 50% 50%;
+            animation: heartBeat .5s ease-in-out 0.1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 2;
+        }
+    }
+
+    // fill the heart if there are items added
+    &.active {
+        #wishlist { // The inner heart path
+            fill: $trunkie;
+            stroke: $trunkie;
+        }
+
+        #count_badge {
+            width: 10px;
+            height: 10px;
+            background: $helplinkRed;
+        }
+
+        #compare_number {
+            display: inline-block;
+        }
+    }
+}
+
+.results-page-desktop {
+    .compare-button-title {
+        svg { // #compare_heart
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+// Desktop compare count indicator
+#compare_number {
+    display: none;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    @extend .rounded-circle;
+    text-align: center;
+    background: $helplinkRed;
+}

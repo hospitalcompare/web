@@ -4,7 +4,6 @@
      aria-labelledby="" aria-modal="true" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content p-3">
-            @include('components.basic.closebutton')
             {!! $carouselContent !!}
         </div>
     </div>

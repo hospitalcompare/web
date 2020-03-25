@@ -55,8 +55,10 @@
                 @endforeach
             @endif
         </select>
-        @if(!empty($svg))
+        @if(!empty($svg) && empty($svgStatic))
             @svg($svg, 'position-absolute v-c')
+        @elseif(!empty($svg) && !empty($svgStatic))
+            @svg($svg, 'position-static')
         @endif
     </div>
 </div>
