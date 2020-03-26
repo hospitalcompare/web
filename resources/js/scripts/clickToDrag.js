@@ -7,7 +7,6 @@ window.clickToDrag = function(selector) {
     let scrollLeft;
 
     slider.addEventListener('mousedown', (e) => {
-        console.log('mousedown');
         isDown = true;
         slider.classList.add('active');
         startX = e.pageX - slider.offsetLeft;

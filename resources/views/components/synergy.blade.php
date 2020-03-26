@@ -4,26 +4,9 @@
             @foreach($specialOffers as $key => $specialOffer )
                 <div class="ad-col">
                     @include('components.basic.adblock', [
-                        'bgColor' => 'pink',
-                        'headerText' => [
-                            'open' => [
-                                'title' => 'Your Nearest Outstanding NHS Hospital',
-                                'subtitle' => !empty($specialOffer['radius']) ? round($specialOffer['radius'], 1) . ' miles away' : ''
-                            ],
-                            'closed' => [
-                                'title' => 'Your Nearest Outstanding NHS Hospital',
-                                'subtitle' => ((empty($data['outstanding']) ?
-                                    'at '.$specialOffer['rating']['latest_rating'].' hospital ' :
-                                     'in '.number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1).' Weeks '). (!empty($specialOffer['radius']) ? round($specialOffer['radius'], 1) . ' miles away' : ''))
-                            ]
-                        ],
-                        'bulletPoints' => [
-                            number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1).' Weeks ',
-                            $specialOffer['rating']['latest_rating'] . ' CQC Rating',
-                            (!empty($specialOffer['rating']['avg_user_rating'])) ? $specialOffer['rating']['avg_user_rating'] . ' star NHS Choices user rating' : null
-                        ],
+                        'headerText'        =>  $specialOffer['hospital_type']['name'] == 'Independent' ? 'Your Nearest Outstanding Private Hospital' : 'Your Nearest Outstanding NHS Hospital',
                         'offerPrice'        =>  null,
-                        'hospitalType'      =>  $specialOffer['hospital_type']['name'] == 'Independent' ? 'private-hospital' : 'nhs-hospital',
+                        'hospitalType'      =>  $specialOffer['hospital_type']['name'],
                         'title'             =>  $specialOffer['name'],
                         'url'               =>  $specialOffer['url'],
                         'url2'              =>  $specialOffer['nhs_private_url'],
@@ -39,8 +22,8 @@
         <div class="ad-col">
             <div class="ad-block rounded ad-block-insurance">
                 <div class="ad-block-header d-flex align-items-center">
-                    <div class="offer-text">
-                        <p class="offer-title mb-0 col-white">Compare Health Insurance
+                    <div class="ad-block-header-text">
+                        <p class="ad-block-header-title mb-0 col-white">Compare Health Insurance
                             for Pre-Existing Conditions</p>
                     </div>
                 </div>
@@ -89,8 +72,8 @@
         <div class="ad-col">
             <div class="ad-block rounded ad-block-insurance">
                 <div class="ad-block-header d-flex align-items-center">
-                    <div class="offer-text">
-                        <p class="offer-title mb-0 col-white">Fund Your Treatment and Get Seen Faster</p>
+                    <div class="ad-block-header-text">
+                        <p class="ad-block-header-title mb-0 col-white">Fund Your Treatment and Get Seen Faster</p>
                     </div>
                 </div>
                 <div class="ad-block-body d-xxl-block">
@@ -130,8 +113,8 @@
         <div class="ad-col">
             <div class="ad-block rounded ad-block-insurance">
                 <div class="ad-block-header d-flex align-items-center">
-                    <div class="offer-text">
-                        <p class="offer-title mb-0 col-white">Compare Travel Insurance
+                    <div class="ad-block-header-text">
+                        <p class="ad-block-header-title mb-0 col-white">Compare Travel Insurance
                             for Pre-Existing Conditions</p>
                     </div>
                 </div>
