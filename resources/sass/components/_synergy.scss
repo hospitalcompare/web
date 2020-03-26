@@ -10,9 +10,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-    cursor: grab;
-
-    //overflow-x: scroll;
+    @media (max-width: 1600px) {
+        width: 100%;
+        cursor: url("/images/cursors/grab.cur"), move;
+    }
 
     &:before {
         content: '';
@@ -51,10 +52,7 @@
             }
             @media (min-width: 1600px) {
                 width: auto;
-                //display: inline-block;
-                @media (min-width: 1600px) {
-                    flex: 1;
-                }
+                flex: 1;
             }
         }
     }
