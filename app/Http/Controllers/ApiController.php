@@ -53,7 +53,7 @@ class ApiController {
 
         $locationId = $req['location_id'];
         $modelName = $req['model'];
-        unset($req['model'], $req['id']);
+        unset($req['model'], $req['location_id']);
         $model = new ApiCRUD($modelName);
         $response['success'] = $model->updateByBulk($locationId, $req);
         if($response['success'])

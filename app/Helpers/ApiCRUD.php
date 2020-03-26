@@ -107,15 +107,16 @@ class ApiCRUD extends BasicCRUD
     /**
      * Updating existing model exists
      *
-     * @param $id
+     * @param $locationId
      * @param $bulkValues
      * @return array
      */
     public function updateByBulk($locationId, $bulkValues) {
         $hospital = Hospital::where('location_id', $locationId)->first();
+        $record = $this->modelName::where('hospital_id', $hospital->id)->first();
 
-        if(!empty($hospital)) {
-            $record = $this->modelName::where('hospital_id', $hospital->id)->first();
+        if(!empty($record)) {
+
             //Set the new rules
             $this->setRules($bulkValues);
             $validator = \Validator::make($bulkValues, $this->rules);
@@ -124,6 +125,7 @@ class ApiCRUD extends BasicCRUD
                 Errors::generateError($validator->errors());
             }
 
+            dd($bulkValues);
             //Limit the response ONLY for the user Authenticated (on `Live`)
 //            if(env('APP_ENV', 'local') === 'live') {
 //                if(array_key_exists ('user_id', $bulkValues)) {
