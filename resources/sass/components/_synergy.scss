@@ -10,8 +10,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-
-    //overflow-x: scroll;
+    @media (max-width: 1600px) {
+        width: 100%;
+        cursor: url("/images/cursors/grab.cur"), move;
+    }
 
     &:before {
         content: '';
@@ -31,20 +33,25 @@
 
     // Solutions menu
     .synergy-ad-list {
-        @media (max-width: 1600px) {
-            position: absolute;
-            bottom: 0;
-        }
+        //@media (max-width: 1600px) {
+        //    position: absolute;
+        //    bottom: 0;
+        //}
         @media (max-width: 1600px) {
             width: 100%;
         }
-        overflow-x: auto;
+        overflow-x: hidden;
         overflow-y: hidden;
         @include reset-row-spacing(7.5px);
 
         > div {
-            display: inline-block;
+            flex: none;
+            width: 250px;
+            @include media-breakpoint-up(md) {
+                width: 365px;
+            }
             @media (min-width: 1600px) {
+                width: auto;
                 flex: 1;
             }
         }
@@ -52,20 +59,12 @@
 
     .ad-block {
         overflow: hidden; // to keep corners rounded
-        width: 250px;
-        @include media-breakpoint-up(md) {
-            width: 365px;
-        }
-        @media (min-width: 1600px) {
-            width: auto;
-        }
         background-size: 200%;
         background-position: left;
         min-height: 0;
         transition: min-height ease 0.4s, background-position ease 0.3s;
 
-        &.private-hospital__offer,
-        &.pink__offer {
+        &.ad_pink {
             background-image: linear-gradient(266deg, #ed0373, #fd409d);
         }
 
@@ -78,8 +77,8 @@
             padding: 13px;
             height: 72px;
 
-            .offer-text {
-                .offer-title {
+            .ad-block-header-text {
+                .ad-block-header-title {
                     @include font-size(17);
                     line-height: 23px;
 

@@ -466,7 +466,7 @@
     {{--                                <div class="ad-block-header d-flex align-items-center">--}}
 
 
-    {{--                                    <div class="offer-text">--}}
+    {{--                                    <div class="ad-block-header-text">--}}
     {{--                                        <div class="closed-text">--}}
     {{--                                            <p class="offer-title mb-0">NHS funded operation</p>--}}
     {{--                                            <p class="offer-subtitle mb-0">in 4.3 Weeks </p>--}}
@@ -505,11 +505,11 @@
     {{--                            </div>--}}
     {{--                        </li>--}}
     {{--                        <li class="d-block h-100 ml-4">--}}
-    {{--                            <div class="ad-block pink__offer pink">--}}
+    {{--                            <div class="ad-block ad_pink pink">--}}
     {{--                                <div class="ad-block-header d-flex align-items-center">--}}
 
 
-    {{--                                    <div class="offer-text">--}}
+    {{--                                    <div class="ad-block-header-text">--}}
     {{--                                        <div class="closed-text">--}}
     {{--                                            <p class="offer-title mb-0">NHS funded operation</p>--}}
     {{--                                            <p class="offer-subtitle mb-0">in 4.3 Weeks </p>--}}
