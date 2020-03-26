@@ -10,6 +10,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    cursor: grab;
 
     //overflow-x: scroll;
 
@@ -31,34 +32,35 @@
 
     // Solutions menu
     .synergy-ad-list {
-        @media (max-width: 1600px) {
-            position: absolute;
-            bottom: 0;
-        }
+        //@media (max-width: 1600px) {
+        //    position: absolute;
+        //    bottom: 0;
+        //}
         @media (max-width: 1600px) {
             width: 100%;
         }
-        overflow-x: auto;
+        overflow-x: hidden;
         overflow-y: hidden;
         @include reset-row-spacing(7.5px);
 
         > div {
-            display: inline-block;
+            flex: none;
+            width: 250px;
+            @include media-breakpoint-up(md) {
+                width: 365px;
+            }
             @media (min-width: 1600px) {
-                flex: 1;
+                width: auto;
+                //display: inline-block;
+                @media (min-width: 1600px) {
+                    flex: 1;
+                }
             }
         }
     }
 
     .ad-block {
         overflow: hidden; // to keep corners rounded
-        width: 250px;
-        @include media-breakpoint-up(md) {
-            width: 365px;
-        }
-        @media (min-width: 1600px) {
-            width: auto;
-        }
         background-size: 200%;
         background-position: left;
         min-height: 0;

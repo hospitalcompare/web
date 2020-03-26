@@ -1,8 +1,8 @@
 <div class="synergy-bar">
-    <div class="synergy-ad-list mb-0 row flex-nowrap align-items-end">
+    <div class="synergy-ad-list mb-0 d-flex flex-nowrap align-items-end">
         @if(!empty($specialOffers))
             @foreach($specialOffers as $key => $specialOffer )
-                <div class="col">
+                <div class="ad-col">
                     @include('components.basic.adblock', [
                         'bgColor' => 'pink',
                         'headerText' => [
@@ -22,21 +22,21 @@
                             $specialOffer['rating']['latest_rating'] . ' CQC Rating',
                             (!empty($specialOffer['rating']['avg_user_rating'])) ? $specialOffer['rating']['avg_user_rating'] . ' star NHS Choices user rating' : null
                         ],
-                        'offerPrice'        => null,
-                        'hospitalType'      => $specialOffer['hospital_type']['name'] == 'Independent' ? 'private-hospital' : 'nhs-hospital',
-                        'title'             => $specialOffer['name'],
-                        'url'               => $specialOffer['url'],
-                        'url2'              => $specialOffer['nhs_private_url'],
-                        'id'                => $specialOffer['id'],
-                        'tel'               => $specialOffer['phone_number'],
-                        'tel2'              => $specialOffer['phone_number_2'],
+                        'offerPrice'        =>  null,
+                        'hospitalType'      =>  $specialOffer['hospital_type']['name'] == 'Independent' ? 'private-hospital' : 'nhs-hospital',
+                        'title'             =>  $specialOffer['name'],
+                        'url'               =>  $specialOffer['url'],
+                        'url2'              =>  $specialOffer['nhs_private_url'],
+                        'id'                =>  $specialOffer['id'],
+                        'tel'               =>  $specialOffer['phone_number'],
+                        'tel2'              =>  $specialOffer['phone_number_2'],
                     ])
                 </div>
             @endforeach
         @endif
 
         {{--  Fund treatment/health insurance/travel insurance  --}}
-        <div class="col">
+        <div class="ad-col">
             <div class="ad-block rounded ad-block-insurance">
                 <div class="ad-block-header d-flex align-items-center">
                     <div class="offer-text">
@@ -86,7 +86,7 @@
             </div>
         </div>
         {{--   Self pay for pre-existing --}}
-        <div class="col">
+        <div class="ad-col">
             <div class="ad-block rounded ad-block-insurance">
                 <div class="ad-block-header d-flex align-items-center">
                     <div class="offer-text">
@@ -127,7 +127,7 @@
             </div>
         </div>
         {{--   Travel insurance for pre-existing --}}
-        <div class="col">
+        <div class="ad-col">
             <div class="ad-block rounded ad-block-insurance">
                 <div class="ad-block-header d-flex align-items-center">
                     <div class="offer-text">
