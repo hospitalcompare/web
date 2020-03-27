@@ -16,7 +16,7 @@ class FaqItem extends Component {
                     </h2>
                 </div>
 
-                <div id={`collapse${id}`} className="collapse" aria-labelledby={`heading${id}`}
+                <div id={`collapse${id}`} className="_collapse" aria-labelledby={`heading${id}`}
                      data-parent="#faqs_accordion">
                     <div className="card-body"
                          dangerouslySetInnerHTML={{ __html: answer }}>

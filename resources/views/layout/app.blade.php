@@ -102,59 +102,10 @@
 
     </head>
     <body class="@yield('body-class')">
-        @if(env('APP_ENV') == 'dev')
-            <!-- Google Tag Manager (noscript) -->
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJZJN5W"
-                              height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-            <!-- End Google Tag Manager (noscript) -->
-        @endif
-        @include('layout.header')
+        <main class="" id="react-container">
 
-
-        @include('components.basic.alert')
-        <main class="" id="app">
-            @yield('content')
         </main>
-
-        @include('mobile.components.modals.modalmobilesearchform')
-        @include('components.modals.modalexitsurvey')
-        @include('layout.footer', ['page_footer' => ''])
-        {{-- Stickybits is the script for handling position sticky cross browser --}}
-        <script type="text/javascript" src="{{ asset('js/stickybits.js') }}"></script>
-        <script src="{{ mix('js/app.js') }}"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key={{ config('services.googleApiKey') }}"
-                async defer></script>
-        <script>
-            window.addEventListener("load", function(){
-                // https://www.osano.com/cookieconsent/download/
-                window.cookieconsent.initialise({
-                    "palette": {
-                        "popup": {
-                            "background": "#1d1d1d",
-                            "text": "#fff"
-                        },
-                        "button": {
-                            "background": "#037098",
-                            "text": "#ffffff",
-                        }
-                    },
-                    "theme": "hc-cookie",
-                    "position": "top",
-                    "static": true,
-                    "content": {
-                        "message": "We use cookies to provide a better service. By closing this window or continuing to use our website you agree with our use of cookies. <span class=\"para-block d-inline d-xl-block\">Find out how to manage cookies and view our policy </span>",
-                        "dismiss": "Close",
-                        "link": "here.",
-                        "href": "/cookie-policy"
-                    }
-                })});
-        </script>
-        <style>
-            .cc-window.cc-floating {
-                max-width: 4000px !important;
-            }
-        </style>
-        @include('components.modals.modaltour')
+        <script src="{{ asset(url('/js/app.js')) }}"></script>
     </body>
 
 </html>
