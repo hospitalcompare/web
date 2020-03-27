@@ -1,12 +1,10 @@
 .results-page {
     .corporate-content {
-        display: none;
+        //display: none;
     }
 }
 
 .corporate-content {
-    //box-shadow: inset 0px -20px 0px 0px $brand-primary-1;
-
     .corporate-content-inner {
         background-color: #fff;
         padding: 1rem 0;
@@ -23,15 +21,7 @@
 }
 
 .corporate-content-section-2 {
-    //width: calc(86% - 134px);
-    //width: calc(100% - 134px);
-    //padding-left: 8px;
-    //padding-top: 18px;
-    //padding-bottom: 60px;
-
     .nav-tabs {
-        //box-shadow: inset 0px -2px 0px 0px rgba(236, 236, 236, 1), inset 0px 2px 0px 0px rgba(236,236,236,1);
-
         li { // nav-item
             margin-right: 25px;
             box-sizing: content-box;
@@ -92,16 +82,6 @@
         align-items: flex-end;
     }
 
-    //
-    //.carousel-control-prev {
-    //    left: -12px;
-    //}
-    //.carousel-control-next {
-    //    right: -12px;
-    //}
-
-    // End carousel
-
     // Stats tab
     .rating-name {
         @extend .font-16;
@@ -126,7 +106,6 @@
         .row {
             @include reset-row-spacing(7.5px);
         }
-
 
         // Video
         .video-wrapper {
@@ -159,50 +138,6 @@
 .corporate-content-section-3 {
     width: 14%;
 }
-
-
-//.modal-carousel {
-//    // Carousel styles
-//    .carousel-inner {
-//        //margin-bottom: 10px;
-//    }
-//
-//    .carousel-item {
-//        @include aspect-ratio(190, 110, auto);
-//    }
-//
-//    .indicators {
-//        @include reset-row-spacing(5px);
-//        cursor: pointer;
-//
-//        li {
-//            margin-bottom: 6px;
-//
-//            .col-inner {
-//                @include aspect-ratio(43, 40);
-//                position: relative;
-//                overflow: hidden;
-//
-//                img {
-//                    @include v-h-c;
-//                }
-//            }
-//        }
-//    }
-//
-//    .indicators {
-//        li {
-//            margin-top: 10px;
-//            margin-bottom: 0;
-//        }
-//    }
-//
-//    .carousel-control-prev-icon,
-//    .carousel-control-next-icon {
-//        width: 20px;
-//        height: 20px;
-//    }
-//}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
