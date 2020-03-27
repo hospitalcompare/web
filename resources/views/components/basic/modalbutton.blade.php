@@ -49,7 +49,11 @@ data-target="{{ $modalTarget }}"
 @endif
 @if(!empty($address))
     data-address="{{ $address }}"
+@endif
+@if(!empty($dismissModal) && $dismissModal)
+    data-dismiss="modal"
 @endif>
+
     <span>{!! $buttonText !!}</span>
     @if(!empty($svg) && empty($svgClass))
         @svg($svg)

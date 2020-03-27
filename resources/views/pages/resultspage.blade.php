@@ -12,6 +12,8 @@
 
 @section('body-class', 'results-page results-page-desktop')
 
+{{--{{ dd($data['special_offers']) }}--}}
+
 @section('content')
     @include('pages.pagesections.resultspageform', ['displayBlock' => false])
     <div class="results mt-3 mt-lg-0">
@@ -94,9 +96,10 @@
         @endif
     </div>
 
-    @include('components.solutionsbar', [
+    @include('components.synergy', [
         'specialOffers' => $data['special_offers']
         ])
+    @include('components.shortlist')
 @endsection
 
 @section('modals')
