@@ -4,8 +4,6 @@ import axios from "axios";
 class SearchFaq extends Component {
     constructor(props) {
         super(props);
-        this.timer;
-        this.interval = 5000;
     }
 
 // Do the ajax request with a delay
