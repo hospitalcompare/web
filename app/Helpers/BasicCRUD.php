@@ -12,20 +12,12 @@ class BasicCRUD
     protected $successMsg;
     public 	  $modelObject;
 
-    /**
-     * Constructing the Model and the request data
-     * BasicCRUD constructor.
-     * @param $model
-     */
     public function __construct($model)
     {
         $this->modelName = '\App\Models\\'.$model;
         $this->requestData = \Request::all();
     }
 
-    /**
-     * Creates a new Object from the modelName
-     */
     public function create()
     {
         $model = new $this->modelName;
@@ -45,10 +37,6 @@ class BasicCRUD
         return $this->modelObject;
     }
 
-    /**
-     * Updates an existing Object
-     * @param $id
-     */
     public function update($id)
     {
         $model = new $this->modelName;
@@ -57,13 +45,6 @@ class BasicCRUD
         $this->modelObject->update($this->requestData);
     }
 
-    /**
-     * Deletes the record
-     * Soft delete is the default
-     * @param $id
-     * @param bool $hard
-     * @return RedirectResponse|int
-     */
     public function delete($id, $hard = false)
     {
         if(!$hard)
