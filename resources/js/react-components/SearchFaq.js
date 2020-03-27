@@ -18,8 +18,9 @@ class SearchFaq extends Component {
                     <div className="input-wrapper w-100">
                         <input id="faq_search_input"
                                className="w-100 form-control"
+                               value={this.props.searchTerm}
+                               placeholder={this.props.searchTerm}
                                type="search"
-                               placeholder="Search"
                                onChange={(e) => {this.props.handleChange(e)}} />
                     </div>
                 </form>
