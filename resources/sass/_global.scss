@@ -621,7 +621,7 @@ path {
 }
 
 .d-table-cell {
-    @extend .p-2;
+    @extend .py-2;
 }
 
 // Ticks/dashes in the results ratings
@@ -710,6 +710,11 @@ path {
 
 .blue-tick {
     max-width: 60px;
+}
+
+.blue-tick-inline {
+    width: 10px;
+    display: inline;
 }
 
 // Signature font

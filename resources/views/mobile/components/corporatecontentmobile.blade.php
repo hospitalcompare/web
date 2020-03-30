@@ -11,12 +11,12 @@
                        role="tab" aria-controls="stats" aria-selected="false">Stats</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " id="consultansts-tab_{{ $id }}" data-toggle="tab"
+                    <a class="nav-link active" id="consultansts-tab_{{ $id }}" data-toggle="tab"
                        href="#consultants_{{ $id }}"
                        role="tab" aria-controls="stats" aria-selected="false">Consultants</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link map-tab active"
+                    <a class="nav-link map-tab "
                        id="map-tab_{{ $id }}"
                        data-toggle="tab"
                        data-map-target="#gmap_{{ $id }}"
@@ -256,16 +256,6 @@
                                             </button>
                                         </h2>
                                     </div>
-{{--                                    <div id="collapseSix_{{ $id }}" class="collapse" aria-labelledby="headingSix_{{ $id }}"--}}
-{{--                                         data-parent="#hospital_stats">--}}
-{{--                                        <div class="card-body">--}}
-{{--                                            @if(!empty($FFRating))--}}
-{{--                                                <p>National average is 98.855%</p>--}}
-{{--                                            @else--}}
-{{--                                                <p>No data for this hospital</p>--}}
-{{--                                            @endif--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
                                 </div>
                                 <div class="card rounded-0">
                                     <div class="card-header" id="headingSeven_{{ $id }}">
@@ -290,7 +280,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane col-12" id="consultants_{{ $id }}" role="tabpanel"
+                <div class="tab-pane active col-12" id="consultants_{{ $id }}" role="tabpanel"
                      aria-labelledby="consultants-tab">
                     <div class="row">
                         <div class="col-12">
@@ -302,8 +292,8 @@
                                                     data-toggle="collapse"
                                                     data-target="#collapseTwo_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseTwo_{{ $id }}">
-                                                <p class="rating-name">Waiting Time</p>
-                                                <p class="rating-value pt-0">{{ $waitTime }} Weeks</p>
+                                                <p class="rating-name">Ali Addas</p>
+                                                <p class="rating-value pt-0">Trauma and Orthopaedics 244444 procedures</p>
 
                                             </button>
                                         </h2>
@@ -314,41 +304,77 @@
                                             <div>
                                                 <div class="d-table w-100 text-left">
                                                     <div class="d-table-row">
-                                                        <div class="d-table-cell"></div>
-                                                        <div class="d-table-cell SofiaPro-Medium">Weeks</div>
-                                                        <div class="d-table-cell SofiaPro-Medium">Ranking</div>
+                                                        <div class="d-table-cell px-0 col-grey w-50">GMC Code</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">65465465</div>
                                                     </div>
                                                     <div class="d-table-row">
-                                                        <div class="d-table-cell">Current Waiting Time</div>
-                                                        <div class="d-table-cell">{{$waitTime}}</div>
-                                                        <div class="d-table-cell">{{$waitingTimeRanking}}</div>
+                                                        <div class="d-table-cell px-0 col-grey w-50">Licensed</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">@svg('tick-blue', 'blue-tick-inline') Valid</div>
                                                     </div>
                                                     <div class="d-table-row">
-                                                        <div class="d-table-cell SofiaPro-SemiBold">Waiting Times
-                                                            for Treated Patients
-                                                        </div>
-                                                        <div class="d-table-cell"></div>
-                                                        <div class="d-table-cell"></div>
+                                                        <div class="d-table-cell px-0 col-grey w-50">Years Registered</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">10 years</div>
                                                     </div>
                                                     <div class="d-table-row">
-                                                        <div class="d-table-cell">Outpatients Treated</div>
-                                                        <div class="d-table-cell">{{$outpatient}}</div>
-                                                        <div class="d-table-cell">{{$outpatientRank}}</div>
+                                                        <div class="d-table-cell px-0 col-grey w-50">Procedures</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">Laparoscopic hernia repair,
+                                                            Haemorrhoid treatment, Gallbladder
+                                                            and gallstone removal, Bowel surgery,
+                                                            Rectal prolapse surgery</div>
                                                     </div>
                                                     <div class="d-table-row">
-                                                        <div class="d-table-cell">Inpatients Treated</div>
-                                                        <div class="d-table-cell">{{$inpatient}}</div>
-                                                        <div class="d-table-cell">{{$inpatientRank}}</div>
-                                                    </div>
-                                                    <div class="d-table-row">
-                                                        <div class="d-table-cell">Diagnostics - % waiting 6+ weeks
-                                                        </div>
-                                                        <div class="d-table-cell">{{$diagnostic}}</div>
-                                                        <div class="d-table-cell">{{$diagnosticRank}}</div>
+                                                        <div class="d-table-cell px-0 col-grey w-50">Also Practicing At</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">St Helens Hospital<br />
+                                                            Warrington & Halton Hospital</div>
                                                     </div>
                                                 </div>
-                                                <small class="text-left">NB - Diagnostics is a % of current waiting list waiting 6+
-                                                    weeks (national target is 1%)</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card rounded-0">
+                                    <div class="card-header" id="headingTwo_{{ $id }}">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link collapsed rounded-0" type="button"
+                                                    data-toggle="collapse"
+                                                    data-target="#collapseTwo_{{ $id }}" aria-expanded="false"
+                                                    aria-controls="collapseTwo_{{ $id }}">
+                                                <p class="rating-name">Ali Addas</p>
+                                                <p class="rating-value pt-0">Trauma and Orthopaedics 244444 procedures</p>
+
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseTwo_{{ $id }}" class="collapse" aria-labelledby="headingTwo_{{ $id }}"
+                                         data-parent="#hospital_stats">
+                                        <div class="card-body">
+                                            <div>
+                                                <div class="d-table w-100 text-left">
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">GMC Code</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">65465465</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Licensed</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">@svg('tick-blue', 'blue-tick-inline') Valid</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Years Registered</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">10 years</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Procedures</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">Laparoscopic hernia repair,
+                                                            Haemorrhoid treatment, Gallbladder
+                                                            and gallstone removal, Bowel surgery,
+                                                            Rectal prolapse surgery</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Also Practicing At</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">St Helens Hospital<br />
+                                                            Warrington & Halton Hospital</div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -357,7 +383,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane active col-12"
+                <div class="tab-pane col-12"
                      id="map_{{ $id }}"
                      role="tabpanel"
                      aria-labelledby="map-tab">

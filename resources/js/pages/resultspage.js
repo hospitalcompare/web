@@ -197,58 +197,7 @@ $showFilters.bind('keydown', function(e) {
 //     $(this).toggleClass('open');
 // });
 
-// Toggle the corporate content area
-$('.btn-more-info').on('click', function () {
-    var $target = $($(this).data('target'));
-    var $isToggleButton = $(this).hasClass('btn-more-info');
-    // The offset
-    var scrollOffset = isDesktop ? 87 : 150;
-    $(this)
-        .parents('.result-item')
-        .toggleClass('corporate-content-open');
 
-    if ($target.is(':visible')) {
-        $target
-            .slideUp()
-            .removeClass('open');
-        // Only change text for 'More info' button
-        if($isToggleButton)
-            isDesktop ? $(this).find('span, div').text('Map +') : $(this).find('span, div').text('More info +');
-            // $(this).find('span, div').text('More info');
-        // Scroll back to the result item
-        var $scrollBack = $(this).parents('.result-item').offset().top;
-        $('html, body').animate({
-            scrollTop: $scrollBack - scrollOffset
-        }, 800);
-        //Change the `Close info` to `More info`
-    } else {
-        $target
-            .slideDown()
-            // Permanently add class gmap-initialized
-            .addClass('open');
-        // Scroll to the corporate content area (compensate for the height of sticky header bar)
-        $('html, body').animate({
-            scrollTop: ($(this).parents('.result-item').offset().top) - scrollOffset
-            // scrollTop: ($target.offset().top) - scrollOffset
-        }, 800);
-        // Init the map - only once. Ie only if the CC area hasn't already been opened
-        if(!$target.hasClass('gmap-initialised')) {
-            var $id = $(this).data('id');
-            var targetMap = '#gmap_' + $id;
-            var $latitude = $(targetMap).data('latitude');
-            var $longitude = $(targetMap).data('longitude');
-            initializeGMap($latitude, $longitude, targetMap);
-        }
-        // Permanently add class gmap-initialized
-        $target.addClass('gmap-initialised');
-        // Only change text for 'More info' button
-        if($isToggleButton)
-            // $(this).find('span, div').text('Close info');
-            isDesktop ? $(this).find('span, div').text('Hide map -') : $(this).find('span, div').text('Hide info -');
-    }
-});
-
-// popupDoctor($doctor.data('message'), $doctor.data('doctor-delay'));
 
 // Reset filters
 $('#clear_filters').on('click', function(e){
@@ -267,4 +216,60 @@ $('#clear_filters').on('click', function(e){
     setTimeout(function () {
         $resultspageform.submit();
     }, 500);
+});
+
+// TABS ************************************************************** //
+// Toggle the corporate content area
+$('.btn-more-info').on('click', function () {
+    var $target = $($(this).data('target'));
+    // Add data-attribute for the tab to open
+    var $isToggleButton = $(this).hasClass('btn-more-info');
+    // The offset
+    var scrollOffset = isDesktop ? 87 : 150;
+    $(this)
+        .parents('.result-item')
+        .toggleClass('corporate-content-open');
+
+    if ($target.is(':visible')) {
+        $target
+            .slideUp()
+            .removeClass('open');
+        // Only change text for 'More info' button
+        if($isToggleButton)
+            isDesktop ? $(this).find('span, div').text('Map +') : $(this).find('span, div').text('More info +');
+        // $(this).find('span, div').text('More info');
+        // Scroll back to the result item
+        var $scrollBack = $(this).parents('.result-item').offset().top;
+        $('html, body').animate({
+            scrollTop: $scrollBack - scrollOffset
+        }, 800);
+        //Change the `Close info` to `More info`
+    } else {
+        $target
+            .slideDown()
+            .addClass('open');
+        // Scroll to the corporate content area (compensate for the height of sticky header bar)
+        $('html, body').animate({
+            scrollTop: ($(this).parents('.result-item').offset().top) - scrollOffset
+        }, 800);
+        // Init the map - only once. Ie only if the CC area hasn't already been opened
+        if(!$target.hasClass('gmap-initialised')) {
+            var $id = $(this).data('id');
+            var targetMap = '#gmap_' + $id;
+            var $latitude = $(targetMap).data('latitude');
+            var $longitude = $(targetMap).data('longitude');
+            initializeGMap($latitude, $longitude, targetMap);
+        }
+        // Permanently add class gmap-initialized
+        $target.addClass('gmap-initialised');
+        // Only change text for 'More info' button
+        if($isToggleButton)
+            // $(this).find('span, div').text('Close info');
+            isDesktop ? $(this).find('span, div').text('Hide map -') : $(this).find('span, div').text('Hide info -');
+    }
+});
+
+
+$(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function (e) {
+    // e.target // newly activated tab
 });

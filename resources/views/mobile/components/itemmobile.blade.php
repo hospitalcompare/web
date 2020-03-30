@@ -14,22 +14,28 @@
             'svg'               => 'heart-solid',
             'id'                => $id])
         <div class="result-item-mobile-section-1 w-100 mb-3">
-            <div class="hospital-details w-100 position-relative text-center">
-                <p class="sort-item-title SofiaPro-Medium text-center" id="item_name_{{$id}}">
+            <div class="hospital-details w-100 position-relative">
+                <p class="sort-item-title SofiaPro-Medium" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
                 @if(!empty($locationSpecialism))
-                    <p class="sort-item-specialism font-12 mb-1 text-center col-grey">
+                    <p class="sort-item-specialism font-12 mb-1 text-left col-grey">
                         Specialism:&nbsp;<span>{{ $locationSpecialism }}</span></p>
                 @endif
-                @if(!empty($d['radius']))
-                    <p class="sort-item-location text-center col-grey font-12 d-inline-block mb-0 mr-3"><span>@svg('icon-map', 'map-icon')</span>{{$location}} {{-- trim($town, ', ') --}}
+                    <p class="sort-item-location col-grey font-12 d-inline-block mb-0 mr-1">
+                        <span  class="btn-more-info"
+                            data-target="#corporate_content_hospital_{{$id}}"
+                            data-toggle="tab">
+                            @svg('icon-map', 'map-icon')
+                        </span>
+                        @if(!empty($d['radius']))
+                            {{$location}}
+                        @endif
                     </p>
-                @endif
             <!-- More info button -->
                 @include('components.basic.button', [
-                   'classTitle'        => 'btn btn-more-info text-center font-12 p-0 shadow-none',
-                   'buttonText'        => 'More info +',
+                   'classTitle'        => 'btn btn-more-info font-12 p-0 shadow-none',
+                   'buttonText'        => 'View Consultants +',
                    'htmlButton'        => true,
                    'icon'              => '',
                    'id'                => 'more_info_' . $id,
