@@ -10,6 +10,15 @@ class="{{$classTitle}}"
 @if(!empty($dataTarget))
     data-target="{{ $dataTarget }}"
 @endif
+@if(!empty($dataTabTarget))
+    data-tab-target="{{ $dataTabTarget }}"
+@endif
+@if(!empty($dataHiddenText))
+    data-hidden-text="{{ $dataHiddenText }}"
+@endif
+@if(!empty($dataTabTarget))
+    data-visible-text="{{ $dataVisibleText }}"
+@endif
 @if(empty($htmlButton))
 href="{{ empty($hrefValue) ? 'javascript:void(0);' : $hrefValue }}"
 @endif

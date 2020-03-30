@@ -22,25 +22,33 @@
                     <p class="sort-item-specialism font-12 mb-1 text-left col-grey">
                         Specialism:&nbsp;<span>{{ $locationSpecialism }}</span></p>
                 @endif
-                    <p class="sort-item-location col-grey font-12 d-inline-block mb-0 mr-1">
-                        <span  class="btn-more-info"
+{{--                    <p class="_sort-item-location col-grey font-12 d-inline-block mb-0 mr-1">--}}
+                        <button  class="btn btn-more-info font-12 p-0 d-inline-flex align-items-center mr-3 shadow-none"
                             data-target="#corporate_content_hospital_{{$id}}"
-                            data-toggle="tab">
+                            data-hidden-text="View Map +"
+                            data-visible-text="Hide Map -"
+                            data-tab-target="#map-tab_{{$id}}">
                             @svg('icon-map', 'map-icon')
-                        </span>
+
                         @if(!empty($d['radius']))
                             {{$location}}
+                        @else
+                            <span>View Map +</span>
                         @endif
-                    </p>
+                        </button>
+{{--                    </p>--}}
             <!-- More info button -->
                 @include('components.basic.button', [
-                   'classTitle'        => 'btn btn-more-info font-12 p-0 shadow-none',
-                   'buttonText'        => 'View Consultants +',
-                   'htmlButton'        => true,
-                   'icon'              => '',
-                   'id'                => 'more_info_' . $id,
-                   'dataId'            => $id,
-                   'dataTarget'        => '#corporate_content_hospital_' . $id
+                   'classTitle'         => 'btn btn-more-info font-12 p-0 shadow-none',
+                   'buttonText'         => 'View Consultants +',
+                   'htmlButton'         => true,
+                   'icon'               => '',
+                   'id'                 => 'more_info_' . $id,
+                   'dataId'             => $id,
+                   'dataTarget'         => '#corporate_content_hospital_' . $id,
+                   'dataTabTarget'      => '#consultants-tab_' . $id,
+                   'dataHiddenText'     => 'View Consultants +',
+                   'dataVisibleText'    => 'Hide Consultants -',
                 ])
             <!-- Corporate content area -->
                 @include('mobile.components.corporatecontentmobile', [

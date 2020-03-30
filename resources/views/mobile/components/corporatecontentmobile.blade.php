@@ -11,7 +11,7 @@
                        role="tab" aria-controls="stats" aria-selected="false">Stats</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" id="consultansts-tab_{{ $id }}" data-toggle="tab"
+                    <a class="nav-link active" id="consultants-tab_{{ $id }}" data-toggle="tab"
                        href="#consultants_{{ $id }}"
                        role="tab" aria-controls="stats" aria-selected="false">Consultants</a>
                 </li>

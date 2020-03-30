@@ -222,6 +222,13 @@ $('#clear_filters').on('click', function(e){
 // Toggle the corporate content area
 $('.btn-more-info').on('click', function () {
     var $target = $($(this).data('target'));
+    // the related tab to opn in the CC area
+    var $tabTarget = $($(this).data('tab-target'));
+    var hiddenText = $(this).data('hidden-text');
+    var visibleText = $(this).data('visible-text');
+    console.log($tabTarget);
+
+
     // Add data-attribute for the tab to open
     var $isToggleButton = $(this).hasClass('btn-more-info');
     // The offset
@@ -236,7 +243,7 @@ $('.btn-more-info').on('click', function () {
             .removeClass('open');
         // Only change text for 'More info' button
         if($isToggleButton)
-            isDesktop ? $(this).find('span, div').text('Map +') : $(this).find('span, div').text('More info +');
+            isDesktop ? $(this).find('span, div').text(hiddenText) : $(this).find('span, div').text(hiddenText);
         // $(this).find('span, div').text('More info');
         // Scroll back to the result item
         var $scrollBack = $(this).parents('.result-item').offset().top;
@@ -248,28 +255,24 @@ $('.btn-more-info').on('click', function () {
         $target
             .slideDown()
             .addClass('open');
+        // open the corresponding tab
+        $tabTarget.tab('show');
         // Scroll to the corporate content area (compensate for the height of sticky header bar)
         $('html, body').animate({
             scrollTop: ($(this).parents('.result-item').offset().top) - scrollOffset
         }, 800);
-        // Init the map - only once. Ie only if the CC area hasn't already been opened
-        if(!$target.hasClass('gmap-initialised')) {
-            var $id = $(this).data('id');
-            var targetMap = '#gmap_' + $id;
-            var $latitude = $(targetMap).data('latitude');
-            var $longitude = $(targetMap).data('longitude');
-            initializeGMap($latitude, $longitude, targetMap);
-        }
+
         // Permanently add class gmap-initialized
         $target.addClass('gmap-initialised');
         // Only change text for 'More info' button
         if($isToggleButton)
             // $(this).find('span, div').text('Close info');
-            isDesktop ? $(this).find('span, div').text('Hide map -') : $(this).find('span, div').text('Hide info -');
+            isDesktop ? $(this).find('span, div').text(visibleText) : $(this).find('span, div').text(visibleText);
     }
 });
 
 
-$(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function (e) {
+$(document).on('shown.bs.tab', 'map-tab', function (e) {
     // e.target // newly activated tab
+    console.log(e.relatedTarget)
 });
