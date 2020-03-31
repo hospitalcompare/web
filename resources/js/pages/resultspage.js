@@ -153,7 +153,7 @@ var $showFiltersDiv = $('#show_filters div');
 // Click handler for 'Show filters' button
 $showFilters.on('click', function () {
     // If on the desktop view
-    if( $body.hasClass('results-page-desktop') ){
+    if ($body.hasClass('results-page-desktop')) {
         $filters.slideToggle();
         // Change the text of show filters button
         // toggleShowFiltersText();
@@ -178,12 +178,12 @@ $(document).on('click', function (e) {
 
 // Hide the filters in the mobile results page view
 $hideFilters = $('#close_mobile_filters');
-$hideFilters.on('click', function(){
-   $('body').removeClass('filters-open');
+$hideFilters.on('click', function () {
+    $('body').removeClass('filters-open');
 });
 
 // Open the filters form when tabbing off the 'Filter resutls' button
-$showFilters.bind('keydown', function(e) {
+$showFilters.bind('keydown', function (e) {
     var keyCode = e.keyCode || e.which;
     if (keyCode == 9) {  //If it's the tab key
         $(this).trigger('click'); //Force a click outside the dropdown, so it forces a close
@@ -198,9 +198,8 @@ $showFilters.bind('keydown', function(e) {
 // });
 
 
-
 // Reset filters
-$('#clear_filters').on('click', function(e){
+$('#clear_filters').on('click', function (e) {
     // Clear postcode
     $('#input_postcode').val('');
 
@@ -210,7 +209,7 @@ $('#clear_filters').on('click', function(e){
     $('#resultspage_form .select-picker').selectpicker('refresh');
 
     // Reset range to default
-    $('#resultspage_form #radiusProx').slider('setValue', 4 );
+    $('#resultspage_form #radiusProx').slider('setValue', 4);
 
     // Submit form with 0.5 sec delay
     setTimeout(function () {
@@ -226,8 +225,6 @@ $('.btn-more-info').on('click', function () {
     var $tabTarget = $($(this).data('tab-target'));
     var hiddenText = $(this).data('hidden-text');
     var visibleText = $(this).data('visible-text');
-    console.log($tabTarget);
-
 
     // Add data-attribute for the tab to open
     var $isToggleButton = $(this).hasClass('btn-more-info');
@@ -242,7 +239,7 @@ $('.btn-more-info').on('click', function () {
             .slideUp()
             .removeClass('open');
         // Only change text for 'More info' button
-        if($isToggleButton)
+        if ($isToggleButton)
             isDesktop ? $(this).find('span, div').text(hiddenText) : $(this).find('span, div').text(hiddenText);
         // $(this).find('span, div').text('More info');
         // Scroll back to the result item
@@ -261,18 +258,17 @@ $('.btn-more-info').on('click', function () {
         $('html, body').animate({
             scrollTop: ($(this).parents('.result-item').offset().top) - scrollOffset
         }, 800);
-
-        // Permanently add class gmap-initialized
-        $target.addClass('gmap-initialised');
         // Only change text for 'More info' button
-        if($isToggleButton)
+        if ($isToggleButton)
             // $(this).find('span, div').text('Close info');
             isDesktop ? $(this).find('span, div').text(visibleText) : $(this).find('span, div').text(visibleText);
     }
 });
 
-
-$(document).on('shown.bs.tab', 'map-tab', function (e) {
-    // e.target // newly activated tab
-    console.log(e.relatedTarget)
+$(document).on('shown.bs.tab', '[data-toggle="tab"]', function (e) {
+    var targetMapContainerId = $(this).data('map-target');
+    var $targetMapContainerElement = $(targetMapContainerId);
+    var latitude = $targetMapContainerElement.data('latitude');
+    var longitude = $targetMapContainerElement.data('longitude');
+    initializeGMap(latitude, longitude, targetMapContainerId);
 });

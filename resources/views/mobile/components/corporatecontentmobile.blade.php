@@ -6,7 +6,7 @@
         <!-- Nav tabs -->
             <ul class="nav nav-tabs" id="nav-tabs_{{ $id }}" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link " id="stats-tab_{{ $id }}" data-toggle="tab"
+                    <a class="nav-link" id="stats-tab_{{ $id }}" data-toggle="tab"
                        href="#stats_{{ $id }}"
                        role="tab" aria-controls="stats" aria-selected="false">Stats</a>
                 </li>
@@ -16,7 +16,7 @@
                        role="tab" aria-controls="stats" aria-selected="false">Consultants</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link map-tab "
+                    <a class="nav-link"
                        id="map-tab_{{ $id }}"
                        data-toggle="tab"
                        data-map-target="#gmap_{{ $id }}"
