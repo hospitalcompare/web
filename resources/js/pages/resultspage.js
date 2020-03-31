@@ -272,3 +272,8 @@ $(document).on('shown.bs.tab', '[data-toggle="tab"]', function (e) {
     var longitude = $targetMapContainerElement.data('longitude');
     initializeGMap(latitude, longitude, targetMapContainerId);
 });
+
+// Click to drag on the consultant table
+if($('.table-scroll').length)
+    // Init on the synergy ad list
+    clickToDrag('.table-scroll');

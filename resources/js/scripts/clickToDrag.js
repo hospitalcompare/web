@@ -5,6 +5,7 @@ window.clickToDrag = function(selector) {
     let isDown = false;
     let startX;
     let scrollLeft;
+    let multiplier = 1;
 
     slider.addEventListener('mousedown', (e) => {
         isDown = true;
@@ -27,7 +28,7 @@ window.clickToDrag = function(selector) {
         if (!isDown) return;  // stop the fn from running
         e.preventDefault();
         const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 3;
+        const walk = (x - startX) * multiplier;
         slider.scrollLeft = scrollLeft - walk;
     });
 };

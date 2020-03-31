@@ -56,7 +56,7 @@
                                                             <div class="col-inner p-2  d-flex flex-column justify-content-center align-items-start bg-{{ str_slug($qualityRating) }} text-white rounded">
                                                                 <p class="mb-0 text-white">Overall</p>
                                                                 <p class="mb-0 text-white text-left">
-                                                                <strong>{{ $qualityRating }}</strong></p>
+                                                                    <strong>{{ $qualityRating }}</strong></p>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 cqc-right">
@@ -403,6 +403,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="container-fluid">
             </div>
         </div>
         {{--            <div class="corporate-content-section-3"></div>--}}
