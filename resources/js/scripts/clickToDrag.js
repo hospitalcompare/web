@@ -33,4 +33,7 @@ window.clickToDrag = function(selector) {
 };
 
 // Init on the synergy ad list
-clickToDrag('.synergy-ad-list');
+if($('.synergy-ad-list').length)
+    // Init on the synergy ad list
+    clickToDrag('.synergy-ad-list');
+
