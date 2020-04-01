@@ -164,7 +164,7 @@
                              aria-labelledby="consultants-tab">
                             <div class="">
                                 <div class="">
-                                    <div id="table-scroll" class="table-scroll">
+                                    <div id="table-scroll_{{$id}}" class="table-scroll">
                                         <table id="main-table" class="main-table">
                                             <thead>
                                                 <tr>
