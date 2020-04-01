@@ -151,6 +151,7 @@
         .carousel-arrow-bg {
             fill: #fff;
         }
+
         .carousel-arrow-chevron {
             fill: $brand-primary-1;
         }
@@ -171,5 +172,70 @@
     .result-item-mobile-section-2 {
         max-height: 0;
         overflow: hidden;
+    }
+}
+
+// Consultants table
+
+
+.table-scroll {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin: auto;
+    overflow: auto;
+    height: 350px;
+}
+
+.table-scroll {
+    table {
+        width: 100%;
+        min-width: 1200px;
+        margin: auto;
+        //border-collapse: collapse;
+        //border-spacing: 0;
+
+        th, td {
+            padding: 5px 10px;
+            //border: 1px solid #fff;
+            vertical-align: top;
+        }
+
+        thead {
+            th {
+                background: $table-header-color;
+                position: sticky;
+                top: 0;
+                border-bottom: 2px solid #fff;
+
+                &:first-child {
+                    position: sticky;
+                    left: 0;
+                    z-index: 5;
+                    background: $table-header-color;
+                    border-right: 2px solid #fff;
+                }
+            }
+        }
+
+        tbody {
+            th {
+                border-right: 2px solid #fff;
+
+                &:first-child {
+                    position: sticky;
+                    left: 0;
+                    z-index: 2;
+                    background: #cde2ea;
+                    font-weight: normal;
+                }
+            }
+
+            td {
+                background: $table-body-color;
+                border: 2px solid #fff;
+                @extend .col-grey;
+            }
+        }
     }
 }

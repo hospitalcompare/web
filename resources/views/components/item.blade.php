@@ -29,7 +29,20 @@
                         <p class="sort-item-specialism col-grey mb-1">
                             <strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
                     @endif
-                    <p class="sort-item-location">{{$location}}</p>
+{{--                    <p class="sort-item-location">{{$location}}</p>--}}
+                    <button  class="btn btn-more-info font-12 p-0 d-inline-flex align-items-center mr-3 shadow-none"
+                             data-target="#corporate_content_hospital_{{$id}}"
+                             data-hidden-text="View Map +"
+                             data-visible-text="Hide Map -"
+                             data-tab-target="#map-tab_{{$id}}">
+                        @svg('icon-map', 'map-icon')
+
+                        @if(!empty($d['radius']))
+                            {{$location}}
+                        @else
+                            <span>View Map +</span>
+                        @endif
+                    </button>
 
                     <div class="btn-area mt-auto d-flex align-items-center justify-content-center justify-content-lg-start">
                         <div
@@ -37,13 +50,17 @@
                             <p class="m-0 col-white">{{$fundedText}}</p>
                         </div>
                         @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-more-info font-12 p-0 shadow-none',
-                            'buttonText'        => 'Map +',
+                            'classTitle'        => 'btn btn-more-info font-12 p-0 shadow-none ml-2',
+                            'buttonText'        => 'View Consultants +',
+                            'dataTabTarget'     => '#consultants-tab_' . $id,
+                            'dataHiddenText'    => 'View Consultants +',
+                            'dataVisibleText'   => 'Hide Consultants -',
                             'htmlButton'        => true,
                             'id'                => 'more_info_' . $id,
                             'dataTarget'        => '#corporate_content_hospital_' . $id,
                             'dataId'            => $id
                          ])
+
                     </div>
                 </div>
             </div>

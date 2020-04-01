@@ -16,7 +16,7 @@ class="{{$classTitle}}"
 @if(!empty($dataHiddenText))
     data-hidden-text="{{ $dataHiddenText }}"
 @endif
-@if(!empty($dataTabTarget))
+@if(!empty($dataVisibleText))
     data-visible-text="{{ $dataVisibleText }}"
 @endif
 @if(empty($htmlButton))
@@ -32,7 +32,7 @@ role="button"
 @if(!empty($hospitalType))
     data-hospital-type="{{ $hospitalType }}"
 @endif>
-<div>{!! $buttonText !!}</div>
+<span>{!! $buttonText !!}</span>
 @if(!empty($svg) && empty($svgClass))
     @svg($svg)
 @elseif(!empty($svg) && !empty($svgClass))

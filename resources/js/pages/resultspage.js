@@ -274,6 +274,6 @@ $(document).on('shown.bs.tab', '[data-toggle="tab"]', function (e) {
 });
 
 // Click to drag on the consultant table
-if($('.table-scroll').length)
-    // Init on the synergy ad list
-    clickToDrag('.table-scroll');
+// if($('.table-scroll').length)
+//     // Init on the synergy ad list
+//     clickToDrag('.table-scroll');
