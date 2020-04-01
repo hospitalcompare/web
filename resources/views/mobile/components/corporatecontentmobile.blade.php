@@ -286,22 +286,26 @@
                         <div class="col-12">
                             <div class="hc-accordion p-0" id="consultant_list">
                                 <div class="card rounded-0">
-                                    <div class="card-header" id="headingTwo_{{ $id }}">
+                                    <div class="card-header" id="headingOne_{{ $id }}">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link collapsed rounded-0" type="button"
                                                     data-toggle="collapse"
-                                                    data-target="#collapseTwo_{{ $id }}" aria-expanded="false"
-                                                    aria-controls="collapseTwo_{{ $id }}">
+                                                    data-target="#collapseOne_{{ $id }}" aria-expanded="false"
+                                                    aria-controls="collapseOne_{{ $id }}">
                                                 <div class="rating-name">Edward Wood</div>
                                                 <div class="rating-value pt-0 d-flex">Orthopaedic Surgeon<span class="procedure-count ml-3">75</span>&nbsp;procedures</div>
                                             </button>
                                         </h2>
                                     </div>
-                                    <div id="collapseTwo_{{ $id }}" class="collapse" aria-labelledby="headingTwo_{{ $id }}"
+                                    <div id="collapseOne_{{ $id }}" class="collapse" aria-labelledby="headingOne_{{ $id }}"
                                          data-parent="#hospital_stats">
                                         <div class="card-body">
                                             <div>
                                                 <div class="d-table w-100 text-left">
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Gender</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">M</div>
+                                                    </div>
                                                     <div class="d-table-row">
                                                         <div class="d-table-cell px-0 col-grey w-50">GMC Code</div>
                                                         <div class="d-table-cell px-0 col-grey text-right">4342931</div>
@@ -316,15 +320,11 @@
                                                     </div>
                                                     <div class="d-table-row">
                                                         <div class="d-table-cell px-0 col-grey w-50">Procedures</div>
-                                                        <div class="d-table-cell px-0 col-grey text-right">Laparoscopic hernia repair,
-                                                            Haemorrhoid treatment, Gallbladder
-                                                            and gallstone removal, Bowel surgery,
-                                                            Rectal prolapse surgery</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">Foot & Ankle Surgery</div>
                                                     </div>
                                                     <div class="d-table-row">
                                                         <div class="d-table-cell px-0 col-grey w-50">Also Practicing At</div>
-                                                        <div class="d-table-cell px-0 col-grey text-right">St Helens Hospital<br />
-                                                            Warrington & Halton Hospital</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">The Countess of Chester Hospital</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -338,9 +338,8 @@
                                                     data-toggle="collapse"
                                                     data-target="#collapseTwo_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseTwo_{{ $id }}">
-                                                <p class="rating-name">Ali Addas</p>
-                                                <p class="rating-value pt-0">Trauma and Orthopaedics 244444 procedures</p>
-
+                                                <div class="rating-name">Mark Webb</div>
+                                                <div class="rating-value pt-0  d-flex">Orthopaedic Surgeon <span class="ml-2">75 Procedures</span></div>
                                             </button>
                                         </h2>
                                     </div>
@@ -350,8 +349,12 @@
                                             <div>
                                                 <div class="d-table w-100 text-left">
                                                     <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Gender</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">M</div>
+                                                    </div>
+                                                    <div class="d-table-row">
                                                         <div class="d-table-cell px-0 col-grey w-50">GMC Code</div>
-                                                        <div class="d-table-cell px-0 col-grey text-right">65465465</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">4055310</div>
                                                     </div>
                                                     <div class="d-table-row">
                                                         <div class="d-table-cell px-0 col-grey w-50">Licensed</div>
@@ -359,19 +362,161 @@
                                                     </div>
                                                     <div class="d-table-row">
                                                         <div class="d-table-cell px-0 col-grey w-50">Years Registered</div>
-                                                        <div class="d-table-cell px-0 col-grey text-right">10 years</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">28	Years</div>
                                                     </div>
                                                     <div class="d-table-row">
                                                         <div class="d-table-cell px-0 col-grey w-50">Procedures</div>
-                                                        <div class="d-table-cell px-0 col-grey text-right">Laparoscopic hernia repair,
-                                                            Haemorrhoid treatment, Gallbladder
-                                                            and gallstone removal, Bowel surgery,
-                                                            Rectal prolapse surgery</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">Total Elbow Replacement
+                                                            Total Shoulder Replacement</div>
                                                     </div>
                                                     <div class="d-table-row">
                                                         <div class="d-table-cell px-0 col-grey w-50">Also Practicing At</div>
-                                                        <div class="d-table-cell px-0 col-grey text-right">St Helens Hospital<br />
-                                                            Warrington & Halton Hospital</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">The Countess of Chester Hospital</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card rounded-0">
+                                    <div class="card-header" id="headingThree_{{ $id }}">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link collapsed rounded-0" type="button"
+                                                    data-toggle="collapse"
+                                                    data-target="#collapseThree_{{ $id }}" aria-expanded="false"
+                                                    aria-controls="collapseThree_{{ $id }}">
+                                                <div class="rating-name">Raghuram Thonse</div>
+                                                <div class="rating-value pt-0  d-flex">Orthopaedic Surgeon <span class="ml-2">257 Procedures</span></div>
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseThree_{{ $id }}" class="collapse" aria-labelledby="headingThree_{{ $id }}"
+                                         data-parent="#hospital_stats">
+                                        <div class="card-body">
+                                            <div>
+                                                <div class="d-table w-100 text-left">
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Gender</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">M</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">GMC Code</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">4732589</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Licensed</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">@svg('tick-blue', 'blue-tick-inline') Valid</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Years Registered</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">20	Years</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Procedures</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">Total Knee Replacement
+                                                            Total Hip Replacement
+                                                            Total Shoulder Replacement</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Also Practicing At</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">The Countess of Chester Hospital</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card rounded-0">
+                                    <div class="card-header" id="headingFour_{{ $id }}">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link collapsed rounded-0" type="button"
+                                                    data-toggle="collapse"
+                                                    data-target="#collapseFour_{{ $id }}" aria-expanded="false"
+                                                    aria-controls="collapseFour_{{ $id }}">
+                                                <div class="rating-name">Ronan Banim</div>
+                                                <div class="rating-value pt-0  d-flex">Orthopaedic Surgeon <span class="ml-2">623 Procedures</span></div>
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseFour_{{ $id }}" class="collapse" aria-labelledby="headingFour_{{ $id }}"
+                                         data-parent="#hospital_stats">
+                                        <div class="card-body">
+                                            <div>
+                                                <div class="d-table w-100 text-left">
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Gender</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">M</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">GMC Code</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">4031824</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Licensed</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">@svg('tick-blue', 'blue-tick-inline') Valid</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Years Registered</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">29 Years</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Procedures</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">Total Hip Replacement
+                                                            Patello-Femoral Replacement
+                                                            Total knee replacement
+                                                            Unicondylar Knee Replacement</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Also Practicing At</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">The Countess of Chester Hospital</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card rounded-0">
+                                    <div class="card-header" id="headingFive_{{ $id }}">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link collapsed rounded-0" type="button"
+                                                    data-toggle="collapse"
+                                                    data-target="#collapseFive_{{ $id }}" aria-expanded="false"
+                                                    aria-controls="collapseFive_{{ $id }}">
+                                                <div class="rating-name">Janardhan Rao</div>
+                                                <div class="rating-value pt-0  d-flex">Orthopaedic Surgeon <span class="ml-2">319 Procedures</span></div>
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseFive_{{ $id }}" class="collapse" aria-labelledby="headingFive_{{ $id }}"
+                                         data-parent="#hospital_stats">
+                                        <div class="card-body">
+                                            <div>
+                                                <div class="d-table w-100 text-left">
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Gender</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">M</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">GMC Code</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">3555187</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Licensed</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">@svg('tick-blue', 'blue-tick-inline') Valid</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Years Registered</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">29 Years</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Procedures</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">Total Hip Replacement
+                                                            Total Knee Replacement
+                                                            Unicondylar Knee Replacement</div>
+                                                    </div>
+                                                    <div class="d-table-row">
+                                                        <div class="d-table-cell px-0 col-grey w-50">Also Practicing At</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">The Countess of Chester Hospital</div>
                                                     </div>
                                                 </div>
                                             </div>
