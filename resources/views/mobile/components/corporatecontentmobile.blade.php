@@ -292,9 +292,8 @@
                                                     data-toggle="collapse"
                                                     data-target="#collapseTwo_{{ $id }}" aria-expanded="false"
                                                     aria-controls="collapseTwo_{{ $id }}">
-                                                <p class="rating-name">Ali Addas</p>
-                                                <p class="rating-value pt-0">Trauma and Orthopaedics 244444 procedures</p>
-
+                                                <div class="rating-name">Edward Wood</div>
+                                                <div class="rating-value pt-0 d-flex">Orthopaedic Surgeon<span class="procedure-count ml-3">75</span>&nbsp;procedures</div>
                                             </button>
                                         </h2>
                                     </div>
@@ -305,7 +304,7 @@
                                                 <div class="d-table w-100 text-left">
                                                     <div class="d-table-row">
                                                         <div class="d-table-cell px-0 col-grey w-50">GMC Code</div>
-                                                        <div class="d-table-cell px-0 col-grey text-right">65465465</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right">4342931</div>
                                                     </div>
                                                     <div class="d-table-row">
                                                         <div class="d-table-cell px-0 col-grey w-50">Licensed</div>
@@ -313,7 +312,7 @@
                                                     </div>
                                                     <div class="d-table-row">
                                                         <div class="d-table-cell px-0 col-grey w-50">Years Registered</div>
-                                                        <div class="d-table-cell px-0 col-grey text-right">10 years</div>
+                                                        <div class="d-table-cell px-0 col-grey text-right"><span class="years-registered">23</span>&nbsp;years</div>
                                                     </div>
                                                     <div class="d-table-row">
                                                         <div class="d-table-cell px-0 col-grey w-50">Procedures</div>

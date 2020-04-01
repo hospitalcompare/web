@@ -175,22 +175,81 @@
                                                     <th scope="col" class="text-center">Years Registered</th>
                                                     <th scope="col" width="300">Specialisms</th>
                                                     <th scope="col">Also Practicing At</th>
-                                                    <th scope="col">History</th>
+{{--                                                    <th scope="col">History</th>--}}
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach(range(1, 100) as $i)
-                                                <tr>
-                                                    <th>Ali Addis</th>
-                                                    <td class="text-center">M</td>
-                                                    <td class="text-center">6080734</td>
-                                                    <td class="text-center">Valid</td>
-                                                    <td class="text-center">10 years</td>
-                                                    <td>Trauma & Orthopaedics</td>
-                                                    <td>St Helens Hospital</td>
-                                                    <td>Trauma & Orthopaedics</td>
-                                                </tr>
-                                                @endforeach
+                                            <tr>
+                                                <th>Edward Wood</th>
+                                                <td class="text-center">M</td>
+                                                <td class="text-center">4342931</td>
+                                                <td class="text-center">Valid</td>
+                                                <td class="text-center">23 years</td>
+                                                <td>Foot & Ankle Surgery</td>
+                                                <td>The Countess of Chester Hospital</td>
+{{--                                                <td>Trauma & Orthopaedics</td>--}}
+                                            </tr>
+                                            <tr>
+                                                <th>Mark Webb</th>
+                                                <td class="text-center">M</td>
+                                                <td class="text-center">4055310</td>
+                                                <td class="text-center">Valid</td>
+                                                <td class="text-center">28 years</td>
+                                                <td>Total Elbow Replacement<br/>
+                                                    Total Shoulder Replacement</td>
+                                                <td>The Countess of Chester Hospital</td>
+{{--                                                <td>Trauma & Orthopaedics</td>--}}
+                                            </tr>
+                                            <tr>
+                                                <th>Raghuram Thonse</th>
+                                                <td class="text-center">M</td>
+                                                <td class="text-center">4732589</td>
+                                                <td class="text-center">Valid</td>
+                                                <td class="text-center">20 years</td>
+                                                <td>Total Knee Replacement<br/>
+                                                    Total Hip Replacement<br/>
+                                                    Total Shoulder Replacement</td>
+                                                <td>The Countess of Chester Hospital</td>
+                                                {{--                                                <td></td>--}}
+                                            </tr>
+                                            <tr>
+                                                <th>Janardhan Rao</th>
+                                                <td class="text-center">M</td>
+                                                <td class="text-center">3555187</td>
+                                                <td class="text-center">Valid</td>
+                                                <td class="text-center">29	Years</td>
+                                                <td>Total Hip Replacement<br/>
+                                                    Total Knee Replacement<br/>
+                                                    Unicondylar Knee Replacement</td>
+                                                <td>The Countess of Chester Hospital</td>
+                                                {{--                                                <td></td>--}}
+                                            </tr>
+                                            <tr>
+                                                <th>Ronan Banim</th>
+                                                <td class="text-center">M</td>
+                                                <td class="text-center">4031824</td>
+                                                <td class="text-center">Valid</td>
+                                                <td class="text-center">27	Years</td>
+                                                <td>Total Hip Replacement<br/>
+                                                    Patello-Femoral Replacement<br/>
+                                                    Total knee replacement<br/>
+                                                    Unicondylar Knee Replacement</td>
+                                                <td>The Countess of Chester Hospital</td>
+                                                {{--                                                <td></td>--}}
+                                            </tr>
+{{--                                            @foreach(range(1, 100) as $i)--}}
+{{--                                                <tr>--}}
+{{--                                                    <th>Edward Wood</th>--}}
+{{--                                                    <td class="text-center">M</td>--}}
+{{--                                                    <td class="text-center">6080734</td>--}}
+{{--                                                    <td class="text-center">Valid</td>--}}
+{{--                                                    <td class="text-center">10 years</td>--}}
+{{--                                                    <td>Trauma & Orthopaedics</td>--}}
+{{--                                                    <td>St Helens Hospital</td>--}}
+{{--                                                    <td>Trauma & Orthopaedics</td>--}}
+{{--                                                </tr>--}}
+{{--                                                @endforeach--}}
+
                                             </tbody>
                                         </table>
                                     </div>

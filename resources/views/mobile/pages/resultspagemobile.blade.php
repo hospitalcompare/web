@@ -146,4 +146,5 @@
     @include('components.modals.modalcomparehealthinsurance')
     @include('components.modals.modalfundyourtreatment')
     @include('components.modals.modalcomparetravelinsurance')
+
 @endsection
