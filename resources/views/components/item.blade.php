@@ -21,8 +21,7 @@
                 {{--                        <p class="m-0">{{$fundedText}}</p></div>--}}
                 {{--                </div>--}}
                 <div class="hospital-details d-flex align-content-between flex-column w-100 position-relative">
-
-                    <p class="sort-item-title SofiaPro-SemiBold" id="item_name_{{$id}}">
+                    <p title="{{$title}}" class="sort-item-title overflow-ellipsis SofiaPro-SemiBold" id="item_name_{{$id}}">
                         {{$title}}
                     </p>
                     @if(!empty($locationSpecialism))
@@ -44,13 +43,12 @@
                         @endif
                     </button>
 
-                    <div class="btn-area mt-auto d-flex align-items-center justify-content-center justify-content-lg-start">
-                        <div
-                            class="d-none d-lg-inline-block rounded-pill py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
-                            <p class="m-0 col-white">{{$fundedText}}</p>
+                    <div class="btn-area mt-auto d-flex flex-column flex-xl-row align-items-xl-center justify-content-lg-start">
+                        <div class="pill-wrapper">
+                            <p class="d-none d-lg-inline-block rounded-pill py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }} m-0 col-white">{{$fundedText}}</p>
                         </div>
                         @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-more-info font-12 p-0 shadow-none ml-2',
+                            'classTitle'        => 'btn btn-more-info font-12 p-0 shadow-none ml-lg-2',
                             'buttonText'        => 'View Consultants +',
                             'dataTabTarget'     => '#consultants-tab_' . $id,
                             'dataHiddenText'    => 'View Consultants +',

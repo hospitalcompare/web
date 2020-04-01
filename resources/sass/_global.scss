@@ -1175,3 +1175,10 @@ h6 {
         border-bottom-left-radius: 0 !important;
     }
 }
+
+// Add ellipsis to overflowing text
+.overflow-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
