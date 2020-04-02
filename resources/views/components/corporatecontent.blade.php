@@ -173,6 +173,7 @@
                                                     <th scope="col" class="text-center">GMC Code</th>
                                                     <th scope="col" class="text-center">Licensed</th>
                                                     <th scope="col" class="text-center">Years Registered</th>
+                                                    <th scope="col">Procedures Performed</th>
                                                     <th scope="col" width="300">Specialisms</th>
                                                     <th scope="col">Also Practicing At</th>
 {{--                                                    <th scope="col">History</th>--}}
@@ -185,6 +186,7 @@
                                                 <td class="text-center">4342931</td>
                                                 <td class="text-center">Valid</td>
                                                 <td class="text-center">23 years</td>
+                                                <td>75 Procedures</td>
                                                 <td>Foot & Ankle Surgery</td>
                                                 <td>The Countess of Chester Hospital</td>
 {{--                                                <td>Trauma & Orthopaedics</td>--}}
@@ -195,6 +197,7 @@
                                                 <td class="text-center">4055310</td>
                                                 <td class="text-center">Valid</td>
                                                 <td class="text-center">28 years</td>
+                                                <td>75 Procedures</td>
                                                 <td>Total Elbow Replacement<br/>
                                                     Total Shoulder Replacement</td>
                                                 <td>The Countess of Chester Hospital</td>
@@ -206,6 +209,7 @@
                                                 <td class="text-center">4732589</td>
                                                 <td class="text-center">Valid</td>
                                                 <td class="text-center">20 years</td>
+                                                <td>257 Procedures</td>
                                                 <td>Total Knee Replacement<br/>
                                                     Total Hip Replacement<br/>
                                                     Total Shoulder Replacement</td>
@@ -218,6 +222,7 @@
                                                 <td class="text-center">3555187</td>
                                                 <td class="text-center">Valid</td>
                                                 <td class="text-center">29	Years</td>
+                                                <td>319 Procedures</td>
                                                 <td>Total Hip Replacement<br/>
                                                     Total Knee Replacement<br/>
                                                     Unicondylar Knee Replacement</td>
@@ -230,6 +235,7 @@
                                                 <td class="text-center">4031824</td>
                                                 <td class="text-center">Valid</td>
                                                 <td class="text-center">27	Years</td>
+                                                <td>623 Procedures</td>
                                                 <td>Total Hip Replacement<br/>
                                                     Patello-Femoral Replacement<br/>
                                                     Total knee replacement<br/>
