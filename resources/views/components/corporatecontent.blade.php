@@ -4,40 +4,32 @@
         <div class="corporate-content-inner d-flex">
             <div class="corporate-content-section-1"></div>
             <div class="corporate-content-section-2 position-relative w-100">
-{{--                @include('components.basic.button', [--}}
-{{--                    'buttonText'        => 'Close Info',--}}
-{{--                    'classTitle'        => 'btn btn-cc-close position-absolute',--}}
-{{--                    'svg'               => 'times',--}}
-{{--                    'dataTarget'        => '#corporate_content_hospital_' . $id,--}}
-{{--                    'style'             => 'right: 0; top: 9px',--}}
-{{--                    'id'                => 'close_cc_' . $id])--}}
                 <!-- Nav tabs -->
-{{--                <ul class="nav nav-tabs" id="nav-tabs_{{ $id }}" role="tablist">--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a class="nav-link active " id="profile-tab_{{ $id }}" data-toggle="tab"--}}
-{{--                           href="#profile_{{ $id }}"--}}
-{{--                           role="tab" aria-controls="profile" aria-selected="false">Profile</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a class="nav-link map-tab active"--}}
-{{--                           id="map-tab_{{ $id }}"--}}
-{{--                           data-toggle="tab"--}}
-
-{{--                           data-map-target="#gmap_{{ $id }}"--}}
-{{--                           href="#map_{{ $id }}"--}}
-{{--                           role="tab"--}}
-{{--                           aria-controls="home"--}}
-{{--                           aria-selected="true">Map</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item d-none">--}}
-{{--                        <a class="nav-link" id="treatments-tab_{{ $id }}" data-toggle="tab"--}}
-{{--                           href="#treatments_{{ $id }}" role="tab" aria-controls="home"--}}
-{{--                           aria-selected="true">Treatments</a>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
+                <ul class="nav nav-tabs" id="nav-tabs_{{ $id }}" role="tablist">
+                    {{--                    <li class="nav-item">--}}
+                    {{--                        <a class="nav-link" id="stats-tab_{{ $id }}" data-toggle="tab"--}}
+                    {{--                           href="#stats_{{ $id }}"--}}
+                    {{--                           role="tab" aria-controls="stats" aria-selected="false">Stats</a>--}}
+                    {{--                    </li>--}}
+                    <li class="nav-item">
+                        <a class="nav-link active" id="consultants-tab_{{ $id }}" data-toggle="tab"
+                           href="#consultants_{{ $id }}"
+                           role="tab" aria-controls="stats" aria-selected="false">Consultants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           id="map-tab_{{ $id }}"
+                           data-toggle="tab"
+                           data-map-target="#gmap_{{ $id }}"
+                           href="#map_{{ $id }}"
+                           role="tab"
+                           aria-controls="home"
+                           aria-selected="true">Map</a>
+                    </li>
+                </ul>
                 <!-- Tab panes -->
-                <div class="container-fluid">
-                    <div class="tab-content row">
+                <div class="">
+                    <div class="tab-content">
 
                         {{--                    <div class="tab-pane active col-12" id="profile_{{ $id }}" role="tabpanel"--}}
                         {{--                         aria-labelledby="profile-tab">--}}
@@ -168,7 +160,109 @@
                         {{--                            </div>--}}
                         {{--                        </div>--}}
                         {{--                    </div>--}}
-                        <div class="tab-pane col-12 active"
+                        <div class="tab-pane active" id="consultants_{{ $id }}" role="tabpanel"
+                             aria-labelledby="consultants-tab">
+                            <div class="">
+                                <div class="">
+                                    <div id="table-scroll_{{$id}}" class="table-scroll">
+                                        <table id="main-table" class="main-table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col" class="text-center">Gender</th>
+                                                    <th scope="col" class="text-center">GMC Code</th>
+                                                    <th scope="col" class="text-center">Licensed</th>
+                                                    <th scope="col" class="text-center">Years Registered</th>
+                                                    <th scope="col">Procedures Performed</th>
+                                                    <th scope="col" width="300">Specialisms</th>
+                                                    <th scope="col">Also Practicing At</th>
+{{--                                                    <th scope="col">History</th>--}}
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <th>Edward Wood</th>
+                                                <td class="text-center">M</td>
+                                                <td class="text-center">4342931</td>
+                                                <td class="text-center">Valid</td>
+                                                <td class="text-center">23 years</td>
+                                                <td>100 Procedures</td>
+                                                <td>Foot & Ankle Surgery</td>
+                                                <td>The Countess of Chester Hospital</td>
+{{--                                                <td>Trauma & Orthopaedics</td>--}}
+                                            </tr>
+                                            <tr>
+                                                <th>Mark Webb</th>
+                                                <td class="text-center">M</td>
+                                                <td class="text-center">4055310</td>
+                                                <td class="text-center">Valid</td>
+                                                <td class="text-center">28 years</td>
+                                                <td>75 Procedures</td>
+                                                <td>Total Elbow Replacement<br/>
+                                                    Total Shoulder Replacement</td>
+                                                <td>The Countess of Chester Hospital</td>
+{{--                                                <td>Trauma & Orthopaedics</td>--}}
+                                            </tr>
+                                            <tr>
+                                                <th>Raghuram Thonse</th>
+                                                <td class="text-center">M</td>
+                                                <td class="text-center">4732589</td>
+                                                <td class="text-center">Valid</td>
+                                                <td class="text-center">20 years</td>
+                                                <td>257 Procedures</td>
+                                                <td>Total Knee Replacement<br/>
+                                                    Total Hip Replacement<br/>
+                                                    Total Shoulder Replacement</td>
+                                                <td>The Countess of Chester Hospital</td>
+                                                {{--                                                <td></td>--}}
+                                            </tr>
+                                            <tr>
+                                                <th>Janardhan Rao</th>
+                                                <td class="text-center">M</td>
+                                                <td class="text-center">3555187</td>
+                                                <td class="text-center">Valid</td>
+                                                <td class="text-center">29	Years</td>
+                                                <td>319 Procedures</td>
+                                                <td>Total Hip Replacement<br/>
+                                                    Total Knee Replacement<br/>
+                                                    Unicondylar Knee Replacement</td>
+                                                <td>The Countess of Chester Hospital</td>
+                                                {{--                                                <td></td>--}}
+                                            </tr>
+                                            <tr>
+                                                <th>Ronan Banim</th>
+                                                <td class="text-center">M</td>
+                                                <td class="text-center">4031824</td>
+                                                <td class="text-center">Valid</td>
+                                                <td class="text-center">27	Years</td>
+                                                <td>623 Procedures</td>
+                                                <td>Total Hip Replacement<br/>
+                                                    Patello-Femoral Replacement<br/>
+                                                    Total knee replacement<br/>
+                                                    Unicondylar Knee Replacement</td>
+                                                <td>The Countess of Chester Hospital</td>
+                                                {{--                                                <td></td>--}}
+                                            </tr>
+{{--                                            @foreach(range(1, 100) as $i)--}}
+{{--                                                <tr>--}}
+{{--                                                    <th>Edward Wood</th>--}}
+{{--                                                    <td class="text-center">M</td>--}}
+{{--                                                    <td class="text-center">6080734</td>--}}
+{{--                                                    <td class="text-center">Valid</td>--}}
+{{--                                                    <td class="text-center">10 years</td>--}}
+{{--                                                    <td>Trauma & Orthopaedics</td>--}}
+{{--                                                    <td>St Helens Hospital</td>--}}
+{{--                                                    <td>Trauma & Orthopaedics</td>--}}
+{{--                                                </tr>--}}
+{{--                                                @endforeach--}}
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane col-12 "
                              id="map_{{ $id }}"
                              role="tabpanel"
                              aria-labelledby="map-tab">

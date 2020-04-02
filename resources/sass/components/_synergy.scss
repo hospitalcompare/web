@@ -36,8 +36,7 @@
         @media (max-width: 1600px) {
             width: 100%;
         }
-        overflow-x: hidden;
-        overflow-y: hidden;
+
         @include reset-row-spacing(7.5px);
 
         > div {
@@ -154,6 +153,21 @@
         background-repeat: no-repeat;
         background-position: center;
         transition: $transition;
+    }
+}
+
+
+.results-page-mobile {
+    .synergy-ad-list {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+}
+
+.results-page-desktop {
+    .synergy-ad-list {
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
 }
 

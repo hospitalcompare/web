@@ -153,7 +153,7 @@ var $showFiltersDiv = $('#show_filters div');
 // Click handler for 'Show filters' button
 $showFilters.on('click', function () {
     // If on the desktop view
-    if( $body.hasClass('results-page-desktop') ){
+    if ($body.hasClass('results-page-desktop')) {
         $filters.slideToggle();
         // Change the text of show filters button
         // toggleShowFiltersText();
@@ -178,12 +178,12 @@ $(document).on('click', function (e) {
 
 // Hide the filters in the mobile results page view
 $hideFilters = $('#close_mobile_filters');
-$hideFilters.on('click', function(){
-   $('body').removeClass('filters-open');
+$hideFilters.on('click', function () {
+    $('body').removeClass('filters-open');
 });
 
 // Open the filters form when tabbing off the 'Filter resutls' button
-$showFilters.bind('keydown', function(e) {
+$showFilters.bind('keydown', function (e) {
     var keyCode = e.keyCode || e.which;
     if (keyCode == 9) {  //If it's the tab key
         $(this).trigger('click'); //Force a click outside the dropdown, so it forces a close
@@ -197,9 +197,36 @@ $showFilters.bind('keydown', function(e) {
 //     $(this).toggleClass('open');
 // });
 
+
+// Reset filters
+$('#clear_filters').on('click', function (e) {
+    // Clear postcode
+    $('#input_postcode').val('');
+
+    // Reset selectpickers
+    $("#resultspage_form .select-picker option[selected]").removeAttr("selected");
+    $('#resultspage_form .select-picker option[value=0]').attr('selected', 'selected');
+    $('#resultspage_form .select-picker').selectpicker('refresh');
+
+    // Reset range to default
+    $('#resultspage_form #radiusProx').slider('setValue', 4);
+
+    // Submit form with 0.5 sec delay
+    setTimeout(function () {
+        $resultspageform.submit();
+    }, 500);
+});
+
+// TABS ************************************************************** //
 // Toggle the corporate content area
 $('.btn-more-info').on('click', function () {
     var $target = $($(this).data('target'));
+    // the related tab to opn in the CC area
+    var $tabTarget = $($(this).data('tab-target'));
+    var hiddenText = $(this).data('hidden-text');
+    var visibleText = $(this).data('visible-text');
+
+    // Add data-attribute for the tab to open
     var $isToggleButton = $(this).hasClass('btn-more-info');
     // The offset
     var scrollOffset = isDesktop ? 87 : 150;
@@ -212,9 +239,9 @@ $('.btn-more-info').on('click', function () {
             .slideUp()
             .removeClass('open');
         // Only change text for 'More info' button
-        if($isToggleButton)
-            isDesktop ? $(this).find('span, div').text('Map +') : $(this).find('span, div').text('More info +');
-            // $(this).find('span, div').text('More info');
+        if ($isToggleButton)
+            isDesktop ? $(this).find('span, div').text(hiddenText) : $(this).find('span, div').text(hiddenText);
+        // $(this).find('span, div').text('More info');
         // Scroll back to the result item
         var $scrollBack = $(this).parents('.result-item').offset().top;
         $('html, body').animate({
@@ -224,47 +251,29 @@ $('.btn-more-info').on('click', function () {
     } else {
         $target
             .slideDown()
-            // Permanently add class gmap-initialized
             .addClass('open');
+        // open the corresponding tab
+        $tabTarget.tab('show');
         // Scroll to the corporate content area (compensate for the height of sticky header bar)
         $('html, body').animate({
             scrollTop: ($(this).parents('.result-item').offset().top) - scrollOffset
-            // scrollTop: ($target.offset().top) - scrollOffset
         }, 800);
-        // Init the map - only once. Ie only if the CC area hasn't already been opened
-        if(!$target.hasClass('gmap-initialised')) {
-            var $id = $(this).data('id');
-            var targetMap = '#gmap_' + $id;
-            var $latitude = $(targetMap).data('latitude');
-            var $longitude = $(targetMap).data('longitude');
-            initializeGMap($latitude, $longitude, targetMap);
-        }
-        // Permanently add class gmap-initialized
-        $target.addClass('gmap-initialised');
         // Only change text for 'More info' button
-        if($isToggleButton)
+        if ($isToggleButton)
             // $(this).find('span, div').text('Close info');
-            isDesktop ? $(this).find('span, div').text('Hide map -') : $(this).find('span, div').text('Hide info -');
+            isDesktop ? $(this).find('span, div').text(visibleText) : $(this).find('span, div').text(visibleText);
     }
 });
 
-// popupDoctor($doctor.data('message'), $doctor.data('doctor-delay'));
-
-// Reset filters
-$('#clear_filters').on('click', function(e){
-    // Clear postcode
-    $('#input_postcode').val('');
-
-    // Reset selectpickers
-    $("#resultspage_form .select-picker option[selected]").removeAttr("selected");
-    $('#resultspage_form .select-picker option[value=0]').attr('selected', 'selected');
-    $('#resultspage_form .select-picker').selectpicker('refresh');
-
-    // Reset range to default
-    $('#resultspage_form #radiusProx').slider('setValue', 4 );
-
-    // Submit form with 0.5 sec delay
-    setTimeout(function () {
-        $resultspageform.submit();
-    }, 500);
+$(document).on('shown.bs.tab', '[data-toggle="tab"]', function (e) {
+    var targetMapContainerId = $(this).data('map-target');
+    var $targetMapContainerElement = $(targetMapContainerId);
+    var latitude = $targetMapContainerElement.data('latitude');
+    var longitude = $targetMapContainerElement.data('longitude');
+    initializeGMap(latitude, longitude, targetMapContainerId);
 });
+
+// Click to drag on the consultant table
+// if($('.table-scroll').length)
+//     // Init on the synergy ad list
+//     clickToDrag('.table-scroll');

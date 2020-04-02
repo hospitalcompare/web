@@ -621,7 +621,7 @@ path {
 }
 
 .d-table-cell {
-    @extend .p-2;
+    @extend .py-2;
 }
 
 // Ticks/dashes in the results ratings
@@ -710,6 +710,11 @@ path {
 
 .blue-tick {
     max-width: 60px;
+}
+
+.blue-tick-inline {
+    width: 10px;
+    display: inline;
 }
 
 // Signature font
@@ -951,7 +956,7 @@ h6 {
 .map-icon {
     width: 10px;
     height: 15px;
-    margin-right: 10px;
+    margin-right: 6px;
     position: static !important;
 }
 
@@ -1169,4 +1174,11 @@ h6 {
         border-top-left-radius: 0 !important;
         border-bottom-left-radius: 0 !important;
     }
+}
+
+// Add ellipsis to overflowing text
+.overflow-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

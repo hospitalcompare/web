@@ -21,29 +21,44 @@
                 {{--                        <p class="m-0">{{$fundedText}}</p></div>--}}
                 {{--                </div>--}}
                 <div class="hospital-details d-flex align-content-between flex-column w-100 position-relative">
-
-                    <p class="sort-item-title SofiaPro-SemiBold" id="item_name_{{$id}}">
+                    <p title="{{$title}}" class="sort-item-title overflow-ellipsis SofiaPro-SemiBold" id="item_name_{{$id}}">
                         {{$title}}
                     </p>
                     @if(!empty($locationSpecialism))
                         <p class="sort-item-specialism col-grey mb-1">
                             <strong>Specialism:&nbsp;</strong><span>{{ $locationSpecialism }}</span></p>
                     @endif
-                    <p class="sort-item-location">{{$location}}</p>
+{{--                    <p class="sort-item-location">{{$location}}</p>--}}
+                    <button  class="btn btn-more-info font-12 p-0 d-inline-flex align-items-center mr-3 shadow-none"
+                             data-target="#corporate_content_hospital_{{$id}}"
+                             data-hidden-text="View Map +"
+                             data-visible-text="Hide Map -"
+                             data-tab-target="#map-tab_{{$id}}">
+                        @svg('icon-map', 'map-icon')
 
-                    <div class="btn-area mt-auto d-flex align-items-center justify-content-center justify-content-lg-start">
-                        <div
-                            class="d-none d-lg-inline-block rounded-pill py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }}">
-                            <p class="m-0 col-white">{{$fundedText}}</p>
+                        @if(!empty($d['radius']))
+                            {{$location}}
+                        @else
+                            <span>View Map +</span>
+                        @endif
+                    </button>
+
+                    <div class="btn-area mt-auto d-flex flex-column flex-xl-row align-items-xl-center justify-content-lg-start">
+                        <div class="pill-wrapper">
+                            <p class="d-none d-lg-inline-block rounded-pill py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }} m-0 col-white">{{$fundedText}}</p>
                         </div>
                         @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-more-info font-12 p-0 shadow-none',
-                            'buttonText'        => 'Map +',
+                            'classTitle'        => 'btn btn-more-info font-12 p-0 shadow-none ml-lg-2',
+                            'buttonText'        => 'View Consultants +',
+                            'dataTabTarget'     => '#consultants-tab_' . $id,
+                            'dataHiddenText'    => 'View Consultants +',
+                            'dataVisibleText'   => 'Hide Consultants -',
                             'htmlButton'        => true,
                             'id'                => 'more_info_' . $id,
                             'dataTarget'        => '#corporate_content_hospital_' . $id,
                             'dataId'            => $id
                          ])
+
                     </div>
                 </div>
             </div>
@@ -344,20 +359,20 @@
                         </div>
                     @endif
 {{--                        TODO: add special offer back in when we have them--}}
-{{--                    @if(!empty($specialOffers))--}}
-{{--                        <div class="col-12 mt-lg-2 d-none d-lg-block">--}}
-{{--                            <div class="position-relative btn-block">--}}
-{{--                                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [--}}
-{{--                                    'class' => 'default'])--}}
-{{--                                @include('components.basic.button', [--}}
-{{--                                    'classTitle'        => 'toggle-ad btn btn-enquire btn-block btn-pink btn-special-offer font-12',--}}
-{{--                                    'htmlButton'        => true,--}}
-{{--                                    'id'                => 'special_' . $id,--}}
-{{--                                    'buttonText'        => 'Special Offers',--}}
-{{--                                    'svg'               => 'special'])--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    @endif--}}
+                    @if(!empty($specialOffers))
+                        <div class="col-12 mt-lg-2 d-none d-lg-block">
+                            <div class="position-relative btn-block">
+                                @includeWhen(!empty($specialOffers), 'components.basic.specialofferslide', [
+                                    'class' => 'default'])
+                                @include('components.basic.button', [
+                                    'classTitle'        => 'toggle-ad btn btn-enquire btn-block btn-pink btn-special-offer font-12',
+                                    'htmlButton'        => true,
+                                    'id'                => 'special_' . $id,
+                                    'buttonText'        => 'Special Offers',
+                                    'svg'               => 'special'])
+                            </div>
+                        </div>
+                    @endif
                     <div class="col-12 mt-lg-2">
                         @include('components.basic.button', [
                             'classTitle'        =>  'btn btn-compare compare btn-block font-12 d-none d-lg-block',

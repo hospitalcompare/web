@@ -5,11 +5,9 @@
 }
 
 .corporate-content {
-    //box-shadow: inset 0px -20px 0px 0px $brand-primary-1;
-
     .corporate-content-inner {
         background-color: #fff;
-        padding: 1rem 0;
+        padding: 1rem;
 
         @include media-breakpoint-up(lg) {
             padding: 30px;
@@ -23,15 +21,7 @@
 }
 
 .corporate-content-section-2 {
-    //width: calc(86% - 134px);
-    //width: calc(100% - 134px);
-    //padding-left: 8px;
-    //padding-top: 18px;
-    //padding-bottom: 60px;
-
     .nav-tabs {
-        //box-shadow: inset 0px -2px 0px 0px rgba(236, 236, 236, 1), inset 0px 2px 0px 0px rgba(236,236,236,1);
-
         li { // nav-item
             margin-right: 25px;
             box-sizing: content-box;
@@ -53,7 +43,7 @@
     }
 
     .tab-content {
-        @include reset-row-spacing(12px);
+        //@include reset-row-spacing(12px);
 
         .address {
             color: $brand-tertiary-2;
@@ -92,16 +82,6 @@
         align-items: flex-end;
     }
 
-    //
-    //.carousel-control-prev {
-    //    left: -12px;
-    //}
-    //.carousel-control-next {
-    //    right: -12px;
-    //}
-
-    // End carousel
-
     // Stats tab
     .rating-name {
         @extend .font-16;
@@ -122,28 +102,27 @@
         padding-top: 13px;
     }
 
-    .media-pane {
-        .row {
-            @include reset-row-spacing(7.5px);
-        }
-
-
-        // Video
-        .video-wrapper {
-            @include aspect-ratio(187, 140);
-
-            .player-button {
-                width: 50%;
-                max-width: 45px;
-                //@include aspect-ratio(576, 512);
-            }
-        }
-
-        .video-caption {
-            margin-top: 5px;
-        }
-
-    }
+    //.media-pane {
+    //    .row {
+    //        @include reset-row-spacing(7.5px);
+    //    }
+    //
+    //    // Video
+    //    .video-wrapper {
+    //        @include aspect-ratio(187, 140);
+    //
+    //        .player-button {
+    //            width: 50%;
+    //            max-width: 45px;
+    //            //@include aspect-ratio(576, 512);
+    //        }
+    //    }
+    //
+    //    .video-caption {
+    //        margin-top: 5px;
+    //    }
+    //
+    //}
 
     .special-offers-tab {
         padding: 14px 33px 17px;
@@ -160,50 +139,6 @@
     width: 14%;
 }
 
-
-//.modal-carousel {
-//    // Carousel styles
-//    .carousel-inner {
-//        //margin-bottom: 10px;
-//    }
-//
-//    .carousel-item {
-//        @include aspect-ratio(190, 110, auto);
-//    }
-//
-//    .indicators {
-//        @include reset-row-spacing(5px);
-//        cursor: pointer;
-//
-//        li {
-//            margin-bottom: 6px;
-//
-//            .col-inner {
-//                @include aspect-ratio(43, 40);
-//                position: relative;
-//                overflow: hidden;
-//
-//                img {
-//                    @include v-h-c;
-//                }
-//            }
-//        }
-//    }
-//
-//    .indicators {
-//        li {
-//            margin-top: 10px;
-//            margin-bottom: 0;
-//        }
-//    }
-//
-//    .carousel-control-prev-icon,
-//    .carousel-control-next-icon {
-//        width: 20px;
-//        height: 20px;
-//    }
-//}
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     transition: $transition;
@@ -216,6 +151,7 @@
         .carousel-arrow-bg {
             fill: #fff;
         }
+
         .carousel-arrow-chevron {
             fill: $brand-primary-1;
         }
@@ -236,5 +172,70 @@
     .result-item-mobile-section-2 {
         max-height: 0;
         overflow: hidden;
+    }
+}
+
+// Consultants table
+
+
+.table-scroll {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin: auto;
+    overflow: auto;
+    //height: 350px;
+}
+
+.table-scroll {
+    table {
+        width: 100%;
+        min-width: 1200px;
+        margin: auto;
+        //border-collapse: collapse;
+        //border-spacing: 0;
+
+        th, td {
+            padding: 5px 10px;
+            //border: 1px solid #fff;
+            vertical-align: top;
+        }
+
+        thead {
+            th {
+                background: $table-header-color;
+                position: sticky;
+                top: 0;
+                border-bottom: 2px solid #fff;
+
+                &:first-child {
+                    position: sticky;
+                    left: 0;
+                    z-index: 5;
+                    background: $table-header-color;
+                    border-right: 2px solid #fff;
+                }
+            }
+        }
+
+        tbody {
+            th {
+                border-right: 2px solid #fff;
+
+                &:first-child {
+                    position: sticky;
+                    left: 0;
+                    z-index: 2;
+                    background: #cde2ea;
+                    font-weight: normal;
+                }
+            }
+
+            td {
+                background: $table-body-color;
+                border: 2px solid #fff;
+                @extend .col-grey;
+            }
+        }
     }
 }

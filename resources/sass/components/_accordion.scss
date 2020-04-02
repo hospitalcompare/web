@@ -31,7 +31,7 @@
             @extend .text-decoration-none;
             width: 100%;
             text-align: left;
-            padding-right: 90px;
+            padding-right: 50px;
             @include media-breakpoint-up(lg) {
                 @include font-size(24);
                 padding: 2rem;
