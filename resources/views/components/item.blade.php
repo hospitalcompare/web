@@ -47,7 +47,7 @@
                         <div class="pill-wrapper">
                             <p class="d-none d-lg-inline-block rounded-pill py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }} m-0 col-white">{{$fundedText}}</p>
                         </div>
-                        @if($id == '122' || $id == '123')
+                        @if($d['location_id'] === 'RJR05' || $d['location_id'] === '1-115574737')
                             @include('components.basic.button', [
                                 'classTitle'        => 'btn btn-more-info font-12 p-0 shadow-none ml-lg-2',
                                 'buttonText'        => 'View Consultants +',
