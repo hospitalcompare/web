@@ -186,7 +186,7 @@
                                                 <td class="text-center">4342931</td>
                                                 <td class="text-center">Valid</td>
                                                 <td class="text-center">23 years</td>
-                                                <td>75 Procedures</td>
+                                                <td>100 Procedures</td>
                                                 <td>Foot & Ankle Surgery</td>
                                                 <td>The Countess of Chester Hospital</td>
 {{--                                                <td>Trauma & Orthopaedics</td>--}}

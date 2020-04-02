@@ -1,13 +1,13 @@
 .results-page {
     .corporate-content {
-        //display: none;
+        display: none;
     }
 }
 
 .corporate-content {
     .corporate-content-inner {
         background-color: #fff;
-        padding: 1rem 0;
+        padding: 1rem;
 
         @include media-breakpoint-up(lg) {
             padding: 30px;
@@ -43,7 +43,7 @@
     }
 
     .tab-content {
-        @include reset-row-spacing(12px);
+        //@include reset-row-spacing(12px);
 
         .address {
             color: $brand-tertiary-2;
@@ -102,27 +102,27 @@
         padding-top: 13px;
     }
 
-    .media-pane {
-        .row {
-            @include reset-row-spacing(7.5px);
-        }
-
-        // Video
-        .video-wrapper {
-            @include aspect-ratio(187, 140);
-
-            .player-button {
-                width: 50%;
-                max-width: 45px;
-                //@include aspect-ratio(576, 512);
-            }
-        }
-
-        .video-caption {
-            margin-top: 5px;
-        }
-
-    }
+    //.media-pane {
+    //    .row {
+    //        @include reset-row-spacing(7.5px);
+    //    }
+    //
+    //    // Video
+    //    .video-wrapper {
+    //        @include aspect-ratio(187, 140);
+    //
+    //        .player-button {
+    //            width: 50%;
+    //            max-width: 45px;
+    //            //@include aspect-ratio(576, 512);
+    //        }
+    //    }
+    //
+    //    .video-caption {
+    //        margin-top: 5px;
+    //    }
+    //
+    //}
 
     .special-offers-tab {
         padding: 14px 33px 17px;
