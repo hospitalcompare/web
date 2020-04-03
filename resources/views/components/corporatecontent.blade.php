@@ -165,101 +165,8 @@
                             <div class="">
                                 <div class="">
                                     <div id="table-scroll_{{$id}}" class="table-scroll">
-                                        @if($d['location_id'] === '1-115574737')
-                                            <table id="main-table" class="main-table">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">Name</th>
-                                                    <th scope="col" class="text-center">Gender</th>
-                                                    <th scope="col" class="text-center">GMC Code</th>
-                                                    <th scope="col" class="text-center">Licensed</th>
-                                                    <th scope="col" class="text-center">Years Registered</th>
-                                                    <th scope="col">Procedures Performed</th>
-                                                    <th scope="col" width="300">Specialisms</th>
-                                                    <th scope="col">Also Practicing At</th>
-{{--                                                    <th scope="col">History</th>--}}
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <th>Edward Wood</th>
-                                                <td class="text-center">M</td>
-                                                <td class="text-center">4342931</td>
-                                                <td class="text-center">Valid</td>
-                                                <td class="text-center">23 years</td>
-                                                <td>100 Procedures</td>
-                                                <td>Foot & Ankle Surgery</td>
-                                                <td>The Countess of Chester Hospital</td>
-{{--                                                <td>Trauma & Orthopaedics</td>--}}
-                                            </tr>
-                                            <tr>
-                                                <th>Mark Webb</th>
-                                                <td class="text-center">M</td>
-                                                <td class="text-center">4055310</td>
-                                                <td class="text-center">Valid</td>
-                                                <td class="text-center">28 years</td>
-                                                <td>75 Procedures</td>
-                                                <td>Total Elbow Replacement<br/>
-                                                    Total Shoulder Replacement</td>
-                                                <td>The Countess of Chester Hospital</td>
-{{--                                                <td>Trauma & Orthopaedics</td>--}}
-                                            </tr>
-                                            <tr>
-                                                <th>Raghuram Thonse</th>
-                                                <td class="text-center">M</td>
-                                                <td class="text-center">4732589</td>
-                                                <td class="text-center">Valid</td>
-                                                <td class="text-center">20 years</td>
-                                                <td>257 Procedures</td>
-                                                <td>Total Knee Replacement<br/>
-                                                    Total Hip Replacement<br/>
-                                                    Total Shoulder Replacement</td>
-                                                <td>The Countess of Chester Hospital</td>
-                                                {{--                                                <td></td>--}}
-                                            </tr>
-                                            <tr>
-                                                <th>Janardhan Rao</th>
-                                                <td class="text-center">M</td>
-                                                <td class="text-center">3555187</td>
-                                                <td class="text-center">Valid</td>
-                                                <td class="text-center">29	Years</td>
-                                                <td>319 Procedures</td>
-                                                <td>Total Hip Replacement<br/>
-                                                    Total Knee Replacement<br/>
-                                                    Unicondylar Knee Replacement</td>
-                                                <td>The Countess of Chester Hospital</td>
-                                                {{--                                                <td></td>--}}
-                                            </tr>
-                                            <tr>
-                                                <th>Ronan Banim</th>
-                                                <td class="text-center">M</td>
-                                                <td class="text-center">4031824</td>
-                                                <td class="text-center">Valid</td>
-                                                <td class="text-center">27	Years</td>
-                                                <td>623 Procedures</td>
-                                                <td>Total Hip Replacement<br/>
-                                                    Patello-Femoral Replacement<br/>
-                                                    Total knee replacement<br/>
-                                                    Unicondylar Knee Replacement</td>
-                                                <td>The Countess of Chester Hospital</td>
-                                                {{--                                                <td></td>--}}
-                                            </tr>
-{{--                                            @foreach(range(1, 100) as $i)--}}
-{{--                                                <tr>--}}
-{{--                                                    <th>Edward Wood</th>--}}
-{{--                                                    <td class="text-center">M</td>--}}
-{{--                                                    <td class="text-center">6080734</td>--}}
-{{--                                                    <td class="text-center">Valid</td>--}}
-{{--                                                    <td class="text-center">10 years</td>--}}
-{{--                                                    <td>Trauma & Orthopaedics</td>--}}
-{{--                                                    <td>St Helens Hospital</td>--}}
-{{--                                                    <td>Trauma & Orthopaedics</td>--}}
-{{--                                                </tr>--}}
-{{--                                                @endforeach--}}
-
-                                            </tbody>
-                                        </table>
-                                        @elseif($d['location_id'] === 'RJR05')
+                                        {{--                                        Countess of Chester--}}
+                                        @if($d['location_id'] === 'RJR05')
                                             <table id="main-table" class="main-table">
                                                 <thead>
                                                 <tr>
@@ -275,69 +182,73 @@
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-{{--                                                <tr>--}}
-{{--                                                    <th>Edward Wood</th>--}}
-{{--                                                    <td class="text-center">M</td>--}}
-{{--                                                    <td class="text-center">4342931</td>--}}
-{{--                                                    <td class="text-center">Valid</td>--}}
-{{--                                                    <td class="text-center">23 years</td>--}}
-{{--                                                    <td>100 Procedures</td>--}}
-{{--                                                    <td>Foot & Ankle Surgery</td>--}}
-{{--                                                    <td>The Countess of Chester Hospital</td>--}}
-{{--                                                    --}}{{--                                                <td>Trauma & Orthopaedics</td>--}}
-{{--                                                </tr>--}}
-{{--                                                <tr>--}}
-{{--                                                    <th>Mark Webb</th>--}}
-{{--                                                    <td class="text-center">M</td>--}}
-{{--                                                    <td class="text-center">4055310</td>--}}
-{{--                                                    <td class="text-center">Valid</td>--}}
-{{--                                                    <td class="text-center">28 years</td>--}}
-{{--                                                    <td>75 Procedures</td>--}}
-{{--                                                    <td>Total Elbow Replacement<br/>--}}
-{{--                                                        Total Shoulder Replacement</td>--}}
-{{--                                                    <td>The Countess of Chester Hospital</td>--}}
-{{--                                                    --}}{{--                                                <td>Trauma & Orthopaedics</td>--}}
-{{--                                                </tr>--}}
-{{--                                                <tr>--}}
-{{--                                                    <th>Raghuram Thonse</th>--}}
-{{--                                                    <td class="text-center">M</td>--}}
-{{--                                                    <td class="text-center">4732589</td>--}}
-{{--                                                    <td class="text-center">Valid</td>--}}
-{{--                                                    <td class="text-center">20 years</td>--}}
-{{--                                                    <td>257 Procedures</td>--}}
-{{--                                                    <td>Total Knee Replacement<br/>--}}
-{{--                                                        Total Hip Replacement<br/>--}}
-{{--                                                        Total Shoulder Replacement</td>--}}
-{{--                                                    <td>The Countess of Chester Hospital</td>--}}
-{{--                                                    --}}{{--                                                <td></td>--}}
-{{--                                                </tr>--}}
-{{--                                                <tr>--}}
-{{--                                                    <th>Janardhan Rao</th>--}}
-{{--                                                    <td class="text-center">M</td>--}}
-{{--                                                    <td class="text-center">3555187</td>--}}
-{{--                                                    <td class="text-center">Valid</td>--}}
-{{--                                                    <td class="text-center">29	Years</td>--}}
-{{--                                                    <td>319 Procedures</td>--}}
-{{--                                                    <td>Total Hip Replacement<br/>--}}
-{{--                                                        Total Knee Replacement<br/>--}}
-{{--                                                        Unicondylar Knee Replacement</td>--}}
-{{--                                                    <td>The Countess of Chester Hospital</td>--}}
-{{--                                                    --}}{{--                                                <td></td>--}}
-{{--                                                </tr>--}}
-{{--                                                <tr>--}}
-{{--                                                    <th>Ronan Banim</th>--}}
-{{--                                                    <td class="text-center">M</td>--}}
-{{--                                                    <td class="text-center">4031824</td>--}}
-{{--                                                    <td class="text-center">Valid</td>--}}
-{{--                                                    <td class="text-center">27	Years</td>--}}
-{{--                                                    <td>623 Procedures</td>--}}
-{{--                                                    <td>Total Hip Replacement<br/>--}}
-{{--                                                        Patello-Femoral Replacement<br/>--}}
-{{--                                                        Total knee replacement<br/>--}}
-{{--                                                        Unicondylar Knee Replacement</td>--}}
-{{--                                                    <td>The Countess of Chester Hospital</td>--}}
-{{--                                                    --}}{{--                                                <td></td>--}}
-{{--                                                </tr>--}}
+                                                <tr>
+                                                    <th>Edward Wood</th>
+                                                    <td class="text-center">M</td>
+                                                    <td class="text-center">4342931</td>
+                                                    <td class="text-center">Valid</td>
+                                                    <td class="text-center">23 years</td>
+                                                    <td>100 Procedures</td>
+                                                    <td>Foot & Ankle Surgery</td>
+                                                    <td>Nuffield The Grosvenor Hospital</td>
+                                                    {{--                                                <td>Trauma & Orthopaedics</td>--}}
+                                                </tr>
+                                                <tr>
+                                                    <th>Mark Webb</th>
+                                                    <td class="text-center">M</td>
+                                                    <td class="text-center">4055310</td>
+                                                    <td class="text-center">Valid</td>
+                                                    <td class="text-center">28 years</td>
+                                                    <td>75 Procedures</td>
+                                                    <td>Total Elbow Replacement<br/>
+                                                        Total Shoulder Replacement
+                                                    </td>
+                                                    <td>Nuffield The Grosvenor Hospital</td>
+                                                    {{--                                                <td>Trauma & Orthopaedics</td>--}}
+                                                </tr>
+                                                <tr>
+                                                    <th>Raghuram Thonse</th>
+                                                    <td class="text-center">M</td>
+                                                    <td class="text-center">4732589</td>
+                                                    <td class="text-center">Valid</td>
+                                                    <td class="text-center">20 years</td>
+                                                    <td>257 Procedures</td>
+                                                    <td>Total Knee Replacement<br/>
+                                                        Total Hip Replacement<br/>
+                                                        Total Shoulder Replacement
+                                                    </td>
+                                                    <td>Nuffield The Grosvenor Hospital</td>
+                                                    {{--                                                <td></td>--}}
+                                                </tr>
+                                                <tr>
+                                                    <th>Janardhan Rao</th>
+                                                    <td class="text-center">M</td>
+                                                    <td class="text-center">3555187</td>
+                                                    <td class="text-center">Valid</td>
+                                                    <td class="text-center">29 Years</td>
+                                                    <td>319 Procedures</td>
+                                                    <td>Total Hip Replacement<br/>
+                                                        Total Knee Replacement<br/>
+                                                        Unicondylar Knee Replacement
+                                                    </td>
+                                                    <td>Nuffield The Grosvenor Hospital</td>
+                                                    {{--                                                <td></td>--}}
+                                                </tr>
+                                                <tr>
+                                                    <th>Ronan Banim</th>
+                                                    <td class="text-center">M</td>
+                                                    <td class="text-center">4031824</td>
+                                                    <td class="text-center">Valid</td>
+                                                    <td class="text-center">27 Years</td>
+                                                    <td>623 Procedures</td>
+                                                    <td>Total Hip Replacement<br/>
+                                                        Patello-Femoral Replacement<br/>
+                                                        Total knee replacement<br/>
+                                                        Unicondylar Knee Replacement
+                                                    </td>
+                                                    <td>Nuffield The Grosvenor Hospital</td>
+                                                    {{--                                                <td></td>--}}
+                                                </tr>
                                                 {{--                                            @foreach(range(1, 100) as $i)--}}
                                                 {{--                                                <tr>--}}
                                                 {{--                                                    <th>Edward Wood</th>--}}
@@ -351,6 +262,205 @@
                                                 {{--                                                </tr>--}}
                                                 {{--                                                @endforeach--}}
 
+                                                </tbody>
+                                            </table>
+                                            {{--                                            Grosvenor Nuffield --}}
+                                        @elseif($d['location_id'] === '1-115574737')
+                                            <table id="main-table" class="main-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Name</th>
+                                                        <th scope="col" class="text-center">Gender</th>
+                                                        <th scope="col" class="text-center">GMC Code</th>
+                                                        <th scope="col" class="text-center">Licensed</th>
+                                                        <th scope="col" class="text-center">Years Registered</th>
+                                                        <th scope="col">Procedures Performed</th>
+                                                        <th scope="col" width="300">Specialisms</th>
+                                                        <th scope="col">Also Practicing At</th>
+                                                        {{--                                                    <th scope="col">History</th>--}}
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Asad Syed</th>{{-- Name --}}
+                                                        <td class="text-center">M</td>{{-- Gender --}}
+                                                        <td class="text-center">5202732</td>{{-- GMC code --}}
+                                                        <td class="text-center">Valid</td>{{-- Licensed --}}
+                                                        <td class="text-center">19	Years</td>{{-- Years Registered --}}
+                                                        <td>5 Procedures</td>{{-- Procedures Performed --}}
+                                                        <td>Total Knee Replacement
+                                                            Total Hip Replacement</td>{{-- Specialisms --}}
+                                                        <td>-</td>{{-- Also Practicing At --}}
+                                                        {{--                                                    <td></td>--}}{{-- --}}
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Paramasivam Sathyamoorthy</th>{{-- Name --}}
+                                                        <td class="text-center">M</td>{{-- Gender --}}
+                                                        <td class="text-center">4481515</td>{{-- GMC code --}}
+                                                        <td class="text-center">Valid</td>{{-- Licensed --}}
+                                                        <td class="text-center">22	Years</td>{{-- Years Registered --}}
+                                                        <td>37 Procedures</td>{{-- Procedures Performed --}}
+                                                        <td>Total Hip Replacement
+                                                            Total Shoulder Replacement</td>{{-- Specialisms --}}
+                                                        <td>-</td>{{-- Also Practicing At --}}
+                                                        {{--                                                    <td></td>--}}{{-- --}}
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th>Narendra Kumar Rath</th>{{-- Name --}}
+                                                        <td class="text-center">M</td>{{-- Gender --}}
+                                                        <td class="text-center">6076738</td>{{-- GMC code --}}
+                                                        <td class="text-center">Valid</td>{{-- Licensed --}}
+                                                        <td class="text-center">19	Years</td>{{-- Years Registered --}}
+                                                        <td>319 Procedures</td>{{-- Procedures Performed --}}
+                                                        <td>Spinal Surgery</td>{{-- Specialisms --}}
+                                                        <td>The Walton Centre</td>{{-- Also Practicing At --}}
+                                                        {{--                                                    <td></td>--}}{{-- --}}
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Ibrahim Malek</th>{{-- Name --}}
+                                                        <td class="text-center">M</td>{{-- Gender --}}
+                                                        <td class="text-center">5207226</td>{{-- GMC code --}}
+                                                        <td class="text-center">Valid</td>{{-- Licensed --}}
+                                                        <td class="text-center"></td>{{-- Years Registered --}}
+                                                        <td>202 Procedures</td>{{-- Procedures Performed --}}
+                                                        <td>Total Hip Replacement<br/>
+                                                            Total Knee Replacement</td>{{-- Specialisms --}}
+                                                        <td>-</td>{{-- Also Practicing At --}}
+                                                        {{--                                                    <td></td>--}}{{-- --}}
+                                                    </tr>
+                                                    <tr>
+                                                        <th>David Machin</th>{{-- Name --}}
+                                                        <td class="text-center">M</td>{{-- Gender --}}
+                                                        <td class="text-center">6053053</td>{{-- GMC code --}}
+                                                        <td class="text-center">Valid</td>{{-- Licensed --}}
+                                                        <td class="text-center">16	Years</td>{{-- Years Registered --}}
+                                                        <td>0 Procedures</td>{{-- Procedures Performed --}}
+                                                        <td>Total Hip Replacement<br/>
+                                                            Total Knee Replacement</td>{{-- Specialisms --}}
+                                                        <td>Whiston Hospital</td>{{-- Also Practicing At --}}
+                                                        {{--                                                    <td></td>--}}{{-- --}}
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Stephen Lipscombe</th>{{-- Name --}}
+                                                        <td class="text-center">M</td>{{-- Gender --}}
+                                                        <td class="text-center">6053053</td>{{-- GMC code --}}
+                                                        <td class="text-center">Valid</td>{{-- Licensed --}}
+                                                        <td class="text-center">17	Years</td>{{-- Years Registered --}}
+                                                        <td>5 Procedures</td>{{-- Procedures Performed --}}
+                                                        <td>Total Hip Replacement<br/>
+                                                            Total Knee Replacement</td>{{-- Specialisms --}}
+                                                        <td>-</td>{{-- Also Practicing At --}}
+                                                        {{--                                                    <td></td>--}}{{-- --}}
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Tamas Kustos</th>{{-- Name --}}
+                                                        <td class="text-center">M</td>{{-- Gender --}}
+                                                        <td class="text-center">6096591</td>{{-- GMC code --}}
+                                                        <td class="text-center">Valid</td>{{-- Licensed --}}
+                                                        <td class="text-center">16	Years</td>{{-- Years Registered --}}
+                                                        <td>176 Procedures</td>{{-- Procedures Performed --}}
+                                                        <td>Total Hip Replacement<br/>
+                                                            Total Knee Replacement</td>{{-- Specialisms --}}
+                                                        <td>-</td>{{-- Also Practicing At --}}
+                                                        {{--                                                    <td></td>--}}{{-- --}}
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Hussain Anthony Kazi</th>{{-- Name --}}
+                                                        <td class="text-center">M</td>{{-- Gender --}}
+                                                        <td class="text-center">6053270</td>{{-- GMC code --}}
+                                                        <td class="text-center">Valid</td>{{-- Licensed --}}
+                                                        <td class="text-center">18	Years</td>{{-- Years Registered --}}
+                                                        <td>18 Years</td>{{-- Procedures Performed --}}
+                                                        <td>Total Hip Replacement<br/>
+                                                            Total Knee Replacement</td>{{-- Specialisms --}}
+                                                        <td>Victoria Infirmary</td>{{-- Also Practicing At --}}
+                                                        {{--                                                    <td></td>--}}{{-- --}}
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Mayur Chawda</th>{{-- Name --}}
+                                                        <td class="text-center">M</td>{{-- Gender --}}
+                                                        <td class="text-center">4578972</td>{{-- GMC code --}}
+                                                        <td class="text-center">Valid</td>{{-- Licensed --}}
+                                                        <td class="text-center">22	Years</td>{{-- Years Registered --}}
+                                                        <td>662 Procedures</td>{{-- Procedures Performed --}}
+                                                        <td>Total Hip Replacement<br/>
+                                                            Total Knee Replacement<br/>
+                                                            Unicondylar Knee Replacement</td>{{-- Specialisms --}}
+                                                        <td>-</td>{{-- Also Practicing At --}}
+                                                        {{--                                                    <td></td>--}}{{-- --}}
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Adrian Fintan Carroll</th>{{-- Name --}}
+                                                        <td class="text-center">M</td>{{-- Gender --}}
+                                                        <td class="text-center">4200172</td>{{-- GMC code --}}
+                                                        <td class="text-center">Valid</td>{{-- Licensed --}}
+                                                        <td class="text-center">24	Years</td>{{-- Years Registered --}}
+                                                        <td>708 Procedures</td>{{-- Procedures Performed --}}
+                                                        <td>Total Hip Replacement<br/>
+                                                            Total Knee Replacement<br/>
+                                                            Unicondylar Knee Replacement<br/>
+                                                            Total Shoulder Replacement</td>{{-- Specialisms --}}
+                                                        <td>Arrowe Park Hospital</td>{{-- Also Practicing At --}}
+                                                        {{--                                                    <td></td>--}}{{-- --}}
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Vladimir Bobic</th>{{-- Name --}}
+                                                        <td class="text-center">M</td>{{-- Gender --}}
+                                                        <td class="text-center">3636149</td>{{-- GMC code --}}
+                                                        <td class="text-center">Valid</td>{{-- Licensed --}}
+                                                        <td class="text-center">28	Years</td>{{-- Years Registered --}}
+                                                        <td>23 Procedures</td>{{-- Procedures Performed --}}
+                                                        <td>Total Knee Replacement</td>{{-- Specialisms --}}
+                                                        <td>-</td>{{-- Also Practicing At --}}
+                                                        {{--                                                    <td></td>--}}{{-- --}}
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Nick Boyce-Cam</th>{{-- Name --}}
+                                                        <td class="text-center">M</td>{{-- Gender --}}
+                                                        <td class="text-center">4716730</td>{{-- GMC code --}}
+                                                        <td class="text-center">Valid</td>{{-- Licensed --}}
+                                                        <td class="text-center">19	Years</td>{{-- Years Registered --}}
+                                                        <td>389 Procedures</td>{{-- Procedures Performed --}}
+                                                        <td>Total Hip Replacement<br/>
+                                                            Total Knee Replacement<br/>
+                                                            Unicondylar Knee Replacement</td>{{-- Specialisms --}}
+                                                        <td>Leighton Hospital</td>{{-- Also Practicing At --}}
+                                                        {{--                                                    <td></td>--}}{{-- --}}
+                                                    </tr>
+                                                    <tr>
+                                                        <th></th>{{-- Name --}}
+                                                        <td class="text-center">M</td>{{-- Gender --}}
+                                                        <td class="text-center"></td>{{-- GMC code --}}
+                                                        <td class="text-center">Valid</td>{{-- Licensed --}}
+                                                        <td class="text-center"></td>{{-- Years Registered --}}
+                                                        <td></td>{{-- Procedures Performed --}}
+                                                        <td></td>{{-- Specialisms --}}
+                                                        <td>-</td>{{-- Also Practicing At --}}
+                                                        {{--                                                    <td></td>--}}{{-- --}}
+                                                    </tr>
+{{--                                                    <tr>--}}
+{{--                                                        <th></th>--}}{{-- Name --}}
+{{--                                                        <td class="text-center">M</td>--}}{{-- Gender --}}
+{{--                                                        <td class="text-center"></td>--}}{{-- GMC code --}}
+{{--                                                        <td class="text-center">Valid</td>--}}{{-- Licensed --}}
+{{--                                                        <td class="text-center"></td>--}}{{-- Years Registered --}}
+{{--                                                        <td></td>--}}{{-- Procedures Performed --}}
+{{--                                                        <td></td>--}}{{-- Specialisms --}}
+{{--                                                        <td>-</td>--}}{{-- Also Practicing At --}}
+{{--                                                        --}}{{--                                                    <td></td>--}}{{----}}{{-- --}}
+{{--                                                    </tr>--}}
+{{--                                                    <tr>--}}
+{{--                                                        <th></th>--}}{{-- Name --}}
+{{--                                                        <td class="text-center">M</td>--}}{{-- Gender --}}
+{{--                                                        <td class="text-center"></td>--}}{{-- GMC code --}}
+{{--                                                        <td class="text-center">Valid</td>--}}{{-- Licensed --}}
+{{--                                                        <td class="text-center"></td>--}}{{-- Years Registered --}}
+{{--                                                        <td></td>--}}{{-- Procedures Performed --}}
+{{--                                                        <td></td>--}}{{-- Specialisms --}}
+{{--                                                        <td>-</td>--}}{{-- Also Practicing At --}}
+{{--                                                        --}}{{--                                                    <td></td>--}}{{----}}{{-- --}}
+{{--                                                    </tr>--}}
                                                 </tbody>
                                             </table>
                                         @endif
