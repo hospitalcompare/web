@@ -5,7 +5,7 @@
                 <div class="ad-col">
                     @include('components.basic.adblock', [
                         'headerText'        =>  ((empty($data['outstanding']) ?
-                                                    'Your Nearest ' . $specialOffer['rating']['latest_rating'] . ' Hospital ' . (!empty($specialOffer['radius']) ? '<small> - ' . round($specialOffer['radius'], 1) . ' miles away</small>' : '') :
+                                                    'Your Nearest ' . $specialOffer['rating']['latest_rating'] . ' ' . ($specialOffer['hospital_type']['name'] === 'Independent' ? 'Private' : 'NHS' ) . ' Hospital ' . (!empty($specialOffer['radius']) ? '<small> - ' . round($specialOffer['radius'], 1) . ' miles away</small>' : '') :
                                                     'Your Lowest Waiting Time <br/><small> - ' . number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1) . ' Weeks</small>') ),
                         'offerPrice'        =>  null,
                         'hospitalType'      =>  $specialOffer['hospital_type']['name'],
