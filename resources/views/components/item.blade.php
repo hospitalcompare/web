@@ -47,18 +47,19 @@
                         <div class="pill-wrapper">
                             <p class="d-none d-lg-inline-block rounded-pill py-1 px-2 {{ $NHSClass == 'private-hospital' ? 'bg-private' : 'bg-nhs' }} m-0 col-white">{{$fundedText}}</p>
                         </div>
-                        @include('components.basic.button', [
-                            'classTitle'        => 'btn btn-more-info font-12 p-0 shadow-none ml-lg-2',
-                            'buttonText'        => 'View Consultants +',
-                            'dataTabTarget'     => '#consultants-tab_' . $id,
-                            'dataHiddenText'    => 'View Consultants +',
-                            'dataVisibleText'   => 'Hide Consultants -',
-                            'htmlButton'        => true,
-                            'id'                => 'more_info_' . $id,
-                            'dataTarget'        => '#corporate_content_hospital_' . $id,
-                            'dataId'            => $id
-                         ])
-
+                        @if($d['location_id'] === 'RJR05' || $d['location_id'] === '1-115574737')
+                            @include('components.basic.button', [
+                                'classTitle'        => 'btn btn-more-info font-12 p-0 shadow-none ml-lg-2',
+                                'buttonText'        => 'View Consultants +',
+                                'dataTabTarget'     => '#consultants-tab_' . $id,
+                                'dataHiddenText'    => 'View Consultants +',
+                                'dataVisibleText'   => 'Hide Consultants -',
+                                'htmlButton'        => true,
+                                'id'                => 'more_info_' . $id,
+                                'dataTarget'        => '#corporate_content_hospital_' . $id,
+                                'dataId'            => $id
+                             ])
+                        @endif
                     </div>
                 </div>
             </div>
