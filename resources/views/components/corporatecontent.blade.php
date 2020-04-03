@@ -11,11 +11,14 @@
                     {{--                           href="#stats_{{ $id }}"--}}
                     {{--                           role="tab" aria-controls="stats" aria-selected="false">Stats</a>--}}
                     {{--                    </li>--}}
-                    <li class="nav-item">
-                        <a class="nav-link active" id="consultants-tab_{{ $id }}" data-toggle="tab"
-                           href="#consultants_{{ $id }}"
-                           role="tab" aria-controls="stats" aria-selected="false">Consultants</a>
-                    </li>
+                    @if($d['location_id'] === 'RJR05' || $d['location_id'] === '1-115574737')
+                        <li class="nav-item">
+                            <a class="nav-link active" id="consultants-tab_{{ $id }}" data-toggle="tab"
+                               href="#consultants_{{ $id }}"
+                               role="tab" aria-controls="stats" aria-selected="false">Consultants</a>
+                        </li>
+                    @endif
+
                     <li class="nav-item">
                         <a class="nav-link"
                            id="map-tab_{{ $id }}"
@@ -468,17 +471,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane col-12 "
+                        <div class="tab-pane"
                              id="map_{{ $id }}"
                              role="tabpanel"
                              aria-labelledby="map-tab">
                             <div class="row">
                                 <div class="corporate-content-details d-flex col col-12 col-md-2 mb-3">
-                                    {{--                                <div class="img-wrap mr-4">--}}
-                                    {{--                                    <img class="image" width="173" height="158"--}}
-                                    {{--                                         src="images/alder-1.jpg"--}}
-                                    {{--                                         alt="Image of {{ $hospitalTitle }}">--}}
-                                    {{--                                </div>--}}
                                     <div class="address">
                                         {!! $address !!}
                                     </div>
