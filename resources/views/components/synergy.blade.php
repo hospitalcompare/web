@@ -4,7 +4,9 @@
             @foreach($specialOffers as $key => $specialOffer )
                 <div class="ad-col">
                     @include('components.basic.adblock', [
-                        'headerText'        =>  $specialOffer['hospital_type']['name'] == 'Independent' ? 'Your Nearest Outstanding Private Hospital' : 'Your Nearest Outstanding NHS Hospital',
+                        'headerText'        =>  ((empty($data['outstanding']) ?
+                                                    'Your Nearest ' . $specialOffer['rating']['latest_rating'] . ' Hospital ' . (!empty($specialOffer['radius']) ? round($specialOffer['radius'], 1) . ' - miles away' : '') :
+                                                    'Your Lowest Waiting Time <br/> - ' . number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1) . ' Weeks ') ),
                         'offerPrice'        =>  null,
                         'hospitalType'      =>  $specialOffer['hospital_type']['name'],
                         'title'             =>  $specialOffer['name'],
@@ -17,6 +19,33 @@
                 </div>
             @endforeach
         @endif
+
+{{--            <li class="d-block h-100 {{ $loop->index != 0 ? 'ml-4' : '' }}">--}}
+{{--                @include('components.basic.specialoffertab', [--}}
+{{--                    'bgColor' => $loop->index == 0 ? 'blue' : 'pink',--}}
+{{--                    'headerText' => [--}}
+{{--                        'open' => [--}}
+{{--                            'title' => $specialOffer['name'],--}}
+{{--                            'subtitle' => !empty($specialOffer['radius']) ? round($specialOffer['radius'], 1) . ' miles away' : ''--}}
+{{--                        ],--}}
+{{--                        'closed' => [--}}
+{{--                            'title' => 'NHS funded treatment',--}}
+{{--                            'subtitle' => ((empty($data['outstanding']) ?--}}
+{{--                                'at '.$specialOffer['rating']['latest_rating'].' hospital ' :--}}
+{{--                                 'in '.number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1).' Weeks '). (!empty($specialOffer['radius']) ? round($specialOffer['radius'], 1) . ' miles away' : ''))--}}
+{{--                        ]--}}
+{{--                    ],--}}
+{{--                    'bulletPoints' => [--}}
+{{--                        number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1).' Weeks ',--}}
+{{--                        $specialOffer['rating']['latest_rating'] . ' CQC Rating',--}}
+{{--                        (!empty($specialOffer['rating']['avg_user_rating'])) ? $specialOffer['rating']['avg_user_rating'] . ' star NHS Choices user rating' : null--}}
+{{--                    ],--}}
+{{--                    'offerPrice'    => null,--}}
+{{--                    'hospitalType'  => $specialOffer['hospital_type']['name'] == 'Independent' ? 'private-hospital' : 'nhs-hospital',--}}
+{{--                    'hospitalUrl'   => $specialOffer['url'],--}}
+{{--                    'hospitalId'    => $specialOffer['id']--}}
+{{--                ])--}}
+{{--            </li>--}}
 
         {{--  Fund treatment/health insurance/travel insurance  --}}
         <div class="ad-col">

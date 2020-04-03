@@ -2,7 +2,7 @@
 <div class="ad-block rounded ad_pink">
     <div class="ad-block-header d-flex align-items-start">
         <div class="ad-block-header-text">
-            <p class="ad-block-header-title mb-0 col-white">{{ $headerText }}</p>
+            <p class="ad-block-header-title mb-0 col-white">{!! $headerText !!}</p>
         </div>
     </div>
     <div class="ad-block-body d-xxl-block">
