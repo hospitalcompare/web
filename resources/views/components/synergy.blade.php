@@ -4,7 +4,9 @@
             @foreach($specialOffers as $key => $specialOffer )
                 <div class="ad-col">
                     @include('components.basic.adblock', [
-                        'headerText'        =>  $specialOffer['hospital_type']['name'] == 'Independent' ? 'Your Nearest Outstanding Private Hospital' : 'Your Nearest Outstanding NHS Hospital',
+                        'headerText'        =>  ((empty($data['outstanding']) ?
+                                                    'Your Nearest ' . $specialOffer['rating']['latest_rating'] . ' ' . ($specialOffer['hospital_type']['name'] === 'Independent' ? 'Private' : 'NHS' ) . ' Hospital ' . (!empty($specialOffer['radius']) ? '<small> - ' . round($specialOffer['radius'], 1) . ' miles away</small>' : '') :
+                                                    $specialOffer['rating']['latest_rating'] . ' Hospital With Low Waiting Time (<small>' . number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1) . ' Weeks</small>)' . (!empty($specialOffer['radius']) ? '<small> - ' . round($specialOffer['radius'], 1) . ' miles</small>' : '')) ),
                         'offerPrice'        =>  null,
                         'hospitalType'      =>  $specialOffer['hospital_type']['name'],
                         'title'             =>  $specialOffer['name'],
@@ -17,7 +19,6 @@
                 </div>
             @endforeach
         @endif
-
         {{--  Fund treatment/health insurance/travel insurance  --}}
         <div class="ad-col">
             <div class="ad-block rounded ad-block-insurance">

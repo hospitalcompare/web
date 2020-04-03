@@ -431,17 +431,6 @@
                                                         <td>Leighton Hospital</td>{{-- Also Practicing At --}}
                                                         {{--                                                    <td></td>--}}{{-- --}}
                                                     </tr>
-                                                    <tr>
-                                                        <th></th>{{-- Name --}}
-                                                        <td class="text-center">M</td>{{-- Gender --}}
-                                                        <td class="text-center"></td>{{-- GMC code --}}
-                                                        <td class="text-center">Valid</td>{{-- Licensed --}}
-                                                        <td class="text-center"></td>{{-- Years Registered --}}
-                                                        <td></td>{{-- Procedures Performed --}}
-                                                        <td></td>{{-- Specialisms --}}
-                                                        <td>-</td>{{-- Also Practicing At --}}
-                                                        {{--                                                    <td></td>--}}{{-- --}}
-                                                    </tr>
 {{--                                                    <tr>--}}
 {{--                                                        <th></th>--}}{{-- Name --}}
 {{--                                                        <td class="text-center">M</td>--}}{{-- Gender --}}
