@@ -137,7 +137,7 @@ window.getHtmlStars = function (rating) {
     }
 
     return html;
-}
+};
 
 /**
  * Generates HTML code based on a given value (percentage or 0 or 1)
