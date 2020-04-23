@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import SearchFaq from "../components/SearchFaq";
 import ListFaqs from "../components/ListFaqs";
+import Accordion from "react-bootstrap/Accordion";
 import axios from "axios";
 import FaqItem from "../components/FaqItem";
 
@@ -94,7 +95,8 @@ class FaqHome extends Component {
                 </section>
                 <section>
                     <div className="container">
-                        <div className="accordion" id="faqs_accordion">
+                        <Accordion
+                            id="faqs_accordion">
                             {
                                 (filteredFaqs.length)
                                     ? filteredFaqs.map((faq) => <FaqItem searchTerm={this.state.searchTerm}
@@ -102,7 +104,7 @@ class FaqHome extends Component {
                                                                          key={faq.id}/>)
                                     : <h1>No matching faqs found</h1>
                             }
-                        </div>
+                        </Accordion>
                     </div>
                 </section>
             </main>

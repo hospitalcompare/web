@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import Accordion from 'react-bootstrap/Accordion';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import '../../scripts/vendor/highlight';
 
 class FaqItem extends Component {
@@ -8,38 +11,34 @@ class FaqItem extends Component {
         const regex = new RegExp(searchTerm, 'gi');
 
         return (
-            <div className="card">
-                <div className="card-header" id={`heading${id}`}>
-                    <h2 className="mb-0">
-                        <button className="btn btn-link collapsed text-left" type="button"
-                                data-toggle="collapse"
-                                data-target={`#collapse${id}`} aria-expanded="false"
-                                aria-controls={`collapse${id}`}
-                                dangerouslySetInnerHTML={
-                                    {
-                                        __html: searchTerm !== ""
-                                            ? question.replace(regex, `<span class="hl d-inline">${searchTerm}</span>`)
-                                            : question
-                                    }
-                                }>
+            <Card>
+                <Card.Header>
+                    <Accordion.Toggle as={Button}
+                                      className="btn btn-link text-left"
+                                      variant="link"
+                                      eventKey={id}
+                                      dangerouslySetInnerHTML={
+                                          {
+                                              __html: searchTerm !== ""
+                                                  ? question.replace(regex, `<span class="hl d-inline">${searchTerm}</span>`)
+                                                  : question
+                                          }
+                                      }>
+                    </Accordion.Toggle>
+                </Card.Header>
 
-                        </button>
-                    </h2>
-                </div>
-
-                <div id={`collapse${id}`} className="collapse" aria-labelledby={`heading${id}`}
-                     data-parent="#faqs_accordion">
-                    <div className="card-body"
-                         dangerouslySetInnerHTML={
-                             {
-                                 __html: searchTerm !== ""
-                                     ? answer.replace(regex, `<span class="hl d-inline">${searchTerm}</span>`)
-                                     : answer
-                             }
-                         }>
-                    </div>
-                </div>
-            </div>
+                <Accordion.Collapse eventKey={id}>
+                    <Card.Body
+                        dangerouslySetInnerHTML={
+                            {
+                                __html: searchTerm !== ""
+                                    ? answer.replace(regex, `<span class="hl d-inline">${searchTerm}</span>`)
+                                    : answer
+                            }
+                        }>
+                    </Card.Body>
+                </Accordion.Collapse>
+            </Card>
         );
     }
 };
