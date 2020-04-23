@@ -102,9 +102,7 @@
 
     </head>
     <body class="@yield('body-class')">
-        <main class="" id="react-container">
-
-        </main>
+        <div class="" id="react-container"></div>
         <script src="{{ asset(url('/js/index.js')) }}"></script>
     </body>
 

@@ -1,9 +1,9 @@
-.hl { // The highlighted span for search terms in results
-    @extend .bg-turq;
-    @extend .text-white;
-    display: inline;
-}
 .faqs-page {
+    .hl { // The highlighted span for search terms in results
+        @extend .bg-turq;
+        @extend .text-white;
+        display: inline;
+    }
 
     .input-wrapper {
         svg {

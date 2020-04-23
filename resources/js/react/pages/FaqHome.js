@@ -28,6 +28,9 @@ class FaqHome extends Component {
 
     // Load in all FAQs on page load
     componentDidMount() {
+        document.title = "Hospital Compare | Faqs Page";
+        document.body.classList.add('faqs-page');
+
         const apiUrl = `api/faqs`;
         const bodyparams = {
             dataType: "json",
