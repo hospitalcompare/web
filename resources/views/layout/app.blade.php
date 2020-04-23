@@ -105,7 +105,7 @@
         <main class="" id="react-container">
 
         </main>
-        <script src="{{ asset(url('/js/app.js')) }}"></script>
+        <script src="{{ asset(url('/js/index.js')) }}"></script>
     </body>
 
 </html>

@@ -45,7 +45,7 @@ mix.options({
     processCssUrls: false
 })
     .sass('resources/sass/app.scss', 'public/css')
-    .react(['resources/js/app.js'], 'public/js')
+    .react(['resources/js/index.js'], 'public/js')
     .sourceMaps(productionSourceMaps,"source-map")
     .version();
 

@@ -15,7 +15,7 @@ class FaqItem extends Component {
                                 data-toggle="collapse"
                                 data-target={`#collapse${id}`} aria-expanded="false"
                                 aria-controls={`collapse${id}`}
-                                dangerouslySetInnerHTML={{ __html: question.replace(regex, `<span class="hl">${searchTerm}</span>`) }}>
+                                dangerouslySetInnerHTML={{ __html: question.replace(regex, `<span class="hl d-inline">${searchTerm}</span>`) }}>
 
                         </button>
                     </h2>

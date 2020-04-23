@@ -71,7 +71,11 @@ class FaqHome extends Component {
                 </form>
                 <div className="accordion" id="faqs_accordion">
                     {
-                        (filteredFaqs.length) ? filteredFaqs.map((faq) => <FaqItem searchTerm={this.state.searchTerm} faq={faq} key={faq.id}/>) : 'No faqs hombre'
+                        (filteredFaqs.length)
+                            ? filteredFaqs.map((faq) => <FaqItem searchTerm={this.state.searchTerm}
+                                                                 faq={faq}
+                                                                 key={faq.id}/>)
+                            : 'No faqs hombre'
                     }
                 </div>
             </div>
