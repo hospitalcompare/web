@@ -5,6 +5,19 @@ import Button from 'react-bootstrap/Button';
 import '../../scripts/vendor/highlight';
 
 class FaqItem extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            open: false
+        }
+    }
+
+    handleClick = () => {
+        this.setState({
+            open: !this.state.open
+        })
+    }
+
     render() {
         const {question, answer, id} = this.props.faq;
         const searchTerm = this.props.searchTerm;
@@ -13,18 +26,23 @@ class FaqItem extends Component {
         return (
             <Card>
                 <Card.Header>
-                    <Accordion.Toggle as={Button}
-                                      className="btn btn-link text-left"
-                                      variant="link"
-                                      eventKey={id}
-                                      dangerouslySetInnerHTML={
-                                          {
-                                              __html: searchTerm !== ""
-                                                  ? question.replace(regex, `<span class="hl d-inline">${searchTerm}</span>`)
-                                                  : question
-                                          }
-                                      }>
-                    </Accordion.Toggle>
+                    <h2 className="mb-0">
+                        <Accordion.Toggle as={Button}
+                                          onClick={this.handleClick}
+                                          className={`btn btn-link text-left ${
+                                              this.state.open ? '' : 'collapsed'
+                                          }`}
+                                          variant="link"
+                                          eventKey={id}
+                                          dangerouslySetInnerHTML={
+                                              {
+                                                  __html: searchTerm !== ""
+                                                      ? question.replace(regex, `<span class="hl d-inline">${searchTerm}</span>`)
+                                                      : question
+                                              }
+                                          }>
+                        </Accordion.Toggle>
+                    </h2>
                 </Card.Header>
 
                 <Accordion.Collapse eventKey={id}>
