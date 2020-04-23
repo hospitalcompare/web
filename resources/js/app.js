@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react'
 import {BrowserRouter as Router, Redirect, Route, Switch, NavLink, Link} from 'react-router-dom'
-import HomePage from './react-components/HomePage'
-import FaqHome from './react-components/FaqHome'
-import Header from './react-components/Header'
+import HomePage from './react/pages/HomePage'
+import FaqHome from './react/pages/FaqHome'
+import Header from './react/components/Header'
+import Footer from './react/components/Footer'
 
 const App = () => {
     return (
@@ -16,6 +16,7 @@ const App = () => {
                     <Redirect to="/"/>
                 </Switch>
             </Router>
+            <Footer/>
         </React.Fragment>
     );
 };

@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import '../scripts/vendor/highlight';
+import '../../scripts/vendor/highlight';
 
 class FaqItem extends Component {
     render() {
-        const { question, answer, id } = this.props.faq;
+        const {question, answer, id} = this.props.faq;
         const searchTerm = this.props.searchTerm;
         const regex = new RegExp(searchTerm, 'gi');
 
@@ -15,7 +15,13 @@ class FaqItem extends Component {
                                 data-toggle="collapse"
                                 data-target={`#collapse${id}`} aria-expanded="false"
                                 aria-controls={`collapse${id}`}
-                                dangerouslySetInnerHTML={{ __html: question.replace(regex, `<span class="hl d-inline">${searchTerm}</span>`) }}>
+                                dangerouslySetInnerHTML={
+                                    {
+                                        __html: searchTerm !== ""
+                                            ? question.replace(regex, `<span class="hl d-inline">${searchTerm}</span>`)
+                                            : question
+                                    }
+                                }>
 
                         </button>
                     </h2>
@@ -24,7 +30,13 @@ class FaqItem extends Component {
                 <div id={`collapse${id}`} className="collapse" aria-labelledby={`heading${id}`}
                      data-parent="#faqs_accordion">
                     <div className="card-body"
-                         dangerouslySetInnerHTML={{ __html: answer }}>
+                         dangerouslySetInnerHTML={
+                             {
+                                 __html: searchTerm !== ""
+                                     ? answer.replace(regex, `<span class="hl d-inline">${searchTerm}</span>`)
+                                     : answer
+                             }
+                         }>
                     </div>
                 </div>
             </div>
