@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { NavLink } from 'react-router-dom';
+// import NavLink from './NavLink';
 
 class Header extends Component {
     render() {
@@ -26,7 +28,10 @@ class Header extends Component {
                         <nav id="main_nav" className="main-nav" role="navigation">
                             <ul className="main-menu">
                                 <li>
-                                    <a href="/">Home</a>
+                                    {/*<a href="/">Home</a>*/}
+                                    <NavLink exact
+                                             activeClassName=""
+                                             to="/" >Home</NavLink>
                                     {/*<svg className="d-lg-none" xmlns="http://www.w3.org/2000/svg" width="7" height="11"*/}
                                     {/*     viewBox="0 0 7 11">*/}
                                     {/*    <g>*/}
@@ -37,8 +42,47 @@ class Header extends Component {
                                     {/*    </g>*/}
                                     {/*</svg>*/}
                                 </li>
+                                {/*<li>*/}
+                                {/*    <a href="/about-us">About Us*/}
+                                {/*        /!*<svg className="d-lg-none" xmlns="http://www.w3.org/2000/svg" width="7" height="11"*!/*/}
+                                {/*        /!*     viewBox="0 0 7 11">*!/*/}
+                                {/*        /!*    <g>*!/*/}
+                                {/*        /!*        <g>*!/*/}
+                                {/*        /!*            <path fill="grey"*!/*/}
+                                {/*        /!*                  d="M4.406 5.655L.495 9.567a.567.567 0 0 0-.167.405c0 .153.059.296.167.404l.342.343a.567.567 0 0 0 .405.167c.153 0 .297-.06.404-.167L6.304 6.06a.567.567 0 0 0 .167-.405.567.567 0 0 0-.167-.407L1.65.596A.567.567 0 0 0 1.246.43a.568.568 0 0 0-.404.167L.499.94a.573.573 0 0 0 0 .809z"></path>*!/*/}
+                                {/*        /!*        </g>*!/*/}
+                                {/*        /!*    </g>*!/*/}
+                                {/*        /!*</svg>*!/*/}
+                                {/*    </a>*/}
+                                {/*</li>*/}
+                                {/*<li>*/}
+                                {/*    <a href="/your-rights">Your Rights*/}
+                                {/*        /!*<svg className="d-lg-none" xmlns="http://www.w3.org/2000/svg" width="7" height="11"*!/*/}
+                                {/*        /!*     viewBox="0 0 7 11">*!/*/}
+                                {/*        /!*    <g>*!/*/}
+                                {/*        /!*        <g>*!/*/}
+                                {/*        /!*            <path fill="grey"*!/*/}
+                                {/*        /!*                  d="M4.406 5.655L.495 9.567a.567.567 0 0 0-.167.405c0 .153.059.296.167.404l.342.343a.567.567 0 0 0 .405.167c.153 0 .297-.06.404-.167L6.304 6.06a.567.567 0 0 0 .167-.405.567.567 0 0 0-.167-.407L1.65.596A.567.567 0 0 0 1.246.43a.568.568 0 0 0-.404.167L.499.94a.573.573 0 0 0 0 .809z"></path>*!/*/}
+                                {/*        /!*        </g>*!/*/}
+                                {/*        /!*    </g>*!/*/}
+                                {/*        /!*</svg>*!/*/}
+                                {/*    </a>*/}
+                                {/*</li>*/}
+                                {/*<li>*/}
+                                {/*    <a href="/how-to-use">How To Use*/}
+                                {/*        /!*<svg className="d-lg-none" xmlns="http://www.w3.org/2000/svg" width="7" height="11"*!/*/}
+                                {/*        /!*     viewBox="0 0 7 11">*!/*/}
+                                {/*        /!*    <g>*!/*/}
+                                {/*        /!*        <g>*!/*/}
+                                {/*        /!*            <path fill="grey" d="M4.406 5.655L.495 9.567a.567.567 0 0 0-.167.405c0 .153.059.296.167.404l.342.343a.567.567 0 0 0 .405.167c.153 0 .297-.06.404-.167L6.304 6.06a.567.567 0 0 0 .167-.405.567.567 0 0 0-.167-.407L1.65.596A.567.567 0 0 0 1.246.43a.568.568 0 0 0-.404.167L.499.94a.573.573 0 0 0 0 .809z"></path>*!/*/}
+                                {/*        /!*        </g>*!/*/}
+                                {/*        /!*    </g>*!/*/}
+                                {/*        /!*</svg>*!/*/}
+                                {/*    </a>*/}
+                                {/*</li>*/}
                                 <li>
-                                    <a href="/about-us">About Us
+                                    <NavLink activeClassName="active"
+                                          to="/faqs">FAQs
                                         {/*<svg className="d-lg-none" xmlns="http://www.w3.org/2000/svg" width="7" height="11"*/}
                                         {/*     viewBox="0 0 7 11">*/}
                                         {/*    <g>*/}
@@ -48,64 +92,26 @@ class Header extends Component {
                                         {/*        </g>*/}
                                         {/*    </g>*/}
                                         {/*</svg>*/}
-                                    </a>
+                                    </NavLink>
                                 </li>
-                                <li>
-                                    <a href="/your-rights">Your Rights
-                                        {/*<svg className="d-lg-none" xmlns="http://www.w3.org/2000/svg" width="7" height="11"*/}
-                                        {/*     viewBox="0 0 7 11">*/}
-                                        {/*    <g>*/}
-                                        {/*        <g>*/}
-                                        {/*            <path fill="grey"*/}
-                                        {/*                  d="M4.406 5.655L.495 9.567a.567.567 0 0 0-.167.405c0 .153.059.296.167.404l.342.343a.567.567 0 0 0 .405.167c.153 0 .297-.06.404-.167L6.304 6.06a.567.567 0 0 0 .167-.405.567.567 0 0 0-.167-.407L1.65.596A.567.567 0 0 0 1.246.43a.568.568 0 0 0-.404.167L.499.94a.573.573 0 0 0 0 .809z"></path>*/}
-                                        {/*        </g>*/}
-                                        {/*    </g>*/}
-                                        {/*</svg>*/}
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/how-to-use">How To Use
-                                        {/*<svg className="d-lg-none" xmlns="http://www.w3.org/2000/svg" width="7" height="11"*/}
-                                        {/*     viewBox="0 0 7 11">*/}
-                                        {/*    <g>*/}
-                                        {/*        <g>*/}
-                                        {/*            <path fill="grey" d="M4.406 5.655L.495 9.567a.567.567 0 0 0-.167.405c0 .153.059.296.167.404l.342.343a.567.567 0 0 0 .405.167c.153 0 .297-.06.404-.167L6.304 6.06a.567.567 0 0 0 .167-.405.567.567 0 0 0-.167-.407L1.65.596A.567.567 0 0 0 1.246.43a.568.568 0 0 0-.404.167L.499.94a.573.573 0 0 0 0 .809z"></path>*/}
-                                        {/*        </g>*/}
-                                        {/*    </g>*/}
-                                        {/*</svg>*/}
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/faqs">FAQs
-                                        {/*<svg className="d-lg-none" xmlns="http://www.w3.org/2000/svg" width="7" height="11"*/}
-                                        {/*     viewBox="0 0 7 11">*/}
-                                        {/*    <g>*/}
-                                        {/*        <g>*/}
-                                        {/*            <path fill="grey"*/}
-                                        {/*                  d="M4.406 5.655L.495 9.567a.567.567 0 0 0-.167.405c0 .153.059.296.167.404l.342.343a.567.567 0 0 0 .405.167c.153 0 .297-.06.404-.167L6.304 6.06a.567.567 0 0 0 .167-.405.567.567 0 0 0-.167-.407L1.65.596A.567.567 0 0 0 1.246.43a.568.568 0 0 0-.404.167L.499.94a.573.573 0 0 0 0 .809z"></path>*/}
-                                        {/*        </g>*/}
-                                        {/*    </g>*/}
-                                        {/*</svg>*/}
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/blogs">Blog
-                                        {/*<svg className="d-lg-none" xmlns="http://www.w3.org/2000/svg" width="7" height="11"*/}
-                                        {/*     viewBox="0 0 7 11">*/}
-                                        {/*    <g>*/}
-                                        {/*        <g>*/}
-                                        {/*            <path fill="grey"*/}
-                                        {/*                  d="M4.406 5.655L.495 9.567a.567.567 0 0 0-.167.405c0 .153.059.296.167.404l.342.343a.567.567 0 0 0 .405.167c.153 0 .297-.06.404-.167L6.304 6.06a.567.567 0 0 0 .167-.405.567.567 0 0 0-.167-.407L1.65.596A.567.567 0 0 0 1.246.43a.568.568 0 0 0-.404.167L.499.94a.573.573 0 0 0 0 .809z"></path>*/}
-                                        {/*        </g>*/}
-                                        {/*    </g>*/}
-                                        {/*</svg>*/}
-                                    </a>
-                                </li>
-                                <li className="d-none d-lg-inline-block">
-                                    <a className="cursor-pointer" data-toggle="modal" data-target="#hc_modal_tour">
-                                        Help
-                                    </a>
-                                </li>
+                                {/*<li>*/}
+                                {/*    <a href="/blogs">Blog*/}
+                                {/*        /!*<svg className="d-lg-none" xmlns="http://www.w3.org/2000/svg" width="7" height="11"*!/*/}
+                                {/*        /!*     viewBox="0 0 7 11">*!/*/}
+                                {/*        /!*    <g>*!/*/}
+                                {/*        /!*        <g>*!/*/}
+                                {/*        /!*            <path fill="grey"*!/*/}
+                                {/*        /!*                  d="M4.406 5.655L.495 9.567a.567.567 0 0 0-.167.405c0 .153.059.296.167.404l.342.343a.567.567 0 0 0 .405.167c.153 0 .297-.06.404-.167L6.304 6.06a.567.567 0 0 0 .167-.405.567.567 0 0 0-.167-.407L1.65.596A.567.567 0 0 0 1.246.43a.568.568 0 0 0-.404.167L.499.94a.573.573 0 0 0 0 .809z"></path>*!/*/}
+                                {/*        /!*        </g>*!/*/}
+                                {/*        /!*    </g>*!/*/}
+                                {/*        /!*</svg>*!/*/}
+                                {/*    </a>*/}
+                                {/*</li>*/}
+                                {/*<li className="d-none d-lg-inline-block">*/}
+                                {/*    <a className="cursor-pointer" data-toggle="modal" data-target="#hc_modal_tour">*/}
+                                {/*        Help*/}
+                                {/*    </a>*/}
+                                {/*</li>*/}
                             </ul>
                         </nav>
                         <span id="search_toggle"
