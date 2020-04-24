@@ -19,12 +19,13 @@ Route::middleware('checkToken')->group(function () {
     Route::post('/enquiry', 'ApiController@enquiry');
     Route::post('/search-faq/{postcode}', 'ApiController@searchFaq');
     Route::get('/search-faq', 'ApiController@searchFaq');
-    Route::post('/faqs', 'ApiController@faqs');
     Route::post('/createEnquiriesFile', 'ApiController@createEnquiriesFile');
     Route::get('/getHospitalsByIds/{hospitalIds}/{procedureId}', 'ApiController@getHospitalsByIds');
     Route::get('/createHospitalImagesThumbs', 'ApiController@createHospitalImagesThumbs');
     Route::post('/survey', 'ApiController@createSurvey');
     Route::get('/generateSitemap', 'ApiController@generateSitemap');
+    Route::post('/faqs', 'ApiController@faqs');
+    Route::post('/getProcedures', 'ApiController@getProceduresForDropdowns');
 
     //TEST ROUTES
     Route::get('/testGet', 'ApiController@testGet');

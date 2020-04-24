@@ -417,6 +417,23 @@ class ApiController {
         return $this->returnedData;
     }
 
+    public function getProceduresForDropdowns() {
+        //Get all Specialties with Procedures ordered by name
+        $procedures = Specialty::where('name', '<>','Total')->with(['procedures' => function($query) {
+            $query->orderBy('name', 'ASC');
+        }])->orderBy('name', 'ASC')->get()->toArray();
+
+//        $procedures = Procedure::all()->sortBy('name')->toArray();
+        //Add the option to view all procedures ( id = 0 )
+        array_unshift($procedures, ['id' => '-1', 'name' => 'Not Known']);
+        array_unshift($procedures, ['id' => 0, 'name' => 'Choose your treatment (if known)']);
+
+        $this->returnedData['success']      = true;
+        $this->returnedData['data']['procedures_for_dropdowns'] = $procedures;
+
+        return $this->returnedData;
+    }
+
     public function testGet() {
 
         $this->returnedData['success'] = true;

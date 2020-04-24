@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Banner from './pageSections/Banner';
 
 class HomePage extends Component {
     componentDidMount() {
@@ -9,11 +10,8 @@ class HomePage extends Component {
     render() {
         return (
             <main>
-                <section>
-                    <div className="container">
-                        Home page
-                    </div>
-                </section>
+                <Banner />
+                {/*<h1>Homepage</h1>*/}
             </main>
         );
     }
