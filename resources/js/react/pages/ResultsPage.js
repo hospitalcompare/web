@@ -17,7 +17,7 @@ class ResultsPage extends Component {
 
     componentDidMount() {
         // Do the ajax call to get list of matching hospitals
-        const apiUrl = `api/getAllHospitals`;
+        const apiUrl = '/api/getAllHospitals';
         const config = {
             headers: {
                 Authorization: 'Bearer mBu7IB6nuxh8RVzJ61f4'

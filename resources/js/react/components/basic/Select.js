@@ -6,9 +6,8 @@ class Select extends Component {
     constructor() {
         super();
         this.state = {
-            procedures: [],
+            specialties: [],
         }
-        this.selectedProcedure = React.createRef();
     }
 
     // Load in all FAQs on page load
@@ -25,10 +24,9 @@ class Select extends Component {
         };
         axios.post(apiUrl, bodyparams, config)
             .then((res) => {
-                const procedures = res.data.data.procedures_for_dropdowns;
-                console.log(procedures)
+                const specialties = res.data.data.procedures_for_dropdowns;
                 this.setState({
-                    procedures
+                    specialties
                 });
             })
             .catch((error) => {
@@ -37,24 +35,32 @@ class Select extends Component {
     }
 
     render() {
+        const {specialties} = this.state;
         return (
             <Form.Control
                 name="procedure"
                 ref={this.selectedProcedure}
+                defaultValue={-1}
                 onChange={(e) => this.props.handleChange(e)}
                 className="select-picker"
                 as="select">
                 {
-                    this.state.procedures.map(specialty => (<optgroup label={specialty.name}
-                                                                      key={specialty.id}>
-                        {
-                            specialty.hasOwnProperty("procedures")
-                                ? specialty.procedures.map(procedure =>
-                                    <option key={procedure.id}
-                                            value={procedure.id}>{procedure.name}</option>)
-                                : ''
+                    specialties.map(
+                        specialty => {
+                            return specialty.id === 0 || specialty.id === '-1'
+                                ? <option key={specialty.id}>{specialty.name}</option>
+                                : <optgroup label={specialty.name}
+                                            key={specialty.id}>
+                                    {
+                                        specialty.hasOwnProperty("procedures")
+                                            ? specialty.procedures.map(procedure =>
+                                                <option key={procedure.id}
+                                                        value={procedure.id}>{procedure.name}</option>)
+                                            : ''
+                                    }
+                                </optgroup>
                         }
-                    </optgroup>))
+                    )
                 }
             </Form.Control>
         );
