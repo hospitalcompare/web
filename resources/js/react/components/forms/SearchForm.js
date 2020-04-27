@@ -1,20 +1,36 @@
 import React, {Component} from 'react';
 import Select from '../basic/Select';
 import Form from "react-bootstrap/Form";
+import {withRouter} from "react-router";
 
 class SearchForm extends Component {
+    state = {
+        procedure: '',
+        procedureId: null
+    }
+
+    componentDidMount() {
+        console.log(this.context)
+    }
+
     submitForm = (e) => {
         e.preventDefault();
-
     }
 
     handleClick = (e) => {
         e.preventDefault();
-        console.log('handled click');
+        this.props.history.push({
+            pathname: `/results-page/${this.state.procedure}`,
+            // search:
+        })
     }
 
     handleChange = (e) => {
-        console.log(e.target.value);
+        const {name, value} = e.target;
+
+        this.setState({
+            [name]: value
+        })
     }
 
     render() {
@@ -95,4 +111,4 @@ class SearchForm extends Component {
     }
 }
 
-export default SearchForm;
+export default withRouter(SearchForm);

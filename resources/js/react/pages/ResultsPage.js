@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import {useParams} from 'react-router-dom';
 
 class ResultsPage extends Component {
+    componentDidMount() {
+
+    }
+
     render() {
         const { match: { params } } = this.props;
         const {procedure} = params;

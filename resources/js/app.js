@@ -30,7 +30,9 @@ class App extends Component {
                 <Router>
                     <Header handleMenuToggle={this.handleMenuToggle}/>
                     <Switch>
-                        <Route exact path="/" component={HomePage}/>
+                        <Route exact path="/"
+                               component={HomePage}
+                               history={this.props.history}/>
                         <Route exact path="/results-page" component={ResultsPage}/>
                         <Route path="/results-page/:procedure" component={ResultsPage}/>
                         <Route exact path="/faqs" component={FaqHome}/>

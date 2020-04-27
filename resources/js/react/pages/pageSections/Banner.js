@@ -39,7 +39,7 @@ class Banner extends Component {
                         <div className="col col-lg-6 col-12">
                             <div className="banner-form-wrapper rounded ml-auto">
                                 <p className="SofiaPro-Medium d-none d-lg-block">Find the best hospitals</p>
-                                <SearchForm />
+                                <SearchForm hiklstory={this.props.history} />
                             </div>
                         </div>
                     </div>

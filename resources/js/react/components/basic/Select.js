@@ -49,7 +49,9 @@ class Select extends Component {
                                                                       key={specialty.id}>
                         {
                             specialty.hasOwnProperty("procedures")
-                                ? specialty.procedures.map(procedure => <option key={procedure.id}>{procedure.name}</option>)
+                                ? specialty.procedures.map(procedure =>
+                                    <option key={procedure.id}
+                                            value={procedure.id}>{procedure.name}</option>)
                                 : ''
                         }
                     </optgroup>))
