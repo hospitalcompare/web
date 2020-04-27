@@ -6,8 +6,9 @@ class Select extends Component {
     constructor() {
         super();
         this.state = {
-            procedures: []
+            procedures: [],
         }
+        this.selectedProcedure = React.createRef();
     }
 
     // Load in all FAQs on page load
@@ -38,6 +39,9 @@ class Select extends Component {
     render() {
         return (
             <Form.Control
+                name="procedure"
+                ref={this.selectedProcedure}
+                onChange={(e) => this.props.handleChange(e)}
                 className="select-picker"
                 as="select">
                 {

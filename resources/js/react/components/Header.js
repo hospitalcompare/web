@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+
 // import NavLink from './NavLink';
 
 class Header extends Component {
@@ -28,10 +29,16 @@ class Header extends Component {
                         <nav id="main_nav" className="main-nav" role="navigation">
                             <ul className="main-menu">
                                 <li>
+                                    <NavLink exact
+                                             activeClassName=""
+                                             to="/results-page">Results</NavLink>
+                                </li>
+                                <li>
                                     {/*<a href="/">Home</a>*/}
                                     <NavLink exact
                                              activeClassName=""
-                                             to="/" >Home</NavLink>
+                                             to="/">Home</NavLink>
+
                                     {/*<svg className="d-lg-none" xmlns="http://www.w3.org/2000/svg" width="7" height="11"*/}
                                     {/*     viewBox="0 0 7 11">*/}
                                     {/*    <g>*/}
@@ -82,7 +89,7 @@ class Header extends Component {
                                 {/*</li>*/}
                                 <li>
                                     <NavLink activeClassName="active"
-                                          to="/faqs">FAQs
+                                             to="/faqs">FAQs
                                         {/*<svg className="d-lg-none" xmlns="http://www.w3.org/2000/svg" width="7" height="11"*/}
                                         {/*     viewBox="0 0 7 11">*/}
                                         {/*    <g>*/}
