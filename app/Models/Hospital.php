@@ -393,7 +393,7 @@ class Hospital extends Model
 
         $page -= 1;
 
-        $perPage = 10;
+        $perPage = -1;
         $currentPageSearchResults = $hospitals->slice($page * $perPage, $perPage)->all();
         $hospitals = new LengthAwarePaginator($currentPageSearchResults, $hospitals->count(), $perPage);
         $hospitals->setPath(env('APP_URL').'/results-page');

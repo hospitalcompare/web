@@ -31,6 +31,6 @@ Route::middleware('checkToken')->group(function () {
     Route::get('/testGet', 'ApiController@testGet');
     Route::post('/testPost', 'ApiController@testPost');
 //    Route::get('/getHospitalsByDistance/{postcode}', 'ApiController@getHospitalsByDistance'); //DISABLED AS WE DON'T USE THIS ROUTE ( TESTING ONLY )
-//    Route::get('/getAllHospitals', 'ApiController@getAllHospitals'); //DISABLED AS WE DON'T USE THIS ROUTE ( TESTING ONLY )
+    Route::get('/getAllHospitals', 'ApiController@getAllHospitals'); //DISABLED AS WE DON'T USE THIS ROUTE ( TESTING ONLY )
 
 });
