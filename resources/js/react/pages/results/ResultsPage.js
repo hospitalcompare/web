@@ -15,7 +15,7 @@ class ResultsPage extends Component {
 
     componentDidMount() {
         // Do the ajax call to get list of matching hospitals
-        document.body.classList.add('results-page results-page-desktop')
+        document.body.classList.add('results-page', 'results-page-desktop');
         const apiUrl = `/api/getHospitalsForHomepageSearch/${this.state.procedure}`;
         const config = {
             headers: {
