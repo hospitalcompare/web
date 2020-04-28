@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom'
-import HomePage from './react/pages/HomePage'
-import FaqHome from './react/pages/FaqHome'
-import ResultsPage from './react/pages/ResultsPage'
+import HomePage from './react/pages/home/HomePage'
+import FaqHome from './react/pages/faqs/FaqHome'
+import ResultsPage from './react/pages/results/ResultsPage'
 import Header from './react/components/Header'
 import Footer from './react/components/Footer'
 

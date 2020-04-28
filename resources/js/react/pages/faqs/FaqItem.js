@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import '../../scripts/vendor/highlight';
+import '../../../scripts/vendor/highlight';
 
 class FaqItem extends Component {
     constructor(props) {

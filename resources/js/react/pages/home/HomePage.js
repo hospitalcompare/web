@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Banner from './pageSections/Banner';
+import Banner from '../pageSections/Banner';
 
 class HomePage extends Component {
     componentDidMount() {

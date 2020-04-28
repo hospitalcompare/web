@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import SearchFaq from "../components/SearchFaq";
-import ListFaqs from "../components/ListFaqs";
+import SearchFaq from "./SearchFaq";
+import ListFaqs from "./ListFaqs";
 import Accordion from "react-bootstrap/Accordion";
 import axios from "axios";
-import FaqItem from "../components/FaqItem";
+import FaqItem from "./FaqItem";
 
 const SVGMag = () => {
     return (
