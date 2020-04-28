@@ -1,5 +1,4 @@
 const mix = require('laravel-mix');
-const pathRes = require('path');
 const webpack = require('webpack');
 let productionSourceMaps = false;
 

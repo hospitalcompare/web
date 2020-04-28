@@ -17,6 +17,7 @@ use App\Models\Specialty;
 use App\Models\Survey;
 use App\Models\Trust;
 use App\Services\Location;
+use Illuminate\Support\Facades\DB;
 use Request;
 use Intervention\Image\ImageManagerStatic as Image;
 
@@ -238,20 +239,7 @@ class ApiController {
      *
      * @return array
      */
-    public function getAllHospitals() {
-        //Get the request and load it as variables
-        $request        = \Request::all();
-        $postcode       = $request['postcode'] ?? '';
-        $procedureId    = $request['procedure_id'] ?? '';
-        $radius         = $request['radius'] ?? 50; //50 miles as default
 
-        $hospitals = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
-
-        $this->returnedData['success']              = true;
-        $this->returnedData['data']['hospitals']    = $hospitals;
-
-        return $this->returnedData;
-    }
 
     /**
      * Creates an Enquiry based on the given inputs: specialty_id (can be null/empty), hospital_id, title, first_name, last_name, email, date_of_birth, additional_information
@@ -430,6 +418,18 @@ class ApiController {
 
         $this->returnedData['success']      = true;
         $this->returnedData['data']['procedures_for_dropdowns'] = $procedures;
+
+        return $this->returnedData;
+    }
+
+    public function getHospitalsForHomepageSearch($postcode = '', $procedureId, $radius = null) {
+        //Get the request and load it as variables
+        $radius         = 50; //50 miles as default
+        $postcode       = 'WA68JY';
+        $hospitals      = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
+
+        $this->returnedData['success']  = true;
+        $this->returnedData['data']     = $hospitals['data'];
 
         return $this->returnedData;
     }

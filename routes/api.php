@@ -26,11 +26,13 @@ Route::middleware('checkToken')->group(function () {
     Route::get('/generateSitemap', 'ApiController@generateSitemap');
     Route::post('/faqs', 'ApiController@faqs');
     Route::post('/getProcedures', 'ApiController@getProceduresForDropdowns');
+    Route::get('/getAllHospitals', 'ApiController@getAllHospitals');
+    Route::get('/getHospitalsForHomepageSearch/{procedureId}', 'ApiController@getHospitalsForHomepageSearch'); // Given a procedure id, return the parent specialty
 
     //TEST ROUTES
     Route::get('/testGet', 'ApiController@testGet');
     Route::post('/testPost', 'ApiController@testPost');
 //    Route::get('/getHospitalsByDistance/{postcode}', 'ApiController@getHospitalsByDistance'); //DISABLED AS WE DON'T USE THIS ROUTE ( TESTING ONLY )
-    Route::get('/getAllHospitals', 'ApiController@getAllHospitals'); //DISABLED AS WE DON'T USE THIS ROUTE ( TESTING ONLY )
+
 
 });
