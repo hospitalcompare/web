@@ -22,7 +22,7 @@ class ResultItem extends Component {
     }
 
     render() {
-        const {name} = this.props;
+        const {name, location_specialism, hospital_type, hospital_id} = this.props;
         return (
             <React.Fragment>
                 <div className="result-item mb-3 mb-lg-0" id="result-item_388">
@@ -46,9 +46,13 @@ class ResultItem extends Component {
                                        id="item_name_388">
                                         {name}
                                     </p>
-                                    <p className="sort-item-specialism col-grey mb-1">
-                                        <strong>Specialism:&nbsp;</strong><span>Cancer</span></p>
-
+                                    { location_specialism !== ""
+                                        ? <p className="sort-item-specialism col-grey mb-1">
+                                            <strong>Specialism:&nbsp;</strong>
+                                            <span>{location_specialism}</span>
+                                        </p>
+                                        : ""
+                                    }
                                     <button
                                         className="btn btn-more-info font-12 p-0 d-inline-flex align-items-center mr-3 shadow-none"
                                         data-target="#corporate_content_hospital_388" data-hidden-text="View Map +"
@@ -66,8 +70,9 @@ class ResultItem extends Component {
                                     <div
                                         className="btn-area mt-auto d-flex flex-column flex-xl-row align-items-xl-center justify-content-lg-start">
                                         <div className="pill-wrapper">
-                                            <p className="d-none d-lg-inline-block rounded-pill py-1 px-2 bg-nhs m-0 col-white">NHS
-                                                Hospital</p>
+                                            <p className={`d-none d-lg-inline-block rounded-pill py-1 px-2 ${hospital_type.id === 1 ? 'bg-private' : 'bg-nhs'} m-0 col-white`}>
+                                                {hospital_type.id === 1 ? 'Private Hospital' : 'NHS Hospital'}
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -154,8 +159,8 @@ class ResultItem extends Component {
                                 </div>" data-trigger="hover" data-placement="bottom" data-html="true"
                                          data-original-title="" title="">
                                         <p className="stat-label d-block w-100 d-lg-none">Waiting Time</p>
-                                        <p>10.2<span className="d-inline d-lg-none">&nbsp;</span><br/>
-                                            className="d-none d-lg-inline">Weeks</p>
+                                        <p>10.2<span className="d-inline d-lg-none">&nbsp;</span>
+                                            <br className="d-none d-lg-inline" />Weeks</p>
                                     </div>
                                 </div>
 
@@ -176,19 +181,19 @@ class ResultItem extends Component {
                                         <p className="stat-label d-block w-100 d-lg-none">NHS User Rating</p>
                                         <span className="d-flex">
                                             <img className="star-icon"
-                                                 src="images/icons/star-full.svg"
+                                                 src="/images/icons/star-full.svg"
                                                  alt="Whole Star"/>
                                              <img
-                                                 className="star-icon" src="images/icons/star-full.svg"
+                                                 className="star-icon" src="/images/icons/star-full.svg"
                                                  alt="Whole Star"/>
                                             <img
-                                                className="star-icon" src="images/icons/star-full.svg"
+                                                className="star-icon" src="/images/icons/star-full.svg"
                                                 alt="Whole Star"/>
                                             <img
-                                                className="star-icon" src="images/icons/star-full.svg"
+                                                className="star-icon" src="/images/icons/star-full.svg"
                                                 alt="Whole Star"/>
                                             <img
-                                                className="star-icon" src="images/icons/star-half.svg"
+                                                className="star-icon" src="/images/icons/star-half.svg"
                                                 alt="Half Star"/>
                                         </span>
                                     </div>
@@ -220,7 +225,7 @@ class ResultItem extends Component {
                                     <div className="d-flex flex-column justify-content-center">
                                         <p className="stat-label d-block w-100 d-lg-none">NHS Funded Work</p>
                                         <p>
-                                            <img className="dash-or-tick" src="images/icons/tick-green.svg"
+                                            <img className="dash-or-tick" src="/images/icons/tick-green.svg"
                                                  alt="Tick icon"/>
                                         </p>
                                     </div>
@@ -229,7 +234,7 @@ class ResultItem extends Component {
                                 <div className="result-item-section-2__child">
                                     <div className="d-flex flex-column justify-content-center">
                                         <p className="stat-label d-block d-lg-none">Private Self Pay</p>
-                                        <p><img className="dash-or-tick" src="images/icons/dash-black.svg"
+                                        <p><img className="dash-or-tick" src="/images/icons/dash-black.svg"
                                                 alt="Dash icon"/></p>
                                     </div>
                                 </div>

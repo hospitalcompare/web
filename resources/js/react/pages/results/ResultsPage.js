@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from "axios";
 import ResultItem from "./ResultItem";
+import ResultsPageForm from "./ResultsPageForm";
 
 class ResultsPage extends Component {
     constructor(props) {
@@ -39,6 +40,7 @@ class ResultsPage extends Component {
         const {procedure, hospitals} = this.state;
         return (
             <main>
+                <ResultsPageForm />
                 <div className="results mt-3 mt-lg-0">
                     {
                         procedure !== null
