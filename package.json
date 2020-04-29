@@ -40,6 +40,7 @@
         "cookieconsent": "^3.1.1",
         "jquery-validation": "^1.19.1",
         "js-cookie": "^2.2.1",
+        "query-string": "^6.12.1",
         "react": "^16.13.0",
         "react-bootstrap": "^1.0.1",
         "react-dom": "^16.13.0",

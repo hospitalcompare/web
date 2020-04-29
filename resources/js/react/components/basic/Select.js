@@ -40,7 +40,7 @@ class Select extends Component {
             <Form.Control
                 name="procedure"
                 ref={this.selectedProcedure}
-                defaultValue={-1}
+                value={this.props.procedure}
                 onChange={(e) => this.props.handleChange(e)}
                 className={this.props.className}
                 as="select">

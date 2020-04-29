@@ -2,25 +2,33 @@ import React, {Component} from 'react';
 import axios from "axios";
 import ResultItem from "./ResultItem";
 import ResultsPageForm from "./ResultsPageForm";
+import queryString from 'query-string';
+import {
+    useLocation
+} from "react-router-dom";
 
 class ResultsPage extends Component {
     constructor(props) {
         super(props);
         const {match: {params}} = this.props;
+        let query = queryString.parse(this.props.location.search);
         // parse the parameter from the URL
-        const {procedure, postcode} = params;
+        let procedure = query.procedure || '';
+        let postcode = query.postcode || '';
+        let radius = query.radius || null;
         this.state = {
             hospitals: [],
             procedure,
-            postcode
+            postcode,
+            radius
         }
     }
 
     componentDidMount() {
         // Do the ajax call to get list of matching hospitals
         document.body.classList.add('results-page', 'results-page-desktop');
-        const {procedure, postcode} = this.state;
-        const apiUrl = `/api/getHospitalsForHomepageSearch/${procedure}/${postcode}`;
+        const {procedure, postcode, radius} = this.state;
+        const apiUrl = `/api/getHospitalsForHomepageSearch/${postcode}/${procedure}/${radius}`;
         const config = {
             headers: {
                 Authorization: 'Bearer mBu7IB6nuxh8RVzJ61f4'
@@ -46,10 +54,10 @@ class ResultsPage extends Component {
                 <ResultsPageForm />
                 <div className="results mt-3 mt-lg-0">
                     {
-                        procedure !== null
+                        hospitals.length > 0
                             ? hospitals.map(hospital => <ResultItem key={hospital.id}
                                                                     {...hospital} />)
-                            : <h1>No procedure selected</h1>
+                            : <h1>No hospitals found</h1>
                     }
                 </div>
             </main>

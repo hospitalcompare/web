@@ -215,6 +215,28 @@ class ApiController {
     }
 
     /**
+     * Returns a list of Hospitals for data submitted on homepage form
+     *
+     * @param string $postcode
+     * @param string $procedureId
+     * @param int $radius
+     *
+     * @return array
+     */
+    public function getHospitalsForHomepageSearch($postcode, $procedureId, $radius) {
+        //Get the request and load it as variables
+//        $radius         = 500; //50 miles as default
+//        $postcode       = 'WA68JY';
+//        $procedureId    = '10';
+        $hospitals      = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
+
+        $this->returnedData['success']  = true;
+        $this->returnedData['data']     = $hospitals['data'];
+
+        return $this->returnedData;
+    }
+
+    /**
      * Returns a list of Hospitals filtered by Distance (given by a Postcode)
      *
      * @param $postcode
@@ -422,16 +444,6 @@ class ApiController {
         return $this->returnedData;
     }
 
-    public function getHospitalsForHomepageSearch($postcode, $procedureId, $radius = null) {
-        //Get the request and load it as variables
-        $radius         = 50; //50 miles as default
-        $hospitals      = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
-
-        $this->returnedData['success']  = true;
-        $this->returnedData['data']     = $hospitals['data'];
-
-        return $this->returnedData;
-    }
 
     public function testGet() {
 

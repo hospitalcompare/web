@@ -22,8 +22,8 @@ class SearchForm extends Component {
         e.preventDefault();
         const {procedure, postcode} = this.state;
         this.props.history.push({
-            pathname: `/results-page/${procedure}/${postcode}`,
-            // search:
+            pathname: '/results-page/',
+            search: `?postcode=${postcode}&procedure=${procedure}&radius=50`
         })
     }
 
@@ -41,7 +41,8 @@ class SearchForm extends Component {
                       className="form-element"
                       onSubmit={this.submitForm}>
                     <div className="form-child treatment-parent position-relative">
-                        <Select className="big"
+                        <Select value={this.state.procedure}
+                                className="big"
                                 handleChange={this.handleChange}/>
                         {/*@include('components.basic.select', [*/}
                         {/*'selectPicker'          => 'true',*/}
@@ -75,6 +76,7 @@ class SearchForm extends Component {
                             {/*])*/}
                             <input type="text"
                                    name="postcode"
+                                   value={this.state.postcode}
                                    className="postcode-text-box big input-postcode"
                                    placeholder="Enter postcode"
                                    onChange={this.handleChange}/>

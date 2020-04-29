@@ -196,9 +196,10 @@ class ResultsPageForm extends Component {
                                     </div>
                                 </div>
 
-                                <a id="show_filters"
-                                   className="btn btn-grey btn-icon btn-arrow-down font-14 py-2 pl-3 mr-3 w-100"
-                                   href="javascript:void(0);" role="button">
+                                <button
+                                    id="show_filters"
+                                    className="btn btn-grey btn-icon btn-arrow-down font-14 py-2 pl-3 mr-3 w-100"
+                                    role="button">
                                     <span>Filters</span>
                                     <svg className="" xmlns="http://www.w3.org/2000/svg" width="18" height="11"
                                          viewBox="0 0 18 11">
@@ -209,7 +210,7 @@ class ResultsPageForm extends Component {
                                             </g>
                                         </g>
                                     </svg>
-                                </a>
+                                </button>
 
                                 <div id="open_shortlist"
                                      className="compare-button-title d-flex align-items-center h-100 ml-auto pulse-animation shortlist-has-items">
