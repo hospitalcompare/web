@@ -6,6 +6,7 @@ import {withRouter} from "react-router";
 class SearchForm extends Component {
     state = {
         procedure: '',
+        postcode: '',
         procedureId: null
     }
 
@@ -19,8 +20,9 @@ class SearchForm extends Component {
 
     handleClick = (e) => {
         e.preventDefault();
+        const {procedure, postcode} = this.state;
         this.props.history.push({
-            pathname: `/results-page/${this.state.procedure}`,
+            pathname: `/results-page/${procedure}/${postcode}`,
             // search:
         })
     }
@@ -39,7 +41,8 @@ class SearchForm extends Component {
                       className="form-element"
                       onSubmit={this.submitForm}>
                     <div className="form-child treatment-parent position-relative">
-                        <Select handleChange={this.handleChange}/>
+                        <Select className="big"
+                                handleChange={this.handleChange}/>
                         {/*@include('components.basic.select', [*/}
                         {/*'selectPicker'          => 'true',*/}
                         {/*'selectclassName'           => 'big select-picker',*/}
@@ -70,6 +73,11 @@ class SearchForm extends Component {
                             {/*'validation'        => 'maxlength=8 autocomplete="off"',*/}
                             {/*'id'                => 'input_postcode'*/}
                             {/*])*/}
+                            <input type="text"
+                                   name="postcode"
+                                   className="postcode-text-box big input-postcode"
+                                   placeholder="Enter postcode"
+                                   onChange={this.handleChange}/>
                         </div>
                         <div className="postcode-results-container">
                             <div className="ajax-box">

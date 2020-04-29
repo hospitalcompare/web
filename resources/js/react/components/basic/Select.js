@@ -42,7 +42,7 @@ class Select extends Component {
                 ref={this.selectedProcedure}
                 defaultValue={-1}
                 onChange={(e) => this.props.handleChange(e)}
-                className="select-picker"
+                className={this.props.className}
                 as="select">
                 {
                     specialties.map(

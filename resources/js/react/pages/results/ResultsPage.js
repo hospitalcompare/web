@@ -7,17 +7,20 @@ class ResultsPage extends Component {
     constructor(props) {
         super(props);
         const {match: {params}} = this.props;
-        const {procedure} = params;
+        // parse the parameter from the URL
+        const {procedure, postcode} = params;
         this.state = {
             hospitals: [],
-            procedure
+            procedure,
+            postcode
         }
     }
 
     componentDidMount() {
         // Do the ajax call to get list of matching hospitals
         document.body.classList.add('results-page', 'results-page-desktop');
-        const apiUrl = `/api/getHospitalsForHomepageSearch/${this.state.procedure}`;
+        const {procedure, postcode} = this.state;
+        const apiUrl = `/api/getHospitalsForHomepageSearch/${procedure}/${postcode}`;
         const config = {
             headers: {
                 Authorization: 'Bearer mBu7IB6nuxh8RVzJ61f4'
