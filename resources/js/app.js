@@ -34,7 +34,7 @@ class App extends Component {
                                component={HomePage}
                                history={this.props.history}/>
                         <Route exact path="/results-page" component={ResultsPage}/>
-                        <Route exact path="/results-page/:procedure/:postcode" component={ResultsPage}/>
+                        <Route exact path="/results-page/:postcode/:procedure/" component={ResultsPage}/>
                         <Route exact path="/faqs" component={FaqHome}/>
                         <Redirect to="/"/>
                     </Switch>
