@@ -20,10 +20,10 @@ class Header extends Component {
                         <div className="header-logo-parent">
                             <a href="/" className="">
                                 <img className="header-logo-image d-lg-none" height="40px"
-                                     src="//localhost:8080/images/icons/logo-mobile.svg" alt="Hospital Compare logo"/>
+                                     src="/images/icons/logo-mobile.svg" alt="Hospital Compare logo"/>
                                 <img className="header-logo-image d-none d-lg-block"
                                      height="34px"
-                                     src="//localhost:8080/images/icons/logo-desktop.svg" alt="Hospital Compare logo"/>
+                                     src="/images/icons/logo-desktop.svg" alt="Hospital Compare logo"/>
                             </a>
                         </div>
                         <nav id="main_nav" className="main-nav" role="navigation">

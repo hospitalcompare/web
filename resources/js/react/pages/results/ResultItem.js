@@ -1,20 +1,9 @@
 import React, {Component} from 'react';
-// import {ReactComponent as CompareHeart} from '../../../../images/icons/compare-heart.svg';
+import CompareHeart from '../../svg/CompareHeart';
+import MapIcon from "../../svg/MapIcon";
+import '../../scripts/getHtmlStars';
+import '../../scripts/getHtmlDashTickValue';
 
-const CompareHeart = () => {
-    return (
-        <svg id="compare_heart"
-             xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 30 30">
-            <path id="outer-circle" fill="transparent" strokeWidth="2" stroke="#fff"
-                  d="M15 1c7.7 0 14 6.3 14 14s-6.3 14-14 14S1 22.7 1 15 7.3 1 15 1z"/>
-            <g>
-                <path id="wishlist" fill="transparent"
-                      d="M18.8 8c-1.3 0-2.6.7-3.3 1.8-.2.2-.3.5-.4.7-.1-.2-.3-.5-.4-.7-.7-1.1-2-1.8-3.3-1.8-2.6.1-4.4 2-4.4 4.4v.1c0 2.8 2.3 4.7 5.7 7.7.6.6 1.3 1.1 1.9 1.7.1.1.3.1.4.1.1 0 .2 0 .3-.1l2.1-1.8c3.2-2.7 5.6-4.7 5.6-7.6.1-2.4-1.7-4.4-4.1-4.6l-.1.1z"/>
-            </g>
-        </svg>
-    )
-};
 
 class ResultItem extends Component {
     constructor(props) {
@@ -22,10 +11,10 @@ class ResultItem extends Component {
     }
 
     render() {
-        const {name, location_specialism, hospital_type, hospital_id} = this.props;
+        const {name, location_specialism, hospital_type, hospital_id, rating, waiting_time, cancelled_op} = this.props;
         return (
             <React.Fragment>
-                <div className="result-item mb-3 mb-lg-0" id="result-item_388">
+                <div className="result-item mb-3 mb-lg-0" id={`result-item_${hospital_id}`}>
                     <div className="container">
                         <div className="result-item-inner position-relative">
                             <button id="388" style={{top: '0', right: '0', padding: '0 0 0 30px !important'}}
@@ -57,13 +46,7 @@ class ResultItem extends Component {
                                         className="btn btn-more-info font-12 p-0 d-inline-flex align-items-center mr-3 shadow-none"
                                         data-target="#corporate_content_hospital_388" data-hidden-text="View Map +"
                                         data-visible-text="Hide Map -" data-tab-target="#map-tab_388">
-                                        <svg className="map-icon" xmlns="http://www.w3.org/2000/svg"
-                                             viewBox="0 0 33.37 49.61">
-                                            <g id="Layer_1" data-name="Layer 1">
-                                                <path fill="#037098"
-                                                      d="M26.38 34.66c4.77-8.54 7-14.25 7-18A16.69 16.69 0 000 16.68c0 3.73 2.22 9.44 7 18 2.9 5.2 5.81 9.72 6.63 11l2.37 3.6a.82.82 0 001.33 0l2.36-3.58c.37-.54 3.52-5.36 6.69-11.04zm-9.7 12.75L15 44.83s-3.28-5-6.61-10.93C3.86 25.82 1.58 20 1.58 16.68a15.11 15.11 0 0130.21 0c0 3.35-2.28 9.14-6.79 17.22-2.93 5.24-5.78 9.66-6.59 10.89z"></path>
-                                            </g>
-                                        </svg>
+                                        <MapIcon />
                                         <span>View Map +</span>
                                     </button>
 
@@ -116,7 +99,7 @@ class ResultItem extends Component {
                              </div>" data-trigger="hover" data-placement="bottom" data-html="true"
                                         data-original-title="" title="">
                                         <p className="stat-label d-block w-100 d-lg-none">Care Quality Rating</p>
-                                        <p className="text-center col-outstanding">Outstanding</p>
+                                        <p className="text-center col-outstanding">{rating.latest_rating}</p>
                                     </div>
                                 </div>
 
@@ -159,7 +142,7 @@ class ResultItem extends Component {
                                 </div>" data-trigger="hover" data-placement="bottom" data-html="true"
                                          data-original-title="" title="">
                                         <p className="stat-label d-block w-100 d-lg-none">Waiting Time</p>
-                                        <p>10.2<span className="d-inline d-lg-none">&nbsp;</span>
+                                        <p>{Math.round(waiting_time[0].avg_waiting_weeks * 100) / 100}<span className="d-inline d-lg-none">&nbsp;</span>
                                             <br className="d-none d-lg-inline" />Weeks</p>
                                     </div>
                                 </div>
@@ -179,22 +162,8 @@ class ResultItem extends Component {
                             </ul>" data-trigger="hover" data-placement="bottom" data-html="true" data-original-title=""
                                         title="">
                                         <p className="stat-label d-block w-100 d-lg-none">NHS User Rating</p>
-                                        <span className="d-flex">
-                                            <img className="star-icon"
-                                                 src="/images/icons/star-full.svg"
-                                                 alt="Whole Star"/>
-                                             <img
-                                                 className="star-icon" src="/images/icons/star-full.svg"
-                                                 alt="Whole Star"/>
-                                            <img
-                                                className="star-icon" src="/images/icons/star-full.svg"
-                                                alt="Whole Star"/>
-                                            <img
-                                                className="star-icon" src="/images/icons/star-full.svg"
-                                                alt="Whole Star"/>
-                                            <img
-                                                className="star-icon" src="/images/icons/star-half.svg"
-                                                alt="Half Star"/>
+                                        <span className="d-flex"
+                                              dangerouslySetInnerHTML={{__html: getHtmlStars(rating.avg_user_rating)}}>
                                         </span>
                                     </div>
                                 </div>
@@ -206,7 +175,7 @@ class ResultItem extends Component {
                                          data-trigger="hover" data-placement="bottom" data-html="true"
                                          data-original-title="" title="">
                                         <p className="stat-label d-block w-100 d-lg-none">Operations Cancelled</p>
-                                        0.2%
+                                        {cancelled_op !== null ? getHtmlDashTickValue(cancelled_op.perc_cancelled_ops, "%") : "No data"}
                                     </div>
                                 </div>
 
@@ -217,7 +186,7 @@ class ResultItem extends Component {
                                          data-original-title="" title="">
                                         <p className="stat-label d-block w-100 d-lg-none">Friends &amp; Family
                                             Rating</p>
-                                        96.3%
+                                        {rating.friends_family_rating !== null ? getHtmlDashTickValue(rating.friends_family_rating, "%") : "No data"}
                                     </div>
                                 </div>
 
