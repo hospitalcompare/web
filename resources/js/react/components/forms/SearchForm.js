@@ -8,7 +8,45 @@ class SearchForm extends Component {
     state = {
         radii: [],
         procedure: '',
-        postcode: 'WA68JY',
+        postcode: '',
+        returnedPostcodes: [
+        //     {
+        //     "postcode": "WA6 8JY",
+        //     "quality": 1,
+        //     "eastings": 357120,
+        //     "northings": 372467,
+        //     "country": "England",
+        //     "nhs_ha": "North West",
+        //     "longitude": -2.64407,
+        //     "latitude": 53.247492,
+        //     "european_electoral_region": "North West",
+        //     "primary_care_trust": "Western Cheshire",
+        //     "region": "North West",
+        //     "lsoa": "Cheshire West and Chester 015A",
+        //     "msoa": "Cheshire West and Chester 015",
+        //     "incode": "8JY",
+        //     "outcode": "WA6",
+        //     "parliamentary_constituency": "Weaver Vale",
+        //     "admin_district": "Cheshire West and Chester",
+        //     "parish": "Norley",
+        //     "admin_county": null,
+        //     "admin_ward": "Weaver & Cuddington",
+        //     "ced": null,
+        //     "ccg": "NHS West Cheshire",
+        //     "nuts": "Cheshire West and Chester",
+        //     "codes": {
+        //         "admin_district": "E06000050",
+        //         "admin_county": "E99999999",
+        //         "admin_ward": "E05012243",
+        //         "parish": "E04012555",
+        //         "parliamentary_constituency": "E14001024",
+        //         "ccg": "E38000196",
+        //         "ccg_id": "02F",
+        //         "ced": "E99999999",
+        //         "nuts": "UKD63"
+        //     }
+        // }
+        ],
         radius: null
     }
 
@@ -35,6 +73,57 @@ class SearchForm extends Component {
             })
     }
 
+    handlePostcodeAjax = (value) => {
+        const config = {
+            headers: {
+                Authorization: 'Bearer mBu7IB6nuxh8RVzJ61f4'
+            }
+        };
+        if (value !== "") {
+            axios.get(`api/getLocations/${value}`, config)
+                .then((res) => {
+                    const locations = res.data.data;
+                    console.log(locations.result)
+                    this.setState({
+                        returnedPostcodes: locations.result
+                    })
+                })
+                .catch((error) => {
+                    console.log('Error with fetching locations', error)
+                })
+        }
+
+
+        // $.ajax({
+        //     url: 'api/getLocations/' + value,
+        //     type: 'GET',
+        //     headers: {
+        //         'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
+        //     },
+        //     dataType: "json",
+        //     contentType: "application/json; charset=utf-8",
+        //     data: {},
+        //     success: function (data) {
+        //         ajaxBox.empty(); // remove old options
+        //         $('#hc_alert').slideUp(); // Hide the alert bar
+        //         //Check if we have at least one result in our data
+        //         if (!$.isEmptyObject(data.data.result)) {
+        //             $.each(data.data.result, function (key, obj) { //$.parseJSON() method is needed unless chrome is throwing error.
+        //                 ajaxBox.append("<p class='postcode-item' >" + obj.postcode + ', ' + obj.admin_district + "</p>");
+        //             });
+        //             resultsContainer.slideDown();
+        //         } else {
+        //             ajaxBox.append(`<p class='postcode-error-message'>No matches found for ${postcode}</p>`);
+        //             resultsContainer.slideDown();
+        //         }
+        //     },
+        //     error: function (data) {
+        //         showAlert('Something went wrong! Please try again.', false)
+        //     },
+        // })
+    }
+
+
     submitForm = (e) => {
         e.preventDefault();
     }
@@ -50,12 +139,15 @@ class SearchForm extends Component {
 
     handleChange = (e) => {
         const {name, value} = e.target;
-        this.setState({
-            [name]: value
-        })
+        if (name === 'postcode') {
+            console.log(value)
+            this.handlePostcodeAjax(value)
+        }
+        this.setState({[name]: value})
     }
 
     render() {
+        const {returnedPostcodes} = this.state;
         return (
             <React.Fragment>
                 <Form id="search_form"
@@ -98,27 +190,31 @@ class SearchForm extends Component {
                             <input type="text"
                                    name="postcode"
                                    value={this.state.postcode}
-                                   // value={this.state.postcode}
+                                // value={this.state.postcode}
                                    className="postcode-text-box big input-postcode"
                                    placeholder="Enter postcode"
                                    onChange={this.handleChange}/>
                         </div>
-                        <div className="postcode-results-container">
+                        <div className="postcode-results-container d-block">
                             <div className="ajax-box">
-                                <span className="sr-only">Ajax box</span>
+                                {
+                                    this.state.returnedPostcodes.map(result => <p className='postcode-item'>{result.postcode}, {result.admin_district}</p>)
+                                }
+
                             </div>
                         </div>
                     </div>
                     <div className="form-child radius-parent full-left _column-layout position-relative"
                          data-reveal-direction="down">
                         <select
-                                className="w-100 distance-dropdown big select-picker"
-                                onChange={this.handleChange}
-                                defaultValue="how"
-                                name="radius"
-                                id="">
+                            className="w-100 distance-dropdown big select-picker"
+                            onChange={this.handleChange}
+                            defaultValue="how"
+                            name="radius"
+                            id="">
                             <option disabled key="-1"
-                                    value="how">How far would you travel?</option>
+                                    value="how">How far would you travel?
+                            </option>
                             {
                                 this.state.radii.map(
                                     option => <option key={option.id}

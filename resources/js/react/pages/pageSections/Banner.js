@@ -12,10 +12,10 @@ class Banner extends Component {
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="banner-text col col-12 col-lg-6">
-                            <h1>Choose the
+                            <h1>Choose the&nbsp;
                                 <span className="col-brand-primary-1">Right Hospital <br
-                                    className="d-none d-md-inline-block"/></span>for
-                                <span className="col-brand-primary-1">Your&nbsp;Treatment</span>
+                                    className="d-none d-md-inline-block"/></span>for&nbsp;
+                                <span className="col-brand-primary-1">Your Treatment</span>
                             </h1>
                             <h3 className="font-20 d-lg-none">Find the best quality hospitals and shortest waiting
                                 times,
