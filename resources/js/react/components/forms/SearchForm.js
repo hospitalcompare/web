@@ -76,7 +76,8 @@ class SearchForm extends Component {
                             {/*])*/}
                             <input type="text"
                                    name="postcode"
-                                   value={this.state.postcode}
+                                   value="WA68JY"
+                                   // value={this.state.postcode}
                                    className="postcode-text-box big input-postcode"
                                    placeholder="Enter postcode"
                                    onChange={this.handleChange}/>

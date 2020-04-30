@@ -223,11 +223,9 @@ class ApiController {
      *
      * @return array
      */
-    public function getHospitalsForHomepageSearch($postcode, $procedureId, $radius) {
+    public function getHospitalsForHomepageSearch($postcode = '', $procedureId = '', $radius = null) {
         //Get the request and load it as variables
-//        $radius         = 500; //50 miles as default
-//        $postcode       = 'WA68JY';
-//        $procedureId    = '10';
+        $radius = 50;
         $hospitals      = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
 
         $this->returnedData['success']  = true;

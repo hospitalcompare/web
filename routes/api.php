@@ -27,7 +27,7 @@ Route::middleware('checkToken')->group(function () {
     Route::post('/faqs', 'ApiController@faqs');
     Route::post('/getProcedures', 'ApiController@getProceduresForDropdowns');
     Route::get('/getAllHospitals', 'ApiController@getAllHospitals');
-    Route::get('/getHospitalsForHomepageSearch/{postcode}/{procedureId}/{radius}', 'ApiController@getHospitalsForHomepageSearch'); // Given a procedure id, return the parent specialty
+    Route::get('/getHospitalsForHomepageSearch/{postcode?}/{procedureId?}/{radius?}', 'ApiController@getHospitalsForHomepageSearch'); // Given a procedure id, return the parent specialty
 
     //TEST ROUTES
     Route::get('/testGet', 'ApiController@testGet');
