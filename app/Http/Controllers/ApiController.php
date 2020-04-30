@@ -223,9 +223,8 @@ class ApiController {
      *
      * @return array
      */
-    public function getHospitalsForHomepageSearch($postcode = '', $procedureId = '', $radius = null) {
+    public function getHospitalsForHomepageSearch($postcode = '', $procedureId = '', $radius = '') {
         //Get the request and load it as variables
-        $radius = 50;
         $hospitals      = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
 
         $this->returnedData['success']  = true;
@@ -438,6 +437,17 @@ class ApiController {
 
         $this->returnedData['success']      = true;
         $this->returnedData['data']['procedures_for_dropdowns'] = $procedures;
+
+        return $this->returnedData;
+    }
+
+    // Return the radius options for the dropdown
+    public function getRadiusForDropdown() {
+        //Get all Specialties with Procedures ordered by name
+        $radii = Utils::radius;
+
+        $this->returnedData['success']                      = true;
+        $this->returnedData['data']['radius_for_dropdown']  = $radii;
 
         return $this->returnedData;
     }

@@ -26,6 +26,7 @@ Route::middleware('checkToken')->group(function () {
     Route::get('/generateSitemap', 'ApiController@generateSitemap');
     Route::post('/faqs', 'ApiController@faqs');
     Route::post('/getProcedures', 'ApiController@getProceduresForDropdowns');
+    Route::get('/getRadius', 'ApiController@getRadiusForDropdown');
     Route::get('/getAllHospitals', 'ApiController@getAllHospitals');
     Route::get('/getHospitalsForHomepageSearch/{postcode?}/{procedureId?}/{radius?}', 'ApiController@getHospitalsForHomepageSearch'); // Given a procedure id, return the parent specialty
 

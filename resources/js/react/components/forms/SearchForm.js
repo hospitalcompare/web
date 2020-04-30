@@ -2,16 +2,37 @@ import React, {Component} from 'react';
 import Select from '../basic/Select';
 import Form from "react-bootstrap/Form";
 import {withRouter} from "react-router";
+import axios from "axios";
 
 class SearchForm extends Component {
     state = {
+        radii: [],
         procedure: '',
-        postcode: '',
-        procedureId: null
+        postcode: 'WA68JY',
+        radius: null
     }
 
     componentDidMount() {
-        console.log(this.context)
+        const apiUrl = `api/getRadius`;
+        // const bodyparams = {
+        //     dataType: "json",
+        //     contentType: "application/json; charset=utf-8"
+        // };
+        const config = {
+            headers: {
+                Authorization: 'Bearer mBu7IB6nuxh8RVzJ61f4'
+            }
+        };
+        axios.get(apiUrl, config)
+            .then((res) => {
+                const radii = res.data.data.radius_for_dropdown;
+                this.setState({
+                    radii
+                });
+            })
+            .catch((error) => {
+                console.log('Error with fetching radii', error)
+            })
     }
 
     submitForm = (e) => {
@@ -20,10 +41,10 @@ class SearchForm extends Component {
 
     handleClick = (e) => {
         e.preventDefault();
-        const {procedure, postcode} = this.state;
+        const {procedure, postcode, radius} = this.state;
         this.props.history.push({
             pathname: '/results-page/',
-            search: `?postcode=${postcode}&procedure=${procedure}&radius=50`
+            search: `?postcode=${postcode}&procedure=${procedure}&radius=${radius}`
         })
     }
 
@@ -76,7 +97,7 @@ class SearchForm extends Component {
                             {/*])*/}
                             <input type="text"
                                    name="postcode"
-                                   value="WA68JY"
+                                   value={this.state.postcode}
                                    // value={this.state.postcode}
                                    className="postcode-text-box big input-postcode"
                                    placeholder="Enter postcode"
@@ -88,8 +109,23 @@ class SearchForm extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="form-child radius-parent full-left column-layout position-relative"
+                    <div className="form-child radius-parent full-left _column-layout position-relative"
                          data-reveal-direction="down">
+                        <select
+                                className="w-100 distance-dropdown big select-picker"
+                                onChange={this.handleChange}
+                                defaultValue="how"
+                                name="radius"
+                                id="">
+                            <option disabled key="-1"
+                                    value="how">How far would you travel?</option>
+                            {
+                                this.state.radii.map(
+                                    option => <option key={option.id}
+                                                      value={option.value}>{option.name}</option>
+                                )
+                            }
+                        </select>
                         {/*@include('components.basic.select', [*/}
                         {/*'selectclassName'           =>  'distance-dropdown big select-picker',*/}
                         {/*'selectWrapperclassName'    =>  'w-100',*/}

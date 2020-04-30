@@ -15,7 +15,7 @@ class ResultsPage extends Component {
         // parse the parameter from the URL
         let procedure = query.procedure || '';
         let postcode = query.postcode || '';
-        let radius = query.radius || 50;
+        let radius = query.radius || '';
         this.state = {
             hospitals: [],
             procedure,
