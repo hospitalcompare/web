@@ -4,50 +4,22 @@ import Form from "react-bootstrap/Form";
 import {withRouter} from "react-router";
 import axios from "axios";
 
+// Check valid postcode
+function valid_postcode(postcode) {
+    postcode = postcode.replace(/\s/g, "");
+    var regex = /^((([A-PR-UWYZ][0-9])|([A-PR-UWYZ][0-9][0-9])|([A-PR-UWYZ][A-HK-Y][0-9])|([A-PR-UWYZ][A-HK-Y][0-9][0-9])|([A-PR-UWYZ][0-9][A-HJKSTUW])|([A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY]))\s?([0-9][ABD-HJLNP-UW-Z]{2})|(GIR)\s?(0AA))$/i;
+    return regex.test(postcode);
+}
+
 class SearchForm extends Component {
     state = {
         radii: [],
         procedure: '',
         postcode: '',
-        returnedPostcodes: [
-        //     {
-        //     "postcode": "WA6 8JY",
-        //     "quality": 1,
-        //     "eastings": 357120,
-        //     "northings": 372467,
-        //     "country": "England",
-        //     "nhs_ha": "North West",
-        //     "longitude": -2.64407,
-        //     "latitude": 53.247492,
-        //     "european_electoral_region": "North West",
-        //     "primary_care_trust": "Western Cheshire",
-        //     "region": "North West",
-        //     "lsoa": "Cheshire West and Chester 015A",
-        //     "msoa": "Cheshire West and Chester 015",
-        //     "incode": "8JY",
-        //     "outcode": "WA6",
-        //     "parliamentary_constituency": "Weaver Vale",
-        //     "admin_district": "Cheshire West and Chester",
-        //     "parish": "Norley",
-        //     "admin_county": null,
-        //     "admin_ward": "Weaver & Cuddington",
-        //     "ced": null,
-        //     "ccg": "NHS West Cheshire",
-        //     "nuts": "Cheshire West and Chester",
-        //     "codes": {
-        //         "admin_district": "E06000050",
-        //         "admin_county": "E99999999",
-        //         "admin_ward": "E05012243",
-        //         "parish": "E04012555",
-        //         "parliamentary_constituency": "E14001024",
-        //         "ccg": "E38000196",
-        //         "ccg_id": "02F",
-        //         "ced": "E99999999",
-        //         "nuts": "UKD63"
-        //     }
-        // }
-        ],
-        radius: null
+        returnedPostcodes: [],
+        radius: '',
+        haveResults: false,
+        showPostcodes: false
     }
 
     componentDidMount() {
@@ -80,47 +52,29 @@ class SearchForm extends Component {
             }
         };
         if (value !== "") {
+            this.setState({showPostcodes: true})
             axios.get(`api/getLocations/${value}`, config)
                 .then((res) => {
                     const locations = res.data.data;
-                    console.log(locations.result)
-                    this.setState({
-                        returnedPostcodes: locations.result
-                    })
+                    console.log('Truthy?: ', (locations.result !== null))
+                    // If the API returns a list of postcodes, set the returned postcodes in state
+                    locations.result !== null && locations.result.length > 0
+                        ? this.setState({
+                            returnedPostcodes: locations.result,
+                            haveResults: true
+                        })
+                        // Otherwise clear the returned postcodes and set have results to false
+                        : this.setState({
+                            returnedPostcodes: [],
+                            haveResults: false
+                        })
+
+
                 })
                 .catch((error) => {
                     console.log('Error with fetching locations', error)
                 })
         }
-
-
-        // $.ajax({
-        //     url: 'api/getLocations/' + value,
-        //     type: 'GET',
-        //     headers: {
-        //         'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
-        //     },
-        //     dataType: "json",
-        //     contentType: "application/json; charset=utf-8",
-        //     data: {},
-        //     success: function (data) {
-        //         ajaxBox.empty(); // remove old options
-        //         $('#hc_alert').slideUp(); // Hide the alert bar
-        //         //Check if we have at least one result in our data
-        //         if (!$.isEmptyObject(data.data.result)) {
-        //             $.each(data.data.result, function (key, obj) { //$.parseJSON() method is needed unless chrome is throwing error.
-        //                 ajaxBox.append("<p class='postcode-item' >" + obj.postcode + ', ' + obj.admin_district + "</p>");
-        //             });
-        //             resultsContainer.slideDown();
-        //         } else {
-        //             ajaxBox.append(`<p class='postcode-error-message'>No matches found for ${postcode}</p>`);
-        //             resultsContainer.slideDown();
-        //         }
-        //     },
-        //     error: function (data) {
-        //         showAlert('Something went wrong! Please try again.', false)
-        //     },
-        // })
     }
 
 
@@ -139,15 +93,24 @@ class SearchForm extends Component {
 
     handleChange = (e) => {
         const {name, value} = e.target;
+        const {returnedPostcodes} = this.state;
+
+        let timer;
+        const interval = 0;
+        // For the postcode field, make the ajax call
         if (name === 'postcode') {
-            console.log(value)
-            this.handlePostcodeAjax(value)
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                this.handlePostcodeAjax(value)
+            }, interval);
         }
+
         this.setState({[name]: value})
     }
 
     render() {
-        const {returnedPostcodes} = this.state;
+        const {returnedPostcodes, postcode, haveResults, showPostcodes} = this.state;
+
         return (
             <React.Fragment>
                 <Form id="search_form"
@@ -189,22 +152,35 @@ class SearchForm extends Component {
                             {/*])*/}
                             <input type="text"
                                    name="postcode"
-                                   value={this.state.postcode}
-                                // value={this.state.postcode}
+                                   maxLength="8"
+                                   value={postcode}
                                    className="postcode-text-box big input-postcode"
                                    placeholder="Enter postcode"
                                    onChange={this.handleChange}/>
                         </div>
-                        <div className="postcode-results-container d-block">
+                        <div className={`postcode-results-container ${showPostcodes ? 'd-block' : 'd-none'}`}>
                             <div className="ajax-box">
                                 {
-                                    this.state.returnedPostcodes.map(result => <p className='postcode-item'>{result.postcode}, {result.admin_district}</p>)
+                                    haveResults
+                                        ? returnedPostcodes.map(
+                                        (result, index) =>
+                                            <p
+                                                key={index}
+                                                data-postcode={result.postcode}
+                                                className='postcode-item'
+                                                onClick={(e) => {
+                                                    this.setState({
+                                                        postcode: e.target.dataset.postcode,
+                                                        showPostcodes: false
+                                                    })
+                                                }}>{result.postcode}, {result.admin_district}</p>)
+                                        : <p className='postcode-error-message'>No matches found for {postcode}</p>
                                 }
 
                             </div>
                         </div>
                     </div>
-                    <div className="form-child radius-parent full-left _column-layout position-relative"
+                    <div className={`form-child radius-parent full-left column-layout ${postcode.length > 0 ? 'revealed-down' : ''} position-relative`}
                          data-reveal-direction="down">
                         <select
                             className="w-100 distance-dropdown big select-picker"

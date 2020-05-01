@@ -3,9 +3,6 @@ import axios from "axios";
 import ResultItem from "./ResultItem";
 import ResultsPageForm from "./ResultsPageForm";
 import queryString from 'query-string';
-import {
-    useLocation
-} from "react-router-dom";
 
 class ResultsPage extends Component {
     constructor(props) {
