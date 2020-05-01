@@ -10,10 +10,11 @@ class ResultsPage extends Component {
         const {match: {params}} = this.props;
         let query = queryString.parse(this.props.location.search);
         // parse the parameter from the URL
-        let procedure = query.procedure || '';
-        let postcode = query.postcode || '';
-        let radius = query.radius || '';
+        let procedure   = query.procedure || '';
+        let postcode    = query.postcode || '';
+        let radius      = query.radius || '';
         this.state = {
+            loadingHospitals: false,
             hospitals: [],
             procedure,
             postcode,
@@ -31,12 +32,13 @@ class ResultsPage extends Component {
                 Authorization: 'Bearer mBu7IB6nuxh8RVzJ61f4'
             }
         };
+        this.setState({loadingHospitals: true})
         axios.get(apiUrl, config)
             .then((res) => {
                 const returnedHospitals = res.data.data.hospitals.data;
-                console.log(returnedHospitals)
                 this.setState({
-                    hospitals: returnedHospitals
+                    hospitals: returnedHospitals,
+                    loadingHospitals: false
                 });
             })
             .catch((error) => {
@@ -45,16 +47,16 @@ class ResultsPage extends Component {
     }
 
     render() {
-        const {procedure, hospitals} = this.state;
+        const {loadingHospitals, hospitals} = this.state;
         return (
             <main>
                 <ResultsPageForm />
                 <div className="results mt-3 mt-lg-0">
                     {
-                        hospitals.length > 0
-                            ? hospitals.map(hospital => <ResultItem key={hospital.id}
-                                                                    {...hospital} />)
-                            : <h1>No hospitals found</h1>
+                        loadingHospitals
+                            ? <h1>Loading hospitals</h1>
+                            : hospitals.map(hospital => <ResultItem key={hospital.id}
+                        {...hospital} />)
                     }
                 </div>
             </main>
