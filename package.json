@@ -45,6 +45,8 @@
         "react-bootstrap": "^1.0.1",
         "react-dom": "^16.13.0",
         "react-router-dom": "^5.1.2",
+        "react-select-picker": "0.0.7",
+        "react-select-search": "^1.1.2",
         "webpack-jquery-ui": "^2.0.1"
     }
 }

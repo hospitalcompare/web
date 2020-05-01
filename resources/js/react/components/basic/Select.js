@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Form, {Control} from 'react-bootstrap/Form';
 import axios from "axios";
+import SelectSearch from 'react-select-search';
 
 class Select extends Component {
     constructor() {
@@ -36,33 +36,23 @@ class Select extends Component {
 
     render() {
         const {specialties} = this.state;
+        const options = [
+            {name: 'Swedish', value: 'sv'},
+            {name: 'English', value: 'en'},
+            {
+                type: 'group',
+                name: 'Group name',
+                items: [
+                    {name: 'Spanish', value: 'es'},
+                ]
+            },
+        ];
         return (
-            <Form.Control
-                name="procedure"
-                ref={this.selectedProcedure}
-                value={this.props.procedure}
-                onChange={(e) => this.props.handleChange(e)}
-                className={this.props.className}
-                as="select">
-                {
-                    specialties.map(
-                        specialty => {
-                            return specialty.id === 0 || specialty.id === '-1'
-                                ? <option key={specialty.id}>{specialty.name}</option>
-                                : <optgroup label={specialty.name}
-                                            key={specialty.id}>
-                                    {
-                                        specialty.hasOwnProperty("procedures")
-                                            ? specialty.procedures.map(procedure =>
-                                                <option key={procedure.id}
-                                                        value={procedure.id}>{procedure.name}</option>)
-                                            : ''
-                                    }
-                                </optgroup>
-                        }
-                    )
-                }
-            </Form.Control>
+            <SelectSearch onChange={()=> console.log('select')}
+                          options={options}
+                          defaultValue="sv"
+                          name="language"
+                          placeholder="Choose your language" />
         );
     }
 };
