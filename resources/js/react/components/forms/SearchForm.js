@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Select from '../basic/Select';
+import SelectComponent from '../basic/SelectComponent';
 import Form from "react-bootstrap/Form";
 import {withRouter} from "react-router";
 import axios from "axios";
@@ -20,7 +20,7 @@ class SearchForm extends Component {
         radius: '',
         haveResults: false,
         showPostcodes: false
-    }
+    };
 
     componentDidMount() {
         const apiUrl = `api/getRadius`;
@@ -75,12 +75,11 @@ class SearchForm extends Component {
                     console.log('Error with fetching locations', error)
                 })
         }
-    }
-
+    };
 
     submitForm = (e) => {
         e.preventDefault();
-    }
+    };
 
     handleClick = (e) => {
         e.preventDefault();
@@ -89,27 +88,29 @@ class SearchForm extends Component {
             pathname: '/results-page/',
             search: `?postcode=${postcode}&procedure=${procedure}&radius=${radius}`
         })
-    }
+    };
 
     handleChange = (e) => {
-        const {name, value} = e.target;
+        const {value} = e.target;
         const {returnedPostcodes} = this.state;
 
-        let timer;
-        const interval = 0;
-        // For the postcode field, make the ajax call
-        if (name === 'postcode') {
-            clearTimeout(timer);
-            timer = setTimeout(() => {
-                this.handlePostcodeAjax(value)
-            }, interval);
-        }
+        console.log(value);
 
-        this.setState({[name]: value})
-    }
+        // let timer;
+        // const interval = 0;
+        // // For the postcode field, make the ajax call
+        // if (name === 'postcode') {
+        //     clearTimeout(timer);
+        //     timer = setTimeout(() => {
+        //         this.handlePostcodeAjax(value)
+        //     }, interval);
+        // }
+        //
+        // this.setState({[name]: value})
+    };
 
     render() {
-        const {returnedPostcodes, postcode, haveResults, showPostcodes} = this.state;
+        const {returnedPostcodes, postcode, haveResults, showPostcodes, procedure} = this.state;
 
         return (
             <React.Fragment>
@@ -117,9 +118,8 @@ class SearchForm extends Component {
                       className="form-element"
                       onSubmit={this.submitForm}>
                     <div className="form-child treatment-parent position-relative">
-                        <Select value={this.state.procedure}
-                                className="big"
-                                handleChange={this.handleChange}/>
+                        <SelectComponent value={procedure}
+                                         handleChange={this.handleChange}/>
                         {/*@include('components.basic.select', [*/}
                         {/*'selectPicker'          => 'true',*/}
                         {/*'selectclassName'           => 'big select-picker',*/}

@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import SearchForm from '../../components/forms/SearchForm';
 
-import Form from 'react-bootstrap/Form';
-import Select from '../../components/basic/Select';
-
 class Banner extends Component {
     render() {
         const hideText = true;
