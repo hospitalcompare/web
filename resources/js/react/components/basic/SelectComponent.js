@@ -78,6 +78,7 @@ class SelectComponent extends Component {
                 name="procedure"
                 className="big"
                 placeholder="Choose your treatment (if known)"
+                defaultValue={this.props.value}
                 formatGroupLabel={formatGroupLabel}
                 options={specialties}
                 onChange={(property, value) => {

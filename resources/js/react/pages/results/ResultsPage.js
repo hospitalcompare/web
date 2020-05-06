@@ -11,8 +11,8 @@ class ResultsPage extends Component {
         let query = queryString.parse(this.props.location.search);
         // parse the parameter from the URL
         let procedure   = query.procedure || '';
-        let postcode    = query.postcode || '';
-        let radius      = query.radius || '';
+        let postcode    = decodeURI(query.postcode) || '';
+        let radius      = query.radius || 50;
         this.state = {
             loadingHospitals: false,
             hospitals: [],

@@ -223,9 +223,9 @@ class ApiController {
      *
      * @return array
      */
-    public function getHospitalsForHomepageSearch($postcode = '', $procedureId = '', $radius = '') {
+    public function getHospitalsForHomepageSearch($postcode = '', $procedureId = '', $radius = null) {
         //Get the request and load it as variables
-        $hospitals      = Hospital::getHospitalsWithParams($postcode, $procedureId, $radius);
+        $hospitals      = Hospital::getHospitalsWithParams($postcode = '', $procedureId = '', $radius = null);
 
         $this->returnedData['success']  = true;
         $this->returnedData['data']     = $hospitals['data'];

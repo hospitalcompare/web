@@ -16,10 +16,10 @@ class SearchForm extends Component {
         super(props);
         this.state = {
             radii: [],
-            procedure: '',
+            procedure: '0',
             postcode: '',
             returnedPostcodes: [],
-            radius: '',
+            radius: 50,
             haveResults: false,
             showPostcodes: false
         }
@@ -90,7 +90,7 @@ class SearchForm extends Component {
         const {procedure, postcode, radius} = this.state;
         this.props.history.push({
             pathname: '/results-page/',
-            search: `?postcode=${postcode}&procedure=${procedure}&radius=${radius}`
+            search: `?procedure=${procedure}&postcode=${postcode}&radius=${radius}`
         })
     };
 
