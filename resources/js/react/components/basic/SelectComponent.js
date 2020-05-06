@@ -2,15 +2,6 @@ import React, {Component} from 'react';
 import axios from "axios";
 import Select from 'react-select';
 
-const options = [
-    { value: 'Food', label: 'Food' },
-    { value: 'Being Fabulous', label: 'Being Fabulous' },
-    { value: 'Ken Wheeler', label: 'Ken Wheeler' },
-    { value: 'ReasonML', label: 'ReasonML' },
-    { value: 'Unicorns', label: 'Unicorns' },
-    { value: 'Kittens', label: 'Kittens' },
-];
-
 class SelectComponent extends Component {
     constructor() {
         super();
@@ -59,13 +50,26 @@ class SelectComponent extends Component {
         const groupStyles = {
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'flex-start',
+            justifyContent: 'space-between',
+        };
+
+        const groupBadgeStyles = {
+            backgroundColor: '#EBECF0',
+            borderRadius: '2em',
+            color: '#172B4D',
+            display: 'inline-block',
+            fontSize: 12,
+            fontWeight: 'normal',
+            lineHeight: '1',
+            minWidth: 1,
+            padding: '0.16666666666667em 0.5em',
+            textAlign: 'center',
         };
 
         const formatGroupLabel = data => (
             <div style={groupStyles}>
                 <span>{data.label}</span>
-                {/*<span style={groupBadgeStyles}>{data.options.length}</span>*/}
+                <span style={groupBadgeStyles}>{data.options.length}</span>
             </div>
         );
 
@@ -77,8 +81,7 @@ class SelectComponent extends Component {
                 formatGroupLabel={formatGroupLabel}
                 options={specialties}
                 onChange={(property, value) => {
-                    console.log(property, value)
-                    this.setState({ procedure: property.value })
+                    this.props.handleChange(property.value)
                 }}
 
             />
