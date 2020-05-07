@@ -78,7 +78,6 @@ class SearchForm extends Component {
         e.preventDefault();
         const {procedure, postcode, radius, fakePostcode} = this.state;
         if(fakePostcode !== "") {
-            alert('Fuck off robot!');
             // TODO: create a function to display a message saying 'something went wrong'
             return;
         }
