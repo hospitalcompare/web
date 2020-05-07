@@ -285,13 +285,19 @@ input[type=submit] {
 }
 
 // Larger input/select
-input.big,
-select.big {
+.big {
     @include font-size(16);
     font-weight: 500;
     //height: 60px;
     //line-height: 60px;
     padding: 16px 45px 16px 16px;
+    line-height: $line-height-base;
+}
+
+.react-select {
+    [class*="ValueContainer"] {
+        padding: 16px 0 16px 16px;
+    }
 }
 
 // Custom container widths

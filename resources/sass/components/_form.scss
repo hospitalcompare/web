@@ -31,7 +31,7 @@ textarea {
 
 input:not([type="range"]):not([type="submit"]):not([type="checkbox"]),
 select:not([class^="ui-datepicker"]),
-textarea {
+textarea, .react-select [class*="control"] {
     border: 2px solid $border-color; /*Removes border*/
     border-radius: $btn-border-radius;
     appearance: none;
@@ -39,6 +39,11 @@ textarea {
     background-color: $white;
     //text-indent: 0.01px; /* Removes default arrow from firefox*/
     //text-overflow: "";  /*Removes default arrow from firefox*/
+}
+
+.react-select [class*="placeholder"] {
+    margin-left: 0;
+    font-size: 1rem;
 }
 
 select::-ms-expand {

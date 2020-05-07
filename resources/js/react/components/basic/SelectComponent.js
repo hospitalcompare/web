@@ -76,7 +76,7 @@ class SelectComponent extends Component {
         return (
             <Select
                 name="procedure"
-                className="big"
+                className="react-select"
                 placeholder="Choose your treatment (if known)"
                 defaultValue={this.props.value}
                 formatGroupLabel={formatGroupLabel}
