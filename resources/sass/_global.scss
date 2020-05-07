@@ -164,6 +164,7 @@ a:hover {
 }
 
 main {
+    min-height: 100vh;
     section {
         padding: 45px 0;
         @include media-breakpoint-up(lg) {
