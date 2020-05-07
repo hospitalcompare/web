@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Loader from "../../components/basic/Loader";
 import axios from "axios";
 import ResultItem from "./ResultItem";
 import ResultsPageForm from "./ResultsPageForm";
@@ -11,7 +12,8 @@ class ResultsPage extends Component {
         let query = queryString.parse(this.props.location.search);
         // parse the parameter from the URL
         let procedure   = query.procedure || '';
-        let postcode    = decodeURI(query.postcode) || '';
+        let postcode    = decodeURI(query.postcode.replace(/\s+/g, "").toLowerCase()) || '';
+        console.log(postcode);
         let radius      = query.radius || 50;
         this.state = {
             loadingHospitals: false,
@@ -54,7 +56,7 @@ class ResultsPage extends Component {
                 <div className="results mt-3 mt-lg-0">
                     {
                         loadingHospitals
-                            ? <h1>Loading hospitals</h1>
+                            ? <Loader />
                             : hospitals.map(hospital => <ResultItem key={hospital.id}
                         {...hospital} />)
                     }

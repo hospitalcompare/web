@@ -25,7 +25,6 @@ class SearchForm extends Component {
         }
     }
 
-
     componentDidMount() {
         const apiUrl = `api/getRadius`;
         // const bodyparams = {
@@ -60,7 +59,6 @@ class SearchForm extends Component {
             axios.get(`api/getLocations/${value}`, config)
                 .then((res) => {
                     const locations = res.data.data;
-                    console.log('Truthy?: ', (locations.result !== null))
                     // If the API returns a list of postcodes, set the returned postcodes in state
                     locations.result !== null && locations.result.length > 0
                         ? this.setState({
@@ -90,7 +88,7 @@ class SearchForm extends Component {
         const {procedure, postcode, radius} = this.state;
         this.props.history.push({
             pathname: '/results-page/',
-            search: `?procedure=${procedure}&postcode=${postcode}&radius=${radius}`
+            search: `?postcode=${postcode}&procedure=${procedure}&radius=${radius}`
         })
     };
 
