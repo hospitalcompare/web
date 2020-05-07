@@ -12,7 +12,7 @@ class ResultsPage extends Component {
         let query = queryString.parse(this.props.location.search);
         // parse the parameter from the URL
         let procedure   = query.procedure || '';
-        let postcode    = decodeURI(query.postcode.replace(/\s+/g, "").toLowerCase()) || '';
+        let postcode    = typeof query.postcode !== 'undefined' ? decodeURI(query.postcode.replace(/\s+/g, "").toLowerCase()) : '';
         console.log(postcode);
         let radius      = query.radius || 50;
         this.state = {
