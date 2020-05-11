@@ -17,12 +17,12 @@ class App extends Component {
     handleMenuToggle = () => {
         this.setState({
             menuOpen: !this.state.menuOpen
-        })
+        });
 
         this.state.menuOpen
             ? document.body.classList.remove('menu-open')
             : document.body.classList.add('menu-open');
-    }
+    };
 
     render() {
         return (
