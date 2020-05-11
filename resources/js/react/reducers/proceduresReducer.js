@@ -9,11 +9,22 @@ export const initialState = {
 export default function proceduresReducer(state = initialState, action) {
     switch (action.type) {
         case actions.GET_PROCEDURES:
-            return { ...state, loading: true };
+            return {
+                ...state,
+                loading: true
+            };
         case actions.GET_PROCEDURES_SUCCESS:
-            return { procedures: action.payload, loading: false, hasErrors: false };
+            return {
+                procedures: action.payload.data.procedures_for_dropdowns,
+                loading: false,
+                hasErrors: false
+            };
         case actions.GET_PROCEDURES_FAILURE:
-            return { ...state, loading: false, hasErrors: true };
+            return {
+                ...state,
+                loading: false,
+                hasErrors: true
+            };
         default:
             return state
     }

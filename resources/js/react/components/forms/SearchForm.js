@@ -89,6 +89,7 @@ class SearchForm extends Component {
     };
 
     handleSelect = (value) => {
+        console.log(value)
         this.setState({
             procedure: value
         })

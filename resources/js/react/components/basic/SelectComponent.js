@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import Select from 'react-select';
 import {connect} from "react-redux";
 import { fetchProcedures } from '../../actions/procedureActions';
+import { setProcedure } from "../../actions/filterActions";
 
 const SelectComponent = (
     {
@@ -41,16 +42,26 @@ const SelectComponent = (
         </div>
     );
 
+    const mappedProcedures = procedures.map(
+        specialty => ({
+            // value: specialty.id,
+            label: specialty.name,
+            options: specialty.procedures.map(procedure => ({
+                value: procedure.id,
+                label: procedure.name
+            }))
+        })
+    );
+
     return (
         <Select
             name="procedure"
             className="react-select"
             placeholder="Choose your treatment (if known)"
-            defaultValue={'Hello'}
             formatGroupLabel={formatGroupLabel}
-            options={procedures}
+            options={mappedProcedures}
             onChange={(property, value) => {
-                this.props.handleChange(property.value)
+                dispatch(setProcedure(property.value))
             }}
 
         />
@@ -61,6 +72,7 @@ const mapStateToProps = state => ({
     loading: state.procedures.loading,
     procedures: state.procedures.procedures,
     hasErrors: state.procedures.hasErrors,
+    procedure: state.filters.procedure
 });
 
 export default connect(mapStateToProps)(SelectComponent);

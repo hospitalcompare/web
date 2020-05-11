@@ -1,23 +1,17 @@
-const initialState = {
+import {UPDATE_PROCEDURE} from "../actions/filterActions";
+
+export const initialState = {
     procedure: '',
     postcode: '',
     radius: null,
 };
 
-export default function(state = initialState, action) {
+export default function filtersReducer(state = initialState, action) {
     switch (action.type) {
-        case 'UPDATE_FILTERS':
+        case UPDATE_PROCEDURE:
             return {
                 ...state,
-                date: action.payload.date,
-                airport: action.payload.airport
-            };
-
-        case 'SET_FILTERS':
-            return {
-                ...state,
-                date: new Date(),
-                airport: ''
+                procedure: action.payload,
             };
 
         default:
