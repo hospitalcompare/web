@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
-import SelectComponent from '../basic/SelectComponent';
+import { useSelector } from "react-redux";
 import Form from "react-bootstrap/Form";
 import {withRouter} from "react-router";
 import axios from "axios";
+
+import SelectComponent from '../basic/SelectComponent';
 import '../../scripts/validatePostcode';
 
 class SearchForm extends Component {
@@ -76,7 +78,8 @@ class SearchForm extends Component {
 
     handleClick = (e) => {
         e.preventDefault();
-        const {procedure, postcode, radius, fakePostcode} = this.state;
+        const {postcode, radius, fakePostcode} = this.state;
+        const procedure = '4';
         if(fakePostcode !== "") {
             // TODO: create a function to display a message saying 'something went wrong'
             return;
