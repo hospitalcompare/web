@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
-import { useSelector } from "react-redux";
+import { connect } from 'react-redux';
 import Form from "react-bootstrap/Form";
 import {withRouter} from "react-router";
 import axios from "axios";
 
 import SelectComponent from '../basic/SelectComponent';
+import InputComponent from "../basic/InputComponent";
 import '../../scripts/validatePostcode';
+import {fetchPostcodes, setPostcode} from "../../actions/postcodeActions";
 
 class SearchForm extends Component {
     constructor(props) {
@@ -42,34 +44,7 @@ class SearchForm extends Component {
     }
 
     handlePostcodeAjax = (value) => {
-        const config = {
-            headers: {
-                Authorization: 'Bearer mBu7IB6nuxh8RVzJ61f4'
-            }
-        };
-        if (value !== "") {
-            this.setState({showPostcodes: true})
-            axios.get(`api/getLocations/${value}`, config)
-                .then((res) => {
-                    const locations = res.data.data;
-                    // If the API returns a list of postcodes, set the returned postcodes in state
-                    locations.result !== null && locations.result.length > 0
-                        ? this.setState({
-                            returnedPostcodes: locations.result,
-                            haveResults: true
-                        })
-                        // Otherwise clear the returned postcodes and set have results to false
-                        : this.setState({
-                            returnedPostcodes: [],
-                            haveResults: false
-                        })
 
-
-                })
-                .catch((error) => {
-                    console.log('Error with fetching locations', error)
-                })
-        }
     };
 
     submitForm = (e) => {
@@ -100,9 +75,6 @@ class SearchForm extends Component {
 
     handleChange = (e) => {
         const {value, name} = e.target;
-        const {returnedPostcodes} = this.state;
-
-        console.log(value);
 
         let timer;
         const interval = 0;
@@ -126,8 +98,7 @@ class SearchForm extends Component {
                       className="form-element"
                       onSubmit={this.submitForm}>
                     <div className="form-child treatment-parent position-relative">
-                        <SelectComponent value={procedure}
-                                         handleChange={this.handleSelect}/>
+                        <SelectComponent />
                     </div>
                     <div className="form-child postcode-parent position-relative">
                         <label htmlFor="fakePostcode" className="d-none">
@@ -141,13 +112,12 @@ class SearchForm extends Component {
                                onChange={this.handleChange}/>
 
                         <div className="input-wrapper position-relative">
-                            <input type="text"
-                                   name="postcode"
-                                   maxLength="8"
-                                   value={postcode}
-                                   className="postcode-text-box big input-postcode"
-                                   placeholder="Enter postcode"
-                                   onChange={this.handleChange}/>
+                            <InputComponent onChange={(e) => {
+                                // Update the stored postcode
+                                this.props.dispatch(setPostcode(e.target.value));
+                                // Get the postcodes
+                                // this.props.dispatch(fetchPostcodes(postcode))
+                            }}/>
                         </div>
                         <div className={`postcode-results-container ${showPostcodes ? 'd-block' : 'd-none'}`}>
                             <div className="ajax-box">
@@ -206,4 +176,4 @@ class SearchForm extends Component {
     }
 }
 
-export default withRouter(SearchForm);
+export default connect()(withRouter(SearchForm));

@@ -66,7 +66,7 @@ const SelectComponent = (
 
         />
     );
-}
+};
 
 const mapStateToProps = state => ({
     loading: state.procedures.loading,
