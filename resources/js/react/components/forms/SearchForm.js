@@ -116,7 +116,7 @@ class SearchForm extends Component {
                                 // Update the stored postcode
                                 this.props.dispatch(setPostcode(e.target.value));
                                 // Get the postcodes
-                                // this.props.dispatch(fetchPostcodes(postcode))
+                                this.props.dispatch(fetchPostcodes(e.target.value))
                             }}/>
                         </div>
                         <div className={`postcode-results-container ${showPostcodes ? 'd-block' : 'd-none'}`}>

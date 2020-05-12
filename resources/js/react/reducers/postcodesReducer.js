@@ -22,7 +22,7 @@ export default function postcodesReducer(state = initialState, action) {
             };
         case actions.GET_POSTCODES_SUCCESS:
             return {
-                procedures: action.payload.data,
+                postcodes: action.payload.data,
                 loading: false,
                 hasErrors: false
             };

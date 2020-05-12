@@ -26,21 +26,18 @@ export const getPostcodesFailure = () => ({
 });
 
 // Combine them all in an asynchronous thunk
+const params = {
+    headers: {
+        'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4'
+    }
+};
+
 export function fetchPostcodes(postcode) {
     return async dispatch => {
         dispatch(getPostcodes());
 
         try {
-            const response = await fetch(`api/getLocations/${postcode}`, {
-                method: 'post',
-                headers: {
-                    Authorization: 'Bearer mBu7IB6nuxh8RVzJ61f4'
-                },
-                body: {
-                    dataType: "json",
-                    contentType: "application/json; charset=utf-8"
-                }
-            });
+            const response = await fetch(`api/getLocations/${postcode}`, params);
             const data = await response.json();
 
             dispatch(getPostcodesSuccess(data))
