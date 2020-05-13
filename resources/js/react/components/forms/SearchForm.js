@@ -1,51 +1,26 @@
 import React, {Component} from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import Form from "react-bootstrap/Form";
 import {withRouter} from "react-router";
-import axios from "axios";
+import radii from '../../data/radii';
 
 import SelectComponent from '../basic/SelectComponent';
 import InputComponent from "../basic/InputComponent";
 import '../../scripts/validatePostcode';
-import {fetchPostcodes, setPostcode} from "../../actions/postcodeActions";
+import {fetchPostcodes, hidePostcodes} from "../../actions/postcodeActions";
 
 class SearchForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            radii: [],
+            radii: radii,
             procedure: '0',
             postcode: '',
             fakePostcode: '',
-            returnedPostcodes: [],
             radius: 50,
-            haveResults: false,
             showPostcodes: false
         }
     }
-
-    componentDidMount() {
-        const apiUrl = `api/getRadius`;
-        const config = {
-            headers: {
-                Authorization: 'Bearer mBu7IB6nuxh8RVzJ61f4'
-            }
-        };
-        axios.get(apiUrl, config)
-            .then((res) => {
-                const radii = res.data.data.radius_for_dropdown;
-                this.setState({
-                    radii
-                });
-            })
-            .catch((error) => {
-                console.log('Error with fetching radii', error)
-            })
-    }
-
-    handlePostcodeAjax = (value) => {
-
-    };
 
     submitForm = (e) => {
         e.preventDefault();
@@ -55,7 +30,7 @@ class SearchForm extends Component {
         e.preventDefault();
         const {postcode, radius, fakePostcode} = this.state;
         const procedure = '4';
-        if(fakePostcode !== "") {
+        if (fakePostcode !== "") {
             // TODO: create a function to display a message saying 'something went wrong'
             return;
         }
@@ -67,7 +42,6 @@ class SearchForm extends Component {
     };
 
     handleSelect = (value) => {
-        console.log(value)
         this.setState({
             procedure: value
         })
@@ -80,17 +54,19 @@ class SearchForm extends Component {
         const interval = 0;
         // For the postcode field, make the ajax call
         if (name === 'postcode') {
-            clearTimeout(timer);
-            timer = setTimeout(() => {
-                this.handlePostcodeAjax(value)
-            }, interval);
+            this.props.dispatch(fetchPostcodes(e.target.value))
+            //     clearTimeout(timer);
+            //     timer = setTimeout(() => {
+            //         this.handlePostcodeAjax(value)
+            //     }, interval);
         }
 
         this.setState({[name]: value})
     };
 
     render() {
-        const {returnedPostcodes, postcode, haveResults, showPostcodes, procedure, fakePostcode} = this.state;
+        const {postcode, fakePostcode} = this.state;
+        const {returnedPostcodes, haveResults, showPostcodes} = this.props;
 
         return (
             <React.Fragment>
@@ -98,7 +74,7 @@ class SearchForm extends Component {
                       className="form-element"
                       onSubmit={this.submitForm}>
                     <div className="form-child treatment-parent position-relative">
-                        <SelectComponent />
+                        <SelectComponent/>
                     </div>
                     <div className="form-child postcode-parent position-relative">
                         <label htmlFor="fakePostcode" className="d-none">
@@ -112,12 +88,8 @@ class SearchForm extends Component {
                                onChange={this.handleChange}/>
 
                         <div className="input-wrapper position-relative">
-                            <InputComponent onChange={(e) => {
-                                // Update the stored postcode
-                                this.props.dispatch(setPostcode(e.target.value));
-                                // Get the postcodes
-                                this.props.dispatch(fetchPostcodes(e.target.value))
-                            }}/>
+                            <InputComponent value={this.state.postcode}
+                                            onChange={this.handleChange}/>
                         </div>
                         <div className={`postcode-results-container ${showPostcodes ? 'd-block' : 'd-none'}`}>
                             <div className="ajax-box">
@@ -132,8 +104,8 @@ class SearchForm extends Component {
                                                 onClick={(e) => {
                                                     this.setState({
                                                         postcode: e.target.dataset.postcode,
-                                                        showPostcodes: false
-                                                    })
+                                                    });
+                                                    this.props.dispatch(hidePostcodes());
                                                 }}>{result.postcode}, {result.admin_district}</p>)
                                         : <p className='postcode-error-message'>No matches found for {postcode}</p>
                                 }
@@ -176,4 +148,10 @@ class SearchForm extends Component {
     }
 }
 
-export default connect()(withRouter(SearchForm));
+const mapStateToProps = state => ({
+    returnedPostcodes: state.postcodes.postcodes,
+    haveResults: state.postcodes.haveResults,
+    showPostcodes: state.postcodes.showPostcodes
+});
+
+export default connect(mapStateToProps)(withRouter(SearchForm));

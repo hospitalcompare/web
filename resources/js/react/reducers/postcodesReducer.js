@@ -2,19 +2,14 @@ import * as actions from '../actions/postcodeActions';
 
 export const initialState = {
     postcodes: [],
-    postcode: '',
     loading: false,
     hasErrors: false,
+    haveResults: false,
+    showPostcodes: false
 };
 
 export default function postcodesReducer(state = initialState, action) {
     switch (action.type) {
-        case actions.SET_POSTCODE:
-            console.log(action.payload);
-            return {
-                ...state,
-                postcode: action.payload
-            };
         case actions.GET_POSTCODES:
             return {
                 ...state,
@@ -22,15 +17,25 @@ export default function postcodesReducer(state = initialState, action) {
             };
         case actions.GET_POSTCODES_SUCCESS:
             return {
-                postcodes: action.payload.data,
+                postcodes: action.payload.data.result,
                 loading: false,
-                hasErrors: false
+                hasErrors: false,
+                haveResults: action.payload.data.result.length > 0,
+                showPostcodes: action.payload.data.result.length > 0
             };
         case actions.GET_POSTCODES_FAILURE:
             return {
                 ...state,
                 loading: false,
-                hasErrors: true
+                hasErrors: true,
+                haveResults: false,
+                showPostcodes: false,
+                postcodes: []
+            };
+        case actions.HIDE_POSTCODES:
+            return {
+                ...state,
+                showPostcodes: false
             };
         default:
             return state

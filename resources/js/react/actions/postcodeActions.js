@@ -2,14 +2,14 @@
 import axios from "axios";
 
 export const SET_POSTCODE = 'SET_POSTCODE';
-export const GET_POSTCODES = 'GET POSTCODES';
+export const GET_POSTCODES = 'GET_POSTCODES';
+export const HIDE_POSTCODES = 'HIDE_POSTCODES';
 export const GET_POSTCODES_SUCCESS = 'GET_POSTCODES_SUCCESS';
 export const GET_POSTCODES_FAILURE = 'GET_POSTCODES_FAILURE';
 
 // Create Redux action creators that return an action
-export const setPostcode = (postcode) => ({
-    type: SET_POSTCODE,
-    payload: postcode
+export const hidePostcodes = () => ({
+    type: HIDE_POSTCODES,
 });
 
 export const getPostcodes = () => ({
@@ -33,18 +33,21 @@ const params = {
 };
 
 export function fetchPostcodes(postcode) {
-    return async dispatch => {
-        dispatch(getPostcodes());
+    if(postcode !== "")
+        return async dispatch => {
+            dispatch(getPostcodes());
 
-        try {
-            const response = await fetch(`api/getLocations/${postcode}`, params);
-            const data = await response.json();
+            try {
+                const response = await fetch(`api/getLocations/${postcode}`, params);
+                const data = await response.json();
 
-            dispatch(getPostcodesSuccess(data))
-        } catch (error) {
-            dispatch(getPostcodesFailure())
-        }
-    }
+                dispatch(getPostcodesSuccess(data))
+            } catch (error) {
+                dispatch(getPostcodesFailure())
+            }
+        };
+    // If user has deleted all characters
+    return dispatch => {dispatch(getPostcodesFailure())}
 }
 
 //

@@ -2,13 +2,13 @@ import React from 'react';
 import {connect} from "react-redux";
 
 const InputComponent = (props) => {
-    const { postcode, onChange } = props;
+    const { value, onChange } = props;
     return (
         <React.Fragment>
             <input type="text"
                    name="postcode"
                    maxLength="8"
-                   value={postcode}
+                   value={value}
                    onChange={onChange}
                    className="postcode-text-box big input-postcode"
                    placeholder="Enter postcode"/>
@@ -18,7 +18,7 @@ const InputComponent = (props) => {
 
 
 const mapStateToProps = state => ({
-    postcode: state.postcodes.postcode
+    postcode: state.postcodes.postcode,
 });
 
 export default connect(mapStateToProps)(InputComponent);
