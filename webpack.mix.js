@@ -44,24 +44,24 @@ mix.options({
     processCssUrls: false
 })
     .sass('resources/sass/app.scss', 'public/css')
-    .react(['resources/js/index.js'], 'public/js')
-    .sourceMaps(productionSourceMaps,"source-map")
-    .version();
-
+    .react(['resources/js/index.js'], 'public/js/app.js')
+    .sourceMaps(productionSourceMaps, "source-map")
 
 // Reload browser when something changes
 mix.browserSync({
-    injectChanges: true,
+    injectChanges: false,
     files: [
         'resources/sass/**/*.scss',
         'resources/js/**/*.js',
         'resources/views/**/*.blade.php',
-        'public/images/**/*'
+        'resources/images/**/*'
     ],
-    logSnippet: true,
+    // logSnippet: true,
     proxy: process.env.APP_URL,
     port: 8080,
     ghostMode: false
-})
-    //Disable notification sounds
-    .disableSuccessNotifications();
+});
+
+//Disable notification sounds
+mix.disableSuccessNotifications();
+mix.version();

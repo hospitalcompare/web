@@ -103,7 +103,7 @@
     </head>
     <body class="@yield('body-class')">
         <div class="" id="react-container"></div>
-        <script src="{{ mix('/js/index.js') }}"></script>
+        <script src="{{ asset(mix('/js/app.js'), true) }}"></script>
     </body>
 
 </html>
