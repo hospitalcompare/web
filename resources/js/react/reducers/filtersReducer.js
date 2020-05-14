@@ -1,4 +1,4 @@
-import {UPDATE_PROCEDURE} from "../actions/filterActions";
+import {UPDATE_FILTERS} from "../actions/filterActions";
 
 export const initialState = {
     procedure: '',
@@ -8,10 +8,12 @@ export const initialState = {
 
 export default function filtersReducer(state = initialState, action) {
     switch (action.type) {
-        case UPDATE_PROCEDURE:
+        case UPDATE_FILTERS:
             return {
                 ...state,
-                procedure: action.payload,
+                postcode: action.payload.postcode,
+                procedure: action.payload.procedure,
+                radius: action.payload.radius,
             };
 
         default:

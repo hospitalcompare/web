@@ -8,6 +8,7 @@ import SelectComponent from '../basic/SelectComponent';
 import InputComponent from "../basic/InputComponent";
 import '../../scripts/validatePostcode';
 import {fetchPostcodes, hidePostcodes} from "../../actions/postcodeActions";
+import {setFilters} from "../../actions/filterActions";
 
 class SearchForm extends Component {
     constructor(props) {
@@ -22,23 +23,29 @@ class SearchForm extends Component {
         }
     }
 
+    // Prevent default form submission
     submitForm = (e) => {
         e.preventDefault();
     };
 
+    // Custom handler for form submission
     handleClick = (e) => {
         e.preventDefault();
-        const {postcode, radius, fakePostcode} = this.state;
-        const procedure = '4';
+        // Make sure honeypot field is empty
+        const {procedure, postcode, radius, fakePostcode} = this.state;
         if (fakePostcode !== "") {
             // TODO: create a function to display a message saying 'something went wrong'
             return;
         }
 
+        // Redirect to results page with query string
         this.props.history.push({
             pathname: '/results-page/',
-            search: `?postcode=${postcode}&procedure=${procedure}&radius=${radius}`
-        })
+            // search: `?postcode=${postcode}&procedure=${procedure}&radius=${radius}`
+        }),
+
+        // Dispatch action to store
+        this.props.dispatch(setFilters({postcode, procedure, radius}));
     };
 
     handleSelect = (value) => {
@@ -74,7 +81,7 @@ class SearchForm extends Component {
                       className="form-element"
                       onSubmit={this.submitForm}>
                     <div className="form-child treatment-parent position-relative">
-                        <SelectComponent/>
+                        <SelectComponent handleChange={(value) => this.handleSelect(value)}/>
                     </div>
                     <div className="form-child postcode-parent position-relative">
                         <label htmlFor="fakePostcode" className="d-none">

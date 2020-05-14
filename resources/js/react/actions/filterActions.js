@@ -1,9 +1,9 @@
 // Create Redux action types
-export const UPDATE_PROCEDURE = 'UPDATE_PROCEDURE';
+export const UPDATE_FILTERS = 'UPDATE_FILTERS';
 
 // Handles changes to filters ANS reset
 
-export const setProcedure = (procedure) => ({
-    type: UPDATE_PROCEDURE,
-    payload: procedure,
+export const setFilters = (filters) => ({
+    type: UPDATE_FILTERS,
+    payload: filters,
 });

@@ -4,17 +4,20 @@ import axios from "axios";
 import ResultItem from "./ResultItem";
 import ResultsPageForm from "./ResultsPageForm";
 import queryString from 'query-string';
+import {connect} from "react-redux";
 
 class ResultsPage extends Component {
     constructor(props) {
         super(props);
-        const {match: {params}} = this.props;
-        let query = queryString.parse(this.props.location.search);
-        // parse the parameter from the URL
-        let procedure   = query.procedure || '';
-        let postcode    = typeof query.postcode !== 'undefined' ? decodeURI(query.postcode.replace(/\s+/g, "").toLowerCase()) : '';
-        console.log(postcode);
-        let radius      = query.radius || 50;
+        const {match: {params}, postcode, procedure, radius} = this.props;
+
+        // let query = queryString.parse(this.props.location.search);
+        // // parse the parameter from the URL
+        // let procedure   = query.procedure || '';
+        // let postcode    = typeof query.postcode !== 'undefined' ? decodeURI(query.postcode.replace(/\s+/g, "").toLowerCase()) : '';
+        // let radius      = query.radius || 50;
+
+
         this.state = {
             loadingHospitals: false,
             hospitals: [],
@@ -66,4 +69,11 @@ class ResultsPage extends Component {
     }
 }
 
-export default ResultsPage;
+const mapStateToProps = state => ({
+    postcode: state.filters.postcode,
+    procedure: state.filters.procedure,
+    radius: state.filters.radius
+});
+
+export default connect(mapStateToProps)(ResultsPage);
+
