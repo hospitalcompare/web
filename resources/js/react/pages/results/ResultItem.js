@@ -1,5 +1,15 @@
 import React, {Component} from 'react';
 import Tabs from 'react-bootstrap/Tabs';
+import Nav from 'react-bootstrap/Nav';
+import NavItem from 'react-bootstrap/NavItem';
+import NavLink from 'react-bootstrap/NavLink';
+
+import Tab from 'react-bootstrap/Tab';
+import TabContent from 'react-bootstrap/TabContent';
+import TabPane from 'react-bootstrap/TabPane';
+import TabContainer from 'react-bootstrap/TabContainer';
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 import CompareHeart from '../../svg/CompareHeart';
 import MapIcon from "../../svg/MapIcon";
@@ -15,6 +25,10 @@ class ResultItem extends Component {
         }
     }
 
+    componentDidMount() {
+        document.title = 'Hospital Compare - Results';
+    }
+
     toggleContent = () => {
         this.setState((prevState) => ({
             showContent: !prevState.showContent
@@ -23,11 +37,11 @@ class ResultItem extends Component {
 
 
     render() {
-        const {name, location_specialism, hospital_type, hospital_id, rating, waiting_time, cancelled_op} = this.props;
+        const {name, location_specialism, hospital_type, id, rating, waiting_time, cancelled_op} = this.props;
         const {showContent} = this.state;
         return (
             <React.Fragment>
-                <div className="result-item mb-3 mb-lg-0" id={`result-item_${hospital_id}`}>
+                <div className="result-item mb-3 mb-lg-0" id={`result-item_${id}`}>
                     <div className="container">
                         <div className="result-item-inner position-relative">
                             <button id="388" style={{top: '0', right: '0', padding: '0 0 0 30px !important'}}
@@ -48,7 +62,7 @@ class ResultItem extends Component {
                                        id="item_name_388">
                                         {name}
                                     </p>
-                                    { location_specialism !== ""
+                                    {location_specialism !== ""
                                         ? <p className="sort-item-specialism col-grey mb-2">
                                             <strong>Specialism:&nbsp;</strong>
                                             <span>{location_specialism}</span>
@@ -62,7 +76,7 @@ class ResultItem extends Component {
                                         data-hidden-text="View Map +"
                                         data-visible-text="Hide Map -"
                                         data-tab-target="#map-tab_388">
-                                        <MapIcon />
+                                        <MapIcon/>
                                         <span>View Map +</span>
                                     </button>
 
@@ -158,8 +172,9 @@ class ResultItem extends Component {
                                 </div>" data-trigger="hover" data-placement="bottom" data-html="true"
                                          data-original-title="" title="">
                                         <p className="stat-label d-block w-100 d-lg-none">Waiting Time</p>
-                                        <p>{Math.round(waiting_time[0].avg_waiting_weeks * 100) / 100}<span className="d-inline d-lg-none">&nbsp;</span>
-                                            <br className="d-none d-lg-inline" />Weeks</p>
+                                        <p>{Math.round(waiting_time[0].avg_waiting_weeks * 100) / 100}<span
+                                            className="d-inline d-lg-none">&nbsp;</span>
+                                            <br className="d-none d-lg-inline"/>Weeks</p>
                                     </div>
                                 </div>
 
@@ -320,59 +335,69 @@ class ResultItem extends Component {
                             {/*                        </div>*/}
                         </div>
                     </div>
-                    <div className={`corporate-content w-100 ${showContent ? 'open' : ''}`} id="corporate_content_hospital_388">
+                    <div className={`corporate-content w-100 ${showContent ? 'open' : ''}`}
+                         id="corporate_content_hospital_388">
                         <div className="container">
                             <div className="corporate-content-inner d-flex">
                                 <div className="corporate-content-section-1"></div>
                                 <div className="corporate-content-section-2 position-relative w-100">
-                                    {/*Nav tabs*/}
-                                    <ul className="nav nav-tabs" id="nav-tabs_388" role="tablist">
-
-
-                                        <li className="nav-item">
-                                            <a className="nav-link" id="map-tab_388" data-toggle="tab"
-                                               data-map-target="#gmap_388" href="#map_388" role="tab"
-                                               aria-controls="home" aria-selected="true">Map</a>
-                                        </li>
-                                    </ul>
-                                    {/*Tab panes*/}
-                                    <div className="">
-                                        <div className="tab-content">
-
-
-                                            <div className="tab-pane active" id="consultants_388" role="tabpanel"
-                                                 aria-labelledby="consultants-tab">
-                                                <div className="">
-                                                    <div className="">
-                                                        <div id="table-scroll_388" className="table-scroll">
-
+                                    <Tab.Container defaultActiveKey="map" id={`${id}`}>
+                                        <Row>
+                                            <Col xs={12}>
+                                                {/*Nav tabs*/}
+                                                <Nav variant="tabs">
+                                                    <Nav.Item>
+                                                        <Nav.Link title="Map"
+                                                                  eventKey="map"
+                                                                  data-map-target="#gmap_388"
+                                                                  href="#map_388">
+                                                            Map
+                                                        </Nav.Link>
+                                                    </Nav.Item>
+                                                    <Nav.Item>
+                                                        <Nav.Link title="Consultants"
+                                                                  eventKey="consultants">
+                                                            Consultants
+                                                        </Nav.Link>
+                                                    </Nav.Item>
+                                                </Nav>
+                                            </Col>
+                                            {/*Tab panes*/}
+                                            <Col xs={12}>
+                                                <TabContent>
+                                                    <TabPane eventKey="map">
+                                                        <div className="row">
+                                                            <div
+                                                                className="corporate-content-details d-flex col col-12 col-md-2 mb-3">
+                                                                <div className="address">
+                                                                    <strong>The Christie
+                                                                        Hospital </strong><br/><br/>Manchester<br/>Lancashire <br/>M20
+                                                                    4BX
+                                                                </div>
+                                                            </div>
+                                                            <div className="col col-12 col-md-10">
+                                                                <div id="gmap_388"
+                                                                     className="map-container"
+                                                                     style={{height: '400px'}}
+                                                                     data-longitude="-2.230125"
+                                                                     data-latitude="53.429767">
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="tab-pane" id="map_388" role="tabpanel"
-                                                 aria-labelledby="map-tab">
-                                                <div className="row">
-                                                    <div
-                                                        className="corporate-content-details d-flex col col-12 col-md-2 mb-3">
-                                                        <div className="address">
-                                                            <strong>The Christie
-                                                                Hospital </strong><br/><br/>Manchester<br/>Lancashire <br/>M20
-                                                            4BX
+                                                    </TabPane>
+                                                    <TabPane eventKey="consultants">
+                                                        <div className="">
+                                                            <div id="table-scroll_388" className="table-scroll">
+                                                                Table content
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className="col col-12 col-md-10">
-                                                        <div id="gmap_388"
-                                                             className="map-container"
-                                                             style={{height: '400px'}}
-                                                             data-longitude="-2.230125"
-                                                             data-latitude="53.429767">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                    </TabPane>
+                                                </TabContent>
+                                            </Col>
+                                        </Row>
+
+
+                                    </Tab.Container>
                                 </div>
                             </div>
                         </div>

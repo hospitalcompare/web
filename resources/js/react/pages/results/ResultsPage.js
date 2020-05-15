@@ -60,7 +60,7 @@ class ResultsPage extends Component {
                     {
                         loadingHospitals
                             ? <Loader />
-                            : hospitals.map(hospital => <ResultItem key={hospital.id}
+                            : hospitals.map(hospital => <ResultItem {...hospital} key={hospital.id}
                         {...hospital} />)
                     }
                 </div>

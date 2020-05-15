@@ -2,6 +2,7 @@
     .corporate-content {
         max-height: 0;
         transition: $transition;
+        overflow: hidden;
 
         &.open {
             max-height: 1000px;
@@ -36,23 +37,19 @@
 
     .nav-tabs {
         //box-shadow: inset 0px -2px 0px 0px rgba(236, 236, 236, 1), inset 0px 2px 0px 0px rgba(236,236,236,1);
-
-        li { // nav-item
+        a { // nav-link
             margin-right: 25px;
             box-sizing: content-box;
+            color: $caretBlack;
+            @include font-size(18);
+            @extend .SofiaPro-Medium;
+            @extend .pt-0;
+            @extend .pb-2;
+            background-color: transparent;
 
-            a { // nav-link
-                color: $caretBlack;
-                @include font-size(18);
-                @extend .SofiaPro-Medium;
-                @extend .pt-0;
-                @extend .pb-2;
+            &.active {
+                border-bottom: 2px solid $brand-primary-1;
                 background-color: transparent;
-
-                &.active {
-                    border-bottom: 2px solid $brand-primary-1;
-                    background-color: transparent;
-                }
             }
         }
     }
