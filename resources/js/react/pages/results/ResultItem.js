@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Tabs from 'react-bootstrap/Tabs';
+
 import CompareHeart from '../../svg/CompareHeart';
 import MapIcon from "../../svg/MapIcon";
 import '../../scripts/getHtmlStars';
@@ -8,10 +10,21 @@ import '../../scripts/getHtmlDashTickValue';
 class ResultItem extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            showContent: false
+        }
     }
+
+    toggleContent = () => {
+        this.setState((prevState) => ({
+            showContent: !prevState.showContent
+        }))
+    };
+
 
     render() {
         const {name, location_specialism, hospital_type, hospital_id, rating, waiting_time, cancelled_op} = this.props;
+        const {showContent} = this.state;
         return (
             <React.Fragment>
                 <div className="result-item mb-3 mb-lg-0" id={`result-item_${hospital_id}`}>
@@ -36,16 +49,19 @@ class ResultItem extends Component {
                                         {name}
                                     </p>
                                     { location_specialism !== ""
-                                        ? <p className="sort-item-specialism col-grey mb-1">
+                                        ? <p className="sort-item-specialism col-grey mb-2">
                                             <strong>Specialism:&nbsp;</strong>
                                             <span>{location_specialism}</span>
                                         </p>
                                         : ""
                                     }
                                     <button
-                                        className="btn btn-more-info font-12 p-0 d-inline-flex align-items-center mr-3 shadow-none"
-                                        data-target="#corporate_content_hospital_388" data-hidden-text="View Map +"
-                                        data-visible-text="Hide Map -" data-tab-target="#map-tab_388">
+                                        onClick={this.toggleContent}
+                                        className="btn btn-more-info font-12 p-0 d-inline-flex align-items-center mr-3 mb-1 shadow-none"
+                                        data-target="#corporate_content_hospital_388"
+                                        data-hidden-text="View Map +"
+                                        data-visible-text="Hide Map -"
+                                        data-tab-target="#map-tab_388">
                                         <MapIcon />
                                         <span>View Map +</span>
                                     </button>
@@ -304,7 +320,7 @@ class ResultItem extends Component {
                             {/*                        </div>*/}
                         </div>
                     </div>
-                    <div className="corporate-content w-100" id="corporate_content_hospital_388">
+                    <div className={`corporate-content w-100 ${showContent ? 'open' : ''}`} id="corporate_content_hospital_388">
                         <div className="container">
                             <div className="corporate-content-inner d-flex">
                                 <div className="corporate-content-section-1"></div>

@@ -1,6 +1,11 @@
 .results-page {
     .corporate-content {
-        display: none;
+        max-height: 0;
+        transition: $transition;
+
+        &.open {
+            max-height: 1000px;
+        }
     }
 }
 
