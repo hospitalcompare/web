@@ -40,7 +40,19 @@ class ResultItem extends Component {
 
 
     render() {
-        const {name, location_specialism, hospital_type, id, rating, waiting_time, cancelled_op} = this.props;
+        const {
+            name,
+            location_specialism,
+            hospital_type,
+            id,
+            rating,
+            waiting_time,
+            cancelled_op,
+            url,
+            phone_number,
+            phone_number_2,
+            phone_number_3
+        } = this.props;
         const {address: {latitude, longitude}} = this.props;
         const {showContent} = this.state;
         return (
@@ -62,7 +74,7 @@ class ResultItem extends Component {
                             <div className="result-item-section-1">
                                 <div
                                     className="hospital-details d-flex align-content-between flex-column w-100 position-relative">
-                                    <p title="The Christie Hospital "
+                                    <p title={name}
                                        className="sort-item-title overflow-ellipsis SofiaPro-SemiBold"
                                        id="item_name_388">
                                         {name}
@@ -244,49 +256,48 @@ class ResultItem extends Component {
                             </div>
                             <div className="result-item-section-3">
                                 <div className="row btn-area-cta">
-                                    <div className="col-6 col-lg-12">
-                                                    <span id="enquire_nhs388"
-                                                          className="btn btn-enquire btn-enquire-static-svg btn-brand-secondary-3 enquiry mr-2 btn-block font-12"
-                                                          role="button" data-toggle="modal"
-                                                          data-target="#hc_modal_contacts_general_388"
-                                                          data-hospital-type="nhs-hospital"
-                                                          data-hospital-tel="01614463000"
-                                                          data-hospital-tel-2="01615164014" data-has-email="1"
-                                                          data-hospital-url="https://www.christie.nhs.uk"
-                                                          data-hospital-title="The Christie Hospital ">
+                                    {/*<div className="col-6 col-lg-12">*/}
+                                    {/*                <span id="enquire_nhs388"*/}
+                                    {/*                      className="btn btn-enquire btn-enquire-static-svg btn-brand-secondary-3 enquiry mr-2 btn-block font-12"*/}
+                                    {/*                      role="button" data-toggle="modal"*/}
+                                    {/*                      data-target="#hc_modal_contacts_general_388"*/}
+                                    {/*                      data-hospital-type="nhs-hospital"*/}
+                                    {/*                      data-hospital-tel={phone_number}*/}
+                                    {/*                      data-hospital-tel-2={phone_number_2} data-has-email="1"*/}
+                                    {/*                      data-hospital-url={url}*/}
+                                    {/*                      data-hospital-title={name}>*/}
+                                    {/*                        <span>Make an enquiry</span>*/}
+                                    {/*                            <EnquireIcon/>*/}
+                                    {/*                        </span>*/}
+                                    {/*</div>*/}
+                                    {/*<div className="col-6 col-lg-12 mt-lg-2">*/}
+                                    {/*     <div className="row btn-web-call">*/}
+                                    {/*        <div className="btn-wrapper col-6 ">*/}
+                                    {/*            <a id={`go_to_website_${id}`}*/}
+                                    {/*               className="btn btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right"*/}
+                                    {/*               target="_blank" href={url} role="button"*/}
+                                    {/*               data-hospital-type="nhs-hospital">*/}
+                                    {/*                <span>Web</span>*/}
+                                    {/*                <WebIcon/>*/}
+                                    {/*            </a>*/}
+                                    {/*        </div>*/}
 
-                                                            <span>Make an enquiry</span>
-                                                                <EnquireIcon/>
-                                                            </span>
-                                    </div>
-                                    <div className="col-6 col-lg-12 mt-lg-2">
-                                        <div className="row btn-web-call">
-                                            <div className="btn-wrapper col-6 ">
-                                                <a id="388"
-                                                   className="btn  btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-right"
-                                                   target="_blank" href="https://www.christie.nhs.uk" role="button"
-                                                   data-hospital-type="nhs-hospital">
-                                                    <span>Web</span>
-                                                    <WebIcon/>
-                                                </a>
-                                            </div>
-
-                                            <div className="btn-wrapper col-6">
-                                                <span id="enquire_nhs388"
-                                                      className="btn  btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left"
-                                                      role="button" data-toggle="modal"
-                                                      data-target="#hc_modal_contacts_general_388"
-                                                      data-hospital-type="nhs-hospital"
-                                                      data-hospital-tel="01614463000"
-                                                      data-hospital-tel-2="01615164014" data-has-email="1"
-                                                      data-hospital-url="https://www.christie.nhs.uk"
-                                                      data-hospital-title="The Christie Hospital ">
-                                                        <span>Call</span>
-                                                    <CallIcon/>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                             {/*<div className="btn-wrapper col-6">*/}
+                                    {/*            <span id="enquire_nhs388"*/}
+                                    {/*                  className="btn  btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left"*/}
+                                    {/*                  role="button" data-toggle="modal"*/}
+                                    {/*                  data-target="#hc_modal_contacts_general_388"*/}
+                                    {/*                  data-hospital-type="nhs-hospital"*/}
+                                    {/*                  data-hospital-tel="01614463000"*/}
+                                    {/*                  data-hospital-tel-2="01615164014" data-has-email="1"*/}
+                                    {/*                  data-hospital-url="https://www.christie.nhs.uk"*/}
+                                    {/*                  data-hospital-title="The Christie Hospital ">*/}
+                                    {/*                    <span>Call</span>*/}
+                                    {/*                <CallIcon/>*/}
+                                    {/*            </span>*/}
+                                    {/*        </div>*/}
+                                    {/*    </div>*/}
+                                    {/*</div>*/}
 
                                     <div className="col-12 mt-lg-2">
                                         <button id={`add_to_compare_${id}`}
