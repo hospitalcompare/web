@@ -73,11 +73,9 @@ class ResultItem extends Component {
                                         onClick={this.toggleContent}
                                         className="btn btn-more-info font-12 p-0 d-inline-flex align-items-center mr-3 mb-1 shadow-none"
                                         data-target="#corporate_content_hospital_388"
-                                        data-hidden-text="View Map +"
-                                        data-visible-text="Hide Map -"
                                         data-tab-target="#map-tab_388">
                                         <MapIcon/>
-                                        <span>View Map +</span>
+                                        <span>{ showContent ? 'Hide Map -' : 'View Map +'}</span>
                                     </button>
 
                                     <div
