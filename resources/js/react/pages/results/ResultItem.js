@@ -37,14 +37,15 @@ class ResultItem extends Component {
 
 
     render() {
-        const {name, location_specialism, hospital_type, id, rating, waiting_time, cancelled_op} = this.props;
+        const {name, location_specialism, hospital_type, id, rating, waiting_time, cancelled_op } = this.props;
+        const {address: {latitude, longitude}} = this.props;
         const {showContent} = this.state;
         return (
             <React.Fragment>
                 <div className="result-item mb-3 mb-lg-0" id={`result-item_${id}`}>
                     <div className="container">
                         <div className="result-item-inner position-relative">
-                            <button id="388" style={{top: '0', right: '0', padding: '0 0 0 30px !important'}}
+                            <button id={`add_to_compare_${id}`} style={{top: '0', right: '0', padding: '0 0 0 30px !important'}}
                                     className="btn btn-compare position-absolute compare font-12 d-inline-block d-lg-none mt-3 mr-3 shadow-none"
                                     role="button"
                                     data-hospital-type="nhs-hospital">
@@ -334,7 +335,7 @@ class ResultItem extends Component {
                         </div>
                     </div>
                     <div className={`corporate-content w-100 ${showContent ? 'open' : ''}`}
-                         id="corporate_content_hospital_388">
+                         id={`corporate_content_hospital_${id}`}>
                         <div className="container">
                             <div className="corporate-content-inner d-flex">
                                 <div className="corporate-content-section-1"></div>
@@ -347,8 +348,8 @@ class ResultItem extends Component {
                                                     <Nav.Item>
                                                         <Nav.Link title="Map"
                                                                   eventKey="map"
-                                                                  data-map-target="#gmap_388"
-                                                                  href="#map_388">
+                                                                  data-map-target={`#gmap_${id}`}
+                                                                  href={`#map_${id}`}>
                                                             Map
                                                         </Nav.Link>
                                                     </Nav.Item>
@@ -374,11 +375,11 @@ class ResultItem extends Component {
                                                                 </div>
                                                             </div>
                                                             <div className="col col-12 col-md-10">
-                                                                <div id="gmap_388"
+                                                                <div id={`gmap_${id}`}
                                                                      className="map-container"
                                                                      style={{height: '400px'}}
-                                                                     data-longitude="-2.230125"
-                                                                     data-latitude="53.429767">
+                                                                     data-longitude={longitude}
+                                                                     data-latitude={latitude}>
                                                                 </div>
                                                             </div>
                                                         </div>
