@@ -1,13 +1,9 @@
 import React, {Component} from 'react';
-import Tabs from 'react-bootstrap/Tabs';
 import Nav from 'react-bootstrap/Nav';
-import NavItem from 'react-bootstrap/NavItem';
-import NavLink from 'react-bootstrap/NavLink';
 
 import Tab from 'react-bootstrap/Tab';
 import TabContent from 'react-bootstrap/TabContent';
 import TabPane from 'react-bootstrap/TabPane';
-import TabContainer from 'react-bootstrap/TabContainer';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -15,6 +11,7 @@ import CompareHeart from '../../svg/CompareHeart';
 import MapIcon from "../../svg/MapIcon";
 import '../../scripts/getHtmlStars';
 import '../../scripts/getHtmlDashTickValue';
+import initializeGMap from '../../scripts/gmapInit';
 
 
 class ResultItem extends Component {
@@ -27,12 +24,17 @@ class ResultItem extends Component {
 
     componentDidMount() {
         document.title = 'Hospital Compare - Results';
+
     }
 
     toggleContent = () => {
         this.setState((prevState) => ({
             showContent: !prevState.showContent
         }))
+
+        const {id, address: {latitude, longitude}} = this.props;
+        console.log(latitude);
+        initializeGMap(latitude, longitude, `#gmap_${id}`)
     };
 
 
