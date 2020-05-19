@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
-import Loader from "../../components/basic/Loader";
+
 import axios from "axios";
-import ResultItem from "./ResultItem";
-import ResultsPageForm from "./ResultsPageForm";
 import queryString from 'query-string';
 import {connect} from "react-redux";
+
+import Loader from "../../components/basic/Loader";
+import ResultItem from "./ResultItem";
+import ResultsPageForm from "./ResultsPageForm";
+import SolutionsBar from "./SolutionsBar";
 
 class ResultsPage extends Component {
     constructor(props) {
@@ -23,7 +26,8 @@ class ResultsPage extends Component {
             hospitals: [],
             procedure,
             postcode,
-            radius
+            radius,
+            showShortlist: false
         }
     }
 
@@ -51,11 +55,20 @@ class ResultsPage extends Component {
             })
     }
 
+    handleClick = () => {
+        this.setState((prevState) => ({
+            showShortlist: !prevState.showShortlist
+        }));
+
+        this.state.showShortlist ? document.body.classList.remove('shortlist-open') : document.body.classList.add('shortlist-open');
+    };
+
     render() {
         const {loadingHospitals, hospitals} = this.state;
         return (
             <main>
-                <ResultsPageForm />
+                <ResultsPageForm showShortlist={this.state.showShortlist}
+                                 handleShortlistToggle={this.handleClick} />
                 <div className="results mt-3 mt-lg-0">
                     {
                         loadingHospitals
@@ -64,6 +77,8 @@ class ResultsPage extends Component {
                         {...hospital} />)
                     }
                 </div>
+                <SolutionsBar showShortlist={this.state.showShortlist}
+                              handleShortlistToggle={this.handleClick} />
             </main>
         );
     }

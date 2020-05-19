@@ -213,6 +213,7 @@ class ResultsPageForm extends Component {
                                 </button>
 
                                 <div id="open_shortlist"
+                                     onClick={this.props.handleShortlistToggle}
                                      className="compare-button-title d-flex align-items-center h-100 ml-auto pulse-animation shortlist-has-items">
                                     <div className="svg-wrapper">
                                         <svg className="compare-heart" height="30" width="30" id="compare_heart"
