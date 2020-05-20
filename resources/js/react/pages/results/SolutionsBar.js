@@ -42,7 +42,7 @@ const SolutionsBar = ({showShortlist, handleShortlistToggle}) => {
             {/*        </div>*/}
             {/*    </div>*/}
             {/*</div>*/}
-            <div className={`compare-hospitals-content ${showShortlist ? 'd-block' : ''}`}>
+            <div className={`compare-hospitals-content`}>
                 <div className="container">
                     <div className="row flex-nowrap">
                         <div className="col col-3" id="no_items_added">

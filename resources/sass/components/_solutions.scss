@@ -2,19 +2,19 @@
 
 .compare-hospitals-bar {
     position: fixed;
-    bottom: 0;
+    top: 100%;
     left: 0;
     width: 100%;
     background-color: #fff;
     z-index: 1040;
-
+    transform: translate3d(0, 0, 0);
+    transition: $transition;
 
     .compare-hospitals-content {
         padding-bottom: 30px;
         background-color: #fff;
-        display: none;
-        height: calc(100vh - 190px);
         overflow-y: scroll;
+        height: calc(100vh - 190px);
 
         .row {
             @include reset-row-spacing(0);

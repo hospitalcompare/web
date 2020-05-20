@@ -58,6 +58,10 @@ body {
             opacity: $modal-backdrop-opacity;
             pointer-events: initial;
         }
+
+        .compare-hospitals-bar {
+            transform: translate3d(0, -100%, 0);
+        }
     }
 }
 
@@ -1082,7 +1086,6 @@ h6 {
 .rating > input:checked ~ label:hover ~ label {
     color: $brand-secondary-5;
 }
-
 
 // Hospital type tag
 .hospital-type {
