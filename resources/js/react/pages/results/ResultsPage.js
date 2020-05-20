@@ -66,20 +66,25 @@ class ResultsPage extends Component {
     render() {
         const {loadingHospitals, hospitals} = this.state;
         return (
-            <main>
-                <ResultsPageForm showShortlist={this.state.showShortlist}
-                                 handleShortlistToggle={this.handleClick} />
-                <div className="results mt-3 mt-lg-0">
-                    {
-                        loadingHospitals
-                            ? <Loader />
-                            : hospitals.map(hospital => <ResultItem {...hospital} key={hospital.id}
-                        {...hospital} />)
-                    }
-                </div>
-                <SolutionsBar showShortlist={this.state.showShortlist}
-                              handleShortlistToggle={this.handleClick} />
-            </main>
+            <React.Fragment>
+                <main>
+                    <ResultsPageForm showShortlist={this.state.showShortlist}
+                                     handleShortlistToggle={this.handleClick}/>
+                    <div className="results mt-3 mt-lg-0">
+                        {
+                            loadingHospitals
+                                ? <Loader/>
+                                : hospitals.map(hospital => <ResultItem {...hospital} key={hospital.id}
+                                                                        {...hospital} />)
+                        }
+                    </div>
+                    <SolutionsBar showShortlist={this.state.showShortlist}
+                                  handleShortlistToggle={this.handleClick}/>
+                </main>
+                <div className="hc-backdrop"
+                    onClick={this.handleClick}></div>
+            </React.Fragment>
+
         );
     }
 }

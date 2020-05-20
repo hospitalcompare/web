@@ -1,9 +1,27 @@
-import React, {Component} from 'react';
+import React, {useEffect, useRef} from 'react';
 import CompareHeart from "../../svg/CompareHeart";
 import MoreInfoIcon from "../../svg/MoreInfoIcon";
 
-const SolutionsBar = (props) => {
-    const {showShortlist} = props;
+const SolutionsBar = ({showShortlist, handleShortlistToggle}) => {
+    // const node = useRef();
+
+    // const handleClick = e => {
+    //     if (node.current.contains(e.target)) {
+    //         // inside click
+    //         return;
+    //     }
+    //     // outside click
+    //     handleShortlistToggle();
+    // };
+
+    // useEffect(() => {
+    //     document.addEventListener("mousedown", handleClick);
+    //
+    //     return () => {
+    //         document.removeEventListener("mousedown", handleClick);
+    //     };
+    // }, []);
+
     return (
         <div className="compare-hospitals-bar compare-hospitals-bar_desktop">
             {/*<div className="compare-hospitals-header d-flex justify-content-between">*/}
