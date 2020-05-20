@@ -1,24 +1,23 @@
 //Check if we don't have the cookie and set it to 0
-import svgMapIcon from '../../images/icons/icon-map.svg';
+import MapIcon from '../svg/MapIcon';
 
 var $compareBar = $('.compare-hospitals-bar');
 var $compareContent = $('.compare-hospitals-content');
 var $compareButtonTitle = $('#open_shortlist');
 var $countSpan = $('#compare_number');
 var $heartIcon = $('#compare_heart');
-var $svgMapIcon = svgMapIcon;
 // Where we hold the counts of hospital types
 // No of each type of hospital in compare
 var nhsCountHolder = $('#nhs-hospital-count');
 var privateCountHolder = $('#private-hospital-count');
-$body.on('DOMSubtreeModified', privateCountHolder, function () {
-    // code here
-    if (parseInt($('#private-hospital-count').text()) > 0) {
-        $('#multiple_enquiries_button').prop('disabled', false);
-    } else {
-        $('#multiple_enquiries_button').prop('disabled', true);
-    }
-});
+// $body.on('DOMSubtreeModified', privateCountHolder, function () {
+//     // code here
+//     if (parseInt($('#private-hospital-count').text()) > 0) {
+//         $('#multiple_enquiries_button').prop('disabled', false);
+//     } else {
+//         $('#multiple_enquiries_button').prop('disabled', true);
+//     }
+// });
 
 
 var multiEnquiryButton = $('#multiple_enquiries_button');
@@ -263,7 +262,7 @@ window.addHospitalToCompare = function (element) {
                 <div class="card-header p-0 pb-2 bg-white" id="heading${element.id}">
                      <button class="btn btn-link collapsed text-decoration-none p-0 rounded-0" data-toggle="collapse" data-target="#collapse${element.id}" aria-expanded="true" aria-controls="collapse${element.id}">
                          <p class="font-18 SofiaPro-SemiBold mb-2">${textTruncate(element.display_name, 30, '...')}</p>
-                         <p class="col-grey mb-2"><img class="map-icon" src="/images/icons/icon-map.svg" alt="Map icon">${element.address.city} | ${hospitalType}</p>
+                         <p class="col-grey mb-2"><MapIcon/>${element.address.city} | ${hospitalType}</p>
                          <p class="mb-2">${latestRating}&nbsp;|&nbsp;${getHtmlDashTickValue(waitingTime, " Weeks Average Waiting")}</p>
                      </button>
                      <div class="btn-area d-flex align-items-center">
@@ -338,7 +337,58 @@ window.addHospitalToCompare = function (element) {
         $body.find('#modal-container').append(nhsModalContent);
 };
 
+function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) {
+    var $modalToRemove = $(`#hc_modal_contacts_general_shortlist_${elementId}`);
+    if ($modalToRemove.length) {
+        // When removing a hospital from compare, Remove the associated contacts modal from the body - for hospitals in the shortlist
+        $modalToRemove.remove();
+    }
 
+    // Remove the item from the shortlist
+    $('#compare_hospital_id_' + elementId).remove();
+    target.append(emptyCol);
+    $('button#' + elementId + '.compare').removeClass('selected');
+
+    // Filter out the clicked item from the data
+    var dataArr = data.split(',');
+    var elementIndex = dataArr.indexOf(elementId);
+    dataArr.splice(elementIndex, 1);
+    data = dataArr.join(',');
+
+    // Update the ids in the multi enquiry form
+    multiEnquiryButton.data('hospital-id', removeTrailingComma(data));
+
+    compareCount = parseInt(compareCount) - 1;
+
+    if (hospitalType == 'private-hospital' || hospitalType == 'private') {
+        privateHospitalCount -= 1;
+        privateCountHolder.text(privateHospitalCount)
+    } else {
+        nhsHospitalCount -= 1;
+        nhsCountHolder.text(nhsHospitalCount);
+    }
+
+    // Slide content down when all data removed
+    if (compareCount === 0) {
+        // Switch the first column round
+        $('#compare_hospitals_headings').addClass('d-none');
+        $('#no_items_added').removeClass('d-none');
+        // Hide the comparison area
+        $compareContent.slideUp();
+        $body.removeClass('shortlist-open');
+        $compareContent.removeClass('revealed');
+    }
+
+    // Check to see if we need to re-enable the buttons
+    enableButtons();
+
+    // var $countSpan = $('#compare_number');
+    $countSpan.text(compareCount);
+
+    // Set the data cookie
+    Cookies.set("compareHospitalsData", data, {expires: 365});
+
+}
 
 //Set the OnClick event for the Compare button
 $(document).on("click", ".compare", function () {

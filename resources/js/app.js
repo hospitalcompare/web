@@ -14,6 +14,11 @@ class App extends Component {
         }
     }
 
+    componentDidMount() {
+        var doc = document.documentElement;
+        doc.setAttribute('data-useragent', navigator.userAgent);
+    }
+
     handleMenuToggle = () => {
         this.setState({
             menuOpen: !this.state.menuOpen

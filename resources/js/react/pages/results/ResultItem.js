@@ -15,6 +15,8 @@ import WebIcon from "../../svg/WebIcon";
 import CallIcon from "../../svg/CallIcon";
 import CompareIcon from "../../svg/CompareIcon";
 import EnquireIcon from "../../svg/EnquireIcon";
+import '../../scripts/cookies';
+import {getCompareCount, getHospitalsByIds, enableButtons} from '../../scripts/global';
 
 
 class ResultItem extends Component {
@@ -37,6 +39,134 @@ class ResultItem extends Component {
         const {id, address: {latitude, longitude}} = this.props;
         initializeGMap(latitude, longitude, `#gmap_${id}`)
     };
+
+    removeHospitalFromCompare = (elementId, data, compareCount, hospitalType) => {
+
+        // Remove the item from the shortlist TODO: achieve this through render method in solutionsbar component
+        // $('#compare_hospital_id_' + elementId).remove();
+
+        //
+        //target.append(emptyCol);
+        // $('button#' + elementId + '.compare').removeClass('selected');
+
+        // Filter out the clicked item from the data
+        var dataArr = data.split(',');
+        var elementIndex = dataArr.indexOf(elementId);
+        var privateHospitalCount = 0;
+        var nhsHospitalCount = 0;
+        dataArr.splice(elementIndex, 1);
+        data = dataArr.join(',');
+
+        // Update the ids in the multi enquiry form
+        // multiEnquiryButton.data('hospital-id', removeTrailingComma(data)); TODO: reintroduce multienquiry button
+
+        compareCount = parseInt(compareCount) - 1;
+
+        if (hospitalType === 'private-hospital' || hospitalType === 'private') {
+            privateHospitalCount -= 1;
+            console.log('privateHospitalCount:', privateHospitalCount) //TODO: do this in the solutions bar
+        } else {
+            nhsHospitalCount -= 1;
+            console.log('nhsHospitalCount:', nhsHospitalCount); //TODO: do this in the solutions bar
+        }
+
+        // Slide content down when all data removed
+        if (compareCount === 0) {
+            // Switch the first column round
+            // $('#compare_hospitals_headings').addClass('d-none'); TODO: do this in the solutions bar component
+            // $('#no_items_added').removeClass('d-none');
+            // Hide the comparison area
+            // $compareContent.slideUp(); TODO: do this in the solutions bar component
+            document.body.classList.remove('shortlist-open');
+        }
+
+        // Check to see if we need to re-enable the buttons
+        enableButtons();
+
+        // var $countSpan = $('#compare_number');
+        console.log('compare count:', compareCount); //TODO: do this in the solutions bar
+
+        // Set the data cookie
+        Cookies.set("compareHospitalsData", data, {expires: 365});
+
+    }
+
+    handleCompareClick (id) {
+        // Get hospital type of item whose button has been clicked to remove it
+        var hospitalTypeClicked = 'nhs-hospital';
+        //Get the Data that is already in the Cookies
+        var compareCount = getCompareCount();
+        var data = Cookies.get("compareHospitalsData");
+        //Load the Cookies with the data that we need for the comparison
+        var elementId = id;
+
+        // Split data string into Array
+        var dataArr = data.split(',');
+        // Check if value is in array
+        var result = false;
+        for (var i = 0; i < dataArr.length; i++) {
+            var stringPart = dataArr[i];
+            if (stringPart != elementId) continue;
+
+            result = true;
+            break;
+        }
+
+        //Check if there are already 5 hospitals for comparison in Cookies
+        if (compareCount < 5) {
+            //Check if we don't have the hospital in our comparison and add it - if not true then add to compare - also add the id to the enquiry form
+            if (!result) {
+                // Show the headings column when first item added, and it's not already in the
+                if (compareCount === 0) {
+                    // Toggle the first column of comparison
+                    // Switch the first column round
+                    $('#compare_hospitals_headings').removeClass('d-none');
+                    $('#no_items_added').addClass('d-none');
+
+                }
+                //Add data to Cookies and send the element to populate the table
+                data += elementId + ',';
+                // Update the enquiry form
+                // multiEnquiryButton.data('hospital-id', removeTrailingComma(data));
+
+                // Remove placeholder column
+                // target.children().last().remove(); TODO: do this in the comparison component
+
+                // Add to the comparison area
+                getHospitalsByIds(elementId);
+
+                // Update compare count
+                compareCount = parseInt(compareCount) + 1;
+                console.log('compareCount:', compareCount);
+            }
+        }
+
+        // Check if we have to remove the data of the element that has been clicked - if true, it is already in the data
+        if (result) {
+            //Remove the hospital from the comparison table
+            this.removeHospitalFromCompare(elementId, data, compareCount, hospitalTypeClicked);
+            var dataArr = data.split(',');
+            var elementIndex = dataArr.indexOf(elementId);
+            dataArr.splice(elementIndex, 1);
+            data = dataArr.join(',');
+            compareCount = parseInt(compareCount) - 1;
+        }
+
+        // Pulsate the heart every time there is an action TODO: do this through the results page form component
+        // $compareButtonTitle.removeClass('pulse-animation');
+        // setTimeout(function () {
+        //     $compareButtonTitle.addClass('pulse-animation');
+        // }, 100);
+        //
+        // if (compareCount > 0) {
+        //     $compareButtonTitle.addClass('shortlist-has-items');
+        // } else {
+        //     $compareButtonTitle.removeClass('shortlist-has-items');
+        // }
+
+        // Set compareHospitalsData
+        Cookies.set("compareHospitalsData", data, {expires: 365});
+    }
 
 
     render() {
@@ -64,6 +194,7 @@ class ResultItem extends Component {
                                     style={{top: '0', right: '0', padding: '0 0 0 30px !important'}}
                                     className="btn btn-compare position-absolute compare font-12 d-inline-block d-lg-none mt-3 mr-3 shadow-none"
                                     role="button"
+                                    onClick={this.handleCompareClick(id)}
                                     data-hospital-type="nhs-hospital">
                                 <span>Add to compare</span>
                                 <CompareIcon/>

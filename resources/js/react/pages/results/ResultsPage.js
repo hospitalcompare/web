@@ -8,6 +8,7 @@ import Loader from "../../components/basic/Loader";
 import ResultItem from "./ResultItem";
 import ResultsPageForm from "./ResultsPageForm";
 import SolutionsBar from "./SolutionsBar";
+import {getCompareCount} from "../../scripts/global";
 
 class ResultsPage extends Component {
     constructor(props) {
@@ -27,7 +28,8 @@ class ResultsPage extends Component {
             procedure,
             postcode,
             radius,
-            showShortlist: false
+            showShortlist: false,
+            compareCount: getCompareCount()
         }
     }
 
@@ -64,11 +66,12 @@ class ResultsPage extends Component {
     };
 
     render() {
-        const {loadingHospitals, hospitals} = this.state;
+        const {loadingHospitals, hospitals, compareCount} = this.state;
         return (
             <React.Fragment>
                 <main>
-                    <ResultsPageForm showShortlist={this.state.showShortlist}
+                    <ResultsPageForm compareCount={compareCount}
+                                     showShortlist={this.state.showShortlist}
                                      handleShortlistToggle={this.handleClick}/>
                     <div className="results mt-3 mt-lg-0">
                         {

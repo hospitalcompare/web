@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
-class ResultsPageForm extends Component {
-    render() {
+const ResultsPageForm = ({handleShortlistToggle, compareCount}) => {
         return (
             <form className="form-element" id="resultspage_form" style={{top: '0px', position: 'sticky'}}>
                 <div className="sort-parent" id="sort_parent">
@@ -213,7 +212,7 @@ class ResultsPageForm extends Component {
                                 </button>
 
                                 <div id="open_shortlist"
-                                     onClick={this.props.handleShortlistToggle}
+                                     onClick={handleShortlistToggle}
                                      className="compare-button-title d-flex align-items-center h-100 ml-auto pulse-animation shortlist-has-items">
                                     <div className="svg-wrapper">
                                         <svg className="compare-heart" height="30" width="30" id="compare_heart"
@@ -225,7 +224,7 @@ class ResultsPageForm extends Component {
                                                       d="M18.8 8c-1.3 0-2.6.7-3.3 1.8-.2.2-.3.5-.4.7-.1-.2-.3-.5-.4-.7-.7-1.1-2-1.8-3.3-1.8-2.6.1-4.4 2-4.4 4.4v.1c0 2.8 2.3 4.7 5.7 7.7.6.6 1.3 1.1 1.9 1.7.1.1.3.1.4.1.1 0 .2 0 .3-.1l2.1-1.8c3.2-2.7 5.6-4.7 5.6-7.6.1-2.4-1.7-4.4-4.1-4.6l-.1.1z"></path>
                                             </g>
                                         </svg>
-                                        <span id="compare_number" className="col-white">n</span>
+                                        <span id="compare_number" className="col-white">{compareCount}</span>
                                     </div>
                                 </div>
                             </div>
@@ -3463,7 +3462,6 @@ class ResultsPageForm extends Component {
                 {/*</div>*/}
             </form>
         );
-    }
-}
+};
 
 export default ResultsPageForm;
