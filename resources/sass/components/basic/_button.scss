@@ -27,10 +27,6 @@
         line-height: 1.5;
         vertical-align: center;
         display: block;
-        @include media-breakpoint-down(lg) {
-            //display: inline-block;
-            //padding-top: 1px;
-        }
     }
 
     //colours
@@ -69,11 +65,10 @@
     }
 
     &.btn-blue {
-        background-color: $blue;
-        background-size: 200%;
+        background-color: $brand-primary-1;
 
         &:hover {
-            background-color: $brand-primary-1;
+            background-color: $brand-secondary-3;
         }
     }
 
@@ -124,6 +119,34 @@
         }
     }
 
+    &.btn-outline {
+        box-shadow: inset 0px 0px 0px 2px $brand-secondary-3;
+        color: $brand-secondary-3;
+        padding: 8px 14px 8px 40px;
+
+        svg {
+            content: '';
+            position: absolute;
+            @include v-c;
+            left: 8px;
+            width: 20px;
+            height: 20px;
+        }
+
+        &:hover {
+            background-color: $brand-secondary-3;
+            color: #fff;
+
+            svg, i {
+
+                path {
+                    stroke: #fff;
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
     &.btn-compare {
         box-shadow: inset 0px 0px 0px 2px $brand-primary-1;
         color: $brand-primary-1;
@@ -146,7 +169,7 @@
 
         @include media-breakpoint-up(xl){
             &:hover {
-                background-color: $brand-primary-7;
+                background-color: $trunkie;
                 color: #fff;
 
                 svg, i {
@@ -216,9 +239,10 @@
     &.btn-arrow-down {
         padding-right: 50px;
 
-        i, svg {
+        svg {
             @include v-c;
-            right: 20px;
+            right: 14px;
+            width: 12px;
             transition: $transition;
         }
 
@@ -440,46 +464,6 @@
     }
 }
 
-.btn-modal-close {
-    padding: 6px 24px 6px 8px;
-    display: inline-block;
-    border: none;
-    border-radius: 31px;
-    background-color: #000000 !important;
-    z-index: 5;
-    opacity: 1;
-    top: 5px;
-    right: 5px;
-    transition: $transition;
-    @include font-size(14);
-
-    @include media-breakpoint-up(lg) {
-        top: 0;
-        right: 0;
-        transform: translate(50%, -50%);
-    }
-
-    @include hover {
-        opacity: 1 !important;
-        background-color: $brand-primary-1 !important;
-    }
-
-    span {
-        background-color: inherit;
-    }
-
-    svg {
-        @include v-c;
-        right: 8px;
-        width: 7px;
-        height: 7px;
-
-        path {
-            fill: #fff;
-        }
-    }
-}
-
 // Reset styles from standard button
 .btn-plain {
     appearance: none;
@@ -541,7 +525,9 @@
         width: 20px;
         height: 20px;
     }
+}
 
+.btn-enquire-static-svg {
     @include media-breakpoint-down(md){
         justify-content: center;
         //align-items: center;
@@ -603,4 +589,10 @@
 
         }
     }
+}
+
+
+// SIde by side web and call buttons
+.btn-web-call {
+    @include reset-row-spacing(1px);
 }

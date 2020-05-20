@@ -12,6 +12,8 @@
 
 @section('body-class', 'results-page results-page-desktop')
 
+{{--{{ dd($data['outstanding']) }}--}}
+
 @section('content')
     @include('pages.pagesections.resultspageform', ['displayBlock' => false])
     <div class="results mt-3 mt-lg-0">
@@ -94,11 +96,42 @@
         @endif
     </div>
 
-    @include('components.solutionsbar', [
+    @include('components.synergy', [
         'specialOffers' => $data['special_offers']
         ])
+    @include('components.shortlist')
+@endsection
 
+@section('modals')
+    {{--    Modals for fund treatment/health insurance/travel insurance online --}}
+    @include('components.modals.modalcomparehealthinsurance')
+    @include('components.modals.modalfundyourtreatment')
+    @include('components.modals.modalcomparetravelinsurance')
     @include('components.modals.modalenquireprivate', [
-        'procedures' => $data['filters']['procedures']])
+    'procedures' => $data['filters']['procedures']])
+    {{-- Modal for 'Call' button - include only if there are special offers --}}
+    @if(!empty($data['special_offers']))
+        @foreach($data['special_offers'] as $key => $specialOffer )
+            {{--            Contacts modal for private hospital --}}
+            @includeWhen($specialOffer['hospital_type']['name'] == 'Independent', 'components.modals.modalcontactsprivate', [
+                'NHSClass'      =>  $specialOffer['hospital_type']['name'] == 'Independent' ? 'private-hospital' : 'nhs-hospital',
+                'id'            =>  $specialOffer['id'],
+                'title'         =>  $specialOffer['name'],
+                'url'           =>  $specialOffer['url'],
+                'tel'           =>  $specialOffer['phone_number'],
+                'tel2'          =>  $specialOffer['phone_number_2'],
 
+            ])
+            {{--Contact modal for nhs hospital--}}
+            @include('components.modals.modalcontactsgeneral', [
+                'NHSClass'      =>  $specialOffer['hospital_type']['name'] == 'Independent' ? 'private-hospital' : 'nhs-hospital',
+                'id'            =>  $specialOffer['id'],
+                'title'         =>  $specialOffer['name'],
+                'url'           =>  $specialOffer['url'],
+                'url2'          =>  $specialOffer['nhs_private_url'],
+                'tel'           =>  $specialOffer['phone_number'],
+                'tel2'          =>  $specialOffer['phone_number_2']
+            ])
+        @endforeach
+    @endif
 @endsection

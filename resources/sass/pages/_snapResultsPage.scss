@@ -43,16 +43,6 @@
     .test-page .sort-bar .section-3 {
         width: 18%;
     }
-
-    .btn-icon.btn-arrow-down svg {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 20px;
-        transition: 0.3s all ease;
-        width: 12px !important;
-    }
-
     /* End Nav Bar */
 
     /* Results Card */
@@ -65,11 +55,6 @@
         width: 22%;
         position: relative;
     }
-    //
-    //.results-page-desktop .result-item-inner .result-item-section-1 .hospital-details,
-    //.test-page .result-item-inner .result-item-section-1 .hospital-details {
-    //    padding: 38px 8px 38px 8px;
-    //}
 
     .results-page-desktop .result-item-inner .result-item-section-2,
     .test-page .result-item-inner .result-item-section-2 {
@@ -127,22 +112,6 @@
         top: 0;
         width: 25px;
         height: 25px;
-    }
-
-    .results-page-desktop .nhs-hospital p:after {
-        border-bottom: solid 15px transparent;
-        border-right: solid 15px transparent;
-        border-left: solid 15px $nhsBlue;
-        border-top: solid 15px $nhsBlue;
-        content: ''
-    }
-
-    .results-page-desktop .private-hospital p:after {
-        border-bottom: solid 15px transparent;
-        border-right: solid 15px transparent;
-        border-left: solid 15px $privateBlue;
-        border-top: solid 15px $privateBlue;
-        content: ''
     }
 
     .results-page-desktop .sort-item-title,
@@ -304,16 +273,16 @@
         display: flex !important;
     }
 
-    .btn-enquire svg,
-    .btn-enquire-private-hospital svg {
-        position: static;
-        top: 0;
-        transform: translateY(0);
-        left: 0px;
-        width: 20px;
-        height: 20px;
-        margin-right: 8px !important;
-    }
+    //.btn-enquire svg,
+    //.btn-enquire-private-hospital svg {
+    //    position: static;
+    //    top: 0;
+    //    transform: translateY(0);
+    //    left: 0px;
+    //    width: 20px;
+    //    height: 20px;
+    //    margin-right: 8px !important;
+    //}
 
     .result-item .btn-compare svg {
         content: "";

@@ -46,7 +46,6 @@ $('.flat-form .treatment-parent .dropdown-toggle .filter-option-inner-inner').te
 $('#how_to_use_filter_policies .dropdown-toggle .filter-option-inner-inner').text($howToUseSelectPlaceholder);
 
 $('#how_to_use_policies').on('shown.bs.select', function () {
-    // console.log($howToUseSelectPlaceholder);
     $('.dropdown-menu li:first-child a').text($howToUseSelectPlaceholder);
 });
 
@@ -138,7 +137,7 @@ window.getHtmlStars = function (rating) {
     }
 
     return html;
-}
+};
 
 /**
  * Generates HTML code based on a given value (percentage or 0 or 1)
@@ -167,7 +166,6 @@ window.getHtmlDashTickValue = function (value, text = "") {
 
 window.toggleContent = function (speed = 400, parent = 'body') {
     var $target = $($(this).data('target'));
-    // console.log($target);
     $(this).toggleClass('target-open');
     if ($target.is(':visible')) {
         $(parent).addClass($(this).data('target') + '_open');
@@ -248,7 +246,6 @@ window.getHospitalsByIds = function (hospitalIds) {
         contentType: "application/json; charset=utf-8",
         data: {},
         success: function (data) {
-            // console.log(data.data);
             //Check if we have at least one result in our data
             if (!$.isEmptyObject(data.data)) {
                 // console.log('Data:', data.data[0]);
@@ -289,7 +286,7 @@ window.textTruncate = function (str, length, ending) {
 };
 
 //Check if we have a parameter in the URL
-window.getUrlParameter = function(sParam) {
+window.getUrlParameter = function (sParam) {
     var sPageURL = window.location.search.substring(1),
         sURLVariables = sPageURL.split('&'),
         sParameterName,
@@ -356,11 +353,80 @@ $(document).on('click', function (e) {
 });
 
 // Recaptcha callback - clear error message when correctly submitted
-window.recaptchaCallback = function() {
-    $('#hiddenRecaptcha').valid();
-};
+// window.recaptchaCallback = function() {
+//     $('#hiddenRecaptcha').valid();
+// };
+//
 
+// Reset elements of enquiry form
 window.handleFormReset = function() {
+
+    var $form = $('#enquiry_form');
+    // Reset select pickers
+
+    // Clear text inputs
+    // $textInputs = $form.find('input[type=text');
+    // $textInputs.val('');
+
+    // Clear email imputs
+    // $emailInputs = $form.find('input[type=email');
+    // $emailInputs.val('');
+
+    // Clear text area
+    // $textAreas = $form.find('textarea');
+    // $textAreas.val('');
+
+    // Uncheck checkbox
+    // $checkBoxes = $form.find('input[type=checkbox]');
+    // $checkBoxes.prop('checked', false);
+
+    // Reset selectpickers
+    // $selectPickers = $form.find('.select-picker');
+    // // $selectPickers.val('default').selectpicker("refresh");
+    // $selectPickers.each(function(index, element){
+    //     // $(this).find("option[selected]").removeAttr("selected");
+    //     //
+    //     // $(this).find("option[value=0]").attr('selected', 'selected');
+    //
+    //     $(this).val('0').selectpicker("refresh");
+    //     // $(this).selectpicker('refresh');
+    // });
+
     // reset the recaptcha
     grecaptcha.reset();
 };
+
+// Handle the covid alert message
+// Set the cookie to stop further popups
+var $specialAlert = $('#hc_special_alert');
+
+function setShowAlertToFalse() {
+    Cookies.set('showSpecialAlert', false, {expires: 1});
+}
+
+function showSpecialAlert() {
+    $specialAlert
+        // .find('.alert-text')
+        // .html(message)
+        // .parents('.alert')
+        // .removeClass('alert-success alert-danger')
+        .addClass('show')
+        .slideDown();
+}
+
+// When closing the message, set the cookie to show that it has been dismissed
+$specialAlert.on('close.bs.alert', function () {
+    // Set the cookie to false
+    setShowAlertToFalse();
+});
+
+$('#special_alert_link').on('click', function () {
+    setShowAlertToFalse();
+});
+
+// Show the covid alert message if the cookie is not set
+$(document).ready(function () {
+    if (Cookies.get("showSpecialAlert") != 'false') {
+        showSpecialAlert();
+    }
+});

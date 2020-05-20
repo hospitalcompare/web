@@ -1,15 +1,12 @@
 //Check if we don't have the cookie and set it to 0
+import svgMapIcon from '../../images/icons/icon-map.svg';
+
 var $compareBar = $('.compare-hospitals-bar');
 var $compareContent = $('.compare-hospitals-content');
+var $compareButtonTitle = $('#open_shortlist');
 var $countSpan = $('#compare_number');
 var $heartIcon = $('#compare_heart');
-var $svgMapIcon =
-    `<svg class="map-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.37 49.61">
-        <g id="Layer_1" data-name="Layer 1">
-            <path fill="#037098" d="M26.38 34.66c4.77-8.54 7-14.25 7-18A16.69 16.69 0 000 16.68c0 3.73 2.22 9.44 7 18 2.9 5.2 5.81 9.72 6.63 11l2.37 3.6a.82.82 0 001.33 0l2.36-3.58c.37-.54 3.52-5.36 6.69-11.04zm-9.7 12.75L15 44.83s-3.28-5-6.61-10.93C3.86 25.82 1.58 20 1.58 16.68a15.11 15.11 0 0130.21 0c0 3.35-2.28 9.14-6.79 17.22-2.93 5.24-5.78 9.66-6.59 10.89z"/>
-            <path fill="#037098" d="M16.68 12.56a4 4 0 104 4 4 4 0 00-4-4z"/>
-        </g>
-    </svg>`;
+var $svgMapIcon = svgMapIcon;
 // Where we hold the counts of hospital types
 // No of each type of hospital in compare
 var nhsCountHolder = $('#nhs-hospital-count');
@@ -81,11 +78,11 @@ if (compareCount > 0 && window.location.href.indexOf("results-page") > '-1') {
     var remainingColCount = 5 - compareCount;
     target.append(repeatStringNumTimes(emptyCol, remainingColCount));
     $countSpan.text(compareCount);
-    $heartIcon.addClass('has-count');
+    $compareButtonTitle.addClass('pulse-animation');
     //Add the `active` class that will change the color to pink
-    $heartIcon.addClass('active');
+    $compareButtonTitle.addClass('shortlist-has-items');
 } else {
-    $heartIcon.removeClass('active');
+    $compareButtonTitle.removeClass('shortlist-has-items');
     target.append(repeatStringNumTimes(emptyCol, 5))
 }
 
@@ -142,7 +139,7 @@ window.addHospitalToCompare = function (element) {
         nhsFundedWork = 1;
     }
 
-    var btnClass = (isDesktop) ? 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-block font-12' : 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-squared btn-squared_slim font-12 px-5';
+    var btnClass = (isDesktop) ? 'btn btn-brand-secondary-3 enquiry font-12 p-2 btn-enquire text-center w-100' : 'btn btn-icon btn-brand-secondary-3 btn-enquire enquiry btn-squared btn-squared_slim font-12 px-5';
     var targetModal = hospitalType == 'Private' ? '#hc_modal_enquire_private' : '#hc_modal_contacts_general_shortlist_' + element.id;
     var btnContent =
         `<a id="${element.id}"
@@ -154,7 +151,7 @@ window.addHospitalToCompare = function (element) {
             data-image="${element.image}"
             data-target="${targetModal}">${circleCheck}Enquire</a>`;
     // Button content if NHS hospital has a private website url
-    var urlTwoButton = (element.nhs_private_url != "" && typeof element.nhs_private_url != "undefined") ? `<a id="${element.id}" class="p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block" target="blank" href="${element.nhs_private_url}" role="button" data-hospital-type="nhs-hospital"><span>Visit website</span></a>` : '';
+    var urlTwoButton = (element.nhs_private_url != "" && typeof element.nhs_private_url != "undefined") ? `<a id="${element.id}" class="p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block" target="_blank" href="${element.nhs_private_url}" role="button" data-hospital-type="nhs-hospital"><span>Visit website</span></a>` : '';
     // Button to trigger contact form for the private wing of NHS hospital
     var nhsPrivateContactBtn = (element.email != "" && typeof element.email != "undefined") ? `<button class="btn btn-squared btn-squared_slim btn-enquire btn-brand-secondary-3 enquiry font-12 text-center mt-5" id="${element.id}" data-hospital-id="${element.id}" data-dismiss="modal" data-hospital-type="nhs-hospital" data-toggle="modal" data-target="#hc_modal_enquire_private" data-hospital-title="${element.display_name}">Make a private treatment enquiry${circleCheck}</button>` : '';
 
@@ -177,9 +174,9 @@ window.addHospitalToCompare = function (element) {
                                 <div class="col-12 col-md-6">
                                     <div
                                         class="col-inner h-100 col-inner__left text-center d-flex flex-column justify-content-center align-items-center">
-                                        <h3 class="modal-title mb-3">Thanks for Your Interest in <span id="hospital_title">${element.display_name}</span>
+                                        <h3 class="modal-title mb-3 w-100">Thanks for Your Interest in <span id="hospital_title">${element.display_name}</span>
                                             </h3>
-                                        <div class="d-flex mb-3">
+                                        <div class="d-flex mb-3 w-100">
                                             <div class="modal-copy">
                                                 <p class="col-grey p-secondary mb-0">Without a GP referral, this NHS hospital won't respond to direct enquiries regarding
                                                     treatments. Please call or check their website to find out more about their services
@@ -195,7 +192,7 @@ window.addHospitalToCompare = function (element) {
                                         <div class="">
                                             <p class="mb-1">Main switchboard</p>
                                             <p class="col-brand-primary-1 font-20 mb-1" id="hospital_telephone">${element.phone_number}</p>
-                                                <a id="${element.id}" class="p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block" target="blank" href="${element.url}" role="button" data-hospital-type="${element.hospital_type.name === 'Independent' ? 'private-hospital' : 'nhs-hospital'}">
+                                                <a id="${element.id}" class="p-0 btn-link col-brand-primary-1 enquiry font-12 mb-4 d-inline-block" target="_blank" href="${element.url}" role="button" data-hospital-type="${element.hospital_type.name === 'Independent' ? 'private-hospital' : 'nhs-hospital'}">
                                                     <span>Visit website</span>
                                                 </a>
                                             <p class="mb-1">Private</p>
@@ -266,7 +263,7 @@ window.addHospitalToCompare = function (element) {
                 <div class="card-header p-0 pb-2 bg-white" id="heading${element.id}">
                      <button class="btn btn-link collapsed text-decoration-none p-0 rounded-0" data-toggle="collapse" data-target="#collapse${element.id}" aria-expanded="true" aria-controls="collapse${element.id}">
                          <p class="font-18 SofiaPro-SemiBold mb-2">${textTruncate(element.display_name, 30, '...')}</p>
-                         <p class="col-grey mb-2">${$svgMapIcon}${element.address.city} | ${hospitalType}</p>
+                         <p class="col-grey mb-2"><img class="map-icon" src="/images/icons/icon-map.svg" alt="Map icon">${element.address.city} | ${hospitalType}</p>
                          <p class="mb-2">${latestRating}&nbsp;|&nbsp;${getHtmlDashTickValue(waitingTime, " Weeks Average Waiting")}</p>
                      </button>
                      <div class="btn-area d-flex align-items-center">
@@ -338,7 +335,7 @@ window.addHospitalToCompare = function (element) {
     // Add corresponding enquiry modal to body
     // Add corresponding enquiry modal to body
     if (element.hospital_type.name === 'NHS')
-        $body.append(nhsModalContent);
+        $body.find('#modal-container').append(nhsModalContent);
 };
 
 function removeHospitalFromCompare(elementId, data, compareCount, hospitalType) {
@@ -457,15 +454,15 @@ $(document).on("click", ".compare", function () {
     }
 
     // Pulsate the heart every time there is an action
-    $heartIcon.removeClass('has-count');
+    $compareButtonTitle.removeClass('pulse-animation');
     setTimeout(function () {
-        $heartIcon.addClass('has-count');
+        $compareButtonTitle.addClass('pulse-animation');
     }, 100);
 
     if (compareCount > 0) {
-        $heartIcon.addClass('active');
+        $compareButtonTitle.addClass('shortlist-has-items');
     } else {
-        $heartIcon.removeClass('active');
+        $compareButtonTitle.removeClass('shortlist-has-items');
     }
 
     // Set compareHospitalsData
@@ -474,50 +471,31 @@ $(document).on("click", ".compare", function () {
 
 //Set the OnClick event for the Remove Hospital on the Comparison table
 $(document).on("click", ".remove-hospital", function (e) {
-    console.log(e);
     e.stopPropagation();
     var hospitalTypeClicked = $(this).data('hospital-type');
     var elementId = $(this).attr('id');
     var data = Cookies.get("compareHospitalsData");
     var compareCount = getCompareCount();
     if (compareCount === 1) {
-        $heartIcon.removeClass('active');
+        $compareButtonTitle.removeClass('shortlist-has-items');
     }
     elementId = elementId.replace('remove_id_', '');
     removeHospitalFromCompare(elementId, data, compareCount, hospitalTypeClicked);
 });
 
 //Set the Onclick event for the Comparison Header - toggle open and closed
-$(document).on("click", "#compare_button_title", function (e) {
+$(document).on("click", '#open_shortlist', function (e) {
     // Close all open modals
     $('.modal').modal('hide');
-    var compareCount = getCompareCount();
-    var $openTabs = $('.special-offer-tab.open');
-    // var solutionsBar = $('.compare-hospitals-bar');
-    if (compareCount > -1) {
-        // solutionsBar.toggleClass('open');
-        $compareContent.slideToggle();
-        $body.toggleClass('shortlist-open');
-        // $('.compare-arrow').toggleClass('rotated');
-        $compareContent.toggleClass('revealed');
-        // Close the special offer tabs if any are open
-        $openTabs
-            .removeClass('open')
-            .find('.special-offer-body')
-            .slideUp();
-        var $isSticky = $('#resultspage_form').hasClass('js-is-sticky');
-        if ($isSticky) {
-            stickybits('#resultspage_form').cleanup();
-            return;
-        }
-        stickybits('#resultspage_form', {useStickyClasses: true});
-    }
+    $compareContent.slideToggle();
+    $body.toggleClass('shortlist-open');
+    $compareContent.toggleClass('revealed');
 });
 
-// Hide shortlist bar if clicking outside it, but only if it is already open, and if you are NOT clicking on the modal eg enquiry modal
+// Click outside shortlist to close it
 $(document).on('click', function (e) {
-    var isModal = $(e.target).parents('.modal').length || $(e.target).hasClass('modal');
-    if ($compareBar.has(e.target).length === 0 && $compareContent.hasClass('revealed') && !isModal ) {
+    var isBackdrop = $(e.target).parents('.hc-backdrop').length || $(e.target).hasClass('hc-backdrop');
+    if (isBackdrop) {
         $compareContent.slideUp();
         $body.removeClass('shortlist-open');
         $compareContent.removeClass('revealed');

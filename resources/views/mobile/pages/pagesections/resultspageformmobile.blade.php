@@ -1,34 +1,46 @@
 <form class="form-element" id="resultspage_form">
     <div class="sort-parent" id="sort_parent">
         <div class="container">
-            <div class="row pb-3">
-                <div class="col-12 py-3">
+            <div class="row">
+                <div class="col-12 py-3 bg-navy col-white results-info-bar">
                     <span class="SofiaPro-SemiBold">Showing {{(!empty($data['hospitals']) && !is_array($data['hospitals']) && $data['hospitals']->total() == 50)? 'a maximum of 50':$data['hospitals']->total()}} hospital(s)</span><br>
                     Ordered
                     by {{ !empty(Request::input('sort_by')) ? \App\Helpers\Utils::sortBys[Request::input('sort_by')]['name'].((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? ' & Distance' : ((Request::input('sort_by') == 10 || Request::input('sort_by') == 9) ? ' then Waiting Time' : ' then Care Quality')) : ((!empty(Request::input('postcode')) && empty($hc_errors[0]['postcode'])) ? 'Care Quality Rating then Distance' : 'Care Quality Rating then Waiting Time') }}
                 </div>
-                <div class="col-6">
-                    @include('components.basic.button', [
-                        'buttonText'        => 'Show Filters',
-                        'classTitle'        => 'btn btn-brand-primary-1 btn-squared btn-squared_slim btn-arrow-down font-14 d-flex flex-row-reverse justify-content-around align-items-center',
-                        'id'                => 'show_filters',
-                        'svg'               => 'icon-filter',
-                        'svgClass'          => 'd-inline position-static'
+{{--                Sort button--}}
+                <div class="col-4 px-0 results-sort-filter-compare">
+                    @include('components.basic.select', [
+                        'showLabel'             =>  false,
+                        'options'               =>  $data['sortBy'],
+                        'svg'                   =>  'icon-order-by',
+                        'selectClass'           =>  'select-sort-by select-picker font-12 h-100 border-right pt-0 col-grey rounded-0',
+                        'selectWrapperClass'    =>  'h-100',
+                        'selectParentClass'     =>  'align-items-center h-100',
+                        'placeholder'           =>  'Sort by:',
+                        'name'                  =>  'sort_by',
+                        'selectId'              =>  'sort_by_select',
+                        'labelClass'            =>  'mb-0 SofiaPro-Medium sort-by-label'
                     ])
                 </div>
-                <div class="col-6">
-                    @include('components.basic.select', [
-                        'showLabel'             => false,
-                        'options'               => $data['sortBy'],
-                        'svg'                   => 'icon-order-by',
-                        'selectClass'           => 'select-sort-by select-picker SofiaPro-Medium font-14 h-100 border-0 rounded pt-0',
-                        'selectWrapperClass'    => 'h-100',
-                        'selectParentClass'     => 'align-items-center h-100',
-                        'placeholder'           => 'Sort by:',
-                        'name'                  => 'sort_by',
-                        'selectId'              => 'sort_by_select',
-                        'labelClass'            => 'mb-0 SofiaPro-Medium sort-by-label'
+{{--                Filter button--}}
+                <div class="col-4 px-0">
+                    @include('components.basic.button', [
+                        'buttonText'        =>  'Filter',
+                        'classTitle'        =>  'btn btn-squared col-grey font-12 d-flex flex-row-reverse justify-content-around align-items-center border-right rounded-0',
+                        'id'                =>  'show_filters',
+                        'svg'               =>  'icon-filter',
+                        'svgClass'          =>  'd-inline position-static'
                     ])
+                </div>
+{{--             Compare button --}}
+                <div class="col-4 px-0">
+                    <div id="open_shortlist" class="compare-button-title d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="svg-wrapper">
+                            @svg('compare-heart', 'compare-heart')
+                            <span id="count_badge" class="rounded-circle"></span>
+                        </div>
+                        <p class="font-12 mb-0">Compare</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -49,24 +61,7 @@
                         'name'                  => 'postcode',
                         'id'                    => 'input_postcode',
                       ])
-                    {{--                    <a tabindex="0" data-offset="0 5px"--}}
-                    {{--                       class="help-link"--}}
-                    {{--                       style="right: 53px"--}}
-                    {{--                        @include('components.basic.popover', [--}}
-                    {{--                        'dismissible'   => true,--}}
-                    {{--                        'placement'      => 'top',--}}
-                    {{--                        'html'           => 'true',--}}
-                    {{--                        'size'           => 'max-width',--}}
-                    {{--                        'trigger'        => 'hover',--}}
-                    {{--                        'content'        => '<p>--}}
-                    {{--                                         Please enter your postcode<br>for a refined search.--}}
-                    {{--                                     </p>--}}
-                    {{--                                     '])--}}
-                    {{--                    >@svg('icon-more-info')</a>--}}
                 </div>
-                <!-- Accordion for filters -->
-            {{--                @include('mobile.components.filteraccordion')--}}
-            <!-- End of accordion for filters -->
                 <!-- Procedures -->
                 <div class="filter-mobile col-12 d-flex align-items-center">
                     @include('components.basic.select', [
@@ -198,20 +193,20 @@
                 <!-- Insurance -->
                 <div class="filter-mobile col-12">
                     @include('components.basic.select', [
-                        'selectParentClass'     => 'w-100',
-                        'showLabel'             => true,
-                        'placeholder'           => 'Insurance',
-                        'selectPicker'          => 'true',
-                        'options'               => $data['filters']['policies'],
-                        'suboptionClass'        => 'policies',
-                        'group'                 => true,
-                        'groupName'             => 'policies',
-                        'svg'                   => 'icon-chevron-down',
-                        'selectClass'           => 'select-picker',
-                        'placeholder'           => 'Insurance',
-                        'name'                  => 'policy_id',
-                        'showTooltip'           => true,
-                        'selectPickerContainer' => '.filter-parent',
+                        'selectParentClass'     =>  'w-100',
+                        'showLabel'             =>  true,
+                        'placeholder'           =>  'Insurance',
+                        'selectPicker'          =>  'true',
+                        'options'               =>  $data['filters']['policies'],
+                        'suboptionClass'        =>  'policies',
+                        'group'                 =>  true,
+                        'groupName'             =>  'policies',
+                        'svg'                   =>  'icon-chevron-down',
+                        'selectClass'           =>  'select-picker',
+                        'placeholder'           =>  'Insurance',
+                        'name'                  =>  'policy_id',
+                        'showTooltip'           =>  true,
+                        'selectPickerContainer' =>  '.filter-parent',
                         'modalText'             =>
                             '<p class="SofiaPro-SemiBold mb-3 font-18">
                                  Insurance policy

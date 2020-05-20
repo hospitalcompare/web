@@ -11,325 +11,341 @@
 @section('body-class', 'test-page')
 
 @section('content')
-        <section class="_bg-brand-primary-1">
-            <div class="container">
-                <form class="w-100" id="form_exit_survey">
+    <section>
+        @include('components.modals.modalcomparehealthinsurance', ['displayBlock'  => true])
+    </section>
+    <section>
+        <div class="container">
+            <h2>Enquiry button</h2>
+            <div class="btn-area">
+                @include('components.basic.button', [
+                    'classTitle'        =>  'btn btn-brand-secondary-3 enquiry font-12 p-2 btn-enquire text-center',
+                    'buttonText'        =>  'Enquire',
+                    'svg'               =>  'circle-check',
+                    'style'             =>  'min-width: 100px'
+                ])
+            </div>
+        </div>
+    </section>
+    <section class="_bg-brand-primary-1">
+        <div class="container">
+            <form class="w-100" id="form_exit_survey">
 
-                    <div class="form-group mb-4 d-flex justify-content-center">
-                        <fieldset class="rating">
-                            <input type="radio" id="star5" name="rating" value="5">
-                            <label class="full" for="star5" title="5 stars"></label>
+                <div class="form-group mb-4 d-flex justify-content-center">
+                    <fieldset class="rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label class="full" for="star5" title="5 stars"></label>
 
-                            <input type="radio" id="star4half" name="rating" value="4.5">
-                            <label class="half" for="star4half" title="4.5 stars"></label>
+                        <input type="radio" id="star4half" name="rating" value="4.5">
+                        <label class="half" for="star4half" title="4.5 stars"></label>
 
-                            <input type="radio" id="star4" name="rating" value="4">
-                            <label class="full" for="star4" title="4 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label class="full" for="star4" title="4 stars"></label>
 
-                            <input type="radio" id="star3half" name="rating" value="3.5">
-                            <label class="half" for="star3half" title="3.5 stars"></label>
+                        <input type="radio" id="star3half" name="rating" value="3.5">
+                        <label class="half" for="star3half" title="3.5 stars"></label>
 
-                            <input type="radio" id="star3" name="rating" value="3">
-                            <label class="full" for="star3" title="3 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label class="full" for="star3" title="3 stars"></label>
 
-                            <input type="radio" id="star2half" name="rating" value="2.5">
-                            <label class="half" for="star2half" title="2.5 stars"></label>
+                        <input type="radio" id="star2half" name="rating" value="2.5">
+                        <label class="half" for="star2half" title="2.5 stars"></label>
 
-                            <input type="radio" id="star2" name="rating" value="2">
-                            <label class="full" for="star2" title="2 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label class="full" for="star2" title="2 stars"></label>
 
-                            <input type="radio" id="star1half" name="rating" value="1.5">
-                            <label class="half" for="star1half" title="1.5 stars"></label>
+                        <input type="radio" id="star1half" name="rating" value="1.5">
+                        <label class="half" for="star1half" title="1.5 stars"></label>
 
-                            <input type="radio" id="star1" name="rating" value="1">
-                            <label class="full" for="star1" title="1 star"></label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label class="full" for="star1" title="1 star"></label>
 
-                            <input type="radio" id="starhalf" name="rating" value="0.5">
-                            <label class="half" for="starhalf" title="0.5 stars"></label>
-                        </fieldset>
-                    </div>
-                    <div class="form-group mb-4">
-                        <div id="col_additional_information">
+                        <input type="radio" id="starhalf" name="rating" value="0.5">
+                        <label class="half" for="starhalf" title="0.5 stars"></label>
+                    </fieldset>
+                </div>
+                <div class="form-group mb-4">
+                    <div id="col_additional_information">
                         <textarea class="form-control p-3" name="feedback" placeholder="Any further feedback?"
                                   id="further_feedback" rows="5"></textarea>
-                        </div>
                     </div>
-                    <div class="form-group">
-                        <button id="submit_survey" style=""
-                                class="btn btn-squared btn-squared_slim btn-brand-secondary-3 px-5"
-                                target="" data-target="" href="javascript:void(0);" role="button" data-id="">
-                            <div>Submit</div>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <section>
-            <div class="container">
-                @include('components.introblog')
-            </div>
-        </section>
-        <section>
-            @include('components.emails.emailprovider')
-        </section>
-        <section>
-            @include('components.emails.emailuser')
-        </section>
-{{--    <section class="pt-3">--}}
-{{--        <div class="container">--}}
-{{--            <h3>Enquiry Form</h3>--}}
-{{--            @include('components.modals.modalenquireprivate', [--}}
-{{--                       'procedures'    => $data['filters']['procedures'],--}}
-{{--                       'title'         => 'Mr',--}}
-{{--                       'firstName'     => 'Test',--}}
-{{--                       'dob'           => '1980/04/12',--}}
-{{--                       'lastName'      => 'Testing',--}}
-{{--                       'email'         => 'test@test.com',--}}
-{{--                       'phone'         => '07941939374',--}}
-{{--                       'postcode'      => 'ch423re',--}}
-{{--                       'gdpr'          => true])--}}
-{{--        </div>--}}
-{{--    </section>--}}
-{{--    <section>--}}
-{{--        <div class="modal-body p-3 position-relative">--}}
-{{--            <div class="carousel-wrapper position-relative">--}}
-{{--                <!-- Slide number indicator -->--}}
-{{--                <div id="carousel_tour" class="carousel slide _carousel-fade pointer-event" data-ride="carousel" data-interval="false">--}}
-{{--                    <!--Slides-->--}}
+                </div>
+                <div class="form-group">
+                    <button id="submit_survey" style=""
+                            class="btn btn-squared btn-squared_slim btn-brand-secondary-3 px-5"
+                            target="" data-target="" href="javascript:void(0);" role="button" data-id="">
+                        <div>Submit</div>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            @include('components.introblog')
+        </div>
+    </section>
+    <section>
+        @include('components.emails.emailprovider')
+    </section>
+    <section>
+        @include('components.emails.emailuser')
+    </section>
+    {{--    <section class="pt-3">--}}
+    {{--        <div class="container">--}}
+    {{--            <h3>Enquiry Form</h3>--}}
+    {{--            @include('components.modals.modalenquireprivate', [--}}
+    {{--                       'procedures'    => $data['filters']['procedures'],--}}
+    {{--                       'title'         => 'Mr',--}}
+    {{--                       'firstName'     => 'Test',--}}
+    {{--                       'dob'           => '1980/04/12',--}}
+    {{--                       'lastName'      => 'Testing',--}}
+    {{--                       'email'         => 'test@test.com',--}}
+    {{--                       'phone'         => '07941939374',--}}
+    {{--                       'postcode'      => 'ch423re',--}}
+    {{--                       'gdpr'          => true])--}}
+    {{--        </div>--}}
+    {{--    </section>--}}
+    {{--    <section>--}}
+    {{--        <div class="modal-body p-3 position-relative">--}}
+    {{--            <div class="carousel-wrapper position-relative">--}}
+    {{--                <!-- Slide number indicator -->--}}
+    {{--                <div id="carousel_tour" class="carousel slide _carousel-fade pointer-event" data-ride="carousel" data-interval="false">--}}
+    {{--                    <!--Slides-->--}}
 
-{{--                    <!--/.Slides-->--}}
-{{--                    <div class="carousel-inner position-relative" role="listbox">--}}
+    {{--                    <!--/.Slides-->--}}
+    {{--                    <div class="carousel-inner position-relative" role="listbox">--}}
 
-{{--                        <div class="carousel-item">--}}
-{{--                            <div class="carousel-item-inner">--}}
-{{--                                <div class="row">--}}
-{{--                                    <div class="carousel-item-copy col-4">--}}
-{{--                                        <h5 class="font-28 SofiaPro-Medium">How to Use the--}}
-{{--                                            Filters</h5>--}}
-{{--                                        <p class="col-grey p-secondary">Following your initial search, tap--}}
-{{--                                            the cyan ‘Filter Results’ button--}}
-{{--                                            near the top of your screen to--}}
-{{--                                            reveal further options to hone--}}
-{{--                                            your results by categories like--}}
-{{--                                            waiting times. Once you’ve--}}
-{{--                                            made your changes, click the--}}
-{{--                                            blue ‘Update Results’ button and--}}
-{{--                                            your choices will be reflected in--}}
-{{--                                            your search results.</p>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="carousel-item-image col-8">--}}
-{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-1.jpg')">--}}
-
-
-
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <div class="carousel-item">--}}
-{{--                            <div class="carousel-item-inner">--}}
-{{--                                <div class="row">--}}
-{{--                                    <div class="carousel-item-copy col-4">--}}
-{{--                                        <h5 class="font-18 SofiaPro-Medium">How to Use the--}}
-{{--                                            Sort Function--}}
-{{--                                            Rating Arrows</h5>--}}
-{{--                                        <p class="col-grey p-secondary">You can sort your data by--}}
-{{--                                            clicking the downward-facing--}}
-{{--                                            arrows in the white bar above--}}
-{{--                                            your search results. This means--}}
-{{--                                            you can sort your data by--}}
-{{--                                            specific columns, for example--}}
-{{--                                            prioritising your results by--}}
-{{--                                            shortest waiting time.</p>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="carousel-item-image col-8">--}}
-{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-2.jpg')">--}}
+    {{--                        <div class="carousel-item">--}}
+    {{--                            <div class="carousel-item-inner">--}}
+    {{--                                <div class="row">--}}
+    {{--                                    <div class="carousel-item-copy col-4">--}}
+    {{--                                        <h5 class="font-28 SofiaPro-Medium">How to Use the--}}
+    {{--                                            Filters</h5>--}}
+    {{--                                        <p class="col-grey p-secondary">Following your initial search, tap--}}
+    {{--                                            the cyan ‘Filter Results’ button--}}
+    {{--                                            near the top of your screen to--}}
+    {{--                                            reveal further options to hone--}}
+    {{--                                            your results by categories like--}}
+    {{--                                            waiting times. Once you’ve--}}
+    {{--                                            made your changes, click the--}}
+    {{--                                            blue ‘Update Results’ button and--}}
+    {{--                                            your choices will be reflected in--}}
+    {{--                                            your search results.</p>--}}
+    {{--                                    </div>--}}
+    {{--                                    <div class="carousel-item-image col-8">--}}
+    {{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-1.jpg')">--}}
 
 
 
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
 
-{{--                        <div class="carousel-item">--}}
-{{--                            <div class="carousel-item-inner">--}}
-{{--                                <div class="row">--}}
-{{--                                    <div class="carousel-item-copy col-4">--}}
-{{--                                        <h5 class="font-18 SofiaPro-Medium">How to Use Tooltips to Get More Information</h5>--}}
-{{--                                        <p class="col-grey p-secondary">Throughout Hospital Compare, you can get more information about specific--}}
-{{--                                            subjects from our tailored tooltips. The tooltips provide more detail--}}
-{{--                                            and context on information within your search results. You can access--}}
-{{--                                            them by hovering over headings and information with your mouse cursor.--}}
-{{--                                        </p>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="carousel-item-image col-8">--}}
-{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-3.jpg')">--}}
-
-
-
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <div class="carousel-item active">--}}
-{{--                            <div class="carousel-item-inner">--}}
-{{--                                <div class="row">--}}
-{{--                                    <div class="carousel-item-copy col-4">--}}
-{{--                                        <h5 class="font-18 SofiaPro-Medium">How to Compare Results and Add to a Shortlist</h5>--}}
-{{--                                        <p class="col-grey p-secondary">After generating your search results, you can compare specific hospitals--}}
-{{--                                            (up to five) by clicking the ‘Add to Compare’ buttons at the end of each--}}
-{{--                                            result row. Once you’ve selected the hospitals you’re interested in,--}}
-{{--                                            click the cyan ‘Compare’ button in the bottom right to view your choices--}}
-{{--                                            in detail.--}}
-{{--                                        </p>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="carousel-item-image col-8">--}}
-{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-4.jpg')">--}}
+    {{--                        <div class="carousel-item">--}}
+    {{--                            <div class="carousel-item-inner">--}}
+    {{--                                <div class="row">--}}
+    {{--                                    <div class="carousel-item-copy col-4">--}}
+    {{--                                        <h5 class="font-18 SofiaPro-Medium">How to Use the--}}
+    {{--                                            Sort Function--}}
+    {{--                                            Rating Arrows</h5>--}}
+    {{--                                        <p class="col-grey p-secondary">You can sort your data by--}}
+    {{--                                            clicking the downward-facing--}}
+    {{--                                            arrows in the white bar above--}}
+    {{--                                            your search results. This means--}}
+    {{--                                            you can sort your data by--}}
+    {{--                                            specific columns, for example--}}
+    {{--                                            prioritising your results by--}}
+    {{--                                            shortest waiting time.</p>--}}
+    {{--                                    </div>--}}
+    {{--                                    <div class="carousel-item-image col-8">--}}
+    {{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-2.jpg')">--}}
 
 
 
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
 
-{{--                        <div class="carousel-item">--}}
-{{--                            <div class="carousel-item-inner">--}}
-{{--                                <div class="row">--}}
-{{--                                    <div class="carousel-item-copy col-4">--}}
-{{--                                        <h5 class="font-18 SofiaPro-Medium">What is the Solutions Bar?</h5>--}}
-{{--                                        <p class="col-grey p-secondary">You’ll find the solutions bar located below your search results. Based on--}}
-{{--                                            the criteria you searched for, the blue box highlights an outstanding--}}
-{{--                                            hospital with the lowest waiting time, whilst the pink box highlights--}}
-{{--                                            special offers you may be interested in.--}}
-{{--                                        </p>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="carousel-item-image col-8">--}}
-{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-5.jpg')">--}}
-
-
-
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <div class="carousel-item">--}}
-{{--                            <div class="carousel-item-inner">--}}
-{{--                                <div class="row">--}}
-{{--                                    <div class="carousel-item-copy col-4">--}}
-{{--                                        <h5 class="font-18 SofiaPro-Medium">How to Make an Enquiry--}}
-{{--                                        </h5>--}}
-{{--                                        <p class="col-grey p-secondary">After generating and comparing your search results, you can make--}}
-{{--                                            enquiries to private hospitals by clicking the blue ‘Make an Enquiry’--}}
-{{--                                            button at the end of each result line. You will then be asked to--}}
-{{--                                            complete a short form which will be sent to them once finalised.</p>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="carousel-item-image col-8">--}}
-{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-6.jpg')">--}}
+    {{--                        <div class="carousel-item">--}}
+    {{--                            <div class="carousel-item-inner">--}}
+    {{--                                <div class="row">--}}
+    {{--                                    <div class="carousel-item-copy col-4">--}}
+    {{--                                        <h5 class="font-18 SofiaPro-Medium">How to Use Tooltips to Get More Information</h5>--}}
+    {{--                                        <p class="col-grey p-secondary">Throughout Hospital Compare, you can get more information about specific--}}
+    {{--                                            subjects from our tailored tooltips. The tooltips provide more detail--}}
+    {{--                                            and context on information within your search results. You can access--}}
+    {{--                                            them by hovering over headings and information with your mouse cursor.--}}
+    {{--                                        </p>--}}
+    {{--                                    </div>--}}
+    {{--                                    <div class="carousel-item-image col-8">--}}
+    {{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-3.jpg')">--}}
 
 
 
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
 
-{{--                        <div class="carousel-item">--}}
-{{--                            <div class="carousel-item-inner">--}}
-{{--                                <div class="row">--}}
-{{--                                    <div class="carousel-item-copy col-4">--}}
-{{--                                        <h5 class="font-18 SofiaPro-Medium">Learn More About Your Rights</h5>--}}
-{{--                                        <p class="col-grey p-secondary">You can learn more about your legal rights by clicking the ‘Your Rights’--}}
-{{--                                            button in the main website menu at the top of your screen.</p>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="carousel-item-image col-8">--}}
-{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-7.jpg')">--}}
-
-
-
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <div class="carousel-item">--}}
-{{--                            <div class="carousel-item-inner">--}}
-{{--                                <div class="row">--}}
-{{--                                    <div class="carousel-item-copy col-4">--}}
-{{--                                        <h5 class="font-18 SofiaPro-Medium">Learn More Through Our Blog</h5>--}}
-{{--                                        <p class="col-grey p-secondary">From articles focusing on your rights to current events, waiting times to--}}
-{{--                                            quality, our regularly-updated blog plays host to a range of unique and--}}
-{{--                                            informative articles. Click the ‘Blog’ button in the main menu to--}}
-{{--                                            access.</p>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="carousel-item-image col-8">--}}
-{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-8.jpg')">--}}
+    {{--                        <div class="carousel-item active">--}}
+    {{--                            <div class="carousel-item-inner">--}}
+    {{--                                <div class="row">--}}
+    {{--                                    <div class="carousel-item-copy col-4">--}}
+    {{--                                        <h5 class="font-18 SofiaPro-Medium">How to Compare Results and Add to a Shortlist</h5>--}}
+    {{--                                        <p class="col-grey p-secondary">After generating your search results, you can compare specific hospitals--}}
+    {{--                                            (up to five) by clicking the ‘Add to Compare’ buttons at the end of each--}}
+    {{--                                            result row. Once you’ve selected the hospitals you’re interested in,--}}
+    {{--                                            click the cyan ‘Compare’ button in the bottom right to view your choices--}}
+    {{--                                            in detail.--}}
+    {{--                                        </p>--}}
+    {{--                                    </div>--}}
+    {{--                                    <div class="carousel-item-image col-8">--}}
+    {{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-4.jpg')">--}}
 
 
 
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
 
-{{--                        <div class="carousel-item">--}}
-{{--                            <div class="carousel-item-inner">--}}
-{{--                                <div class="row">--}}
-{{--                                    <div class="carousel-item-copy col-4">--}}
-{{--                                        <h5 class="font-18 SofiaPro-Medium">Got a Specific Question?</h5>--}}
-{{--                                        <p class="col-grey p-secondary">Our FAQ is the perfect place to start when you have a burning question. You’ll find answers to many queries covering everything from your rights, to choosing a consultant, booking an appointment at a hospital to the sources of our data.--}}
-{{--                                            If you can’t find an answer to your question, you can email us directly by clicking here.--}}
-{{--                                        </p>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="carousel-item-image col-8">--}}
-{{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-9.jpg')">--}}
+    {{--                        <div class="carousel-item">--}}
+    {{--                            <div class="carousel-item-inner">--}}
+    {{--                                <div class="row">--}}
+    {{--                                    <div class="carousel-item-copy col-4">--}}
+    {{--                                        <h5 class="font-18 SofiaPro-Medium">What is the Solutions Bar?</h5>--}}
+    {{--                                        <p class="col-grey p-secondary">You’ll find the solutions bar located below your search results. Based on--}}
+    {{--                                            the criteria you searched for, the blue box highlights an outstanding--}}
+    {{--                                            hospital with the lowest waiting time, whilst the pink box highlights--}}
+    {{--                                            special offers you may be interested in.--}}
+    {{--                                        </p>--}}
+    {{--                                    </div>--}}
+    {{--                                    <div class="carousel-item-image col-8">--}}
+    {{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-5.jpg')">--}}
 
 
 
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <!--/.Controls-->--}}
-{{--            <div class="carousel-controls position-absolute w-100">--}}
-{{--                <div class="container-fluid">--}}
-{{--                    <div class="row w-100">--}}
-{{--                        <div class="col-4">--}}
-{{--                            <div class="row">--}}
-{{--                                <div class="col-6">--}}
-{{--                                    <a class="carousel-control-prev carousel-control btn btn-squared btn-squared_slim btn-black btn-tour-control prev" href="#carousel_tour" role="button" data-slide="prev">--}}
-{{--                                        Previous--}}
-{{--                                    </a>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-6">--}}
-{{--                                    <a class="carousel-control-next carousel-control btn btn-squared btn-squared_slim btn-brand-primary-1 col-white btn-tour-control next" href="#carousel_tour" role="button" data-slide="next">Next--}}
-{{--                                    </a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <!--Controls-->--}}
-{{--        </div>--}}
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
 
-{{--    </section>--}}
+    {{--                        <div class="carousel-item">--}}
+    {{--                            <div class="carousel-item-inner">--}}
+    {{--                                <div class="row">--}}
+    {{--                                    <div class="carousel-item-copy col-4">--}}
+    {{--                                        <h5 class="font-18 SofiaPro-Medium">How to Make an Enquiry--}}
+    {{--                                        </h5>--}}
+    {{--                                        <p class="col-grey p-secondary">After generating and comparing your search results, you can make--}}
+    {{--                                            enquiries to private hospitals by clicking the blue ‘Make an Enquiry’--}}
+    {{--                                            button at the end of each result line. You will then be asked to--}}
+    {{--                                            complete a short form which will be sent to them once finalised.</p>--}}
+    {{--                                    </div>--}}
+    {{--                                    <div class="carousel-item-image col-8">--}}
+    {{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-6.jpg')">--}}
+
+
+
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+
+    {{--                        <div class="carousel-item">--}}
+    {{--                            <div class="carousel-item-inner">--}}
+    {{--                                <div class="row">--}}
+    {{--                                    <div class="carousel-item-copy col-4">--}}
+    {{--                                        <h5 class="font-18 SofiaPro-Medium">Learn More About Your Rights</h5>--}}
+    {{--                                        <p class="col-grey p-secondary">You can learn more about your legal rights by clicking the ‘Your Rights’--}}
+    {{--                                            button in the main website menu at the top of your screen.</p>--}}
+    {{--                                    </div>--}}
+    {{--                                    <div class="carousel-item-image col-8">--}}
+    {{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-7.jpg')">--}}
+
+
+
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+
+    {{--                        <div class="carousel-item">--}}
+    {{--                            <div class="carousel-item-inner">--}}
+    {{--                                <div class="row">--}}
+    {{--                                    <div class="carousel-item-copy col-4">--}}
+    {{--                                        <h5 class="font-18 SofiaPro-Medium">Learn More Through Our Blog</h5>--}}
+    {{--                                        <p class="col-grey p-secondary">From articles focusing on your rights to current events, waiting times to--}}
+    {{--                                            quality, our regularly-updated blog plays host to a range of unique and--}}
+    {{--                                            informative articles. Click the ‘Blog’ button in the main menu to--}}
+    {{--                                            access.</p>--}}
+    {{--                                    </div>--}}
+    {{--                                    <div class="carousel-item-image col-8">--}}
+    {{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-8.jpg')">--}}
+
+
+
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+
+    {{--                        <div class="carousel-item">--}}
+    {{--                            <div class="carousel-item-inner">--}}
+    {{--                                <div class="row">--}}
+    {{--                                    <div class="carousel-item-copy col-4">--}}
+    {{--                                        <h5 class="font-18 SofiaPro-Medium">Got a Specific Question?</h5>--}}
+    {{--                                        <p class="col-grey p-secondary">Our FAQ is the perfect place to start when you have a burning question. You’ll find answers to many queries covering everything from your rights, to choosing a consultant, booking an appointment at a hospital to the sources of our data.--}}
+    {{--                                            If you can’t find an answer to your question, you can email us directly by clicking here.--}}
+    {{--                                        </p>--}}
+    {{--                                    </div>--}}
+    {{--                                    <div class="carousel-item-image col-8">--}}
+    {{--                                        <div class="image-wrapper" style="background-image: url('/images/help/help-9.jpg')">--}}
+
+
+
+    {{--                                        </div>--}}
+    {{--                                    </div>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+    {{--            <!--/.Controls-->--}}
+    {{--            <div class="carousel-controls position-absolute w-100">--}}
+    {{--                <div class="container-fluid">--}}
+    {{--                    <div class="row w-100">--}}
+    {{--                        <div class="col-4">--}}
+    {{--                            <div class="row">--}}
+    {{--                                <div class="col-6">--}}
+    {{--                                    <a class="carousel-control-prev carousel-control btn btn-squared btn-squared_slim btn-black btn-tour-control prev" href="#carousel_tour" role="button" data-slide="prev">--}}
+    {{--                                        Previous--}}
+    {{--                                    </a>--}}
+    {{--                                </div>--}}
+    {{--                                <div class="col-6">--}}
+    {{--                                    <a class="carousel-control-next carousel-control btn btn-squared btn-squared_slim btn-brand-primary-1 col-white btn-tour-control next" href="#carousel_tour" role="button" data-slide="next">Next--}}
+    {{--                                    </a>--}}
+    {{--                                </div>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+    {{--            <!--Controls-->--}}
+    {{--        </div>--}}
+
+    {{--    </section>--}}
 
     {{--    <section>--}}
     {{--        @include('components.modals.modalexitsurvey')--}}
@@ -440,17 +456,17 @@
     </section>
     {{--    <section>--}}
     {{--        <div class="compare-hospitals-bar ">--}}
-    {{--            <div class="compare-hospitals-header d-flex justify-content-between">--}}
+    {{--            <div class="synergy-bar d-flex justify-content-between">--}}
     {{--                <div class="container position-relative d-flex justify-content-between align-items-end h-100">--}}
 
 
     {{--                    <ul class="solutions-menu align-items-end d-none d-md-flex mb-0 ml-auto mr-3">--}}
     {{--                        <li class="d-block h-100 ">--}}
-    {{--                            <div class="special-offer-tab blue__offer blue">--}}
-    {{--                                <div class="special-offer-header d-flex align-items-center">--}}
+    {{--                            <div class="ad-block blue__offer blue">--}}
+    {{--                                <div class="ad-block-header d-flex align-items-center">--}}
 
 
-    {{--                                    <div class="offer-text">--}}
+    {{--                                    <div class="ad-block-header-text">--}}
     {{--                                        <div class="closed-text">--}}
     {{--                                            <p class="offer-title mb-0">NHS funded operation</p>--}}
     {{--                                            <p class="offer-subtitle mb-0">in 4.3 Weeks </p>--}}
@@ -460,12 +476,12 @@
     {{--                                            <p class="distance mb-0"></p>--}}
     {{--                                        </div>--}}
     {{--                                    </div>--}}
-    {{--                                    <span class="toggle-special-offer">--}}
+    {{--                                    <span class="toggle-ad">--}}
     {{--            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12"><g><g><path fill="#fff"--}}
     {{--                                                                                                           d="M9.72 3.84l7.277 7.276c.2.2.467.31.752.31s.552-.11.752-.31l.638-.638c.2-.2.31-.467.31-.752s-.11-.552-.31-.752L10.475.31c-.2-.2-.469-.31-.754-.31-.286 0-.554.11-.755.31L.31 8.966c-.2.2-.311.467-.311.752s.11.552.31.752l.638.638c.415.414 1.09.414 1.505 0z"></path></g></g></svg>--}}
     {{--        </span>--}}
     {{--                                </div>--}}
-    {{--                                <div class="special-offer-body">--}}
+    {{--                                <div class="ad-block-body">--}}
     {{--                                    <div class="inner-body d-flex flex-column justify-content-between h-100">--}}
     {{--                                        <div>--}}
     {{--                                            <ul class="bullets">--}}
@@ -489,11 +505,11 @@
     {{--                            </div>--}}
     {{--                        </li>--}}
     {{--                        <li class="d-block h-100 ml-4">--}}
-    {{--                            <div class="special-offer-tab pink__offer pink">--}}
-    {{--                                <div class="special-offer-header d-flex align-items-center">--}}
+    {{--                            <div class="ad-block ad_pink pink">--}}
+    {{--                                <div class="ad-block-header d-flex align-items-center">--}}
 
 
-    {{--                                    <div class="offer-text">--}}
+    {{--                                    <div class="ad-block-header-text">--}}
     {{--                                        <div class="closed-text">--}}
     {{--                                            <p class="offer-title mb-0">NHS funded operation</p>--}}
     {{--                                            <p class="offer-subtitle mb-0">in 4.3 Weeks </p>--}}
@@ -503,12 +519,12 @@
     {{--                                            <p class="distance mb-0"></p>--}}
     {{--                                        </div>--}}
     {{--                                    </div>--}}
-    {{--                                    <span class="toggle-special-offer">--}}
+    {{--                                    <span class="toggle-ad">--}}
     {{--            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12"><g><g><path fill="#fff"--}}
     {{--                                                                                                           d="M9.72 3.84l7.277 7.276c.2.2.467.31.752.31s.552-.11.752-.31l.638-.638c.2-.2.31-.467.31-.752s-.11-.552-.31-.752L10.475.31c-.2-.2-.469-.31-.754-.31-.286 0-.554.11-.755.31L.31 8.966c-.2.2-.311.467-.311.752s.11.552.31.752l.638.638c.415.414 1.09.414 1.505 0z"></path></g></g></svg>--}}
     {{--        </span>--}}
     {{--                                </div>--}}
-    {{--                                <div class="special-offer-body">--}}
+    {{--                                <div class="ad-block-body">--}}
     {{--                                    <div class="inner-body d-flex flex-column justify-content-between h-100">--}}
     {{--                                        <div>--}}
     {{--                                            <ul class="bullets">--}}
@@ -1178,12 +1194,6 @@
     {{--        </div>--}}
     {{--    </section>--}}
     <section>
-        <div class="container" style="height: 300px">
-            @include('components.basic.closebutton',
-                ['position'  => 'static'])
-        </div>
-    </section>
-    <section>
         <h3>Large popover - left</h3>
         <div class="my-5 popover popover-large fade bs-popover-left show" role="tooltip" id="popover438743"
              x-placement="bottom"
@@ -1232,7 +1242,8 @@
                                                 <h3 class="modal-title mb-3">Hospital Name</h3>
                                                 <div class="d-flex mb-3">
                                                     <div class="image-wrapper mr-3">
-                                                        <img class="mr-3" src="images/alder-1.jpg" alt="Hospital placeholder image">
+                                                        <img class="mr-3" src="images/alder-1.jpg"
+                                                             alt="Hospital placeholder image">
                                                     </div>
                                                     <div class="modal-copy">
                                                         <p>This NHS hospital does not respond to direct enquiries

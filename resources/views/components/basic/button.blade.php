@@ -10,6 +10,15 @@ class="{{$classTitle}}"
 @if(!empty($dataTarget))
     data-target="{{ $dataTarget }}"
 @endif
+@if(!empty($dataTabTarget))
+    data-tab-target="{{ $dataTabTarget }}"
+@endif
+@if(!empty($dataHiddenText))
+    data-hidden-text="{{ $dataHiddenText }}"
+@endif
+@if(!empty($dataVisibleText))
+    data-visible-text="{{ $dataVisibleText }}"
+@endif
 @if(empty($htmlButton))
 href="{{ empty($hrefValue) ? 'javascript:void(0);' : $hrefValue }}"
 @endif
@@ -23,7 +32,7 @@ role="button"
 @if(!empty($hospitalType))
     data-hospital-type="{{ $hospitalType }}"
 @endif>
-<div>{!! $buttonText !!}</div>
+<span>{!! $buttonText !!}</span>
 @if(!empty($svg) && empty($svgClass))
     @svg($svg)
 @elseif(!empty($svg) && !empty($svgClass))

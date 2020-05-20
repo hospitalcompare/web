@@ -19,18 +19,27 @@ $letter-spacing: 0em;
 // Borders
 $border-radius: 3px;
 
-
+// Grid breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1440px
+);
 
 // 2020 new brand colours. Old turquoise = #00cecd
 // Primary colours
 $brand-primary-1: #037098; // trunkie
+$trunkie: $brand-primary-1;
 $brand-primary-2: #3e92cc; // sky blue
 $brand-primary-3: #00707c; // greeny blue
 $brand-primary-4: #18435a; // navy ish blue
 $brand-primary-5: #037098; // lilac
 $brand-primary-6: #de026d; // hot pink
 $brand-primary-7: #0d69f2; // original blue
-$blue: $brand-primary-7;   // to override BS default blue
+$blue: $brand-primary-7; // to override BS default blue
 
 // Secondary colours
 $brand-secondary-1: #00cfcc; // cyan
@@ -43,7 +52,7 @@ $brand-secondary-7: #b50000; // red
 
 // Tertiary (greys)
 $brand-tertiary-1: #1b1b1b;
-$brand-tertiary-2: #757575;
+$brand-tertiary-2: #757575; // col-grey text
 $brand-tertiary-3: #ececec;
 
 // Colors
@@ -100,9 +109,14 @@ $popover-arrow-color: #fff;
 $popover-max-width: 500px;
 
 // Modal
+//$modal-xl:                          1140px !default;
+//$modal-lg:                          800px !default;
+//$modal-md: 500px;
+//$modal-sm:                          300px !default;
 $modal-inner-padding: 0;
 $modal-content-border-radius: $border-radius;
 $modal-content-border-width: 0;
+$modal-dialog-margin: 1rem; // Spacing around modal - stop it hitting edge of browser
 $zindex-modal-backdrop: 1080;
 $zindex-modal: 1085;
 
@@ -185,7 +199,6 @@ $paginationColor: #595959;
 $paginationDisabledColor: #C0C0C0;
 
 
-
 // Box shadows
 $box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
 
@@ -195,8 +208,15 @@ $pink-tick-size: 15px;
 
 // Cards
 
-$card-spacer-y:                     2rem;
-$card-spacer-x:                     1.25rem !default;
+$card-spacer-y: 2rem;
+$card-spacer-x: 1.25rem !default;
 
 // Header
 $mobile-header-height: 60px;
+
+// Mobile sort/filter bar buttons
+$mobileSortbarButtonHeight: 40px;
+
+// Table colours for consultants table
+$table-header-color: #cde2ea;
+$table-body-color: #f0f0f0;

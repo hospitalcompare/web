@@ -1,48 +1,4 @@
 <div class="compare-hospitals-bar compare-hospitals-bar_desktop {{ !empty($position) && $position == 'static' ? 'position-static' : ''  }}">
-    <div class="compare-hospitals-header d-flex justify-content-between">
-        <div class="container position-relative d-flex justify-content-between align-items-end h-100">
-
-            {{--            @include('components.doctor', ['delay' => 0])--}}
-            @if(!empty($data['special_offers']))
-                <ul class="solutions-menu align-items-end d-none d-lg-flex mb-0 ml-auto mr-3">
-                    @foreach($specialOffers as $key => $specialOffer )
-                        <li class="d-block h-100 {{ $loop->index != 0 ? 'ml-4' : '' }}">
-                            @include('components.basic.specialoffertab', [
-                                'bgColor' => $loop->index == 0 ? 'blue' : 'pink',
-                                'headerText' => [
-                                    'open' => [
-                                        'title' => $specialOffer['name'],
-                                        'subtitle' => !empty($specialOffer['radius']) ? round($specialOffer['radius'], 1) . ' miles away' : ''
-                                    ],
-                                    'closed' => [
-                                        'title' => 'NHS funded treatment',
-                                        'subtitle' => ((empty($data['outstanding']) ?
-                                            'at '.$specialOffer['rating']['latest_rating'].' hospital ' :
-                                             'in '.number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1).' Weeks '). (!empty($specialOffer['radius']) ? round($specialOffer['radius'], 1) . ' miles away' : ''))
-                                    ]
-                                ],
-                                'bulletPoints' => [
-                                    number_format((float)$specialOffer['waiting_time'][0]['perc_waiting_weeks'], 1).' Weeks ',
-                                    $specialOffer['rating']['latest_rating'] . ' CQC Rating',
-                                    (!empty($specialOffer['rating']['avg_user_rating'])) ? $specialOffer['rating']['avg_user_rating'] . ' star NHS Choices user rating' : null
-                                ],
-                                'offerPrice'    => null,
-                                'hospitalType'  => $specialOffer['hospital_type']['name'] == 'Independent' ? 'private-hospital' : 'nhs-hospital',
-                                'hospitalUrl'   => $specialOffer['url'],
-                                'hospitalId'    => $specialOffer['id']
-                            ])
-                        </li>
-                    @endforeach
-                </ul>
-            @endif
-            <div id="compare_button_title" class="compare-button-title d-flex align-items-center h-100 ml-auto">
-                @svg('compare-heart', 'compare-heart')
-                <p class="font-26">Compare&nbsp;(<span id="compare_number">0</span>)<span
-                        class="compare-arrow ml-3"></span>
-                </p>
-            </div>
-        </div>
-    </div>
     <div class="compare-hospitals-content">
         <div class="container">
             <div class="row flex-nowrap">

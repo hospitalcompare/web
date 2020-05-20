@@ -1,5 +1,5 @@
 <div class="compare-hospitals-bar">
-    <div class="compare-hospitals-header d-flex justify-content-between align-items-center">
+    <div class="synergy-bar d-flex justify-content-between align-items-center">
         <ul class="d-flex m-0">
             <li><a href="" class="btn btn-icon btn-special-tab">Special Offers</a></li>
             <li><a href="">Virtual GP</a></li>

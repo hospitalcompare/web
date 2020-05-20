@@ -1,9 +1,9 @@
 <div class="special-offers-slide {{ $class }}">
     <div class="d-flex">
-        {{--            <button type="button" class="close toggle-special-offer position-absolute" data-dismiss="modal"--}}
+        {{--            <button type="button" class="close toggle-ad position-absolute" data-dismiss="modal"--}}
         {{--                    aria-label="Close">--}}
         {{--            </button>--}}
-        <span class="position-absolute close-offer toggle-special-offer d-inline-flex">
+        <span class="position-absolute close-offer toggle-ad d-inline-flex">
             @svg('times')
         </span>
 {{--        <div class="mr-2">--}}

@@ -14,27 +14,41 @@
             'svg'               => 'heart-solid',
             'id'                => $id])
         <div class="result-item-mobile-section-1 w-100 mb-3">
-            <div class="hospital-details w-100 position-relative text-center">
-                <p class="sort-item-title SofiaPro-Medium text-center" id="item_name_{{$id}}">
+            <div class="hospital-details w-100 position-relative">
+                <p class="sort-item-title SofiaPro-Medium" id="item_name_{{$id}}">
                     {{$title}}
                 </p>
                 @if(!empty($locationSpecialism))
-                    <p class="sort-item-specialism font-12 mb-1 text-center col-grey">
+                    <p class="sort-item-specialism font-12 mb-1 text-left col-grey">
                         Specialism:&nbsp;<span>{{ $locationSpecialism }}</span></p>
                 @endif
-                @if(!empty($d['radius']))
-                    <p class="sort-item-location text-center col-grey font-12 d-inline-block mb-0 mr-3"><span>@svg('icon-map', 'map-icon')</span>{{$location}} {{-- trim($town, ', ') --}}
-                    </p>
-                @endif
+{{--                    <p class="_sort-item-location col-grey font-12 d-inline-block mb-0 mr-1">--}}
+                        <button  class="btn btn-more-info font-12 p-0 d-inline-flex align-items-center mr-3 shadow-none"
+                            data-target="#corporate_content_hospital_{{$id}}"
+                            data-hidden-text="View Map +"
+                            data-visible-text="Hide Map -"
+                            data-tab-target="#map-tab_{{$id}}">
+                            @svg('icon-map', 'map-icon')
+
+                        @if(!empty($d['radius']))
+                            {{$location}}
+                        @else
+                            <span>View Map +</span>
+                        @endif
+                        </button>
+{{--                    </p>--}}
             <!-- More info button -->
                 @include('components.basic.button', [
-                   'classTitle'        => 'btn btn-more-info text-center font-12 p-0 shadow-none',
-                   'buttonText'        => 'More info +',
-                   'htmlButton'        => true,
-                   'icon'              => '',
-                   'id'                => 'more_info_' . $id,
-                   'dataId'            => $id,
-                   'dataTarget'        => '#corporate_content_hospital_' . $id
+                   'classTitle'         => 'btn btn-more-info font-12 p-0 shadow-none',
+                   'buttonText'         => 'View Consultants +',
+                   'htmlButton'         => true,
+                   'icon'               => '',
+                   'id'                 => 'more_info_' . $id,
+                   'dataId'             => $id,
+                   'dataTarget'         => '#corporate_content_hospital_' . $id,
+                   'dataTabTarget'      => '#consultants-tab_' . $id,
+                   'dataHiddenText'     => 'View Consultants +',
+                   'dataVisibleText'    => 'Hide Consultants -',
                 ])
             <!-- Corporate content area -->
                 @include('mobile.components.corporatecontentmobile', [
@@ -103,19 +117,19 @@
             </div>
 {{--            TODO: reinstate special offers when we have them--}}
             {{-- Special offers --}}
-{{--            @if(!empty($specialOffers))--}}
-{{--                <div class="result-item-section-2__child d-flex justify-content-end mb-3">--}}
-{{--                    <div class="button-wrapper">--}}
-{{--                        @include('components.basic.modalbutton', [--}}
-{{--                            'classTitle'        => 'toggle-special-offer btn btn-icon btn-link btn-special-offer btn-special-offer_mobile col-pink rounded-0 d-flex align-items-center justify-content-end flex-row-reverse py-0 pr-0 ml-auto',--}}
-{{--                            'htmlButton'        => true,--}}
-{{--                            'modalTarget'       => '#hc_modal_mobile_special_offer_' . $id,--}}
-{{--                            'id'                => 'special_' . $id,--}}
-{{--                            'buttonText'        => 'Special Offers',--}}
-{{--                            'svg'               => 'special-pink'])--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            @endif--}}
+            @if(!empty($specialOffers))
+                <div class="result-item-section-2__child d-flex justify-content-end mb-3">
+                    <div class="button-wrapper">
+                        @include('components.basic.modalbutton', [
+                            'classTitle'        => 'toggle-ad btn btn-icon btn-link btn-special-offer btn-special-offer_mobile col-pink rounded-0 d-flex align-items-center justify-content-end flex-row-reverse py-0 pr-0 ml-auto',
+                            'htmlButton'        => true,
+                            'modalTarget'       => '#hc_modal_mobile_special_offer_' . $id,
+                            'id'                => 'special_' . $id,
+                            'buttonText'        => 'Special Offers',
+                            'svg'               => 'special-pink'])
+                    </div>
+                </div>
+            @endif
         </div>
         <div class="result-item-mobile-section-3 w-100 mt-auto">
             <div class="row">
@@ -221,9 +235,9 @@
             </div>
         </div>
     </div>
-    {{-- Modal for special offer --}}
     @include('components.modals.modalcontactsprivate')
     @include('components.modals.modalcontactsgeneral')
+    {{-- Modal for special offer --}}
     @if(!empty($specialOffers))
         @includeWhen(!empty($specialOffers), 'mobile.components.modals.modalmobilespecialoffer', [
             'class' => 'default'])

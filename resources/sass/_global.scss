@@ -4,18 +4,18 @@
 
 body {
     // Mask when shortlist is open
-    &:before {
-        pointer-events: none;
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: $modal-backdrop-bg;
-        opacity: 0;
-        transition: $transition;
-    }
+    //&:before {
+    //    pointer-events: none;
+    //    content: '';
+    //    position: fixed;
+    //    top: 0;
+    //    left: 0;
+    //    width: 100vw;
+    //    height: 100vh;
+    //    background-color: $modal-backdrop-bg;
+    //    opacity: 0;
+    //    transition: $transition;
+    //}
 }
 
 .cursor-pointer {
@@ -29,18 +29,32 @@ body {
     }
 }
 
+// Semi-opaque backdrop for custom modals/slide-outs etc
+.hc-backdrop {
+    pointer-events: none;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $modal-backdrop-bg;
+    opacity: 0;
+    transition: $transition;
+}
+
 .menu-open,
 .shortlist-open {
     &.results-page {
         overflow: hidden; // Stop body scrolling
 
-        #resultspage_form {
-            z-index: initial;
-            //position: static !important;
-        }
+        //#resultspage_form {
+        //    z-index: initial;
+        //    //position: static !important;
+        //}
 
         // Fade in the mask when shortlist is open
-        &:before {
+        .hc-backdrop {
             opacity: $modal-backdrop-opacity;
             pointer-events: initial;
         }
@@ -49,7 +63,7 @@ body {
 
 .menu-open {
     // Fade in the mask when shortlist is open
-    &:before {
+    .hc-backdrop {
         z-index: 1045;
     }
 }
@@ -57,7 +71,7 @@ body {
 .shortlist-open {
     &.results-page {
         // Fade in the mask when shortlist is open
-        &:before {
+        .hc-backdrop {
             z-index: 1035;
         }
     }
@@ -130,7 +144,7 @@ a:hover {
     //    display: block !important;
     //}
 
-    &:before {
+    .hc-backdrop {
         opacity: 0.5 !important;
         z-index: 10;
     }
@@ -152,10 +166,10 @@ a:hover {
     }
 
     // Hide the special offer tabs
-    .solutions-menu,
+    .synergy-bar,
     #hc_modal_mobile_special_offer_tab_trigger {
-        opacity: 0;
-        visibility: hidden;
+        max-height: 0 !important;
+        padding: 0 !important;
     }
 
     .compare-arrow {
@@ -302,13 +316,13 @@ input[type=submit] {
 
 // Custom container widths
 .container-980 {
-    @include media-breakpoint-up(xl){
+    @include media-breakpoint-up(xl) {
         max-width: 980px;
     }
 }
 
 .container-1028 {
-    @include media-breakpoint-up(xl){
+    @include media-breakpoint-up(xl) {
         max-width: 1028px;
     }
 }
@@ -317,8 +331,16 @@ input[type=submit] {
     background-color: $brand-primary-1;
 }
 
+.bg-navy {
+    background-color: $brand-primary-4;
+}
+
 .bg-blue {
     background-color: $blue;
+}
+
+.bg-trunkie {
+    background-color: $trunkie;
 }
 
 .bg-violet {
@@ -326,7 +348,7 @@ input[type=submit] {
 }
 
 .bg-purple {
-    background-color: $purple;
+    background-color: $brand-secondary-3;
 }
 
 .bg-green {
@@ -403,6 +425,11 @@ input[type=submit] {
     background-color: $brand-primary-1;
 }
 
+// Custom alert colours
+.alert-hc-danger {
+    background-color: #b50000;
+}
+
 // Font colours
 .col-brand-primary-1 {
     color: $brand-primary-1;
@@ -433,7 +460,7 @@ input[type=submit] {
 }
 
 .col-white {
-    color: $white;
+    color: $white !important;
 }
 
 .col-greylight {
@@ -545,8 +572,6 @@ input[type=submit] {
     }
 
 
-
-
     .cc-link {
         color: $brand-primary-1 !important;
     }
@@ -603,7 +628,7 @@ path {
 }
 
 .d-table-cell {
-    @extend .p-2;
+    @extend .py-2;
 }
 
 // Ticks/dashes in the results ratings
@@ -694,6 +719,11 @@ path {
     max-width: 60px;
 }
 
+.blue-tick-inline {
+    width: 10px;
+    display: inline;
+}
+
 // Signature font
 .signature {
     font-family: "Brown Pen", cursive;
@@ -715,11 +745,29 @@ path {
 }
 
 // Padding
+.p-13 {
+    padding: 13px;
+}
+
+.p-15 {
+    padding: 15px;
+}
+
 .p-30 {
     padding: 30px;
 }
 
-.p-y-75 {
+.py-25 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.py-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.py-75 {
     padding-top: 75px;
     padding-bottom: 75px;
 }
@@ -755,6 +803,10 @@ path {
 
 .lh-16 {
     line-height: 1.6;
+}
+
+.lh-18px {
+    line-height: 18px;
 }
 
 // Carousels on mobile
@@ -911,7 +963,7 @@ h6 {
 .map-icon {
     width: 10px;
     height: 15px;
-    margin-right: 10px;
+    margin-right: 6px;
     position: static !important;
 }
 
@@ -981,7 +1033,6 @@ h6 {
 }
 
 
-
 //fieldset, label { margin: 0; padding: 0; }
 
 /****** Style Star Rating Widget *****/
@@ -991,7 +1042,10 @@ h6 {
     float: left;
 }
 
-.rating > input { display: none; }
+.rating > input {
+    display: none;
+}
+
 .rating > label:before {
     margin: 2px;
     font-size: 2.25em;
@@ -1016,12 +1070,18 @@ h6 {
 
 .rating > input:checked ~ label, /* show gold star when clicked */
 .rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: $brand-secondary-5;  } /* hover previous stars in list */
+.rating:not(:checked) > label:hover ~ label {
+    color: $brand-secondary-5;
+}
+
+/* hover previous stars in list */
 
 .rating > input:checked + label:hover, /* hover current star when changing rating */
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: $brand-secondary-5;  }
+.rating > input:checked ~ label:hover ~ label {
+    color: $brand-secondary-5;
+}
 
 
 // Hospital type tag
@@ -1103,23 +1163,29 @@ h6 {
     padding: 0 !important;
 }
 
-//.results-page-desktop .nhs-hospital p:after {
-//    border-bottom: solid 15px transparent;
-//    border-right: solid 15px transparent;
-//    border-left: solid 15px $nhsBlue;
-//    border-top: solid 15px $nhsBlue;
-//    content: ''
-//}
-//
-//.results-page-desktop .private-hospital p:after {
-//    border-bottom: solid 15px transparent;
-//    border-right: solid 15px transparent;
-//    border-left: solid 15px $privateBlue;
-//    border-top: solid 15px $privateBlue;
-//    content: ''
-//}
-
 // Force accordions open for content editing purposes
 //.collapse {
 //    display: block !important;
 //}
+
+// Border radius zero at xl breakpoint
+.rounded-xl-right-0 {
+    @include media-breakpoint-up(xl) {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+}
+
+.rounded-xl-left-0 {
+    @include media-breakpoint-up(xl) {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+}
+
+// Add ellipsis to overflowing text
+.overflow-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
