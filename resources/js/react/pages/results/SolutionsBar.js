@@ -1,47 +1,11 @@
 import React, {useEffect, useRef} from 'react';
 import CompareHeart from "../../svg/CompareHeart";
 import MoreInfoIcon from "../../svg/MoreInfoIcon";
+import Shortlist from "./Shortlist";
 
 const SolutionsBar = ({showShortlist, handleShortlistToggle}) => {
-    // const node = useRef();
-
-    // const handleClick = e => {
-    //     if (node.current.contains(e.target)) {
-    //         // inside click
-    //         return;
-    //     }
-    //     // outside click
-    //     handleShortlistToggle();
-    // };
-
-    // useEffect(() => {
-    //     document.addEventListener("mousedown", handleClick);
-    //
-    //     return () => {
-    //         document.removeEventListener("mousedown", handleClick);
-    //     };
-    // }, []);
-
     return (
         <div className="compare-hospitals-bar compare-hospitals-bar_desktop">
-            {/*<div className="compare-hospitals-header d-flex justify-content-between">*/}
-            {/*    <div className="container position-relative d-flex justify-content-between align-items-end h-100">*/}
-            {/*        /!*<ul className="solutions-menu align-items-end d-none d-lg-flex mb-0 ml-auto mr-3">*!/*/}
-            {/*        /!*    <li className="d-block h-100">*!/*/}
-            {/*        /!*        Solution item*!/*/}
-            {/*        /!*    </li>*!/*/}
-            {/*        /!*</ul>*!/*/}
-            {/*        <div id="compare_button_title"*/}
-            {/*             className="compare-button-title d-flex align-items-center h-100 ml-auto">*/}
-            {/*            <CompareHeart/>*/}
-            {/*            <button onClick={this.handleClick}*/}
-            {/*                    className="font-26">*/}
-            {/*                Compare&nbsp;(<span id="compare_number">0</span>)*/}
-            {/*                <span className="compare-arrow ml-3"></span>*/}
-            {/*            </button>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
             <div className={`compare-hospitals-content`}>
                 <div className="container">
                     <div className="row flex-nowrap">
@@ -71,11 +35,10 @@ const SolutionsBar = ({showShortlist, handleShortlistToggle}) => {
                                 </div>
                                 <div className=""></div>
                                 <div className="cell">
-                            <span className="position-relative">Hospital Type&nbsp&nbsp;
-                                <span tabIndex="0" data-offset="0 5px"
-                                      className="help-link">
-                                    <MoreInfoIcon/>
-                                </span>
+                                    <span className="position-relative">Hospital Type&nbsp&nbsp;
+                                        <span tabIndex="0" data-offset="0 5px" className="help-link">
+                                            <MoreInfoIcon/>
+                                        </span>
                                     </span>
                                 </div>
                                 <div className="cell">
@@ -194,6 +157,7 @@ const SolutionsBar = ({showShortlist, handleShortlistToggle}) => {
                         <div className="col col-9 mt-0 border-right-0">
                             <div className="row flex-nowrap" id="compare_hospitals_grid">
                                 {/*Compare items added here*/}
+                                <Shortlist/>
                             </div>
                         </div>
                     </div>

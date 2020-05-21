@@ -231,13 +231,13 @@ window.slugify = function (string) {
 };
 
 // Compare functions
-window.getHospitalsByIds = function (hospitalIds) {
+export const getHospitalsByIds = function (hospitalIds) {
     var procedureId = getUrlParameter('procedure_id');
     if (typeof procedureId == "undefined")
         procedureId = 0;
 
     $.ajax({
-        url: 'api/getHospitalsByIds/' + hospitalIds + '/' + procedureId,
+        url: `api/getHospitalsByIds/${hospitalIds}/${procedureId}`,
         type: 'GET',
         headers: {
             'Authorization': 'Bearer mBu7IB6nuxh8RVzJ61f4',
@@ -247,21 +247,19 @@ window.getHospitalsByIds = function (hospitalIds) {
         data: {},
         success: function (data) {
             //Check if we have at least one result in our data
-            if (!$.isEmptyObject(data.data)) {
-                // console.log('Data:', data.data[0]);
 
-                $.each(data.data, function (key, element) { //$.parseJSON() method is needed unless chrome is throwing error.
-                    // console.log(key, element.email !== "");
-                    //Toggle the full heart or empty heart  class of the button
-                    $('button#' + element.id + '.compare').addClass('selected');
-                    addHospitalToCompare(element);
-                });
+            console.log('Returned data from getHospitalsByIds', data.data);
+            // $.each(data.data, function (key, element) { //$.parseJSON() method is needed unless chrome is throwing error.
+            //     // console.log(key, element.email !== "");
+            //     //Toggle the full heart or empty heart  class of the button
+            //     $('button#' + element.id + '.compare').addClass('selected');
+            //     addHospitalToCompare(element);
+            // });
 
-                // console.log('Data added to compare, ', parseInt(Cookies.get('compareCount')));
-                // Disable buttons if we have reached the max number of items
-                if (getCompareCount() === 5) {
-                    disableButtons();
-                }
+            // console.log('Data added to compare, ', parseInt(Cookies.get('compareCount')));
+            // Disable buttons if we have reached the max number of items
+            if (getCompareCount() === 5) {
+                disableButtons();
             }
         },
         error: function (data) {

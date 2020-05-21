@@ -1,3 +1,6 @@
+import addHospitalToCompare from "./addHospitalToCompare";
+
+
 
 //Set the checked value of checkboxes to boolean 0/1
 $("input[type='checkbox']").on('change', function () {
@@ -202,23 +205,16 @@ export const getHospitalsByIds = function(hospitalIds) {
         contentType: "application/json; charset=utf-8",
         data: {},
         success: function (data) {
-            //Check if we have at least one result in our data
-            if (!$.isEmptyObject(data.data)) {
-                // console.log('Data:', data.data[0]);
-
-                $.each(data.data, function (key, element) { //$.parseJSON() method is needed unless chrome is throwing error.
-                    // console.log(key, element.email !== "");
-                    //Toggle the full heart or empty heart  class of the button
-                    $('button#' + element.id + '.compare').addClass('selected');
-                    addHospitalToCompare(element);
-                });
-
-                // console.log('Data added to compare, ', parseInt(Cookies.get('compareCount')));
-                // Disable buttons if we have reached the max number of items
-                if (getCompareCount() === 5) {
-                    disableButtons();
-                }
+            if (getCompareCount() === 5) {
+                disableButtons();
             }
+            console.log('Returned hospital data', data);
+
+            // console.log('Data added to compare, ', parseInt(Cookies.get('compareCount')));
+            // Disable buttons if we have reached the max number of items
+
+            // if (!$.isEmptyObject(data.data)) {
+                // console.log('Data:', data.data[0]);
         },
         error: function (data) {
             showAlert('Something went wrong! Please try again.', false)
