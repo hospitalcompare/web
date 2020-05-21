@@ -4,6 +4,7 @@ export const initialState = {
     shortlistHospitals: [],
     loading: false,
     hasErrors: false,
+    haveShortlistedHospitals: false,
     privateHospitalCount: 0,
     nhsHospitalCount: 0
 };
@@ -18,6 +19,7 @@ export default function shortlistReducer(state = initialState, action) {
         case actions.GET_SHORTLISTED_HOSPITALS_SUCCESS:
             return {
                 shortlistHospitals: action.payload.data,
+                haveShortlistedHospitals: true,
                 loading: false,
                 hasErrors: false,
             };
@@ -25,6 +27,7 @@ export default function shortlistReducer(state = initialState, action) {
             return {
                 ...state,
                 loading: false,
+                haveShortlistedHospitals: false,
                 hasErrors: true,
             };
         default:
