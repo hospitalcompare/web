@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from "react-redux";
 import Nav from 'react-bootstrap/Nav';
 
 import Tab from 'react-bootstrap/Tab';
@@ -17,6 +18,7 @@ import CompareIcon from "../../svg/CompareIcon";
 import EnquireIcon from "../../svg/EnquireIcon";
 import '../../scripts/cookies';
 import {getCompareCount, getHospitalsByIds, enableButtons} from '../../scripts/global';
+import {fetchShortlistedHospitals} from "../../actions/shortlistActions";
 
 
 class ResultItem extends Component {
@@ -91,9 +93,7 @@ class ResultItem extends Component {
 
     }
 
-    handleCompareClick(id) {
-        // Get hospital type of item whose button has been clicked to remove it
-        var hospitalTypeClicked = 'nhs-hospital';
+    handleCompareClick(id, hospitalType) {
         //Get the Data that is already in the Cookies
         var compareCount = getCompareCount();
         console.log('Compare count:', compareCount)
@@ -113,26 +113,14 @@ class ResultItem extends Component {
             break;
         }
 
-        console.log('In the shortlist allready?:', result);
-
         //Check if there are already 5 hospitals for comparison in Cookies
         if (compareCount < 5) {
             //Check if we don't have the hospital in our comparison and add it - if not true then add to compare - also add the id to the enquiry form
             if (!result) {
                 // Show the headings column when first item added, and it's not already in the
-                if (compareCount === 0) {
-                    // Toggle the first column of comparison
-                    // Switch the first column round
-                    // Create a variable to say we now have items
 
-                }
                 //Add data to Cookies and send the element to populate the table
-                data += elementId + ',';
-                // Update the enquiry form
-                // multiEnquiryButton.data('hospital-id', removeTrailingComma(data));
-
-                // Remove placeholder column
-                // target.children().last().remove(); TODO: do this in the comparison component
+                data += id + ',';
 
                 // Add to the comparison area
                 getHospitalsByIds(elementId);
@@ -146,7 +134,7 @@ class ResultItem extends Component {
         // Check if we have to remove the data of the element that has been clicked - if true, it is already in the data
         if (result) {
             //Remove the hospital from the comparison table
-            this.removeHospitalFromCompare(elementId, data, compareCount, hospitalTypeClicked);
+            this.removeHospitalFromCompare(elementId, data, compareCount, hospitalType);
             var dataArr = data.split(',');
             var elementIndex = dataArr.indexOf(elementId);
             dataArr.splice(elementIndex, 1);
@@ -154,20 +142,10 @@ class ResultItem extends Component {
             compareCount = parseInt(compareCount) - 1;
         }
 
-        // Pulsate the heart every time there is an action TODO: do this through the results page form component
-        // $compareButtonTitle.removeClass('pulse-animation');
-        // setTimeout(function () {
-        //     $compareButtonTitle.addClass('pulse-animation');
-        // }, 100);
-        //
-        // if (compareCount > 0) {
-        //     $compareButtonTitle.addClass('shortlist-has-items');
-        // } else {
-        //     $compareButtonTitle.removeClass('shortlist-has-items');
-        // }
-
         // Set compareHospitalsData
         Cookies.set("compareHospitalsData", data, {expires: 365});
+        // Also update the store
+        this.props.dispatch(fetchShortlistedHospitals(data));
     }
 
 
@@ -188,6 +166,7 @@ class ResultItem extends Component {
         } = this.props;
         const {address: {latitude, longitude}} = this.props;
         const {showContent} = this.state;
+        const hospitalType = hospital_type_id === 1 ? 'private-hospital' : 'nhs-hospital';
         return (
             <React.Fragment>
                 <div className="result-item mb-3 mb-lg-0" id={`result-item_${id}`}>
@@ -441,10 +420,10 @@ class ResultItem extends Component {
                                         <button id={`add_to_compare_${id}`}
                                                 className="btn btn-compare compare btn-block font-12 d-none d-lg-block"
                                                 role="button"
-                                                data-hospital-type={hospital_type_id === 1 ? 'private-hospital' : 'nhs-hospital'}
+                                                data-hospital-type={hospitalType}
                                                 onClick={
                                                     () => {
-                                                        this.handleCompareClick(id)
+                                                        this.handleCompareClick(id, hospitalType)
                                                     }
                                                 }>
                                             <span>Add to compare</span>
@@ -688,4 +667,4 @@ class ResultItem extends Component {
     }
 }
 
-export default ResultItem;
+export default connect()(ResultItem);

@@ -29,7 +29,7 @@ class ResultsPage extends Component {
             postcode,
             radius,
             showShortlist: false,
-            compareCount: getCompareCount()
+            compareCount: typeof Cookies.get("compareHospitalsData") !== 'undefined' ? getCompareCount() : 0
         }
     }
 

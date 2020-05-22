@@ -256,7 +256,7 @@ window.getUrlParameter = function (sParam) {
 
 // Get compare count from compare hospitals data
 export const getCompareCount = function () {
-    if (Cookies.get("compareHospitalsData") != "") {
+    if (Cookies.get("compareHospitalsData") !== "") {
         return parseInt(removeTrailingComma(Cookies.get('compareHospitalsData')).split(',').length);
     }
     return 0;
