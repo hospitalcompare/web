@@ -1,9 +1,9 @@
-import React, {useEffect, useRef} from 'react';
-import CompareHeart from "../../svg/CompareHeart";
+import React from 'react';
 import MoreInfoIcon from "../../svg/MoreInfoIcon";
 import Shortlist from "./Shortlist";
+import CompareIcon from "../../svg/CompareIcon";
 
-const SolutionsBar = ({showShortlist, handleShortlistToggle}) => {
+const SolutionsBar = () => {
     return (
         <div className="compare-hospitals-bar compare-hospitals-bar_desktop">
             <div className={`compare-hospitals-content`}>
@@ -16,8 +16,7 @@ const SolutionsBar = ({showShortlist, handleShortlistToggle}) => {
                                         added any
                                         hospitals to compare yet. </p>
                                     <p>Click the the&nbsp;
-                                        <img width="14" height="12" src="/images/icons/heart.svg"
-                                             alt="Heart icon"/>&nbsp;next to the hospital to add the chosen
+                                        <CompareIcon/>&nbsp;next to the hospital to add the chosen
                                         hospital into the comparison dashboard.</p>
                                 </div>
                             </div>
@@ -33,7 +32,6 @@ const SolutionsBar = ({showShortlist, handleShortlistToggle}) => {
                                         Enquire all button
                                     </div>
                                 </div>
-                                <div className=""></div>
                                 <div className="cell">
                                     <span className="position-relative">Hospital Type&nbsp&nbsp;
                                         <span tabIndex="0" data-offset="0 5px" className="help-link">
@@ -42,115 +40,122 @@ const SolutionsBar = ({showShortlist, handleShortlistToggle}) => {
                                     </span>
                                 </div>
                                 <div className="cell">
-                            <span className="position-relative">Average Waiting Time&nbsp;&nbsp;
-                                <span tabIndex="0" data-offset="0 5px"
-                                      className="help-link">
-                                    <MoreInfoIcon/></span>
-                                </span>
+                                <span className="position-relative">Average Waiting Time&nbsp;&nbsp;
+                                    <span tabIndex="0" data-offset="0 5px"
+                                          className="help-link">
+                                        <MoreInfoIcon/></span>
+                                    </span>
                                 </div>
                                 <div className="cell">
-                            <span className="position-relative">NHS User Rating&nbsp;&nbsp;
-                                <span tabIndex="0" data-offset="0 5px"
-                                      className="help-link"><MoreInfoIcon/></span>
-                            </span>
+                                    <span className="position-relative">NHS User Rating&nbsp;&nbsp;
+                                        <span tabIndex="0" data-offset="0 5px"
+                                              className="help-link">
+                                            <MoreInfoIcon/></span>
+                                    </span>
                                 </div>
                                 <div className="cell">
-                            <span className="position-relative">% Operations cancelled&nbsp;&nbsp;
-                                <span tabIndex="0" data-offset="0 5px"
-                                      className="help-link"><MoreInfoIcon/></span>
-                        </span>
+                                    <span className="position-relative">% Operations cancelled&nbsp;&nbsp;
+                                        <span tabIndex="0" data-offset="0 5px"
+                                              className="help-link">
+                                            <MoreInfoIcon/></span>
+                                    </span>
                                 </div>
                                 <div className="cell">
-                            <span className="position-relative">Care Quality Rating&nbsp;&nbsp;
-                                <span tabIndex="0"
-                                      className="help-link"><MoreInfoIcon/></span>
-                    </span>
+                                <span className="position-relative">Care Quality Rating&nbsp;&nbsp;
+                                    <span tabIndex="0"
+                                          className="help-link">
+                                        <MoreInfoIcon/></span>
+                                    </span>
                                 </div>
                                 <div className="cell">
-                            <span className="position-relative">Friends & Family Rating&nbsp;&nbsp;
-                                <span tabIndex="0"
-                                      className="help-link"><MoreInfoIcon/></span>
-                </span>
+                                    <span className="position-relative">Friends & Family Rating&nbsp;&nbsp;
+                                        <span tabIndex="0"
+                                              className="help-link">
+                                            <MoreInfoIcon/></span>
+                                        </span>
                                 </div>
                                 <div className="cell">
-                            <span className="position-relative">NHS Funded Work&nbsp;&nbsp;
-                                <span tabIndex="0"
-                                      className="help-link"><MoreInfoIcon/></span>
-        </span>
+                                    <span className="position-relative">NHS Funded Work&nbsp;&nbsp;
+                                        <span tabIndex="0"
+                                              className="help-link">
+                                            <MoreInfoIcon/></span>
+                                    </span>
                                 </div>
                                 <div className="cell">
-                            <span className="position-relative">Private Self Pay&nbsp;&nbsp;
-                                <span tabIndex="0"
-                                      className="help-link"><MoreInfoIcon/></span>
-        </span>
+                                    <span className="position-relative">Private Self Pay&nbsp;&nbsp;
+                                        <span tabIndex="0"
+                                              className="help-link">
+                                            <MoreInfoIcon/></span>
+                                        </span>
                                 </div>
                                 <div className="cell column-break SofiaPro-SemiBold">Care Quality Rating</div>
                                 <div className="cell">
-                            <span className="position-relative">Safe&nbsp;&nbsp;
-                                <span tabIndex="0"
-                                      className="help-link"><MoreInfoIcon/></span>
-        </span>
+                                    <span className="position-relative">Safe&nbsp;&nbsp;
+                                        <span tabIndex="0"
+                                              className="help-link"><MoreInfoIcon/></span>
+                                        </span>
                                 </div>
                                 <div className="cell">
-                            <span className="position-relative">Effective&nbsp;&nbsp;
-                                <span tabIndex="0"
-                                      className="help-link"><MoreInfoIcon/></span>
-        </span>
+                                    <span className="position-relative">Effective&nbsp;&nbsp;
+                                    <span tabIndex="0"
+                                          className="help-link">
+                                        <MoreInfoIcon/></span>
+                                    </span>
                                 </div>
                                 <div className="cell">
-                            <span className="position-relative">Caring&nbsp;&nbsp;
-                                <span tabIndex="0"
-                                      className="help-link"><MoreInfoIcon/></span>
-        </span>
+                                    <span className="position-relative">Caring&nbsp;&nbsp;
+                                        <span tabIndex="0"
+                                              className="help-link"><MoreInfoIcon/></span>
+                                    </span>
                                 </div>
                                 <div className="cell">
-                            <span className="position-relative">Responsive&nbsp;&nbsp;
-                                <span tabIndex="0"
-                                      className="help-link"><MoreInfoIcon/></span>
-        </span>
+                                    <span className="position-relative">Responsive&nbsp;&nbsp;
+                                        <span tabIndex="0"
+                                              className="help-link"><MoreInfoIcon/></span>
+                                    </span>
                                 </div>
                                 <div className="cell">
-                            <span className="position-relative">Well Led&nbsp;&nbsp;
-                                <span tabIndex="0"
-                                      className="help-link"><MoreInfoIcon/></span>
-        </span>
+                                    <span className="position-relative">Well Led&nbsp;&nbsp;
+                                        <span tabIndex="0"
+                                              className="help-link"><MoreInfoIcon/></span>
+                                    </span>
                                 </div>
                                 <div className="cell column-break SofiaPro-SemiBold">NHS User Rating</div>
                                 <div className="cell">
-            <span className="position-relative">Cleanliness&nbsp;&nbsp;
-                <span tabIndex="0"
-                      className="help-link"><MoreInfoIcon/></span>
-    </span>
+                                    <span className="position-relative">Cleanliness&nbsp;&nbsp;
+                                        <span tabIndex="0"
+                                              className="help-link"><MoreInfoIcon/></span>
+                                    </span>
                                 </div>
                                 <div className="cell">
-    <span className="position-relative">Food & Hydration&nbsp;&nbsp;
-        <span tabIndex="0"
-              className="help-link"><MoreInfoIcon/></span>
-    </span>
+                                    <span className="position-relative">Food & Hydration&nbsp;&nbsp;
+                                        <span tabIndex="0"
+                                              className="help-link"><MoreInfoIcon/></span>
+                                    </span>
                                 </div>
                                 <div className="cell">
-    <span className="position-relative">Privacy, Dignity & Wellbeing&nbsp;&nbsp;
-        <span tabIndex="0"
-              className="help-link"><MoreInfoIcon/></span>
-    </span>
+                                    <span className="position-relative">Privacy, Dignity & Wellbeing&nbsp;&nbsp;
+                                        <span tabIndex="0"
+                                              className="help-link"><MoreInfoIcon/></span>
+                                    </span>
                                 </div>
                                 <div className="cell">
-    <span className="position-relative">Condition, Appearance & Maintenance&nbsp;&nbsp;
-        <span tabIndex="0"
-              className="help-link"><MoreInfoIcon/></span>
-    </span>
+                                    <span className="position-relative">Condition, Appearance & Maintenance&nbsp;&nbsp;
+                                        <span tabIndex="0"
+                                              className="help-link"><MoreInfoIcon/></span>
+                                    </span>
                                 </div>
                                 <div className="cell">
-    <span className="position-relative">Dementia Domain&nbsp;&nbsp;
-        <span tabIndex="0" h
-              className="help-link"><MoreInfoIcon/></span>
-    </span>
+                                    <span className="position-relative">Dementia Domain&nbsp;&nbsp;
+                                        <span tabIndex="0"
+                                              className="help-link"><MoreInfoIcon/></span>
+                                    </span>
                                 </div>
                                 <div className="cell">
-    <span className="position-relative">Disability Domain&nbsp;&nbsp;
-        <span tabIndex="0"
-              className="help-link"><MoreInfoIcon/></span>
-    </span>
+                                    <span className="position-relative">Disability Domain&nbsp;&nbsp;
+                                        <span tabIndex="0"
+                                              className="help-link"><MoreInfoIcon/></span>
+                                    </span>
                                 </div>
                             </div>
                         </div>
