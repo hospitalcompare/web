@@ -8,8 +8,7 @@ class Shortlist extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // hospitalIds: Cookies.get("compareHospitalsData")
-            hospitalIds: [80]
+            hospitalIds: removeTrailingComma(Cookies.get('compareHospitalsData')).split(',')
         }
     }
 

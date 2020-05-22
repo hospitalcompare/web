@@ -2,38 +2,40 @@ import React from 'react';
 import MoreInfoIcon from "../../svg/MoreInfoIcon";
 import Shortlist from "./Shortlist";
 import CompareIcon from "../../svg/CompareIcon";
+import {connect} from "react-redux";
+import CompareHeart from "../../svg/CompareHeart";
 
-const SolutionsBar = () => {
+const SolutionsBar = ({haveShortlistedHospitals, privateHospitalCount, nhsHospitalCount}) => {
     return (
         <div className="compare-hospitals-bar compare-hospitals-bar_desktop">
             <div className={`compare-hospitals-content`}>
                 <div className="container">
                     <div className="row flex-nowrap">
-                        <div className="col col-3" id="no_items_added">
+                        <div className={`col col-3 ${haveShortlistedHospitals ? 'd-none' : 'd-block'}`} id="no_items_added">
                             <div className="col-inner pr-3">
                                 <div className="col-header_small">
                                     <p className="font-16 SofiaPro-SemiBold pb-4 grey-border-bottom">You haven’t
                                         added any
                                         hospitals to compare yet. </p>
                                     <p>Click the the&nbsp;
-                                        <CompareIcon/>&nbsp;next to the hospital to add the chosen
+                                        <CompareHeart/>&nbsp;next to the hospital to add the chosen
                                         hospital into the comparison dashboard.</p>
                                 </div>
                             </div>
                         </div>
-                        <div id="compare_hospitals_headings" className="col col-3 d-none">
+                        <div id="compare_hospitals_headings" className={`col col-3 ${haveShortlistedHospitals ? 'd-block' : 'd-none'}`}>
                             <div className="col-inner h-100">
                                 <div className="col-header pr-3">
                                     <p className="SofiaPro-SemiBold mb-1">You are comparing:</p>
-                                    <p className="mb-3"><span id="nhs-hospital-count">0</span>&nbsp;NHS hospital(s)
-                                        &<br/><span id="private-hospital-count">0</span>&nbsp;Private hospital(s)
+                                    <p className="mb-3"><span id="nhs-hospital-count">{nhsHospitalCount}</span>&nbsp;NHS hospital(s)
+                                        &<br/><span id="private-hospital-count">{privateHospitalCount}</span>&nbsp;Private hospital(s)
                                     </p>
                                     <div className="form-wrapper pt-3 grey-border-top d-none">
                                         Enquire all button
                                     </div>
                                 </div>
                                 <div className="cell">
-                                    <span className="position-relative">Hospital Type&nbsp&nbsp;
+                                    <span className="position-relative">Hospital Type&nbsp;&nbsp;
                                         <span tabIndex="0" data-offset="0 5px" className="help-link">
                                             <MoreInfoIcon/>
                                         </span>
@@ -173,4 +175,10 @@ const SolutionsBar = () => {
     );
 };
 
-export default SolutionsBar;
+const mapStateToProps = state => ({
+    haveShortlistedHospitals: state.shortlist.haveShortlistedHospitals,
+    privateHospitalCount: state.shortlist.privateHospitalCount,
+    nhsHospitalCount: state.shortlist.nhsHospitalCount
+});
+
+export default connect(mapStateToProps)(SolutionsBar);

@@ -91,11 +91,12 @@ class ResultItem extends Component {
 
     }
 
-    handleCompareClick (id) {
+    handleCompareClick(id) {
         // Get hospital type of item whose button has been clicked to remove it
         var hospitalTypeClicked = 'nhs-hospital';
         //Get the Data that is already in the Cookies
         var compareCount = getCompareCount();
+        console.log('Compare count:', compareCount)
         var data = Cookies.get("compareHospitalsData");
         //Load the Cookies with the data that we need for the comparison
         var elementId = id;
@@ -112,6 +113,8 @@ class ResultItem extends Component {
             break;
         }
 
+        console.log('In the shortlist allready?:', result);
+
         //Check if there are already 5 hospitals for comparison in Cookies
         if (compareCount < 5) {
             //Check if we don't have the hospital in our comparison and add it - if not true then add to compare - also add the id to the enquiry form
@@ -120,8 +123,7 @@ class ResultItem extends Component {
                 if (compareCount === 0) {
                     // Toggle the first column of comparison
                     // Switch the first column round
-                    $('#compare_hospitals_headings').removeClass('d-none');
-                    $('#no_items_added').addClass('d-none');
+                    // Create a variable to say we now have items
 
                 }
                 //Add data to Cookies and send the element to populate the table
@@ -174,6 +176,7 @@ class ResultItem extends Component {
             name,
             location_specialism,
             hospital_type,
+            hospital_type_id,
             id,
             rating,
             waiting_time,
@@ -190,18 +193,22 @@ class ResultItem extends Component {
                 <div className="result-item mb-3 mb-lg-0" id={`result-item_${id}`}>
                     <div className="container">
                         <div className="result-item-inner position-relative">
-                            <button id={`add_to_compare_${id}`}
-                                    style={{top: '0', right: '0', padding: '0 0 0 30px !important'}}
-                                    className="btn btn-compare position-absolute compare font-12 d-inline-block d-lg-none mt-3 mr-3 shadow-none"
-                                    role="button"
-                                    onClick={this.handleCompareClick(id)}
-                                    data-hospital-type="nhs-hospital">
-                                <span>Add to compare</span>
-                                <CompareIcon/>
-                            </button>
-                            <div className="hospital-type nhs-hospital d-lg-none py-1 px-2 bg-nhs">
-                                <p className="m-0">NHS Hospital</p>
-                            </div>
+                            {/*<button id={`add_to_compare_${id}`}*/}
+                            {/*        style={{top: '0', right: '0', padding: '0 0 0 30px !important'}}*/}
+                            {/*        className="btn btn-compare position-absolute compare font-12 d-inline-block d-lg-none mt-3 mr-3 shadow-none"*/}
+                            {/*        role="button"*/}
+                            {/*        onClick={*/}
+                            {/*            (id) => {*/}
+                            {/*                this.handleCompareClick(id)*/}
+                            {/*            }*/}
+                            {/*        }*/}
+                            {/*        data-hospital-type="nhs-hospital">*/}
+                            {/*    <span>Add to compare</span>*/}
+                            {/*    <CompareIcon/>*/}
+                            {/*</button>*/}
+                            {/*<div className="hospital-type nhs-hospital d-lg-none py-1 px-2 bg-nhs">*/}
+                            {/*    <p className="m-0">NHS Hospital</p>*/}
+                            {/*</div>*/}
                             <div className="result-item-section-1">
                                 <div
                                     className="hospital-details d-flex align-content-between flex-column w-100 position-relative">
@@ -413,7 +420,7 @@ class ResultItem extends Component {
                                     {/*            </a>*/}
                                     {/*        </div>*/}
 
-                                             {/*<div className="btn-wrapper col-6">*/}
+                                    {/*<div className="btn-wrapper col-6">*/}
                                     {/*            <span id="enquire_nhs388"*/}
                                     {/*                  className="btn  btn-enquire btn-brand-primary-4 enquiry btn-block font-12 rounded-left"*/}
                                     {/*                  role="button" data-toggle="modal"*/}
@@ -434,7 +441,12 @@ class ResultItem extends Component {
                                         <button id={`add_to_compare_${id}`}
                                                 className="btn btn-compare compare btn-block font-12 d-none d-lg-block"
                                                 role="button"
-                                                data-hospital-type="nhs-hospital">
+                                                data-hospital-type={hospital_type_id === 1 ? 'private-hospital' : 'nhs-hospital'}
+                                                onClick={
+                                                    () => {
+                                                        this.handleCompareClick(id)
+                                                    }
+                                                }>
                                             <span>Add to compare</span>
                                             <CompareIcon/>
                                         </button>
