@@ -7,9 +7,6 @@ import ShortListItem from '../results/ShortListItem';
 class Shortlist extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            hospitalIds: typeof Cookies.get('compareHospitalsData') !== 'undefined' ? removeTrailingComma(Cookies.get('compareHospitalsData')).split(',') : ''
-        }
     }
 
     componentDidMount() {
@@ -18,10 +15,11 @@ class Shortlist extends Component {
             Cookies.set("compareHospitalsData", '', {expires: 365});
         }
         const hospitalIds = removeTrailingComma(Cookies.get('compareHospitalsData'));
+        console.log("Hospital ids on page load", hospitalIds);
         const {dispatch} = this.props;
         // Do the AJAX call using the hospital ids returned from cookies
-        // TODO: if the array is longer than one item, do the AJAX call, if not, set the 'haveShortlistedHospitals variable to false
-        if(hospitalIds.length > 0)
+
+        if(hospitalIds !== "")
             dispatch(fetchShortlistedHospitals(hospitalIds))
     }
 

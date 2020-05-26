@@ -16,7 +16,7 @@ import WebIcon from "../../svg/WebIcon";
 import CallIcon from "../../svg/CallIcon";
 import CompareIcon from "../../svg/CompareIcon";
 import EnquireIcon from "../../svg/EnquireIcon";
-import '../../scripts/cookies';
+// import '../../scripts/cookies';
 import {getCompareCount, getHospitalsByIds, enableButtons} from '../../scripts/global';
 import {fetchShortlistedHospitals} from "../../actions/shortlistActions";
 
@@ -42,110 +42,31 @@ class ResultItem extends Component {
         initializeGMap(latitude, longitude, `#gmap_${id}`)
     };
 
-    removeHospitalFromCompare = (elementId, data, compareCount, hospitalType) => {
-
-        // Remove the item from the shortlist TODO: achieve this through render method in solutionsbar component
-        // $('#compare_hospital_id_' + elementId).remove();
-
-        //
-        //target.append(emptyCol);
-        // $('button#' + elementId + '.compare').removeClass('selected');
-
-        // Filter out the clicked item from the data
-        var dataArr = data.split(',');
-        var elementIndex = dataArr.indexOf(elementId);
-        var privateHospitalCount = 0;
-        var nhsHospitalCount = 0;
-        dataArr.splice(elementIndex, 1);
-        data = dataArr.join(',');
-
-        // Update the ids in the multi enquiry form
-        // multiEnquiryButton.data('hospital-id', removeTrailingComma(data)); TODO: reintroduce multienquiry button
-
-        compareCount = parseInt(compareCount) - 1;
-
-        if (hospitalType === 'private-hospital' || hospitalType === 'private') {
-            privateHospitalCount -= 1;
-            console.log('privateHospitalCount:', privateHospitalCount) //TODO: do this in the solutions bar
-        } else {
-            nhsHospitalCount -= 1;
-            console.log('nhsHospitalCount:', nhsHospitalCount); //TODO: do this in the solutions bar
-        }
-
-        // Slide content down when all data removed
-        if (compareCount === 0) {
-            // Switch the first column round
-            // $('#compare_hospitals_headings').addClass('d-none'); TODO: do this in the solutions bar component
-            // $('#no_items_added').removeClass('d-none');
-            // Hide the comparison area
-            // $compareContent.slideUp(); TODO: do this in the solutions bar component
-            document.body.classList.remove('shortlist-open');
-        }
-
-        // Check to see if we need to re-enable the buttons
-        enableButtons();
-
-        // var $countSpan = $('#compare_number');
-        console.log('compare count:', compareCount); //TODO: do this in the solutions bar
-
-        // Set the data cookie
-        Cookies.set("compareHospitalsData", data, {expires: 365});
-
-    }
-
-    handleCompareClick(id, hospitalType) {
-        //Get the Data that is already in the Cookies
+    handleCompareClick(id) {
         var compareCount = getCompareCount();
-        console.log('Compare count:', compareCount)
-        var data = Cookies.get("compareHospitalsData");
-        //Load the Cookies with the data that we need for the comparison
-        var elementId = id;
+        //Get the Data that is already in the Cookies
+        // Remove the trailing comma
+        var shortlistIds = removeTrailingComma(Cookies.get("compareHospitalsData"));
+        // Check if current id is in the data
+        // Convert data to array (parse values to integer)
+        var shortlistArray = shortlistIds.split(',').map(
+            value => parseInt(value)
+        );
 
-        // Split data string into Array
-        var dataArr = data.split(',');
-        // Check if value is in array
-        var result = false;
-        for (var i = 0; i < dataArr.length; i++) {
-            var stringPart = dataArr[i];
-            if (stringPart != elementId) continue;
+        // Check if id is in the array
+        let result = shortlistArray.includes(parseInt(id));
 
-            result = true;
-            break;
+        // If not in the array
+        if(!result) {
+            // Add the id to the shortlist ids (ensure comma included)
+            shortlistIds += `,${id},`
         }
 
-        //Check if there are already 5 hospitals for comparison in Cookies
-        if (compareCount < 5) {
-            //Check if we don't have the hospital in our comparison and add it - if not true then add to compare - also add the id to the enquiry form
-            if (!result) {
-                // Show the headings column when first item added, and it's not already in the
 
-                //Add data to Cookies and send the element to populate the table
-                data += id + ',';
-
-                // Add to the comparison area
-                getHospitalsByIds(elementId);
-
-                // Update compare count
-                compareCount = parseInt(compareCount) + 1;
-                console.log('compareCount:', compareCount);
-            }
-        }
-
-        // Check if we have to remove the data of the element that has been clicked - if true, it is already in the data
-        if (result) {
-            //Remove the hospital from the comparison table
-            this.removeHospitalFromCompare(elementId, data, compareCount, hospitalType);
-            var dataArr = data.split(',');
-            var elementIndex = dataArr.indexOf(elementId);
-            dataArr.splice(elementIndex, 1);
-            data = dataArr.join(',');
-            compareCount = parseInt(compareCount) - 1;
-        }
-
-        // Set compareHospitalsData
-        Cookies.set("compareHospitalsData", data, {expires: 365});
+        // In either case
+        Cookies.set("compareHospitalsData", shortlistIds, {expires: 365});
         // Also update the store
-        this.props.dispatch(fetchShortlistedHospitals(data));
+        // this.props.dispatch(fetchShortlistedHospitals(removeTrailingComma(data)));
     }
 
 
@@ -172,22 +93,6 @@ class ResultItem extends Component {
                 <div className="result-item mb-3 mb-lg-0" id={`result-item_${id}`}>
                     <div className="container">
                         <div className="result-item-inner position-relative">
-                            {/*<button id={`add_to_compare_${id}`}*/}
-                            {/*        style={{top: '0', right: '0', padding: '0 0 0 30px !important'}}*/}
-                            {/*        className="btn btn-compare position-absolute compare font-12 d-inline-block d-lg-none mt-3 mr-3 shadow-none"*/}
-                            {/*        role="button"*/}
-                            {/*        onClick={*/}
-                            {/*            (id) => {*/}
-                            {/*                this.handleCompareClick(id)*/}
-                            {/*            }*/}
-                            {/*        }*/}
-                            {/*        data-hospital-type="nhs-hospital">*/}
-                            {/*    <span>Add to compare</span>*/}
-                            {/*    <CompareIcon/>*/}
-                            {/*</button>*/}
-                            {/*<div className="hospital-type nhs-hospital d-lg-none py-1 px-2 bg-nhs">*/}
-                            {/*    <p className="m-0">NHS Hospital</p>*/}
-                            {/*</div>*/}
                             <div className="result-item-section-1">
                                 <div
                                     className="hospital-details d-flex align-content-between flex-column w-100 position-relative">
@@ -423,12 +328,13 @@ class ResultItem extends Component {
                                                 data-hospital-type={hospitalType}
                                                 onClick={
                                                     () => {
-                                                        this.handleCompareClick(id, hospitalType)
+                                                        this.handleCompareClick(id)
                                                     }
                                                 }>
                                             <span>Add to compare</span>
                                             <CompareIcon/>
                                         </button>
+                                        <h2>{id}</h2>
                                     </div>
                                 </div>
                                 {/*row*/}

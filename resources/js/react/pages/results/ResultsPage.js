@@ -28,8 +28,7 @@ class ResultsPage extends Component {
             procedure,
             postcode,
             radius,
-            showShortlist: false,
-            compareCount: typeof Cookies.get("compareHospitalsData") !== 'undefined' ? getCompareCount() : 0
+            showShortlist: false
         }
     }
 
@@ -66,18 +65,18 @@ class ResultsPage extends Component {
     };
 
     render() {
-        const {loadingHospitals, hospitals, compareCount} = this.state;
+        const {loadingHospitals, hospitals} = this.state;
         return (
             <React.Fragment>
                 <main>
-                    <ResultsPageForm compareCount={compareCount}
+                    <ResultsPageForm compareCount={this.props.shortlistHospitals.length}
                                      showShortlist={this.state.showShortlist}
                                      handleShortlistToggle={this.handleClick}/>
                     <div className="results mt-3 mt-lg-0">
                         {
                             loadingHospitals
                                 ? <Loader/>
-                                : hospitals.map(hospital => <ResultItem {...hospital} key={hospital.id}
+                                : hospitals.map(hospital => <ResultItem key={hospital.id}
                                                                         {...hospital} />)
                         }
                     </div>
@@ -95,7 +94,8 @@ class ResultsPage extends Component {
 const mapStateToProps = state => ({
     postcode: state.filters.postcode,
     procedure: state.filters.procedure,
-    radius: state.filters.radius
+    radius: state.filters.radius,
+    shortlistHospitals: state.shortlist.shortlistHospitals
 });
 
 export default connect(mapStateToProps)(ResultsPage);
