@@ -25,7 +25,9 @@ class ResultItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showContent: false
+            showContent: false,
+            inShortlist: false,
+            disabled: false
         }
     }
 
@@ -54,12 +56,16 @@ class ResultItem extends Component {
         // console.log("In the array?:", result);
 
         // If not in the array
-        if (!result) {
+        if (!result && compareCount < 5) {
             // Add the id to the shortlist ids
-            shortlistIds.push(id)
+            shortlistIds.push(id);
             // Also update the store - convert to string and remove trailing comma
             const str = removeTrailingComma(shortlistIds.join(','));
             this.props.dispatch(fetchShortlistedHospitals(removeTrailingComma(str)));
+            // Set as 'inShortlist'
+            this.setState({
+                inShortlist: true
+            })
         }
 
         // If in the array, remove it
@@ -67,7 +73,7 @@ class ResultItem extends Component {
             shortlistIds = shortlistIds.filter((element) => {
                     return element !== parseInt(id);
                 }
-            )
+            );
             // Also update the store - convert to string and remove trailing comma
             const str = removeTrailingComma(shortlistIds.join(','));
 
@@ -78,11 +84,13 @@ class ResultItem extends Component {
                 this.props.dispatch(clearShortlistedHospitals());
             // Otherwise
             this.props.dispatch(fetchShortlistedHospitals(removeTrailingComma(str)));
+            // Remove 'selected' class
+            this.setState({
+                inShortlist: false
+            })
         }
         // In either case
-
         Cookies.set("compareHospitalsData", shortlistIds, {expires: 365});
-
     }
 
 
@@ -102,7 +110,7 @@ class ResultItem extends Component {
             phone_number_3
         } = this.props;
         const {address: {latitude, longitude}} = this.props;
-        const {showContent} = this.state;
+        const {showContent, inShortlist} = this.state;
         const hospitalType = hospital_type_id === 1 ? 'private-hospital' : 'nhs-hospital';
         return (
             <React.Fragment>
@@ -339,7 +347,7 @@ class ResultItem extends Component {
 
                                     <div className="col-12 mt-lg-2">
                                         <button id={`add_to_compare_${id}`}
-                                                className="btn btn-compare compare btn-block font-12 d-none d-lg-block"
+                                                className={`btn btn-compare compare btn-block font-12 d-none d-lg-block ${inShortlist ? 'selected' : ''}`}
                                                 role="button"
                                                 data-hospital-type={hospitalType}
                                                 onClick={
