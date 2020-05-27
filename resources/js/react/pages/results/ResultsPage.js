@@ -9,6 +9,7 @@ import ResultItem from "./ResultItem";
 import ResultsPageForm from "./ResultsPageForm";
 import SolutionsBar from "./SolutionsBar";
 import {getCompareCount} from "../../scripts/global";
+import {fetchHospitals} from "../../actions/hospitalActions";
 
 class ResultsPage extends Component {
     constructor(props) {
@@ -36,24 +37,9 @@ class ResultsPage extends Component {
         // Do the ajax call to get list of matching hospitals
         document.body.classList.add('results-page', 'results-page-desktop');
         const {procedure, postcode, radius} = this.state;
-        const apiUrl = `/api/getHospitalsForHomepageSearch/${postcode}/${procedure}/${radius}`;
-        const config = {
-            headers: {
-                Authorization: 'Bearer mBu7IB6nuxh8RVzJ61f4'
-            }
-        };
-        this.setState({loadingHospitals: true})
-        axios.get(apiUrl, config)
-            .then((res) => {
-                const returnedHospitals = res.data.data.hospitals.data;
-                this.setState({
-                    hospitals: returnedHospitals,
-                    loadingHospitals: false
-                });
-            })
-            .catch((error) => {
-                console.log('Error fetching hospitals', error)
-            })
+
+        // Dispatch the action to return hospital list
+        this.props.dispatch(fetchHospitals(postcode, procedure, radius));
     }
 
     handleClick = () => {
@@ -65,7 +51,8 @@ class ResultsPage extends Component {
     };
 
     render() {
-        const {loadingHospitals, hospitals} = this.state;
+        const {loadingHospitals} = this.state;
+        const {hospitals} = this.props;
         return (
             <React.Fragment>
                 <main>
@@ -95,7 +82,8 @@ const mapStateToProps = state => ({
     postcode: state.filters.postcode,
     procedure: state.filters.procedure,
     radius: state.filters.radius,
-    shortlistHospitals: state.shortlist.shortlistHospitals
+    shortlistHospitals: state.shortlist.shortlistHospitals,
+    hospitals: state.hospitals.hospitals
 });
 
 export default connect(mapStateToProps)(ResultsPage);
