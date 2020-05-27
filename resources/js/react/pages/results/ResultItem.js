@@ -33,6 +33,15 @@ class ResultItem extends Component {
 
     componentDidMount() {
         document.title = 'Hospital Compare - Results';
+        var shortlistIds = JSON.parse(Cookies.get("compareHospitalsData"));
+        // Check if current id is in the data
+
+        // Check if id is in the array
+        const {id} = this.props;
+        let result = shortlistIds.includes(parseInt(id));
+        // If in the shortlist already, add the 'selected' class
+        if(result)
+            this.setState({inShortlist:true})
     }
 
     toggleContent = () => {
