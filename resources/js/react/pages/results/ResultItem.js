@@ -32,16 +32,18 @@ class ResultItem extends Component {
     }
 
     componentDidMount() {
-        document.title = 'Hospital Compare - Results';
+        document.title = 'Hospital Compare - Results Page';
         var shortlistIds = JSON.parse(Cookies.get("compareHospitalsData"));
-        // Check if current id is in the data
-
         // Check if id is in the array
         const {id} = this.props;
         let result = shortlistIds.includes(parseInt(id));
         // If in the shortlist already, add the 'selected' class
         if(result)
-            this.setState({inShortlist:true})
+            this.setState({inShortlist:true});
+        // disable button if not in shortlist, and compareCount == 5
+        const compareCount = getCompareCount();
+        if(compareCount === 5 && result === false)
+            this.setState({disabled: true})
     }
 
     toggleContent = () => {
@@ -102,7 +104,6 @@ class ResultItem extends Component {
         Cookies.set("compareHospitalsData", shortlistIds, {expires: 365});
     }
 
-
     render() {
         const {
             name,
@@ -119,7 +120,7 @@ class ResultItem extends Component {
             phone_number_3
         } = this.props;
         const {address: {latitude, longitude}} = this.props;
-        const {showContent, inShortlist} = this.state;
+        const {showContent, inShortlist, disabled} = this.state;
         const hospitalType = hospital_type_id === 1 ? 'private-hospital' : 'nhs-hospital';
         return (
             <React.Fragment>
@@ -356,9 +357,10 @@ class ResultItem extends Component {
 
                                     <div className="col-12 mt-lg-2">
                                         <button id={`add_to_compare_${id}`}
-                                                className={`btn btn-compare compare btn-block font-12 d-none d-lg-block ${inShortlist ? 'selected' : ''}`}
+                                                className={`btn btn-compare compare btn-block font-12 d-none d-lg-block ${inShortlist ? 'selected' : ''} ${disabled ? 'disabled' : ''}`}
                                                 role="button"
                                                 data-hospital-type={hospitalType}
+                                                disabled={(disabled) ? 'disabled' : ''}
                                                 onClick={
                                                     () => {
                                                         this.handleCompareClick(id)
@@ -367,7 +369,6 @@ class ResultItem extends Component {
                                             <span>Add to compare</span>
                                             <CompareIcon/>
                                         </button>
-                                        <h2>{id}</h2>
                                     </div>
                                 </div>
                                 {/*row*/}
