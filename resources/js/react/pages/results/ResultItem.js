@@ -17,8 +17,8 @@ import CallIcon from "../../svg/CallIcon";
 import CompareIcon from "../../svg/CompareIcon";
 import EnquireIcon from "../../svg/EnquireIcon";
 // import '../../scripts/cookies';
-import {getCompareCount, getHospitalsByIds, enableButtons} from '../../scripts/global';
-import {fetchShortlistedHospitals} from "../../actions/shortlistActions";
+import {getCompareCount} from '../../scripts/global';
+import {fetchShortlistedHospitals, clearShortlistedHospitals} from "../../actions/shortlistActions";
 
 
 class ResultItem extends Component {
@@ -43,30 +43,46 @@ class ResultItem extends Component {
     };
 
     handleCompareClick(id) {
-        var compareCount = getCompareCount();
+        const compareCount = getCompareCount();
         //Get the Data that is already in the Cookies
         // Remove the trailing comma
-        var shortlistIds = removeTrailingComma(Cookies.get("compareHospitalsData"));
+        var shortlistIds = JSON.parse(Cookies.get("compareHospitalsData"));
         // Check if current id is in the data
-        // Convert data to array (parse values to integer)
-        var shortlistArray = shortlistIds.split(',').map(
-            value => parseInt(value)
-        );
 
         // Check if id is in the array
-        let result = shortlistArray.includes(parseInt(id));
+        let result = shortlistIds.includes(parseInt(id));
+        // console.log("In the array?:", result);
 
         // If not in the array
-        if(!result) {
-            // Add the id to the shortlist ids (ensure comma included)
-            shortlistIds += `,${id},`
+        if (!result) {
+            // Add the id to the shortlist ids
+            shortlistIds.push(id)
+            // Also update the store - convert to string and remove trailing comma
+            const str = removeTrailingComma(shortlistIds.join(','));
+            this.props.dispatch(fetchShortlistedHospitals(removeTrailingComma(str)));
         }
 
+        // If in the array, remove it
+        if (result) {
+            shortlistIds = shortlistIds.filter((element) => {
+                    return element !== parseInt(id);
+                }
+            )
+            // Also update the store - convert to string and remove trailing comma
+            const str = removeTrailingComma(shortlistIds.join(','));
 
+            // If it's the last item in the array,
+            if(compareCount === 1)
+                console.log('last one in!');
+                // Dispatch to set the store to empty the shortlisted hospitals
+                this.props.dispatch(clearShortlistedHospitals());
+            // Otherwise
+            this.props.dispatch(fetchShortlistedHospitals(removeTrailingComma(str)));
+        }
         // In either case
+
         Cookies.set("compareHospitalsData", shortlistIds, {expires: 365});
-        // Also update the store
-        // this.props.dispatch(fetchShortlistedHospitals(removeTrailingComma(data)));
+
     }
 
 

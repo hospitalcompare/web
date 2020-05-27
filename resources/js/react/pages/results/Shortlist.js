@@ -10,15 +10,17 @@ class Shortlist extends Component {
     }
 
     componentDidMount() {
+
+
         // Check if the cookies are already set
         if (typeof Cookies.get("compareHospitalsData") === 'undefined') {
-            Cookies.set("compareHospitalsData", '', {expires: 365});
+            Cookies.set("compareHospitalsData", [], {expires: 365});
         }
-        const hospitalIds = removeTrailingComma(Cookies.get('compareHospitalsData'));
+        const hospitalIds = JSON.parse(Cookies.get('compareHospitalsData'));
         console.log("Hospital ids on page load", hospitalIds);
         const {dispatch} = this.props;
         // Do the AJAX call using the hospital ids returned from cookies
-
+        const idList = hospitalIds.join(',');
         if(hospitalIds !== "")
             dispatch(fetchShortlistedHospitals(hospitalIds))
     }

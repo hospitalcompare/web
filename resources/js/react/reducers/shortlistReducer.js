@@ -16,6 +16,13 @@ export default function shortlistReducer(state = initialState, action) {
                 ...state,
                 loading: true
             };
+        case actions.CLEAR_SHORTLISTED_HOSPITALS:
+            return {
+                shortlistHospitals: [],
+                haveShortlistedHospitals: false,
+                privateHospitalCount: 0,
+                nhsHospitalCount: 0
+            };
         case actions.GET_SHORTLISTED_HOSPITALS_SUCCESS:
             return {
                 shortlistHospitals: action.payload.data,

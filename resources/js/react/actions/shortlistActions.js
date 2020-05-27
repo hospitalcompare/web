@@ -2,12 +2,17 @@
 import axios from "axios";
 
 export const GET_SHORTLISTED_HOSPITALS = 'GET_SHORTLISTED_HOSPITALS';
+export const CLEAR_SHORTLISTED_HOSPITALS = 'CLEAR_SHORTLISTED_HOSPITALS';
 export const GET_SHORTLISTED_HOSPITALS_SUCCESS = 'GET_SHORTLISTED_HOSPITALS_SUCCESS';
 export const GET_SHORTLISTED_HOSPITALS_FAILURE = 'GET_SHORTLISTED_HOSPITALS_FAILURE';
 
 // Create Redux action creators that return an action
 export const getShortlistedHospitals = () => ({
     type: GET_SHORTLISTED_HOSPITALS,
+});
+
+export const clearShortlistedHospitals = () => ({
+    type: CLEAR_SHORTLISTED_HOSPITALS
 });
 
 export const getShortlistedHospitalsSuccess = shortlistedHospitals => ({
