@@ -51,8 +51,7 @@ class ResultsPage extends Component {
     };
 
     render() {
-        const {loadingHospitals} = this.state;
-        const {hospitals} = this.props;
+        const {hospitals, loadingHospitals} = this.props;
         return (
             <React.Fragment>
                 <main>
@@ -83,7 +82,8 @@ const mapStateToProps = state => ({
     procedure: state.filters.procedure,
     radius: state.filters.radius,
     shortlistHospitals: state.shortlist.shortlistHospitals,
-    hospitals: state.hospitals.hospitals
+    hospitals: state.hospitals.hospitals,
+    loadingHospitals: state.hospitals.loading
 });
 
 export default connect(mapStateToProps)(ResultsPage);

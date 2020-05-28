@@ -9,7 +9,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import MapIcon from "../../svg/MapIcon";
-import '../../scripts/getHtmlStars';
+import HtmlStars from '../../components/basic/HtmlStars';
 import '../../scripts/getHtmlDashTickValue';
 import initializeGMap from '../../scripts/gmapInit';
 import WebIcon from "../../svg/WebIcon";
@@ -38,11 +38,11 @@ class ResultItem extends Component {
         const {id} = this.props;
         let result = shortlistIds.includes(parseInt(id));
         // If in the shortlist already, add the 'selected' class
-        if(result)
-            this.setState({inShortlist:true});
+        if (result)
+            this.setState({inShortlist: true});
         // disable button if not in shortlist, and compareCount == 5
         const compareCount = getCompareCount();
-        if(compareCount === 5 && result === false)
+        if (compareCount === 5 && result === false)
             this.setState({disabled: true})
     }
 
@@ -89,10 +89,10 @@ class ResultItem extends Component {
             const str = removeTrailingComma(shortlistIds.join(','));
 
             // If it's the last item in the array,
-            if(compareCount === 1)
+            if (compareCount === 1)
                 console.log('last one in!');
-                // Dispatch to set the store to empty the shortlisted hospitals
-                this.props.dispatch(clearShortlistedHospitals());
+            // Dispatch to set the store to empty the shortlisted hospitals
+            this.props.dispatch(clearShortlistedHospitals());
             // Otherwise
             this.props.dispatch(fetchShortlistedHospitals(removeTrailingComma(str)));
             // Remove 'selected' class
@@ -253,19 +253,25 @@ class ResultItem extends Component {
                                 <div className="result-item-section-2__child">
                                     <div
                                         className="h-50 d-flex flex-column align-items-center justify-content-center SofiaPro-Medium"
-                                        data-toggle="popover" data-content="
-                            <ul class=&quot;nhs-user-ratings mb-0&quot;>
-                                <li>Cleanliness:&amp;nbsp;<span><strong>99.4%</span></strong></li>
-                                <li>Food &amp; Hydration:&amp;nbsp;<span><strong>97.7%</span></strong></li>
-                                <li>Privacy, Dignity &amp; Wellbeing:&amp;nbsp;<span><strong>95.7%</span></strong></li>
-                                <li>Condition, Appearance &amp; Maintainance:&amp;nbsp;<span><strong>98.4%</span></strong></li>
-                                <li>Dementia Domain:&amp;nbsp;            <span><strong>93.5%</span></strong></li>
-                                <li>Disability Domain:&amp;nbsp;        <span><strong>89.9%</span></strong></li>
-                            </ul>" data-trigger="hover" data-placement="bottom" data-html="true" data-original-title=""
+                                        data-toggle="popover"
+                                        data-content="
+                                            <ul class=&quot;nhs-user-ratings mb-0&quot;>
+                                                <li>Cleanliness:&amp;nbsp;<span><strong>99.4%</span></strong></li>
+                                                <li>Food &amp; Hydration:&amp;nbsp;<span><strong>97.7%</span></strong></li>
+                                                <li>Privacy, Dignity &amp; Wellbeing:&amp;nbsp;<span><strong>95.7%</span></strong></li>
+                                                <li>Condition, Appearance &amp; Maintainance:&amp;nbsp;<span><strong>98.4%</span></strong></li>
+                                                <li>Dementia Domain:&amp;nbsp;            <span><strong>93.5%</span></strong></li>
+                                                <li>Disability Domain:&amp;nbsp;        <span><strong>89.9%</span></strong></li>
+                                            </ul>"
+                                        data-trigger="hover"
+                                        data-placement="bottom"
+                                        data-html="true"
+                                        data-original-title=""
                                         title="">
                                         <p className="stat-label d-block w-100 d-lg-none">NHS User Rating</p>
-                                        <span className="d-flex"
-                                              dangerouslySetInnerHTML={{__html: getHtmlStars(rating.avg_user_rating)}}>
+                                        <span className="d-flex">
+                                            <HtmlStars rating={rating.avg_user_rating}
+                                                       id={id}/>
                                         </span>
                                     </div>
                                 </div>

@@ -104,7 +104,7 @@
     <body class="@yield('body-class')">
         <div class="" id="react-container"></div>
         <script src="https://maps.googleapis.com/maps/api/js?key={{ config('services.googleApiKey') }}" async defer></script>
-        <script src="{{ asset(mix('/js/app.js'), true) }}"></script>
+        <script src="{{ mix('/js/app.js') }}"></script>
     </body>
 
 </html>
