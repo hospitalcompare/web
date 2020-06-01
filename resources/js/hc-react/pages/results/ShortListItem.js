@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ShortListItem = ({id, image, display_name, hospital_type, hospital_type_id}) => {
     const imageStyles = {
@@ -49,6 +50,10 @@ const ShortListItem = ({id, image, display_name, hospital_type, hospital_type_id
             </div>
         </div>
     );
+};
+
+ShortListItem.propTypes = {
+    hospital: PropTypes.object
 };
 
 export default ShortListItem;

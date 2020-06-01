@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import '../../scripts/cookies';
 import {fetchShortlistedHospitals} from "../../actions/shortlistActions";
 import {connect} from "react-redux";
@@ -45,5 +46,10 @@ const mapStateToProps = state => ({
     shortlistHospitals: state.shortlist.shortlistHospitals,
     haveShortlistedHospitals: state.shortlist.haveShortlistedHospitals
 });
+
+Shortlist.propTypes = {
+    shortlistHospitals: PropTypes.array,
+    haveShortlistedHospitals: PropTypes.bool
+};
 
 export default connect(mapStateToProps)(Shortlist);

@@ -186,6 +186,6 @@ SolutionsBar.propTypes = {
     haveShortlistedHospitals: PropTypes.bool,
     privateHospitalCount: PropTypes.number,
     nhsHospitalCount: PropTypes.number
-}
+};
 
 export default connect(mapStateToProps)(SolutionsBar);
