@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import MoreInfoIcon from "../../svg/MoreInfoIcon";
 import Shortlist from "./Shortlist";
 import CompareIcon from "../../svg/CompareIcon";
@@ -180,5 +181,11 @@ const mapStateToProps = state => ({
     privateHospitalCount: state.shortlist.privateHospitalCount,
     nhsHospitalCount: state.shortlist.nhsHospitalCount
 });
+
+SolutionsBar.propTypes = {
+    haveShortlistedHospitals: PropTypes.bool,
+    privateHospitalCount: PropTypes.number,
+    nhsHospitalCount: PropTypes.number
+}
 
 export default connect(mapStateToProps)(SolutionsBar);
