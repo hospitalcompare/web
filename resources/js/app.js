@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom'
 import HomePage from './hc-react/pages/home/HomePage'
 import FaqHome from './hc-react/pages/faqs/FaqHome'
@@ -7,12 +8,9 @@ import Header from './hc-react/components/Header'
 import Footer from './hc-react/components/Footer'
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            menuOpen: false
-        }
-    }
+    state = {
+        menuOpen: false
+    };
 
     componentDidMount() {
         var doc = document.documentElement;
@@ -48,6 +46,6 @@ class App extends Component {
             </React.Fragment>
         );
     }
-};
+}
 
 export default App

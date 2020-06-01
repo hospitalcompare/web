@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import {connect} from "react-redux";
 
@@ -83,6 +84,16 @@ const mapStateToProps = state => ({
     hospitals: state.hospitals.hospitals,
     loadingHospitals: state.hospitals.loading
 });
+
+ResultsPage.propTypes = {
+    postcode: PropTypes.string,
+    procedure: PropTypes.number,
+    radius: PropTypes.number,
+    shortlistHospitals: PropTypes.array,
+    hospitals: PropTypes.array,
+    loadingHospitals: PropTypes.bool
+}
+
 
 export default connect(mapStateToProps)(ResultsPage);
 
