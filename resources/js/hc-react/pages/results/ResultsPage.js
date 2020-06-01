@@ -13,13 +13,13 @@ import {fetchHospitals} from "../../actions/hospitalActions";
 class ResultsPage extends Component {
     constructor(props) {
         super(props);
-        const {match: {params}, postcode, procedure, radius} = this.props;
+        const {match: {params}} = this.props;
 
-        // let query = queryString.parse(this.props.location.search);
+        let query = queryString.parse(this.props.location.search);
         // // parse the parameter from the URL
-        // let procedure   = query.procedure || '';
-        // let postcode    = typeof query.postcode !== 'undefined' ? decodeURI(query.postcode.replace(/\s+/g, "").toLowerCase()) : '';
-        // let radius      = query.radius || 50;
+        let procedure   = query.procedure || null;
+        let postcode    = typeof query.postcode !== 'undefined' ? decodeURI(query.postcode.replace(/\s+/g, "").toLowerCase()) : '';
+        let radius      = query.radius || 50;
 
 
         this.state = {
@@ -77,9 +77,9 @@ class ResultsPage extends Component {
 }
 
 const mapStateToProps = state => ({
-    postcode: state.filters.postcode,
-    procedure: state.filters.procedure,
-    radius: state.filters.radius,
+    // postcode: state.filters.postcode,
+    // procedure: state.filters.procedure,
+    // radius: state.filters.radius,
     shortlistHospitals: state.shortlist.shortlistHospitals,
     hospitals: state.hospitals.hospitals,
     loadingHospitals: state.hospitals.loading

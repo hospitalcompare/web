@@ -16,7 +16,7 @@ class Shortlist extends Component {
             Cookies.set("compareHospitalsData", [], {expires: 365});
         }
         const hospitalIds = JSON.parse(Cookies.get('compareHospitalsData'));
-        console.log("Hospital ids on page load", hospitalIds);
+        // console.log("Hospital ids on page load", hospitalIds);
         const {dispatch} = this.props;
         // Do the AJAX call using the hospital ids returned from cookies
         const idList = hospitalIds.join(',');

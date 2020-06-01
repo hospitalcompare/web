@@ -15,7 +15,7 @@ class SearchForm extends Component {
         super(props);
         this.state = {
             radii: radii,
-            procedure: '0',
+            procedure: null,
             postcode: '',
             fakePostcode: '',
             radius: 50,
@@ -41,11 +41,11 @@ class SearchForm extends Component {
         // Redirect to results page with query string
         this.props.history.push({
             pathname: '/results-page/',
-            // search: `?postcode=${postcode}&procedure=${procedure}&radius=${radius}`
-        }),
+            search: `?postcode=${postcode}&procedure=${procedure}&radius=${radius}`
+        });
 
         // Dispatch action to store
-        this.props.dispatch(setFilters({postcode, procedure, radius}));
+        // this.props.dispatch(setFilters({postcode, procedure, radius}));
     };
 
     handleSelect = (value) => {
@@ -62,10 +62,10 @@ class SearchForm extends Component {
         // For the postcode field, make the ajax call
         if (name === 'postcode') {
             this.props.dispatch(fetchPostcodes(e.target.value))
-            //     clearTimeout(timer);
-            //     timer = setTimeout(() => {
-            //         this.handlePostcodeAjax(value)
-            //     }, interval);
+                // clearTimeout(timer);
+                // timer = setTimeout(() => {
+                //     this.handlePostcodeAjax(value)
+                // }, interval);
         }
 
         this.setState({[name]: value})

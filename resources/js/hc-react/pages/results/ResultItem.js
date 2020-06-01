@@ -91,7 +91,7 @@ class ResultItem extends Component {
 
             // If it's the last item in the array,
             if (compareCount === 1)
-                console.log('last one in!');
+                // console.log('last one in!');
             // Dispatch to set the store to empty the shortlisted hospitals
             this.props.dispatch(clearShortlistedHospitals());
             // Otherwise

@@ -3,7 +3,6 @@ import SearchForm from '../../components/forms/SearchForm';
 
 class Banner extends Component {
     render() {
-        const hideText = true;
         return (
             <section className="banner">
                 <div className="container">
