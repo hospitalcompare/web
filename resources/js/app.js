@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom'
-import HomePage from './react/pages/home/HomePage'
-import FaqHome from './react/pages/faqs/FaqHome'
-import ResultsPage from './react/pages/results/ResultsPage'
-import Header from './react/components/Header'
-import Footer from './react/components/Footer'
+import HomePage from './hc-react/pages/home/HomePage'
+import FaqHome from './hc-react/pages/faqs/FaqHome'
+import ResultsPage from './hc-react/pages/results/ResultsPage'
+import Header from './hc-react/components/Header'
+import Footer from './hc-react/components/Footer'
 
 class App extends Component {
     constructor(props) {

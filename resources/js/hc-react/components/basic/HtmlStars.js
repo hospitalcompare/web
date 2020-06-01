@@ -5,7 +5,7 @@
  * @param rating
  * @returns {string}
  */
-import React from 'React';
+import React from 'react';
 import StarOutline from "../../svg/StarOutline";
 import StarHalf from "../../svg/StarHalf";
 import Star from "../../svg/Star";

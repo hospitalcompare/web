@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-
-import axios from "axios";
 import queryString from 'query-string';
 import {connect} from "react-redux";
 
