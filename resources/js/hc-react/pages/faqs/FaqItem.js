@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
@@ -16,7 +17,7 @@ class FaqItem extends Component {
         this.setState({
             open: !this.state.open
         })
-    }
+    };
 
     render() {
         const {question, answer, id} = this.props.faq;
@@ -59,6 +60,11 @@ class FaqItem extends Component {
             </Card>
         );
     }
+};
+
+FaqItem.propTypes = {
+    faq: PropTypes.object,
+    searchTerm: PropTypes.string
 };
 
 export default FaqItem;

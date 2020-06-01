@@ -4,18 +4,7 @@ import ListFaqs from "./ListFaqs";
 import Accordion from "react-bootstrap/Accordion";
 import axios from "axios";
 import FaqItem from "./FaqItem";
-
-const SVGMag = () => {
-    return (
-        <svg className="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.1 39.08">
-            <title>4Artboard 8</title>
-            <g data-name="Layer 1">
-                <path fill="#fff"
-                      d="M36.3,38.62a1.7,1.7,0,0,0,2.31,0,1.64,1.64,0,0,0,0-2.33l-8.91-8.91.51-.7a16.77,16.77,0,1,0-3.53,3.53l.69-.51ZM16.74,30.21A13.46,13.46,0,1,1,30.2,16.75,13.48,13.48,0,0,1,16.74,30.21Z"></path>
-            </g>
-        </svg>
-    );
-};
+import MagIcon from "../../svg/MagIcon";
 
 class FaqHome extends Component {
     constructor() {
@@ -81,7 +70,7 @@ class FaqHome extends Component {
                             rights? Our FAQs may be able to help! Search for specific keywords or browse a full list of
                             questions below.</h2>
                         <div className="input-wrapper position-relative w-100">
-                            <SVGMag />
+                            <MagIcon />
                             <form onSubmit={this.handleSubmit}
                                   className="">
                                 <div className="input-wrapper w-100">
