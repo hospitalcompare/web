@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {connect} from "react-redux";
 import Nav from 'react-bootstrap/Nav';
 
@@ -612,5 +613,10 @@ class ResultItem extends Component {
         );
     }
 }
+
+ResultItem.propTypes = {
+    id: PropTypes.number,
+    address: PropTypes.object
+};
 
 export default connect()(ResultItem);

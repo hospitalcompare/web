@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const ResultsPageForm = ({handleShortlistToggle, compareCount}) => {
     return (
@@ -3463,6 +3464,11 @@ const ResultsPageForm = ({handleShortlistToggle, compareCount}) => {
             {/*</div>*/}
         </form>
     );
+};
+
+ResultsPageForm.propTypes = {
+    handleShortlistToggle: PropTypes.func,
+    compareCount: PropTypes.number
 };
 
 export default ResultsPageForm;
