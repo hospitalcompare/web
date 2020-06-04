@@ -1,6 +1,12 @@
 import React from 'react';
+import CompareIcon from "../../svg/CompareIcon";
 
 const EmptyCol = () => {
+    const heartStyles = {
+        width: "14px",
+        height: "14px"
+    };
+
     return (
         <div className="col col-empty h-100">
             <div className="col-inner">
@@ -10,8 +16,11 @@ const EmptyCol = () => {
                     <p className="text-center px-2">
                         Add more hospitals to your
                         Shortlist by clicking the&nbsp;
-                        <img width="14" height="12" src="/images/icons/heart.svg"
-                             alt="Heart icon"/>
+                        <CompareIcon styles={heartStyles}
+                                     stroke={"#037098"}
+                                     strokeWidth={"50px"}
+                                     fill={"transparent"}
+                        />
                     </p>
                 </div>
             </div>

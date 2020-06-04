@@ -31,21 +31,13 @@ class Shortlist extends Component {
         return (
             <React.Fragment>
                 {
-                    haveShortlistedHospitals
-                        ?
-                        shortlistHospitals.map(
-                            hospital => <ShortListItem key={hospital.id}
-                                                       {...hospital} />
-                        )
-                        // Add in the blank columns here
-                        : <h1>No items in the shortlist</h1>
+                    shortlistHospitals.map(
+                        hospital => <ShortListItem key={hospital.id}
+                                                   {...hospital} />
+                    )
                 }
                 {
-                    haveShortlistedHospitals
-                    ?
                     emptyCols.map((emptyCol, index) => <EmptyCol key={index} />)
-                    : ''
-
                 }
             </React.Fragment>
         );

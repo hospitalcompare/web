@@ -4,7 +4,11 @@ import MoreInfoIcon from "../../svg/MoreInfoIcon";
 import Shortlist from "./Shortlist";
 import CompareIcon from "../../svg/CompareIcon";
 import {connect} from "react-redux";
-import CompareHeart from "../../svg/CompareHeart";
+
+const heartStyles = {
+    width: "14px",
+    height: "14px"
+};
 
 const SolutionsBar = ({haveShortlistedHospitals, privateHospitalCount, nhsHospitalCount}) => {
     return (
@@ -19,7 +23,11 @@ const SolutionsBar = ({haveShortlistedHospitals, privateHospitalCount, nhsHospit
                                         added any
                                         hospitals to compare yet. </p>
                                     <p>Click the the&nbsp;
-                                        <CompareHeart/>&nbsp;next to the hospital to add the chosen
+                                        <CompareIcon styles={heartStyles}
+                                                     stroke={"#037098"}
+                                                     strokeWidth={"50px"}
+                                                     fill={"transparent"}
+                                        />&nbsp;next to the hospital to add the chosen
                                         hospital into the comparison dashboard.</p>
                                 </div>
                             </div>

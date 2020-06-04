@@ -1,11 +1,13 @@
 import React from "react";
 
-const CompareHeart = () => {
+const CompareHeart = ({styles}) => {
     return (
         <svg id="compare_heart"
+             style={styles}
              xmlns="http://www.w3.org/2000/svg"
              viewBox="0 0 30 30">
-            <path id="outer-circle" fill="transparent" strokeWidth="2" stroke="#fff"
+            <path id="outer-circle"
+                  fill="transparent" strokeWidth="2" stroke="#fff"
                   d="M15 1c7.7 0 14 6.3 14 14s-6.3 14-14 14S1 22.7 1 15 7.3 1 15 1z"/>
             <g>
                 <path id="wishlist" fill="transparent"
