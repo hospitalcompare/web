@@ -4,6 +4,7 @@ import '../../scripts/cookies';
 import {fetchShortlistedHospitals} from "../../actions/shortlistActions";
 import {connect} from "react-redux";
 import ShortListItem from '../results/ShortListItem';
+import EmptyCol from "./EmptyCol";
 
 class Shortlist extends Component {
     constructor(props) {
@@ -26,6 +27,7 @@ class Shortlist extends Component {
 
     render() {
         const {shortlistHospitals, haveShortlistedHospitals} = this.props;
+        const emptyCols = [...Array(5 - shortlistHospitals.length)];
         return (
             <React.Fragment>
                 {
@@ -35,7 +37,15 @@ class Shortlist extends Component {
                             hospital => <ShortListItem key={hospital.id}
                                                        {...hospital} />
                         )
+                        // Add in the blank columns here
                         : <h1>No items in the shortlist</h1>
+                }
+                {
+                    haveShortlistedHospitals
+                    ?
+                    emptyCols.map((emptyCol, index) => <EmptyCol key={index} />)
+                    : ''
+
                 }
             </React.Fragment>
         );
