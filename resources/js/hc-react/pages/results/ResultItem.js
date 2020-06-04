@@ -28,7 +28,7 @@ class ResultItem extends Component {
         this.state = {
             showContent: false,
             inShortlist: false,
-            disabled: false
+            // disabled: false
         }
     }
 
@@ -42,9 +42,9 @@ class ResultItem extends Component {
         if (result)
             this.setState({inShortlist: true});
         // disable button if not in shortlist, and compareCount == 5
-        const compareCount = getCompareCount();
-        if (compareCount === 5 && result === false)
-            this.setState({disabled: true})
+        // const compareCount = getCompareCount();
+        // if (compareCount === 5 && result === false)
+        //     this.setState({disabled: true})
     }
 
     toggleContent = () => {
@@ -121,7 +121,8 @@ class ResultItem extends Component {
             phone_number_3
         } = this.props;
         const {address: {latitude, longitude}} = this.props;
-        const {showContent, inShortlist, disabled} = this.state;
+        const {showContent, inShortlist} = this.state;
+        const disabled = this.props.disabled;
         const hospitalType = hospital_type_id === 1 ? 'private-hospital' : 'nhs-hospital';
         return (
             <React.Fragment>

@@ -10,6 +10,11 @@ import SolutionsBar from "./SolutionsBar";
 import {getCompareCount} from "../../scripts/global";
 import {fetchHospitals} from "../../actions/hospitalActions";
 
+// Check to see if a hospital should be disabled from adding to compare
+const isDisabled = (value) => {
+    return !JSON.parse(Cookies.get("compareHospitalsData")).includes(parseInt(value)) && getCompareCount() === 5;
+};
+
 class ResultsPage extends Component {
     constructor(props) {
         super(props);
@@ -51,6 +56,7 @@ class ResultsPage extends Component {
 
     render() {
         const {hospitals, loadingHospitals} = this.props;
+        // Disabled is true if compare count = 5 and it's not in the shortlist
         return (
             <React.Fragment>
                 <main>
@@ -61,7 +67,8 @@ class ResultsPage extends Component {
                         {
                             loadingHospitals
                                 ? <Loader/>
-                                : hospitals.map(hospital => <ResultItem key={hospital.id}
+                                : hospitals.map(hospital => <ResultItem disabled={isDisabled(hospital.id)}
+                                                                        key={hospital.id}
                                                                         {...hospital} />)
                         }
                     </div>
