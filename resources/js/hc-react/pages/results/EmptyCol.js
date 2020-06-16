@@ -3,8 +3,8 @@ import CompareIcon from "../../svg/CompareIcon";
 
 const EmptyCol = () => {
     const heartStyles = {
-        width: "14px",
-        height: "14px"
+            width: "14px",
+            height: "14px"
     };
 
     return (
@@ -16,7 +16,7 @@ const EmptyCol = () => {
                     <p className="text-center px-2">
                         Add more hospitals to your
                         Shortlist by clicking the&nbsp;
-                        <CompareIcon styles={heartStyles}
+                        <CompareIcon style={heartStyles}
                                      stroke={"#037098"}
                                      strokeWidth={"50px"}
                                      fill={"transparent"}

@@ -6,8 +6,8 @@ import CompareIcon from "../../svg/CompareIcon";
 import {connect} from "react-redux";
 
 const heartStyles = {
-    width: "14px",
-    height: "14px"
+        width: "14px",
+        height: "14px"
 };
 
 const SolutionsBar = ({haveShortlistedHospitals, privateHospitalCount, nhsHospitalCount}) => {
@@ -23,7 +23,7 @@ const SolutionsBar = ({haveShortlistedHospitals, privateHospitalCount, nhsHospit
                                         added any
                                         hospitals to compare yet. </p>
                                     <p>Click the the&nbsp;
-                                        <CompareIcon styles={heartStyles}
+                                        <CompareIcon style={heartStyles}
                                                      stroke={"#037098"}
                                                      strokeWidth={"50px"}
                                                      fill={"transparent"}
